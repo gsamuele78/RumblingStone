@@ -10,29 +10,29 @@
 ```
 M7-C — La tenda del comando di Zog'tar (notte, ≈372 DR)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
-01 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🟫 🟫 🟫 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪
-02 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🔵 🔵 🟫 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪
-03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-04 🟩 🟩 🟩 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟩 🟩 🟩
-05 🎪 🎪 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-06 🟩 🔥 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-07 🟩 🟩 🎪 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
-08 🎪 🟩 🎪 🧱 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-09 🎪 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🚪 🚪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-10 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 🪑 ⬜ 🏮 ⬜ ⬜ ⬜ ⬜ ⬜ 🪓 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
-11 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🎪 🟫 🟫 🎪 🎪 🟫 🟫 🟫 🟫
-12 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ 🎪 🟫 🟫 🎪 🎪 🟫 🟫 🟫 🟫
+01 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱
+02 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+03 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+04 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🟫 🧱
+05 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🟫 🧱
+06 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+07 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+08 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+09 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🚪 🚪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+10 🧱 🟫 🔥 🟫 🟫 🟫 🟫 🟫 🎪 🪑 ⬜ 🏮 ⬜ ⬜ ⬜ ⬜ ⬜ 🪓 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+11 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+12 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 13 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ 🔴 🔴 ⚫ ⚫ ⬜ ⬜ 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-14 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 ⬜ 🏮 ⬜ 🔴 🟡 ⚫ ⚫ 🔴 🟡 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
-15 🎪 🎪 🟩 🧱 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-16 🟩 🔥 🟩 🧱 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-17 🟩 🟩 🎪 🧱 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🧱 🟩 🟩 🟩
-18 🎪 🟩 🎪 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-19 🎪 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
-20 🟩 🟩 🟩 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟩 🟩 🟩
-21 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-22 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🟩 🟫 🟫 🟫 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🟩
-23 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🟩 🟫 🟫 🟫 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🎪 🎪 🟩 🟩
+14 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ 🏮 ⬜ 🔴 🟡 ⚫ ⚫ 🔴 🟡 🎪 🟫 🟫 🟫 🟫 🟫 🔥 🟫 🧱
+15 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+16 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+17 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+18 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+19 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+20 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+21 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+22 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱
+23 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱
 
 @north N
 @tipo tattica esterno
@@ -50,13 +50,13 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 @mark 8 ; P16 ; Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª (Combattente 1)
 @mark 9 ; N14 ; Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido (GS 6, adepto 7)
 @path Il corridore hobgoblin (complicazione 6 della Scena 6) ; AA12 V7 N8 ; #d62828
-@path Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2 ; W13 U18 O16 ; #7b2cbf
+@path Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2 ; X6 U17 O16 ; #7b2cbf
 @path Le ronde di orchi più vicine (1d4+2 round) ; A12 G12 ; #e85d04
 @path Gli squadroni hobgoblin (2d4+2 round) ; O23 O18 ; #9d0208
 @zone S10-S14 ; Telo est: «il telo a sinistra» di Balvar
 @zone N15-P15 ; Telo del glifo
 @zone N12-N12 ; Palo centrale, di legno
-@zone V11-W12 ; Tenda del turno dopo
+@zone X4-Y5 ; Tenda del turno dopo
 @zone Q13-R14 ; Fondo buio
 ```
 
@@ -67,8 +67,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 | 🟪 Palo centrale | N12 | di legno, alto 6 m come gli altri due: il simbolo è quello del pilastro, ma non è mithral. È il palo maestro: le due metà del colmo si incastrano su di lui. Regge la runa 2 di Balvar, la barriera di lame (stato E); abbatterlo: Forza CD 20, azione standard (stato F). Sotto il colmo il telo è a 6 m, ai lati a 3 m (Scena 8) |
 | 🔥 Falò della guardia | H17 | chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva |
 | 🔥 Falò della guardia | T17 | chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva |
-| 🔥 Fuoco del clan | B6 | il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m |
-| 🔥 Fuoco del clan | B16 | il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m |
+| 🔥 Fuoco del varco ovest | C10 | le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD |
+| 🔥 Fuoco del varco est | Y14 | le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD |
 | 🏮 Braciere della soglia | L10 | luce (non SRD: l'SRD non ha bracieri, il raggio sta fra la torcia e la lampada comune perché il fondo buio resti buio): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio. La soglia (M9–N9) è in luce intensa e non dà occultamento (Scena 7) |
 | 🏮 Braciere del seggio | K14 | luce (non SRD, come il braciere della soglia): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio |
 | ⬜ Fondo buio | Q13–R14 | dove i bracieri non arrivano: Q13–R14, più la striscia R10–R12 lungo il telo est. Non dà occultamento contro le guardie hobgoblin né contro Balvar: tutti vedono al buio fino a 18 m, e per l'SRD l'oscurità non nasconde da chi ha scurovisione (Scena 7). Ci si nasconde solo dietro una copertura: i tre pali a K12, N12 e Q12, la tavola a J10, lo schienale del seggio. Lì si tira Nascondersi contro il loro Osservare (+1, Appendice A.2): una prova entrando, un'altra se qualcuno si muove. |
@@ -89,7 +89,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 | Orda | Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª | 🔴 | 1 | Combattente 1 | P16 |
 | Orda | Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido | 🟡 | 1 | GS 6, adepto 7 | N14 |
 
-- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, V11–W12. Se è **pre-allertato**, vedi lo stato B qui sotto.
+- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, X4–Y5, a 9 m dal telo. Se è **pre-allertato**, vedi lo stato B qui sotto.
 - **Da dove si entra** (Scene 6 e 7): dalla **soglia** (M9–N9), e con un nano fra loro scatta la runa (stato C); dal **telo est** (S10–S14), «il telo a sinistra» che Balvar consiglia, e si resta invisibili senza runa né glifo; dal **telo sopra il seggio** (N15–P15), che porta il glifo (stato D). Chi taglia la tenda altrove resta invisibile, ma il taglio fa rumore: le guardie tirano Ascoltare contro il suo Muoversi Silenziosamente.
 - **Round di sorpresa** (Scena 8): chi nessuno ha visto né sentito ha un'azione standard o di movimento. Parlare con Balvar in nanico antico, sottovoce, non conta come parlare ad alta voce. Zog'tar non perde la Destrezza alla CA (Schivare Prodigioso Migliorato) e fuori dall'Ira ha 283 pf.
 - **Round 1** (Scena 8): Ira Barbarica (*«A ME, CANI! ABBATTETE LE OMBRE!»*) e Occhio di Ossidiana su Thorik; delle quattro guardie, due restano davanti al seggio e due vanno in coppia su chi lancia incantesimi o colpisce da lontano. Al primo grido Grask suona il corno entro **1d4 round**, se nessuno se n'è occupato prima (Scena 6).
@@ -111,6 +111,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 | F · il palo abbattuto | Zog'tar abbatte il palo centrale (Forza **CD 20**, azione standard), se il volo dura | le due metà del colmo cadono e si portano dietro i pali di testa: il telo crolla su tutta la tenda, J10–R14 | chi vola sotto finisce a terra, intralciato, finché non supera Riflessi **CD 15** (un tentativo per round); Zog'tar e le guardie escono dal telo in un round (Scena 8) |
 | G · il drago | il corno ha suonato prima dello scontro, o i PG si attardano: Skullcrusher arriva 70 round dopo il primo suono | un passaggio radente strappa il telo: la tenda è scoperchiata | soffia sulla linea che prende più PG, anche con dentro le guardie; poi resta a 12-15 m. EL 18-19, oltre il tetto, voluto dal DM (Scena 8) |
 | H · Durik | Hella lo richiama dal seme alla tenda | Durik compare accanto a Hella | costa una carica dell'Evocazione dei Guardiani, e richiamato dal seme resta con Hella (Scena 6, variante dall'alto). Se invece è stato distrutto, la carica lo riporta per un'ora (scheda di Durik). Senza richiamo è alla postierla o nel seme, e non è su questa mappa |
+| I · il barile | i PG lasciano cadere dall'alto il barile d'olio con le fiale della fenice | dove cade: pozza d'olio di 3 × 3 quadretti attorno all'impatto, schizzi fino a 2 quadretti, il telo squarciato; se prende il colmo (riga 12) la tenda crolla | palle di fuoco da 6d6 (Riflessi CD 14), oggetto in caduta 15d6 su chi sta nella casella, olio in fiamme, fumo, crollo: tutte le regole in ARC07-BARILE-SULLA-TENDA.md |
 
 > **La tenda misura 13,5 × 7,5 m di pavimento** (9 × 5 quadretti), 16,5 × 10,5 m col telo.
 > Tre pali in fila sotto il colmo, a 4,5 m l'uno dall'altro, alti 6 m; le pareti

@@ -1,0 +1,1477 @@
+{
+  "schema_version": "1.0",
+  "title": "M7-H — Il quartiere del comando: la piazza e le tende attorno (notte, ≈372 DR)",
+  "scale_m_per_square": 1.5,
+  "map_size": [
+    44,
+    40
+  ],
+  "base_terrain": "🟩",
+  "north": "N",
+  "tipo": "tattica",
+  "ambiente": "esterno",
+  "luogo": "Hammerfist ≈372 DR, la tenda del comando sulla piana dell'orda",
+  "quota": "870 m ; s.l.m., la piana dell'orda [INFERRED — needs DM confirmation: il DM ha fissato la piana a quota 0, non la quota sul mare]",
+  "dislivello": "0 m ; sulla piana dell'orda: porta e cortile sono 100 m più in alto, a nord, a circa 1 km di cammino dalla postierla",
+  "regions": [
+    {
+      "terrain": "🟫",
+      "rect": [
+        6,
+        6,
+        31,
+        2
+      ],
+      "label": "La corsia attorno allo steccato, larga 3 m"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        6,
+        31,
+        31,
+        2
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        6,
+        8,
+        2,
+        23
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        35,
+        8,
+        2,
+        23
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        20,
+        0,
+        3,
+        6
+      ],
+      "label": "La via nord, larga 4,5 m, verso la fortezza"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        21,
+        33,
+        3,
+        7
+      ],
+      "label": "La via sud, verso le colline"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        37,
+        18,
+        7,
+        3
+      ],
+      "label": "La via est"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        0,
+        18,
+        6,
+        3
+      ],
+      "label": "La via ovest, fra i clan degli orchi"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        8,
+        2,
+        12,
+        1
+      ],
+      "label": "Corsia fra le file di tende"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        24,
+        2,
+        20,
+        1
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        8,
+        36,
+        13,
+        1
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        24,
+        36,
+        20,
+        1
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        40,
+        8,
+        1,
+        10
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        40,
+        21,
+        1,
+        10
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        9,
+        9,
+        25,
+        21
+      ],
+      "label": "La piazza del comando: terra battuta, sgombra, dentro lo steccato"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        20,
+        8,
+        3,
+        1
+      ],
+      "label": "Il varco nord, sulla via per la fortezza"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        21,
+        30,
+        3,
+        1
+      ],
+      "label": "Il varco sud, sulla via per le colline"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        34,
+        18,
+        1,
+        3
+      ],
+      "label": "Il varco est"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        8,
+        18,
+        1,
+        3
+      ],
+      "label": "Il varco ovest, verso i clan degli orchi"
+    },
+    {
+      "terrain": "⬜",
+      "rect": [
+        17,
+        17,
+        9,
+        5
+      ],
+      "label": "Dentro la tenda: assi e pelli stese sul terreno"
+    }
+  ],
+  "structures": [
+    {
+      "type": "🧱",
+      "line": [
+        [
+          8,
+          8
+        ],
+        [
+          19,
+          8
+        ]
+      ],
+      "label": "Steccato di pali appuntiti, alto 1,5 m: chiude la piazza del comando"
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          23,
+          8
+        ],
+        [
+          34,
+          8
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          8,
+          30
+        ],
+        [
+          20,
+          30
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          24,
+          30
+        ],
+        [
+          34,
+          30
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          17
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          8,
+          21
+        ],
+        [
+          8,
+          29
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          34,
+          9
+        ],
+        [
+          34,
+          17
+        ]
+      ]
+    },
+    {
+      "type": "🧱",
+      "line": [
+        [
+          34,
+          21
+        ],
+        [
+          34,
+          29
+        ]
+      ]
+    },
+    {
+      "type": "🎪",
+      "line": [
+        [
+          16,
+          16
+        ],
+        [
+          26,
+          16
+        ]
+      ],
+      "label": "Telo nord della tenda, parete alta 3 m. Tagliarlo fa rumore: le guardie tirano Ascoltare contro il Muoversi Silenziosamente di chi taglia (Scena 7)"
+    },
+    {
+      "type": "🎪",
+      "line": [
+        [
+          16,
+          22
+        ],
+        [
+          26,
+          22
+        ]
+      ],
+      "label": "Telo sud della tenda"
+    },
+    {
+      "type": "🎪",
+      "line": [
+        [
+          16,
+          16
+        ],
+        [
+          16,
+          22
+        ]
+      ],
+      "label": "Telo ovest della tenda"
+    },
+    {
+      "type": "🎪",
+      "line": [
+        [
+          26,
+          16
+        ],
+        [
+          26,
+          22
+        ]
+      ],
+      "label": "Telo est della tenda"
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        26,
+        17,
+        1,
+        5
+      ],
+      "label": "Telo est: «il telo a sinistra» di Balvar"
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        21,
+        22,
+        3,
+        1
+      ],
+      "label": "Telo del glifo"
+    },
+    {
+      "type": "🚪",
+      "at": [
+        20,
+        16
+      ],
+      "label": "La soglia (runa 1: epurare invisibilità quando un nano la varca)"
+    },
+    {
+      "type": "🚪",
+      "at": [
+        21,
+        16
+      ],
+      "label": "La soglia, larga 3 m perché Zog'tar, Grande, ci passi"
+    },
+    {
+      "type": "🟪",
+      "at": [
+        18,
+        19
+      ],
+      "label": "Palo ovest, di legno, alto 6 m"
+    },
+    {
+      "type": "🟪",
+      "rect": [
+        21,
+        19,
+        1,
+        1
+      ],
+      "label": "Palo centrale, di legno"
+    },
+    {
+      "type": "🟪",
+      "at": [
+        24,
+        19
+      ],
+      "label": "Palo est, di legno, alto 6 m"
+    },
+    {
+      "type": "🪑",
+      "at": [
+        17,
+        17
+      ],
+      "label": "Tavola con la mappa di Hammerfist"
+    },
+    {
+      "type": "👑",
+      "rect": [
+        22,
+        21,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🪓",
+      "at": [
+        25,
+        17
+      ],
+      "label": "Rastrelliera delle guardie"
+    },
+    {
+      "type": "🦴",
+      "at": [
+        15,
+        15
+      ],
+      "label": "Ossa di nani appese ai tiranti, fuori dalla tenda"
+    },
+    {
+      "type": "🦴",
+      "at": [
+        27,
+        15
+      ],
+      "label": "Ossa di nani appese ai tiranti, fuori dalla tenda"
+    },
+    {
+      "type": "🦴",
+      "at": [
+        15,
+        23
+      ],
+      "label": "Ossa di nani appese ai tiranti, fuori dalla tenda"
+    },
+    {
+      "type": "🦴",
+      "at": [
+        27,
+        23
+      ],
+      "label": "Ossa di nani appese ai tiranti, fuori dalla tenda"
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        31,
+        11,
+        2,
+        2
+      ],
+      "label": "Tenda del turno dopo"
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        9,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        9,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        12,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        12,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        15,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        15,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        25,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        25,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        28,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        28,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        31,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        31,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        34,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        34,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        37,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        37,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        40,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        40,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        9,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        9,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        12,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        12,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        15,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        15,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        22,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        22,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        25,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        25,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        38,
+        28,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        41,
+        28,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        9,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        9,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        12,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        12,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        15,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        15,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        18,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        18,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        25,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        25,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        28,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        28,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        31,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        31,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        34,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        34,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        37,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        37,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        40,
+        34,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        40,
+        37,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        1,
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        5,
+        5,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        10,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        2,
+        9,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        5,
+        11,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        1,
+        15,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        23,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        5,
+        22,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        27,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        4,
+        28,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        33,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        5,
+        34,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        1,
+        38,
+        2,
+        1
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        4,
+        37,
+        1,
+        2
+      ]
+    }
+  ],
+  "hazards": [
+    {
+      "type": "🟪",
+      "at": [
+        21,
+        19
+      ],
+      "label": "Palo centrale",
+      "effect": "di legno, alto 6 m come gli altri due: il simbolo è quello del pilastro, ma non è mithral. È il palo maestro: le due metà del colmo si incastrano su di lui. Regge la runa 2 di Balvar, la barriera di lame (stato E); abbatterlo: Forza CD 20, azione standard (stato F). Sotto il colmo il telo è a 6 m, ai lati a 3 m (Scena 8)"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        15,
+        24
+      ],
+      "label": "Falò della guardia",
+      "effect": "chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        27,
+        24
+      ],
+      "label": "Falò della guardia",
+      "effect": "chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        10,
+        17
+      ],
+      "label": "Fuoco del varco ovest",
+      "effect": "le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        32,
+        21
+      ],
+      "label": "Fuoco del varco est",
+      "effect": "le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
+    },
+    {
+      "type": "🏮",
+      "at": [
+        19,
+        17
+      ],
+      "label": "Braciere della soglia",
+      "effect": "luce (non SRD: l'SRD non ha bracieri, il raggio sta fra la torcia e la lampada comune perché il fondo buio resti buio): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio. La soglia (M9–N9) è in luce intensa e non dà occultamento (Scena 7)"
+    },
+    {
+      "type": "🏮",
+      "at": [
+        18,
+        21
+      ],
+      "label": "Braciere del seggio",
+      "effect": "luce (non SRD, come il braciere della soglia): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        3,
+        3
+      ],
+      "label": "Fuoco della banda della Zanna",
+      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m. Attorno dormono una ventina d'orchi e lo sciamano della banda"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        3,
+        12
+      ],
+      "label": "Fuoco della banda del Corvo",
+      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m. Attorno dormono una ventina d'orchi e lo sciamano della banda"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        3,
+        25
+      ],
+      "label": "Fuoco della banda dell'Ascia Rotta",
+      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m. Attorno dormono una ventina d'orchi e lo sciamano della banda"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        3,
+        35
+      ],
+      "label": "Fuoco della banda dei Teschi",
+      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m. Attorno dormono una ventina d'orchi e lo sciamano della banda"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        21,
+        3
+      ],
+      "label": "Fuoco del quartiere nord",
+      "effect": "un fuoco in mezzo alla via, lontano dai teli: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        39,
+        19
+      ],
+      "label": "Fuoco del quartiere est",
+      "effect": "come il fuoco del quartiere nord"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        22,
+        37
+      ],
+      "label": "Fuoco del quartiere sud",
+      "effect": "come il fuoco del quartiere nord"
+    }
+  ],
+  "units": [
+    {
+      "faction": "PG",
+      "name": "I PG in volo, invisibili, a 48 m sopra la tenda",
+      "token": "🔵",
+      "at": [
+        22,
+        18
+      ],
+      "quantity": 4
+    },
+    {
+      "faction": "Orda",
+      "name": "Zog'tar Deatheye (Grande), seduto sul seggio",
+      "token": "⚫",
+      "area": {
+        "rect": [
+          22,
+          20,
+          2,
+          2
+        ]
+      },
+      "cr": "GS 15",
+      "note": "Grande: il master compilato porta «@taglia P14 ; Grande»"
+    },
+    {
+      "faction": "Orda",
+      "name": "Balvar Fuocospento, sullo sgabello nel fondo buio, a tre passi dal generale",
+      "token": "🟡",
+      "at": [
+        25,
+        21
+      ],
+      "cr": "GS 13"
+    },
+    {
+      "faction": "Orda",
+      "name": "Guardia hobgoblin, in ascolto accanto al seggio",
+      "token": "🔴",
+      "at": [
+        20,
+        20
+      ],
+      "cr": "Guerriero 8"
+    },
+    {
+      "faction": "Orda",
+      "name": "Guardia hobgoblin, in ascolto accanto al seggio",
+      "token": "🔴",
+      "at": [
+        21,
+        20
+      ],
+      "cr": "Guerriero 8"
+    },
+    {
+      "faction": "Orda",
+      "name": "Guardia hobgoblin, in ascolto accanto al seggio",
+      "token": "🔴",
+      "at": [
+        24,
+        21
+      ],
+      "cr": "Guerriero 8"
+    },
+    {
+      "faction": "Orda",
+      "name": "Guardia hobgoblin, in ascolto accanto al seggio",
+      "token": "🔴",
+      "at": [
+        20,
+        21
+      ],
+      "cr": "Guerriero 8"
+    },
+    {
+      "faction": "Orda",
+      "name": "Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª",
+      "token": "🔴",
+      "at": [
+        23,
+        23
+      ],
+      "cr": "Combattente 1"
+    },
+    {
+      "faction": "Orda",
+      "name": "Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido",
+      "token": "🟡",
+      "at": [
+        21,
+        21
+      ],
+      "cr": "GS 6, adepto 7"
+    },
+    {
+      "faction": "Orda",
+      "name": "Squadra hobgoblin del quartiere nord, otto per tenda",
+      "token": "🔴",
+      "at": [
+        27,
+        2
+      ],
+      "quantity": 8,
+      "cr": "Guerriero 4"
+    },
+    {
+      "faction": "Orda",
+      "name": "Squadra hobgoblin del quartiere sud",
+      "token": "🔴",
+      "at": [
+        27,
+        36
+      ],
+      "quantity": 8,
+      "cr": "Guerriero 4"
+    },
+    {
+      "faction": "Orda",
+      "name": "Banda d'orchi del Corvo, attorno al fuoco",
+      "token": "🔴",
+      "at": [
+        2,
+        13
+      ],
+      "quantity": 20,
+      "cr": "GS ½"
+    },
+    {
+      "faction": "Orda",
+      "name": "Le sentinelle del varco est",
+      "token": "🔴",
+      "at": [
+        37,
+        20
+      ],
+      "quantity": 2,
+      "cr": "Guerriero 4"
+    }
+  ],
+  "movements": [
+    {
+      "name": "Le ronde di orchi dalla via ovest (1d4+2 round)",
+      "path": [
+        [
+          0,
+          19
+        ],
+        [
+          8,
+          19
+        ]
+      ],
+      "color": "#e85d04"
+    },
+    {
+      "name": "Gli squadroni hobgoblin dalla via sud (2d4+2 round)",
+      "path": [
+        [
+          22,
+          39
+        ],
+        [
+          22,
+          31
+        ]
+      ],
+      "color": "#9d0208"
+    },
+    {
+      "name": "Gli squadroni hobgoblin dalla via nord (2d4+2 round)",
+      "path": [
+        [
+          21,
+          0
+        ],
+        [
+          21,
+          8
+        ]
+      ],
+      "color": "#9d0208"
+    },
+    {
+      "name": "Le sentinelle del varco est",
+      "path": [
+        [
+          37,
+          19
+        ],
+        [
+          34,
+          19
+        ]
+      ],
+      "color": "#d62828"
+    },
+    {
+      "name": "Le due guardie del turno dopo",
+      "path": [
+        [
+          31,
+          13
+        ],
+        [
+          28,
+          24
+        ],
+        [
+          22,
+          23
+        ]
+      ],
+      "color": "#7b2cbf"
+    }
+  ],
+  "notes": [
+    "M7-H è M7-C con il quartiere attorno: la piazza è la stessa e le sue coordinate sono quelle di M7-C spostate di otto colonne e otto righe (la N12 di M7-C qui è V20).",
+    "Le vie sono larghe 4,5 m, le corsie fra le file 1,5 m, la corsia attorno allo steccato 3 m: le misure del campo di Polibio ridotte a un'orda (plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md). Le tende hobgoblin sono da otto, 3 × 3 m, in file diritte; i ripari degli orchi sono storti, attorno al fuoco della banda, con il vuoto fra un clan e l'altro.",
+    "Il barile: i PG volano a 48 m, invisibili. Lo sgancio, la deviazione, le fiale della fenice, l'olio e il fuoco sono in ARC07-BARILE-SULLA-TENDA.md. Una palla di fuoco ha 6 m di raggio, 4 quadretti: dal palo centrale arriva al telo e a Grask solo se il barile devia verso sud.",
+    "Le tende hobgoblin più vicine sono a 12 m dal telo del comando, oltre lo steccato e la corsia: nessuna palla di fuoco nata nella tenda ci arriva, e il fuoco non salta lo spiazzo."
+  ],
+  "tattiche": [
+    "**Il campo si sveglia** (Scena 8): il boato si sente in tutto il quartiere. Le sentinelle dei varchi gridano e restano al loro posto; le ronde d'orchi arrivano dalla via ovest in 1d4+2 round, gli squadroni hobgoblin da nord e da sud in 2d4+2. Finché Zog'tar è in piedi non entrano nella piazza: fanno quadrato sulla corsia, fuori dallo steccato, e passano secchi e coperte bagnate oltre i varchi.",
+    "**Chi guarda in alto**: nessuno, al primo round. Dal secondo gli sciamani dei clan cercano chi ha lanciato, e chi ha *vedere invisibilità* guarda il cielo; a 48 m la scurovisione (18 m) non arriva, e le stelle non bastano per vedere un invisibile che non si muove."
+  ],
+  "evoluzione": [
+    {
+      "stato": "I · il barile",
+      "trigger": "il barile cade sulla tenda",
+      "griglia": "la tenda brucia; lo spiazzo attorno resta sgombro",
+      "effetto": "allarme in tutto il quartiere; i rinforzi seguono le vie, non le corsie"
+    },
+    {
+      "stato": "J · i secondi barilotti",
+      "trigger": "i PG lasciano cadere uno dei barilotti da 10 litri",
+      "griglia": "una pozza di 1 quadretto e schizzi attorno, dove cade",
+      "effetto": "sul varco o sulla via dove si ammassano i rinforzi, o sulla tenda del turno dopo: regole in ARC07-BARILE-SULLA-TENDA.md"
+    }
+  ],
+  "note_dm": [
+    "**Il quartiere misura 66 × 60 m**: la piazza del comando, 40,5 × 34,5 m dentro lo steccato, con attorno la corsia di 3 m e la prima fila di tende. Oltre il bordo il campo continua per mezzo chilometro in ogni direzione (M7-A)."
+  ],
+  "taglie": [
+    {
+      "at": [
+        23,
+        21
+      ],
+      "taglia": "Grande"
+    }
+  ]
+}

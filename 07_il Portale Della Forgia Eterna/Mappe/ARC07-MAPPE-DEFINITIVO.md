@@ -47,6 +47,7 @@
 | **M7-A** | Hammerfist ≈372 DR (fortezza & orda) | DEF-4 | strategica | ✅ |
 | **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ |
 | **M7-C** | La tenda del comando di Zog'tar | DEF-4 Scene 7-8, contratto JSON (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json`) | tattica | ✅ |
+| **M7-H** | Il quartiere del comando, attorno alla tenda | DEF-4 Scene 6-8 e `ARC07-BARILE-SULLA-TENDA.md`, contratto JSON (`ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO.json`) | tattica | ✅ |
 | **M7-S** | Hammerfist in sezione, 372 e 1372 | lotto D28, `ARC07-MAPPE-HAMMERFIST-372-1372.md` | sezione | ✅ |
 | **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 e 1372 (D48) |
 | **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30, D48; contratto JSON | tattica | ✅ 372 e 1372 |
@@ -62,7 +63,7 @@
 - **DEF-1 · Piano della Terra**: T-1 · T-2 · T-3 · T-4 · T-5 · T-6
 - **DEF-2 · Ritorno & Affreschi**: S-1 · S-2
 - **DEF-3 · Resurrezione**: R-1
-- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
+- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · M7-H · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
 - **DEF-5 · Ritorno a Hammerfist**: CM-1 · CM-2
 
 ---

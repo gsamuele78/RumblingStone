@@ -31,6 +31,7 @@
 | **M7-A** | la fortezza, il campo, il bosco | superficie | [Atlante](ARC07-MAPPE-DEFINITIVO.md), strategica | la vista del 1372 è l'Atlante di Hammerfist, MAPPA 1 e 2A |
 | **M7-B** | il cortile del duello | 0 (+100 m sulla piana) | [Atlante](ARC07-MAPPE-DEFINITIVO.md), Scena 11 | H3-1, il cortile sfondato (`08_…/Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`) |
 | **M7-C** | la tenda del comando | campo, sulla piana (quota 0) | [M7-C](ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md), Scene 7-8 | — (il campo del 372 non esiste più) |
+| **M7-H** | il quartiere attorno alla tenda | campo, sulla piana (quota 0) | [M7-H](ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO.md), Scene 6-8 e il barile ([ARC07-BARILE-SULLA-TENDA](../ARC07-BARILE-SULLA-TENDA.md)) | — |
 | **M7-D** | il corridoio della fucina: quartieri, cappella, alchimista, fucina di Gunnvor, armeria | −1 | [M7-D 372](hammerfist-372-1372/M7-D-livello-1-372.md), Scena 5 | [M7-D 1372](hammerfist-372-1372/M7-D-livello-1-1372.md) |
 | **M7-E** | le gallerie di Zeth | −2 | [M7-E 372](hammerfist-372-1372/M7-E-gallerie-372.md), Scena 5 | [M7-E 1372](hammerfist-372-1372/M7-E-gallerie-1372.md), i passaggi antichi |
 | **M7-F** | la fucina grande | −3 | [M7-F 372](hammerfist-372-1372/M7-F-fucina-grande-372.md), vista dall'affaccio | [M7-F 1372](hammerfist-372-1372/M7-F-fucina-grande-1372.md) |

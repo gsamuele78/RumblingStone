@@ -4355,10 +4355,12 @@ Hammerfist dall'alto in basso.
 
  La tenda misura 13,5 m × 7,5 m di pavimento, 16,5 m ×
 10,5 m col telo: un padiglione di pelle nera a tre pali in fila sotto il colmo,
-alto 6 m al colmo e 3 m alle pareti. Sta sola in mezzo a una piazza sgombra,
-chiusa da uno steccato con quattro varchi; fuori ci sono le file di tende delle
-guardie hobgoblin e, a ovest, i ripari dei clan degli orchi attorno ai loro
-fuochi.
+alto 6 m al colmo e 3 m alle pareti. Sta sola in mezzo alla piazza del
+comando, 40,5 × 34,5 m di terra battuta chiusa da uno steccato con quattro
+varchi: la cornice della mappa è lo steccato. Fuori, su M7-H, ci sono la
+corsia, le file di tende delle guardie hobgoblin e, a ovest, i ripari dei clan
+degli orchi attorno ai loro fuochi. Se il tavolo bombarda la tenda dall'alto,
+le regole sono in `ARC07-BARILE-SULLA-TENDA.md`.
 
 **Dove sta chi, se la griglia non è stampata.** I PG arrivano da nord, per la
 via, a M2–N3. La soglia è a nord, M9–N9, in piena luce del braciere a L10. I
@@ -4368,8 +4370,8 @@ seggio a K14; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14.
 Balvar è sullo sgabello a R14, nel fondo buio Q13–R14. Il telo est, «il telo a
 sinistra», va da S10 a S14; il telo del glifo è quello sopra il seggio,
 N15–P15. Grask è seduto fuori, a P16, due quadretti dietro il seggio, e il
-sacerdote dorme sulla sua stuoia, a N14. Nella loro tenda, V11–W12, a 3 m dal
-telo est, dormono le due guardie del turno dopo.
+sacerdote dorme sulla sua stuoia, a N14. Nella loro tenda, X4–Y5, a 9 m dal
+telo, nell'angolo nord-est della piazza, dormono le due guardie del turno dopo.
 
 <!-- /pagina -->
 
