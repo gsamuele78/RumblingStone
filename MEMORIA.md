@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-24 | ARC-07 · il barile sulla tenda (esperim… | la botte d'olio con le fiale della fenice lasciata cadere da 48 m sulla tenda d… | 🟡 Fisica della caduta (3,15 s, 30 m/s, deriva 20 cm), tiro di sgancio della casa che non rompe l'invisibilità, oggetto in caduta 15d6 (SRD 3.5), palle di fuoco… |
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
 | 2026-10-24 | RICERCA-ARCHI-SENZA-TESTO | D1-D12 decise e P30-b (DM: *«Dimmeli punto per punto con soluzione consigliata… | ✅ Dodici card, una per voce: dieci sulla proposta, D6 sui numeri più duri, D8 «tutti giocati», D12 cambiata dal DM in «convertili anche questi, poi si cerca un… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | STATO-E-ORDINE | §0, triage delle chat di Claude.ai | ✅ 24 chat verificate sui percorsi di `main`: tutte assorbite o superate; tre punti nuovi: nomi Elsir rimasti in finzione, arco 05 solo in PDF, archiviazione e… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
-| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
 
 ## Le misure che si portano dietro
 
