@@ -4,6 +4,7 @@
 **In questo file**
 
 - 1. Where echoes live
+- 1-bis. La regola del cambio d'autore *(aggiunta 2026-08-10, dopo due errori veri)*
 - 2. Writing echoes (arming)
 - 3. Firing echoes (payoff)
 - 3-bis. Graded outcomes — the "regola pieno/ridotto" (Palio pattern)
