@@ -3111,7 +3111,7 @@ Un numero alto qui non vuol dire lavoro perso: dice dove leggere, e la lettura
 è scritta nel sotto-lotto. I sei rami si possono cancellare quando la PR della
 parte di codice di 4j è su `main`; la cancellazione la fa il DM.
 
-### 4.13 · Lotto **4g-1** — lo strumento delle schede PG `[✅ 2026-10-23 · 4g-2 ⬜ · ADR-0088 proposta]`
+### 4.13 · Lotto **4g-1** — lo strumento delle schede PG `[✅ 2026-10-23, #278 · 4g-2 ⬜ · ADR-0088 accettata]`
 
 #### FASE 1 · Audit, sul repo del 2026-10-23
 
@@ -3156,6 +3156,23 @@ rito, D84) scrivono lo stesso +4 due volte; il DM il 2026-10-23: *«il canone è
 quello giocato nel gruppo»*, e lì `state.yaml` conta +4 CAR in tutto, come la
 scheda giocatore della Corona rivista («8 → 12»). Resta solo una differenza di
 attribuzione (Corona o rito), che non cambia il numero.
+
+### 4.14 · La #99 si chiude, e tre pezzi si riprendono `[✅ 2026-10-24]`
+
+Il DM ha scelto A: chiudere la #99 (l'ha chiusa il thread padre il
+2026-10-24) e riprendere da `main` i tre pezzi che nessun lotto copriva.
+Misura: le righe aggiunte dalla #99 (almeno 30 caratteri) cercate su `main`
+con la 4g-1. Il resto delle righe «mancanti» è testo di agosto che `main` ha
+riscritto (`state.yaml`, `state.md`, i test, il manifest).
+
+| Pezzo | Dove arriva | Prova |
+|---|---|---|
+| `inventory_inferred.py` (G4) | `scripts/`, test in `scripts/tests/test_inventory_inferred.py`, baseline `docs/audit/inferred-baseline.json` (260 aperti), manifest | 12 test, nessuno scrive nel repo; `--check` in CI non bloccante (canale testing, ADR-0099) |
+| la regola del cambio d'autore (`f580bc1d`) | `skills/rumblingstone-narrative-style/references/consequence-echoes.md` §1-bis | i fatti citati (E-07c armata di Thorik, E-07e annullata) riscontrati su `state.yaml` |
+| la serie Golarion (`c019d7ef`) | `Arco-Post-Hammerfist-P2D-PALIO-VERIFICA-LEGALE-IP.md` §4 | coerente con `stemmi/golarion/README.md` §«Licenza e IP» |
+
+Il ratchet diventa un cancello solo se il DM lo promuove, come ogni canale
+testing. Resta aperto 4g-2.
 
 ## Come si misura che il piano è finito
 

@@ -1,6 +1,6 @@
 # ADR-0088 — La PR #99 si chiude: le schede PG ripartono da `main`, i gruppi restano rami
 
-**Stato**: proposta. Il lotto 4g-1 è attuato con questa decisione; la chiusura della #99 e il no a 4h aspettano il sì del DM
+**Stato**: accettata il 2026-10-24 (scelta A del DM: *«Vai di a per la 99»*). 4g-1 è su `main` (#278); la #99 è chiusa; i tre pezzi che nessun lotto copriva sono ripresi (punto 5); resta 4g-2
 **Data**: 2026-10-23 (proposta scritta il 2026-10-10, rimisurata oggi)
 **Decisione-fonte**: il compito del thread «Piano per la PR 99 abbandonata»: chiudere la #99 oppure recuperarne il lavoro in PR nuove piccole, con un ADR breve. Il 2026-10-23 il DM ha dato la regola del lavoro: i thread figli sviluppano e provano, il merge lo fa il thread padre.
 **Rapporti**: chiude la FASE 4 di [PIANO-RIPRESA-PR-ABBANDONATE](../PIANO-RIPRESA-PR-ABBANDONATE.md); conferma [ADR-0007](ADR-0007-scritture-canone-triplo-vincolo.md) e [ADR-0090](ADR-0090-la-partita-riparte-su-un-ramo-di-gruppo-nuovo.md) (un gruppo è un ramo); applica [ADR-0050](ADR-0050-stato-di-campagna-dati-e-prosa.md) alle schede PG (un master e una vista, mai due master).
@@ -48,6 +48,18 @@ non recupererebbe lavoro: rovescerebbe una decisione attuata.
 4. **Il resto della #99 è storico**: gli audit di agosto, il piano di agosto,
    `validate_links.py` (superato da `validate_docs.py`), `dmcore/frontmatter.py`
    (superato da `dmcore/delta_sessione.py`). Restano leggibili nel ramo.
+5. **Tre pezzi non stavano in nessun lotto**, misurati riga per riga il
+   2026-10-24 (le righe aggiunte dalla #99 cercate su `main`): il DM ha scelto
+   di riprenderli tutti e tre prima di chiudere.
+   - `scripts/inventory_inferred.py`, il ratchet dei `[INFERRED]` aperti (lotto
+     G4): su `main` nessuno li contava. Entra nel canale testing (ADR-0099):
+     `--check` non bloccante in CI, baseline 260 in
+     `docs/audit/inferred-baseline.json`; l'inventario si genera a richiesta.
+   - La regola del cambio d'autore delle echi (`consequence-echoes.md` §1-bis,
+     commit `f580bc1d`): su `main` c'era la metà meccanica (`validate_state` R6),
+     non la guida per chi scrive.
+   - La serie di stemmi Golarion nella verifica legale del Palio (§4): IP di
+     Paizo, non portabile in un'edizione commerciale (`c019d7ef`).
 
 ## Conseguenze
 
@@ -75,4 +87,5 @@ non recupererebbe lavoro: rovescerebbe una decisione attuata.
 | il gate è vero sul repo | `python3 scripts/validate_pg.py` esce 0; `render_pg.py --check` esce 0 |
 | il gate morde | 14 mutazioni dello strumento, 14 rosse in `scripts/tests/test_validate_pg.py` |
 | nessuna seconda copia | una scheda con `classe`, `hp`, `stato` o `artefatti` è rifiutata |
-| niente si perde chiudendo la #99 | `python3 scripts/contenuti_nei_rami.py --fetch --check` dopo la chiusura |
+| niente si perde chiudendo la #99 | le righe della #99 di almeno 30 caratteri cercate su `main` (2026-10-24): fuori dai lotti restavano solo i tre pezzi del punto 5 |
+| niente si perde chiudendo la #99, sul registro | `python3 scripts/contenuti_nei_rami.py --fetch --check` dopo la chiusura |

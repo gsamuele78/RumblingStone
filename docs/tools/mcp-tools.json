@@ -3400,6 +3400,49 @@
       "deterministic": true
     },
     {
+      "name": "inventory_inferred",
+      "description": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»\n\nInventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/ (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI.",
+      "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
+      "invocation": "python3 scripts/inventory_inferred.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Sottoalbero da scansionare (default: tutto il repo)."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: fallisce se il debito APERTO sale sopra la baseline."
+          },
+          "update-baseline": {
+            "type": "boolean",
+            "description": "Riscrive la baseline col conteggio attuale."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "out": {
+            "type": "string",
+            "description": "File dell'inventario (default: docs/audit/INFERRED-INVENTARIO.md)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/INFERRED-INVENTARIO.md",
+        "docs/audit/inferred-baseline.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "lettura_a_scene",
       "description": "«Il lettore a freddo ha trovato davvero quello che arriva tardi, o l'ha visto perché aveva già letto la scena dopo?»\n\nServe un master ai lettori a freddo una scena alla volta da 127.0.0.1: la scena dopo arriva solo dopo una riga di diario (ago, mi aspettavo, ho trovato, so adesso) e dopo il tempo per leggerla; alla chiusura scrive impronte, mai il testo. Adattato da first-reader/feed.py (Apache 2.0, ADR-0076).",
       "use_case": "«Il lettore a freddo ha trovato davvero quello che arriva tardi, o l'ha visto perché aveva già letto la scena dopo?»",
