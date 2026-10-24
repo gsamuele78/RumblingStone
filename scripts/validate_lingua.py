@@ -130,7 +130,10 @@ def file_di_contenuto() -> list[Path]:
     for d in ROOT.iterdir():
         if not d.is_dir() or not d.name.startswith(CONTENUTO):
             continue
-        out.extend(p for p in d.rglob("*.md") if not p.name.endswith(".hb.md"))
+        # `_testi-altrui/`: conversioni di manuali e siti altrui (RICERCA-ARCHI-SENZA-TESTO
+        # D12), tenute come sono; i loro refusi sono della fonte e non si correggono.
+        out.extend(p for p in d.rglob("*.md")
+                   if not p.name.endswith(".hb.md") and "_testi-altrui" not in p.parts)
     return sorted(out)
 
 

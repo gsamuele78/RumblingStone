@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 30 decisioni aperte
+## Aspetta il DM: 18 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -37,18 +37,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RECUPERO` | D6 | L3 | **RICONCILIAZIONE-PR-APERTE si chiude come superato?** R3, R6, R7, R8 sono decisi o fatti altrove (§2.3). *Proposta*: sì, ✅ con il rimando a dove sta ognuno |
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
-| `ARCHI-SENZA-TESTO` | D1 | 05 | **I funghi della Stanza Runica.** I PDF: la druida segue la spirale di zurkhwood, trova la Runa di Ysgard e i funghi crescono e la coprono. Il canone: il gruppo brucia i funghi della stanza e Hella perde il micelio. *Pr… |
-| `ARCHI-SENZA-TESTO` | D2 | 05 | **Chi è lo spirito nel sarcofago.** I PDF: «Thorek Forgiamartello, l'antico portatore della Corona». Il canone: Thorek è il re di Hammerfist, Thorek I suo antenato di mille anni fa, e una statua del Cuore è Thorek I. *P… |
-| `ARCHI-SENZA-TESTO` | D3 | 05 | **La gemma della prova.** I PDF: la Gemma del Legame Spirituale, chiave per la Corona. Il canone: tre gemme, tutte nella Corona e spente nell'arco 06; la Prova della Sala Profonda attiva il topazio. *Proposta*: la gemma… |
-| `ARCHI-SENZA-TESTO` | D4 | 05 | **Le ricompense della Stanza Runica.** I PDF: Benedizione di Thorek (+2 permanente ai TS contro la paura) e +1 slot del livello più alto; 4.800 PE totali più bonus. Il registro XP: 5.800 PX per PG; nessuna scheda di PG… |
-| `ARCHI-SENZA-TESTO` | D5 | 05 | **I nomi tolkieniani delle rune** (Moria, Erebor, Durin, Khazad-dûm e altri sei). Il canone non li usa. *Proposta*: restano nella trascrizione come documento d'archivio; un master li sostituisce con nomi nanici di Faerû… |
-| `ARCHI-SENZA-TESTO` | D6 | 05 | **I numeri in contrasto fra i tre PDF**: il soffitto (per fasce dal round 6, o 30 cm ogni 5 round dal 10), Conoscenze (natura) CD 25 o 28, il dominio dei non morti a 1d4 o 1d6 Saggezza, le catene dal round 4 o dal 7. *P… |
-| `ARCHI-SENZA-TESTO` | D7 | 00 | **Il livello di partenza.** `campagna_flusso.txt` e il registro XP (28.000 PX): 8° livello. La cronaca: «Phase A … (Levels 4–6)». *Proposta*: correggere la cronaca a «8° livello», se il DM conferma che il gruppo non ha… |
-| `ARCHI-SENZA-TESTO` | D8 | 00 | **Gli appunti d'apertura mai portati**: Lando Norris e l'offerta da 3.500 a 4.500 mo, Khalzon Burn con la maschera dei draghi, il negromante di Castel Wrath con gli scheletri dei giganti e la tribù della Luna della Mort… |
-| `ARCHI-SENZA-TESTO` | D9 | 02 | **Il nemico della Scala d'Ossa**: «necromante di Abbathor» (cronaca) o chierico di Abbathor (file, registro XP, Bestiario)? E GS 11 (Bestiario) o 12 (registro)? *Proposta*: chierico, come dicono tre fonti su quattro; il… |
-| `ARCHI-SENZA-TESTO` | D10 | 02-03 | **Il duergar mago fuggito.** I file lo fanno scappare dalla Scala d'Ossa e tornare davanti al tempio con i drow del casato. La cronaca non ha il filo. *Proposta*: entra nella cronaca se il DM conferma che è andata così |
-| `ARCHI-SENZA-TESTO` | D11 | 03 | **Il retriever e lo scontro davanti al tempio.** Il retriever: comandato dallo stregone drow (cronaca) o mandato dai chierici di Abbathor a riprendere Aegis Fang (nome del file sorgente)? E lo scontro EL 14 (capitano de… |
-| `ARCHI-SENZA-TESTO` | D12 | 00-03 | **Le trascrizioni di testi altrui nel repo**: il capitolo di *Expedition to Undermountain* (01, con il link ad archive.org), il Grell Patriarca di *Lords of Madness* (01), le pagine dei drow e dei warlock (03), le pagin… |
 
 ### Revisioni della prosa da approvare: 0
 
@@ -103,15 +91,13 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | [DRAPPO](plans/PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
 | **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | `ruff.toml` | dopo il merge della #264 |
 | **P27 · I nomi dell'Elsir Vale rimasti nel testo di gioco**: il triage delle chat dice «sostituiti da Cannath», ma «Elsir» compare ancora in ~30 file di contenuto. Molte righe sono note d'adattamento e vanno tenute (REA… | triage chat 2026-10-23, chat 15 | censire le righe, separare note d'adattamento e finzione, correggere solo la finzione |
-| **P30 · Gli altri archi senza testo, e cosa si è perso nell'import**: 06, 07, 10 senza perdite; mai arrivati nei markdown l'Orrore Palustre d'Ombra e Zanna (03), lo scontro davanti al tempio e il warlock (03), gli appun… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §5 | P30-a, le schede che mancano nel Bestiario; poi P30-b dopo D7-D11 |
+| **P30 · Gli altri archi senza testo, e cosa si è perso nell'import**: 06, 07, 10 senza perdite. D7-D12 decise dal DM il 2026-10-23 e la cronaca corretta (P30-b: partenza all'8° livello, appunti d'apertura giocati, chier… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §5 | P30-a, le schede che mancano nel Bestiario |
 
-## 🟡 Fatto a metà: 1
+## 🟡 Fatto a metà: 0
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
-| Cosa | Dove sta il dettaglio | Da dove si parte |
-|---|---|---|
-| **P28 · L'arco 05 (la Stanza Runica) viveva solo in PDF**: trascritto in `05_aa-stanza-runica/ARC05-STANZA-RUNICA-TRASCRIZIONE.md` coi numeri dei tre PDF; il canone resta `campaign/lore/campaign-chronicle.md`. Sei diver… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §3.6 e D1-D6 | una risposta per voce; l'agente la porta nella trascrizione e nella cronaca |
+Nessuna.
 
 ## Fatto di recente: le ultime 12 righe del CHANGELOG
 
@@ -120,6 +106,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
+| 2026-10-24 | RICERCA-ARCHI-SENZA-TESTO | D1-D12 decise e P30-b (DM: *«Dimmeli punto per punto con soluzione consigliata… | ✅ Dodici card, una per voce: dieci sulla proposta, D6 sui numeri più duri, D8 «tutti giocati», D12 cambiata dal DM in «convertili anche questi, poi si cerca un… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
 | 2026-10-23 | INVENTARIO-GEMINI-AISTUDIO | inventario di Drive contro il repo (DM: «vedere se ci sono dei contenuti su gem… | 🟡 182 file guardati, circa 45 della campagna. I `.md` finali di Hammerfist sono nel repo (97-99%); mancano `battle_stats_maps.md`, tre mini-boss e il patrono T… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7 chiuso: D4-D6 del DM (residui di coerenza al Bestiario, possessivo viet… | ✅ lotto 7 completo; l'allineamento di ARC-08 al Bestiario è nella #286 |
@@ -130,11 +117,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
-| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7i: la catena della prosa ha un ingresso solo (richiesta del DM: integrar… | 🟡 `dm.py prosa` mette in fila i dieci script; spaCy e LanguageTool nel registro, così `doctor` li vede; quattro diagrammi nuovi (catena, tre sequenze, dipenden… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 30 aperte, 293 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 18 aperte, 305 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
