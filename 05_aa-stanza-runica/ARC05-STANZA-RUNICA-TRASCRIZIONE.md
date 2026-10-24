@@ -18,7 +18,8 @@
 > `campaign/lore/campaign-chronicle.md` (Arc 05) e `campaign/state.md`. Dove i
 > PDF dicono altro, la riga porta il segno ⚠️ e il rimando alla voce del
 > registro in [`plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md`](../plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §4.
-> Le divergenze sono segnate e non decise: le decide il DM.
+> Il testo resta quello dei PDF; il DM ha deciso le divergenze il
+> 2026-10-23, e la tabella qui sotto dice cosa vale al tavolo.
 >
 > ⚠️ **La più grossa, da sapere prima di leggere**: i PDF fanno dei funghi
 > zurkhwood della parete nord un **aiuto** per la druida (trovano la runa
@@ -26,6 +27,17 @@
 > **il gruppo brucia i funghi** e Hella perde il dono del micelio
 > (`campaign-chronicle.md`, Arc 05; `plans/SOGGETTO-DISCESA-UNDERDARK-ARCHI-01-05.md`
 > §10.1 e §10.5). Registro, voce D1.
+>
+> **Cosa vale (decisioni del DM, 2026-10-23).**
+>
+> | Voce | Cosa vale |
+> |---|---|
+> | D1 · i funghi | il canone: il gruppo brucia i funghi e Hella perde il micelio. Per un gruppo futuro la spirale di zurkhwood resta la via lunga verso la runa, e il fuoco è la scorciatoia |
+> | D2 · lo spirito | è **Thorek I** Forgiamartello, l'antenato di mille anni fa (la statua del Cuore) |
+> | D3 · la gemma | la Gemma del Legame Spirituale è la **chiave della stanza della Corona**, non una gemma della Corona: le gemme della Corona restano tre |
+> | D4 · le ricompense | Benedizione di Thorek e slot extra **non sono state date**; valgono i 5.800 PX per PG del registro |
+> | D5 · i nomi delle rune | qui restano come nei PDF; un master li sostituisce con nomi nanici di Faerûn |
+> | D6 · i numeri | i più duri: soffitto per fasce dal round 6 (la tabella di §2), Conoscenze (natura) CD 28, dominio dei non morti a 1d6 Saggezza, catene dal round 4 |
 
 ---
 

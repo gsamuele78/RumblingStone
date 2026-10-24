@@ -4,7 +4,7 @@
 > archi 00-10 e dei due standalone, con la risposta a una domanda per ognuno:
 > il suo contenuto esiste anche in markdown, e se esiste, è arrivato intero?
 > Dove un file vecchio dice una cosa diversa dal canone, la differenza è
-> segnata in §4 e lasciata al DM.
+> segnata in §4. Il DM le ha decise tutte il 2026-10-23.
 >
 > **Chi l'ha chiesto.** Il DM, il 2026-10-23: *«controllare se ci sono pdf o
 > altri file relativi agli altri archi che sono presenti ma non scritti oppure
@@ -12,11 +12,10 @@
 > dell'indice (l'arco 05 solo in PDF); il resto diventa P30.
 >
 > **Il canone.** `campaign/lore/campaign-chronicle.md`, e per lo stato
-> corrente `campaign/state.md`. Vince sui documenti vecchi. Qui non si decide
-> niente: si segna.
+> corrente `campaign/state.md`. Vince sui documenti vecchi.
 >
 > **Data**: 2026-10-23 · **Base**: `main` a `9334a85` · **Stato**: 🟡 misurato,
-> D1-D12 aperte al DM
+> D1-D12 decise dal DM il 2026-10-23, P30-b eseguito
 
 ## 0. Cosa ho guardato prima, e cosa questa ricerca non rifà
 
@@ -286,25 +285,26 @@ con il Bestiario: li lascio al lotto P30-a.
 
 ## 4. Il registro delle divergenze, per il DM
 
-Ogni riga dice cosa dicono i file vecchi, cosa dice il canone e cosa propongo.
-La proposta è una proposta.
+Ogni riga dice cosa dicono i file vecchi, cosa dice il canone, cosa proponevo e
+cosa ha deciso il DM il 2026-10-23 (una card per voce). Le voci decise hanno
+l'id barrato.
 
 <!-- decisioni-dm: ARCHI-SENZA-TESTO -->
 
 | # | Arco | Domanda |
 |---|---|---|
-| D1 | 05 | **I funghi della Stanza Runica.** I PDF: la druida segue la spirale di zurkhwood, trova la Runa di Ysgard e i funghi crescono e la coprono. Il canone: il gruppo brucia i funghi della stanza e Hella perde il micelio. *Proposta*: vale il canone; quando l'arco si scrive, la spirale porta alla runa **e** il fuoco è la scorciatoia che il gruppo ha preso. La trascrizione resta com'è, segnata |
-| D2 | 05 | **Chi è lo spirito nel sarcofago.** I PDF: «Thorek Forgiamartello, l'antico portatore della Corona». Il canone: Thorek è il re di Hammerfist, Thorek I suo antenato di mille anni fa, e una statua del Cuore è Thorek I. *Proposta*: chiedere se è Thorek I (il nome torna) o un altro portatore da rinominare |
-| D3 | 05 | **La gemma della prova.** I PDF: la Gemma del Legame Spirituale, chiave per la Corona. Il canone: tre gemme, tutte nella Corona e spente nell'arco 06; la Prova della Sala Profonda attiva il topazio. *Proposta*: la gemma dell'arco 05 è la chiave della stanza della Corona e non una quarta gemma; chiedere |
-| D4 | 05 | **Le ricompense della Stanza Runica.** I PDF: Benedizione di Thorek (+2 permanente ai TS contro la paura) e +1 slot del livello più alto; 4.800 PE totali più bonus. Il registro XP: 5.800 PX per PG; nessuna scheda di PG porta la benedizione o lo slot. *Proposta*: chiedere se al tavolo sono state date; se sì vanno nelle schede, se no si scrive che non ci sono |
-| D5 | 05 | **I nomi tolkieniani delle rune** (Moria, Erebor, Durin, Khazad-dûm e altri sei). Il canone non li usa. *Proposta*: restano nella trascrizione come documento d'archivio; un master li sostituisce con nomi nanici di Faerûn (regola di `SOGGETTO-DISCESA` §4-bis) |
-| D6 | 05 | **I numeri in contrasto fra i tre PDF**: il soffitto (per fasce dal round 6, o 30 cm ogni 5 round dal 10), Conoscenze (natura) CD 25 o 28, il dominio dei non morti a 1d4 o 1d6 Saggezza, le catene dal round 4 o dal 7. *Proposta*: vale l'avventura intera (`dc53af8b`), salvo che il DM ricordi cosa ha usato |
-| D7 | 00 | **Il livello di partenza.** `campagna_flusso.txt` e il registro XP (28.000 PX): 8° livello. La cronaca: «Phase A … (Levels 4–6)». *Proposta*: correggere la cronaca a «8° livello», se il DM conferma che il gruppo non ha mai giocato i livelli 4-6 |
-| D8 | 00 | **Gli appunti d'apertura mai portati**: Lando Norris e l'offerta da 3.500 a 4.500 mo, Khalzon Burn con la maschera dei draghi, il negromante di Castel Wrath con gli scheletri dei giganti e la tribù della Luna della Morte, ciclope e mantimera al posto della chimera, orchi e ogre schiavi degli hobgoblin. *Proposta*: chiedere quali sono successi al tavolo; quelli giocati entrano nella cronaca, gli altri restano appunti |
-| D9 | 02 | **Il nemico della Scala d'Ossa**: «necromante di Abbathor» (cronaca) o chierico di Abbathor (file, registro XP, Bestiario)? E GS 11 (Bestiario) o 12 (registro)? *Proposta*: chierico, come dicono tre fonti su quattro; il GS lo decide la scheda giocata |
-| D10 | 02-03 | **Il duergar mago fuggito.** I file lo fanno scappare dalla Scala d'Ossa e tornare davanti al tempio con i drow del casato. La cronaca non ha il filo. *Proposta*: entra nella cronaca se il DM conferma che è andata così |
-| D11 | 03 | **Il retriever e lo scontro davanti al tempio.** Il retriever: comandato dallo stregone drow (cronaca) o mandato dai chierici di Abbathor a riprendere Aegis Fang (nome del file sorgente)? E lo scontro EL 14 (capitano del casato, tre drow, il duergar fuggito, Zanna, l'Orrore Palustre a 110 pf) e il warlock con tre spettri al tempio, che il registro XP conferma e la cronaca non nomina. *Proposta*: chiedere chi manda il retriever; lo scontro e il warlock entrano nella cronaca |
-| D12 | 00-03 | **Le trascrizioni di testi altrui nel repo**: il capitolo di *Expedition to Undermountain* (01, con il link ad archive.org), il Grell Patriarca di *Lords of Madness* (01), le pagine dei drow e dei warlock (03), le pagine di realmshelps.net (00, 03). *Proposta*: non convertirle in markdown; spostarle fuori dal repo, o almeno fuori dalle cartelle degli archi, se il repo diventa pubblico. Decide il DM, con la skill `rumblingstone-edizione` |
+| ~~D1~~ | 05 | **I funghi della Stanza Runica.** I PDF: la druida segue la spirale di zurkhwood, trova la Runa di Ysgard e i funghi crescono e la coprono. Il canone: il gruppo brucia i funghi della stanza e Hella perde il micelio. *Proposta*: vale il canone; quando l'arco si scrive, la spirale porta alla runa **e** il fuoco è la scorciatoia che il gruppo ha preso. La trascrizione resta com'è, segnata. **Deciso (DM, 2026-10-23)**: vale il canone, il gruppo brucia i funghi e Hella perde il micelio. Quando l'arco si scrive, la spirale resta come via lunga verso la runa e il fuoco è la scorciatoia che il gruppo ha preso |
+| ~~D2~~ | 05 | **Chi è lo spirito nel sarcofago.** I PDF: «Thorek Forgiamartello, l'antico portatore della Corona». Il canone: Thorek è il re di Hammerfist, Thorek I suo antenato di mille anni fa, e una statua del Cuore è Thorek I. *Proposta*: chiedere se è Thorek I (il nome torna) o un altro portatore da rinominare. **Deciso (DM, 2026-10-23)**: è **Thorek I** Forgiamartello, l'antenato di mille anni fa, lo stesso della statua del Cuore |
+| ~~D3~~ | 05 | **La gemma della prova.** I PDF: la Gemma del Legame Spirituale, chiave per la Corona. Il canone: tre gemme, tutte nella Corona e spente nell'arco 06; la Prova della Sala Profonda attiva il topazio. *Proposta*: la gemma dell'arco 05 è la chiave della stanza della Corona e non una quarta gemma; chiedere. **Deciso (DM, 2026-10-23)**: è la chiave della stanza della Corona e non una gemma della Corona. Le gemme restano tre |
+| ~~D4~~ | 05 | **Le ricompense della Stanza Runica.** I PDF: Benedizione di Thorek (+2 permanente ai TS contro la paura) e +1 slot del livello più alto; 4.800 PE totali più bonus. Il registro XP: 5.800 PX per PG; nessuna scheda di PG porta la benedizione o lo slot. *Proposta*: chiedere se al tavolo sono state date; se sì vanno nelle schede, se no si scrive che non ci sono. **Deciso (DM, 2026-10-23)**: non sono state date. Niente Benedizione di Thorek né slot extra nelle schede; restano i 5.800 PX del registro |
+| ~~D5~~ | 05 | **I nomi tolkieniani delle rune** (Moria, Erebor, Durin, Khazad-dûm e altri sei). Il canone non li usa. *Proposta*: restano nella trascrizione come documento d'archivio; un master li sostituisce con nomi nanici di Faerûn (regola di `SOGGETTO-DISCESA` §4-bis). **Deciso (DM, 2026-10-23)**: la trascrizione li tiene come archivio; un master li sostituisce con nomi nanici di Faerûn |
+| ~~D6~~ | 05 | **I numeri in contrasto fra i tre PDF**: il soffitto (per fasce dal round 6, o 30 cm ogni 5 round dal 10), Conoscenze (natura) CD 25 o 28, il dominio dei non morti a 1d4 o 1d6 Saggezza, le catene dal round 4 o dal 7. *Proposta*: vale l'avventura intera (`dc53af8b`), salvo che il DM ricordi cosa ha usato. **Deciso (DM, 2026-10-23)**: valgono i numeri più duri: soffitto per fasce dal round 6, Conoscenze (natura) CD 28, dominio dei non morti a 1d6 Saggezza, catene dal round 4 |
+| ~~D7~~ | 00 | **Il livello di partenza.** `campagna_flusso.txt` e il registro XP (28.000 PX): 8° livello. La cronaca: «Phase A … (Levels 4–6)». *Proposta*: correggere la cronaca a «8° livello», se il DM conferma che il gruppo non ha mai giocato i livelli 4-6. **Deciso (DM, 2026-10-23)**: il gruppo parte dall'8° livello; la cronaca è corretta |
+| ~~D8~~ | 00 | **Gli appunti d'apertura mai portati**: Lando Norris e l'offerta da 3.500 a 4.500 mo, Khalzon Burn con la maschera dei draghi, il negromante di Castel Wrath con gli scheletri dei giganti e la tribù della Luna della Morte, ciclope e mantimera al posto della chimera, orchi e ogre schiavi degli hobgoblin. *Proposta*: chiedere quali sono successi al tavolo; quelli giocati entrano nella cronaca, gli altri restano appunti. **Deciso (DM, 2026-10-23)**: sono stati giocati tutti ed entrano nella cronaca dell'arco 00 |
+| ~~D9~~ | 02 | **Il nemico della Scala d'Ossa**: «necromante di Abbathor» (cronaca) o chierico di Abbathor (file, registro XP, Bestiario)? E GS 11 (Bestiario) o 12 (registro)? *Proposta*: chierico, come dicono tre fonti su quattro; il GS lo decide la scheda giocata. **Deciso (DM, 2026-10-23)**: chierico di Abbathor, GS 11 come nel Bestiario; la cronaca è corretta |
+| ~~D10~~ | 02-03 | **Il duergar mago fuggito.** I file lo fanno scappare dalla Scala d'Ossa e tornare davanti al tempio con i drow del casato. La cronaca non ha il filo. *Proposta*: entra nella cronaca se il DM conferma che è andata così. **Deciso (DM, 2026-10-23)**: sì, fugge e torna davanti al tempio; entra nella cronaca |
+| ~~D11~~ | 03 | **Il retriever e lo scontro davanti al tempio.** Il retriever: comandato dallo stregone drow (cronaca) o mandato dai chierici di Abbathor a riprendere Aegis Fang (nome del file sorgente)? E lo scontro EL 14 (capitano del casato, tre drow, il duergar fuggito, Zanna, l'Orrore Palustre a 110 pf) e il warlock con tre spettri al tempio, che il registro XP conferma e la cronaca non nomina. *Proposta*: chiedere chi manda il retriever; lo scontro e il warlock entrano nella cronaca. **Deciso (DM, 2026-10-23)**: lo stregone drow comanda il retriever su commissione dei chierici di Abbathor, per riprendere Aegis Fang; lo scontro EL 14 e il warlock con i tre spettri entrano nella cronaca |
+| ~~D12~~ | 00-03 | **Le trascrizioni di testi altrui nel repo**: il capitolo di *Expedition to Undermountain* (01, con il link ad archive.org), il Grell Patriarca di *Lords of Madness* (01), le pagine dei drow e dei warlock (03), le pagine di realmshelps.net (00, 03). *Proposta*: non convertirle in markdown; spostarle fuori dal repo, o almeno fuori dalle cartelle degli archi, se il repo diventa pubblico. Decide il DM, con la skill `rumblingstone-edizione`. **Deciso (DM, 2026-10-24, poi cambiato)**: prima «restano senza conversione», poi *«convertili anche il D12 in markdown, poi si cerca una soluzione adatta»*. Convertiti in 16 markdown nelle cartelle `_testi-altrui/` degli archi 00, 01 e 03 (elenco in §5-bis); dove tenerli resta da decidere |
 
 ## 5. Cosa propongo di fare (P30)
 
@@ -319,9 +319,10 @@ In ordine, una PR per lotto:
   `pregen-pcgen/`. Con le voci POINTER delle creature dell'arco 05 si toglie la riga della
   trascrizione da `FUORI_RAGGIO` in `scripts/tests/test_png_archi_nel_bestiario.py`,
   messa da questa PR finché D1-D6 sono aperte.
-- **P30-b · La cronaca corretta** (agente, dopo D7-D11). Una riga per risposta
-  nella cronaca degli archi 00-03.
-- **P30-c · Le note del DM per gli archi 01-04** (agente, dopo D12). Un
+- **P30-b · La cronaca corretta** ✅ (2026-10-23, con le risposte a D1-D11).
+  Una riga per risposta nella cronaca degli archi 00-05.
+- **P30-c · Le note del DM per gli archi 01-04** (agente; i testi altrui sono
+  già convertiti, §5-bis, e le note li citano senza ricopiarli). Un
   markdown per arco con quello che è del DM: le trappole ritarate, gli scontri
   composti, le scelte di regia. Senza ricopiare i manuali.
 - **P30-d · Igiene** (agente, classe M). L'estensione alle tre immagini WebP
@@ -329,9 +330,30 @@ In ordine, una PR per lotto:
   swap `.Belkram.md.kate-swp` via dal repo; i doppioni di `04_…/00_` e `02_`
   Celebromorfosi e di `06_…/_ARCHIVIO` verificati e, se il DM vuole, tolti.
 
-Per l'arco 05, quando il DM ha risposto a D1-D6: le risposte vanno nella
-trascrizione (riga per riga) e nella cronaca. Il master dell'arco è un'altra
+Per l'arco 05 le risposte a D1-D6 sono nella trascrizione (tabella in testa)
+e nella cronaca. Il master dell'arco è un'altra
 cosa e non è chiesto.
+
+## 5-bis. I testi altrui convertiti (D12)
+
+Il DM ha chiesto il 2026-10-24 di convertire anche questi. Sono in una cartella
+`_testi-altrui/` dentro ogni arco, così si spostano tutti insieme quando si
+decide dove tenerli. Ognuno ha in testa la fonte e l'avviso che non è canone e
+non va pubblicato. La conversione è automatica (`pdftotext`, `pandoc`, uno
+script per paragrafi e titoli) e non corregge i refusi della fonte, quindi
+`validate_lingua` e `build_monster_catalog` saltano quelle cartelle: il
+catalogo ha già le creature dai sorgenti `.txt`, e contarle due volte darebbe
+doppioni.
+
+| Arco | Sorgente | Markdown |
+|---|---|---|
+| 00 | `00_shaar/00_shar.txt`, `Shaar.htm`, `Popolo dello Shaar.htm`, `Città e siti dello Shaar.htm` (realmshelps.net) | `00_Red Hand Of Doom/_testi-altrui/` (4 file) |
+| 01 | `Miniera.txt`, `Miniera-ita.txt` (*Expedition to Undermountain*), `grellPatriarca.txt`, `grell necromante.txt` (*Lords of Madness*) | `01_LaMiniera/_testi-altrui/` (4 file) |
+| 03 | i cinque `house_*_drow.pdf`, `warlock_png_sazzt.pdf`, `il Tempio di Moradin - in fondo guardiano da sx.txt`, `01_Il Guardiano/Realms Helps Creature_ Beholder, Death Tyrant.pdf` | `03_la Cittadella/_testi-altrui/` (8 file) |
+
+Il rischio non cambia: sono testi coperti da diritti di altri, ora più facili
+da copiare. Finché il repo è privato non pesa; prima di renderlo pubblico la
+cartella va spostata o tolta (`rumblingstone-edizione`, gate d'uscita).
 
 ## 6. Limiti
 

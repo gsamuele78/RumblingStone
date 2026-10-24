@@ -357,8 +357,10 @@ def should_skip(path):
     # «Battaglia Finale – Fase 0». E' la forma del rischio che D10 aveva
     # dichiarato — «una copia crea un secondo master» — comparsa al primo giro.
     # `validate_modules.py` escludeva gia' `_ARCHIVIO` per la stessa ragione.
+    # '_testi-altrui' = conversioni in markdown dei .txt/.pdf altrui (RICERCA-ARCHI-SENZA-TESTO
+    # D12): i sorgenti sono gia' nel catalogo, contarli due volte darebbe doppioni.
     skip_dirs = {'.git', 'node_modules', '.claude', '.cursor', '.windsurf', '.gemini', '.chatgpt', '.agents', '.github', 'Immagini', 'immage_campaign', 'Mappe', 'Musica', 'skills', 'Script', 'Old', 'png_La_mano_rossa_del_destino_files', 'tokens', 'homebrew', 'docs', 'campaign',
-                 '_ARCHIVIO', 'STANDALONE-Il-Drappo-di-Tarsilia'}
+                 '_ARCHIVIO', '_testi-altrui', 'STANDALONE-Il-Drappo-di-Tarsilia'}
     for part in path.parts:
         if part in skip_dirs or part.endswith('_files'):
             return True

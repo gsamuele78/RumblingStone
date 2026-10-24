@@ -52,8 +52,8 @@ CATALOGO = yaml.safe_load(
 #: dimenticanza, ed e' cosi' che questo cancello aveva perso l'Abbazia.
 FUORI_RAGGIO = {
     "05_aa-stanza-runica/ARC05-STANZA-RUNICA-TRASCRIZIONE.md":
-        "trascrizione d'archivio dei PDF con sei divergenze aperte al DM (RICERCA-ARCHI-SENZA-TESTO D1-D6): "
-        "le voci POINTER entrano con P30-a, dopo le risposte, per non agganciare creature che il canone puo' cambiare",
+        "trascrizione d'archivio dei PDF (RICERCA-ARCHI-SENZA-TESTO D1-D6, decise il 2026-10-23): "
+        "le voci POINTER entrano con P30-a, insieme alle schede che mancano nel Bestiario",
     "06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/00-La Corona di Adamantio-ogetto&Prove/000_Guida_Dm_Corona_adamantio_ogetto_prove_rituali_sfide.md":
         "guida all'artefatto: le marche sono bonus di gemme e CD di rituali, non creature",
     "06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/00-La Corona di Adamantio-ogetto&Prove/00_corona_di_adamantio_momento_risveglio_1_prova_scheda_giocatore.md":
