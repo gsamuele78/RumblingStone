@@ -96,7 +96,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > sulla sua terrazza; circa 25.000 abitanti, profughi esclusi, la città più popolosa
 > della valle, più di Rethmar. È più grande della Dennovar del libro (circa 11.600)
 > per scelta del DM, perché la valle regga l'orda di circa 10.000. Se
-> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[INFERRED — needs DM confirmation]`.
+> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 
@@ -2254,10 +2254,10 @@ Tre vincoli di coerenza, risolti a monte:
 ## 1. Geografia e Lore — Channathgate ampliata
 
 Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 25.000
-abitanti, più dei circa 11.600 della Dennovar del libro, per scelta del DM; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
+abitanti, più dei circa 11.600 della Dennovar del libro, per scelta del DM; Rethmar resta la capitale), sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
 a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway", più popolosa di Rethmar,
 **città aperta** senza cinta (`P2D-Palio-Allegati/mappe/channathgate-pianta.svg`), **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
-(`state.md` refugee ledger). **Questa avventura la trasforma nel motore geopolitico**
+(registro dei profughi della campagna). **Questa avventura la trasforma nel motore geopolitico**
 che sblocca quel contributo — e molto altro.
 
 **Ampliamento canonico proposto:**
@@ -2985,8 +2985,8 @@ Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 > distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
 > il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
 > pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
-> vedere gli otto rioni a colpo d'occhio. Misure e abitanti della pianta sono
-> `[INFERRED — needs DM confirmation]`.
+> vedere gli otto rioni a colpo d'occhio. Misure, abitanti e posizioni della pianta sono
+> canone.
 
 ![Channathgate, pianta in scala](../P2D-Palio-Allegati/mappe/channathgate-pianta.svg)
 

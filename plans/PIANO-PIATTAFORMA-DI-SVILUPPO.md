@@ -61,6 +61,7 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | mypy | 2.3.1 | — | 328 rilievi, 0 bug nel campione di 41 | **unstable**, non si adotta |
 | pyright | — | — | non misurato | unstable |
 | pre-commit (framework) | — | — | non misurato; A4 ha già deciso hook senza dipendenze | **non si adotta** |
+| riscontro SRD (`riscontro_srd.py` con l'SRD 3.5 e il PRD PF1e in cache, OGL 1.0a) | commit fissati, sha256 per file | sì | 53 regole di ARC-08 in 0,25 s, 3 discordanze vere (RISCONTRO-ARC08) | **testing** da questa PR (P11, ADR-0103) |
 
 ### Librerie Python
 
@@ -74,6 +75,7 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | scipy | ≥ 1.18.1 | collaudo delle mappe | **stable** |
 | scikit-image | ≥ 0.25 | resa delle mappe | **stable** |
 | fonttools | ≥ 4.66.1 | font delle mappe | **stable** |
+| shapely | = 2.2.0 | piante delle città, `scripts/piante/` (ADR-0102) | **testing** dal 2026-10-23 |
 | bpy, torch, piq | `requirements-completo.txt` | 3D e seconda misura della resa, fuori CI | **testing** locale (non girano in CI: ADR-0084) |
 | spaCy, Stanza | — | `misura_sintassi` (PR #264, #270) | **unstable** |
 | `import fitz` di pymupdf | — | deprecato: pymupdf avvisa che sparirà | da migrare a `import pymupdf` prima che salga la versione maggiore |
@@ -104,6 +106,7 @@ tutti i componenti che la fanno passare in CI.
 | libretto imposto | typst, pdfcpu | testing |
 | mappe: SVG, contratto JSON, UVTT | Python | stable |
 | mappe: collaudo, qualità, resa | tcod, numpy, scipy, scikit-image | stable |
+| mappe: piante delle città | shapely, numpy, scipy | testing |
 | mappe: 3D e immagini | Blender, ComfyUI, torch, piq | unstable |
 | prosa: lingua, MQM, foglio di stile | Python | stable |
 | prosa: sintassi | spaCy, Stanza | unstable |
@@ -196,6 +199,32 @@ escludeva da 3.13 (la 1.0.3 ha la ruota per 3.13, e l'API usata
 cartelle, con gruppi suoi. Job CI `convertitori`, non bloccante.
 Resta: i test del motore leggono PDF fuori dal repo.
 
+### P10 · Il rilascio è una PR ✅ in testing
+`[engine: Opus 5.5 · effort: medio · qualità: la PR di rilascio unita crea tag, rilascio, archivio riproducibile e attestazione senza passi a mano]`
+DM 2026-10-23: *«iniziare il tag e release come fatto nel progetto
+iemod-fetch»*. [ADR-0100](adr/ADR-0100-il-rilascio-e-una-pr.md): CHANGELOG.md
+di progetto alla radice (Keep a Changelog, italiano), `__version__` in
+`scripts/dmcore/__init__.py` letto da `dm.py --version`, workflow
+`release.yml` con `scripts/release_plan.py` e `scripts/release_notes.py`
+ripresi da iemod-fetch (MIT, stesso autore), guida in
+[docs/RILASCIO.md](../docs/RILASCIO.md). Il primo rilascio è 1.0.0 (D7). Il
+workflow sale a stable dopo tre rilasci senza interventi a mano.
+
+### P11 · Il riscontro delle regole sull'SRD ✅ in testing
+`[engine: Opus 5.5 · effort: alto · qualità: nessun test usa la rete; uno sha256 sbagliato o la rete assente si dicono con un codice d'uscita loro]`
+DM 2026-10-23: *«aggiungi se ci sono tools skills pipeline plugin e tools che
+non sono presenti nel repo aggiungili ed integrali […] in un flusso
+coerente»*. L'unico candidato che la [ricerca in rete](esperimenti/ricerca-rete-2026-10-23/RICERCA.md)
+raccomanda. [ADR-0103](adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md):
+`scripts/riscontro_srd.py` scarica l'SRD 3.5 in Markdown e il PRD PF1e in
+SQLite a commit fissato, con lo sha256 di ogni file, in
+`~/.cache/rumblingstone/srd/`, e riscontra un file di regole (concorda,
+discorda, non trovata, con la citazione). Job CI `riscontro-srd` non
+bloccante; il flusso di tutti gli strumenti di qualità in
+[ARCHITETTURA](../docs/ARCHITETTURA.md) §18. Primo uso su DEF-1 e DEF-2:
+[RISCONTRO-ARC08](esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md), 53
+regole, 3 discordanze lasciate al DM. Sale a stable non prima del 2026-11-06.
+
 ### P8 · La prova generale della prossima migrazione ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: un job non bloccante su Python 3.14 verde per un mese prima del salto]`
 - Parte quando Debian 14 entra nel congelamento (atteso nel 2027): un job CI
@@ -226,16 +255,17 @@ Resta: i test del motore leggono PDF fuori dal repo.
 | ~~D4~~ | P5 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **uv in testing per installare in CI e fare il lock di A3?** MIT o Apache-2.0. Installazione 33 s → 4 s a freddo; in CI il guadagno è circa 20 s su 914, il valore vero è il lock con hash senza pip-tools e la stessa 3.13 su Ubuntu e Bazzite senza PPA. Proposta: sì, in testing |
 | ~~D5~~ | P3 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **ruff resta in testing con gli otto gruppi di regole che cercano bug, e sale dopo 14 giorni?** Le regole di stile restano fuori (1.672 rilievi, quasi tutti scelte volute del repo). Proposta: sì |
 | ~~D6~~ | P9 | ✅ **Decisa il 2026-10-23, risposta del DM: B** (*«D6 b»*, dopo la spiegazione: correggere e portare `converters/` nella piattaforma). **I tre bug che ruff ha trovato in `converters/` si correggono?** Un modulo che non si importa, un NameError a fine installazione, una correzione grammaticale che non parte e non lo dice. `converters/` è fuori dalla piattaforma (PRATICHE D9). Proposta: tre righe in una PR a parte, senza portare `converters/` in CI |
+| ~~D7~~ | P10 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«1.0.0, solo le skill»*). **Il primo rilascio è 1.0.0, con dentro solo i pacchetti delle skill?** Lo 0.1.0 scritto nel codice non è mai uscito; 1.0.0 dice «la piattaforma di ADR-0099 è la base». Il repo è pubblico, quindi il rilascio lo è: esce solo ciò che il repo mostra già (pacchetti delle skill, sorgenti del tag), i PDF dei booklet no finché non passano dal gate di `rumblingstone-edizione`. Proposta: sì, 1.0.0, solo le skill |
 
 <!-- eco: PIATTAFORMA 2026-10-23 -->
-- **Decise**: D1 la regola dei tre canali · D2 un corridore solo per i test · D3 pytest-xdist in testing · D4 uv in testing · D5 ruff in testing, stable dopo 14 giorni · D6 B, `converters/` dentro la piattaforma
+- **Decise**: D1 la regola dei tre canali · D2 un corridore solo per i test · D3 pytest-xdist in testing · D4 uv in testing · D5 ruff in testing, stable dopo 14 giorni · D6 B, `converters/` dentro la piattaforma · D7 primo rilascio 1.0.0 con solo le skill
 - **Aperte**: nessuna
 - **Cambiate**: D6 dalla proposta A (correggere e lasciare fuori) a B (correggere e portare dentro)
 - **Dedotto da me**: che D3 e D4 in testing si provino nello stesso job non bloccante (uv installa, xdist esegue), per pagare un job solo invece di due; che «se sono migliorative poi diventano standard» del DM sia la regola di promozione di ADR-0099 §3, e non un sì anticipato alla promozione; che lo stesso concetto del kernel Linux in Debian» voglia dire i canali unstable, testing e stable con promozione a tempo e senza regressioni, e la migrazione a ogni rilascio di Debian (lettura confermata dalla nota del coordinatore); che le soglie (14 giorni, 10 run, +5%, tre mesi di oldstable) siano mie e da tarare; che «le skill» nella piattaforma vogliano dire che le skill conoscono la regola, non che le skill diventino componenti con un canale
 
 ## §6 · Ordine
 
-P0 → D1 → P9 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
+P0 → D1 → P9 → P10 → P11 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
 A2 → P7 → P8 quando Debian 14 si congela.
 
 ## Checklist di avanzamento
@@ -250,3 +280,5 @@ A2 → P7 → P8 quando Debian 14 si congela.
 - [ ] P7 · skill e guide
 - [ ] P8 · prova generale della migrazione a 3.14
 - [x] P9 · `converters/` nella piattaforma, in testing (D6)
+- [x] P10 · il rilascio è una PR (ADR-0100), workflow in testing; primo rilascio 1.0.0 (D7 ✅)
+- [x] P11 · il riscontro SRD (ADR-0103) in testing, job `riscontro-srd`; stable non prima del 2026-11-06

@@ -75,6 +75,14 @@ are **generated artifacts — never hand-edit them**. CI
    `dm.py asset installa <zip> --categoria base|premium`), and a **premium**
    pack (Plus, Patron Packs, tokens, even if paid for) has no licence beyond
    the table — `dm.py asset controlla` fails on it (GUIDA-MAPPE §5.1-§5.2).
+   **The «pianta» theme** (ADR-0102) draws the same grid in the style of the
+   city plans: hatched rock with jagged edges (≤ 0.24 cell, walkable cells
+   unchanged), coursed paving, a «Luoghi» panel from the `@mark` lines and the
+   legend below. It is adopted one folder at a time: where `rendered-pianta/`
+   exists, `validate_maps` wants it complete and aligned (ARC-07 since
+   2026-10-23). The canonical plans of Rethmar, Dauth and Channathgate come
+   from `scripts/piante/` (shapely, requirements-dev): change the program,
+   never the SVG, then `dm.py maps citta <città>`; `--check` compares bytes.
 6. **Fidelity contract** (piano RENDER-MAPPE-FEDELTÀ, 2026-07-23): side
    annotations on a grid row start after **≥3 spaces** (or a detached `│`
    preceded by ≥2 spaces, or box-drawing) — the parser never reads them as
@@ -204,4 +212,6 @@ python3 scripts/dm.py asset texture && python3 scripts/dm.py maps texture   # CC
 python3 scripts/misura_resa.py --check               # the rendering did not get worse (ADR-0086), GUIDA-MAPPE §5.1.2
 python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, optional, table only
 python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
+python3 scripts/dm.py maps pianta <file.md>        # «pianta» theme → rendered-pianta/ (ADR-0102)
+python3 scripts/dm.py maps citta [rethmar|dauth|channathgate] [--check]  # the repo's own city plans
 ```

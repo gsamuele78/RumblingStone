@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # Il workflow Release la riesegue intera sul commit da rilasciare (ADR-0100).
+  workflow_call:
 
 permissions:
   contents: read
@@ -51,6 +53,14 @@ jobs:
       - name: ruff — nomi non definiti, codice morto, usi deprecati (testing, non bloccante)
         continue-on-error: true
         run: ruff check --output-format github
+
+      # ADR-0102, canale TESTING: shapely ridisegna le piante di Rethmar, Dauth e
+      # Channathgate dai loro programmi in scripts/piante/, e le confronta byte
+      # per byte con quelle committate. Sale a stable dopo 14 giorni e 10 run su
+      # main senza falsi allarmi (un arrotondamento diverso di GEOS lo sarebbe).
+      - name: Piante delle città allineate ai programmi (testing, non bloccante)
+        continue-on-error: true
+        run: python scripts/genera_pianta_citta.py --tutte --check
 
       - name: Tool manifest conformance gate (ADR-0012)
         run: python scripts/tools_manifest.py --check
@@ -122,6 +132,21 @@ jobs:
           python scripts/validate_state.py
           python scripts/render_state.py --check
 
+      # I costi permanenti dei PG non spariscono più (RIPRESA-PR 4g-1, ADR-0088):
+      # ogni modificatore ha una fonte, ogni costo affermato nei documenti è
+      # sulla scheda o dismesso con una ragione, e la scheda non copia state.yaml.
+      - name: Schede PG — modificatori con fonte e viste rigenerate (ADR-0088)
+        run: |
+          python scripts/validate_pg.py
+          python scripts/render_pg.py --check
+
+      # Il debito [INFERRED] dei documenti vivi non sale (ripreso dalla #99,
+      # lotto G4; ADR-0088). Canale testing (ADR-0099): non blocca finché il DM
+      # non lo promuove. Se sale per una ragione: --update-baseline nello stesso commit.
+      - name: Ratchet dei [INFERRED] aperti — non bloccante (ADR-0088, testing)
+        continue-on-error: true
+        run: python scripts/inventory_inferred.py --check
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: python scripts/validate_maps.py
 
@@ -178,18 +203,37 @@ jobs:
       - name: Domande del developer — si gioca?
         run: python scripts/domande_developer.py --check
 
+      # Lotto 7c di AVVENTURE-COMMUNITY: lo stesso PNG o mostro con GS, pf, CA,
+      # CD o classi diversi in due scene. Solo ARC-07 e ARC-08, dove la
+      # precisione è misurata (4 su 4); le contraddizioni che aspettano il DM
+      # stanno in plans/coerenza-residui.json con la ragione.
+      - name: Coerenza fra scene e archi
+        run: python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json "07_il Portale Della Forgia Eterna" "08_La Battaglia Di Hammerfist"
+
+      # Fronti e orologi (DM, 2026-10-23): canone dagli archi nuovi, da ARC-08
+      # in poi, un file `ARCnn-FRONTI.yaml` nella cartella dell'arco. ARC-07
+      # resta com'è. Senza file il passo non fa niente.
+      - name: Fronti e orologi degli archi
+        shell: bash
+        run: |
+          shopt -s nullglob
+          f=(*/ARC[0-9][0-9]-FRONTI.yaml)
+          if [ ${#f[@]} -eq 0 ]; then echo "nessun file di fronti"; exit 0; fi
+          python scripts/coerenza_campagna.py fronti "${f[@]}"
+
       # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
       # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
       # dritte, «E'») restano ~2.450 e non bloccano: --strict li alzerebbe a
-      # errori, e si mette il giorno in cui anche quelli sono a zero.
+      # errori, e si mette il giorno in cui anche quelli sono a zero. Dal
+      # 2026-10-22 se ne stampa solo il conto (l'elenco con --avvisi).
       - name: Lingua italiana — refusi meccanici
         run: python scripts/validate_lingua.py
 
-      # Idem: misura la norma di italiano-nativo.md (calchi, tic a densita',
-      # nomi inglesi dove il glossario vuole l'italiano). ADR-0025.
-      - name: Prosa — traduttese e tic dell'IA (non bloccante)
-        continue-on-error: true
-        run: python scripts/validate_prosa.py
+      # Il passo non bloccante `validate_prosa.py` (calchi, tic a densita') e'
+      # uscito il 2026-10-22, lotto 7e di AVVENTURE-COMMUNITY: le stesse regole le
+      # ricalcola e le pesa MQM (punteggio_mqm, piu' sotto), che chiama
+      # validate_prosa.rilievi sugli stessi file. Le regole restano; il passo
+      # che non bloccava niente costava 6 s.
 
       # BLOCCANTE, soglia zero: il foglio di stile (glossario §8, ADR-0078).
       # Una grafia gia' decisa non torna a scriversi nell'altro modo. Le scelte
@@ -212,17 +256,10 @@ jobs:
       - name: Skill — l'indice in testa ai references lunghi
         run: python scripts/indice_references.py --check
 
-      # Il gemello del passo sopra, dall'altro lato: quello controlla che ogni
-      # norma dica CHI la guarda, questo che ogni «nessuno la guarda» dica
-      # COSA MANCA — e lo rimisura invece di fidarsi della prosa. La ragione
-      # scritta a mano invecchia in silenzio: e' successo ai «27 ADR mancanti»,
-      # che erano zero e non erano mai stati ventisette. ADR-0062.
-      #
-      # ⚠️ Una superficie vuota NON e' un difetto e non boccia: boccia una riga
-      # che ha smesso di dire il vero, cioe' una norma diventata misurabile che
-      # il registro dichiara ancora 🔴.
-      - name: Superficie delle norme scoperte — manca il codice o manca il dato?
-        run: python scripts/superficie_norme.py --check
+      # Il gemello del passo sopra (superficie_norme, ADR-0062) e' dentro
+      # validate_norme_editoriali dal 2026-10-22: ogni «non misurato» dice COSA
+      # MANCA, e la ragione si rimisura invece di fidarsi della prosa. Il passo
+      # separato rifaceva lo stesso controllo una seconda volta.
 
       # ⚠️ Gira in un passo SUO e per ultimo fra i cancelli editoriali, perche'
       # esegue davvero i comandi che §6.2 cita — e sono i piu' lenti del repo.
@@ -261,6 +298,7 @@ jobs:
 
       - name: DM tool smoke tests
         run: |
+          python scripts/inventory_inferred.py --help > /dev/null
           python scripts/suggest_encounter.py --help > /dev/null
           python scripts/suggest_loot.py --help > /dev/null
           python scripts/suggest_map.py --help > /dev/null
@@ -306,6 +344,10 @@ jobs:
           python scripts/comfyui_batch.py --lista > /dev/null
           python scripts/comfyui_batch.py --dry-run > /dev/null
           python scripts/render_map_blender.py --help > /dev/null
+          # Il ponte della prosa locale (ADR-0089): come ComfyUI, in CI solo la
+          # composizione del prompt; il modello gira sulla macchina del DM.
+          python scripts/banco_prosa_locale.py --help > /dev/null
+          python scripts/banco_prosa_locale.py corsa --dry-run > /dev/null
 
       # Tre cose che un --help non prova: che i cancelli MORDANO. Un gate che
       # esiste e non si verifica e' un gate che un giorno smette di funzionare
@@ -355,7 +397,10 @@ jobs:
         # Il gate che mancava: senza typst in CI, due booklet della campagna non
         # avevano mai compilato e nessuno poteva accorgersene. Ora ogni manifest
         # del repo produce un PDF vero, con i segnalibri.
-        run: python scripts/validate_booklets.py --stampa
+        # I volumi di un corredo li compila e li misura il passo dopo
+        # (validate_corredo --stampa, con gli stessi controlli di guscio e
+        # segnalibri): compilarli anche qui li faceva due volte, 79 s su 230.
+        run: python scripts/validate_booklets.py --stampa --salta-corredo
 
       - name: Il corredo della serata (pezzi, doppioni, box, e i suoi PDF misurati)
         # rumblingstone-automation, «Il corredo della serata»; ADR-0070. Con
@@ -537,6 +582,37 @@ jobs:
 
       - name: Il convertitore HTML parte
         run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
+
+  # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
+  # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
+  # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:
+  # sarebbe un componente nuovo). Il rapporto va nel riepilogo del run. Le
+  # discordanze le decide il DM, quindi niente --strict: il passo diventa
+  # rosso solo se lo strumento si rompe (1 sha256 sbagliato, 2 file dei
+  # riscontri rotto, 3 rete assente). Sale a stable dopo 14 giorni e 10 run.
+  riscontro-srd:
+    name: Riscontro SRD in prova (ARC-08) — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scarica le fonti a commit fissato
+        run: python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" scarica
+
+      - name: Riscontra DEF-1 e DEF-2
+        run: |
+          python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" --offline riscontra \
+            plans/esperimenti/ricerca-rete-2026-10-23/riscontri-arc08.yaml \
+            --md "$RUNNER_TEMP/riscontro.md"
+          { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
 
   build:
     name: Build skill packages

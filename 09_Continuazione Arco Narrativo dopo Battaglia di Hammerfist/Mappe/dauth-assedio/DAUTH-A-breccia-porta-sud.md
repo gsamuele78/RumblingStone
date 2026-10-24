@@ -23,8 +23,8 @@ COLONNE:  A B C D E F G H I J K L
 @north N
 @tipo tattica abitato
 @luogo Dauth, Porta Sud
-@quota 530 m ; s.l.m., l'androne della Porta Sud [INFERRED — needs DM confirmation]
-@dislivello +40 m ; sul borgo dei carrettieri e sulla piana a sud, in fondo alla rampa [INFERRED — needs DM confirmation]
+@quota 530 m ; s.l.m., l'androne della Porta Sud
+@dislivello +40 m ; sul borgo dei carrettieri e sulla piana a sud, in fondo alla rampa
 @collega A06 ; fuori mappa ; il camminamento sopra la porta non ha una griglia: la carta lo dice solo «sui lati»
 @collega L06 ; fuori mappa ; il camminamento sopra la porta non ha una griglia: la carta lo dice solo «sui lati»
 @mark 1 ; F9 ; Comandante del Vanguard (hobgoblin-captain-cr8) (GS 8)
