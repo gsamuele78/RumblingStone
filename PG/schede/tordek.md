@@ -12,14 +12,18 @@ Classe, PF e stato di oggi: `campaign/state.yaml`, blocco `party` (e [`state.md`
 
 | | Catena | Oggi |
 |---|---|---:|
-| **FOR** | `[INFERRED]` — non attestato | — |
-| **DES** | `[INFERRED]` — non attestato | — |
-| **COS** | `[INFERRED]` — non attestato | — |
-| **INT** | `[INFERRED]` — non attestato | — |
-| **SAG** | `[INFERRED]` — non attestato | — |
-| **CAR** | `[INFERRED]` — non attestato | — |
+| **FOR** | 18 → **20** *(scheda PCGen al 12° livello)* | 20 |
+| **DES** | 14 → **16** *(scheda PCGen al 12° livello)* | 16 |
+| **COS** | 16 | 16 |
+| **INT** | 14 | 14 |
+| **SAG** | 16 → **18** *(scheda PCGen al 12° livello)* | 18 |
+| **CAR** | 8 | 8 |
 
-## Modificatori permanenti — 0
+## Modificatori permanenti — 3
 
-**Nessuno.** *(Un elenco vuoto è un fatto, non un vuoto: `validate_pg.py` verifica che nessun documento affermi il contrario senza che sia stato dismesso con una ragione scritta.)*
+| Car. | Δ | Causa | Quando | Fonte |
+|---|---:|---|---|---|
+| **FOR** | +2 | Guanti della Potenza dell'Orco indossati (+2 di potenziamento). | scheda PCGen al 12° livello | `PG/Artefatti/Artefatti-Pg/Tordek/Tordek Durinheart 12 lvl modificato.pdf` |
+| **DES** | +2 | Stivali (DES +2) indossati (+2 di potenziamento). | scheda PCGen al 12° livello | `PG/Artefatti/Artefatti-Pg/Tordek/Tordek Durinheart 12 lvl modificato.pdf` |
+| **SAG** | +2 | Fascia (SAG +2) indossata (+2 di potenziamento). | scheda PCGen al 12° livello | `PG/Artefatti/Artefatti-Pg/Tordek/Tordek Durinheart 12 lvl modificato.pdf` |
 
