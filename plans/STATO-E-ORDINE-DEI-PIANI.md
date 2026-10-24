@@ -43,7 +43,7 @@
 > si aggiorna più. Ogni sua riga aperta ha qui una riga nuova, oppure sta fra le
 > chiuse.
 
-**Ultimo aggiornamento**: 2026-10-23, su `main` a `36d03e6` (merge della #234).
+**Ultimo aggiornamento**: 2026-10-23, su `main` a `9334a85` (merge della #277), con il triage delle chat di Claude.ai (P27-P29); P28 aggiornata dalla #287.
 Ogni riga è stata rimisurata sul repo e sul ramo di gruppo
 `campaign-group-rumblingstone` (`ce34599`).
 
@@ -74,6 +74,8 @@ Ogni riga è stata rimisurata sul repo e sul ramo di gruppo
 | ⬜ | **P24 · CICLO-DI-SESSIONE, la Fase 0** (D1-D6 decise il 2026-09-30) | agente | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | la Fase 0 |
 | ⬜ | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | agente | [DRAPPO](PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
 | ⬜ | **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | agente | `ruff.toml` | dopo il merge della #264 |
+| ⬜ | **P27 · I nomi dell'Elsir Vale rimasti nel testo di gioco**: il triage delle chat dice «sostituiti da Cannath», ma «Elsir» compare ancora in ~30 file di contenuto. Molte righe sono note d'adattamento e vanno tenute (README, glossario); alcune sono in finzione e contraddicono il canone: `Bestiario/png/Tempestas/Tempestas.md` («le città dell'Elsir Vale e del Cannath Vale», come se fossero due valli), `campaign/state.md` («Elsir Crossroads / Channath Crocevia»), `ARC08-01-GUIDA-DM.md`, gli archi 00 e 09 | agente | triage chat 2026-10-23, chat 15 | censire le righe, separare note d'adattamento e finzione, correggere solo la finzione |
+| 🙋 | **P29 · Le chat di Claude.ai, la parte che solo il DM può fare**: archiviare a mano le 24 chat del triage (nessuno strumento qui le raggiunge, né i loro allegati) e ripetere la ricerca dentro gli altri progetti di Claude.ai, che il triage non ha visto | DM | triage chat 2026-10-23, «Note oneste» | archiviare; dire se esistono altri progetti RumblingStone |
 | 🟡 | **P28 · L'arco 05 (la Stanza Runica) viveva solo in PDF**: trascritto in `05_aa-stanza-runica/ARC05-STANZA-RUNICA-TRASCRIZIONE.md` coi numeri dei tre PDF; il canone resta `campaign/lore/campaign-chronicle.md`. Sei divergenze segnate sulla riga e non decise: i funghi (i PDF aiutano la druida, il canone li fa bruciare e Hella perde il micelio), Thorek Forgiamartello, la Gemma del Legame Spirituale, ricompense e PX, i nomi tolkieniani delle rune, i numeri in contrasto fra i PDF | DM | [ARCHI-SENZA-TESTO](RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §3.6 e D1-D6 | una risposta per voce; l'agente la porta nella trascrizione e nella cronaca |
 | ⬜ | **P30 · Gli altri archi senza testo, e cosa si è perso nell'import**: 06, 07, 10 senza perdite; mai arrivati nei markdown l'Orrore Palustre d'Ombra e Zanna (03), lo scontro davanti al tempio e il warlock (03), gli appunti d'apertura di `campagna_flusso.txt` (00), il duergar fuggito (02-03), il Grell Patriarca (01), l'Antenato Nanico e la chierica di Lolth (04); le trascrizioni di manuali altrui (01, 03) da non convertire | agente, con D7-D12 al DM | [ARCHI-SENZA-TESTO](RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §5 | P30-a, le schede che mancano nel Bestiario; poi P30-b dopo D7-D11 |
 
@@ -96,6 +98,7 @@ CHANGELOG resta.
 | ✅ | Il lotto 7 di AVVENTURE-COMMUNITY, la qualità misurabile, con Stanza contro spaCy (#264 con dentro la #270; ADR-0101) | #264 unita il 2026-10-23 (`bfe0e39`); D4-D6 decise lo stesso giorno, il seguito è P02 |
 | ✅ | Le piante di Rethmar, Dauth e Channathgate e gli strumenti delle mappe nel repo (ADR-0102) | #276 (`28eca2c`) e #280 (`8119333`), 2026-10-23 |
 | ✅ | La PR del LLM locale (ADR-0089) | #234 unita il 2026-10-23 (`36d03e6`); il seguito è P04 |
+| ✅ | Le 24 chat di Claude.ai fuori dai progetti (triage del 2026-10-23) | 24 percorsi su 24 trovati su `main` a `9334a85`; assorbite o superate. Restano P27 (nomi Elsir), P28 (arco 05, ora trascritto dalla #287) e P29 (archiviazione e altri progetti, del DM) |
 | ✖ | La pianta di Dauth esportata da Watabou (RESA-ASSET R5) | abbandonata per decisione del DM (2026-10-22): le città della valle entrano solo con le piante del generatore del repo (#269, #271, #272) |
 | 🔀 | Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi, 568 | da 568 a 44: il Bestiario è a 0 con la #241 (ADR-0091) e le #247-#248. Il resto è P16 |
 | 🔀 | Le quattro revisioni della prova su ARC-08 (`plans/scrittura/revisioni-pilota-ARC08/`) | superate se il DM dice sì a MASTER-DEF D6 (la r1 di `hammerfist_encounters` scartata, i master assorbono gli altri file). Restano dentro P07 |
