@@ -140,6 +140,13 @@ jobs:
           python scripts/validate_pg.py
           python scripts/render_pg.py --check
 
+      # Il debito [INFERRED] dei documenti vivi non sale (ripreso dalla #99,
+      # lotto G4; ADR-0088). Canale testing (ADR-0099): non blocca finché il DM
+      # non lo promuove. Se sale per una ragione: --update-baseline nello stesso commit.
+      - name: Ratchet dei [INFERRED] aperti — non bloccante (ADR-0088, testing)
+        continue-on-error: true
+        run: python scripts/inventory_inferred.py --check
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: python scripts/validate_maps.py
 
@@ -291,6 +298,7 @@ jobs:
 
       - name: DM tool smoke tests
         run: |
+          python scripts/inventory_inferred.py --help > /dev/null
           python scripts/suggest_encounter.py --help > /dev/null
           python scripts/suggest_loot.py --help > /dev/null
           python scripts/suggest_map.py --help > /dev/null
