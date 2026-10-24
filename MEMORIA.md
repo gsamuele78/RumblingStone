@@ -66,7 +66,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P02 · AVVENTURE-COMMUNITY 7c**: D4-D6 decise dal DM il 2026-10-23 e applicate (ARC-08 allineato al Bestiario nella #286, possessivo vietato solo sul corpo, fronti e orologi canone da ARC-08). Resta il primo… | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) §Decisioni | il thread di ARC-08, col prossimo master |
 | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
-| **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
+| **P05 · La #99 e lo schedario dei PG**: #99 chiusa il 2026-10-24 (ADR-0088 accettata, scelta A); 4g-1 su `main` con la #278; i tre pezzi rimasti ripresi (§4.14); 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 §4.13-§4.14 | 4g-2: i valori delle caratteristiche dalle schede del DM, con un modulo |
 
 ## 🙋 Aspetta il DM: 10
 
@@ -119,6 +119,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
 | 2026-10-23 | INVENTARIO-GEMINI-AISTUDIO | inventario di Drive contro il repo (DM: «vedere se ci sono dei contenuti su gem… | 🟡 182 file guardati, circa 45 della campagna. I `.md` finali di Hammerfist sono nel repo (97-99%); mancano `battle_stats_maps.md`, tre mini-boss e il patrono T… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7 chiuso: D4-D6 del DM (residui di coerenza al Bestiario, possessivo viet… | ✅ lotto 7 completo; l'allineamento di ARC-08 al Bestiario è nella #286 |
@@ -130,7 +131,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7i: la catena della prosa ha un ingresso solo (richiesta del DM: integrar… | 🟡 `dm.py prosa` mette in fila i dieci script; spaCy e LanguageTool nel registro, così `doctor` li vede; quattro diagrammi nuovi (catena, tre sequenze, dipenden… |
-| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7e, correzione dopo il merge con main: `voto_scrittura` resta | ✅ La #234 (ADR-0089) ha portato su main `banco_prosa_locale`, che fa votare le corse del modello locale a `voto_scrittura`: toglierlo spezzava quel flusso. Il… |
 
 ## Le misure che si portano dietro
 

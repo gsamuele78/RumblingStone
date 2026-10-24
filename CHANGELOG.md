@@ -18,6 +18,12 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/inventory_inferred.py`, canale testing (ADR-0088, ADR-0099): conta i
+  marcatori INFERRED aperti separandoli da quelli dei piani e dei changelog; in CI
+  `--check` non bloccante contro `docs/audit/inferred-baseline.json` (260).
+  Ripreso dalla PR #99, chiusa il 2026-10-24.
+- La regola del cambio d'autore delle echi nella skill di stile
+  (`consequence-echoes.md` §1-bis), ripresa dalla PR #99.
 - `dm.py maps pianta`: il tema «pianta» delle mappe tattiche, nello stile delle
   piante delle città, in `rendered-pianta/` (ADR-0102). ARC-07 l'ha adottato.
 - `dm.py maps citta [rethmar|dauth|channathgate] [--check]` e
