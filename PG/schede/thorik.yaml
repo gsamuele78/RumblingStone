@@ -10,7 +10,9 @@ schema_version: 1
 pg: Thorik
 
 caratteristiche:
-  for: {base: null, attuale: null, attestato_da: null}
+  # FOR 20 è il numero del modulo al tavolo (Sentinella, chi porta il corpo).
+  # Il lotto 4g-2 lo prende così; se comprende un oggetto, lo dice il DM.
+  for: {base: 20, attuale: 20, attestato_da: "07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md"}
   # La sola catena attestata per intero: il modulo scrive «DES: 10 → 8 (-2 Corona)»
   # quando la indossa, e il rito dello Smeraldo toglie altri 2.
   des: {base: 10, attuale: 6, attestato_da: "07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md"}
