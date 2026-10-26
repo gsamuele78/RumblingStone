@@ -118,9 +118,9 @@ def rifai_m7c(d: dict) -> dict:
     d["evoluzione"].append({
         "stato": "I · il barile",
         "trigger": "i PG lasciano cadere dall'alto il barile d'olio con le fiale della fenice",
-        "griglia": "dove cade (1d8 per la direzione, 1d4−1 quadretti dalla casella scelta): l'olio "
-                   "copre i quadretti entro 6 m dall'impatto, il telo si squarcia; se prende il "
-                   "colmo (riga 12) la tenda crolla",
+        "griglia": "dove cade (1d8 per la direzione, 1d4−1 quadretti dalla verticale): l'olio "
+                   "copre tutto il pavimento della tenda, il telo si squarcia; se prende un palo o "
+                   "il colmo (riga 12) la tenda crolla subito",
         "effetto": "oggetto in caduta 15d6 su chi sta nella casella; due palle di fuoco da 6d6 "
                    f"(Riflessi CD 14); olio in fiamme, fumo, crollo: le regole sono in {SUPPLEMENTO}"})
     return d
@@ -257,8 +257,8 @@ def costruisci_m7h(c: dict) -> dict:
         "un gruppo e l'altro (plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md, la "
         "parte sui campi mongoli e d'avventura).",
         f"Il barile: i PG volano a 48 m, invisibili. La deviazione, la caduta, l'olio e il fuoco sono in "
-        f"{SUPPLEMENTO}. L'olio e le palle di fuoco arrivano a 6 m dall'impatto: nessuna tenda della "
-        "Guardia è così vicina al telo del comando.",
+        f"{SUPPLEMENTO}. All'aperto le palle di fuoco arrivano a 6 m dall'impatto e l'olio a 7: "
+        "nessuna tenda della Guardia è così vicina al telo del comando.",
     ]
     h["tattiche"] = [
         "**Il campo si sveglia** (Scena 8): il boato si sente in tutto il campo. Le sentinelle dei "
