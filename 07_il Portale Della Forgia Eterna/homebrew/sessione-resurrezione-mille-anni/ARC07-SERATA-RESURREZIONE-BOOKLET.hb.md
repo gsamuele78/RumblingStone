@@ -4046,11 +4046,13 @@ come i PG, per il fianco est.
 
 **Com'è fatto il campo.** Ha due facce. Fuori stanno i clan degli orchi, una
 quindicina di bande: ripari di pelle bassi e storti, a gruppi attorno al fuoco
-della banda, con un tratto vuoto fra un clan e l'altro. Al centro c'è il
-quartiere hobgoblin, chiuso da uno steccato: tende uguali da otto soldati, in
-file, lungo vie diritte, e in mezzo una piazza sgombra con la tenda del
-generale, sola, e le guardie in una tenda loro. È il quartiere degli squadroni
-che «marciano al passo». La tenda del comando è un padiglione a tre pali,
+della banda, con un tratto vuoto fra un clan e l'altro. Al centro c'è il campo
+del capo, senza recinto, come quello di un khan o di un khal: la tenda del
+generale sola in mezzo a uno spiazzo di terra battuta, il fuoco del consiglio
+e i pali dei trofei davanti alla soglia, e attorno, a venti o trenta metri,
+le lance della Guardia della Mano, quattro tende da otto attorno a ogni
+fuoco, a gruppi staccati. Gli squadroni «marciano al passo», ma dormono come
+un'orda. La tenda del comando è un padiglione a tre pali,
 13,5 × 7,5 m: le misure, e da dove vengono, sono in Appendice D (M7-C).
 
 ### ZONA 3 — Le Mura all'Alba (l'assalto)
@@ -7858,9 +7860,9 @@ LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 
 ▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
 confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
 del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
-della banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato ·
-▪▪ le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗
-la tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
+fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
+la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vatore ·
 ⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
@@ -7955,12 +7957,13 @@ Hammerfist dall'alto in basso.
 
  La tenda misura 13,5 m × 7,5 m di pavimento, 16,5 m ×
 10,5 m col telo: un padiglione di pelle nera a tre pali in fila sotto il colmo,
-alto 6 m al colmo e 3 m alle pareti. Sta sola in mezzo alla piazza del
-comando, 40,5 × 34,5 m di terra battuta chiusa da uno steccato con quattro
-varchi: la cornice della mappa è lo steccato. Fuori, su M7-H, ci sono la
-corsia, le file di tende delle guardie hobgoblin e, a ovest, i ripari dei clan
-degli orchi attorno ai loro fuochi. Se il tavolo bombarda la tenda dall'alto,
-le regole sono in `ARC07-BARILE-SULLA-TENDA.md`.
+alto 6 m al colmo e 3 m alle pareti. Sta sola in mezzo allo spiazzo del
+capo, terra battuta senza recinto, come il campo di un capo nomade: davanti
+alla soglia il fuoco del consiglio, ridotto a brace, e i pali dei trofei; sul
+bordo, staccate, le tende dei servi e del bottino. Su M7-H, a venti o trenta
+metri, ci sono le lance della Guardia della Mano attorno ai loro fuochi e, a
+ovest, i ripari dei clan degli orchi. Se il tavolo bombarda la tenda
+dall'alto, le regole sono nel supplemento «Il barile sulla tenda» (ARC-07).
 
 **Dove sta chi, se la griglia non è stampata.** I PG arrivano da nord, per la
 via, a M2–N3. La soglia è a nord, M9–N9, in piena luce del braciere a L10. I
@@ -7971,7 +7974,7 @@ Balvar è sullo sgabello a R14, nel fondo buio Q13–R14. Il telo est, «il telo
 sinistra», va da S10 a S14; il telo del glifo è quello sopra il seggio,
 N15–P15. Grask è seduto fuori, a P16, due quadretti dietro il seggio, e il
 sacerdote dorme sulla sua stuoia, a N14. Nella loro tenda, X4–Y5, a 9 m dal
-telo, nell'angolo nord-est della piazza, dormono le due guardie del turno dopo.
+telo, sul bordo nord-est dello spiazzo, dormono le due guardie del turno dopo.
 
 <!-- /pagina -->
 

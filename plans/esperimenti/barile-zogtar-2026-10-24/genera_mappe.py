@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Rifà i contratti JSON di M7-C (la piazza del comando) e M7-H (il quartiere attorno).
+"""Rifà i contratti JSON di M7-C (lo spiazzo del capo) e M7-H (il campo attorno).
 
-Il DM, 2026-10-24: la tenda e il campo devono essere coerenti, «come gli
-accampamenti romani o dei barbari», senza tende attaccate a quella di Zog'tar.
+Il DM, 2026-10-24, in due tempi. Prima: la tenda e il campo devono essere
+coerenti, senza tende attaccate a quella di Zog'tar. Poi: niente steccato,
+sono barbari, orchi e hobgoblin; il modello è il campo di un capo nomade, il
+khalasar di un khal, l'ordo di un khan, il campo di una banda gota.
 
 - M7-C resta la mappa dello scontro e tiene la tenda dov'era (stesse coordinate
-  di tutte le scene), ma la sua cornice diventa lo steccato: la piazza sgombra
-  è di 40,5 × 34,5 m, la tenda del turno dopo sta a 9 m nell'angolo nord-est,
-  e le file di tende e i ripari degli orchi escono dalla mappa.
-- M7-H è nuova: lo stesso steccato con il quartiere attorno, 66 × 60 m, per il
-  barile, la fuga dalla tenda in fiamme e i rinforzi che arrivano dalle vie.
+  di tutte le scene). Attorno c'è lo spiazzo del capo, terra battuta senza
+  recinto: il fuoco del consiglio ridotto a brace davanti alla soglia, i pali
+  dei trofei, il bottino ammucchiato, e sul bordo un anello largo di tende dei
+  servi, staccate l'una dall'altra; la tenda del turno dopo resta a X4-Y5.
+- M7-H è il campo attorno, 66 × 60 m: oltre lo spiazzo, a 20-30 m dal telo, le
+  lance della Guardia della Mano, quattro tende attorno a un fuoco, a gruppi
+  staccati; a ovest i clan degli orchi coi ripari storti; vie battute che
+  partono a raggiera dallo spiazzo, niente file diritte.
+
+Lo script parte dal contratto di M7-C com'è su disco ed è idempotente: toglie
+quello che ha messo lui (o lo steccato della PR #261) e lo rimette.
 
 Uso (dalla radice del repo):
     python3 plans/esperimenti/barile-zogtar-2026-10-24/genera_mappe.py
@@ -26,79 +34,95 @@ MAPPE = RADICE / "07_il Portale Della Forgia Eterna" / "Mappe"
 M7C = MAPPE / "ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json"
 M7H = MAPPE / "ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO.json"
 
-LARGH, ALT = 27, 23          # M7-C: la piazza dentro lo steccato
+LARGH, ALT = 27, 23          # M7-C: lo spiazzo del capo
 DX, DY = 8, 8                # dove sta M7-C dentro M7-H
 H_LARGH, H_ALT = 44, 40      # M7-H
 
+LUCE = "Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
+SUPPLEMENTO = "il supplemento «Il barile sulla tenda»"
 
-def steccato() -> list[dict]:
-    """Lo steccato corre sul bordo di M7-C, con quattro varchi sulle vie."""
-    s = "Steccato di pali appuntiti, alto 1,5 m: chiude la piazza del comando"
-    return [
-        {"type": "🧱", "line": [[0, 0], [11, 0]], "label": s},
-        {"type": "🧱", "line": [[15, 0], [26, 0]]},
-        {"type": "🧱", "line": [[0, 22], [12, 22]]},
-        {"type": "🧱", "line": [[16, 22], [26, 22]]},
-        {"type": "🧱", "line": [[0, 1], [0, 9]]},
-        {"type": "🧱", "line": [[0, 13], [0, 21]]},
-        {"type": "🧱", "line": [[26, 1], [26, 9]]},
-        {"type": "🧱", "line": [[26, 13], [26, 21]]},
-    ]
+# Le tende dei servi, sul bordo dello spiazzo: staccate, a 7,5-12 m dal telo.
+TENDE_SERVI = [[1, 1, 2, 2], [6, 0, 2, 2], [19, 0, 2, 2], [24, 7, 2, 2], [24, 15, 2, 2],
+               [21, 20, 2, 2], [9, 21, 2, 2], [3, 19, 2, 2], [0, 14, 2, 2], [0, 5, 2, 2]]
+
+
+def e_della_tenda(s: dict) -> bool:
+    """I pezzi della tenda del comando, che non si toccano."""
+    if s["type"] != "🎪":
+        return True
+    return "line" in s or "Telo" in s.get("label", "")
 
 
 def rifai_m7c(d: dict) -> dict:
     d = copy.deepcopy(d)
+    interno = next(r for r in d["regions"] if r["terrain"] == "⬜")
     d["regions"] = [
-        {"terrain": "🟫", "rect": [1, 1, 25, 21],
-         "label": "La piazza del comando: terra battuta, sgombra, dentro lo steccato"},
-        {"terrain": "🟫", "rect": [12, 0, 3, 1], "label": "Il varco nord, sulla via per la fortezza"},
-        {"terrain": "🟫", "rect": [13, 22, 3, 1], "label": "Il varco sud, sulla via per le colline"},
-        {"terrain": "🟫", "rect": [26, 10, 1, 3], "label": "Il varco est"},
-        {"terrain": "🟫", "rect": [0, 10, 1, 3], "label": "Il varco ovest, verso i clan degli orchi"},
-        d["regions"][-1],  # l'interno della tenda, invariato
+        {"terrain": "🟫", "rect": [6, 2, 15, 19],
+         "label": "Lo spiazzo del capo: terra battuta dagli zoccoli e dai piedi, senza recinto"},
+        {"terrain": "🟫", "rect": [4, 4, 19, 15]},
+        {"terrain": "🟫", "rect": [2, 7, 23, 9]},
+        {"terrain": "🟫", "rect": [12, 0, 3, 2], "label": "La via battuta verso la fortezza"},
+        {"terrain": "🟫", "rect": [13, 21, 3, 2], "label": "La via battuta verso le colline"},
+        {"terrain": "🟫", "rect": [25, 10, 2, 3], "label": "La via battuta verso est"},
+        {"terrain": "🟫", "rect": [0, 10, 2, 3], "label": "La via battuta verso i clan degli orchi"},
+        interno,
     ]
     tenuti = [s for s in d["structures"]
-              if s["type"] != "🧱" and not (s["type"] == "🎪" and "rect" in s
-                                             and s["rect"][2:] in ([2, 2], [2, 1], [1, 2])
-                                             and s.get("label") != "Telo del glifo")]
-    tenuti.append({"type": "🎪", "rect": [23, 3, 2, 2],
-                   "label": "Tenda del turno dopo"})
-    d["structures"] = steccato() + tenuti
-    nuovi_fuochi = {
-        "Fuoco del clan": None,
-    }
-    hz = []
-    for h in d["hazards"]:
-        if h.get("label") in nuovi_fuochi:
-            continue
-        hz.append(h)
-    luce = "Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
-    hz.insert(3, {"type": "🔥", "at": [2, 9], "label": "Fuoco del varco ovest",
-                  "effect": f"le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. {luce}"})
-    hz.insert(4, {"type": "🔥", "at": [24, 13], "label": "Fuoco del varco est",
-                  "effect": f"le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. {luce}"})
+              if s["type"] not in ("🧱", "🗿", "📦") and e_della_tenda(s)]
+    servi = [{"type": "🎪", "rect": r} for r in TENDE_SERVI]
+    servi[0]["label"] = "Tende dei servi e del bottino del capo: dentro non ci sono soldati"
+    d["structures"] = tenuti + servi + [
+        {"type": "🎪", "rect": [23, 3, 2, 2], "label": "Tenda del turno dopo"},
+        {"type": "🗿", "at": [10, 5],
+         "label": "Palo dei trofei: teschi di nani, code di lupo, lo stendardo della Mano Rossa"},
+        {"type": "🗿", "at": [16, 5], "label": "Palo dei trofei"},
+        {"type": "📦", "at": [5, 7],
+         "label": "Il bottino della valle, ammucchiato davanti al capo perché i capiclan lo vedano"},
+    ]
+    hz = [h for h in d["hazards"]
+          if h["type"] != "🔥" or h.get("label") == "Falò della guardia"]
+    hz[1:1] = [
+        {"type": "🔥", "at": [13, 4], "label": "Il fuoco del consiglio",
+         "effect": "davanti alla soglia, dove il capo parla ai capiclan; a notte fonda è brace: "
+                   "chi entra nella cella prende 1d6 da fuoco, la luce è fioca e solo entro 3 m"},
+        {"type": "🔥", "at": [3, 11], "label": "Fuoco delle sentinelle ovest",
+         "effect": f"due sentinelle sulla via battuta: chi entra nella cella prende 1d6 da fuoco. {LUCE}"},
+        {"type": "🔥", "at": [23, 11], "label": "Fuoco delle sentinelle est",
+         "effect": f"due sentinelle sulla via battuta: chi entra nella cella prende 1d6 da fuoco. {LUCE}"},
+    ]
     d["hazards"] = hz
     for m in d["movements"]:
         if m["name"].startswith("Le due guardie del turno dopo"):
             m["path"] = [[23, 5], [20, 16], [14, 15]]
-    d["tattiche"] = [t.replace("nella loro tenda, V11–W12", "nella loro tenda, X4–Y5, a 9 m dal telo")
-                     for t in d["tattiche"]]
+    sost = [
+        ("nella loro tenda, V11–W12", "nella loro tenda, X4–Y5, a 9 m dal telo"),
+        ("passano lo steccato, fanno quadrato nella piazza attorno al telo",
+         "entrano nello spiazzo, fanno quadrato attorno al telo"),
+        ("Le frecce dei varchi sono una proposta", "Le frecce delle vie battute sono una proposta"),
+    ]
+    tt = []
+    for t in d["tattiche"]:
+        for a, b in sost:
+            t = t.replace(a, b)
+        tt.append(t)
+    d["tattiche"] = tt
     d["notes"] = [n for n in d["notes"] if not n.startswith("Com'è fatto il campo")]
     d["notes"].append(
-        "Com'è fatto il campo qui attorno: la cornice di questa mappa è lo steccato. Dentro c'è "
-        "solo la piazza del comando, 40,5 × 34,5 m di terra battuta, con la tenda sola nel mezzo, "
-        "come il pretorio di un campo romano; l'unica altra tenda è quella del turno dopo, a 9 m, "
-        "nell'angolo nord-est. Fuori dai quattro varchi corre una corsia di 3 m, poi le file di "
-        "tende hobgoblin a nord, a est e a sud, e i clan degli orchi a ovest: sono su M7-H, "
-        "che serve per il barile e per i rinforzi.")
+        "Com'è fatto il campo qui attorno: come il campo di un capo nomade, senza recinto. La tenda "
+        "sta sola in mezzo allo spiazzo del capo, terra battuta larga una quarantina di metri; davanti "
+        "alla soglia il fuoco del consiglio, ridotto a brace, e i due pali dei trofei. Sul bordo, "
+        "staccate l'una dall'altra, le tende dei servi e del bottino, senza soldati, e quella del "
+        "turno dopo, a 9 m dal telo. Le lance della Guardia della Mano dormono più in là, a 20-30 m, "
+        "attorno ai loro fuochi, e i clan degli orchi a ovest: sono su M7-H.")
+    d["evoluzione"] = [e for e in d["evoluzione"] if not e["stato"].startswith("I ·")]
     d["evoluzione"].append({
         "stato": "I · il barile",
         "trigger": "i PG lasciano cadere dall'alto il barile d'olio con le fiale della fenice",
-        "griglia": "dove cade: pozza d'olio di 3 × 3 quadretti attorno all'impatto, schizzi fino a "
-                   "2 quadretti, il telo squarciato; se prende il colmo (riga 12) la tenda crolla",
-        "effetto": "palle di fuoco da 6d6 (Riflessi CD 14), oggetto in caduta 15d6 su chi sta "
-                   "nella casella, olio in fiamme, fumo, crollo: tutte le regole in "
-                   "ARC07-BARILE-SULLA-TENDA.md"})
+        "griglia": "dove cade (1d8 per la direzione, 1d4−1 quadretti dalla casella scelta): l'olio "
+                   "copre i quadretti entro 6 m dall'impatto, il telo si squarcia; se prende il "
+                   "colmo (riga 12) la tenda crolla",
+        "effetto": "oggetto in caduta 15d6 su chi sta nella casella; due palle di fuoco da 6d6 "
+                   f"(Riflessi CD 14); olio in fiamme, fumo, crollo: le regole sono in {SUPPLEMENTO}"})
     return d
 
 
@@ -121,22 +145,31 @@ def sposta_voce(v: dict) -> dict:
     return v
 
 
-def tende_hobgoblin() -> list[dict]:
-    """Contubernium: 3 × 3 m, otto soldati. File diritte, corsie di 1,5 m fra le tende."""
-    t = []
-    xs_nord = [0, 3, 6, 9, 12, 15, 25, 28, 31, 34, 37, 40]
-    for i, x in enumerate(xs_nord):
-        if x < 9:
-            continue  # l'angolo nord-ovest è dei clan
-        for y in (0, 3):
-            t.append({"type": "🎪", "rect": [x, y, 2, 2]} | {})
-    for y in (9, 12, 15, 22, 25, 28):
-        for x in (38, 41):
-            t.append({"type": "🎪", "rect": [x, y, 2, 2]})
-    for x in (9, 12, 15, 18, 25, 28, 31, 34, 37, 40):
-        for y in (34, 37):
-            t.append({"type": "🎪", "rect": [x, y, 2, 2]})
-    return t
+# Le lance della Guardia della Mano: quattro tende da otto attorno al fuoco della
+# lancia, a gruppi staccati, sul bordo dello spiazzo. Ogni gruppo è (cx, cy, lati),
+# dove i lati dicono quali delle quattro tende ci sono (o, e, n, s).
+LANCE = [
+    (13, 4, "oen"), (29, 4, "oen"), (39, 4, "oen"),
+    (39, 12, "oens"), (39, 26, "oens"),
+    (13, 35, "oes"), (30, 35, "oes"), (39, 36, "n"),
+]
+VIE = (range(19, 24), range(17, 22))  # colonne della via nord/sud, righe della via est/ovest
+
+
+def lance_hobgoblin() -> tuple[list[dict], list[dict]]:
+    """Tende 3 × 3 m attorno al fuoco della lancia, con 3 m di vuoto fra il fuoco e il telo."""
+    tende, fuochi = [], []
+    for i, (cx, cy, lati) in enumerate(LANCE):
+        pos = {"o": (cx - 4, cy - 1), "e": (cx + 3, cy - 1), "n": (cx - 1, cy - 4), "s": (cx - 1, cy + 3)}
+        for lato in lati:
+            x, y = pos[lato]
+            tende.append({"type": "🎪", "rect": [x, y, 2, 2]})
+        fuochi.append({"type": "🔥", "at": [cx, cy], "label": "Fuoco della lancia" if i else
+                       "Fuoco della lancia della Guardia della Mano",
+                       "effect": f"attorno dormono otto hobgoblin per tenda: chi entra nella cella prende "
+                                 f"1d6 da fuoco. {LUCE}"})
+    tende[0]["label"] = "Tende della Guardia della Mano, otto hobgoblin per tenda, a gruppi attorno al fuoco"
+    return tende, fuochi
 
 
 def clan_orchi() -> tuple[list[dict], list[dict]]:
@@ -162,7 +195,7 @@ def clan_orchi() -> tuple[list[dict], list[dict]]:
 def costruisci_m7h(c: dict) -> dict:
     h = {
         "schema_version": "1.0",
-        "title": "M7-H — Il quartiere del comando: la piazza e le tende attorno (notte, ≈372 DR)",
+        "title": "M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan (notte, ≈372 DR)",
         "scale_m_per_square": 1.5,
         "map_size": [H_LARGH, H_ALT],
         "base_terrain": "🟩",
@@ -173,75 +206,66 @@ def costruisci_m7h(c: dict) -> dict:
         "quota": c["quota"],
         "dislivello": c["dislivello"],
     }
-    regioni = [
-        {"terrain": "🟫", "rect": [6, 6, 31, 2], "label": "La corsia attorno allo steccato, larga 3 m"},
-        {"terrain": "🟫", "rect": [6, 31, 31, 2]},
-        {"terrain": "🟫", "rect": [6, 8, 2, 23]},
-        {"terrain": "🟫", "rect": [35, 8, 2, 23]},
-        {"terrain": "🟫", "rect": [20, 0, 3, 6], "label": "La via nord, larga 4,5 m, verso la fortezza"},
-        {"terrain": "🟫", "rect": [21, 33, 3, 7], "label": "La via sud, verso le colline"},
-        {"terrain": "🟫", "rect": [37, 18, 7, 3], "label": "La via est"},
-        {"terrain": "🟫", "rect": [0, 18, 6, 3], "label": "La via ovest, fra i clan degli orchi"},
-        {"terrain": "🟫", "rect": [8, 2, 12, 1], "label": "Corsia fra le file di tende"},
-        {"terrain": "🟫", "rect": [24, 2, 20, 1]},
-        {"terrain": "🟫", "rect": [8, 36, 13, 1]},
-        {"terrain": "🟫", "rect": [24, 36, 20, 1]},
-        {"terrain": "🟫", "rect": [40, 8, 1, 10]},
-        {"terrain": "🟫", "rect": [40, 21, 1, 10]},
+    regioni = [sposta_voce(r) for r in c["regions"] if "label" not in r or "via battuta" not in r["label"]]
+    regioni += [
+        {"terrain": "🟫", "rect": [20, 0, 3, 8], "label": "La via battuta verso la fortezza"},
+        {"terrain": "🟫", "rect": [21, 31, 3, 9], "label": "La via battuta verso le colline"},
+        {"terrain": "🟫", "rect": [35, 18, 9, 3], "label": "La via battuta verso est"},
+        {"terrain": "🟫", "rect": [0, 18, 8, 3], "label": "La via battuta fra i clan degli orchi"},
     ]
-    for r in c["regions"]:
-        regioni.append(sposta_voce(r))
     h["regions"] = regioni
-    ripari, fuochi = clan_orchi()
-    h["structures"] = [sposta_voce(s) for s in c["structures"]] + tende_hobgoblin() + ripari
-    h["hazards"] = [sposta_voce(z) for z in c["hazards"] if z["type"] in ("🔥", "🏮", "🟪")] + fuochi + [
-        {"type": "🔥", "at": [21, 3], "label": "Fuoco del quartiere nord",
-         "effect": "un fuoco in mezzo alla via, lontano dai teli: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"},
-        {"type": "🔥", "at": [39, 19], "label": "Fuoco del quartiere est",
-         "effect": "come il fuoco del quartiere nord"},
-        {"type": "🔥", "at": [22, 37], "label": "Fuoco del quartiere sud",
-         "effect": "come il fuoco del quartiere nord"},
+    tende, fuochi_lance = lance_hobgoblin()
+    ripari, fuochi_clan = clan_orchi()
+    h["structures"] = [sposta_voce(s) for s in c["structures"]] + tende + ripari + [
+        {"type": "🐴", "at": [18, 38], "label": "I lupi da guerra della Guardia, legati ai picchetti"},
+        {"type": "📦", "at": [25, 1], "label": "Carri del bottino, senza buoi, lasciati dove si sono fermati"},
+        {"type": "📦", "at": [26, 1]},
+        {"type": "🗿", "at": [5, 17], "label": "Il palo degli sciamani degli orchi"},
     ]
+    h["hazards"] = [sposta_voce(z) for z in c["hazards"] if z["type"] in ("🔥", "🏮", "🟪")] \
+        + fuochi_lance + fuochi_clan
     unita = [sposta_voce(u) for u in c["units"] if not u["name"].startswith("I quattro PG")]
     unita.insert(0, {"faction": "PG", "name": "I PG in volo, invisibili, a 48 m sopra la tenda",
                      "token": "🔵", "at": [22, 18], "quantity": 4})
     unita += [
-        {"faction": "Orda", "name": "Squadra hobgoblin del quartiere nord, otto per tenda", "token": "🔴",
-         "at": [27, 2], "quantity": 8, "cr": "Guerriero 4"},
-        {"faction": "Orda", "name": "Squadra hobgoblin del quartiere sud", "token": "🔴",
-         "at": [27, 36], "quantity": 8, "cr": "Guerriero 4"},
+        {"faction": "Orda", "name": "Una lancia della Guardia della Mano, otto per tenda", "token": "🔴",
+         "at": [29, 6], "quantity": 24, "cr": "Guerriero 4"},
+        {"faction": "Orda", "name": "Una lancia della Guardia della Mano", "token": "🔴",
+         "at": [30, 33], "quantity": 24, "cr": "Guerriero 4"},
         {"faction": "Orda", "name": "Banda d'orchi del Corvo, attorno al fuoco", "token": "🔴",
          "at": [2, 13], "quantity": 20, "cr": "GS ½"},
-        {"faction": "Orda", "name": "Le sentinelle del varco est", "token": "🔴",
+        {"faction": "Orda", "name": "Le sentinelle della via est", "token": "🔴",
          "at": [37, 20], "quantity": 2, "cr": "Guerriero 4"},
     ]
     h["units"] = unita
     h["movements"] = [
         {"name": "Le ronde di orchi dalla via ovest (1d4+2 round)", "path": [[0, 19], [8, 19]], "color": "#e85d04"},
-        {"name": "Gli squadroni hobgoblin dalla via sud (2d4+2 round)", "path": [[22, 39], [22, 31]], "color": "#9d0208"},
-        {"name": "Gli squadroni hobgoblin dalla via nord (2d4+2 round)", "path": [[21, 0], [21, 8]], "color": "#9d0208"},
-        {"name": "Le sentinelle del varco est", "path": [[37, 19], [34, 19]], "color": "#d62828"},
+        {"name": "Le lance della Guardia dalla via sud (2d4+2 round)", "path": [[22, 39], [22, 31]], "color": "#9d0208"},
+        {"name": "Le lance della Guardia dalla via nord (2d4+2 round)", "path": [[21, 0], [21, 8]], "color": "#9d0208"},
+        {"name": "Le sentinelle della via est", "path": [[37, 19], [34, 19]], "color": "#d62828"},
         {"name": "Le due guardie del turno dopo", "path": [[31, 13], [28, 24], [22, 23]], "color": "#7b2cbf"},
     ]
     h["notes"] = [
-        "M7-H è M7-C con il quartiere attorno: la piazza è la stessa e le sue coordinate sono quelle "
+        "M7-H è M7-C con il campo attorno: lo spiazzo è lo stesso e le sue coordinate sono quelle "
         "di M7-C spostate di otto colonne e otto righe (la N12 di M7-C qui è V20).",
-        "Le vie sono larghe 4,5 m, le corsie fra le file 1,5 m, la corsia attorno allo steccato 3 m: "
-        "le misure del campo di Polibio ridotte a un'orda (plans/esperimenti/mappe-campo-2026-10-21/"
-        "RICERCA-ACCAMPAMENTI.md). Le tende hobgoblin sono da otto, 3 × 3 m, in file diritte; i "
-        "ripari degli orchi sono storti, attorno al fuoco della banda, con il vuoto fra un clan e l'altro.",
-        "Il barile: i PG volano a 48 m, invisibili. Lo sgancio, la deviazione, le fiale della fenice, "
-        "l'olio e il fuoco sono in ARC07-BARILE-SULLA-TENDA.md. Una palla di fuoco ha 6 m di raggio, "
-        "4 quadretti: dal palo centrale arriva al telo e a Grask solo se il barile devia verso sud.",
-        "Le tende hobgoblin più vicine sono a 12 m dal telo del comando, oltre lo steccato e la corsia: "
-        "nessuna palla di fuoco nata nella tenda ci arriva, e il fuoco non salta lo spiazzo.",
+        "Il modello è il campo di un capo nomade, non il castrum romano: niente recinto e niente file "
+        "diritte. La tenda del capo sta sola in mezzo allo spiazzo; attorno, a 20-30 m, le lance "
+        "della Guardia della Mano, quattro tende da otto attorno al fuoco della lancia, a gruppi "
+        "staccati; a ovest i clan degli orchi, ripari storti attorno al fuoco della banda, con il "
+        "vuoto fra un clan e l'altro. Le vie sono solo terra battuta, a raggiera dallo spiazzo.",
+        "Le misure: tende da otto di 3 × 3 m, 3 m di vuoto fra il fuoco e il telo, almeno 4,5 m fra "
+        "un gruppo e l'altro (plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md, la "
+        "parte sui campi mongoli e d'avventura).",
+        f"Il barile: i PG volano a 48 m, invisibili. La deviazione, la caduta, l'olio e il fuoco sono in "
+        f"{SUPPLEMENTO}. L'olio e le palle di fuoco arrivano a 6 m dall'impatto: nessuna tenda della "
+        "Guardia è così vicina al telo del comando.",
     ]
     h["tattiche"] = [
-        "**Il campo si sveglia** (Scena 8): il boato si sente in tutto il quartiere. Le sentinelle dei "
-        "varchi gridano e restano al loro posto; le ronde d'orchi arrivano dalla via ovest in 1d4+2 "
-        "round, gli squadroni hobgoblin da nord e da sud in 2d4+2. Finché Zog'tar è in piedi non "
-        "entrano nella piazza: fanno quadrato sulla corsia, fuori dallo steccato, e passano secchi e "
-        "coperte bagnate oltre i varchi.",
+        "**Il campo si sveglia** (Scena 8): il boato si sente in tutto il campo. Le sentinelle dei "
+        "fuochi gridano e restano al loro posto; le ronde d'orchi arrivano dalla via ovest in 1d4+2 "
+        "round, le lance della Guardia dalle vie nord e sud in 2d4+2, il tempo di svegliarsi e "
+        "armarsi. Finché Zog'tar è in piedi non vanno addosso alla tenda: fanno quadrato nello "
+        "spiazzo, a una decina di metri dal telo, e portano acqua e pelli bagnate.",
         "**Chi guarda in alto**: nessuno, al primo round. Dal secondo gli sciamani dei clan cercano "
         "chi ha lanciato, e chi ha *vedere invisibilità* guarda il cielo; a 48 m la scurovisione "
         "(18 m) non arriva, e le stelle non bastano per vedere un invisibile che non si muove.",
@@ -249,16 +273,15 @@ def costruisci_m7h(c: dict) -> dict:
     h["evoluzione"] = [
         {"stato": "I · il barile", "trigger": "il barile cade sulla tenda",
          "griglia": "la tenda brucia; lo spiazzo attorno resta sgombro",
-         "effetto": "allarme in tutto il quartiere; i rinforzi seguono le vie, non le corsie"},
-        {"stato": "J · i secondi barilotti", "trigger": "i PG lasciano cadere uno dei barilotti da 10 litri",
-         "griglia": "una pozza di 1 quadretto e schizzi attorno, dove cade",
-         "effetto": "sul varco o sulla via dove si ammassano i rinforzi, o sulla tenda del turno dopo: "
-                    "regole in ARC07-BARILE-SULLA-TENDA.md"},
+         "effetto": "allarme in tutto il campo; i rinforzi arrivano per le vie battute"},
+        {"stato": "J · i barilotti", "trigger": "i PG lasciano cadere uno dei barilotti da 10 litri",
+         "griglia": "l'olio copre i quadretti entro 3 m da dove cade",
+         "effetto": "su una via dove si ammassano i rinforzi, su una lancia che si sveglia, o sulla "
+                    f"tenda del turno dopo: le regole sono in {SUPPLEMENTO}"},
     ]
     h["note_dm"] = [
-        "**Il quartiere misura 66 × 60 m**: la piazza del comando, 40,5 × 34,5 m dentro lo steccato, "
-        "con attorno la corsia di 3 m e la prima fila di tende. Oltre il bordo il campo continua per "
-        "mezzo chilometro in ogni direzione (M7-A)."]
+        "**Il campo qui misura 66 × 60 m**: lo spiazzo del capo, con attorno la Guardia della Mano e "
+        "i primi clan. Oltre il bordo il campo continua per mezzo chilometro in ogni direzione (M7-A)."]
     h["taglie"] = [{"at": sposta(t["at"]), "taglia": t["taglia"]} for t in c.get("taglie", [])]
     return h
 
