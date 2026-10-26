@@ -90,6 +90,40 @@ def d(n: int, f: int, rng: random.Random) -> int:
     return sum(rng.randint(1, f) for _ in range(n))
 
 
+# ---------------------------------------------------------------- la quota
+
+SCALA_DADI = [1, 2, 3, 4, 6, 8, 10, 12]   # 1 vuol dire nessuna deviazione
+
+
+def piedi(quota_m: float) -> float:
+    return quota_m / 0.3048
+
+
+def dadi_oggetto_in_caduta(quota_m: float, libbre: float) -> int:
+    """SRD 3.5, «Falling Objects»: quanti d6 fa a chi sta sotto."""
+    ft = piedi(quota_m)
+    if libbre >= 200:
+        return 0 if ft < 10 else min(20, int(libbre // 200) + int((ft - 10) // 10))
+    passo = next(p for lim, p in ((100, 20), (50, 30), (30, 40), (10, 50), (5, 60), (1, 70))
+                 if libbre > lim)
+    return min(20, int(ft // passo))
+
+
+def dadi_caduta_propria(quota_m: float) -> int:
+    """Il danno che prende l'oggetto stesso: 1d6 ogni 3 m, come chi cade (SRD)."""
+    return min(20, int(piedi(quota_m) // 10))
+
+
+def dado_deviazione(quota_m: float, pesante: bool = True, visto: bool = True) -> int:
+    """Un gradino ogni 15 m di caduta; uno in più se è leggero, uno se è al buio."""
+    gradino = int(quota_m // 15) + (0 if pesante else 1) + (0 if visto else 1)
+    return SCALA_DADI[min(gradino, len(SCALA_DADI) - 1)]
+
+
+def tempo_di_caduta(quota_m: float) -> float:
+    return math.sqrt(2 * quota_m / 9.81) * 1.01
+
+
 DIREZIONI = [(0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1)]
 
 
@@ -123,8 +157,10 @@ class Parametri:
     dadi_caduta: int = 15        # 15d6 sopra i 200 libbre, 7d6 sotto (SRD 3.5)
     cd_fiala: int = 14
     massiccio_unico: bool = True  # le fiale contano come un'esplosione sola per i 50 danni
+    quota: float | None = None    # se c'è, decide i dadi della caduta e della deviazione
     inzuppato_brucia: bool = True  # chi è nel cuore prende fuoco senza TS (variazione)
     forno: bool = True            # la tenda fa da forno: chi è sotto il telo è nell'area (variazione)
+    rostri: bool = True           # le lame sotto la botte: 1d4 da 1d8 sul colpo diretto (variazione)
 
 
 RAGGIO_FUOCO = 6.0   # palla di fuoco: 20 piedi
@@ -142,7 +178,14 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     crs = disposizione()
     for cr in crs:
         cr.pf_ora = cr.pf
-    esito: dict = {"colmo": False}
+    esito: dict = {"colmo": False, "intera": False}
+    if par.quota is not None:
+        quota = par.quota
+        par = Parametri(**{**par.__dict__, "dadi_caduta": dadi_oggetto_in_caduta(quota, 205),
+                           "dado_deviazione": dado_deviazione(quota), "quota": None})
+        # La botte si apre se il danno della sua caduta passa durezza 5 e 10 pf (SRD).
+        # Se regge, le palle di fuoco la aprono, e l'olio esce solo al round dopo.
+        esito["intera"] = d(dadi_caduta_propria(quota), 6, rng) - 5 < 10
 
     # 1. Lo sgancio non è un attacco: niente tiro per colpire, l'invisibilità resta.
     #    Deviazione come le armi a spargimento che mancano (SRD): 1d8 la direzione,
@@ -160,18 +203,32 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     # aree partono da un incrocio della griglia).
     origine = (punto[0] + rng.randint(0, 1), punto[1] + rng.randint(0, 1))
 
-    # 2. Il colpo diretto: una creatura sola, quella nella casella. Niente TS.
-    colpito = next((cr for cr in crs if punto in cr.caselle), None)
+    # 2. Il colmo. Un palo preso in cima si spezza sempre; sul resto della riga del
+    #    colmo il barile prende la trave: con 1-2 su d6 la spezza, e in tutti e due i
+    #    casi la tenda crolla subito. Con 3-6 la trave regge e la botte le si apre
+    #    sopra, a 6 m: sotto non c'è colpo diretto, l'olio e il fuoco sono gli stessi.
+    sulla_trave = False
+    if punto in {c("K", 12), c("N", 12), c("Q", 12)}:
+        esito["colmo"] = True
+    elif punto in COLMO:
+        if rng.randint(1, 6) <= 2:
+            esito["colmo"] = True
+        else:
+            sulla_trave = True
+            esito["intera"] = False  # la trave la apre comunque
+
+    # 3. Il colpo diretto: una creatura sola, quella nella casella. Niente TS.
+    #    Il telo di pelle toglie 3 (durezza 2 e 1 pf, SRD); i rostri sono lame di
+    #    spada, e cadono con la botte: 1d4 lame da 1d8 (variazione, la fossa con
+    #    gli spuntoni dell'SRD rovesciata). Tutto insieme è un attacco solo.
+    colpito = None if sulla_trave else next((cr for cr in crs if punto in cr.caselle), None)
     danno_per: dict[str, list[int]] = {cr.nome: [] for cr in crs}
     if colpito:
-        dn = max(0, d(par.dadi_caduta, 6, rng) - colpito.rd)
-        danno_per[colpito.nome].append(dn)
+        dn = d(par.dadi_caduta, 6, rng) - (3 if punto in TELO else 0)
+        if par.rostri:
+            dn += d(rng.randint(1, 4), 8, rng)
+        danno_per[colpito.nome].append(max(0, dn - colpito.rd))
         esito["colpito"] = colpito.nome
-
-    # 3. Un palo preso in cima si spezza sempre; sul resto della riga del colmo,
-    #    2 su 6 il barile prende la trave. In tutti e due i casi la tenda crolla subito.
-    if punto in {c("K", 12), c("N", 12), c("Q", 12)} or (punto in COLMO and rng.randint(1, 6) <= 2):
-        esito["colmo"] = True
 
     # 4. Le fiale si rompono tutte all'impatto: una palla di fuoco ciascuna.
     fuoco_per: dict[str, int] = {cr.nome: 0 for cr in crs}
@@ -196,6 +253,8 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     #    telo l'olio arriva solo col cuore.
     cuore = {(punto[0] + i, punto[1] + j) for i in (-1, 0, 1) for j in (-1, 0, 1)}
     for cr in crs:
+        if esito["intera"]:
+            break
         if any(q in cuore for q in cr.caselle):
             cr.inzuppato = True
             danno_per[cr.nome].append(d(1, 6, rng))
@@ -220,7 +279,10 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     for cr in crs:
         if cr.morto:
             continue
-        if not (cr.inzuppato or sotto_olio(cr, punto)):
+        if esito["intera"] or not (cr.inzuppato or sotto_olio(cr, punto)):
+            if esito["colmo"] and cr.dentro:
+                cr.pf_ora -= d(2, 6, rng)
+                cr.morto = cr.morto or cr.pf_ora <= -10
             continue
         cr.pf_ora -= d(1, 3, rng)
         if cr.inzuppato:
@@ -328,7 +390,7 @@ def tabella_palo(forno: bool = True) -> list[str]:
         elif chi:
             prende = f"**{chi}**, 15d6"
         elif q in COLMO:
-            prende = "il colmo, con 1-2 su d6: la tenda crolla subito"
+            prende = "il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto"
         elif q[1] in (8, 14) or q[0] in (8, 18):
             prende = "il telo, sul bordo: metà olio fuori"
         else:
@@ -349,6 +411,54 @@ def tabella_palo(forno: bool = True) -> list[str]:
     return righe
 
 
+# ---------------------------------------------------------------- la quota, riga per riga
+
+QUOTE = (48, 42, 36, 30, 27, 24, 18, 12, 9)
+
+
+def tabella_quote() -> list[str]:
+    righe = [
+        "| Quota | Caduta | Botte: danno a chi sta sotto | 50 o più | La botte si apre | Deviazione: botte nella luce / al buio | Barilotto: danno, deviazione nella luce |",
+        "|---|---|---|---:|---:|---|---|",
+    ]
+    rng = random.Random(1)
+    for q in QUOTE:
+        n = dadi_oggetto_in_caduta(q, 205)
+        p50 = sum(d(n, 6, rng) >= 50 for _ in range(20000)) / 200 if n else 0
+        apre = sum(d(dadi_caduta_propria(q), 6, rng) - 5 >= 10 for _ in range(20000)) / 200
+        dv, db = dado_deviazione(q), dado_deviazione(q, visto=False)
+        dl = dado_deviazione(q, pesante=False)
+        fmt = lambda x: "nessuna" if x == 1 else f"1d{x}−1"  # noqa: E731
+        nb = dadi_oggetto_in_caduta(q, 31)
+        righe.append(
+            f"| {q} m | {tempo_di_caduta(q):.1f} s".replace(".", ",") + f" | **{n}d6** | {p50:.0f}% | {apre:.0f}% "
+            f"| {fmt(dv)} / {fmt(db)} | {nb}d6 · {fmt(dl)} |".replace("0d6", "niente"))
+    return righe
+
+
+def riassunto_quote(prove: int, seme: int) -> list[str]:
+    righe = [
+        "| Quota | La tenda giù subito | La botte resta intera | Zog'tar, pf (mediana) | Il sacerdote morto | Una guardia a terra (M13) | Grask morto |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for q in QUOTE:
+        rng = random.Random(seme)
+        colmo = intera = sac = gua = gra = 0
+        zog = []
+        for _ in range(prove):
+            e = prova(Parametri(mira="centro", quota=q), rng)
+            colmo += e["colmo"]
+            intera += e["intera"]
+            zog.append(e["creature"]["Zog'tar"][0])
+            sac += e["creature"]["Sacerdote"][1]
+            gua += e["creature"]["Guardia M13"][0] <= 0
+            gra += e["creature"]["Grask"][1]
+        zog.sort()
+        pct = lambda x: f"{100 * x / prove:.0f}%"  # noqa: E731
+        righe.append(f"| {q} m | {pct(colmo)} | {pct(intera)} | {zog[prove // 2]} | {pct(sac)} | {pct(gua)} | {pct(gra)} |")
+    return righe
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--prove", type=int, default=20000)
@@ -358,8 +468,12 @@ def main() -> None:
                     help="ogni fiala è un attacco a sé per il danno massiccio, chi è inzuppato "
                          "tira il TS per non prendere fuoco, la palla di fuoco resta di 6 m "
                          "anche sotto il telo (lettura RAW)")
+    ap.add_argument("--quote", action="store_true", help="la tabella per quota di sgancio")
     ap.add_argument("--palo", action="store_true", help="solo la tabella delle cadute mirando a N12")
     a = ap.parse_args()
+    if a.quote:
+        print("\n".join(tabella_quote() + [""] + riassunto_quote(a.prove, a.seme)))
+        return
     if a.palo:
         print("\n".join(tabella_palo(forno=not a.regole_srd)))
         return

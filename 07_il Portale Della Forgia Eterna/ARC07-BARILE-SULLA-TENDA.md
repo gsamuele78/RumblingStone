@@ -6,9 +6,12 @@
 > d'olio piena di sassi, con i rostri dei fabbri nanici sotto e le fiale della
 > fenice legate con le corde. In apertura c'è la **scheda da tavolo**, dieci
 > passi da tirare senza improvvisare; poi la caduta e la deviazione, i danni
-> della caduta, dell'olio e delle palle di fuoco e l'area che coprono, le 25
+> della caduta, dell'olio e delle palle di fuoco e l'area che coprono, tutto
+> rifatto per la quota da cui il tavolo rigioca lo sgancio, il telo e i rostri, le 25
 > cadute possibili sopra il palo centrale, che cosa vedono i PG da 48 m e chi
-> li può trovare, le tattiche di chi è dentro e del campo, round per round, i
+> li può trovare, quando si tira l'iniziativa e che cosa fanno le rune, le
+> tattiche di chi è dentro e del campo, round per round, chi suona il corno se
+> Grask muore, i
 > due barilotti da 10 litri e una procedura, con i PE, per le trovate dei
 > giocatori delle prossime volte.
 >
@@ -27,15 +30,16 @@
 ## La scheda da tavolo
 
 Dieci passi, nell'ordine in cui si tirano. Ogni riga dice da quale regola
-dell'SRD viene; le variazioni sono segnate ◆ e sono le domande B4, B5, B6 e
-B12 del §12. Con questa scheda il DM non deve inventare niente: tira i dadi
+dell'SRD viene; le variazioni sono segnate ◆ e sono le domande B4, B5, B6,
+B12 e B16 del §12. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
+sganciano: la tabella è nel §2-bis. Con questa scheda il DM non deve inventare niente: tira i dadi
 della colonna di destra.
 
 | # | Che cosa | Regola | Si tira |
 |---|---|---|---|
 | 1 | **Lo sgancio** | Non è un attacco (SRD, *invisibilità*: chi causa danno in modo indiretto non attacca). È un'azione gratuita, e chi sgancia resta invisibile. Si può fare nel round di sorpresa, e tutti e quattro i PG possono sganciare nello stesso round | niente |
-| 2 | **Dove cade** | Non si mira: la deviazione è l'attrito dell'aria più quanto chi sgancia era spostato dalla verticale. Come l'arma a spargimento che manca (SRD): 1d8 per la direzione, 1 = nord e poi in senso orario. ◆ La distanza dipende dal peso e dalla luce (§2): la botte, sopra la tenda illuminata dai fuochi, 1d4−1 quadretti; un barilotto nella luce 1d6−1; al buio un dado in più. Se chi sgancia si è mosso in quel round, in più 6 quadretti nella direzione del volo | **1d8** e **1d4−1** (barilotto **1d6−1**) |
-| 3 | **Che cosa prende** | Una creatura nella casella: oggetto in caduta (SRD), senza TS, meno la RD. Un palo (K12, N12, Q12): lo spezza in cima, la tenda crolla subito. Un'altra casella della riga 12: ◆ la trave del colmo, 1-2 su d6 e crolla subito | **15d6** (barilotto 3d6); d6 per il colmo |
+| 2 | **Dove cade** | Non si mira: la deviazione è l'attrito dell'aria più quanto chi sgancia era spostato dalla verticale. Come l'arma a spargimento che manca (SRD): 1d8 per la direzione, 1 = nord e poi in senso orario. ◆ La distanza dipende dalla **quota**, dal peso e da che cosa vede chi sgancia (§2 e §2-bis): da 48 m la botte, sopra la tenda illuminata dai fuochi, 1d4−1 quadretti, un barilotto 1d6−1; se chi sgancia non vede il bersaglio, un dado in più. Se si è mosso in quel round, in più 6 quadretti nella direzione del volo | **1d8** e il dado della quota (§2-bis); da 48 m **1d4−1**, barilotto **1d6−1** |
+| 3 | **Che cosa prende** | Il telo non la ferma: i rostri lo tagliano e toglie solo 3 danni (§3). Una creatura nella casella: oggetto in caduta (SRD), senza TS, meno la RD; ◆ in più le lame dei rostri, 1d4 lame da 1d8, nello stesso colpo. Un palo (K12, N12, Q12): lo spezza in cima, la tenda crolla subito. Un'altra casella della riga 12: ◆ la trave del colmo, 1-2 su d6 la spezza e crolla tutto; 3-6 la botte le si apre sopra, e sotto nessuno prende il colpo diretto | i dadi della quota (§2-bis): da 48 m **15d6** − 3 + **1d4 × 1d8** (barilotto 3d6 − 3); d6 per il colmo |
 | 4 | **Le fiale** | Si rompono sempre: prendono anche loro i 15d6 della caduta, e il vetro ha 1 pf. Ogni fiala è una *palla di fuoco* (SRD). L'origine è un angolo della casella d'impatto (d4, o quello che sceglie il DM). ◆ Sotto il telo la tenda fa da forno: chi è dentro la tenda è nell'area. Fuori dal telo valgono i 6 m dall'angolo | **6d6 per fiala**, **Riflessi CD 14** dimezza, un TS per fiala |
 | 5 | **L'olio, subito** | Il **cuore** è la casella d'impatto e le otto attorno: chi c'è è colpito in pieno, come da un'ampolla d'olio (SRD, fuoco dell'alchimista), e prende fuoco ◆ senza TS. Il resto dell'olio copre **tutto il pavimento della tenda** (all'aperto: fino a 7 m): chi c'è prende lo spruzzo | cuore **1d6**; resto **1** |
 | 6 | **L'olio, ogni round** | La palla di fuoco lo accende tutto nello stesso istante. Chi sta nell'olio che brucia prende 1d3 (SRD, la pinta versata) e tira per non prendere fuoco (SRD, «Catching on Fire»). Chi è nel cuore prende il secondo 1d6 dell'ampolla al round dopo l'impatto. ◆ Il cuore brucia 10 round, il resto del pavimento 3 (all'aperto 2) | **1d3**, **Riflessi CD 15** |
@@ -134,18 +138,140 @@ orario) e una distanza in quadretti. La distanza, da 48 m, è questa:
 Il conto della fisica sta in `simula_barile.py`; la regola lo arrotonda per
 eccesso, perché al buio si sbaglia anche il punto da cui si parte.
 
-## 3. Il telo e il colmo
+## 2-bis. Rigiocare lo sgancio: tutto dalla quota
 
-Il telo di pelle non ferma niente: i rostri lo tagliano come un coltello, e la
-botte arriva a terra con la stessa velocità. Il telo si apre in uno squarcio
-largo un metro e mezzo.
+Il DM farà rigiocare lo sgancio, e la quota la scelgono i PG. Da quella
+dipendono tre cose: quanti dadi fa la botte a chi sta sotto, quanto devia, e
+chi dei PG vede davvero dove la lascia andare. Più in basso si vede meglio e
+si sbaglia meno, ma la botte fa meno male, e dal round dopo i PG sono a
+portata del campo.
 
-La riga 12 di M7-C, da J12 a R12, è quella del **colmo**: una trave sopra i tre
-pali, alta 6 m. Se la botte cade su una casella di quella riga, tira d6: con 1 o
-2 prende la trave, la spezza, e la tenda crolla subito, come nello stato F di
-M7-C (tutti sotto il telo a terra e intralciati, Riflessi CD 15 per uscire, un
-tentativo per round). Se cade su un palo (K12, N12, Q12) lo spezza, con lo
-stesso effetto `[Regola della casa, costruita sullo stato F di M7-C]`.
+**Prima: chi vede che cosa, al buio.** Le stelle non bastano a nessuno: oltre
+la sua scurovisione un PG vede solo quello che i fuochi illuminano. La tenda
+del comando è nella luce fioca dei due falò della guardia (H17 e T17) e della
+brace del fuoco del consiglio: da qualsiasi quota se ne vede la sagoma nera,
+ma non quello che c'è sotto.
+
+| PG | Che cosa ha | Vede la tenda al buio fino a |
+|---|---|---|
+| **Artemis** | scurovisione 36 m e Vista del Diavolo 18 m, dall'Anello dell'Illuminazione Caotica | **36 m** |
+| **Thorik** | *Visione del Vero* della Corona, 1 volta al giorno per 10 minuti: vede nel buio, anche magico, e vede gli invisibili | **36 m**, se la attiva prima |
+| **Hella** | nana dei sogni, scurovisione 27 m | **27 m** |
+| **Tordek** | nano, scurovisione 18 m | **18 m** |
+
+Chi sgancia «vede» il bersaglio se è entro la sua scurovisione, o se il
+bersaglio è nella luce di un fuoco. Lo può guidare a voce un altro PG che lo
+vede: nella tabella vale la colonna «nella luce», ma parlare si sente (§8).
+
+**La tabella.** Danno dell'oggetto in caduta dall'SRD: la botte con i sassi
+pesa 205 libbre, quindi 1d6 più 1d6 ogni 3 m oltre i primi; il barilotto da
+31 libbre fa 1d6 ogni 12 m. La botte si apre se il danno della sua stessa
+caduta (1d6 ogni 3 m, come chi cade) passa durezza 5 e 10 pf. Deviazione: un
+gradino di dado ogni 15 m di caduta, uno in più per il barilotto, uno in più
+se chi sgancia non vede il bersaglio (§2).
+
+| Quota | Caduta | Botte: danno a chi sta sotto | 50 o più | La botte si apre | Deviazione: botte nella luce / al buio | Barilotto: danno, deviazione nella luce |
+|---|---|---|---:|---:|---|---|
+| 48 m | 3,2 s | **15d6** | 68% | 100% | 1d4−1 / 1d6−1 | 3d6 · 1d6−1 |
+| 42 m | 3,0 s | **13d6** | 26% | 100% | 1d3−1 / 1d4−1 | 3d6 · 1d4−1 |
+| 36 m | 2,7 s | **11d6** | 2% | 100% | 1d3−1 / 1d4−1 | 2d6 · 1d4−1 |
+| 30 m | 2,5 s | **9d6** | 0% | 100% | 1d3−1 / 1d4−1 | 2d6 · 1d4−1 |
+| 27 m | 2,4 s | **8d6** | 0% | 100% | 1d2−1 / 1d3−1 | 2d6 · 1d3−1 |
+| 24 m | 2,2 s | **7d6** | 0% | 99% | 1d2−1 / 1d3−1 | 1d6 · 1d3−1 |
+| 18 m | 1,9 s | **5d6** | 0% | 78% | 1d2−1 / 1d3−1 | 1d6 · 1d3−1 |
+| 12 m | 1,6 s | **3d6** | 0% | 9% | nessuna / 1d2−1 | niente · 1d2−1 |
+| 9 m | 1,4 s | **2d6** | 0% | 0% | nessuna / 1d2−1 | niente · 1d2−1 |
+
+- **Sotto i 18 m la botte può restare intera.** Le fiale si rompono lo stesso
+  (il vetro ha 1 pf) e le palle di fuoco scoppiano. Il fuoco apre la botte
+  alla fine del round, e l'olio esce al round dopo: niente cuore e niente
+  pavimento inzuppato al primo round, solo una pozza di 3 × 3 quadretti attorno
+  alla botte che brucia per 10 round.
+- **Sopra un palo** la botte cade 6 m in meno: dal palo centrale, da 48 m, sono
+  42 m, cioè 13d6 sul palo (che si spezza comunque).
+- **Il danno massiccio** arriva solo dall'alto: due volte su tre da 48 m, una
+  volta su quattro da 42, quasi mai sotto.
+
+**Che cosa rischiano i PG, quota per quota.** Al momento dello sgancio
+nessuno sta guardando in alto; i rischi valgono dal round dopo.
+
+| Quota | Che cosa li raggiunge |
+|---|---|
+| sopra i 45 m | niente. Fuori dalla gittata massima dei giavellotti, fuori da ogni scurovisione |
+| da 45 a 37 m | i giavellotti, ma solo se qualcuno li vede (il giavellotto con la *luce*, §8) |
+| 36 m e sotto | la scurovisione di Skullcrusher, se arriva |
+| 19,5 m e sotto | l'*epurare invisibilità* di Balvar: raggio 19,5 m attorno a lui. Se lo lancia, chi è dentro torna visibile |
+| 18 m e sotto | la scurovisione di tutto il campo: visibili, li vedono tutti; invisibili, li vede il sacerdote con *vedere invisibilità*. *Comando* del sacerdote a 12 m |
+| 9 m e sotto | Osservare CD 20 per notare un invisibile che si muove (SRD) |
+| 6 m e sotto | sono dentro la loro stessa palla di fuoco |
+
+**Che cosa succede, quota per quota.** Il barile lasciato cadere sopra il palo
+centrale, due fiale, la tenda nella luce dei falò; 20.000 prove per riga, fino
+alla fine del primo round.
+
+| Quota | La tenda giù subito | La botte resta intera | Zog'tar, pf (mediana) | Il sacerdote morto | Una guardia a terra (M13) | Grask morto |
+|---|---:|---:|---:|---:|---:|---:|
+| 48 m | 36% | 0% | 247 | 41% | 10% | 30% |
+| 42 m | 39% | 0% | 246 | 42% | 12% | 29% |
+| 36 m | 39% | 0% | 246 | 43% | 12% | 30% |
+| 30 m | 39% | 0% | 246 | 43% | 12% | 30% |
+| 27 m | 54% | 0% | 244 | 45% | 16% | 28% |
+| 24 m | 55% | 1% | 244 | 45% | 16% | 28% |
+| 18 m | 55% | 21% | 246 | 41% | 12% | 27% |
+| 12 m | 100% | 91% | 252 | 33% | 3% | 25% |
+| 9 m | 100% | 100% | 253 | 31% | 1% | 24% |
+
+**Che cosa vuol dire.** Il danno della botte conta poco: sotto il palo
+centrale non c'è nessuno, e quello che uccide è il fuoco, che non dipende dalla
+quota. Scendere serve a sbagliare meno e a far crollare la tenda più spesso
+(da 27 m una volta su due), non a fare più male a Zog'tar. Sotto i 18 m la botte
+resta intera quasi sempre e l'olio arriva un round dopo. La quota buona, se il
+DM vuole un consiglio da dare, è **fra 30 e 36 m**, con Artemis o Thorik che
+sgancia: vedono la tenda anche dove i falò non arrivano, la deviazione scende a
+1d3−1, la botte si apre sempre, e restano fuori da tutto quello che il campo può
+fare.
+
+## 3. Il telo, il colmo e i rostri
+
+**Il telo non la ferma, e non la rallenta.** La botte arriva a 30 m/s con
+40 kJ. Per tagliare un telo di pelle con la punta di una lama bastano poche
+centinaia di joule: il telo le toglie meno dell'1% dell'energia, mezzo punto
+percentuale di velocità. Nell'SRD la pelle ha durezza 2 e 5 pf per pollice di
+spessore; un telo di 6 mm ha 1 pf. Al tavolo vale così: **il telo toglie 3 danni
+al colpo diretto** (durezza 2 più 1 pf), e la botte arriva a terra come se il
+telo non ci fosse.
+
+**Che cosa fanno i rostri.** Sono lame di spada piantate nel fondo della
+botte, con le punte in giù. Tre cose:
+
+- **Tagliano invece di tirare.** Una botte senza rostri sfonderebbe il telo
+  lo stesso, ma lo trascinerebbe giù con sé, e tirerebbe i pali: la tenda
+  crollerebbe più spesso. Con i rostri lo squarcio è pulito, largo un metro e
+  mezzo, e il telo attorno resta su.
+- **Tengono la botte dritta e la piantano.** Con i sassi sul fondo la botte
+  cade sulle punte come una freccia, e le punte entrano nella terra battuta:
+  non rotola e non rimbalza.
+- **Feriscono chi è sotto** `[Variazione sull'SRD — INFERRED, needs DM
+  confirmation, B16]`. L'SRD ha la fossa con gli spuntoni, dove chi cade
+  finisce su 1d4 punte. Qui è rovesciato: le punte cadono su chi sta sotto.
+  Chi prende il colpo diretto prende anche **1d4 lame da 1d8**, nello stesso
+  colpo, quindi contano per i 50 danni del danno massiccio.
+
+**Lacera tutto, lacera in parte, rotola al bordo?** Le tre possibilità che il
+DM ha chiesto di pesare, con i numeri:
+
+| Dove tocca il telo | Che cosa succede alla botte | Al tavolo |
+|---|---|---|
+| sulla falda, fra il colmo e il bordo | taglia e passa: la falda scende di 50° circa, ma a 30 m/s la botte non scivola, e le punte mordono prima che la pelle ceda | arriva a terra nella casella tirata: il caso normale |
+| sul colmo, la riga 12 | prende la trave, alta 6 m | d6: con 1-2 spezza la trave e la tenda crolla subito; con 3-6 la trave regge, la botte le si apre sopra e olio e fiale cadono da lì. Sotto nessuno prende il colpo diretto; il fuoco e l'olio sono gli stessi |
+| sul bordo del telo, l'anello esterno di M7-C | taglia il telo dove scende verso terra, a un metro e mezzo d'altezza `[INFERRED]` | arriva a terra contro la parete: metà dell'olio resta dentro, metà esce, e fuori arriva fino a 3 m |
+| un barilotto, sulla falda | senza rostri e senza sassi cade storto, di piatto o di spigolo `[Variazione — INFERRED, B20]` | d6: con 1-2 rimbalza sulla falda, scivola giù e si apre fuori, nella casella oltre il bordo, dalla parte della falda (nord se è sopra la riga 12, sud se è sotto). Con 3-6 sfonda e cade dentro |
+
+**Le palle di fuoco scoppiano sotto il telo.** Le fiale si rompono quando la
+botte tocca terra, o la trave, e tutte e due stanno sotto il telo. L'olio e il
+fuoco nascono dentro la tenda, mai sopra; solo al bordo metà resta fuori. Se una
+fiala si rompesse sul telo, la palla di fuoco nascerebbe sul tetto: la tenda fa
+da forno lo stesso, e chi è dentro è comunque nell'area.
 
 La runa della barriera di lame è incisa sul palo centrale, N12. Se il palo si
 spezza, la runa si spezza con lui **senza scattare**: scatta solo quando la
@@ -179,8 +305,9 @@ caduta** (SRD 3.5, «Falling Objects»): un oggetto da 200 libbre in su fa 1d6
 ogni 200 libbre, più 1d6 per ogni 3 m di caduta oltre i primi, fino a 20d6. Da
 48 m sono **15d6**, in media 52. L'SRD non dà un TS e non chiede un tiro per
 colpire: lo prende chi sta sotto. La riduzione del danno conta (Zog'tar ha RD
-3/—). I rostri non aggiungono dadi: fanno sì che il danno sia tagliente e che
-la botte passi il telo.
+3/—). Il telo toglie 3 danni, e i rostri aggiungono 1d4 lame da 1d8 nello
+stesso colpo (§3, variazione B16). Da 48 m, quindi, chi è sotto prende 15d6 − 3
++ 1d4 × 1d8, in media 60. Da un'altra quota, i dadi del §2-bis.
 
 Una creatura sola prende il colpo diretto, quella della casella. Per Zog'tar,
 che è Grande, basta una delle sue quattro caselle.
@@ -322,19 +449,19 @@ fuoco con la tenda che fa da forno. Chi non è nominato nelle ultime due colonne
 | nessuna deviazione | N12 | 25% | il palo centrale, in cima: lo spezza e la tenda crolla subito | Zog'tar, Guardia M13, Guardia N13 | nessuno · secondo l'angolo: Grask |
 | 1 nord · 1,5 m | N11 | 3,1% | il pavimento | nessuno | Grask |
 | 2 nord-est · 2,1 m | O11 | 3,1% | il pavimento | nessuno | Grask |
-| 3 est · 1,5 m | O12 | 3,1% | il colmo, con 1-2 su d6: la tenda crolla subito | Zog'tar, Guardia N13 | nessuno · secondo l'angolo: Grask |
+| 3 est · 1,5 m | O12 | 3,1% | il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto | Zog'tar, Guardia N13 | nessuno · secondo l'angolo: Grask |
 | 4 sud-est · 2,1 m | O13 | 3,1% | **Zog'tar**, 15d6 | Zog'tar, Guardia N13, Sacerdote | nessuno |
 | 5 sud · 1,5 m | N13 | 3,1% | **Guardia N13**, 15d6 | Zog'tar, Guardia M13, Guardia N13, Guardia M14, Sacerdote | nessuno · secondo l'angolo: Grask |
 | 6 sud-ovest · 2,1 m | M13 | 3,1% | **Guardia M13**, 15d6 | Guardia M13, Guardia N13, Guardia M14, Sacerdote | nessuno · secondo l'angolo: Grask |
-| 7 ovest · 1,5 m | M12 | 3,1% | il colmo, con 1-2 su d6: la tenda crolla subito | Guardia M13, Guardia N13 | Grask |
+| 7 ovest · 1,5 m | M12 | 3,1% | il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto | Guardia M13, Guardia N13 | Grask |
 | 8 nord-ovest · 2,1 m | M11 | 3,1% | il pavimento | nessuno | Grask |
 | 1 nord · 3,0 m | N10 | 3,1% | il pavimento | nessuno | Grask |
 | 2 nord-est · 4,2 m | P10 | 3,1% | il pavimento | nessuno | Grask |
-| 3 est · 3,0 m | P12 | 3,1% | il colmo, con 1-2 su d6: la tenda crolla subito | Zog'tar | nessuno · secondo l'angolo: Grask |
+| 3 est · 3,0 m | P12 | 3,1% | il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto | Zog'tar | nessuno · secondo l'angolo: Grask |
 | 4 sud-est · 4,2 m | P14 | 3,1% | **Zog'tar**, 15d6 | Zog'tar, Guardia Q14 | nessuno |
 | 5 sud · 3,0 m | N14 | 3,1% | **Sacerdote**, 15d6 | Zog'tar, Guardia M13, Guardia N13, Guardia M14, Sacerdote | nessuno |
 | 6 sud-ovest · 4,2 m | L14 | 3,1% | il pavimento | Guardia M13, Guardia M14 | nessuno · secondo l'angolo: Grask |
-| 7 ovest · 3,0 m | L12 | 3,1% | il colmo, con 1-2 su d6: la tenda crolla subito | Guardia M13 | Grask |
+| 7 ovest · 3,0 m | L12 | 3,1% | il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto | Guardia M13 | Grask |
 | 8 nord-ovest · 4,2 m | L10 | 3,1% | il pavimento | nessuno | Grask |
 | 1 nord · 4,5 m | N9 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
 | 2 nord-est · 6,4 m | Q9 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
@@ -438,14 +565,47 @@ perde il volo cade: 48 m, **15d6** (SRD, 1d6 ogni 3 m). Lo fa solo se è in
 modalità «minacciato, o attaccato» della Scena 7, ed è il caso: il barile è un
 attacco.
 
+### Quando si tira l'iniziativa, e che cosa fanno le rune
+
+**L'iniziativa si tira quando i PG decidono di sganciare**, prima di tirare i
+dadi della caduta: per l'SRD il combattimento comincia quando una parte agisce
+contro l'altra, e i PG sono gli unici che sanno che sta cominciando. Tirano tutti,
+PG e PNG. Poi:
+
+1. **Il round di sorpresa è solo dei PG.** Nessuno nel campo sa che sono lì.
+   Ognuno ha un'azione standard o di movimento, e lasciar cadere qualcosa è
+   un'azione gratuita: la botte e i due barilotti possono andare giù nello stesso
+   round. La botte cade in 3 secondi, meno di mezzo round: **arriva nel turno di
+   chi l'ha lasciata**, e il DM risolve subito la scheda, dal passo 2 al 5.
+2. **Il round 1 comincia in ordine d'iniziativa.** Chi è nella tenda è colto alla
+   sprovvista fino al suo primo turno: niente Destrezza alla CA, che quassù conta
+   poco. I TS contro le palle di fuoco li tira con il suo bonus pieno: l'SRD toglie
+   la Destrezza alla CA, non ai Riflessi.
+3. **L'olio che brucia** (passo 6 della scheda) si tira alla fine di ogni round,
+   per tutti insieme. È lì che chi brucia perde i punti ferita.
+
+**Balvar non è colto alla sprovvista** `[INFERRED — needs DM confirmation,
+B18]`. Il suo *Leggere il Fuori-Posto* è acceso, un cono di 18 m verso la
+soglia, e il palo centrale ci sta dentro. Le fiale della fenice sono magiche:
+Balvar le sente arrivare un battito prima dell'urto. Non fa in tempo a fare
+niente, il round di sorpresa resta dei PG, ma al round 1 non è colto alla
+sprovvista, e sa che cosa è caduto prima di vederlo.
+
+**Le rune non scattano con il barile.** Una per una, con la regola di ciascuna:
+
+| La runa o il glifo | Scatta? | Perché, e la versione più forte |
+|---|---|---|
+| La soglia, *epurare invisibilità* | no | scatta quando un nano varca la soglia: la botte non è una creatura, e i PG sono a 48 m. Se dopo uno di loro scende sotto i 19,5 m sopra la soglia, scatta su di lui |
+| Il palo centrale, *barriera di lame* | no | la attiva Balvar. Se il palo si spezza, la runa si spezza senza scattare (B7) |
+| Su Balvar, *silenzio* | non da sola | la accende lui, a comando. Contro chi è a 48 m non serve: la tiene per dopo |
+| Il glifo sul telo sopra il seggio, 5d8 sonori | no, per l'SRD | il glifo scatta solo per una creatura che lo varca o lo tocca. ★ La versione più forte `[INFERRED — needs DM confirmation, B17]`: **scatta quando il telo che lo porta brucia o crolla**, alla fine del round 1 o al crollo. Scoppio sonoro di 5d8, Riflessi CD 18 dimezza, su chi sta entro 1,5 m dal punto del telo sopra il seggio: Zog'tar, se è ancora lì, e la guardia Q14 |
+| La custodia del corno, al polso di Grask | no | cuoio e ferro: il fuoco non la apre, e il glifo scatta solo per chi la apre senza la parola |
+| La gemella della Catena, sul corno | non scatta, ma **ascolta** | tutto quello che si grida vicino a Grask arriva a Skullcrusher sulle colline (Scena 6). Il boato, «A ME, CANI! IL CORNO!» e «Dall'alto. Hanno ali.»: all'alba il drago sa che i nani volano, e guarda in alto `[INFERRED — needs DM confirmation, B21]` |
+
 ### Le tattiche, round per round
 
-L'iniziativa si tira dopo lo scoppio. Nella tenda nessuno ha visto arrivare la
-botte, quindi il round di sorpresa è tutto dei PG: ognuno ha un'azione standard
-o di movimento, e **lasciar cadere un barilotto è un'azione gratuita**, quindi
-nello stesso round di sorpresa possono andare giù la botte e tutti e due i
-barilotti. Le righe valgono per i due casi del §6: la tenda crollata subito (35%)
-e la tenda in piedi che brucia.
+Le righe valgono per i due casi del §6: la tenda crollata subito (35%) e la
+tenda in piedi che brucia.
 
 | Chi | Round 1 | Round 2-3 | Dal round 4 |
 |---|---|---|---|
@@ -457,6 +617,32 @@ e la tenda in piedi che brucia.
 | **Le due guardie del turno dopo** | Si svegliano nella loro tenda, a X4–Y5 | Arrivano al round 2, armate, da Zog'tar | Con le altre |
 | **Il campo** (M7-H) | Le sentinelle dei fuochi gridano. I clan degli orchi si svegliano tutti insieme | Le ronde d'orchi arrivano dalla via ovest in 1d4+2 round, le lance della Guardia della Mano dalle vie nord e sud in 2d4+2. Finché Zog'tar è in piedi non vanno addosso alla tenda: fanno quadrato nello spiazzo, a una decina di metri dal telo, e portano acqua e pelli bagnate | Gli sciamani, se il corno ha suonato, cercano con *vedere invisibilità* e *luce*; nessuno vede a 48 m. Il campo resta sveglio fino all'alba |
 | **Skullcrusher** | | | Se il corno ha suonato, arriva **70 round** dopo il primo suono e caccia sopra il campo (Scena 6, «Se il corno suona di notte») |
+
+### Chi suona il corno, se Grask muore
+
+Il corno chiama il drago chiunque lo suoni: la Catena è incisa sul corno, non su
+Grask. Il problema è la custodia, chiusa da un glifo e incatenata al polso del
+ragazzo morto. In ordine, chi ci prova:
+
+| Chi | Quando | Come |
+|---|---|---|
+| **Balvar**, se è vivo | round 2-3 | non apre la custodia: dà la parola a Zog'tar, o a una guardia, e il corno suona senza glifo **al round 3-4** |
+| **Zog'tar**, se Balvar è morto o lontano | round 2-3 | va al corpo, spezza la catena e strappa la custodia: il glifo gli scoppia addosso, 5d8 sonori, Riflessi CD 18, e lui suona lo stesso **al round 3** (B8) |
+| **La guardia più vicina**, se Zog'tar è a terra | appena Zog'tar lo ordina, anche da a terra | come Zog'tar, ma con 60 pf e Riflessi +4 il glifo la può uccidere: una guardia già bruciata muore una volta su tre `[INFERRED]`. Se muore, il corno resta nella custodia aperta, e lo prende la seguente |
+| **Il primo capolancia della Guardia della Mano** | quando arriva, round 4-10 (2d4+2) | se nella tenda nessuno è in piedi a dare ordini, il capolancia sa che il corno è il segnale dell'alba e del drago. ★ Lo fa suonare `[INFERRED — needs DM confirmation, B19]`. L'alternativa è che aspetti l'alba, senza ordini |
+| **Nessuno** | | se sono morti Grask, Zog'tar e Balvar, e le guardie sono tutte a terra prima che arrivino le lance. È il caso «se rubano o rompono il corno» della Scena 6: il drago arriva a metà mattina, furioso |
+
+Il drago arriva 70 round dopo il primo suono, chiunque abbia suonato.
+
+### Se sopravvivono: che cosa fanno dopo la notte
+
+| Chi | Che cosa fa fino all'alba | All'alba |
+|---|---|---|
+| **Zog'tar** | brucia di rabbia, ma non perde la testa: dorme al buio, fuori dalla luce, e ogni ora in un posto diverso. Fa spegnere i fuochi dello spiazzo e mette due guardie a guardare il cielo. Manda le lance a cercare per il campo, perché pensa a un traditore prima che a dei nani in volo | guida l'assalto (§10), con il segno delle ustioni addosso. Ai suoi dice che il fuoco era un segno: chi l'ha attraversato vince |
+| **Balvar** | è stato attaccato: non tratta più da solo (§10). Incide di nuovo i glifi scattati, rifà la custodia, e ricorda la botte di Hammerfist | sta sulla collina col drago, come nel canone. Ha capito che i nani vengono dall'alto, e lo dice al drago attraverso la Catena |
+| **Il sacerdote** | cura chi brucia fino a finire gli incantesimi. Prepara *vedere invisibilità* e *luce* per la notte dopo | sale sulla breccia con Zog'tar, se ci sono incantesimi da spendere |
+| **Le guardie** | stanno attorno al generale, con gli scudi alzati, al buio. Chi ha visto morire i compagni nel fuoco odia i nani in un modo nuovo | combattono con Zog'tar sulla breccia |
+| **Grask**, se è vivo | non lascia più il corno. Dorme in piedi | suona all'alba, e il drago arriva sull'assalto |
 
 **Che cosa rischiano i PG.** Finché restano a 48 m, zitti, e si allontanano
 dalla verticale della tenda dopo lo sgancio, niente: nessuno nel campo vede
@@ -606,6 +792,12 @@ regole lasciano scegliere.
 | B13 | Balvar lancia *dissolvi magie* ad area nel cielo (dove il giavellotto con la luce ha mostrato i PG, o alla cieca sopra la tenda, una volta su sei)? | sì: chi perde il volo cade da 48 m, 15d6 | no: Balvar non attacca dei nani che non vede |
 | B14 | La procedura delle trovate (§13) entra nello standard dei moduli, con la riga «se ci fanno l'ingegnere» nei master dei prossimi archi? | sì, da ARC-08 | solo questa volta |
 | B15 | I PE per l'ingegno: tre fasce, GS = livello −4, −2, pari al livello; per il barile la fascia di mezzo, o quella alta se il corno non suona | sì | un premio fisso a sessione; o niente oltre ai nemici sconfitti |
+| B16 | I rostri sono lame di spada: chi prende il colpo diretto prende anche 1d4 lame da 1d8, nello stesso colpo? | sì | no: i rostri servono solo a tagliare il telo, come prima |
+| B17 | Il glifo sul telo sopra il seggio scatta quando il telo brucia o crolla? | sì, 5d8 sonori entro 1,5 m dal punto | no, come l'SRD: si brucia senza scattare |
+| B18 | Balvar, col Fuori-Posto acceso, sente arrivare le fiale e non è colto alla sprovvista al round 1? | sì | no: è sorpreso come gli altri |
+| B19 | Se nella tenda non resta nessuno in piedi, il primo capolancia fa suonare il corno? | sì, appena arriva | no: aspetta l'alba senza ordini |
+| B20 | Un barilotto senza rostri che cade sulla falda può rimbalzare fuori, 1-2 su d6? | sì | no: sfonda sempre, come la botte |
+| B21 | Il drago sente attraverso la gemella del corno i gridi della notte, e all'alba guarda in alto? | sì | no: il sussurro porta solo i nomi |
 
 ## 13. Le trovate dei giocatori: come gestirle le prossime volte
 
