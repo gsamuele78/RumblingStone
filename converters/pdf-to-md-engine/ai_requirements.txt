@@ -7,7 +7,7 @@ torchvision>=0.15.0
 # Text processing and NLP
 language-tool-python>=3.4.0
 spacy>=3.8.16
-nltk>=3.10.3
+nltk>=3.10.4
 
 # Vision and image processing
 opencv-python>=4.8.0
