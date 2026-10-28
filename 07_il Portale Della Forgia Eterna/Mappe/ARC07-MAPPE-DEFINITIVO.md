@@ -47,6 +47,7 @@
 | **M7-A** | Hammerfist ≈372 DR (fortezza & orda) | DEF-4 | strategica | ✅ |
 | **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ |
 | **M7-C** | La tenda del comando di Zog'tar | DEF-4 Scene 7-8, contratto JSON (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json`) | tattica | ✅ |
+| **M7-H** | Il campo del capo, attorno alla tenda | DEF-4 Scene 6-8 e `ARC07-BARILE-SULLA-TENDA.md`, contratto JSON (`ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO.json`) | tattica | ✅ |
 | **M7-S** | Hammerfist in sezione, 372 e 1372 | lotto D28, `ARC07-MAPPE-HAMMERFIST-372-1372.md` | sezione | ✅ |
 | **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 e 1372 (D48) |
 | **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30, D48; contratto JSON | tattica | ✅ 372 e 1372 |
@@ -62,7 +63,7 @@
 - **DEF-1 · Piano della Terra**: T-1 · T-2 · T-3 · T-4 · T-5 · T-6
 - **DEF-2 · Ritorno & Affreschi**: S-1 · S-2
 - **DEF-3 · Resurrezione**: R-1
-- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
+- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · M7-H · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
 - **DEF-5 · Ritorno a Hammerfist**: CM-1 · CM-2
 
 ---
@@ -609,9 +610,9 @@ LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 
 ▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
 confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
 del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
-della banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato ·
-▪▪ le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗
-la tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
+fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
+la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vatore ·
 ⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
@@ -654,8 +655,8 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
 - **Terreno & zone**: **Zona 1** = Hammerfist giovane (mura bianche, sicura, arrivo
   del portale) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
   = copertura): fuori i clan degli orchi, a gruppi di ripari attorno al fuoco
-  della banda; al centro il quartiere hobgoblin, chiuso da uno steccato, a file
-  e vie diritte, con la piazza del comando (M7-C) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
+  della banda; al centro il campo del capo, senza recinto, con le lance
+  hobgoblin a gruppi attorno ai fuochi e lo spiazzo del comando (M7-C) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
   guardia** GP1-GP4 ai margini.
 - **Posizioni notevoli**: **Tenda del Comando** (Zog'tar Deatheye, GS 15, + 4
   guardie hobgoblin, Guerriero 8) al centro delle tende; **Vatore** (§5, il futuro Sal) tra le

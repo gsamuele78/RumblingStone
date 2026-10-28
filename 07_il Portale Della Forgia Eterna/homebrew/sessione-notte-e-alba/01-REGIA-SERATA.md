@@ -269,9 +269,9 @@ d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 resta completo.
 
 **Gli scontri senza griglia.** La pattuglia dei tre fallimenti e i lupi della
-Scena 6 non hanno una mappa in scala: M7-A non lo è. Giocali su M7-C, fuori
-dallo steccato: le file di tende hobgoblin a nord, a sud e a est, i ripari dei
-clan degli orchi attorno ai due fuochi a ovest.
+Scena 6 non hanno una mappa in scala: M7-A non lo è. Giocali su M7-H, il
+campo attorno allo spiazzo del capo: le lance hobgoblin a gruppi attorno ai
+loro fuochi, i ripari dei clan degli orchi a ovest.
 
 ---
 
