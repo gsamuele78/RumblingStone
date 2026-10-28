@@ -120,6 +120,15 @@ def dado_deviazione(quota_m: float, pesante: bool = True, visto: bool = True) ->
     return SCALA_DADI[min(gradino, len(SCALA_DADI) - 1)]
 
 
+def probabilita_legno(quota_m: float, prove: int = 20000, seme: int = 24) -> float:
+    """Quante volte la botte spezza un palo o la trave (durezza 5, 60 pf), in percentuale."""
+    rng = random.Random(seme)
+    dadi = dadi_oggetto_in_caduta(quota_m - ALTEZZA_COLMO, 205)
+    ok = sum(d(dadi, 6, rng) + d(rng.randint(1, 4), 8, rng) - DUREZZA_LEGNO >= PF_LEGNO
+             for _ in range(prove))
+    return 100 * ok / prove
+
+
 def tempo_di_caduta(quota_m: float) -> float:
     return math.sqrt(2 * quota_m / 9.81) * 1.01
 
@@ -163,6 +172,9 @@ class Parametri:
     rostri: bool = True           # le lame sotto la botte: 1d4 da 1d8 sul colpo diretto (variazione)
 
 
+ALTEZZA_COLMO = 6.0  # la trave del colmo e la cima dei pali
+DUREZZA_LEGNO = 5    # SRD, legno
+PF_LEGNO = 60        # SRD: 10 pf per pollice; palo e trave da 15 cm, cioè 6 pollici
 RAGGIO_FUOCO = 6.0   # palla di fuoco: 20 piedi
 RAGGIO_OLIO = 7.0    # all'aperto: 105 pinte, cuore 3 × 3 a 5 pinte e 60 quadretti a 1 pinta
 
@@ -179,6 +191,7 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     for cr in crs:
         cr.pf_ora = cr.pf
     esito: dict = {"colmo": False, "intera": False}
+    quota_reale = par.quota if par.quota is not None else 48.0
     if par.quota is not None:
         quota = par.quota
         par = Parametri(**{**par.__dict__, "dadi_caduta": dadi_oggetto_in_caduta(quota, 205),
@@ -203,19 +216,21 @@ def prova(par: Parametri, rng: random.Random) -> dict:
     # aree partono da un incrocio della griglia).
     origine = (punto[0] + rng.randint(0, 1), punto[1] + rng.randint(0, 1))
 
-    # 2. Il colmo. Un palo preso in cima si spezza sempre; sul resto della riga del
-    #    colmo il barile prende la trave: con 1-2 su d6 la spezza, e in tutti e due i
-    #    casi la tenda crolla subito. Con 3-6 la trave regge e la botte le si apre
-    #    sopra, a 6 m: sotto non c'è colpo diretto, l'olio e il fuoco sono gli stessi.
+    # 2. Il legno. Sulla riga 12 la botte prende un palo in cima o la trave del
+    #    colmo, a 6 m: cade 6 m in meno, e il danno della caduta va al legno (SRD,
+    #    oggetti: durezza 5 e 10 pf per pollice; palo e trave da 15 cm, 60 pf),
+    #    con le lame dei rostri. Se passa, il legno si spezza e la tenda crolla
+    #    subito; se no, la botte gli si apre sopra: sotto niente colpo diretto.
     sulla_trave = False
-    if punto in {c("K", 12), c("N", 12), c("Q", 12)}:
-        esito["colmo"] = True
-    elif punto in COLMO:
-        if rng.randint(1, 6) <= 2:
+    if punto in COLMO or punto in {c("K", 12), c("N", 12), c("Q", 12)}:
+        dadi_legno = dadi_oggetto_in_caduta(quota_reale - ALTEZZA_COLMO, 205)
+        dn = d(dadi_legno, 6, rng) + (d(rng.randint(1, 4), 8, rng) if par.rostri else 0)
+        if dn - DUREZZA_LEGNO >= PF_LEGNO:
             esito["colmo"] = True
         else:
             sulla_trave = True
-            esito["intera"] = False  # la trave la apre comunque
+        # la botte prende il danno della sua caduta fino al legno (SRD): sotto i 18 m può reggere
+        esito["intera"] = d(dadi_caduta_propria(quota_reale - ALTEZZA_COLMO), 6, rng) - 5 < 10
 
     # 3. Il colpo diretto: una creatura sola, quella nella casella. Niente TS.
     #    Il telo di pelle toglie 3 (durezza 2 e 1 pf, SRD); i rostri sono lame di
@@ -375,6 +390,7 @@ def tabella_palo(forno: bool = True) -> list[str]:
         "|---|---|---:|---|---|---|",
     ]
     mira = c("N", 12)
+    rotto = f"{probabilita_legno(48.0):.0f}%"
     casi = [(None, 0)] + [(i, k) for k in (1, 2, 3) for i in range(8)]
     for i, k in casi:
         if i is None:
@@ -386,11 +402,11 @@ def tabella_palo(forno: bool = True) -> list[str]:
             etichetta, prob = f"{i + 1} {NOMI_DIR[i]} · {metri:.1f} m".replace(".", ","), "3,1%"
         chi = next((cr.nome for cr in crs if q in cr.caselle), None)
         if q in PALI:
-            prende = f"{PALI[q]}, in cima: lo spezza e la tenda crolla subito"
+            prende = f"{PALI[q]}, in cima: lo spezza il {rotto}, e la tenda crolla; se no la botte gli si apre sopra"
         elif chi:
-            prende = f"**{chi}**, 15d6"
+            prende = f"**{chi}**, 15d6 − 3 + 1d4 × 1d8"
         elif q in COLMO:
-            prende = "il colmo: con 1-2 su d6 la spezza e la tenda crolla subito; con 3-6 la botte si apre sulla trave, e sotto niente colpo diretto"
+            prende = f"la trave del colmo: la spezza il {rotto}, e la tenda crolla; se no la botte le si apre sopra, e sotto niente colpo diretto"
         elif q[1] in (8, 14) or q[0] in (8, 18):
             prende = "il telo, sul bordo: metà olio fuori"
         else:
@@ -418,8 +434,8 @@ QUOTE = (48, 42, 36, 30, 27, 24, 18, 12, 9)
 
 def tabella_quote() -> list[str]:
     righe = [
-        "| Quota | Caduta | Botte: danno a chi sta sotto | 50 o più | La botte si apre | Deviazione: botte nella luce / al buio | Barilotto: danno, deviazione nella luce |",
-        "|---|---|---|---:|---:|---|---|",
+        "| Quota | Caduta | Botte: danno a chi sta sotto | 50 o più | La botte si apre | Spezza un palo o la trave | Deviazione: botte nella luce / al buio | Barilotto: danno, deviazione nella luce |",
+        "|---|---|---|---:|---:|---:|---|---|",
     ]
     rng = random.Random(1)
     for q in QUOTE:
@@ -431,7 +447,7 @@ def tabella_quote() -> list[str]:
         fmt = lambda x: "nessuna" if x == 1 else f"1d{x}−1"  # noqa: E731
         nb = dadi_oggetto_in_caduta(q, 31)
         righe.append(
-            f"| {q} m | {tempo_di_caduta(q):.1f} s".replace(".", ",") + f" | **{n}d6** | {p50:.0f}% | {apre:.0f}% "
+            f"| {q} m | {tempo_di_caduta(q):.1f} s".replace(".", ",") + f" | **{n}d6** | {p50:.0f}% | {apre:.0f}% | {probabilita_legno(q):.0f}% "
             f"| {fmt(dv)} / {fmt(db)} | {nb}d6 · {fmt(dl)} |".replace("0d6", "niente"))
     return righe
 
