@@ -21,6 +21,7 @@ quello che un controllo di prestampa misura, più le schede delle creature:
 | `fuori_margine` | righe che escono dall'area di stampa | 0 |
 | `immagini_sotto_300dpi` | immagini sotto 300 dpi alla dimensione stampata | 0 |
 | `schede_spezzate` | riquadri di creatura che cominciano su una pagina e finiscono su un'altra | 0 |
+| `rimandi_sbagliati` | «scheda a pagina N» senza la creatura a pagina N, «continua a pagina N» senza «(segue)» a pagina N, «continua nella colonna accanto» senza «(segue)» sulla stessa pagina | 0 |
 | `pagine_con_immagine` | quota di pagine con un'immagine raster di almeno un quarto di pagina | da registrare |
 | `pagine_con_immagine_decimo` | la stessa quota con la soglia di 1/10 di pagina, dove il piano pone l'obiettivo ≥ 0,3 (Paizo 0,40) | da registrare |
 
@@ -58,6 +59,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import statistics
 import subprocess
 import sys
@@ -73,7 +75,7 @@ CARTELLA = ROOT / "build" / "misura-stampa"
 REGISTRO = ROOT / "docs" / "audit" / "stampa-booklet.json"
 #: Le misure con un tetto: si scende soltanto. Le altre si registrano e basta.
 CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "immagini_sotto_300dpi",
-             "schede_spezzate", "font_non_incorporati")
+             "schede_spezzate", "font_non_incorporati", "rimandi_sbagliati")
 REGISTRATE = ("pagine", "corpo_mediano_pt", "corpo_minimo_pt", "schede", "pagine_con_immagine",
               "pagine_con_immagine_decimo")
 MINIMO_PT = 7.0
@@ -96,6 +98,11 @@ def compila_misurabile(mp: Path) -> tuple[Path, list[dict], str]:
         esito = compila_senza_font_di_sistema(typ, pdf)
         if esito.returncode != 0:
             raise RuntimeError(f"{mp.name}: typst non compila\n{esito.stderr[-2000:]}")
+        # Un'impaginazione che non converge stampa rimandi sbagliati: «scheda a
+        # pagina N», «continua a pagina N» presi da un giro precedente.
+        if "did not converge" in esito.stderr:
+            raise RuntimeError(f"{mp.name}: l'impaginazione non converge, i rimandi di pagina "
+                               f"possono essere sbagliati\n{esito.stderr[-2000:]}")
         schede = interroga_schede(typ)
     finally:
         typ.unlink(missing_ok=True)
@@ -237,6 +244,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         pagine_illustrate += grande
         pagine_illustrate_decimo += media
     spezzate = [s for s in schede if s["a"] != s["da"]]
+    rimandi = rimandi_sbagliati(doc)
     return {
         "pagine": len(doc),
         "font_non_incorporati": sorted(font_mancanti),
@@ -247,14 +255,48 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         "immagini_sotto_300dpi": len(immagini_basse),
         "schede": len(schede),
         "schede_spezzate": len(spezzate),
+        "rimandi_sbagliati": len(rimandi),
         "pagine_con_immagine": round(pagine_illustrate / len(doc), 3) if len(doc) else 0,
         "pagine_con_immagine_decimo": round(pagine_illustrate_decimo / len(doc), 3) if len(doc) else 0,
         "dettaglio": {
             "sotto_minimo": sotto[:30], "fuori_margine": fuori[:30],
             "immagini_basse": immagini_basse[:30],
-            "schede_spezzate": spezzate,
+            "schede_spezzate": spezzate, "rimandi_sbagliati": rimandi[:30],
         },
     }
+
+
+def _piano(testo: str) -> str:
+    """Il testo senza trattini morbidi e con gli spazi ridotti: un nome che va a
+    capo nel titolo si ritrova lo stesso."""
+    return re.sub(r"\s+", " ", testo.replace("\xad", "").replace("\u00ad", "")).strip()
+
+
+def rimandi_sbagliati(doc) -> list[tuple]:
+    """I rimandi di pagina dell'appendice delle creature, controllati sul PDF.
+
+    Un rimando si sbaglia quando l'impaginazione sposta qualcosa dopo che il
+    numero è stato scritto. L'appendice ne stampa di tre tipi, e ognuno dice
+    dove si deve trovare cosa."""
+    testi = [_piano(p.get_text()) for p in doc]
+    sbagliati = []
+    for n, pagina in enumerate(doc, 1):
+        for blocco in pagina.get_text("dict")["blocks"]:
+            righe = [[s["text"] for s in r["spans"] if s["text"].strip()] for r in blocco.get("lines", [])]
+            for parti in righe:
+                testo = _piano(" ".join(parti))
+                if m := re.search(r"scheda a pagina (\d+)", testo):
+                    # Il nome apre la riga dell'incontro: è il primo pezzo del blocco.
+                    nome, dove = _piano(righe[0][0]), int(m.group(1))
+                    if not (1 <= dove <= len(testi)) or nome not in testi[dove - 1]:
+                        sbagliati.append((n, nome[:40], f"scheda a pagina {dove}"))
+                elif m := re.search(r"continua a pagina (\d+)", testo):
+                    dove = int(m.group(1))
+                    if not (1 <= dove <= len(testi)) or "(segue)" not in testi[dove - 1]:
+                        sbagliati.append((n, "", f"continua a pagina {dove}"))
+                elif "continua nella colonna accanto" in testo and "(segue)" not in testi[n - 1]:
+                    sbagliati.append((n, "", "continua nella colonna accanto"))
+    return sbagliati
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -388,7 +388,7 @@
   })
 
   let testa = grid(columns: (1fr, auto), align: (left + bottom, right + bottom),
-    text(font: TITOLI, size: 12pt, weight: 600, fill: rosso)[#nome],
+    par(justify: false, text(font: TITOLI, size: 12pt, weight: 600, fill: rosso, hyphenate: false)[#nome]),
     if gs != "" { text(font: TITOLI, size: 9pt, fill: seppia)[#gs] } else { [] })
   let resto(tattiche) = [
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
@@ -421,16 +421,21 @@
   // cima al pezzo dopo il nome ripetuto con «(segue)». Testata e piede sono
   // quelli di una tabella, che Typst ripete a ogni pezzo; il contesto dice se
   // il pezzo è il primo o l'ultimo.
-  let lungo(chiave) = {
+  // `accanto`: il riquadro comincia nella colonna di sinistra e finisce in
+  // quella di destra della stessa pagina, in due pezzi. Allora la colonna
+  // basta a dire quale pezzo è, senza chiedere a Typst dove sono la testa e
+  // la fine: meno giri di impaginazione.
+  let lungo(chiave, accanto: false) = {
     let inizio() = query(<sb-app>).filter(m => m.value == chiave).first().location()
     let fine() = query(selector(<sb-fine>).after(inizio())).first().location()
     table(columns: 1, stroke: none, inset: (x: 9pt, y: 0pt), fill: boxLato,
       table.header(repeat: true, table.cell(inset: (x: 9pt, top: 8pt, bottom: 2pt),
         stroke: (top: 1.4pt + rosso))[
         #context {
-          let primo = here().page() == inizio().page() and calc.abs(here().position().y - inizio().position().y) < 30pt and calc.abs(here().position().x - inizio().position().x) < 40pt
+          let primo = if accanto { here().position().x < page.width / 2 } else {
+            here().page() == inizio().page() and calc.abs(here().position().y - inizio().position().y) < 30pt and calc.abs(here().position().x - inizio().position().x) < 40pt }
           if primo { testa } else {
-            text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso)[#nome]
+            text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
             text(size: 8pt, style: "italic", fill: seppia)[ (segue)]
           }
         }
@@ -443,13 +448,18 @@
       table.footer(repeat: true, table.cell(inset: (x: 9pt, top: 2pt, bottom: 6pt),
         stroke: (bottom: 1.4pt + rosso))[
         #context {
-          let f = fine()
           let qui = here().position()
-          let ultimo = here().page() == f.page() and calc.abs(qui.x - f.position().x) < 40pt
-          if not ultimo {
-            let dove = if page.columns > 1 and qui.x < page.width / 2 [nella colonna accanto] else [a pagina #(counter(page).get().first() + 1)]
-            align(right, text(size: 8pt, style: "italic", fill: seppia)[continua #dove])
-          }
+          let ultimo = if accanto { qui.x >= page.width / 2 or fine().position().x < page.width / 2 } else {
+            // La colonna, non la x esatta: il piede è allineato a destra e
+            // la sua x cade lontano da quella del segnaposto di fine.
+            let f = fine()
+            here().page() == f.page() and (qui.x < page.width / 2) == (f.position().x < page.width / 2) }
+          // Il piede ha la stessa altezza con e senza «continua»: se cambiasse,
+          // cambierebbe anche dove si spezza il riquadro e Typst non
+          // troverebbe un'impaginazione stabile.
+          let dove = if page.columns > 1 and qui.x < page.width / 2 [nella colonna accanto] else [a pagina #(counter(page).get().first() + 1)]
+          let riga = align(right, text(size: 8pt, style: "italic", fill: seppia)[continua #dove])
+          if ultimo { hide(riga) } else { riga }
         }
       ]),
     )
@@ -464,7 +474,7 @@
       return
     }
     [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
-                lungo: lungo(chiave))) <sb-dato>]
+                lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
     // La riga dell'incontro: quanto serve per tenere il conto al tavolo, e la
     // pagina dove sta il resto. I campi brevi, non le fasce: CA e pf.
     let pagina = {
@@ -480,7 +490,7 @@
     block(width: 100%, breakable: true, above: 0.9em, below: 0.6em,
       stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
       #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
-      #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso)[#nome]
+      #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
       #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
       #if pagina != none {
         h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
@@ -497,8 +507,10 @@
 }
 
 // L'appendice delle creature: ogni riquadro intero una volta sola, in ordine
-// di nome, a due colonne. Un riquadro non si spezza mai: se non entra nella
-// colonna passa intero alla colonna dopo (criterio WotC del piano, I6). Se
+// di nome, a due colonne. Un riquadro non si spezza mai a pagina girata
+// (criterio WotC del piano, I6): nella colonna di destra, se non entra, passa
+// intero alla pagina dopo; in quella di sinistra continua nella colonna
+// accanto, col «continua» in fondo e il nome ripetuto in cima. Se
 // nessuna scheda è andata in appendice, la pagina non esiste.
 #let appendice-creature(titolo: "Appendice: le creature") = context {
   let viste = (:)
@@ -508,23 +520,59 @@
   if viste.len() == 0 { return }
   let elenco = viste.values().sorted(key: v => lower(v.nome))
   capitolo-aperto(titolo, none)
+  [#metadata(none) <sb-app-inizio>]
+  // Le misure della pagina. La larghezza della colonna è quella delle tabelle
+  // (`TABELLA-COLONNA`); l'altezza è la pagina meno i margini.
+  let a5 = page.width < 16cm
+  let due = page.columns > 1
+  let larghezza = if due { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
+  let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
+  let cima = if a5 { 1.5cm } else { 2.1cm }
+  let fondo-col = page.height - if a5 { 1.4cm } else { 2.0cm }
+  // Dove cade ogni riquadro si calcola qui, sommando le altezze, e non con
+  // `here()`: un riquadro che non si spezza si porta dietro anche la propria
+  // posizione nella colonna dopo, e una scelta presa sulla posizione chiede
+  // a Typst giri di impaginazione in più che non convergono. Il conto è
+  // prudente (spazio fra i riquadri largo, colonna destra della prima pagina
+  // presa alla stessa altezza della sinistra): sbaglia solo nel senso di
+  // spostare un riquadro che sarebbe entrato, come prima.
+  let inizio = query(<sb-app-inizio>)
+  let y-prima = if inizio.len() > 0 { inizio.first().location().position().y } else { cima }
+  let spazio = 12pt
+  let col = 0
+  let y = y-prima
+  let cima-destra = y-prima
   for v in elenco {
-    // Quanto è alto rispetto a una colonna. La larghezza della colonna è quella
-    // delle tabelle (`TABELLA-COLONNA`); l'altezza è la pagina meno i margini.
-    let a5 = page.width < 16cm
-    let larghezza = if page.columns > 1 { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
-    let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
     let alto = measure(v.intero, width: larghezza).height
-    if alto < colonna * 0.92 {
+    let resta = fondo-col - y
+    // Nella colonna di sinistra un riquadro che non entra continua nella
+    // colonna accanto, sulla stessa pagina, invece di lasciare bianca metà
+    // della colonna (ARC-07 Notte e Alba p. 100, colonna piena al 29%,
+    // rimisura del 2026-10-29). Non gira pagina: il criterio WotC regge.
+    let nella-accanto = due and col == 0 and resta > 6cm and alto > resta and alto - resta < (fondo-col - cima-destra) * 0.9
+    if nella-accanto {
+      [#metadata(v.chiave) <sb-app>]
+      block(width: 100%, below: 1em, v.accanto)
+      col = 1
+      y = cima-destra + alto - resta + 30pt + spazio
+    } else if alto < colonna * 0.92 {
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, breakable: false, below: 1em, v.intero)
+      if alto > resta {
+        if due and col == 0 { col = 1; y = cima-destra } else { col = 0; y = cima; cima-destra = cima }
+      }
+      y += alto + spazio
     } else {
       // Più alto di una colonna: comincia in cima a una pagina, così due
       // colonne lo tengono senza girare pagina; più alto di due, comincia su
       // una pagina pari e si legge sulle due facciate aperte.
-      pagebreak(weak: true, to: if page.columns > 1 and alto > colonna * 1.85 { "even" } else { none })
+      pagebreak(weak: true, to: if due and alto > colonna * 1.85 { "even" } else { none })
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, below: 1em, v.lungo)
+      cima-destra = cima
+      if not due or alto <= colonna { col = 0; y = cima + alto + spazio }
+      else if alto <= colonna * 2 { col = 1; y = cima + alto - colonna + 30pt + spazio }
+      else { col = 0; y = cima + alto - colonna * 2 + 60pt + spazio }
     }
   }
 }
