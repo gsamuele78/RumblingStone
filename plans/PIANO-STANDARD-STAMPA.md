@@ -63,6 +63,10 @@ Note oneste sulla misura:
 - **D3. Varianti di layout misurate.** La pipeline scarta le varianti con
   errori misurabili. Fra quelle senza errori sceglie il DM alla cieca, come per
   la prosa.
+- **D5. Dove sta la scheda intera** (aperta, nata dal confronto con RHoD):
+  il riquadro intero alla prima comparsa della creatura nel volume e una riga
+  con rimando alla pagina nelle successive, come fa WotC con l'appendice. Cambia
+  ADR-0105, che oggi mette il riquadro a ogni comparsa: la decide il DM.
 - **D4. Un registro.** Ogni booklet ha i suoi tetti di stampa in git, che
   scendono soltanto. ✅ attuato con `docs/audit/stampa-booklet.json`.
 
@@ -91,7 +95,13 @@ Note oneste sulla misura:
   «(encounter continues on page N)», contro 14 su 76 senza rimando. Dettaglio
   in `standard-stampa/CONFRONTO-WOTC-2026-10-29.md`. Resta fuori la prosa
   WotC: web.archive.org, drivethrurpg e dmsguild sono chiusi anche dai thread
-  nuovi, servono pagine dei PDF del DM.
+  nuovi. Poi, alle 15:05, 18 pagine interne della copia di *Red Hand of Doom*
+  del DM: testo a 9,75 pt, interlinea 1,10, 61 caratteri per riga (noi 10 pt,
+  1,30, 59), circa 4.650 caratteri per pagina (noi 3.570). Il box da leggere
+  è corsivo colorato nel testo, senza riquadro (14,5% del testo). Immagini:
+  con la soglia di ¼ di pagina WotC 0,06 contro noi 0,09, con la soglia di
+  1/10 WotC 0,50 contro noi 0,18. Nel libro le schede intere stanno
+  nell'appendice; nell'incontro c'è una riga sola col rimando.
 - [ ] **A4** Il censimento degli elementi di layout nei tre renderer e delle
   forme dei dati (Bestiario, master, PG, Drappo PF1e).
 
@@ -113,7 +123,10 @@ Note oneste sulla misura:
   a 1,35-1,4; `pagine_con_immagine` resta registrata senza tetto, con
   obiettivo ≥ 0,3. Dal lato WotC: una variante «scheda in colonna», un
   campo per riga e righe da 40-60 caratteri, contro il riquadro largo di
-  oggi; le fasce colorate al cieco.
+  oggi; le fasce colorate al cieco. Interlinea fra 1,10 (WotC) e 1,41
+  (Paizo): decide il cieco. Una variante del box da leggere senza riquadro,
+  in corsivo colorato. `pagine_con_immagine` misurata anche con la soglia di
+  1/10 di pagina, ed è lì l'obiettivo ≥ 0,3.
 - [ ] **I7** Le schede PG del Drappo nello stesso tema.
 
 ## Fase 3 — Validazione
