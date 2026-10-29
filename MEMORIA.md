@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-29 | ARC-07 · il barile sulla tenda (decisio… | il DM accetta tutte le proposte ★ tranne B25 (*«tutti gli inferred ok a parte i… | 🟡 B1-B15 e B22-B24 decise, i 22 INFERRED del documento diventano canone del 2026-10-29; resta B25 (come reagiscono le bande d'orchi e i lupi), chiesta al DM co… |
 | 2026-10-24 | ARC-07 · il barile sulla tenda (esperim… | la botte d'olio con le fiale della fenice lasciata cadere da 48 m sulla tenda d… | 🟡 Fisica della caduta (3,15 s, 30 m/s, deriva 20 cm), tiro di sgancio della casa che non rompe l'invisibilità, oggetto in caduta 15d6 (SRD 3.5), palle di fuoco… |
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | 4g-2, prima parte: le caratteristiche dei PG che il repo attesta | 🟡 15 caselle su 24 (Tordek dalla scheda PCGen, Hella da DEF-3, FOR di Thorik da P1); restano 9 al DM con un modulo |
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | STATO-E-ORDINE · INDEX · RECUPERO · RIP… | P15 dell'indice: la coerenza dell'archivio dei piani | ✅ Otto intestazioni di piano riallineate allo stato di `INDEX.md`: le sei dell'indice (AMBIENTE, PRATICHE, TRAVASO, AUTOMAZIONE, AGENT-SKILLS, DRAPPO) e due tr… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | la forma delle 18 mappe di ARC-07 ridisegnata contro i moduli (DM: «Stile e for… | ✅ Nessun rilievo E nuovo, voti uguali o più alti (T-2 97→100). Il tema pianta ora non tronca le voci di legenda a metà parola e non mette un oggetto sulla rocc… |
 | 2026-10-23 | STATO-E-ORDINE | §0, triage delle chat di Claude.ai | ✅ 24 chat verificate sui percorsi di `main`: tutte assorbite o superate; tre punti nuovi: nomi Elsir rimasti in finzione, arco 05 solo in PDF, archiviazione e… |
-| 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 
 ## Le misure che si portano dietro
 
