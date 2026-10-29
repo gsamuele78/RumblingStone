@@ -81,9 +81,17 @@ Note oneste sulla misura:
   30 righe per colonna contro 26,5, le schede allo stesso corpo del testo
   contro 9,5-10, e soprattutto 0,7 pagine con un'illustrazione grande contro
   0,09. Sotto 7 pt Paizo ha solo fregi, marchi e licenza, quindi la soglia
-  regge. Manca il lato WotC (web.archive.org chiuso dal proxy). Sono moduli,
-  non volumi di AP, e cinque pagine sono poche. Dettaglio in
-  `standard-stampa/CONFRONTO-AP-2026-10-29.md` nella cartella condivisa.
+  regge. Sono moduli, non volumi di AP, e cinque pagine sono poche.
+  Dettaglio in `standard-stampa/CONFRONTO-AP-2026-10-29.md` nella cartella
+  condivisa. Lato WotC, solo schede (stesso giorno): le 100 schede della Web
+  Enhancement di *Red Hand of Doom* (caricata dal DM il 2026-10-18) contro
+  ARC-07 col riquadro nuovo. Corpo 9 pt uguale, densità per pagina uguale;
+  interlinea 1,11 contro 1,24; **righe della scheda da 46 caratteri (Paizo
+  31-45) contro 106 nostre**; schede spezzate 3 su 100, sempre con
+  «(encounter continues on page N)», contro 14 su 76 senza rimando. Dettaglio
+  in `standard-stampa/CONFRONTO-WOTC-2026-10-29.md`. Resta fuori la prosa
+  WotC: web.archive.org, drivethrurpg e dmsguild sono chiusi anche dai thread
+  nuovi, servono pagine dei PDF del DM.
 - [ ] **A4** Il censimento degli elementi di layout nei tre renderer e delle
   forme dei dati (Bestiario, master, PG, Drappo PF1e).
 
@@ -93,8 +101,9 @@ Note oneste sulla misura:
   restare uguale.
 - [ ] **I2** Le etichette delle mappe non scendono sotto il corpo minimo: la
   scala della figura decide la dimensione delle etichette nel renderer.
-- [ ] **I3** Il riquadro che si spezza ripete la testata («segue»), oppure
-  passa intero alla colonna dopo quando è più corto di una colonna.
+- [ ] **I3** Il riquadro che si spezza ripete la testata con «(continua a
+  pagina N)», come fa WotC, oppure passa intero alla colonna dopo quando è
+  più corto di una colonna.
 - [ ] **I4** Schema della creatura e generatore delle righe leggibili.
   Migrazione a lotti: ARC-07 e il Bestiario, poi il resto.
 - [ ] **I5** Rappresentazione intermedia e renderer unici, un elemento alla
@@ -102,7 +111,9 @@ Note oneste sulla misura:
 - [ ] **I6** Varianti di layout e scelta alla cieca del DM. Dal confronto
   di A3: il corpo resta a 10 pt; si provano le schede a 9 pt e l'interlinea
   a 1,35-1,4; `pagine_con_immagine` resta registrata senza tetto, con
-  obiettivo ≥ 0,3.
+  obiettivo ≥ 0,3. Dal lato WotC: una variante «scheda in colonna», un
+  campo per riga e righe da 40-60 caratteri, contro il riquadro largo di
+  oggi; le fasce colorate al cieco.
 - [ ] **I7** Le schede PG del Drappo nello stesso tema.
 
 ## Fase 3 — Validazione
