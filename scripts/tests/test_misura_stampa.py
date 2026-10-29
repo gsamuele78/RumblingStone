@@ -105,6 +105,54 @@ class TestSegnapostiNelTema(unittest.TestCase):
         finally:
             typ.unlink(missing_ok=True)
 
+    def test_appendice_una_scheda_per_creatura_e_tattica_nell_incontro(self):
+        """ADR-0105 punto 7: due comparse della stessa creatura danno due righe
+        con la loro tattica e un solo riquadro intero in appendice."""
+        import export_booklet_typst as ex
+        xorn = "```statblocco\nnome: Xorn\ngs: 6\nca: 24\npf: 52\nts: Temp +8\ntattica: {t}\n```\n"
+        corpo = xorn.format(t="Sale dal pavimento.") + "\nTesto.\n\n" + xorn.format(t="Fugge nella roccia.")
+        typ = ROOT / "scripts" / "tests" / "_tmp_appendice.typ"
+        pdf = typ.with_suffix(".pdf")
+        typ.write_text('#import "../typst/tema-rumblingstone.typ": *\n'
+                       '#modo-schede.update("appendice")\n'
+                       f'{ex.md_to_typ(corpo)}\n#appendice-creature()\n', encoding="utf-8")
+        try:
+            self.assertEqual(ms.interroga_schede(typ), [{"nome": "Xorn", "da": 2, "a": 2}])
+            self.assertEqual(ex.compila("typst", typ, pdf)[0].returncode, 0)
+            testo = "".join(p.get_text() for p in pymupdf.open(pdf))
+            self.assertEqual(testo.count("scheda a pagina 2"), 2)
+            self.assertIn("Sale dal pavimento.", testo)
+            self.assertIn("Fugge nella roccia.", testo)
+            self.assertEqual(testo.count("Appendice: le creature"), 1)
+        finally:
+            typ.unlink(missing_ok=True)
+            pdf.unlink(missing_ok=True)
+
+
+class TestAppendiceHtml(unittest.TestCase):
+    """Le stesse due comparse nella via HTML e Homebrewery."""
+
+    def test_html_e_homebrewery(self):
+        import build_booklet_html as bh
+        xorn = "```statblocco\nnome: Xorn\ngs: 6\nca: 24\npf: 52\nts: Temp +8\ntattica: {t}\n```"
+        bh.APPENDICE = {}
+        try:
+            righe = [bh.statblocco_html(xorn.format(t=t)[14:-4]) for t in ("Sale.", "Fugge.")]
+            self.assertEqual(len(bh.APPENDICE), 1)
+            self.assertTrue(all('class="sb-riga"' in r for r in righe))
+            self.assertIn("Fugge.", righe[1])
+            self.assertNotIn("Sale.", next(iter(bh.APPENDICE.values()))[2])
+        finally:
+            bh.APPENDICE = None
+        bh.APPENDICE_HB = {}
+        try:
+            hb = bh.statblocchi_homebrewery(xorn.format(t="Sale.") + "\n\n" + xorn.format(t="Fugge."))
+            self.assertEqual(len(bh.APPENDICE_HB), 1)
+            self.assertEqual(hb.count("*scheda in appendice*"), 2)
+            self.assertNotIn("{{monster", hb)
+        finally:
+            bh.APPENDICE_HB = None
+
 
 if __name__ == "__main__":
     unittest.main()

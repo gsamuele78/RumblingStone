@@ -2085,6 +2085,48 @@
       "deterministic": true
     },
     {
+      "name": "varianti_stampa",
+      "description": "«Quale impaginazione si legge meglio al tavolo? Fammi scegliere senza sapere quale è quale.»\n\nCompila lo stesso booklet in più varianti del tema (interlinea, box da leggere senza riquadro), passate con typst --input; misura ogni PDF con misura_stampa e scarta la variante che peggiora una misura con tetto rispetto al libro di sempre. Con le varianti rimaste prepara CIECO.pdf: coppie di pagine con lo stesso testo, una per versione, in ordine casuale, e la chiave in CHIAVE.json. Serve PyMuPDF.",
+      "use_case": "«Quale impaginazione si legge meglio al tavolo? Fammi scegliere senza sapere quale è quale.»",
+      "invocation": "python3 scripts/varianti_stampa.py MANIFEST.json --out CARTELLA",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "Il manifest del booklet."
+          },
+          "out": {
+            "type": "string",
+            "description": "Cartella del fascicolo cieco, fuori dal repo."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Seme del caso: stesse coppie a ogni esecuzione."
+          },
+          "coppie": {
+            "type": "integer",
+            "description": "Coppie per variante."
+          }
+        },
+        "required": [
+          "manifest",
+          "out"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<out>/CIECO.pdf",
+        "<out>/CHIAVE.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
       "name": "build_monster_catalog",
       "description": "«Quali statblocchi esistono già nel repo, e dove sono?»\n\nIndicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
       "use_case": "«Quali statblocchi esistono già nel repo, e dove sono?»",

@@ -12,6 +12,10 @@
       "a5": {
         "interno": 1.5,
         "esterno": 1.1
+      },
+      "scheda": {
+        "interno": 1.0,
+        "esterno": 1.0
       }
     }
   },
@@ -21,7 +25,7 @@
         "testi_sotto_minimo": 291,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 58,
-        "schede_spezzate": 2,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
@@ -29,7 +33,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 3.9,
         "schede": 12,
-        "pagine_con_immagine": 0.089
+        "pagine_con_immagine": 0.089,
+        "pagine_con_immagine_decimo": 0.178
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -45,7 +50,8 @@
         "corpo_mediano_pt": 9.5,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -61,7 +67,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 1,
-        "pagine_con_immagine": 0.263
+        "pagine_con_immagine": 0.263,
+        "pagine_con_immagine_decimo": 0.263
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": {
@@ -69,15 +76,16 @@
         "testi_sotto_minimo": 330,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 68,
-        "schede_spezzate": 3,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
-        "pagine": 145,
+        "pagine": 146,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 3.9,
         "schede": 15,
-        "pagine_con_immagine": 0.069
+        "pagine_con_immagine": 0.068,
+        "pagine_con_immagine_decimo": 0.13
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -93,7 +101,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-GRUPPO-CAMMINO.manifest.json": {
@@ -109,7 +118,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-SESSIONE-TERROS-BOOKLET.manifest.json": {
@@ -117,15 +127,16 @@
         "testi_sotto_minimo": 0,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
-        "schede_spezzate": 2,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
-        "pagine": 59,
+        "pagine": 60,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 4,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-TEASER-GIOCATORI.manifest.json": {
@@ -141,7 +152,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json": {
@@ -149,7 +161,7 @@
         "testi_sotto_minimo": 291,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 56,
-        "schede_spezzate": 2,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
@@ -157,7 +169,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 3.9,
         "schede": 13,
-        "pagine_con_immagine": 0.094
+        "pagine_con_immagine": 0.094,
+        "pagine_con_immagine_decimo": 0.176
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
@@ -165,15 +178,16 @@
         "testi_sotto_minimo": 97,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 2,
-        "schede_spezzate": 1,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
-        "pagine": 64,
+        "pagine": 65,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 3.0,
         "schede": 5,
-        "pagine_con_immagine": 0.031
+        "pagine_con_immagine": 0.031,
+        "pagine_con_immagine_decimo": 0.031
       }
     },
     "10-stand-alone/L'abbazia Della Rotta Sicura/homebrew/abbazia-rotta-sicura.manifest.json": {
@@ -181,15 +195,16 @@
         "testi_sotto_minimo": 102,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
-        "schede_spezzate": 3,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
-        "pagine": 40,
+        "pagine": 41,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 2.5,
         "schede": 19,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BENVENUTO-TAVOLO.manifest.json": {
@@ -205,7 +220,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-DM.manifest.json": {
@@ -213,15 +229,16 @@
         "testi_sotto_minimo": 36,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 19,
-        "schede_spezzate": 1,
+        "schede_spezzate": 0,
         "font_non_incorporati": 0
       },
       "misura": {
-        "pagine": 85,
+        "pagine": 86,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 6.1,
         "schede": 7,
-        "pagine_con_immagine": 0.118
+        "pagine_con_immagine": 0.116,
+        "pagine_con_immagine_decimo": 0.209
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-GIOCATORI.manifest.json": {
@@ -237,7 +254,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.625
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-FASCICOLO-SCHEDE.manifest.json": {
@@ -253,7 +271,8 @@
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.091
+        "pagine_con_immagine": 0.091,
+        "pagine_con_immagine_decimo": 0.455
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-PROP.manifest.json": {
@@ -269,13 +288,14 @@
         "corpo_mediano_pt": 9.5,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.167
       }
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-SCHEDE-PG.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 108,
-        "fuori_margine": 299,
+        "testi_sotto_minimo": 0,
+        "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
         "font_non_incorporati": 0
@@ -283,9 +303,10 @@
       "misura": {
         "pagine": 6,
         "corpo_mediano_pt": 9.0,
-        "corpo_minimo_pt": 6.7,
+        "corpo_minimo_pt": 7.0,
         "schede": 0,
-        "pagine_con_immagine": 0.0
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0
       }
     }
   }

@@ -883,6 +883,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
+    "schede",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -1055,6 +1056,12 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # in questo volume, o se ne vanno (ADR-0070, classe D).
     nel_volume = capitoli_del_volume(base, man)
     parti = intestazione(man, base=base, carta=carta, formato=formato)
+    # Dove sta il riquadro intero delle creature (ADR-0105 punto 7): in
+    # appendice, con la riga e la tattica nell'incontro; «qui» per i volumi che
+    # le schede le vogliono dove sono scritte.
+    appendice = man.get("schede", "appendice") == "appendice"
+    if appendice:
+        parti.append('#modo-schede.update("appendice")')
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
@@ -1070,6 +1077,8 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)
         parti.append("")
+    if appendice:
+        parti.append("#appendice-creature()")
     testo = "\n".join(parti)
     # L'indice analitico e' opt-in dal manifest: non tutti i volumi lo vogliono
     # (un teaser di due pagine con un indice analitico e' una presa in giro).

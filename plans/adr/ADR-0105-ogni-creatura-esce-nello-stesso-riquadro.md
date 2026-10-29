@@ -83,6 +83,16 @@ Per il punto 7 (dove sta il riquadro):
    dell'appendice, e la tattica di quell'incontro. Un PNG che cambia tattica
    nel tempo, o che si incontra in stanze o luoghi diversi, porta una tattica
    per ogni incontro. Il riquadro non si ripete più a ogni comparsa.
+   Nel tema: la riga dell'incontro ha nome, GS, CA, pf, «scheda a pagina N»
+   e la fascia Tattiche; l'appendice (`appendice-creature`) mette i riquadri
+   in ordine di nome, a due colonne, uno per creatura (stesso nome e stessi
+   numeri; la tattica non conta). Un riquadro non si spezza; quello più alto
+   di una colonna comincia in cima a una pagina, o su una pagina pari se è
+   più alto di due, porta «continua nella colonna accanto» o «continua a
+   pagina N» in fondo e il nome con «(segue)» in cima al pezzo dopo, come
+   *Red Hand of Doom*. HTML e Homebrewery fanno lo stesso, con un
+   collegamento al posto del numero di pagina. Un manifest con
+   `"schede": "qui"` tiene i riquadri dove sono scritti.
 
 ## Conseguenze
 

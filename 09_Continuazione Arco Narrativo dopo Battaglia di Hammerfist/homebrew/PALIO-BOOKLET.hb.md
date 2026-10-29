@@ -2811,57 +2811,20 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 ## 1. I Fantini (i due archetipi)
 
 ### 1.1 Fantino Cavaliere — "corsa pulita" (GS 8)
-{{monster,frame
-## Fantino Cavaliere
-*Umano Guerriero 6 / Cavaliere-ish · corsa pulita* · GS 8
-___
-
-**DIFESA**
-___
-**CA 18** (armatura leggera da corsa) · **pf 55** · TS Tempra +7, Riflessi +6, Volontà +4  
-
-**ATTACCO**
-___
-**Mischia** nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato  
-
-**STATISTICHE**
-___
-For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Cavalcata Poderosa*, *Attacco in Corsa*  
-
-**CAPACITÀ SPECIALI**
-___
-- **Legame col cavallo**: +2 alle prove di Cavalcare del proprio destriero (empatia).  
+{{note
+##### Fantino Cavaliere · GS 8
+**CA** 18, armatura leggera da corsa · **pf** 55 · *scheda in appendice*
 
 **TATTICHE**
-___
 Cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.  
 }}
 
 ### 1.2 Fantino Ladro — "corsa assassina" (GS 8)
-{{monster,frame
-## Fantino Ladro
-*Mezzelfo Ladro 8 · corsa assassina* · GS 8
-___
-
-**DIFESA**
-___
-**CA 19** · **pf 44** · TS Tempra +4, Riflessi +10, Volontà +3  
-
-**ATTACCO**
-___
-**Mischia** nerbo con aghi +11 (1d4+1 + veleno CD 14, 1d2 Des); *Attacco Furtivo* se il rivale è Colto alla Sprovvista (curva cieca, Zona 5) · **Sbilanciare/Spingere in sella** +13  
-
-**STATISTICHE**
-___
-Des 18 · **Abilità** Cavalcare +12, Raggirare +14, Furtività +14  
-
-**CAPACITÀ SPECIALI**
-___
-- *Attacco Furtivo* +4d6.  
-- **Slealtà**: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).  
+{{note
+##### Fantino Ladro · GS 8
+**CA** 19 · **pf** 44 · *scheda in appendice*
 
 **TATTICHE**
-___
 Sta dietro, colpisce nelle curve cieche, punta a **disarcionare** più che a vincere.  
 }}
 
@@ -2910,72 +2873,29 @@ Statistiche-corsa astratte (mod. applicato ai tiri di Zona del fantino):
 ## 3. I Sicari di Sonjak (assalto alla stalla, Giorno 2 notte, GS 11–12)
 
 ### 3.1 Drow Assassino ×2 (GS 9 cad.)
-{{monster,frame
-## Drow Assassino (2)
-*Drow Ladro 5 / Assassino 4* · GS 9
-___
-
-**DIFESA**
-___
-**CA 21** · **pf 58** · TS Riflessi +12  
-
-**ATTACCO**
-___
-Balestra a mano + veleno drow (sonno, CD 17) · **Attacco Furtivo** +6d6  
-
-**STATISTICHE**
-___
-Des 20  
-
-**CAPACITÀ SPECIALI**
-___
-- **Morte Improvvisa** (CD 18), *Nascondersi nelle Ombre*.  
-- **Innata**: *Oscurità*, *Fuoco delle Fate*.  
+{{note
+##### Drow Assassino (2) · GS 9
+**CA** 21 · **pf** 58 · *scheda in appendice*
 
 **TATTICHE**
-___
 **Obiettivo**: **il cavallo**, non i PG: colpire e sparire. Se scoperti, coprono la fuga.  
 }}
 
 
 ### 3.2 Drow Chierica di Lolth (GS 10)
-{{monster,frame
-## Drow Chierica di Lolth
-*Drow Chierico 9* · GS 10
-___
-
-**DIFESA**
-___
-**CA 22** · **pf 63**  
-
-**STATISTICHE**
-___
-Sag 18  
-
-**CAPACITÀ SPECIALI**
-___
-- **Incantesimi** fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). *Oscurità*, *Individuazione Magico*.  
+{{note
+##### Drow Chierica di Lolth · GS 10
+**CA** 22 · **pf** 63 · *scheda in appendice*
 
 **TATTICHE**
-___
 Comanda l'assalto; usa **Silenzio** per soffocare gli allarmi, **Ragnatela** in stalla. **Cattura viva** = intel Fase 0 Rethmar + −1 clock Sonjak.  
 }}
 
 
 ### 3.3 Servitore della Spora (GS 3, ariete vivente)
-{{monster,frame
-## Servitore della Spora (1-2)
-*Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)* · GS 3
-___
-
-**DIFESA**
-___
-**pf 32**  
-
-**CAPACITÀ SPECIALI**
-___
-- **Carica suicida**, **veleno da contatto CD 16**.  
-- **Esplode** in spore alla morte (Tempra CD 14 o 1 round *nauseato*).  
+{{note
+##### Servitore della Spora (1-2) · GS 3
+**CA** — · **pf** 32 · *scheda in appendice*
 }}
 
 
@@ -3155,3 +3075,104 @@ per mappa. Companion di raccordo:*
 > Esiti aperti (D13): chi vince il Palio, se la stalla regge e per quale rotta
 > arrivano i rinforzi dipende dalle scelte dei PG e dai dadi.
 
+
+\page
+
+# Appendice: le creature
+
+{{monster,frame
+## Drow Assassino (2)
+*Drow Ladro 5 / Assassino 4* · GS 9
+___
+
+**DIFESA**
+___
+**CA 21** · **pf 58** · TS Riflessi +12  
+
+**ATTACCO**
+___
+Balestra a mano + veleno drow (sonno, CD 17) · **Attacco Furtivo** +6d6  
+
+**STATISTICHE**
+___
+Des 20  
+
+**CAPACITÀ SPECIALI**
+___
+- **Morte Improvvisa** (CD 18), *Nascondersi nelle Ombre*.  
+- **Innata**: *Oscurità*, *Fuoco delle Fate*.  
+}}
+{{monster,frame
+## Drow Chierica di Lolth
+*Drow Chierico 9* · GS 10
+___
+
+**DIFESA**
+___
+**CA 22** · **pf 63**  
+
+**STATISTICHE**
+___
+Sag 18  
+
+**CAPACITÀ SPECIALI**
+___
+- **Incantesimi** fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). *Oscurità*, *Individuazione Magico*.  
+}}
+{{monster,frame
+## Fantino Cavaliere
+*Umano Guerriero 6 / Cavaliere-ish · corsa pulita* · GS 8
+___
+
+**DIFESA**
+___
+**CA 18** (armatura leggera da corsa) · **pf 55** · TS Tempra +7, Riflessi +6, Volontà +4  
+
+**ATTACCO**
+___
+**Mischia** nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato  
+
+**STATISTICHE**
+___
+For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Cavalcata Poderosa*, *Attacco in Corsa*  
+
+**CAPACITÀ SPECIALI**
+___
+- **Legame col cavallo**: +2 alle prove di Cavalcare del proprio destriero (empatia).  
+}}
+{{monster,frame
+## Fantino Ladro
+*Mezzelfo Ladro 8 · corsa assassina* · GS 8
+___
+
+**DIFESA**
+___
+**CA 19** · **pf 44** · TS Tempra +4, Riflessi +10, Volontà +3  
+
+**ATTACCO**
+___
+**Mischia** nerbo con aghi +11 (1d4+1 + veleno CD 14, 1d2 Des); *Attacco Furtivo* se il rivale è Colto alla Sprovvista (curva cieca, Zona 5) · **Sbilanciare/Spingere in sella** +13  
+
+**STATISTICHE**
+___
+Des 18 · **Abilità** Cavalcare +12, Raggirare +14, Furtività +14  
+
+**CAPACITÀ SPECIALI**
+___
+- *Attacco Furtivo* +4d6.  
+- **Slealtà**: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).  
+}}
+{{monster,frame
+## Servitore della Spora (1-2)
+*Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)* · GS 3
+___
+
+**DIFESA**
+___
+**pf 32**  
+
+**CAPACITÀ SPECIALI**
+___
+- **Carica suicida**, **veleno da contatto CD 16**.  
+- **Esplode** in spore alla morte (Tempra CD 14 o 1 round *nauseato*).  
+}}

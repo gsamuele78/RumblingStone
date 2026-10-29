@@ -22,6 +22,7 @@ quello che un controllo di prestampa misura, più le schede delle creature:
 | `immagini_sotto_300dpi` | immagini sotto 300 dpi alla dimensione stampata | 0 |
 | `schede_spezzate` | riquadri di creatura che cominciano su una pagina e finiscono su un'altra | 0 |
 | `pagine_con_immagine` | quota di pagine con un'immagine raster di almeno un quarto di pagina | da registrare |
+| `pagine_con_immagine_decimo` | la stessa quota con la soglia di 1/10 di pagina, dove il piano pone l'obiettivo ≥ 0,3 (Paizo 0,40) | da registrare |
 
 Le schede si riconoscono dai segnaposti `<sb-inizio>` e `<sb-fine>` che il
 tema mette in ogni `#statblocco`; si leggono con `typst eval`.
@@ -73,7 +74,8 @@ REGISTRO = ROOT / "docs" / "audit" / "stampa-booklet.json"
 #: Le misure con un tetto: si scende soltanto. Le altre si registrano e basta.
 CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "immagini_sotto_300dpi",
              "schede_spezzate", "font_non_incorporati")
-REGISTRATE = ("pagine", "corpo_mediano_pt", "corpo_minimo_pt", "schede", "pagine_con_immagine")
+REGISTRATE = ("pagine", "corpo_mediano_pt", "corpo_minimo_pt", "schede", "pagine_con_immagine",
+              "pagine_con_immagine_decimo")
 MINIMO_PT = 7.0
 DPI_MINIMI = 300
 # Typst appende punteggiatura e trattini nel margine (text.overhang, la
@@ -97,6 +99,10 @@ def compila_misurabile(mp: Path) -> tuple[Path, list[dict], str]:
         schede = interroga_schede(typ)
     finally:
         typ.unlink(missing_ok=True)
+    # Un volume fatto solo di schede da tavolo ha la gabbia della scheda
+    # (scheda-pg.typ), non quella del libro.
+    if man.get("chapters") and all(c.get("layout") == "schede" for c in man["chapters"]):
+        formato = "scheda"
     return pdf, schede, formato
 
 
@@ -146,7 +152,9 @@ def accoppia_segnaposti(segnaposti: list) -> list[dict]:
 
 # I margini del tema (`libro` in tema-rumblingstone.typ), speculari: la pagina 1
 # è una destra, quindi sulle dispari l'interno è a sinistra.
-MARGINI_CM = {"a4": {"interno": 2.0, "esterno": 1.5}, "a5": {"interno": 1.5, "esterno": 1.1}}
+MARGINI_CM = {"a4": {"interno": 2.0, "esterno": 1.5}, "a5": {"interno": 1.5, "esterno": 1.1},
+              # la scheda da tavolo: un foglio sciolto, margini uguali sui due lati
+              "scheda": {"interno": 1.0, "esterno": 1.0}}
 # Testatine e folio stanno nel margine alto e basso: si controlla solo che non
 # arrivino al bordo, dove la taglierina o la stampante li mangiano.
 BORDO_CM = 0.8
@@ -172,7 +180,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
     import pymupdf
     doc = pymupdf.open(pdf)
     corpi: Counter = Counter()
-    sotto, fuori, immagini_basse, pagine_illustrate = [], [], [], 0
+    sotto, fuori, immagini_basse, pagine_illustrate, pagine_illustrate_decimo = [], [], [], 0, 0
     minimo = 99.0
     font_mancanti: set[str] = set()
     for n, pagina in enumerate(doc, 1):
@@ -207,7 +215,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
                 # una macchina all'altra (in CI la misura per span dava +1/+3).
                 if piccola:
                     sotto.append(piccola)
-        grande = False
+        grande = media = False
         immagini = [(pymupdf.Rect(im["bbox"]), im) for im in pagina.get_image_info(xrefs=True)]
         for r, im in immagini:
             if min(r.width, r.height) < ILLUSTRAZIONE_MINIMA_PT:
@@ -224,7 +232,10 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
                 immagini_basse.append((n, round(dpi), round(r.width / 72 * 2.54, 1)))
             if r.width * r.height >= area.width * area.height / 4:
                 grande = True
+            if r.width * r.height >= area.width * area.height / 10:
+                media = True
         pagine_illustrate += grande
+        pagine_illustrate_decimo += media
     spezzate = [s for s in schede if s["a"] != s["da"]]
     return {
         "pagine": len(doc),
@@ -237,6 +248,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         "schede": len(schede),
         "schede_spezzate": len(spezzate),
         "pagine_con_immagine": round(pagine_illustrate / len(doc), 3) if len(doc) else 0,
+        "pagine_con_immagine_decimo": round(pagine_illustrate_decimo / len(doc), 3) if len(doc) else 0,
         "dettaglio": {
             "sotto_minimo": sotto[:30], "fuori_margine": fuori[:30],
             "immagini_basse": immagini_basse[:30],

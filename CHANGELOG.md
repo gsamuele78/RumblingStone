@@ -23,6 +23,16 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   Tattiche, riempite dalle righe di ADR-0091 o dai campi del blocco; la stessa
   forma esce nell'HTML dei booklet e in Homebrewery (`{{monster,frame}}`). Il
   campo `gs` accetta un testo («PG di 13°») o «—».
+- Le schede intere delle creature in appendice (ADR-0105 punto 7): nel punto
+  dell'incontro una riga con nome, GS, CA, pf, la pagina della scheda e la
+  tattica di quell'incontro; in fondo al volume `appendice-creature` con un
+  riquadro per creatura, mai spezzato a pagina girata, con «continua» e
+  «(segue)» quando è più alto di una colonna. Lo stesso in HTML e Homebrewery.
+  Chiave di manifest `"schede": "qui"` per tenere i riquadri dove sono.
+- `scripts/varianti_stampa.py`: compila un booklet in più varianti del tema
+  (interlinea, box da leggere senza riquadro), le misura, scarta quelle che
+  peggiorano una misura con tetto e prepara il fascicolo per la scelta alla
+  cieca, con la chiave a parte.
 - `componenti.py`: l'ancora `#scheda` include il blocco ```statblocco con la
   sua parte leggibile e il nome dal titolo della scheda.
 - `scripts/misura_statblocchi_booklet.py`: conta per booklet le schede di

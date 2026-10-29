@@ -1,6 +1,6 @@
 # PIANO — Uno standard solo per i dati delle creature e per la stampa dei booklet
 
-> **Stato**: 🟡 in corso (2026-10-29). Audit A1-A3 fatti, misura registrata e in CI. Le decisioni D1-D4 sono proposte e aspettano il DM · **Classe**: C per il codice, K per i master da convertire
+> **Stato**: 🟡 in corso (2026-10-29). Audit A1-A3 fatti, misura registrata e in CI. D5 decisa (appendice), I3 fatto, I6 e I7 in parte; il cieco di I6 aspetta il DM · **Classe**: C per il codice, K per i master da convertire
 > **Nasce da**: la richiesta del DM del 2026-10-29, dopo la PR #295: *«uniformare tutti i master nel miglior template possibile […] e poi il miglior layout possibile per la stampa usando questo master di dati […] in una pipeline che azzera i glitch […] e sia misurabile e registri il miglioramento […] creando delle pipeline std e dei test concreti e reali e professionali che verifichino la correttezza, il miglioramento e l'aderenza agli standard professionali dell'editoria»*. Poi, sulla scheda di decisione: la #295 non si unisce, si rifà dentro questo standard (scelta B, «Fermarla»), e il layout si confronta con quello degli AP 3.5 e PF1e più apprezzati dalla community.
 > **Decisioni collegate**: [ADR-0105](adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (il riquadro unico, proposta, nella #295); [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) (la catena Typst); [ADR-0070](adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md) (l'apparato non va in stampa).
 > **Misura riproducibile**: `python3 scripts/misura_stampa.py --tutti`, registro in [`docs/audit/stampa-booklet.json`](../docs/audit/stampa-booklet.json).
@@ -50,6 +50,25 @@ Note oneste sulla misura:
   font di sistema (FreeSans, Unifont, Inter compaiono nel PDF) è esso stesso
   un difetto da togliere in I1.
 - Vedove e orfane, e i glifi mancanti, non si misurano ancora.
+
+## Seconda misura (2026-10-29, dopo l'appendice)
+
+| Misura | Prima | Dopo |
+|---|---|---|
+| Riquadri spezzati fra due pagine | 14 | 0 |
+| Testo oltre la gabbia, schede PG del Drappo | 299 | 0 (gabbia di 1 cm) |
+| Testo sotto 7 pt, schede PG del Drappo | etichette a 6,x pt | 0 |
+| Pagine dei volumi DM | Notte 101, Resurrezione 145, Terros 59, Palio 64 | 101, 146, 60, 65 |
+
+Il conto delle pagine cambia di una al massimo: l'appendice occupa quanto
+tolgono le righe compatte. `pagine_con_immagine_decimo` (soglia 1/10 di
+pagina) è registrata senza tetto; l'obiettivo ≥ 0,3 resta di I6.
+
+Varianti di I6 su ARC07-NOTTE-E-ALBA, tutte senza peggiorare le misure con
+tetto: base 101 pagine e interlinea 1,28; interlinea stretta 92 pagine e
+1,08; box da leggere colorato senza riquadro 100 pagine. Le 8 coppie
+cieche sono nella cartella condivisa, `standard-stampa/cieco-2026-10-29/`;
+la chiave sta in una sottocartella da aprire dopo il voto.
 
 ## Decisioni proposte
 
@@ -133,14 +152,22 @@ Note oneste sulla misura:
   restare uguale.
 - [ ] **I2** Le etichette delle mappe non scendono sotto il corpo minimo: la
   scala della figura decide la dimensione delle etichette nel renderer.
-- [ ] **I3** Il riquadro che si spezza ripete la testata con «(continua a
+- [x] **I3** Il riquadro che si spezza ripete la testata con «(continua a
   pagina N)», come fa WotC, oppure passa intero alla colonna dopo quando è
-  più corto di una colonna.
+  più corto di una colonna. Fatto nella #295 insieme a D5: le schede intere
+  stanno nell'appendice delle creature, in ordine alfabetico, e una scheda
+  più corta di una colonna non si spezza mai. Una più lunga ripete il nome
+  con «(segue)» in testa e chiude con «continua nella colonna accanto» o
+  «continua a pagina N»; se è più lunga di due colonne parte da una pagina
+  pari, così non si spezza a pagina girata. Nell'incontro resta una riga con
+  GS, CA, pf, il rimando alla pagina della scheda e la tattica di quel
+  momento. I volumi dei giocatori tengono le schede dove compaiono
+  (`"schede": "qui"` nel manifest).
 - [ ] **I4** Schema della creatura e generatore delle righe leggibili.
   Migrazione a lotti: ARC-07 e il Bestiario, poi il resto.
 - [ ] **I5** Rappresentazione intermedia e renderer unici, un elemento alla
   volta, con il confronto visivo delle pagine.
-- [ ] **I6** Varianti di layout e scelta alla cieca del DM. Dal confronto
+- [~] **I6** Varianti di layout e scelta alla cieca del DM. Dal confronto
   di A3: il corpo resta a 10 pt; si provano le schede a 9 pt e l'interlinea
   a 1,35-1,4; `pagine_con_immagine` resta registrata senza tetto, con
   obiettivo ≥ 0,3. Dal lato WotC: una variante «scheda in colonna», un
@@ -154,7 +181,10 @@ Note oneste sulla misura:
   (ADR-0104). Criterio per le schede spezzate (modello WotC, deciso dal
   thread padre il 2026-10-29): nessuna scheda spezzata a pagina girata, e
   ogni scheda che si spezza porta il «continua».
-- [ ] **I7** Le schede PG del Drappo nello stesso tema.
+- [~] **I7** Le schede PG del Drappo nello stesso tema. Prima parte nella
+  #295: le etichette sotto 7 pt salgono a 7 pt e le schede si misurano con
+  la loro gabbia di 1 cm (geometria `scheda`), quindi 0 righe fuori margine
+  invece di 299. Resta da portarle nel tema comune.
 
 ## Fase 3 — Validazione
 
