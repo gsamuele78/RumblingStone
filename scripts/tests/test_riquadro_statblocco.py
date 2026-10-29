@@ -65,8 +65,14 @@ class TestSezioni(unittest.TestCase):
     def test_le_caratteristiche_con_parentesi_restano(self):
         self.assertEqual(sb.senza_caratteristiche("For 30 (36 in Ira), Des 10 · Talenti"),
                          "For 30 (36 in Ira), Des 10 · Talenti")
-        self.assertEqual(sb.senza_caratteristiche("For 17, Des 10, Cos 17 · Talenti x").strip(" ·"),
-                         "Talenti x")
+        self.assertEqual(sb.senza_caratteristiche("For 17, Des 10, Cos 17 · Talenti x"),
+                         "For 17, Des 10, Cos 17 · Talenti x")
+        self.assertEqual(sb.senza_caratteristiche(
+            "For 12, Des 10, Cos 18, Int 13, Sag 20, con il +4 della Collana, Car 12"),
+            "For 12, Des 10, Cos 18, Int 13, Sag 20, con il +4 della Collana, Car 12")
+        self.assertEqual(sb.senza_caratteristiche(
+            "For 34 (+12), Des 8 (−1), Cos 25 (+7), Int 10, Sag 15 (+2), Car 11 · BAB +22").strip(" ·"),
+            "BAB +22")
 
 
 class TestEtichettaGs(unittest.TestCase):

@@ -514,10 +514,18 @@ _CARATTERISTICHE = re.compile(
 def senza_caratteristiche(testo: str) -> str:
     """La riga **Statistiche** senza le caratteristiche in testa: in stampa
     stanno nella griglia del riquadro, e scriverle due volte confonde. Se una
-    caratteristica porta una parentesi («For 30 (36 in Ira)»), la riga resta
-    intera: la griglia ha solo il numero, e la parentesi andrebbe persa."""
+    caratteristica porta una parentesi che non è il solo modificatore
+    («For 30 (36 in Ira)»), la riga resta intera: la griglia ha solo il
+    numero, e la parentesi andrebbe persa."""
     m = _CARATTERISTICHE.match(testo)
-    if not m or "(" in m.group(0):
+    # «(+3)» è il modificatore, che la griglia non mostra ma si ricava: si
+    # toglie. Ogni altra parentesi («(36 in Ira)») è un'informazione.
+    if not m or re.search(r"\((?!\s*[+−-]?\d+\s*\))", m.group(0)):
+        return testo
+    # Si toglie solo un gruppo che le contiene tutte e sei: se la riga
+    # intercala un commento («Sag 20, con il +4 della Collana, Car 12»), la
+    # griglia non lo dice, e la riga resta intera.
+    if len(re.findall(r"(?i)\b(?:for|des|cos|int|sag|car)\b", m.group(0))) < 6:
         return testo
     return testo[m.end():]
 

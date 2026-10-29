@@ -4129,17 +4129,27 @@ voci originali (pasta corrosiva, Ritmo dei cavalli) sono marcate come tali.
 
 ![Vidalia Roncetti](../ALLEGATI/immagini/web/png-roncetti.jpg)
 
-**Umana esperta 6** · LN · femmina, 61 anni · **GS 4**
+{{monster,frame
+## Vidalia Roncetti, Sovrintendente al Drappo
+*Umana esperta 6 · LN · femmina, 61 anni* · GS 4
+___
+**Iniziativa** +1 · **Percezione** +11 · **Velocità** 9 m
+
+**DIFESA**
+___
+**CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +6  
+
+**ATTACCO**
+___
+**Mischia** bastone +4 (1d6) · **BAB** +4 · **CMB** +4 · **CMD** 15  
+
+**STATISTICHE**
+___
+For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Percepire Intenzioni **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6  
+}}
+
 *Forestiera residente da trentotto anni. Terzo mandato. Non si compra e — cosa più
 scomoda — non si convince.*
-
-**Iniziativa** +1 · **Percezione** +11 · **Velocità** 9 m
-**CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +6
-**Mischia** bastone +4 (1d6)
-**For** 10 · **Des** 12 · **Cos** 12 · **Int** 15 · **Sag** 16 · **Car** 14
-**BAB** +4 · **CMB** +4 · **CMD** 15
-**Abilità** Percepire Intenzioni **+14**, Percezione +11, Diplomazia +11, Valutare
-+11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6
 
 **Vuole**: che Tarsilia esista ancora fra vent'anni, e sospetta che le contrade non
 bastino a garantirlo.
@@ -4174,43 +4184,31 @@ decidono che non si può.
 
 ## §3 · Sfregio
 
-**Umano ladro 4** · NM · maschio, età incerta · **GS 3**
-*Adepto di Norgorber nel modo pratico: non prega, esegue. Non conosce Ottavia Vesca e
-non l'ha mai vista. Lavora per un mediatore, e il mediatore ha tre clienti.*
-
+{{monster,frame
+## Sfregio
+*Umano ladro 4 · NM · maschio, età incerta* · GS 3
+___
 **Iniziativa** +4 · **Percezione** +8 · **Velocità** 9 m
 
-### Difesa
-**CA** 18, contatto 15, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 anello)
-**pf** 26 (4d8+4)
-**TS** Tempra **+2**, Riflessi **+8**, Volontà **+2**
-**Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in
-movimento +1**
+**DIFESA**
+___
+**CA** 18, contatto 15, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 anello) · **pf** 26 (4d8+4) · **TS** Tempra **+2**, Riflessi **+8**, Volontà **+2** · **Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in movimento +1**  
 
-### Attacco
-**Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)*
-**Distanza** balestra a mano +7 (1d4/19–20)
-**Attacco furtivo** +2d6
-**BAB** +3 · **CMB** +4 · **CMD** 18
+**ATTACCO**
+___
+**Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 18  
 
-### Statistiche
-**For** 12 · **Des** 18 · **Cos** 12 · **Int** 13 · **Sag** 12 · **Car** 10
-**Talenti**: Finezza nell'Arma · Schivare · Mobilità *(trucco di combattimento)*
-**Talenti da ladro**: Furtività Rapida · Trucco di Combattimento
-**Abilità**: Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*,
-Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8,
-Scalare +8, Cavalcare +9
-**Equipaggiamento**: cuoio borchiato da maestro · pugnale da maestro · balestra a
-mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di
-*cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima
-fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*
+**STATISTICHE**
+___
+For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Finezza nell'Arma · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*  
 
-### Come si comporta
-**Non ingaggia mai volontariamente.** Il suo mestiere è entrare, fare, uscire. Se lo
-scoprono usa l'olio e il fumo, poi le finestre alte. **Fugge a 8 pf, sempre**, anche
-a lavoro mezzo fatto, anche se sta vincendo.
-Catturato vivo: **non parla**. Non per lealtà — perché il mediatore paga i silenzi e
-non paga più i morti.
+**TATTICHE**
+___
+**Non ingaggia mai volontariamente.** Il suo mestiere è entrare, fare, uscire. Se lo scoprono usa l'olio e il fumo, poi le finestre alte. **Fugge a 8 pf, sempre**, anche a lavoro mezzo fatto, anche se sta vincendo. Catturato vivo: **non parla**. Non per lealtà — perché il mediatore paga i silenzi e non paga più i morti.  
+}}
+
+*Adepto di Norgorber nel modo pratico: non prega, esegue. Non conosce Ottavia Vesca e
+non l'ha mai vista. Lavora per un mediatore, e il mediatore ha tre clienti.*
 
 ---
 
@@ -4218,49 +4216,129 @@ non paga più i morti.
 
 ### 4.1 · Tintore mezzo ubriaco — GS 1/3
 
-**Umano esperto 1** · pf 6 · **CA** 12 · TS Tem +1, Rif +0, Vol +2
-**Mischia** bastone da tinozza +1 *(1d6 non letale)* · pugno +1 (1d3 non letale)
-**For** 12, **Des** 11, **Cos** 12, **Int** 10, **Sag** 11, **Car** 10
-**Abilità** Artigianato (tintura) +6, Professione +4
-**Come combatte**: male, e in gruppo. Si ferma se vede una lama vera, se vede sangue,
-o se qualcuno più anziano di lui alza la voce.
+{{monster,frame
+## Tintore mezzo ubriaco
+*Umano esperto 1* · GS 1/3
+___
+
+**DIFESA**
+___
+**CA** 12 · **pf** 6 · TS Tem +1, Rif +0, Vol +2  
+
+**ATTACCO**
+___
+**Mischia** bastone da tinozza +1 *(1d6 non letale)* · pugno +1 (1d3 non letale)  
+
+**STATISTICHE**
+___
+For 12, Des 11, Cos 12, Int 10, Sag 11, Car 10 · **Abilità** Artigianato (tintura) +6, Professione +4  
+
+**TATTICHE**
+___
+Male, e in gruppo. Si ferma se vede una lama vera, se vede sangue, o se qualcuno più anziano di lui alza la voce.  
+}}
 
 ### 4.2 · Bravaccio del canale — GS 1/2
 
-**Umano guerriero 1** · pf 13 · **CA** 16 (+4 camicia di maglia, +2 scudo)
-TS Tem +4, Rif +1, Vol +0 · **Iniziativa** +1
-**Mischia** mazza pesante +4 (1d8+2) · coltello +4 (1d4+2/19–20)
-**For** 15, **Des** 12, **Cos** 14, **Int** 9, **Sag** 10, **Car** 8
-**BAB** +1 · **CMB** +3 · **CMD** 14
-**Talenti** Attacco Poderoso, Vigore Sovrannaturale
-**Come combatte**: per la paga della serata. **Si arrende** se ne cadono due, o a un
-Intimidire CD 14 fatto da chi ne ha appena messo giù uno. Nessuno di loro morirà per
-Sfregio.
+{{monster,frame
+## Bravaccio del canale
+*Umano guerriero 1* · GS 1/2
+___
+**Iniziativa** +1
+
+**DIFESA**
+___
+**CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 13 · TS Tem +4, Rif +1, Vol +0  
+
+**ATTACCO**
+___
+**Mischia** mazza pesante +4 (1d8+2) · coltello +4 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14  
+
+**STATISTICHE**
+___
+For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Vigore Sovrannaturale  
+
+**TATTICHE**
+___
+Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 14 fatto da chi ne ha appena messo giù uno. Nessuno di loro morirà per Sfregio.  
+}}
+
 **Pico** — uno dei quattro, diciassette anni, quello della rissa alla fontana.
 
 ### 4.3 · Miliziano della Torre — GS 1
 
-**Umano guerriero 2** · pf 20 · **CA** 18 (+5 corazza a scaglie, +2 scudo, +1 Des)
-TS Tem +5, Rif +1, Vol +0
-**Mischia** lancia lunga +5 (1d8+3) · spada corta +5 (1d6+2/19–20)
-**For** 15, **Des** 12, **Cos** 14, **Int** 10, **Sag** 11, **Car** 10
-**Come combatte**: in formazione, con le lance, e mai da soli. Trenchi ne ha
-**dodici** e li usa tutti insieme o nessuno.
+{{monster,frame
+## Miliziano della Torre
+*Umano guerriero 2* · GS 1
+___
+
+**DIFESA**
+___
+**CA** 18 (+5 corazza a scaglie, +2 scudo, +1 Des) · **pf** 20 · TS Tem +5, Rif +1, Vol +0  
+
+**ATTACCO**
+___
+**Mischia** lancia lunga +5 (1d8+3) · spada corta +5 (1d6+2/19–20)  
+
+**STATISTICHE**
+___
+For 15, Des 12, Cos 14, Int 10, Sag 11, Car 10  
+
+**TATTICHE**
+___
+In formazione, con le lance, e mai da soli. Trenchi ne ha **dodici** e li usa tutti insieme o nessuno.  
+}}
 
 ### 4.4 · Cerbo, guardiano del magazzino — GS 1/2
 
-**Umano popolano 2** · pf 9 · **CA** 11 · TS Tem +3, Rif +0, Vol +0
-**Mischia** randello +2 (1d6+1)
-**Percezione** +2 · **Come combatte**: non combatte. **Urla.**
+{{monster,frame
+## Cerbo, guardiano del magazzino
+*Umano popolano 2* · GS 1/2
+___
+**Sensi** Percezione +2
+
+**DIFESA**
+___
+**CA** 11 · **pf** 9 · TS Tem +3, Rif +0, Vol +0  
+
+**ATTACCO**
+___
+**Mischia** randello +2 (1d6+1)  
+
+**STATISTICHE**
+___
+**Percezione** +2  
+
+**TATTICHE**
+___
+Non combatte. **Urla.**  
+}}
+
 *Ha sessantun anni e dorme in magazzino perché a casa c'è la nuora.*
 
 ---
 
 ## §5 · I cavalli
 
-Profilo base: **cavallo** del Bestiario Core (animale Grande, GS 1) — CA 11, pf 15
-(2d8+6), Tempra +6, Riflessi +5, Volontà +1, velocità 15 m, morso +3 (1d4+3), due
-zoccoli −2 (1d6+1), For 16, Des 14, Cos 17, Int 2, Sag 13, Car 6, CMD 18.
+Profilo base: **cavallo** del Bestiario Core.
+
+{{monster,frame
+## Cavallo (profilo base)
+*Animale Grande · Bestiario Core* · GS 1
+___
+
+**DIFESA**
+___
+**CA** 11 · **pf** 15 (2d8+6) · TS Tempra +6, Riflessi +5, Volontà +1  
+
+**ATTACCO**
+___
+Vel 15 m · morso +3 (1d4+3), due zoccoli −2 (1d6+1) · **CMD** 18  
+
+**STATISTICHE**
+___
+For 16, Des 14, Cos 17, Int 2, Sag 13, Car 6  
+}}
 
 Sopra al profilo si applica il **Ritmo** — *voce originale di questo modulo*, non una
 regola del Core: è il modificatore che il cavallo dà alle prove di Cavalcare in Corsa
