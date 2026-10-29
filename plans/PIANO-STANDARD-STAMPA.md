@@ -151,7 +151,9 @@ Note oneste sulla misura:
   misurata anche con la soglia di 1/10 di pagina, ed è lì l'obiettivo ≥ 0,3
   (Paizo 0,40, noi 0,17). Il divario viene soprattutto dal ritratto del PNG
   accanto alla sua scheda, che appartiene al lavoro delle immagini
-  (ADR-0104).
+  (ADR-0104). Criterio per le schede spezzate (modello WotC, deciso dal
+  thread padre il 2026-10-29): nessuna scheda spezzata a pagina girata, e
+  ogni scheda che si spezza porta il «continua».
 - [ ] **I7** Le schede PG del Drappo nello stesso tema.
 
 ## Fase 3 — Validazione

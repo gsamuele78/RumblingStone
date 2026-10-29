@@ -34,6 +34,14 @@ sembrava curato era il recinto. La misura del 2026-10-29 su `main`
 | Solo uno stile più curato per il testo a spaziatura fissa | poco lavoro | le forme restano cinque; i paragrafi in prosa restano prosa |
 | Lasciare la forma ai master | nessun lavoro | è la situazione che il DM ha visto |
 
+Per il punto 7 (dove sta il riquadro):
+
+| Opzione | A favore | Contro |
+|---|---|---|
+| **Appendice in fondo, nell'incontro una riga col rimando e la tattica** (scelta del DM, modello WotC) | le pagine dell'incontro restano corte; una creatura ha un solo riquadro da tenere giusto | al tavolo si gira pagina per i numeri |
+| Riquadro alla prima comparsa, poi «vedi pagina N» (modello Paizo, *Burnt Offerings*) | i numeri sono dove si combatte la prima volta | la prima comparsa dipende dall'ordine di lettura, non di gioco |
+| Riquadro intero a ogni comparsa (la prima versione di questo ADR) | nessun rimando | più pagine e più riquadri spezzati; lo stesso riquadro ripetuto può divergere |
+
 ## Decisione
 
 1. **Il riquadro è uno.** Barra col nome e il GS, riga del tipo, riga di
@@ -66,6 +74,15 @@ sembrava curato era il recinto. La misura del 2026-10-29 su `main`
    prova che il riquadro arriva sulla carta. I tetti stanno in
    `docs/audit/statblocchi-booklet.json` e scendono soltanto (`--aggiorna`);
    la CI esegue `--check`.
+7. **Il riquadro intero sta in appendice, la tattica nell'incontro** (D5 del
+   [piano dello standard di stampa](../PIANO-STANDARD-STAMPA.md), decisa dal
+   DM il 2026-10-29: *«allora C ma la tattica del particolare incontro rimane
+   dove compare»*). Ogni volume raccoglie i riquadri interi delle sue creature
+   in un'appendice in fondo, come *Red Hand of Doom*. Nel punto
+   dell'incontro restano una riga col nome, il GS e il rimando alla pagina
+   dell'appendice, e la tattica di quell'incontro. Un PNG che cambia tattica
+   nel tempo, o che si incontra in stanze o luoghi diversi, porta una tattica
+   per ogni incontro. Il riquadro non si ripete più a ogni comparsa.
 
 ## Conseguenze
 
@@ -85,11 +102,17 @@ sembrava curato era il recinto. La misura del 2026-10-29 su `main`
 - Non misura la leggibilità: dice che la forma è una, non che è bella. Quella
   la giudica il DM sulle pagine di prima e dopo.
 
+- Col punto 7 l'appendice diventa un elemento del volume: il generatore la
+  compone dai recinti dei master, e la misura dei riquadri spezzati la conta
+  lì. È lavoro del piano dello standard di stampa (I3, I4), non di questa PR.
+
 ## Da rivedere se
 
 - il DM, sfogliando le pagine, trova il riquadro meno leggibile delle forme
   di prima per una famiglia di creature (i draghi, i PG);
 - un booklet nuovo ha bisogno di una forma che il riquadro non regge (un
   mostro con due forme, un esercito);
+- al tavolo girare pagina per l'appendice costa più del previsto: si
+  riprende il modello Paizo del punto 7;
 - i master del Drappo, che è PF1e, chiedono campi che il blocco non ha
   (BMC e DMC).
