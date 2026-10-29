@@ -18,7 +18,7 @@
   "booklet": {
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 335,
+        "testi_sotto_minimo": 291,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 58,
         "schede_spezzate": 2,
@@ -66,7 +66,7 @@
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 375,
+        "testi_sotto_minimo": 330,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 68,
         "schede_spezzate": 3,
@@ -146,7 +146,7 @@
     },
     "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 335,
+        "testi_sotto_minimo": 291,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 56,
         "schede_spezzate": 2,
@@ -162,7 +162,7 @@
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 99,
+        "testi_sotto_minimo": 97,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 2,
         "schede_spezzate": 1,
@@ -210,7 +210,7 @@
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-DM.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 39,
+        "testi_sotto_minimo": 36,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 19,
         "schede_spezzate": 1,

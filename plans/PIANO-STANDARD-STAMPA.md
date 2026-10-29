@@ -32,7 +32,7 @@ problemi.
 | Font non incorporati | 0 in tutti i booklet |
 | Corpo mediano del testo | 10 pt (9 pt le schede PG del Drappo) |
 | Testo oltre la gabbia dei margini | 0, tranne il titolo di copertina del Ritorno alla Forgia (1) e le schede PG del Drappo (299: margini di 1 cm, non quelli del tema) |
-| Testo sotto 7 pt | 1.393 pezzi in 7 booklet, quasi tutti etichette di mappe SVG rimpicciolite fino a 2,5-3,9 pt; nel Drappo anche le griglie a spaziatura fissa a 6,1 pt |
+| Testo sotto 7 pt | 1.255 righe in 7 booklet, quasi tutte etichette di mappe SVG rimpicciolite fino a 2,5-3,9 pt; nel Drappo anche le griglie a spaziatura fissa a 6,1 pt |
 | Immagini sotto 300 dpi | 222, soprattutto nell'appendice mappe di ARC-07 (strati a 72 dpi) |
 | Riquadri di creatura spezzati fra due pagine | 14 su 76 riquadri stampati (Terros, la Sentinella, Fra' Timoteo…) |
 | Pagine con un'immagine di almeno un quarto di pagina | 0-26%; le mappe vettoriali non contano |
@@ -44,7 +44,12 @@ Note oneste sulla misura:
   risoluzione non contano come immagini sgranate. Quelli a 72 dpi di ARC-07
   contano, perché sotto non c'è un'immagine buona. Non ho ancora guardato a
   occhio se si vedono stampati.
-- Vedove e orfane non si misurano ancora.
+- La misura compila senza i font di sistema: con quelli, il ripiego per i
+  glifi che i nostri font non hanno cambiava da una macchina all'altra e la CI
+  contava 1-3 righe in più del portatile. Il fatto che i booklet ricorrano a
+  font di sistema (FreeSans, Unifont, Inter compaiono nel PDF) è esso stesso
+  un difetto da togliere in I1.
+- Vedove e orfane, e i glifi mancanti, non si misurano ancora.
 
 ## Decisioni proposte
 

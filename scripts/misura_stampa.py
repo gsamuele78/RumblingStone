@@ -16,7 +16,7 @@ quello che un controllo di prestampa misura, più le schede delle creature:
 | misura | come si legge | soglia di partenza |
 |---|---|---|
 | `font_non_incorporati` | i font del PDF senza file incorporato | 0 |
-| `testi_sotto_minimo` | pezzi di testo sotto 7 pt (i numeri soli esclusi), etichette delle mappe comprese | 0 |
+| `testi_sotto_minimo` | righe con testo sotto 7 pt (i numeri soli esclusi), etichette delle mappe comprese | 0 |
 | `corpo_mediano_pt` | il corpo più frequente del testo | 9,5-11 pt (C8 di RIFERIMENTI-AP) |
 | `fuori_margine` | righe che escono dall'area di stampa | 0 |
 | `immagini_sotto_300dpi` | immagini sotto 300 dpi alla dimensione stampata | 0 |
@@ -48,7 +48,10 @@ ogni misura d'errore e l'ultima misura delle altre, così il miglioramento si
 legge nella storia di git.
 
 Compila il booklet in `build/misura-stampa/` (non tocca il PDF accanto al
-manifest). Serve typst; senza PyMuPDF esce 2.
+manifest) **senza i font di sistema**, perché la misura sia la stessa su ogni
+macchina: un glifo che i font del repo non hanno esce come casella vuota
+anche nella misura, invece di prendere un font diverso a seconda del PC.
+Serve typst; senza PyMuPDF esce 2.
 """
 from __future__ import annotations
 
@@ -88,7 +91,7 @@ def compila_misurabile(mp: Path) -> tuple[Path, list[dict], str]:
     formato = man.get("formato", "a4")
     typ.write_text(ex.sorgente(man, mp.parent, True, formato=formato), encoding="utf-8")
     try:
-        esito, _ = ex.compila("typst", typ, pdf)
+        esito = compila_senza_font_di_sistema(typ, pdf)
         if esito.returncode != 0:
             raise RuntimeError(f"{mp.name}: typst non compila\n{esito.stderr[-2000:]}")
         schede = interroga_schede(typ)
@@ -97,11 +100,28 @@ def compila_misurabile(mp: Path) -> tuple[Path, list[dict], str]:
     return pdf, schede, formato
 
 
+#: Solo i font del repo (scripts/fonts e quelli dentro typst): i font di
+#: sistema cambiano da una macchina all'altra, e con loro i ripieghi per i
+#: glifi che i nostri font non hanno. La misura deve dare lo stesso numero sul
+#: portatile del DM e in CI.
+SOLO_FONT_DEL_REPO = ["--ignore-system-fonts", "--font-path", str(ex.FONTS)]
+
+
+def compila_senza_font_di_sistema(typ: Path, pdf: Path) -> subprocess.CompletedProcess:
+    cmd = ["typst", "compile", *SOLO_FONT_DEL_REPO, "--root", str(ROOT),
+           "--package-path", str(ex.PACCHETTI)]
+    esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
+    if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
+        # lo stesso ripiego di export_booklet_typst.compila (bug dei tag di typst 0.15.1)
+        esito = subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)], capture_output=True, text=True)
+    return esito
+
+
 def interroga_schede(typ: Path) -> list[dict]:
     """Inizio e fine di ogni riquadro, dai segnaposti del tema."""
     espressione = ("query(selector(<sb-inizio>).or(<sb-fine>))"
                    ".map(m => (str(m.label), m.value, m.location().page()))")
-    cmd = ["typst", "eval", "--in", str(typ), "--font-path", str(ex.FONTS), "--root", str(ROOT),
+    cmd = ["typst", "eval", "--in", str(typ), *SOLO_FONT_DEL_REPO, "--root", str(ROOT),
            "--package-path", str(ex.PACCHETTI), espressione]
     esito = subprocess.run(cmd, capture_output=True, text=True)
     if esito.returncode != 0:
@@ -165,6 +185,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         dentro = area_di_stampa(area, n, formato)
         for blocco in pagina.get_text("rawdict")["blocks"]:
             for riga in blocco.get("lines", []):
+                piccola = None
                 for span in riga["spans"]:
                     glifi = [c for c in span["chars"] if c["c"].strip()]
                     if not glifi:
@@ -173,14 +194,19 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
                     corpi[round(span["size"] * 2) / 2] += len(testo)
                     if not testo.isdigit():
                         minimo = min(minimo, span["size"])
-                        if span["size"] < MINIMO_PT:
-                            sotto.append((n, round(span["size"], 1), testo[:40]))
+                        if span["size"] < MINIMO_PT and piccola is None:
+                            piccola = (n, round(span["size"], 1), testo[:40])
                     # Il riquadro dei glifi, non dello span: lo span di una riga
                     # giustificata porta con sé lo spazio finale.
                     inchiostro = pymupdf.Rect(min(c["bbox"][0] for c in glifi), min(c["bbox"][1] for c in glifi),
                                               max(c["bbox"][2] for c in glifi), max(c["bbox"][3] for c in glifi))
                     if not dentro.contains(inchiostro):
                         fuori.append((n, testo[:40]))
+                # Si conta la riga, non lo span: un glifo che cade su un font
+                # di sistema spezza lo span, e i font di sistema cambiano da
+                # una macchina all'altra (in CI la misura per span dava +1/+3).
+                if piccola:
+                    sotto.append(piccola)
         grande = False
         immagini = [(pymupdf.Rect(im["bbox"]), im) for im in pagina.get_image_info(xrefs=True)]
         for r, im in immagini:
