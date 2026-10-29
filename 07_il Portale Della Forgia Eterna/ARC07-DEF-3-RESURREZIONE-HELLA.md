@@ -1487,66 +1487,39 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
 
 ### A.1 · Hella Oakenshield, risorta (§7)
 
+```statblocco
+nome: Hella Oakenshield, risorta
+gs: PG di 13°
+tipo: Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media
+ca: 20
+ca-dettaglio: contatto 10, colta alla sprovvista 20
+pf: ~110
+pf-dado: 13 DV
+ts: Temp +16, Rifl +8, Vol +15
+attributi: For 12 Des 10 Cos 18 Int 13 Sag 20 Car 12
+velocita: 6 m
+iniziativa: +0
+sensi: scurovisione 27 m (Dream Dwarf)
 ```
-============================================================
-   HELLA OAKENSHIELD — Dream Dwarf · Ranger 1 / Druida 12
-   Ibrido Treant (risorta) · Neutrale Buono · Media
-============================================================
-PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo
-  leggero di legno +1, +3 naturale della Collana) [CANONE — DM 2026-10-18] · contatto 10 · colta alla sprovvista 20 · Iniz +0
-BAB/Lotta: +10/+11 · Velocità 6 m (nana: l'armatura non la riduce)
-FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5), con il +4 della Collana
-  [CANONE — DM 2026-10-18] · CAR 12
-TS: Tempra +16 · Riflessi +8 · Volontà +15 (base Ranger 1 + Druida 12
-  +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD)
-Scurovisione 27 m (Dream Dwarf)
-------------------------------------------------------------
-CAPACITÀ IBRIDO TREANT (dal viaggio + rito)
-• Doppio tipo Umanoide(Nano)/Vegetale · VULNERABILITÀ AL FUOCO ×1,5
-• Resistenza al Freddo 15 · Guarigione rapida 1 (a contatto con terra o pietra;
-  sospesa nel round dopo un danno da fuoco) [CANONE — DM 2026-10-18]. È la
-  guarigione rapida SRD: Hella muore come chiunque altro
-• Empatia Vegetale +4 · Fotosintesi (1/g: 2d8 pf a 1h di sole)
-• Radicamento (1/g, 5 round: immune a spinta/travolgere/sbilanciare; immobile)
-• Marchio della Veritade (Prova I): +4 Diplomazia coi nani di Moradin; 1/g
-  verità→Volontà CD 17 o scosso
-• Radice Silenziosa (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata
-• Radici del Mondo (Prova III): guarigione rapida 1 anche su suolo sacro o
-  druidico; 1/g
-  Radicamento corale (+1 morale TS agli alleati entro 9 m, 5 round, lei immobile)
-DONI DEL PARTY (§5, solo se donati — segna quelli veri dopo il rito):
-  [ ] Scudo del Custode (Thorik) - 1/g immediata, prende il danno di un alleato
-      entro 9 m DIMEZZATO; Thorik accelerato 3 round verso il protetto
-  [ ] Pelle di Adamantio (Tordek) - RD 3/adamantino (la sua UNICA RD)
-  [ ] Rovo Eldritch (Artemis) - A VOLONTA', standard, contatto a distanza 18 m,
-      2d6 (meta' rovi, meta' fuoco)
-  RESTITUZIONE (Collana #6): 1 volta sola per seme, immediata, Hella rende al
-  donatore cio' che aveva dato per una scena intera. Poi mai piu'.
-------------------------------------------------------------
-INCANTESIMI DRUIDA (CL 12) — slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2
-  (base SRD del druido di 12°, più i bonus di SAG 20)
-Preparati tipici pre-battaglia, per livello: 1° Entangle, Faerie Fire, Produce
-Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call
-Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of
-Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of
-Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI
-TALENTI: Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend
-Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
-------------------------------------------------------------
-COMPAGNO — DURIK RIFORGIATO (12 DV, 102 pf) · CA 21 (contatto 12, sprovvisto 19)
-  · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3)
-  · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame
-  telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo.
-  Scheda completa: il foglio "Durik, il guardiano di pietra".
-Sempre presente; il 3° seme della Collana lo richiama se è distrutto. (Il rinoceronte visto in gioco è la FORMA
-SELVATICA di Hella, non un compagno.)
-EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2 a borchie vegetali,
-Scudo leggero di Legno +1,
-Scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, Bacchetta
-di Cura Ferite Moderate (25 cariche).
-ARTEFATTO: Collana dei Semi Eterni (§7).
-============================================================
-```
+**Iniziativa** +0 · **Sensi** scurovisione 27 m (Dream Dwarf)
+
+**Difesa** **CA 20** (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo leggero di legno +1, +3 naturale della Collana) `[CANONE — DM 2026-10-18]`, contatto 10, colta alla sprovvista 20 · **pf ~110** (13 DV) · TS Tempra +16, Riflessi +8, Volontà +15 (base Ranger 1 + Druida 12 +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD) · **Vulnerabilità al fuoco** ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco) `[CANONE — DM 2026-10-18]`: è la guarigione rapida SRD, Hella muore come chiunque altro
+
+**Attacco** Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +11
+
+**Statistiche** For 12, Des 10, Cos 18, Int 13, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 12 · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C) cuoio borchiato +2 a borchie vegetali, scudo leggero di legno +1, scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, bacchetta di Cura Ferite Moderate (25 cariche) · **Artefatto** Collana dei Semi Eterni (§7)
+
+**Capacità speciali**
+- **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.
+- **Empatia Vegetale** +4 · **Fotosintesi** (1/g: 2d8 pf a 1 ora di sole).
+- **Radicamento** (1/g, 5 round): immune a spinta, travolgere e sbilanciare; immobile.
+- **Marchio della Veritade** (Prova I): +4 Diplomazia coi nani di Moradin; 1/g verità → Volontà CD 17 o scosso.
+- **Radice Silenziosa** (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata.
+- **Radici del Mondo** (Prova III): guarigione rapida 1 anche su suolo sacro o druidico; 1/g Radicamento corale (+1 morale ai TS degli alleati entro 9 m, 5 round, lei immobile).
+- **Doni del party** (§5, solo se donati: segna quelli veri dopo il rito): ☐ *Scudo del Custode* (Thorik): 1/g, immediata, prende il danno di un alleato entro 9 m **dimezzato**; Thorik accelerato 3 round verso il protetto. ☐ *Pelle di Adamantio* (Tordek): RD 3/adamantino (la sua **unica** RD). ☐ *Rovo Eldritch* (Artemis): **a volontà**, standard, contatto a distanza 18 m, 2d6 (metà rovi, metà fuoco).
+- **Restituzione** (Collana #6): una volta sola per seme, immediata, Hella rende al donatore ciò che aveva dato per una scena intera. Poi mai più.
+- **Incantesimi da druida** (LI 12), slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2 (base SRD del druido di 12°, più i bonus di SAG 20). Preparati tipici prima di una battaglia: 1° Entangle, Faerie Fire, Produce Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI.
+- **Compagno, Durik riforgiato** (12 DV, 102 pf): CA 21 (contatto 12, sprovvisto 19) · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3) · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo. Scheda completa: il foglio «Durik, il guardiano di pietra». Sempre presente; il 3° seme della Collana lo richiama se è distrutto. Il rinoceronte visto in gioco è la **forma selvatica** di Hella, non un compagno.
 
 <!-- storico -->
 ⚠️ *L'equipaggiamento della scheda (cuoio borchiato, scudo di legno, scimitarra)
@@ -1560,32 +1533,38 @@ Il Treant dell'SRD 3.5, tenuto **Grande** come nel canone, con i numeri del
 canone dove sono più alti `[CANONE — DM 2026-10-18]`. *«Corteccia di ferro freddo, foglie di
 mithral affilato, un cuore di energia terrestre.»*
 
+```statblocco
+nome: Treant di Adamantio (evocato dalla Collana)
+gs: ~10
+tipo: Vegetale Grande · Neutrale Buono
+ca: 24
+ca-dettaglio: contatto 9, colto alla sprovvista 24 (−1 taglia, +15 naturale)
+pf: 90
+pf-dado: 10d8+50
+ts: Temp +12, Rifl +3, Vol +8
+attributi: For 29 Des 10 Cos 21 Int 12 Sag 16 Car 12
+velocita: 9 m
+iniziativa: +0
+sensi: visione crepuscolare; Ascoltare +8, Osservare +8
+attacchi:
+  - Schianto +18 (2d8+9)
+  - Attacco completo 2 schianti +18 (2d8+9)
 ```
-============================================================
-   TREANT DI ADAMANTIO (evocato dalla Collana) · GS ~10
-   Vegetale Grande · Neutrale Buono
-============================================================
-DV 10d8+50 · PF 90 (fissi, dal canone) · Iniz +0 · Vel 9 m
-CA 24 (-1 taglia, +15 naturale) · contatto 9 · colto alla sprovvista 24
-BAB/Lotta: +7/+20 (+7 BAB, +4 taglia, +9 FOR)
-Attacco: schianto +18 mischia (2d8+9)
-Attacco completo: 2 schianti +18 mischia (2d8+9)
-Spazio/portata: 3 m / 3 m
-Attacchi speciali: Travolgere 2d8+13 (Riflessi CD 24 dimezza);
-  danni doppi a oggetti e strutture, ignora Durezza sotto 20
-Qualità speciali: RD 10/adamantio · i colpi contano come adamantio ·
-  visione crepuscolare · tratti dei vegetali · VULNERABILITÀ AL FUOCO
-TS: Tempra +12 · Riflessi +3 · Volontà +8
-FOR 29 · DES 10 · COS 21 · INT 12 · SAG 16 · CAR 12
-Abilità: Ascoltare +8 · Osservare +8 · Percepire Intenzioni +8
-Talenti: Attacco Poderoso, Arma Focalizzata (schianto), Spezzare
-  Migliorato, Volontà di Ferro
-Durata: 1 ora, al massimo due Treant, uno per seme (§7)
-Legami: Tordek donatore entro 9 m, resistenza al fuoco 10.
-  Artemis donatrice entro 9 m, quando usa Luce di Lathander (il potere
-  1/giorno dell'Anello): Rigenerazione 1 per tutta la durata.
-============================================================
-```
+**Iniziativa** +0 · **Sensi** visione crepuscolare; Ascoltare +8, Osservare +8
+
+**Difesa** **CA 24** (−1 taglia, +15 naturale), contatto 9, colto alla sprovvista 24 · **pf 90** (fissi, dal canone; DV 10d8+50) · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio** · tratti dei vegetali · **Vulnerabilità al fuoco**
+
+**Attacco** Vel 9 m · **Mischia** schianto +18 (2d8+9); attacco completo 2 schianti +18 (2d8+9) · Spazio 3 m, portata 3 m · BAB +7; Lotta +20 (+7 BAB, +4 taglia, +9 FOR)
+
+**Statistiche** For 29, Des 10, Cos 21, Int 12, Sag 16, Car 12 · **Talenti** Attacco Poderoso, Arma Focalizzata (schianto), Spezzare Migliorato, Volontà di Ferro · **Abilità** Ascoltare +8, Osservare +8, Percepire Intenzioni +8
+
+**Capacità speciali**
+- **Travolgere** 2d8+13 (Riflessi CD 24 dimezza).
+- **Colpi d'adamantio**: danni doppi a oggetti e strutture, ignora la durezza sotto 20; i suoi colpi contano come adamantio.
+- **Durata**: 1 ora, al massimo due Treant, uno per seme (§7).
+- **Legami**: Tordek donatore entro 9 m, resistenza al fuoco 10. Artemis donatrice entro 9 m, quando usa Luce di Lathander (il potere 1/giorno dell'Anello): Rigenerazione 1 per tutta la durata.
+
+**Tattiche** Obbedisce a Hella, che gli dà ordini a voce o col gesto. Senza ordini si mette fra lei e il nemico più vicino, e colpisce chi le arriva entro 3 m. Contro chi vola fuori portata non può niente: si pianta accanto a Hella e la copre. Se c'è una porta, un muro o una macchina d'assedio, ci va contro prima che contro le persone. Non fugge e non si arrende: allo scadere dell'ora, o a 0 pf, torna seme.
 
 **I conti.** Base: il Treant SRD (Vegetale Enorme, 7 DV, FOR 29, DES 8,
 COS 21, INT 12, SAG 16, CAR 12, Ascoltare/Osservare/Percepire Intenzioni +8,
@@ -1605,13 +1584,6 @@ il colpire è **+18** invece del +16 dei conti (+7 BAB, +9 FOR, −1 taglia, +1
 Arma Focalizzata): i due punti in più sono i colpi d'adamantio. Il Treant non
 anima gli alberi, come invece fa quello dell'SRD.
 
-**Tattica.** Obbedisce a Hella, che gli dà ordini a voce o col gesto. Senza
-ordini si mette fra lei e il nemico più vicino, e colpisce chi le arriva entro
-3 m. Contro chi vola fuori portata non può niente: si pianta accanto a Hella e
-la copre. Se c'è una porta, un muro o una macchina d'assedio, ci va contro
-prima che contro le persone. Non fugge e non si arrende: allo scadere dell'ora,
-o a 0 pf, torna seme.
-
 <!-- apparato -->
 Boost log: 2026-10-18 — Treant SRD (GS 8) avanzato a 10 DV e tenuto Grande coi numeri del canone — GS 8 → ~10 — alleato evocato da Hella: il tetto EL ≤ APL+4 riguarda i nemici e non si applica; il benchmark PF1e per GS 10 (pf ~125, CA ~24, colpire +18) lo colloca sotto la media per pf e in linea per CA e colpire.
 <!-- /apparato -->
@@ -1622,25 +1594,30 @@ Hella diventa un Ibrido Treant/Nano **Enorme** per 10 round, 1 volta al
 giorno, con un'azione standard. Prende gli schianti e la portata del Treant
 SRD, più il +8 FOR del canone `[CANONE — DM 2026-10-18]`.
 
+```statblocco
+nome: Hella, Avatar della Radice
+gs: forma di Hella
+tipo: Ibrido Treant/Nano Enorme · 10 round, 1 volta al giorno
+ca: 21
+ca-dettaglio: contatto 8, colta alla sprovvista 21 (−2 taglia, +13 naturale)
+pf: quelli di Hella
+ts: quelli di Hella
+attributi: For 20
+velocita: 9 m
+attacchi:
+  - Schianto +13 (2d6+5)
+  - Attacco completo 2 schianti +13 (2d6+5)
 ```
-============================================================
-   HELLA, AVATAR DELLA RADICE · Ibrido Treant/Nano Enorme
-============================================================
-PF: quelli di Hella · CA 21 (-2 taglia, +13 naturale) · contatto 8 ·
-  colta alla sprovvista 21 · Vel 9 m
-BAB/Lotta: +10/+23 (+10 BAB, +8 taglia, +5 FOR)
-Attacco: schianto +13 mischia (2d6+5)
-Attacco completo: 2 schianti +13 mischia (2d6+5)
-Spazio/portata: 4,5 m / 4,5 m
-Attacchi speciali: Travolgere 2d6+7 (Riflessi CD 21 dimezza);
-  danni doppi a oggetti e strutture
-FOR 20 (12 + 8) · le altre caratteristiche restano quelle di Hella
-Restano: vulnerabilità al fuoco, guarigione rapida, i Doni del party
-Equipaggiamento: si fonde nella forma e smette di funzionare, come nella
-  forma selvatica; la Collana continua a funzionare
-Incantesimi: con Incantesimi Naturali, come nella forma selvatica
-============================================================
-```
+**Difesa** **CA 21** (−2 taglia, +13 naturale), contatto 8, colta alla sprovvista 21 · **pf** quelli di Hella · restano la vulnerabilità al fuoco, la guarigione rapida e i Doni del party
+
+**Attacco** Vel 9 m · **Mischia** schianto +13 (2d6+5); attacco completo 2 schianti +13 (2d6+5) · Spazio 4,5 m, portata 4,5 m · BAB +10; Lotta +23 (+10 BAB, +8 taglia, +5 FOR)
+
+**Statistiche** For 20 (12 + 8); le altre caratteristiche restano quelle di Hella
+
+**Capacità speciali**
+- **Travolgere** 2d6+7 (Riflessi CD 21 dimezza); danni doppi a oggetti e strutture.
+- **Equipaggiamento**: si fonde nella forma e smette di funzionare, come nella forma selvatica; la Collana continua a funzionare.
+- **Incantesimi**: con Incantesimi Naturali, come nella forma selvatica.
 
 **I conti.** Schianti, portata e armatura naturale +13 vengono dal Treant SRD;
 quell'armatura naturale non si somma al +3 della Collana, e vale la più alta.

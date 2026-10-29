@@ -66,6 +66,9 @@ FUORI_RAGGIO = {
         "sistema di combattimento di massa: le statistiche sono esempi di unita', non un roster",
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P1C-Rituale-COMPLETO-SCALE.md":
         "regia del rituale; i drow delle tre ondate hanno schede proprie in Bestiario/mostri/drow-*",
+    "10-stand-alone/L'abbazia Della Rotta Sicura/indice_maestro.md":
+        "indice del dry-run: l'unica scheda e' Fra' Timoteo (correzione D11, ADR-0105), PNG che non "
+        "combatte e senza GS dichiarato, quindi niente da dare al pool degli incontri",
 }
 
 #: Dove una voce puo' dichiarare il proprio bersaglio.

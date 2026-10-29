@@ -10265,6 +10265,341 @@
       "idempotent": true
     },
     {
+      "id": "misura_statblocchi_booklet",
+      "path": "scripts/misura_statblocchi_booklet.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_statblocchi_booklet.py --check",
+      "summary": "Conta, booklet per booklet, le schede di creatura e la forma in cui escono in stampa (ADR-0105): riquadro (il recinto ```statblocco), griglia (un recinto qualunque), prosa, tabella, sciolta. --stampa conta anche i riquadri nel sorgente Typst; --check confronta i fuori forma con i tetti di docs/audit/statblocchi-booklet.json, che --aggiorna fa solo scendere.",
+      "use_case": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca ogni scheda fuori forma con la sua riga."
+        },
+        {
+          "name": "--stampa",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Conta i #statblocco( nel sorgente Typst di ogni booklet."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa la misura in JSON."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se un booklet ha più schede fuori forma del suo tetto."
+        },
+        {
+          "name": "--aggiorna",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive i tetti, solo verso il basso."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "docs/audit/statblocchi-booklet.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "docs/audit/statblocchi-booklet.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra il suo tetto (--check)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge solo i master e i manifest"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_statblocchi_booklet.py --check",
+      "tests": [
+        "scripts/tests/test_riquadro_statblocco.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
+      ]
+    },
+    {
+      "id": "misura_stampa",
+      "path": "scripts/misura_stampa.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_stampa.py --tutti --check",
+      "summary": "Compila ogni booklet e ne misura il PDF come un controllo di prestampa: font non incorporati, testo sotto 7 pt, testo oltre la gabbia dei margini speculari, immagini sotto 300 dpi, riquadri di creatura spezzati fra due pagine (dai segnaposti <sb-inizio>/<sb-fine> del tema, letti con typst eval), più corpo mediano e quota di pagine illustrate. --check confronta con i tetti di docs/audit/stampa-booklet.json, che --aggiorna fa solo scendere. Serve PyMuPDF (requirements-dev.txt, come validate_corredo --stampa).",
+      "use_case": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [],
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "I manifest da misurare."
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ogni booklet con un manifest."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le misure in JSON."
+        },
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cosa sfora, pagina per pagina."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se un booklet supera un suo tetto o non è registrato."
+        },
+        {
+          "name": "--aggiorna",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive il registro; i tetti scendono soltanto."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "docs/audit/stampa-booklet.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "docs/audit/stampa-booklet.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "build/misura-stampa/*.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "typst e font fissati: stesso sorgente, stesso PDF, stesse misure"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_stampa.py --help",
+      "tests": [
+        "scripts/tests/test_misura_stampa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
+      ]
+    },
+    {
+      "id": "varianti_stampa",
+      "path": "scripts/varianti_stampa.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/varianti_stampa.py MANIFEST.json --out CARTELLA",
+      "summary": "Compila lo stesso booklet in più varianti del tema (interlinea, box da leggere senza riquadro), passate con typst --input; misura ogni PDF con misura_stampa e scarta la variante che peggiora una misura con tetto rispetto al libro di sempre. Con le varianti rimaste prepara CIECO.pdf: coppie di pagine con lo stesso testo, una per versione, in ordine casuale, e la chiave in CHIAVE.json. Serve PyMuPDF.",
+      "use_case": "«Quale impaginazione si legge meglio al tavolo? Fammi scegliere senza sapere quale è quale.»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [],
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il manifest del booklet."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del fascicolo cieco, fuori dal repo."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": 20261029,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seme del caso: stesse coppie a ogni esecuzione."
+        },
+        {
+          "name": "--coppie",
+          "type": "int",
+          "required": false,
+          "default": 4,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppie per variante."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<out>/CIECO.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<out>/CHIAVE.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "typst e font fissati: stesso sorgente, stesso PDF, stesse misure"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_stampa.py --help",
+      "tests": [
+        "scripts/tests/test_misura_stampa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
+      ]
+    },
+    {
       "id": "gate_locale",
       "path": "scripts/gate_locale.py",
       "category": "G-orchestration-governance",

@@ -110,6 +110,30 @@
   .readaloud{ font-style:italic; }
   .vague{ font-style:italic; font-size:.86rem; opacity:.9; }
 
+  /* Il riquadro delle statistiche: la stessa forma del PDF (ADR-0105). */
+  .statblocco{ background:var(--note-bg); border-top:3px solid var(--rubric);
+      border-bottom:3px solid var(--rubric); padding:.6rem .9rem .7rem; margin:.9rem 0;
+      break-inside:avoid; font-size:.92rem; }
+  .statblocco .sb-testa{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem;}
+  .statblocco .sb-nome{ font-family:'Cinzel',Georgia,serif; font-variant:small-caps; color:var(--rubric);
+      font-size:1.15rem; font-weight:600;}
+  .statblocco .sb-gs{ font-family:'Cinzel',Georgia,serif; color:var(--brass); white-space:nowrap;}
+  .statblocco .sb-tipo{ font-style:italic; color:#6b4f2a; margin:.05rem 0 .3rem;}
+  .statblocco .sb-fascia{ font-family:'Cinzel',Georgia,serif; font-size:.72rem; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--rubric); border-bottom:1px solid var(--rubric);
+      margin:.5rem 0 .2rem; font-weight:600;}
+  .statblocco p{ margin:.15rem 0; text-align:left;}
+  .statblocco ul{ margin:.15rem 0 .2rem 1.1rem;}
+  .statblocco .sb-car{ display:grid; grid-template-columns:repeat(6,1fr); text-align:center; margin:.2rem 0;}
+  .statblocco .sb-car span{ display:block; font-size:.7rem; color:#6b4f2a; font-variant:small-caps;}
+  .sb-riga{ border-left:3px solid var(--rubric); padding:.2rem .7rem; margin:.8rem 0;}
+  .sb-riga .sb-testa{ display:flex; gap:.6rem; align-items:baseline;}
+  .sb-riga .sb-nome{ font-family:'Cinzel',Georgia,serif; font-variant:small-caps; color:var(--rubric); font-weight:600;}
+  .sb-riga .sb-gs{ font-family:'Cinzel',Georgia,serif; color:var(--brass);}
+  .sb-riga .sb-rimando{ margin-left:auto; font-style:italic; color:#6b4f2a; font-size:.85rem;}
+  .sb-riga .sb-fascia{ font-family:'Cinzel',Georgia,serif; font-size:.72rem; letter-spacing:.12em; color:var(--rubric);}
+  .sb-riga p{ margin:.15rem 0; text-align:left;}
+  .statblocco .sb-fonte{ font-size:.75rem; color:#6b4f2a; margin-top:.3rem;}
   pre.mono{ background:rgba(201,173,106,.18); border:1px solid var(--brass); padding:.6rem .8rem;
       overflow-x:auto; font-size:.8rem; line-height:1.35; font-family:ui-monospace,Consolas,monospace;}
   .figure{ margin:.8rem auto; text-align:center; }
@@ -157,7 +181,7 @@
   <h1>La Resurrezione e i Mille Anni</h1>
   <p>La serata del 2026-09-25: la regia, la cassetta del DM, il ritorno, la resurrezione e il viaggio a mille anni fa, in ordine di gioco, con le loro appendici A4 di statistiche e mappe. Le pagine ✉ sono nel volume dei giocatori, e la regia dice quando consegnarle.</p>
 </header>
-<nav class="tabs" role="tablist"><button role="tab" aria-selected="true" data-pane="c0">Copertina</button><button role="tab" aria-selected="false" data-pane="c1">I · Regia della serata</button><button role="tab" aria-selected="false" data-pane="c2">II · La cassetta del DM: cast, pronuncia, read-aloud, suoni</button><button role="tab" aria-selected="false" data-pane="c3">III · Il Ritorno e gli Affreschi</button><button role="tab" aria-selected="false" data-pane="c4">IV · La Resurrezione di Hella</button><button role="tab" aria-selected="false" data-pane="c5">V · Il Viaggio a Mille Anni fa</button><button role="tab" aria-selected="false" data-pane="c6">VI · La Collana dei Semi Eterni</button></nav>
+<nav class="tabs" role="tablist"><button role="tab" aria-selected="true" data-pane="c0">Copertina</button><button role="tab" aria-selected="false" data-pane="c1">I · Regia della serata</button><button role="tab" aria-selected="false" data-pane="c2">II · La cassetta del DM: cast, pronuncia, read-aloud, suoni</button><button role="tab" aria-selected="false" data-pane="c3">III · Il Ritorno e gli Affreschi</button><button role="tab" aria-selected="false" data-pane="c4">IV · La Resurrezione di Hella</button><button role="tab" aria-selected="false" data-pane="c5">V · Il Viaggio a Mille Anni fa</button><button role="tab" aria-selected="false" data-pane="c6">VI · La Collana dei Semi Eterni</button><button role="tab" aria-selected="false" data-pane="c7">Appendice: le creature</button></nav>
 <main>
 <section class="pane on" id="c0">
   <div class="sheet cover">
@@ -980,112 +1004,15 @@ inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 <h2 class="sec">APPENDICE A — STATISTICHE</h2>
 <div class="desc"><p class="readaloud">Una pagina A4 a una colonna. La giocatrice di Hella ha la sua versione, le righe da aggiungere alla scheda (<em>Hella, tornata</em>, nel volume dei giocatori); questa è la scheda completa per il DM, e i numeri stanno qui una volta sola.</p></div>
 <h3 class="sub">A.1 · Hella Oakenshield, risorta (§7)</h3>
-<pre class="mono">============================================================
-   HELLA OAKENSHIELD — Dream Dwarf · Ranger 1 / Druida 12
-   Ibrido Treant (risorta) · Neutrale Buono · Media
-============================================================
-PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo
-  leggero di legno +1, +3 naturale della Collana) · contatto 10 · colta alla sprovvista 20 · Iniz +0
-BAB/Lotta: +10/+11 · Velocità 6 m (nana: l&#x27;armatura non la riduce)
-FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5), con il +4 della Collana
- · CAR 12
-TS: Tempra +16 · Riflessi +8 · Volontà +15 (base Ranger 1 + Druida 12
-  +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD)
-Scurovisione 27 m (Dream Dwarf)
-------------------------------------------------------------
-CAPACITÀ IBRIDO TREANT (dal viaggio + rito)
-• Doppio tipo Umanoide(Nano)/Vegetale · VULNERABILITÀ AL FUOCO ×1,5
-• Resistenza al Freddo 15 · Guarigione rapida 1 (a contatto con terra o pietra;
-  sospesa nel round dopo un danno da fuoco). È la
-  guarigione rapida SRD: Hella muore come chiunque altro
-• Empatia Vegetale +4 · Fotosintesi (1/g: 2d8 pf a 1h di sole)
-• Radicamento (1/g, 5 round: immune a spinta/travolgere/sbilanciare; immobile)
-• Marchio della Veritade (Prova I): +4 Diplomazia coi nani di Moradin; 1/g
-  verità→Volontà CD 17 o scosso
-• Radice Silenziosa (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata
-• Radici del Mondo (Prova III): guarigione rapida 1 anche su suolo sacro o
-  druidico; 1/g
-  Radicamento corale (+1 morale TS agli alleati entro 9 m, 5 round, lei immobile)
-DONI DEL PARTY (§5, solo se donati — segna quelli veri dopo il rito):
-  [ ] Scudo del Custode (Thorik) - 1/g immediata, prende il danno di un alleato
-      entro 9 m DIMEZZATO; Thorik accelerato 3 round verso il protetto
-  [ ] Pelle di Adamantio (Tordek) - RD 3/adamantino (la sua UNICA RD)
-  [ ] Rovo Eldritch (Artemis) - A VOLONTA&#x27;, standard, contatto a distanza 18 m,
-      2d6 (meta&#x27; rovi, meta&#x27; fuoco)
-  RESTITUZIONE (Collana #6): 1 volta sola per seme, immediata, Hella rende al
-  donatore cio&#x27; che aveva dato per una scena intera. Poi mai piu&#x27;.
-------------------------------------------------------------
-INCANTESIMI DRUIDA (CL 12) — slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2
-  (base SRD del druido di 12°, più i bonus di SAG 20)
-Preparati tipici pre-battaglia, per livello: 1° Entangle, Faerie Fire, Produce
-Flame · 2° Barkskin, Bull&#x27;s Strength, Flaming Sphere, Heat Metal · 3° Call
-Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of
-Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of
-Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI
-TALENTI: Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend
-Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
-------------------------------------------------------------
-COMPAGNO — DURIK RIFORGIATO (12 DV, 102 pf) · CA 21 (contatto 12, sprovvisto 19)
-  · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3)
-  · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame
-  telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo.
-  Scheda completa: il foglio &quot;Durik, il guardiano di pietra&quot;.
-Sempre presente; il 3° seme della Collana lo richiama se è distrutto. (Il rinoceronte visto in gioco è la FORMA
-SELVATICA di Hella, non un compagno.)
-EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2 a borchie vegetali,
-Scudo leggero di Legno +1,
-Scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, Bacchetta
-di Cura Ferite Moderate (25 cariche).
-ARTEFATTO: Collana dei Semi Eterni (§7).
-============================================================</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Hella Oakenshield, risorta</span><span class="sb-gs">PG di 13°</span><a class="sb-rimando" href="#sb-1">scheda in appendice</a></div><p><b>CA</b> 20, contatto 10, colta alla sprovvista 20 · <b>pf</b> ~110 (13 DV)</p></div>
 <h3 class="sub">A.2 · Treant di Adamantio, evocato dalla Collana (§7)</h3>
 <p>Il Treant dell'SRD 3.5, tenuto <strong>Grande</strong> come nel canone, con i numeri del canone dove sono più alti. <em>«Corteccia di ferro freddo, foglie di mithral affilato, un cuore di energia terrestre.»</em></p>
-<pre class="mono">============================================================
-   TREANT DI ADAMANTIO (evocato dalla Collana) · GS ~10
-   Vegetale Grande · Neutrale Buono
-============================================================
-DV 10d8+50 · PF 90 (fissi, dal canone) · Iniz +0 · Vel 9 m
-CA 24 (-1 taglia, +15 naturale) · contatto 9 · colto alla sprovvista 24
-BAB/Lotta: +7/+20 (+7 BAB, +4 taglia, +9 FOR)
-Attacco: schianto +18 mischia (2d8+9)
-Attacco completo: 2 schianti +18 mischia (2d8+9)
-Spazio/portata: 3 m / 3 m
-Attacchi speciali: Travolgere 2d8+13 (Riflessi CD 24 dimezza);
-  danni doppi a oggetti e strutture, ignora Durezza sotto 20
-Qualità speciali: RD 10/adamantio · i colpi contano come adamantio ·
-  visione crepuscolare · tratti dei vegetali · VULNERABILITÀ AL FUOCO
-TS: Tempra +12 · Riflessi +3 · Volontà +8
-FOR 29 · DES 10 · COS 21 · INT 12 · SAG 16 · CAR 12
-Abilità: Ascoltare +8 · Osservare +8 · Percepire Intenzioni +8
-Talenti: Attacco Poderoso, Arma Focalizzata (schianto), Spezzare
-  Migliorato, Volontà di Ferro
-Durata: 1 ora, al massimo due Treant, uno per seme (§7)
-Legami: Tordek donatore entro 9 m, resistenza al fuoco 10.
-  Artemis donatrice entro 9 m, quando usa Luce di Lathander (il potere
-  1/giorno dell&#x27;Anello): Rigenerazione 1 per tutta la durata.
-============================================================</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Treant di Adamantio (evocato dalla Collana)</span><span class="sb-gs">GS ~10</span><a class="sb-rimando" href="#sb-2">scheda in appendice</a></div><p><b>CA</b> 24, contatto 9, colto alla sprovvista 24 (−1 taglia, +15 naturale) · <b>pf</b> 90 (10d8+50)</p><div class="sb-fascia">Tattiche</div><p>Obbedisce a Hella, che gli dà ordini a voce o col gesto. Senza ordini si mette fra lei e il nemico più vicino, e colpisce chi le arriva entro 3 m. Contro chi vola fuori portata non può niente: si pianta accanto a Hella e la copre. Se c'è una porta, un muro o una macchina d'assedio, ci va contro prima che contro le persone. Non fugge e non si arrende: allo scadere dell'ora, o a 0 pf, torna seme.</p></div>
 <p><strong>I conti.</strong> Base: il Treant SRD (Vegetale Enorme, 7 DV, FOR 29, DES 8, COS 21, INT 12, SAG 16, CAR 12, Ascoltare/Osservare/Percepire Intenzioni +8, Attacco Poderoso, Spezzare Migliorato, Volontà di Ferro). Avanzato a <strong>10 DV</strong> (SRD, <em>Avanzamento</em>: il Treant avanza per DV), che porta il quarto talento, Arma Focalizzata. Tenuto Grande: DES 10, come vuole la tabella SRD dei cambi di taglia, e taglia −1. DV 10d8 più COS +5 per dado danno 95 di media: vale il 90 del canone. TS da vegetale con 10 DV: Tempra 7 + 5 = <strong>+12</strong>, Riflessi 3 + 0 = <strong>+3</strong>, Volontà 3 + 3 + 2 (Volontà di Ferro) = <strong>+8</strong>. Lotta 7 + 4 + 9 = <strong>+20</strong>. CA 10 − 1 + 0 + 15 = <strong>24</strong>. Travolgere (SRD): danno dello schianto più 1,5 × FOR = 2d8+13, CD 10 + ½ DV + FOR = 10 + 5 + 9 = <strong>24</strong>.</p>
 <p>⚠ <strong>Non SRD</strong>, e vale il canone: FOR 29, COS 21, armatura naturale +15 e RD 10/adamantio restano quelle del canone anche da Grande (l'SRD, scendendo di taglia, darebbe FOR 21, COS 17 e +10); lo schianto fa <strong>2d8</strong> invece dell'1d8 di una creatura Grande; e il colpire è <strong>+18</strong> invece del +16 dei conti (+7 BAB, +9 FOR, −1 taglia, +1 Arma Focalizzata): i due punti in più sono i colpi d'adamantio. Il Treant non anima gli alberi, come invece fa quello dell'SRD.</p>
-<p><strong>Tattica.</strong> Obbedisce a Hella, che gli dà ordini a voce o col gesto. Senza ordini si mette fra lei e il nemico più vicino, e colpisce chi le arriva entro 3 m. Contro chi vola fuori portata non può niente: si pianta accanto a Hella e la copre. Se c'è una porta, un muro o una macchina d'assedio, ci va contro prima che contro le persone. Non fugge e non si arrende: allo scadere dell'ora, o a 0 pf, torna seme.</p>
 <h3 class="sub">A.3 · L'Avatar della Radice (§7)</h3>
 <p>Hella diventa un Ibrido Treant/Nano <strong>Enorme</strong> per 10 round, 1 volta al giorno, con un'azione standard. Prende gli schianti e la portata del Treant SRD, più il +8 FOR del canone.</p>
-<pre class="mono">============================================================
-   HELLA, AVATAR DELLA RADICE · Ibrido Treant/Nano Enorme
-============================================================
-PF: quelli di Hella · CA 21 (-2 taglia, +13 naturale) · contatto 8 ·
-  colta alla sprovvista 21 · Vel 9 m
-BAB/Lotta: +10/+23 (+10 BAB, +8 taglia, +5 FOR)
-Attacco: schianto +13 mischia (2d6+5)
-Attacco completo: 2 schianti +13 mischia (2d6+5)
-Spazio/portata: 4,5 m / 4,5 m
-Attacchi speciali: Travolgere 2d6+7 (Riflessi CD 21 dimezza);
-  danni doppi a oggetti e strutture
-FOR 20 (12 + 8) · le altre caratteristiche restano quelle di Hella
-Restano: vulnerabilità al fuoco, guarigione rapida, i Doni del party
-Equipaggiamento: si fonde nella forma e smette di funzionare, come nella
-  forma selvatica; la Collana continua a funzionare
-Incantesimi: con Incantesimi Naturali, come nella forma selvatica
-============================================================</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Hella, Avatar della Radice</span><span class="sb-gs">forma di Hella</span><a class="sb-rimando" href="#sb-3">scheda in appendice</a></div><p><b>CA</b> 21, contatto 8, colta alla sprovvista 21 (−2 taglia, +13 naturale) · <b>pf</b> quelli di Hella</p></div>
 <p><strong>I conti.</strong> Schianti, portata e armatura naturale +13 vengono dal Treant SRD; quell'armatura naturale non si somma al +3 della Collana, e vale la più alta. Colpire 10 + 5 − 2 = <strong>+13</strong>, Lotta 10 + 8 + 5 = <strong>+23</strong>, CA 10 − 2 + 0 + 13 = <strong>21</strong>. Travolgere (SRD): 2d6 + 1,5 × 5 = 2d6+7, CD 10 + 6 (½ di 13 DV) + 5 = <strong>21</strong>. La velocità è quella del Treant SRD, 9 m.</p>
 <p>⚠ <strong>Non SRD</strong>: la taglia sale di due categorie con il solo +8 FOR del canone (l'SRD ne darebbe +16 e cambierebbe COS e DES), e Incantesimi Naturali vale qui anche se l'Avatar non è forma selvatica.</p>
 <h2 class="sec">APPENDICE B — MAPPE</h2>
@@ -1913,166 +1840,37 @@ DISPOSIZIONE SACRA: 3 semi (triangolo) inscritti nel cerchio dei 3 officianti.
 <div class="desc"><p class="readaloud">Una pagina A4 a una colonna, da tenere aperta durante gli scontri. I numeri stanno <strong>solo qui</strong>: le schede d'entrata nelle scene dicono chi è il PNG, questa appendice dice quanto fa male.</p></div>
 <h3 class="sub">A.1 · Skullcrusher il Nero (Scena 11)</h3>
 <p>Skullcrusher è un <strong>drago nero adulto maturo</strong> dell'SRD, con la resistenza agli incantesimi e la lista degli incantesimi. I numeri sono quelli della tabella del drago nero (d20srd.org, <em>Dragon, True</em>); talenti, abilità e incantesimi conosciuti sono quelli dell'SRD. Sopra c'è il template <strong>Avanzato</strong> di PF1e, nella versione completa (+4 a tutte le caratteristiche, +2 di armatura naturale), <strong>senza alzare il GS</strong>: vale come un GS 15 e si conta come 14.</p>
-<pre class="mono">============================================================
-   SKULLCRUSHER IL NERO — il Primo Nero (GS 14, Avanzato)
-   Drago nero adulto maturo · capostipite di Fauci di Palude
-============================================================
-Drago Enorme (acqua) · caotico malvagio
-DV 22d12+154 (297 pf) · Iniz +6 · Sensi: percezione
-  cieca 18 m, scurovisione 36 m, visione crepuscolare ×4;
-  Ascoltare +29, Osservare +29
-Velocità: 18 m, volare 45 m (scarsa), nuotare 18 m
-CA 33 (−2 taglia, +2 DES, +23 naturale), contatto 10, impreparato 31
-  (37 con *armatura magica*, che si lancia prima del duello e dura 5 ore: al duello della Scena 11 è **già addosso**, quindi CA 37)
-RD 10/magia · RI 21 · immune acido, sonno, paralisi
-TS Temp +20, Rifl +17, Vol +19
-BAB +22 · Lotta +40
-Spazio/portata 4,5 m / 3 m (morso 4,5 m)
-Mischia: morso +30 (2d8+10) · 2 artigli +25 (2d6+5) ·
-  2 ali +25 (1d8+5) · colpo di coda +25 (2d6+15)
-Schiacciare (in volo o saltando, azione standard): 2d8+15,
-  Riflessi CD 28 o immobilizzati. Solo contro creature
-  Piccole o minori: i nani e i PG Medi non li schiaccia
-Soffio ACIDO (Sop): linea di 30 m, 14d4, Riflessi CD 30 ½
-  (28 + Capacità Focalizzata), di nuovo dopo 1d4 round.
-  Aderente, quando lo sceglie: chi ne prende danno ne
-  riprende metà al round dopo; toglierselo è un&#x27;azione di
-  round completo con Riflessi CD 30 (+2 rotolando a terra,
-  e si resta proni); la ricarica sale di 1 round
-Presenza Terrificante (Str): raggio 63 m, Volontà CD 25,
-  chi ha meno di 22 DV è scosso per 4d6 round (4 DV o meno:
-  in preda al panico); chi supera il TS è immune per 24 ore
-Capacità magiche: 3/giorno oscurità (raggio 21 m);
-  1/giorno corrompere l&#x27;acqua (CD 25: rovina anche le
-  pozioni che un PG ha addosso, se falliscono il TS)
-Respirare sott&#x27;acqua (Str)
-Incantesimi da stregone (incantatore di 5°; CD 14 + livello):
-  0 (6/giorno) individuazione del magico, lettura del magico,
-    mano magica, resistenza, suono fantasma, frastornare
-  1° (7/giorno) armatura magica, scudo, colpo accurato,
-    dardo incantato
-  2° (5/giorno) vedere invisibilità, immagine speculare
-FOR 31 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
-Talenti: Attacco in Volo, Capacità Focalizzata (soffio),
-  Fluttuare, Iniziativa Migliorata, Riflessi Fulminei,
-  Soffio Aderente, Virata, Volontà di Ferro
-Abilità: Ascoltare +29, Cercare +29, Concentrazione +32,
-  Intimidire +29, Muoversi Silenziosamente +27,
-  Nascondersi +19, Osservare +29, Sapienza Magica +29,
-  Nuotare +18
-------------------------------------------------------------
-PERCHÉ GS 14 (scelta del DM): la nota D8 lo voleva GS 12,
-un Adulto &quot;potenziato&quot; senza numeri. Adesso è un drago
-dell&#x27;SRD intero, Avanzato senza alzare il GS.
-EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4.
-Il vero climax resta Fauci nel 1372: qui si semina.
-============================================================</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Skullcrusher il Nero, il Primo Nero</span><span class="sb-gs">GS 14</span><a class="sb-rimando" href="#sb-4">scheda in appendice</a></div><p><b>CA</b> 33, contatto 10, impreparato 31 (−2 taglia, +2 DES, +23 naturale); 37 con armatura magica · <b>pf</b> 297 (22d12+154)</p><div class="sb-fascia">Tattiche</div><p>Il duello della Scena 11: combatte in passata, dice il nome prima di colpire e fugge a ⅓ dei pf. Qui sotto, «Cosa cambia al tavolo», i numeri che contano nel duello.</p></div>
+<p><strong>Perché GS 14</strong> (scelta del DM): la nota D8 lo voleva GS 12, un Adulto «potenziato» senza numeri. Adesso è un drago dell'SRD intero, Avanzato senza alzare il GS. EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4. Il vero climax resta Fauci nel 1372: qui si semina.</p>
 <ul><li>Boost log: due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. <em>Virata</em> → <strong>Capacità Focalizzata (soffio)</strong> (SRD, <em>Ability Focus</em>: +2 alla CD, soffio CD 28 → 30). <em>Attacco Poderoso</em> → <strong>Soffio Aderente</strong> (<em>Clinging Breath</em>) <code>[Private source — Draconomicon (WotC 2003), p. 67]</code>: talento di metasoffio, <strong>fuori dall'SRD</strong>; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano <em>Ghermire</em>, <em>Fluttuare</em> e <em>Attacco in Volo</em>, che la Scena 11 usa, e <em>Riflessi Fulminei</em> e <em>Volontà di Ferro</em>, che reggono i TS. Il telaio è stato riverificato sulla tabella SRD (<em>Black Dragon</em>, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon <code>[INFERRED — needs DM confirmation sulla CD per toglierselo]</code>.</li><li>Boost log: un talento cambiato: <em>Ghermire</em> → <strong>Virata</strong> (SRD, <em>Wingover</em>) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con <em>colpo accurato</em>, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco.</li></ul>
 <p><strong>Cosa cambia al tavolo, rispetto ai numeri di prima</strong></p>
 <ul><li><strong>I PG invisibili non gli sfuggono da vicino.</strong> La percezione cieca localizza tutto entro 18 m: sa in che quadretto è un PG invisibile, che però conserva l'occultamento totale, 50% di mancare (SRD, <em>percezione cieca</em>). <em>Vedere invisibilità</em> dura 50 minuti: se lo lancia al primo allarme, i PG invisibili sono visibili per tutto il duello. Di notte sulle colline non l'ha lanciato, perché non si aspetta nessuno.</li><li><strong>Il soffio fa più male</strong>: 14d4 (in media 35) invece di 12d4, e Riflessi CD 30. La runa di Zeth (<em>resistere all'energia</em> 20) ne toglie ancora più della metà.</li><li><strong>L'acido resta addosso</strong> (<em>Soffio Aderente</em>). Quando lo sceglie, chi ha preso danno dal soffio ne riprende metà all'inizio del round dopo: 17 in media a chi ha fallito il TS, 8-9 a chi l'ha superato. La runa di Zeth toglie 20 anche a questo, che è un danno a sé, e di solito lo spegne tutto. Il prezzo per il drago: la ricarica è 1d4+1 round. Lo usa al primo soffio, quando il gruppo è fitto, e non quando ha fretta di soffiare di nuovo.</li><li><strong>La RI 21</strong>: un incantatore di 12°-13° livello la supera con 8 o 9 sul d20 (d20 + livello contro 21), quindi un incantesimo su tre circa si spegne. Le invocazioni di Artemis la subiscono come gli incantesimi.</li><li><strong>RD 10/magia</strong>: le armi dei PG sono magiche; le balestre delle mura, no.</li><li><strong><em>Corrompere l'acqua</em></strong> può rovinare le pozioni in tasca a un PG (TS dell'oggetto sulla Volontà del portatore). Lo usa al primo turno libero dal soffio, se vede qualcuno bere (Scena 11, round 2-3).</li><li><strong>Il nome</strong> (<em>colpo accurato</em>): +20 al prossimo attacco entro il round dopo, e l'occultamento non conta. Il morso sul PG nominato è a +50, e l'invisibilità di Artemis non lo salva. Lo lancia a metà della passata, con Attacco in Volo, e il morso arriva alla passata dopo (Scena 11). Il nome non lo chiede: è quello sentito di notte attraverso il corno, o un epiteto (Scena 7).</li></ul>
 <h3 class="sub">A.1-bis · Skullcrusher Vecchio, il drago di stasera</h3>
 <p>La riga di prima usava il drago <strong>Vecchio</strong> dell'SRD senza template, e ne veniva fuori un drago <strong>più debole</strong> di quello di base (287 pf e CD 27/24 contro 297 e 28/25). Questo è il Vecchio dell'SRD (d20srd.org, <em>Dragon, True</em>) con lo stesso template Avanzato di A.1. Si usa con il gruppo di stasera, insieme alle 2 wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4 . Con un gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena 11, «Quale drago si usa, e quando»).</p>
-<pre class="mono">SKULLCRUSHER VECCHIO (GS 17: Vecchio GS 16, +1 Avanzato)
-Drago Enorme (acqua) · DV 25d12+175 (337 pf) · Iniz +6
-CA 36 (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34;
-   40 con *armatura magica*
-RD 10/magia · RI 22 · immune acido, sonno, paralisi
-TS Temp +21, Rifl +18, Vol +20 · BAB +25 · Lotta +44
-Mischia: morso +34 (2d8+11) · 2 artigli +29 (2d6+5) ·
-   2 ali +29 (1d8+5) · colpo di coda +29 (2d6+16)
-Schiacciare 2d8+16, Riflessi CD 29 (solo creature Piccole o minori)
-Soffio ACIDO: linea di 30 m, 16d4, Riflessi CD 31 ½ (aderente come A.1)
-Presenza Terrificante: raggio 72 m, Volontà CD 26 (meno di 25 DV)
-Capacità magiche: come A.1, ma *oscurità* con raggio 24 m,
-   più *crescita vegetale* 1/giorno
-Incantesimi da stregone, incantatore di 7°: 6/7/7/5 al giorno
-   (lentezza CD 17)
-FOR 33 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
-Talenti: quelli di A.1 (Virata, non Ghermire), più Allerta
-Abilità e il resto: come A.1</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Skullcrusher Vecchio</span><span class="sb-gs">GS 17 (Vecchio GS 16, +1 Avanzato)</span><a class="sb-rimando" href="#sb-5">scheda in appendice</a></div><p><b>CA</b> 36, contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica · <b>pf</b> 337 (25d12+175)</p><div class="sb-fascia">Tattiche</div><p>Come A.1: fugge a ⅓ dei pf, circa <strong>112 pf</strong>.</p></div>
 <p>I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il soffio e lo schiacciare (+2 al soffio per Capacità Focalizzata), ½ DV + CAR per la Presenza. I talenti sono quelli di A.1, Riflessi Fulminei e Volontà di Ferro compresi; il nono, che il Vecchio ha in più, è Allerta, che non cambia i numeri del combattimento. Fugge a ⅓ dei pf come in A.1: circa <strong>112 pf</strong>. Gli incantesimi conosciuti in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla lista dello stregone: <em>dissolvi magie</em> e <em>lentezza</em>. PX alla tabella DMG: circa 15.600 per un gruppo di 13°, cioè <strong>≈ 3.900 a testa</strong>, e 12.600 per un gruppo di 14°, cioè <strong>≈ 3.150 a testa</strong>. Le wyvern si sommano a parte (§8 A).</p>
 <ul><li>Boost log: drago nero <strong>Vecchio</strong> dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.</li><li>Boost log: usato anche con il gruppo di 13°, con le 2 wyvern, e <em>Ghermire</em> → <strong>Virata</strong> come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca.</li></ul>
 <h3 class="sub">A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)</h3>
-<pre class="mono">============================================================
-   ZOG&#x27;TAR DEATHEYE — generale dell&#x27;orda antica (GS 15, Avanzato)
-   Mezzo-Ogre/Orco · Barbaro 14 / Guerriero 1 · Grande · CM
-============================================================
-PF: 283 (15 DV, massimi per dado) · 328 in Ira Superiore
-CA 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat)
-   · 24 in Ira. Il mithral alza la DES massima a +3 (SRD);
-   è preda presa ai nani, e i nani la riconoscono
-   tocco 12 · impreparato 26 (Schivare Prodigioso Migliorato)
-Iniz +9 · Velocità 12 m
-BAB/Lotta: +15 / +29 (+32 in Ira)
-FOR 30 (36 in Ira) · DES 20 · COS 24 (30 in Ira) · INT 16 · SAG 16 · CAR 18
-Ascoltare +11 · Osservare +3 · Intimidire +14   (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
-In Ira: ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3)
-Fuori dall&#x27;Ira (round di sorpresa): +26/+21/+16 (3d6+16)
-A distanza: 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m
-Colpo Devastante (azione standard): +25 in Ira, 3d6+20;
-   Riflessi con CD pari al danno, o vola via di 3 m e cade
-   prono (+1d6 a lui e all&#x27;ostacolo se ne incontra uno)
-TS: Tempra +18 (+21 in Ira) · Riflessi +9 · Volontà +9 (+12 in Ira;
-   +16 contro gli ammaliamenti, Volontà Indomita)
-------------------------------------------------------------
-• Ira Barbarica Superiore (6/g, con Ira Extra): +6 FOR, +6 COS,
-  +3 Volontà, −2 CA, 13 round. Dopo l&#x27;Ira è affaticato
-  (l&#x27;Ira Instancabile arriva al 17°)
-• RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato ·
-  Percepire Trappole +4 · Volontà Indomita (14°)
-• Presenza Minacciosa: entro 9 m, Vol CD 21 o scosso 1d4 round
-  (10 + ½ DV + CAR, come la presenza terrificante dei draghi; D57)
-• Attacco Poderoso a due mani: fino a −15 al colpire per +30 ai danni
-• OCCHIO DI OSSIDIANA (artefatto minore maledetto, incastonato al posto
-  dell&#x27;occhio destro, canone del DM): 3/g azione di movimento,
-  marca un bersaglio → −2 CA contro Zog&#x27;tar e +2 danni subiti da lui, 5 round.
-  Prezzo: Zog&#x27;tar è VULNERABILE alla luce divina (Luce di Lathander/Corona).
-Talenti (7): Attacco Poderoso, Spingere Migliorato, Colpo
-   Devastante (talento da mostro, SRD), Ira Extra, Iniziativa
-   Migliorata, Volontà di Ferro, Arma Focalizzata (ascia)
-GUARDIE (4): Hobgoblin Guerriero 8 · CA 19 (+8 arm. completa,
-   +1 DES, il massimo che l&#x27;armatura lascia; spadone, niente scudo) · PF 60 · spadone +14 (2d6+6)
-   giavellotti +9 a distanza (1d6+4), incremento 9 m
-   TS Temp +8, Rifl +3, Vol +1 · Iniz +1 · Vel 6 m (armatura pesante)
-   Ascoltare +1 · Osservare +1   (guerriero 8 SRD sulle caratteristiche dell&#x27;hobgoblin, senza gradi nelle due abilità)
-============================================================</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Zog'tar Deatheye, generale dell'orda antica</span><span class="sb-gs">GS 15 (Avanzato)</span><a class="sb-rimando" href="#sb-6">scheda in appendice</a></div><p><b>CA</b> 26, contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira · <b>pf</b> 283 (15 DV, massimi per dado; 328 in Ira Superiore)</p><div class="sb-fascia">Tattiche</div><p>La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.</p></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Guardia di Zog'tar (4)</span><span class="sb-gs">GS 8</span><a class="sb-rimando" href="#sb-7">scheda in appendice</a></div><p><b>CA</b> 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo · <b>pf</b> 60</p></div>
 <p><strong>Il sacerdote dell'orda</strong> (Scena 8)</p>
-<pre class="mono">SACERDOTE DELL&#x27;ORDA — hobgoblin adepto 7 (GS 6)
-PF 38 (7d6+14) · CA 12 (+2 DES) · Iniz +2 · Vel 9 m
-Bastone ferrato +3 mischia (1d6) · TS Temp +4, Rifl +4, Vol +7
-FOR 10 · DES 14 · COS 15 · INT 14 · SAG 15 · CAR 8
-Ascoltare +2 · Osservare +2 · Concentrazione +12
-Incantesimi (3/4/3; CD 12 + livello):
-  0 guida, individuazione del magico, luce
-  1° benedizione, causare paura, comando, protezione dal bene
-  2° vedere invisibilità, oscurità, forza del toro</pre>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Sacerdote dell'orda</span><span class="sb-gs">GS 6</span><a class="sb-rimando" href="#sb-8">scheda in appendice</a></div><p><b>CA</b> 12, +2 DES · <b>pf</b> 38 (7d6+14)</p><div class="sb-fascia">Tattiche</div><p>Sta nella tenda di Zog'tar (Scena 8).</p></div>
 <h3 class="sub">A.3 · Durin Rocciadura (Scena 2)</h3>
-<p>Nano Guerriero 6 · PF 52 · CA 22 (arm. completa +1, scudo pesante +1) · BAB/Lotta +6/+10 · Ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano · TS Temp +8, Rifl +2, Vol +4 · FOR 18, COS 16, SAG 14. <strong>Onesto e leale fino alla morte</strong> una volta convinto; antenato di Othrek (Hammerfist 1372).</p>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Durin Rocciadura</span><span class="sb-gs">GS 6</span><a class="sb-rimando" href="#sb-9">scheda in appendice</a></div><p><b>CA</b> 22, arm. completa +1, scudo pesante +1 · <b>pf</b> 52</p></div>
+<p><strong>Onesto e leale fino alla morte</strong> una volta convinto; antenato di Othrek (Hammerfist 1372).</p>
 <h3 class="sub">A.4 · Balvar Fuocospento (Scena 7)</h3>
-<pre class="mono">gs: 13
-tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
-ca: 24
-ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
-pf: 101
-pf-dado: 13d8+39
-ts: Temp +13, Rifl +8, Vol +17
-attributi: For 12 Des 14 Cos 16 Int 16 Sag 20 Car 14
-velocita: 6 m
-iniziativa: +2
-sensi: scurovisione 18 m; Ascoltare +5, Osservare +5
-attacchi:
-  - Mischia martello da guerra runico +1 +11/+6 (1d8+2)
-voci:
-  - Talenti: Incidere Rune, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
-  - Abilità: Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19</pre>
-<p><strong>13 DV</strong> · BAB +9, Lotta +10 · scurovisione 18 m, immune alla paura. <strong>Leggere il Fuori-Posto</strong> (Su, 3/giorno): come <em>individuazione del magico</em>, ma sulle anomalie del tempo; percepisce chi non appartiene a questo secolo.</p>
-<p><strong>Incantesimi</strong> da chierico di 13° livello, <strong>CD 15 + livello</strong>: <em>dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier</em> (13d6, Riflessi CD 21), <em>slay living</em> (Tempra CD 20), <em>silence, invisibility purge, glyph of warding, dimensional anchor</em>, <em>greater command</em> (Volontà CD 20).</p>
-<p><strong>Rune incise</strong>: quattro, e scattano alla condizione scritta senza consumare uno slot. Qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).</p>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Balvar Fuocospento, il Consigliere dell'Orda</span><span class="sb-gs">GS 13</span><a class="sb-rimando" href="#sb-10">scheda in appendice</a></div><p><b>CA</b> 24, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · <b>pf</b> 101 (13d8+39)</p><div class="sb-fascia">Tattiche</div><p>Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni fa, Scena 7, «Cosa fa quando comincia lo scontro» (canone, decisione Q21 del DM) (recuperato non combatte e indica la runa della Catena; trattativa aperta guarda un round e poi sta con chi vince; minacciato combatte con Zog'tar, come dice «Come si combatte, se si arriva a combatterlo» nella stessa scena). <strong>Morale</strong>: sotto 30 pf non fugge e non implora, finisce di incidere la lastra con un'azione di round completo, l'ultima, e in quel turno non attacca e non lancia (decisioni D52 e D71 del DM, nella stessa scena).</p></div>
+<p>Le CD degli incantesimi che contano in questa scena (chierico di 13° livello, <strong>CD 15 + livello</strong>): <em>blade barrier</em> (13d6, Riflessi CD 21), <em>slay living</em> (Tempra CD 20), <em>greater command</em> (Volontà CD 20). Le quattro rune incise, qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).</p>
 <h3 class="sub">A.5 · Re Thorek I e Thorgrim Barbadiferro (Scena 4)</h3>
 <p>Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo; come bersaglio del drago vale la soglia a colpi della Scena 11, «Il re»; Thorgrim è un vecchio, vivo e fragile, che non combatte. Se il tavolo li porta in combattimento, è una scelta del DM, e va segnata nel registro della serata.</p>
 <h3 class="sub">A.6 · Le creature del campo (Scena 6)</h3>
 <p>Sono le complicazioni dello skill challenge, e si usano con le statistiche standard dell'SRD. Le schede di worg, goblin, orchi e hobgoblin del Bestiario sono della Mano Rossa del 1372: qui valgono quelle SRD di questa tabella.</p>
-<div class="tablewrap"><table><thead><tr><th>Creatura</th><th>Da dove viene</th><th>Cosa conta</th></tr></thead><tbody><tr><td><strong>Pattuglia di 4 orchi</strong></td><td>complicazione 3</td><td>è una ronda, con i numeri della riga «Ronda di orchi» qui sotto; passano a 6 m</td></tr><tr><td><strong>Cavalieri dei lupi</strong></td><td>il primo e l'ultimo blocco</td><td>worg SRD (GS 2): 30 pf, CA 14, morso +7 (1d6+4) e sbilanciare, Ascoltare e Osservare +6, olfatto 9 m. Goblin in sella: combattente 1, Ascoltare e Osservare +2</td></tr><tr><td><strong>Vedette goblin</strong></td><td>complicazione 4</td><td>goblin SRD (GS 1/3): Ascoltare e Osservare +2, scurovisione 18 m</td></tr><tr><td><strong>Squadrone di 6 hobgoblin</strong></td><td>complicazione 6</td><td>a 24 m; manda il corridore. Nello skill challenge sente con Ascoltare e Osservare +2 (Scena 6); se combatte, ha i numeri della pattuglia dei tre fallimenti, qui sotto</td></tr><tr><td><strong>Ronda di orchi</strong></td><td>accorre alla tenda e agli scontri (Scene 6 e 8)</td><td>quattro orchi SRD, guerriero 1, GS ½: 5 pf, CA 13 (contatto 10), falchion +4 (2d4+4/18-20) o giavellotto +1 (1d6+3), TS Temp +3 Rifl +0 Vol −2, scurovisione 18 m (gli stessi di «Il Ritorno a Hammerfist» A.1). Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestiario, GS 3: 30 pf, CA 16, falchion +7 (2d4+3)</td></tr><tr><td><strong>La pattuglia dei tre fallimenti</strong></td><td>skill challenge</td><td>otto hobgoblin guerrieri di 4° livello, EL 10: 30 pf, CA 15, spada lunga +6 (1d8+3/19-20), TS Temp +6 Rifl +2 Vol +0, Iniz +1, Vel 9 m, Ascoltare e Osservare −1; ogni round 1d6, con 1 uno corre alla tenda</td></tr><tr><td><strong>Treant di Adamantio</strong></td><td>la Collana di Hella (Scene 5, 8, 10, 11)</td><td>Grande, 90 pf, RD 10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle strutture, FOR 29, TS Temp +12 Rifl +3 Vol +8, Travolgere 2d8+13 (Riflessi CD 24), vulnerabile al fuoco, dura 1 ora (cap. IV A.2)</td></tr><tr><td><strong>Wyvern</strong> (2, scalatura per un gruppo di 13°)</td><td>scortano il drago dal round 2 (Scena 11)</td><td>SRD: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4). Vanno su chi tiene la corda e su chi vola</td></tr><tr><td><strong>Gli sciamani del campo</strong></td><td>dopo il corno</td><td>adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con <em>vedere invisibilità</em> fra quelli di 2°</td></tr></tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>Creatura</th><th>Da dove viene</th><th>Cosa conta</th></tr></thead><tbody><tr><td><strong>Pattuglia di 4 orchi</strong></td><td>complicazione 3</td><td>è una ronda, con i numeri dell'orco della ronda qui sotto; passano a 6 m</td></tr><tr><td><strong>Cavalieri dei lupi</strong></td><td>il primo e l'ultimo blocco</td><td>il worg qui sotto. Goblin in sella: combattente 1, Ascoltare e Osservare +2</td></tr><tr><td><strong>Vedette goblin</strong></td><td>complicazione 4</td><td>goblin SRD (GS 1/3): Ascoltare e Osservare +2, scurovisione 18 m</td></tr><tr><td><strong>Squadrone di 6 hobgoblin</strong></td><td>complicazione 6</td><td>a 24 m; manda il corridore. Nello skill challenge sente con Ascoltare e Osservare +2 (Scena 6); se combatte, ha i numeri della pattuglia dei tre fallimenti, qui sotto</td></tr><tr><td><strong>Ronda di orchi</strong></td><td>accorre alla tenda e agli scontri (Scene 6 e 8)</td><td>quattro orchi della ronda, qui sotto (gli stessi di «Il Ritorno a Hammerfist» A.1), col loro sergente</td></tr><tr><td><strong>La pattuglia dei tre fallimenti</strong></td><td>skill challenge</td><td>otto hobgoblin guerrieri di 4° livello, EL 10, qui sotto; ogni round 1d6, con 1 uno corre alla tenda</td></tr><tr><td><strong>Treant di Adamantio</strong></td><td>la Collana di Hella (Scene 5, 8, 10, 11)</td><td>qui sotto in breve; la scheda intera è in cap. IV A.2</td></tr><tr><td><strong>Wyvern</strong> (2, scalatura per un gruppo di 13°)</td><td>scortano il drago dal round 2 (Scena 11)</td><td>qui sotto</td></tr><tr><td><strong>Gli sciamani del campo</strong></td><td>dopo il corno</td><td>adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con <em>vedere invisibilità</em> fra quelli di 2°</td></tr></tbody></table></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Worg dei cavalieri dei lupi</span><span class="sb-gs">GS 2</span><a class="sb-rimando" href="#sb-11">scheda in appendice</a></div><p><b>CA</b> 14 · <b>pf</b> 30</p></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Orco della ronda</span><span class="sb-gs">GS ½</span><a class="sb-rimando" href="#sb-12">scheda in appendice</a></div><p><b>CA</b> 13, contatto 10 · <b>pf</b> 5</p><div class="sb-fascia">Tattiche</div><p>Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestiario, GS 3: 30 pf, CA 16, falchion +7 (2d4+3).</p></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Hobgoblin della pattuglia (8)</span><span class="sb-gs">GS 4</span><a class="sb-rimando" href="#sb-13">scheda in appendice</a></div><p><b>CA</b> 15 · <b>pf</b> 30</p></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Treant di Adamantio</span><span class="sb-gs">GS ~10</span><a class="sb-rimando" href="#sb-14">scheda in appendice</a></div><p><b>CA</b> 24, RD 10/adamantio, vulnerabile al fuoco · <b>pf</b> 90</p><div class="sb-fascia">Tattiche</div><p>Dura 1 ora.</p></div>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Wyvern (2)</span><span class="sb-gs">GS 6</span><a class="sb-rimando" href="#sb-15">scheda in appendice</a></div><p><b>CA</b> 18 · <b>pf</b> 59</p><div class="sb-fascia">Tattiche</div><p>Vanno su chi tiene la corda dell'ala e su chi vola.</p></div>
 <h2 class="sec">APPENDICE B — IL SIGILLO DI OSSIDIANA</h2>
 <div class="desc"><p class="readaloud"><strong>Cos'è.</strong> Un sigillo/anello-sigillo di <strong>ossidiana nera</strong>, gelido al tatto, che «beve» la luce intorno; inciso con la runa-vuoto di <strong>Shar</strong> (Signora della Notte, dea di perdita, oscurità e segreti). È ciò che Vatore ha appena rubato, e ciò con cui diventerà <strong>Sal</strong>. Shar è più pertinente di Mask perché il <strong>prezzo è la perdita di anime</strong>, non solo il furto.</p></div>
 <div class="tablewrap"><table><thead><tr><th>Potere</th><th>Effetto</th></tr></thead><tbody><tr><td><strong>1 · Manto di Notte Assoluta</strong> (passivo, gratis)</td><td>Entro <strong>9 m</strong> dal portatore gli incantesimi di <strong>luce</strong> di livello ≤2 sono <strong>soppressi</strong>; <em>daylight</em> e superiori richiedono <strong>prova di livello incantatore CD 20</strong> o falliscono. La luce non-magica è solo attenuata (penombra).</td></tr><tr><td><strong>2 · Furto della Notte</strong> (1/giorno, azione)</td><td>Il portatore compie <strong>un'azione furtiva</strong> (furto, colpo, passaggio) come se fosse <strong>invisibile e silenzioso</strong> per <strong>1 round</strong>. NON attivabile in piena luce naturale.</td></tr></tbody></table></div>
@@ -3785,6 +3583,13 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
     <div class="pagefoot"><span>La Resurrezione e i Mille Anni · VI · La Collana dei Semi Eterni</span>
     <span class="n">7</span></div>
   </div>
+</section>
+<section class="pane" id="c7">
+  <div class="sheet">
+    <div class="chapter-body"><h2>Appendice: le creature</h2><div id="sb-10"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Balvar Fuocospento, il Consigliere dell'Orda</span><span class="sb-gs">GS 13</span></div><div class="sb-tipo">Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE</div><p><b>Iniziativa</b> +2 · <strong>Sensi</strong> scurovisione 18 m; Ascoltare +5, Osservare +5</p><div class="sb-fascia">Difesa</div><p><strong>CA 24</strong>, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · <strong>pf 101</strong> (13 DV) · TS Temp +13, Rifl +8, <strong>Vol +17</strong> (+2 razziale vs magia) · immune a paura (patto con Abbathor) · <strong>Debolezza</strong> le sue rune sono <strong>scritte</strong> — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).</p><div class="sb-fascia">Attacco</div><p>Vel 6 m · <strong>Mischia</strong> martello da guerra runico +1 +11/+6 (1d8+2) · Domini <strong>Inganno</strong> e <strong>Runa</strong> (dominio Runa = FRCS). Incantesimi da <strong>chierico di 13° livello</strong>: è chierico 9 <strong>e</strong> Runecaster 4, e il Runecaster avanza il lancio (per questo ha <em>blade barrier</em>, che è di 6°). CD 15+liv: tipici <em>dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor</em>, <em>greater command</em> (uno slot di 5° libero).</p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>12</b></div><div><span>Des</span><b>14</b></div><div><span>Cos</span><b>16</b></div><div><span>Int</span><b>16</b></div><div><span>Sag</span><b>20</b></div><div><span>Car</span><b>14</b></div></div><p>BAB +9; Lotta +10 · <strong>Abilità</strong> Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · <strong>Talenti</strong> Incidere Rune <code>[Private source — FRCS]</code>, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · <strong>Equipaggiamento</strong> armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Rune incise (Runecaster 4)</strong>: incide fino a <strong>4 rune persistenti</strong> su superfici o creature consenzienti/legate; una runa incisa <strong>non consuma slot al momento dell'uso</strong> e scatta alla condizione scritta. Alla tenda di Zog'tar (ARC-07 questo capitolo, Scene 6 e 7): <em>invisibility purge</em> sulla soglia, <em>blade barrier</em> sul palo centrale, <em>silence</em> su sé stesso, <strong>la Catena</strong> (sotto). <em>Dimensional anchor</em> lo lancia, non lo incide.</li><li><strong>La Catena di Skullcrusher (Su, unica)</strong>: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, <strong>Skullcrusher combatte per l'orda</strong>. Non è dominazione — è un <strong>contratto scritto nella carne</strong>, e il drago lo sa.</li><li><strong>Leggere il Fuori-Posto (Su, 3/giorno)</strong>: come <em>detect magic</em> ma sulle <strong>anomalie temporali</strong>: percepisce chi non appartiene a questo secolo. <strong>È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.</strong></li></ul></div></div><div id="sb-9"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Durin Rocciadura</span><span class="sb-gs">GS 6</span></div><div class="sb-tipo">Nano Medio · Guerriero 6</div><div class="sb-fascia">Difesa</div><p><strong>CA 22</strong> (arm. completa +1, scudo pesante +1) · <strong>pf 52</strong> · TS Temp +8, Rifl +2, Vol +4</p><div class="sb-fascia">Attacco</div><p><strong>Mischia</strong> ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano</p><div class="sb-fascia">Statistiche</div><p>For 18, Cos 16, Sag 14 · BAB +6; Lotta +10</p></div></div><div id="sb-7"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Guardia di Zog'tar (4)</span><span class="sb-gs">GS 8</span></div><div class="sb-tipo">Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin</div><p><b>Iniziativa</b> +1 · <b>Sensi</b> Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)</p><div class="sb-fascia">Difesa</div><p><b>CA</b> 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo · <b>pf</b> 60 · <b>TS</b> Temp +8, Rifl +3, Vol +1</p><div class="sb-fascia">Attacco</div><p><b>Vel</b> 6 m (armatura pesante) · <b>Mischia</b> spadone +14 (2d6+6) · <b>Distanza</b> giavellotti +9 (1d6+4), incremento 9 m</p></div></div><div id="sb-1"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Hella Oakenshield, risorta</span><span class="sb-gs">PG di 13°</span></div><div class="sb-tipo">Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media</div><p><b>Iniziativa</b> +0 · <strong>Sensi</strong> scurovisione 27 m (Dream Dwarf)</p><div class="sb-fascia">Difesa</div><p><strong>CA 20</strong> (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo leggero di legno +1, +3 naturale della Collana), contatto 10, colta alla sprovvista 20 · <strong>pf ~110</strong> (13 DV) · TS Tempra +16, Riflessi +8, Volontà +15 (base Ranger 1 + Druida 12 +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD) · <strong>Vulnerabilità al fuoco</strong> ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco): è la guarigione rapida SRD, Hella muore come chiunque altro</p><div class="sb-fascia">Attacco</div><p>Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +11</p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>12</b></div><div><span>Des</span><b>10</b></div><div><span>Cos</span><b>18</b></div><div><span>Int</span><b>13</b></div><div><span>Sag</span><b>20</b></div><div><span>Car</span><b>12</b></div></div><p>For 12, Des 10, Cos 18, Int 13, SAG 20(+5), con il +4 della Collana, Car 12 · <strong>Talenti</strong> Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · <strong>Equipaggiamento</strong> (recuperato dal corpo, §11 C) cuoio borchiato +2 a borchie vegetali, scudo leggero di legno +1, scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, bacchetta di Cura Ferite Moderate (25 cariche) · <strong>Artefatto</strong> Collana dei Semi Eterni (§7)</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Ibrido Treant</strong> (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.</li><li><strong>Empatia Vegetale</strong> +4 · <strong>Fotosintesi</strong> (1/g: 2d8 pf a 1 ora di sole).</li><li><strong>Radicamento</strong> (1/g, 5 round): immune a spinta, travolgere e sbilanciare; immobile.</li><li><strong>Marchio della Veritade</strong> (Prova I): +4 Diplomazia coi nani di Moradin; 1/g verità → Volontà CD 17 o scosso.</li><li><strong>Radice Silenziosa</strong> (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata.</li><li><strong>Radici del Mondo</strong> (Prova III): guarigione rapida 1 anche su suolo sacro o druidico; 1/g Radicamento corale (+1 morale ai TS degli alleati entro 9 m, 5 round, lei immobile).</li><li><strong>Doni del party</strong> (§5, solo se donati: segna quelli veri dopo il rito): ☐ <em>Scudo del Custode</em> (Thorik): 1/g, immediata, prende il danno di un alleato entro 9 m <strong>dimezzato</strong>; Thorik accelerato 3 round verso il protetto. ☐ <em>Pelle di Adamantio</em> (Tordek): RD 3/adamantino (la sua <strong>unica</strong> RD). ☐ <em>Rovo Eldritch</em> (Artemis): <strong>a volontà</strong>, standard, contatto a distanza 18 m, 2d6 (metà rovi, metà fuoco).</li><li><strong>Restituzione</strong> (Collana #6): una volta sola per seme, immediata, Hella rende al donatore ciò che aveva dato per una scena intera. Poi mai più.</li><li><strong>Incantesimi da druida</strong> (LI 12), slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2 (base SRD del druido di 12°, più i bonus di SAG 20). Preparati tipici prima di una battaglia: 1° Entangle, Faerie Fire, Produce Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI.</li><li><strong>Compagno, Durik riforgiato</strong> (12 DV, 102 pf): CA 21 (contatto 12, sprovvisto 19) · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3) · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo. Scheda completa: il foglio «Durik, il guardiano di pietra». Sempre presente; il 3° seme della Collana lo richiama se è distrutto. Il rinoceronte visto in gioco è la <strong>forma selvatica</strong> di Hella, non un compagno.</li></ul></div></div><div id="sb-3"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Hella, Avatar della Radice</span><span class="sb-gs">forma di Hella</span></div><div class="sb-tipo">Ibrido Treant/Nano Enorme · 10 round, 1 volta al giorno</div><div class="sb-fascia">Difesa</div><p><strong>CA 21</strong> (−2 taglia, +13 naturale), contatto 8, colta alla sprovvista 21 · <strong>pf</strong> quelli di Hella · restano la vulnerabilità al fuoco, la guarigione rapida e i Doni del party</p><div class="sb-fascia">Attacco</div><p>Vel 9 m · <strong>Mischia</strong> schianto +13 (2d6+5); attacco completo 2 schianti +13 (2d6+5) · Spazio 4,5 m, portata 4,5 m · BAB +10; Lotta +23 (+10 BAB, +8 taglia, +5 FOR)</p><div class="sb-fascia">Statistiche</div><p>For 20 (12 + 8); le altre caratteristiche restano quelle di Hella</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Travolgere</strong> 2d6+7 (Riflessi CD 21 dimezza); danni doppi a oggetti e strutture.</li><li><strong>Equipaggiamento</strong>: si fonde nella forma e smette di funzionare, come nella forma selvatica; la Collana continua a funzionare.</li><li><strong>Incantesimi</strong>: con Incantesimi Naturali, come nella forma selvatica.</li></ul></div></div><div id="sb-13"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Hobgoblin della pattuglia (8)</span><span class="sb-gs">GS 4</span></div><div class="sb-tipo">Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata</div><p><b>Iniziativa</b> +1 · <b>Sensi</b> Ascoltare −1, Osservare −1</p><div class="sb-fascia">Difesa</div><p><b>CA</b> 15 · <b>pf</b> 30 · <b>TS</b> Temp +6, Rifl +2, Vol +0</p><div class="sb-fascia">Attacco</div><p><b>Vel</b> 9 m · <b>Mischia</b> spada lunga +6 (1d8+3/19-20)</p><div class="sb-fonte">in otto fanno EL 10; i numeri sono calcolati sull'SRD</div></div></div><div id="sb-12"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Orco della ronda</span><span class="sb-gs">GS ½</span></div><div class="sb-tipo">Orco Medio · guerriero 1 SRD</div><p><b>Sensi</b> scurovisione 18 m</p><div class="sb-fascia">Difesa</div><p><b>CA</b> 13, contatto 10 · <b>pf</b> 5 · <b>TS</b> Temp +3, Rifl +0, Vol −2</p><div class="sb-fascia">Attacco</div><p><b>Mischia</b> falchion +4 (2d4+4/18-20) · <b>Distanza</b> giavellotto +1 (1d6+3)</p></div></div><div id="sb-8"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Sacerdote dell'orda</span><span class="sb-gs">GS 6</span></div><div class="sb-tipo">Hobgoblin Medio · Adepto 7</div><p><b>Iniziativa</b> +2 · <strong>Sensi</strong> Ascoltare +2, Osservare +2</p><div class="sb-fascia">Difesa</div><p><strong>CA 12</strong> (+2 DES) · <strong>pf 38</strong> (7d6+14) · TS Temp +4, Rifl +4, Vol +7</p><div class="sb-fascia">Attacco</div><p>Vel 9 m · <strong>Mischia</strong> bastone ferrato +3 (1d6) · <strong>Incantesimi</strong> (3/4/3; CD 12 + livello): 0 <em>guida, individuazione del magico, luce</em>; 1° <em>benedizione, causare paura, comando, protezione dal bene</em>; 2° <em>vedere invisibilità, oscurità, forza del toro</em></p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>10</b></div><div><span>Des</span><b>14</b></div><div><span>Cos</span><b>15</b></div><div><span>Int</span><b>14</b></div><div><span>Sag</span><b>15</b></div><div><span>Car</span><b>8</b></div></div><p><strong>Abilità</strong> Ascoltare +2, Osservare +2, Concentrazione +12</p></div></div><div id="sb-4"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Skullcrusher il Nero, il Primo Nero</span><span class="sb-gs">GS 14</span></div><div class="sb-tipo">Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude</div><p><b>Iniziativa</b> +6 · <strong>Sensi</strong> percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29</p><div class="sb-fascia">Difesa</div><p><strong>CA 33</strong> (−2 taglia, +2 DES, +23 naturale), contatto 10, impreparato 31; **37 con <em>armatura magica</em><strong>, che si lancia prima del duello e dura 5 ore: al duello della Scena 11 è </strong>già addosso<strong>, quindi CA 37 · </strong>pf 297** (22d12+154) · TS Temp +20, Rifl +17, Vol +19 · RD 10/magia · RI 21 · immune acido, sonno, paralisi</p><div class="sb-fascia">Attacco</div><p>Vel 18 m, volare 45 m (scarsa), nuotare 18 m · <strong>Mischia</strong> morso +30 (2d8+10), 2 artigli +25 (2d6+5), 2 ali +25 (1d8+5), colpo di coda +25 (2d6+15) · Spazio 4,5 m, portata 3 m (morso 4,5 m) · <strong>Schiacciare</strong> (in volo o saltando, azione standard) 2d8+15, Riflessi CD 28 o immobilizzati; solo contro creature Piccole o minori: i nani e i PG Medi non li schiaccia · <strong>Soffio acido</strong> (Sop) linea di 30 m, 14d4, Riflessi CD 30 dimezza (28 + Capacità Focalizzata), di nuovo dopo 1d4 round · <strong>Capacità magiche</strong> 3/giorno <em>oscurità</em> (raggio 21 m); 1/giorno <em>corrompere l'acqua</em> (CD 25: rovina anche le pozioni che un PG ha addosso, se falliscono il TS) · <strong>Incantesimi da stregone</strong> (incantatore di 5°, CD 14 + livello): 0 (6/giorno) <em>individuazione del magico, lettura del magico, mano magica, resistenza, suono fantasma, frastornare</em>; 1° (7/giorno) <em>armatura magica, scudo, colpo accurato, dardo incantato</em>; 2° (5/giorno) <em>vedere invisibilità, immagine speculare</em></p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>31</b></div><div><span>Des</span><b>14</b></div><div><span>Cos</span><b>25</b></div><div><span>Int</span><b>18</b></div><div><span>Sag</span><b>19</b></div><div><span>Car</span><b>18</b></div></div><p>BAB +22; Lotta +40 · <strong>Talenti</strong> Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Aderente, Virata, Volontà di Ferro · <strong>Abilità</strong> Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Soffio aderente</strong>, quando lo sceglie: chi ne prende danno ne riprende metà al round dopo; toglierselo è un'azione di round completo con Riflessi CD 30 (+2 rotolando a terra, e si resta proni); la ricarica sale di 1 round.</li><li><strong>Presenza Terrificante</strong> (Str): raggio 63 m, Volontà CD 25; chi ha meno di 22 DV è scosso per 4d6 round (4 DV o meno: in preda al panico); chi supera il TS è immune per 24 ore.</li><li><strong>Respirare sott'acqua</strong> (Str).</li></ul></div></div><div id="sb-5"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Skullcrusher Vecchio</span><span class="sb-gs">GS 17 (Vecchio GS 16, +1 Avanzato)</span></div><div class="sb-tipo">Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato</div><p><b>Iniziativa</b> +6 · <strong>Sensi</strong> come A.1</p><div class="sb-fascia">Difesa</div><p><strong>CA 36</strong> (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34; **40 con <em>armatura magica</em><strong> · </strong>pf 337** (25d12+175) · TS Temp +21, Rifl +18, Vol +20 · RD 10/magia · RI 22 · immune acido, sonno, paralisi</p><div class="sb-fascia">Attacco</div><p>come A.1 · <strong>Mischia</strong> morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · <strong>Schiacciare</strong> 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · <strong>Soffio acido</strong> linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · <strong>Capacità magiche</strong> come A.1, ma <em>oscurità</em> con raggio 24 m, più <em>crescita vegetale</em> 1/giorno · <strong>Incantesimi da stregone</strong> incantatore di 7°: 6/7/7/5 al giorno (<em>lentezza</em> CD 17)</p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>33</b></div><div><span>Des</span><b>14</b></div><div><span>Cos</span><b>25</b></div><div><span>Int</span><b>18</b></div><div><span>Sag</span><b>19</b></div><div><span>Car</span><b>18</b></div></div><p>BAB +25; Lotta +44 · <strong>Talenti</strong> quelli di A.1 (Virata, non Ghermire), più Allerta · <strong>Abilità</strong> e il resto: come A.1</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Presenza Terrificante</strong>: raggio 72 m, Volontà CD 26 (meno di 25 DV).</li><li><strong>Soffio aderente</strong>, come A.1.</li></ul></div></div><div id="sb-14"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Treant di Adamantio</span><span class="sb-gs">GS ~10</span></div><div class="sb-tipo">Vegetale Grande, evocato dalla Collana di Hella</div><div class="sb-fascia">Difesa</div><p><b>CA</b> 24, RD 10/adamantio, vulnerabile al fuoco · <b>pf</b> 90 · <b>TS</b> Temp +12, Rifl +3, Vol +8</p><div class="sb-fascia">Attacco</div><p><b>Vel</b> 9 m · <b>Mischia</b> 2 schianti +18 (2d8+9), danni doppi alle strutture · <b>Speciale</b> Travolgere 2d8+13 (Riflessi CD 24)</p><div class="sb-fascia">Statistiche</div><p><b>For</b> 29</p><div class="sb-fonte">la scheda intera è nell'appendice delle statistiche della Resurrezione di Hella</div></div></div><div id="sb-2"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Treant di Adamantio (evocato dalla Collana)</span><span class="sb-gs">GS ~10</span></div><div class="sb-tipo">Vegetale Grande · Neutrale Buono</div><p><b>Iniziativa</b> +0 · <strong>Sensi</strong> visione crepuscolare; Ascoltare +8, Osservare +8</p><div class="sb-fascia">Difesa</div><p><strong>CA 24</strong> (−1 taglia, +15 naturale), contatto 9, colto alla sprovvista 24 · <strong>pf 90</strong> (fissi, dal canone; DV 10d8+50) · TS Tempra +12, Riflessi +3, Volontà +8 · <strong>RD 10/adamantio</strong> · tratti dei vegetali · <strong>Vulnerabilità al fuoco</strong></p><div class="sb-fascia">Attacco</div><p>Vel 9 m · <strong>Mischia</strong> schianto +18 (2d8+9); attacco completo 2 schianti +18 (2d8+9) · Spazio 3 m, portata 3 m · BAB +7; Lotta +20 (+7 BAB, +4 taglia, +9 FOR)</p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>29</b></div><div><span>Des</span><b>10</b></div><div><span>Cos</span><b>21</b></div><div><span>Int</span><b>12</b></div><div><span>Sag</span><b>16</b></div><div><span>Car</span><b>12</b></div></div><p><strong>Talenti</strong> Attacco Poderoso, Arma Focalizzata (schianto), Spezzare Migliorato, Volontà di Ferro · <strong>Abilità</strong> Ascoltare +8, Osservare +8, Percepire Intenzioni +8</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Travolgere</strong> 2d8+13 (Riflessi CD 24 dimezza).</li><li><strong>Colpi d'adamantio</strong>: danni doppi a oggetti e strutture, ignora la durezza sotto 20; i suoi colpi contano come adamantio.</li><li><strong>Durata</strong>: 1 ora, al massimo due Treant, uno per seme (§7).</li><li><strong>Legami</strong>: Tordek donatore entro 9 m, resistenza al fuoco 10. Artemis donatrice entro 9 m, quando usa Luce di Lathander (il potere 1/giorno dell'Anello): Rigenerazione 1 per tutta la durata.</li></ul></div></div><div id="sb-11"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Worg dei cavalieri dei lupi</span><span class="sb-gs">GS 2</span></div><div class="sb-tipo">Bestia magica Media · worg SRD</div><p><b>Sensi</b> olfatto 9 m; Ascoltare +6, Osservare +6</p><div class="sb-fascia">Difesa</div><p><b>CA</b> 14 · <b>pf</b> 30 · <b>TS</b> Temp +5, Rifl +6, Vol +3</p><div class="sb-fascia">Attacco</div><p><b>Mischia</b> morso +7 (1d6+4) e sbilanciare</p><div class="sb-fonte">worg dell'SRD; i tiri salvezza sono quelli della sua scheda SRD</div></div></div><div id="sb-15"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Wyvern (2)</span><span class="sb-gs">GS 6</span></div><div class="sb-tipo">Drago Grande · wyvern SRD</div><div class="sb-fascia">Difesa</div><p><b>CA</b> 18 · <b>pf</b> 59 · <b>TS</b> Temp +7, Rifl +6, Vol +6</p><div class="sb-fascia">Attacco</div><p><b>Vel</b> volare 18 m · <b>Mischia</b> pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)</p><div class="sb-fonte">wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD</div></div></div><div id="sb-6"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Zog'tar Deatheye, generale dell'orda antica</span><span class="sb-gs">GS 15 (Avanzato)</span></div><div class="sb-tipo">Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1</div><p><b>Iniziativa</b> +9 · <strong>Sensi</strong> Ascoltare +11, Osservare +3</p><div class="sb-fascia">Difesa</div><p><strong>CA 26</strong> (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · <strong>pf 283</strong> (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)</p><div class="sb-fascia">Attacco</div><p>Vel 12 m · <strong>Mischia</strong> in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · <strong>Distanza</strong> 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · <strong>Colpo Devastante</strong> (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · <strong>Attacco Poderoso</strong> a due mani: fino a −15 al colpire per +30 ai danni</p><div class="sb-fascia">Statistiche</div><div class="sb-car"><div><span>For</span><b>30</b></div><div><span>Des</span><b>20</b></div><div><span>Cos</span><b>24</b></div><div><span>Int</span><b>16</b></div><div><span>Sag</span><b>16</b></div><div><span>Car</span><b>18</b></div></div><p>For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · <strong>Talenti</strong> (7) Attacco Poderoso, Spingere Migliorato, Colpo Devastante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · <strong>Abilità</strong> Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Ira Barbarica Superiore</strong> (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).</li><li><strong>Presenza Minacciosa</strong>: entro 9 m, Volontà CD 21 o scosso 1d4 round (10 + ½ DV + CAR, come la presenza terrificante dei draghi; D57).</li><li><strong>Occhio di Ossidiana</strong> (artefatto minore maledetto, incastonato al posto dell'occhio destro, canone del DM): 3/giorno, azione di movimento, marca un bersaglio: −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round. Prezzo: Zog'tar è <strong>vulnerabile alla luce divina</strong> (Luce di Lathander, Corona).</li></ul></div></div></div>
+    <div class="pagefoot"><span>La Resurrezione e i Mille Anni · Appendice</span>
+    <span class="n">8</span></div>
+  </div>
 </section></main>
 <button class="printbtn" onclick="window.print()" title="Stampa/salva in PDF SOLO la scheda aperta (A4)">🖨 Salva PDF</button>
 <script>
@@ -3801,6 +3606,11 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
   // dall'export PDF headless — ADR-0013 §5)
   if(location.hash && document.getElementById(location.hash.slice(1)))
     show(location.hash.slice(1));
+  // La riga dell'incontro porta alla scheda in appendice, che sta in un'altra scheda.
+  document.querySelectorAll('a.sb-rimando').forEach(a=>a.addEventListener('click',e=>{
+    const t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+    e.preventDefault(); show(t.closest('section.pane').id); t.scrollIntoView();
+  }));
 </script>
 </body>
 </html>

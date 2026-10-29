@@ -1872,6 +1872,94 @@
       "deterministic": true
     },
     {
+      "name": "misura_stampa",
+      "description": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»\n\nCompila ogni booklet e ne misura il PDF come un controllo di prestampa: font non incorporati, testo sotto 7 pt, testo oltre la gabbia dei margini speculari, immagini sotto 300 dpi, riquadri di creatura spezzati fra due pagine (dai segnaposti <sb-inizio>/<sb-fine> del tema, letti con typst eval), più corpo mediano e quota di pagine illustrate. --check confronta con i tetti di docs/audit/stampa-booklet.json, che --aggiorna fa solo scendere. Serve PyMuPDF (requirements-dev.txt, come validate_corredo --stampa).",
+      "use_case": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»",
+      "invocation": "python3 scripts/misura_stampa.py --tutti --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "I manifest da misurare."
+          },
+          "tutti": {
+            "type": "boolean",
+            "description": "Ogni booklet con un manifest."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Le misure in JSON."
+          },
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Cosa sfora, pagina per pagina."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un booklet supera un suo tetto o non è registrato."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive il registro; i tetti scendono soltanto."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/stampa-booklet.json",
+        "build/misura-stampa/*.pdf"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_statblocchi_booklet",
+      "description": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»\n\nConta, booklet per booklet, le schede di creatura e la forma in cui escono in stampa (ADR-0105): riquadro (il recinto ```statblocco), griglia (un recinto qualunque), prosa, tabella, sciolta. --stampa conta anche i riquadri nel sorgente Typst; --check confronta i fuori forma con i tetti di docs/audit/statblocchi-booklet.json, che --aggiorna fa solo scendere.",
+      "use_case": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»",
+      "invocation": "python3 scripts/misura_statblocchi_booklet.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Elenca ogni scheda fuori forma con la sua riga."
+          },
+          "stampa": {
+            "type": "boolean",
+            "description": "Conta i #statblocco( nel sorgente Typst di ogni booklet."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Stampa la misura in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un booklet ha più schede fuori forma del suo tetto."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive i tetti, solo verso il basso."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/statblocchi-booklet.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra il suo tetto (--check)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "session_recap",
       "description": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»\n\nRecap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
       "use_case": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»",
@@ -1993,6 +2081,48 @@
         "0": "corredo completo",
         "1": "un pezzo mancante o difettoso",
         "2": "uso errato"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "varianti_stampa",
+      "description": "«Quale impaginazione si legge meglio al tavolo? Fammi scegliere senza sapere quale è quale.»\n\nCompila lo stesso booklet in più varianti del tema (interlinea, box da leggere senza riquadro), passate con typst --input; misura ogni PDF con misura_stampa e scarta la variante che peggiora una misura con tetto rispetto al libro di sempre. Con le varianti rimaste prepara CIECO.pdf: coppie di pagine con lo stesso testo, una per versione, in ordine casuale, e la chiave in CHIAVE.json. Serve PyMuPDF.",
+      "use_case": "«Quale impaginazione si legge meglio al tavolo? Fammi scegliere senza sapere quale è quale.»",
+      "invocation": "python3 scripts/varianti_stampa.py MANIFEST.json --out CARTELLA",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "Il manifest del booklet."
+          },
+          "out": {
+            "type": "string",
+            "description": "Cartella del fascicolo cieco, fuori dal repo."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Seme del caso: stesse coppie a ogni esecuzione."
+          },
+          "coppie": {
+            "type": "integer",
+            "description": "Coppie per variante."
+          }
+        },
+        "required": [
+          "manifest",
+          "out"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<out>/CIECO.pdf",
+        "<out>/CHIAVE.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
       },
       "deterministic": true
     },

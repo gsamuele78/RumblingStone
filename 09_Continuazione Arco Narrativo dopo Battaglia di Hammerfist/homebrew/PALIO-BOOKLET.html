@@ -110,6 +110,30 @@
   .readaloud{ font-style:italic; }
   .vague{ font-style:italic; font-size:.86rem; opacity:.9; }
 
+  /* Il riquadro delle statistiche: la stessa forma del PDF (ADR-0105). */
+  .statblocco{ background:var(--note-bg); border-top:3px solid var(--rubric);
+      border-bottom:3px solid var(--rubric); padding:.6rem .9rem .7rem; margin:.9rem 0;
+      break-inside:avoid; font-size:.92rem; }
+  .statblocco .sb-testa{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem;}
+  .statblocco .sb-nome{ font-family:'Cinzel',Georgia,serif; font-variant:small-caps; color:var(--rubric);
+      font-size:1.15rem; font-weight:600;}
+  .statblocco .sb-gs{ font-family:'Cinzel',Georgia,serif; color:var(--brass); white-space:nowrap;}
+  .statblocco .sb-tipo{ font-style:italic; color:#6b4f2a; margin:.05rem 0 .3rem;}
+  .statblocco .sb-fascia{ font-family:'Cinzel',Georgia,serif; font-size:.72rem; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--rubric); border-bottom:1px solid var(--rubric);
+      margin:.5rem 0 .2rem; font-weight:600;}
+  .statblocco p{ margin:.15rem 0; text-align:left;}
+  .statblocco ul{ margin:.15rem 0 .2rem 1.1rem;}
+  .statblocco .sb-car{ display:grid; grid-template-columns:repeat(6,1fr); text-align:center; margin:.2rem 0;}
+  .statblocco .sb-car span{ display:block; font-size:.7rem; color:#6b4f2a; font-variant:small-caps;}
+  .sb-riga{ border-left:3px solid var(--rubric); padding:.2rem .7rem; margin:.8rem 0;}
+  .sb-riga .sb-testa{ display:flex; gap:.6rem; align-items:baseline;}
+  .sb-riga .sb-nome{ font-family:'Cinzel',Georgia,serif; font-variant:small-caps; color:var(--rubric); font-weight:600;}
+  .sb-riga .sb-gs{ font-family:'Cinzel',Georgia,serif; color:var(--brass);}
+  .sb-riga .sb-rimando{ margin-left:auto; font-style:italic; color:#6b4f2a; font-size:.85rem;}
+  .sb-riga .sb-fascia{ font-family:'Cinzel',Georgia,serif; font-size:.72rem; letter-spacing:.12em; color:var(--rubric);}
+  .sb-riga p{ margin:.15rem 0; text-align:left;}
+  .statblocco .sb-fonte{ font-size:.75rem; color:#6b4f2a; margin-top:.3rem;}
   pre.mono{ background:rgba(201,173,106,.18); border:1px solid var(--brass); padding:.6rem .8rem;
       overflow-x:auto; font-size:.8rem; line-height:1.35; font-family:ui-monospace,Consolas,monospace;}
   .figure{ margin:.8rem auto; text-align:center; }
@@ -157,7 +181,7 @@
   <h1>Il Palio di Channathgate</h1>
   <p>I 14 capitoli integrali del side-arc P2D (ARC-09) in stile Manuale del Giocatore — nessun taglio: è il contenuto completo dei file master, con stemmi e mappe vettoriali della campagna. Materiale del DM.</p>
 </header>
-<nav class="tabs" role="tablist"><button role="tab" aria-selected="true" data-pane="c0">Copertina</button><button role="tab" aria-selected="false" data-pane="c1">✉ Teaser giocatori — «Novanta Secondi»</button><button role="tab" aria-selected="false" data-pane="c2">I · La Città e i Distretti</button><button role="tab" aria-selected="false" data-pane="c3">II · L&#x27;Avventura (regole base)</button><button role="tab" aria-selected="false" data-pane="c4">III · Le Contrade — Stemmi e Canti</button><button role="tab" aria-selected="false" data-pane="c5">IV · Le Ballate (i Ritornelli)</button><button role="tab" aria-selected="false" data-pane="c6">V · Le Prove di Ammissione</button><button role="tab" aria-selected="false" data-pane="c7">VI · Giorno 1 — La Tratta</button><button role="tab" aria-selected="false" data-pane="c8">VII · Le Prove di Batteria</button><button role="tab" aria-selected="false" data-pane="c9">VIII · Giorno 2 — Partiti, Cena, Sabotaggi</button><button role="tab" aria-selected="false" data-pane="c10">IX · Giorni 3-4 — La Corsa e gli Esiti</button><button role="tab" aria-selected="false" data-pane="c11">X · DM Master Reference</button><button role="tab" aria-selected="false" data-pane="c12">XI · Integrazione di Campagna</button><button role="tab" aria-selected="false" data-pane="c13">XII · Conseguenze ed Echi</button><button role="tab" aria-selected="false" data-pane="c14">XIII · Statblocchi</button><button role="tab" aria-selected="false" data-pane="c15">XIV · Le Mappe</button></nav>
+<nav class="tabs" role="tablist"><button role="tab" aria-selected="true" data-pane="c0">Copertina</button><button role="tab" aria-selected="false" data-pane="c1">✉ Teaser giocatori — «Novanta Secondi»</button><button role="tab" aria-selected="false" data-pane="c2">I · La Città e i Distretti</button><button role="tab" aria-selected="false" data-pane="c3">II · L&#x27;Avventura (regole base)</button><button role="tab" aria-selected="false" data-pane="c4">III · Le Contrade — Stemmi e Canti</button><button role="tab" aria-selected="false" data-pane="c5">IV · Le Ballate (i Ritornelli)</button><button role="tab" aria-selected="false" data-pane="c6">V · Le Prove di Ammissione</button><button role="tab" aria-selected="false" data-pane="c7">VI · Giorno 1 — La Tratta</button><button role="tab" aria-selected="false" data-pane="c8">VII · Le Prove di Batteria</button><button role="tab" aria-selected="false" data-pane="c9">VIII · Giorno 2 — Partiti, Cena, Sabotaggi</button><button role="tab" aria-selected="false" data-pane="c10">IX · Giorni 3-4 — La Corsa e gli Esiti</button><button role="tab" aria-selected="false" data-pane="c11">X · DM Master Reference</button><button role="tab" aria-selected="false" data-pane="c12">XI · Integrazione di Campagna</button><button role="tab" aria-selected="false" data-pane="c13">XII · Conseguenze ed Echi</button><button role="tab" aria-selected="false" data-pane="c14">XIII · Statblocchi</button><button role="tab" aria-selected="false" data-pane="c15">XIV · Le Mappe</button><button role="tab" aria-selected="false" data-pane="c16">Appendice: le creature</button></nav>
 <main>
 <section class="pane on" id="c0">
   <div class="sheet cover">
@@ -1134,11 +1158,9 @@
 <hr class="rule">
 <h2 class="sec">1. I Fantini (i due archetipi)</h2>
 <h3 class="sub">1.1 Fantino Cavaliere — "corsa pulita" (GS 8)</h3>
-<p>Umano Guerriero 6 / Cavaliere-ish. <strong>CA</strong> 18 (armatura leggera da corsa) · <strong>PF</strong> 55 · <strong>For</strong> 14 <strong>Des</strong> 16 <strong>Cos</strong> 13. <strong>TS</strong> Temp +7 Rifl +6 Vol +4.</p>
-<ul><li><strong>Cavalcare +16</strong> (foco: corsa), <em>Combattere in Sella</em>, <em>Cavalcata Poderosa</em>, <em>Attacco in Corsa</em>.</li><li><strong>Nerbo</strong> +9 mischia, 1d4+2 non letale; su colpo, bersaglio Cavalcare DC 15 o Sbilanciato.</li><li><strong>Legame col cavallo</strong>: +2 alle prove di Cavalcare del proprio destriero (empatia).</li><li><strong>Tattica</strong>: cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.</li></ul>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Fantino Cavaliere</span><span class="sb-gs">GS 8</span><a class="sb-rimando" href="#sb-1">scheda in appendice</a></div><p><b>CA</b> 18, armatura leggera da corsa · <b>pf</b> 55</p><div class="sb-fascia">Tattiche</div><p>Cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.</p></div>
 <h3 class="sub">1.2 Fantino Ladro — "corsa assassina" (GS 8)</h3>
-<p>Mezzelfo Ladro 8. <strong>CA</strong> 19 · <strong>PF</strong> 44 · <strong>Des</strong> 18. <strong>TS</strong> Temp +4 Rifl +10 Vol +3.</p>
-<ul><li><strong>Cavalcare +12</strong>, <strong>Raggirare +14</strong>, <strong>Furtività +14</strong>, <em>Attacco Furtivo +4d6</em>.</li><li><strong>Nerbo con aghi</strong>: +11 mischia, 1d4+1 + veleno (CD 14, 1d2 Des); <em>Attacco Furtivo</em> se il rivale è Colto alla Sprovvista (curva cieca, Zona 5).</li><li><strong>Sbilanciare/Spingere in sella</strong> +13. <strong>Slealtà</strong>: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).</li><li><strong>Tattica</strong>: sta dietro, colpisce nelle curve cieche, punta a <strong>disarcionare</strong> più che a vincere.</li></ul>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Fantino Ladro</span><span class="sb-gs">GS 8</span><a class="sb-rimando" href="#sb-2">scheda in appendice</a></div><p><b>CA</b> 19 · <b>pf</b> 44</p><div class="sb-fascia">Tattiche</div><p>Sta dietro, colpisce nelle curve cieche, punta a <strong>disarcionare</strong> più che a vincere.</p></div>
 <hr class="rule">
 <h3 class="sub">1.3 Il Roster — gli 8 fantini con nome (personalità, prezzo, leve)</h3>
 <p>Usa l'archetipo (§1.1/§1.2) per le statistiche; qui trovi <strong>chi sono</strong>. <em>Onore</em> = TS contro la corruzione (Master §3.3); <em>Leva</em> = come comprarli o blindarli.</p>
@@ -1152,13 +1174,11 @@
 <hr class="rule">
 <h2 class="sec">3. I Sicari di Sonjak (assalto alla stalla, Giorno 2 notte, GS 11–12)</h2>
 <h3 class="sub">3.1 Drow Assassino ×2 (GS 9 cad.)</h3>
-<p>Drow Ladro 5 / Assassino 4. <strong>CA</strong> 21 · <strong>PF</strong> 58 · <strong>Des</strong> 20. <strong>TS</strong> Rifl +12.</p>
-<ul><li><strong>Attacco Furtivo +6d6</strong>, <strong>Morte Improvvisa</strong> (CD 18), <em>Nascondersi nelle Ombre</em>.</li><li><strong>Innata</strong>: <em>Oscurità</em>, <em>Fuoco delle Fate</em>. Balestra a mano + veleno drow (sonno, CD 17).</li><li><strong>Obiettivo</strong>: <strong>il cavallo</strong>, non i PG — colpire e sparire. Se scoperti, coprono la fuga.</li></ul>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Drow Assassino (2)</span><span class="sb-gs">GS 9</span><a class="sb-rimando" href="#sb-3">scheda in appendice</a></div><p><b>CA</b> 21 · <b>pf</b> 58</p><div class="sb-fascia">Tattiche</div><p><strong>Obiettivo</strong>: <strong>il cavallo</strong>, non i PG: colpire e sparire. Se scoperti, coprono la fuga.</p></div>
 <h3 class="sub">3.2 Drow Chierica di Lolth (GS 10)</h3>
-<p>Drow Chierico 9. <strong>CA</strong> 22 · <strong>PF</strong> 63 · <strong>Sag</strong> 18. <strong>Incantesimi</strong> fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). <em>Oscurità</em>, <em>Individuazione Magico</em>.</p>
-<ul><li>Comanda l'assalto; usa <strong>Silenzio</strong> per soffocare gli allarmi, <strong>Ragnatela</strong> in stalla.</li><li><strong>Cattura viva</strong> = intel Fase 0 Rethmar + −1 clock Sonjak.</li></ul>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Drow Chierica di Lolth</span><span class="sb-gs">GS 10</span><a class="sb-rimando" href="#sb-4">scheda in appendice</a></div><p><b>CA</b> 22 · <b>pf</b> 63</p><div class="sb-fascia">Tattiche</div><p>Comanda l'assalto; usa <strong>Silenzio</strong> per soffocare gli allarmi, <strong>Ragnatela</strong> in stalla. <strong>Cattura viva</strong> = intel Fase 0 Rethmar + −1 clock Sonjak.</p></div>
 <h3 class="sub">3.3 Servitore della Spora (GS 3, ariete vivente)</h3>
-<p>Umanoide fungino mindless (dall'esperimento di Sonjak, §2.4a CALCOLI). <strong>PF</strong> 32 · carica suicida, <strong>veleno da contatto CD 16</strong>, esplode in spore alla morte (Tempra CD 14 o 1 round <em>nauseato</em>). 1–2 presenti.</p>
+<div class="sb-riga"><div class="sb-testa"><span class="sb-nome">Servitore della Spora (1-2)</span><span class="sb-gs">GS 3</span><a class="sb-rimando" href="#sb-5">scheda in appendice</a></div><p><b>CA</b> — · <b>pf</b> 32</p></div>
 <div class="desc"><p class="readaloud"><strong>Prova documentale</strong>: su un drow, il <strong>sigillo del mercante di Channathgate</strong> (rete de <em>Il Collezionista</em>) → collega Sonjak, la Civetta/Valerius e i drow. Aggancio ai registri.</p></div>
 <hr class="rule">
 <h2 class="sec">4. PNG chiave del Palio</h2>
@@ -1775,6 +1795,13 @@
     <div class="pagefoot"><span>Il Palio di Channathgate · XIV · Le Mappe</span>
     <span class="n">16</span></div>
   </div>
+</section>
+<section class="pane" id="c16">
+  <div class="sheet">
+    <div class="chapter-body"><h2>Appendice: le creature</h2><div id="sb-3"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Drow Assassino (2)</span><span class="sb-gs">GS 9</span></div><div class="sb-tipo">Drow Ladro 5 / Assassino 4</div><div class="sb-fascia">Difesa</div><p><strong>CA 21</strong> · <strong>pf 58</strong> · TS Riflessi +12</p><div class="sb-fascia">Attacco</div><p>Balestra a mano + veleno drow (sonno, CD 17) · <strong>Attacco Furtivo</strong> +6d6</p><div class="sb-fascia">Statistiche</div><p>Des 20</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Morte Improvvisa</strong> (CD 18), <em>Nascondersi nelle Ombre</em>.</li><li><strong>Innata</strong>: <em>Oscurità</em>, <em>Fuoco delle Fate</em>.</li></ul></div></div><div id="sb-4"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Drow Chierica di Lolth</span><span class="sb-gs">GS 10</span></div><div class="sb-tipo">Drow Chierico 9</div><div class="sb-fascia">Difesa</div><p><strong>CA 22</strong> · <strong>pf 63</strong></p><div class="sb-fascia">Statistiche</div><p>Sag 18</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Incantesimi</strong> fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). <em>Oscurità</em>, <em>Individuazione Magico</em>.</li></ul></div></div><div id="sb-1"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Fantino Cavaliere</span><span class="sb-gs">GS 8</span></div><div class="sb-tipo">Umano Guerriero 6 / Cavaliere-ish · corsa pulita</div><div class="sb-fascia">Difesa</div><p><strong>CA 18</strong> (armatura leggera da corsa) · <strong>pf 55</strong> · TS Tempra +7, Riflessi +6, Volontà +4</p><div class="sb-fascia">Attacco</div><p><strong>Mischia</strong> nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato</p><div class="sb-fascia">Statistiche</div><p>For 14, Des 16, Cos 13 · <strong>Abilità</strong> Cavalcare +16 (foco: corsa) · <strong>Talenti</strong> <em>Combattere in Sella</em>, <em>Cavalcata Poderosa</em>, <em>Attacco in Corsa</em></p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Legame col cavallo</strong>: +2 alle prove di Cavalcare del proprio destriero (empatia).</li></ul></div></div><div id="sb-2"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Fantino Ladro</span><span class="sb-gs">GS 8</span></div><div class="sb-tipo">Mezzelfo Ladro 8 · corsa assassina</div><div class="sb-fascia">Difesa</div><p><strong>CA 19</strong> · <strong>pf 44</strong> · TS Tempra +4, Riflessi +10, Volontà +3</p><div class="sb-fascia">Attacco</div><p><strong>Mischia</strong> nerbo con aghi +11 (1d4+1 + veleno CD 14, 1d2 Des); <em>Attacco Furtivo</em> se il rivale è Colto alla Sprovvista (curva cieca, Zona 5) · <strong>Sbilanciare/Spingere in sella</strong> +13</p><div class="sb-fascia">Statistiche</div><p>Des 18 · <strong>Abilità</strong> Cavalcare +12, Raggirare +14, Furtività +14</p><div class="sb-fascia">Capacità speciali</div><ul><li><em>Attacco Furtivo</em> +4d6.</li><li><strong>Slealtà</strong>: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).</li></ul></div></div><div id="sb-5"><div class="statblocco"><div class="sb-testa"><span class="sb-nome">Servitore della Spora (1-2)</span><span class="sb-gs">GS 3</span></div><div class="sb-tipo">Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)</div><div class="sb-fascia">Difesa</div><p><strong>pf 32</strong></p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Carica suicida</strong>, <strong>veleno da contatto CD 16</strong>.</li><li><strong>Esplode</strong> in spore alla morte (Tempra CD 14 o 1 round <em>nauseato</em>).</li></ul></div></div></div>
+    <div class="pagefoot"><span>Il Palio di Channathgate · Appendice</span>
+    <span class="n">17</span></div>
+  </div>
 </section></main>
 <button class="printbtn" onclick="window.print()" title="Stampa/salva in PDF SOLO la scheda aperta (A4)">🖨 Salva PDF</button>
 <script>
@@ -1791,6 +1818,11 @@
   // dall'export PDF headless — ADR-0013 §5)
   if(location.hash && document.getElementById(location.hash.slice(1)))
     show(location.hash.slice(1));
+  // La riga dell'incontro porta alla scheda in appendice, che sta in un'altra scheda.
+  document.querySelectorAll('a.sb-rimando').forEach(a=>a.addEventListener('click',e=>{
+    const t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+    e.preventDefault(); show(t.closest('section.pane').id); t.scrollIntoView();
+  }));
 </script>
 </body>
 </html>
