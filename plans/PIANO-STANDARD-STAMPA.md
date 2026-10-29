@@ -63,12 +63,15 @@ Note oneste sulla misura:
 - **D3. Varianti di layout misurate.** La pipeline scarta le varianti con
   errori misurabili. Fra quelle senza errori sceglie il DM alla cieca, come per
   la prosa.
-- **D5. Dove sta la scheda intera** (aperta, nata dal confronto con RHoD):
-  il riquadro intero alla prima comparsa della creatura nel volume e una riga
-  con rimando alla pagina nelle successive, come fa WotC con l'appendice. Cambia
-  ADR-0105, che oggi mette il riquadro a ogni comparsa: la decide il DM.
 - **D4. Un registro.** Ogni booklet ha i suoi tetti di stampa in git, che
   scendono soltanto. ✅ attuato con `docs/audit/stampa-booklet.json`.
+- **D5. Dove sta la scheda intera** (decisa dal DM il 2026-10-29, scelta
+  «Appendice»): le schede intere delle creature vanno in un'appendice in fondo
+  al volume, come in *Red Hand of Doom*. Nell'incontro restano una riga con il
+  rimando alla pagina e la **tattica di quell'incontro**: se un PNG cambia
+  tattica nel tempo, o lo si incontra in stanze o luoghi diversi, ogni
+  incontro porta la sua. Cambia ADR-0105, che oggi mette il riquadro intero a
+  ogni comparsa.
 
 ## Fase 1 — Audit
 
