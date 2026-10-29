@@ -22,16 +22,16 @@
 > **Da dove vengono i numeri.** Dall'SRD 3.5. Dove l'SRD non ha una regola per
 > quello che è successo, c'è una **variazione**, segnata come tale e costruita
 > su una regola dell'SRD vicina; quando le letture possibili sono due, vale la
-> più forte, come vuole il DM. Le probabilità vengono da 20.000 prove di
-> `plans/esperimenti/barile-zogtar-2026-10-24/simula_barile.py`, che usa
-> queste stesse regole: i risultati completi sono in `ESITI-SIMULAZIONE.md`,
-> nella stessa cartella.
+> più forte, come vuole il DM. Le probabilità vengono da 20.000 prove di una
+> simulazione che usa queste stesse regole<!-- storico -->
+> (`plans/esperimenti/barile-zogtar-2026-10-24/simula_barile.py`; i risultati
+> completi sono in `ESITI-SIMULAZIONE.md`, nella stessa cartella)<!-- /storico -->.
 
 ## La scheda da tavolo
 
 Dieci passi, nell'ordine in cui si tirano. Ogni riga dice da quale regola
-dell'SRD viene; le variazioni sono segnate ◆ e sono le domande B4, B5, B6,
-B12 e B16 del §12. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
+dell'SRD viene; le variazioni sono segnate ◆ e sono le scelte del DM B4, B5, B6,
+B12 e B16. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
 sganciano: la tabella è nel §2-bis. Con questa scheda il DM non deve inventare niente: tira i dadi
 della colonna di destra.
 
@@ -58,7 +58,7 @@ TS, 21 a chi li supera.
 
 ## 1. Che cosa hanno fatto, e che cosa si suppone
 
-Il racconto del DM, 2026-10-24, messo in ordine:
+Il racconto del DM, messo in ordine:
 
 - I PG volano sopra il campo, invisibili, a **48 m** di quota, in una notte
   stellata. Partono dalla postierla in volo, come nella variante «dall'alto»
@@ -72,7 +72,7 @@ Il racconto del DM, 2026-10-24, messo in ordine:
 - Vogliono squarciare la tenda di Zog'tar.
 
 Quello che il racconto non dice si suppone così, e ogni supposizione è una
-domanda al DM in fondo (§12):
+scelta del DM:
 
 - Le fiale sulla botte sono **due**. Le tabelle danno anche una e tre.
 - Una fiala della fenice **scoppia quando si rompe**: il vetro che va in pezzi
@@ -106,7 +106,7 @@ nemici sopra. Lasciar cadere un barile è lo stesso gesto. Non è un attacco,
 quindi non c'è tiro per colpire, l'invisibilità resta, e lasciarlo andare è
 un'azione gratuita.
 
-**La deviazione** `[Variazione sull'SRD — CANONE DM 2026-10-29, B4]`.
+**La deviazione** `[Variazione sull'SRD, B4]`.
 I PG non mirano: lasciano andare. Il barile finisce lontano dalla verticale
 per due ragioni, e la regola le mette tutte e due in un dado solo.
 
@@ -420,7 +420,7 @@ L'SRD dà due regole per l'olio, e qui servono tutte e due.
 
 La botte ha 50 litri, cioè **105 pinte**. Una botte che si apre a 110 all'ora
 schizza l'olio tutto attorno, e il conto delle pinte dice fin dove arriva
-`[Variazione sull'SRD — CANONE DM 2026-10-29, B6]`:
+`[Variazione sull'SRD, B6]`:
 
 | Zona | All'aperto | Dentro la tenda | Olio | Brucia |
 |---|---|---|---|---|
@@ -478,7 +478,7 @@ naturale fallisce sempre, quindi anche Zog'tar, con Tempra +18, ha il 5%.
 - Il **colpo diretto** da 15d6 arriva a 50 due volte su tre.
 - **Le due palle di fuoco contano come un attacco solo**: si sommano, e la
   somma è quella che conta per i 50 `[Variazione, la versione più terribile —
-  CANONE DM 2026-10-29, B5: per l'SRD ogni palla di fuoco è un attacco a sé, e 6d6 non
+  B5: per l'SRD ogni palla di fuoco è un attacco a sé, e 6d6 non
   arrivano mai a 50]`. Con due fiale e il TS fallito, la somma
   arriva a 50 una volta su dieci.
 - Il colpo diretto, il fuoco e l'olio restano attacchi diversi.
@@ -865,17 +865,15 @@ pali dei trofei, con i carri del bottino lasciati dove si sono fermati.
   rinforzi arrivano da lì. Nessuna tenda della Guardia è dentro i 6 m del
   barile.
 
-Le misure vengono dalla ricerca del 21 ottobre sugli accampamenti
-(`plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md`, le parti
-sui campi mongoli e d'avventura). Le due mappe passano il collaudo senza
+Le misure vengono dalla ricerca sugli accampamenti, nelle parti sui campi
+mongoli e d'avventura<!-- storico --> (`plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md`)<!-- /storico -->. Le due mappe passano il collaudo senza
 errori, con voto di qualità 100 tutte e due.
 
+<!-- storico -->
 ## 12. Domande al DM
 
 Ogni domanda ha la proposta ★, scelta come la versione più forte quando le
 regole lasciano scegliere.
-
-<!-- pagina: una-colonna -->
 
 | # | Domanda | ★ Proposta | Le altre |
 |---|---|---|---|
@@ -904,8 +902,7 @@ regole lasciano scegliere.
 | B23 | Lo sgancio guidato: chi non vede, guidato da chi vede il colmo, usa la colonna «chi vede», con 1 quadretto in più se la guida non vede chi sgancia | **decisa dal DM il 2026-10-29:** sì | la guida a voce vale sempre «chi vede»; o non vale niente |
 | B24 | La tenda che brucia fa luce come un falò grande: intensa entro 12 m, fioca fino a 24 m, finché non crolla e diventa brace | **decisa dal DM il 2026-10-29:** sì | la luce di un falò normale, 6 m e 12 m |
 | B25 | Come reagiscono le bande d'orchi e i lupi al barile | **decisa dal DM il 2026-10-29: la furia.** Le quattro bande corrono armate allo spiazzo con le torce, senza ritardo; i lupi si stringono e il ritorno a piedi si tira a CD +2 | il caos (saccheggio, ronde in ritardo di 1d4 round); la disciplina; la caccia per tutta la notte (CD +4) |
-
-<!-- /pagina -->
+<!-- /storico -->
 
 ## 13. Le trovate dei giocatori: come gestirle le prossime volte
 
