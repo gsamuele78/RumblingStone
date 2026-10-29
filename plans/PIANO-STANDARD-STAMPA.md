@@ -81,6 +81,23 @@ a caso. Basta per tenere il libro di sempre, non per dire che la variante è
 peggiore in assoluto. L'interlinea si potrà rimettere al cieco su un altro
 booklet con più coppie; il guadagno sarebbe 9 pagine su 101.
 
+## Terza misura (2026-10-29, dopo l'unione della #295)
+
+La rimisura su main del thread delle schede ha trovato due difetti nati
+dalla colonna stretta dell'appendice, e correggendoli ne è emerso un terzo.
+
+| Misura | Su main dopo la #295 | Dopo la correzione |
+|---|---|---|
+| Titoli dei riquadri spezzati con il trattino, appendici dei 7 volumi | 23 | 0 |
+| Colonne dell'appendice piene meno del 60% (ultima pagina esclusa) | 5 | 4 |
+| Rimandi di pagina sbagliati (nuova misura, tetto 0) | 1 (Terros, «continua a pagina 60») | 0 |
+| Impaginazioni che non convergono (ora fanno fallire la misura) | 0 | 0 |
+
+Le 4 colonne che restano sotto il 60% sono colonne di destra seguite da una
+scheda che non ci sta: continuarla nella pagina dopo vorrebbe dire
+spezzarla a pagina girata, che il criterio WotC esclude. Le toglierebbe solo
+un ordine diverso dall'alfabetico.
+
 ## Decisioni proposte
 
 - **D1. Dati una volta sola.** La creatura diventa un dato con uno schema, come

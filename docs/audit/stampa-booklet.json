@@ -26,7 +26,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 58,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 101,
@@ -43,7 +44,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 7,
@@ -60,7 +62,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 5,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 19,
@@ -77,15 +80,16 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 68,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 146,
+        "pagine": 145,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 3.9,
         "schede": 15,
-        "pagine_con_immagine": 0.068,
-        "pagine_con_immagine_decimo": 0.13
+        "pagine_con_immagine": 0.069,
+        "pagine_con_immagine_decimo": 0.131
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -94,7 +98,8 @@
         "fuori_margine": 1,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 25,
@@ -111,7 +116,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 4,
@@ -128,7 +134,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 60,
@@ -145,7 +152,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 3,
@@ -162,7 +170,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 56,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 85,
@@ -179,7 +188,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 2,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 65,
@@ -196,7 +206,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 41,
@@ -213,7 +224,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 2,
@@ -230,7 +242,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 19,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 86,
@@ -247,7 +260,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 6,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 8,
@@ -264,7 +278,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 7,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 11,
@@ -281,7 +296,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 1,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 6,
@@ -298,7 +314,8 @@
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
-        "font_non_incorporati": 0
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 6,

@@ -83,6 +83,31 @@ class TestPdf(unittest.TestCase):
         # il caso che una copisteria rifiuta.
         self.assertEqual(v["font_non_incorporati"], ["Helvetica"])
 
+    def test_rimandi_di_pagina(self):
+        """Un rimando giusto per tipo e uno sbagliato per tipo."""
+        doc = pymupdf.open()
+        for _ in range(3):
+            doc.new_page(width=595.28, height=841.89)
+        doc[0].insert_text((60, 100), "Xorn", fontsize=10)
+        doc[0].insert_text((60, 112), "scheda a pagina 2", fontsize=10)
+        doc[0].insert_text((60, 200), "Terros", fontsize=10)
+        doc[0].insert_text((60, 212), "scheda a pagina 3", fontsize=10)      # Terros non è a p. 3
+        doc[1].insert_text((60, 100), "Xorn", fontsize=10)
+        doc[1].insert_text((60, 300), "continua a pagina 3", fontsize=10)    # niente «(segue)» a p. 3
+        doc[1].insert_text((60, 400), "continua nella colonna accanto", fontsize=10)  # né a p. 2
+        doc[2].insert_text((60, 100), "Drago", fontsize=10)
+        pdf = self.cartella / "rimandi.pdf"
+        doc.save(pdf)
+        sbagliati = ms.rimandi_sbagliati(pymupdf.open(pdf))
+        self.assertEqual([s[2] for s in sbagliati],
+                         ["scheda a pagina 3", "continua a pagina 3", "continua nella colonna accanto"])
+        doc = pymupdf.open(pdf)
+        doc[2].insert_text((60, 130), "Terros (segue)", fontsize=10)
+        doc[1].insert_text((300, 100), "Xorn (segue)", fontsize=10)
+        pdf2 = self.cartella / "rimandi-giusti.pdf"
+        doc.save(pdf2)
+        self.assertEqual(ms.rimandi_sbagliati(pymupdf.open(pdf2)), [])
+
     def test_la_pagina_pari_ha_l_interno_a_destra(self):
         area = pymupdf.Rect(0, 0, 595.28, 841.89)
         dispari, pari = ms.area_di_stampa(area, 1, "a4"), ms.area_di_stampa(area, 2, "a4")

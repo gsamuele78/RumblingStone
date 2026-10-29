@@ -40,7 +40,8 @@ VARIANTI: dict[str, tuple[dict[str, str], str, str]] = {
 }
 
 #: Le misure che una variante non può peggiorare (le stesse con tetto in CI).
-MISURE_CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "schede_spezzate", "font_non_incorporati")
+MISURE_CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "schede_spezzate", "font_non_incorporati",
+                    "rimandi_sbagliati")
 
 def compila_variante(mp: Path, nome: str, valori: dict[str, str], cartella: Path) -> Path:
     man = json.loads(mp.read_text(encoding="utf-8"))

@@ -712,3 +712,4 @@
 | 2026-10-29 | STANDARD-STAMPA | A1 riferimenti AP, A2 prima misura di stampa | PR #295 | 🟡 `misura_stampa.py` in CI con tetti per booklet: 0 font non incorporati, 1.255 righe sotto 7 pt (etichette delle mappe), 222 immagini sotto 300 dpi, 14 riquadri spezzati su 76 |
 | 2026-10-29 | STANDARD-STAMPA | D5 appendice delle creature, I3 schede che non si spezzano, I6 varianti e cieco, I7 prima parte | PR #295 | 🟡 schede spezzate da 14 a 0, schede PG del Drappo fuori gabbia da 299 a 0; appendice in Typst, HTML e Homebrewery; 8 coppie cieche (interlinea 1,08 e box colorato) al DM |
 | 2026-10-29 | STANDARD-STAMPA | I6 primo cieco delle varianti | PR #295 | 🟡 box da leggere colorato scartato (4 a 0 per il riquadro); interlinea 1,08 contro 1,30 pari (2 a 2), resta 1,30 |
+| 2026-10-29 | STANDARD-STAMPA | I3 correzioni dopo la rimisura su main | PR nuova | 🟡 titoli sillabati 23 → 0, colonne vuote 5 → 4, rimandi di pagina sbagliati 1 → 0 con misura nuova a tetto 0 |
