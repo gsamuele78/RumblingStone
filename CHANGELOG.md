@@ -28,6 +28,12 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `scripts/misura_statblocchi_booklet.py`: conta per booklet le schede di
   creatura e la forma in cui escono (`--stampa` conta i riquadri nel sorgente
   Typst); `--check` in CI contro i tetti di `docs/audit/statblocchi-booklet.json`.
+- `scripts/misura_stampa.py`: compila ogni booklet e ne misura il PDF come un
+  controllo di prestampa (font non incorporati, testo sotto 7 pt, testo oltre
+  la gabbia, immagini sotto 300 dpi, riquadri di creatura spezzati fra due
+  pagine). Un job della CI controlla i tetti di `docs/audit/stampa-booklet.json`.
+  Il riquadro `#statblocco` del tema lascia due segnaposti invisibili
+  (`<sb-inizio>`, `<sb-fine>`) per questa misura.
 - `scripts/inventory_inferred.py`, canale testing (ADR-0088, ADR-0099): conta i
   marcatori INFERRED aperti separandoli da quelli dei piani e dei changelog; in CI
   `--check` non bloccante contro `docs/audit/inferred-baseline.json` (260).

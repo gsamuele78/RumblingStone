@@ -1,0 +1,110 @@
+"""Le misure di stampa di un booklet (scripts/misura_stampa.py).
+
+Il PDF di prova si costruisce con PyMuPDF: una riga nel margine, una scritta
+da 5 pt, un font non incorporato, un riquadro che si spezza fra due pagine.
+"""
+from __future__ import annotations
+
+import shutil
+import subprocess
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import misura_stampa as ms  # noqa: E402
+
+try:
+    import pymupdf
+except ImportError:  # pragma: no cover
+    pymupdf = None
+
+
+class TestSegnaposti(unittest.TestCase):
+
+    def test_coppie_e_riquadro_spezzato(self):
+        schede = ms.accoppia_segnaposti([
+            ["sb-inizio", "Xorn", 3], ["sb-fine", "Xorn", 3],
+            ["sb-inizio", "Terros", 38], ["sb-fine", "Terros", 39],
+        ])
+        self.assertEqual(schede, [{"nome": "Xorn", "da": 3, "a": 3},
+                                  {"nome": "Terros", "da": 38, "a": 39}])
+
+    def test_una_fine_senza_inizio_non_conta(self):
+        self.assertEqual(ms.accoppia_segnaposti([["sb-fine", "X", 1]]), [])
+
+
+class TestTetti(unittest.TestCase):
+
+    def test_sopra_il_tetto_e_booklet_nuovo(self):
+        v = {m: 0 for m in ms.CON_TETTO} | {"font_non_incorporati": [], "schede_spezzate": 2}
+        registrati = {"a": {"tetti": {m: 0 for m in ms.CON_TETTO} | {"schede_spezzate": 1}}}
+        fuori = ms.sopra_il_tetto(registrati, {"a": v, "b": v})
+        self.assertEqual(len(fuori), 2)
+        self.assertIn("schede_spezzate = 2, il tetto è 1", fuori[0])
+        self.assertIn("booklet nuovo", fuori[1])
+
+    def test_sotto_il_tetto_passa(self):
+        v = {m: 0 for m in ms.CON_TETTO} | {"font_non_incorporati": []}
+        self.assertEqual(ms.sopra_il_tetto({"a": {"tetti": {m: 1 for m in ms.CON_TETTO}}}, {"a": v}), [])
+
+
+@unittest.skipIf(pymupdf is None, "serve PyMuPDF")
+class TestPdf(unittest.TestCase):
+
+    def setUp(self):
+        self.cartella = Path(__file__).parent / "_tmp_misura_stampa"
+        self.cartella.mkdir(exist_ok=True)
+
+    def tearDown(self):
+        shutil.rmtree(self.cartella, ignore_errors=True)
+
+    def test_margine_corpo_minimo_e_spezzate(self):
+        doc = pymupdf.open()
+        for _ in range(2):
+            doc.new_page(width=595.28, height=841.89)
+        pt = 72 / 2.54
+        # Pagina 1 (destra): interno a sinistra, 2 cm. Una riga nel margine
+        # interno e una regolare.
+        doc[0].insert_text((1.0 * pt, 200), "fuori dalla gabbia", fontsize=10)
+        doc[0].insert_text((2.2 * pt, 220), "dentro la gabbia", fontsize=10)
+        doc[1].insert_text((2.2 * pt, 220), "scritta minuscola di una mappa", fontsize=5)
+        doc[1].insert_text((2.2 * pt, 240), "12", fontsize=5)   # i numeri soli non contano
+        pdf = self.cartella / "prova.pdf"
+        doc.save(pdf)
+        v = ms.misura_pdf(pdf, [{"nome": "Terros", "da": 1, "a": 2}])
+        self.assertEqual(v["pagine"], 2)
+        self.assertEqual(v["fuori_margine"], 1)
+        self.assertEqual(v["testi_sotto_minimo"], 1)
+        self.assertEqual(v["schede_spezzate"], 1)
+        # PyMuPDF scrive con l'Helvetica di base, non incorporata: è proprio
+        # il caso che una copisteria rifiuta.
+        self.assertEqual(v["font_non_incorporati"], ["Helvetica"])
+
+    def test_la_pagina_pari_ha_l_interno_a_destra(self):
+        area = pymupdf.Rect(0, 0, 595.28, 841.89)
+        dispari, pari = ms.area_di_stampa(area, 1, "a4"), ms.area_di_stampa(area, 2, "a4")
+        self.assertGreater(dispari.x0, pari.x0)
+        self.assertGreater(dispari.x1, pari.x1)
+
+
+@unittest.skipIf(pymupdf is None or not shutil.which("typst"), "serve typst")
+class TestSegnapostiNelTema(unittest.TestCase):
+    """Il riquadro vero del tema lascia i due segnaposti e la misura li legge."""
+
+    def test_un_riquadro_breve_non_si_spezza(self):
+        import export_booklet_typst as ex
+        corpo = ("```statblocco\nnome: Xorn\ngs: 6\nca: 24\npf: 52\nts: Temp +8\n```\n")
+        typ = ROOT / "scripts" / "tests" / "_tmp_segnaposti.typ"
+        typ.write_text(f'#import "../typst/tema-rumblingstone.typ": *\n{ex.md_to_typ(corpo)}\n',
+                       encoding="utf-8")
+        try:
+            self.assertEqual(ms.interroga_schede(typ), [{"nome": "Xorn", "da": 1, "a": 1}])
+        finally:
+            typ.unlink(missing_ok=True)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -589,6 +589,40 @@ jobs:
       - name: Il convertitore HTML parte
         run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
 
+  # Le misure di stampa dei booklet (piano dello standard di stampa, PR #295):
+  # corpo minimo, testo oltre la gabbia, immagini sotto 300 dpi, riquadri di
+  # creatura spezzati fra due pagine, font non incorporati. Ogni booklet ha i
+  # suoi tetti in docs/audit/stampa-booklet.json e nessuna misura può salire.
+  # Job a parte perché ricompila i 17 volumi (circa 3 minuti): gira accanto a
+  # «validate» e non ne allunga il tempo.
+  stampa-misurata:
+    name: Misure di stampa dei booklet (misura_stampa)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Install typst (la stessa versione fissata di «validate»)
+        env:
+          TYPST_VERSION: "0.15.1"
+        run: |
+          curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" -o /tmp/typst.tar.xz
+          tar -xJf /tmp/typst.tar.xz -C /tmp
+          sudo install /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+
+      - name: Nessun booklet sopra i suoi tetti di stampa
+        run: |
+          set -o pipefail
+          { echo "## Misure di stampa dei booklet"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          python scripts/misura_stampa.py --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
   # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
   # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
   # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:

@@ -366,6 +366,9 @@
     stroke: (top: 1.4pt + rosso, bottom: 1.4pt + rosso),
     breakable: true,
   )[
+    // Segnaposti invisibili per la misura di stampa (scripts/misura_stampa.py):
+    // la pagina del primo e dell'ultimo segnaposto dice se il riquadro si spezza.
+    #metadata(to-string(nome)) <sb-inizio>
     #grid(columns: (1fr, auto), align: (left + bottom, right + bottom),
       text(font: TITOLI, size: 12pt, weight: 600, fill: rosso)[#nome],
       if gs != "" { text(font: TITOLI, size: 9pt, fill: seppia)[#gs] } else { [] })
@@ -381,6 +384,7 @@
       #fascia("Tattiche", text(size: 8.5pt)[#tattiche])
     ]
     #if fonte != "" [ #v(3pt) #text(size: 7.4pt, fill: seppia)[#fonte] ]
+    #metadata(to-string(nome)) <sb-fine>
   ]
   if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
 }

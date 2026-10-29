@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 122,
+  "tool_count": 123,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4618,6 +4618,132 @@
       ],
       "docs": [
         "plans/adr/ADR-0072-la-scheda-porta-la-sua-immagine-dentro.md"
+      ]
+    },
+    {
+      "id": "misura_stampa",
+      "path": "scripts/misura_stampa.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_stampa.py --tutti --check",
+      "summary": "Compila ogni booklet e ne misura il PDF come un controllo di prestampa: font non incorporati, testo sotto 7 pt, testo oltre la gabbia dei margini speculari, immagini sotto 300 dpi, riquadri di creatura spezzati fra due pagine (dai segnaposti <sb-inizio>/<sb-fine> del tema, letti con typst eval), più corpo mediano e quota di pagine illustrate. --check confronta con i tetti di docs/audit/stampa-booklet.json, che --aggiorna fa solo scendere. Serve PyMuPDF (requirements-dev.txt, come validate_corredo --stampa).",
+      "use_case": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [],
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "I manifest da misurare."
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ogni booklet con un manifest."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le misure in JSON."
+        },
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cosa sfora, pagina per pagina."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se un booklet supera un suo tetto o non è registrato."
+        },
+        {
+          "name": "--aggiorna",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive il registro; i tetti scendono soltanto."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "docs/audit/stampa-booklet.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "docs/audit/stampa-booklet.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "build/misura-stampa/*.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "typst e font fissati: stesso sorgente, stesso PDF, stesse misure"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_stampa.py --help",
+      "tests": [
+        "scripts/tests/test_misura_stampa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
       ]
     },
     {

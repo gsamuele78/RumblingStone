@@ -1872,6 +1872,53 @@
       "deterministic": true
     },
     {
+      "name": "misura_stampa",
+      "description": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»\n\nCompila ogni booklet e ne misura il PDF come un controllo di prestampa: font non incorporati, testo sotto 7 pt, testo oltre la gabbia dei margini speculari, immagini sotto 300 dpi, riquadri di creatura spezzati fra due pagine (dai segnaposti <sb-inizio>/<sb-fine> del tema, letti con typst eval), più corpo mediano e quota di pagine illustrate. --check confronta con i tetti di docs/audit/stampa-booklet.json, che --aggiorna fa solo scendere. Serve PyMuPDF (requirements-dev.txt, come validate_corredo --stampa).",
+      "use_case": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»",
+      "invocation": "python3 scripts/misura_stampa.py --tutti --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "I manifest da misurare."
+          },
+          "tutti": {
+            "type": "boolean",
+            "description": "Ogni booklet con un manifest."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Le misure in JSON."
+          },
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Cosa sfora, pagina per pagina."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un booklet supera un suo tetto o non è registrato."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive il registro; i tetti scendono soltanto."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/stampa-booklet.json",
+        "build/misura-stampa/*.pdf"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra un suo tetto o non registrato (--check)",
+        "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_statblocchi_booklet",
       "description": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»\n\nConta, booklet per booklet, le schede di creatura e la forma in cui escono in stampa (ADR-0105): riquadro (il recinto ```statblocco), griglia (un recinto qualunque), prosa, tabella, sciolta. --stampa conta anche i riquadri nel sorgente Typst; --check confronta i fuori forma con i tetti di docs/audit/statblocchi-booklet.json, che --aggiorna fa solo scendere.",
       "use_case": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»",
