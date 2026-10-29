@@ -50,6 +50,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
   rete non risponde. Job CI `riscontro-srd`, non bloccante.
 ### Modificato
+- `scripts/booklet-container`: immagine base `debian:13-slim` aggiornata al digest
+  nuovo da Dependabot (gruppo docker-settimanale, PR #293).
 - `converters/`: minimi delle dipendenze alzati da Dependabot (gruppo
   convertitori-settimanale, PR #274), fra cui transformers 5.20.2, Pillow 13.0.0,
   lxml 6.1.3, language-tool-python 3.4.0, spacy 3.8.16, scikit-learn 1.9.1.

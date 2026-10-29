@@ -17,12 +17,30 @@
     {
       "terrain": "🟫",
       "rect": [
+        6,
+        2,
+        15,
+        19
+      ],
+      "label": "Lo spiazzo del capo: terra battuta dagli zoccoli e dai piedi, senza recinto"
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
         4,
         4,
         19,
         15
-      ],
-      "label": "La piazza del comando: terra battuta, sgombra, dentro lo steccato"
+      ]
+    },
+    {
+      "terrain": "🟫",
+      "rect": [
+        2,
+        7,
+        23,
+        9
+      ]
     },
     {
       "terrain": "🟫",
@@ -30,39 +48,39 @@
         12,
         0,
         3,
-        4
+        2
       ],
-      "label": "La via nord, verso la fortezza"
+      "label": "La via battuta verso la fortezza"
     },
     {
       "terrain": "🟫",
       "rect": [
         13,
-        19,
+        21,
         3,
-        4
+        2
       ],
-      "label": "La via sud, verso le colline"
+      "label": "La via battuta verso le colline"
     },
     {
       "terrain": "🟫",
       "rect": [
-        23,
+        25,
         10,
-        4,
+        2,
         3
       ],
-      "label": "La via est"
+      "label": "La via battuta verso est"
     },
     {
       "terrain": "🟫",
       "rect": [
         0,
         10,
-        4,
+        2,
         3
       ],
-      "label": "La via ovest, verso i clan degli orchi"
+      "label": "La via battuta verso i clan degli orchi"
     },
     {
       "terrain": "⬜",
@@ -76,111 +94,6 @@
     }
   ],
   "structures": [
-    {
-      "type": "🧱",
-      "line": [
-        [
-          3,
-          3
-        ],
-        [
-          11,
-          3
-        ]
-      ],
-      "label": "Steccato di pali appuntiti, alto 1,5 m, attorno alla piazza"
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          15,
-          3
-        ],
-        [
-          23,
-          3
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          3,
-          19
-        ],
-        [
-          12,
-          19
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          16,
-          19
-        ],
-        [
-          23,
-          19
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          3,
-          4
-        ],
-        [
-          3,
-          9
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          3,
-          13
-        ],
-        [
-          3,
-          18
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          23,
-          4
-        ],
-        [
-          23,
-          9
-        ]
-      ]
-    },
-    {
-      "type": "🧱",
-      "line": [
-        [
-          23,
-          13
-        ],
-        [
-          23,
-          18
-        ]
-      ]
-    },
     {
       "type": "🎪",
       "line": [
@@ -359,53 +272,17 @@
     {
       "type": "🎪",
       "rect": [
-        21,
-        10,
+        1,
+        1,
         2,
         2
       ],
-      "label": "Tenda del turno dopo"
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        3,
-        0,
-        2,
-        2
-      ]
+      "label": "Tende dei servi e del bottino del capo: dentro non ci sono soldati"
     },
     {
       "type": "🎪",
       "rect": [
         6,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        9,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        16,
         0,
         2,
         2
@@ -423,8 +300,8 @@
     {
       "type": "🎪",
       "rect": [
-        22,
-        0,
+        24,
+        7,
         2,
         2
       ]
@@ -432,8 +309,8 @@
     {
       "type": "🎪",
       "rect": [
-        25,
-        0,
+        24,
+        15,
         2,
         2
       ]
@@ -441,26 +318,8 @@
     {
       "type": "🎪",
       "rect": [
-        0,
         21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        3,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        6,
-        21,
+        20,
         2,
         2
       ]
@@ -477,8 +336,8 @@
     {
       "type": "🎪",
       "rect": [
-        17,
-        21,
+        3,
+        19,
         2,
         2
       ]
@@ -486,8 +345,17 @@
     {
       "type": "🎪",
       "rect": [
-        20,
-        21,
+        0,
+        14,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "🎪",
+      "rect": [
+        0,
+        5,
         2,
         2
       ]
@@ -496,100 +364,35 @@
       "type": "🎪",
       "rect": [
         23,
-        21,
+        3,
         2,
         2
-      ]
+      ],
+      "label": "Tenda del turno dopo"
     },
     {
-      "type": "🎪",
-      "rect": [
-        25,
-        4,
-        2,
-        2
-      ]
+      "type": "🗿",
+      "at": [
+        10,
+        5
+      ],
+      "label": "Palo dei trofei: teschi di nani, code di lupo, lo stendardo della Mano Rossa"
     },
     {
-      "type": "🎪",
-      "rect": [
-        25,
-        7,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        14,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        17,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        4,
-        2,
-        1
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        7,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        2,
-        6,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        14,
-        2,
-        1
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        17,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        2,
+      "type": "🗿",
+      "at": [
         16,
-        1,
-        2
-      ]
+        5
+      ],
+      "label": "Palo dei trofei"
+    },
+    {
+      "type": "📦",
+      "at": [
+        5,
+        7
+      ],
+      "label": "Il bottino della valle, ammucchiato davanti al capo perché i capiclan lo vedano"
     }
   ],
   "hazards": [
@@ -605,6 +408,33 @@
     {
       "type": "🔥",
       "at": [
+        13,
+        4
+      ],
+      "label": "Il fuoco del consiglio",
+      "effect": "davanti alla soglia, dove il capo parla ai capiclan; a notte fonda è brace: chi entra nella cella prende 1d6 da fuoco, la luce è fioca e solo entro 3 m"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        3,
+        11
+      ],
+      "label": "Fuoco delle sentinelle ovest",
+      "effect": "due sentinelle sulla via battuta: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
+    },
+    {
+      "type": "🔥",
+      "at": [
+        23,
+        11
+      ],
+      "label": "Fuoco delle sentinelle est",
+      "effect": "due sentinelle sulla via battuta: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
+    },
+    {
+      "type": "🔥",
+      "at": [
         7,
         16
       ],
@@ -619,24 +449,6 @@
       ],
       "label": "Falò della guardia",
       "effect": "chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva"
-    },
-    {
-      "type": "🔥",
-      "at": [
-        1,
-        5
-      ],
-      "label": "Fuoco del clan",
-      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"
-    },
-    {
-      "type": "🔥",
-      "at": [
-        1,
-        15
-      ],
-      "label": "Fuoco del clan",
-      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"
     },
     {
       "type": "🏮",
@@ -792,12 +604,12 @@
       "name": "Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2",
       "path": [
         [
-          22,
-          12
+          23,
+          5
         ],
         [
           20,
-          17
+          16
         ],
         [
           14,
@@ -844,17 +656,17 @@
     "Il corno ha suonato prima, o i PG si attardano: Skullcrusher arriva 70 round dopo il primo suono, scoperchia la tenda con un passaggio radente e soffia sulla linea che prende più PG; EL 18-19 (Scena 8).",
     "Hella richiama Durik dal seme alla tenda: compare accanto a lei, costa una carica dell'Evocazione dei Guardiani, e richiamato dal seme resta con Hella (Scena 6, variante dall'alto). Se invece è stato distrutto, la carica lo riporta per un'ora (scheda di Durik). Senza richiamo Durik è alla postierla o nel seme, e non è su questa mappa.",
     "Le rune incise di Balvar sono quattro: la soglia, il palo centrale, sé stesso (silenzio a comando) e la Catena del drago, sulla scaglia di Skullcrusher, fuori da questa mappa. La lastra d'ardesia che incide mentre combatte non è una runa attiva (Scena 7).",
-    "Com'è fatto il campo qui attorno: la tenda del comando sta sola in una piazza sgombra, chiusa da uno steccato con quattro varchi, come il pretorio di un campo romano. Le guardie hobgoblin dormono in file di tende da otto, 3 × 3 m, lungo le vie; i clan degli orchi, a ovest, dormono in ripari di pelle sparsi attorno al fuoco della banda. Sono il terreno degli scontri per strada della Scena 6 (regia della serata)."
+    "Com'è fatto il campo qui attorno: come il campo di un capo nomade, senza recinto. La tenda sta sola in mezzo allo spiazzo del capo, terra battuta larga una quarantina di metri; davanti alla soglia il fuoco del consiglio, ridotto a brace, e i due pali dei trofei. Sul bordo, staccate l'una dall'altra, le tende dei servi e del bottino, senza soldati, e quella del turno dopo, a 9 m dal telo. Le lance della Guardia della Mano dormono più in là, a 20-30 m, attorno ai loro fuochi, e i clan degli orchi a ovest: sono su M7-H."
   ],
   "tattiche": [
-    "**Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, V11–W12. Se è **pre-allertato**, vedi lo stato B qui sotto.",
+    "**Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, X4–Y5, a 9 m dal telo. Se è **pre-allertato**, vedi lo stato B qui sotto.",
     "**Da dove si entra** (Scene 6 e 7): dalla **soglia** (M9–N9), e con un nano fra loro scatta la runa (stato C); dal **telo est** (S10–S14), «il telo a sinistra» che Balvar consiglia, e si resta invisibili senza runa né glifo; dal **telo sopra il seggio** (N15–P15), che porta il glifo (stato D). Chi taglia la tenda altrove resta invisibile, ma il taglio fa rumore: le guardie tirano Ascoltare contro il suo Muoversi Silenziosamente.",
     "**Round di sorpresa** (Scena 8): chi nessuno ha visto né sentito ha un'azione standard o di movimento. Parlare con Balvar in nanico antico, sottovoce, non conta come parlare ad alta voce. Zog'tar non perde la Destrezza alla CA (Schivare Prodigioso Migliorato) e fuori dall'Ira ha 283 pf.",
     "**Round 1** (Scena 8): Ira Barbarica (*«A ME, CANI! ABBATTETE LE OMBRE!»*) e Occhio di Ossidiana su Thorik; delle quattro guardie, due restano davanti al seggio e due vanno in coppia su chi lancia incantesimi o colpisce da lontano. Al primo grido Grask suona il corno entro **1d4 round**, se nessuno se n'è occupato prima (Scena 6).",
     "**Round 2-3** (Scena 8): carica chi fa più danni, Attacco Poderoso −5/+10 se ha colpito bene. Contro chi ha armatura leggera o niente usa il Colpo Devastante e lo scaglia contro un palo o fuori dal telo. Il sacerdote si alza al primo grido e agisce dal round 1: da dietro il seggio lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar, poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del generale.",
     "**Balvar** (Scena 7): recuperato, non combatte e al primo round dice dov'è la runa della Catena; con la trattativa aperta guarda il primo round e poi sta con chi vince; minacciato o attaccato, *righteous might* al round 1, *slay living* (Tempra CD 20) al round 2, dal round 3 la runa del *silenzio* su di sé, la barriera di lame del palo centrale e il martello.",
     "**Chi vola sotto il telo** (6 m al colmo, 3 m ai lati; Scena 8): resta **nella** portata dell'ascia: Zog'tar è alto 3 m e arriva 3 m oltre, fino al colmo. Ne esce solo chi sta fuori dal telo. Zog'tar tira i tre giavellotti Grandi (+19, 1d8+13 in Ira `[CANONE — DM 2026-10-18]`) e, se il volo dura, abbatte il palo centrale (stato F); le guardie tirano giavellotti (+9, 1d6+4); Balvar, se combatte, *dissolvi magie* e *comando superiore* «Cadi» (Volontà CD 20); il sacerdote *comando*.",
-    "**Rinforzi** (Scena 8): le ronde di orchi più vicine arrivano in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**, poi un'altra ronda ogni round e un altro squadrone ogni due. Finché Zog'tar è in piedi non entrano: passano lo steccato, fanno quadrato nella piazza attorno al telo e aspettano chi esce; quando lui cade, entrano. Le frecce dei varchi sono una proposta: la tenda sta al centro del campo, e arrivano da ogni lato.",
+    "**Rinforzi** (Scena 8): le ronde di orchi più vicine arrivano in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**, poi un'altra ronda ogni round e un altro squadrone ogni due. Finché Zog'tar è in piedi non entrano: entrano nello spiazzo, fanno quadrato attorno al telo e aspettano chi esce; quando lui cade, entrano. Le frecce delle vie battute sono una proposta: la tenda sta al centro del campo, e arrivano da ogni lato.",
     "**Morale** (Scene 7 e 8): sotto il **30% dei pf** Zog'tar combatte disperato e cerca di portare un PG con sé (un ultimo Attacco Poderoso pieno, −15/+30). Balvar sotto i **30 pf** non fugge e non implora: finisce di incidere la lastra e la lascia lì. Con la Via A (Intimidire CD 22 con la luce divina) Zog'tar arretra ed esce dalla tenda davanti alle sue guardie."
   ],
   "evoluzione": [
@@ -899,6 +711,12 @@
       "trigger": "Hella lo richiama dal seme alla tenda",
       "griglia": "Durik compare accanto a Hella",
       "effetto": "costa una carica dell'Evocazione dei Guardiani, e richiamato dal seme resta con Hella (Scena 6, variante dall'alto). Se invece è stato distrutto, la carica lo riporta per un'ora (scheda di Durik). Senza richiamo è alla postierla o nel seme, e non è su questa mappa"
+    },
+    {
+      "stato": "I · il barile",
+      "trigger": "i PG lasciano cadere dall'alto il barile d'olio con le fiale della fenice",
+      "griglia": "dove cade (1d8 per la direzione, 1d4−1 quadretti dalla verticale): l'olio copre tutto il pavimento della tenda, il telo si squarcia; se prende un palo o il colmo (riga 12) la tenda crolla subito",
+      "effetto": "oggetto in caduta 15d6 su chi sta nella casella; due palle di fuoco da 6d6 (Riflessi CD 14); olio in fiamme, fumo, crollo: le regole sono in il supplemento «Il barile sulla tenda»"
     }
   ],
   "note_dm": [
