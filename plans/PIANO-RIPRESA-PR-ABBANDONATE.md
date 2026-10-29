@@ -3157,6 +3157,21 @@ quello giocato nel gruppo»*, e lì `state.yaml` conta +4 CAR in tutto, come la
 scheda giocatore della Corona rivista («8 → 12»). Resta solo una differenza di
 attribuzione (Corona o rito), che non cambia il numero.
 
+**4g-2, prima parte `[🟡 2026-10-24]`.** Dal repo stesso: 15 caselle su 24.
+
+| PG | Fonte | Caselle |
+|---|---|---|
+| Tordek | la scheda PCGen del giocatore al 12° (`Tordek Durinheart 12 lvl modificato.pdf`); al 13° nessun aumento | 6 su 6 |
+| Hella | ARC07-DEF-3 App. A.1, canone del DM 2026-10-18 (SAG 20 con il +4 della Collana) | 6 su 6 |
+| Thorik | FOR 20 da P1, più DES e CAR della 4g-1 | 3 su 6 |
+| Artemis | nessun numero nel repo | 0 su 6 |
+
+Scelta di default, da confermare: l'attuale conta gli oggetti indossati (i +2
+di Tordek), come la Corona e la Collana, perché è il numero del tavolo.
+Restano al DM, con un modulo: COS, INT e SAG di Thorik e le sei di Artemis.
+Trovato strada facendo: P1, P2 e la tabella della lotta di DEF-1 danno a Tordek
+FOR 14, la sua scheda dice 20.
+
 ### 4.14 · La #99 si chiude, e tre pezzi si riprendono `[✅ 2026-10-24]`
 
 Il DM ha scelto A: chiudere la #99 (l'ha chiusa il thread padre il

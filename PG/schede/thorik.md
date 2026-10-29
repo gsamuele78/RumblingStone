@@ -12,7 +12,7 @@ Classe, PF e stato di oggi: `campaign/state.yaml`, blocco `party` (e [`state.md`
 
 | | Catena | Oggi |
 |---|---|---:|
-| **FOR** | `[INFERRED]` — non attestato | — |
+| **FOR** | 20 | 20 |
 | **DES** | 10 → **8** *(ARC-07 P1, Corona indossata)* → **6** *(rito dello Smeraldo, 2026-07-31)* | 6 |
 | **COS** | `[INFERRED]` valore ignoto, ma con +2 (rito dello Smeraldo, 2026-07-31) | — |
 | **INT** | `[INFERRED]` — non attestato | — |
