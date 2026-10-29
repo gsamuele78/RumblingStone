@@ -1,6 +1,6 @@
 # ARC-07 · Il barile sulla tenda di Zog'tar
 
-> **Che cos'è.** Il supplemento alle Scene 7 e 8 di `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`
+> **Che cos'è.** Il supplemento alle Scene 7 e 8 di DEF-4<!-- apparato --> (`ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`)<!-- /apparato -->
 > per quello che il tavolo ha fatto davvero: invece di entrare nella tenda del
 > comando, i PG ci hanno lasciato cadere sopra, da 48 m e invisibili, una botte
 > d'olio piena di sassi, con i rostri dei fabbri nanici sotto e le fiale della
@@ -16,7 +16,7 @@
 > giocatori delle prossime volte.
 >
 > **Le mappe** sono M7-C, lo spiazzo del capo con la tenda, e M7-H, il campo
-> attorno (`Mappe/`). Le coordinate di questo documento sono quelle di M7-C; su
+> attorno<!-- apparato --> (`Mappe/`)<!-- /apparato -->. Le coordinate di questo documento sono quelle di M7-C; su
 > M7-H si sommano otto colonne e otto righe.
 >
 > **Da dove vengono i numeri.** Dall'SRD 3.5. Dove l'SRD non ha una regola per
@@ -139,7 +139,7 @@ orario) e una distanza in quadretti. La distanza, da 48 m, è questa:
 - Se chi sgancia si è mosso in quel round, la botte conserva la sua velocità:
   in più, 6 quadretti nella direzione del volo, e la tenda si manca.
 
-Il conto della fisica sta in `simula_barile.py`; la regola lo arrotonda per
+Il conto della fisica sta nella simulazione<!-- apparato --> (`simula_barile.py`)<!-- /apparato -->; la regola lo arrotonda per
 eccesso, perché al buio si sbaglia anche il punto da cui si parte.
 
 ## 2-bis. Rigiocare lo sgancio: tutto dalla quota
@@ -577,7 +577,7 @@ telo che crolla addosso se il palo o il colmo si sono spezzati.
   brucia una volta su quattro invece di due su tre.
 - **Se fossero stati sopra il seggio** invece che sopra il palo, Grask
   sarebbe morto l'83% delle volte e Zog'tar avrebbe preso i 15d6 una volta su
-  tre: i numeri sono in `ESITI-SIMULAZIONE.md`.
+  tre<!-- apparato -->: i numeri sono in `ESITI-SIMULAZIONE.md`<!-- /apparato -->.
 
 **Che cosa vuol dire.** Il barile **non uccide Zog'tar**: 283 punti ferita, RD
 3 e Riflessi +9 reggono anche il colpo in pieno. Gli toglie un quinto dei punti
@@ -974,6 +974,6 @@ sa che i nani volano, e il resto dell'assedio lo mostra (§10).
 - SRD 3.5, *invisibilità* («causing harm indirectly is not an attack»), *palla
   di fuoco*, aree e incroci della griglia, danno massiccio, CD degli oggetti
   magici: d20srd.org, voci omonime
-- La fisica della caduta: `simula_barile.py` nella cartella dell'esperimento;
+- La fisica della caduta<!-- apparato --> (`simula_barile.py` nella cartella dell'esperimento)<!-- /apparato -->:
   densità dell'olio 0,91 kg/l, aria a 870 m 1,12 kg/m³, coefficiente di
   resistenza 0,9.
