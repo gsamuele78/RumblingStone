@@ -75,6 +75,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   repo. `regola NOME` cerca una regola; `riscontra FILE.yaml` dice concorda,
   discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
   rete non risponde. Job CI `riscontro-srd`, non bloccante.
+- Booklet ARC-07 *Notte e Alba*: nuovo capitolo VII «Il barile sulla tenda di Zog'tar» (quote, calcoli ed esiti del bombardamento, PR #292 e #296); la mappa M7-H del campo del capo entra nell'Appendice D di DEF-4, quindi anche nei volumi Resurrezione e Mille anni. Le tre tabelle più lunghe del capitolo stanno su pagina a una colonna. I tetti di stampa dei tre volumi salgono per le etichette e i simboli di M7-H (+98 righe sotto 7 pt, +9 immagini sotto 300 dpi), lo stesso difetto delle altre mappe (I2).
 ### Modificato
 - `converters/pdf-to-md-engine`: minimo di `nltk` alzato a 3.10.4 da Dependabot
   (gruppo convertitori-settimanale, PR #294).

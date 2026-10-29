@@ -35,6 +35,8 @@ B12 e B16 del §12. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
 sganciano: la tabella è nel §2-bis. Con questa scheda il DM non deve inventare niente: tira i dadi
 della colonna di destra.
 
+<!-- pagina: una-colonna -->
+
 | # | Che cosa | Regola | Si tira |
 |---|---|---|---|
 | 1 | **Lo sgancio** | Non è un attacco (SRD, *invisibilità*: chi causa danno in modo indiretto non attacca). È un'azione gratuita, e chi sgancia resta invisibile. Si può fare nel round di sorpresa, e tutti e quattro i PG possono sganciare nello stesso round | niente |
@@ -47,6 +49,8 @@ della colonna di destra.
 | 8 | **Il crollo** | Se non è già crollata, la tenda crolla alla fine del round 1d4+1. Chi è sotto il telo che cade prende il fuoco del telo, è intralciato e per uscire tira un TS a round, con 1d6 a ogni round sotto `[Regola della casa, costruita sullo stato F di M7-C]` | **2d6**, **Riflessi CD 15** |
 | 9 | **Il fumo** | SRD, «Smoke Effects», sotto il telo: chi fallisce passa il round a tossire, due round di fila fanno 1d6 non letali; occultamento 20% per tutti | **Tempra CD 15**, +1 per prova |
 | 10 | **Il danno massiccio** | SRD 3.5: 50 danni o più da un solo attacco, e chi fallisce muore; un 1 naturale fallisce sempre. ◆ Le palle di fuoco nate insieme contano come un attacco solo; il colpo diretto e l'olio restano a parte | **Tempra CD 15** |
+
+<!-- /pagina -->
 
 **Due conti da avere in testa.** Il colpo diretto da 15d6 fa 50 o più due
 volte su tre. Due palle di fuoco fanno 42 in media a chi fallisce tutti e due i
@@ -501,6 +505,8 @@ dell'olio (colpito in pieno, prende fuoco) e chi resta fuori dalle palle di
 fuoco con la tenda che fa da forno. Chi non è nominato nelle ultime due colonne
 è nell'area: prende le palle di fuoco e l'olio del pavimento.
 
+<!-- pagina: una-colonna -->
+
 | d8 · metri | Casella | Probabilità | Che cosa prende | Nel cuore dell'olio | Fuori dalle palle di fuoco |
 |---|---|---:|---|---|---|
 | nessuna deviazione | N12 | 25% | il palo centrale, in cima: lo spezza il 19%, e la tenda crolla; se no la botte gli si apre sopra | Zog'tar, Guardia M13, Guardia N13 | nessuno · secondo l'angolo: Grask |
@@ -528,6 +534,8 @@ fuoco con la tenda che fa da forno. Chi non è nominato nelle ultime due colonne
 | 6 sud-ovest · 6,4 m | K15 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
 | 7 ovest · 4,5 m | K12 | 3,1% | il palo ovest, in cima: lo spezza il 19%, e la tenda crolla; se no la botte gli si apre sopra | nessuno | Grask |
 | 8 nord-ovest · 6,4 m | K9 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
+
+<!-- /pagina -->
 
 **Come si legge al tavolo.** Si tirano il d4 e il d8, si trova la riga, e la
 riga dice tutto: chi prende i 15d6, se la tenda crolla subito, chi è
@@ -867,6 +875,8 @@ errori, con voto di qualità 100 tutte e due.
 Ogni domanda ha la proposta ★, scelta come la versione più forte quando le
 regole lasciano scegliere.
 
+<!-- pagina: una-colonna -->
+
 | # | Domanda | ★ Proposta | Le altre |
 |---|---|---|---|
 | B1 | Quante fiale della fenice ci sono sulla botte, e quante su ciascun barilotto? | **decisa dal DM il 2026-10-29:** due sulla botte, una per barilotto | una o tre sulla botte: §7 dà i numeri |
@@ -894,6 +904,8 @@ regole lasciano scegliere.
 | B23 | Lo sgancio guidato: chi non vede, guidato da chi vede il colmo, usa la colonna «chi vede», con 1 quadretto in più se la guida non vede chi sgancia | **decisa dal DM il 2026-10-29:** sì | la guida a voce vale sempre «chi vede»; o non vale niente |
 | B24 | La tenda che brucia fa luce come un falò grande: intensa entro 12 m, fioca fino a 24 m, finché non crolla e diventa brace | **decisa dal DM il 2026-10-29:** sì | la luce di un falò normale, 6 m e 12 m |
 | B25 | Come reagiscono le bande d'orchi e i lupi al barile | **decisa dal DM il 2026-10-29: la furia.** Le quattro bande corrono armate allo spiazzo con le torce, senza ritardo; i lupi si stringono e il ritorno a piedi si tira a CD +2 | il caos (saccheggio, ronde in ritardo di 1d4 round); la disciplina; la caccia per tutta la notte (CD +4) |
+
+<!-- /pagina -->
 
 ## 13. Le trovate dei giocatori: come gestirle le prossime volte
 
