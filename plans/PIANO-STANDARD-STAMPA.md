@@ -1,6 +1,6 @@
 # PIANO — Uno standard solo per i dati delle creature e per la stampa dei booklet
 
-> **Stato**: 🟡 in corso (2026-10-29). Audit A1 e A2 fatti, misura registrata e in CI. Le decisioni D1-D4 sono proposte e aspettano il DM · **Classe**: C per il codice, K per i master da convertire
+> **Stato**: 🟡 in corso (2026-10-29). Audit A1-A3 fatti, misura registrata e in CI. Le decisioni D1-D4 sono proposte e aspettano il DM · **Classe**: C per il codice, K per i master da convertire
 > **Nasce da**: la richiesta del DM del 2026-10-29, dopo la PR #295: *«uniformare tutti i master nel miglior template possibile […] e poi il miglior layout possibile per la stampa usando questo master di dati […] in una pipeline che azzera i glitch […] e sia misurabile e registri il miglioramento […] creando delle pipeline std e dei test concreti e reali e professionali che verifichino la correttezza, il miglioramento e l'aderenza agli standard professionali dell'editoria»*. Poi, sulla scheda di decisione: la #295 non si unisce, si rifà dentro questo standard (scelta B, «Fermarla»), e il layout si confronta con quello degli AP 3.5 e PF1e più apprezzati dalla community.
 > **Decisioni collegate**: [ADR-0105](adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (il riquadro unico, proposta, nella #295); [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) (la catena Typst); [ADR-0070](adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md) (l'apparato non va in stampa).
 > **Misura riproducibile**: `python3 scripts/misura_stampa.py --tutti`, registro in [`docs/audit/stampa-booklet.json`](../docs/audit/stampa-booklet.json).
@@ -71,7 +71,10 @@ Note oneste sulla misura:
   rimando alla pagina e la **tattica di quell'incontro**: se un PNG cambia
   tattica nel tempo, o lo si incontra in stanze o luoghi diversi, ogni
   incontro porta la sua. Cambia ADR-0105, che oggi mette il riquadro intero a
-  ogni comparsa.
+  ogni comparsa. Dal confronto con Paizo, arrivato dopo la decisione: *Burnt
+  Offerings* non usa l'appendice ma un ibrido. La scheda intera sta alla prima
+  comparsa del PNG unico, poi c'è «vedi pagina N», e il Bestiario in fondo
+  serve solo ai mostri nuovi. Anche lì la tattica sta nell'incontro.
 
 ## Fase 1 — Audit
 
@@ -80,7 +83,7 @@ Note oneste sulla misura:
   condivisa `standard-stampa/RIFERIMENTI-AP.md`; Reddit e archive.org erano
   chiusi dal proxy.
 - [x] **A2** La prima misura di stampa dei 17 booklet, in CI con i tetti.
-- [~] **A3** Il confronto con le pagine degli AP di riferimento. Lato Paizo
+- [x] **A3** Il confronto con le pagine degli AP di riferimento. Lato Paizo
   fatto il 2026-10-29 (thread «Confronto layout con gli AP»): cinque pagine
   ciascuno della Player's Guide di CotCT e di cinque moduli Free RPG Day,
   tutti PDF gratuiti, tenuti fuori dal repo. Contro ARC-07 Notte e Alba,
@@ -105,6 +108,22 @@ Note oneste sulla misura:
   con la soglia di ¼ di pagina WotC 0,06 contro noi 0,09, con la soglia di
   1/10 WotC 0,50 contro noi 0,18. Nel libro le schede intere stanno
   nell'appendice; nell'incontro c'è una riga sola col rimando.
+  Infine, lo stesso giorno, un AP Paizo intero comprato dal DM, *Burnt
+  Offerings* (100 pagine, 3.5), misurato tutto al posto dei campioni
+  gratuiti. Testo a 9 pt, interlinea 1,33, 63 caratteri per riga, circa
+  4.350 caratteri per pagina, niente sotto 7 pt: il campione dei moduli
+  (8,5 pt e 1,41) non rappresentava l'AP. Il box da leggere è sans marrone
+  nel testo, senza riquadro (12%). Le righe della scheda sono da 31-34
+  caratteri, e la tattica sta sempre nell'incontro, anche sotto la riga col
+  rimando. Ci sono 15 schede intere negli incontri dove il PNG unico si
+  combatte e 6 nel Bestiario in fondo, solo per i mostri nuovi. Altre 28
+  righe rimandano al Monster Manual, al Bestiario o a una scheda
+  precedente. Si spezzano 9 schede su 15, 3 a pagina girata e senza
+  «continua»; 8 su 15 hanno accanto il ritratto del PNG. Con lo stesso
+  metodo raster su tutti e due, Paizo ha il 24% di pagine con
+  un'illustrazione di almeno ¼ e il 40% con una di almeno 1/10, con il 17%
+  di area illustrata. ARC-07 ha 10%, 17% e 5,7%. Dettaglio in
+  `standard-stampa/CONFRONTO-PAIZO-AP-2026-10-29.md`.
 - [ ] **A4** Il censimento degli elementi di layout nei tre renderer e delle
   forme dei dati (Bestiario, master, PG, Drappo PF1e).
 
@@ -126,10 +145,13 @@ Note oneste sulla misura:
   a 1,35-1,4; `pagine_con_immagine` resta registrata senza tetto, con
   obiettivo ≥ 0,3. Dal lato WotC: una variante «scheda in colonna», un
   campo per riga e righe da 40-60 caratteri, contro il riquadro largo di
-  oggi; le fasce colorate al cieco. Interlinea fra 1,10 (WotC) e 1,41
-  (Paizo): decide il cieco. Una variante del box da leggere senza riquadro,
-  in corsivo colorato. `pagine_con_immagine` misurata anche con la soglia di
-  1/10 di pagina, ed è lì l'obiettivo ≥ 0,3.
+  oggi; le fasce colorate al cieco. Interlinea fra 1,10 (WotC) e 1,33
+  (Paizo, AP intero): decide il cieco. Una variante del box da leggere senza
+  riquadro, colorata, come fanno tutti e due gli AP. `pagine_con_immagine`
+  misurata anche con la soglia di 1/10 di pagina, ed è lì l'obiettivo ≥ 0,3
+  (Paizo 0,40, noi 0,17). Il divario viene soprattutto dal ritratto del PNG
+  accanto alla sua scheda, che appartiene al lavoro delle immagini
+  (ADR-0104).
 - [ ] **I7** Le schede PG del Drappo nello stesso tema.
 
 ## Fase 3 — Validazione
