@@ -50,6 +50,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
   rete non risponde. Job CI `riscontro-srd`, non bloccante.
 ### Modificato
+- `converters/pdf-to-md-engine`: minimo di `nltk` alzato a 3.10.4 da Dependabot
+  (gruppo convertitori-settimanale, PR #294).
 - `scripts/booklet-container`: immagine base `debian:13-slim` aggiornata al digest
   nuovo da Dependabot (gruppo docker-settimanale, PR #293).
 - `converters/`: minimi delle dipendenze alzati da Dependabot (gruppo
