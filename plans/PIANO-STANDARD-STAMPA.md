@@ -73,9 +73,17 @@ Note oneste sulla misura:
   condivisa `standard-stampa/RIFERIMENTI-AP.md`; Reddit e archive.org erano
   chiusi dal proxy.
 - [x] **A2** La prima misura di stampa dei 17 booklet, in CI con i tetti.
-- [ ] **A3** Il confronto con 4-5 pagine per titolo degli AP di riferimento
-  (anteprime ufficiali, web enhancement, pagine del DM): stessa misura, fuori
-  dal repo.
+- [~] **A3** Il confronto con le pagine degli AP di riferimento. Lato Paizo
+  fatto il 2026-10-29 (thread «Confronto layout con gli AP»): cinque pagine
+  ciascuno della Player's Guide di CotCT e di cinque moduli Free RPG Day,
+  tutti PDF gratuiti, tenuti fuori dal repo. Contro ARC-07 Notte e Alba,
+  Paizo ha il corpo a 8,5 pt contro 10, l'interlinea a 1,41 contro 1,30, circa
+  30 righe per colonna contro 26,5, le schede allo stesso corpo del testo
+  contro 9,5-10, e soprattutto 0,7 pagine con un'illustrazione grande contro
+  0,09. Sotto 7 pt Paizo ha solo fregi, marchi e licenza, quindi la soglia
+  regge. Manca il lato WotC (web.archive.org chiuso dal proxy). Sono moduli,
+  non volumi di AP, e cinque pagine sono poche. Dettaglio in
+  `standard-stampa/CONFRONTO-AP-2026-10-29.md` nella cartella condivisa.
 - [ ] **A4** Il censimento degli elementi di layout nei tre renderer e delle
   forme dei dati (Bestiario, master, PG, Drappo PF1e).
 
@@ -91,7 +99,10 @@ Note oneste sulla misura:
   Migrazione a lotti: ARC-07 e il Bestiario, poi il resto.
 - [ ] **I5** Rappresentazione intermedia e renderer unici, un elemento alla
   volta, con il confronto visivo delle pagine.
-- [ ] **I6** Varianti di layout e scelta alla cieca del DM.
+- [ ] **I6** Varianti di layout e scelta alla cieca del DM. Dal confronto
+  di A3: il corpo resta a 10 pt; si provano le schede a 9 pt e l'interlinea
+  a 1,35-1,4; `pagine_con_immagine` resta registrata senza tetto, con
+  obiettivo ≥ 0,3.
 - [ ] **I7** Le schede PG del Drappo nello stesso tema.
 
 ## Fase 3 — Validazione
