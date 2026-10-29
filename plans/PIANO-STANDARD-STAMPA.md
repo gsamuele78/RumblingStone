@@ -1,6 +1,6 @@
 # PIANO — Uno standard solo per i dati delle creature e per la stampa dei booklet
 
-> **Stato**: 🟡 in corso (2026-10-29). Audit A1-A3 fatti, misura registrata e in CI. D5 decisa (appendice), I3 fatto, I6 e I7 in parte; il cieco di I6 aspetta il DM · **Classe**: C per il codice, K per i master da convertire
+> **Stato**: 🟡 in corso (2026-10-29). Audit A1-A3 fatti, misura registrata e in CI. D5 decisa (appendice), I3 fatto, I6 e I7 in parte; primo cieco di I6 votato (box nel riquadro, interlinea non decisa) · **Classe**: C per il codice, K per i master da convertire
 > **Nasce da**: la richiesta del DM del 2026-10-29, dopo la PR #295: *«uniformare tutti i master nel miglior template possibile […] e poi il miglior layout possibile per la stampa usando questo master di dati […] in una pipeline che azzera i glitch […] e sia misurabile e registri il miglioramento […] creando delle pipeline std e dei test concreti e reali e professionali che verifichino la correttezza, il miglioramento e l'aderenza agli standard professionali dell'editoria»*. Poi, sulla scheda di decisione: la #295 non si unisce, si rifà dentro questo standard (scelta B, «Fermarla»), e il layout si confronta con quello degli AP 3.5 e PF1e più apprezzati dalla community.
 > **Decisioni collegate**: [ADR-0105](adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (il riquadro unico, proposta, nella #295); [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) (la catena Typst); [ADR-0070](adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md) (l'apparato non va in stampa).
 > **Misura riproducibile**: `python3 scripts/misura_stampa.py --tutti`, registro in [`docs/audit/stampa-booklet.json`](../docs/audit/stampa-booklet.json).
@@ -67,8 +67,19 @@ pagina) è registrata senza tetto; l'obiettivo ≥ 0,3 resta di I6.
 Varianti di I6 su ARC07-NOTTE-E-ALBA, tutte senza peggiorare le misure con
 tetto: base 101 pagine e interlinea 1,28; interlinea stretta 92 pagine e
 1,08; box da leggere colorato senza riquadro 100 pagine. Le 8 coppie
-cieche sono nella cartella condivisa, `standard-stampa/cieco-2026-10-29/`;
-la chiave sta in una sottocartella da aprire dopo il voto.
+cieche sono nella cartella condivisa, `standard-stampa/cieco-2026-10-29/`.
+
+Voto cieco del DM (2026-10-29, `VOTO.json` nella stessa cartella):
+
+| Variante | Scelta la base | Scelta la variante | Esito |
+|---|---|---|---|
+| Box da leggere colorato, senza riquadro | 4 | 0 | scartata: il box resta nel riquadro |
+| Interlinea stretta 1,08 | 2 | 2 | non decisa: resta 1,30 |
+
+Quattro coppie per variante sono poche: 4 a 0 ha probabilità 1/16 di uscire
+a caso. Basta per tenere il libro di sempre, non per dire che la variante è
+peggiore in assoluto. L'interlinea si potrà rimettere al cieco su un altro
+booklet con più coppie; il guadagno sarebbe 9 pagine su 101.
 
 ## Decisioni proposte
 

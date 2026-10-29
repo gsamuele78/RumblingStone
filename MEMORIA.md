@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-29 | STANDARD-STAMPA | I6 primo cieco delle varianti | 🟡 box da leggere colorato scartato (4 a 0 per il riquadro); interlinea 1,08 contro 1,30 pari (2 a 2), resta 1,30 |
 | 2026-10-29 | STANDARD-STAMPA | D5 appendice delle creature, I3 schede che non si spezzano, I6 varianti e cieco… | 🟡 schede spezzate da 14 a 0, schede PG del Drappo fuori gabbia da 299 a 0; appendice in Typst, HTML e Homebrewery; 8 coppie cieche (interlinea 1,08 e box color… |
 | 2026-10-29 | STANDARD-STAMPA | A1 riferimenti AP, A2 prima misura di stampa | 🟡 `misura_stampa.py` in CI con tetti per booklet: 0 font non incorporati, 1.255 righe sotto 7 pt (etichette delle mappe), 222 immagini sotto 300 dpi, 14 riquad… |
 | 2026-10-29 | ADR-0105 · riquadro unico delle creatur… | conversione ARC-07 e Palio; misura per booklet con tetti | 🟡 da 4/79 a 50/88 schede nel riquadro; ARC-07 e Palio al 100%; Abbazia e Drappo in corso |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
 | 2026-10-23 | INVENTARIO-GEMINI-AISTUDIO | inventario di Drive contro il repo (DM: «vedere se ci sono dei contenuti su gem… | 🟡 182 file guardati, circa 45 della campagna. I `.md` finali di Hammerfist sono nel repo (97-99%); mancano `battle_stats_maps.md`, tre mini-boss e il patrono T… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7 chiuso: D4-D6 del DM (residui di coerenza al Bestiario, possessivo viet… | ✅ lotto 7 completo; l'allineamento di ARC-08 al Bestiario è nella #286 |
-| 2026-10-23 | RICERCA-ARCHI-SENZA-TESTO | censimento e trascrizione dell'arco 05 (DM: *«controllare se ci sono pdf o altr… | 🟡 Censiti i file non markdown degli archi 00-10 e degli standalone e confrontati coi markdown (numeri e nomi propri della fonte assenti nel markdown, poi a man… |
 
 ## Le misure che si portano dietro
 
