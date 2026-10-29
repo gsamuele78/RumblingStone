@@ -1872,6 +1872,47 @@
       "deterministic": true
     },
     {
+      "name": "misura_statblocchi_booklet",
+      "description": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»\n\nConta, booklet per booklet, le schede di creatura e la forma in cui escono in stampa (ADR-0105): riquadro (il recinto ```statblocco), griglia (un recinto qualunque), prosa, tabella, sciolta. --stampa conta anche i riquadri nel sorgente Typst; --check confronta i fuori forma con i tetti di docs/audit/statblocchi-booklet.json, che --aggiorna fa solo scendere.",
+      "use_case": "«Le creature di questo booklet escono tutte nello stesso riquadro, e quante ne mancano?»",
+      "invocation": "python3 scripts/misura_statblocchi_booklet.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Elenca ogni scheda fuori forma con la sua riga."
+          },
+          "stampa": {
+            "type": "boolean",
+            "description": "Conta i #statblocco( nel sorgente Typst di ogni booklet."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Stampa la misura in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un booklet ha più schede fuori forma del suo tetto."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive i tetti, solo verso il basso."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/statblocchi-booklet.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "un booklet sopra il suo tetto (--check)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "session_recap",
       "description": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»\n\nRecap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
       "use_case": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»",

@@ -304,12 +304,63 @@
 // Blocco statistiche: il riquadro del mostro/PNG, coi numeri dove il DM li
 // cerca invece che dentro un paragrafo (ADR-0021). I campi arrivano già
 // strutturati da `dmcore.statblock`: qui c'è solo la forma.
+//
+// La forma è una sola per ogni creatura, dal goblin al drago (ADR-0105): il
+// nome e il GS sulla barra, il tipo sotto, la riga dell'iniziativa, poi le
+// fasce DIFESA, ATTACCO, STATISTICHE, CAPACITÀ SPECIALI e TATTICHE, come nelle
+// AP. Le fasce si riempiono con le righe leggibili di ADR-0091 (`sezioni`)
+// quando la scheda le ha, e se no coi campi del blocco: la forma non cambia,
+// cambia solo quanto è piena. Una fascia senza niente dentro non si stampa.
 #let statblocco(
   nome: "", tipo: "", gs: "", iniziativa: "", sensi: "",
   ca: "", pf: "", ts: "", velocita: "",
   attributi: (), attacchi: (), voci: (), tattica: "", fonte: "",
+  sezioni: (:),
   larga: false,
 ) = {
+  let fascia(titolo, corpo) = if corpo != none [
+    #v(3.5pt)
+    #block(width: 100%, below: 3pt, stroke: (bottom: 0.6pt + rosso), inset: (bottom: 1.5pt))[
+      #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[#upper(titolo)]
+    ]
+    #corpo
+  ]
+  // Dai campi, le voci di una fascia stanno su una riga sola separate da «·»,
+  // come le righe di ADR-0091: le due vie danno lo stesso riquadro.
+  let in-riga(coppie) = {
+    let piene = coppie.filter(c => c.at(1) != "" and c.at(1) != [])
+    if piene.len() == 0 { none } else { piene.map(c => [*#c.at(0)* #c.at(1)]).join([ · ]) }
+  }
+  let difesa = sezioni.at("Difesa", default: in-riga((("CA", ca), ("pf", pf), ("TS", ts))))
+  let attacco = sezioni.at("Attacco", default: in-riga(
+    (("Vel", velocita),) + attacchi.map(a => (a.at(0), a.at(1)))))
+  // La griglia delle caratteristiche solo quando ci sono tutte e sei: con
+  // tre colonne su sei il riquadro sembra rotto. Altrimenti stanno in riga.
+  let griglia-car = attributi.len() == 6
+  let statistiche = {
+    let testo = sezioni.at("Statistiche", default: in-riga(
+      (if griglia-car { () } else { attributi.map(((k, v)) => (k, v)) }) + voci.map(v => (v.at(0), v.at(1)))))
+    if not griglia-car and testo == none { none } else [
+      #if griglia-car [
+        #grid(columns: (1fr,) * attributi.len(), column-gutter: 4pt,
+          ..attributi.map(((k, v)) => align(center)[
+            #text(font: TITOLI, size: 7pt, fill: seppia)[#upper(k)] \
+            #text(size: 9pt, weight: 600)[#v]
+          ]))
+        #v(2pt)
+      ]
+      #testo
+    ]
+  }
+  let capacita = sezioni.at("Capacità speciali", default: none)
+  let tattiche = sezioni.at("Tattiche", default: if tattica == "" { none } else [#tattica])
+  let apertura = sezioni.at("Iniziativa", default: {
+    let pezzi = ()
+    if iniziativa != "" { pezzi.push([*Iniziativa* #iniziativa]) }
+    if sensi != "" { pezzi.push([*Sensi* #sensi]) }
+    if pezzi.len() == 0 { none } else { pezzi.join([ · ]) }
+  })
+
   let corpo = block(
     width: 100%, fill: boxLato, inset: (x: 9pt, y: 8pt), radius: 2pt,
     stroke: (top: 1.4pt + rosso, bottom: 1.4pt + rosso),
@@ -317,37 +368,19 @@
   )[
     #grid(columns: (1fr, auto), align: (left + bottom, right + bottom),
       text(font: TITOLI, size: 12pt, weight: 600, fill: rosso)[#nome],
-      if gs != "" { text(font: TITOLI, size: 9pt, fill: seppia)[GS #gs] } else { [] })
+      if gs != "" { text(font: TITOLI, size: 9pt, fill: seppia)[#gs] } else { [] })
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
-    #v(3pt)
-    #line(length: 100%, stroke: 0.5pt + seppia)
-    #v(3pt)
     #set text(size: 8.8pt)
-    #let riga(e, v) = if v != "" [ *#e* #v \ ]
-    #riga("Iniziativa", iniziativa)
-    #riga("Sensi", sensi)
-    #riga("CA", ca)
-    #riga("pf", pf)
-    #riga("TS", ts)
-    #riga("Velocità", velocita)
-    #if attributi.len() > 0 [
-      #v(2pt)
-      #grid(columns: (1fr,) * attributi.len(), column-gutter: 4pt,
-        ..attributi.map(((k, v)) => align(center)[
-          #text(font: TITOLI, size: 7pt, fill: seppia)[#upper(k)] \
-          #text(size: 9pt, weight: 600)[#v]
-        ]))
-      #v(2pt)
+    #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false)
+    #if apertura != none { v(2pt); apertura }
+    #fascia("Difesa", difesa)
+    #fascia("Attacco", attacco)
+    #fascia("Statistiche", statistiche)
+    #fascia("Capacità speciali", capacita)
+    #if tattiche != none [
+      #fascia("Tattiche", text(size: 8.5pt)[#tattiche])
     ]
-    #for a in attacchi [ *#a.at(0)* #a.at(1) \ ]
-    #for v in voci [ *#v.at(0)* #v.at(1) \ ]
-    #if tattica != "" [
-      #v(2pt)
-      #line(length: 100%, stroke: 0.4pt + seppia.lighten(40%))
-      #v(2pt)
-      #text(size: 8.4pt, style: "italic")[*Tattica.* #tattica]
-    ]
-    #if fonte != "" [ #v(2pt) #text(size: 7.4pt, fill: seppia)[#fonte] ]
+    #if fonte != "" [ #v(3pt) #text(size: 7.4pt, fill: seppia)[#fonte] ]
   ]
   if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
 }

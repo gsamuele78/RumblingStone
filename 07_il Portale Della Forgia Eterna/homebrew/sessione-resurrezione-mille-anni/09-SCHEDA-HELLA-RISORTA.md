@@ -66,9 +66,25 @@ non si fonde nel corpo nuovo.
 | **Avatar della Radice** | 1 volta al giorno, azione standard: diventi un **Ibrido Treant Enorme** per 10 round. +8 FOR, portata estesa, schianti: CA 21, 2 schianti +13 (2d6+5), portata 4,5 m, travolgere 2d6+7 (Riflessi CD 21); l'equipaggiamento si fonde, la Collana no `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: la taglia sale di due categorie col solo +8 FOR. Torna all'alba |
 | **Evocazione dei Guardiani** | 3 volte al giorno, azione standard, un seme per volta. Semi I e II: un **Treant di Adamantio**, per **1 ora**. Seme III: **Durik**, se è stato distrutto: torna subito, per un'ora, e all'alba è di nuovo intero. I semi usati tornano all'alba |
 
-**Treant di Adamantio** *(evocato)* · Grande · 90 pf · RD 10/adamantio · CA 24 ·
-velocità 9 m · 2 schianti **+18** (2d8+9) · danni doppi a oggetti e strutture,
-ignora la durezza sotto 20 · i suoi colpi contano come adamantio · TS Tempra +12, Riflessi +3, Volontà +8 · portata 3 m · travolgere 2d8+13 (Riflessi CD 24) `[CANONE — DM 2026-10-18]`.
+```statblocco
+nome: Treant di Adamantio (evocato)
+gs: —
+tipo: Vegetale Grande
+ca: 24
+pf: 90
+ts: Temp +12, Rifl +3, Vol +8
+velocita: 9 m
+attacchi:
+  - 2 schianti +18 (2d8+9)
+```
+**Difesa** **CA 24** · **pf 90** · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio** `[CANONE — DM 2026-10-18]`
+
+**Attacco** Vel 9 m · **Mischia** 2 schianti **+18** (2d8+9) · portata 3 m
+
+**Capacità speciali**
+- **Travolgere** 2d8+13 (Riflessi CD 24).
+- **Colpi d'adamantio**: danni doppi a oggetti e strutture, ignora la durezza sotto 20; i suoi colpi contano come adamantio.
+
 ⚠ Non SRD: FOR, armatura naturale e schianti da 2d8 restano quelli di un Treant Enorme anche da Grande.
 
 **Due Treant insieme costano caro.** Al massimo due, uno per seme. Se li chiami

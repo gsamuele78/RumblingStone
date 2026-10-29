@@ -175,6 +175,12 @@ jobs:
       - name: pf-dado registra i dadi vita, e le correzioni sono riproducibili
         run: python scripts/conformita_statblocchi.py --check
 
+      # Ogni creatura dei booklet esce nello stesso riquadro (ADR-0105): una
+      # scheda nuova scritta in prosa o in un recinto qualunque fa salire il
+      # conto del suo booklet sopra il tetto.
+      - name: Le creature dei booklet escono nel riquadro (misura_statblocchi_booklet)
+        run: python scripts/misura_statblocchi_booklet.py --check
+
       - name: Validate DEF module masters (module-standard checklist, token-free review)
         run: python scripts/validate_modules.py
 

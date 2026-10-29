@@ -18,6 +18,16 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Il riquadro unico delle creature in stampa (ADR-0105): `#statblocco` nel
+  tema Typst ha le fasce Difesa, Attacco, Statistiche, Capacità speciali e
+  Tattiche, riempite dalle righe di ADR-0091 o dai campi del blocco; la stessa
+  forma esce nell'HTML dei booklet e in Homebrewery (`{{monster,frame}}`). Il
+  campo `gs` accetta un testo («PG di 13°») o «—».
+- `componenti.py`: l'ancora `#scheda` include il blocco ```statblocco con la
+  sua parte leggibile e il nome dal titolo della scheda.
+- `scripts/misura_statblocchi_booklet.py`: conta per booklet le schede di
+  creatura e la forma in cui escono (`--stampa` conta i riquadri nel sorgente
+  Typst); `--check` in CI contro i tetti di `docs/audit/statblocchi-booklet.json`.
 - `scripts/inventory_inferred.py`, canale testing (ADR-0088, ADR-0099): conta i
   marcatori INFERRED aperti separandoli da quelli dei piani e dei changelog; in CI
   `--check` non bloccante contro `docs/audit/inferred-baseline.json` (260).

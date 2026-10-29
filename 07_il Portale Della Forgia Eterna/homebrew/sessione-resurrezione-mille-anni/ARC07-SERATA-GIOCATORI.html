@@ -110,6 +110,23 @@
   .readaloud{ font-style:italic; }
   .vague{ font-style:italic; font-size:.86rem; opacity:.9; }
 
+  /* Il riquadro delle statistiche: la stessa forma del PDF (ADR-0105). */
+  .statblocco{ background:var(--note-bg); border-top:3px solid var(--rubric);
+      border-bottom:3px solid var(--rubric); padding:.6rem .9rem .7rem; margin:.9rem 0;
+      break-inside:avoid; font-size:.92rem; }
+  .statblocco .sb-testa{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem;}
+  .statblocco .sb-nome{ font-family:'Cinzel',Georgia,serif; font-variant:small-caps; color:var(--rubric);
+      font-size:1.15rem; font-weight:600;}
+  .statblocco .sb-gs{ font-family:'Cinzel',Georgia,serif; color:var(--brass); white-space:nowrap;}
+  .statblocco .sb-tipo{ font-style:italic; color:#6b4f2a; margin:.05rem 0 .3rem;}
+  .statblocco .sb-fascia{ font-family:'Cinzel',Georgia,serif; font-size:.72rem; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--rubric); border-bottom:1px solid var(--rubric);
+      margin:.5rem 0 .2rem; font-weight:600;}
+  .statblocco p{ margin:.15rem 0; text-align:left;}
+  .statblocco ul{ margin:.15rem 0 .2rem 1.1rem;}
+  .statblocco .sb-car{ display:grid; grid-template-columns:repeat(6,1fr); text-align:center; margin:.2rem 0;}
+  .statblocco .sb-car span{ display:block; font-size:.7rem; color:#6b4f2a; font-variant:small-caps;}
+  .statblocco .sb-fonte{ font-size:.75rem; color:#6b4f2a; margin-top:.3rem;}
   pre.mono{ background:rgba(201,173,106,.18); border:1px solid var(--brass); padding:.6rem .8rem;
       overflow-x:auto; font-size:.8rem; line-height:1.35; font-family:ui-monospace,Consolas,monospace;}
   .figure{ margin:.8rem auto; text-align:center; }
@@ -304,7 +321,8 @@
 <p>Un torc di legno e metallo, alla temperatura di chi lo porta. Tre semi: due verdi venati d'adamantio, il terzo grigio-verde e ruvido. Toccandolo senti il peso di una testa appoggiata sul petto.</p>
 <p><strong>Funziona sempre</strong>, anche in forma selvatica: ha le radici sotto la pelle, e non si fonde nel corpo nuovo.</p>
 <div class="tablewrap"><table><thead><tr><th>Potere</th><th>Effetto</th></tr></thead><tbody><tr><td><strong>Saggezza della Terra</strong></td><td>+4 di potenziamento alla Saggezza. ⚠️ <strong>Non si somma</strong> al Periapto di Saggezza: vale il bonus più alto</td></tr><tr><td><strong>Corteccia del Guardiano</strong></td><td>+3 di armatura naturale alla CA</td></tr><tr><td><strong>Avatar della Radice</strong></td><td>1 volta al giorno, azione standard: diventi un <strong>Ibrido Treant Enorme</strong> per 10 round. +8 FOR, portata estesa, schianti: CA 21, 2 schianti +13 (2d6+5), portata 4,5 m, travolgere 2d6+7 (Riflessi CD 21); l'equipaggiamento si fonde, la Collana no. ⚠ Non SRD: la taglia sale di due categorie col solo +8 FOR. Torna all'alba</td></tr><tr><td><strong>Evocazione dei Guardiani</strong></td><td>3 volte al giorno, azione standard, un seme per volta. Semi I e II: un <strong>Treant di Adamantio</strong>, per <strong>1 ora</strong>. Seme III: <strong>Durik</strong>, se è stato distrutto: torna subito, per un'ora, e all'alba è di nuovo intero. I semi usati tornano all'alba</td></tr></tbody></table></div>
-<p><strong>Treant di Adamantio</strong> <em>(evocato)</em> · Grande · 90 pf · RD 10/adamantio · CA 24 · velocità 9 m · 2 schianti <strong>+18</strong> (2d8+9) · danni doppi a oggetti e strutture, ignora la durezza sotto 20 · i suoi colpi contano come adamantio · TS Tempra +12, Riflessi +3, Volontà +8 · portata 3 m · travolgere 2d8+13 (Riflessi CD 24). ⚠ Non SRD: FOR, armatura naturale e schianti da 2d8 restano quelli di un Treant Enorme anche da Grande.</p>
+<div class="statblocco"><div class="sb-testa"><span class="sb-nome">Treant di Adamantio (evocato)</span></div><div class="sb-tipo">Vegetale Grande</div><div class="sb-fascia">Difesa</div><p><strong>CA 24</strong> · <strong>pf 90</strong> · TS Tempra +12, Riflessi +3, Volontà +8 · <strong>RD 10/adamantio</strong></p><div class="sb-fascia">Attacco</div><p>Vel 9 m · <strong>Mischia</strong> 2 schianti <strong>+18</strong> (2d8+9) · portata 3 m</p><div class="sb-fascia">Capacità speciali</div><ul><li><strong>Travolgere</strong> 2d8+13 (Riflessi CD 24).</li><li><strong>Colpi d'adamantio</strong>: danni doppi a oggetti e strutture, ignora la durezza sotto 20; i suoi colpi contano come adamantio.</li></ul></div>
+<p>⚠ Non SRD: FOR, armatura naturale e schianti da 2d8 restano quelli di un Treant Enorme anche da Grande.</p>
 <p><strong>Due Treant insieme costano caro.</strong> Al massimo due, uno per seme. Se li chiami tutti e due nello stesso momento, per <strong>un mese</strong> la Collana non evoca più: niente Treant, e se Durik cade non torna subito, ma all'alba. Il resto della Collana non si spegne.</p>
 <h3 class="sub">I doni dei tuoi compagni</h3>
 <div class="tablewrap"><table><thead><tr><th></th><th>Seme</th><th>Da chi</th><th>Cosa ti dà</th></tr></thead><tbody><tr><td>☐</td><td>I</td><td>Thorik, la sua deflessione</td><td><strong>Scudo del Custode</strong>: 1 volta al giorno, azione immediata, prendi su di te il danno destinato a un alleato entro 9 m, <strong>dimezzato</strong>. E Thorik scatta verso chi hai protetto, accelerato per tre round</td></tr><tr><td>☐</td><td>II</td><td>Tordek, il suo Ancoraggio</td><td><strong>Pelle di Adamantio</strong>: <strong>RD 3/adamantino</strong>. La tua unica</td></tr><tr><td>☐</td><td>III</td><td>Artemis, un dado del suo colpo</td><td><strong>Rovo Eldritch</strong>: a volontà, azione standard, contatto a distanza 18 m, <strong>2d6</strong>, metà rovi e metà fuoco. È magico: la resistenza agli incantesimi vale</td></tr></tbody></table></div>

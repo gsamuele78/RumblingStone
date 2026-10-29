@@ -75,12 +75,12 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
 | SCENA 8 | FOR) | 25 |
-| SCENA 8 | e perdi l'azione di movimento (Riflessi | 15 |
+| SCENA 8 | si perde l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | blocca 1 round, senza stordirlo (Tempra | 15 |
 | SCENA 8 | Riflessi | 22 |
 | SCENA 8 | e perde l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | Thorik resta con Riflessi | 22 |
-| SCENA 8 | centrato a scelta, 8d6 (contundente+perforante), Riflessi | 22 |
+| SCENA 8 | scelta, 8d6 (contundente e perforante), Riflessi | 22 |
 | SCENA 8 | prende danni, gli altri tirano Riflessi | 22 |
 | SCENA 8 | FOR) contro | 25 |
 | SCENA 8 | Prima di leggerlo, Thorik tira Riflessi | 22 |
