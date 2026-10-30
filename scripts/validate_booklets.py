@@ -16,7 +16,8 @@ Cosa controlla, in ordine di quanto fa male se salta:
    silenzio;
 2. **i file esistono** — capitoli, copertina, introduzione;
 3. **le immagini dei master esistono** — è il controllo che avrebbe fermato il
-   Palio: un `![...](...)` che punta a un file assente diventa un buco;
+   Palio: un `![...](...)` che punta a un file assente diventa un buco; una
+   mappa generata entra solo come pianta in stampa con la sua legenda (ADR-0106);
 4. **la parità fra le catene** — quali chiavi consuma ognuna, e quali restano
    inattive da una parte (avviso, non errore: `header` in stampa *deve* restare
    inattiva, perché lì la testatina segue il capitolo);
@@ -110,6 +111,24 @@ def _controlla_oggetto(dato: dict, schema: dict, dove: str, errori: list[str]) -
             _controlla_oggetto(valore, sotto, f"{dove}.{chiave}", errori)
 
 
+MAPPA = re.compile(r"_map\d\d_[^/]*\.svg$")
+
+
+def _mappa_di_stampa(src: str, nome: str, master: Path) -> list[str]:
+    """Una mappa generata entra nel booklet solo come pianta in stampa, con la
+    sua legenda nello stesso master (ADR-0106): la pergamena e gli altri temi
+    nella gabbia A4 scendono sotto i 7 pt e i filtri diventano raster."""
+    if not MAPPA.search(src) or src.endswith("_legenda.svg"):
+        return []
+    if Path(src).parent.name != "rendered-stampa-pianta":
+        return [f"mappa «{src}» in {nome}: nel booklet va la pianta in stampa "
+                f"(rendered-stampa-pianta/, render_map_svg.py --tema pianta --stampa)"]
+    legenda = src.removesuffix(".svg") + "_legenda.svg"
+    if legenda not in master.read_text(encoding="utf-8"):
+        return [f"mappa «{src}» in {nome} senza la sua legenda ({Path(legenda).name})"]
+    return []
+
+
 def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
     """(errori, avvisi) di un manifest: struttura, file, immagini, parità."""
     errori: list[str] = []
@@ -143,6 +162,7 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
             if not (f.parent / src).resolve().is_file():
                 errori.append(f"{rel}: immagine mancante «{src}» "
                               f"(citata in {cap['file']}, alt «{alt}»)")
+            errori.extend(f"{rel}: {e}" for e in _mappa_di_stampa(src, cap["file"], f))
 
     inattive_stampa = sorted(set(man) & SOLO_HTML)
     if inattive_stampa:

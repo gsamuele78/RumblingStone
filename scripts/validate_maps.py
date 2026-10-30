@@ -125,12 +125,25 @@ def check_tema_pianta(rendered_dirs: list[Path]) -> tuple[list[str], int]:
     return _check_gemello(rendered_dirs, "pianta", obbligatorio=False)
 
 
-def check_tema_stampa(repo_root: Path) -> tuple[list[str], int]:
-    """Il modo stampa (ADR-0105) si adotta una mappa alla volta, per quelle che
-    nel booklet escono troppo piccole: ogni SVG di un `rendered-stampa-<tema>/`
-    (la mappa e la sua `_legenda`) deve venire dal suo master, byte per byte."""
+def check_tema_stampa(repo_root: Path, rendered_dirs: list[Path] | None = None) -> tuple[list[str], int]:
+    """Il modo stampa (ADR-0105): ogni SVG di un `rendered-stampa-<tema>/` (la
+    mappa e la sua `_legenda`) deve venire dal suo master, byte per byte. La
+    pianta in stampa è lo standard di ogni mappa (ADR-0106): accanto a ogni
+    `rendered/` c'è un `rendered-stampa-pianta/` con tutte le sue mappe."""
     errors: list[str] = []
     totale = 0
+    for rdir in rendered_dirs or []:
+        sdir = rdir.parent / R.cartella_stampa("pianta")
+        stems = {m.group("stem") for m in (SVG_NAME_RE.match(p.name) for p in rdir.glob("*.svg")) if m}
+        for stem in sorted(stems):
+            md = rdir.parent / f"{stem}.md"
+            if not md.exists():
+                continue
+            for nome in render_master(md):
+                for n in (nome, nome.removesuffix(".svg") + "_legenda.svg"):
+                    if not (sdir / n).is_file():
+                        errors.append(f"SVG della pianta in stampa mancante (ADR-0106): {sdir / n} — "
+                                      f"render_map_svg.py --tema pianta --stampa")
     for svg in sorted(repo_root.glob("**/rendered-stampa*/*.svg")):
         totale += 1
         tema = svg.parent.name.removeprefix("rendered-stampa-")
@@ -270,7 +283,7 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
     errors.extend(err_pt)
 
     # 8. il tema stampa, mappa per mappa
-    err_st, svg_st = check_tema_stampa(repo_root)
+    err_st, svg_st = check_tema_stampa(repo_root, rendered_dirs)
     errors.extend(err_st)
 
     if as_json:

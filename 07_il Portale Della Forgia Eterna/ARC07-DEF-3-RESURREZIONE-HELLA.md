@@ -86,7 +86,7 @@
 | §11 | **Avanzamento** | PX, artefatti, il corredo di Hella |
 | §12 | **Ponte + Handout & Asset** | verso il viaggio a mille anni fa (`DEF-4`); handout, immagini, musica |
 | App. A | **Statistiche** | la scheda completa di Hella risorta, il Treant di Adamantio |
-| App. B | **Mappe** | la Sala della Forgia a pergamena, il cerchio del rito |
+| App. B | **Mappe** | la pianta della Sala della Forgia, il cerchio del rito |
 
 ---
 
@@ -130,7 +130,7 @@ male. Il resto si legge al tavolo, in avanti.
 **Cosa stampare.** Il volume dei giocatori *Il Cuore e la Porta*, con i fogli
 della tabella qui sotto: **gli echi privati si danno prima di cominciare**. Poi
 la **Quick-Reference §0-bis** (rito + sacrifici); le mappe dell'**Appendice B**
-(la Sala a pergamena e il cerchio R-1); la scheda completa di Hella
+(la pianta della Sala e il cerchio R-1); la scheda completa di Hella
 (**Appendice A**); il PDF Benedizioni.
 
 **Come si chiude.** Hella viva, i Doni tessuti (o i debiti aperti), il Debito
@@ -365,7 +365,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > ha più bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-`DEF-2`; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+`DEF-2`; la pianta dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -1459,7 +1459,7 @@ le Cronache in `homebrew/HANDOUT-1-cronache-quattro-eroi.hb.md`)<!-- /apparato -
 | La Custode delle Radici, allo Step 5 | la tavola della Custode, in §6<!-- apparato --> (`Immagini/tavola-custode-delle-radici.jpg`)<!-- /apparato --> |
 | Il risveglio di Hella | la tavola del risveglio, in §7 dopo il box<!-- apparato --> (`Immagini/tavola-risveglio-di-hella.jpg`; `Hella_elementale` resta per l'Avatar della Radice)<!-- /apparato --> |
 | Durik e Hella, dopo il risveglio | la tavola di Durik e Hella, copertina della scheda di Durik<!-- apparato --> (`Immagini/tavola-durik-e-hella.jpg`, `08-SCHEDA-DURIK`)<!-- /apparato --> |
-| La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione<!-- apparato --> (`Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp`, verificato il 2026-09-24)<!-- /apparato --> |
+| La Sala durante il rito | la **pianta** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione<!-- apparato --> (`Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp`, verificato il 2026-09-24)<!-- /apparato --> |
 
 ### Musica
 - **La Canzone delle Pietre**<!-- apparato --> (`Musica/LaCanzoneDellePietre.mp3`)<!-- /apparato -->. **Qui è il suo momento pieno**: falla
@@ -1637,12 +1637,16 @@ Boost log: 2026-10-18 — forma d'Avatar costruita sul Treant SRD — nessun cam
 
 ## APPENDICE B — MAPPE
 
-### La Sala della Forgia Eterna, a pergamena
+### La Sala della Forgia Eterna
 
 La pianta tattica della Sala, con l'Altare al centro. Il cerchio del rito sta
 attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
-![La Sala della Forgia Eterna](Mappe/rendered/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+![La Sala della Forgia Eterna](Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+
+<!-- nuova-pagina -->
+
+![La Sala della Forgia Eterna — Indicazioni e legenda](Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino_legenda.svg)
 
 <!-- nuova-pagina -->
 
@@ -1651,7 +1655,7 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. La pianta a pergamena della Sala è
+> identiche; là hanno gli add-on DM. La pianta della Sala è
 > all'inizio di questa appendice.
 
 #### MAPPA R-1 — IL CERCHIO DEL RITO (Altare del Cuore di Moradin)

@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-30 | STANDARD-STAMPA | I2 chiuso: pianta in stampa per tutte le 56 mappe del repo (ADR-0106), controll… | ✅ scritte sotto 7 pt 5.820→0 e filtri rasterizzati 418→0 sulle 56 mappe, nessun testo perso; ARC-07 righe sotto 7 pt a 0 in tutti e tre i volumi (Notte e Alba… |
 | 2026-10-30 | STANDARD-STAMPA | I2 prime mappe: modo stampa per M7-H e M7-C, stile pianta scelto al cieco | 🟡 scritte ≥ 7,4 pt, niente filtri rasterizzati; tetti ARC-07 giù: Notte e Alba 291→217 righe e 58→52 immagini, Resurrezione 330→256 e 68→62, Mille anni 291→217… |
 | 2026-10-29 | STANDARD-STAMPA | I3 correzioni dopo la rimisura su main | 🟡 titoli sillabati 23 → 0, colonne vuote 5 → 4, rimandi di pagina sbagliati 1 → 0 con misura nuova a tetto 0 |
 | 2026-10-29 | STANDARD-STAMPA | I6 primo cieco delle varianti | 🟡 box da leggere colorato scartato (4 a 0 per il riquadro); interlinea 1,08 contro 1,30 pari (2 a 2), resta 1,30 |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | 4g-2, prima parte: le caratteristiche dei PG che il repo attesta | 🟡 15 caselle su 24 (Tordek dalla scheda PCGen, Hella da DEF-3, FOR di Thorik da P1); restano 9 al DM con un modulo |
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
 | 2026-10-24 | RICERCA-ARCHI-SENZA-TESTO | D1-D12 decise e P30-b (DM: *«Dimmeli punto per punto con soluzione consigliata… | ✅ Dodici card, una per voce: dieci sulla proposta, D6 sui numeri più duri, D8 «tutti giocati», D12 cambiata dal DM in «convertili anche questi, poi si cerca un… |
-| 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
 
 ## Le misure che si portano dietro
 

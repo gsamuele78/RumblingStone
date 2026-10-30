@@ -22,20 +22,20 @@
   "booklet": {
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 217,
+        "testi_sotto_minimo": 0,
         "fuori_margine": 0,
-        "immagini_sotto_300dpi": 52,
+        "immagini_sotto_300dpi": 45,
         "schede_spezzate": 0,
         "font_non_incorporati": 0,
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 125,
+        "pagine": 129,
         "corpo_mediano_pt": 10.0,
-        "corpo_minimo_pt": 4.5,
+        "corpo_minimo_pt": 7.0,
         "schede": 12,
-        "pagine_con_immagine": 0.064,
-        "pagine_con_immagine_decimo": 0.136
+        "pagine_con_immagine": 0.031,
+        "pagine_con_immagine_decimo": 0.101
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -76,20 +76,20 @@
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 256,
+        "testi_sotto_minimo": 0,
         "fuori_margine": 0,
-        "immagini_sotto_300dpi": 62,
+        "immagini_sotto_300dpi": 45,
         "schede_spezzate": 0,
         "font_non_incorporati": 0,
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 148,
+        "pagine": 153,
         "corpo_mediano_pt": 10.0,
-        "corpo_minimo_pt": 4.5,
+        "corpo_minimo_pt": 7.0,
         "schede": 15,
-        "pagine_con_immagine": 0.061,
-        "pagine_con_immagine_decimo": 0.122
+        "pagine_con_immagine": 0.026,
+        "pagine_con_immagine_decimo": 0.085
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -166,20 +166,20 @@
     },
     "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 217,
+        "testi_sotto_minimo": 0,
         "fuori_margine": 0,
-        "immagini_sotto_300dpi": 50,
+        "immagini_sotto_300dpi": 43,
         "schede_spezzate": 0,
         "font_non_incorporati": 0,
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 88,
+        "pagine": 92,
         "corpo_mediano_pt": 10.0,
-        "corpo_minimo_pt": 4.5,
+        "corpo_minimo_pt": 7.0,
         "schede": 13,
-        "pagine_con_immagine": 0.08,
-        "pagine_con_immagine_decimo": 0.159
+        "pagine_con_immagine": 0.033,
+        "pagine_con_immagine_decimo": 0.109
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {

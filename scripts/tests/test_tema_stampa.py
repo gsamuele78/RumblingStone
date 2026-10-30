@@ -9,7 +9,9 @@ va la pianta (lo stile di Dauth), scelta di Jfs al cieco. Il test fissa queste
 cose sulla mappa vera che l'ha fatto nascere, in tutti e tre i temi.
 """
 
+import os
 import re
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -74,10 +76,60 @@ class TestTemaStampa(unittest.TestCase):
         self.assertIn("Telo del glifo", self.legenda)
         self.assertRegex(self.mappa, r'font-style="italic">b</text>')
 
+    def test_la_legenda_dice_la_regola_intera(self):
+        # in stampa la parentesi della voce non si taglia: porta la regola
+        piatto = " ".join(re.sub(r"<[^>]+>", " ", self.legenda).split())
+        self.assertIn("blocca la vista, si taglia)", piatto)
+
     def test_a_capo_tiene_le_parole(self):
         righe = R._a_capo("uno due tre quattro cinque", 9)
         self.assertEqual(righe, ["uno due", "tre", "quattro", "cinque"])
         self.assertEqual(" ".join(righe), "uno due tre quattro cinque")
+
+
+class TestStandardDiRepo(unittest.TestCase):
+    """ADR-0106: la pianta in stampa vale per ogni mappa del repo."""
+
+    RADICE = SCRIPTS.parent
+
+    def _mappa(self, rel: str, i: int = 0):
+        md = self.RADICE / rel
+        return md, R.extract_maps(md.read_text(encoding="utf-8"))[i]
+
+    def test_mappa_alta_resta_sopra_i_7_pt(self):
+        # 21×53: stretta nella pagina per altezza, scendeva a 4,3 pt
+        md, g = self._mappa("07_il Portale Della Forgia Eterna/Mappe/Portale-Forgia-L2-REVISED-UltraClear.md")
+        self.assertGreaterEqual(min(_corpi_pt(R.render_svg(g, md.name, "pianta", "mappa", True))), 7.0)
+
+    def test_legenda_lunga_va_su_due_colonne(self):
+        # 17 luoghi e 15 zone: su una colonna la legenda superava i 21 cm
+        md, g = self._mappa("08_La Battaglia Di Hammerfist/Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md")
+        self.assertGreaterEqual(min(_corpi_pt(R.render_svg(g, md.name, "pianta", "legenda", True))), 7.0)
+
+    def test_simboli_della_legenda_del_master(self):
+        # 🛡️ e 🥋 non sono nel glossario: il nome viene dalla legenda del master
+        md, g = self._mappa("07_il Portale Della Forgia Eterna/Mappe/ARC07-MAPPE-DEFINITIVO.md")
+        legenda = R.render_svg(g, md.name, "pianta", "legenda", True)
+        self.assertIn("Thorik (F04)", legenda)
+        self.assertIn("base corrosa del pilastro", legenda)
+
+    def test_stesso_svg_con_ogni_seme_di_hash(self):
+        # le acque si disegnavano nell'ordine di un set: l'SVG cambiava da
+        # un processo all'altro e validate_maps falliva a caso
+        codice = ("import sys; sys.path.insert(0, sys.argv[1]); import render_map_svg as R; "
+                  "from pathlib import Path; md = Path(sys.argv[2]); "
+                  "g = R.extract_maps(md.read_text(encoding='utf-8'))[2]; "
+                  "import hashlib; print(hashlib.md5(R.render_svg(g, md.name, 'pianta').encode()).hexdigest())")
+        md = self.RADICE / "08_La Battaglia Di Hammerfist/Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md"
+        uscite = {subprocess.run([sys.executable, "-c", codice, str(SCRIPTS), str(md)], capture_output=True,
+                                 text=True, env={**os.environ, "PYTHONHASHSEED": str(seme)}).stdout
+                  for seme in (1, 5)}
+        self.assertEqual(len(uscite), 1, uscite)
+
+    def test_la_foresta_si_disegna(self):
+        md, g = self._mappa("09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/"
+                            "Arco-Post-Hammerfist-P1B-Foresta-In-Fiamme-MAPPA.md")
+        self.assertIn("<svg", R.render_svg(g, md.name, "pianta", "mappa", True))
 
 
 if __name__ == "__main__":

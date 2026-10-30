@@ -660,7 +660,7 @@ Il tema si adotta una cartella alla volta. Dove esiste `rendered-pianta/`,
 `validate_maps` lo vuole completo e allineato ai master, come la pergamena;
 dove non esiste nessuno lo pretende. ARC-07 l'ha adottato il 2026-10-23.
 
-### 5.5 Il modo stampa: una mappa grande nel booklet A4 (ADR-0105)
+### 5.5 Il modo stampa: ogni mappa nel booklet A4 (ADR-0105, ADR-0106)
 
 Una mappa larga più di una trentina di colonne, nel booklet, entra solo
 rimpicciolita: M7-H (44×40) usciva a scala 0,3, con coordinate e legenda fra
@@ -683,10 +683,25 @@ per mappa:
 
 Nel booklet va il tema **pianta** (lo stile delle piante delle città, §5.4):
 Jfs l'ha scelto al cieco del 2026-10-30 contro pergamena e texture, tutte e
-tre dentro i tetti di stampa. Nel master del booklet si puntano tutte e due le
-pagine, ognuna seguita da `<!-- nuova-pagina -->`. Il modo si adotta una mappa
-alla volta; `validate_maps` controlla che ogni SVG di `rendered-stampa-*/`
-venga dal suo master. Prime mappe: M7-H e M7-C.
+tre dentro i tetti di stampa. Dal 2026-10-30 è lo standard di **ogni** mappa
+del repo (ADR-0106):
+
+- accanto a ogni `rendered/` c'è un `rendered-stampa-pianta/` con la mappa e
+  la `_legenda` di ogni master. Si rigenerano tutte insieme con
+  `python3 scripts/render_map_svg.py --tutti-i-master --tema pianta --stampa`;
+  `validate_maps` segnala quelle mancanti e quelle non allineate al master;
+- nel master di un booklet una mappa generata si punta solo da
+  `rendered-stampa-pianta/`, seguita dalla sua `_legenda`, ognuna seguita da
+  `<!-- nuova-pagina -->`. `validate_booklets` ferma la pergamena e la mappa
+  senza legenda;
+- la mappa alta (più di 1,2 volte la larghezza) allarga il foglio fino al
+  rapporto della pagina, così le scritte restano a 7,4 pt; la legenda lunga
+  mette luoghi e zone su due colonne;
+- in stampa la voce di legenda è intera, parentesi comprese («copertura +4
+  CA, terreno difficile»), e i simboli locali prendono il nome dalla legenda
+  del master.
+
+Pergamena e texture restano per lo schermo e per i VTT.
 
 ---
 

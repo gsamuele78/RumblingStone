@@ -2018,7 +2018,8 @@ def main() -> int:
     ap.add_argument("files", nargs="*", help="markdown file(s) containing emoji-grid maps")
     ap.add_argument("--tutti-i-master", action="store_true",
                     help="ogni master che ha gia' un SVG in rendered/ (per rifare un tema intero); "
-                         "col tema pianta solo le cartelle che hanno adottato rendered-pianta/")
+                         "col tema pianta solo le cartelle che hanno adottato rendered-pianta/, "
+                         "tranne in --stampa, che vale per tutte (ADR-0106)")
     ap.add_argument("-o", "--outdir", help="output directory (default: rendered/ next to input)")
     ap.add_argument("--map", type=int, help="render only map #N (1-based) of each file")
     ap.add_argument("--list", action="store_true", help="list maps found, render nothing")
@@ -2037,7 +2038,8 @@ def main() -> int:
         args.files = sorted({str(p.parent.parent / f"{p.name.split('_map')[0]}.md")
                              for p in radice.glob("**/rendered/*_map[0-9][0-9]_*.svg")
                              if (p.parent.parent / f"{p.name.split('_map')[0]}.md").exists()
-                             and (args.tema != "pianta" or (p.parent.parent / CARTELLA_TEMA["pianta"]).is_dir())})
+                             and (args.tema != "pianta" or args.stampa
+                                  or (p.parent.parent / CARTELLA_TEMA["pianta"]).is_dir())})
     if not args.files:
         ap.error("indica i file, oppure --tutti-i-master")
     if args.tema == "texture" and not _texture_cc0():

@@ -178,8 +178,12 @@ un ordine diverso dall'alfabetico.
 
 - [ ] **I1** File dei token di stile, letto da Typst e dal CSS. La misura deve
   restare uguale.
-- [ ] **I2** Le etichette delle mappe non scendono sotto il corpo minimo: la
+- [x] **I2** Le etichette delle mappe non scendono sotto il corpo minimo: la
   scala della figura decide la dimensione delle etichette nel renderer.
+  Fatto con la #298 e ADR-0106: ogni mappa del repo ha la pianta in stampa
+  (`rendered-stampa-pianta/`, scritte a 7,4 pt, niente filtri) e i booklet
+  usano solo quella. Nei tre volumi di ARC-07 le righe sotto 7 pt passano da
+  217/256/217 a 0.
 - [x] **I3** Il riquadro che si spezza ripete la testata con «(continua a
   pagina N)», come fa WotC, oppure passa intero alla colonna dopo quando è
   più corto di una colonna. Fatto nella #295 insieme a D5: le schede intere

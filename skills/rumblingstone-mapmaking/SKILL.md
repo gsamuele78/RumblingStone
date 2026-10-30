@@ -101,6 +101,13 @@ are **generated artifacts — never hand-edit them**. CI
    full 9 pt. The typst exporter enforces the column/A4 split on its own
    (`rumblingstone-editoria` §4, point 4), but a 180-cell legend line still
    shrinks the whole map: shorten the annotation, never the grid.
+   **The rendered map in a booklet is always the «pianta» print mode**
+   (ADR-0106, DM 2026-10-30): every `rendered/` has a `rendered-stampa-pianta/`
+   twin with the map and its `_legenda` (`render_map_svg.py --tutti-i-master
+   --tema pianta --stampa`), and a booklet master points at both, each
+   followed by `<!-- nuova-pagina -->`. Text never goes below 7.4 pt, no
+   filters, legend entries whole. `validate_maps` flags missing or stale
+   files, `validate_booklets` stops a parchment SVG or a map without legend.
 8. **Hero map from a service (Canva AI), until the local ComfyUI pass is
    tested** (DM, 2026-09-25). Canva AI paints **only** the player-facing hero
    map. The prompt is written **from the map's JSON** (the Mode 3 contract, or
@@ -213,5 +220,6 @@ python3 scripts/misura_resa.py --check               # the rendering did not get
 python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, optional, table only
 python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
 python3 scripts/dm.py maps pianta <file.md>        # «pianta» theme → rendered-pianta/ (ADR-0102)
+python3 scripts/render_map_svg.py --tutti-i-master --tema pianta --stampa   # print mode of every map (ADR-0106)
 python3 scripts/dm.py maps citta [rethmar|dauth|channathgate] [--check]  # the repo's own city plans
 ```
