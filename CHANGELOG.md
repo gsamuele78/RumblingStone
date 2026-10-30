@@ -75,7 +75,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   repo. `regola NOME` cerca una regola; `riscontra FILE.yaml` dice concorda,
   discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
   rete non risponde. Job CI `riscontro-srd`, non bloccante.
-- Booklet ARC-07 *Notte e Alba*: nuovo capitolo VII «Il barile sulla tenda di Zog'tar» (quote, calcoli ed esiti del bombardamento, PR #292 e #296); la mappa M7-H del campo del capo entra nell'Appendice D di DEF-4, quindi anche nei volumi Resurrezione e Mille anni. Le tre tabelle più lunghe del capitolo stanno su pagina a una colonna. I tetti di stampa dei tre volumi salgono per le etichette e i simboli di M7-H (+98 righe sotto 7 pt, +9 immagini sotto 300 dpi), lo stesso difetto delle altre mappe (I2).
+- Booklet ARC-07 *Notte e Alba*: nuovo capitolo VII «Il barile sulla tenda di Zog'tar» (quote, calcoli ed esiti del bombardamento, PR #292 e #296); la mappa M7-H del campo del capo entra nell'Appendice D di DEF-4, quindi anche nei volumi Resurrezione e Mille anni. Le tre tabelle più lunghe del capitolo stanno su pagina a una colonna. M7-H entra col tema stampa, su due pagine (mappa, poi indicazioni e legenda): i tetti di stampa dei tre volumi restano quelli di prima.
+- `render_map_svg.py --tema stampa` (in `rendered-stampa/`, GUIDA-MAPPE §5.5): per una mappa grande nel booklet A4, scritte in punti mai sotto i 7,4 pt, indicazioni e legenda in un secondo SVG, nessun filtro rasterizzato. `validate_maps` controlla questi SVG contro il master.
 ### Modificato
 - `converters/pdf-to-md-engine`: minimo di `nltk` alzato a 3.10.4 da Dependabot
   (gruppo convertitori-settimanale, PR #294).

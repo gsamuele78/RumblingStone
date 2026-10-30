@@ -4403,7 +4403,11 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 <!-- nuova-pagina -->
 
-![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](Mappe/rendered/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](Mappe/rendered-stampa/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](Mappe/rendered-stampa/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
 
 <!-- nuova-pagina -->
 
