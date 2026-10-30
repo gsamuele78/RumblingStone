@@ -1718,7 +1718,7 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 
 ### **ROUND 12-13: LA CONTROFFENSIVA**
 
-**Al round 12 Grimjaw entra dalla porta** con le guardie (MAPPA 5, stato F, ⚫ AH1 e la rotta nera fino all'anello nord), e la rotta degli altri gli scorre accanto. Il duello è sotto, «L'ARRIVO DI GRIMJAW».
+**Al round 12 Grimjaw entra dalla porta** con le guardie (MAPPA 5, stato F, ⚫ AH1 e la rotta nera fino al centro dello schieramento), e la rotta degli altri gli scorre accanto. Il duello è sotto, «L'ARRIVO DI GRIMJAW».
 
 **NEMICI RIMANENTI:** 
 - 12 Bugbear terrorizzati (tentano fuga)

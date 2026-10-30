@@ -2276,6 +2276,10 @@
 <circle cx="508" cy="151" r="10.1" fill="url(#g_d62828)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="173" cy="182" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="158" y="165" width="28" height="28"/>
+<circle cx="397.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="396" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="425.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="424" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="453.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="452" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="481.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
@@ -2286,42 +2290,68 @@
 <circle cx="536" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="565.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="564" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="593.2" cy="181" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="592" cy="179" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="845" cy="182" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="830" y="165" width="28" height="28"/>
-<circle cx="369.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="368" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="397.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="396" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="425.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="424" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="453.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="452" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="481.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="480" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="509.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="508" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="537.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="536" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="565.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="564" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="593.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="592" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="621.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="620" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="649.2" cy="209" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="648" cy="207" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="341.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="340" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="369.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="368" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="649.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="648" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="285.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="284" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="313.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="312" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="425.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="424" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="453.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="452" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="481.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="480" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="509.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="508" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="537.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="536" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="565.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="564" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="677.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="676" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="313.2" cy="265" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="312" cy="263" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="705.2" cy="237" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="704" cy="235" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="257.2" cy="265" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="256" cy="263" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="285.2" cy="265" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="284" cy="263" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="509" cy="266" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="494" y="249" width="28" height="28"/>
 <circle cx="705.2" cy="265" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="704" cy="263" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="285.2" cy="293" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="284" cy="291" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="733.2" cy="265" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="732" cy="263" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="229.2" cy="293" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="228" cy="291" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="257.2" cy="293" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="256" cy="291" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="733.2" cy="293" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="732" cy="291" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="761.2" cy="293" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="760" cy="291" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
+<circle cx="229.2" cy="321" r="10.1" fill="#1d160d" opacity="0.3"/>
+<circle cx="228" cy="319" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="257.2" cy="321" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="256" cy="319" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="285.2" cy="321" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="284" cy="319" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="397" cy="322" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="382" y="305" width="28" height="28"/>
 <ellipse cx="621" cy="322" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
@@ -2332,124 +2362,42 @@
 <circle cx="760" cy="319" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="117" cy="350" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="102" y="333" width="28" height="28"/>
-<circle cx="257.2" cy="349" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="256" cy="347" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="761.2" cy="349" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="760" cy="347" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="257.2" cy="377" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="256" cy="375" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="761.2" cy="377" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="760" cy="375" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="229.2" cy="405" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="228" cy="403" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="341" cy="406" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="326" y="389" width="28" height="28"/>
 <ellipse cx="677" cy="406" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="662" y="389" width="28" height="28"/>
-<circle cx="789.2" cy="405" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="788" cy="403" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="145" cy="434" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="130" y="417" width="28" height="28"/>
-<circle cx="229.2" cy="433" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="228" cy="431" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="481" cy="434" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_star" x="466" y="417" width="28" height="28"/>
 <ellipse cx="509" cy="434" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_sparkle" x="494" y="417" width="28" height="28"/>
-<circle cx="789.2" cy="433" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="788" cy="431" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="845" cy="434" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="830" y="417" width="28" height="28"/>
-<circle cx="229.2" cy="461" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="228" cy="459" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <circle cx="481.2" cy="461" r="10.1" fill="#1d160d" opacity="0.3"/>
 <circle cx="480" cy="459" r="10.1" fill="url(#g_212529)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="509" cy="462" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_star" x="494" y="445" width="28" height="28"/>
-<circle cx="789.2" cy="461" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="788" cy="459" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="89" cy="490" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="74" y="473" width="28" height="28"/>
-<circle cx="229.2" cy="489" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="228" cy="487" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="789.2" cy="489" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="788" cy="487" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="901" cy="490" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="886" y="473" width="28" height="28"/>
-<circle cx="229.2" cy="517" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="228" cy="515" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="341" cy="518" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="326" y="501" width="28" height="28"/>
 <ellipse cx="677" cy="518" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="662" y="501" width="28" height="28"/>
-<circle cx="789.2" cy="517" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="788" cy="515" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="257.2" cy="545" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="256" cy="543" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="761.2" cy="545" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="760" cy="543" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="257.2" cy="573" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="256" cy="571" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="761.2" cy="573" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="760" cy="571" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="257.2" cy="601" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="256" cy="599" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="285.2" cy="601" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="284" cy="599" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="397" cy="602" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="382" y="585" width="28" height="28"/>
 <ellipse cx="621" cy="602" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="606" y="585" width="28" height="28"/>
-<circle cx="733.2" cy="601" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="732" cy="599" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="761.2" cy="601" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="760" cy="599" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="285.2" cy="629" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="284" cy="627" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="733.2" cy="629" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="732" cy="627" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="145" cy="658" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="130" y="641" width="28" height="28"/>
-<circle cx="313.2" cy="657" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="312" cy="655" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="509" cy="658" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_statue" x="494" y="641" width="28" height="28"/>
-<circle cx="705.2" cy="657" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="704" cy="655" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="873" cy="658" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="858" y="641" width="28" height="28"/>
-<circle cx="341.2" cy="685" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="340" cy="683" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="369.2" cy="685" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="368" cy="683" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="649.2" cy="685" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="648" cy="683" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="677.2" cy="685" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="676" cy="683" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="369.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="368" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="397.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="396" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="425.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="424" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="593.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="592" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="621.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="620" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="649.2" cy="713" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="648" cy="711" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="201" cy="742" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="186" y="725" width="28" height="28"/>
-<circle cx="453.2" cy="741" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="452" cy="739" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="481.2" cy="741" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="480" cy="739" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="509.2" cy="741" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="508" cy="739" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="537.2" cy="741" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="536" cy="739" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
-<circle cx="565.2" cy="741" r="10.1" fill="#1d160d" opacity="0.3"/>
-<circle cx="564" cy="739" r="10.1" fill="url(#g_1d6fd8)" stroke="#2e2316" stroke-width="1.4"/>
 <ellipse cx="789" cy="770" rx="9" ry="4.5" fill="#1d160d" opacity="0.18"/>
 <use href="#pr_stalagmite" x="774" y="753" width="28" height="28"/>
 <circle cx="508" cy="431" r="33.6" fill="url(#pt-luce)"/>

@@ -1660,6 +1660,17 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
 #### MAPPA R-1 — IL CERCHIO DEL RITO (Altare del Cuore di Moradin)
 
+![R-1 — Il cerchio del rito](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map02_r-1-il-cerchio-del-rito-10-m-10-m-10-col-10-righ.svg)
+
+<!-- nuova-pagina -->
+
+![R-1 — Il cerchio del rito — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map02_r-1-il-cerchio-del-rito-10-m-10-m-10-col-10-righ_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII di prima, da cui è stata ridisegnata la pianta in scala (`Mappe/ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md`):
+
 ```
 ════════════════════════════════════════════════════════════════════════
  IL CERCHIO DEL RITO — al centro della Sala della Forgia (l'ottagono degli affreschi)
@@ -1693,5 +1704,6 @@ margini (testimone, non officiante).
 DISPOSIZIONE SACRA: 3 semi (triangolo) inscritti nel cerchio dei 3 officianti.
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 <!-- /pagina -->

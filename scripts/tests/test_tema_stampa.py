@@ -134,3 +134,18 @@ class TestStandardDiRepo(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSchemi(unittest.TestCase):
+    def test_schemi_allineati_e_leggibili(self):
+        """Gli schemi di ARC-07 (ADR-0106 §5) sono quelli dello script, con il corpo minimo di stampa."""
+        import render_schemi as S
+
+        self.assertEqual(S.main(["--check"]), 0)
+        for fn in S.SCHEMI.values():
+            svg = fn()
+            self.assertIn('width="496"', svg)
+            corpi = [float(x) for x in re.findall(r'font-size="([\d.]+)"', svg)]
+            self.assertTrue(corpi)
+            self.assertGreaterEqual(min(corpi), 7.4)
+            self.assertNotIn("<filter", svg)

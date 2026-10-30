@@ -4420,15 +4420,27 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 <!-- nuova-pagina -->
 
-### Le griglie ASCII ultra-clear (scala 1,5 m/quadretto)
+### Le griglie (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Le versioni a pergamena di M7-B e M7-C
-> sono all'inizio di questa appendice.
+> identiche; là hanno gli add-on DM. Le piante di M7-B e M7-C sono all'inizio di
+> questa appendice; M7-A, la vista strategica non in scala, è uno schema
+> disegnato nello stesso stile.
 
 #### MAPPA M7-A — HAMMERFIST ≈372 DR: fortezza, campo dell'orda, mura (strategica)
+
+![M7-A — Hammerfist ≈372 DR, vista strategica](Mappe/schemi/M7-A-hammerfist-372.svg)
+
+<!-- nuova-pagina -->
+
+![M7-A — Indicazioni e profilo](Mappe/schemi/M7-A-hammerfist-372_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+Lo schema ASCII di prima, da cui è stato disegnato lo schema (`scripts/render_schemi.py`, si cambia lo script e si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -4481,6 +4493,7 @@ la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vator
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 Le quote sono del DM `[CANONE — DM 2026-10-22]`: piana 0, spianata degli arieti
 +80, porta e cortile +100, torre nord +120, le tende fra 500 m e 1 km dalle
@@ -4489,6 +4502,11 @@ nord sul suo gradone sono inferenze da confermare: sono scritte, con le loro
 ragioni, nelle note di M7-A dell'Atlante<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->.
 
 #### MAPPA M7-B — L'ARENA DEL DUELLO (cortile interno · Skullcrusher)
+
+La pianta di M7-B è all'inizio di questa appendice.
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -4541,6 +4559,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
 @dislivello +100 m ; sulla piana dell'orda, a sud
 ```
+<!-- /apparato -->
 
 Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
 sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li

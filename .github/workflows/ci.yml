@@ -148,7 +148,9 @@ jobs:
         run: python scripts/inventory_inferred.py --check
 
       - name: Validate generated maps (well-formed, in-sync SVGs)
-        run: python scripts/validate_maps.py
+        run: |
+          python scripts/validate_maps.py
+          python scripts/render_schemi.py --check
 
       - name: Validate Bestiario library (naming, headers, CR, catalog sync)
         run: python scripts/validate_bestiario.py

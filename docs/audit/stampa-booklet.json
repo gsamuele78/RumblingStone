@@ -84,12 +84,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 153,
+        "pagine": 157,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 15,
-        "pagine_con_immagine": 0.026,
-        "pagine_con_immagine_decimo": 0.085
+        "pagine_con_immagine": 0.025,
+        "pagine_con_immagine_decimo": 0.083
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -102,7 +102,7 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 25,
+        "pagine": 28,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
@@ -138,7 +138,7 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 60,
+        "pagine": 65,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 4,

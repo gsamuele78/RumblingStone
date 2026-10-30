@@ -694,6 +694,12 @@ del repo (ADR-0106):
   `rendered-stampa-pianta/`, seguita dalla sua `_legenda`, ognuna seguita da
   `<!-- nuova-pagina -->`. `validate_booklets` ferma la pergamena e la mappa
   senza legenda;
+- la griglia ASCII di una mappa che il renderer sa disegnare non si stampa:
+  nel master resta fra `<!-- apparato -->` e `<!-- /apparato -->`, dopo la
+  pianta. `validate_booklets` ferma la griglia stampata. Una vista che non
+  sta su una griglia (una sezione, una carta non in scala) diventa uno schema
+  disegnato nello stile della pianta da `scripts/render_schemi.py`, che la CI
+  controlla con `--check`;
 - la mappa alta (più di 1,2 volte la larghezza) allarga il foglio fino al
   rapporto della pagina, così le scritte restano a 7,4 pt; la legenda lunga
   mette luoghi e zone su due colonne;

@@ -59,6 +59,22 @@ processo all'altro.
    legenda del master.
 4. Una mappa nuova o rifatta entra con le tre versioni: pergamena, texture e
    pianta in stampa.
+5. In un booklet la griglia che il renderer sa disegnare non si stampa: al
+   suo posto va la pianta, e la griglia resta nel master fra
+   `<!-- apparato -->` e `<!-- /apparato -->` (Jfs, 2026-10-30: *«perché le
+   mappe con le griglie ultra Clear non sono state rifatte con il nuovo
+   metodo e layout?»*). `validate_booklets` lo controlla. Le griglie
+   schematiche, che il renderer non legge (T-1, T-4, T-5, S-1, R-1, M7-A),
+   passano in pianta così, per scelta di Jfs del 2026-10-30: S-1 (ottagono),
+   R-1 (cerchio di 6 m) e T-5 (esagono di 18 m) diventano griglie in scala;
+   T-1, T-4 (sezione) e M7-A (non in scala) diventano schemi disegnati nello
+   stesso stile, senza griglia. Le tre in scala stanno in
+   `Mappe/ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md`; S-1 è la pianta di PF-2 con
+   gli affreschi come li mette DEF-2 (scelta di Jfs, 2026-10-30), con le
+   differenze in nota. Gli schemi li genera `scripts/render_schemi.py`
+   (carta, inchiostro, numeri rossi e corpo di 7,4 pt della pianta, nessun
+   filtro), e la CI controlla con `--check` che gli SVG siano quelli dello
+   script.
 
 ## Conseguenze
 

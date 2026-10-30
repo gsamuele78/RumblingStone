@@ -24,22 +24,22 @@
 <text x="14" y="30" font-size="13.5" text-anchor="start" fill="#2e2316" font-weight="bold" font-style="normal">Luoghi, zone e percorsi</text>
 <circle cx="22" cy="52" r="8" fill="#7a1f1f"/>
 <text x="22" y="55.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">1</text>
-<text x="38" y="56" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH20 — Anello esterno NORD (Guerrieri)</text>
+<text x="38" y="56" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH20 — Centro dello schieramento, davanti alla porta: 40 guerrieri su quattro file di scudi</text>
 <circle cx="22" cy="67" r="8" fill="#7a1f1f"/>
 <text x="22" y="70.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">2</text>
-<text x="38" y="71" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH37 — Anello esterno SUD (Guerrieri)</text>
+<text x="38" y="71" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH37 — Il sud non è schierato: dietro l'altare c'è solo il condotto della sorgente</text>
 <circle cx="22" cy="82" r="8" fill="#7a1f1f"/>
 <text x="22" y="85.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">3</text>
-<text x="38" y="86" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">X28 — Anello esterno OVEST (Guerrieri)</text>
+<text x="38" y="86" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">X23 — Ala ovest, piegata verso l'altare: 10 guerrieri, 4 balestrieri, 2 capi</text>
 <circle cx="22" cy="97" r="8" fill="#7a1f1f"/>
 <text x="22" y="100.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">4</text>
-<text x="38" y="101" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AR28 — Anello esterno EST (Guerrieri)</text>
+<text x="38" y="101" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AQ23 — Ala est, piegata verso l'altare: 10 guerrieri, 4 balestrieri, 2 capi</text>
 <circle cx="22" cy="112" r="8" fill="#7a1f1f"/>
 <text x="22" y="115.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">5</text>
-<text x="38" y="116" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AE24 — Balestrieri (cerchio medio, NO) (Balestrieri)</text>
+<text x="38" y="116" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AE22 — I 12 balestrieri del centro, dietro le file: sparano sopra le teste</text>
 <circle cx="22" cy="127" r="8" fill="#7a1f1f"/>
 <text x="22" y="130.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">6</text>
-<text x="38" y="131" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AL24 — Balestrieri (cerchio medio, NE) (Balestrieri)</text>
+<text x="38" y="131" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH23 — I 6 capi del centro</text>
 <circle cx="22" cy="142" r="8" fill="#7a1f1f"/>
 <text x="22" y="145.5" font-size="9.5" text-anchor="middle" fill="#fbf1dc" font-weight="bold" font-style="normal">7</text>
 <text x="38" y="146" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH29 — Re Thorek XIII (8 PF, avvelenato: Guarigione CD 25 ogni round, al terzo fallimento muore)</text>
@@ -92,13 +92,13 @@
 <text x="22" y="384.5" font-size="9.5" text-anchor="middle" fill="#7a1f1f" font-weight="normal" font-style="italic">f</text>
 <text x="38" y="386" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">AH49–AH53 — Condotto della sorgente: 1,5 m, acqua alla caviglia, esce nei tunnel bassi</text>
 <line x1="14" y1="397" x2="30" y2="397" stroke="#d62828" stroke-width="2" stroke-dasharray="6 3"/>
-<text x="38" y="401" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Rotta d'assalto delle ondate (porta → anello): AH5 → AH13 → AH18</text>
+<text x="38" y="401" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Rotta d'assalto delle ondate (porta → schieramento): AH5 → AH13 → AH18</text>
 <line x1="14" y1="412" x2="30" y2="412" stroke="#8c2fb8" stroke-width="2" stroke-dasharray="6 3"/>
 <text x="38" y="416" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Ondata 3: bugbear in aggiramento ovest: AF5 → Y11 → Y18</text>
 <line x1="14" y1="427" x2="30" y2="427" stroke="#8c2fb8" stroke-width="2" stroke-dasharray="6 3"/>
 <text x="38" y="431" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Ondata 3: bugbear in aggiramento est: AJ5 → AQ11 → AQ18</text>
 <line x1="14" y1="442" x2="30" y2="442" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="6 3"/>
-<text x="38" y="446" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Grimjaw e le guardie (round 12): dalla porta all'anello nord: AG2 → AG6 → AG12 → AG18</text>
+<text x="38" y="446" font-size="11" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Grimjaw e le guardie (round 12): dalla porta al centro dello schieramento: AG2 → AG6 → AG12 → AG18</text>
 <text x="14" y="485" font-size="13.5" text-anchor="start" fill="#2e2316" font-weight="bold" font-style="normal">Legenda</text>
 <use href="#pr_bolt" x="12" y="492" width="20" height="20"/>
 <text x="38" y="507" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Energia / pericolo magico</text>

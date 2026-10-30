@@ -18,6 +18,7 @@ Cosa controlla, in ordine di quanto fa male se salta:
 3. **le immagini dei master esistono** — è il controllo che avrebbe fermato il
    Palio: un `![...](...)` che punta a un file assente diventa un buco; una
    mappa generata entra solo come pianta in stampa con la sua legenda (ADR-0106);
+   una griglia che il renderer sa disegnare non si stampa (va la pianta);
    il `.hb.md` committato è quello che il manifest produce oggi;
 4. **la parità fra le catene** — quali chiavi consuma ognuna, e quali restano
    inattive da una parte (avviso, non errore: `header` in stampa *deve* restare
@@ -130,6 +131,22 @@ def _mappa_di_stampa(src: str, nome: str, master: Path) -> list[str]:
     return []
 
 
+APPARATO = re.compile(r"<!-- apparato -->.*?<!-- /apparato -->", re.S)
+
+
+def _griglie_stampate(master: Path, nome: str) -> list[str]:
+    """Una griglia di mappa che il renderer sa disegnare non va in stampa: al
+    suo posto va la pianta, e la griglia resta nel sorgente come apparato
+    (ADR-0106). Le griglie schematiche, che il renderer non legge, restano."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import render_map_svg as R  # noqa: PLC0415
+
+    testo = APPARATO.sub("", master.read_text(encoding="utf-8"))
+    return [f"griglia «{g['title'][:60]}» stampata in {nome}: metti la pianta "
+            f"(rendered-stampa-pianta/) e la griglia fra <!-- apparato --> e <!-- /apparato -->"
+            for g in R.extract_maps(testo)]
+
+
 def _hb_allineato(mp: Path, rel) -> list[str]:
     """Il .hb.md committato è quello che il manifest produce oggi. Si rifà
     con l'HTML (ADR-0003), ma nessuno lo controllava: il 2026-10-30 tre volumi
@@ -185,6 +202,7 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
                 errori.append(f"{rel}: immagine mancante «{src}» "
                               f"(citata in {cap['file']}, alt «{alt}»)")
             errori.extend(f"{rel}: {e}" for e in _mappa_di_stampa(src, cap["file"], f))
+        errori.extend(f"{rel}: {e}" for e in _griglie_stampate(f, cap["file"]))
 
     errori += _hb_allineato(mp, rel)
 

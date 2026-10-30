@@ -495,6 +495,23 @@ class TestManifestDelRepo(unittest.TestCase):
             errori, _ = controlla_manifest(mp, self.schema)
             self.assertTrue(any("X.hb.md non allineato" in e for e in errori), errori)
 
+    def test_griglia_disegnabile_stampata_viene_fermata(self):
+        # la griglia vera di S-2, nell'atlante di ARC-07
+        atlante = (REPO / "07_il Portale Della Forgia Eterna" / "Mappe" /
+                   "ARC07-MAPPE-DEFINITIVO.md").read_text(encoding="utf-8")
+        inizio = atlante.rfind("```", 0, atlante.index(" STANZA DELLA CORONA —"))
+        griglia = atlante[inizio:atlante.index("```", inizio + 3) + 3] + "\n"
+        with tempfile.TemporaryDirectory() as d:
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"title": "C", "file": "c.md"}]}),
+                          encoding="utf-8")
+            (Path(d) / "c.md").write_text(griglia, encoding="utf-8")
+            errori, _ = controlla_manifest(mp, self.schema)
+            self.assertTrue(any("stampata in c.md" in e for e in errori), errori)
+            (Path(d) / "c.md").write_text(f"<!-- apparato -->\n{griglia}<!-- /apparato -->\n",
+                                          encoding="utf-8")
+            self.assertEqual(controlla_manifest(mp, self.schema)[0], [])
+
     def test_una_chiave_inventata_viene_rifiutata(self):
         with tempfile.TemporaryDirectory() as d:
             cap = Path(d) / "c.md"
