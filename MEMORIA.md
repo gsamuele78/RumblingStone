@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-30 | STANDARD-STAMPA | I2 prima mappa: tema stampa per M7-H | 🟡 M7-H nel booklet A4 con scritte ≥ 7,4 pt e senza filtri rasterizzati; tetti dei tre volumi ARC-07 invariati (291/58, 330/68, 291/56); le altre mappe di I2 re… |
 | 2026-10-29 | STANDARD-STAMPA | I3 correzioni dopo la rimisura su main | 🟡 titoli sillabati 23 → 0, colonne vuote 5 → 4, rimandi di pagina sbagliati 1 → 0 con misura nuova a tetto 0 |
 | 2026-10-29 | STANDARD-STAMPA | I6 primo cieco delle varianti | 🟡 box da leggere colorato scartato (4 a 0 per il riquadro); interlinea 1,08 contro 1,30 pari (2 a 2), resta 1,30 |
 | 2026-10-29 | STANDARD-STAMPA | D5 appendice delle creature, I3 schede che non si spezzano, I6 varianti e cieco… | 🟡 schede spezzate da 14 a 0, schede PG del Drappo fuori gabbia da 299 a 0; appendice in Typst, HTML e Homebrewery; 8 coppie cieche (interlinea 1,08 e box color… |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-24 | RIPRESA-PR-ABBANDONATE | F4 §4.14 (chiusura #99) | ✅ #99 chiusa (ADR-0088 accettata, scelta A); ripresi `inventory_inferred.py` (testing), echi §1-bis, nota Golarion |
 | 2026-10-24 | RICERCA-ARCHI-SENZA-TESTO | D1-D12 decise e P30-b (DM: *«Dimmeli punto per punto con soluzione consigliata… | ✅ Dodici card, una per voce: dieci sulla proposta, D6 sui numeri più duri, D8 «tutti giocati», D12 cambiata dal DM in «convertili anche questi, poi si cerca un… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
-| 2026-10-23 | INVENTARIO-GEMINI-AISTUDIO | inventario di Drive contro il repo (DM: «vedere se ci sono dei contenuti su gem… | 🟡 182 file guardati, circa 45 della campagna. I `.md` finali di Hammerfist sono nel repo (97-99%); mancano `battle_stats_maps.md`, tre mini-boss e il patrono T… |
 
 ## Le misure che si portano dietro
 
