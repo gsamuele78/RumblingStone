@@ -18,6 +18,7 @@ Cosa controlla, in ordine di quanto fa male se salta:
 3. **le immagini dei master esistono** — è il controllo che avrebbe fermato il
    Palio: un `![...](...)` che punta a un file assente diventa un buco; una
    mappa generata entra solo come pianta in stampa con la sua legenda (ADR-0106);
+   il `.hb.md` committato è quello che il manifest produce oggi;
 4. **la parità fra le catene** — quali chiavi consuma ognuna, e quali restano
    inattive da una parte (avviso, non errore: `header` in stampa *deve* restare
    inattiva, perché lì la testatina segue il capitolo);
@@ -129,6 +130,27 @@ def _mappa_di_stampa(src: str, nome: str, master: Path) -> list[str]:
     return []
 
 
+def _hb_allineato(mp: Path, rel) -> list[str]:
+    """Il .hb.md committato è quello che il manifest produce oggi. Si rifà
+    con l'HTML (ADR-0003), ma nessuno lo controllava: il 2026-10-30 tre volumi
+    di ARC-07 avevano l'HTML nuovo e il .hb.md di prima, senza il capitolo del
+    barile. Si controlla solo dove il .hb.md esiste: generarlo resta una scelta."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import build_booklet_html as B  # noqa: PLC0415
+
+    try:
+        out = B.percorso_hb(mp)
+        if not out.is_file():
+            return []
+        atteso = B.testo_hb(mp)[1]
+    except Exception as e:  # un manifest rotto è già un errore sopra
+        return [f"{rel}: .hb.md non generabile — {e}"]
+    if out.read_text(encoding="utf-8") != atteso:
+        return [f"{rel}: {out.name} non allineato ai capitoli — "
+                f"python3 scripts/build_booklet_html.py {rel} --format hb"]
+    return []
+
+
 def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
     """(errori, avvisi) di un manifest: struttura, file, immagini, parità."""
     errori: list[str] = []
@@ -163,6 +185,8 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
                 errori.append(f"{rel}: immagine mancante «{src}» "
                               f"(citata in {cap['file']}, alt «{alt}»)")
             errori.extend(f"{rel}: {e}" for e in _mappa_di_stampa(src, cap["file"], f))
+
+    errori += _hb_allineato(mp, rel)
 
     inattive_stampa = sorted(set(man) & SOLO_HTML)
     if inattive_stampa:

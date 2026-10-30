@@ -2083,7 +2083,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §11 | **Avanzamento** | PX, artefatti, il corredo di Hella |
 | §12 | **Ponte + Handout & Asset** | verso il viaggio a mille anni fa (cap. V); handout, immagini, musica |
 | App. A | **Statistiche** | la scheda completa di Hella risorta, il Treant di Adamantio |
-| App. B | **Mappe** | la Sala della Forgia a pergamena, il cerchio del rito |
+| App. B | **Mappe** | la pianta della Sala della Forgia, il cerchio del rito |
 
 ---
 
@@ -2126,7 +2126,7 @@ male. Il resto si legge al tavolo, in avanti.
 **Cosa stampare.** Il volume dei giocatori *Il Cuore e la Porta*, con i fogli
 della tabella qui sotto: **gli echi privati si danno prima di cominciare**. Poi
 la **Quick-Reference §0-bis** (rito + sacrifici); le mappe dell'**Appendice B**
-(la Sala a pergamena e il cerchio R-1); la scheda completa di Hella
+(la pianta della Sala e il cerchio R-1); la scheda completa di Hella
 (**Appendice A**); il PDF Benedizioni.
 
 **Come si chiude.** Hella viva, i Doni tessuti (o i debiti aperti), il Debito
@@ -2361,7 +2361,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > ha più bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-cap. III; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+cap. III; la pianta dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -3423,7 +3423,7 @@ Sono nel volume dei giocatori, *Il Cuore e la Porta*, un foglio ciascuno.
 | La Custode delle Radici, allo Step 5 | la tavola della Custode, in §6 |
 | Il risveglio di Hella | la tavola del risveglio, in §7 dopo il box |
 | Durik e Hella, dopo il risveglio | la tavola di Durik e Hella, copertina della scheda di Durik |
-| La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione |
+| La Sala durante il rito | la **pianta** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione |
 
 ### Musica
 - **La Canzone delle Pietre**. **Qui è il suo momento pieno**: falla
@@ -3509,12 +3509,16 @@ qui anche se l'Avatar non è forma selvatica.
 
 ## APPENDICE B — MAPPE
 
-### La Sala della Forgia Eterna, a pergamena
+### La Sala della Forgia Eterna
 
 La pianta tattica della Sala, con l'Altare al centro. Il cerchio del rito sta
 attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
-![La Sala della Forgia Eterna](../../Mappe/rendered/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+![La Sala della Forgia Eterna](../../Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+
+<!-- nuova-pagina -->
+
+![La Sala della Forgia Eterna — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino_legenda.svg)
 
 <!-- nuova-pagina -->
 
@@ -3523,7 +3527,7 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. La pianta a pergamena della Sala è
+> identiche; là hanno gli add-on DM. La pianta della Sala è
 > all'inizio di questa appendice.
 
 #### MAPPA R-1 — IL CERCHIO DEL RITO (Altare del Cuore di Moradin)
@@ -7616,17 +7620,34 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ## APPENDICE D — MAPPE
 
-> Le tre mappe a pergamena stanno su pagine intere. Sotto ci sono le griglie da
+> Le mappe stanno su pagine intere, disegnate come le piante delle città, con
+> i luoghi, le zone e la legenda nella pagina dopo. Sotto ci sono le griglie da
 > cui sono generate: si modifica la griglia e si rigenera l'immagine, mai il
 > contrario.
 
-### Le mappe a pergamena
+### Le mappe
 
-![M7-B — Il cortile del duello](../../Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
+![M7-B — Il cortile del duello](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
 
 <!-- nuova-pagina -->
 
-![M7-C — La tenda del comando](../../Mappe/rendered/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+![M7-B — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — La tenda del comando](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
 
 <!-- nuova-pagina -->
 
@@ -7765,15 +7786,27 @@ piana, 100 m sotto, con le tende fino all'orizzonte.
 La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
 Hammerfist dall'alto in basso.
 
-![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
 
 <!-- nuova-pagina -->
 
-![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+![M7-D — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3_legenda.svg)
 
 <!-- nuova-pagina -->
 
-![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr_legenda.svg)
 
 <!-- nuova-pagina -->
 

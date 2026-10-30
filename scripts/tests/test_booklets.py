@@ -483,6 +483,18 @@ class TestManifestDelRepo(unittest.TestCase):
                 errori, _ = controlla_manifest(m, self.schema)
                 self.assertEqual(errori, [])
 
+    def test_hb_md_vecchio_viene_segnalato(self):
+        # 2026-10-30: HTML rifatto, .hb.md di prima, e nessuno lo vedeva
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "c.md").write_text("# c\n\ntesto nuovo\n", encoding="utf-8")
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"title": "C", "file": "c.md"}]}),
+                          encoding="utf-8")
+            self.assertEqual(controlla_manifest(mp, self.schema)[0], [])  # senza .hb.md: libero
+            (Path(d) / "X.hb.md").write_text("vecchio\n", encoding="utf-8")
+            errori, _ = controlla_manifest(mp, self.schema)
+            self.assertTrue(any("X.hb.md non allineato" in e for e in errori), errori)
+
     def test_una_chiave_inventata_viene_rifiutata(self):
         with tempfile.TemporaryDirectory() as d:
             cap = Path(d) / "c.md"

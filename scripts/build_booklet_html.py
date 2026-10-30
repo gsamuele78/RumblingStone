@@ -880,6 +880,23 @@ HB_TAGS = {"dm": "{{note\n##### ⚠ SOLO DM\nQuesto capitolo è materiale del DM
 def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
     """Via Homebrewery (ADR-0013): stesso manifest → sorgente V3 .hb.md
     per l'editor self-hosted (nativo o Docker, ``dm.py hype``)."""
+    out, testo = testo_hb(manifest_path, out_override)
+    out.write_text(testo, encoding="utf-8")
+    return out
+
+
+def percorso_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
+    """Dove va il .hb.md: accanto all'HTML, col suo nome."""
+    mf = json.loads(manifest_path.read_text(encoding="utf-8"))
+    html_out = out_override or (manifest_path.parent /
+                                mf.get("out", manifest_path.stem.replace(".manifest", "") + ".html"))
+    stem = html_out.name[:-5] if html_out.name.endswith(".html") else html_out.name
+    return html_out.parent / (stem + ".hb.md")
+
+
+def testo_hb(manifest_path: Path, out_override: Path | None = None) -> tuple[Path, str]:
+    """Il .hb.md del manifest, senza scriverlo: (dove va, il testo).
+    `validate_booklets` lo confronta con quello committato."""
     base = manifest_path.parent
     mf = json.loads(manifest_path.read_text(encoding="utf-8"))
     title = mf.get("title", "Booklet")
@@ -903,9 +920,7 @@ def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
     # in `07_arco/homebrew/sessione/BOOKLET.hb.md` — due livelli piu' in basso —
     # lo stesso link finisce su `07_arco/homebrew/plans/adr/Y.md`, che non
     # esiste. Erano **41 link rotti su 44** in otto booklet (lotto E1).
-    html_out = out_override or (base / mf.get("out", manifest_path.stem.replace(".manifest", "") + ".html"))
-    stem = html_out.name[:-5] if html_out.name.endswith(".html") else html_out.name
-    out = html_out.parent / (stem + ".hb.md")
+    out = percorso_hb(manifest_path, out_override)
     dest = out.resolve().parent
 
     capitoli = capitoli_del_volume(base, mf)
@@ -929,8 +944,7 @@ def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
         parts += ["\n\\page\n", "# Appendice: le creature\n"]
         parts += [r for _, r in sorted(APPENDICE_HB.values(), key=lambda v: v[0].lower())]
     APPENDICE_HB = None
-    out.write_text("\n".join(parts) + "\n", encoding="utf-8")
-    return out
+    return out, "\n".join(parts) + "\n"
 
 
 def main(argv: list[str] | None = None) -> int:
