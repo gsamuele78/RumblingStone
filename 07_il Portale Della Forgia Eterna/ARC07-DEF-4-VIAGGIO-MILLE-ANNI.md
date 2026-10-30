@@ -4389,25 +4389,31 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ## APPENDICE D — MAPPE
 
-> Le tre mappe a pergamena stanno su pagine intere. Sotto ci sono le griglie da
+> Le mappe stanno su pagine intere. Il cortile del duello è a pergamena; la
+> tenda e il campo del capo sono disegnati come le piante delle città, con i
+> luoghi, le zone e la legenda nella pagina dopo. Sotto ci sono le griglie da
 > cui sono generate: si modifica la griglia e si rigenera l'immagine, mai il
 > contrario.
 
-### Le mappe a pergamena
+### Le mappe
 
 ![M7-B — Il cortile del duello](Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
 
 <!-- nuova-pagina -->
 
-![M7-C — La tenda del comando](Mappe/rendered/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+![M7-C — La tenda del comando](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
 
 <!-- nuova-pagina -->
 
-![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](Mappe/rendered-stampa/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+![M7-C — Indicazioni e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d_legenda.svg)
 
 <!-- nuova-pagina -->
 
-![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](Mappe/rendered-stampa/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
 
 <!-- nuova-pagina -->
 

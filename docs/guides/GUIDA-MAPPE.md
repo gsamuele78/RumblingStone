@@ -660,30 +660,33 @@ Il tema si adotta una cartella alla volta. Dove esiste `rendered-pianta/`,
 `validate_maps` lo vuole completo e allineato ai master, come la pergamena;
 dove non esiste nessuno lo pretende. ARC-07 l'ha adottato il 2026-10-23.
 
-### 5.5 Il tema stampa: una mappa grande nel booklet A4 (ADR-0105)
+### 5.5 Il modo stampa: una mappa grande nel booklet A4 (ADR-0105)
 
 Una mappa larga più di una trentina di colonne, nel booklet, entra solo
 rimpicciolita: M7-H (44×40) usciva a scala 0,3, con coordinate e legenda fra
-3 e 3,8 pt, e i filtri della pergamena (grana, marezzatura, ombre sfumate)
-diventavano nove strati raster a 288 dpi. `misura_stampa.py` li conta tutti.
+3 e 3,8 pt, e i filtri (grana, marezzatura, ombre sfumate) diventavano strati
+raster a 288 dpi. `misura_stampa.py` li conta tutti.
 
 ```bash
-python3 scripts/render_map_svg.py --tema stampa "<percorso>/<MASTER>.md"
+python3 scripts/render_map_svg.py --tema pianta --stampa "<percorso>/<MASTER>.md"
 ```
 
-scrive in `rendered-stampa/` due SVG per mappa:
+`--stampa` vale per ogni tema e scrive in `rendered-stampa-<tema>/` due SVG
+per mappa:
 
 - `…_mapNN_….svg`: la griglia, con ogni scritta in punti per una mappa larga
   quanto la gabbia A4 (17,5 cm) e mai sotto i 7,4 pt. Le colonne a due
   lettere si sfalsano su due righe; le zone portano solo una lettera
   minuscola in corsivo (*a*, *b*…); niente filtri né vignettatura.
-- `…_mapNN_…_legenda.svg`: INDICAZIONI e LEGENDA, con le voci lunghe a capo,
-  da mettere nella pagina dopo.
+- `…_mapNN_…_legenda.svg`: luoghi, zone, percorsi e legenda, con le voci
+  lunghe a capo, da mettere nella pagina dopo.
 
-Nel master del booklet si puntano tutte e due, ognuna seguita da
-`<!-- nuova-pagina -->`. Il tema si adotta una mappa alla volta, solo dove la
-pergamena esce troppo piccola; `validate_maps` controlla che ogni SVG di
-`rendered-stampa/` venga dal suo master. Prima mappa: M7-H, 2026-10-30.
+Nel booklet va il tema **pianta** (lo stile delle piante delle città, §5.4):
+Jfs l'ha scelto al cieco del 2026-10-30 contro pergamena e texture, tutte e
+tre dentro i tetti di stampa. Nel master del booklet si puntano tutte e due le
+pagine, ognuna seguita da `<!-- nuova-pagina -->`. Il modo si adotta una mappa
+alla volta; `validate_maps` controlla che ogni SVG di `rendered-stampa-*/`
+venga dal suo master. Prime mappe: M7-H e M7-C.
 
 ---
 

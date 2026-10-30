@@ -135,15 +135,19 @@ entra nella pagina solo a scala 0,3, e Typst rasterizza i filtri della
 pergamena a 288 dpi. Alzare i tetti era la via più breve; Jfs ha scelto di
 rifare le scritte.
 
-**Decisione.** Un tema delle mappe in più, `stampa` (`rendered-stampa/`),
-adottato una mappa alla volta: corpi in punti per la gabbia A4 (17,5 cm),
+**Decisione.** Un modo di stampa per ogni tema delle mappe (`--stampa`,
+`rendered-stampa-<tema>/`), adottato una mappa alla volta: corpi in punti per la gabbia A4 (17,5 cm),
 mai sotto 7,4 pt; indicazioni e legenda in un secondo SVG sulla pagina dopo;
 zone con una lettera; nessun filtro né vignettatura. Alternative scartate:
 alzare i tetti (il difetto restava), dividere la mappa in quarti (quattro
 pagine e la legenda ripetuta), rasterizzare la mappa (le scritte piccole
 sparivano dalla misura senza diventare leggibili).
 
-**Conseguenze.** I tetti dei tre volumi restano quelli di prima. La mappa di
-stampa è più piatta della pergamena (niente grana né ombre sfumate). M7-C e le
-altre mappe sotto 7 pt (le 291 righe di I2) possono passare allo stesso tema
-quando si rifà il loro booklet.
+Al cieco del 2026-10-30 fra pergamena, texture e pianta, tutte e tre dentro
+i tetti, Jfs ha scelto la pianta (lo stile di Dauth, ADR-0102): scala in
+metri, raggio delle luci, teli chiari distinti dal terreno.
+
+**Conseguenze.** I tetti dei tre volumi non salgono. Le mappe di stampa
+perdono grana e ombre sfumate. M7-H e M7-C sono le prime; le altre mappe
+sotto 7 pt (I2) possono passare allo stesso modo quando si rifà il loro
+booklet.

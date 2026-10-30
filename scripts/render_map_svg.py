@@ -91,13 +91,13 @@ EMOJI_NOTO = Path(__file__).resolve().parent / "emoji-noto"
 # pergamena. Una tessera copre CELLE_PER_TESSERA quadretti per lato. Gli SVG
 # di questo tema vanno in `rendered-texture/`, accanto a `rendered/`.
 TEXTURE_CC0 = Path(__file__).resolve().parent / "texture-cc0"
-TEMI = ("pergamena", "texture", "pianta", "stampa")
+TEMI = ("pergamena", "texture", "pianta")
 CELLE_PER_TESSERA = 2
 VELATURA = 0.30    # opacità del colore del terreno sopra la texture: tarata dal DM
                    # il 2026-10-09 sulle texture vere (D16), fra 0,45 e 0,20
-CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture", "pianta": "rendered-pianta",
-                 "stampa": "rendered-stampa"}
-# Tema stampa (ADR-0105, M7-H): una mappa grande stampata nel booklet si
+CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture", "pianta": "rendered-pianta"}
+# Il modo stampa (`--stampa`, in `rendered-stampa-<tema>/`; ADR-0105, M7-H)
+# vale per ogni tema. Una mappa grande stampata nel booklet si
 # rimpicciolisce fino a 0,3 e le scritte scendono a 3 pt. Qui ogni scritta ha
 # un corpo in punti, per una mappa stampata larga quanto la gabbia A4 del
 # booklet (21 cm − 2,0 − 1,5 di margini = 17,5 cm), mai sotto i 7 pt della
@@ -106,6 +106,14 @@ CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture", "pianta
 # alto che largo e torni a rimpicciolirsi. Niente filtri: Typst li
 # rasterizza a 288 dpi, sotto i 300 della misura.
 LARGHEZZA_STAMPA_PT = 496.0
+
+
+def cartella_stampa(tema: str) -> str:
+    """La cartella del modo stampa di un tema: `rendered-stampa-pianta/`…"""
+    return f"rendered-stampa-{tema}"
+
+
+
 CORPO_STAMPA_PT = 7.4
 # D24 di RESA-ASSET: sulle texture i glifi perdevano contrasto (mediana 7,9 →
 # 4,5 misurata da misura_resa.py) e alcuni terreni si confondevano (⛰ e 🔳 a
@@ -1396,15 +1404,16 @@ def _a_capo(testo: str, caratteri: float) -> list[str]:
     return righe + [riga] if riga else righe or [""]
 
 
-def render_svg(grid: dict, source_name: str, tema: str = "pergamena", parte: str = "mappa") -> str:
-    """`parte` conta solo nel tema stampa: "mappa" (griglia e scritte sopra) o
-    "legenda" (indicazioni e legenda, l'altra pagina)."""
+def render_svg(grid: dict, source_name: str, tema: str = "pergamena", parte: str = "mappa",
+               stampa: bool = False) -> str:
+    """`stampa`: il modo di stampa (LARGHEZZA_STAMPA_PT), dove `parte` è "mappa"
+    (griglia e scritte sopra) o "legenda" (indicazioni e legenda, l'altra pagina)."""
     if tema not in TEMI:
         raise ValueError(f"tema: uno di {', '.join(TEMI)}")
     if tema == "pianta":
         # lo stile delle piante delle città (ADR-0102): un modulo suo, stessi simboli
         from render_map_pianta import render_pianta  # noqa: PLC0415 (importa questo modulo)
-        return render_pianta(grid, source_name)
+        return render_pianta(grid, source_name, stampa, parte)
     rows = grid["rows"]
     row_nums = sorted(rows)
     n_rows = row_nums[-1] - row_nums[0] + 1
@@ -1428,7 +1437,6 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena", parte: str
     legend_h = 18 + LEGEND_ROW_H * legend_rows
     height = ly + legend_h + 26
 
-    stampa = tema == "stampa"
     sola_legenda = stampa and parte == "legenda"
     # u: px dell'SVG per punto stampato. k_leg: la scala del gruppo della legenda,
     # disegnata con le misure di sempre, perché il suo corpo più piccolo (9,5 px,
@@ -2019,9 +2027,10 @@ def main() -> int:
     ap.add_argument("--tema", choices=TEMI, default="pergamena",
                     help="pergamena (default, in rendered/); texture: terreni con le texture "
                          "CC0 di scripts/texture-cc0/, in rendered-texture/; pianta: lo stile "
-                         "delle piante delle città (ADR-0102), in rendered-pianta/; stampa: "
-                         "scritte in punti per il booklet A4, mappa e legenda in due SVG, "
-                         "in rendered-stampa/")
+                         "delle piante delle città (ADR-0102), in rendered-pianta/")
+    ap.add_argument("--stampa", action="store_true",
+                    help="modo stampa del tema: scritte in punti per il booklet A4, mappa e "
+                         "legenda in due SVG, in rendered-stampa-<tema>/ (GUIDA-MAPPE §5.5)")
     args = ap.parse_args()
     if args.tutti_i_master:
         radice = Path(__file__).resolve().parent.parent
@@ -2065,18 +2074,20 @@ def main() -> int:
                 n_cols = max(len(c) for c in rows.values())
                 print(f"  {i:2d}. {g['title']}  ({n_cols}×{len(rows)} celle)")
             continue
-        outdir = Path(args.outdir) if args.outdir else path.parent / CARTELLA_TEMA[args.tema]
+        outdir = Path(args.outdir) if args.outdir else path.parent / (
+            cartella_stampa(args.tema) if args.stampa else CARTELLA_TEMA[args.tema])
         outdir.mkdir(parents=True, exist_ok=True)
         for i, g in enumerate(maps, 1):
             if args.map and i != args.map:
                 continue
             name = f"{path.stem}_map{i:02d}_{nome_mappa(g['title'])}.svg"
-            (outdir / name).write_text(render_svg(g, path.name, args.tema), encoding="utf-8")
+            (outdir / name).write_text(render_svg(g, path.name, args.tema, stampa=args.stampa),
+                                       encoding="utf-8")
             print(f"✓ {outdir / name}")
             total += 1
-            if args.tema == "stampa":
+            if args.stampa:
                 leg = name.removesuffix(".svg") + "_legenda.svg"
-                (outdir / leg).write_text(render_svg(g, path.name, "stampa", "legenda"),
+                (outdir / leg).write_text(render_svg(g, path.name, args.tema, "legenda", True),
                                           encoding="utf-8")
                 print(f"✓ {outdir / leg}")
                 total += 1

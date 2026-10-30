@@ -105,7 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-10-30 | STANDARD-STAMPA | I2 prima mappa: tema stampa per M7-H | 🟡 M7-H nel booklet A4 con scritte ≥ 7,4 pt e senza filtri rasterizzati; tetti dei tre volumi ARC-07 invariati (291/58, 330/68, 291/56); le altre mappe di I2 re… |
+| 2026-10-30 | STANDARD-STAMPA | I2 prime mappe: modo stampa per M7-H e M7-C, stile pianta scelto al cieco | 🟡 scritte ≥ 7,4 pt, niente filtri rasterizzati; tetti ARC-07 giù: Notte e Alba 291→217 righe e 58→52 immagini, Resurrezione 330→256 e 68→62, Mille anni 291→217… |
 | 2026-10-29 | STANDARD-STAMPA | I3 correzioni dopo la rimisura su main | 🟡 titoli sillabati 23 → 0, colonne vuote 5 → 4, rimandi di pagina sbagliati 1 → 0 con misura nuova a tetto 0 |
 | 2026-10-29 | STANDARD-STAMPA | I6 primo cieco delle varianti | 🟡 box da leggere colorato scartato (4 a 0 per il riquadro); interlinea 1,08 contro 1,30 pari (2 a 2), resta 1,30 |
 | 2026-10-29 | STANDARD-STAMPA | D5 appendice delle creature, I3 schede che non si spezzano, I6 varianti e cieco… | 🟡 schede spezzate da 14 a 0, schede PG del Drappo fuori gabbia da 299 a 0; appendice in Typst, HTML e Homebrewery; 8 coppie cieche (interlinea 1,08 e box color… |

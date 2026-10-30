@@ -126,28 +126,33 @@ def check_tema_pianta(rendered_dirs: list[Path]) -> tuple[list[str], int]:
 
 
 def check_tema_stampa(repo_root: Path) -> tuple[list[str], int]:
-    """Il tema stampa (ADR-0105) si adotta una mappa alla volta, per quelle che
-    nel booklet escono troppo piccole: ogni SVG di un `rendered-stampa/` (la
-    mappa e la sua `_legenda`) deve venire dal suo master, byte per byte."""
+    """Il modo stampa (ADR-0105) si adotta una mappa alla volta, per quelle che
+    nel booklet escono troppo piccole: ogni SVG di un `rendered-stampa-<tema>/`
+    (la mappa e la sua `_legenda`) deve venire dal suo master, byte per byte."""
     errors: list[str] = []
     totale = 0
-    for svg in sorted(repo_root.glob("**/rendered-stampa/*.svg")):
+    for svg in sorted(repo_root.glob("**/rendered-stampa*/*.svg")):
         totale += 1
+        tema = svg.parent.name.removeprefix("rendered-stampa-")
+        if tema not in R.TEMI:
+            errors.append(f"cartella di stampa senza tema (rendered-stampa-<tema>): "
+                          f"{svg.relative_to(repo_root)}")
+            continue
         md = svg.parent.parent / f"{svg.name.split('_map')[0]}.md"
         if not md.is_file():
-            errors.append(f"SVG del tema stampa senza master: {svg.relative_to(repo_root)}")
+            errors.append(f"SVG del modo stampa senza master: {svg.relative_to(repo_root)}")
             continue
         legenda = svg.name.endswith("_legenda.svg")
         nome = svg.name.removesuffix("_legenda.svg") + ".svg" if legenda else svg.name
         maps = R.extract_maps(md.read_text(encoding="utf-8"))
-        atteso = next((R.render_svg(g, md.name, "stampa", "legenda" if legenda else "mappa")
+        atteso = next((R.render_svg(g, md.name, tema, "legenda" if legenda else "mappa", True)
                        for i, g in enumerate(maps, 1)
                        if f"{md.stem}_map{i:02d}_{R.nome_mappa(g['title'])}.svg" == nome), None)
         if atteso is None:
-            errors.append(f"SVG del tema stampa orfano (il master non ha questa mappa): "
+            errors.append(f"SVG del modo stampa orfano (il master non ha questa mappa): "
                           f"{svg.relative_to(repo_root)}")
         elif atteso != svg.read_text(encoding="utf-8"):
-            errors.append(f"SVG NON allineato al master (rigenera con --tema stampa): "
+            errors.append(f"SVG NON allineato al master (rigenera con --tema {tema} --stampa): "
                           f"{svg.relative_to(repo_root)}")
     return errors, totale
 
@@ -286,7 +291,7 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
           f"{total_masters} master — tutti ben formati, tracciabili e allineati."
           + (f" Tema texture: {svg_tex} SVG." if svg_tex else "")
           + (f" Tema pianta: {svg_pt} SVG." if svg_pt else "")
-          + (f" Tema stampa: {svg_st} SVG." if svg_st else ""))
+          + (f" Modo stampa: {svg_st} SVG." if svg_st else ""))
     return 0
 
 
