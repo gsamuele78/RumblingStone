@@ -475,7 +475,7 @@ spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → i
 restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
 deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
 (terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
-(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
+(le incisioni-specchio) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
 inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
