@@ -621,3 +621,16 @@ class TestColophon(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSchemaAsciiStampato(unittest.TestCase):
+    def test_schema_a_riquadri_fuori_dall_apparato_viene_fermato(self):
+        import validate_booklets as V
+
+        disegno = "```\n" + "┌────────┐\n│ torre  │\n└────────┘\n" * 2 + "```\n"
+        with tempfile.TemporaryDirectory() as d:
+            m = Path(d) / "m.md"
+            m.write_text("# x\n\n" + disegno, encoding="utf-8")
+            self.assertEqual(len(V._schemi_ascii_stampati(m, "m.md")), 1)
+            m.write_text("# x\n\n<!-- apparato -->\n" + disegno + "<!-- /apparato -->\n", encoding="utf-8")
+            self.assertEqual(V._schemi_ascii_stampati(m, "m.md"), [])

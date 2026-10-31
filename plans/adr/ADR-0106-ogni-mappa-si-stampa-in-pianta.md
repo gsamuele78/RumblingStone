@@ -74,7 +74,12 @@ processo all'altro.
    differenze in nota. Gli schemi li genera `scripts/render_schemi.py`
    (carta, inchiostro, numeri rossi e corpo di 7,4 pt della pianta, nessun
    filtro), e la CI controlla con `--check` che gli SVG siano quelli dello
-   script.
+   script. Lo stesso vale in tutto il repo per ogni disegno a caratteri in un
+   booklet (Jfs, 2026-10-31: «fai diventare standard queste cose in tutto il
+   repo»): una carta o una sezione diventa uno schema, una linea del tempo una
+   tabella, e il disegno resta come apparato. `validate_booklets` ferma un
+   recinto senza linguaggio con 20 o più caratteri di riquadro fuori
+   dall'apparato.
 
 ## Conseguenze
 

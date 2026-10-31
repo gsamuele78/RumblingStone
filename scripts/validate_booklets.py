@@ -147,6 +147,28 @@ def _griglie_stampate(master: Path, nome: str) -> list[str]:
             for g in R.extract_maps(testo)]
 
 
+RECINTO = re.compile(r"^```([^\n]*)\n(.*?)^```", re.S | re.M)
+BOX = re.compile(r"[\u2500-\u257F]")
+
+
+def _schemi_ascii_stampati(master: Path, nome: str) -> list[str]:
+    """Uno schema disegnato a caratteri (una sezione, una carta non in scala, una
+    linea del tempo) non va in stampa: diventa uno schema di render_schemi.py o
+    una tabella, e il disegno resta come apparato (ADR-0106 §5). Si riconosce dai
+    caratteri di riquadro in un recinto senza linguaggio."""
+    testo = APPARATO.sub("", master.read_text(encoding="utf-8"))
+    errori = []
+    for m in RECINTO.finditer(testo):
+        if m.group(1).strip() not in ("", "text", "txt"):
+            continue
+        if len(BOX.findall(m.group(2))) >= 20:
+            prima = next((r.strip() for r in m.group(2).splitlines() if r.strip()), "")
+            errori.append(f"schema ASCII «{prima[:50]}» stampato in {nome}: fanne uno schema "
+                          f"(scripts/render_schemi.py) o una tabella, e il disegno fra "
+                          f"<!-- apparato --> e <!-- /apparato -->")
+    return errori
+
+
 def _hb_allineato(mp: Path, rel) -> list[str]:
     """Il .hb.md committato è quello che il manifest produce oggi. Si rifà
     con l'HTML (ADR-0003), ma nessuno lo controllava: il 2026-10-30 tre volumi
@@ -203,6 +225,7 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
                               f"(citata in {cap['file']}, alt «{alt}»)")
             errori.extend(f"{rel}: {e}" for e in _mappa_di_stampa(src, cap["file"], f))
         errori.extend(f"{rel}: {e}" for e in _griglie_stampate(f, cap["file"]))
+        errori.extend(f"{rel}: {e}" for e in _schemi_ascii_stampati(f, cap["file"]))
 
     errori += _hb_allineato(mp, rel)
 

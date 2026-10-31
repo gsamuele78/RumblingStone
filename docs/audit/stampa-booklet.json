@@ -238,7 +238,7 @@
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-DM.manifest.json": {
       "tetti": {
-        "testi_sotto_minimo": 36,
+        "testi_sotto_minimo": 30,
         "fuori_margine": 0,
         "immagini_sotto_300dpi": 19,
         "schede_spezzate": 0,

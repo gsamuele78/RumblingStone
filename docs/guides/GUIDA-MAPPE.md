@@ -699,7 +699,9 @@ del repo (ADR-0106):
   pianta. `validate_booklets` ferma la griglia stampata. Una vista che non
   sta su una griglia (una sezione, una carta non in scala) diventa uno schema
   disegnato nello stile della pianta da `scripts/render_schemi.py`, che la CI
-  controlla con `--check`;
+  controlla con `--check`. Una linea del tempo o un diagramma a caratteri
+  diventa una tabella: `validate_booklets` ferma ogni disegno a riquadri
+  stampato;
 - la mappa alta (più di 1,2 volte la larghezza) allarga il foglio fino al
   rapporto della pagina, così le scritte restano a 7,4 pt; la legenda lunga
   mette luoghi e zone su due colonne;
