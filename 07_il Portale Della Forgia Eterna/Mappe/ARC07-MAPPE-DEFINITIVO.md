@@ -475,7 +475,7 @@ spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → i
 restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
 deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
 (terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
-(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
+(le incisioni-specchio) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
 inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
@@ -792,27 +792,27 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 01    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🏰🚪🚪🏰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
 02    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤🟤🔴🔴🔴🔴🟤🟤🟤⛰⛰🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰  ← 🔴 ondata nemica in corso (entra dalla porta)
 03    ⛰⛰⛰⛰🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤⛰⛰⛰⛰⛰⛰
-04    ⛰⛰⛰🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰  ┐
-05    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
-06    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
-07    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  │ 🔵 CERCHIO DIFENSIVO
-08    ⛰⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰⛰  │ dei 90 NANI
-09    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤⛰⛰⛰  │ (anello a 30 m
-10    ⛰⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  dall'altare;
-11    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰  │  3 file: 60 guerrieri
-12    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │  + 20 balestrieri
-13    ⛰🟨🟨🔺🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🔺🟨🟨🟤⛰  │  + 10 capi al centro)
-14    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │
-15    ⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🔺🟤⛰  │ ⭐ ALTARE DI MORADIN
-16    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │ (P-Q 13-14 · Ø 6 m,
-17    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  +3 m, basalto+rune oro)
-18    ⛰⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤⛰⛰⛰  │ ⚫ RE THOREK (8 pf)
-19    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤⛰⛰⛰⛰  │ ✨ SFERA DORATA (R8 · breve: porte)
-20    ⛰⛰⛰⛰🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰⛰  │
-21    ⛰⛰⛰🔺🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🔺🟤⛰⛰  │
-22    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
-23    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
-24    ⛰⛰⛰🟤🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  ┘
+04    ⛰⛰⛰🟤🔺🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰  ┐
+05    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+06    ⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🔵🔵🔵🔵🔵🔵🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+07    ⛰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤⛰⛰  │ 🔵 SCHIERAMENTO
+08    ⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤⛰⛰  │ dei 90 NANI
+09    ⛰⛰⛰🟤🟤🟤🔵🔵🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤⛰⛰⛰  │ (a 30 m dall'altare,
+10    ⛰⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │  rivolto alla porta:
+11    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │  centro pesante e
+12    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │  due ali piegate;
+13    ⛰🟨🟨🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟨🟨🟤⛰  │  60+20+10)
+14    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │
+15    ⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟤⛰  │ ⭐ ALTARE DI MORADIN
+16    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │ (P-Q 13-14 · Ø 6 m,
+17    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │  +3 m, basalto+rune oro)
+18    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │ ⚫ RE THOREK (8 pf)
+19    ⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  │ ✨ SFERA DORATA (R8 · breve: porte)
+20    ⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+21    ⛰⛰⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟤⛰⛰  │
+22    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+23    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+24    ⛰⛰⛰🟤🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  ┘
 25    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰⛰⛰
 26    ⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰⛰🟤🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰⛰
 27    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
@@ -821,12 +821,12 @@ LEGENDA · 🟤 pavimento di caverna · ⛰ roccia viva, le pareti della caverna
 🏰 la muratura ai lati della porta · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
-🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
+🔵 90 nani (schierati a 30 m, rivolti alla porta) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
 sfera compare in tutte e due le regie: al Round 8 nella lunga, quando le porte
 cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
 (copertura parziale) · 🔴 ondata nemica, alla porta. I due orchi scossi che
-restano dopo l'aura non sono segnati: sono già dentro l'anello, fra i nani e
+restano dopo l'aura non sono segnati: sono già dentro lo schieramento, fra i nani e
 l'altare (DEF-5 Scena 2). Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
@@ -867,8 +867,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   sopraelevate per tiratori, stalagmiti 🔺 = copertura parziale); soffitto
   **40 m** — le stalattiti possono **crollare** su effetti ad area potenti
   (Terremoto ecc.): 4d6 contundenti, raggio 3 m, **Riflessi CD 18** annulla.
-- **Posizioni**: **90 nani** in anello a 30 m (fila esterna 60 guerrieri con
-  scudi, mediana 20 balestrieri, interna 10 capi + **Re Thorek** ⚫ sull'altare,
+- **Posizioni**: **90 nani** schierati a 30 m, rivolti alla porta (al centro, davanti al varco, 40 guerrieri su quattro file di scudi con dietro 12 balestrieri e 6 capi; ai lati due ali piegate all'indietro verso l'altare, ciascuna di 10 guerrieri, 4 balestrieri e 2 capi `[CANONE — DM 2026-10-30]`) + **Re Thorek** ⚫ sull'altare,
   critico a 8 pf, l'acido che lo consuma finché l'Apparizione non lo ferma,
   cosciente a occhi chiusi, incapace di combattere; Madre Dana in ginocchio su
   di lui); **10
@@ -920,14 +919,14 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
 03    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰⛰  ← 🪨 i battenti abbattuti (M03, P03)
 04    ⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰
 05    ⛰⛰⛰🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤⛰⛰⛰
-06    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  ┐ 🔵 l'anello dei nani a 30 m dall'altare
-07    🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤  │ (tre file: guerrieri fuori, balestrieri,
-08    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤  ┘  capi dentro; il DM li muove a blocchi)
-09    🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤
-10    🟤🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵🔵🔵🔵🟤
-11    🔵🔵🔵🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵
-12    🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵
-13    🔵🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
+06    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  ┐ 🔵 lo schieramento dei nani, a 30 m dall'altare
+07    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  │ (centro: 40 guerrieri, 12 balestrieri, 6 capi;
+08    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  ┘  ali: 10+4+2 ciascuna; il DM le muove a blocchi)
+09    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤
+10    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🦴🔵🔵🔵🔵🟤🟤🟤🟤
+11    🟤🟤🟤🟤🔵🔵🔵🔵🦴🟤🟤🔵🔵🔵🔵🦴🔵🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤
+12    🟤🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤
+13    🟤🟤🟤🟤🦴🔵🔵🔵🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🔵🔵🔵🦴🟤🟤🟤🟤  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
 14    🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤
 15    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🔴 i due orchi scossi (L15, M15)
 16    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
@@ -955,7 +954,7 @@ LEGENDA · 🦴 i caduti dei primi due round, orchi e nani (terreno difficile)
 LEGENDA · 🗿 statue dei Re Ancestrali su basi di 3 m, alte 4 m (copertura totale)
 LEGENDA · 🏮 bracieri su treppiede (copertura ½, luce 9 m)
 LEGENDA · ⭐ l'altare, Ø 6 m, alto 3 m: si sale con Scalare CD 15 in un round
-LEGENDA · 🔵 i PG sull'altare e l'anello dei nani · 🔴 i due orchi scossi
+LEGENDA · 🔵 i PG sull'altare e lo schieramento dei nani · 🔴 i due orchi scossi
 LEGENDA · Gli hobgoblin entrano dal varco M-P 01 alla fine del round 1 della pulizia.
 LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
 ════════════════════════════════════════════════════════════════════════════════
@@ -963,13 +962,13 @@ LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
 @tipo tattica caverna
 @luogo Hammerfist, il Cuore della Montagna (lato nord, dalla porta all'altare)
 @deroga struttura/senza-anelli ; caverna aperta: si gira attorno all'altare e alle statue, che sono isole nel vuoto, non blocchi di muro
-@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e l'anello dei nani, ed è voluto
-@deroga m2/vuoto ; lo spazio fra l'anello e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
+@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e lo schieramento dei nani, ed è voluto
+@deroga m2/vuoto ; lo spazio fra lo schieramento e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
 @deroga m4/esposizione ; luce piena dalle stalattiti e nessun muro interno: chi corre verso l'altare è visto da tutti
 ```
 
 - **Distanze**: dal varco della porta al bordo dell'altare 33 m, 22 quadretti;
-  dall'anello dei nani al centro dell'altare 30 m; dai due orchi scossi al
+  dallo schieramento dei nani al centro dell'altare 30 m; dai due orchi scossi al
   bordo dell'altare 13,5 m, 9 quadretti. Gli hobgoblin, 6 m di velocità in
   armatura pesante, correndo coprono 18 m a round: la regia dei round della
   Scena 3 resta quella scritta.
@@ -978,7 +977,7 @@ LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
   Si gira attorno all'altare e alle statue; chi sale sull'altare (Scalare CD
   15) ha la quota di 3 m.
 - **Chi c'è al primo round della pulizia**: i PG sull'altare, il re e Dana al
-  centro; l'anello dei nani a nord; i due orchi scossi fra l'anello e l'altare.
+  centro; lo schieramento dei nani a nord; i due orchi scossi fra lo schieramento e l'altare.
   Gli hobgoblin non ci sono ancora: entrano dal varco alla fine del round 1.
 
 ---

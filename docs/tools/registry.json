@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 124,
+  "tool_count": 125,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -2540,6 +2540,65 @@
       "docs": [
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/SKILL.md"
+      ]
+    },
+    {
+      "id": "render_schemi",
+      "path": "scripts/render_schemi.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/render_schemi.py",
+      "summary": "Gli schemi di ARC-07 che non stanno su una griglia (T-1, T-4, M7-A; ADR-0106 §5): li disegna nello stile della pianta (carta, inchiostro, numeri rossi, corpo minimo 7,4 pt, nessun filtro) in 07_il Portale Della Forgia Eterna/Mappe/schemi/. L'SVG non si ritocca a mano: si cambia lo script.",
+      "use_case": "«Una sezione o una carta non in scala va nel booklet: come la stampo senza la griglia ASCII?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive: esce 1 se un SVG non è quello dello script."
+        }
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "07_il Portale Della Forgia Eterna/Mappe/schemi/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "schema non allineato (--check)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "nessun caso, coordinate fisse"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "scrive solo gli SVG degli schemi"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/render_schemi.py --check",
+      "tests": [
+        "scripts/tests/test_tema_stampa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md",
+        "docs/guides/GUIDA-MAPPE.md"
       ]
     },
     {

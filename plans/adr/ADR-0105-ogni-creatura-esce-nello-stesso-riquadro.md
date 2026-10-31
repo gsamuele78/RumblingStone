@@ -126,3 +126,28 @@ Per il punto 7 (dove sta il riquadro):
   riprende il modello Paizo del punto 7;
 - i master del Drappo, che è PF1e, chiedono campi che il blocco non ha
   (BMC e DMC).
+
+## Seguito del 2026-10-30: le mappe grandi nel booklet (tema stampa)
+
+**Contesto.** Con M7-H (44×40) nell'Appendice D di DEF-4, i tre volumi di
+ARC-07 prendevano +98 righe sotto 7 pt e +9 immagini sotto 300 dpi: la mappa
+entra nella pagina solo a scala 0,3, e Typst rasterizza i filtri della
+pergamena a 288 dpi. Alzare i tetti era la via più breve; Jfs ha scelto di
+rifare le scritte.
+
+**Decisione.** Un modo di stampa per ogni tema delle mappe (`--stampa`,
+`rendered-stampa-<tema>/`), adottato una mappa alla volta: corpi in punti per la gabbia A4 (17,5 cm),
+mai sotto 7,4 pt; indicazioni e legenda in un secondo SVG sulla pagina dopo;
+zone con una lettera; nessun filtro né vignettatura. Alternative scartate:
+alzare i tetti (il difetto restava), dividere la mappa in quarti (quattro
+pagine e la legenda ripetuta), rasterizzare la mappa (le scritte piccole
+sparivano dalla misura senza diventare leggibili).
+
+Al cieco del 2026-10-30 fra pergamena, texture e pianta, tutte e tre dentro
+i tetti, Jfs ha scelto la pianta (lo stile di Dauth, ADR-0102): scala in
+metri, raggio delle luci, teli chiari distinti dal terreno.
+
+**Conseguenze.** I tetti dei tre volumi non salgono. Le mappe di stampa
+perdono grana e ombre sfumate. M7-H e M7-C sono le prime; le altre mappe
+sotto 7 pt (I2) possono passare allo stesso modo quando si rifà il loro
+booklet.

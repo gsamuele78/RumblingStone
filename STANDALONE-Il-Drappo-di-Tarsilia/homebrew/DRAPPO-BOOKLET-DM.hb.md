@@ -333,14 +333,11 @@ dell'Oca, e sono lì che si cade.
 
 ## §4 · Le tre sessioni a colpo d'occhio
 
-```
- GIORNO 1 ─────────── GIORNO 2 ──────────────── GIORNO 3
- La Sorte              I Partiti e la Cena       Lo Stacco e la Corsa
-   │                     │                          │
- il cavallo che        i patti col nemico,        tre giri, novanta
- ti tocca, e se        il duello dei canti,       secondi, e una scelta
- provi a cambiarlo     le stalle di notte         che non si può rimandare
-```
+| Giorno | Che cosa succede | Che cosa si gioca |
+|---|---|---|
+| 1 | La Sorte | il cavallo che ti tocca, e se provi a cambiarlo |
+| 2 | I Partiti e la Cena | i patti col nemico, il duello dei canti, le stalle di notte |
+| 3 | Lo Stacco e la Corsa | tre giri, novanta secondi, e una scelta che non si può rimandare |
 
 ### Le pietre miliari — accadono comunque, all'ora scritta
 

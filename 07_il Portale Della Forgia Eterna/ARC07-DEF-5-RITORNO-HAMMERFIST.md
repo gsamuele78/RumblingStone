@@ -74,7 +74,7 @@
 > di mithral cedono agli orchi. La loro apparizione mette in fuga gli orchi,
 > salva **Re Thorek**, che sta morendo d'acido sull'altare, e rialza novanta nani
 > allo stremo. Poi **venti hobgoblin sergenti** entrano con un ordine solo,
-> uccidere il re: cinque passano l'anello dei nani, e quando cadono Re Thorek
+> uccidere il re: cinque passano lo schieramento dei nani, e quando cadono Re Thorek
 > indica in alto, verso il drago, e **Madre Dana** apre il portale per i
 > bastioni dell'ARC-08.
 
@@ -179,7 +179,7 @@ Prima di leggere la Scena 2, guarda come è finito il duello di `DEF-4`.
 | **Morale dei nani** | +6 (netto +2) | +4 |
 | **Gli orchi** | Volontà CD 25 contro l'aura: ne restano **due scossi**, il capo forse fra loro | niente TS: l'aura mette in fuga tutti tranne **cinque orchi e il capo**, che restano scossi |
 | **Gli hobgoblin entrano** | alla fine del round 1 | alla fine del round di sorpresa |
-| **Quanti passano l'anello** | 5; **3** con l'ordine di Thorik nel round di sorpresa; **2** con anche il preavviso di Artemis. Ordine dato nel round 1, prima che entrino: **4**; preavviso senza ordine: **4**; ordine nel round 1 più preavviso: **3** `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 1]` | **5**, qualunque cosa facciano Thorik e Artemis `[CANONE — DM 2026-10-18]` |
+| **Quanti passano lo schieramento** | 5; **3** con l'ordine di Thorik nel round di sorpresa; **2** con anche il preavviso di Artemis. Ordine dato nel round 1, prima che entrino: **4**; preavviso senza ordine: **4**; ordine nel round 1 più preavviso: **3** `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 1]` | **5**, qualunque cosa facciano Thorik e Artemis `[CANONE — DM 2026-10-18]` |
 | **Il box del primo round** | «ne restano due» | «ne restano cinque, stretti intorno al più grosso» |
 | **Lo scontro** | 4-5 round, una prova di forza | 3-4 round, uno scontro vero `[CANONE — DM 2026-10-12, D77]`; Dana è davvero in pericolo |
 | **Il resto** | | uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili |
@@ -350,7 +350,7 @@ Moradin: +1 ai TS vs paura per i difensori) `[CANONE — DM 2026-07-23]`. Vedi C
 
 **Dati per il DM (non da leggere).** Caverna di **100 × 80 m**, alta 40, su una
 griglia da **3 m** a quadretto (MAPPA CM-1, Appendice B; il lato nord a 1,5 m è la carta CM-2). Altare **+3 m**, Ø 6 m,
-in P-Q 13-14; le dieci statue, alte 4 m, sul cerchio a 20 m; l'anello dei nani
+in P-Q 13-14; le dieci statue, alte 4 m, sul cerchio a 20 m; lo schieramento dei nani
 a 30 m; la porta, 6 × 6 m, in P-Q01, a **36 m** dall'altare; due piattaforme
 laterali a +1,5 m (B-C13 e d-e13). Luce piena ovunque, dalle stalattiti di
 cristallo: niente *oscurità*. Le stalattiti possono crollare su effetti ad area
@@ -444,10 +444,10 @@ loro luce mette in fuga gli orchi.
 | i PG | sull'altare, P-Q 13-14 | è alto 3 m: si sale con Scalare CD 15 in un round, si scende con un salto (1d6, o niente con Saltare o Acrobazia CD 15) |
 | Re Thorek | steso sull'altare, ⚫ P14 | 8 pf, esausto, non si alza |
 | Madre Dana | in ginocchio sul re | prende su di sé il colpo che lo ucciderebbe |
-| i novanta nani | l'anello 🔵 a 30 m dall'altare: fuori sessanta guerrieri con gli scudi, in mezzo venti balestrieri, dentro i dieci capi | il DM li muove come tre blocchi |
+| i novanta nani | lo schieramento 🔵 a 30 m dall'altare, rivolto alla porta: al centro, davanti al varco, 40 guerrieri su quattro file di scudi con dietro 12 balestrieri e 6 capi; ai lati due ali piegate all'indietro verso l'altare, ciascuna di 10 guerrieri, 4 balestrieri e 2 capi `[CANONE — DM 2026-10-30]` | il DM li muove come tre blocchi |
 | le dieci statue 🗿 | il cerchio a 20 m (Q07 · U09 · W12 · W16 · U19 · Q21 · M19 · K16 · K12 · M09) | copertura |
-| la porta 🚪 | P-Q01, a nord, a **36 m** dall'altare, oltre l'anello | unico ingresso. Nel round di sorpresa chi combatte in mischia non ci arriva |
-| gli orchi 🔴 | entrati dalla porta (righe 02-03) | in fuga dopo l'aura. I due scossi che restano sono già dentro l'anello `[CANONE — DM 2026-10-18, G2-32]` |
+| la porta 🚪 | P-Q01, a nord, a **36 m** dall'altare, oltre lo schieramento | unico ingresso. Nel round di sorpresa chi combatte in mischia non ci arriva |
+| gli orchi 🔴 | entrati dalla porta (righe 02-03) | in fuga dopo l'aura. I due scossi che restano sono già dentro lo schieramento `[CANONE — DM 2026-10-18, G2-32]` |
 | le piattaforme 🟨 | B-C13 a ovest, d-e13 a est, +1,5 m, con stalagmiti 🔺 | posti da tiratore, copertura parziale |
 
 Sulla carta **CM-2** (1,5 m a quadretto, Appendice B), dove si gioca la
@@ -456,7 +456,7 @@ N-O 26-27 e i PG intorno; i due orchi scossi in L15-M15; il varco della porta
 in M-P 01-02, coi battenti abbattuti in M03 e P03; le sette statue del lato
 nord in O-P 13-14 (Q07), G-H 17-18 (M09), W-X 17-18 (U09), C-D 23-24 (K12),
 a-b 23-24 (W12), C-D 31-32 (K16) e a-b 31-32 (W16). Le distanze restano
-quelle scritte: 36 m dalla porta all'altare, 30 m all'anello.
+quelle scritte: 36 m dalla porta all'altare, 30 m allo schieramento.
 
 > **Read-aloud (LotR lead) — la caverna, sotto la luce.** *Sotto la luce che vi
 > porta si apre una caverna grande come una cattedrale. Le stalattiti fanno
@@ -465,7 +465,7 @@ quelle scritte: 36 m dalla porta all'altare, 30 m all'anello.
 > gemono sotto gli arieti, e le rune incise sui battenti si spengono una alla volta.*
 
 > **Read-aloud (Andor lead) — la caverna, l'ultima resistenza.** *Oggi la
-> caverna è un mattatoio: novanta nani, di trecento, fanno un anello intorno
+> caverna è un mattatoio: novanta nani, di trecento, fanno muro davanti
 > all'altare, e la prima fila guarda le porte. Sull'altare è steso un re, la
 > barba impastata di sangue e d'acido, il respiro un sibilo. Una sacerdotessa
 > anziana prega su di lui, e le mani le tremano. È il terzo giorno, l'ora in cui
@@ -508,15 +508,15 @@ si ricorda (§7). Le statistiche di Treant e Durik sono in Appendice A.
 | PG · gesto | Cosa fa | Cosa cambia |
 |---|---|---|
 | **Thorik** · il primo ordine ai novanta, dall'altare | è il primo ordine da portatore della Corona. Se lo dà nel round di sorpresa, i tre blocchi avanzano nel round 1 e il muro di scudi si fa sul varco, prima che entrino gli hobgoblin `[CANONE — DM 2026-10-12, D77]` | ne passano **3** invece di 5 (nel ramo «meno luminoso», 5 comunque) |
-| **Thorik** · più tardi, l'*Aura di Comando* | se oggi non l'ha già usata al −1000: 1/giorno, *comando* CD 15 dalla pagina della Corona, su **una** creatura come l'incantesimo dell'SRD, a gittata vicina (16,5 m al 13°). Il capo degli orchi alla porta, a 36 m, è fuori portata finché non passa l'anello | se il capo è uno dei due rimasti, «Fuggi!» lo manda via, e l'altro scosso, senza più nessuno che lo tenga, scappa con lui `[CANONE — DM 2026-10-15, D91]` |
+| **Thorik** · più tardi, l'*Aura di Comando* | se oggi non l'ha già usata al −1000: 1/giorno, *comando* CD 15 dalla pagina della Corona, su **una** creatura come l'incantesimo dell'SRD, a gittata vicina (16,5 m al 13°). Il capo degli orchi alla porta, a 36 m, è fuori portata finché non passa lo schieramento | se il capo è uno dei due rimasti, «Fuggi!» lo manda via, e l'altro scosso, senza più nessuno che lo tenga, scappa con lui `[CANONE — DM 2026-10-15, D91]` |
 | **Tordek** · coprire il re col corpo | il re è lì sull'altare, a un passo: Tordek gli dà copertura morbida, +4 alla CA contro gli attacchi a distanza (SRD) | gli archi degli hobgoblin, se lo scontro dura |
-| **Tordek** · scendere fra l'altare e l'anello | un salto di 3 m: 1d6, o nessun danno con Saltare o Acrobazia CD 15 (SRD) | è il primo che gli orchi scossi caricano (Scena 3) |
+| **Tordek** · scendere fra l'altare e lo schieramento | un salto di 3 m: 1d6, o nessun danno con Saltare o Acrobazia CD 15 (SRD) | è il primo che gli orchi scossi caricano (Scena 3) |
 | **Artemis** · guardare dall'altare | vede tutta la caverna: chi scappa, chi resta, e il capo degli orchi che ha smesso di urlare. Il capo tira contro l'aura come gli altri: se fallisce scappa per primo, se fa 20 è uno dei due che restano, e se cade l'altro scappa `[CANONE — DM 2026-10-15, D91]` | il bersaglio giusto per il «Fuggi!» di Thorik |
 | **Artemis** · volare sopra la porta | le Ali d'Ombra danno 18 m di volo, a volontà e con un'azione gratuita (pagina dell'Anello), e la porta è a 36 m: 18 m nel round di sorpresa e 18 nel round 1, con l'azione di movimento. Arriva prima della fine del round 1, quando la fila di scudi è ancora nel corridoio, e grida il preavviso, che è un'azione gratuita come ogni parlare (SRD): le resta l'azione standard. Il *Passo d'Ombra* qui non serve: vuole penombra, e la caverna è in luce piena | i nani avvisati vincono il primo scambio del muro di scudi: con l'ordine di Thorik ne passano **2**. Se nel round 1 fa altro, li vede entrare e il preavviso non c'è `[CANONE — DM 2026-10-15, D91]` |
 | **Hella** · radici intorno al re | le radici che le crescono intorno sono sue: chiuse sul re, copertura totale per un round `[CANONE — DM 2026-10-12, D77]` | |
 | **Hella** · radici verso la porta | fanno come *intralciare*, ma su un'area di 6 m di raggio (Riflessi CD 15), per un round soltanto `[CANONE — DM 2026-10-12, D77]`. Nel round di sorpresa prendono gli orchi in fuga, non gli hobgoblin, che entrano dopo | chi resta intralciato non può fuggire: si rannicchia come ogni creatura in panico messa all'angolo (SRD) e si arrende |
 | **Hella** · lo *Scudo del Custode* | solo se al rito Thorik ha donato la deflessione: 1/giorno, immediata, prende dimezzato il danno di un alleato entro 9 m, e Thorik è accelerato 3 round verso chi lei ha protetto | |
-| **Hella** · i Treant di Adamantio | si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Durano 1 ora (`DEF-3` Appendice A.2; qui Appendice A.3) | chiamarli **tutti e due insieme** spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba): va detto alla giocatrice prima che scelga. Se al −1000 li ha già chiamati insieme di notte, è spenta; chiamarli insieme all'alba non la spegne (`DEF-4`). L'alba del 1372 non è ancora arrivata: i semi spesi al −1000 sono ancora spesi. I Treant chiamati all'alba del 372, se la loro ora non è finita, restano al −1000 e svaniscono a fine durata; il seme resta speso fino all'alba del 1372 (D91). Quelli chiamati qui compaiono ai piedi dell'altare, dentro l'anello `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 4]` |
+| **Hella** · i Treant di Adamantio | si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Durano 1 ora (`DEF-3` Appendice A.2; qui Appendice A.3) | chiamarli **tutti e due insieme** spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba): va detto alla giocatrice prima che scelga. Se al −1000 li ha già chiamati insieme di notte, è spenta; chiamarli insieme all'alba non la spegne (`DEF-4`). L'alba del 1372 non è ancora arrivata: i semi spesi al −1000 sono ancora spesi. I Treant chiamati all'alba del 372, se la loro ora non è finita, restano al −1000 e svaniscono a fine durata; il seme resta speso fino all'alba del 1372 (D91). Quelli chiamati qui compaiono ai piedi dell'altare, dentro lo schieramento `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 4]` |
 | **Hella** · Durik | arriva con lei, perché è legato alla Collana (`DEF-4`): sta accanto a Hella e va dove lei lo manda (Appendice A.4) | se il drago l'ha distrutto nel duello, Hella lo richiama col seme III, se è carico e l'Evocazione non è spenta: torna subito, per un'ora (`DEF-3` §7). Altrimenti torna all'alba |
 
 **Le radici di Hella si usano una volta per scena** `[CANONE — DM 2026-10-18, G2-33]`,
@@ -527,7 +527,7 @@ intorno al re o verso la porta: un'azione standard, alla gittata di
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| i novanta nani | tre file intorno all'altare, a trenta metri: sessanta guerrieri con gli scudi, venti balestrieri, dieci capi al centro. Hanno fatto due giorni di assedio e si vede nelle braccia | fino all'apparizione non parlano, contano. Dopo gridano tutti insieme una parola sola, il nome della fortezza |
+| i novanta nani | a trenta metri dall'altare, rivolti alle porte: un blocco spesso di scudi davanti al varco e due ali più sottili piegate verso l'altare; sessanta guerrieri, venti balestrieri, dieci capi. Hanno fatto due giorni di assedio e si vede nelle braccia | fino all'apparizione non parlano, contano. Dopo gridano tutti insieme una parola sola, il nome della fortezza |
 | gli orchi | berserker entrati con le porte, sporchi di fumo e di sangue nanico. Trovano davanti una luce che non capiscono | urlano per farsi coraggio. Quando la luce li colpisce smettono, e chi scappa scappa senza voltarsi |
 | il capo degli orchi | il più grosso, con un elmo nanico preso sulle mura. Vuole uscire vivo e tenersi l'elmo | urla ordini in orchesco finché ha qualcuno a cui darli, poi niente |
 
@@ -600,14 +600,14 @@ intera**.
 **In scena** — Dove: la caverna — Chi: Re Thorek · Madre Superiora Dana · gli orchi · gli hobgoblin sergenti · Aegis Fang
 
 Restano due orchi scossi, e alla fine del round 1 entrano venti hobgoblin
-sergenti che vogliono il re: cinque passano l'anello, e quando cadono comincia
+sergenti che vogliono il re: cinque passano lo schieramento, e quando cadono comincia
 il passaggio di consegne. **La battaglia non si gioca qui**: questa è la pulizia
 della caverna, l'ultimo respiro dell'ARC-07 prima che cominci quella vera.
 
 > 🧭 **Lo scontro in 30 secondi.**
-> - **Chi combatte i PG**: i due orchi scossi rimasti dopo l'aura (§0-bis), forse col capo; poi i **cinque hobgoblin** che passano l'anello (3 con l'ordine di Thorik, 2 con anche il preavviso di Artemis; nel ramo «meno luminoso» sempre 5, e sei orchi). Gli altri quindici li tengono i nani.
+> - **Chi combatte i PG**: i due orchi scossi rimasti dopo l'aura (§0-bis), forse col capo; poi i **cinque hobgoblin** che passano lo schieramento (3 con l'ordine di Thorik, 2 con anche il preavviso di Artemis; nel ramo «meno luminoso» sempre 5, e sei orchi). Gli altri quindici li tengono i nani.
 > - **Cosa vogliono**: gli orchi uscire vivi; gli hobgoblin **il re**, e nient'altro.
-> - **Quando finisce**: quando l'ultimo degli hobgoblin che hanno passato l'anello cade o getta le armi. Poi il silenzio, e il passaggio di consegne.
+> - **Quando finisce**: quando l'ultimo degli hobgoblin che hanno passato lo schieramento cade o getta le armi. Poi il silenzio, e il passaggio di consegne.
 > - **Due modalità**: 🎚️ **[FAST-PLAY]**, due round narrati senza tiri; 🎚️ **[COMBATTIMENTO COMPLETO]**, 4-5 round su CM-2 (3-4 nel ramo «meno luminoso»).
 > - **Sul tavolo**: CM-2 (Appendice B; CM-1 per vedere la caverna intera) e la pagina delle statistiche (Appendice A).
 
@@ -617,7 +617,7 @@ porte, quasi tutti stanno già scappando. Lo scontro lo fanno i nemici che
 arrivano dopo, dalla riga 3-5 della tabella delle ondate, in fondo alla mappa
 CM-1: **20 hobgoblin sergenti**, alla fine del round 1 della pulizia. L'aura è
 scattata prima che entrassero, e non li tocca: fanno muro di scudi alla porta.
-I tre blocchi di nani ne tengono quindici; cinque passano l'anello
+I tre blocchi di nani ne tengono quindici; cinque passano lo schieramento
 `[CANONE — DM 2026-10-12, D77]`. Se Thorik ha dato l'ordine nel round di
 sorpresa ne passano tre; se anche Artemis li ha visti dalla porta e ha dato il
 preavviso, due `[CANONE — DM 2026-10-15, D92]`; gli altri casi, l'ordine dato
@@ -662,16 +662,16 @@ stretti intorno al più grosso».
 
 | Round | Ramo luminoso | Ramo «meno luminoso» | I nani |
 |---|---|---|---|
-| Round di sorpresa | l'aura è risolta, gli orchi fuggono; un gesto a testa (Scena 2) | restano cinque orchi scossi e il capo; **alla fine del round entrano gli hobgoblin** | fermi, nell'anello |
-| Round 1 | gli orchi in panico (§0-bis) si sparpagliano; i nani potenziati e i Treant di Hella li incalzano verso le porte, e chi resta è circondato. **Alla fine del round entrano gli hobgoblin** | gli hobgoblin aprono un varco nell'anello | incalzano gli orchi; con l'ordine di Thorik avanzano e fanno muro sul varco |
-| Round 2 | **cinque hobgoblin aprono un varco** nell'anello, a 30 m dall'altare (il lato nord, verso la porta) | i cinque corrono verso l'altare | tengono il muro di scudi sui quindici |
+| Round di sorpresa | l'aura è risolta, gli orchi fuggono; un gesto a testa (Scena 2) | restano cinque orchi scossi e il capo; **alla fine del round entrano gli hobgoblin** | fermi, nello schieramento |
+| Round 1 | gli orchi in panico (§0-bis) si sparpagliano; i nani potenziati e i Treant di Hella li incalzano verso le porte, e chi resta è circondato. **Alla fine del round entrano gli hobgoblin** | gli hobgoblin aprono un varco nello schieramento | incalzano gli orchi; con l'ordine di Thorik avanzano e fanno muro sul varco |
+| Round 2 | **cinque hobgoblin aprono un varco** nello schieramento, a 30 m dall'altare (il lato nord, verso la porta) | i cinque corrono verso l'altare | tengono il muro di scudi sui quindici |
 | Round 3 | i cinque corrono: 18 m a round in armatura pesante, senza la Destrezza alla CA | **tre ai piedi dell'altare alla fine del round**; i due in coda si fermano a distanza di tiro, lasciano la spada e passano il round a sfilare lo scudo e a estrarre l'arco | |
 | Round 4 | **ai piedi dell'altare alla fine del round**. Non salgono | i due in coda tirano al re; gli altri tre passano all'arco | **finiscono i quindici alla porta entro la fine del round** |
 | Round 5 | passano all'arco: spada a terra, scudo via, arco in mano | tirano anche i tre `[CANONE — DM 2026-10-18]` | |
 | Round 6 | tirano al re, se lo scontro dura ancora; il colpo che lo porterebbe sotto 0 lo prende Dana. Mentre Dana copre il re, chi tira al re tira contro la CA di contatto di Dana, 14, e il danno è suo `[CANONE — DM 2026-10-18, G2-31]`. ⚠ Non SRD. Senza scudo la loro CA scende a 19; quella del re è in A.6 | | |
 
 Chi vuole fermare gli hobgoblin prima scende dall'altare e va al varco. Quando
-l'ultimo di quelli che hanno passato l'anello cade o getta le armi, la caverna è
+l'ultimo di quelli che hanno passato lo schieramento cade o getta le armi, la caverna è
 sgombra, e il silenzio dopo il boato è il momento del passaggio di consegne.
 
 `[HDYWTDT — il finisher a chi chiude la pulizia]`: il PG che abbatte l'ultimo
@@ -679,7 +679,7 @@ hobgoblin, o che lo costringe a gettare la spada, racconta lui come.
 
 #### Tattiche, round per round (dal punto di vista di chi combatte)
 
-- **Gli orchi scossi** (Appendice A.1). Sono già dentro l'anello, fra i nani e
+- **Gli orchi scossi** (Appendice A.1). Sono già dentro lo schieramento, fra i nani e
   l'altare `[CANONE — DM 2026-10-18, G2-32]`. Dal round 1 si stringono al capo e
   caricano il primo PG che scende dall'altare; se il capo cade, gettano le armi
   `[CANONE — DM 2026-10-12, D77]`. Se il capo non è fra loro, i due caricano
@@ -697,7 +697,7 @@ hobgoblin, o che lo costringe a gettare la spada, racconta lui come.
 con 20 si arriva a 14 (SRD). Arrivati alla fine del
   round 4, passano all'arco nel round 5 e tirano al re dal round 6, se lo scontro
   dura ancora; il colpo che lo porterebbe sotto 0 lo prende Dana (Scena 2). Non
-  si ritirano; gettano le armi quando di quelli che hanno passato l'anello ne
+  si ritirano; gettano le armi quando di quelli che hanno passato lo schieramento ne
   restano in piedi meno della metà: due su cinque, uno su tre. Se ne sono passati
   due, combattono fino all'ultimo. Contro chi è invisibile non cambiano niente:
   il loro bersaglio è il re, e il re si vede.
@@ -712,7 +712,7 @@ con 20 si arriva a 14 (SRD). Arrivati alla fine del
   La pulizia diventa uno scontro vero di 3-4 round prima del passaggio
   `[CANONE — DM 2026-10-12, D77]`, con il calendario anticipato di un round
   (tabella qui sopra). L'ordine di Thorik e il preavviso di Artemis arrivano
-  tardi, perché gli hobgoblin sono già dentro: l'anello ne lascia passare cinque,
+  tardi, perché gli hobgoblin sono già dentro: lo schieramento ne lascia passare cinque,
   qualunque cosa facciano `[CANONE — DM 2026-10-18]`. Il primo tiro al re arriva
   dentro i 3-4 round dello scontro: qui Dana è davvero in pericolo
   `[CANONE — DM 2026-10-18]`.
@@ -730,7 +730,7 @@ con 20 si arriva a 14 (SRD). Arrivati alla fine del
 |---|---|
 | **curano Re Thorek** invece di combattere | lo tiene giù l'esausto, non i pf. L'Apparizione ha già fermato l'acido; ha **196 pf** massimi (ARC-08). *Ristorare* o *guarigione* tolgono l'esausto (il gruppo ne ha pergamene); *ristorare inferiore* lo porta ad affaticato, e da affaticato si rialza già. Quando non è più esausto si rialza, anche se è ancora a 8 pf; ogni cura in più gli alza i pf `[CANONE — DM 2026-10-12, D77]` `[CANONE — DM 2026-10-15, D90]`. *Ristorare* e *ristorare inferiore* si lanciano in 3 round, anche da pergamena; *guarigione* in un'azione standard (SRD). *Ristorare* è da chierico: la pergamena la legge Artemis con Usare Oggetti Magici (CD 27). *Ristorare inferiore* è anche da druido, e Hella lo lancia o lo legge. Gli orchi durano i round del lancio in più, ma Re Thorek si rialza e guida i suoi nell'ARC-08. La sua *Presenza Regale* (+3 morale, ARC-08) **non si somma** al bonus dell'Apparizione: i bonus morali non si sommano, vale il più alto (SRD). Nel ramo «meno luminoso» (+4) la sua *Chiamata alle Armi* (+5, 3 al giorno) lo supera, e vale quella. Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Scelta valida, premiala. **Se gli danno la boccetta n. 4 di Kettra**, quella con la cera nera: cura 3d8+5 come una *cura ferite gravi*, e il re si porta addosso il riflesso violaceo sotto la pelle del polso, che vedono soltanto gli agenti della gilda del Collezionista; lo toglie *rimuovi maledizione* (`DEF-4` Scena 5). È un'eco per l'ARC-08 e l'ARC-09 (§7) |
 | **chiudono la porta** | i battenti di mithral sono scardinati dagli arieti e non si chiudono: il varco, 6 m, si blocca solo con la magia (*muro di pietra*, *muro di spine*) `[CANONE — DM 2026-10-12, D77]`. Se è bloccato prima della fine del round 1, gli hobgoblin restano fuori e la pulizia finisce con gli orchi rimasti; gli orchi in panico chiusi dentro si rannicchiano (SRD) e si arrendono. Nel ramo «meno luminoso» è troppo tardi: gli hobgoblin sono già dentro alla fine del round di sorpresa, e il muro chiude fuori soltanto l'ondata dopo `[CANONE — DM 2026-10-18, G2-35]`. Una porta murata con *muro di pietra* regge `[CANONE — DM 2026-10-15, D91]`. Regge anche il *muro di spine*: chi lo forza fa una prova di Forza con un'azione di round completo, e avanza di 1,5 m ogni 5 punti oltre 20, quindi gli serve almeno 25, e un sergente arriva al massimo a 22. Con le armi da taglio si apre la strada al ritmo di 30 cm ogni 10 minuti, e il fuoco magico lo brucia in 10 minuti (SRD). Hella, druida di 12°, li ha tutti e due nella lista (SRD), se li ha preparati |
-| **inseguono gli orchi nel corridoio** | chi insegue nel round 1 trova gli hobgoblin nel corridoio, a muro di scudi: la prima fila lo attacca, le altre gli passano accanto senza fermarsi, perché l'ordine è il re, ed entrano alla fine del round come sempre. Quanti passano l'anello resta il conto di questa scena. Gli orchi in panico chiusi fra lui e gli scudi si rannicchiano (SRD) e si arrendono. Se la porta è già murata, chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[CANONE — DM 2026-10-15, D91]` |
+| **inseguono gli orchi nel corridoio** | chi insegue nel round 1 trova gli hobgoblin nel corridoio, a muro di scudi: la prima fila lo attacca, le altre gli passano accanto senza fermarsi, perché l'ordine è il re, ed entrano alla fine del round come sempre. Quanti passano lo schieramento resta il conto di questa scena. Gli orchi in panico chiusi fra lui e gli scudi si rannicchiano (SRD) e si arrendono. Se la porta è già murata, chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[CANONE — DM 2026-10-15, D91]` |
 | **chiedono a Dana di chiudere il varco** | lo chiude con il suo ultimo *muro di pietra* `[CANONE — DM 2026-10-15, D92]`: è la riga qui sopra |
 | **restano tutti sull'altare** | gli orchi tirano i giavellotti, gli hobgoblin arrivano ai piedi dell'altare alla fine del round 4 e passano all'arco: lo scontro dura di più, e i colpi al re arrivano (Dana) |
 
@@ -747,7 +747,7 @@ tutti e quattro. Lo tira e lo muove un giocatore presente, anche nel round di
 sorpresa; le scelte di canone, come il finisher, restano del giocatore assente
 `[CANONE — DM 2026-10-18, G2-07]`. Se nessuno fa il suo gesto, senza Thorik ne
 passano cinque, senza Artemis non c'è il preavviso, senza Hella niente radici
-né Treant. **Con cinque PG** passano l'anello sei hobgoblin invece di cinque, e
+né Treant. **Con cinque PG** passano lo schieramento sei hobgoblin invece di cinque, e
 l'ordine e il preavviso ne tolgono gli stessi.
 
 > **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultimo nemico
@@ -828,7 +828,7 @@ e nella Guida DM.
 | **Vogliono curare o salvare Re Thorek subito** | Scena 3, «Se i PG…», la prima riga |
 | **Chiudono la porta, o inseguono gli orchi nel corridoio** | Scena 3, «Se i PG…». Sul lato ARC-07, dopo gli hobgoblin della Scena 3, la caverna resta sgombra: la prossima ondata, i bugbear, è dell'ARC-08 |
 | **Chiedono conto del viaggio a Dana o a Re Thorek** | Nessuno sa del viaggio temporale: è un segreto di Moradin. Dana lo legge come profezia compiuta. I PG possono rivelare o tacere: rivelare rafforza il mito (Custodi Eterni), tacere lo rende leggenda ancora più grande |
-| **Madre Dana cade, o non può aprire il portale** | La caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche-barde che Dana guida (chierica 8 / barda 4, GS 12; i loro incantesimi sono spesi sulle mura come quelli di Dana, Scena 3), in ginocchio fra i capi al centro dell'anello<!-- apparato --> (Guida DM dell'ARC-08, PNG Alleati; Appendice A.7)<!-- /apparato -->, più lente e con la voce che trema `[CANONE — DM 2026-10-15, D91]`. Dana a terra perde 1 pf a round finché un nano non la stabilizza con Guarire CD 15 (SRD), e il primo che ci prova è uno dei capi: Dana cade, non muore `[CANONE — DM 2026-10-18]`. L'ARC-08 comincia uguale, con un'ombra in più |
+| **Madre Dana cade, o non può aprire il portale** | La caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche-barde che Dana guida (chierica 8 / barda 4, GS 12; i loro incantesimi sono spesi sulle mura come quelli di Dana, Scena 3), in ginocchio fra i capi dello schieramento<!-- apparato --> (Guida DM dell'ARC-08, PNG Alleati; Appendice A.7)<!-- /apparato -->, più lente e con la voce che trema `[CANONE — DM 2026-10-15, D91]`. Dana a terra perde 1 pf a round finché un nano non la stabilizza con Guarire CD 15 (SRD), e il primo che ci prova è uno dei capi: Dana cade, non muore `[CANONE — DM 2026-10-18]`. L'ARC-08 comincia uguale, con un'ombra in più |
 | **Si fermano a curarsi dopo la pulizia** | Dana e le Cantitrici hanno speso tutto sulle mura (Scena 3): l'unica cura che resta è il *muro di pietra* di Dana convertito, se non l'ha già lanciato. Le cure sono quelle del gruppo, nel round che serve ad aprire il portale. Fermarsi di più costa: ogni 10 minuti Fauci abbatte una torre della Porta Ovest, e l'ARC-08 comincia con una torre in meno `[CANONE — DM 2026-10-12, D77]`. Dopo sei torri, cioè un'ora, la Porta Ovest cade: dormire nella caverna si può, ma l'ARC-08 si apre sulla riga «breccia aperta» del §0-bis, e quel sonno è il primo riposo, quindi il livello si prende lì (§8) `[CANONE — DM 2026-10-18]` |
 | **Vogliono inseguire subito Fauci, o saltare il passaggio di consegne** | Possono! Il portale di Dana è la via più rapida ai bastioni. Non c'è un cancello, c'è solo il ritmo: da qui in poi è ARC-08 |
 | **FALLIMENTO — e se arrivassero «troppo tardi»?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente: è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**: il criterio e cosa cambia stanno nel §0-bis, «I due rami» `[CANONE — DM 2026-10-15, D90]`. Il resto della tabella degli effetti resta uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta |
@@ -1039,13 +1039,17 @@ giorno). Lo statblocco completo è nella Guida DM dell'ARC-08.
 ### A.7 · Le Cantitrici della Pietra (§6)
 
 Chierica 8 / barda 4, GS 12; gli incantesimi del giorno spesi sulle mura. In
-ginocchio fra i capi al centro dell'anello.
+ginocchio sul re, sull'altare.
 
 <!-- /pagina -->
 
 ---
 
-## APPENDICE B — MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto; CM-1 è la vista d'insieme a 3 m, vedi sotto)
+## APPENDICE B — MAPPE (scala 1,5 m/quadretto; CM-1 è la vista d'insieme a 3 m, vedi sotto)
+
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
@@ -1070,6 +1074,17 @@ ginocchio fra i capi al centro dell'anello.
 > sulla carta **CM-2**, qui sotto, a 1,5 m. Non mischiare quadretti di mappe a
 > scale diverse.
 
+![CM-1 — Il Cuore della Montagna](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map06_il-cuore-della-montagna-caverna-sacra-100-m-80-m.svg)
+
+<!-- nuova-pagina -->
+
+![CM-1 — Il Cuore della Montagna — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map06_il-cuore-della-montagna-caverna-sacra-100-m-80-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
+
 ```
 ════════════════════════════════════════════════════════════════════════════════
  IL CUORE DELLA MONTAGNA — caverna sacra 100 m × 80 m (33 col × 27 righe · 3 m)
@@ -1079,27 +1094,27 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 01    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🏰🚪🚪🏰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
 02    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤🟤🔴🔴🔴🔴🟤🟤🟤⛰⛰🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰  ← 🔴 ondata nemica in corso (entra dalla porta)
 03    ⛰⛰⛰⛰🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤⛰⛰⛰⛰⛰⛰
-04    ⛰⛰⛰🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰  ┐
-05    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
-06    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
-07    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  │ 🔵 CERCHIO DIFENSIVO
-08    ⛰⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰⛰  │ dei 90 NANI
-09    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤⛰⛰⛰  │ (anello a 30 m
-10    ⛰⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  dall'altare;
-11    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰  │  3 file: 60 guerrieri
-12    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │  + 20 balestrieri
-13    ⛰🟨🟨🔺🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🔺🟨🟨🟤⛰  │  + 10 capi al centro)
-14    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │
-15    ⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🔺🟤⛰  │ ⭐ ALTARE DI MORADIN
-16    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │ (P-Q 13-14 · Ø 6 m,
-17    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  +3 m, basalto+rune oro)
-18    ⛰⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤⛰⛰⛰  │ ⚫ RE THOREK (8 pf)
-19    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤⛰⛰⛰⛰  │ ✨ SFERA DORATA (R8 · breve: porte)
-20    ⛰⛰⛰⛰🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰⛰  │
-21    ⛰⛰⛰🔺🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🔺🟤⛰⛰  │
-22    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
-23    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
-24    ⛰⛰⛰🟤🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  ┘
+04    ⛰⛰⛰🟤🔺🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰  ┐
+05    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+06    ⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🔵🔵🔵🔵🔵🔵🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+07    ⛰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤⛰⛰  │ 🔵 SCHIERAMENTO
+08    ⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤⛰⛰  │ dei 90 NANI
+09    ⛰⛰⛰🟤🟤🟤🔵🔵🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤⛰⛰⛰  │ (a 30 m dall'altare,
+10    ⛰⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │  rivolto alla porta:
+11    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │  centro pesante e
+12    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │  due ali piegate;
+13    ⛰🟨🟨🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟨🟨🟤⛰  │  60+20+10)
+14    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │
+15    ⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟤⛰  │ ⭐ ALTARE DI MORADIN
+16    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰  │ (P-Q 13-14 · Ø 6 m,
+17    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │  +3 m, basalto+rune oro)
+18    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │ ⚫ RE THOREK (8 pf)
+19    ⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  │ ✨ SFERA DORATA (R8 · breve: porte)
+20    ⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+21    ⛰⛰⛰🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺🟤⛰⛰  │
+22    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+23    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+24    ⛰⛰⛰🟤🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  ┘
 25    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰⛰⛰
 26    ⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰⛰🟤🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰⛰
 27    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
@@ -1108,7 +1123,7 @@ LEGENDA · 🟤 pavimento di caverna · ⛰ roccia viva, le pareti della caverna
 🏰 la muratura ai lati della porta · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
-🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
+🔵 90 nani (schierati a 30 m, rivolti alla porta) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
 sfera compare in tutte e due le regie: al Round 8 nella lunga, quando le porte
 cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
@@ -1120,11 +1135,12 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
 @dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
+<!-- /apparato -->
 
-> Il varco che gli hobgoblin aprono nell'anello è sul lato nord, fra la porta e
+> Il varco che gli hobgoblin aprono nello schieramento è sul lato nord, fra la porta e
 > l'altare (riga 04). Dove sono tutti: Scena 2, «Dove sono tutti». Le 🔴 alle
 > righe 02-03 sono l'ondata che entra; i due orchi scossi che restano dopo
-> l'aura non sono segnati, e stanno dentro l'anello, fra i nani e l'altare
+> l'aura non sono segnati, e stanno dentro lo schieramento, fra i nani e l'altare
 > `[CANONE — DM 2026-10-18, G2-32]`.
 
 ### ⏫ EVENTO CLIMAX — L'APPARIZIONE (la sfera dorata)
@@ -1158,8 +1174,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   sopraelevate per tiratori, stalagmiti 🔺 = copertura parziale); soffitto
   **40 m**: le stalattiti possono **crollare** su effetti ad area potenti
   (Terremoto ecc.): 4d6 contundenti, raggio 3 m, **Riflessi CD 18** annulla.
-- **Posizioni**: **90 nani** in anello a 30 m (fila esterna 60 guerrieri con
-  scudi, mediana 20 balestrieri, interna 10 capi + **Re Thorek** ⚫ sull'altare,
+- **Posizioni**: **90 nani** schierati a 30 m, rivolti alla porta (al centro, davanti al varco, 40 guerrieri su quattro file di scudi con dietro 12 balestrieri e 6 capi; ai lati due ali piegate all'indietro verso l'altare, ciascuna di 10 guerrieri, 4 balestrieri e 2 capi `[CANONE — DM 2026-10-30]`) + **Re Thorek** ⚫ sull'altare,
   critico a 8 pf, l'acido che lo consuma finché l'Apparizione non lo ferma, cosciente a occhi chiusi, incapace di combattere); **10
   statue** 🗿 sul cerchio a 20 m (Q07·U09·W12·W16·U19·Q21·M19·K16·K12·M09);
   nemici dalla **porta nord** P-Q01.
@@ -1198,6 +1213,17 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 > Bracieri 🏮, caduti 🦴 e le punte di roccia di un quadretto lungo la parete
 > nord sono dettagli della carta a 1,5 m, che la vista a 3 m non disegna.
 
+![CM-2 — Il lato nord del Cuore](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map07_cm-2-il-cuore-della-montagna-lato-nord-42-m-48-m.svg)
+
+<!-- nuova-pagina -->
+
+![CM-2 — Il lato nord del Cuore — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map07_cm-2-il-cuore-della-montagna-lato-nord-42-m-48-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
+
 ```
 ════════════════════════════════════════════════════════════════════════════════
  CM-2 · IL CUORE DELLA MONTAGNA, LATO NORD — 42 m × 48 m (28 col × 32 righe · 1,5 m)
@@ -1209,14 +1235,14 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
 03    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰⛰  ← 🪨 i battenti abbattuti (M03, P03)
 04    ⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰
 05    ⛰⛰⛰🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤⛰⛰⛰
-06    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  ┐ 🔵 l'anello dei nani a 30 m dall'altare
-07    🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤  │ (tre file: guerrieri fuori, balestrieri,
-08    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤  ┘  capi dentro; il DM li muove a blocchi)
-09    🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤
-10    🟤🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵🔵🔵🔵🟤
-11    🔵🔵🔵🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵
-12    🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵
-13    🔵🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
+06    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  ┐ 🔵 lo schieramento dei nani, a 30 m dall'altare
+07    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  │ (centro: 40 guerrieri, 12 balestrieri, 6 capi;
+08    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  ┘  ali: 10+4+2 ciascuna; il DM le muove a blocchi)
+09    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤
+10    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🦴🔵🔵🔵🔵🟤🟤🟤🟤
+11    🟤🟤🟤🟤🔵🔵🔵🔵🦴🟤🟤🔵🔵🔵🔵🦴🔵🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤
+12    🟤🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🟤🟤🟤🟤
+13    🟤🟤🟤🟤🦴🔵🔵🔵🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🔵🔵🔵🦴🟤🟤🟤🟤  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
 14    🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤
 15    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🔴 i due orchi scossi (L15, M15)
 16    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
@@ -1244,7 +1270,7 @@ LEGENDA · 🦴 i caduti dei primi due round, orchi e nani (terreno difficile)
 LEGENDA · 🗿 statue dei Re Ancestrali su basi di 3 m, alte 4 m (copertura totale)
 LEGENDA · 🏮 bracieri su treppiede (copertura ½, luce 9 m)
 LEGENDA · ⭐ l'altare, Ø 6 m, alto 3 m: si sale con Scalare CD 15 in un round
-LEGENDA · 🔵 i PG sull'altare e l'anello dei nani · 🔴 i due orchi scossi
+LEGENDA · 🔵 i PG sull'altare e lo schieramento dei nani · 🔴 i due orchi scossi
 LEGENDA · Gli hobgoblin entrano dal varco M-P 01 alla fine del round 1 della pulizia.
 LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
 ════════════════════════════════════════════════════════════════════════════════
@@ -1252,13 +1278,14 @@ LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
 @tipo tattica caverna
 @luogo Hammerfist, il Cuore della Montagna (lato nord, dalla porta all'altare)
 @deroga struttura/senza-anelli ; caverna aperta: si gira attorno all'altare e alle statue, che sono isole nel vuoto, non blocchi di muro
-@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e l'anello dei nani, ed è voluto
-@deroga m2/vuoto ; lo spazio fra l'anello e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
+@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e lo schieramento dei nani, ed è voluto
+@deroga m2/vuoto ; lo spazio fra lo schieramento e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
 @deroga m4/esposizione ; luce piena dalle stalattiti e nessun muro interno: chi corre verso l'altare è visto da tutti
 ```
+<!-- /apparato -->
 
 - **Distanze**: dal varco della porta al bordo dell'altare 33 m, 22 quadretti;
-  dall'anello dei nani al centro dell'altare 30 m; dai due orchi scossi al
+  dallo schieramento dei nani al centro dell'altare 30 m; dai due orchi scossi al
   bordo dell'altare 13,5 m, 9 quadretti. Gli hobgoblin, 6 m di velocità in
   armatura pesante, correndo coprono 18 m a round: la regia dei round della
   Scena 3 resta quella scritta.
@@ -1267,5 +1294,5 @@ LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
   Si gira attorno all'altare e alle statue; chi sale sull'altare (Scalare CD
   15) ha la quota di 3 m.
 - **Chi c'è al primo round della pulizia**: i PG sull'altare, il re e Dana al
-  centro; l'anello dei nani a nord; i due orchi scossi fra l'anello e l'altare.
+  centro; lo schieramento dei nani a nord; i due orchi scossi fra lo schieramento e l'altare.
   Gli hobgoblin non ci sono ancora: entrano dal varco alla fine del round 1.

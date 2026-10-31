@@ -1180,13 +1180,28 @@ sistema «La Forgia Ricorda» promosso qui dal `DEF-1` §10.
 
 ## APPENDICE — MAPPE (scala 1,5 m/quadretto)
 
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
+> La Sala S-1 è la pianta di PF-2 con gli affreschi come stanno dopo la Terra.
+>
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna:
-> larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.
+> identiche; là hanno gli add-on DM.
 
 ### MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)
+
+![S-1 — La Sala della Forgia Eterna dopo la Terra](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40.svg)
+
+<!-- nuova-pagina -->
+
+![S-1 — La Sala della Forgia Eterna dopo la Terra — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII di prima, da cui è stata ridisegnata la pianta in scala (`Mappe/ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md`):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -1225,6 +1240,7 @@ STATO DOPO LA TERRA: A4 chiuso · A5 si chiude («Forza Sostenuta») · A2 80%
 A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 ### MAPPA S-2 — LA STANZA DELLA CORONA DI ADAMANTIO (santuario in purificazione)
 
@@ -1232,6 +1248,17 @@ A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
 > quella della Stanza della Corona in ARC-06<!-- apparato --> (`06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Tactics_and_maps.md`)<!-- /apparato --> — stessi
 > posizionamenti di trono, muro, colonne, statue, alcove, macerie e ingresso.
 > Qui è mostrata nello **stato ARC-07** (santuario in purificazione).
+
+![S-2 — La Stanza della Corona](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe.svg)
+
+<!-- nuova-pagina -->
+
+![S-2 — La Stanza della Corona — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -1265,6 +1292,7 @@ inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
 @tipo tattica interni
 ```
+<!-- /apparato -->
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   La navata utile è A-J/03-13 (15 × 16,5 m): la porta D-F02 sta nel muro sud
   e dà sull'androne D-F01.

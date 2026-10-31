@@ -1050,6 +1050,31 @@
       "deterministic": true
     },
     {
+      "name": "render_schemi",
+      "description": "«Una sezione o una carta non in scala va nel booklet: come la stampo senza la griglia ASCII?»\n\nGli schemi di ARC-07 che non stanno su una griglia (T-1, T-4, M7-A; ADR-0106 §5): li disegna nello stile della pianta (carta, inchiostro, numeri rossi, corpo minimo 7,4 pt, nessun filtro) in 07_il Portale Della Forgia Eterna/Mappe/schemi/. L'SVG non si ritocca a mano: si cambia lo script.",
+      "use_case": "«Una sezione o una carta non in scala va nel booklet: come la stampo senza la griglia ASCII?»",
+      "invocation": "python3 scripts/render_schemi.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Non scrive: esce 1 se un SVG non è quello dello script."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "07_il Portale Della Forgia Eterna/Mappe/schemi/"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "schema non allineato (--check)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_maps",
       "description": "«Ho toccato un master di mappe: gli SVG committati corrispondono ancora, o ne ho lasciato indietro uno?»\n\nGate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti).",
       "use_case": "«Ho toccato un master di mappe: gli SVG committati corrispondono ancora, o ne ho lasciato indietro uno?»",

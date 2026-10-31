@@ -866,9 +866,9 @@
 <use href="#pr_rocks" x="378" y="460" width="20" height="20"/>
 <text x="404" y="475" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Rocce/macerie</text>
 <use href="#nt_1f4a0" x="380" y="481" width="16" height="16"/>
-<text x="404" y="494" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">💠</text>
+<text x="404" y="494" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">base corrosa del pilastro (crolla → ponte)</text>
 <use href="#nt_1f6e1" x="380" y="500" width="16" height="16"/>
-<text x="404" y="513" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">🛡</text>
+<text x="404" y="513" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Thorik (F04)</text>
 <use href="#nt_1f94b" x="380" y="519" width="16" height="16"/>
-<text x="404" y="532" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">🥋</text>
+<text x="404" y="532" font-size="10.5" text-anchor="start" fill="#2e2316" font-weight="normal" font-style="normal">Tordek (G05)</text>
 </svg>

@@ -1,6 +1,6 @@
 # ARC-07 · Il barile sulla tenda di Zog'tar
 
-> **Che cos'è.** Il supplemento alle Scene 7 e 8 di `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`
+> **Che cos'è.** Il supplemento alle Scene 7 e 8 di DEF-4<!-- apparato --> (`ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`)<!-- /apparato -->
 > per quello che il tavolo ha fatto davvero: invece di entrare nella tenda del
 > comando, i PG ci hanno lasciato cadere sopra, da 48 m e invisibili, una botte
 > d'olio piena di sassi, con i rostri dei fabbri nanici sotto e le fiale della
@@ -16,24 +16,26 @@
 > giocatori delle prossime volte.
 >
 > **Le mappe** sono M7-C, lo spiazzo del capo con la tenda, e M7-H, il campo
-> attorno (`Mappe/`). Le coordinate di questo documento sono quelle di M7-C; su
+> attorno<!-- apparato --> (`Mappe/`)<!-- /apparato -->. Le coordinate di questo documento sono quelle di M7-C; su
 > M7-H si sommano otto colonne e otto righe.
 >
 > **Da dove vengono i numeri.** Dall'SRD 3.5. Dove l'SRD non ha una regola per
 > quello che è successo, c'è una **variazione**, segnata come tale e costruita
 > su una regola dell'SRD vicina; quando le letture possibili sono due, vale la
-> più forte, come vuole il DM. Le probabilità vengono da 20.000 prove di
-> `plans/esperimenti/barile-zogtar-2026-10-24/simula_barile.py`, che usa
-> queste stesse regole: i risultati completi sono in `ESITI-SIMULAZIONE.md`,
-> nella stessa cartella.
+> più forte, come vuole il DM. Le probabilità vengono da 20.000 prove di una
+> simulazione che usa queste stesse regole<!-- storico -->
+> (`plans/esperimenti/barile-zogtar-2026-10-24/simula_barile.py`; i risultati
+> completi sono in `ESITI-SIMULAZIONE.md`, nella stessa cartella)<!-- /storico -->.
 
 ## La scheda da tavolo
 
 Dieci passi, nell'ordine in cui si tirano. Ogni riga dice da quale regola
-dell'SRD viene; le variazioni sono segnate ◆ e sono le domande B4, B5, B6,
-B12 e B16 del §12. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
+dell'SRD viene; le variazioni sono segnate ◆ e sono le scelte del DM B4, B5, B6,
+B12 e B16. I dadi delle righe 2 e 3 dipendono dalla quota da cui i PG
 sganciano: la tabella è nel §2-bis. Con questa scheda il DM non deve inventare niente: tira i dadi
 della colonna di destra.
+
+<!-- pagina: una-colonna -->
 
 | # | Che cosa | Regola | Si tira |
 |---|---|---|---|
@@ -48,13 +50,15 @@ della colonna di destra.
 | 9 | **Il fumo** | SRD, «Smoke Effects», sotto il telo: chi fallisce passa il round a tossire, due round di fila fanno 1d6 non letali; occultamento 20% per tutti | **Tempra CD 15**, +1 per prova |
 | 10 | **Il danno massiccio** | SRD 3.5: 50 danni o più da un solo attacco, e chi fallisce muore; un 1 naturale fallisce sempre. ◆ Le palle di fuoco nate insieme contano come un attacco solo; il colpo diretto e l'olio restano a parte | **Tempra CD 15** |
 
+<!-- /pagina -->
+
 **Due conti da avere in testa.** Il colpo diretto da 15d6 fa 50 o più due
 volte su tre. Due palle di fuoco fanno 42 in media a chi fallisce tutti e due i
 TS, 21 a chi li supera.
 
 ## 1. Che cosa hanno fatto, e che cosa si suppone
 
-Il racconto del DM, 2026-10-24, messo in ordine:
+Il racconto del DM, messo in ordine:
 
 - I PG volano sopra il campo, invisibili, a **48 m** di quota, in una notte
   stellata. Partono dalla postierla in volo, come nella variante «dall'alto»
@@ -68,7 +72,7 @@ Il racconto del DM, 2026-10-24, messo in ordine:
 - Vogliono squarciare la tenda di Zog'tar.
 
 Quello che il racconto non dice si suppone così, e ogni supposizione è una
-domanda al DM in fondo (§12):
+scelta del DM:
 
 - Le fiale sulla botte sono **due**. Le tabelle danno anche una e tre.
 - Una fiala della fenice **scoppia quando si rompe**: il vetro che va in pezzi
@@ -102,7 +106,7 @@ nemici sopra. Lasciar cadere un barile è lo stesso gesto. Non è un attacco,
 quindi non c'è tiro per colpire, l'invisibilità resta, e lasciarlo andare è
 un'azione gratuita.
 
-**La deviazione** `[Variazione sull'SRD — CANONE DM 2026-10-29, B4]`.
+**La deviazione** `[Variazione sull'SRD, B4]`.
 I PG non mirano: lasciano andare. Il barile finisce lontano dalla verticale
 per due ragioni, e la regola le mette tutte e due in un dado solo.
 
@@ -135,7 +139,7 @@ orario) e una distanza in quadretti. La distanza, da 48 m, è questa:
 - Se chi sgancia si è mosso in quel round, la botte conserva la sua velocità:
   in più, 6 quadretti nella direzione del volo, e la tenda si manca.
 
-Il conto della fisica sta in `simula_barile.py`; la regola lo arrotonda per
+Il conto della fisica sta nella simulazione<!-- apparato --> (`simula_barile.py`)<!-- /apparato -->; la regola lo arrotonda per
 eccesso, perché al buio si sbaglia anche il punto da cui si parte.
 
 ## 2-bis. Rigiocare lo sgancio: tutto dalla quota
@@ -416,7 +420,7 @@ L'SRD dà due regole per l'olio, e qui servono tutte e due.
 
 La botte ha 50 litri, cioè **105 pinte**. Una botte che si apre a 110 all'ora
 schizza l'olio tutto attorno, e il conto delle pinte dice fin dove arriva
-`[Variazione sull'SRD — CANONE DM 2026-10-29, B6]`:
+`[Variazione sull'SRD, B6]`:
 
 | Zona | All'aperto | Dentro la tenda | Olio | Brucia |
 |---|---|---|---|---|
@@ -474,7 +478,7 @@ naturale fallisce sempre, quindi anche Zog'tar, con Tempra +18, ha il 5%.
 - Il **colpo diretto** da 15d6 arriva a 50 due volte su tre.
 - **Le due palle di fuoco contano come un attacco solo**: si sommano, e la
   somma è quella che conta per i 50 `[Variazione, la versione più terribile —
-  CANONE DM 2026-10-29, B5: per l'SRD ogni palla di fuoco è un attacco a sé, e 6d6 non
+  B5: per l'SRD ogni palla di fuoco è un attacco a sé, e 6d6 non
   arrivano mai a 50]`. Con due fiale e il TS fallito, la somma
   arriva a 50 una volta su dieci.
 - Il colpo diretto, il fuoco e l'olio restano attacchi diversi.
@@ -500,6 +504,8 @@ Le 25 cadute possibili, con quello che prende il barile, chi sta nel cuore
 dell'olio (colpito in pieno, prende fuoco) e chi resta fuori dalle palle di
 fuoco con la tenda che fa da forno. Chi non è nominato nelle ultime due colonne
 è nell'area: prende le palle di fuoco e l'olio del pavimento.
+
+<!-- pagina: una-colonna -->
 
 | d8 · metri | Casella | Probabilità | Che cosa prende | Nel cuore dell'olio | Fuori dalle palle di fuoco |
 |---|---|---:|---|---|---|
@@ -528,6 +534,8 @@ fuoco con la tenda che fa da forno. Chi non è nominato nelle ultime due colonne
 | 6 sud-ovest · 6,4 m | K15 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
 | 7 ovest · 4,5 m | K12 | 3,1% | il palo ovest, in cima: lo spezza il 19%, e la tenda crolla; se no la botte gli si apre sopra | nessuno | Grask |
 | 8 nord-ovest · 6,4 m | K9 | 3,1% | il telo, sul bordo: metà olio fuori | nessuno | Grask |
+
+<!-- /pagina -->
 
 **Come si legge al tavolo.** Si tirano il d4 e il d8, si trova la riga, e la
 riga dice tutto: chi prende i 15d6, se la tenda crolla subito, chi è
@@ -569,7 +577,7 @@ telo che crolla addosso se il palo o il colmo si sono spezzati.
   brucia una volta su quattro invece di due su tre.
 - **Se fossero stati sopra il seggio** invece che sopra il palo, Grask
   sarebbe morto l'83% delle volte e Zog'tar avrebbe preso i 15d6 una volta su
-  tre: i numeri sono in `ESITI-SIMULAZIONE.md`.
+  tre<!-- apparato -->: i numeri sono in `ESITI-SIMULAZIONE.md`<!-- /apparato -->.
 
 **Che cosa vuol dire.** Il barile **non uccide Zog'tar**: 283 punti ferita, RD
 3 e Riflessi +9 reggono anche il colpo in pieno. Gli toglie un quinto dei punti
@@ -857,11 +865,11 @@ pali dei trofei, con i carri del bottino lasciati dove si sono fermati.
   rinforzi arrivano da lì. Nessuna tenda della Guardia è dentro i 6 m del
   barile.
 
-Le misure vengono dalla ricerca del 21 ottobre sugli accampamenti
-(`plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md`, le parti
-sui campi mongoli e d'avventura). Le due mappe passano il collaudo senza
+Le misure vengono dalla ricerca sugli accampamenti, nelle parti sui campi
+mongoli e d'avventura<!-- storico --> (`plans/esperimenti/mappe-campo-2026-10-21/RICERCA-ACCAMPAMENTI.md`)<!-- /storico -->. Le due mappe passano il collaudo senza
 errori, con voto di qualità 100 tutte e due.
 
+<!-- storico -->
 ## 12. Domande al DM
 
 Ogni domanda ha la proposta ★, scelta come la versione più forte quando le
@@ -894,6 +902,7 @@ regole lasciano scegliere.
 | B23 | Lo sgancio guidato: chi non vede, guidato da chi vede il colmo, usa la colonna «chi vede», con 1 quadretto in più se la guida non vede chi sgancia | **decisa dal DM il 2026-10-29:** sì | la guida a voce vale sempre «chi vede»; o non vale niente |
 | B24 | La tenda che brucia fa luce come un falò grande: intensa entro 12 m, fioca fino a 24 m, finché non crolla e diventa brace | **decisa dal DM il 2026-10-29:** sì | la luce di un falò normale, 6 m e 12 m |
 | B25 | Come reagiscono le bande d'orchi e i lupi al barile | **decisa dal DM il 2026-10-29: la furia.** Le quattro bande corrono armate allo spiazzo con le torce, senza ritardo; i lupi si stringono e il ritorno a piedi si tira a CD +2 | il caos (saccheggio, ronde in ritardo di 1d4 round); la disciplina; la caccia per tutta la notte (CD +4) |
+<!-- /storico -->
 
 ## 13. Le trovate dei giocatori: come gestirle le prossime volte
 
@@ -965,6 +974,6 @@ sa che i nani volano, e il resto dell'assedio lo mostra (§10).
 - SRD 3.5, *invisibilità* («causing harm indirectly is not an attack»), *palla
   di fuoco*, aree e incroci della griglia, danno massiccio, CD degli oggetti
   magici: d20srd.org, voci omonime
-- La fisica della caduta: `simula_barile.py` nella cartella dell'esperimento;
+- La fisica della caduta<!-- apparato --> (`simula_barile.py` nella cartella dell'esperimento)<!-- /apparato -->:
   densità dell'olio 0,91 kg/l, aria a 870 m 1,12 kg/m³, coefficiente di
   resistenza 0,9.

@@ -125,6 +125,51 @@ def check_tema_pianta(rendered_dirs: list[Path]) -> tuple[list[str], int]:
     return _check_gemello(rendered_dirs, "pianta", obbligatorio=False)
 
 
+def check_tema_stampa(repo_root: Path, rendered_dirs: list[Path] | None = None) -> tuple[list[str], int]:
+    """Il modo stampa (ADR-0105): ogni SVG di un `rendered-stampa-<tema>/` (la
+    mappa e la sua `_legenda`) deve venire dal suo master, byte per byte. La
+    pianta in stampa è lo standard di ogni mappa (ADR-0106): accanto a ogni
+    `rendered/` c'è un `rendered-stampa-pianta/` con tutte le sue mappe."""
+    errors: list[str] = []
+    totale = 0
+    for rdir in rendered_dirs or []:
+        sdir = rdir.parent / R.cartella_stampa("pianta")
+        stems = {m.group("stem") for m in (SVG_NAME_RE.match(p.name) for p in rdir.glob("*.svg")) if m}
+        for stem in sorted(stems):
+            md = rdir.parent / f"{stem}.md"
+            if not md.exists():
+                continue
+            for nome in render_master(md):
+                for n in (nome, nome.removesuffix(".svg") + "_legenda.svg"):
+                    if not (sdir / n).is_file():
+                        errors.append(f"SVG della pianta in stampa mancante (ADR-0106): {sdir / n} — "
+                                      f"render_map_svg.py --tema pianta --stampa")
+    for svg in sorted(repo_root.glob("**/rendered-stampa*/*.svg")):
+        totale += 1
+        tema = svg.parent.name.removeprefix("rendered-stampa-")
+        if tema not in R.TEMI:
+            errors.append(f"cartella di stampa senza tema (rendered-stampa-<tema>): "
+                          f"{svg.relative_to(repo_root)}")
+            continue
+        md = svg.parent.parent / f"{svg.name.split('_map')[0]}.md"
+        if not md.is_file():
+            errors.append(f"SVG del modo stampa senza master: {svg.relative_to(repo_root)}")
+            continue
+        legenda = svg.name.endswith("_legenda.svg")
+        nome = svg.name.removesuffix("_legenda.svg") + ".svg" if legenda else svg.name
+        maps = R.extract_maps(md.read_text(encoding="utf-8"))
+        atteso = next((R.render_svg(g, md.name, tema, "legenda" if legenda else "mappa", True)
+                       for i, g in enumerate(maps, 1)
+                       if f"{md.stem}_map{i:02d}_{R.nome_mappa(g['title'])}.svg" == nome), None)
+        if atteso is None:
+            errors.append(f"SVG del modo stampa orfano (il master non ha questa mappa): "
+                          f"{svg.relative_to(repo_root)}")
+        elif atteso != svg.read_text(encoding="utf-8"):
+            errors.append(f"SVG NON allineato al master (rigenera con --tema {tema} --stampa): "
+                          f"{svg.relative_to(repo_root)}")
+    return errors, totale
+
+
 def _check_gemello(rendered_dirs: list[Path], tema: str, obbligatorio: bool) -> tuple[list[str], int]:
     errors: list[str] = []
     totale = 0
@@ -237,6 +282,10 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
     err_pt, svg_pt = check_tema_pianta(rendered_dirs)
     errors.extend(err_pt)
 
+    # 8. il tema stampa, mappa per mappa
+    err_st, svg_st = check_tema_stampa(repo_root, rendered_dirs)
+    errors.extend(err_st)
+
     if as_json:
         print(json.dumps({
             "tool": "validate_maps", "ok": not errors,
@@ -254,7 +303,8 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
     print(f"✓ validate_maps: {total_svg} SVG in {len(rendered_dirs)} dir rendered/, "
           f"{total_masters} master — tutti ben formati, tracciabili e allineati."
           + (f" Tema texture: {svg_tex} SVG." if svg_tex else "")
-          + (f" Tema pianta: {svg_pt} SVG." if svg_pt else ""))
+          + (f" Tema pianta: {svg_pt} SVG." if svg_pt else "")
+          + (f" Modo stampa: {svg_st} SVG." if svg_st else ""))
     return 0
 
 

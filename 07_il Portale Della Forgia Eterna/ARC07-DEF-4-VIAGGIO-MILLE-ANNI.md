@@ -4389,29 +4389,58 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ## APPENDICE D — MAPPE
 
-> Le tre mappe a pergamena stanno su pagine intere. Sotto ci sono le griglie da
+> Le mappe stanno su pagine intere, disegnate come le piante delle città, con
+> i luoghi, le zone e la legenda nella pagina dopo. Sotto ci sono le griglie da
 > cui sono generate: si modifica la griglia e si rigenera l'immagine, mai il
 > contrario.
 
-### Le mappe a pergamena
+### Le mappe
 
-![M7-B — Il cortile del duello](Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
-
-<!-- nuova-pagina -->
-
-![M7-C — La tenda del comando](Mappe/rendered/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+![M7-B — Il cortile del duello](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
 
 <!-- nuova-pagina -->
 
-### Le griglie ASCII ultra-clear (scala 1,5 m/quadretto)
+![M7-B — Indicazioni e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — La tenda del comando](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — Indicazioni e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
+
+<!-- nuova-pagina -->
+
+### Le griglie (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Le versioni a pergamena di M7-B e M7-C
-> sono all'inizio di questa appendice.
+> identiche; là hanno gli add-on DM. Le piante di M7-B e M7-C sono all'inizio di
+> questa appendice; M7-A, la vista strategica non in scala, è uno schema
+> disegnato nello stesso stile.
 
 #### MAPPA M7-A — HAMMERFIST ≈372 DR: fortezza, campo dell'orda, mura (strategica)
+
+![M7-A — Hammerfist ≈372 DR, vista strategica](Mappe/schemi/M7-A-hammerfist-372.svg)
+
+<!-- nuova-pagina -->
+
+![M7-A — Indicazioni e profilo](Mappe/schemi/M7-A-hammerfist-372_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+Lo schema ASCII di prima, da cui è stato disegnato lo schema (`scripts/render_schemi.py`, si cambia lo script e si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -4464,6 +4493,7 @@ la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vator
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 Le quote sono del DM `[CANONE — DM 2026-10-22]`: piana 0, spianata degli arieti
 +80, porta e cortile +100, torre nord +120, le tende fra 500 m e 1 km dalle
@@ -4472,6 +4502,11 @@ nord sul suo gradone sono inferenze da confermare: sono scritte, con le loro
 ragioni, nelle note di M7-A dell'Atlante<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->.
 
 #### MAPPA M7-B — L'ARENA DEL DUELLO (cortile interno · Skullcrusher)
+
+La pianta di M7-B è all'inizio di questa appendice.
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -4524,6 +4559,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
 @dislivello +100 m ; sulla piana dell'orda, a sud
 ```
+<!-- /apparato -->
 
 Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
 sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li
@@ -4538,15 +4574,27 @@ piana, 100 m sotto, con le tende fino all'orizzonte.
 La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
 Hammerfist dall'alto in basso<!-- apparato --> (`Mappe/ARC07-MAPPE-HAMMERFIST-372-1372.md`)<!-- /apparato -->.
 
-![M7-D — Il corridoio della fucina, livello −1](Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+![M7-D — Il corridoio della fucina, livello −1](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
 
 <!-- nuova-pagina -->
 
-![M7-E — Le gallerie di Zeth, livello −2](Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+![M7-D — Indicazioni e legenda](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3_legenda.svg)
 
 <!-- nuova-pagina -->
 
-![M7-F — La fucina grande, livello −3](Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+![M7-E — Le gallerie di Zeth, livello −2](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Indicazioni e legenda](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — Indicazioni e legenda](Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr_legenda.svg)
 
 <!-- nuova-pagina -->
 

@@ -4113,81 +4113,56 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ## APPENDICE D — MAPPE
 
-> Le tre mappe a pergamena stanno su pagine intere. Sotto ci sono le griglie da
+> Le mappe stanno su pagine intere, disegnate come le piante delle città, con
+> i luoghi, le zone e la legenda nella pagina dopo. Sotto ci sono le griglie da
 > cui sono generate: si modifica la griglia e si rigenera l'immagine, mai il
 > contrario.
 
-### Le mappe a pergamena
+### Le mappe
 
-![M7-B — Il cortile del duello](../../Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
-
-<!-- nuova-pagina -->
-
-![M7-C — La tenda del comando](../../Mappe/rendered/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+![M7-B — Il cortile del duello](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
 
 <!-- nuova-pagina -->
 
-### Le griglie ASCII ultra-clear (scala 1,5 m/quadretto)
+![M7-B — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — La tenda del comando](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
+
+<!-- nuova-pagina -->
+
+### Le griglie (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Le versioni a pergamena di M7-B e M7-C
-> sono all'inizio di questa appendice.
+> identiche; là hanno gli add-on DM. Le piante di M7-B e M7-C sono all'inizio di
+> questa appendice; M7-A, la vista strategica non in scala, è uno schema
+> disegnato nello stesso stile.
 
 #### MAPPA M7-A — HAMMERFIST ≈372 DR: fortezza, campo dell'orda, mura (strategica)
 
-```
-════════════════════════════════════════════════════════════════════════
- HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
-════════════════════════════════════════════════════════════════════════
-                       NORD ▲  la montagna: dentro, le sale scendono (M7-S)
-   ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
-        ╔════════════ 🔔 torre nord, +120 ═══════╗
-        ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
-        ║  CORTILE INTERNO, +100 → M7-B (duello)  ║     mura bianche, sicura
-        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura all'alba
-              ╲ rampa finale ┊          scale ▲▲▲ ┊⇣    🌲🌲🌲🌲 BOSCO A EST
-        ░░░░░░ SPIANATA DEGLI ARIETI, +80 ░░░░░░   ┊⇣    🌲 ✦ portale, ~500 m
-                ╲╱╲╱ strada a tornanti ╲╱╲╱        ┊⇣    🌲🌲🌲🌲 (Scene 1-2)
-   · · · · · · · · · piana dell'orda, quota 0 · · ┊ · · ·  ← le tende da 500 m
-   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊
-   GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
-   ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
-   🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km di cammino: cinque blocchi
-   ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
-   🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
-   GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
-                       SUD ▼  oltre il campo: le colline, dove dorme il drago
-────────────────────────────────────────────────────────────────────────
- IL PROFILO, NORD → SUD (le quote del DM, sulla piana dell'orda)
-  +120 m ┌──┐ torre nord, la porta che entra nella montagna
-         │  │
-  +100 m ┘  └─────────────┐ porta e targa
-           cortile, M7-B  │
-                           ╲ rampa finale, 20 m
-   +80 m                    ╲────────────────┐ spianata degli arieti
-                                              ╲ strada a tornanti
-                                               ╲___
-                                                   ╲___
-     0 m                                               ╲__ piana · ⛺🔥⛺ · COMANDO
-         ├── dal ciglio, giù per i tornanti: circa 500 m ──┤ le tende, fino a 1 km ──┤
- La via dei PG non è questa sezione: dalla postierla (+100) giù per il
- fianco est, 100 m di dislivello, lungo il lato est del campo fino alla
- tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
-────────────────────────────────────────────────────────────────────────
-LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
-confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
-del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
-della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
-fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
-la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vatore ·
-⚔️ scontro · ✦ arrivo del portale.
-Skullcrusher entra dall'alto sul cortile interno → M7-B.
-════════════════════════════════════════════════════════════════════════
-```
+![M7-A — Hammerfist ≈372 DR, vista strategica](../../Mappe/schemi/M7-A-hammerfist-372.svg)
+
+<!-- nuova-pagina -->
+
+![M7-A — Indicazioni e profilo](../../Mappe/schemi/M7-A-hammerfist-372_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 Le quote sono del DM: piana 0, spianata degli arieti
 +80, porta e cortile +100, torre nord +120, le tende fra 500 m e 1 km dalle
@@ -4197,57 +4172,8 @@ ragioni, nelle note di M7-A dell'Atlante.
 
 #### MAPPA M7-B — L'ARENA DEL DUELLO (cortile interno · Skullcrusher)
 
-```
-════════════════════════════════════════════════════════════════════════
- CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
- Nord in alto, la montagna. Skullcrusher entra da V1 (~45 m) e picchia. PG dalla riga 16.
-════════════════════════════════════════════════════════════════════════
-COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
-01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
-02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
-03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
-05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿⬜⬜⬜🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
-06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫⬜⬜⬜⬜🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
-09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
-10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
-11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫⬜⬜🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
-17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜🏰   Re Thorek I, alle spalle dei PG
-18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
-════════════════════════════════════════════════════════════════════════
-LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
-d'atterraggio del drago (Enorme) · 🟫 cortile · ⬜ il selciato dalla porta
-principale alla statua, alla porta della montagna e alla postierla ·
-🪨 macerie (copertura +4) ·
-🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
-⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
-del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.
-@north N
-@mark 1 ; V1 ; Skullcrusher (quota ~45 m)
-@mark 2 ; D16 ; Thorik
-@mark 3 ; G16 ; Tordek
-@mark 4 ; L17 ; Re Thorek I (8 pf se la Scena 10 è andata male)
-@mark 5 ; Q16 ; Artemis
-@mark 6 ; T16 ; Hella, con Durik accanto
-@mark 7 ; C5 ; La fucina originale, accesa da stanotte
-@mark 8 ; T8 ; Il pozzo sulla cisterna
-@mark 9 ; T4 ; Le campane della torre nord
-@mark 10 ; W18 ; La postierla
-@mark 11 ; U16 ; Durik, accanto a Hella
-@mark 12 ; W2 ; Wyvern 1, di scorta: entra dal round 2
-@mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
-@tipo tattica esterno
-@luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
-@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
-@dislivello +100 m ; sulla piana dell'orda, a sud
-```
+La pianta di M7-B è all'inizio di questa appendice.
+
 
 Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
 sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li
@@ -4262,15 +4188,27 @@ piana, 100 m sotto, con le tende fino all'orizzonte.
 La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
 Hammerfist dall'alto in basso.
 
-![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
 
 <!-- nuova-pagina -->
 
-![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+![M7-D — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3_legenda.svg)
 
 <!-- nuova-pagina -->
 
-![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr_legenda.svg)
 
 <!-- nuova-pagina -->
 

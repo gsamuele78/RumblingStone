@@ -428,27 +428,27 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 15 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 16 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 17 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-18 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-19 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-20 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-21 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-22 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-23 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-24 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-25 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-26 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-27 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🔵 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ✨ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🔵 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-28 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔮 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-29 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-30 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-31 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-32 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+18 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+19 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+20 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+21 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+22 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+23 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+24 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+25 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+26 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+27 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🔵 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ✨ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🔵 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+28 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔮 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+29 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+30 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+31 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+32 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 33 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 34 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 35 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-36 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-37 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-38 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+36 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+37 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+38 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 39 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 40 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 41 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
@@ -466,12 +466,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 53 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 💧 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 
 @north N
-@mark 1 ; AH20 ; Anello esterno NORD (Guerrieri)
-@mark 2 ; AH37 ; Anello esterno SUD (Guerrieri)
-@mark 3 ; X28 ; Anello esterno OVEST (Guerrieri)
-@mark 4 ; AR28 ; Anello esterno EST (Guerrieri)
-@mark 5 ; AE24 ; Balestrieri (cerchio medio, NO) (Balestrieri)
-@mark 6 ; AL24 ; Balestrieri (cerchio medio, NE) (Balestrieri)
+@mark 1 ; AH20 ; Centro dello schieramento, davanti alla porta: 40 guerrieri su quattro file di scudi
+@mark 2 ; AH37 ; Il sud non è schierato: dietro l'altare c'è solo il condotto della sorgente
+@mark 3 ; X23 ; Ala ovest, piegata verso l'altare: 10 guerrieri, 4 balestrieri, 2 capi
+@mark 4 ; AQ23 ; Ala est, piegata verso l'altare: 10 guerrieri, 4 balestrieri, 2 capi
+@mark 5 ; AE22 ; I 12 balestrieri del centro, dietro le file: sparano sopra le teste
+@mark 6 ; AH23 ; I 6 capi del centro
 @mark 7 ; AH29 ; Re Thorek XIII (8 PF, avvelenato: Guarigione CD 25 ogni round, al terzo fallimento muore)
 @mark 8 ; AG30 ; Madre Dana Forgiapietra (Clr 14: 20 pf, un solo Muro di Pietra)
 @mark 9 ; AK30 ; Cantitrici della Pietra (se sopravvissute) (Clr/Brd 11)
@@ -483,10 +483,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @mark 15 ; AH3 ; ONDATA 2 (round 5-6): Hobgoblin + Sergente (GS 1/2-1)
 @mark 16 ; AH4 ; ONDATA 3 (round 7-8): Bugbear Assassini (GS 9, furtivo +4d6)
 @mark 17 ; AH1 ; GRIMJAW + Guardie Nere orog: corno al round 11, ingresso al round 12
-@path Rotta d'assalto delle ondate (porta → anello) ; AH5 AH13 AH18 ; #d62828
+@path Rotta d'assalto delle ondate (porta → schieramento) ; AH5 AH13 AH18 ; #d62828
 @path Ondata 3: bugbear in aggiramento ovest ; AF5 Y11 Y18 ; #8c2fb8
 @path Ondata 3: bugbear in aggiramento est ; AJ5 AQ11 AQ18 ; #8c2fb8
-@path Grimjaw e le guardie (round 12): dalla porta all'anello nord ; AG2 AG6 AG12 AG18 ; #1a1a1a
+@path Grimjaw e le guardie (round 12): dalla porta al centro dello schieramento ; AG2 AG6 AG12 AG18 ; #1a1a1a
 @zone AF26-AJ30 ; Altare di Moradin: piattaforma circolare 6 m, +3 m, pietra nera con rune d'oro
 @zone U12-W14 ; Pilastro della volta (4,5 m di lato)
 @zone AQ12-AS14 ; Pilastro della volta
@@ -503,16 +503,16 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Re Thorek AH29** (8 PF, avvelenato dall'acido di Fauci: una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per magia; al terzo fallimento muore. La cura segue l'SRD: *neutralizzare veleno* o *guarigione* fanno finire l'avvelenamento e fermano le prove `[CANONE — DM 2026-10-19, D12]`)
 - **Madre Dana AG30** (ha speso quasi tutto sulle mura: 20 pf e un solo *Muro di Pietra* per tutto il 3B, scheda nella guida; niente *guarigione* al round 1. La sua scheda completa vale per Dana riposata, cioè il mattino della battaglia `[CANONE — DM 2026-10-18]`, confermato dal D12 `[CANONE — DM 2026-10-19, D12]`) · **Cantitrici AJ30-AL30** (se sopravvissute)
 - **Borin AF29** (difesa altare) · **Thorin AI29** (accanto all'altare: +2 LI sacro) · **Dara BA27** (terrazzo EST +1,5 m) · **Nala O27** (terrazzo OVEST)
-- **Anello difensivo:** 60 guerrieri (4 blocchi N/S/E/O) + 20 balestrieri (2 blocchi) + nucleo leader
+- **Lo schieramento** `[CANONE — DM 2026-10-30]`, rivolto all'unico ingresso: al centro, davanti alla porta, 40 guerrieri su quattro file (righe 18-21), 12 balestrieri dietro (riga 22) e 6 capi (riga 23); ai lati due ali piegate verso l'altare (W-Z e AO-AR, righe 22-25), ciascuna con 10 guerrieri, 4 balestrieri e 2 capi. Il sud dell'altare resta scoperto
 - **Porta di Mithral 🚪 AF05-AI05** (6 m a due battenti, ward collassati; l'unico ingresso per un esercito) — tunnel di 6 m di larghezza e 10 m di lunghezza alle spalle
-- **Pilastri della volta 🟪** U12-W14, AQ12-AS14, U42-W44, AQ42-AS44: 4,5 m di lato, copertura totale; gli assassini dell'ondata 3 li usano per aggirare l'anello
-- **Condotto della sorgente 💧 AH49-AH53** `[INFERRED]`: largo 1,5 m, acqua alla caviglia, esce nei tunnel bassi. Ci passa una fila indiana: è la via di fuga se l'anello cede, e la strada di un terzo fianco se il DM la dà ai bugbear
+- **Pilastri della volta 🟪** U12-W14, AQ12-AS14, U42-W44, AQ42-AS44: 4,5 m di lato, copertura totale; gli assassini dell'ondata 3 li usano per aggirare le ali dello schieramento
+- **Condotto della sorgente 💧 AH49-AH53** `[INFERRED]`: largo 1,5 m, acqua alla caviglia, esce nei tunnel bassi. Ci passa una fila indiana: è la via di fuga se lo schieramento cede, e la strada di un terzo fianco se il DM la dà ai bugbear
 - **10 statue 🗿** in cerchio (~20 m dall'altare): occhi di rubino
 
 ### ⚔️ ONDATE (agganciate alle unità in griglia, rotte tratteggiate):
 | Ondata | Round | Forze | Tattica |
 |---|---|---|---|
-| 1 | 3-4 | 30 Orchi Berserker (furia +4 For, −2 CA) | carica cieca sull'anello — imbuto alla porta |
+| 1 | 3-4 | 30 Orchi Berserker (furia +4 For, −2 CA) | carica cieca sul centro dello schieramento — imbuto alla porta |
 | 2 | 5-6 | 20 Hobgoblin + Sergente (immuni paura) | muro di scudi, fiancheggiamento coordinato (+2), sergente +1 att entro 6 m |
 | 3 | 7-8 | 15 Bugbear Assassini (`Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`: furtivo +4d6, Nascondersi +17) | aggiramento sui fianchi (rotte viola), bersaglio Re Thorek — INTERROTTI dall'Apparizione (round 9-10) |
 | Finale | corno all'11, ingresso al 12 | Grimjaw + 10 Guardie Nere orog (`Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`) se vivo; altrimenti capitano hobgoblin → auto-ritirata | entra dalla porta sulla rotta nera, punta l'altare; sfida personale o ritirata strategica `[CANONE — DM 2026-10-19, D11]` |
@@ -538,7 +538,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stato | Trigger | Cosa cambia | Effetto |
 |---|---|---|---|
 | A — Barricata ("MAPPA 3A" guida) | — | com'è disegnata; l'altare (AF26-AJ30) è una piattaforma su cui si sale, e solo 🔮 AH28 blocca il passo | prove mediche sul Re (round 1-2) |
-| B | round 3-4 | Ondata 1 dentro | mischia all'anello nord |
+| B | round 3-4 | Ondata 1 dentro | mischia al centro dello schieramento |
 | C | round 5-6 | Ondata 2 | pressione disciplinata |
 | D | round 7-8 | Ondata 3 sui fianchi | assassini verso l'altare |
 | E — APPARIZIONE | round 9-10 | ✨ sopra l'altare; buff/malus del climax | inversione totale del momentum |

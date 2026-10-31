@@ -1904,51 +1904,26 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 
 ## APPENDICE — MAPPE (scala 1,5 m/quadretto)
 
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
+> La Sala S-1 è la pianta di PF-2 con gli affreschi come stanno dopo la Terra.
+>
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna:
-> larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.
+> identiche; là hanno gli add-on DM.
 
 ### MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)
 
-```
-════════════════════════════════════════════════════════════════════════
- SALA DELLA FORGIA ETERNA — ottagono Ø 40 m (26 quadretti) · soffitto 15 m
- Zona SICURA · Altare centrale · Portale P1 a NORD (→ Stanza della Corona)
-════════════════════════════════════════════════════════════════════════
-                          NORD  ▼  [P1 → Stanza Corona]
-              ┌───────────[ A1 «L'Alba del Mondo» ]───────────┐
-             ╱   (statico · Moradin forgia la Corona)          ╲
-      [ A2 ]╱                                                    ╲[ A3 ]
-   «4 Eroi» │        🔲 col.mithral (nord)                       │ «Visione»
-   (→80%)   │                                                    │ (Thorik)
-            │                    ✦ (*) spawn PG                  │
-     OVEST  │   🔲col        ╔══════════════╗          🔲col     │  EST
-   [ A4 ]───┤  (adam.)       ║   ALTARE     ║        (adam.)     ├───[ A5 ]
-   «Fuoco»  │                ║  CUORE DI    ║                    │ «Terra»
-   CHIUSO   │                ║   MORADIN    ║                    │ →«Forza
-            │                ║  🔥 Forgia   ║                    │ Sostenuta»
-            │                ╚══════════════╝                    │ (si chiude)
-            │        † corpo di Hella · Therysol · Durik         │
-            │                 🔲 col.adam. (sud)                 │
-      [ A6 ]╲                                                    ╱[ A7 ]
-   «Tempo»   ╲                                                  ╱ «Hammerfist»
-   (→80%,    ╲                                                 ╱  LIVE ⏳3g20h
-   portale)   └───────────[ A8 «Ritorno Trionfale» ]──────────┘  +Aegis Bane
-                          SUD  ▲   (vuoto → 60%)
-────────────────────────────────────────────────────────────────────────
-LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
-(1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn
-· † corpo di Hella accanto all'Altare, lato sud,
-vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik
-fra il corpo e il pericolo · [P1] portale sempre aperto. Distanze:
-spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal centro); Ø 40 m.
-STATO DOPO LA TERRA: A4 chiuso · A5 si chiude («Forza Sostenuta») · A2 80%
-(4ª figura = Hella prende contorno) · A6 80% (portale del Tempo pulsa) ·
-A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
-════════════════════════════════════════════════════════════════════════
-```
+![S-1 — La Sala della Forgia Eterna dopo la Terra](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40.svg)
+
+<!-- nuova-pagina -->
+
+![S-1 — La Sala della Forgia Eterna dopo la Terra — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 ### MAPPA S-2 — LA STANZA DELLA CORONA DI ADAMANTIO (santuario in purificazione)
 
@@ -1957,38 +1932,14 @@ A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
 > posizionamenti di trono, muro, colonne, statue, alcove, macerie e ingresso.
 > Qui è mostrata nello **stato ARC-07** (santuario in purificazione).
 
-```
-════════════════════════════════════════════════════════════════════════
- STANZA DELLA CORONA — 15 m × 19,5 m (10 col × 13 righe · 1,5 m/quadretto)
- NORD in alto (trono/muro) · ingresso a SUD (righe basse) · ora SANTUARIO
-════════════════════════════════════════════════════════════════════════
-@north S
-COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬜ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬜ ⬜   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
-12     🔲 ⬜ 🔲 ⬜ 👑 👑 ⬜ 🔲 ⬜ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
-11     🔲 ⬜ 🔲 ⬜ ✝️ ⬜ ⬜ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
-10     🔲 ⬜ 🔲 ⬜ ⬜ ⬜ ⬜ 🔲 ⬜ ⬜   B10 = ex nascondiglio Yochlol 2
-09     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   H09 = ex nascondiglio Yochlol 1
-08     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
-07     ⬜ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 ⬜ ⬜   🪨 macerie (terreno difficile ×2)
-06     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
-05     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-04     ⬜ ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ ⬜ ⬜
-03     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-02     🏰 🏰 🏰 🚪 🚪 🚪 🏰 🏰 🏰 🏰   🚪 INGRESSO sud D-F02, nel muro sud della navata
-01     🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰   SUD · androne D-F01 verso la Sala della Forgia
-════════════════════════════════════════════════════════════════════════
-LEGENDA · ⬜ pavimento (ora pulito) · 🏰 roccia del muro sud · 🔲 colonne parallele (copertura +4 CA,
-spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
-restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
-deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
-(terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
-(incisioni-specchio, §6) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
-inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
-🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
-(ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
-@tipo tattica interni
-```
+![S-2 — La Stanza della Corona](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe.svg)
+
+<!-- nuova-pagina -->
+
+![S-2 — La Stanza della Corona — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe_legenda.svg)
+
+<!-- nuova-pagina -->
+
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   La navata utile è A-J/03-13 (15 × 16,5 m): la porta D-F02 sta nel muro sud
   e dà sull'androne D-F01.
@@ -2083,7 +2034,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §11 | **Avanzamento** | PX, artefatti, il corredo di Hella |
 | §12 | **Ponte + Handout & Asset** | verso il viaggio a mille anni fa (cap. V); handout, immagini, musica |
 | App. A | **Statistiche** | la scheda completa di Hella risorta, il Treant di Adamantio |
-| App. B | **Mappe** | la Sala della Forgia a pergamena, il cerchio del rito |
+| App. B | **Mappe** | la pianta della Sala della Forgia, il cerchio del rito |
 
 ---
 
@@ -2126,7 +2077,7 @@ male. Il resto si legge al tavolo, in avanti.
 **Cosa stampare.** Il volume dei giocatori *Il Cuore e la Porta*, con i fogli
 della tabella qui sotto: **gli echi privati si danno prima di cominciare**. Poi
 la **Quick-Reference §0-bis** (rito + sacrifici); le mappe dell'**Appendice B**
-(la Sala a pergamena e il cerchio R-1); la scheda completa di Hella
+(la pianta della Sala e il cerchio R-1); la scheda completa di Hella
 (**Appendice A**); il PDF Benedizioni.
 
 **Come si chiude.** Hella viva, i Doni tessuti (o i debiti aperti), il Debito
@@ -2361,7 +2312,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > ha più bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-cap. III; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+cap. III; la pianta dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -3423,7 +3374,7 @@ Sono nel volume dei giocatori, *Il Cuore e la Porta*, un foglio ciascuno.
 | La Custode delle Radici, allo Step 5 | la tavola della Custode, in §6 |
 | Il risveglio di Hella | la tavola del risveglio, in §7 dopo il box |
 | Durik e Hella, dopo il risveglio | la tavola di Durik e Hella, copertina della scheda di Durik |
-| La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione |
+| La Sala durante il rito | la **pianta** dell'Appendice B. ⚠️ La vecchia mappa del rituale è un grafico, non un'illustrazione |
 
 ### Musica
 - **La Canzone delle Pietre**. **Qui è il suo momento pieno**: falla
@@ -3509,12 +3460,16 @@ qui anche se l'Avatar non è forma selvatica.
 
 ## APPENDICE B — MAPPE
 
-### La Sala della Forgia Eterna, a pergamena
+### La Sala della Forgia Eterna
 
 La pianta tattica della Sala, con l'Altare al centro. Il cerchio del rito sta
 attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
-![La Sala della Forgia Eterna](../../Mappe/rendered/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+![La Sala della Forgia Eterna](../../Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino.svg)
+
+<!-- nuova-pagina -->
+
+![La Sala della Forgia Eterna — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/Portale-Forgia-L1-REVISED-UltraClear_map02_mappa-pf-2-sala-della-forgia-eterna-hub-divino_legenda.svg)
 
 <!-- nuova-pagina -->
 
@@ -3523,44 +3478,19 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. La pianta a pergamena della Sala è
+> identiche; là hanno gli add-on DM. La pianta della Sala è
 > all'inizio di questa appendice.
 
 #### MAPPA R-1 — IL CERCHIO DEL RITO (Altare del Cuore di Moradin)
 
-```
-════════════════════════════════════════════════════════════════════════
- IL CERCHIO DEL RITO — al centro della Sala della Forgia (l'ottagono degli affreschi)
- Cerchio rituale Ø 6 m (raggio 3 m) attorno all'Altare · Sud lasciato VUOTO
-════════════════════════════════════════════════════════════════════════
-                          NORD  ▼
-                        🛡️ THORIK
-                    (Corona + Aegis Fang)
-                   Conoscenze relig. CD 15
-                           │ 3 m
-                   ╔═══════╧═══════╗
-   🔮 ARTEMIS      ║   🟡 ALTARE   ║      🥋 TORDEK
-   (Ring, UMD 18)  ║  († Hella,    ║   (ki, Concentr. 20)
-   OVEST ── 3 m ───╢   3 semi:     ╟─── 3 m ── EST
-                   ║  🌰 fronte    ║
-                   ║ 🌰 sx  dx 🌰  ║
-                   ╚═══════╤═══════╝
-                           │
-                    (SUD = VUOTO)
-                  ← da qui fluisce l'energia →
-                  ← e QUI, allo Step 5, appare
-                    ✦ LA CUSTODE DELLE RADICI (§6)
-                          SUD  ▲
-────────────────────────────────────────────────────────────────────────
-LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin (posato sul cuore di Hella) ·
-† corpo di Hella (supino) · 🌰 3 semi (mano sx / mano dx / fronte: triangolo
-inscritto nel cerchio) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O), tutti
-a 3 m dal centro: con il SUD vuoto (energia + soglia della Custode) fanno una
-croce. Chi officia NON può fare altro durante gli step. Therysol veglia ai
-margini (testimone, non officiante).
-DISPOSIZIONE SACRA: 3 semi (triangolo) inscritti nel cerchio dei 3 officianti.
-════════════════════════════════════════════════════════════════════════
-```
+![R-1 — Il cerchio del rito](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map02_r-1-il-cerchio-del-rito-10-m-10-m-10-col-10-righ.svg)
+
+<!-- nuova-pagina -->
+
+![R-1 — Il cerchio del rito — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map02_r-1-il-cerchio-del-rito-10-m-10-m-10-col-10-righ_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 <!-- /pagina -->
 
@@ -7616,81 +7546,56 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ## APPENDICE D — MAPPE
 
-> Le tre mappe a pergamena stanno su pagine intere. Sotto ci sono le griglie da
+> Le mappe stanno su pagine intere, disegnate come le piante delle città, con
+> i luoghi, le zone e la legenda nella pagina dopo. Sotto ci sono le griglie da
 > cui sono generate: si modifica la griglia e si rigenera l'immagine, mai il
 > contrario.
 
-### Le mappe a pergamena
+### Le mappe
 
-![M7-B — Il cortile del duello](../../Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
-
-<!-- nuova-pagina -->
-
-![M7-C — La tenda del comando](../../Mappe/rendered/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+![M7-B — Il cortile del duello](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
 
 <!-- nuova-pagina -->
 
-### Le griglie ASCII ultra-clear (scala 1,5 m/quadretto)
+![M7-B — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — La tenda del comando](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d.svg)
+
+<!-- nuova-pagina -->
+
+![M7-C — Indicazioni e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO_map01_m7-c-la-tenda-del-comando-di-zog-tar-notte-372-d_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Il campo del capo: lo spiazzo, la Guardia della Mano e i clan](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del.svg)
+
+<!-- nuova-pagina -->
+
+![M7-H — Indicazioni e legenda: i numeri, le lettere delle zone e i simboli della mappa](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-M7H-QUARTIERE-DEL-COMANDO_map01_m7-h-il-campo-del-capo-lo-spiazzo-la-guardia-del_legenda.svg)
+
+<!-- nuova-pagina -->
+
+### Le griglie (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Le versioni a pergamena di M7-B e M7-C
-> sono all'inizio di questa appendice.
+> identiche; là hanno gli add-on DM. Le piante di M7-B e M7-C sono all'inizio di
+> questa appendice; M7-A, la vista strategica non in scala, è uno schema
+> disegnato nello stesso stile.
 
 #### MAPPA M7-A — HAMMERFIST ≈372 DR: fortezza, campo dell'orda, mura (strategica)
 
-```
-════════════════════════════════════════════════════════════════════════
- HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
-════════════════════════════════════════════════════════════════════════
-                       NORD ▲  la montagna: dentro, le sale scendono (M7-S)
-   ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
-        ╔════════════ 🔔 torre nord, +120 ═══════╗
-        ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
-        ║  CORTILE INTERNO, +100 → M7-B (duello)  ║     mura bianche, sicura
-        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura all'alba
-              ╲ rampa finale ┊          scale ▲▲▲ ┊⇣    🌲🌲🌲🌲 BOSCO A EST
-        ░░░░░░ SPIANATA DEGLI ARIETI, +80 ░░░░░░   ┊⇣    🌲 ✦ portale, ~500 m
-                ╲╱╲╱ strada a tornanti ╲╱╲╱        ┊⇣    🌲🌲🌲🌲 (Scene 1-2)
-   · · · · · · · · · piana dell'orda, quota 0 · · ┊ · · ·  ← le tende da 500 m
-   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊
-   GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
-   ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
-   🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km di cammino: cinque blocchi
-   ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
-   🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
-   GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
-                       SUD ▼  oltre il campo: le colline, dove dorme il drago
-────────────────────────────────────────────────────────────────────────
- IL PROFILO, NORD → SUD (le quote del DM, sulla piana dell'orda)
-  +120 m ┌──┐ torre nord, la porta che entra nella montagna
-         │  │
-  +100 m ┘  └─────────────┐ porta e targa
-           cortile, M7-B  │
-                           ╲ rampa finale, 20 m
-   +80 m                    ╲────────────────┐ spianata degli arieti
-                                              ╲ strada a tornanti
-                                               ╲___
-                                                   ╲___
-     0 m                                               ╲__ piana · ⛺🔥⛺ · COMANDO
-         ├── dal ciglio, giù per i tornanti: circa 500 m ──┤ le tende, fino a 1 km ──┤
- La via dei PG non è questa sezione: dalla postierla (+100) giù per il
- fianco est, 100 m di dislivello, lungo il lato est del campo fino alla
- tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
-────────────────────────────────────────────────────────────────────────
-LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
-confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
-del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
-della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
-fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
-la tenda del comando, sola nel suo spiazzo · ┊◄ la via dei PG · 👤 Vatore ·
-⚔️ scontro · ✦ arrivo del portale.
-Skullcrusher entra dall'alto sul cortile interno → M7-B.
-════════════════════════════════════════════════════════════════════════
-```
+![M7-A — Hammerfist ≈372 DR, vista strategica](../../Mappe/schemi/M7-A-hammerfist-372.svg)
+
+<!-- nuova-pagina -->
+
+![M7-A — Indicazioni e profilo](../../Mappe/schemi/M7-A-hammerfist-372_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 Le quote sono del DM: piana 0, spianata degli arieti
 +80, porta e cortile +100, torre nord +120, le tende fra 500 m e 1 km dalle
@@ -7700,57 +7605,8 @@ ragioni, nelle note di M7-A dell'Atlante.
 
 #### MAPPA M7-B — L'ARENA DEL DUELLO (cortile interno · Skullcrusher)
 
-```
-════════════════════════════════════════════════════════════════════════
- CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
- Nord in alto, la montagna. Skullcrusher entra da V1 (~45 m) e picchia. PG dalla riga 16.
-════════════════════════════════════════════════════════════════════════
-COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
-01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
-02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
-03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
-05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿⬜⬜⬜🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
-06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫⬜⬜⬜⬜🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
-09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
-10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
-11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫⬜⬜🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
-17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜🏰   Re Thorek I, alle spalle dei PG
-18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
-════════════════════════════════════════════════════════════════════════
-LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
-d'atterraggio del drago (Enorme) · 🟫 cortile · ⬜ il selciato dalla porta
-principale alla statua, alla porta della montagna e alla postierla ·
-🪨 macerie (copertura +4) ·
-🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
-⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
-del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.
-@north N
-@mark 1 ; V1 ; Skullcrusher (quota ~45 m)
-@mark 2 ; D16 ; Thorik
-@mark 3 ; G16 ; Tordek
-@mark 4 ; L17 ; Re Thorek I (8 pf se la Scena 10 è andata male)
-@mark 5 ; Q16 ; Artemis
-@mark 6 ; T16 ; Hella, con Durik accanto
-@mark 7 ; C5 ; La fucina originale, accesa da stanotte
-@mark 8 ; T8 ; Il pozzo sulla cisterna
-@mark 9 ; T4 ; Le campane della torre nord
-@mark 10 ; W18 ; La postierla
-@mark 11 ; U16 ; Durik, accanto a Hella
-@mark 12 ; W2 ; Wyvern 1, di scorta: entra dal round 2
-@mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
-@tipo tattica esterno
-@luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
-@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
-@dislivello +100 m ; sulla piana dell'orda, a sud
-```
+La pianta di M7-B è all'inizio di questa appendice.
+
 
 Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
 sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li
@@ -7765,15 +7621,27 @@ piana, 100 m sotto, con le tende fino all'orizzonte.
 La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
 Hammerfist dall'alto in basso.
 
-![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
 
 <!-- nuova-pagina -->
 
-![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+![M7-D — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3_legenda.svg)
 
 <!-- nuova-pagina -->
 
-![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr_legenda.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — Indicazioni e legenda](../../Mappe/hammerfist-372-1372/rendered-stampa-pianta/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr_legenda.svg)
 
 <!-- nuova-pagina -->
 

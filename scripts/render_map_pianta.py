@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import math
 import random
+import re
 
 import render_map_svg as R
 from dmcore import chiusure, legenda
@@ -120,7 +121,9 @@ def _a_capo(t: str, larghezza: int) -> list[str]:
     return righe + ([riga] if riga else [])
 
 
-def render_pianta(grid: dict, source_name: str) -> str:
+def render_pianta(grid: dict, source_name: str, stampa: bool = False, parte: str = "mappa") -> str:
+    """`stampa`: il modo di stampa di render_map_svg (LARGHEZZA_STAMPA_PT), con
+    `parte` "mappa" o "legenda" (luoghi, zone, percorsi e legenda)."""
     rows = grid["rows"]
     row_nums = sorted(rows)
     nr = len(row_nums)
@@ -133,6 +136,7 @@ def render_pianta(grid: dict, source_name: str) -> str:
     rng = random.Random(int(seme * 10))
     simboli = R.SYMBOLS
     luci = legenda.luci()
+    locale = grid.get("local_legend") or {}
 
     def em(r, c):
         if not (0 <= r < nr) or c < 0:
@@ -209,6 +213,52 @@ def render_pianta(grid: dict, source_name: str) -> str:
     y_leg = y_l + h_luoghi + (10 if righe_luoghi else 0)
     righe_leg = math.ceil(len(leg) / colonne)
     height = int(y_leg + 26 + righe_leg * 19 + 22)
+    u = width / R.LARGHEZZA_STAMPA_PT
+    cz = R.CORPO_STAMPA_PT * u
+    sfalsa = nc > 26
+    voci_st: list[tuple[str, str, list[str]]] = []
+    if stampa and parte == "legenda":
+        k_leg = R.CORPO_STAMPA_PT * u / 9.5
+        larga_v = width / k_leg
+        # la voce intera, a capo nella colonna: la parentesi porta la regola
+        # (copertura, blocca la vista) e in stampa non si taglia
+        mezza = (larga_v - 28) / 2
+        car_l = int((mezza - 30) / 5.5)
+        voci_leg = [(e, _a_capo(_nome_voce(e, simboli, locale), car_l)) for e in leg]
+        alti = [19 + 13 * (len(t) - 1) for _, t in voci_leg]
+        taglio = _taglio(alti)
+        h_leg = 26 + max(sum(alti[:taglio]), sum(alti[taglio:])) + 10
+        # luoghi, zone e percorsi su una colonna; su due se la legenda non
+        # starebbe più nella pagina (21 cm) a 7,4 pt
+        for col_v in (1, 2):
+            larga_c = (larga_v - 28) / col_v
+            car_v = (larga_c - 24 - (10 if col_v > 1 else 0)) / 5.5
+            voci_st = [("mark", str(m["n"]), _a_capo(
+                f"{R.col_label(m['coord'][0])}{m['coord'][1]} — {m['text']}", car_v)) for m in ann["marks"]]
+            voci_st += [("zona", R._lettera_zona(iz), _a_capo(R._testi_indicazioni(
+                {"marks": [], "paths": [], "zones": [z]})[0], car_v)) for iz, z in enumerate(ann["zones"])]
+            voci_st += [("path", pa["color"], _a_capo(R._testi_indicazioni(
+                {"marks": [], "paths": [pa], "zones": []})[0], car_v)) for pa in ann["paths"]]
+            alti_v = [15 + 13 * (len(t) - 1) for _, _, t in voci_st]
+            taglio_v = _taglio(alti_v) if col_v > 1 else len(alti_v)
+            alto_v = 30 + 26 + max(sum(alti_v[:taglio_v]), sum(alti_v[taglio_v:]))
+            y_leg_v = alto_v + 16 if voci_st else 22
+            height = round((y_leg_v + h_leg) * k_leg)
+            if height <= width * 590 / R.LARGHEZZA_STAMPA_PT:
+                break
+    elif stampa:
+        # una mappa alta la pagina la stringerebbe in altezza (21 cm, 595 pt) e
+        # le scritte tornerebbero sotto i 7 pt: allora si allarga il foglio
+        # finché il rapporto è quello della pagina, con la mappa al centro
+        testa = 23 + (16.5 if sfalsa else 8.5) + 11 + 12
+        if gh > (590 - testa) * u:
+            width = round(R.LARGHEZZA_STAMPA_PT * gh / (590 - testa))
+            ox = MARGIN + (width - 2 * MARGIN - gw) / 2
+            u = width / R.LARGHEZZA_STAMPA_PT
+            cz = R.CORPO_STAMPA_PT * u
+        oy = round(23 * u + (16.5 if sfalsa else 8.5) * u)
+        y_sb = round(oy + gh + 11 * u)
+        height = round(y_sb + 12 * u)
 
     o: list[str] = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{_n(width)}" height="{height}" '
                     f'viewBox="0 0 {_n(width)} {height}" font-family="{R.FONT}">']
@@ -270,15 +320,50 @@ def render_pianta(grid: dict, source_name: str) -> str:
     defs.append("</defs>")
     o.extend(defs)
     w = o.append
+    if stampa and parte == "legenda":
+        w(f'<rect width="{_n(width)}" height="{height}" fill="{C["carta"]}"/>')
+        w(f'<g transform="scale({R._n(k_leg)})">')
+        if voci_st:
+            w(_testo(14, 30, "Luoghi, zone e percorsi", 13.5, weight="bold"))
+        for kk, (tipo, segno, righe) in enumerate(voci_st):
+            x = 14 + (kk >= taglio_v) * larga_c
+            yy = 56 + sum(alti_v[taglio_v if kk >= taglio_v else 0:kk])
+            if tipo == "mark":
+                w(f'<circle cx="{_n(x + 8)}" cy="{_n(yy - 4)}" r="8" fill="{C["marker"]}"/>')
+                w(_testo(x + 8, yy - 0.5, segno, 9.5, "middle", C["marker_t"], "bold"))
+            elif tipo == "zona":
+                w(f'<rect x="{_n(x)}" y="{_n(yy - 12)}" width="16" height="14" rx="2" fill="none" '
+                  f'stroke="{C["marker"]}" stroke-width="1.4" stroke-dasharray="4 3"/>')
+                w(_testo(x + 8, yy - 1.5, segno, 9.5, "middle", C["marker"], style="italic"))
+            else:
+                w(f'<line x1="{_n(x)}" y1="{_n(yy - 4)}" x2="{_n(x + 16)}" y2="{_n(yy - 4)}" stroke="{segno}" '
+                  f'stroke-width="2" stroke-dasharray="6 3"/>')
+            for j, riga in enumerate(righe):
+                w(_testo(x + 24, yy + j * 13, riga, 11))
+        w(_testo(14, y_leg_v + 8, "Legenda", 13.5, weight="bold"))
+        for kk, (e, righe) in enumerate(voci_leg):
+            cx_ = 14 + (kk >= taglio) * mezza
+            yy = y_leg_v + 30 + sum(alti[taglio if kk >= taglio else 0:kk])
+            _voce_legenda(w, e, cx_, yy, simboli, noto, locale, righe=righe)
+        w("</g>")
+        w("</svg>")
+        return "\n".join(o)
 
     # ---- carta, titolo
     w(f'<rect width="{_n(width)}" height="{height}" fill="{C["carta"]}" filter="url(#pt-grana)"/>')
-    corpo, comprimi = R._corpo_titolo(grid["title"], width - 2 * MARGIN, 21.0)
-    stretto = (f' textLength="{_n(width - 2 * MARGIN)}" lengthAdjust="spacingAndGlyphs"' if comprimi else "")
-    w(f'<text x="{MARGIN}" y="34" font-size="{_n(corpo)}" font-weight="bold" fill="{C["inchiostro"]}"'
-      f'{stretto}>{R._esc(grid["title"])}</text>')
+    if stampa:
+        corpo = 9 * u
+        comprimi = R._corpo_titolo(grid["title"], width - 2 * MARGIN - 24, corpo)[0] < corpo
+        spazio_t = width - 2 * MARGIN - 24
+    else:
+        corpo, comprimi = R._corpo_titolo(grid["title"], width - 2 * MARGIN, 21.0)
+        spazio_t = width - 2 * MARGIN
+    stretto = (f' textLength="{_n(spazio_t)}" lengthAdjust="spacingAndGlyphs"' if comprimi else "")
+    w(f'<text x="{MARGIN}" y="{_n(12 * u) if stampa else 34}" font-size="{_n(corpo)}" font-weight="bold" '
+      f'fill="{C["inchiostro"]}"{stretto}>{R._esc(grid["title"])}</text>')
     lato = f"{nc * scala:g} × {nr * scala:g} m · quadretto di {scala:g} m · {nc}×{nr} quadretti"
-    w(_testo(MARGIN, 54, lato.replace(".", ","), 12, fill=C["sbiadito"], style="italic"))
+    w(_testo(MARGIN, 21 * u if stampa else 54, lato.replace(".", ","), cz if stampa else 12,
+             fill=C["sbiadito"], style="italic"))
 
     # ---- pavimenti
     w(f'<rect x="{_n(ox)}" y="{oy}" width="{gw}" height="{gh}" fill="{C["piatto"]}"/>')
@@ -329,7 +414,7 @@ def render_pianta(grid: dict, source_name: str) -> str:
         elif p == "t_forest":
             for (r, c) in celle:
                 cx, cy = ox + (c + 0.5) * CELL + rng.uniform(-3, 3), oy + (r + 0.5) * CELL + rng.uniform(-3, 3)
-                w(R._canopy(_n(cx), _n(cy), _n(CELL * rng.uniform(0.42, 0.55))))
+                w(R._canopy(round(cx, 1), round(cy, 1), round(CELL * rng.uniform(0.42, 0.55), 1)))
         elif p == "t_lava":
             for (r, c) in celle:
                 for _ in range(2):
@@ -375,7 +460,7 @@ def render_pianta(grid: dict, source_name: str) -> str:
         if dais:
             w(f'<path d="{_celle_path(dais, ox, oy)}" fill="none" stroke="{C["sbiadito"]}" stroke-width="1.6"/>')
     # acque e lava: la riva
-    for p in [*ACQUE, "t_lava", "t_void"]:
+    for p in [*sorted(ACQUE), "t_lava", "t_void"]:
         if p in regioni:
             col = C["lava_b"] if p == "t_lava" else (C["inchiostro"] if p == "t_void" else C["acqua_b"])
             w(f'<path d="{R._region_path(regioni[p], ox, oy)}" fill="none" stroke="{col}" stroke-width="1.3" '
@@ -481,13 +566,19 @@ def render_pianta(grid: dict, source_name: str) -> str:
     def centro(cella):
         c_, rn_ = cella
         return ox + c_ * CELL + CELL / 2, oy + (rn_ - r0) * CELL + CELL / 2
-    for z in ann["zones"]:
+    for iz, z in enumerate(ann["zones"]):
         (ax, ay), (bx, by) = z["a"], z["b"]
         x0, y0 = ox + min(ax, bx) * CELL, oy + (min(ay, by) - r0) * CELL
         w(f'<rect x="{_n(x0)}" y="{_n(y0)}" width="{_n((abs(bx - ax) + 1) * CELL)}" '
           f'height="{_n((abs(by - ay) + 1) * CELL)}" fill="none" stroke="{C["marker"]}" stroke-width="1.4" '
           f'stroke-dasharray="6 4" opacity="0.85"/>')
-        w(_testo(x0 + 4, y0 + 13, z["text"], 10.5, fill=C["marker"], weight="bold", alone=True))
+        if stampa:
+            w(f'<rect x="{_n(x0 + 2)}" y="{_n(y0 + 2)}" width="{_n(cz * 0.9)}" height="{_n(cz * 1.05)}" '
+              f'rx="2" fill="{C["carta"]}" opacity="0.9"/>')
+            w(_testo(x0 + 2 + cz * 0.45, y0 + 2 + cz * 0.8, R._lettera_zona(iz), cz, "middle",
+                     C["marker"], style="italic"))
+        else:
+            w(_testo(x0 + 4, y0 + 13, z["text"], 10.5, fill=C["marker"], weight="bold", alone=True))
     for p in ann["paths"]:
         pts = [centro(c_) for c_ in p["coords"]]
         if p["loop"]:
@@ -502,19 +593,30 @@ def render_pianta(grid: dict, source_name: str) -> str:
     for m in ann["marks"]:
         cx, cy = centro(m["coord"])
         bx, by = cx + CELL * 0.32, cy - CELL * 0.32
-        w(f'<circle cx="{_n(bx)}" cy="{_n(by)}" r="8.5" fill="{C["marker"]}" stroke="{C["marker_t"]}" '
-          f'stroke-width="1.4"/>')
-        w(_testo(bx, by + 3.6, m["n"], 10, "middle", C["marker_t"], "bold"))
+        w(f'<circle cx="{_n(bx)}" cy="{_n(by)}" r="{_n(cz * 0.68) if stampa else 8.5}" fill="{C["marker"]}" '
+          f'stroke="{C["marker_t"]}" stroke-width="1.4"/>')
+        w(_testo(bx, by + (cz * 0.36 if stampa else 3.6), m["n"], cz if stampa else 10, "middle",
+                 C["marker_t"], "bold"))
     w("</g>")
 
     # ---- cornice, coordinate, rosa, scala
     w(f'<rect x="{_n(ox)}" y="{oy}" width="{gw}" height="{gh}" fill="none" stroke="{C["inchiostro"]}" '
       f'stroke-width="2"/>')
     for c in range(nc):
-        w(_testo(ox + c * CELL + CELL / 2, oy - 7, R.col_label(c), 9, "middle", C["sbiadito"]))
+        if stampa:
+            w(_testo(ox + c * CELL + CELL / 2, oy - (10.5 if sfalsa and c % 2 else 2.5) * u, R.col_label(c),
+                     cz, "middle", C["sbiadito"]))
+        else:
+            w(_testo(ox + c * CELL + CELL / 2, oy - 7, R.col_label(c), 9, "middle", C["sbiadito"]))
     for r, rn in enumerate(row_nums):
-        w(_testo(ox - 7, oy + r * CELL + CELL / 2 + 3, f"{rn:02d}", 9, "end", C["sbiadito"]))
-    w(R._compass_svg(ox + gw - 24, oy + 26, 15, ann["north"]))
+        if stampa:
+            w(_testo(ox - 4, oy + r * CELL + CELL / 2 + 0.36 * cz, f"{rn:02d}", cz, "end", C["sbiadito"]))
+        else:
+            w(_testo(ox - 7, oy + r * CELL + CELL / 2 + 3, f"{rn:02d}", 9, "end", C["sbiadito"]))
+    if stampa:
+        w(R._compass_svg(ox + gw - 26, oy + 34, 15, ann["north"], cz))
+    else:
+        w(R._compass_svg(ox + gw - 24, oy + 26, 15, ann["north"]))
     passo_m = next(v for v in (1.5, 3, 7.5, 15, 30, 75, 150) if v * 5 >= nc * scala / 4 or v == 150)
     seg = passo_m / scala * CELL
     n_seg = max(2, min(5, int(gw / seg)))
@@ -522,8 +624,13 @@ def render_pianta(grid: dict, source_name: str) -> str:
         w(f'<rect x="{_n(ox + i * seg)}" y="{y_sb - 6}" width="{_n(seg)}" height="6" '
           f'fill="{C["inchiostro"] if i % 2 == 0 else C["carta"]}" stroke="{C["inchiostro"]}" stroke-width="0.8"/>')
     for i in range(n_seg + 1):
-        w(_testo(ox + i * seg, y_sb + 12, f"{i * passo_m:g}".replace(".", ","), 9.5, "middle"))
-    w(_testo(ox + n_seg * seg + 14, y_sb, "metri", 10.5, style="italic"))
+        w(_testo(ox + i * seg, y_sb + (cz if stampa else 12), f"{i * passo_m:g}".replace(".", ","),
+                 cz if stampa else 9.5, "middle"))
+    w(_testo(ox + n_seg * seg + 14, y_sb, "metri", cz if stampa else 10.5, style="italic"))
+    if stampa:
+        w("</svg>")
+        # niente filtri (render_map_svg, LARGHEZZA_STAMPA_PT)
+        return "\n".join(re.sub(r' filter="url\(#[\w-]+\)"', "", r) for r in o)
 
     # ---- luoghi e legenda
     if righe_luoghi:
@@ -541,20 +648,42 @@ def render_pianta(grid: dict, source_name: str) -> str:
     for k, e in enumerate(leg):
         cx_ = MARGIN + (k // righe_leg) * largo
         yy = y_leg + 30 + (k % righe_leg) * 19
-        sp = simboli.get(e)
-        nome = (sp or {}).get("it") or e
-        if sp and sp["mode"] == "fill":
-            col = COLORE.get(sp.get("pat"), sp.get("fill", C["lastre"]))
-            w(f'<rect x="{_n(cx_)}" y="{_n(yy - 11)}" width="16" height="13" fill="{col}" '
-              f'stroke="{C["inchiostro"]}" stroke-width="0.8"/>')
-        elif sp and sp["mode"] == "unit":
-            w(f'<circle cx="{_n(cx_ + 8)}" cy="{_n(yy - 4.5)}" r="7" fill="url(#{R._grad_id(sp["fill"])})" '
-              f'stroke="{C["inchiostro"]}"/>')
-        elif sp and sp.get("prop"):
-            var = R.VARIANTS.get(sp["prop"], [sp["prop"]])
-            w(f'<use href="#{var[0]}" x="{_n(cx_ - 2)}" y="{_n(yy - 15)}" width="20" height="20"/>')
-        elif e in noto:
-            w(f'<use href="#{noto[e][0]}" x="{_n(cx_)}" y="{_n(yy - 13)}" width="16" height="16"/>')
-        w(_testo(cx_ + 24, yy, _corto(nome, int(car) - 4), 10.5))
+        _voce_legenda(w, e, cx_, yy, simboli, noto, locale, int(car) - 4)
     w("</svg>")
     return "\n".join(o)
+
+
+def _taglio(alti: list[float]) -> int:
+    """Dove spezzare un elenco in due colonne di altezza simile."""
+    acc = 0.0
+    for i, a in enumerate(alti):
+        if acc >= sum(alti) / 2:
+            return i
+        acc += a
+    return len(alti)
+
+
+def _nome_voce(e, simboli, locale) -> str:
+    """Il nome di un simbolo: quello del glossario, poi la legenda del master."""
+    return (simboli.get(e) or {}).get("it") or locale.get(e) or e
+
+
+def _voce_legenda(w, e, cx_, yy, simboli, noto, locale, car=0, righe=None) -> None:
+    """Una voce della legenda: il segno a sinistra, il nome accorciato a `car`,
+    oppure intero su più `righe` (modo stampa)."""
+    sp = simboli.get(e)
+    nome = _nome_voce(e, simboli, locale)
+    if sp and sp["mode"] == "fill":
+        col = COLORE.get(sp.get("pat"), sp.get("fill", C["lastre"]))
+        w(f'<rect x="{_n(cx_)}" y="{_n(yy - 11)}" width="16" height="13" fill="{col}" '
+          f'stroke="{C["inchiostro"]}" stroke-width="0.8"/>')
+    elif sp and sp["mode"] == "unit":
+        w(f'<circle cx="{_n(cx_ + 8)}" cy="{_n(yy - 4.5)}" r="7" fill="url(#{R._grad_id(sp["fill"])})" '
+          f'stroke="{C["inchiostro"]}"/>')
+    elif sp and sp.get("prop"):
+        var = R.VARIANTS.get(sp["prop"], [sp["prop"]])
+        w(f'<use href="#{var[0]}" x="{_n(cx_ - 2)}" y="{_n(yy - 15)}" width="20" height="20"/>')
+    elif e in noto:
+        w(f'<use href="#{noto[e][0]}" x="{_n(cx_)}" y="{_n(yy - 13)}" width="16" height="16"/>')
+    for j, riga in enumerate(righe or [_corto(nome, car)]):
+        w(_testo(cx_ + 24, yy + j * 13, riga, 10.5))

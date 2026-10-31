@@ -16,7 +16,10 @@ Cosa controlla, in ordine di quanto fa male se salta:
    silenzio;
 2. **i file esistono** — capitoli, copertina, introduzione;
 3. **le immagini dei master esistono** — è il controllo che avrebbe fermato il
-   Palio: un `![...](...)` che punta a un file assente diventa un buco;
+   Palio: un `![...](...)` che punta a un file assente diventa un buco; una
+   mappa generata entra solo come pianta in stampa con la sua legenda (ADR-0106);
+   una griglia che il renderer sa disegnare non si stampa (va la pianta);
+   il `.hb.md` committato è quello che il manifest produce oggi;
 4. **la parità fra le catene** — quali chiavi consuma ognuna, e quali restano
    inattive da una parte (avviso, non errore: `header` in stampa *deve* restare
    inattiva, perché lì la testatina segue il capitolo);
@@ -110,6 +113,83 @@ def _controlla_oggetto(dato: dict, schema: dict, dove: str, errori: list[str]) -
             _controlla_oggetto(valore, sotto, f"{dove}.{chiave}", errori)
 
 
+MAPPA = re.compile(r"_map\d\d_[^/]*\.svg$")
+
+
+def _mappa_di_stampa(src: str, nome: str, master: Path) -> list[str]:
+    """Una mappa generata entra nel booklet solo come pianta in stampa, con la
+    sua legenda nello stesso master (ADR-0106): la pergamena e gli altri temi
+    nella gabbia A4 scendono sotto i 7 pt e i filtri diventano raster."""
+    if not MAPPA.search(src) or src.endswith("_legenda.svg"):
+        return []
+    if Path(src).parent.name != "rendered-stampa-pianta":
+        return [f"mappa «{src}» in {nome}: nel booklet va la pianta in stampa "
+                f"(rendered-stampa-pianta/, render_map_svg.py --tema pianta --stampa)"]
+    legenda = src.removesuffix(".svg") + "_legenda.svg"
+    if legenda not in master.read_text(encoding="utf-8"):
+        return [f"mappa «{src}» in {nome} senza la sua legenda ({Path(legenda).name})"]
+    return []
+
+
+APPARATO = re.compile(r"<!-- apparato -->.*?<!-- /apparato -->", re.S)
+
+
+def _griglie_stampate(master: Path, nome: str) -> list[str]:
+    """Una griglia di mappa che il renderer sa disegnare non va in stampa: al
+    suo posto va la pianta, e la griglia resta nel sorgente come apparato
+    (ADR-0106). Le griglie schematiche, che il renderer non legge, restano."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import render_map_svg as R  # noqa: PLC0415
+
+    testo = APPARATO.sub("", master.read_text(encoding="utf-8"))
+    return [f"griglia «{g['title'][:60]}» stampata in {nome}: metti la pianta "
+            f"(rendered-stampa-pianta/) e la griglia fra <!-- apparato --> e <!-- /apparato -->"
+            for g in R.extract_maps(testo)]
+
+
+RECINTO = re.compile(r"^```([^\n]*)\n(.*?)^```", re.S | re.M)
+BOX = re.compile(r"[\u2500-\u257F]")
+
+
+def _schemi_ascii_stampati(master: Path, nome: str) -> list[str]:
+    """Uno schema disegnato a caratteri (una sezione, una carta non in scala, una
+    linea del tempo) non va in stampa: diventa uno schema di render_schemi.py o
+    una tabella, e il disegno resta come apparato (ADR-0106 §5). Si riconosce dai
+    caratteri di riquadro in un recinto senza linguaggio."""
+    testo = APPARATO.sub("", master.read_text(encoding="utf-8"))
+    errori = []
+    for m in RECINTO.finditer(testo):
+        if m.group(1).strip() not in ("", "text", "txt"):
+            continue
+        if len(BOX.findall(m.group(2))) >= 20:
+            prima = next((r.strip() for r in m.group(2).splitlines() if r.strip()), "")
+            errori.append(f"schema ASCII «{prima[:50]}» stampato in {nome}: fanne uno schema "
+                          f"(scripts/render_schemi.py) o una tabella, e il disegno fra "
+                          f"<!-- apparato --> e <!-- /apparato -->")
+    return errori
+
+
+def _hb_allineato(mp: Path, rel) -> list[str]:
+    """Il .hb.md committato è quello che il manifest produce oggi. Si rifà
+    con l'HTML (ADR-0003), ma nessuno lo controllava: il 2026-10-30 tre volumi
+    di ARC-07 avevano l'HTML nuovo e il .hb.md di prima, senza il capitolo del
+    barile. Si controlla solo dove il .hb.md esiste: generarlo resta una scelta."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import build_booklet_html as B  # noqa: PLC0415
+
+    try:
+        out = B.percorso_hb(mp)
+        if not out.is_file():
+            return []
+        atteso = B.testo_hb(mp)[1]
+    except Exception as e:  # un manifest rotto è già un errore sopra
+        return [f"{rel}: .hb.md non generabile — {e}"]
+    if out.read_text(encoding="utf-8") != atteso:
+        return [f"{rel}: {out.name} non allineato ai capitoli — "
+                f"python3 scripts/build_booklet_html.py {rel} --format hb"]
+    return []
+
+
 def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
     """(errori, avvisi) di un manifest: struttura, file, immagini, parità."""
     errori: list[str] = []
@@ -143,6 +223,11 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
             if not (f.parent / src).resolve().is_file():
                 errori.append(f"{rel}: immagine mancante «{src}» "
                               f"(citata in {cap['file']}, alt «{alt}»)")
+            errori.extend(f"{rel}: {e}" for e in _mappa_di_stampa(src, cap["file"], f))
+        errori.extend(f"{rel}: {e}" for e in _griglie_stampate(f, cap["file"]))
+        errori.extend(f"{rel}: {e}" for e in _schemi_ascii_stampati(f, cap["file"]))
+
+    errori += _hb_allineato(mp, rel)
 
     inattive_stampa = sorted(set(man) & SOLO_HTML)
     if inattive_stampa:

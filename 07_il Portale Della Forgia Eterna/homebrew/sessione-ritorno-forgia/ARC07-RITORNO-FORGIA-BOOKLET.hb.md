@@ -1383,51 +1383,26 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 
 ## APPENDICE — MAPPE (scala 1,5 m/quadretto)
 
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
+> La Sala S-1 è la pianta di PF-2 con gli affreschi come stanno dopo la Terra.
+>
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna:
-> larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.
+> identiche; là hanno gli add-on DM.
 
 ### MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)
 
-```
-════════════════════════════════════════════════════════════════════════
- SALA DELLA FORGIA ETERNA — ottagono Ø 40 m (26 quadretti) · soffitto 15 m
- Zona SICURA · Altare centrale · Portale P1 a NORD (→ Stanza della Corona)
-════════════════════════════════════════════════════════════════════════
-                          NORD  ▼  [P1 → Stanza Corona]
-              ┌───────────[ A1 «L'Alba del Mondo» ]───────────┐
-             ╱   (statico · Moradin forgia la Corona)          ╲
-      [ A2 ]╱                                                    ╲[ A3 ]
-   «4 Eroi» │        🔲 col.mithral (nord)                       │ «Visione»
-   (→80%)   │                                                    │ (Thorik)
-            │                    ✦ (*) spawn PG                  │
-     OVEST  │   🔲col        ╔══════════════╗          🔲col     │  EST
-   [ A4 ]───┤  (adam.)       ║   ALTARE     ║        (adam.)     ├───[ A5 ]
-   «Fuoco»  │                ║  CUORE DI    ║                    │ «Terra»
-   CHIUSO   │                ║   MORADIN    ║                    │ →«Forza
-            │                ║  🔥 Forgia   ║                    │ Sostenuta»
-            │                ╚══════════════╝                    │ (si chiude)
-            │        † corpo di Hella · Therysol · Durik         │
-            │                 🔲 col.adam. (sud)                 │
-      [ A6 ]╲                                                    ╱[ A7 ]
-   «Tempo»   ╲                                                  ╱ «Hammerfist»
-   (→80%,    ╲                                                 ╱  LIVE ⏳3g20h
-   portale)   └───────────[ A8 «Ritorno Trionfale» ]──────────┘  +Aegis Bane
-                          SUD  ▲   (vuoto → 60%)
-────────────────────────────────────────────────────────────────────────
-LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
-(1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn
-· † corpo di Hella accanto all'Altare, lato sud,
-vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik
-fra il corpo e il pericolo · [P1] portale sempre aperto. Distanze:
-spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal centro); Ø 40 m.
-STATO DOPO LA TERRA: A4 chiuso · A5 si chiude («Forza Sostenuta») · A2 80%
-(4ª figura = Hella prende contorno) · A6 80% (portale del Tempo pulsa) ·
-A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
-════════════════════════════════════════════════════════════════════════
-```
+![S-1 — La Sala della Forgia Eterna dopo la Terra](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40.svg)
+
+<!-- nuova-pagina -->
+
+![S-1 — La Sala della Forgia Eterna dopo la Terra — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map03_s-1-la-sala-della-forgia-eterna-dopo-la-terra-40_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 ### MAPPA S-2 — LA STANZA DELLA CORONA DI ADAMANTIO (santuario in purificazione)
 
@@ -1436,38 +1411,14 @@ A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
 > posizionamenti di trono, muro, colonne, statue, alcove, macerie e ingresso.
 > Qui è mostrata nello **stato ARC-07** (santuario in purificazione).
 
-```
-════════════════════════════════════════════════════════════════════════
- STANZA DELLA CORONA — 15 m × 19,5 m (10 col × 13 righe · 1,5 m/quadretto)
- NORD in alto (trono/muro) · ingresso a SUD (righe basse) · ora SANTUARIO
-════════════════════════════════════════════════════════════════════════
-@north S
-COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬜ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬜ ⬜   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
-12     🔲 ⬜ 🔲 ⬜ 👑 👑 ⬜ 🔲 ⬜ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
-11     🔲 ⬜ 🔲 ⬜ ✝️ ⬜ ⬜ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
-10     🔲 ⬜ 🔲 ⬜ ⬜ ⬜ ⬜ 🔲 ⬜ ⬜   B10 = ex nascondiglio Yochlol 2
-09     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   H09 = ex nascondiglio Yochlol 1
-08     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
-07     ⬜ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 ⬜ ⬜   🪨 macerie (terreno difficile ×2)
-06     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
-05     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-04     ⬜ ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ ⬜ ⬜
-03     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-02     🏰 🏰 🏰 🚪 🚪 🚪 🏰 🏰 🏰 🏰   🚪 INGRESSO sud D-F02, nel muro sud della navata
-01     🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰   SUD · androne D-F01 verso la Sala della Forgia
-════════════════════════════════════════════════════════════════════════
-LEGENDA · ⬜ pavimento (ora pulito) · 🏰 roccia del muro sud · 🔲 colonne parallele (copertura +4 CA,
-spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
-restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
-deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
-(terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
-(incisioni-specchio, §6) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
-inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
-🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
-(ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
-@tipo tattica interni
-```
+![S-2 — La Stanza della Corona](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe.svg)
+
+<!-- nuova-pagina -->
+
+![S-2 — La Stanza della Corona — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map04_stanza-della-corona-15-m-19-5-m-10-col-13-righe_legenda.svg)
+
+<!-- nuova-pagina -->
+
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   La navata utile è A-J/03-13 (15 × 16,5 m): la porta D-F02 sta nel muro sud
   e dà sull'androne D-F01.

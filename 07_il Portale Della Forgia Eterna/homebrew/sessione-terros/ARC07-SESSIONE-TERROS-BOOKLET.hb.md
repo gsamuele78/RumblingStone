@@ -652,7 +652,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §11-bis | **Avanzamento** | PX, tesoro ordinario, valore artefatti |
 | §12 | **Ritorno alla Sala** | ponte al «Il Ritorno e gli Affreschi» |
 | §13 | **Handout & Asset** | stampabili, immagini per momento, musica |
-| MAPPE | **T-1…T-6** | ASCII ultra-clear 1,5 m/quadretto |
+| MAPPE | **T-1…T-6** | piante a 1,5 m/quadretto; T-1 e T-4 schemi non in scala |
 
 ---
 
@@ -3303,90 +3303,45 @@ contata a parte (audit WBL).
 
 ---
 
-## MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto)
+## MAPPE (scala 1,5 m/quadretto)
 
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
+> T-5 è ridisegnata in scala; T-1 e T-4, che non sono in scala, sono schemi
+> disegnati nello stesso stile.
+>
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
+> identiche; là hanno gli add-on DM.
 
 ### MAPPA T-1 — PIANO DELLA TERRA: orizzonte & percorso (schematica)
 
-```
-════════════════════════════════════════════════════════════════════════
-  PIANO ELEMENTALE DELLA TERRA — vista d'insieme (distanze in m, non in scala)
-════════════════════════════════════════════════════════════════════════
-   [ARRIVO 0 m]        [300 m-1 km]        [1-1,5 km]     [1,5-2 km]
-   ┌──────────┐    ╱╲  FORESTA        ▓▓▓ CAMPO        ~~~~~ OCEANO   ┌────┐
-   │  ◎ ◎ ◎   │═══╱  ╲ CRISTALLI    ▓ 💠 ▓ CRISTALLI  ~~ DI ~~ ROCCIA│ ▣▣ │
-   │ piattaf. │ p  │XX│ GIGANTI      ▓💎▓  VIVENTI     ~~ (grigia) ~~ │ ▣▣ │
-   │ cristallo│ o  │  │ (30-60 m)    ▓ 💠 ▓ (skill     ~~~~~~~~~~~~~~~ │TEMPIO
-   │  ◎ ◎ ◎   │ n  ╲  ╱ [XORN×3:      ▓▓▓  challenge)   50 m sopra ▲  │MITHRAL
-   └──────────┘ t   ╲╱   Fauci di                        l'oceano    │ 100m³
-                i         Diamante]  ← Aegis Fang VIBRA verso il Tempio →└────┘
-   ◎ = cristalli luminescenti · ponti = pietra galleggiante · XX = pilastro
-   corroso (Xorn) · 💠 Cristalli Viventi · 💎 Madre Cristallo · ▣ portale
-   (faccia INFERIORE del cubo, verso l'oceano; ruota 1 giro/ora)
-   GRAVITÀ 2× — movimento LENTO ovunque (§3)
-════════════════════════════════════════════════════════════════════════
-```
+![T-1 — Il Piano della Terra, dall'arrivo al Tempio](../../Mappe/schemi/T-1-piano-della-terra.svg)
+
 
 ### MAPPA T-2 — FORESTA DI CRISTALLI: agguato degli Xorn (§5, tattica)
 
-```
-════════════════════════════════════════════════════════════════════════
- FORESTA DI CRISTALLI GIGANTI — 27 m × 15 m (18 col × 10 righe · 1,5 m)
- Terreno difficile ovunque (movimento ×2) · gravità 2×
-════════════════════════════════════════════════════════════════════════
-COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
-01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
-02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫 🟫   🕳️ G02 = Xorn 1 emerge
-03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫
-04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🌫 🌫 🟫 🟫 🟫 🟫 🟫 🟫   🛡️F04 Thorik · 🔮I04 Artemis
-05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫   🥋G05 Tordek · 🕳️O05 Xorn 2
-06    🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫
-07    🟫 🟫 🔷 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🔷 🔷 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
-09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
-10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🌫 🌫 🔷 🟫 🟫 🟫 🟫
-LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
-        🟫 = roccia frastagliata (difficile) · 🕳️ = punto d'emersione Xorn
-        🟣 = Fauci di Diamante (élite, Grande: 2×2) · 💠 = base corrosa del pilastro · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis
-        🌫 = fenditura larga 3 m, profonda 18 m (caduta 6d10, risalita Scalare CD 20)
-        🪨 = geode di cristallo alto 3-5 m (copertura totale, PF 80, Durezza 8, si spacca)
-        Chi emerge e morde resta in superficie fino al suo turno: Earth Glide (§5)
-════════════════════════════════════════════════════════════════════════
-@north N
-@taglia G9 ; Grande
-@tipo tattica caverna
-```
+![T-2 — La foresta di cristalli](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map01_foresta-di-cristalli-giganti-27-m-15-m-18-col-10.svg)
+
+<!-- nuova-pagina -->
+
+![T-2 — La foresta di cristalli — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map01_foresta-di-cristalli-giganti-27-m-15-m-18-col-10_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 ### MAPPA T-3 — CAMPO DEI CRISTALLI VIVENTI (skill challenge, §6)
 
-```
-════════════════════════════════════════════════════════════════════════
- CAMPO DEI CRISTALLI VIVENTI — 30 m × 12 m (20 col × 8 righe · 1,5 m)
- GRAVITÀ 2×   ·   ingresso da OVEST (A06), uscita a EST (T06)
-════════════════════════════════════════════════════════════════════════
-COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
-01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️   ← vuoto laterale
-02    🟫 🔮 🟫 🟫 💚 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🔮 🟫 🟫   💚 E02 crepato
-03    🔮 🔮 🟫 🔮 🔮 🔮 🔮 🟫 🔮 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫   triangoli · cerchi · esagono
-04    🟫 🟫 🟫 🟫 🟫 🟫 🔮 🟫 🔮 🔷 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫   🔷 J04 Madre Cristallo
-05    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔮 🔮 🟫 🔮 🔮 🟫 🟫 🟫 🔮 🟫 🔮 🟫 🟫
-06    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   ← corridoio libero
-07    🟫 🔮 🔮 🔮 🟫 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 💚 🟫 🟫 🔮 🟫 🟫   💚 O07 crepato
-08    🟫 🟫 🔮 🟫 🟫 🔮 🟫 🟫 🔮 🔮 🔮 🟫 🟫 🟫 🟫 🔮 🔮 🟫 🟫 🟫   ↓ faglia a sud (+30 min)
-════════════════════════════════════════════════════════════════════════
-LEGENDA · 💚 Cristallo Vivente crepato, riforgiabile (E02 e O07): curato vale +2
-🔮 Cristallo Vivente che canta, alto 1-3 m: copertura ½, chi ci entra lo rompe
-🔷 Madre Cristallo (J04), alta 5 m · 🌫️ vuoto laterale, gravità a 90°: non si attraversa
-⬜ corridoio libero (riga 06) · 🟫 suolo del giardino
-════════════════════════════════════════════════════════════════════════
-@north N
-@tipo tattica caverna
-@luogo Piano della Terra, giardino dei Cristalli Viventi
-```
+![T-3 — Il campo dei cristalli viventi](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map02_campo-dei-cristalli-viventi-30-m-12-m-20-col-8-r.svg)
+
+<!-- nuova-pagina -->
+
+![T-3 — Il campo dei cristalli viventi — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map02_campo-dei-cristalli-viventi-30-m-12-m-20-col-8-r_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 La runa di Varis in J05 delle stesure vecchie non si gioca (canone del §6): in
 questa griglia J05 è suolo, il varco a sud del cerchio interno da cui si
@@ -3394,109 +3349,30 @@ arriva alla Madre Cristallo dal corridoio.
 
 ### MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (§7a)
 
-```
-════════════════════════════════════════════════════════════════════════
- APPROCCIO AL TEMPIO — sezione verticale (l'"alto" è relativo)
-════════════════════════════════════════════════════════════════════════
-        ┌───────────────── TEMPIO (cubo 100 m, ruota) ─────────────────┐
-        │  ░░░░░░ gravità PROPRIA · corridoi ruotano 90° ogni 20 m ░░░  │
-        └───────────────┬────────── ▣ PORTALE (faccia inferiore) ──────┘
-                        │ 3) i PG salgono la corda (Scalare CD 15)
-             ▲ gravità  │ 2) a ~20 m la gravità del Tempio CATTURA Tordek
-             │ del      │    → "cade" verso il portale (Inception)
-   50 m      │ Tempio   │ 1) TORDEK salta (Saltare CD 25, Take 10 = 26 ✓)
-             │          │      [le Rune di Attracco si colpiscono all'arrivo]
-   ~~~~~~~~~~┴~~~~~~~~~~~┴~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   ~~~~~~~~~~ OCEANO DI ROCCIA (grigia, liquida-ma-cede) ~~~~~~~~~~~~~~~~
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   Ruoli: Thorik = ANCORA (FOR CD 20) · Artemis = TRAGHETTATORE (vola col cavo)
-          Tordek = NAVIGATORE (Saltare CD 25 + Rune di Attracco)
-════════════════════════════════════════════════════════════════════════
-```
+![T-4 — L'approccio al Tempio, in sezione](../../Mappe/schemi/T-4-approccio-al-tempio.svg)
+
 
 ### MAPPA T-5 — ANTICAMERA DELLA MAGNETITE: la Sentinella (§7b, tattica)
 
-```
-════════════════════════════════════════════════════════════════════════
- ANTICAMERA DELLA MAGNETITE — esagono Ø 18 m · pareti MAGNETITE (🧲)
-════════════════════════════════════════════════════════════════════════
-                         N (parete nord)
-                 🧲 🧲 🧲 🧲 🧲 🧲 🧲
-              🧲 🧲 🧲 [⛓️ THORIK] 🧲 🧲 🧲      ⛓️ = Thorik immobilizzato
-            🧲 ⬜ ⬜ [🕸️ ARTEMIS] ⬜ ⬜ 🧲          (metallo incollato alla parete)
-          🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
-        🧲 ⬜ ⬜ ⬜ ⬜ 🤖 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🤖 = SENTINELLA (centro)
-      W 🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲 E
-        🧲 ⬜ ⬜ ⬜ ⬜ 🥋 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🥋 = TORDEK (unico in piedi)
-          🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
-            🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            🕸️ = Artemis prono, accanto a
-              🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            Thorik (gravità 10×)
-                         S (porta sigillata)
-  ⬜ = pavimento (gravità 2×, gestibile SOLO per Tordek) · 🧲 pareti che
-  incollano chi porta metallo. Duello: TORDEK vs SENTINELLA (RD 15/adam.+contund. →
-  solo i Bracieri passano; 3 crepe = guscio infranto → Geode di Smeraldo).
-════════════════════════════════════════════════════════════════════════
-```
+![T-5 — L'anticamera della magnetite](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map01_t-5-anticamera-della-magnetite-esagono-18-m-12-c.svg)
+
+<!-- nuova-pagina -->
+
+![T-5 — L'anticamera della magnetite — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map01_t-5-anticamera-della-magnetite-esagono-18-m-12-c_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 ### MAPPA T-6 — CAMERA DELL'ALTARE: TERROS L'ANTICO (§8, tattica)
 
-```
-════════════════════════════════════════════════════════════════════════
- CAMERA CENTRALE — sfera Ø 60 m · ZERO-G ovunque TRANNE l'ALTARE
- ALTARE 13,5 × 9 m = 9 × 6 quadretti da 1,5 m, angoli smussati
- Vista: piano equatoriale attorno all'Altare (24 col × 16 righe · 1,5 m)
-════════════════════════════════════════════════════════════════════════
-COL → A B C D E F G H I J K L M N O P Q R S T U V W X
-01    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← muro curvo: crash 2d6 solo se sei già a <3 m
-02    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-03    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        ZONA ZERO-G (Ø 60 m)
-04    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🔮 Artemis vola qui (Terros −4 vs aria)
-05    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-06    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟡 bordo di rune: ci finisci con la 1ª spinta
-07    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟣 TERROS (Enorme, 3×3 quadretti)
-09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
-10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-11    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ALTARE 13,5 × 9 m (9×6 quadretti) = gravità normale
-12    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-13    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-14    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        Earth Glide: Terros
-15    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        entra/esce dall'Altare
-16    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-════════════════════════════════════════════════════════════════════════
-LEGENDA · 🟩 Altare calpestabile (grav. normale) · 🟡 bordo/rune smeraldo
-🟣 Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
-────────────────────────────────────────────────────────────────────────
-⚙️ GEOGRAFIA DELLA SPINTA (3 m = 2 quadretti, 1/round — vedi §8 statblock)
-  ASSE LUNGO (E-O, 9 quadretti): Terros ne occupa 3, restano 3 per lato.
-    La 1ª spinta ti porta sul bordo 🟡; la 2ª ti butta nello zero-G.
-  ASSE CORTO (N-S, 6 quadretti): margine 1-2 quadretti. È l'ASSE LETALE:
-    di qui una sola spinta ti fa uscire. I giocatori lo imparano al round 2.
-  ↳ Questa asimmetria È il posizionamento: tenere il fianco corto verso
-    Terros è l'errore che paga il tank.
-────────────────────────────────────────────────────────────────────────
-DILEMMA DELL'ALTARE (ha DUE lati, non uno):
-  SULL'ALTARE  = Earth Mastery +1 per Terros contro di te,
-                 MA i due nani hanno +4 di Stabilità contro la Spinta.
-  IN ZERO-G    = eviti l'Earth Mastery, MA perdi del tutto la Stabilità
-                 (Tordek non resiste più a nessuna spinta) e ti serve volo.
-  Artemis in 🌫️ = quasi intoccabile (−4 al boss) = star DPS.
-  Terros NON vola: nello zero-G non guarisce, ma il gruppo non ha come
-  spingercelo (l'Onda non lo sposta, la spallata non è legale, 8c-2b).
-────────────────────────────────────────────────────────────────────────
-⚠️ QUESTA GRIGLIA È LO STATO DAL ROUND 2 (Altare già centrato). Al round 1
-l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).
-SCENOGRAFIA (MAP 6): ingresso a NORD = 🚪 SOGLIA di mithral (si apre da sé;
-l'Altare vi era ormeggiato). Dopo il distacco: ~27 m di zero-G fra soglia e
-Altare — la via di fuga esiste, ma va attraversata in volo o a spinte.
-Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
-scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
-vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
-════════════════════════════════════════════════════════════════════════
-@north N
-@taglia K8 ; Enorme
-@tipo tattica interni
-```
+![T-6 — La camera dell'altare](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map03_camera-centrale-sfera-60-m-zero-g-ovunque-tranne.svg)
+
+<!-- nuova-pagina -->
+
+![T-6 — La camera dell'altare — Luoghi, zone e legenda](../../Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map03_camera-centrale-sfera-60-m-zero-g-ovunque-tranne_legenda.svg)
+
+<!-- nuova-pagina -->
+
 
 
 \page

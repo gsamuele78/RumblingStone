@@ -1023,7 +1023,7 @@ Multi-threat simultaneous:
 **Timing:** Sessione 3 Incontro 3B (CLIMAX!)
 
 **Descrizione Scenario:**
-Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m altezza coperto stalattiti cristallo brillano luce propria (bioluminescent blue-white). Centro: Altare pietra nera dedicato Moradin, rialzato 3m piattaforma, circondato 10 statue colossali Re Nanici ancestrali (4m altezza ciascuno, occhi rubino brillanti). 90 nani superstiti formazione cerchio difensivo attorno altare, preparano ultima resistenza. Single mithral door Nord tunnel = unico ingresso... nemici arriving.
+Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m altezza coperto stalattiti cristallo brillano luce propria (bioluminescent blue-white). Centro: Altare pietra nera dedicato Moradin, rialzato 3m piattaforma, circondato 10 statue colossali Re Nanici ancestrali (4m altezza ciascuno, occhi rubino brillanti). 90 nani superstiti schierati davanti all'altare, rivolti all'unica porta, preparano ultima resistenza. Single mithral door Nord tunnel = unico ingresso... nemici arriving.
 
 **Elementi Mappa:**
 
@@ -1044,13 +1044,11 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 - **Occhi Rubino:** Brillano quando PG appear (Recognition ancestral bloodline)
 - **Simbolismo:** 10 generazioni Re Hammerfist (4.000+ anni storia)
 
-**CERCHIO DIFENSIVO NANICO:**
-- **Formazione:** 90 superstiti ring 360° attorno altare
-- **Spacing:** 3m tra guerrieri (Allow movement)
-- **Layers:**
-  - Outer: 60 Guerrieri (Shields up, spears ready)
-  - Middle: 20 Balestrieri (Crossbows loaded)
-  - Inner: 10 Leaders + Re Thorek + PNG Giocabili
+**LO SCHIERAMENTO NANICO** `[CANONE — DM 2026-10-30]` (prima era un anello di 360°: la porta è l'unico ingresso, e l'anello copriva pareti da cui non entra nessuno):
+- **Formazione:** 90 superstiti a 30 m dall'altare, rivolti alla porta nord
+- **Centro, davanti al varco:** 40 guerrieri su quattro file di scudi, dietro 12 balestrieri e 6 capi
+- **Due ali piegate verso l'altare (ovest ed est):** ciascuna 10 guerrieri, 4 balestrieri e 2 capi; tengono i fianchi del centro
+- **All'altare:** Re Thorek e i PNG giocabili; il sud resta scoperto
 - **Morale:** Desperate (-4 iniziale), transita +2 post-apparizione PG (Swing +6!)
 
 **RE THOREK XIII:**

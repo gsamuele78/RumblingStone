@@ -60,7 +60,7 @@
 | §11-bis | **Avanzamento** | PX, tesoro ordinario, valore artefatti |
 | §12 | **Ritorno alla Sala** | ponte al `DEF-2` |
 | §13 | **Handout & Asset** | stampabili, immagini per momento, musica |
-| MAPPE | **T-1…T-6** | ASCII ultra-clear 1,5 m/quadretto |
+| MAPPE | **T-1…T-6** | piante a 1,5 m/quadretto; T-1 e T-4 schemi non in scala |
 
 ---
 
@@ -2829,14 +2829,25 @@ finale del Fuoco/P3) ·
 
 ---
 
-## MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto)
+## MAPPE (scala 1,5 m/quadretto)
 
+> Le mappe tattiche stanno su pagine intere, disegnate come le piante delle
+> città, con luoghi, zone e legenda nella pagina dopo. Le griglie da cui sono
+> generate restano nel sorgente: si modifica la griglia e si rigenera la pianta.
+> T-5 è ridisegnata in scala; T-1 e T-4, che non sono in scala, sono schemi
+> disegnati nello stesso stile.
+>
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
+> identiche; là hanno gli add-on DM.
 
 ### MAPPA T-1 — PIANO DELLA TERRA: orizzonte & percorso (schematica)
+
+![T-1 — Il Piano della Terra, dall'arrivo al Tempio](Mappe/schemi/T-1-piano-della-terra.svg)
+
+<!-- apparato -->
+Lo schema ASCII di prima, da cui è stato disegnato lo schema (`scripts/render_schemi.py`, si cambia lo script e si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -2856,8 +2867,20 @@ finale del Fuoco/P3) ·
    GRAVITÀ 2× — movimento LENTO ovunque (§3)
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 ### MAPPA T-2 — FORESTA DI CRISTALLI: agguato degli Xorn (§5, tattica)
+
+![T-2 — La foresta di cristalli](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map01_foresta-di-cristalli-giganti-27-m-15-m-18-col-10.svg)
+
+<!-- nuova-pagina -->
+
+![T-2 — La foresta di cristalli — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map01_foresta-di-cristalli-giganti-27-m-15-m-18-col-10_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -2886,8 +2909,20 @@ LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
 @taglia G9 ; Grande
 @tipo tattica caverna
 ```
+<!-- /apparato -->
 
 ### MAPPA T-3 — CAMPO DEI CRISTALLI VIVENTI (skill challenge, §6)
+
+![T-3 — Il campo dei cristalli viventi](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map02_campo-dei-cristalli-viventi-30-m-12-m-20-col-8-r.svg)
+
+<!-- nuova-pagina -->
+
+![T-3 — Il campo dei cristalli viventi — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map02_campo-dei-cristalli-viventi-30-m-12-m-20-col-8-r_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -2913,12 +2948,18 @@ LEGENDA · 💚 Cristallo Vivente crepato, riforgiabile (E02 e O07): curato vale
 @tipo tattica caverna
 @luogo Piano della Terra, giardino dei Cristalli Viventi
 ```
+<!-- /apparato -->
 
 La runa di Varis in J05 delle stesure vecchie non si gioca (canone del §6): in
 questa griglia J05 è suolo, il varco a sud del cerchio interno da cui si
 arriva alla Madre Cristallo dal corridoio.
 
 ### MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (§7a)
+
+![T-4 — L'approccio al Tempio, in sezione](Mappe/schemi/T-4-approccio-al-tempio.svg)
+
+<!-- apparato -->
+Lo schema ASCII di prima, da cui è stato disegnato lo schema (`scripts/render_schemi.py`, si cambia lo script e si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -2939,8 +2980,20 @@ arriva alla Madre Cristallo dal corridoio.
           Tordek = NAVIGATORE (Saltare CD 25 + Rune di Attracco)
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 ### MAPPA T-5 — ANTICAMERA DELLA MAGNETITE: la Sentinella (§7b, tattica)
+
+![T-5 — L'anticamera della magnetite](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map01_t-5-anticamera-della-magnetite-esagono-18-m-12-c.svg)
+
+<!-- nuova-pagina -->
+
+![T-5 — L'anticamera della magnetite — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-SCHEMATICHE-IN-SCALA_map01_t-5-anticamera-della-magnetite-esagono-18-m-12-c_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII di prima, da cui è stata ridisegnata la pianta in scala (`Mappe/ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md`):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -2963,8 +3016,20 @@ arriva alla Madre Cristallo dal corridoio.
   solo i Bracieri passano; 3 crepe = guscio infranto → Geode di Smeraldo).
 ════════════════════════════════════════════════════════════════════════
 ```
+<!-- /apparato -->
 
 ### MAPPA T-6 — CAMERA DELL'ALTARE: TERROS L'ANTICO (§8, tattica)
+
+![T-6 — La camera dell'altare](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map03_camera-centrale-sfera-60-m-zero-g-ovunque-tranne.svg)
+
+<!-- nuova-pagina -->
+
+![T-6 — La camera dell'altare — Luoghi, zone e legenda](Mappe/rendered-stampa-pianta/ARC07-MAPPE-DEFINITIVO_map03_camera-centrale-sfera-60-m-zero-g-ovunque-tranne_legenda.svg)
+
+<!-- nuova-pagina -->
+
+<!-- apparato -->
+La griglia ASCII da cui è generata la pianta (si modifica la griglia, poi si rigenera):
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -3023,3 +3088,4 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 @taglia K8 ; Enorme
 @tipo tattica interni
 ```
+<!-- /apparato -->
