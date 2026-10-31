@@ -930,10 +930,10 @@ bastioni dopo mezza giornata di battaglia sotterranea, e il ponte d'arrivo
 racconta l'arrivo nel Cuore della Montagna, cioè la Scena 2, con uno stato del
 gruppo superato. Finché il raccordo non è scritto, il DM apre la Sessione 4
 della Guida (l'Incontro 4A, la battaglia aerea contro Fauci) dall'uscita del portale, subito, e con
-lo stato del §0-bis `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 5]`. Il raccordo va scritto, e il ponte d'arrivo
-dell'ARC-08 va portato allo stato in uscita: −4 DES / +2 COS / +4 CAR, i tre
-Doni, Durik sempre presente, il Cuore di Moradin che non aggancia gli spiriti
-(D32).
+lo stato del §0-bis `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 5]`. Il raccordo va scritto. Il ponte d'arrivo
+dell'ARC-08 è allineato allo stato in uscita dal 2026-10-31: −4 DES / +2 COS /
++4 CAR, i tre Doni, Durik sempre presente, il Cuore di Moradin che non aggancia
+gli spiriti (D32), e il §3.4 che riprende dall'Incontro 4A.
 
 ### Handout giocatore
 1. **«Lo Stato dei Custodi»**, da consegnare a chiusura d'arco, uno per

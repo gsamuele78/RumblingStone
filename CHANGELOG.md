@@ -18,6 +18,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
+  degli incantesimi fuori rete, nelle esportazioni PCGen di
+  `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
 - Il riquadro unico delle creature in stampa (ADR-0105): `#statblocco` nel
   tema Typst ha le fasce Difesa, Attacco, Statistiche, Capacità speciali e
   Tattiche, riempite dalle righe di ADR-0091 o dai campi del blocco; la stessa
