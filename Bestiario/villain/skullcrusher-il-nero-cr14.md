@@ -6,7 +6,7 @@
 > prima della Mano Rossa: tenerli insieme farebbe proporre a `suggest_encounter`
 > un incontro che mescola due ere e non può esistere. `orda-antica-372dr`
 > esisteva già per Balvar Fuocospento, il consigliere della stessa orda.
-**Source**: `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice A.1 e `07_il Portale Della Forgia Eterna/ERRATA-ARC07-35-Verification.md` §2.3 (statblocco nel master DEFINITIVO, Appendice A.1 — GS 14 Avanzato, vale 15: CA 33, 37 con *armatura magica* già addosso al duello, 297 pf, soffio acido 14d4 Riflessi CD 30, aderente a scelta; il duello della battaglia antica di ~372 DR, Scena 11. Al duello si usa il Vecchio dell'Appendice A.1-bis, GS 17, 337 pf, con le 2 wyvern; l'Adulto resta l'alternativa. I numeri di ERRATA §2.3, GS 12, sono superati dal master)
+**Source**: `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice A.1 e `07_il Portale Della Forgia Eterna/ERRATA-ARC07-35-Verification.md` §2.3 (statblocco nel master DEFINITIVO, Appendice A.1 — GS 14 Avanzato, vale 15: CA 33, 37 con *armatura magica* già addosso al duello, 297 pf, soffio acido 14d4 Riflessi CD 30, aderente a scelta; il duello della battaglia antica di ~372 DR, Scena 11. Al duello si usa il Vecchio dell'Appendice A.1-bis, GS 17, 337 pf, con le 2 wyvern; l'Adulto resta l'alternativa. ERRATA §2.3 è allineata al master dal 2026-10-31)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 
 ## Summary
