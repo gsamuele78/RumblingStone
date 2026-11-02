@@ -5380,6 +5380,43 @@ usa due cose diverse, e tutte e due si possono fare:
   seggio che porta il glifo. Il consiglio non gli
   costa niente, e d'ora in poi i PG gli devono qualcosa.
 
+#### 💣 Variante — il barile sulla tenda
+
+Il gruppo del 25 settembre non è sceso: ha lasciato cadere sulla tenda una
+botte d'olio con i rostri e le fiale della fenice, e tiene in mano due
+barilotti. Le regole sono tutte nel supplemento «Il barile sulla tenda»
+(capitolo a sé nel booklet della serata); qui c'è solo dove si innesta nelle
+scene di questo master.
+
+- **Al posto delle Scene 7 e 8.** Niente soglia, niente trattativa, niente
+  scontro nella tenda: lo scontro è il barile, e si gioca con la scheda da
+  tavolo del supplemento, i dieci passi in ordine. La quota la scelgono i PG
+  (§2-bis del supplemento), e da lì vengono danno, deviazione e chi vede il
+  colmo. Le schede di Zog'tar, delle guardie e di Balvar restano quelle delle
+  Appendici A.2 e A.4.
+- **Le tacche.** Lo sgancio sta dentro la tacca del volo: non costa altro.
+  Grask è sveglio o addormentato secondo la tacca segnata all'arrivo sopra la
+  tenda (B9), come per chi atterra.
+- **L'iniziativa** si tira quando i PG decidono di sganciare. Il round di
+  sorpresa è solo loro; Balvar al round 1 non è colto alla sprovvista (B18).
+- **Le reazioni** sono la tabella «Le tattiche, round per round» del §8 del
+  supplemento: Zog'tar esce dal fuoco e grida al corno, il sacerdote al round
+  3 mette la *luce* sul giavellotto, Balvar al round 4 lancia *dissolvi
+  magie* ad area sul punto illuminato o alla cieca sulla verticale (B13: chi
+  perde il volo cade da 48 m, 15d6). Grask suona entro 1d4 round dal boato,
+  se è vivo; se è morto il corno lo suona qualcun altro (§8, «Chi suona il
+  corno»). L'orda corre allo spiazzo con le torce (B25).
+- **Che cosa rischiano.** Chi resta sopra i 45 m, zitto, e si allontana dalla
+  verticale dopo lo sgancio, niente. Chi resta a guardare rischia il
+  giavellotto con la luce e il dissolvi. Chi scende sotto i 24 m nella luce
+  dell'incendio è visto (B24).
+- **Dopo il barile** valgono le righe del §10 del supplemento, cucite nelle
+  scene che seguono: il ritorno (Scena 9), le mura (Scena 10, tabella «Dalla
+  notte»), il duello (Scena 11, «Dopo il barile») e l'Echo Ledger (§7).
+- **Se scendono dopo il barile** per finire il lavoro, la Scena 8 si gioca
+  com'è, ma con la tenda in fiamme o crollata, il campo sveglio e i rinforzi
+  della tabella «L'orda» del §8 del supplemento già in strada.
+
 **Come torna il drago**. Il **corno da
 guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
 gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
@@ -6299,6 +6336,12 @@ terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
 riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
 in ARC-09 Sal lo cerca su quel polso.
 
+**Dopo il barile**. Il campo è sveglio e le
+bande d'orchi corrono allo spiazzo con le torce: Vatore si ferma fra due tende
+a guardare il fuoco, e la scena dall'alto comincia lì. Chi torna a piedi tira
+il ritorno della Scena 6 a **CD +2**, perché i lupi si sono stretti sotto le
+vie. Se il corno ha suonato, vale anche «Se il corno suona di notte» (Scena 6).
+
 **Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
@@ -6417,6 +6460,9 @@ un successo in più o in meno, e si applica dopo i tiri:
 | cure comprate alla cappella (Scena 5) | nessuno sulla prova. Si tira il **dado dei caduti**: 1d4 per ogni tipo di cura comprata (per il gruppo del 25 settembre, quattro tiri). Il numero è quanti difensori con un nome muoiono sulle mura per quella cura mancata; il DM li annota fra i caduti del 372. Non tocca ARC-08 |
 | i due Treant dell'alba caricano il fianco dell'orda (Scena 5) | **un successo in più** |
 | **Zog'tar è vivo all'alba** (il gruppo ha dormito, o non è arrivato alla tenda) | **un successo in meno**, e Zog'tar guida l'assalto: vedi sotto |
+| **il barile sulla tenda**: il boato è un allarme (supplemento, §10) | **un successo in meno**, anche se la tenda è bruciata |
+| **il barile, e Zog'tar tirato fuori dal fuoco davanti ai suoi** | vale «umiliato davanti alle guardie»: annulla il successo in meno dell'allarme (B11) |
+| **il barile, e Zog'tar vivo** (quasi sempre: §7 del supplemento) | la riga «Zog'tar è vivo all'alba» qui sopra, un successo in meno. Se il barile ha ucciso il sacerdote, sulla breccia sale senza di lui, come già scritto |
 
 **Se Zog'tar è vivo all'alba**. Guida l'orda sotto le mura. Con
 **0-1 successi** sale sulla breccia del camminamento est con le sue quattro
@@ -6493,6 +6539,16 @@ successo in più o in meno, si applica allo stesso modo.
 ### SCENA 11 — Il duello con Skullcrusher
 
 **In scena** — Dove: il cortile — Chi: Skullcrusher · Re Thorek I · Aegis Fang
+
+**Dopo il barile**. Attraverso la
+gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno
+ali.» compreso: all'alba sa che i nani volano e **guarda in alto**. Chi lo
+aspetta in volo sopra il cortile non ha la sorpresa. La Catena regge anche se
+Balvar è morto nel fuoco: le rune incise sopravvivono al runaio. Se il corno
+ha suonato di notte vale «Se il corno suona di notte» (Scena 6): il drago parte
+già in quota e conosce il loro odore. Se nessuno l'ha suonato, perché Grask è
+morto e nessuno ha aperto la custodia, il drago arriva a metà mattina,
+furioso (Scena 6, «Se rubano o rompono il corno»).
 
 **Comparse**
 
@@ -7102,6 +7158,7 @@ si inginocchia. Il resto non si tocca.*
 | **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | registro di fine serata + scheda di Sal |
 | **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (i componenti li porta Vatore, per il Collezionista: Q4-bis) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | registro di fine serata + scheda del Ghostlord |
 | **Zog'tar catturato, o umiliato e vivo** (Scena 8) | un generale mezzo-ogre che sopravvive alla notte del 372: giustiziato dal re se catturato, ramingo se umiliato. Nel 1372 è un nome nelle cronache dell'assedio antico | ARC-08 | registro di fine serata |
+| **La notte del barile** (Scena 6, variante del barile) | chi è morto nel fuoco (Zog'tar, Balvar, il sacerdote, Grask, le guardie), se il corno ha suonato, e se Zog'tar è uscito dal fuoco davanti ai suoi. Balvar vivo non tratta più da solo; morto, la lastra col nome di Hald resta fra le ceneri e qualcuno la trova. Zog'tar vivo dorme ogni notte in un posto diverso, e il campo guarda il cielo: un secondo barile non trova più niente di facile | Scena 10 · Scena 11 · ARC-08, se Zog'tar è vivo (riga qui sopra) · ARC-09 (la lastra di Hald) | registro di fine serata + supplemento «Il barile sulla tenda» §10 |
 | **Scelte-costo vs Zog'tar** (Scena 8) | Thorik affaticato / Cintura di Tordek «assaggiata» o disciplinata / tono del Rubino | ARC-08 (vs Fauci) | Scena 8 + B4 |
 | **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 (vedi sotto) | ARC-08 ingresso | registro delle conseguenze dell'arco |
 | **La Senzienza arriva calda o fredda** («Il Ritorno a Hammerfist» §3, dopo il Rubino) | il ramo lo ha deciso cap. IV §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo è **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
