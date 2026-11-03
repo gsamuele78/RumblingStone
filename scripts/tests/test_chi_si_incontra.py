@@ -117,6 +117,23 @@ class TestChiSiIncontra(unittest.TestCase):
         md, fatto = csi.arricchisci(BARILE, self.barile, self.idx, pg={"zogtar"})
         self.assertNotIn("Chi si incontra", md)
 
+    def test_la_scheda_col_segno_di_blocco_si_riconosce(self):
+        # la #305 mette `<!-- blocco: … -->` fra titolo e tabella, per
+        # `componenti.py --includi`: la scheda è la stessa
+        con = MASTER.replace("Appendice A)*\n\n| | |", "Appendice A)*\n\n<!-- blocco: zogtar-chi -->\n| | |", 1)
+        con = con.replace("| **Vuole** | Hammerfist |\n", "| **Vuole** | Hammerfist |\n<!-- /blocco -->\n", 1)
+        self.assertIn("<!-- blocco: zogtar-chi -->", con)
+        p = csi.schede_entrata(con.split("\n"), self.master)
+        self.assertEqual([x.nome for x in p], ["Zog'tar Deatheye, il generale"])
+        self.assertTrue(any(r.startswith("![") for r in p[0].righe))   # il ritratto viene con lei
+
+    def test_chi_ha_gia_il_riquadro_nel_capitolo_non_si_riporta(self):
+        # il capitolo «Chi c'è stanotte» della #305 ha già il riquadro di Zog'tar
+        capitolo = BARILE + "\n```statblocco\nnome: Zog'tar Deatheye, generale dell'orda\ngs: 15\n```\n"
+        md, fatto = csi.arricchisci(capitolo, self.barile, self.idx)
+        self.assertNotIn("Chi si incontra in questo capitolo", md)
+        self.assertEqual(md.count("```statblocco"), 1)
+
     def test_doctest(self):
         self.assertEqual(doctest.testmod(csi).failed, 0)
 

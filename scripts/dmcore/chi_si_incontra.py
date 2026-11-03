@@ -57,7 +57,6 @@ _TITOLI = {
 }
 
 _ENTRATA = re.compile(r"^\*\*Scheda d'entrata\s*[—–-]\s*(?P<nome>[^*]+?)\*\*(?P<resto>.*)$")
-_COMMENTO = re.compile(r"^\s*<!--.*-->\s*$")
 _IMMAGINE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
 _IN_SCENA = re.compile(r"^\*\*In scena\*\*.*?Chi:\s*(?P<chi>.+)$")
 _ETICHETTE_SB = ("**Iniziativa", "**Difesa", "**Attacco", "**Statistiche",
@@ -112,6 +111,18 @@ def _fine_titolo(righe: list[str], i: int) -> int:
     return j
 
 
+def _segno_di_blocco(riga: str) -> bool:
+    """`<!-- blocco: nome -->` o `<!-- /blocco -->` di `componenti.py --includi`.
+
+    >>> _segno_di_blocco("<!-- blocco: zogtar-chi -->"), _segno_di_blocco("<!-- /blocco -->")
+    (True, True)
+    >>> _segno_di_blocco("| **Aspetto** | mezzo-ogre |")
+    False
+    """
+    r = riga.strip()
+    return r.startswith("<!--") and r.endswith("-->") and "blocco" in r
+
+
 def schede_entrata(righe: list[str], f: Path) -> list[Pezzo]:
     """Ogni scheda d'entrata: titolo, tabella e il ritratto che la segue."""
     fuori = []
@@ -122,13 +133,13 @@ def schede_entrata(righe: list[str], f: Path) -> list[Pezzo]:
         j = _fine_titolo(righe, i) + 1
         # le righe vuote e i segni di blocco (`<!-- blocco: zogtar-chi -->`,
         # che `componenti.py --includi` usa per copiare la tabella) non contano
-        while j < len(righe) and (not righe[j].strip() or _COMMENTO.match(righe[j])):
+        while j < len(righe) and (not righe[j].strip() or _segno_di_blocco(righe[j])):
             j += 1
         if j >= len(righe) or not righe[j].startswith("|"):
             continue
         while j < len(righe) and righe[j].startswith("|"):
             j += 1
-        if j < len(righe) and _COMMENTO.match(righe[j]):
+        if j < len(righe) and _segno_di_blocco(righe[j]):
             j += 1
         # il ritratto, se viene subito dopo
         k = j

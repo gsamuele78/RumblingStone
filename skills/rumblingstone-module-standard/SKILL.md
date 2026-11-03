@@ -401,6 +401,16 @@ riscrive per il tavolo.
 5. PX+tesoro pregenerato quadrano sezione per sezione?
 6. Le mappe hanno coordinate, posizioni e dilemmi tattici in legenda?
 
+## La scheda d'entrata viaggia col capitolo (ADR-0107)
+
+`dmcore.chi_si_incontra` porta nel capitolo del booklet la scheda d'entrata,
+il ritratto e il riquadro di chi vi si incontra. Lavora solo dove il master
+ha la **Scheda d'entrata — Nome, ruolo** con la sua tabella (Aspetto, Vuole,
+Ritratto…) e il riquadro ```statblocco di ADR-0091. Un master che descrive le
+persone in prosa non dà niente al booklet: per questo ogni PNG con un nome
+che si incontra in scena ha la sua scheda d'entrata. Il segno
+`<!-- blocco: … -->` fra titolo e tabella è ammesso.
+
 ## Cancelli deterministici
 
 I controlli che non chiedono un giudizio, da far girare prima di consegnare.

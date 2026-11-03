@@ -136,6 +136,17 @@ Diventerà un gate il giorno della prima ristampa vera (ADR-0024, «da rivisitar
 - **Decidere se pubblicare per soldi**: quella non è una domanda editoriale, è
   ADR-0005, e la risposta è già scritta.
 
+## Chi si incontra sta nel capitolo (ADR-0107, accettata)
+
+Un booklet del DM nuovo nasce con `"schede": "entrambe"` e
+`"chi_si_incontra": true` nel manifest: la scheda d'entrata, il ritratto e il
+riquadro intero di chi si incontra vanno nel capitolo, la mappa dello scontro
+vicino alla scena, e l'appendice dei riquadri resta. Si tiene solo se il PDF
+migliora: `misura_distanza_pagine.py` prima e dopo, nessuna persona più
+lontana dai suoi numeri, e `misura_stampa --check` verde. Se una persona
+peggiora (Terros, 2026-11-03: da 7 a 8 pagine) il booklet resta com'era e lo
+si scrive nell'ADR.
+
 ## Cancelli deterministici
 
 I controlli che non chiedono un giudizio, da far girare prima di consegnare.

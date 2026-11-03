@@ -1,6 +1,6 @@
 # ADR-0107 — Chi si incontra sta nel capitolo dove lo si incontra
 
-**Stato**: proposta
+**Stato**: accettata (2026-11-03, il DM: *«quello che migliora in modo che sia std e non solo ricerca»*)
 **Data**: 2026-11-03
 **Decisione-fonte**: il DM (Jfs), dopo la serata del 2026-11-02 con il booklet di *Notte e Alba*:
 *«per ogni capitolo accanto alla scheda una descrizione, una sua immagine e chi è e cosa vuole credo sia il minimo standard sindacale da adottare, e poi lo leggi da DM»*; e il 2026-11-03: *«voglio che aggiungi anche l'appendice con le schede perché erano fatte bene»*.
@@ -107,9 +107,46 @@ La prova è in [prova-adr0107-2026-11-03/ESITO.md](../esperimenti/prova-adr0107-
 Sul booklet della serata del 25/09 la misura dà: numeri nel capitolo da 0 a
 25 su 151, mappe vicine allo scontro da 4 a 8 su 41, 15 pagine in più. Tutto
 il guadagno sta in ARC-07. Nella lettura cieca il DM e il playtester scelgono
-tutti e due la versione nuova. Restano aperte la fascia TATTICHE che finisce
-sopra il piede quando il riquadro segue una tabella larga, e le correzioni di
-contenuto del master DEF-4.
+tutti e due la versione nuova. La fascia TATTICHE sopra il piede e le
+correzioni di DEF-4 (CD del Vecchio, scurovisione di Zog'tar) sono chiuse:
+la prima dal tema, le seconde dalla PR #305.
+
+## Adozione (2026-11-03)
+
+`"schede": "entrambe"` e `"chi_si_incontra": true` entrano nei manifest dei
+booklet del DM dove la misura migliora e niente peggiora. PDF compilati prima
+e dopo, misurati con `misura_distanza_pagine.py` (mediana delle pagine fra
+dove la persona agisce e dove stanno CA e pf) e `misura_standard_tavolo.py`:
+
+| booklet | pagine | Zog'tar | Skullcrusher | Balvar | Durin | esito |
+|---|---|---|---|---|---|---|
+| Notte e Alba | 143 → 158 | 20,5 → 5,5 | 10 → 3,5 | 25 → 6,5 | 53 → 4,5 | adottato |
+| Serata Resurrezione | 158 → 172 | 24 → 5 | 15 → 4 | 30 → 7,5 | 51 → 4,5 | adottato |
+| Volume Mille Anni | 93 → 105 | 23,5 → 4,5 | 12 → 3 | 29 → 7 | 51 → 4,5 | adottato |
+| Ritorno alla Forgia | 28 → 29 | — | — | — | — | adottato: «vuole» da 0 a 20% |
+| Drappo (DM) | 86 → 87 | — | — | — | — | adottato: numeri nel capitolo in 2 coppie |
+| Abbazia | 41 → 43 | — | — | — | — | adottato: numeri nel capitolo in 4 coppie |
+| Sessione Terros | 66 → 68 | — | — | — | — | **non adottato**: Terros da 7 a 8 pagine |
+
+Sui dieci booklet del DM: numeri nel capitolo da 8 a 25 coppie, «vuole» da 51
+a 61, aspetto da 45 a 50, ritratto da 34 a 38, mappe vicine allo scontro da 5
+a 9 su 42. Palio e Giardino non cambiano (niente schede d'entrata nei master)
+e restano come sono.
+
+La prova ha trovato due difetti veri, corretti: dopo la #305 le schede
+d'entrata con il segno `<!-- blocco -->` non si riconoscevano più (il booklet
+prendeva Zog'tar da una revisione in `plans/`, con l'immagine rotta); e una
+tabella larga in fondo alla pagina copriva il riquadro della colonna accanto.
+Il tema ora mette in cima la tabella della persona portata, rimisura il
+riquadro dove cade e non lascia un titolo da solo in fondo alla colonna.
+`validate_corredo --stampa --rigoroso`, `validate_booklets --stampa` e
+`misura_stampa --tutti --check`: zero righe sovrapposte, zero fuori margine,
+zero schede spezzate. Il tetto delle immagini sotto 300 dpi sale in tre
+volumi (52 → 66, 45 → 53, 43 → 51) per mappe e ritratti ripetuti nei capitoli:
+per riscendere servono i file a risoluzione più alta.
+
+Un test (`TestAdozioneAdr0107`) tiene i sei manifest adottati: togliere il
+modo da uno di loro è rosso.
 
 ## Da rivedere se
 

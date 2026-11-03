@@ -99,6 +99,28 @@ class TestLoStandardMinimo(unittest.TestCase):
         self.assertEqual(doctest.testmod(mst).failed, 0)
 
 
+class TestAdozioneAdr0107(unittest.TestCase):
+    """ADR-0107 adottata il 2026-11-03 dove la misura migliora e niente
+    peggiora (PDF prima e dopo, `misura_distanza_pagine.py`). Togliere il modo
+    da uno di questi booklet è rosso; Terros resta fuori perché peggiora."""
+
+    ADOTTATI = (
+        "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json",
+        "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json",
+        "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json",
+        "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json",
+        "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-DM.manifest.json",
+        "10-stand-alone/L'abbazia Della Rotta Sicura/homebrew/abbazia-rotta-sicura.manifest.json",
+    )
+
+    def test_i_booklet_adottati_tengono_il_modo(self):
+        for rel in self.ADOTTATI:
+            with self.subTest(rel=rel):
+                man = json.loads((ROOT / rel).read_text(encoding="utf-8"))
+                self.assertEqual(man.get("schede"), "entrambe")
+                self.assertIs(man.get("chi_si_incontra"), True)
+
+
 class TestNoteDiLavoro(unittest.TestCase):
     """Le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato»): cricchetto.
 
