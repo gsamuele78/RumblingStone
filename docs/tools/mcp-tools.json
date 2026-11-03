@@ -1898,15 +1898,19 @@
     },
     {
       "name": "misura_box_telecomando",
-      "description": "«C'è un box che dice ai giocatori cosa pensano?»\n\nI box read-aloud che decidono per il gruppo cosa capisce, sa o prova: seconda persona plurale fuori dalle battute, esclusi i «… voi» che danno la scelta. Il 2026-11-03: 4 colpi su 615 box, 2 veri (50%), contro 2 su 15 della configurazione col singolare. Indicatore, non cancello.",
+      "description": "«C'è un box che dice ai giocatori cosa pensano?»\n\nI box read-aloud che decidono per il gruppo cosa capisce, sa o prova (seconda persona plurale, fuori dalle battute). Il 2026-11-03 i 2 veri corretti nel testo (4 → 2 colpi, i 2 rimasti accettati); --check è il cancello, in CI da test_misure_rigorose. Deterministico.",
       "use_case": "«C'è un box che dice ai giocatori cosa pensano?»",
-      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...]",
+      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...] [--check]",
       "inputSchema": {
         "type": "object",
         "properties": {
           "file": {
             "type": "string",
             "description": "file markdown (default: i file vivi)"
+          },
+          "check": {
+            "type": "boolean",
+            "description": "cancello: esce con 1 se c'è un colpo fuori da ACCETTATI"
           }
         },
         "required": [],
@@ -1914,7 +1918,8 @@
       },
       "outputs": [],
       "exit_codes": {
-        "0": "l'elenco è stampato: è un indicatore"
+        "0": "nessun colpo nuovo (o senza --check: elenco stampato)",
+        "1": "con --check: un box nuovo dice al gruppo cosa capisce o sa"
       },
       "deterministic": true
     },
@@ -1952,10 +1957,54 @@
       "deterministic": true
     },
     {
+      "name": "misura_fedelta_nli",
+      "description": "«La riscrittura ha cambiato un fatto che i numeri non vedono, tipo nord diventato sud?»\n\nIl riscritto contraddice l'originale? Coppie (riga tolta, riga messa) del diff, modello NLI mDeBERTa multilingue (MIT), massimo dei due sensi sopra 0,5. Sulle 26 coppie del DM alla cieca F1 0,83 contro 0,62 dei soli numeri. Con --ripara (e dentro ciclo_prosa revisione/misura) le righe che contraddicono tornano all'originale in automatico. Canale unstable (ADR-0099).",
+      "use_case": "«La riscrittura ha cambiato un fatto che i numeri non vedono, tipo nord diventato sud?»",
+      "invocation": "python3 scripts/misura_fedelta_nli.py ORIGINALE RISCRITTO | --rif REV FILE... [--ripara] [--soglia 0.5] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "ORIGINALE RISCRITTO, oppure con --rif i file da confrontare"
+          },
+          "rif": {
+            "type": "string",
+            "description": "il commit o il ramo di prima"
+          },
+          "soglia": {
+            "type": "number",
+            "description": "probabilità di contraddizione oltre cui segnalare"
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          },
+          "ripara": {
+            "type": "boolean",
+            "description": "riscrive il file: le righe che contraddicono tornano all'originale"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "**/*.md"
+      ],
+      "exit_codes": {
+        "0": "nessuna contraddizione, o con --ripara le righe sono state rimesse",
+        "1": "righe che contraddicono l'originale (senza --ripara)",
+        "2": "mancano transformers/torch o il modello"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_ripetizioni_frasi",
-      "description": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»\n\nLe immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Esclude stesso box, copie (4-grammi ≥ 0,5) e handout. Il 2026-11-03 trova 6 ripetizioni vere che i 4-grammi non vedono, contro 1 della configurazione a box interi. Indicatore, non cancello; canale unstable (ADR-0099).",
+      "description": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»\n\nLe immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Il 2026-11-03 le 2 vere nei master corrette (21 → 19 coppie), le altre lette e scritte in plans/scrittura/ripetizioni-accettate.json; --check è il cancello locale. Canale unstable (ADR-0099).",
       "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",
-      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json]",
+      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json] [--check]",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -1966,6 +2015,10 @@
           "json": {
             "type": "boolean",
             "description": "Tutto in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "cancello: esce con 1 se c'è una coppia fuori da ripetizioni-accettate.json"
           }
         },
         "required": [],
@@ -1973,7 +2026,8 @@
       },
       "outputs": [],
       "exit_codes": {
-        "0": "l'elenco è stampato: è un indicatore",
+        "0": "nessuna coppia nuova (o senza --check: elenco stampato)",
+        "1": "con --check: una ripetizione nuova fra box",
         "2": "manca sentence-transformers"
       },
       "deterministic": true

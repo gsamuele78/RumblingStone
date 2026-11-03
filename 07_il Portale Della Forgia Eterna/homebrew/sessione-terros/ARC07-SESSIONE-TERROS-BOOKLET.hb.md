@@ -1137,9 +1137,9 @@ il Tempio. Nessuna prova di Sopravvivenza necessaria.
 
 #### ZONA 1 — Le Piattaforme di Cristallo (0–300 m)
 > **Read-aloud (Salvatore lead) — le piattaforme.** *Il primo passo fuori dal
-> portale è come camminare sul dorso di una bestia addormentata. Le
-> piattaforme di cristallo grigio-verde si susseguono nel buio, unite da ponti
-> di pietra che galleggiano senza fune né pilastro. Sotto, sopra, intorno:
+> portale è come camminare sul dorso di una bestia addormentata. Da vicino il
+> cristallo è grigio-verde e venato come un'unghia, e il primo ponte non ha né
+> fune né pilastro: sta su e basta. Sotto, sopra, intorno:
 > nulla, solo cristalli lontani che brillano come stelle affogate. Ogni ponte
 > oscilla appena sotto il peso raddoppiato, e il cristallo, sotto gli stivali,
 > risponde: un suono basso, breve, come una campana che prova la voce.*

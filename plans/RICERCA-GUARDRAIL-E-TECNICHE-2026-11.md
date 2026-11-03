@@ -182,3 +182,44 @@ misura conferma la prima, e la ragione è nel repo, non nello strumento:
 nomi e numeri sono già tenuti da controlli deterministici più forti. I
 difetti trovati (2 box telecomando, 3 ripetizioni nei master vivi, Lythiel)
 sono prosa e canone: li decide il DM, la riscrittura passa dal cieco.
+
+## 9. Fedeltà del riscritto: l'NLI dove funziona, e le correzioni
+
+Dalla lista di guardrail proposta al DM (NeMo Guardrails, Guardrails AI,
+Ragas, DeepEval) l'unica idea nuova per il repo è la *faithfulness* di Ragas:
+il testo prodotto non deve dire cose che la fonte non dice. Da noi la fonte è
+l'originale e il prodotto è la riscrittura. L'NLI di §7 qui lavora sulle
+coppie per cui è stata misurata: la stessa riga, prima e dopo.
+
+**Etichette del DM, alla cieca** (2026-11-03, `esperimenti/guardrail-2026-11-03/fedelta/`):
+30 coppie (riga tolta, riga messa) dai commit di correzione e di prosa, una
+domanda sola («il dopo dice qualcosa che non può essere vero insieme al
+prima?»), le parole cambiate marcate. 26 risposte sì/no, 4 «?».
+
+| Metodo | Precisione | Richiamo | F1 | AUC |
+|---|---|---|---|---|
+| NLI, massimo dei due sensi > 0,5 | 0,91 | 0,77 | **0,83** | **0,92** |
+| solo numeri diversi | 0,62 | 0,62 | 0,62 | 0,62 |
+| numeri **o** NLI | 0,65 | 0,85 | 0,73 | |
+
+NLI meglio dei numeri in 4.835 ricampionamenti su 5.000 (IC 95% della
+differenza di F1 da −0,01 a +0,47): al limite, ma nella stessa direzione delle
+105 coppie di §7 (0,86 contro 0,63). Le etichette di Claude e quelle del DM
+coincidono su 25 coppie su 26.
+
+**Decisione del DM**: non indicatore, correzione. `misura_fedelta_nli.py
+--ripara` e, da sé, `ciclo_prosa revisione` rimettono come nell'originale la
+riga che lo contraddice; `ciclo_prosa misura` esce con 1. Il costo misurato è
+un falso allarme su 11 segnalazioni: si perde una riscrittura buona, non si
+introduce un errore. Un cambio di fatto voluto (un nome, un numero, il canone)
+si fa a mano, fuori dal ciclo della prosa: la prova è il cortile di Lythiel
+qui sotto, che `misura` segnala con 0,997.
+
+**Correzioni e cancelli, misurati sullo stesso giro**:
+
+| Problema | Prima | Dopo | Cancello |
+|---|---|---|---|
+| box telecomando (`misura_box_telecomando`) | 4 colpi, 2 veri (PALIO «capite che…», P1-REVISED «sapete che…») | 2 colpi, 0 veri (i 2 accettati in `ACCETTATI` col perché) | `--check`, **in CI** |
+| ripetizioni fra box (`misura_ripetizioni_frasi`) | 21 coppie, 3 vere nei master | 19 coppie: corrette le piattaforme di DEF-1 e lo strappo di ARC08-11; DEF-4/DEF-5 «il metallo sulla fronte» resta, è il richiamo del box di DEF-5 votato dal DM (CONGELATI) | `--check`, locale, `plans/scrittura/ripetizioni-accettate.json` |
+| Lythiel e Hella | cortile esterno (Cerimonia §5.1) contro «cortile interno o sui bastioni» (HOOKS) | cortile esterno, dopo la cerimonia, in tutti e due | — |
+| fedeltà delle correzioni stesse | | `misura_fedelta_nli --rif origin/main` sulle 4 riscritture: 0 contraddizioni; `ciclo_prosa misura`: MQM invariato, nessun box impoverito (ARC08-11 lo era alla prima stesura, corretto rimettendo un dettaglio sensoriale) | `ciclo_prosa` |

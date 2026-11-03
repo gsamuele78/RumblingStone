@@ -26,10 +26,18 @@ riscrittura di un box passa dal cieco del DM (ADR-0093).
 ADR-0099. Senza, lo strumento esce con 2 e lo dice. Le funzioni che scelgono
 le frasi e filtrano le coppie sono deterministiche e testate senza modello.
 
+Dal 2026-11-03 (richiesta del DM) è anche un **cancello locale**: le 2
+ripetizioni vere nei master (piattaforme di DEF-1, lo strappo di ARC08-11
+contro DEF-5) sono state corrette (21 → 19 coppie), le altre 19 lette e
+scritte in `plans/scrittura/ripetizioni-accettate.json` col perché. `--check`
+esce con 1 se compare una coppia nuova. Non gira in CI (serve il modello):
+lo chiede la sezione «Cancelli deterministici» della skill narrativa.
+
 ## Uso
 
     python3 scripts/misura_ripetizioni_frasi.py              # master vivi, soglia 0,80
     python3 scripts/misura_ripetizioni_frasi.py --soglia 0.85 --json
+    python3 scripts/misura_ripetizioni_frasi.py --check      # il cancello
 """
 from __future__ import annotations
 
@@ -46,6 +54,23 @@ sys.path.insert(0, str(ROOT / "scripts"))
 MODELLO = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 PAROLE_MIN = 8
 COPIA = 0.5          # 4-grammi in comune da cui la coppia è una copia, non una parafrasi
+ACCETTATE = ROOT / "plans" / "scrittura" / "ripetizioni-accettate.json"
+
+
+def _chiave(c: dict) -> frozenset:
+    return frozenset({(c["a"], c["frase_a"]), (c["b"], c["frase_b"])})
+
+
+def nuove(trovate: list[dict], accettate: list[dict]) -> list[dict]:
+    """Le coppie trovate che non sono fra quelle lette e accettate.
+
+    >>> x = {"a": "A.md", "b": "B.md", "frase_a": "uno", "frase_b": "due"}
+    >>> y = {"a": "B.md", "b": "A.md", "frase_a": "due", "frase_b": "uno"}
+    >>> nuove([x], [y]), len(nuove([x], []))
+    ([], 1)
+    """
+    note = {_chiave(c) for c in accettate}
+    return [c for c in trovate if _chiave(c) not in note]
 
 
 def file_vivi() -> list[Path]:
@@ -123,6 +148,8 @@ def main(argv=None) -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--soglia", type=float, default=0.80, help="coseno minimo (default 0,80)")
     ap.add_argument("--json", action="store_true", help="tutto in JSON")
+    ap.add_argument("--check", action="store_true",
+                    help="cancello: esce con 1 se c'è una coppia fuori da ripetizioni-accettate.json")
     a = ap.parse_args(argv)
     if not (-1.0 <= a.soglia <= 1.0):          # anche nan: un confronto con nan è falso
         ap.error("--soglia è un coseno: fra -1 e 1")
@@ -144,6 +171,13 @@ def main(argv=None) -> int:
         return 2
     E = m.encode([s for *_, s in fr], normalize_embeddings=True, batch_size=64)
     out = coppie(fr, E @ E.T, a.soglia)
+    if a.check:
+        accettate = json.loads(ACCETTATE.read_text(encoding="utf-8"))["coppie"]
+        da_correggere = nuove(out, accettate)
+        print(f"RIPETIZIONI FRA BOX — {len(out)} coppie, {len(da_correggere)} nuove da correggere")
+        for c in da_correggere:
+            print(f"\n✗ {c['coseno']}  {c['a']}  |  {c['b']}\n  A: {c['frase_a']}\n  B: {c['frase_b']}")
+        return 1 if da_correggere else 0
     if a.json:
         print(json.dumps({"frasi": len(fr), "soglia": a.soglia, "coppie": out}, ensure_ascii=False, indent=1))
     else:
