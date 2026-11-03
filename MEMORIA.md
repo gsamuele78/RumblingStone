@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §8 prove scartate rifatte con configurazione rigorosa | ✅ adottati come indicatori: ripetizioni frase per frase (6 vere invece di 1) e box telecomando al plurale (2 su 4 invece di 2 su 15); NLI sulla stessa entità (… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | conti dei master all'SRD (scelta del DM) | ✅ Treant di Adamantio 95 pf (10d8+50), scurovisione 18 m a Durin e alle wyvern; Balvar 101 resta, perché i PNG con classi hanno il primo dado al massimo (DMG 3… |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | STANDARD-STAMPA | ADR-0105 punto 7, modo «entrambe» | ✅ su richiesta del DM, per il booklet Notte e Alba: scheda intera nel capitolo, accanto a descrizione e ritratto, e in più l'appendice delle creature (solo PDF… |
 | 2026-11-02 | PIATTAFORMA-DI-SVILUPPO | P9 · Dependabot convertitori-settimanale | ✅ minimo di `transformers` portato a 5.22.1 a mano, invece del 5.22.0 di Dependabot: lo stesso valore entrato su EarlRagnar78 con la sua #32, così l'allineamen… |
 | 2026-11-02 | STANDALONE-GIARDINO-SALE-CALCE | card D-a e gruppo PF1e | ✅ il DM sceglie le due consigliate: Karkator al LI 16 col Cuore come chiave, PF1e per un gruppo libero di 13°; già applicate, nessun cambio di testo nei moduli |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 playtester, C1, C5 | ✅ 44 rilievi, corretti i 3 🔴 (prove contro Sal con la scelta 17, come si arriva all'isolotto, TS di chi tocca il Cuore una volta al minuto) e quattro regole fu… |
 
 ## Le misure che si portano dietro
 
