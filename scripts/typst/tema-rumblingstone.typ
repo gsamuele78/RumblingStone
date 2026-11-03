@@ -485,13 +485,22 @@
       // Con «entrambe» il riquadro nel capitolo non si spezza a pagina
       // girata: passa intero alla colonna o alla pagina dopo, come in appendice.
       // Un riquadro più alto di una colonna si spezza lo stesso.
-      let entra = if modo-schede.get() == "entrambe" {
+      // Se non entra nello spazio che resta nella colonna, va a capo colonna
+      // da sé: sotto un float Typst 0.15 sbaglia lo spazio che resta, e un
+      // blocco che non si spezza finirebbe sopra il piede.
+      let entra = false
+      let a-capo = false
+      if modo-schede.get() == "entrambe" and not larga {
         let a5 = page.width < 16cm
         let larghezza = if page.columns > 1 { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
         let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
-        measure(intero(tattiche), width: larghezza).height < colonna * 0.92
-      } else { false }
+        let fondo-col = page.height - if a5 { 1.4cm } else { 2.0cm }
+        let alto = measure(intero(tattiche), width: larghezza).height
+        entra = alto < colonna * 0.92
+        a-capo = entra and alto > fondo-col - here().position().y - 12pt
+      }
       let corpo = intero(tattiche, spezzabile: not entra)
+      if a-capo { colbreak() }
       if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
       return
     }
