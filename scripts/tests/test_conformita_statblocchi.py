@@ -375,6 +375,14 @@ class TestRecintiNeiMaster(unittest.TestCase):
         self.assertEqual((x["scritto"], x["atteso"]), (25, 26))
         self.assertIn("come A.1", x["campo"])
 
+    def test_la_cd_riscritta_nella_voce_ereditata_vale(self):
+        # la forma della PR #305: «come A.1, ma … *corrompere l'acqua* a CD 26»
+        vecchio = self.VECCHIO.replace("con raggio 24 m", "con raggio 24 m e *corrompere l'acqua* a CD 26")
+        self.assertEqual(C.conti_dei_recinti(self.DRAGO.format(soffio=30) + vecchio), [])
+        sbagliata = self.VECCHIO.replace("con raggio 24 m", "con raggio 24 m e *corrompere l'acqua* a CD 25")
+        (x,) = C.conti_dei_recinti(self.DRAGO.format(soffio=30) + sbagliata)
+        self.assertEqual((x["campo"], x["scritto"]), ("CD corrompere l'acqua", 25))
+
     def test_la_prosa_che_non_torna_col_recinto(self):
         testo = self.DRAGO.format(soffio=30).replace("**CA 33**", "**CA 35**")
         (x,) = C.conti_dei_recinti(testo)
@@ -390,7 +398,7 @@ class TestRecintiNeiMaster(unittest.TestCase):
     #: di questo ramo): quando scendono, il tetto si abbassa a mano.
     RESIDUI = {
         "ARC07-DEF-3-RESURREZIONE-HELLA.md": 1,   # Treant di Adamantio: pf 90, 10d8+50 fa 95
-        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 5,   # corrompere l'acqua del Vecchio 25/26; scurovisione di
+        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 5,   # dopo la #305 scende a 3: corrompere l'acqua del Vecchio 25/26; scurovisione di
                                                    # Zog'tar, Durin e wyvern; pf di Balvar 101/97
     }
 

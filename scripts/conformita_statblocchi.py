@@ -821,7 +821,7 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
                 if gruppo == "soffio" and focus:
                     nota += " + 2 Capacità Focalizzata"
                 scarto(f"CD {gruppo}", scritto, sorted(ammessi)[-1], nota)
-    mc = re.search(r"corrompere l'acqua\*?\s*\(CD (\d+)", prosa)
+    mc = re.search(r"corrompere l'acqua\*?[^.·\n]{0,12}?CD (\d+)", prosa)
     if mc and presenza is not None and int(mc.group(1)) != presenza:
         scarto("CD corrompere l'acqua", int(mc.group(1)), presenza,
                "SRD, drago nero: la CD della presenza terrificante")
@@ -830,6 +830,9 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
         padre = (fratelli or {}).get(rif)
         if not padre or presenza is None:
             continue
+        mia = _voce_bold(prosa, re.escape(voce.strip())) or ""
+        if re.search(r"corrompere l'acqua\*?[^.·\n]{0,12}?CD \d+", mia):
+            continue  # la voce eredita, ma riscrive la CD per conto suo
         sua = _voce_bold(padre["prosa"], re.escape(voce.strip()))
         cd_padre = _cd(sua)
         pres_padre = _cd(_voce_bold(padre["prosa"], "Presenza (?:Terrificante|Minacciosa)"))
