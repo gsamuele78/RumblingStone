@@ -49,6 +49,11 @@ class TestRipetizioni(unittest.TestCase):
         finally:
             builtins.__import__ = vero
 
+    def test_la_soglia_e_un_coseno(self):
+        for x in ("1.5", "-2", "nan"):
+            with self.assertRaises(SystemExit):
+                rip.main(["--soglia", x])
+
     def test_doctest(self):
         self.assertEqual(doctest.testmod(rip).failed, 0)
 
@@ -65,6 +70,10 @@ class TestTelecomando(unittest.TestCase):
 
     def test_voi_da_la_scelta(self):
         self.assertEqual(tel.colpi("> *Quale rumore lo sapete voi.*"), [])
+
+    def test_anche_voi_che_resta_un_colpo(self):
+        self.assertEqual(tel.colpi("> *Capite anche voi che non c'è ritorno.*"), ["capite"])
+        self.assertEqual(tel.colpi("> *Sapete voi che cosa vuole.*"), ["sapete"])
 
     def test_le_battute_dei_png_no(self):
         self.assertEqual(tel.colpi("> *«Capite che non tornerò» dice Durin.*"), [])

@@ -36,7 +36,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 #: pensare, temere, rendersi conto, accorgersi, sentirsi: il gruppo intero.
 VERBI = re.compile(
     r"\b(capite|sapete|ricordate|decidete|credete|pensate|temete|"
-    r"vi rendete conto|vi accorgete|vi sentite)\b(?!\s+(?:\w+\s+)?voi\b)", re.I)
+    r"vi rendete conto|vi accorgete|vi sentite)\b(?!\s+voi\b(?!\s+che))", re.I)
 BATTUTA = re.compile(r"«[^»]*»|\"[^\"]*\"|“[^”]*”")
 
 
@@ -47,6 +47,8 @@ def colpi(testo: str) -> list[str]:
     ['capite']
     >>> colpi("> *Le loro mani fanno quello che decidete voi.*")
     []
+    >>> colpi("> *Capite anche voi che è finita.*")
+    ['capite']
     >>> colpi('> *«Lo sapete anche voi» dice il re.*')
     []
     """

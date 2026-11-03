@@ -124,6 +124,8 @@ def main(argv=None) -> int:
     ap.add_argument("--soglia", type=float, default=0.80, help="coseno minimo (default 0,80)")
     ap.add_argument("--json", action="store_true", help="tutto in JSON")
     a = ap.parse_args(argv)
+    if not (-1.0 <= a.soglia <= 1.0):          # anche nan: un confronto con nan è falso
+        ap.error("--soglia è un coseno: fra -1 e 1")
     try:
         os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
         from sentence_transformers import SentenceTransformer
@@ -134,7 +136,12 @@ def main(argv=None) -> int:
     fr = []
     for p in file_vivi():
         fr += frasi(p.read_text(errors="replace"), p.relative_to(ROOT).as_posix())
-    m = SentenceTransformer(MODELLO)
+    try:
+        m = SentenceTransformer(MODELLO)
+    except Exception as e:                     # modello non in cache e rete assente
+        print(f"✗ il modello {MODELLO} non si carica ({type(e).__name__}): scaricalo una volta "
+              "con la rete, poi lo strumento lavora dalla cache", file=sys.stderr)
+        return 2
     E = m.encode([s for *_, s in fr], normalize_embeddings=True, batch_size=64)
     out = coppie(fr, E @ E.T, a.soglia)
     if a.json:

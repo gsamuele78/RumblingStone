@@ -1003,7 +1003,7 @@ l'odore di zolfo copre quello del carbone.
   stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
   tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
   si piantano più.)*<!-- /storico --> All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
-  I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 90 pf, RD
+  I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 95 pf, RD
   10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle
   strutture, durano 1 ora; FOR 29, TS Temp +12, Rifl +3, Vol +8, vulnerabili al fuoco, come in `DEF-3` A.2 `[CANONE — DM 2026-10-12, D74]`) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della

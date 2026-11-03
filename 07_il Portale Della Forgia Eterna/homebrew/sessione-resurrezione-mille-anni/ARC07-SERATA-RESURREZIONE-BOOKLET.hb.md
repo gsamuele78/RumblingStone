@@ -4519,7 +4519,7 @@ l'odore di zolfo copre quello del carbone.
 | **Eco** | le bombe sono una sua invenzione, e nel 1372 nessuno sa più farle così |
 
 - **HELLA — i Treant dell'alba.** All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
-  I e II: **due Treant di Adamantio** (statblocco in cap. IV Appendice A.2: Grandi, 90 pf, RD
+  I e II: **due Treant di Adamantio** (statblocco in cap. IV Appendice A.2: Grandi, 95 pf, RD
   10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle
   strutture, durano 1 ora; FOR 29, TS Temp +12, Rifl +3, Vol +8, vulnerabili al fuoco, come in cap. IV A.2) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
