@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108; stato di ADR-0107 corretto nella testa… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §7 le etichette, ADR-0108 | ✅ ADR-0108 accettata; NLI provata fino in fondo (F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle prime 30 sul repo) e non adottata |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | adozione di ADR-0107 (#305 dentro #306) | ✅ ADR-0107 accettata: `"entrambe"` + `"chi_si_incontra"` in 6 booklet, numeri nel capitolo 8 → 25, mappe vicine 5 → 9 su 42, Zog'tar 23,5 → 4,5 pagine; Terros… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | guardrail, tecniche avanzate, ADR-0108 (… | 🟡 `conformita_statblocchi --master` legge i recinti di ADR-0091: 6 conti veri (fra cui *corrompere l'acqua* del Vecchio 25/26 e la scurovisione di Zog'tar, tro… |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 playtester, C1, C5 | ✅ 44 rilievi, corretti i 3 🔴 (prove contro Sal con la scelta 17, come si arriva all'isolotto, TS di chi tocca il Cuore una volta al minuto) e quattro regole fu… |
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B2-B4 PF1e | ✅ modulo PF1e in Qasr al-Milah: master, sei mappe QM-1…QM-6, appendice PF1e (Karkator GS 16 col Cuore, Tariq chierico 13 di Hasharr), guida al tavolo e manifes… |
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 prima parte: lettore a freddo | 🟡 39 rilievi (3 🔴, 11 🟠, 25 🟡): corretti i tre 🔴 (tattiche di Torre e Santuario nel modulo invece che solo sulla mappa, numeri della gravità invertita, soglia… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C2 box misurati | ✅ 15 box contro Abbazia e DEF-4: nessun P1, metratura, parentesi o box oltre 12 righe; un «sembra» e un calco corretti; domande del developer a 0 col TS su Rif… |
 
 ## Le misure che si portano dietro
 
