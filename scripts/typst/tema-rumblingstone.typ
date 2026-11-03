@@ -482,7 +482,16 @@
         [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
                     lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
       }
-      let corpo = intero(tattiche)
+      // Con «entrambe» il riquadro nel capitolo non si spezza a pagina
+      // girata: passa intero alla colonna o alla pagina dopo, come in appendice.
+      // Un riquadro più alto di una colonna si spezza lo stesso.
+      let entra = if modo-schede.get() == "entrambe" {
+        let a5 = page.width < 16cm
+        let larghezza = if page.columns > 1 { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
+        let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
+        measure(intero(tattiche), width: larghezza).height < colonna * 0.92
+      } else { false }
+      let corpo = intero(tattiche, spezzabile: not entra)
       if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
       return
     }

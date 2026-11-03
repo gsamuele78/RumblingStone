@@ -679,6 +679,8 @@ Stasera il drago è il **Vecchio**. La scheda qui sotto rimanda alla scheda
 dell'Adulto (cap. VI Appendice A.1, capitolo VI di questo booklet) per
 sensi, velocità, capacità magiche, talenti e abilità.
 
+<!-- nuova-pagina -->
+
 <!-- include: 07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#skullcrusher-vecchio-scheda -->
 {{monster,frame
 ## Skullcrusher Vecchio
