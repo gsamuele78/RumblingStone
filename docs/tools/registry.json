@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 126,
+  "tool_count": 128,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4680,6 +4680,89 @@
       ]
     },
     {
+      "id": "misura_distanza_pagine",
+      "path": "scripts/misura_distanza_pagine.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
+      "summary": "Legge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "pymupdf"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "pdf",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "uno o più PDF da confrontare"
+        },
+        {
+          "name": "--nomi",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "nomi separati da virgola (default: chi ha un riquadro nel repo)"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "build/**/*.pdf",
+          "kind": "pdf",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "la misura è stampata: è un indicatore",
+        "2": "manca PyMuPDF"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge il testo delle pagine, nessun modello"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misura_distanza_pagine.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
       "id": "misura_stampa",
       "path": "scripts/misura_stampa.py",
       "category": "D-materials",
@@ -4803,6 +4886,105 @@
       ],
       "docs": [
         "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
+      ]
+    },
+    {
+      "id": "misura_standard_tavolo",
+      "path": "scripts/misura_standard_tavolo.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_standard_tavolo.py --dettaglio",
+      "summary": "Per ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo vicino a dove serve. Con --prova misura il capitolo arricchito da dmcore.chi_si_incontra. Indicatore, non cancello.",
+      "use_case": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca ogni coppia capitolo × persona con quello che manca, e i capitoli con uno scontro senza mappa."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        },
+        {
+          "name": "--manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "un booklet solo"
+        },
+        {
+          "name": "--soglia",
+          "type": "int",
+          "required": false,
+          "default": 3,
+          "choices": null,
+          "repeatable": false,
+          "desc": "citazioni minime per dire che una persona compare"
+        },
+        {
+          "name": "--prova",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura ogni booklet come se il manifest avesse «schede»: «entrambe» e «chi_si_incontra»: true (ADR-0107), cioè il capitolo come lo stamperebbe l'esportatore con le persone e le mappe portate dal master."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è un indicatore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge solo i master e i manifest"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misura_standard_tavolo.py",
+        "scripts/tests/test_chi_si_incontra.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md",
+        "plans/RICERCA-USABILITA-AL-TAVOLO-2026-11.md"
       ]
     },
     {

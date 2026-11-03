@@ -1935,6 +1935,43 @@ usa due cose diverse, e tutte e due si possono fare:
   seggio che porta il glifo. Il consiglio non gli
   costa niente, e d'ora in poi i PG gli devono qualcosa.
 
+#### 💣 Variante — il barile sulla tenda `[CANONE — DM 2026-10-26 e 2026-10-29]`
+
+Il gruppo del 25 settembre non è sceso: ha lasciato cadere sulla tenda una
+botte d'olio con i rostri e le fiale della fenice, e tiene in mano due
+barilotti. Le regole sono tutte nel supplemento «Il barile sulla tenda»
+(capitolo a sé nel booklet della serata); qui c'è solo dove si innesta nelle
+scene di questo master.
+
+- **Al posto delle Scene 7 e 8.** Niente soglia, niente trattativa, niente
+  scontro nella tenda: lo scontro è il barile, e si gioca con la scheda da
+  tavolo del supplemento, i dieci passi in ordine. La quota la scelgono i PG
+  (§2-bis del supplemento), e da lì vengono danno, deviazione e chi vede il
+  colmo. Le schede di Zog'tar, delle guardie e di Balvar restano quelle delle
+  Appendici A.2 e A.4.
+- **Le tacche.** Lo sgancio sta dentro la tacca del volo: non costa altro.
+  Grask è sveglio o addormentato secondo la tacca segnata all'arrivo sopra la
+  tenda (B9), come per chi atterra.
+- **L'iniziativa** si tira quando i PG decidono di sganciare. Il round di
+  sorpresa è solo loro; Balvar al round 1 non è colto alla sprovvista (B18).
+- **Le reazioni** sono la tabella «Le tattiche, round per round» del §8 del
+  supplemento: Zog'tar esce dal fuoco e grida al corno, il sacerdote al round
+  3 mette la *luce* sul giavellotto, Balvar al round 4 lancia *dissolvi
+  magie* ad area sul punto illuminato o alla cieca sulla verticale (B13: chi
+  perde il volo cade da 48 m, 15d6). Grask suona entro 1d4 round dal boato,
+  se è vivo; se è morto il corno lo suona qualcun altro (§8, «Chi suona il
+  corno»). L'orda corre allo spiazzo con le torce (B25).
+- **Che cosa rischiano.** Chi resta sopra i 45 m, zitto, e si allontana dalla
+  verticale dopo lo sgancio, niente. Chi resta a guardare rischia il
+  giavellotto con la luce e il dissolvi. Chi scende sotto i 24 m nella luce
+  dell'incendio è visto (B24).
+- **Dopo il barile** valgono le righe del §10 del supplemento, cucite nelle
+  scene che seguono: il ritorno (Scena 9), le mura (Scena 10, tabella «Dalla
+  notte»), il duello (Scena 11, «Dopo il barile») e l'Echo Ledger (§7).
+- **Se scendono dopo il barile** per finire il lavoro, la Scena 8 si gioca
+  com'è, ma con la tenda in fiamme o crollata, il campo sveglio e i rinforzi
+  della tabella «L'orda» del §8 del supplemento già in strada.
+
 **Come torna il drago** `[CANONE — DM 2026-09-26]`. Il **corno da
 guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
 gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
@@ -2012,6 +2049,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
 
+<!-- blocco: zogtar-chi -->
 | | |
 |---|---|
 | **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di mithral annerita, di fattura nanica, presa ai nani. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero `[CANONE — DM 2026-09-24]` |
@@ -2020,6 +2058,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, l'orda che mille anni dopo sarà la Mano Rossa ha un generale in più nei suoi canti `[CANONE — DM 2026-10-07, Q26]` |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Zog'tar Deatheye, il generale](Immagini/web/zogtar-deatheye.jpg)
 
@@ -2105,6 +2144,7 @@ che non abbia già.*
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
 
+<!-- blocco: balvar-chi -->
 | | |
 |---|---|
 | **Aspetto** | nano dello scudo vecchio, grembiule di cuoio, seduto su uno sgabello da bottega. Sulle ginocchia una lastra d'ardesia, in mano una punta di ferro |
@@ -2113,6 +2153,7 @@ Appendice A)*
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Balvar Fuocospento, il runaio esiliato](Immagini/ritratti/balvar-fuocospento.jpg)
 
@@ -2879,6 +2920,12 @@ terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
 riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
 in ARC-09 Sal lo cerca su quel polso.
 
+**Dopo il barile** `[CANONE — DM 2026-10-29, B25]`. Il campo è sveglio e le
+bande d'orchi corrono allo spiazzo con le torce: Vatore si ferma fra due tende
+a guardare il fuoco, e la scena dall'alto comincia lì. Chi torna a piedi tira
+il ritorno della Scena 6 a **CD +2**, perché i lupi si sono stretti sotto le
+vie. Se il corno ha suonato, vale anche «Se il corno suona di notte» (Scena 6).
+
 **Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
@@ -3010,6 +3057,9 @@ un successo in più o in meno, e si applica dopo i tiri:
 | cure comprate alla cappella (Scena 5) | nessuno sulla prova. Si tira il **dado dei caduti**: 1d4 per ogni tipo di cura comprata (per il gruppo del 25 settembre, quattro tiri). Il numero è quanti difensori con un nome muoiono sulle mura per quella cura mancata; il DM li annota fra i caduti del 372. Non tocca ARC-08 |
 | i due Treant dell'alba caricano il fianco dell'orda (Scena 5) | **un successo in più** `[CANONE — DM 2026-10-07, Q49]` |
 | **Zog'tar è vivo all'alba** (il gruppo ha dormito, o non è arrivato alla tenda) | **un successo in meno**, e Zog'tar guida l'assalto: vedi sotto `[CANONE — DM 2026-10-07, Q41]` |
+| **il barile sulla tenda**: il boato è un allarme (supplemento, §10) | **un successo in meno**, anche se la tenda è bruciata `[CANONE — DM 2026-10-29]` |
+| **il barile, e Zog'tar tirato fuori dal fuoco davanti ai suoi** | vale «umiliato davanti alle guardie»: annulla il successo in meno dell'allarme (B11) `[CANONE — DM 2026-10-29]` |
+| **il barile, e Zog'tar vivo** (quasi sempre: §7 del supplemento) | la riga «Zog'tar è vivo all'alba» qui sopra, un successo in meno. Se il barile ha ucciso il sacerdote, sulla breccia sale senza di lui, come già scritto |
 
 **Se Zog'tar è vivo all'alba** `[CANONE — DM 2026-10-07, Q41]`. Guida l'orda sotto le mura. Con
 **0-1 successi** sale sulla breccia del camminamento est con le sue quattro
@@ -3087,6 +3137,16 @@ successo in più o in meno, si applica allo stesso modo.
 
 **In scena** — Dove: il cortile — Chi: Skullcrusher · Re Thorek I · Aegis Fang
 
+**Dopo il barile** `[CANONE — DM 2026-10-26, B21; 2026-10-29, B10]`. Attraverso la
+gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno
+ali.» compreso: all'alba sa che i nani volano e **guarda in alto**. Chi lo
+aspetta in volo sopra il cortile non ha la sorpresa. La Catena regge anche se
+Balvar è morto nel fuoco: le rune incise sopravvivono al runaio. Se il corno
+ha suonato di notte vale «Se il corno suona di notte» (Scena 6): il drago parte
+già in quota e conosce il loro odore. Se nessuno l'ha suonato, perché Grask è
+morto e nessuno ha aperto la custodia, il drago arriva a metà mattina,
+furioso (Scena 6, «Se rubano o rompono il corno»).
+
 **Comparse**
 
 | Chi | Com'è | Come parla |
@@ -3096,6 +3156,7 @@ successo in più o in meno, si applica allo stesso modo.
 **Scheda d'entrata — Skullcrusher il Nero, il capostipite** *(statistiche:
 Appendice A)*
 
+<!-- blocco: skullcrusher-chi -->
 | | |
 |---|---|
 | **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
@@ -3104,6 +3165,7 @@ Appendice A)*
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher») `[CANONE — DM 2026-10-19]`. Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+<!-- /blocco -->
 
 **SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
 l'ho già mangiato, qui. Thorik. I tuoi amici lo dicono troppo forte, il tuo
@@ -3717,6 +3779,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | registro di fine serata + scheda di Sal |
 | **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (i componenti li porta Vatore, per il Collezionista: Q4-bis) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | registro di fine serata + scheda del Ghostlord |
 | **Zog'tar catturato, o umiliato e vivo** (Scena 8) | un generale mezzo-ogre che sopravvive alla notte del 372: giustiziato dal re se catturato, ramingo se umiliato. Nel 1372 è un nome nelle cronache dell'assedio antico `[CANONE — DM 2026-10-12, D69]` | ARC-08 | registro di fine serata |
+| **La notte del barile** (Scena 6, variante del barile) | chi è morto nel fuoco (Zog'tar, Balvar, il sacerdote, Grask, le guardie), se il corno ha suonato, e se Zog'tar è uscito dal fuoco davanti ai suoi. Balvar vivo non tratta più da solo; morto, la lastra col nome di Hald resta fra le ceneri e qualcuno la trova. Zog'tar vivo dorme ogni notte in un posto diverso, e il campo guarda il cielo: un secondo barile non trova più niente di facile `[CANONE — DM 2026-10-29]` | Scena 10 · Scena 11 · ARC-08, se Zog'tar è vivo (riga qui sopra) · ARC-09 (la lastra di Hald) | registro di fine serata + supplemento «Il barile sulla tenda» §10 |
 | **Scelte-costo vs Zog'tar** (Scena 8) | Thorik affaticato / Cintura di Tordek «assaggiata» o disciplinata / tono del Rubino | ARC-08 (vs Fauci) | Scena 8 + B4 |
 | **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 (vedi sotto) | ARC-08 ingresso | registro delle conseguenze dell'arco |
 | **La Senzienza arriva calda o fredda** (`DEF-5` §3, dopo il Rubino) | il ramo lo ha deciso `DEF-3` §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo è **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
@@ -3992,6 +4055,7 @@ wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
 gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 11, «Quale drago si usa, e quando»).
 
+<!-- blocco: skullcrusher-vecchio-scheda -->
 ```statblocco
 nome: Skullcrusher Vecchio
 gs: 17 (Vecchio GS 16, +1 Avanzato)
@@ -4011,15 +4075,16 @@ attacchi:
 
 **Difesa** **CA 36** (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34; **40 con *armatura magica*** · **pf 337** (25d12+175) · TS Temp +21, Rifl +18, Vol +20 · RD 10/magia · RI 22 · immune acido, sonno, paralisi
 
-**Attacco** come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m, più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)
+**Attacco** come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)
 
 **Statistiche** For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1
 
 **Capacità speciali**
 - **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).
-- **Soffio aderente**, come A.1.
+- **Soffio aderente**, come A.1, ma toglierselo è Riflessi CD 31, la CD del suo soffio.
 
 **Tattiche** Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
+<!-- /blocco -->
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
 template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il
@@ -4038,6 +4103,7 @@ si sommano a parte (§8 A).
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
+<!-- blocco: zogtar-scheda -->
 ```statblocco
 nome: Zog'tar Deatheye, generale dell'orda antica
 gs: 15 (Avanzato)
@@ -4050,12 +4116,12 @@ ts: Temp +18 (+21 in Ira), Rifl +9, Vol +9 (+12 in Ira; +16 contro gli ammaliame
 attributi: For 30 Des 20 Cos 24 Int 16 Sag 16 Car 18
 velocita: 12 m
 iniziativa: +9
-sensi: Ascoltare +11, Osservare +3
+sensi: scurovisione 18 m; Ascoltare +11, Osservare +3
 attacchi:
   - Mischia ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira
   - Distanza 3 giavellotti Grandi +19 (1d8+13), incremento 9 m
 ```
-**Iniziativa** +9 · **Sensi** Ascoltare +11, Osservare +3
+**Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **Difesa** **CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)
 
@@ -4065,11 +4131,13 @@ attacchi:
 
 **Capacità speciali**
 - **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).
-- **Presenza Minacciosa**: entro 9 m, Volontà CD 21 o scosso 1d4 round (10 + ½ DV + CAR, come la presenza terrificante dei draghi; D57).
+- **Presenza Minacciosa**: entro 9 m, quando attacca o carica, Volontà CD 21 o scosso 1d4 round; chi supera il TS è immune per 24 ore (10 + ½ DV + CAR, e il resto come la presenza terrificante dei draghi; D57).
 - **Occhio di Ossidiana** (artefatto minore maledetto, incastonato al posto dell'occhio destro, canone del DM): 3/giorno, azione di movimento, marca un bersaglio: −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round. Prezzo: Zog'tar è **vulnerabile alla luce divina** (Luce di Lathander, Corona).
 
 **Tattiche** La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.
+<!-- /blocco -->
 
+<!-- blocco: guardie-scheda -->
 ```statblocco
 nome: Guardia di Zog'tar (4)
 gs: 8
@@ -4085,6 +4153,7 @@ attacchi:
   - Mischia spadone +14 (2d6+6)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
 ```
+<!-- /blocco -->
 <!-- storico -->
 - Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata) — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza da reggere più di un round. PF massimi per dado: scelta del DM.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo (+4 a tutte le caratteristiche, +2 di armatura naturale) — GS 15 → 15 (vale 16): il GS non sale perché la tenda è già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi più di due round contro questi PG e questi artefatti.
@@ -4097,6 +4166,7 @@ attacchi:
 **Il sacerdote dell'orda** (Scena 8) `[CANONE — DM 2026-10-07, Q26:
 adepto 7 dell'SRD sulle caratteristiche dell'hobgoblin, schieramento d'élite]`
 
+<!-- blocco: sacerdote-scheda -->
 ```statblocco
 nome: Sacerdote dell'orda
 gs: 6
@@ -4122,6 +4192,7 @@ attacchi:
 **Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12
 
 **Tattiche** Sta nella tenda di Zog'tar (Scena 8).
+<!-- /blocco -->
 
 ### A.3 · Durin Rocciadura (Scena 2)
 
@@ -4151,7 +4222,7 @@ attacchi:
 ```statblocco
 nome: Balvar Fuocospento, il Consigliere dell'Orda
 gs: 13
-tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
+tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -4283,6 +4354,7 @@ tattica: Dura 1 ora.
 fonte: la scheda intera è nell'appendice delle statistiche della Resurrezione di Hella
 ```
 
+<!-- blocco: wyvern-scheda -->
 ```statblocco
 nome: Wyvern (2)
 gs: 6
@@ -4296,6 +4368,7 @@ attacchi:
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.
 fonte: wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD
 ```
+<!-- /blocco -->
 
 <!-- nuova-pagina -->
 

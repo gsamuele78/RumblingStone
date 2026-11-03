@@ -2738,7 +2738,7 @@ antenato di Othrek (Hammerfist 1372).
 <!-- include: Bestiario/villain/balvar-fuocospento-cr13.md#statblocco -->
 ```statblocco
 gs: 13
-tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
+tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101

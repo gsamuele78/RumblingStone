@@ -90,3 +90,11 @@ Is the encounter under-tuned for APL 13?
 | 3.5 SRD: add HD, size changes, templates, class levels | `references/boost-methods-35.md` |
 | PF1e: simple templates, stats-by-CR benchmark | `pathfinder-1e-srd/references/monster-advancement.md` |
 | Step-by-step rebuild checklist + output format + worked example | `references/boost-workflow.md` |
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/conformita_statblocchi.py --master`: il boss potenziato torna con le regole: pf, CA, CD, «come A.n» ereditato.
+- `python3 scripts/validate_modules.py --tetto-el`: EL ≤ APL+4 (ancora senza superficie: registro norme, riga del tetto).

@@ -273,3 +273,12 @@ guardare** mentre lo esegue.
    evita di bruciare una serata su un numero sbagliato.
 5. **Non archiviare il feedback.** Se non diventa una riga in un file entro la
    settimana, non è mai esistito.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/misura_standard_tavolo.py`: quello che il playtester cerca sfogliando, contato prima della lettura.
+- `python3 scripts/misura_distanza_pagine.py`: le pagine fra scena e numeri nel PDF letto.
+- `python3 scripts/conformita_statblocchi.py --master`: i numeri del round, prima di giocarlo.

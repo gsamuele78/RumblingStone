@@ -333,3 +333,79 @@ class TestStatblocchiNeiMaster(unittest.TestCase):
 
     def test_e_un_rapporto_non_un_cancello(self):
         self.assertEqual(C.main(["--master", str(ROOT / "08_La Battaglia Di Hammerfist" / "ARC08-01-GUIDA-DM.md")]), 0)
+
+
+class TestRecintiNeiMaster(unittest.TestCase):
+    """2026-11-03: i boss recintati di ADR-0091 (Skullcrusher, Zog'tar) e le loro CD."""
+
+    DRAGO = (
+        "### A.1 · Adulto\n\n```statblocco\nnome: Drago\ngs: 14\n"
+        "tipo: Drago Enorme (acqua)\nca: 33\n"
+        "ca-dettaglio: contatto 10, impreparato 31 (−2 taglia, +2 DES, +23 nat)\n"
+        "pf: 297\npf-dado: 22d12+154\nts: Temp +20\n"
+        "attributi: For 31 Des 14 Cos 25 Int 18 Sag 19 Car 18\n"
+        "sensi: scurovisione 36 m\n```\n"
+        "**Difesa** **CA 33** (−2 taglia, +2 DES, +23 nat) · **pf 297** (22d12+154)\n\n"
+        "**Attacco** **Schiacciare** 2d8+15, Riflessi CD 28 · **Soffio acido** (Sop) linea, "
+        "Riflessi CD {soffio} dimezza · **Capacità magiche** 1/giorno *corrompere l'acqua* (CD 25)\n\n"
+        "**Statistiche** For 31 · **Talenti** Capacità Focalizzata (soffio), Virata\n\n"
+        "**Capacità speciali**\n- **Presenza Terrificante** (Str): Volontà CD 25.\n"
+    )
+    VECCHIO = (
+        "\n### A.1-bis · Vecchio\n\n```statblocco\nnome: Vecchio\ngs: 17\n"
+        "tipo: Drago Enorme (acqua)\nca: 36\npf: 337\npf-dado: 25d12+175\nts: Temp +21\n"
+        "attributi: For 33 Des 14 Cos 25 Int 18 Sag 19 Car 18\nsensi: come A.1\n```\n"
+        "**Attacco** come A.1 · **Soffio acido** linea, Riflessi CD 31 · "
+        "**Capacità magiche** come A.1, ma *oscurità* con raggio 24 m\n\n"
+        "**Statistiche** For 33 · **Talenti** quelli di A.1\n\n"
+        "**Capacità speciali**\n- **Presenza Terrificante**: Volontà CD 26.\n"
+    )
+
+    def test_il_drago_giusto_torna(self):
+        self.assertEqual(C.conti_dei_recinti(self.DRAGO.format(soffio=30)), [])
+
+    def test_la_cd_del_soffio_senza_il_talento_contato(self):
+        (x,) = C.conti_dei_recinti(self.DRAGO.format(soffio=28))
+        self.assertEqual((x["campo"], x["scritto"], x["atteso"]), ("CD soffio", 28, 30))
+
+    def test_corrompere_l_acqua_ereditato_dall_adulto(self):
+        # il difetto trovato dal playtester il 2026-11-03: «come A.1» porta la CD 25
+        # dell'Adulto nel Vecchio, dove la presenza è CD 26
+        (x,) = C.conti_dei_recinti(self.DRAGO.format(soffio=30) + self.VECCHIO)
+        self.assertEqual((x["scritto"], x["atteso"]), (25, 26))
+        self.assertIn("come A.1", x["campo"])
+
+    def test_la_cd_riscritta_nella_voce_ereditata_vale(self):
+        # la forma della PR #305: «come A.1, ma … *corrompere l'acqua* a CD 26»
+        vecchio = self.VECCHIO.replace("con raggio 24 m", "con raggio 24 m e *corrompere l'acqua* a CD 26")
+        self.assertEqual(C.conti_dei_recinti(self.DRAGO.format(soffio=30) + vecchio), [])
+        sbagliata = self.VECCHIO.replace("con raggio 24 m", "con raggio 24 m e *corrompere l'acqua* a CD 25")
+        (x,) = C.conti_dei_recinti(self.DRAGO.format(soffio=30) + sbagliata)
+        self.assertEqual((x["campo"], x["scritto"]), ("CD corrompere l'acqua", 25))
+
+    def test_la_prosa_che_non_torna_col_recinto(self):
+        testo = self.DRAGO.format(soffio=30).replace("**CA 33**", "**CA 35**")
+        (x,) = C.conti_dei_recinti(testo)
+        self.assertEqual(x["campo"], "CA (prosa)")
+
+    def test_la_scurovisione_che_manca(self):
+        testo = self.DRAGO.format(soffio=30).replace("sensi: scurovisione 36 m\n", "")
+        (x,) = C.conti_dei_recinti(testo)
+        self.assertEqual(x["campo"], "sensi")
+
+    #: Il cricchetto: i rilievi veri di oggi, per file, col perché. Uno in più è
+    #: rosso. Le correzioni sono canone e le decide il DM : quando scendono, il tetto si abbassa a mano.
+    RESIDUI = {
+        "ARC07-DEF-3-RESURREZIONE-HELLA.md": 1,   # Treant di Adamantio: pf 90, 10d8+50 fa 95
+        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 3,   # scurovisione di Durin e delle wyvern; pf di Balvar 101/97
+                                                   # (la #305 ha corretto il Vecchio e Zog'tar: da 5 a 3)
+    }
+
+    def test_il_cricchetto_dei_master(self):
+        r = C.rapporto_master(C.master_di_default())
+        per_file = {}
+        for x in r:
+            per_file[Path(x["file"]).name] = per_file.get(Path(x["file"]).name, 0) + 1
+        for nome, n in per_file.items():
+            self.assertLessEqual(n, self.RESIDUI.get(nome, 0),
+                                 f"{nome}: {n} conti che non tornano, il tetto è {self.RESIDUI.get(nome, 0)}")
