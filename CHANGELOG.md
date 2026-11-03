@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/dmcore/chi_si_incontra.py` e la chiave `"chi_si_incontra": true` del manifest (ADR-0107, prova): prima di stampare porta nel capitolo il riquadro accanto alla scheda d'entrata, le persone nominate in «In scena … Chi:» e le mappe stampate lontano; `misura_standard_tavolo.py --prova` misura il risultato.
 - `scripts/misura_standard_tavolo.py` (ADR-0107, proposta): per ogni booklet del
   DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso
   capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica; per

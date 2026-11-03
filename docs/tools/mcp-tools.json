@@ -1945,7 +1945,7 @@
     },
     {
       "name": "misura_standard_tavolo",
-      "description": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»\n\nPer ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo. Indicatore, non cancello.",
+      "description": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»\n\nPer ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo vicino a dove serve. Con --prova misura il capitolo arricchito da dmcore.chi_si_incontra. Indicatore, non cancello.",
       "use_case": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»",
       "invocation": "python3 scripts/misura_standard_tavolo.py --dettaglio",
       "inputSchema": {
@@ -1966,17 +1966,18 @@
           "soglia": {
             "type": "integer",
             "description": "citazioni minime per dire che una persona compare"
+          },
+          "prova": {
+            "type": "boolean",
+            "description": "Misura ogni booklet come se il manifest avesse «schede»: «entrambe» e «chi_si_incontra»: true (ADR-0107), cioè il capitolo come lo stamperebbe l'esportatore con le persone e le mappe portate dal master."
           }
         },
         "required": [],
         "additionalProperties": false
       },
-      "outputs": [
-        "docs/audit/statblocchi-booklet.json"
-      ],
+      "outputs": [],
       "exit_codes": {
-        "0": "ok",
-        "1": "un booklet sopra il suo tetto (--check)"
+        "0": "sempre: è un indicatore"
       },
       "deterministic": true
     },

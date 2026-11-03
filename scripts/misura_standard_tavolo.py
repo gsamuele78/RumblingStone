@@ -30,7 +30,7 @@ ricorre almeno `--soglia` volte (3). Per ciascuna coppia capitolo × persona:
 
 | colonna | c'è se, nello stesso capitolo… |
 |---|---|
-| `num` | il riquadro ```statblocco della persona; in un volume con le schede solo in appendice (ADR-0105 §7) conta come `rimando`; con `"schede": "qui"` o `"entrambi"` (ADR-0107) come `qui` |
+| `num` | il riquadro ```statblocco della persona; in un volume con le schede solo in appendice (ADR-0105 §7) conta come `rimando`; con `"schede": "qui"` o `"entrambe"` (ADR-0107) come `qui` |
 | `asp` | una riga o sezione **Aspetto** (scheda d'entrata o dossier) dopo il nome |
 | `img` | un'immagine con il nome nella didascalia o nel file |
 | `chi` | una riga o sezione **Chi è** / **In breve** / **Ruolo** |
@@ -40,7 +40,10 @@ ricorre almeno `--soglia` volte (3). Per ciascuna coppia capitolo × persona:
 `completa` vuol dire tutte e sei (con `num` anche come `rimando`).
 Per ogni capitolo con uno scontro (un riquadro, o le parole *iniziativa* o
 *tattiche*), la colonna `mappa` dice se c'è una mappa (un'immagine da
-`Mappe/`) nel capitolo, solo un rimando («Mappa M7-C», «Appendice D») o niente.
+`Mappe/`) nel capitolo vicino a dove la nomina, una mappa stampata nel
+capitolo ma lontana (`lontana`: più di 200 righe del master dopo, come
+l'Appendice D di un master), solo un rimando («Mappa M7-C», «Appendice D») o
+niente.
 
 ## Cosa NON misura, dichiarato
 
@@ -75,7 +78,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, piega_ascii, togli_storico  # noqa: E402
+from dmcore import chi_si_incontra  # noqa: E402
+from dmcore.testo import (  # noqa: E402
+    capitoli_del_volume, leggi_per_la_stampa, piega_ascii, togli_storico, traduci_rimandi,
+)
 
 CAMPI = ("num", "asp", "img", "chi", "vuole", "tatt")
 
@@ -101,8 +107,7 @@ _NON_PERSONE = {"moradin", "abbathor", "gruumsh", "lolth", "dumathoin", "clanged
 
 # I capitoli di consultazione (regia, cast, introduzione, appendici) non sono
 # il punto in cui si incontra qualcuno: le coppie si contano negli altri.
-_CONSULTAZIONE = re.compile(r"regia|cassetta|\bcast\b|introduzione|dove siamo|indice|glossario|appendice|ponte",
-                            re.I)
+_CONSULTAZIONE = chi_si_incontra.CONSULTAZIONE
 
 _SCHEDA_ENTRATA = re.compile(r"\*\*Scheda d'entrata\s*[—–-]\s*([^*]+?)\*\*")
 _NOME_BLOCCO = re.compile(r"^nome:\s*(.+)$", re.M)
@@ -222,16 +227,33 @@ def blocchi(md: str) -> list[tuple[str, str]]:
     return fuori
 
 
-def campo_dopo_nome(md: str, k: str, campo: re.Pattern, finestra: int = 40) -> bool:
-    """Il campo compare entro `finestra` righe dopo una riga che porta il nome
-    (titolo di scheda d'entrata, intestazione, riga in grassetto)."""
+def campo_dopo_nome(md: str, k: str, campo: re.Pattern, finestra: int = 150) -> bool:
+    r"""Il campo compare nel blocco della persona: dopo il titolo della sua
+    scheda d'entrata o un'intestazione col suo nome, fino alla prossima
+    intestazione di scena (`##`/`###`) o alla scheda d'entrata di un altro,
+    e al massimo `finestra` righe dopo.
+    Una riga in grassetto che la nomina soltanto («**Vuole** … Balvar») non
+    apre il blocco: era un falso positivo della prima misura.
+
+    >>> campo_dopo_nome("**Scheda d'entrata — Balvar, il runaio**\n\n#### Chi è\nun nano", "balvar", _CHI)
+    True
+    >>> campo_dopo_nome("**Vuole** | Balvar\n#### Chi è\nun nano", "balvar", _CHI)
+    False
+    >>> campo_dopo_nome("### Balvar\n\n### Scena 9\n#### Chi è", "balvar", _CHI)
+    False
+    >>> campo_dopo_nome("**Scheda d'entrata — Zog'tar**\n**Scheda d'entrata — Balvar**\n#### Chi è", "zogtar", _CHI)
+    False
+    """
     righe = md.split("\n")
     for i, r in enumerate(righe):
-        rp = piega(r)
-        if conta_nome(rp, k) and (r.startswith("#") or "Scheda d'entrata" in r or r.startswith("**")):
-            pezzo = "\n".join(righe[i:i + finestra])
-            if campo.search(pezzo):
-                return True
+        if not (r.startswith("#") or "Scheda d'entrata" in r) or not conta_nome(piega(r), k):
+            continue
+        j = i + 1
+        while j < len(righe) and j - i < finestra and not re.match(r"^#{2,3}\s", righe[j]) \
+                and "Scheda d'entrata" not in righe[j]:
+            j += 1
+        if campo.search("\n".join(righe[i:j])):
+            return True
     return False
 
 
@@ -257,6 +279,31 @@ def ha_tattica(md: str, k: str, bl: list[tuple[str, str]]) -> bool:
     return False
 
 
+def mappa_lontana(md: str) -> bool:
+    r"""Il capitolo stampa le sue mappe, ma lontano da dove le nomina: una
+    mappa nominata dal testo ha la sua pianta solo più di
+    `chi_si_incontra.LONTANO` righe dopo il punto dove serve (il paragrafo
+    «**Mappa …**» della scena, o la prima volta che il testo la nomina). È l'Appendice D
+    di un master, quaranta pagine dopo la scena.
+
+    >>> mappa_lontana("**Mappa M1-A** qui.\n\n![M1-A — x](Mappe/a.svg)")
+    False
+    >>> mappa_lontana("**Mappa M1-A** qui." + "\n" * 400 + "![M1-A — x](Mappe/a.svg)")
+    True
+    """
+    righe = md.split("\n")
+    piante: dict[str, list[int]] = {}
+    for i, r in enumerate(righe):
+        m = re.match(r"^!\[(M\d+-[A-Z]{1,2})\b[^\]]*\]\(([^)]*Mappe/[^)]*)\)", r)
+        if m:
+            piante.setdefault(m.group(1), []).append(i)
+    for c, i in chi_si_incontra.punti_delle_mappe(righe, set(piante)).items():
+        # stessa regola del generatore: la pianta sta prima del punto o poco dopo
+        if not any(p - i < chi_si_incontra.LONTANO for p in piante[c]):
+            return True
+    return False
+
+
 def manifesti_dm() -> list[Path]:
     fuori = []
     for p in sorted(ROOT.rglob("*.manifest.json")):
@@ -269,11 +316,19 @@ def manifesti_dm() -> list[Path]:
     return fuori
 
 
-def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3) -> dict:
+def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = False,
+                   indice: "chi_si_incontra.Indice | None" = None) -> dict:
+    """`prova` misura il booklet come se il manifest dicesse
+    `"schede": "entrambe", "chi_si_incontra": true` (ADR-0107): il capitolo
+    arricchito da `dmcore.chi_si_incontra`, come lo stampa l'esportatore."""
     man = json.loads(mp.read_text(encoding="utf-8"))
     base = mp.parent
-    # «entrambi» (ADR-0107): il riquadro nel capitolo e anche nell'appendice
-    appendice = man.get("schede", "appendice") == "appendice"
+    modo = "entrambe" if prova else man.get("schede", "appendice")
+    arricchisci = prova or bool(man.get("chi_si_incontra"))
+    # «entrambe» (ADR-0107): il riquadro nel capitolo e anche nell'appendice
+    appendice = modo == "appendice"
+    if arricchisci and indice is None:
+        indice = chi_si_incontra.indice_del_repo()
     nel_volume = capitoli_del_volume(base, man)
     capitoli = []
     for cap in man.get("chapters", []):
@@ -282,8 +337,11 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3) -> dict:
         f = (base / cap["file"]).resolve()
         if not f.is_file():
             continue
-        md = pulisci(leggi_per_la_stampa(f, nel_volume))
-        capitoli.append((cap.get("title", f.stem), md))
+        md = leggi_per_la_stampa(f, nel_volume)
+        if arricchisci and not _CONSULTAZIONE.search(cap.get("title", "")):
+            md, _ = chi_si_incontra.arricchisci(md, f, indice, chiavi_dei_pg())
+            md = traduci_rimandi(md, f, nel_volume)
+        capitoli.append((cap.get("title", f.stem), pulisci(md)))
 
     # chi ha un nome: una scheda (riquadro o scheda d'entrata) in questo
     # booklet, oppure una scheda d'entrata o un dossier altrove nel repo
@@ -312,7 +370,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3) -> dict:
         bl = blocchi(md)
         if _SCONTRO.search(md):
             if any("Mappe/" in p for _, p in _IMMAGINE.findall(md)):
-                mappa = "qui"
+                mappa = "lontana" if mappa_lontana(md) else "qui"
             elif _RIMANDO_MAPPA.search(md):
                 mappa = "rimando"
             else:
@@ -336,7 +394,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3) -> dict:
             presenti = sum(1 for c in CAMPI if (v[c] if c != "num" else v[c] != "manca"))
             righe.append({"capitolo": titolo, "persona": nome, "citazioni": n, **v,
                           "presenti": presenti, "completa": presenti == len(CAMPI)})
-    return {"schede_in": "appendice" if appendice else "capitolo",
+    return {"schede_in": modo,
             "coppie": righe, "mappe": mappe}
 
 
@@ -360,12 +418,15 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--manifest", type=Path)
     ap.add_argument("--soglia", type=int, default=3, help="citazioni minime per dire che una persona compare (3)")
+    ap.add_argument("--prova", action="store_true",
+                    help="misura come se il manifest avesse «entrambe» e «chi_si_incontra» (ADR-0107)")
     a = ap.parse_args(argv)
 
     nomi = persone_con_nome()
     mani = [a.manifest.resolve()] if a.manifest else manifesti_dm()
+    indice = chi_si_incontra.indice_del_repo() if a.prova else None
     dati = {mp.relative_to(ROOT).as_posix() if mp.is_relative_to(ROOT) else str(mp):
-            misura_booklet(mp, nomi, a.soglia) for mp in mani}
+            misura_booklet(mp, nomi, a.soglia, a.prova, indice) for mp in mani}
     for v in dati.values():
         v["riassunto"] = riassunto(v)
     if a.json:

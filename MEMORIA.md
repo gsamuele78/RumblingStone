@@ -105,6 +105,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | prova di ADR-0107 (`plans/esperimenti/prova-adr0107-2026-11-03/`) | 🟡 `dmcore.chi_si_incontra` e `"chi_si_incontra": true` (con `"entrambe"` della #305); misura più severa (3 «complete» vere, non 6); con la prova numeri nel cap… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | ricerca, misura, ADR-0107 | 🟡 14 criteri dalla rete, 8 già misurati sul master e nessuno sul booklet stampato; `misura_standard_tavolo.py`: 6 coppie capitolo × persona complete su 145, nu… |
 | 2026-11-02 | PIATTAFORMA-DI-SVILUPPO | P9 · Dependabot convertitori-settimanale | ✅ minimo di `transformers` portato a 5.22.1 a mano, invece del 5.22.0 di Dependabot: lo stesso valore entrato su EarlRagnar78 con la sua #32, così l'allineamen… |
 | 2026-11-02 | STANDALONE-GIARDINO-SALE-CALCE | card D-a e gruppo PF1e | ✅ il DM sceglie le due consigliate: Karkator al LI 16 col Cuore come chiave, PF1e per un gruppo libero di 13°; già applicate, nessun cambio di testo nei moduli |
@@ -116,7 +117,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B5 e B7 (3.5) | ✅ «Le leve dei PG» nel master (12 leve con dove, prova e conseguenza, una tabella per PG); guida_al_tavolo.md come capitolo 3 del booklet: avvio rapido, regia… |
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 chiuso | ✅ GS-R in render_schemi.py: i tre ingressi sulla pianta canonica di Rethmar; quote allineate al canone (Cannath a +13, foro 8 m sopra il fiume), sorgente del S… |
 | 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 seconda parte: schemi e piante allineate | 🟡 GS-0 collegamenti, GS-S1 sezione della cisterna, GS-S2 Ragni delle Catene in render_schemi.py; GS-3/GS-4/GS-5 allineate (Torre 18 × 19,5 m, ponte maestro 39… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C1 | 🟡 il box del Cuore non presuppone più che il PG lo guardi; attesa di §6.2 (2C) aggiornata a 20 box su 581 in STATO-E-ORDINE-DEI-PIANI |
 
 ## Le misure che si portano dietro
 

@@ -52,7 +52,10 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, slug, togli_storico  # noqa: E402
+from dmcore import chi_si_incontra  # noqa: E402
+from dmcore.testo import (  # noqa: E402
+    capitoli_del_volume, leggi_per_la_stampa, piega_ascii, slug, togli_storico, traduci_rimandi,
+)
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
     StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, leggi as leggi_statblocco,
@@ -1059,9 +1062,15 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # Dove sta il riquadro intero delle creature (ADR-0105 punto 7): in
     # appendice, con la riga e la tattica nell'incontro; «qui» per i volumi che
     # le schede le vogliono dove sono scritte.
-    appendice = man.get("schede", "appendice") == "appendice"
+    modo = man.get("schede", "appendice")
+    appendice = modo in ("appendice", "entrambe")
     if appendice:
-        parti.append('#modo-schede.update("appendice")')
+        parti.append(f'#modo-schede.update("{modo}")')
+    # `"chi_si_incontra": true` (ADR-0107): chi si incontra sta nel capitolo,
+    # con scheda, ritratto, riquadro e mappa, portati dal master che li ha.
+    # Si accompagna a «entrambe», così l'appendice resta.
+    indice = chi_si_incontra.indice_del_repo() if man.get("chi_si_incontra") else None
+    pg = {piega_ascii(p.stem).lower() for p in (ROOT / "PG" / "schede").glob("*.yaml")} if indice else set()
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
@@ -1072,7 +1081,15 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
         parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
-        corpo = md_to_typ(leggi_per_la_stampa(f, nel_volume), f.parent,
+        md = leggi_per_la_stampa(f, nel_volume)
+        # la regia e la cassetta nominano tutti, ma lì non si incontra nessuno
+        if indice is not None and not chi_si_incontra.CONSULTAZIONE.search(titolo):
+            md, fatto = chi_si_incontra.arricchisci(md, f, indice, pg)
+            # quel che arriva da un altro master parla ancora di «DEF-4»
+            md = traduci_rimandi(md, f, nel_volume)
+            for riga in fatto:
+                print(f"  · {titolo[:40]}: {riga}", file=sys.stderr)
+        corpo = md_to_typ(md, f.parent,
                           capolettera=bool(cap.get("capolettera", predefinito)))
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)

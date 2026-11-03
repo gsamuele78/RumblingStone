@@ -10436,7 +10436,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/misura_standard_tavolo.py --dettaglio",
-      "summary": "Per ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo. Indicatore, non cancello.",
+      "summary": "Per ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo vicino a dove serve. Con --prova misura il capitolo arricchito da dmcore.chi_si_incontra. Indicatore, non cancello.",
       "use_case": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»",
       "stability": "beta",
       "stdlib_only": true,
@@ -10478,6 +10478,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "citazioni minime per dire che una persona compare"
+        },
+        {
+          "name": "--prova",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura ogni booklet come se il manifest avesse «schede»: «entrambe» e «chi_si_incontra»: true (ADR-0107), cioè il capitolo come lo stamperebbe l'esportatore con le persone e le mappe portate dal master."
         }
       ],
       "inputs": [
@@ -10488,24 +10497,15 @@
           "schema": null
         },
         {
-          "path": "docs/audit/statblocchi-booklet.json",
-          "kind": "json",
-          "required": false,
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
           "schema": null
         }
       ],
-      "outputs": [
-        {
-          "path": "docs/audit/statblocchi-booklet.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
+      "outputs": [],
       "exit_codes": {
-        "0": "ok",
-        "1": "un booklet sopra il suo tetto (--check)"
+        "0": "sempre: è un indicatore"
       },
       "determinism": {
         "deterministic": true,
@@ -10521,10 +10521,12 @@
       "consumes_schema": null,
       "produces_schema": null,
       "tests": [
-        "scripts/tests/test_riquadro_statblocco.py"
+        "scripts/tests/test_misura_standard_tavolo.py",
+        "scripts/tests/test_chi_si_incontra.py"
       ],
       "docs": [
-        "plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md"
+        "plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md",
+        "plans/RICERCA-USABILITA-AL-TAVOLO-2026-11.md"
       ]
     },
     {

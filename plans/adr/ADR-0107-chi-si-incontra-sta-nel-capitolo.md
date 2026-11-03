@@ -55,17 +55,27 @@ riquadro del capitolo e quello dell'appendice escono dallo stesso recinto
    La scheda d'entrata di ADR-0073 prende la riga **Chi è** come prima voce;
    le altre (Suona, Sa, Eco) restano.
 2. **L'appendice resta**: tutti i riquadri, in ordine di nome, come la fa oggi
-   `appendice-creature`. Il manifest dice `"schede": "entrambi"`; `"appendice"`
-   e `"qui"` restano per i volumi che li vogliono.
+   `appendice-creature`. Il manifest dice `"schede": "entrambe"` (il valore e
+   il tema sono quelli della PR #305, dove la stessa creatura in appendice
+   esce una volta sola); `"appendice"` e `"qui"` restano per i volumi che li
+   vogliono.
 3. **La mappa dello scontro sta nel capitolo dello scontro**, in pianta di
    stampa (ADR-0106), con la legenda. Se la stessa mappa serve in due
    capitoli, si stampa in tutti e due.
 4. **Le creature senza nome** (guardie, wyvern, mostri) hanno nel capitolo i
    numeri e la tattica; chi è e cosa vuole non servono.
 5. **Un capitolo preso da un altro master** porta con sé le persone che ci si
-   incontrano: il generatore le prende dal master o dal dossier (ADR-0091) e
-   le mette nel capitolo, così il capitolo del barile ha Zog'tar anche se la
-   sua scheda d'entrata è scritta nella Scena 7.
+   incontrano: il generatore le prende dal master e le mette nel capitolo,
+   così il capitolo del barile ha Zog'tar anche se la sua scheda d'entrata è
+   scritta nella Scena 7. Lo fa `dmcore.chi_si_incontra` quando il manifest
+   dice `"chi_si_incontra": true`: la riga **Chi è** dal titolo della scheda
+   d'entrata se manca, il riquadro (con la tattica) spostato accanto alla
+   scheda se sta in un'appendice dello stesso capitolo o copiato se sta in un
+   altro master, la scheda portata dove la riga **In scena … Chi:** la nomina
+   (o in testa al capitolo, se il capitolo non ha quelle righe e la nomina
+   almeno 10 volte), le mappe nominate e stampate lontano copiate dopo il
+   paragrafo «**Mappa …**» della scena. Regia e cassetta non si toccano. Il
+   master non cambia: cambia solo quello che va in stampa.
 6. **La misura** è `scripts/misura_standard_tavolo.py`. Oggi è un indicatore;
    quando il primo booklet è convertito diventa un cricchetto in CI, con tetti
    per booklet che scendono soltanto, come `misura_statblocchi_booklet`.
@@ -79,15 +89,27 @@ riquadro del capitolo e quello dell'appendice escono dallo stesso recinto
 - I booklet si allungano: un riquadro e un ritratto in più per ogni persona e
   capitolo, e le mappe ripetute. I tetti di `misura_stampa` possono salire;
   se succede lo si dice, e lo decide il DM.
-- Va scritto il pezzo del generatore (ancora `#persona(Nome)`, campo
-  `"mappe"` nel capitolo del manifest, modo `"entrambi"`), e va aggiunta la
-  riga «Chi è» alle schede d'entrata esistenti: ARC-07 prima, poi Palio,
-  Giardino, Drappo e Abbazia, dove oggi le persone sono descritte in prosa.
+- Il generatore c'è (punto 5). Da solo però lavora solo dove il master ha
+  già le schede d'entrata: nel repo sono 25, tutte di ARC-07 e ARC-08. Palio,
+  Giardino, Drappo e Abbazia descrivono le persone in prosa, e lì la prova
+  del 2026-11-03 non ha cambiato niente: servono le schede d'entrata,
+  scritte a mano. Anche la riga «Chi è» presa dal titolo («il generale») è
+  povera: va scritta nel master, una riga col ruolo in questa storia.
 - Le skill `rumblingstone-module-standard` (scheda d'entrata con «Chi è», il
   controllo capitolo per capitolo) e `rumblingstone-playtest` (la lettura da
   DM con il PDF) vanno aggiornate.
 - La misura conta le voci con l'etichetta, non la loro qualità: la lettura da
   DM resta il giudizio.
+
+## Prova (2026-11-03)
+
+La prova è in [prova-adr0107-2026-11-03/ESITO.md](../esperimenti/prova-adr0107-2026-11-03/ESITO.md).
+Sul booklet della serata del 25/09 la misura dà: numeri nel capitolo da 0 a
+25 su 151, mappe vicine allo scontro da 4 a 8 su 41, 15 pagine in più. Tutto
+il guadagno sta in ARC-07. Nella lettura cieca il DM e il playtester scelgono
+tutti e due la versione nuova. Restano aperte la fascia TATTICHE che finisce
+sopra il piede quando il riquadro segue una tabella larga, e le correzioni di
+contenuto del master DEF-4.
 
 ## Da rivedere se
 
