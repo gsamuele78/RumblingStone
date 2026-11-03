@@ -324,6 +324,17 @@ LIBRERIE = (
                 "dice; `misura_distanza_pagine.py` esce con 2 e dice come installarla. Il booklet "
                 "si stampa uguale.",
     ),
+    # Le immagini ripetute fra i box, frase per frase (RICERCA-GUARDRAIL §8).
+    # Porta torch: resta fuori dai requisiti del repo (canale unstable, ADR-0099).
+    Libreria(
+        nome="sentence-transformers", modulo="sentence_transformers",
+        a_cosa_serve="le ripetizioni fra box frase per frase "
+                     "(`misura_ripetizioni_frasi.py`, modello MiniLM multilingue)",
+        installa="  pip install sentence-transformers   (porta torch; solo in locale)",
+        obbligatoria=False,
+        ripiego="`misura_ripetizioni_frasi.py` esce con 2 e dice come installarla. "
+                "Nessun cancello della CI ne dipende.",
+    ),
     Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",

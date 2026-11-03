@@ -1897,6 +1897,28 @@
       "deterministic": true
     },
     {
+      "name": "misura_box_telecomando",
+      "description": "«C'è un box che dice ai giocatori cosa pensano?»\n\nI box read-aloud che decidono per il gruppo cosa capisce, sa o prova: seconda persona plurale fuori dalle battute, esclusi i «… voi» che danno la scelta. Il 2026-11-03: 4 colpi su 615 box, 2 veri (50%), contro 2 su 15 della configurazione col singolare. Indicatore, non cancello.",
+      "use_case": "«C'è un box che dice ai giocatori cosa pensano?»",
+      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "file markdown (default: i file vivi)"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "l'elenco è stampato: è un indicatore"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_distanza_pagine",
       "description": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»\n\nLegge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
       "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
@@ -1926,6 +1948,33 @@
       "exit_codes": {
         "0": "la misura è stampata: è un indicatore",
         "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_ripetizioni_frasi",
+      "description": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»\n\nLe immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Esclude stesso box, copie (4-grammi ≥ 0,5) e handout. Il 2026-11-03 trova 6 ripetizioni vere che i 4-grammi non vedono, contro 1 della configurazione a box interi. Indicatore, non cancello; canale unstable (ADR-0099).",
+      "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",
+      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "soglia": {
+            "type": "number",
+            "description": "coseno minimo"
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "l'elenco è stampato: è un indicatore",
+        "2": "manca sentence-transformers"
       },
       "deterministic": true
     },
