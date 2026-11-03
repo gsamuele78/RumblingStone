@@ -18,6 +18,10 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/misura_standard_tavolo.py` (ADR-0107, proposta): per ogni booklet del
+  DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso
+  capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica; per
+  ogni capitolo con uno scontro, se c'è la mappa. Indicatore, non cancello.
 - Il riquadro unico delle creature in stampa (ADR-0105): `#statblocco` nel
   tema Typst ha le fasce Difesa, Attacco, Statistiche, Capacità speciali e
   Tattiche, riempite dalle righe di ADR-0091 o dai campi del blocco; la stessa

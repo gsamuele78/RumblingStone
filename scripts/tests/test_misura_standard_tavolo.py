@@ -1,0 +1,103 @@
+"""misura_standard_tavolo: lo standard minimo del DM del 2026-11-02, misurato.
+
+Il caso vero è la serata di *Notte e Alba*: Zog'tar ha la scheda d'entrata e
+il ritratto nella Scena 7 di un capitolo, e il capitolo del barile, dove si
+gioca, ne parla sessanta volte senza dire com'è né cosa vuole. Qui lo stesso
+caso in piccolo, con un booklet finto di due capitoli.
+"""
+from __future__ import annotations
+
+import doctest
+import json
+import sys
+import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import misura_standard_tavolo as mst  # noqa: E402
+
+CAP_COMPLETO = """# La tenda
+
+### SCENA 7 — La tenda del comando
+
+**Scheda d'entrata — Zog'tar Deatheye, il generale**
+
+| | |
+|---|---|
+| **Chi è** | il generale dell'orda |
+| **Aspetto** | mezzo-ogre in mithral annerito |
+| **Vuole** | Hammerfist |
+
+![Zog'tar Deatheye, il generale](Immagini/zogtar.jpg)
+
+![M7-C](Mappe/rendered-stampa-pianta/m7c.svg)
+
+```statblocco
+nome: Zog'tar Deatheye, il generale
+gs: 15
+ca: 30
+pf: 283
+```
+**Tattiche** *Durante il combattimento* Zog'tar carica.
+
+Si tira l'iniziativa. Zog'tar ride.
+"""
+
+CAP_BARILE = """# Il barile
+
+Il barile cade sulla tenda di Zog'tar. Zog'tar si sveglia.
+Si tira l'iniziativa: Zog'tar grida.
+"""
+
+
+def booklet(tmp: Path, schede: str = "appendice") -> Path:
+    (tmp / "a.md").write_text(CAP_COMPLETO, encoding="utf-8")
+    (tmp / "b.md").write_text(CAP_BARILE, encoding="utf-8")
+    man = {"title": "prova", "schede": schede, "chapters": [
+        {"title": "I · La tenda", "file": "a.md", "tag": "dm"},
+        {"title": "II · Il barile", "file": "b.md", "tag": "dm"},
+        {"title": "III · Ai giocatori", "file": "b.md", "tag": "player"},
+    ]}
+    mp = tmp / "prova.manifest.json"
+    mp.write_text(json.dumps(man), encoding="utf-8")
+    return mp
+
+
+class TestLoStandardMinimo(unittest.TestCase):
+
+    def test_capitolo_completo_e_capitolo_vuoto(self):
+        with TemporaryDirectory() as d:
+            r = mst.misura_booklet(booklet(Path(d)), {"zogtar"})
+        per_cap = {c["capitolo"]: c for c in r["coppie"]}
+        self.assertEqual(set(per_cap), {"I · La tenda", "II · Il barile"})
+        tenda, barile = per_cap["I · La tenda"], per_cap["II · Il barile"]
+        self.assertTrue(tenda["completa"])
+        self.assertEqual(tenda["num"], "rimando")       # le schede vanno in appendice
+        self.assertFalse(barile["completa"])
+        self.assertEqual(barile["presenti"], 0)
+
+    def test_con_le_schede_nel_capitolo_i_numeri_sono_qui(self):
+        with TemporaryDirectory() as d:
+            r = mst.misura_booklet(booklet(Path(d), schede="qui"), {"zogtar"})
+        self.assertEqual(r["coppie"][0]["num"], "qui")
+
+    def test_la_mappa_si_cerca_nel_capitolo_dello_scontro(self):
+        with TemporaryDirectory() as d:
+            r = mst.misura_booklet(booklet(Path(d)), {"zogtar"})
+        self.assertEqual({m["capitolo"]: m["mappa"] for m in r["mappe"]},
+                         {"I · La tenda": "qui", "II · Il barile": "manca"})
+
+    def test_sotto_soglia_non_compare(self):
+        with TemporaryDirectory() as d:
+            r = mst.misura_booklet(booklet(Path(d)), {"zogtar"}, soglia=10)
+        self.assertEqual(r["coppie"], [])
+
+    def test_doctest(self):
+        self.assertEqual(doctest.testmod(mst).failed, 0)
+
+
+if __name__ == "__main__":
+    unittest.main()
