@@ -1059,9 +1059,10 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # Dove sta il riquadro intero delle creature (ADR-0105 punto 7): in
     # appendice, con la riga e la tattica nell'incontro; «qui» per i volumi che
     # le schede le vogliono dove sono scritte.
-    appendice = man.get("schede", "appendice") == "appendice"
+    modo = man.get("schede", "appendice")
+    appendice = modo in ("appendice", "entrambe")
     if appendice:
-        parti.append('#modo-schede.update("appendice")')
+        parti.append(f'#modo-schede.update("{modo}")')
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":

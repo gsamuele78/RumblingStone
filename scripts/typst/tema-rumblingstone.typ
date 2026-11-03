@@ -324,7 +324,9 @@
 // CA e pf e il rimando alla pagina, più la tattica di quell'incontro; il
 // riquadro intero va nell'appendice in fondo (`appendice-creature`), una volta
 // sola per creatura. «qui»: il riquadro intero esce dove è scritto, come nei
-// fascicoli di schede da dare in mano. L'esportatore sceglie dal manifest.
+// fascicoli di schede da dare in mano. «entrambe»: il riquadro intero dove è
+// scritto e, in più, l'appendice in fondo (richiesta del DM, 2026-11-03, per i
+// booklet della serata). L'esportatore sceglie dal manifest.
 #let modo-schede = state("modo-schede", "qui")
 
 // Blocco statistiche: il riquadro del mostro/PNG, coi numeri dove il DM li
@@ -468,7 +470,18 @@
   // stessi numeri. La tattica non conta, perché cambia da un incontro all'altro.
   let chiave = to-string(nome) + "|" + repr(intero(none))
   context {
+    // Con «entrambe» la stessa scheda esce in due capitoli, e i rimandi
+    // riscritti per capitolo cambiano il testo: lì la stessa creatura è
+    // stesso nome, GS, CA e pf, non lo stesso testo.
+    let chiave = if modo-schede.get() == "entrambe" {
+      to-string(nome) + "|" + repr(gs) + "|" + repr(ca) + "|" + repr(pf)
+    } else { chiave }
     if modo-schede.get() != "appendice" {
+      // «entrambe»: il riquadro intero qui, e una copia anche nell'appendice.
+      if modo-schede.get() == "entrambe" {
+        [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
+                    lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
+      }
       let corpo = intero(tattiche)
       if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
       return
