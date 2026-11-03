@@ -1539,7 +1539,7 @@ gs: ~10
 tipo: Vegetale Grande · Neutrale Buono
 ca: 24
 ca-dettaglio: contatto 9, colto alla sprovvista 24 (−1 taglia, +15 naturale)
-pf: 90
+pf: 95
 pf-dado: 10d8+50
 ts: Temp +12, Rifl +3, Vol +8
 attributi: For 29 Des 10 Cos 21 Int 12 Sag 16 Car 12
@@ -1552,7 +1552,7 @@ attacchi:
 ```
 **Iniziativa** +0 · **Sensi** visione crepuscolare; Ascoltare +8, Osservare +8
 
-**Difesa** **CA 24** (−1 taglia, +15 naturale), contatto 9, colto alla sprovvista 24 · **pf 90** (fissi, dal canone; DV 10d8+50) · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio** · tratti dei vegetali · **Vulnerabilità al fuoco**
+**Difesa** **CA 24** (−1 taglia, +15 naturale), contatto 9, colto alla sprovvista 24 · **pf 95** (10d8+50) · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio** · tratti dei vegetali · **Vulnerabilità al fuoco**
 
 **Attacco** Vel 9 m · **Mischia** schianto +18 (2d8+9); attacco completo 2 schianti +18 (2d8+9) · Spazio 3 m, portata 3 m · BAB +7; Lotta +20 (+7 BAB, +4 taglia, +9 FOR)
 

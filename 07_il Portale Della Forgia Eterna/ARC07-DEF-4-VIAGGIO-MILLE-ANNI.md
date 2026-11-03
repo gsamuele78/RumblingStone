@@ -4205,6 +4205,7 @@ ca-dettaglio: arm. completa +1, scudo pesante +1
 pf: 52
 ts: Temp +8, Rifl +2, Vol +4
 attributi: For 18 Cos 16 Sag 14
+sensi: scurovisione 18 m
 attacchi:
   - Mischia ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano
 ```
@@ -4343,7 +4344,7 @@ gs: ~10
 tipo: Vegetale Grande, evocato dalla Collana di Hella
 ca: 24
 ca-dettaglio: RD 10/adamantio, vulnerabile al fuoco
-pf: 90
+pf: 95
 ts: Temp +12, Rifl +3, Vol +8
 attributi: For 29
 velocita: 9 m
@@ -4363,6 +4364,7 @@ ca: 18
 pf: 59
 ts: Temp +7, Rifl +6, Vol +6
 velocita: volare 18 m
+sensi: scurovisione 18 m, visione crepuscolare, fiuto
 attacchi:
   - Mischia pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.

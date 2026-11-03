@@ -716,6 +716,7 @@ Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
+**Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
 ___
@@ -6277,6 +6278,7 @@ Sta nella tenda di Zog'tar (Scena 8).
 ## Durin Rocciadura
 *Nano Medio · Guerriero 6* · GS 6
 ___
+**Sensi** scurovisione 18 m
 
 **DIFESA**
 ___
@@ -6427,7 +6429,7 @@ ___
 **DIFESA**
 ___
 **CA** 24, RD 10/adamantio, vulnerabile al fuoco  
-**pf** 90  
+**pf** 95  
 **TS** Temp +12, Rifl +3, Vol +8  
 
 **ATTACCO**
@@ -6452,6 +6454,7 @@ Dura 1 ora.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
+**Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
 ___
