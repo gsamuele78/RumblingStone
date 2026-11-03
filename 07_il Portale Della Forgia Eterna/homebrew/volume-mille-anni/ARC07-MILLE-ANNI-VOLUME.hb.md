@@ -2061,6 +2061,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
 
+<!-- blocco: zogtar-chi -->
 | | |
 |---|---|
 | **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di mithral annerita, di fattura nanica, presa ai nani. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero |
@@ -2069,6 +2070,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, l'orda che mille anni dopo sarà la Mano Rossa ha un generale in più nei suoi canti |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Zog'tar Deatheye, il generale](../../Immagini/web/zogtar-deatheye.jpg)
 
@@ -2148,6 +2150,7 @@ Corona lo è più di tutto il resto. Nel box 2 qui sotto, allora, non guarda
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
 
+<!-- blocco: balvar-chi -->
 | | |
 |---|---|
 | **Aspetto** | nano dello scudo vecchio, grembiule di cuoio, seduto su uno sgabello da bottega. Sulle ginocchia una lastra d'ardesia, in mano una punta di ferro |
@@ -2156,6 +2159,7 @@ Appendice A)*
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Balvar Fuocospento, il runaio esiliato](../../Immagini/ritratti/balvar-fuocospento.jpg)
 
@@ -3126,6 +3130,7 @@ furioso (Scena 6, «Se rubano o rompono il corno»).
 **Scheda d'entrata — Skullcrusher il Nero, il capostipite** *(statistiche:
 Appendice A)*
 
+<!-- blocco: skullcrusher-chi -->
 | | |
 |---|---|
 | **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
@@ -3134,6 +3139,7 @@ Appendice A)*
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher»). Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+<!-- /blocco -->
 
 **SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
 l'ho già mangiato, qui. Thorik. I tuoi amici lo dicono troppo forte, il tuo
@@ -3943,6 +3949,7 @@ wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
 gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 11, «Quale drago si usa, e quando»).
 
+<!-- blocco: skullcrusher-vecchio-scheda -->
 {{note
 ##### Skullcrusher Vecchio · GS 17 (Vecchio GS 16, +1 Avanzato)
 **CA** 36, contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica · **pf** 337 (25d12+175) · *scheda in appendice*
@@ -3950,6 +3957,7 @@ gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 **TATTICHE**
 Come A.1: fugge a ⅓ dei pf, circa **112 pf**.  
 }}
+<!-- /blocco -->
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
 template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il
@@ -3968,6 +3976,7 @@ si sommano a parte (§8 A).
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
+<!-- blocco: zogtar-scheda -->
 {{note
 ##### Zog'tar Deatheye, generale dell'orda antica · GS 15 (Avanzato)
 **CA** 26, contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira · **pf** 283 (15 DV, massimi per dado; 328 in Ira Superiore) · *scheda in appendice*
@@ -3975,15 +3984,19 @@ si sommano a parte (§8 A).
 **TATTICHE**
 La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.  
 }}
+<!-- /blocco -->
 
+<!-- blocco: guardie-scheda -->
 {{note
 ##### Guardia di Zog'tar (4) · GS 8
 **CA** 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo · **pf** 60 · *scheda in appendice*
 }}
+<!-- /blocco -->
 
 
 **Il sacerdote dell'orda** (Scena 8)
 
+<!-- blocco: sacerdote-scheda -->
 {{note
 ##### Sacerdote dell'orda · GS 6
 **CA** 12, +2 DES · **pf** 38 (7d6+14) · *scheda in appendice*
@@ -3991,6 +4004,7 @@ La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta n
 **TATTICHE**
 Sta nella tenda di Zog'tar (Scena 8).  
 }}
+<!-- /blocco -->
 
 ### A.3 · Durin Rocciadura (Scena 2)
 
@@ -4071,6 +4085,7 @@ Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestia
 Dura 1 ora.  
 }}
 
+<!-- blocco: wyvern-scheda -->
 {{note
 ##### Wyvern (2) · GS 6
 **CA** 18 · **pf** 59 · *scheda in appendice*
@@ -4078,6 +4093,7 @@ Dura 1 ora.
 **TATTICHE**
 Vanno su chi tiene la corda dell'ala e su chi vola.  
 }}
+<!-- /blocco -->
 
 <!-- nuova-pagina -->
 
@@ -4327,7 +4343,7 @@ Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni
 > ⚠ Classe non SRD: il **Runecaster** è del *Forgotten Realms Campaign Setting* `[Private source — FRCS]`, e così il dominio della Runa. Prerequisito: *Incidere Rune*, mai scritto nella scheda, ora fra i talenti; gli altri (8 gradi in Artigianato e in Sapienza Magica, incantesimi divini di 3° livello) sono soddisfatti. PF1e: il chierico col **dominio della Runa** (OGL) e il talento *Scrivere Pergamene* si avvicinano in parte: ha i glifi e le rune-trappola, ma non le rune persistenti che non consumano slot, che sono il cuore del personaggio. Si tiene il Runecaster.
 
 
-Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE.
+Umanoide Medio (nano), **Chierico 9 di Abbathor / Runecaster 4**, NE.
 
 
 Notes: consigliere del generale **Zog'tar Deatheye** (CR 15) all'assedio di ≈372 DR. Nano dello scudo **esiliato**, ex-runaio della fortezza, passato ad Abbathor. Non è il capo: è **il motivo per cui il capo ha un drago**. Dossier narrativo, tattiche e ganci → il viaggio a mille anni fa, Scena 7.
@@ -4424,7 +4440,7 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 
 {{monster,frame
 ## Balvar Fuocospento, il Consigliere dell'Orda
-*Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
+*Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
 ___
 **Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
 
@@ -4448,7 +4464,7 @@ ___
 }}
 {{monster,frame
 ## Balvar Fuocospento, il Consigliere dell'Orda (CR 13)
-*Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
+*Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
 ___
 **Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
 

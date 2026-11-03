@@ -24,14 +24,14 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | le vedette goblin | SCENA 6 | — | si danno di gomito a ogni rumore, e il secondo strilla sempre prima del primo |
 | lo squadrone hobgoblin | SCENA 6 | — | ordini di una sillaba, e nessuno risponde |
 | il corridore | SCENA 6 | — | ripete il messaggio a mezza voce per non dimenticarlo |
-| **Zog'tar Deatheye** | SCENA 7 | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
-| **Balvar Fuocospento** | SCENA 7 | che Hammerfist cada **in fretta**, perché un assedio lungo è fame, e lui l'ha già vista. E che qualcuno dica che c'era | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
+| **Zog'tar Deatheye** | SCENA 7 | — | — |
+| **Balvar Fuocospento** | SCENA 7 | — | — |
 | le quattro guardie | SCENA 7 | — | non parlano: al generale rispondono battendo il piatto dello spadone per terra, una volta sì, due no |
 | il sacerdote dell'orda | SCENA 8 | — | canta invece di parlare, sempre la stessa cantilena, e la interrompe solo per dare ordini |
 | **Vatore** | SCENA 9 | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri | il tono del collega, non del nemico. Monosillabi. Terrore reverenziale mal nascosto |
 | Hrodgar, il capitano delle mura | SCENA 10 | — | dà gli ordini con una parola sola |
 | Hald, il nipote di Balvar | SCENA 10 | — | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
-| **Skullcrusher il Nero** | SCENA 11 | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher») `[CANONE — DM 2026-10-19]`. Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
+| **Skullcrusher il Nero** | SCENA 11 | — | — |
 | Aegis Fang | SCENA 11 | — | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
 
 ## L'inserto delle CD

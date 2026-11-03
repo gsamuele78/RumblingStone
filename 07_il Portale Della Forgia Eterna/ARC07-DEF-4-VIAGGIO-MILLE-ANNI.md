@@ -2049,6 +2049,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
 
+<!-- blocco: zogtar-chi -->
 | | |
 |---|---|
 | **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di mithral annerita, di fattura nanica, presa ai nani. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero `[CANONE — DM 2026-09-24]` |
@@ -2057,6 +2058,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, l'orda che mille anni dopo sarà la Mano Rossa ha un generale in più nei suoi canti `[CANONE — DM 2026-10-07, Q26]` |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Zog'tar Deatheye, il generale](Immagini/web/zogtar-deatheye.jpg)
 
@@ -2142,6 +2144,7 @@ che non abbia già.*
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
 
+<!-- blocco: balvar-chi -->
 | | |
 |---|---|
 | **Aspetto** | nano dello scudo vecchio, grembiule di cuoio, seduto su uno sgabello da bottega. Sulle ginocchia una lastra d'ardesia, in mano una punta di ferro |
@@ -2150,6 +2153,7 @@ Appendice A)*
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Balvar Fuocospento, il runaio esiliato](Immagini/ritratti/balvar-fuocospento.jpg)
 
@@ -3152,6 +3156,7 @@ furioso (Scena 6, «Se rubano o rompono il corno»).
 **Scheda d'entrata — Skullcrusher il Nero, il capostipite** *(statistiche:
 Appendice A)*
 
+<!-- blocco: skullcrusher-chi -->
 | | |
 |---|---|
 | **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
@@ -3160,6 +3165,7 @@ Appendice A)*
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher») `[CANONE — DM 2026-10-19]`. Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+<!-- /blocco -->
 
 **SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
 l'ho già mangiato, qui. Thorik. I tuoi amici lo dicono troppo forte, il tuo
@@ -4049,6 +4055,7 @@ wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
 gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 11, «Quale drago si usa, e quando»).
 
+<!-- blocco: skullcrusher-vecchio-scheda -->
 ```statblocco
 nome: Skullcrusher Vecchio
 gs: 17 (Vecchio GS 16, +1 Avanzato)
@@ -4077,6 +4084,7 @@ attacchi:
 - **Soffio aderente**, come A.1.
 
 **Tattiche** Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
+<!-- /blocco -->
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
 template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il
@@ -4095,6 +4103,7 @@ si sommano a parte (§8 A).
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
+<!-- blocco: zogtar-scheda -->
 ```statblocco
 nome: Zog'tar Deatheye, generale dell'orda antica
 gs: 15 (Avanzato)
@@ -4126,7 +4135,9 @@ attacchi:
 - **Occhio di Ossidiana** (artefatto minore maledetto, incastonato al posto dell'occhio destro, canone del DM): 3/giorno, azione di movimento, marca un bersaglio: −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round. Prezzo: Zog'tar è **vulnerabile alla luce divina** (Luce di Lathander, Corona).
 
 **Tattiche** La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.
+<!-- /blocco -->
 
+<!-- blocco: guardie-scheda -->
 ```statblocco
 nome: Guardia di Zog'tar (4)
 gs: 8
@@ -4142,6 +4153,7 @@ attacchi:
   - Mischia spadone +14 (2d6+6)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
 ```
+<!-- /blocco -->
 <!-- storico -->
 - Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata) — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza da reggere più di un round. PF massimi per dado: scelta del DM.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo (+4 a tutte le caratteristiche, +2 di armatura naturale) — GS 15 → 15 (vale 16): il GS non sale perché la tenda è già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi più di due round contro questi PG e questi artefatti.
@@ -4154,6 +4166,7 @@ attacchi:
 **Il sacerdote dell'orda** (Scena 8) `[CANONE — DM 2026-10-07, Q26:
 adepto 7 dell'SRD sulle caratteristiche dell'hobgoblin, schieramento d'élite]`
 
+<!-- blocco: sacerdote-scheda -->
 ```statblocco
 nome: Sacerdote dell'orda
 gs: 6
@@ -4179,6 +4192,7 @@ attacchi:
 **Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12
 
 **Tattiche** Sta nella tenda di Zog'tar (Scena 8).
+<!-- /blocco -->
 
 ### A.3 · Durin Rocciadura (Scena 2)
 
@@ -4208,7 +4222,7 @@ attacchi:
 ```statblocco
 nome: Balvar Fuocospento, il Consigliere dell'Orda
 gs: 13
-tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
+tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -4340,6 +4354,7 @@ tattica: Dura 1 ora.
 fonte: la scheda intera è nell'appendice delle statistiche della Resurrezione di Hella
 ```
 
+<!-- blocco: wyvern-scheda -->
 ```statblocco
 nome: Wyvern (2)
 gs: 6
@@ -4353,6 +4368,7 @@ attacchi:
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.
 fonte: wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD
 ```
+<!-- /blocco -->
 
 <!-- nuova-pagina -->
 
