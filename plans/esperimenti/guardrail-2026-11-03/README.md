@@ -30,3 +30,15 @@ tutti e 2:
 I controlli trovano in più 4 difetti che nessun lettore aveva visto: pf del
 Treant di Adamantio (90, 10d8+50 ne fa 95), pf di Balvar (101, 13d8+39 ne fa
 97), scurovisione di Durin (nano) e delle wyvern (SRD: 18 m).
+
+## `etichette/`: la prova definitiva dell'NLI (§7 della ricerca)
+
+| File | Cosa |
+|---|---|
+| `estrai.py`, `etichette.py` | coppie prima/dopo dalle revisioni dei master e le etichette scritte a mano |
+| `prova_nli.py`, `coppie-etichettate-punteggi.json` | NLI contro i controlli deterministici sulle coppie etichettate (F1 0,86 contro 0,63) |
+| `candidati_repo.py` | 12.742 coppie di frasi quasi uguali in file diversi |
+| `punteggia2.py`, `campione-prime-100.json` | punteggio NLI di un campione di 1.500 coppie; le 100 più «contraddittorie». Delle prime 30, 0 nuove |
+
+Richiede un venv con `torch`, `transformers` e `sentencepiece`, e
+`HF_HUB_DISABLE_XET=1`. Non è nelle dipendenze del repo: non è adottata.

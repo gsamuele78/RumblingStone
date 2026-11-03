@@ -1,6 +1,6 @@
 # ADR-0108 — I cancelli deterministici stanno in ogni skill, con un cricchetto
 
-**Stato**: proposta
+**Stato**: accettata (2026-11-03, Jfs: «quello che migliora in modo che sia std e non solo ricerca»)
 **Data**: 2026-11-03
 **Decisione-fonte**: il DM (Jfs), 2026-11-03: *«è necessario mettere delle guardrail anche a tutte le skills e anche a quelle dello stile»* e *«per ogni tecnica, skill, plugin, guardrail e tecnica avanzata che migliora, adottare nel repo come standard»*.
 **Rapporti**: estende [ADR-0107](ADR-0107-chi-si-incontra-sta-nel-capitolo.md) (la misura sul PDF), [ADR-0091](ADR-0091-la-scheda-del-png-ha-una-forma.md) (i recinti ora controllati), [ADR-0070](ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md) (le note di lavoro); il giudice della prosa resta [ADR-0093](ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md). Ricerca in [RICERCA-GUARDRAIL-E-TECNICHE-2026-11](../RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md).
@@ -52,9 +52,10 @@ le verifica, nessuna in un posto fisso.
 ## Conseguenze
 
 - Una skill nuova senza la sezione rompe i test.
-- I tetti di oggi: 6 conti nei master (DEF-3: 1, DEF-4: 5), 60 note di lavoro
-  in stampa (Notte e Alba 19, Serata Resurrezione 19, Volume Mille Anni 18,
-  Terros 3, Giardino PF1e 1).
+- I tetti di oggi, dopo la PR #305 (che ha corretto il *corrompere l'acqua*
+  del Vecchio e la scurovisione di Zog'tar): 4 conti nei master (DEF-3: 1,
+  DEF-4: 3), 59 note di lavoro in stampa (Notte e Alba 18, Serata
+  Resurrezione 19, Volume Mille Anni 18, Terros 3, Giardino PF1e 1).
 - Le correzioni vanno al DM come proposte. Non le applica questo ramo.
 
 ## Da rivedere se
@@ -63,3 +64,11 @@ le verifica, nessuna in un posto fisso.
   corregge il controllo, non il tetto;
 - ci sono almeno 30 contraddizioni di fatto etichettate: allora si prova
   l'NLI a frasi (SummaC) contro `coerenza_campagna`.
+
+## Adozione (2026-11-03)
+
+Accettata insieme ad ADR-0107. I cancelli adottati restano quelli misurati
+(conti dei recinti, note in stampa, distanza in pagine, sezione nelle skill).
+L'NLI, rimandata qui per mancanza di etichette, è stata provata fino in fondo
+(ricerca §7): F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle
+prime 30 sul repo vero. Non entra: non sa di quale creatura parla una frase.

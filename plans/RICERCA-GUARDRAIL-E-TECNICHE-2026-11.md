@@ -23,7 +23,7 @@ container, con i risultati in
 | **Cancelli dichiarati in ogni skill** | 18 skill | prima: 7 skill su 18 citavano un comando, nessuna in una sezione fissa | **adottato**: sezione «Cancelli deterministici», test che la impone |
 | **Embedding multilingue** (MiniLM, transformer) per i box ripetuti | 362 box di almeno 25 parole | sopra 0,90 di similarità: 4 coppie, tutte ripetizioni vere, ma 3 le trova già il confronto di 4-grammi. Il guadagno è **1 parafrasi**, in un file pre-DEF. Sotto 0,90 trova scene dello stesso tipo, non ripetizioni | **non adottato**: 1 rilievo in più non vale una dipendenza da 1 GB |
 | **Rilevatore dei box «telecomando»** (il box decide cosa i PG provano, sanno, decidono) | 569 box | 15 colpi fuori dalle battute, **2 veri** (13%). Gli altri sono echi personali, effetti magici, sogni: la seconda persona lì è voluta | **non adottato**: precisione troppo bassa, come il pronome soggetto nel 2026-10 |
-| **NLI zero-shot** (transformer) per classificare i box o trovare contraddizioni | — | non provato: non c'è un insieme etichettato su cui misurare | **rimandato**, con la condizione per provarlo (§4) |
+| **NLI** (mDeBERTa-v3 multilingue, transformer) per trovare contraddizioni fra file | 120 coppie etichettate a mano, poi 1.500 coppie di frasi simili prese da file diversi del repo | sulle coppie etichettate F1 0,86 (i numeri da soli 0,63). Sul repo vero **0 contraddizioni nuove nelle prime 30**: 1.268 coppie su 1.500 sopra 0,5, perché due statblocchi di creature diverse «si contraddicono» sempre; le 2 vere (veleno drow CD 18/13) le ha già l'errata. 28 minuti di CPU per 1.500 coppie | **non adottato**: sul repo 28 delle prime 30 sono rumore, e `coerenza_campagna` trova già 20 contraddizioni di fatto senza modello (§7) |
 | **Varianti dei nomi** (fuzzy, come PerfectIt), **numeri incrociati** (come Xbench), **correzione grammaticale** con un modello | §5 | 1 vero su 64; 0 veri su 6; non applicabile | **non adottati** |
 | **LLM come giudice** della prosa | letteratura | l'accordo con gli esperti è basso sulle dimensioni fini (τ ≤ 0,31) | **non adottato**: il giudice resta il cieco del DM (ADR-0093) |
 
@@ -116,4 +116,47 @@ della prima parte, che sono stati adottati.
   master. DEF-4 è anche della PR #305.
 - Il tetto EL ≤ APL+4 resta 🔴 senza superficie: per misurarlo gli incontri
   vanno marcati `**EL**: N`, e questo tocca i master.
-- NLI e validità nel tempo dei fatti: da provare quando ci sono le etichette.
+- NLI: provata e non adottata (§7). Si riprova solo se un modello sa a quale
+  entità si riferisce ogni frase; validità nel tempo dei fatti ancora aperta.
+
+## 7. Le etichette: la prova definitiva dell'NLI
+
+Il DM, il 2026-11-03: «fai le robe complete, la parte etichette verifica, e
+adotta quello che migliora davvero». Due prove, con gli script e i dati in
+`plans/esperimenti/guardrail-2026-11-03/etichette/`.
+
+**Prova 1, su coppie etichettate.** 120 coppie prima/dopo prese dalle
+revisioni dei master (git log), etichettate a mano: contraddizione o no.
+Le ho etichettate io, non il DM, e sono modifiche allineate, quindi il caso
+facile.
+
+| Metodo | Precisione | Richiamo | F1 |
+|---|---|---|---|
+| NLI (classe più probabile) | 0,878 | 0,837 | **0,857** (AUC 0,932) |
+| solo numeri diversi | | | 0,627 |
+| numeri + negazioni + nomi | | | 0,608 |
+| deterministico **e** NLI | | | 0,73 |
+| deterministico **o** NLI | | | 0,714 |
+
+**Prova 2, sul repo vero.** 12.742 coppie di frasi quasi uguali in file
+diversi (33.080 frasi); per i tempi di CPU un campione casuale di 1.500,
+punteggio NLI nei due sensi, poi le prime 30 lette a mano.
+
+| | Valore |
+|---|---|
+| coppie sopra 0,5 | 1.268 su 1.500 (85%) |
+| sopra 0,9 | 920 |
+| contraddizioni vere nelle prime 30 | 2, la stessa (CD del veleno drow 18 contro 13), già corretta in `ERRATA-PARTE1-Quest-Hellas-35-Verification.md` |
+| contraddizioni **nuove** nelle prime 30 | **0** |
+| tempo | 1.696 s per 1.500 coppie su 4 CPU; il repo intero ~4 ore |
+
+Perché. Le frasi simili del repo sono righe di statblocco («Iniziativa +1 ·
+Sensi …») o titoli di box di creature e scene diverse. Il modello non sa che
+parlano di due soggetti, e due valori diversi per lui sono una
+contraddizione. Sulle coppie etichettate il soggetto era lo stesso per
+costruzione: è lì che sta il salto da F1 0,86 a precisione quasi nulla.
+
+**Decisione.** Non adottato. Il controllo che funziona è quello che sa di chi
+si parla: `coerenza_campagna` (fatti per entità, 20 contraddizioni) e
+`conformita_statblocchi --master` (6 conti). Si riprova solo con un passo
+che leghi ogni frase alla sua entità prima del confronto.
