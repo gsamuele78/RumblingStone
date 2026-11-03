@@ -304,6 +304,16 @@ def mappa_lontana(md: str) -> bool:
     return False
 
 
+#: Le note di lavoro che il generatore lascia in stampa di proposito, perché
+#: avvisano il DM: un numero senza fonte (`[INFERRED]`), un riscontro da fare.
+#: Al tavolo sono un buco: il DM le ha lette ad alta voce il 2026-11-03 (la
+#: lettura alla cieca della prova ADR-0107). Il bersaglio è zero, e il
+#: cricchetto sta in `test_misura_standard_tavolo.py`.
+NOTA_DI_LAVORO = re.compile(
+    r"\[INFERRED[^\]\n]{0,80}\]?|va riscontrat[oa][^.\n]{0,40}|da riscontrare|\(da verificare\)"
+    r"|\bTODO\b|\bTBD\b")
+
+
 def manifesti_dm() -> list[Path]:
     fuori = []
     for p in sorted(ROOT.rglob("*.manifest.json")):
@@ -330,7 +340,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
     if arricchisci and indice is None:
         indice = chi_si_incontra.indice_del_repo()
     nel_volume = capitoli_del_volume(base, man)
-    capitoli = []
+    capitoli, note = [], []
     for cap in man.get("chapters", []):
         if cap.get("tag") != "dm" or cap.get("layout") == "schede":
             continue
@@ -341,6 +351,8 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
         if arricchisci and not _CONSULTAZIONE.search(cap.get("title", "")):
             md, _ = chi_si_incontra.arricchisci(md, f, indice, chiavi_dei_pg())
             md = traduci_rimandi(md, f, nel_volume)
+        note += [{"capitolo": cap.get("title", f.stem), "testo": m.group(0)}
+                 for m in NOTA_DI_LAVORO.finditer(re.sub(r"<!--.*?-->", "", md, flags=re.S))]
         capitoli.append((cap.get("title", f.stem), pulisci(md)))
 
     # chi ha un nome: una scheda (riquadro o scheda d'entrata) in questo
@@ -395,7 +407,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
             righe.append({"capitolo": titolo, "persona": nome, "citazioni": n, **v,
                           "presenti": presenti, "completa": presenti == len(CAMPI)})
     return {"schede_in": modo,
-            "coppie": righe, "mappe": mappe}
+            "coppie": righe, "mappe": mappe, "note_di_lavoro": note}
 
 
 def riassunto(d: dict) -> dict:
@@ -409,6 +421,7 @@ def riassunto(d: dict) -> dict:
         "num_qui%": round(100 * sum(1 for r in c if r["num"] == "qui") / n),
         "scontri": len(d["mappe"]),
         "mappa_qui": sum(1 for m in d["mappe"] if m["mappa"] == "qui"),
+        "note_di_lavoro": len(d.get("note_di_lavoro", [])),
     }
 
 
@@ -463,6 +476,9 @@ def main(argv: list[str] | None = None) -> int:
           + " ".join(f"{round(100 * tot[c] / n):>4}%" for c in CAMPI)
           + f" {tot['mappa_qui']:>3}/{tot['scontri']:<3}")
     print(f"numeri stampati nel capitolo (non in appendice): {tot['num_qui']}/{tot['coppie']}")
+    note = {n: v["riassunto"]["note_di_lavoro"] for n, v in dati.items() if v["riassunto"]["note_di_lavoro"]}
+    print(f"note di lavoro che vanno in stampa: {sum(note.values())}"
+          + "".join(f"\n   {k}: {n}" for k, n in note.items()))
     return 0
 
 

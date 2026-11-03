@@ -18,6 +18,10 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108, proposta). Cricchetto in `test_conformita_statblocchi`.
+- `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).
+- `misura_standard_tavolo.py` conta le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato», TODO), con cricchetto per volume.
+- Ogni `skills/*/SKILL.md` ha la sezione «Cancelli deterministici»; `test_cancelli_delle_skill.py` la impone (ADR-0108).
 - `scripts/dmcore/chi_si_incontra.py` e la chiave `"chi_si_incontra": true` del manifest (ADR-0107, prova): prima di stampare porta nel capitolo il riquadro accanto alla scheda d'entrata, le persone nominate in «In scena … Chi:» e le mappe stampate lontano; `misura_standard_tavolo.py --prova` misura il risultato.
 - `scripts/misura_standard_tavolo.py` (ADR-0107, proposta): per ogni booklet del
   DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso

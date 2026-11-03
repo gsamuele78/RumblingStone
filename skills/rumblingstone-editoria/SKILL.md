@@ -311,3 +311,12 @@ ognuna ha già scritto dove va presa.
   solo ciò che è marcato `player`, ed è così che deve restare.
 - Le sei schede pregenerate in un fascicolo unico da girare nel gruppo: brucia i
   segreti di tutti insieme. `--per-scheda`, uno a testa.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_norme_editoriali.py`: ogni norma ha una severità e un controllo, o la ragione per cui non ce l'ha.
+- `python3 scripts/misura_standard_tavolo.py`: lo standard minimo del DM per capitolo (ADR-0107).
+- `python3 scripts/validate_booklets.py --stampa`: la stampa vera.

@@ -67,3 +67,11 @@ changes at this table • **Example:** brief.
 For imported monsters, output the 3.5 SRD stat-block format (see
 `dnd-35-srd/references/monsters.md`) with a `Conversion notes:` line listing
 every PF1e-only mechanic that was translated.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/riscontro_srd.py`: il riscontro sull'SRD PF1e in cache, dove la regola lo dichiara.
+- `python3 scripts/conformita_statblocchi.py --master`: i template Advanced e Giant entrano nel conto.

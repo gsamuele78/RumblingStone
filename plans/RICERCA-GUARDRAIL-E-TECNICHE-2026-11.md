@@ -1,0 +1,101 @@
+# Ricerca: guardrail deterministici e tecniche avanzate per booklet e avventure
+
+**Data**: 2026-11-03 · **Richiesta del DM** (Jfs, due messaggi dello stesso
+mattino): evidenziare cosa cambia fra le versioni; cercare altre skill,
+tecniche e caratteristiche che i DM riconoscono come migliori; mettere
+guardrail deterministici a tutte le skill, anche a quelle dello stile;
+provare transformer per NLP, tecniche di *document AI* e altre tecniche
+avanzate; misurare e verificare il miglioramento in modo deterministico; e
+adottare come standard ciò che migliora.
+
+**Fonti**: WebSearch (Firecrawl senza crediti fino alle 13:00 UTC; il proxy
+rifiuta slyflourish, dndbeyond e thealexandrian con curl). Prove nel
+container, con i risultati in
+[`esperimenti/guardrail-2026-11-03/`](esperimenti/guardrail-2026-11-03/README.md).
+
+## In breve
+
+| Tecnica | Provata su | Esito misurato | Decisione |
+|---|---|---|---|
+| **Conti SRD dei boss recintati** (pf, CA, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, «come A.n», scurovisione) | 19 statblocchi recintati nei master DEF, prima mai controllati | **6 rilievi, tutti veri.** Trova i 2 difetti numerici che il playtester aveva trovato a mano (CD di *corrompere l'acqua* del Vecchio, scurovisione di Zog'tar) e altri 4 che nessun lettore aveva visto | **adottato**: `conformita_statblocchi --master`, cricchetto in test |
+| **Note di lavoro in stampa** («[INFERRED…]», «va riscontrato», «(da verificare)», TODO) | i 10 booklet del DM | **60** in 5 volumi. Tutte vere: il DM le leggerebbe al tavolo | **adottato**: `misura_standard_tavolo`, cricchetto in test |
+| ***Document AI* deterministica**: distanza in pagine fra scena e numeri, letta dal PDF (PyMuPDF) | i due PDF della prova ADR-0107 | ripete la lettura a mano: Zog'tar 23,5 → 5, Skullcrusher 21 → 4, Balvar 28,5 → 5,5, Durin 53 → 4,5 pagine (mediana). Durik peggiora (102,5 → 112) | **adottato** come indicatore: `misura_distanza_pagine.py` |
+| **Cancelli dichiarati in ogni skill** | 18 skill | prima: 7 skill su 18 citavano un comando, nessuna in una sezione fissa | **adottato**: sezione «Cancelli deterministici», test che la impone |
+| **Embedding multilingue** (MiniLM, transformer) per i box ripetuti | 362 box di almeno 25 parole | sopra 0,90 di similarità: 4 coppie, tutte ripetizioni vere, ma 3 le trova già il confronto di 4-grammi. Il guadagno è **1 parafrasi**, in un file pre-DEF. Sotto 0,90 trova scene dello stesso tipo, non ripetizioni | **non adottato**: 1 rilievo in più non vale una dipendenza da 1 GB |
+| **Rilevatore dei box «telecomando»** (il box decide cosa i PG provano, sanno, decidono) | 569 box | 15 colpi fuori dalle battute, **2 veri** (13%). Gli altri sono echi personali, effetti magici, sogni: la seconda persona lì è voluta | **non adottato**: precisione troppo bassa, come il pronome soggetto nel 2026-10 |
+| **NLI zero-shot** (transformer) per classificare i box o trovare contraddizioni | — | non provato: non c'è un insieme etichettato su cui misurare | **rimandato**, con la condizione per provarlo (§4) |
+| **LLM come giudice** della prosa | letteratura | l'accordo con gli esperti è basso sulle dimensioni fini (τ ≤ 0,31) | **non adottato**: il giudice resta il cieco del DM (ADR-0093) |
+
+## 1. Cosa cambia fra le versioni (la prova di ADR-0107)
+
+La lettura a mano del 2026-11-03 ora ha un numero ripetibile. Mediana delle
+pagine fra dove la persona agisce e la pagina con la sua CA e i suoi pf, sui
+due PDF della serata del 2026-09-25 (157 e 172 pagine):
+
+| persona | prima | dopo |
+|---|---|---|
+| Zog'tar | 23,5 (max 118) | **5** (max 94) |
+| Skullcrusher | 21 (max 123) | **4** (max 106) |
+| Balvar | 28,5 (max 118) | **5,5** (max 94) |
+| Durin | 53 (max 61) | **4,5** (max 18) |
+| Durik (`--nomi`) | 102,5 | **112** |
+
+Il massimo resta alto perché alcune pagine d'azione stanno in capitoli che il
+generatore non arricchisce (regia e cassetta, di proposito). Durik peggiora:
+non ha un riquadro, i suoi numeri stanno solo in appendice, e le 15 pagine in
+più li allontanano. È il costo dichiarato di ADR-0107, ora misurato.
+
+## 2. Cosa dicono i DM, e cosa diventa un controllo
+
+| Standard riconosciuto | Fonte | Diventa |
+|---|---|---|
+| il box non decide cosa i PG pensano, provano o fanno («remote-control boxed text») | J. Alexander, [GM Don't #13](https://thealexandrian.net/wordpress/48312/roleplaying-games/gm-dont-list-13-boxed-text-pitfalls) | già P1 in `misura_craft` per percezione e azione; per pensieri e sentimenti la regex non separa (§3) |
+| il box non congela i PG mentre succedono cose («freeze-frame») | stessa fonte | resta giudizio: non c'è una forma testuale riconoscibile |
+| box corti, circa tre frasi | commento allo stesso articolo; [EN World](https://www.enworld.org/forum/showthread.php?p=7592572) | già misurato (`>4 frasi`, tetto 12 righe), indicatore |
+| numeri e mappa dove si gioca, non in appendice | ricerca della PR #306 | ADR-0107, ora misurato anche sul PDF |
+| un numero senza fonte non va al tavolo | regola del repo (INFERRED) | **cricchetto** sulle note di lavoro in stampa |
+| le CD delle capacità seguono 10 + ½ DV + caratteristica | SRD 3.5, *Dragon, True* e capacità speciali | **cricchetto** sui conti dei recinti |
+
+## 3. Le prove che non hanno passato
+
+**Box telecomando.** Una regex su 40 verbi di pensiero, sentimento e
+decisione in seconda persona («capite che», «sapete che», «vi rendete conto»,
+«decidete») dà 29 colpi su 569 box, 15 fuori dalle battute dei PNG. Letti uno
+per uno (`box-telecomando.tsv`), 2 sono veri: «capite che qualunque cosa
+facciate, lui ne guadagnerà» e «anche se sapete che è stata qui per millenni».
+Gli altri 13 sono echi personali per un PG («la ricordi coperta del sangue di
+Hella»), effetti magici («una lingua che non conosci e che capisci lo
+stesso») e sogni. La seconda persona lì è il punto. Il dato utile è un altro:
+i box del repo quasi non hanno questo difetto.
+
+**Embedding per le ripetizioni.** Il registro delle norme dà «ripetizioni fra
+box» come buco. Con `paraphrase-multilingual-MiniLM-L12-v2` (Apache 2.0) sui
+362 box dei master vivi, le coppie sopra 0,90 sono 4 e sono tutte vere, ma
+sono copie volute (la scheda del PG ripetuta nell'handout) tranne una
+parafrasi («come un martello divino» contro «come una valanga di ferro») fra
+ARC08-01 e un file pre-DEF. Il confronto dei 4-grammi, senza modello, ne
+trova 3 su 4. Fra 0,80 e 0,90 il modello trova scene dello stesso genere (due
+passaggi del drago, due notti d'assedio), che non sono ripetizioni.
+
+## 4. Le tecniche avanzate in rete, e se si applicano
+
+| Tecnica | Fonte | Si applica? |
+|---|---|---|
+| **Docling**, layout e ordine di lettura dei PDF (MIT) | [rapporto tecnico](https://hyper.ai/fr/papers/2408.09869), [slide](https://opensource.siemens.com/events/2026/slides/Panos_Vagenas__Docling_The_Open-Source_Document_AI_Engine.pdf) | non serve: i nostri PDF li genera Typst, il testo è già in ordine e PyMuPDF basta. Servirebbe per importare PDF di terzi, che ha già `converters/pdf-to-md-engine` |
+| **NLI a frasi** per le incoerenze (SummaC) | [SummaC](https://arxiv.org/abs/2111.09525v1) | sì in teoria, per i fatti fra scene. Ma lo stesso filone dice che i dati NLI generici rendono poco sulle contraddizioni narrative ([DECODE](https://arxiv.org/pdf/2012.13391.pdf)). Si prova quando `coerenza_campagna` avrà 30 contraddizioni di fatto etichettate (oggi 6, tutte numeriche) |
+| **Controllo con validità nel tempo** dei fatti | [FactTrack](https://www.arxiv.org/pdf/2407.16347) | sì, ed è la parte utile anche senza modello: un fatto vale dal giorno X al giorno Y (il viaggio a mille anni lo chiede). Candidato per `coerenza_campagna` |
+| **Banchi di coerenza narrativa** con giudice LLM | [ConStory-Bench](https://arxiv.org/html/2603.05890) | gli errori si concentrano nei fatti e nei tempi a metà racconto: conferma dove guardare, ma il giudice è un LLM |
+| **LLM come giudice** della prosa | [Limits of automatic evaluation of creativity](https://arxiv.org/pdf/2608.23705), [studio su 431 racconti](https://arxiv.org/pdf/2411.02316), [RAVEL](https://arxiv.org/pdf/2603.00686) | no come giudice: l'accordo con gli esperti è basso (τ ≤ 0,31 su 10 dimensioni su 11). Con rubriche e testi di riferimento sale, quindi resta utile come prima lettura, non come voto |
+
+Le misure di prosa della letteratura (17, più spaCy, Stanza e la perplessità
+di Qwen) sono già state provate sui voti ciechi del DM e nessuna li prevede
+([RICERCA-QUALITA-MISURABILE](RICERCA-QUALITA-MISURABILE-2026-10.md) §3,
+PR #270). Questa ricerca non le rifà.
+
+## 5. Cosa resta aperto
+
+- Le correzioni trovate (6 conti, 60 note) sono canone: le decide il DM nei
+  master. DEF-4 è anche della PR #305.
+- Il tetto EL ≤ APL+4 resta 🔴 senza superficie: per misurarlo gli incontri
+  vanno marcati `**EL**: N`, e questo tocca i master.
+- NLI e validità nel tempo dei fatti: da provare quando ci sono le etichette.

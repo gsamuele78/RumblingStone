@@ -218,3 +218,12 @@ là il numero annunciato prima dell'elenco è un tic, qui «tre porte, tre serra
 
 Quello che vale su tutti e due i lati è §9 di `italiano-nativo.md`: l'antitesi
 «non X: è Y» e il trattino lungo come respiro suonano generati ovunque.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/misura_craft.py --stile`: i tetti e gli indicatori dei box read-aloud, P1 compreso.
+- `python3 scripts/punteggio_mqm.py`: il punteggio MQM come cancello della prosa.
+- `python3 scripts/ciclo_prosa.py`: il box riscritto non perde dettagli (box_impoveriti, ADR-0093).

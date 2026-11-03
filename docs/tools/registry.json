@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 127,
+  "tool_count": 128,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4677,6 +4677,88 @@
       ],
       "docs": [
         "plans/adr/ADR-0072-la-scheda-porta-la-sua-immagine-dentro.md"
+      ]
+    },
+    {
+      "id": "misura_distanza_pagine",
+      "path": "scripts/misura_distanza_pagine.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
+      "summary": "Legge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "pymupdf"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "pdf",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "uno o più PDF da confrontare"
+        },
+        {
+          "name": "--nomi",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "nomi separati da virgola (default: chi ha un riquadro nel repo)"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "build/**/*.pdf",
+          "kind": "pdf",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è un indicatore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge il testo delle pagine, nessun modello"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misura_distanza_pagine.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
       ]
     },
     {

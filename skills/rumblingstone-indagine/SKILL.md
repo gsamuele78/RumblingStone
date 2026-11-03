@@ -199,3 +199,10 @@ Oltre a quello di `narrative-style` (§Self-check) e alla coerenza:
    questo arco? (Più di uno intero, o più di due inneschi → togli.)
 9. **Prova del residuo**: cosa resta di non spiegato? Se niente, aggiungi
    qualcosa — e non spiegarlo nemmeno alla sessione dopo.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/domande_developer.py`: le domande del developer, rete degli indizi compresa (ADR-0092).

@@ -135,3 +135,11 @@ Diventerà un gate il giorno della prima ristampa vera (ADR-0024, «da rivisitar
   «giocatori»), non dall'intera skill.
 - **Decidere se pubblicare per soldi**: quella non è una domanda editoriale, è
   ADR-0005, e la risposta è già scritta.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_booklets.py --stampa`: il gate d'uscita compila davvero.
+- `python3 scripts/misura_distanza_pagine.py`: quanto sfoglia il DM nel volume stampato.

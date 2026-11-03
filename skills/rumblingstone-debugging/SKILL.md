@@ -113,3 +113,11 @@ X» · «non capisco bene ma potrebbe funzionare» · «ancora un tentativo» (d
 - Caso studio interno completo (bug reale «celle fantasma» del renderer,
   diagnosi → contratto → fix → non-regressione byte-identica):
   `plans/PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md`.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/tools_manifest.py --check`: ogni strumento citato esiste ed è dichiarato.
+- `python3 scripts/validate_docs.py`: rimandi e ADR.

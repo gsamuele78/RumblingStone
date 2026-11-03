@@ -56,3 +56,11 @@ For spells use SRD spell-block format. For monsters use SRD stat-block format.
 Tome of Battle, Complete series, Expanded Psionics, Draconomicon, Libris Mortis:
 flag as `[Non-SRD: <book>]`, describe mechanics if known, recommend user verify
 against their copy, never reproduce copyrighted text verbatim.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/riscontro_srd.py`: la regola citata contro l'SRD in cache (ADR-0103).
+- `python3 scripts/validate_bestiario.py`: le schede del Bestiario nella forma di ADR-0091.

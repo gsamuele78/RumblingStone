@@ -230,3 +230,11 @@ python3 scripts/dm.py maps pianta <file.md>        # «pianta» theme → render
 python3 scripts/render_map_svg.py --tutti-i-master --tema pianta --stampa   # print mode of every map (ADR-0106)
 python3 scripts/dm.py maps citta [rethmar|dauth|channathgate] [--check]  # the repo's own city plans
 ```
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_booklets.py`: pianta da stampa e legenda per ogni mappa (ADR-0106).
+- `python3 scripts/misura_standard_tavolo.py`: la mappa sta vicino alla scena dello scontro.

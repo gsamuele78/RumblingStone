@@ -99,5 +99,33 @@ class TestLoStandardMinimo(unittest.TestCase):
         self.assertEqual(doctest.testmod(mst).failed, 0)
 
 
+class TestNoteDiLavoro(unittest.TestCase):
+    """Le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato»): cricchetto.
+
+    La lettura del DM del 2026-11-03 le ha trovate nel booklet della serata. Il
+    bersaglio è zero; oggi si contano per volume, e una in più è rossa. Le tolgono
+    le decisioni del DM nei master, non questo ramo.
+    """
+
+    TETTI = {
+        "ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json": 19,
+        "ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": 19,
+        "ARC07-MILLE-ANNI-VOLUME.manifest.json": 18,
+        "ARC07-SESSIONE-TERROS-BOOKLET.manifest.json": 3,
+        "giardino-sale-calce-pf1e.manifest.json": 1,
+    }
+
+    def test_la_nota_si_riconosce(self):
+        testo = "CD 21 `[INFERRED — needs DM confirmation]`, va riscontrato su d20srd. CD 22."
+        trovate = [m.group(0) for m in mst.NOTA_DI_LAVORO.finditer(testo)]
+        self.assertEqual(len(trovate), 2)
+
+    def test_il_cricchetto_dei_volumi(self):
+        nomi = mst.persone_con_nome()
+        for mp in mst.manifesti_dm():
+            n = len(mst.misura_booklet(mp, nomi)["note_di_lavoro"])
+            self.assertLessEqual(n, self.TETTI.get(mp.name, 0), f"{mp.name}: {n} note di lavoro in stampa")
+
+
 if __name__ == "__main__":
     unittest.main()

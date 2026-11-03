@@ -80,6 +80,7 @@ from dmcore import lettura_creatura as L  # noqa: E402
 # verificatore usa; il resto si chiama dal modulo, con `P.` e `L.`.
 # ---------------------------------------------------------------------------
 from dmcore import progressione as P  # noqa: E402
+from dmcore import statblock as SB  # noqa: E402
 from dmcore.lettura_creatura import (  # noqa: E402
     TS_CAMPO, Scheda, dadi_di_pf, leggi, non_morto_pf1e, talenti,
 )
@@ -671,6 +672,202 @@ def conti_del_master(blocco: dict) -> "list[dict]":
     return fuori
 
 
+# ---------------------------------------------------------------------------
+# Gli statblocchi recintati nei master (ADR-0091), 2026-11-03
+# ---------------------------------------------------------------------------
+#: Il controllo qui sopra legge solo la forma `**Campo:**`. I master di ARC-07
+#: scrivono i boss nella forma di ADR-0091: un recinto ```statblocco``` e,
+#: sotto, le righe **Difesa** / **Attacco** / **Statistiche** / **Capacità
+#: speciali**. Diciannove blocchi, fra cui Skullcrusher e Zog'tar, non li
+#: guardava nessuno. La lettura del DM e del playtester del 2026-11-03 ci ha
+#: trovato due CD dell'Adulto rimaste nel Vecchio tramite «come A.1» e una
+#: scurovisione mancante. Questi conti sono quelli che una regola SRD fissa:
+#:
+#: | conto | la regola |
+#: |---|---|
+#: | pf | media dei dadi di `pf-dado` più il bonus |
+#: | CA | 10 più le voci di `ca-dettaglio` |
+#: | recinto e prosa | la CA e i pf della riga **Difesa** sono quelli del recinto |
+#: | CD del soffio e dello schiacciare | 10 + ½ DV + mod COS (+2 con Capacità Focalizzata) |
+#: | CD della presenza terrificante o minacciosa | 10 + ½ DV + mod CAR |
+#: | CD di *corrompere l'acqua* | quella della presenza terrificante (SRD, *Dragon, True*, drago nero) |
+#: | «come A.n» | una voce ereditata con una CD non vale più se DV o caratteristiche cambiano |
+#: | scurovisione | i tipi che nell'SRD la hanno la scrivono nei sensi |
+#:
+#: ⚠️ Quando i talenti sono ereditati («quelli di A.1») il +2 di Capacità
+#: Focalizzata non si sa: si accettano tutte e due le CD, e lo si dice.
+RECINTO = re.compile(r"^```statblocco\s*$")
+_ETICHETTA_PROSA = re.compile(r"^\*\*(Difesa|Attacco|Statistiche|Iniziativa|Capacità speciali|Tattiche)\*\*")
+#: I tipi che nell'SRD 3.5 hanno scurovisione, con la voce che lo dice.
+#: Un nome per riga, per poterlo controllare: orco e ogre (18 m, *Orc*, *Ogre*),
+#: nano e duergar (18 m, razze e *Dwarf*), drago (36 m, *Dragon* tipo), troll
+#: (27 m, *Troll*), gnoll e goblin (18 m), gigante (18 m, *Giant* tipo).
+SCUROVISIONE_SRD = re.compile(
+    r"\b(?:Orc[oh]i?|Ogre|Nan[oi]|Duergar|Drag[oh]i?|Troll|Gnoll|Goblin|Gigante)\b", re.I)
+
+
+def _int(s: str) -> "int | None":
+    m = re.match(r"\s*([+-]?\d+)", s or "")
+    return int(m.group(1)) if m else None
+
+
+def _recinti_del_master(testo: str):
+    """Ogni recinto ```statblocco``` con il titolo sopra e la prosa sotto.
+
+    La prosa finisce al titolo dopo o al recinto dopo: e' la parte che il DM
+    legge, e le CD stanno li', non nel recinto.
+    """
+    righe = testo.split("\n")
+    titolo, i = "", 0
+    while i < len(righe):
+        t = TITOLO.match(righe[i])
+        if t:
+            titolo = re.sub(r"[*#`]", "", t.group(1)).strip()
+        if not RECINTO.match(righe[i]):
+            i += 1
+            continue
+        try:
+            fine = next(j for j in range(i + 1, len(righe)) if righe[j].strip() == "```")
+        except StopIteration:
+            return
+        try:
+            sb = SB.leggi("\n".join(righe[i:fine + 1]))
+        except SB.StatblockError:
+            sb = None
+        j = fine + 1
+        while j < len(righe) and not TITOLO.match(righe[j]) and not RECINTO.match(righe[j]):
+            j += 1
+        if sb is not None:
+            yield {"titolo": titolo, "riga": i + 1, "sb": sb,
+                   "prosa": "\n".join(righe[fine + 1:j]), "riga_prosa": fine + 2}
+        i = j
+
+
+def _dv(sb) -> "int | None":
+    m = re.match(r"\s*(\d+)d\d+", sb.pf_dado or "") or re.match(r"\s*(\d+)\s*DV", sb.pf_dado or "")
+    return int(m.group(1)) if m else None
+
+
+def _voce_bold(prosa: str, nome: str) -> "str | None":
+    """Il testo dopo `**nome…**` fino al prossimo « · » o alla fine della riga."""
+    m = re.search(r"\*\*(" + nome + r")[^*]*\*\*([^\n]*)", prosa, re.I)
+    if not m:
+        return None
+    return m.group(2).split(" · ")[0]
+
+
+def _cd(testo: "str | None") -> "int | None":
+    m = re.search(r"\bCD\s+(\d+)", testo or "")
+    return int(m.group(1)) if m else None
+
+
+def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict]":
+    """I conti di un recinto che una regola SRD fissa (tabella qui sopra)."""
+    sb, prosa, fuori = b["sb"], b["prosa"], []
+
+    def scarto(campo, scritto, atteso, nota):
+        fuori.append({"campo": campo, "riga": b["riga"], "scritto": scritto,
+                      "atteso": atteso, "nota": nota})
+
+    pf = _int(sb.pf)
+    m = re.fullmatch(r"\s*(\d+)d(\d+)\s*(?:([+-])\s*(\d+))?\s*", sb.pf_dado or "")
+    if m and pf is not None:
+        n, f = int(m.group(1)), int(m.group(2))
+        bonus = int(m.group(4) or 0) * (-1 if m.group(3) == "-" else 1)
+        atteso = math.floor(n * (f + 1) / 2) + bonus
+        if atteso != pf:
+            scarto("pf", pf, atteso, f"media di {sb.pf_dado}")
+    ca = _int(sb.ca)
+    par = re.search(r"\(([^)]*)\)", (sb.ca_dettaglio or "").replace("−", "-"))
+    if ca is not None and par and not re.search(r"forma|con \*", par.group(1)):
+        voci = re.findall(r"([+-]\s*\d+)\s+[^\W\d_]", par.group(1))
+        if voci:
+            atteso = 10 + sum(int(v.replace(" ", "")) for v in voci)
+            if atteso != ca:
+                scarto("CA", ca, atteso, "10 più le voci di ca-dettaglio")
+    difesa = re.search(r"^\*\*Difesa\*\*[^\n]*", prosa, re.M)
+    if difesa:
+        d = difesa.group(0)
+        mca = re.search(r"\*\*CA (\d+)\*\*", d)
+        mpf = re.search(r"\*\*pf (\d+)\*\*", d)
+        if mca and ca is not None and int(mca.group(1)) != ca:
+            scarto("CA (prosa)", int(mca.group(1)), ca, "la riga Difesa contro il recinto")
+        if mpf and pf is not None and int(mpf.group(1)) != pf:
+            scarto("pf (prosa)", int(mpf.group(1)), pf, "la riga Difesa contro il recinto")
+    car = sb.attributi or ""
+    cos, cari, dv = _mod_caratteristica(car, "Cos"), _mod_caratteristica(car, "Car"), _dv(sb)
+    talenti = _voce_bold(prosa, "Talenti") or ""
+    ereditati = bool(re.search(r"quelli di|come A\.", talenti))
+    focus = bool(re.search(r"Capacità Focalizzata \(soffio\)", talenti))
+    presenza = None
+    if dv is not None:
+        for nome, mod, gruppo in (("Soffio(?! aderente)", cos, "soffio"),
+                                  ("Schiacciare", cos, "schiacciare"),
+                                  ("Presenza (?:Terrificante|Minacciosa)", cari, "presenza")):
+            scritto = _cd(_voce_bold(prosa, nome))
+            if scritto is None or mod is None:
+                continue
+            atteso = 10 + dv // 2 + mod
+            ammessi = {atteso}
+            if gruppo == "soffio":
+                if focus:
+                    ammessi = {atteso + 2}
+                elif ereditati:
+                    ammessi = {atteso, atteso + 2}
+            if gruppo == "presenza":
+                presenza = scritto
+            if scritto not in ammessi:
+                nota = f"10 + ½ DV ({dv // 2}) + mod {'COS' if mod is cos else 'CAR'} ({mod:+d})"
+                if gruppo == "soffio" and focus:
+                    nota += " + 2 Capacità Focalizzata"
+                scarto(f"CD {gruppo}", scritto, sorted(ammessi)[-1], nota)
+    mc = re.search(r"corrompere l'acqua\*?\s*\(CD (\d+)", prosa)
+    if mc and presenza is not None and int(mc.group(1)) != presenza:
+        scarto("CD corrompere l'acqua", int(mc.group(1)), presenza,
+               "SRD, drago nero: la CD della presenza terrificante")
+    # «come A.n»: una voce ereditata che porta una CD del blocco di prima
+    for voce, rif in re.findall(r"\*\*([^*]+)\*\*\s*come (A\.\d+(?:-bis)?)\b", prosa):
+        padre = (fratelli or {}).get(rif)
+        if not padre or presenza is None:
+            continue
+        sua = _voce_bold(padre["prosa"], re.escape(voce.strip()))
+        cd_padre = _cd(sua)
+        pres_padre = _cd(_voce_bold(padre["prosa"], "Presenza (?:Terrificante|Minacciosa)"))
+        if cd_padre is not None and pres_padre is not None and pres_padre != presenza \
+                and "corrompere l'acqua" in (sua or ""):
+            scarto(f"CD in «{voce.strip()} come {rif}»", cd_padre, presenza,
+                   f"ereditata da {rif}, dove la presenza è CD {pres_padre}: "
+                   "corrompere l'acqua segue la presenza")
+    # scurovisione: il tipo la ha nell'SRD, i sensi la scrivono
+    sensi = " ".join([sb.sensi or "", _voce_bold(prosa, "Sensi") or ""])
+    if re.search(r"come A\.", sensi) and fratelli:
+        rif = re.search(r"come (A\.\d+(?:-bis)?)", sensi).group(1)
+        if rif in fratelli:
+            sensi += " " + (fratelli[rif]["sb"].sensi or "")
+    tipo = sb.tipo or ""
+    # una forma temporanea («pf: quelli di Hella») tiene i sensi di chi la prende
+    forma = _int(sb.pf) is None
+    if not forma and SCUROVISIONE_SRD.search(tipo) and not re.search(r"scurovisione", sensi, re.I):
+        scarto("sensi", "senza scurovisione", "scurovisione",
+               f"il tipo «{SCUROVISIONE_SRD.search(tipo).group(0)}» la ha nell'SRD")
+    return fuori
+
+
+def _sigla(titolo: str) -> "str | None":
+    m = re.match(r"(A\.\d+(?:-bis)?)\b", titolo)
+    return m.group(1) if m else None
+
+
+def conti_dei_recinti(testo: str) -> "list[dict]":
+    blocchi = list(_recinti_del_master(testo))
+    fratelli = {_sigla(b["titolo"]): b for b in blocchi if _sigla(b["titolo"])}
+    fuori = []
+    for b in blocchi:
+        for x in conti_del_recinto(b, fratelli):
+            fuori.append({"titolo": b["titolo"], **x})
+    return fuori
+
+
 def rapporto_master(files: "list[Path]") -> "list[dict]":
     esito = []
     for p in files:
@@ -679,6 +876,9 @@ def rapporto_master(files: "list[Path]") -> "list[dict]":
             for x in conti_del_master(b):
                 percorso = p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
                 esito.append({"file": str(percorso), "titolo": b["titolo"], **x})
+        for x in conti_dei_recinti(testo):
+            percorso = p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
+            esito.append({"file": str(percorso), **x})
     return esito
 
 

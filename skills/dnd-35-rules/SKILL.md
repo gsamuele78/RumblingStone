@@ -52,3 +52,11 @@ the split costs nothing extra.
 New docs must reference the focused skills directly, never this router.
 This shim gets removed the day nothing in the repo (and no supported agent
 config) points at `dnd-35-rules` anymore.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/conformita_statblocchi.py --master`: pf, CA, lotta, CD di soffio/schiacciare/presenza e sensi degli statblocchi nei master; cricchetto in test_conformita_statblocchi.
+- `python3 scripts/riscontro_srd.py`: la regola citata contro l'SRD in cache (ADR-0103).
