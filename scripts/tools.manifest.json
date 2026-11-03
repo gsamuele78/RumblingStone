@@ -10588,7 +10588,8 @@
       ],
       "outputs": [],
       "exit_codes": {
-        "0": "sempre: è un indicatore"
+        "0": "la misura è stampata: è un indicatore",
+        "2": "manca PyMuPDF"
       },
       "determinism": {
         "deterministic": true,

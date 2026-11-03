@@ -32,7 +32,7 @@ stanno solo in appendice, e le pagine in più li allontanano. La misura lo dice.
   conta come pagina dei numeri;
 * le mappe: le piante non hanno testo affidabile da cui riconoscerle.
 
-È un **indicatore**, come `misura_standard_tavolo`: esce sempre 0.
+È un **indicatore**, come `misura_standard_tavolo`: esce 0, o 2 senza PyMuPDF.
 
 ## Uso
 
@@ -60,7 +60,11 @@ PF = re.compile(r"\bpf\s+\d+")
 
 
 def pagine(pdf: Path) -> list[str]:
-    import pymupdf  # noqa: PLC0415
+    try:
+        import pymupdf  # noqa: PLC0415
+    except ImportError:
+        print("misura_distanza_pagine: serve PyMuPDF (pip install -r requirements-dev.txt)", file=sys.stderr)
+        raise SystemExit(2) from None
     with pymupdf.open(pdf) as doc:
         # l'apostrofo tipografico del PDF («Zog’tar») si piega in «-»: va tolto prima
         return [piega(re.sub(r"[’ʼ‘]", "", p.get_text())) for p in doc]

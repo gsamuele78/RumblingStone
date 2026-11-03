@@ -311,6 +311,19 @@ LIBRERIE = (
                 "`migliora_prosa.py` stima la subordinata spezzata dal numero di "
                 "frasi e di subordinanti. Nessun cancello della CI ne dipende.",
     ),
+    # Il testo delle pagine stampate: l'apparato in stampa (ADR-0070) e la
+    # distanza fra scena e numeri (ADR-0108). AGPL, solo strumento di sviluppo.
+    Libreria(
+        nome="pymupdf", modulo="pymupdf",
+        a_cosa_serve="leggere il testo delle pagine dei PDF stampati: apparato in "
+                     "stampa (`validate_booklets --stampa`) e distanza fra scena e "
+                     "numeri (`misura_distanza_pagine.py`)",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=False,
+        ripiego="`validate_booklets --stampa` salta il conto dell'apparato e lo "
+                "dice; `misura_distanza_pagine.py` esce con 2 e dice come installarla. Il booklet "
+                "si stampa uguale.",
+    ),
     Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
