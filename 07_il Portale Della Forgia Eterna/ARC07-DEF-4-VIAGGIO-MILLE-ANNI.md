@@ -1003,7 +1003,7 @@ l'odore di zolfo copre quello del carbone.
   stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
   tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
   si piantano più.)*<!-- /storico --> All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
-  I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 90 pf, RD
+  I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 95 pf, RD
   10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle
   strutture, durano 1 ora; FOR 29, TS Temp +12, Rifl +3, Vol +8, vulnerabili al fuoco, come in `DEF-3` A.2 `[CANONE — DM 2026-10-12, D74]`) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
@@ -4205,6 +4205,7 @@ ca-dettaglio: arm. completa +1, scudo pesante +1
 pf: 52
 ts: Temp +8, Rifl +2, Vol +4
 attributi: For 18 Cos 16 Sag 14
+sensi: scurovisione 18 m
 attacchi:
   - Mischia ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano
 ```
@@ -4343,7 +4344,7 @@ gs: ~10
 tipo: Vegetale Grande, evocato dalla Collana di Hella
 ca: 24
 ca-dettaglio: RD 10/adamantio, vulnerabile al fuoco
-pf: 90
+pf: 95
 ts: Temp +12, Rifl +3, Vol +8
 attributi: For 29
 velocita: 9 m
@@ -4363,6 +4364,7 @@ ca: 18
 pf: 59
 ts: Temp +7, Rifl +6, Vol +6
 velocita: volare 18 m
+sensi: scurovisione 18 m, visione crepuscolare, fiuto
 attacchi:
   - Mischia pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.

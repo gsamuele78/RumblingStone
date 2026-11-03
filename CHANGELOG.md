@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
 - `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108). Cricchetto in `test_conformita_statblocchi`.
 - `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).
 - `misura_standard_tavolo.py` conta le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato», TODO), con cricchetto per volume.
@@ -74,7 +75,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
-- Documentazione allineata ad ADR-0102, ADR-0105…ADR-0108: `docs/ARCHITETTURA.md` §11 (pianta di stampa, schemi, generatori delle città), §12 (chiavi `schede` e `chi_si_incontra`, misure di stampa), §13 (cancelli delle skill), §16, §18 (ramo «stampa» del flusso della qualità) e §19; README; GUIDA-BOOKLET-E-PDF §1.3, §3 e §9.
+- Documentazione allineata ad ADR-0102, ADR-0105…ADR-0108: `docs/ARCHITETTURA.md` §11 (pianta di stampa, schemi, generatori delle città), §12 (chiavi `schede` e `chi_si_incontra`, misure di stampa), §13 (cancelli delle skill), §16, §18 (ramo «stampa» del flusso della qualità e le due misure di prosa della #308) e §19; README; GUIDA-BOOKLET-E-PDF §1.3, §3 e §9.
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
@@ -111,6 +112,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
 ### Corretto
+- Master ARC-07: Treant di Adamantio 95 pf (10d8+50, prima 90), scurovisione 18 m a Durin e alle wyvern. `conformita_statblocchi --master` accetta il primo dado al massimo per i PNG con livelli di classe (Balvar 101 pf). Cricchetto dei conti a 0.
 - Appendice delle creature in stampa: i nomi nei titoli dei riquadri non vanno più a capo col trattino («Skullcru-sher»); una scheda che non entra nella colonna di sinistra continua nella colonna accanto della stessa pagina invece di lasciarne bianca la metà; il «continua» in fondo all'ultimo pezzo di una scheda lunga non compare più («continua a pagina 60» sotto Terros, che finiva a p. 59). `misura_stampa` conta ora i rimandi di pagina sbagliati (tetto 0) e fallisce se l'impaginazione non converge.
 - `export_map_png.py`: con Chromium la legenda delle mappe più alte usciva tagliata, perché il headless nuovo toglie alla finestra la fascia della cornice. Ora la finestra si apre più alta e il PNG torna all'altezza dell'SVG, con la sola libreria standard.
 

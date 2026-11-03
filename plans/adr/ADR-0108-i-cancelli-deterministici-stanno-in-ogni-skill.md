@@ -72,3 +72,10 @@ Accettata insieme ad ADR-0107. I cancelli adottati restano quelli misurati
 L'NLI, rimandata qui per mancanza di etichette, è stata provata fino in fondo
 (ricerca §7): F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle
 prime 30 sul repo vero. Non entra: non sa di quale creatura parla una frase.
+
+Seconda verifica (2026-11-03, 14:13, richiesta del DM): le cinque prove
+scartate rifatte con una configurazione rigorosa (ricerca §8). Due
+migliorano e si adottano come indicatori: `misura_ripetizioni_frasi.py`
+(6 ripetizioni vere invece di 1) e `misura_box_telecomando.py` (precisione
+dal 13% al 50%). NLI, varianti dei nomi e numeri incrociati restano fuori:
+la seconda misura conferma la prima.
