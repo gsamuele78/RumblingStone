@@ -296,7 +296,11 @@
   // della serata del −1000, p. 65 e p. 72, 2026-09-26). Il flusso a due colonne
   // di Typst 0.15 sbaglia di quel tanto l'altezza lasciata al float: è una
   // mitigazione misurata, non la cura. `validate_booklets --stampa` la tiene.
-  let scavalca = place(auto, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
+  // La tabella della persona portata da ADR-0107 («Chi si incontra in questo
+  // capitolo») sta sempre in cima: in fondo alla pagina Typst 0.15 la mette
+  // sopra il riquadro della colonna accanto (Notte e Alba, p. 24, 2026-11-03).
+  let dove = if sezione == "Chi si incontra in questo capitolo" { top } else { auto }
+  let scavalca = place(dove, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
     #if sezione != none [
       #text(font: TITOLI, size: 7.5pt, fill: seppia, tracking: 0.3pt)[#upper(sezione)]
       #v(-4pt)
@@ -497,7 +501,7 @@
       let larghezza = if page.columns > 1 { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
       let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
       let fondo-col = page.height - if a5 { 1.4cm } else { 2.0cm }
-      let alto = measure(intero(tattiche), width: larghezza).height
+      let alto = measure(intero(tattiche, spezzabile: false), width: larghezza).height
       let resta = fondo-col - here().position().y - 12pt
       // Se non entra nello spazio che resta ma entra in una colonna, va a
       // capo colonna. Lì si misura di nuovo: la colonna dopo può essere
@@ -506,8 +510,24 @@
       // piede. Intero solo se entra davvero dove cade; se no si spezza.
       if alto >= resta and alto < colonna * 0.92 and resta < colonna * 0.8 { colbreak() }
       context {
-        let qui = fondo-col - here().position().y - 12pt
-        intero(tattiche, spezzabile: not (alto < qui))
+        let qui = fondo-col - here().position().y - 4pt
+        // in cima a una colonna quasi intera si fa come prima della prova
+        // (#305): intero se sta in una colonna; Typst lo porta avanti da sé
+        if alto < qui or (qui > colonna * 0.8 and alto < colonna * 0.92) {
+          intero(tattiche, spezzabile: false)
+        }
+        // in fondo a una colonna resterebbe il solo titolo: si va a capo, e
+        // lì si spezza solo se la colonna è accorciata da un float
+        else if alto < colonna * 0.92 and qui < colonna * 0.5 {
+          colbreak()
+          intero(tattiche, spezzabile: true)
+        } else {
+          // un riquadro più alto di una colonna si spezza. Nella colonna di
+          // sinistra continua accanto, sulla stessa pagina; in fondo a quella
+          // di destra lascerebbe il titolo da solo a pagina girata, e va a capo
+          if qui < colonna * 0.33 and here().position().x > page.width / 2 { colbreak() }
+          intero(tattiche, spezzabile: true)
+        }
       }
       return
     }
