@@ -8,6 +8,8 @@ Le prove di [RICERCA-GUARDRAIL-E-TECNICHE](../../RICERCA-GUARDRAIL-E-TECNICHE-20
 | `note-di-lavoro.json` | le 60 note di lavoro che vanno in stampa, per volume | `python3 scripts/misura_standard_tavolo.py --json` |
 | `distanza-pagine.json` | le pagine fra scena e numeri, prima e dopo la prova ADR-0107 | `python3 scripts/misura_distanza_pagine.py --json PRIMA.pdf DOPO.pdf` (PDF in /mnt/project-files/usabilita-al-tavolo/) |
 | `box-telecomando.tsv` | i 15 colpi del rilevatore dei box che decidono per i PG, fuori dalle battute | regex in RICERCA §3; giudizio a mano: 2 veri |
+| `varianti-dei-nomi.txt` | le 64 varianti rare dei nomi del glossario: 1 vera | lo script è nella RICERCA §6 |
+| `numeri-incrociati.txt`, `prova_numeri_incrociati.py` | CA e pf citati nel testo contro il recinto: 0 veri su 6 | `python3 plans/esperimenti/guardrail-2026-11-03/prova_numeri_incrociati.py` |
 | `ripetizioni.json`, `prova_ripetizioni_embedding.py` | le 20 coppie di box più simili per embedding e per 4-grammi | richiede `sentence-transformers` e torch per CPU, fuori dalla dotazione; `HF_HUB_DISABLE_XET=1` |
 
 ## Richiamo contro la lettura del DM e del playtester

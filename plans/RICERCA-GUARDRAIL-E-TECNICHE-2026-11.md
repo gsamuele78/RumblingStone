@@ -24,6 +24,7 @@ container, con i risultati in
 | **Embedding multilingue** (MiniLM, transformer) per i box ripetuti | 362 box di almeno 25 parole | sopra 0,90 di similarità: 4 coppie, tutte ripetizioni vere, ma 3 le trova già il confronto di 4-grammi. Il guadagno è **1 parafrasi**, in un file pre-DEF. Sotto 0,90 trova scene dello stesso tipo, non ripetizioni | **non adottato**: 1 rilievo in più non vale una dipendenza da 1 GB |
 | **Rilevatore dei box «telecomando»** (il box decide cosa i PG provano, sanno, decidono) | 569 box | 15 colpi fuori dalle battute, **2 veri** (13%). Gli altri sono echi personali, effetti magici, sogni: la seconda persona lì è voluta | **non adottato**: precisione troppo bassa, come il pronome soggetto nel 2026-10 |
 | **NLI zero-shot** (transformer) per classificare i box o trovare contraddizioni | — | non provato: non c'è un insieme etichettato su cui misurare | **rimandato**, con la condizione per provarlo (§4) |
+| **Varianti dei nomi** (fuzzy, come PerfectIt), **numeri incrociati** (come Xbench), **correzione grammaticale** con un modello | §5 | 1 vero su 64; 0 veri su 6; non applicabile | **non adottati** |
 | **LLM come giudice** della prosa | letteratura | l'accordo con gli esperti è basso sulle dimensioni fini (τ ≤ 0,31) | **non adottato**: il giudice resta il cieco del DM (ADR-0093) |
 
 ## 1. Cosa cambia fra le versioni (la prova di ADR-0107)
@@ -92,7 +93,24 @@ di Qwen) sono già state provate sui voti ciechi del DM e nessuna li prevede
 ([RICERCA-QUALITA-MISURABILE](RICERCA-QUALITA-MISURABILE-2026-10.md) §3,
 PR #270). Questa ricerca non le rifà.
 
-## 5. Cosa resta aperto
+## 5. Seconda tornata: tecniche di text AI che il repo non ha
+
+Il DM, lo stesso giorno: cercare tecniche di text AI avanzate non ancora nel
+repo, misurarle, e adottarle come standard solo se il prima/dopo mostra un
+miglioramento. Tre provate, nessuna adottata.
+
+| Tecnica | Da dove viene | Prova sul repo | Esito |
+|---|---|---|---|
+| **Varianti dei nomi** (fuzzy matching, come il controllo delle grafie dei nomi di PerfectIt) | [PerfectIt](https://support.perfectit.com/kb/guide/en/features-perfectit-cloud-XfloRYXDDu/Steps/2426078), [GNverifier](https://globalnames.org/apps/gnverifier/) | parole rare (≤ 3) con somiglianza ≥ 0,80 a uno dei 96 nomi del glossario, su 285 file vivi: 64 candidati (`varianti-dei-nomi.txt`) | **1 vero su 64** («Duric» per Durik in un prompt d'immagine). Il resto sono flessioni («Portali», «Forgiato») e inglese. Il glossario con `validate_prosa` tiene già le grafie dei nomi: non adottata |
+| **Numeri incrociati** (il controllo dei numeri dei programmi di QA della traduzione, come Xbench) | [Xbench](https://xtm-cloud.atlassian.net/wiki/x/NQBV6Q), [ProZ](https://www.proz.com/doc/3310) | ogni «CA N» e «N pf» dopo il nome di una creatura recintata, fuori dal recinto, contro i valori del recinto: 19 confronti (`numeri-incrociati.txt`) | **0 veri su 6**: soglie di fuga (172 pf = metà), varianti scalate (391 pf al 34 DV), numeri di un'altra creatura nella stessa riga. Pochi confronti e nessun difetto: non adottata |
+| **Correzione grammaticale con un modello** (GEC) | [17 modelli fino a 9B](https://arxiv.org/pdf/2505.06004); [mBART italiano su MERLIN](https://huggingface.co/MRNH/mbart-italian-grammar-corrector) | non provata | **non applicabile**: i modelli italiani sono addestrati su testi di chi impara la lingua (MERLIN), i nostri box passano già LanguageTool, e una riscrittura della prosa entra solo col cieco del DM (ADR-0093) |
+
+Che cosa dice questa tornata. I difetti che il repo ha ancora non sono di
+lingua né di grafia, che sono già coperti, ma di **regole del gioco**
+(CD, sensi) e di **impaginazione** (numeri lontani, note in stampa): quelli
+della prima parte, che sono stati adottati.
+
+## 6. Cosa resta aperto
 
 - Le correzioni trovate (6 conti, 60 note) sono canone: le decide il DM nei
   master. DEF-4 è anche della PR #305.
