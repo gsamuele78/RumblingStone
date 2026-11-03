@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
 - `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108). Cricchetto in `test_conformita_statblocchi`.
 - `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).
 - `misura_standard_tavolo.py` conta le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato», TODO), con cricchetto per volume.
@@ -110,6 +111,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
 ### Corretto
+- Master ARC-07: Treant di Adamantio 95 pf (10d8+50, prima 90), scurovisione 18 m a Durin e alle wyvern. `conformita_statblocchi --master` accetta il primo dado al massimo per i PNG con livelli di classe (Balvar 101 pf). Cricchetto dei conti a 0.
 - Appendice delle creature in stampa: i nomi nei titoli dei riquadri non vanno più a capo col trattino («Skullcru-sher»); una scheda che non entra nella colonna di sinistra continua nella colonna accanto della stessa pagina invece di lasciarne bianca la metà; il «continua» in fondo all'ultimo pezzo di una scheda lunga non compare più («continua a pagina 60» sotto Terros, che finiva a p. 59). `misura_stampa` conta ora i rimandi di pagina sbagliati (tetto 0) e fallisce se l'impaginazione non converge.
 - `export_map_png.py`: con Chromium la legenda delle mappe più alte usciva tagliata, perché il headless nuovo toglie alla finestra la fascia della cornice. Ora la finestra si apre più alta e il PNG torna all'altezza dell'SVG, con la sola libreria standard.
 

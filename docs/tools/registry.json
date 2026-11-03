@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 128,
+  "tool_count": 130,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4680,6 +4680,62 @@
       ]
     },
     {
+      "id": "misura_box_telecomando",
+      "path": "scripts/misura_box_telecomando.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...]",
+      "summary": "I box read-aloud che decidono per il gruppo cosa capisce, sa o prova: seconda persona plurale fuori dalle battute, esclusi i «… voi» che danno la scelta. Il 2026-11-03: 4 colpi su 615 box, 2 veri (50%), contro 2 su 15 della configurazione col singolare. Indicatore, non cancello.",
+      "use_case": "«C'è un box che dice ai giocatori cosa pensano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "file markdown (default: i file vivi)"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "l'elenco è stampato: è un indicatore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "espressione regolare"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misure_rigorose.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
       "id": "misura_distanza_pagine",
       "path": "scripts/misura_distanza_pagine.py",
       "category": "D-materials",
@@ -4756,6 +4812,74 @@
       "produces_schema": null,
       "tests": [
         "scripts/tests/test_misura_distanza_pagine.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
+      "id": "misura_ripetizioni_frasi",
+      "path": "scripts/misura_ripetizioni_frasi.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json]",
+      "summary": "Le immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Esclude stesso box, copie (4-grammi ≥ 0,5) e handout. Il 2026-11-03 trova 6 ripetizioni vere che i 4-grammi non vedono, contro 1 della configurazione a box interi. Indicatore, non cancello; canale unstable (ADR-0099).",
+      "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",
+      "stability": "local-only",
+      "stdlib_only": false,
+      "external_deps": [
+        "sentence-transformers"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--soglia",
+          "type": "float",
+          "required": false,
+          "default": 0.8,
+          "choices": null,
+          "repeatable": false,
+          "desc": "coseno minimo"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "l'elenco è stampato: è un indicatore",
+        "2": "manca sentence-transformers"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "modello fisso, inferenza senza campionamento"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misure_rigorose.py"
       ],
       "docs": [
         "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",

@@ -395,11 +395,18 @@ class TestRecintiNeiMaster(unittest.TestCase):
 
     #: Il cricchetto: i rilievi veri di oggi, per file, col perché. Uno in più è
     #: rosso. Le correzioni sono canone e le decide il DM : quando scendono, il tetto si abbassa a mano.
-    RESIDUI = {
-        "ARC07-DEF-3-RESURREZIONE-HELLA.md": 1,   # Treant di Adamantio: pf 90, 10d8+50 fa 95
-        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 3,   # scurovisione di Durin e delle wyvern; pf di Balvar 101/97
-                                                   # (la #305 ha corretto il Vecchio e Zog'tar: da 5 a 3)
-    }
+    RESIDUI: dict = {}   # 2026-11-03, scelta del DM: tutti i conti all'SRD (Treant 95,
+                          # scurovisione di Durin e delle wyvern); Balvar 101 è giusto
+                          # col primo dado al massimo dei PNG con classi
+
+    def test_png_con_classi_primo_dado_al_massimo(self):
+        # Balvar: 13d8+39, primo dado 8 e gli altri alla media = 101 (DMG 3.5, cap. 4)
+        con = ("### A.4 · X\n\n```statblocco\nnome: X\ngs: 13\ntipo: Umanoide Medio (nano), Chierico 9 / Runecaster 4\nca: 24\n"
+               "pf: 101\npf-dado: 13d8+39\nts: Temp +13\nattributi: For 12\n```\n")
+        senza = con.replace("Umanoide Medio (nano), Chierico 9 / Runecaster 4", "Vegetale Grande")
+        conti = C.conti_dei_recinti
+        self.assertEqual([x for x in conti(con) if x["campo"] == "pf"], [])
+        self.assertEqual([x["atteso"] for x in conti(senza) if x["campo"] == "pf"], [97])
 
     def test_il_cricchetto_dei_master(self):
         r = C.rapporto_master(C.master_di_default())

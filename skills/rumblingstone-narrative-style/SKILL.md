@@ -227,3 +227,5 @@ Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
 - `python3 scripts/misura_craft.py --stile`: i tetti e gli indicatori dei box read-aloud, P1 compreso.
 - `python3 scripts/punteggio_mqm.py`: il punteggio MQM come cancello della prosa.
 - `python3 scripts/ciclo_prosa.py`: il box riscritto non perde dettagli (box_impoveriti, ADR-0093).
+- `python3 scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa («capite che…»); elenco da leggere, 2 veri su 4 il 2026-11-03.
+- `python3 scripts/misura_ripetizioni_frasi.py`: le immagini già usate in un altro box, anche con parole diverse (embedding frase per frase, solo in locale con `sentence-transformers`); elenco da leggere, la riscrittura passa dal cieco del DM.

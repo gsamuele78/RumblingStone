@@ -775,7 +775,10 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
         n, f = int(m.group(1)), int(m.group(2))
         bonus = int(m.group(4) or 0) * (-1 if m.group(3) == "-" else 1)
         atteso = math.floor(n * (f + 1) / 2) + bonus
-        if atteso != pf:
+        # PNG con livelli di classe: il primo dado al massimo (DMG 3.5, cap. 4)
+        con_classe = re.search(r"[^\W\d_]+ \d+\b", sb.tipo or "")
+        massimo = f + math.floor((n - 1) * (f + 1) / 2) + bonus
+        if atteso != pf and not (con_classe and massimo == pf):
             scarto("pf", pf, atteso, f"media di {sb.pf_dado}")
     ca = _int(sb.ca)
     par = re.search(r"\(([^)]*)\)", (sb.ca_dettaglio or "").replace("−", "-"))
