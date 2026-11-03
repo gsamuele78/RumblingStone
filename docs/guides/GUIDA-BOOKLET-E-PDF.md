@@ -199,6 +199,10 @@ qualcuno non allunga un equipaggiamento.
 | i **parametri** che l'esportatore passa al template `.typ` | `test_schede.py::TestSorgenteTypst` |
 | la **compilazione vera** di tutti i volumi, segnalibri compresi | `validate_booklets.py --stampa`, in CI con `typst` **a versione fissata** |
 | le sei **schede singole** | `--per-scheda` in CI (conta che siano sei) |
+| le **creature** fuori dal riquadro unico, per booklet | `misura_statblocchi_booklet.py --check`, in CI, tetto che scende soltanto |
+| la **prestampa**: corpo sotto 7 pt, testo oltre la gabbia, immagini sotto 300 dpi, riquadri spezzati | `misura_stampa.py --tutti --check`, job CI `stampa-misurata` |
+| **chi si incontra** nel capitolo (numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa) e le **note di lavoro** in stampa | `misura_standard_tavolo.py`: indicatore, con cricchetto nei test sulle note |
+| quante **pagine** separano la scena dai numeri di chi c'è | `misura_distanza_pagine.py <PDF>`: indicatore, a mano |
 | il **giudizio estetico** | ⚠️ nessuno, e nessuno potrà: si guarda a occhio, in locale |
 
 > 📌 **Dal 2026-08-22 in CI c'è `typst`.** Prima non c'era, e la conseguenza è
@@ -312,6 +316,8 @@ capitoli**. Tutti i percorsi sono relativi alla cartella del manifest.
 | `out` | nome del file HTML (i `.hb.md` e i PDF derivano da questo) |
 | `colophon` | **la pagina dei crediti**, sul verso del frontespizio ([ADR-0023](../../plans/adr/ADR-0023-colophon-di-edizione.md)): chi ha fatto il volume, che versione è, su cosa si basa e cosa se ne può fare. Senza questa chiave **il volume esce anonimo**. ⚠️ La `data` si **scrive**, non si deduce dall'orologio: un PDF che prende la data dall'ora corrente cambia a ogni compilazione e smette di essere byte-identico. E `autori` **non si inventa mai** |
 | `indice_analitico` | aggiunge l'**INDICE ANALITICO** in coda al volume da stampa. Le voci **non si annotano a mano**: le marca l'esportatore prendendo i nomi canonici dal glossario, alla prima occorrenza per volume. Se in quel volume non compare nessun nome del glossario — il caso dei moduli autoconclusivi, che hanno un'ambientazione loro — la pagina **non si aggiunge**: un indice vuoto è peggio di niente. Solo catena di stampa: una pagina web ha la ricerca |
+| `schede` | dove esce il riquadro intero delle creature ([ADR-0105](../../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md)): `"appendice"` (predefinito) mette nell'incontro una riga con nome, GS, CA, pf, rimando e tattica e il riquadro in fondo al volume; `"qui"` lo lascia dove è scritto (volumi per i giocatori); `"entrambe"` lo lascia dove è scritto e aggiunge l'appendice, solo nel PDF |
+| `chi_si_incontra` | `true` porta in ogni capitolo, prima di stampare, le persone che vi si incontrano (scheda d'entrata con la riga **Chi è**, ritratto, riquadro con la tattica) e le piante delle mappe che nomina, prese dal master che le ha ([ADR-0107](../../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md), `dmcore/chi_si_incontra.py`). Va con `"schede": "entrambe"`. Il master non cambia. Solo catena di stampa |
 | `chapters[]` | `title` = etichetta del tab · `file` = markdown · `tag` = `dm` (⚠ SOLO DM) / `player` (✉ HANDOUT) / assente |
 
 ---
@@ -489,6 +495,8 @@ generato — quello si rifà a ogni compilazione.
 - [ ] `python3 scripts/dm.py booklet <gruppo> --pdf` → **un** file per la chat di gruppo
 - [ ] `python3 scripts/dm.py booklet <booklet DM> --format both --pdf-all` → hint `pg-` (uno a testa, in privato) + schede `dm-` per te
 - [ ] `python3 scripts/validate_modules.py` verde se hai toccato un master
+- [ ] `python3 scripts/misura_standard_tavolo.py --manifest <booklet DM>`: chi si incontra ha scheda, riquadro e mappa nel capitolo
+- [ ] Letto il booklet da DM, scena per scena: i validatori verdi non bastano (serata del 2026-11-02)
 
 ---
 
