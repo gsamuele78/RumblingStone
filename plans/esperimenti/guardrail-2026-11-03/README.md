@@ -42,3 +42,12 @@ Treant di Adamantio (90, 10d8+50 ne fa 95), pf di Balvar (101, 13d8+39 ne fa
 
 Richiede un venv con `torch`, `transformers` e `sentencepiece`, e
 `HF_HUB_DISABLE_XET=1`. Non è nelle dipendenze del repo: non è adottata.
+
+## `rigorose/`: le prove scartate rifatte (§8 della ricerca)
+
+| File | Cosa |
+|---|---|
+| `embedding_v2.py`, `embedding_v2.json` | ripetizioni frase per frase: 28 coppie a 0,80 prima del filtro degli handout |
+| `varianti_v2.py`, `varianti_v2.txt` | varianti dei soli nomi propri: 126 a distanza ≤ 2, 13 a distanza 1, 0 vere |
+| `numeri_v2.py`, `numeri_v2.txt` | numeri nella parentesi dopo un nome proprio: 1 confronto |
+| `../etichette/filtra_entita.py`, `../etichette/entita-prime-60.json` | NLI sulla stessa entità: le 60 coppie più «contraddittorie» |

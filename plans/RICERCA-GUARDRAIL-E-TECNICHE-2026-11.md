@@ -21,8 +21,8 @@ container, con i risultati in
 | **Note di lavoro in stampa** («[INFERRED…]», «va riscontrato», «(da verificare)», TODO) | i 10 booklet del DM | **60** in 5 volumi. Tutte vere: il DM le leggerebbe al tavolo | **adottato**: `misura_standard_tavolo`, cricchetto in test |
 | ***Document AI* deterministica**: distanza in pagine fra scena e numeri, letta dal PDF (PyMuPDF) | i due PDF della prova ADR-0107 | ripete la lettura a mano: Zog'tar 23,5 → 5, Skullcrusher 21 → 4, Balvar 28,5 → 5,5, Durin 53 → 4,5 pagine (mediana). Durik peggiora (102,5 → 112) | **adottato** come indicatore: `misura_distanza_pagine.py` |
 | **Cancelli dichiarati in ogni skill** | 18 skill | prima: 7 skill su 18 citavano un comando, nessuna in una sezione fissa | **adottato**: sezione «Cancelli deterministici», test che la impone |
-| **Embedding multilingue** (MiniLM, transformer) per i box ripetuti | 362 box di almeno 25 parole | sopra 0,90 di similarità: 4 coppie, tutte ripetizioni vere, ma 3 le trova già il confronto di 4-grammi. Il guadagno è **1 parafrasi**, in un file pre-DEF. Sotto 0,90 trova scene dello stesso tipo, non ripetizioni | **non adottato**: 1 rilievo in più non vale una dipendenza da 1 GB |
-| **Rilevatore dei box «telecomando»** (il box decide cosa i PG provano, sanno, decidono) | 569 box | 15 colpi fuori dalle battute, **2 veri** (13%). Gli altri sono echi personali, effetti magici, sogni: la seconda persona lì è voluta | **non adottato**: precisione troppo bassa, come il pronome soggetto nel 2026-10 |
+| **Embedding multilingue** (MiniLM, transformer) per i box ripetuti | 362 box di almeno 25 parole | sopra 0,90 di similarità: 4 coppie, tutte ripetizioni vere, ma 3 le trova già il confronto di 4-grammi. Il guadagno è **1 parafrasi**, in un file pre-DEF. Sotto 0,90 trova scene dello stesso tipo, non ripetizioni | a box interi non adottato; **frase per frase adottato** (6 vere invece di 1, §8): `misura_ripetizioni_frasi.py` |
+| **Rilevatore dei box «telecomando»** (il box decide cosa i PG provano, sanno, decidono) | 569 box | 15 colpi fuori dalle battute, **2 veri** (13%). Gli altri sono echi personali, effetti magici, sogni: la seconda persona lì è voluta | col singolare non adottato; **solo plurale adottato** (2 su 4, §8): `misura_box_telecomando.py` |
 | **NLI** (mDeBERTa-v3 multilingue, transformer) per trovare contraddizioni fra file | 120 coppie etichettate a mano, poi 1.500 coppie di frasi simili prese da file diversi del repo | sulle coppie etichettate F1 0,86 (i numeri da soli 0,63). Sul repo vero **0 contraddizioni nuove nelle prime 30**: 1.268 coppie su 1.500 sopra 0,5, perché due statblocchi di creature diverse «si contraddicono» sempre; le 2 vere (veleno drow CD 18/13) le ha già l'errata. 28 minuti di CPU per 1.500 coppie | **non adottato**: sul repo 28 delle prime 30 sono rumore, e `coerenza_campagna` trova già 20 contraddizioni di fatto senza modello (§7) |
 | **Varianti dei nomi** (fuzzy, come PerfectIt), **numeri incrociati** (come Xbench), **correzione grammaticale** con un modello | §5 | 1 vero su 64; 0 veri su 6; non applicabile | **non adottati** |
 | **LLM come giudice** della prosa | letteratura | l'accordo con gli esperti è basso sulle dimensioni fini (τ ≤ 0,31) | **non adottato**: il giudice resta il cieco del DM (ADR-0093) |
@@ -160,3 +160,25 @@ costruzione: è lì che sta il salto da F1 0,86 a precisione quasi nulla.
 si parla: `coerenza_campagna` (fatti per entità, 20 contraddizioni) e
 `conformita_statblocchi --master` (6 conti). Si riprova solo con un passo
 che leghi ogni frase alla sua entità prima del confronto.
+
+## 8. Le prove scartate, rifatte con una configurazione rigorosa
+
+Il DM, il 2026-11-03 alle 14:13: le prove scartate vanno ricontrollate e
+configurate bene prima di escluderle. Ognuna è stata rifatta cambiando solo
+la configurazione, sugli stessi file, con lo stesso giudizio a mano. File in
+`plans/esperimenti/guardrail-2026-11-03/rigorose/` ed `etichette/`.
+
+| Prova | Prima | Configurazione rigorosa | Dopo | Decisione |
+|---|---|---|---|---|
+| **Embedding** per le ripetizioni (MiniLM) | box interi, soglia 0,90: **1** parafrasi oltre i 4-grammi | frase per frase (1.255 frasi), solo box diversi, copie (4-grammi ≥ 0,5) e handout esclusi, soglia 0,80 | **6** ripetizioni vere oltre i 4-grammi, 3 nei master DEF vivi (DEF-5/ARC08-11 «filo attraverso mille anni», DEF-4/DEF-5 il metallo sulla fronte, DEF-1 le piattaforme di cristallo due volte) su 21 coppie | **adottata**: `misura_ripetizioni_frasi.py`, indicatore, solo in locale |
+| **Box «telecomando»** | 40 verbi, seconda persona singolare e plurale: 2 veri su 15 (13%) | solo il plurale (il gruppo intero), fuori dalle battute, non «… voi» | **2 veri su 4** (50%), stessi 2 difetti, 11 falsi in meno | **adottata**: `misura_box_telecomando.py`, indicatore |
+| **NLI** (mDeBERTa) | coppie di frasi simili qualsiasi: 0 nuove nelle prime 30 | solo prosa (via righe di statblocco, tabelle, chiavi: valore), solo coppie che nominano la **stessa entità**: 1.149 coppie su 12.742 | **1 plausibile nelle prime 40** (dove Lythiel incontra Hella: cortile esterno o interno), il resto rami alternativi, momenti diversi, versioni 3.5/PF1e volute | non adottata: precisione 2,5% |
+| **Varianti dei nomi** | glossario con parole comuni («Portale», «Tempio»): 1 su 64 | solo nomi propri (mai in minuscolo nel repo, ≥ 10 usi), varianti mai in minuscolo, niente genitivo inglese | **0 veri su 13** a distanza 1 («Mangino» è il singolare di «Mangini») | non adottata: i nomi sono già coerenti, lo tiene il glossario |
+| **Numeri incrociati** | 19 confronti, 0 veri su 6 | solo nomi propri, solo il numero nella parentesi subito dopo il nome, soglie e varianti escluse | **1 confronto**, 0 difetti (Terros avanzato a 34 DV, variante voluta) | non adottata: fuori dal recinto i numeri quasi non si scrivono, e il recinto lo controlla `conformita_statblocchi` |
+
+Che cosa cambia rispetto a §3 e §7. La configurazione conta: per due prove
+su cinque decide fra «scartata» e «adottata». Per le altre tre la seconda
+misura conferma la prima, e la ragione è nel repo, non nello strumento:
+nomi e numeri sono già tenuti da controlli deterministici più forti. I
+difetti trovati (2 box telecomando, 3 ripetizioni nei master vivi, Lythiel)
+sono prosa e canone: li decide il DM, la riscrittura passa dal cieco.
