@@ -79,3 +79,16 @@ migliorano e si adottano come indicatori: `misura_ripetizioni_frasi.py`
 (6 ripetizioni vere invece di 1) e `misura_box_telecomando.py` (precisione
 dal 13% al 50%). NLI, varianti dei nomi e numeri incrociati restano fuori:
 la seconda misura conferma la prima.
+
+Terza verifica (2026-11-03, 17:06-17:13, richiesta del DM: «correggi, non
+solo indicatore», «diventino std misurando il miglioramento»):
+
+- **NLI sulla fedeltà del riscritto** (ricerca §9): sulle 26 coppie
+  etichettate alla cieca dal DM F1 0,83 contro 0,62 dei soli numeri. Entra in
+  `ciclo_prosa revisione` e `misura` come **correzione automatica**: la riga
+  che contraddice l'originale torna com'era, e `misura` esce con 1.
+- **Box telecomando**: i 2 veri corretti nel testo, `--check` cancello in CI
+  (4 colpi → 2, entrambi accettati e motivati).
+- **Ripetizioni fra box**: le 2 vere nei master corrette (21 → 19 coppie),
+  `--check` cancello locale con l'elenco delle accettate.
+- **Lythiel**: il cortile allineato (esterno, dopo la cerimonia).

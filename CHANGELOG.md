@@ -18,6 +18,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/misura_fedelta_nli.py`: il riscritto contraddice l'originale? Coppie di righe del diff giudicate da un modello NLI multilingue (solo in locale, `transformers`). Con `--ripara`, e da sé dentro `ciclo_prosa revisione` e `misura`, le righe che contraddicono tornano all'originale. Sulle 26 coppie del DM F1 0,83 contro 0,62 dei soli numeri (RICERCA-GUARDRAIL §9).
+- `misura_box_telecomando.py --check` (cancello in CI) e `misura_ripetizioni_frasi.py --check` (cancello locale, `plans/scrittura/ripetizioni-accettate.json`).
 - `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
 - `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108). Cricchetto in `test_conformita_statblocchi`.
 - `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).

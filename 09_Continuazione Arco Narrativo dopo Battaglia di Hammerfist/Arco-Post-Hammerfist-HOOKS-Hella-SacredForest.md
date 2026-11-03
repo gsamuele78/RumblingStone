@@ -40,7 +40,7 @@ Vedi `Bestiario/png/Lythiel/Lythiel.md` per statblock. In sintesi:
 
 ### 1.3 Dopo la battaglia — la consegna della Ghianda
 
-**Setting:** la cittadella di Hammerfist tornata in silenzio. Cadaveri in ordine. Tempestas non è ancora arrivato (lui arriva il Giorno 22). Lythiel raggiunge Hella in un cortile interno o sui bastioni — un luogo tranquillo.
+**Setting:** la cittadella di Hammerfist tornata in silenzio. Cadaveri in ordine. Tempestas non è ancora arrivato (lui arriva il Giorno 22). Lythiel raggiunge Hella nel cortile esterno, dopo la cerimonia, e la porta a un piccolo altare nano: un luogo tranquillo, come nel file della Cerimonia delle Cento Asce.
 
 **Read-aloud (DM):**
 > *Lythiel cammina verso di te senza fretta. Tira fuori dalla cintura una piccola ghianda — viva, calda, con un guscio dorato. La porge con due mani. Non parla finché tu non la prendi.*

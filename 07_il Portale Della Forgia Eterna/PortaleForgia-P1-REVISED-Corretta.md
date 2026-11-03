@@ -481,7 +481,7 @@ Dopo aver preservato corpo Hella, i PG si rivolgono al VERO tesoro della stanza:
 
 **Descrizione Dettagliata Corona:**
 
-> *La Corona giace sulla sommità del trono di adamantio, come se qualcuno l'avesse posata lì un momento fa - anche se sapete che è stata qui per millenni.*
+> *La Corona giace sulla sommità del trono di adamantio, come se qualcuno l'avesse posata lì un momento fa - eppure intorno al trono la polvere è alta un dito, e non c'è un'impronta.*
 >
 > *È un cerchio perfetto di adamantio puro, largo circa 30 centimetri, spesso 2 centimetri. Non è ornata con gemme o decorazioni superflue - la sua bellezza è nella PERFEZIONE del metallo e delle rune incise.*
 >

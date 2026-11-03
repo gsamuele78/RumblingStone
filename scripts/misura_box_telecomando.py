@@ -15,12 +15,16 @@ due configurazioni a confronto sui 569 box del repo:
   fuori dalle battute, e non quando il verbo è seguito da «voi» («quello che
   decidete voi» dà la scelta, non la toglie): 4 colpi, **2 veri** (50%).
 
-Si adotta la seconda, come indicatore: un elenco breve da leggere, non un
-cancello. Deterministico, nessuna dipendenza.
+Si adotta la seconda. Il 2026-11-03 i 2 veri sono stati corretti nel testo
+(PALIO «capite che…», P1-REVISED «sapete che…»: 4 colpi → 2) e, su richiesta
+del DM, lo strumento è diventato un **cancello**: `--check` esce con 1 se
+compare un colpo che non è in `ACCETTATI`, i due falsi positivi letti a mano.
+`test_misure_rigorose` lo esegue in CI. Deterministico, nessuna dipendenza.
 
 ## Uso
 
     python3 scripts/misura_box_telecomando.py [FILE.md ...]   # default: i file vivi
+    python3 scripts/misura_box_telecomando.py --check         # il cancello
 """
 from __future__ import annotations
 
@@ -37,6 +41,22 @@ sys.path.insert(0, str(ROOT / "scripts"))
 VERBI = re.compile(
     r"\b(capite|sapete|ricordate|decidete|credete|pensate|temete|"
     r"vi rendete conto|vi accorgete|vi sentite)\b(?!\s+voi\b(?!\s+che))", re.I)
+#: I colpi letti e lasciati come sono (2026-11-03): (file, parole del box).
+#: Il primo è un ricordo vero dei PG (la fortezza la conoscono davvero), il
+#: secondo un prompt d'immagine, non un box da leggere al tavolo.
+ACCETTATI = (
+    ("ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md", "una fortezza che conoscete"),
+    ("PROMPT-IMMAGINI-07ILP.md", "Vi sentite allungare"),
+)
+
+
+def accettato(p: Path, estratto: str) -> bool:
+    """>>> accettato(Path("x/PROMPT-IMMAGINI-07ILP.md"), "… Vi sentite allungare, strappare …")
+    True
+    """
+    return any(p.name == f and pezzo in estratto for f, pezzo in ACCETTATI)
+
+
 BATTUTA = re.compile(r"«[^»]*»|\"[^\"]*\"|“[^”]*”")
 
 
@@ -64,6 +84,8 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("file", nargs="*", type=Path, help="file markdown (default: i file vivi)")
+    ap.add_argument("--check", action="store_true",
+                    help="cancello: esce con 1 se c'è un colpo fuori da ACCETTATI")
     a = ap.parse_args(argv)
     import misura_craft as mc
     if a.file:
@@ -81,11 +103,14 @@ def main(argv=None) -> int:
             corpo = BATTUTA.sub(" ", mc.corpo_del_box(b))
             for m in VERBI.finditer(corpo):
                 trovati.append((p, corpo[max(0, m.start() - 90):m.end() + 70].strip()))
-    print(f"BOX TELECOMANDO — {tot} box, {len(trovati)} da leggere (indicatore, non cancello)")
+    nuovi = [(p, f) for p, f in trovati if not accettato(p, f)]
+    print(f"BOX TELECOMANDO — {tot} box, {len(trovati)} colpi, {len(nuovi)} da correggere")
     for p, f in trovati:
         rel = p.resolve().relative_to(ROOT) if p.resolve().is_relative_to(ROOT) else p
-        print(f"  {rel}: …{f}…")
-    return 0
+        print(f"  {'✓ accettato' if (p, f) not in nuovi else '✗'} {rel}: …{f}…")
+    if nuovi:
+        print("  il box descrive quello che si vede o si sente; cosa capisce il gruppo lo decidono i giocatori")
+    return 1 if a.check and nuovi else 0
 
 
 if __name__ == "__main__":
