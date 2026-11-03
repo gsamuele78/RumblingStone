@@ -1947,6 +1947,43 @@ usa due cose diverse, e tutte e due si possono fare:
   seggio che porta il glifo. Il consiglio non gli
   costa niente, e d'ora in poi i PG gli devono qualcosa.
 
+#### 💣 Variante — il barile sulla tenda
+
+Il gruppo del 25 settembre non è sceso: ha lasciato cadere sulla tenda una
+botte d'olio con i rostri e le fiale della fenice, e tiene in mano due
+barilotti. Le regole sono tutte nel supplemento «Il barile sulla tenda»
+(capitolo a sé nel booklet della serata); qui c'è solo dove si innesta nelle
+scene di questo master.
+
+- **Al posto delle Scene 7 e 8.** Niente soglia, niente trattativa, niente
+  scontro nella tenda: lo scontro è il barile, e si gioca con la scheda da
+  tavolo del supplemento, i dieci passi in ordine. La quota la scelgono i PG
+  (§2-bis del supplemento), e da lì vengono danno, deviazione e chi vede il
+  colmo. Le schede di Zog'tar, delle guardie e di Balvar restano quelle delle
+  Appendici A.2 e A.4.
+- **Le tacche.** Lo sgancio sta dentro la tacca del volo: non costa altro.
+  Grask è sveglio o addormentato secondo la tacca segnata all'arrivo sopra la
+  tenda (B9), come per chi atterra.
+- **L'iniziativa** si tira quando i PG decidono di sganciare. Il round di
+  sorpresa è solo loro; Balvar al round 1 non è colto alla sprovvista (B18).
+- **Le reazioni** sono la tabella «Le tattiche, round per round» del §8 del
+  supplemento: Zog'tar esce dal fuoco e grida al corno, il sacerdote al round
+  3 mette la *luce* sul giavellotto, Balvar al round 4 lancia *dissolvi
+  magie* ad area sul punto illuminato o alla cieca sulla verticale (B13: chi
+  perde il volo cade da 48 m, 15d6). Grask suona entro 1d4 round dal boato,
+  se è vivo; se è morto il corno lo suona qualcun altro (§8, «Chi suona il
+  corno»). L'orda corre allo spiazzo con le torce (B25).
+- **Che cosa rischiano.** Chi resta sopra i 45 m, zitto, e si allontana dalla
+  verticale dopo lo sgancio, niente. Chi resta a guardare rischia il
+  giavellotto con la luce e il dissolvi. Chi scende sotto i 24 m nella luce
+  dell'incendio è visto (B24).
+- **Dopo il barile** valgono le righe del §10 del supplemento, cucite nelle
+  scene che seguono: il ritorno (Scena 9), le mura (Scena 10, tabella «Dalla
+  notte»), il duello (Scena 11, «Dopo il barile») e l'Echo Ledger (§7).
+- **Se scendono dopo il barile** per finire il lavoro, la Scena 8 si gioca
+  com'è, ma con la tenda in fiamme o crollata, il campo sveglio e i rinforzi
+  della tabella «L'orda» del §8 del supplemento già in strada.
+
 **Come torna il drago**. Il **corno da
 guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
 gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
@@ -2024,6 +2061,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
 
+<!-- blocco: zogtar-chi -->
 | | |
 |---|---|
 | **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di mithral annerita, di fattura nanica, presa ai nani. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero |
@@ -2032,6 +2070,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, l'orda che mille anni dopo sarà la Mano Rossa ha un generale in più nei suoi canti |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Zog'tar Deatheye, il generale](../../Immagini/web/zogtar-deatheye.jpg)
 
@@ -2111,6 +2150,7 @@ Corona lo è più di tutto il resto. Nel box 2 qui sotto, allora, non guarda
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
 
+<!-- blocco: balvar-chi -->
 | | |
 |---|---|
 | **Aspetto** | nano dello scudo vecchio, grembiule di cuoio, seduto su uno sgabello da bottega. Sulle ginocchia una lastra d'ardesia, in mano una punta di ferro |
@@ -2119,6 +2159,7 @@ Appendice A)*
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+<!-- /blocco -->
 
 ![Balvar Fuocospento, il runaio esiliato](../../Immagini/ritratti/balvar-fuocospento.jpg)
 
@@ -2866,6 +2907,12 @@ terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
 riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
 in ARC-09 Sal lo cerca su quel polso.
 
+**Dopo il barile**. Il campo è sveglio e le
+bande d'orchi corrono allo spiazzo con le torce: Vatore si ferma fra due tende
+a guardare il fuoco, e la scena dall'alto comincia lì. Chi torna a piedi tira
+il ritorno della Scena 6 a **CD +2**, perché i lupi si sono stretti sotto le
+vie. Se il corno ha suonato, vale anche «Se il corno suona di notte» (Scena 6).
+
 **Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
@@ -2984,6 +3031,9 @@ un successo in più o in meno, e si applica dopo i tiri:
 | cure comprate alla cappella (Scena 5) | nessuno sulla prova. Si tira il **dado dei caduti**: 1d4 per ogni tipo di cura comprata (per il gruppo del 25 settembre, quattro tiri). Il numero è quanti difensori con un nome muoiono sulle mura per quella cura mancata; il DM li annota fra i caduti del 372. Non tocca ARC-08 |
 | i due Treant dell'alba caricano il fianco dell'orda (Scena 5) | **un successo in più** |
 | **Zog'tar è vivo all'alba** (il gruppo ha dormito, o non è arrivato alla tenda) | **un successo in meno**, e Zog'tar guida l'assalto: vedi sotto |
+| **il barile sulla tenda**: il boato è un allarme (supplemento, §10) | **un successo in meno**, anche se la tenda è bruciata |
+| **il barile, e Zog'tar tirato fuori dal fuoco davanti ai suoi** | vale «umiliato davanti alle guardie»: annulla il successo in meno dell'allarme (B11) |
+| **il barile, e Zog'tar vivo** (quasi sempre: §7 del supplemento) | la riga «Zog'tar è vivo all'alba» qui sopra, un successo in meno. Se il barile ha ucciso il sacerdote, sulla breccia sale senza di lui, come già scritto |
 
 **Se Zog'tar è vivo all'alba**. Guida l'orda sotto le mura. Con
 **0-1 successi** sale sulla breccia del camminamento est con le sue quattro
@@ -3061,6 +3111,16 @@ successo in più o in meno, si applica allo stesso modo.
 
 **In scena** — Dove: il cortile — Chi: Skullcrusher · Re Thorek I · Aegis Fang
 
+**Dopo il barile**. Attraverso la
+gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno
+ali.» compreso: all'alba sa che i nani volano e **guarda in alto**. Chi lo
+aspetta in volo sopra il cortile non ha la sorpresa. La Catena regge anche se
+Balvar è morto nel fuoco: le rune incise sopravvivono al runaio. Se il corno
+ha suonato di notte vale «Se il corno suona di notte» (Scena 6): il drago parte
+già in quota e conosce il loro odore. Se nessuno l'ha suonato, perché Grask è
+morto e nessuno ha aperto la custodia, il drago arriva a metà mattina,
+furioso (Scena 6, «Se rubano o rompono il corno»).
+
 **Comparse**
 
 | Chi | Com'è | Come parla |
@@ -3070,6 +3130,7 @@ successo in più o in meno, si applica allo stesso modo.
 **Scheda d'entrata — Skullcrusher il Nero, il capostipite** *(statistiche:
 Appendice A)*
 
+<!-- blocco: skullcrusher-chi -->
 | | |
 |---|---|
 | **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
@@ -3078,6 +3139,7 @@ Appendice A)*
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher»). Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+<!-- /blocco -->
 
 **SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
 l'ho già mangiato, qui. Thorik. I tuoi amici lo dicono troppo forte, il tuo
@@ -3669,6 +3731,7 @@ si inginocchia. Il resto non si tocca.*
 | **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | registro di fine serata + scheda di Sal |
 | **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (i componenti li porta Vatore, per il Collezionista: Q4-bis) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | registro di fine serata + scheda del Ghostlord |
 | **Zog'tar catturato, o umiliato e vivo** (Scena 8) | un generale mezzo-ogre che sopravvive alla notte del 372: giustiziato dal re se catturato, ramingo se umiliato. Nel 1372 è un nome nelle cronache dell'assedio antico | ARC-08 | registro di fine serata |
+| **La notte del barile** (Scena 6, variante del barile) | chi è morto nel fuoco (Zog'tar, Balvar, il sacerdote, Grask, le guardie), se il corno ha suonato, e se Zog'tar è uscito dal fuoco davanti ai suoi. Balvar vivo non tratta più da solo; morto, la lastra col nome di Hald resta fra le ceneri e qualcuno la trova. Zog'tar vivo dorme ogni notte in un posto diverso, e il campo guarda il cielo: un secondo barile non trova più niente di facile | Scena 10 · Scena 11 · ARC-08, se Zog'tar è vivo (riga qui sopra) · ARC-09 (la lastra di Hald) | registro di fine serata + supplemento «Il barile sulla tenda» §10 |
 | **Scelte-costo vs Zog'tar** (Scena 8) | Thorik affaticato / Cintura di Tordek «assaggiata» o disciplinata / tono del Rubino | ARC-08 (vs Fauci) | Scena 8 + B4 |
 | **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 (vedi sotto) | ARC-08 ingresso | registro delle conseguenze dell'arco |
 | **La Senzienza arriva calda o fredda** («Il Ritorno a Hammerfist» §3, dopo il Rubino) | il ramo lo ha deciso «La Resurrezione di Hella» §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo è **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
@@ -3831,11 +3894,32 @@ incantesimi conosciuti sono quelli dell'SRD. Sopra c'è il template **Avanzato**
 di PF1e, nella versione completa (+4 a tutte le caratteristiche, +2 di armatura
 naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14.
 
-{{note
-##### Skullcrusher il Nero, il Primo Nero · GS 14
-**CA** 33, contatto 10, impreparato 31 (−2 taglia, +2 DES, +23 naturale); 37 con armatura magica · **pf** 297 (22d12+154) · *scheda in appendice*
+{{monster,frame
+## Skullcrusher il Nero, il Primo Nero
+*Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude* · GS 14
+___
+**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29
+
+**DIFESA**
+___
+**CA 33** (−2 taglia, +2 DES, +23 naturale), contatto 10, impreparato 31; **37 con *armatura magica***, che si lancia prima del duello e dura 5 ore: al duello della Scena 11 è **già addosso**, quindi CA 37 · **pf 297** (22d12+154) · TS Temp +20, Rifl +17, Vol +19 · RD 10/magia · RI 21 · immune acido, sonno, paralisi  
+
+**ATTACCO**
+___
+Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +30 (2d8+10), 2 artigli +25 (2d6+5), 2 ali +25 (1d8+5), colpo di coda +25 (2d6+15) · Spazio 4,5 m, portata 3 m (morso 4,5 m) · **Schiacciare** (in volo o saltando, azione standard) 2d8+15, Riflessi CD 28 o immobilizzati; solo contro creature Piccole o minori: i nani e i PG Medi non li schiaccia · **Soffio acido** (Sop) linea di 30 m, 14d4, Riflessi CD 30 dimezza (28 + Capacità Focalizzata), di nuovo dopo 1d4 round · **Capacità magiche** 3/giorno *oscurità* (raggio 21 m); 1/giorno *corrompere l'acqua* (CD 25: rovina anche le pozioni che un PG ha addosso, se falliscono il TS) · **Incantesimi da stregone** (incantatore di 5°, CD 14 + livello): 0 (6/giorno) *individuazione del magico, lettura del magico, mano magica, resistenza, suono fantasma, frastornare*; 1° (7/giorno) *armatura magica, scudo, colpo accurato, dardo incantato*; 2° (5/giorno) *vedere invisibilità, immagine speculare*  
+
+**STATISTICHE**
+___
+For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Aderente, Virata, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18  
+
+**CAPACITÀ SPECIALI**
+___
+- **Soffio aderente**, quando lo sceglie: chi ne prende danno ne riprende metà al round dopo; toglierselo è un'azione di round completo con Riflessi CD 30 (+2 rotolando a terra, e si resta proni); la ricarica sale di 1 round.  
+- **Presenza Terrificante** (Str): raggio 63 m, Volontà CD 25; chi ha meno di 22 DV è scosso per 4d6 round (4 DV o meno: in preda al panico); chi supera il TS è immune per 24 ore.  
+- **Respirare sott'acqua** (Str).  
 
 **TATTICHE**
+___
 Il duello della Scena 11: combatte in passata, dice il nome prima di colpire e fugge a ⅓ dei pf. Qui sotto, «Cosa cambia al tavolo», i numeri che contano nel duello.  
 }}
 
@@ -3886,13 +3970,35 @@ wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
 gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 11, «Quale drago si usa, e quando»).
 
-{{note
-##### Skullcrusher Vecchio · GS 17 (Vecchio GS 16, +1 Avanzato)
-**CA** 36, contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica · **pf** 337 (25d12+175) · *scheda in appendice*
+<!-- blocco: skullcrusher-vecchio-scheda -->
+{{monster,frame
+## Skullcrusher Vecchio
+*Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
+___
+**Iniziativa** +6 · **Sensi** come A.1
+
+**DIFESA**
+___
+**CA 36** (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34; **40 con *armatura magica*** · **pf 337** (25d12+175) · TS Temp +21, Rifl +18, Vol +20 · RD 10/magia · RI 22 · immune acido, sonno, paralisi  
+
+**ATTACCO**
+___
+come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
+
+**STATISTICHE**
+___
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1  
+
+**CAPACITÀ SPECIALI**
+___
+- **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).  
+- **Soffio aderente**, come A.1, ma toglierselo è Riflessi CD 31, la CD del suo soffio.  
 
 **TATTICHE**
+___
 Come A.1: fugge a ⅓ dei pf, circa **112 pf**.  
 }}
+<!-- /blocco -->
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
 template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il
@@ -3911,35 +4017,104 @@ si sommano a parte (§8 A).
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
-{{note
-##### Zog'tar Deatheye, generale dell'orda antica · GS 15 (Avanzato)
-**CA** 26, contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira · **pf** 283 (15 DV, massimi per dado; 328 in Ira Superiore) · *scheda in appendice*
+<!-- blocco: zogtar-scheda -->
+{{monster,frame
+## Zog'tar Deatheye, generale dell'orda antica
+*Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1* · GS 15 (Avanzato)
+___
+**Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
+
+**DIFESA**
+___
+**CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)  
+
+**ATTACCO**
+___
+Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · **Colpo Devastante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
+
+**STATISTICHE**
+___
+For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Devastante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)  
+
+**CAPACITÀ SPECIALI**
+___
+- **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).  
+- **Presenza Minacciosa**: entro 9 m, quando attacca o carica, Volontà CD 21 o scosso 1d4 round; chi supera il TS è immune per 24 ore (10 + ½ DV + CAR, e il resto come la presenza terrificante dei draghi; D57).  
+- **Occhio di Ossidiana** (artefatto minore maledetto, incastonato al posto dell'occhio destro, canone del DM): 3/giorno, azione di movimento, marca un bersaglio: −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round. Prezzo: Zog'tar è **vulnerabile alla luce divina** (Luce di Lathander, Corona).  
 
 **TATTICHE**
+___
 La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.  
 }}
+<!-- /blocco -->
 
-{{note
-##### Guardia di Zog'tar (4) · GS 8
-**CA** 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo · **pf** 60 · *scheda in appendice*
+<!-- blocco: guardie-scheda -->
+{{monster,frame
+## Guardia di Zog'tar (4)
+*Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
+___
+**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
+
+**DIFESA**
+___
+**CA** 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo  
+**pf** 60  
+**TS** Temp +8, Rifl +3, Vol +1  
+
+**ATTACCO**
+___
+**Velocità** 6 m (armatura pesante)  
+**Mischia** spadone +14 (2d6+6)  
+**Distanza** giavellotti +9 (1d6+4), incremento 9 m  
 }}
+<!-- /blocco -->
 
 
 **Il sacerdote dell'orda** (Scena 8)
 
-{{note
-##### Sacerdote dell'orda · GS 6
-**CA** 12, +2 DES · **pf** 38 (7d6+14) · *scheda in appendice*
+<!-- blocco: sacerdote-scheda -->
+{{monster,frame
+## Sacerdote dell'orda
+*Hobgoblin Medio · Adepto 7* · GS 6
+___
+**Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
+
+**DIFESA**
+___
+**CA 12** (+2 DES) · **pf 38** (7d6+14) · TS Temp +4, Rifl +4, Vol +7  
+
+**ATTACCO**
+___
+Vel 9 m · **Mischia** bastone ferrato +3 (1d6) · **Incantesimi** (3/4/3; CD 12 + livello): 0 *guida, individuazione del magico, luce*; 1° *benedizione, causare paura, comando, protezione dal bene*; 2° *vedere invisibilità, oscurità, forza del toro*  
+
+**STATISTICHE**
+___
+For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12  
 
 **TATTICHE**
+___
 Sta nella tenda di Zog'tar (Scena 8).  
 }}
+<!-- /blocco -->
 
 ### A.3 · Durin Rocciadura (Scena 2)
 
-{{note
-##### Durin Rocciadura · GS 6
-**CA** 22, arm. completa +1, scudo pesante +1 · **pf** 52 · *scheda in appendice*
+{{monster,frame
+## Durin Rocciadura
+*Nano Medio · Guerriero 6* · GS 6
+___
+
+**DIFESA**
+___
+**CA 22** (arm. completa +1, scudo pesante +1) · **pf 52** · TS Temp +8, Rifl +2, Vol +4  
+
+**ATTACCO**
+___
+**Mischia** ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano  
+
+**STATISTICHE**
+___
+For 18, Cos 16, Sag 14 · BAB +6; Lotta +10  
 }}
 
 **Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
@@ -3947,11 +4122,32 @@ Sta nella tenda di Zog'tar (Scena 8).
 ### A.4 · Balvar Fuocospento (Scena 7)
 
 <!-- include: Bestiario/villain/balvar-fuocospento-cr13.md#scheda -->
-{{note
-##### Balvar Fuocospento, il Consigliere dell'Orda · GS 13
-**CA** 24, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf** 101 (13d8+39) · *scheda in appendice*
+{{monster,frame
+## Balvar Fuocospento, il Consigliere dell'Orda
+*Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
+___
+**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
+
+**DIFESA**
+___
+**CA 24**, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf 101** (13 DV) · TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia) · immune a paura (patto con Abbathor) · **Debolezza** le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).  
+
+**ATTACCO**
+___
+Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero).  
+
+**STATISTICHE**
+___
+For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14 · BAB +9; Lotta +10 · **Abilità** Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · **Talenti** Incidere Rune `[Private source — FRCS]`, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · **Equipaggiamento** armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi  
+
+**CAPACITÀ SPECIALI**
+___
+- **Rune incise (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Alla tenda di Zog'tar (ARC-07 questo capitolo, Scene 6 e 7): *invisibility purge* sulla soglia, *blade barrier* sul palo centrale, *silence* su sé stesso, **la Catena** (sotto). *Dimensional anchor* lo lancia, non lo incide.  
+- **La Catena di Skullcrusher (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.  
+- **Leggere il Fuori-Posto (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**  
 
 **TATTICHE**
+___
 Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni fa, Scena 7, «Cosa fa quando comincia lo scontro» (canone, decisione Q21 del DM) (recuperato non combatte e indica la runa della Catena; trattativa aperta guarda un round e poi sta con chi vince; minacciato combatte con Zog'tar, come dice «Come si combatte, se si arriva a combatterlo» nella stessa scena). **Morale**: sotto 30 pf non fugge e non implora, finisce di incidere la lastra con un'azione di round completo, l'ultima, e in quel turno non attacca e non lancia (decisioni D52 e D71 del DM, nella stessa scena).  
 }}
 <!-- /include -->
@@ -3988,39 +4184,119 @@ questa tabella.
 | **Wyvern** (2, scalatura per un gruppo di 13°) | scortano il drago dal round 2 (Scena 11) | qui sotto |
 | **Gli sciamani del campo** | dopo il corno | adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con *vedere invisibilità* fra quelli di 2° |
 
-{{note
-##### Worg dei cavalieri dei lupi · GS 2
-**CA** 14 · **pf** 30 · *scheda in appendice*
+{{monster,frame
+## Worg dei cavalieri dei lupi
+*Bestia magica Media · worg SRD* · GS 2
+___
+**Sensi** olfatto 9 m; Ascoltare +6, Osservare +6
+
+**DIFESA**
+___
+**CA** 14  
+**pf** 30  
+**TS** Temp +5, Rifl +6, Vol +3  
+
+**ATTACCO**
+___
+**Mischia** morso +7 (1d6+4) e sbilanciare  
+
+*worg dell'SRD; i tiri salvezza sono quelli della sua scheda SRD*
 }}
 
-{{note
-##### Orco della ronda · GS ½
-**CA** 13, contatto 10 · **pf** 5 · *scheda in appendice*
+{{monster,frame
+## Orco della ronda
+*Orco Medio · guerriero 1 SRD* · GS ½
+___
+**Sensi** scurovisione 18 m
+
+**DIFESA**
+___
+**CA** 13, contatto 10  
+**pf** 5  
+**TS** Temp +3, Rifl +0, Vol −2  
+
+**ATTACCO**
+___
+**Mischia** falchion +4 (2d4+4/18-20)  
+**Distanza** giavellotto +1 (1d6+3)  
 
 **TATTICHE**
+___
 Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestiario, GS 3: 30 pf, CA 16, falchion +7 (2d4+3).  
 }}
 
-{{note
-##### Hobgoblin della pattuglia (8) · GS 4
-**CA** 15 · **pf** 30 · *scheda in appendice*
+{{monster,frame
+## Hobgoblin della pattuglia (8)
+*Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
+___
+**Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
+
+**DIFESA**
+___
+**CA** 15  
+**pf** 30  
+**TS** Temp +6, Rifl +2, Vol +0  
+
+**ATTACCO**
+___
+**Velocità** 9 m  
+**Mischia** spada lunga +6 (1d8+3/19-20)  
+
+*in otto fanno EL 10; i numeri sono calcolati sull'SRD*
 }}
 
-{{note
-##### Treant di Adamantio · GS ~10
-**CA** 24, RD 10/adamantio, vulnerabile al fuoco · **pf** 90 · *scheda in appendice*
+{{monster,frame
+## Treant di Adamantio
+*Vegetale Grande, evocato dalla Collana di Hella* · GS ~10
+___
+
+**DIFESA**
+___
+**CA** 24, RD 10/adamantio, vulnerabile al fuoco  
+**pf** 90  
+**TS** Temp +12, Rifl +3, Vol +8  
+
+**ATTACCO**
+___
+**Velocità** 9 m  
+**Mischia** 2 schianti +18 (2d8+9), danni doppi alle strutture  
+**Speciale** Travolgere 2d8+13 (Riflessi CD 24)  
+
+**STATISTICHE**
+___
+For 29  
 
 **TATTICHE**
+___
 Dura 1 ora.  
+
+*la scheda intera è nell'appendice delle statistiche della Resurrezione di Hella*
 }}
 
-{{note
-##### Wyvern (2) · GS 6
-**CA** 18 · **pf** 59 · *scheda in appendice*
+<!-- blocco: wyvern-scheda -->
+{{monster,frame
+## Wyvern (2)
+*Drago Grande · wyvern SRD* · GS 6
+___
+
+**DIFESA**
+___
+**CA** 18  
+**pf** 59  
+**TS** Temp +7, Rifl +6, Vol +6  
+
+**ATTACCO**
+___
+**Velocità** volare 18 m  
+**Mischia** pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)  
 
 **TATTICHE**
+___
 Vanno su chi tiene la corda dell'ala e su chi vola.  
+
+*wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD*
 }}
+<!-- /blocco -->
 
 <!-- nuova-pagina -->
 
@@ -4250,11 +4526,32 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Balvar Fuocospento, il Consigliere dell'Orda (CR 13)
 
 
-{{note
-##### Balvar Fuocospento, il Consigliere dell'Orda (CR 13) · GS 13
-**CA** 24, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf** 101 (13d8+39) · *scheda in appendice*
+{{monster,frame
+## Balvar Fuocospento, il Consigliere dell'Orda (CR 13)
+*Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
+___
+**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
+
+**DIFESA**
+___
+**CA 24**, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf 101** (13 DV) · TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia) · immune a paura (patto con Abbathor) · **Debolezza** le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).  
+
+**ATTACCO**
+___
+Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero).  
+
+**STATISTICHE**
+___
+For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14 · BAB +9; Lotta +10 · **Abilità** Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · **Talenti** Incidere Rune `[Private source — FRCS]`, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · **Equipaggiamento** armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi  
+
+**CAPACITÀ SPECIALI**
+___
+- **Rune incise (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Alla tenda di Zog'tar (ARC-07 cap. I, Scene 6 e 7): *invisibility purge* sulla soglia, *blade barrier* sul palo centrale, *silence* su sé stesso, **la Catena** (sotto). *Dimensional anchor* lo lancia, non lo incide.  
+- **La Catena di Skullcrusher (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.  
+- **Leggere il Fuori-Posto (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**  
 
 **TATTICHE**
+___
 Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni fa, Scena 7, «Cosa fa quando comincia lo scontro» (canone, decisione Q21 del DM) (recuperato non combatte e indica la runa della Catena; trattativa aperta guarda un round e poi sta con chi vince; minacciato combatte con Zog'tar, come dice «Come si combatte, se si arriva a combatterlo» nella stessa scena). **Morale**: sotto 30 pf non fugge e non implora, finisce di incidere la lastra con un'azione di round completo, l'ultima, e in quel turno non attacca e non lancia (decisioni D52 e D71 del DM, nella stessa scena).  
 }}
 
@@ -4270,7 +4567,7 @@ Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni
 > ⚠ Classe non SRD: il **Runecaster** è del *Forgotten Realms Campaign Setting* `[Private source — FRCS]`, e così il dominio della Runa. Prerequisito: *Incidere Rune*, mai scritto nella scheda, ora fra i talenti; gli altri (8 gradi in Artigianato e in Sapienza Magica, incantesimi divini di 3° livello) sono soddisfatti. PF1e: il chierico col **dominio della Runa** (OGL) e il talento *Scrivere Pergamene* si avvicinano in parte: ha i glifi e le rune-trappola, ma non le rune persistenti che non consumano slot, che sono il cuore del personaggio. Si tiene il Runecaster.
 
 
-Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE.
+Umanoide Medio (nano), **Chierico 9 di Abbathor / Runecaster 4**, NE.
 
 
 Notes: consigliere del generale **Zog'tar Deatheye** (CR 15) all'assedio di ≈372 DR. Nano dello scudo **esiliato**, ex-runaio della fortezza, passato ad Abbathor. Non è il capo: è **il motivo per cui il capo ha un drago**. Dossier narrativo, tattiche e ganci → il viaggio a mille anni fa, Scena 7.
@@ -4360,275 +4657,3 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
   riconosce il discendente.
 
 
-
-\page
-
-# Appendice: le creature
-
-{{monster,frame
-## Balvar Fuocospento, il Consigliere dell'Orda
-*Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
-___
-**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
-
-**DIFESA**
-___
-**CA 24**, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf 101** (13 DV) · TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia) · immune a paura (patto con Abbathor) · **Debolezza** le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).  
-
-**ATTACCO**
-___
-Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero).  
-
-**STATISTICHE**
-___
-For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14 · BAB +9; Lotta +10 · **Abilità** Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · **Talenti** Incidere Rune `[Private source — FRCS]`, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · **Equipaggiamento** armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi  
-
-**CAPACITÀ SPECIALI**
-___
-- **Rune incise (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Alla tenda di Zog'tar (ARC-07 questo capitolo, Scene 6 e 7): *invisibility purge* sulla soglia, *blade barrier* sul palo centrale, *silence* su sé stesso, **la Catena** (sotto). *Dimensional anchor* lo lancia, non lo incide.  
-- **La Catena di Skullcrusher (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.  
-- **Leggere il Fuori-Posto (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**  
-}}
-{{monster,frame
-## Balvar Fuocospento, il Consigliere dell'Orda (CR 13)
-*Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
-___
-**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
-
-**DIFESA**
-___
-**CA 24**, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf 101** (13 DV) · TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia) · immune a paura (patto con Abbathor) · **Debolezza** le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).  
-
-**ATTACCO**
-___
-Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero).  
-
-**STATISTICHE**
-___
-For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14 · BAB +9; Lotta +10 · **Abilità** Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · **Talenti** Incidere Rune `[Private source — FRCS]`, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · **Equipaggiamento** armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi  
-
-**CAPACITÀ SPECIALI**
-___
-- **Rune incise (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Alla tenda di Zog'tar (ARC-07 cap. I, Scene 6 e 7): *invisibility purge* sulla soglia, *blade barrier* sul palo centrale, *silence* su sé stesso, **la Catena** (sotto). *Dimensional anchor* lo lancia, non lo incide.  
-- **La Catena di Skullcrusher (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.  
-- **Leggere il Fuori-Posto (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**  
-}}
-{{monster,frame
-## Durin Rocciadura
-*Nano Medio · Guerriero 6* · GS 6
-___
-
-**DIFESA**
-___
-**CA 22** (arm. completa +1, scudo pesante +1) · **pf 52** · TS Temp +8, Rifl +2, Vol +4  
-
-**ATTACCO**
-___
-**Mischia** ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano  
-
-**STATISTICHE**
-___
-For 18, Cos 16, Sag 14 · BAB +6; Lotta +10  
-}}
-{{monster,frame
-## Guardia di Zog'tar (4)
-*Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
-___
-**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
-
-**DIFESA**
-___
-**CA** 19, +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo  
-**pf** 60  
-**TS** Temp +8, Rifl +3, Vol +1  
-
-**ATTACCO**
-___
-**Velocità** 6 m (armatura pesante)  
-**Mischia** spadone +14 (2d6+6)  
-**Distanza** giavellotti +9 (1d6+4), incremento 9 m  
-}}
-{{monster,frame
-## Hobgoblin della pattuglia (8)
-*Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
-___
-**Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
-
-**DIFESA**
-___
-**CA** 15  
-**pf** 30  
-**TS** Temp +6, Rifl +2, Vol +0  
-
-**ATTACCO**
-___
-**Velocità** 9 m  
-**Mischia** spada lunga +6 (1d8+3/19-20)  
-
-*in otto fanno EL 10; i numeri sono calcolati sull'SRD*
-}}
-{{monster,frame
-## Orco della ronda
-*Orco Medio · guerriero 1 SRD* · GS ½
-___
-**Sensi** scurovisione 18 m
-
-**DIFESA**
-___
-**CA** 13, contatto 10  
-**pf** 5  
-**TS** Temp +3, Rifl +0, Vol −2  
-
-**ATTACCO**
-___
-**Mischia** falchion +4 (2d4+4/18-20)  
-**Distanza** giavellotto +1 (1d6+3)  
-}}
-{{monster,frame
-## Sacerdote dell'orda
-*Hobgoblin Medio · Adepto 7* · GS 6
-___
-**Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
-
-**DIFESA**
-___
-**CA 12** (+2 DES) · **pf 38** (7d6+14) · TS Temp +4, Rifl +4, Vol +7  
-
-**ATTACCO**
-___
-Vel 9 m · **Mischia** bastone ferrato +3 (1d6) · **Incantesimi** (3/4/3; CD 12 + livello): 0 *guida, individuazione del magico, luce*; 1° *benedizione, causare paura, comando, protezione dal bene*; 2° *vedere invisibilità, oscurità, forza del toro*  
-
-**STATISTICHE**
-___
-For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12  
-}}
-{{monster,frame
-## Skullcrusher il Nero, il Primo Nero
-*Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude* · GS 14
-___
-**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29
-
-**DIFESA**
-___
-**CA 33** (−2 taglia, +2 DES, +23 naturale), contatto 10, impreparato 31; **37 con *armatura magica***, che si lancia prima del duello e dura 5 ore: al duello della Scena 11 è **già addosso**, quindi CA 37 · **pf 297** (22d12+154) · TS Temp +20, Rifl +17, Vol +19 · RD 10/magia · RI 21 · immune acido, sonno, paralisi  
-
-**ATTACCO**
-___
-Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +30 (2d8+10), 2 artigli +25 (2d6+5), 2 ali +25 (1d8+5), colpo di coda +25 (2d6+15) · Spazio 4,5 m, portata 3 m (morso 4,5 m) · **Schiacciare** (in volo o saltando, azione standard) 2d8+15, Riflessi CD 28 o immobilizzati; solo contro creature Piccole o minori: i nani e i PG Medi non li schiaccia · **Soffio acido** (Sop) linea di 30 m, 14d4, Riflessi CD 30 dimezza (28 + Capacità Focalizzata), di nuovo dopo 1d4 round · **Capacità magiche** 3/giorno *oscurità* (raggio 21 m); 1/giorno *corrompere l'acqua* (CD 25: rovina anche le pozioni che un PG ha addosso, se falliscono il TS) · **Incantesimi da stregone** (incantatore di 5°, CD 14 + livello): 0 (6/giorno) *individuazione del magico, lettura del magico, mano magica, resistenza, suono fantasma, frastornare*; 1° (7/giorno) *armatura magica, scudo, colpo accurato, dardo incantato*; 2° (5/giorno) *vedere invisibilità, immagine speculare*  
-
-**STATISTICHE**
-___
-For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Aderente, Virata, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18  
-
-**CAPACITÀ SPECIALI**
-___
-- **Soffio aderente**, quando lo sceglie: chi ne prende danno ne riprende metà al round dopo; toglierselo è un'azione di round completo con Riflessi CD 30 (+2 rotolando a terra, e si resta proni); la ricarica sale di 1 round.  
-- **Presenza Terrificante** (Str): raggio 63 m, Volontà CD 25; chi ha meno di 22 DV è scosso per 4d6 round (4 DV o meno: in preda al panico); chi supera il TS è immune per 24 ore.  
-- **Respirare sott'acqua** (Str).  
-}}
-{{monster,frame
-## Skullcrusher Vecchio
-*Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
-___
-**Iniziativa** +6 · **Sensi** come A.1
-
-**DIFESA**
-___
-**CA 36** (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34; **40 con *armatura magica*** · **pf 337** (25d12+175) · TS Temp +21, Rifl +18, Vol +20 · RD 10/magia · RI 22 · immune acido, sonno, paralisi  
-
-**ATTACCO**
-___
-come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m, più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
-
-**STATISTICHE**
-___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1  
-
-**CAPACITÀ SPECIALI**
-___
-- **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).  
-- **Soffio aderente**, come A.1.  
-}}
-{{monster,frame
-## Treant di Adamantio
-*Vegetale Grande, evocato dalla Collana di Hella* · GS ~10
-___
-
-**DIFESA**
-___
-**CA** 24, RD 10/adamantio, vulnerabile al fuoco  
-**pf** 90  
-**TS** Temp +12, Rifl +3, Vol +8  
-
-**ATTACCO**
-___
-**Velocità** 9 m  
-**Mischia** 2 schianti +18 (2d8+9), danni doppi alle strutture  
-**Speciale** Travolgere 2d8+13 (Riflessi CD 24)  
-
-**STATISTICHE**
-___
-For 29  
-
-*la scheda intera è nell'appendice delle statistiche della Resurrezione di Hella*
-}}
-{{monster,frame
-## Worg dei cavalieri dei lupi
-*Bestia magica Media · worg SRD* · GS 2
-___
-**Sensi** olfatto 9 m; Ascoltare +6, Osservare +6
-
-**DIFESA**
-___
-**CA** 14  
-**pf** 30  
-**TS** Temp +5, Rifl +6, Vol +3  
-
-**ATTACCO**
-___
-**Mischia** morso +7 (1d6+4) e sbilanciare  
-
-*worg dell'SRD; i tiri salvezza sono quelli della sua scheda SRD*
-}}
-{{monster,frame
-## Wyvern (2)
-*Drago Grande · wyvern SRD* · GS 6
-___
-
-**DIFESA**
-___
-**CA** 18  
-**pf** 59  
-**TS** Temp +7, Rifl +6, Vol +6  
-
-**ATTACCO**
-___
-**Velocità** volare 18 m  
-**Mischia** pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)  
-
-*wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD*
-}}
-{{monster,frame
-## Zog'tar Deatheye, generale dell'orda antica
-*Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1* · GS 15 (Avanzato)
-___
-**Iniziativa** +9 · **Sensi** Ascoltare +11, Osservare +3
-
-**DIFESA**
-___
-**CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)  
-
-**ATTACCO**
-___
-Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · **Colpo Devastante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
-
-**STATISTICHE**
-___
-For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Devastante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)  
-
-**CAPACITÀ SPECIALI**
-___
-- **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).  
-- **Presenza Minacciosa**: entro 9 m, Volontà CD 21 o scosso 1d4 round (10 + ½ DV + CAR, come la presenza terrificante dei draghi; D57).  
-- **Occhio di Ossidiana** (artefatto minore maledetto, incastonato al posto dell'occhio destro, canone del DM): 3/giorno, azione di movimento, marca un bersaglio: −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round. Prezzo: Zog'tar è **vulnerabile alla luce divina** (Luce di Lathander, Corona).  
-}}

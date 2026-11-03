@@ -886,7 +886,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
-    "schede",
+    "schede", "chi_si_incontra",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 

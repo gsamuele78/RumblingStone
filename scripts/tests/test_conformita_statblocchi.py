@@ -394,12 +394,11 @@ class TestRecintiNeiMaster(unittest.TestCase):
         self.assertEqual(x["campo"], "sensi")
 
     #: Il cricchetto: i rilievi veri di oggi, per file, col perché. Uno in più è
-    #: rosso. Le correzioni sono canone e le decide il DM (DEF-3 e DEF-4 non sono
-    #: di questo ramo): quando scendono, il tetto si abbassa a mano.
+    #: rosso. Le correzioni sono canone e le decide il DM : quando scendono, il tetto si abbassa a mano.
     RESIDUI = {
         "ARC07-DEF-3-RESURREZIONE-HELLA.md": 1,   # Treant di Adamantio: pf 90, 10d8+50 fa 95
-        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 5,   # dopo la #305 scende a 3: corrompere l'acqua del Vecchio 25/26; scurovisione di
-                                                   # Zog'tar, Durin e wyvern; pf di Balvar 101/97
+        "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md": 3,   # scurovisione di Durin e delle wyvern; pf di Balvar 101/97
+                                                   # (la #305 ha corretto il Vecchio e Zog'tar: da 5 a 3)
     }
 
     def test_il_cricchetto_dei_master(self):

@@ -369,7 +369,8 @@ def spoglia_homebrewery(testo: str) -> str:
 
 #: Le schede intere raccolte per l'appendice (ADR-0105 punto 7): chiave →
 #: (nome, ancora, riquadro senza tattica). ``None`` quando il volume le vuole
-#: dove sono scritte (`"schede": "qui"` nel manifest).
+#: dove sono scritte (`"schede": "qui"` nel manifest). Con `"entrambe"` l'HTML
+#: le tiene dove sono scritte, come «qui»: l'appendice in più è solo del PDF.
 APPENDICE: dict[str, tuple[str, str, str]] | None = None
 
 

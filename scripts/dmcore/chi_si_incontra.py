@@ -57,6 +57,7 @@ _TITOLI = {
 }
 
 _ENTRATA = re.compile(r"^\*\*Scheda d'entrata\s*[—–-]\s*(?P<nome>[^*]+?)\*\*(?P<resto>.*)$")
+_COMMENTO = re.compile(r"^\s*<!--.*-->\s*$")
 _IMMAGINE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
 _IN_SCENA = re.compile(r"^\*\*In scena\*\*.*?Chi:\s*(?P<chi>.+)$")
 _ETICHETTE_SB = ("**Iniziativa", "**Difesa", "**Attacco", "**Statistiche",
@@ -119,11 +120,15 @@ def schede_entrata(righe: list[str], f: Path) -> list[Pezzo]:
         if not m:
             continue
         j = _fine_titolo(righe, i) + 1
-        while j < len(righe) and not righe[j].strip():
+        # le righe vuote e i segni di blocco (`<!-- blocco: zogtar-chi -->`,
+        # che `componenti.py --includi` usa per copiare la tabella) non contano
+        while j < len(righe) and (not righe[j].strip() or _COMMENTO.match(righe[j])):
             j += 1
         if j >= len(righe) or not righe[j].startswith("|"):
             continue
         while j < len(righe) and righe[j].startswith("|"):
+            j += 1
+        if j < len(righe) and _COMMENTO.match(righe[j]):
             j += 1
         # il ritratto, se viene subito dopo
         k = j
@@ -314,7 +319,10 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
             inserimenti.append((i, [""] + nuovi))
     if not any(_IN_SCENA.match(r) for r in righe):
         candidati = sorted((k for k in idx.entrate
-                            if k not in pg and k not in nel_capitolo and conta(md, k) >= soglia),
+                            # chi ha già il riquadro nel capitolo c'è già (il
+                            # capitolo «Chi c'è stanotte» della #305)
+                            if k not in pg and k not in nel_capitolo and k not in riquadri
+                            and conta(md, k) >= soglia),
                            key=lambda k: -conta(md, k))
         if candidati:
             testa = next((i for i, r in enumerate(righe) if r.startswith("# ")), -1)
