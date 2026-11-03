@@ -18,6 +18,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/misura_fedelta_nli.py`: il riscritto contraddice l'originale? Coppie di righe del diff giudicate da un modello NLI multilingue (solo in locale, `transformers`). Con `--ripara`, e da sé dentro `ciclo_prosa revisione` e `misura`, le righe che contraddicono tornano all'originale. Sulle 26 coppie del DM F1 0,83 contro 0,62 dei soli numeri (RICERCA-GUARDRAIL §9).
+- `misura_box_telecomando.py --check` (cancello in CI) e `misura_ripetizioni_frasi.py --check` (cancello locale, `plans/scrittura/ripetizioni-accettate.json`).
 - `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
 - `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108). Cricchetto in `test_conformita_statblocchi`.
 - `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).
@@ -75,7 +77,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
-- Documentazione allineata ad ADR-0102, ADR-0105…ADR-0108: `docs/ARCHITETTURA.md` §11 (pianta di stampa, schemi, generatori delle città), §12 (chiavi `schede` e `chi_si_incontra`, misure di stampa), §13 (cancelli delle skill), §16, §18 (ramo «stampa» del flusso della qualità e le due misure di prosa della #308) e §19; README; GUIDA-BOOKLET-E-PDF §1.3, §3 e §9.
+- Documentazione allineata ad ADR-0102, ADR-0105…ADR-0108: `docs/ARCHITETTURA.md` §11 (pianta di stampa, schemi, generatori delle città), §12 (chiavi `schede` e `chi_si_incontra`, misure di stampa), §13 (cancelli delle skill), §16, §18 (ramo «stampa» del flusso della qualità e i cancelli della prosa della #308 e della #309, §10.1) e §19; README; GUIDA-BOOKLET-E-PDF §1.3, §3 e §9.
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).

@@ -78,15 +78,25 @@ class TestTelecomando(unittest.TestCase):
     def test_le_battute_dei_png_no(self):
         self.assertEqual(tel.colpi("> *«Capite che non tornerò» dice Durin.*"), [])
 
-    def test_il_repo_oggi(self):
-        # 2026-11-03: 4 colpi su 615 box, 2 veri; un colpo in più si legge
+    def test_il_cancello_sul_repo(self):
+        # 2026-11-03: i 2 veri corretti nel testo, restano i 2 accettati. Un
+        # box nuovo che dice al gruppo cosa capisce boccia la CI.
         import io
         from contextlib import redirect_stdout
         buf = io.StringIO()
         with redirect_stdout(buf):
-            tel.main([])
-        n = int(buf.getvalue().split(" box, ")[1].split(" ")[0])
-        self.assertLessEqual(n, 4, buf.getvalue())
+            esito = tel.main(["--check"])
+        self.assertEqual(esito, 0, buf.getvalue())
+
+    def test_il_cancello_boccia_un_colpo_nuovo(self):
+        import io
+        import tempfile
+        from contextlib import redirect_stdout
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "NUOVO.md"
+            f.write_text("> *Sorride, e capite che lui ne guadagnerà.*\n", encoding="utf-8")
+            with redirect_stdout(io.StringIO()):
+                self.assertEqual(tel.main(["--check", str(f)]), 1)
 
     def test_doctest(self):
         self.assertEqual(doctest.testmod(tel).failed, 0)

@@ -335,6 +335,17 @@ LIBRERIE = (
         ripiego="`misura_ripetizioni_frasi.py` esce con 2 e dice come installarla. "
                 "Nessun cancello della CI ne dipende.",
     ),
+    # La fedeltà del riscritto, riga per riga (RICERCA-GUARDRAIL §9). Porta
+    # torch: fuori dai requisiti del repo (canale unstable, ADR-0099).
+    Libreria(
+        nome="transformers", modulo="transformers",
+        a_cosa_serve="la fedeltà del riscritto all'originale con un modello NLI "
+                     "(`misura_fedelta_nli.py`, dentro `ciclo_prosa revisione` e `misura`)",
+        installa="  pip install transformers torch   (solo in locale)",
+        obbligatoria=False,
+        ripiego="`misura_fedelta_nli.py` esce con 2; `ciclo_prosa` scrive nel documento "
+                "che la fedeltà non è stata controllata e prosegue.",
+    ),
     Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",

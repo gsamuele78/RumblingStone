@@ -592,7 +592,7 @@ l'originale e la coppia non va al cieco.
 | Azione | Script | Canale (§16) | In CI |
 |---|---|---|---|
 | `misura` | `misura_craft` | stable | cancelli e tetti dei box |
-| `ciclo` | `ciclo_prosa` | stable | `box_impoveriti`, verdetto misurato |
+| `ciclo` | `ciclo_prosa` | stable | `box_impoveriti`, verdetto misurato; in locale la riga che contraddice l'originale (NLI, `misura_fedelta_nli`) torna com'era |
 | `mqm` | `punteggio_mqm` | stable | contro la baseline |
 | `sintassi` | `misura_sintassi` | unstable, spaCy facoltativo | no |
 | `coerenza` | `coerenza_campagna` | testing | `fatti --check plans/coerenza-residui.json` |
@@ -925,8 +925,8 @@ stateDiagram-v2
 |---|---|
 | Python 3.13 (Debian 13), pytest, pip-audit, typst, Dependabot | stable |
 | ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0103), shapely e i generatori delle città (ADR-0102) | testing |
-| spaCy, Stanza, LLM locale, mypy, sentence-transformers (solo in locale, per `misura_ripetizioni_frasi`) | unstable |
-| NLI per le contraddizioni, varianti dei nomi, numeri incrociati (provati due volte per ADR-0108) | non adottati: nessun guadagno misurato |
+| spaCy, Stanza, LLM locale, mypy, sentence-transformers (`misura_ripetizioni_frasi`), transformers con un NLI multilingue (`misura_fedelta_nli`), tutti solo in locale | unstable |
+| NLI per le contraddizioni fra file, varianti dei nomi, numeri incrociati (provati due volte per ADR-0108) | non adottati: nessun guadagno misurato |
 
 ## 17. Il rilascio
 
@@ -988,8 +988,9 @@ il DM ha davanti al tavolo.
 | chi prepara la serata | al tavolo chi si incontra ha tutto nel capitolo | `python3 scripts/misura_standard_tavolo.py` | sei elementi per capitolo e persona, mappe, note di lavoro in stampa | indicatore; cricchetto sulle note |
 | chi prepara la serata | quante pagine sfoglia il DM per i numeri | `python3 scripts/misura_distanza_pagine.py PDF` | mediana delle distanze per persona | indicatore, a mano |
 | CI, a ogni PR | il volume regge la prestampa | `python3 scripts/misura_stampa.py --tutti --check` | corpo, gabbia, dpi, riquadri spezzati | job `stampa-misurata`, tetti |
-| chi riscrive la prosa | un box dice al gruppo cosa capisce o sa («capite che…») | `python3 scripts/misura_box_telecomando.py` | elenco da leggere (2 veri su 4 il 2026-11-03) | indicatore, a mano |
-| chi riscrive la prosa | un'immagine già usata in un altro box, anche con altre parole | `python3 scripts/misura_ripetizioni_frasi.py` | coppie di frasi sopra 0,80 (embedding MiniLM) | indicatore, solo in locale |
+| CI, a ogni PR | un box non dice al gruppo cosa capisce o sa («capite che…») | `python3 scripts/misura_box_telecomando.py --check` | colpi fuori da `ACCETTATI` | cancello nei test (`test_misure_rigorose`) |
+| chi riscrive la prosa | un'immagine già usata in un altro box, anche con altre parole | `python3 scripts/misura_ripetizioni_frasi.py --check` | coppie sopra 0,80 (embedding MiniLM) fuori da `plans/scrittura/ripetizioni-accettate.json` | cancello locale |
+| chi riscrive la prosa | il riscritto non contraddice l'originale | `python3 scripts/misura_fedelta_nli.py --ripara ORIGINALE RISCRITTO`, e da sé in `ciclo_prosa revisione` e `misura` | la riga che contraddice torna com'era | correzione automatica, solo in locale |
 | chi scrive con una skill | il lavoro passa i cancelli che la skill dichiara | sezione «Cancelli deterministici» del `SKILL.md` | i comandi da far girare | `test_cancelli_delle_skill` |
 | il DM | decidere le discordanze e i rilievi aperti | tabella `decisioni-dm` del piano | `[CANONE — DM data]` nel master | decisione umana |
 
@@ -1010,6 +1011,7 @@ flowchart LR
     subgraph MODULI["Moduli (ADR-0095)"]
         MC["misura_craft"] --> CP["ciclo_prosa"]
         BT["misura_box_telecomando<br/>misura_ripetizioni_frasi"] --> CP
+        FN["misura_fedelta_nli<br/>ripara"] --> CP
         DD["domande_developer"]
         GF["giro a freddo<br/>lettura_a_scene"] --> RL["registro_letture"]
     end
@@ -1053,11 +1055,15 @@ correzioni che trovano nei master vanno al DM come proposte: i tetti scendono
 a mano quando lui le applica, perché sono canone. Con la PR #308 il DM le ha
 applicate ad ARC-07 e il cricchetto dei conti è a zero.
 
-Le due misure di prosa più recenti, `misura_box_telecomando` e
-`misura_ripetizioni_frasi`, erano state scartate alla prima prova e sono
-entrate come indicatori quando le ha rifatte una configurazione più rigorosa
-(ricerca sui guardrail, §8). Danno un elenco da leggere: la riscrittura passa
-comunque dal cieco del DM.
+Tre controlli della prosa sono stati scartati alla prima prova e sono entrati
+dopo una configurazione più rigorosa (ricerca sui guardrail, §8 e §9; PR #308
+e #309). `misura_box_telecomando --check` è un cancello che gira nei test.
+`misura_ripetizioni_frasi --check` è un cancello locale, con l'elenco delle
+ripetizioni volute. `misura_fedelta_nli` corregge da sé: dentro `ciclo_prosa`
+la riga del riscritto che contraddice l'originale torna com'era (F1 0,83 sulle
+26 coppie etichettate dal DM, contro 0,62 dei soli numeri). Gli ultimi due
+vogliono `sentence-transformers` e `transformers`, quindi girano solo in
+locale. Il giudice della prosa resta il cieco del DM.
 
 ### Componenti e dati
 
