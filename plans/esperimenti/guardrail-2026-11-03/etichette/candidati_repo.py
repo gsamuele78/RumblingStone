@@ -2,7 +2,7 @@
 import difflib, json, re, sys, itertools, random
 from pathlib import Path
 from collections import defaultdict
-R=Path("/home/user/RumblingStone")
+R=Path(__file__).resolve().parents[4]
 DIRS=["07_il Portale Della Forgia Eterna","08_La Battaglia Di Hammerfist","09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist","10-stand-alone","Bestiario"]
 NOME=re.compile(r"\b[A-ZÀ-Ý][a-zà-ÿ'’]{3,}(?:\s[A-ZÀ-Ý][a-zà-ÿ'’]{3,})?")
 COMUNI={"Read","Scena","Sessione","Regia","Appendice","Tattica","Mappa","Nota","Fonte","Corona","Sala","Forgia"}

@@ -1,6 +1,6 @@
 """Coppie (riga tolta, riga messa) dai commit di correzione e di prosa."""
 import difflib, json, random, re, subprocess, sys
-REPO = "/home/user/RumblingStone"
+REPO = str(__import__("pathlib").Path(__file__).resolve().parents[4])
 GRUPPI = {
   "correzione": r"contraddi|non torna|non tornava|riallinea|corrett|sbagliat|errat|discrepanz|incoerenz",
   "prosa": r"prosa|riscrittura|riscritt|giro|box",
