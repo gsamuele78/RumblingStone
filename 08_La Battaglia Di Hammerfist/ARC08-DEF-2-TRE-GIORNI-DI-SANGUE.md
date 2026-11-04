@@ -60,7 +60,7 @@
 > 8. **La riserva e il morale +3.** La riga «Rinforzi» di `ARC08-02` dà +3:
 >    il master lo applica quando la riserva entra nel settore caduto. Con la
 >    breccia (−2) fa +1 netto.
-> 9. **Le frecce ammazzadraghi di Dara.** La guida gliene dava due per il
+> 9. **Le frecce ammazzadraghi di Dara. Decisa** `[CANONE — DM 2026-11-04, P16]`: ci sono. La guida gliene dava due per il
 >    Giorno 3; la sua carta dei poteri non le ha. Il master le fa dare dal Re
 >    all'alba del Giorno 3, dall'armeria: se il DM non le vuole, Dara tira con
 >    Nemico Prescelto (draghi) e basta.
@@ -460,7 +460,7 @@ arrivano a tirare.
 | **comando** | Re Thorek, nel cortile interno (BH34); il Giorno 3 sopra il cancello | gli ordini, e il Re dove i nani lo vedono |
 | **culto** | la Madre Superiora alla stazione di cura (BI36); le Cantitrici sulle Mura dal Giorno 2 | cure e canto, finché durano |
 | **rimedi** | la sala dei feriti dietro la cappella, e la stazione di Dana | i pregen guariscono di notte come sempre; i reparti recuperano 1 PFU (libretto §8). Alchimisti e pozioni: **nessuno**. Le pozioni della città sono già nelle bisacce dei capitani, e non se ne vendono |
-| **bottega** | l'armeria del cortile interno: niente prezzi, la città è in guerra | ripara armi e armature in una notte; dà frecce e quadrelli normali quanti se ne vogliono, nessuna munizione magica. Chi identifica: nessuno, in questi giorni. Il Giorno 3 dà a Dara le due frecce `[INFERRED — le frecce di Dara]` |
+| **bottega** | l'armeria del cortile interno: niente prezzi, la città è in guerra | ripara armi e armature in una notte; dà frecce e quadrelli normali quanti se ne vogliono, nessuna munizione magica. Chi identifica: nessuno, in questi giorni. Il Giorno 3 dà a Dara le due frecce `[CANONE — DM 2026-11-04, P16: già in gioco con la CD del 2026-10-23]` |
 | **messaggi** | i corridori della Porta Interna; i corni dei bastioni | il segnale della ritirata, il Giorno 3 |
 | **guardia** | la riserva nel cortile esterno (BS-CB 56-57): due reparti di balestrieri e uno di veterani | entra nel settore che cede (libretto §1) |
 
@@ -1385,7 +1385,7 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
   torre, sì. Se il cavaliere è morto o fuori combattimento prima del
   round 5, la picchiata non ha la lancia: Fauci passa sulla piattaforma e
   basta. Legato alla sella, non cade: resta lì finché il drago vola.
-- Le **due frecce ammazzadraghi** dell'armeria `[INFERRED — le frecce di Dara]`: SRD,
+- Le **due frecce ammazzadraghi** dell'armeria `[CANONE — DM 2026-11-04, P16: già in gioco con la CD del 2026-10-23]`: SRD,
   *freccia assassina* (draghi): chi è colpito tira Tempra **CD 20** o muore
   `[CANONE — DM 2026-10-23]`. Fauci ha Tempra +21: muore solo con un 1
   naturale. È la regola dell'SRD 3.5; i 50 danni al posto della morte sono di
@@ -1888,7 +1888,7 @@ questa serata (Handout 0). La ricompensa è la tabella del §7.
 | Dove | Cosa | Valore | Chi lo usa |
 |---|---|---|---|
 | Scena 2 e 4 | niente: i comandanti fuggono con le loro armi | | |
-| Scena 6 | due *frecce assassine* (draghi) dall'armeria del Re `[INFERRED — le frecce di Dara]` | 2.282 mo l'una (SRD) | Dara |
+| Scena 6 | due *frecce assassine* (draghi) dall'armeria del Re `[CANONE — DM 2026-11-04, P16: già in gioco con la CD del 2026-10-23]` | 2.282 mo l'una (SRD) | Dara |
 | Scena 8, i bugbear caduti | cuoio borchiato +1, morning star perfetta, 3 giavellotti, *fascia dell'intelletto +2*, due dosi di veleno, a testa | 1.175 + 308 + 3 + 4.000 mo a testa | nessuno, stasera: la colonna non si ferma a spogliare i morti |
 | Scena 8, gli hobgoblin | cotte di maglia, spade lunghe perfette | | nessuno |
 

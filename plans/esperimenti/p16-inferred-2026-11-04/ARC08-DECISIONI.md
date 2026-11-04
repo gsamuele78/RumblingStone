@@ -94,7 +94,7 @@ o superata, e la card lo dice con la prova; il resto è una decisione vera.
 
 - **Card «chiuse perché risolte o superate»**: le 13 della parte A (§3), più
   B19 (le frecce di Dara: il DM ne ha fissato la CD il 2026-10-23, quindi le ha
-  già messe in gioco). Si chiede solo di confermare.
+  già messe in gioco). Si chiede solo di confermare. ✅ **Confermate tutte e 14 dal DM il 2026-11-04.**
 - **Sette card di decisione**, una per tema, sulle scelte del master ancora
   aperte (colonna «Card» di §5): 1 il morale, 2 il cancello e Gorthak, 3 il
   drago e il cavaliere, 4 Grimjaw e il Re, 5 la ritirata e i tunnel, 6 le forze
