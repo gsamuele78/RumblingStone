@@ -282,3 +282,10 @@ semantico in CI sarebbe cattiva pratica. Il gate resta ADR-0009 (tracciatura
 nel CHANGELOG); la review meccanica dei contenuti è `validate_modules.py`
 (token-free). Questa sezione è la disciplina che l'agente applica DA SOLO
 quando riceve la richiesta.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/check_plans_discipline.py`: intestazioni dei piani, INDEX e CHANGELOG.

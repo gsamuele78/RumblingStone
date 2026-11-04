@@ -58,7 +58,7 @@ ESPORTATORE = ROOT / "scripts" / "export_booklet_typst.py"
 # c'è la lettura operativa: se una chiave non compare in nessuna delle due, è
 # una chiave morta e va tolta dal manifest.
 SOLO_HTML = {"header", "player_footer", "cover_tag", "out"}
-SOLO_STAMPA = {"front_matter", "carta", "capolettera", "fregio"}
+SOLO_STAMPA = {"front_matter", "carta", "capolettera", "fregio", "chi_si_incontra"}
 
 IMMAGINE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 

@@ -115,6 +115,7 @@ Con poco tempo per leggere: §0, §0-bis, Scene 2 e 3, Appendice A.
 | come è finito il duello, e le ferite lasciate al drago. Se è **FUGGITO**, anche il perché: ritirata dei PG, Catena spezzata, o un drago che non sono riusciti a intaccare (`DEF-4` Scena 11) | il ramo dell'arrivo (§0-bis, «I due rami»), §6, §7, la copertina del §9 |
 | cosa è successo con Vatore, e **chi porta il Sigillo di Ossidiana**, se l'hanno rubato | §7. Il Sigillo arriva acceso (`DEF-4` Appendice B, `[CANONE — DM 2026-10-18, G2-28]`): entro 9 m dal portatore la luce non magica scende a penombra, e lì il *Passo d'Ombra* di Artemis torna a funzionare. In mano ad Artemis il Sigillo è soppresso, e i poteri di luce dell'Anello diventano instabili. Un'ora dopo che è in mano a un PG il DM sceglie chi paga il livello negativo |
 | il tono del Rubino | §7 |
+| **la notte del barile** (`DEF-4` Scena 6, variante del barile): chi è morto nel fuoco fra Zog'tar, Balvar, il sacerdote e Grask, se il corno ha suonato, se Zog'tar è uscito dal fuoco davanti ai suoi | §7. Nel 1372 non cambia nessuna scena di questo master. Se Balvar è morto, la lastra col nome di Hald aspetta fra le ceneri fino all'ARC-09 |
 | se Re Thorek I ha dato il torque a Thorik, o se la Scena 12 è saltata e il torque è murato nell'incudine | Scena 2, la scheda di Re Thorek. Murato, lo tirano fuori i nani del 1372 quando riconoscono la Corona (`DEF-4` Scena 12): lo porta a Thorik uno dei dieci capi, dopo il passaggio di consegne |
 | se Thorik ha chiesto contro Zog'tar la **Benedizione della Forgia** (`DEF-4` Scena 8) | Scena 2 e 3: senza riposo è ancora **affaticato**, −2 a Forza e Destrezza, e non può correre né caricare (SRD). Al varco ci va a passo normale |
 | come Tordek ha usato la Cintura contro Zog'tar: tutte le cariche (la Cintura l'ha «assaggiata») o una o due (disciplinata) (`DEF-4` Scena 8) | §7 |
@@ -862,6 +863,7 @@ Ogni fallimento di questo master è un costo, non un blocco.
 | **Debito della Radice** (`DEF-3` §6) | pegno al Sogno della Terra (A/B/C, o il quarto ramo: Thorik ha preso il debito su di sé, eco E-07g) | ARC-09 (Cerchio Sacro/Ghostlord) |
 | **Seme del Ghostlord** (`DEF-4` §1-bis) | Zeth avviato alla lichificazione (mano del Collezionista) | ARC-09 (dilemma di Hella) |
 | **Vatore/Sal** (`DEF-4` §5) | sincronizzazione (se segnato/derubato/ferito) | ARC-09 (Sal) |
+| **La notte del barile** (`DEF-4` Scena 6, supplemento «Il barile sulla tenda» §10) | chi è morto nel fuoco; il corno suonato o no; Zog'tar vivo, umiliato o morto. Balvar morto: la lastra col nome di Hald resta fra le ceneri | ARC-08, se Zog'tar è vivo (`DEF-4` §7) · ARC-09 (la lastra) |
 | **Il segno della cera nera** (`DEF-4` Scena 5, la boccetta n. 4) | chi l'ha bevuta, PG o Re Thorek, porta il riflesso violaceo sotto il polso, finché non lo toglie *rimuovi maledizione*. Lo vedono gli agenti della gilda del Collezionista, e in ARC-09 Sal lo cerca su quel polso | ARC-08/09 |
 | **Seme-Mercato di Varis** (`DEF-1` §6-bis) | Marchio di Varis / rispetto | ARC-09 |
 | **Doni mancati alla resurrezione** (`DEF-3` §5) | Hella senza RD 3 / Timeless / Rinascita, se rifiutati | ARC-08/09 |

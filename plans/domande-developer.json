@@ -128,13 +128,6 @@
     },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
-      "regola": "D15",
-      "scena": "SCENA 6",
-      "dettaglio": "«otto hobgoblin»: niente dice cosa li tiene in vita contro un incantesimo ad area",
-      "ragione": "falso positivo: lo scontro non va vinto («Non serve vincerla, serve che nessuno…»), conta l'allarme; un incantesimo ad area che li cancella è un esito previsto"
-    },
-    {
-      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
       "regola": "D10",
       "scena": "SCENA 7",
       "dettaglio": "scontro senza la riga di scala (tre o cinque PG, un PG assente)",

@@ -81,3 +81,11 @@ Before generating any new campaign content, the agent must:
   three ways (one PC each, plus a time-pressure cost).
 - Reactive State Machine, not linear plot: villains have agendas that advance
   whether or not the party intervenes; track countdown clocks in `state.md`.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_state.py`: lo stato della campagna.
+- `python3 scripts/coerenza_campagna.py`: contraddizioni fra archi.

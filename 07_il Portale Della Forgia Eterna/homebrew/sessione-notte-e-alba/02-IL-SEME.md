@@ -27,7 +27,7 @@
 > accendono al ritorno nel 1372.
 >
 > **I rimandi del testo copiato.** «Echo Ledger (§11)» è, in questo booklet,
-> il cap. IV §7; «il #4» è il cap. IV, e Vatore è alla sua Scena 9.
+> il cap. VI §7; «il #4» è il cap. VI, e Vatore è alla sua Scena 9.
 >
 > **Dove eravamo** `[CANONE — DM 2026-10-12]`. Il Seme nessuno l'ha toccato a
 > mani nude: è nello zaino di Tordek dal 31 luglio. Le dieci pozioni le

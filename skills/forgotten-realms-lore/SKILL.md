@@ -43,3 +43,10 @@ Pantheons, Player's Guide to Faerûn, Lost Empires of Faerûn, Underdark.
 - Cite source (FRCS p.X, F&P p.Y, fandom URL).
 - If a fact has 4e/5e retcons, state both and flag which is current for 1372 DR.
 - Never invent NPC stats not in FR canon — defer to RumblingStone campaign skill for custom NPCs.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/coerenza_campagna.py`: lo stesso nome con numeri o fatti diversi fra archi e Bestiario.

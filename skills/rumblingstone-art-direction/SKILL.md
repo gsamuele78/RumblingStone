@@ -253,3 +253,10 @@ Detto perché non ci si illuda:
 - [`stile-illustrazione-handout.md`](../rumblingstone-mapmaking/references/stile-illustrazione-handout.md)
   — il vocabolario di stile e l'ancora storica
 - Esemplare: `10-stand-alone/Il-Drappo-di-Tarsilia/ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md`
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_booklets.py`: le immagini citate esistono e le mappe entrano in pianta (ADR-0106).

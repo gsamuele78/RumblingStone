@@ -151,3 +151,11 @@ Provati sul repo e scartati, con la misura accanto:
 | Documenti del repo (guide, ADR, piani, skill, PR) | questo file |
 | Struttura e disciplina dei piani | `rumblingstone-plans` |
 | Termini banditi nei master di modulo | `validate_modules.py` |
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/validate_norme_editoriali.py`: il registro delle norme.
+- `python3 scripts/misura_craft.py --stile`: Gulpease e indicatori, colonna `Gulp.`.

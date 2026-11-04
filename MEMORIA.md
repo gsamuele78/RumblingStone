@@ -102,18 +102,18 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
+| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
+| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §8 prove scartate rifatte con configurazione rigorosa | ✅ adottati come indicatori: ripetizioni frase per frase (6 vere invece di 1) e box telecomando al plurale (2 su 4 invece di 2 su 15); NLI sulla stessa entità (… |
+| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | conti dei master all'SRD (scelta del DM) | ✅ Treant di Adamantio 95 pf (10d8+50), scurovisione 18 m a Durin e alle wyvern; Balvar 101 resta, perché i PNG con classi hanno il primo dado al massimo (DMG 3… |
+| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §7 le etichette, ADR-0108 | ✅ ADR-0108 accettata; NLI provata fino in fondo (F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle prime 30 sul repo) e non adottata |
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | adozione di ADR-0107 (#305 dentro #306) | ✅ ADR-0107 accettata: `"entrambe"` + `"chi_si_incontra"` in 6 booklet, numeri nel capitolo 8 → 25, mappe vicine 5 → 9 su 42, Zog'tar 23,5 → 4,5 pagine; Terros… |
+| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | guardrail, tecniche avanzate, ADR-0108 (… | 🟡 `conformita_statblocchi --master` legge i recinti di ADR-0091: 6 conti veri (fra cui *corrompere l'acqua* del Vecchio 25/26 e la scurovisione di Zog'tar, tro… |
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | prova di ADR-0107 (`plans/esperimenti/prova-adr0107-2026-11-03/`) | 🟡 `dmcore.chi_si_incontra` e `"chi_si_incontra": true` (con `"entrambe"` della #305); misura più severa (3 «complete» vere, non 6); con la prova numeri nel cap… |
+| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | ricerca, misura, ADR-0107 | 🟡 14 criteri dalla rete, 8 già misurati sul master e nessuno sul booklet stampato; `misura_standard_tavolo.py`: 6 coppie capitolo × persona complete su 145, nu… |
+| 2026-11-03 | STANDARD-STAMPA | ADR-0105 punto 7, modo «entrambe» | ✅ su richiesta del DM, per il booklet Notte e Alba: scheda intera nel capitolo, accanto a descrizione e ritratto, e in più l'appendice delle creature (solo PDF… |
+| 2026-11-02 | PIATTAFORMA-DI-SVILUPPO | P9 · Dependabot convertitori-settimanale | ✅ minimo di `transformers` portato a 5.22.1 a mano, invece del 5.22.0 di Dependabot: lo stesso valore entrato su EarlRagnar78 con la sua #32, così l'allineamen… |
 | 2026-11-02 | STANDALONE-GIARDINO-SALE-CALCE | card D-a e gruppo PF1e | ✅ il DM sceglie le due consigliate: Karkator al LI 16 col Cuore come chiave, PF1e per un gruppo libero di 13°; già applicate, nessun cambio di testo nei moduli |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 playtester, C1, C5 | ✅ 44 rilievi, corretti i 3 🔴 (prove contro Sal con la scelta 17, come si arriva all'isolotto, TS di chi tocca il Cuore una volta al minuto) e quattro regole fu… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B2-B4 PF1e | ✅ modulo PF1e in Qasr al-Milah: master, sei mappe QM-1…QM-6, appendice PF1e (Karkator GS 16 col Cuore, Tariq chierico 13 di Hasharr), guida al tavolo e manifes… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 prima parte: lettore a freddo | 🟡 39 rilievi (3 🔴, 11 🟠, 25 🟡): corretti i tre 🔴 (tattiche di Torre e Santuario nel modulo invece che solo sulla mappa, numeri della gravità invertita, soglia… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C2 box misurati | ✅ 15 box contro Abbazia e DEF-4: nessun P1, metratura, parentesi o box oltre 12 righe; un «sembra» e un calco corretti; domande del developer a 0 col TS su Rif… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C3 simulazione degli scontri | ✅ Ragni delle Catene e Tariq prove giuste; Karkator com'era scritto faceva un TPK (blasfemia al LI 24 uccide senza TS i PG di 13°, RI 34 annulla la magia di He… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B5 e B7 (3.5) | ✅ «Le leve dei PG» nel master (12 leve con dove, prova e conseguenza, una tabella per PG); guida_al_tavolo.md come capitolo 3 del booklet: avvio rapido, regia… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 chiuso | ✅ GS-R in render_schemi.py: i tre ingressi sulla pianta canonica di Rethmar; quote allineate al canone (Cannath a +13, foro 8 m sopra il fiume), sorgente del S… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 seconda parte: schemi e piante allineate | 🟡 GS-0 collegamenti, GS-S1 sezione della cisterna, GS-S2 Ragni delle Catene in render_schemi.py; GS-3/GS-4/GS-5 allineate (Torre 18 × 19,5 m, ponte maestro 39… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C1 | 🟡 il box del Cuore non presuppone più che il PG lo guardi; attesa di §6.2 (2C) aggiornata a 20 box su 581 in STATO-E-ORDINE-DEI-PIANI |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C1, C5 (prima misura) | 🟡 il booklet 3.5 compila e converge (25 pagine, 7 schede, 0 spezzate): elenco degli incantesimi di Tariq fuori dal riquadro, che spezzandosi non convergeva; mi… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 | 🟡 cartella delle mappe rinominata in Mappe/ come nel resto del repo, così il catalogo dei mostri non scambia i titoli delle mappe per creature; catalogo rigene… |
 
 ## Le misure che si portano dietro
 

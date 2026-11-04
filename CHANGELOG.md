@@ -21,6 +21,18 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di
   `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
+- `scripts/misura_fedelta_nli.py`: il riscritto contraddice l'originale? Coppie di righe del diff giudicate da un modello NLI multilingue (solo in locale, `transformers`). Con `--ripara`, e da sé dentro `ciclo_prosa revisione` e `misura`, le righe che contraddicono tornano all'originale. Sulle 26 coppie del DM F1 0,83 contro 0,62 dei soli numeri (RICERCA-GUARDRAIL §9).
+- `misura_box_telecomando.py --check` (cancello in CI) e `misura_ripetizioni_frasi.py --check` (cancello locale, `plans/scrittura/ripetizioni-accettate.json`).
+- `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
+- `conformita_statblocchi.py --master` legge anche gli statblocchi recintati di ADR-0091 nei master: pf, CA, riga Difesa contro recinto, CD di soffio, schiacciare e presenza, *corrompere l'acqua*, voci ereditate con «come A.n», scurovisione dei tipi SRD (ADR-0108). Cricchetto in `test_conformita_statblocchi`.
+- `scripts/misura_distanza_pagine.py`: le pagine fra dove una persona agisce e la pagina con la sua CA e i suoi pf, lette dal PDF stampato con PyMuPDF (ADR-0108).
+- `misura_standard_tavolo.py` conta le note di lavoro che vanno in stampa («[INFERRED…]», «va riscontrato», TODO), con cricchetto per volume.
+- Ogni `skills/*/SKILL.md` ha la sezione «Cancelli deterministici»; `test_cancelli_delle_skill.py` la impone (ADR-0108).
+- `scripts/dmcore/chi_si_incontra.py` e la chiave `"chi_si_incontra": true` del manifest (ADR-0107): prima di stampare porta nel capitolo il riquadro accanto alla scheda d'entrata, le persone nominate in «In scena … Chi:» e le mappe stampate lontano; `misura_standard_tavolo.py --prova` misura il risultato.
+- `scripts/misura_standard_tavolo.py` (ADR-0107): per ogni booklet del
+  DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso
+  capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica; per
+  ogni capitolo con uno scontro, se c'è la mappa. Indicatore, non cancello.
 - Il riquadro unico delle creature in stampa (ADR-0105): `#statblocco` nel
   tema Typst ha le fasce Difesa, Attacco, Statistiche, Capacità speciali e
   Tattiche, riempite dalle righe di ADR-0091 o dai campi del blocco; la stessa
@@ -68,6 +80,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
+- Documentazione allineata ad ADR-0102, ADR-0105…ADR-0108: `docs/ARCHITETTURA.md` §11 (pianta di stampa, schemi, generatori delle città), §12 (chiavi `schede` e `chi_si_incontra`, misure di stampa), §13 (cancelli delle skill), §16, §18 (ramo «stampa» del flusso della qualità e i cancelli della prosa della #308 e della #309, §10.1) e §19; README; GUIDA-BOOKLET-E-PDF §1.3, §3 e §9.
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
@@ -84,6 +97,13 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `validate_booklets` controlla anche che il `.hb.md` committato di un booklet sia quello che il manifest produce oggi (`build_booklet_html.testo_hb`): i `.hb.md` di Notte e Alba, Resurrezione e Mille anni erano rimasti alla versione prima del capitolo del barile e delle mappe nuove.
 - Nei booklet di ARC-07 le griglie ASCII delle mappe tattiche (T-2, T-3, T-6, S-2, M7-B, e CM-1 e CM-2 in DEF-5) lasciano il posto alla pianta in stampa con la legenda; la griglia resta nel master come apparato. `validate_booklets` ferma una griglia disegnabile stampata in un booklet. Le sei schematiche passano anche loro: T-5, R-1 e S-1 ridisegnate in scala in `ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md` (S-1 sulla pianta di PF-2 con gli affreschi di DEF-2), T-1, T-4 e M7-A come schemi senza griglia generati da `scripts/render_schemi.py` (`--check` in CI). In CM-1 e CM-2 (e nella MAPPA 5 di ARC-08) i 90 nani non stanno più ad anello ma schierati verso la porta, centro pesante e due ali piegate (scelta del DM, 2026-10-30); i numeri dello scontro non cambiano. Lo standard vale per tutto il repo: `validate_booklets` ferma ogni disegno a riquadri stampato in un booklet, e le due linee del tempo che restavano (Palio, Drappo) sono diventate tabelle.
 ### Modificato
+- ADR-0107 **accettata** (2026-11-03): `"schede": "entrambe"` e `"chi_si_incontra": true` sono lo standard nei 6 booklet dove migliorano (Notte e Alba, Serata Resurrezione, Mille Anni, Ritorno alla Forgia, Drappo, Abbazia rotta). Numeri nel capitolo 8 → 25, mappe vicine allo scontro 5 → 9 su 42, distanza scena-numeri di Zog'tar 23,5 → 4,5 pagine. Terros resta fuori: si allunga.
+- Il tema Typst piazza in alto la tabella «Chi si incontra in questo capitolo» e misura il riquadro dove cade davvero, così una scheda non si spezza fra due colonne e il titolo non resta solo in fondo.
+- ADR-0108 **accettata**: i cancelli deterministici sono lo standard di ogni skill.
+- `converters/pdf-to-md-engine`: minimi di `transformers` (5.22.1) e `spacy` (3.8.18)
+  alzati da Dependabot (gruppo convertitori-settimanale, PR #304), allineati a EarlRagnar78.
+- `scripts/booklet-container`: immagine base `debian:13-slim` aggiornata al digest
+  nuovo da Dependabot (gruppo docker-settimanale, PR #303).
 - `converters/pdf-to-md-engine`: minimo di `nltk` alzato a 3.10.4 da Dependabot
   (gruppo convertitori-settimanale, PR #294).
 - `scripts/booklet-container`: immagine base `debian:13-slim` aggiornata al digest
@@ -97,6 +117,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
 ### Corretto
+- Master ARC-07: Treant di Adamantio 95 pf (10d8+50, prima 90), scurovisione 18 m a Durin e alle wyvern. `conformita_statblocchi --master` accetta il primo dado al massimo per i PNG con livelli di classe (Balvar 101 pf). Cricchetto dei conti a 0.
 - Appendice delle creature in stampa: i nomi nei titoli dei riquadri non vanno più a capo col trattino («Skullcru-sher»); una scheda che non entra nella colonna di sinistra continua nella colonna accanto della stessa pagina invece di lasciarne bianca la metà; il «continua» in fondo all'ultimo pezzo di una scheda lunga non compare più («continua a pagina 60» sotto Terros, che finiva a p. 59). `misura_stampa` conta ora i rimandi di pagina sbagliati (tetto 0) e fallisce se l'impaginazione non converge.
 - `export_map_png.py`: con Chromium la legenda delle mappe più alte usciva tagliata, perché il headless nuovo toglie alla finestra la fascia della cornice. Ora la finestra si apre più alta e il PNG torna all'altezza dell'SVG, con la sola libreria standard.
 

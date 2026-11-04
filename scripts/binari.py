@@ -311,6 +311,41 @@ LIBRERIE = (
                 "`migliora_prosa.py` stima la subordinata spezzata dal numero di "
                 "frasi e di subordinanti. Nessun cancello della CI ne dipende.",
     ),
+    # Il testo delle pagine stampate: l'apparato in stampa (ADR-0070) e la
+    # distanza fra scena e numeri (ADR-0108). AGPL, solo strumento di sviluppo.
+    Libreria(
+        nome="pymupdf", modulo="pymupdf",
+        a_cosa_serve="leggere il testo delle pagine dei PDF stampati: apparato in "
+                     "stampa (`validate_booklets --stampa`) e distanza fra scena e "
+                     "numeri (`misura_distanza_pagine.py`)",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=False,
+        ripiego="`validate_booklets --stampa` salta il conto dell'apparato e lo "
+                "dice; `misura_distanza_pagine.py` esce con 2 e dice come installarla. Il booklet "
+                "si stampa uguale.",
+    ),
+    # Le immagini ripetute fra i box, frase per frase (RICERCA-GUARDRAIL §8).
+    # Porta torch: resta fuori dai requisiti del repo (canale unstable, ADR-0099).
+    Libreria(
+        nome="sentence-transformers", modulo="sentence_transformers",
+        a_cosa_serve="le ripetizioni fra box frase per frase "
+                     "(`misura_ripetizioni_frasi.py`, modello MiniLM multilingue)",
+        installa="  pip install sentence-transformers   (porta torch; solo in locale)",
+        obbligatoria=False,
+        ripiego="`misura_ripetizioni_frasi.py` esce con 2 e dice come installarla. "
+                "Nessun cancello della CI ne dipende.",
+    ),
+    # La fedeltà del riscritto, riga per riga (RICERCA-GUARDRAIL §9). Porta
+    # torch: fuori dai requisiti del repo (canale unstable, ADR-0099).
+    Libreria(
+        nome="transformers", modulo="transformers",
+        a_cosa_serve="la fedeltà del riscritto all'originale con un modello NLI "
+                     "(`misura_fedelta_nli.py`, dentro `ciclo_prosa revisione` e `misura`)",
+        installa="  pip install transformers torch   (solo in locale)",
+        obbligatoria=False,
+        ripiego="`misura_fedelta_nli.py` esce con 2; `ciclo_prosa` scrive nel documento "
+                "che la fedeltà non è stata controllata e prosegue.",
+    ),
     Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",

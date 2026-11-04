@@ -218,3 +218,15 @@ là il numero annunciato prima dell'elenco è un tic, qui «tre porte, tre serra
 
 Quello che vale su tutti e due i lati è §9 di `italiano-nativo.md`: l'antitesi
 «non X: è Y» e il trattino lungo come respiro suonano generati ovunque.
+
+## Cancelli deterministici
+
+I controlli che non chiedono un giudizio, da far girare prima di consegnare.
+Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
+
+- `python3 scripts/misura_craft.py --stile`: i tetti e gli indicatori dei box read-aloud, P1 compreso.
+- `python3 scripts/punteggio_mqm.py`: il punteggio MQM come cancello della prosa.
+- `python3 scripts/ciclo_prosa.py`: il box riscritto non perde dettagli (box_impoveriti, ADR-0093).
+- `python3 scripts/misura_box_telecomando.py --check`: cancello, anche in CI. Un box non dice al gruppo cosa capisce o sa («capite che…»): si descrive quello che si vede o si sente. I colpi letti e lasciati stanno in `ACCETTATI`.
+- `python3 scripts/misura_ripetizioni_frasi.py --check`: cancello locale (embedding frase per frase, `sentence-transformers`). Un'immagine già usata in un altro box si riscrive; le ripetizioni volute vanno in `plans/scrittura/ripetizioni-accettate.json` col perché.
+- `python3 scripts/misura_fedelta_nli.py --ripara ORIGINALE RISCRITTO`: le righe del riscritto che contraddicono l'originale (NLI) tornano com'erano. Lo fanno da sé anche `ciclo_prosa revisione` e `misura`; un cambio di fatto voluto si fa a mano, fuori dal ciclo della prosa.
