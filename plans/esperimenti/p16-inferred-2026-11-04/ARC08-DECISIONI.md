@@ -75,60 +75,77 @@ abbassa al numero nuovo nello stesso commit.
    danni senza tiro e +2 al morale. *Consigliata*: seguire la regola: resta la
    spinta (opzione B, SRD) per togliere il Re dal cono; l'opzione A e il suo +2
    escono.
-5. **Le altre scelte del master (§5).** *Consigliata*: canone tutte come scritte,
-   tranne la mira di Dara, che esce.
+5. ~~**Le altre scelte del master (§5).**~~ Card ritirata il 2026-11-04: il DM
+   ha chiesto che si chiuda solo ciò che è già fatto, risolto o superato, mai in
+   blocco per comodità. Rifatta come §4-bis.
+
+## 4-bis. Le card rifatte con lo schema del DM (2026-11-04)
+
+Regola di Jfs, 2026-11-04: una marcatura si chiude solo se è già fatta, risolta
+o superata, e la card lo dice con la prova; il resto è una decisione vera.
+
+- **Card «chiuse perché risolte o superate»**: le 13 della parte A (§3), più
+  B19 (le frecce di Dara: il DM ne ha fissato la CD il 2026-10-23, quindi le ha
+  già messe in gioco). Si chiede solo di confermare.
+- **Sette card di decisione**, una per tema, sulle scelte del master ancora
+  aperte (colonna «Card» di §5): 1 il morale, 2 il cancello e Gorthak, 3 il
+  drago e il cavaliere, 4 Grimjaw e il Re, 5 la ritirata e i tunnel, 6 le forze
+  e i pregen, 7 dopo la battaglia. Nessuna è già decisa altrove: cercate in
+  `giro-arc08-sessione1-2026-10-21/`, `giro-arc08-sessione2-2026-10-22/`,
+  `a3-arc08/` e nel canone del 2026-10-30 sul Cuore della Montagna (che fissa lo
+  schieramento in ARC-07, non quanti nani arrivano al Cuore in ARC-08).
 
 ## 5. Parte B: le scelte del master, da fare canone in blocco
 
 Sono le marcature in cui il master ha già scritto una scelta, e la scelta è la
 versione più dura o serve alla scena senza toccare i numeri di un nemico.
 
-| # | Dove | La scelta del master | Consiglio |
-|---|---|---|---|
-| B1 | DEF-2 tabella del morale, Scena 2 | un eroe che colpisce il drago nel sorvolo: +1 | canone |
-| B2 | DEF-2 morale, Scena 6, appendice | il Re che cade sul cancello: −2 | canone |
-| B3 | DEF-2 Scena 2 e appendice | lo sportello del cancello, largo un nano | canone |
-| B4 | DEF-2 Scena 2 | Gorthak che fugge il Giorno 1: il cancello perde la metà quel giorno | canone |
-| B5 | DEF-2 Scena 2 | il macigno colpito non parte (non provato negli script) | canone |
-| B6 | DEF-2 Scena 2 | la testa centrale di Gorthak chiama un reparto in più (la scheda dava +2 morale) | canone: un reparto vale più di +2 |
-| B7 | DEF-2 Scena 2 e appendice | Gorthak sotto metà: un round di Furia, poi la fuga | canone |
-| B8 | DEF-2 Scena 2 | il cancello caduto il Giorno 1: una tacca a round | canone |
-| B9 | DEF-2 Scena 2 | il sorvolo al round 4, 1d4 PFU ai balestrieri di una torre | canone |
-| B10 | DEF-2 notte | il cancello riparato di +20 pf a notte | canone |
-| B11 | DEF-2 Scena 4 | Grimjaw senza sfidante: +1 ad AU e DU, e al round 2 il Re scende a cercarlo | canone |
-| B12 | DEF-2 Scena 4 | il Re torna con 4d10+20 danni | canone |
-| B13 | DEF-2 notte | il Coro fa crollare la rampa: Torre Est a fronte 1 | canone |
-| B14 | DEF-2 Scena 6 | il cancello caduto: il Cancello combatte nell'androne | canone |
-| B15 | DEF-2 Scena 6 | la lancia del cavaliere nella picchiata | canone |
-| B16 | DEF-2 Scena 6, Nala | l'*immagine silenziosa*: se Fauci ci crede, la sequenza slitta di un round | canone |
-| B17 | DEF-2 Scena 6 | il soffio toglie 1d4 di CA alle armature, per sempre (non SRD) | canone, ⚠️ non SRD |
-| B18 | DEF-2 Scena 6, Dara | la mira: +1 al tiro dopo (non SRD) | **esce**: nessuna fonte, e la versione senza è la più dura |
-| B19 | DEF-2 Scena 6, armeria, tesoro | le due frecce ammazzadraghi di Dara | canone: il DM ne ha già fissato la CD (2026-10-23) |
-| B20 | DEF-2 Scena 7 | Nala +2 alla porta (le lanterne) | canone |
-| B21 | DEF-2 Scena 7 | i nani al Cuore: 90 come tetto, le perdite nel Registro | canone |
-| B22 | DEF-2 Scena 8 | senza un ordine a round cadono 1d4 nani e un bugbear passa | canone |
-| B23 | DEF-2 dopo | la corona nera, se il soffio ha preso il Re | canone |
-| B24 | DEF-1 Fase 3 | due round alla torre dopo uno scontro aperto, una prova sola | canone |
-| B25 | DEF-1 Sessione 1 | il Re al Cancello se Borin non lo convince | canone |
-| B26 | DEF-1 sorvolo | il fumo dell'acido: Tempra CD 15 o nauseato 1 round | canone |
-| B27 | DEF-1 regia | l'orda terrificante se il tavolo va liscio (+1 AU e DU) | canone |
-| B28 | DEF-1 leve | Grimjaw cerca l'eroe che ha visto sul pendio | canone |
-| B29 | DEF-1 e GUIDA, Dara e Nala | +18 a Osservare e Ascoltare di Dara; 8 + Int punti della Spia Maestra | canone, da riscontrare sul manuale quando c'è |
-| B30 | DEF-1 duello | la frana: 4d6, Riflessi CD 15 | canone |
-| B31 | ARC08-19 | la riserva entra nel settore che cede e non torna | canone |
-| B32 | GUIDA, élite | 4 capitani su worg; 70 élite = 40 worg rider e 30 sergenti; 5 adepti | canone |
-| B33 | GUIDA, finale | i 50 hobgoblin d'élite con la scheda dei guerrieri 3; uno contro uno i veterani GS 5 | canone |
-| B34 | GUIDA, finale | il conto della Guarigione parte dal round 1, o dall'11 senza flashback | canone |
-| B35 | GUIDA e scontri | Inathiel si gioca col gufo gigante celestiale GS 6 | canone |
-| B36 | GUIDA e scontri, ricompense | i seguaci: quanti e come col *Comando* della *Guida del DM* | canone |
-| B37 | ESITI §4 | Fauci fugge nelle montagne meridionali; il punto lo fissa ARC-09 | canone |
-| B38 | ESITI §4 | il cavaliere conosce il piano fino a Rethmar | canone |
-| B39 | ESITI §4 | dell'uovo di Fauci il cavaliere non sa niente (eco per ARC-10) | canone |
-| B40 | ESITI §4 | lo scrutare di Hella lo vede ferito, a terra, nelle montagne | canone |
-| B41 | ESITI §4 | la comunione della Corona: livello dell'incantatore 20, come un artefatto | canone, la versione più forte |
-| B42 | ESITI §5.5 | il ripiego se il flashback non si gioca | canone |
-| B43 | ESITI §6 | l'armeria: oggetti perfetti e consumabili, niente magia su misura | canone |
-| B44 | HANDOUTS | la Mente Vuota di Thorik non blocca la visione, perché viene dalla Corona stessa | canone: se la bloccasse, ARC-08 non avrebbe la sua cornice |
+| # | Dove | La scelta del master | Consiglio | Card |
+|---|---|---|---|---|
+| B1 | DEF-2 tabella del morale, Scena 2 | un eroe che colpisce il drago nel sorvolo: +1 | canone | 1 · Morale |
+| B2 | DEF-2 morale, Scena 6, appendice | il Re che cade sul cancello: −2 | canone | 1 · Morale |
+| B3 | DEF-2 Scena 2 e appendice | lo sportello del cancello, largo un nano | canone | 2 · Cancello |
+| B4 | DEF-2 Scena 2 | Gorthak che fugge il Giorno 1: il cancello perde la metà quel giorno | canone | 2 · Cancello |
+| B5 | DEF-2 Scena 2 | il macigno colpito non parte (non provato negli script) | canone | 3 · Drago |
+| B6 | DEF-2 Scena 2 | la testa centrale di Gorthak chiama un reparto in più (la scheda dava +2 morale) | canone: un reparto vale più di +2 | 1 · Morale |
+| B7 | DEF-2 Scena 2 e appendice | Gorthak sotto metà: un round di Furia, poi la fuga | canone | 2 · Cancello |
+| B8 | DEF-2 Scena 2 | il cancello caduto il Giorno 1: una tacca a round | canone | 2 · Cancello |
+| B9 | DEF-2 Scena 2 | il sorvolo al round 4, 1d4 PFU ai balestrieri di una torre | canone | 3 · Drago |
+| B10 | DEF-2 notte | il cancello riparato di +20 pf a notte | canone | 2 · Cancello |
+| B11 | DEF-2 Scena 4 | Grimjaw senza sfidante: +1 ad AU e DU, e al round 2 il Re scende a cercarlo | canone | 4 · Grimjaw |
+| B12 | DEF-2 Scena 4 | il Re torna con 4d10+20 danni | canone | 4 · Grimjaw |
+| B13 | DEF-2 notte | il Coro fa crollare la rampa: Torre Est a fronte 1 | canone | 4 · Grimjaw |
+| B14 | DEF-2 Scena 6 | il cancello caduto: il Cancello combatte nell'androne | canone | 2 · Cancello |
+| B15 | DEF-2 Scena 6 | la lancia del cavaliere nella picchiata | canone | 3 · Drago |
+| B16 | DEF-2 Scena 6, Nala | l'*immagine silenziosa*: se Fauci ci crede, la sequenza slitta di un round | canone | 3 · Drago |
+| B17 | DEF-2 Scena 6 | il soffio toglie 1d4 di CA alle armature, per sempre (non SRD) | canone, ⚠️ non SRD | 3 · Drago |
+| B18 | DEF-2 Scena 6, Dara | la mira: +1 al tiro dopo (non SRD) | **esce**: nessuna fonte, e la versione senza è la più dura | 3 · Drago |
+| B19 | DEF-2 Scena 6, armeria, tesoro | le due frecce ammazzadraghi di Dara | canone: il DM ne ha già fissato la CD (2026-10-23) | già risolta: card «chiuse perché risolte» |
+| B20 | DEF-2 Scena 7 | Nala +2 alla porta (le lanterne) | canone | 5 · Ritirata |
+| B21 | DEF-2 Scena 7 | i nani al Cuore: 90 come tetto, le perdite nel Registro | canone | 5 · Ritirata |
+| B22 | DEF-2 Scena 8 | senza un ordine a round cadono 1d4 nani e un bugbear passa | canone | 5 · Ritirata |
+| B23 | DEF-2 dopo | la corona nera, se il soffio ha preso il Re | canone | 5 · Ritirata |
+| B24 | DEF-1 Fase 3 | due round alla torre dopo uno scontro aperto, una prova sola | canone | 5 · Ritirata |
+| B25 | DEF-1 Sessione 1 | il Re al Cancello se Borin non lo convince | canone | 4 · Grimjaw |
+| B26 | DEF-1 sorvolo | il fumo dell'acido: Tempra CD 15 o nauseato 1 round | canone | 3 · Drago |
+| B27 | DEF-1 regia | l'orda terrificante se il tavolo va liscio (+1 AU e DU) | canone | 1 · Morale |
+| B28 | DEF-1 leve | Grimjaw cerca l'eroe che ha visto sul pendio | canone | 4 · Grimjaw |
+| B29 | DEF-1 e GUIDA, Dara e Nala | +18 a Osservare e Ascoltare di Dara; 8 + Int punti della Spia Maestra | canone, da riscontrare sul manuale quando c'è | 6 · Forze |
+| B30 | DEF-1 duello | la frana: 4d6, Riflessi CD 15 | canone | 5 · Ritirata |
+| B31 | ARC08-19 | la riserva entra nel settore che cede e non torna | canone | 5 · Ritirata |
+| B32 | GUIDA, élite | 4 capitani su worg; 70 élite = 40 worg rider e 30 sergenti; 5 adepti | canone | 6 · Forze |
+| B33 | GUIDA, finale | i 50 hobgoblin d'élite con la scheda dei guerrieri 3; uno contro uno i veterani GS 5 | canone | 6 · Forze |
+| B34 | GUIDA, finale | il conto della Guarigione parte dal round 1, o dall'11 senza flashback | canone | 5 · Ritirata |
+| B35 | GUIDA e scontri | Inathiel si gioca col gufo gigante celestiale GS 6 | canone | 6 · Forze |
+| B36 | GUIDA e scontri, ricompense | i seguaci: quanti e come col *Comando* della *Guida del DM* | canone | 7 · Dopo |
+| B37 | ESITI §4 | Fauci fugge nelle montagne meridionali; il punto lo fissa ARC-09 | canone | 7 · Dopo |
+| B38 | ESITI §4 | il cavaliere conosce il piano fino a Rethmar | canone | 7 · Dopo |
+| B39 | ESITI §4 | dell'uovo di Fauci il cavaliere non sa niente (eco per ARC-10) | canone | 7 · Dopo |
+| B40 | ESITI §4 | lo scrutare di Hella lo vede ferito, a terra, nelle montagne | canone | 7 · Dopo |
+| B41 | ESITI §4 | la comunione della Corona: livello dell'incantatore 20, come un artefatto | canone, la versione più forte | 7 · Dopo |
+| B42 | ESITI §5.5 | il ripiego se il flashback non si gioca | canone | 7 · Dopo |
+| B43 | ESITI §6 | l'armeria: oggetti perfetti e consumabili, niente magia su misura | canone | 7 · Dopo |
+| B44 | HANDOUTS | la Mente Vuota di Thorik non blocca la visione, perché viene dalla Corona stessa | canone: se la bloccasse, ARC-08 non avrebbe la sua cornice | 7 · Dopo |
 
 ## 6. Fuori da questo lotto, perché la domanda è già al DM
 
