@@ -880,7 +880,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** `[CANONE — DM 2026-10-07, D39]` | **1** · **0** |
 | Spogliare la tenda delle armature (Scena 8, solo se nessuno ha dato l'allarme) `[CANONE — DM 2026-10-12, D59]` | **1** |
-| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) `[INFERRED — needs DM confirmation]` | **1** |
+| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]` | **1** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) `[CANONE — DM, D22]` | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
 | Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[CANONE — DM 2026-10-12]` | **1** |
@@ -1984,7 +1984,7 @@ Dalla gemella sul corno, Skullcrusher ascolta: quello che si dice vicino a
 Grask gli arriva sulle colline come un sussurro, e all'alba sa i nomi che i
 PG si sono detti alla tenda (Scena 7, «Che cosa muove Skullcrusher»). Fuori
 dal telo sente anche chi parla sottovoce; da dentro la tenda, come Grask,
-solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
+solo i gridi `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]`.
 
 **Comparse**
 
@@ -2519,7 +2519,7 @@ motivo per cui la Scena 7 viene prima.
     distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
     palo centrale** (Forza **CD 20**, azione standard): il colmo è fatto di due
     travi incastrate sul palo centrale, e senza quello cadono e si portano
-    dietro i pali di testa `[INFERRED — needs DM confirmation]`. Il telo crolla, e chi è
+    dietro i pali di testa `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]`. Il telo crolla, e chi è
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
@@ -2624,7 +2624,7 @@ motivo per cui la Scena 7 viene prima.
 - **Il bottino e il tempo**: le armature della tenda, quanto pesano, quando
   si possono togliere e dove stanno nel buco portatile sono in §8 B, «Il
   bottino della tenda e il tempo».
-- **Curarsi prima di ripartire** `[INFERRED — needs DM confirmation]`. Le
+- **Curarsi prima di ripartire** `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]`. Le
   bacchette di cura funzionano anche nella tenda, ma la tenda è circondata
   dalle ronde, e ogni carica è il round di chi la usa. Se il gruppo, in tutto,
   spende **più di 20 cariche** di bacchetta prima di ripartire dalla tenda,
@@ -2912,7 +2912,7 @@ al 12° non ha gradi: chiedi al tavolo, prima della scena, se qualcuno li ha
 comprati. Per chi non li ha, il fagotto si strappa di mano: lo afferra chi
 gli mette le mani addosso, Vatore attiva il Cronolito come quando lo tengono,
 e chi stringeva il fagotto se lo ritrova in mano. Vale la riga «Lo derubano»
-riuscita, e Vatore sa chi è stato `[INFERRED — needs DM confirmation]`.
+riuscita, e Vatore sa chi è stato `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]`.
 
 **Se uno di loro porta il segno** (la cura con la cera nera, Scena 5). Vatore
 guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
@@ -3333,7 +3333,7 @@ cambia davvero.
     sente il nome un round prima: chi è nominato sa che sarà colpito, e gli
     altri sanno su chi preparare la corda. Oltre all'*armatura magica* ha sei
     slot di 1°. ⚠ Non SRD: l'incantesimo vuole anche un fuoco, un piccolo
-    bersaglio di legno, e il drago non lo porta `[INFERRED — needs DM confirmation: il nome gridato vale da fuoco]`.
+    bersaglio di legno, e il drago non lo porta `[CANONE — DM 2026-11-04, P16, Skullcrusher: il nome gridato vale da fuoco]`.
   - ***Fluttuare*** (SRD, *Hover*), **una volta sola**: alla prima paura, a
     ⅓ dei pf (la soglia qui sotto). Con un'azione di movimento si ferma in
     aria, e da fermo si sposta in ogni direzione, anche in verticale, a metà
@@ -4009,7 +4009,7 @@ attacchi:
 <!-- storico -->
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo — GS 14 → 14 (vale 15) — il DM lo vuole più forte senza salire di EL.
 <!-- /storico -->
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[INFERRED — needs DM confirmation sulla CD per toglierselo]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[CANONE — DM 2026-11-04, P16, Skullcrusher: l'acido torna una volta sola, al round dopo, e non serve una prova per toglierselo]`.
 - Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[CANONE — DM 2026-10-19]`.
 
 

@@ -63,3 +63,5 @@ quattro volumi `.hb.md`, poi `inventory_inferred.py --update-baseline` e
 
 - Card R (chiuse perché risolte): sì, R1-R4 chiuse.
 - Card 1 (mura del 372): come scritte.
+- Card 2 (tenda di Zog'tar): come scritte.
+- Card 3 (Skullcrusher): il nome gridato vale da fuoco; Soffio Aderente com'è (l'acido torna una volta, senza prova per toglierselo).
