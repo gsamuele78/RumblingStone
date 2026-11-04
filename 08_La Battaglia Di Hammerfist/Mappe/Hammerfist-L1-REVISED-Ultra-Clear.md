@@ -545,7 +545,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 **SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map03_mappa-1a-3-revised-campo-della-mano-rossa-vista.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 180m × 180m (60 colonne × 60 righe · **3 m/quadretto**, mappa strategica: `@tipo strategica`)
 **Contratto:** `fortezza-json/HF-1A3-campo-mano-rossa.json` (rifatta il 2026-10-22 sul modello della M7-C di ARC-07)
-**Dove sta:** sulla piana a 870 m s.l.m. `[INFERRED]`, a qualche miglio dalle mura (le sentinelle vedono solo polvere e fuochi: DEF-1, Zona 1). Il Torrione la guarda da 400 m. Quando l'assedio comincia, l'orda si riaccampa con lo stesso ordine a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m), e sale per la strada a tornanti (L2, MAPPA 1).
+**Dove sta:** sulla piana a 870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`, a qualche miglio dalle mura (le sentinelle vedono solo polvere e fuochi: DEF-1, Zona 1). Il Torrione la guarda da 400 m. Quando l'assedio comincia, l'orda si riaccampa con lo stesso ordine a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m), e sale per la strada a tornanti (L2, MAPPA 1).
   ⚠️ Vista strategica dal Torrione: serve all'intelligence e alla regia, **NON al combattimento a quadretti**. Le tende sono alla loro misura: il contubernium hobgoblin 3 × 3 m è un quadretto, la tenda nera del comando 18 × 12 m col telo. Non mischiare quadretti di mappe a scale diverse.
 **Incontro:** nessuno — osservazione (Dara col cannocchiale, Incontro 1A FASE 3)
 **Quando si usa:** Sessione 1 (master: `../ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Scena 4, Fase 3); stessa disposizione, vista dal lato fortezza, in `Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED

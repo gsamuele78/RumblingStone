@@ -199,26 +199,26 @@ incantesimo. È una Guardia Nera e non parla per paura: servono *charme*,
 
 1. **Dove va Fauci se fugge**: verso le montagne meridionali (§4; `ARC08-02`
    §1, *Esito della battaglia*). Il punto preciso della tana i file non lo
-   danno `[INFERRED — needs DM confirmation]`.
+   danno `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`.
 2. **A cosa serviva l'avanguardia**: tenere chiusi i nani a nord mentre
    l'Orda prende Terrelton, lo stesso Day 19, e poi scende verso Rethmar
    (`09_…/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`, Day 19).
    Che il cavaliere conosca il piano oltre Terrelton è una deduzione
-   `[INFERRED — needs DM confirmation]`.
+   `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`.
 3. **Perché Fauci vuole Thorik**, e perché prima di finirlo lo prende in
    bocca (`ARC08-02` §1, «La presa di Thorik»): è della stirpe di Skullcrusher e odia
    chi porta le armi dei nani (`ARC08-02` §1, Odio della stirpe;
    `Bestiario/villain/Fauci_di_Palude.md`). Dell'uovo di Fauci (ARC-07 C3)
    il cavaliere non sa niente: è un'eco per ARC-10, e resta coperta
-   `[INFERRED — needs DM confirmation]`.
+   `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`.
 
 **Se lo divinano** *(una riga per segreto: chi lo rompe, cosa ottiene, come
 prosegue il modulo; `skills/rumblingstone-module-standard/references/sviluppo-degli-incontri.md` §9)*
 
 | Segreto | Chi lo rompe | Cosa ottiene | Come prosegue |
 |---|---|---|---|
-| **Fauci in fuga, dov'è** | Lo *scrutare* di Hella (SRD): Fauci tira Volontà +19 contro la CD della sua scheda. L'hanno visto da vicino (nessun modificatore di conoscenza); con una **scaglia** strappata in battaglia il TS ha −10 (parte del corpo, SRD) | Lo vede ferito e a terra, nelle montagne meridionali; il posto i file non lo descrivono `[INFERRED — needs DM confirmation]` | La carta S2 (§6.3) si può anticipare: i PG lo cacciano prima di Rethmar, e se lo uccidono vale il ramo «ucciso» di §4 (−1 drago a Rethmar) `[INFERRED — needs DM confirmation]` |
-| **Tornerà?** | La **Corona** di Thorik: *comunione* una volta al mese da un Nodo (`campaign/state.md` del ramo di gruppo, Corona di Adamantio) | Moradin risponde sì o no, una domanda per livello dell'incantatore (SRD); il livello della comunione della Corona i file non lo danno `[INFERRED — needs DM confirmation]` | Se chiedono del ritorno, la risposta segue la carta S2 (§6.3): se il DM la tiene nel mazzo, è «sì», se l'ha tolta è «no». Il modulo non cambia; il tavolo sa che il conto è aperto |
+| **Fauci in fuga, dov'è** | Lo *scrutare* di Hella (SRD): Fauci tira Volontà +19 contro la CD della sua scheda. L'hanno visto da vicino (nessun modificatore di conoscenza); con una **scaglia** strappata in battaglia il TS ha −10 (parte del corpo, SRD) | Lo vede ferito e a terra, nelle montagne meridionali; il posto i file non lo descrivono `[CANONE — DM 2026-11-04, P16, dopo la battaglia]` | La carta S2 (§6.3) si può anticipare: i PG lo cacciano prima di Rethmar, e se lo uccidono vale il ramo «ucciso» di §4 (−1 drago a Rethmar) `[CANONE — DM 2026-11-04, P16, dopo la battaglia]` |
+| **Tornerà?** | La **Corona** di Thorik: *comunione* una volta al mese da un Nodo (`campaign/state.md` del ramo di gruppo, Corona di Adamantio) | Moradin risponde sì o no, una domanda per livello dell'incantatore (SRD); il livello della comunione della Corona i file non lo danno `[CANONE — DM 2026-11-04, P16, dopo la battaglia]` | Se chiedono del ritorno, la risposta segue la carta S2 (§6.3): se il DM la tiene nel mazzo, è «sì», se l'ha tolta è «no». Il modulo non cambia; il tavolo sa che il conto è aperto |
 | **Che cosa sa il cavaliere** | *Zona di verità*, *charme*, *dominare*, *parlare con i morti* se è caduto | Le tre cose qui sopra; con *parlare con i morti* risponde col TS Volontà +6 (SRD) | Nessuna scena nuova: le tre risposte agganciano §4 e §6.3 |
 
 ---
@@ -298,7 +298,7 @@ la **Sessione 3a**.
   metà dei punti ferita fuggono, così arrivano al finale feriti come vuole
   §5.2. Re Thorek e l'evacuazione restano come sopra.
 
-### 5.5 Se il flashback coi pregen non è stato giocato `[INFERRED — needs DM confirmation]`
+### 5.5 Se il flashback coi pregen non è stato giocato `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`
 
 Sul ramo di gruppo l'Arco 08 non è giocato, né le sessioni coi pregen né il P5
 (`campaign/state.md` §0). Finché il DM non decide se giocarli, il finale parte
@@ -351,7 +351,7 @@ La runa di pietra che Re Thorek consegna ai 4 PG (Cerimonia Atto 3;
   della cittadella e alle fucine (aggancio al tesoro `ARC08-13` §3) a
   costo nullo. Il tetto dell'armeria è quello del banco: oggetti
   perfetti e consumabili già in magazzino, niente magia su misura
-  (`ARC08-17` §2-§3) `[INFERRED — needs DM confirmation]`.
+  (`ARC08-17` §2-§3) `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`.
 - **Riconoscimento** da PNG nanici in ARC-09 (es. Maewen riconosce
   Tordek "dalla runa di Custode Eterno" — già canonico in `state.md`
   §4): la runa è il segno visibile.

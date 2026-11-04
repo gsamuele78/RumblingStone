@@ -60,10 +60,10 @@ trova il successivo 20 m più in alto.
 
 | Ripiano | Sulla piana | s.l.m. | Cosa c'è |
 |---|---|---|---|
-| Piana e accampamenti | 0 m | 870 m `[INFERRED]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
-| Fronte sud e cortile esterno | +80 m | 950 m `[INFERRED]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
-| Cortile interno | +100 m | 970 m `[INFERRED]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
-| Torri nord e cittadella | +120 m | 990 m `[INFERRED]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella (da +100 a +120) |
+| Piana e accampamenti | 0 m | 870 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
+| Fronte sud e cortile esterno | +80 m | 950 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
+| Cortile interno | +100 m | 970 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
+| Torri nord e cittadella | +120 m | 990 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella (da +100 a +120) |
 
 Dal ponte una **strada a tornanti** larga 6 m scende alla piana al 15%:
 circa 530 m di strada per 80 m di quota, con cinque gomiti (MAPPA 1). Il
@@ -469,7 +469,7 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
 
 > ✅ Sono disegnate tutte le 108 righe, larghe 60 (ricontato il 2026-10-22).
 > Il pendio scende di 80 m dalle mura (righe 01-02, 950 m s.l.m.) alla piana,
-> che comincia alla riga 101 (870 m s.l.m.) `[INFERRED]`. La strada a tornanti
+> che comincia alla riga 101 (870 m s.l.m.) `[CANONE — DM 2026-11-04, P16, quota sul mare]`. La strada a tornanti
 > 🟫, larga 6 m, parte dal ponte (AD05) e piega in AW16, M35, AW54, M73 e AD90.
 >
 > ✅ Le altre due mappe di questo master **non hanno difetti**: la 2A è davvero

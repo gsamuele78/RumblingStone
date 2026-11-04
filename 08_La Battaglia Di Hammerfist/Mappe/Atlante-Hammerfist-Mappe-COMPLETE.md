@@ -105,7 +105,7 @@ questo file resta il master narrativo (descrizioni, immagini, prompt).
 
 **Tipo:** Infiltrazione tattica  
 **Scala:** 1 quadrato = 1,5 metri (la griglia della L1)  
-**Quota:** il fondo del canyon a ~900 m s.l.m., +30 m sulla piana `[INFERRED]`  
+**Quota:** il fondo del canyon a ~900 m s.l.m., +30 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
 **Livello Sfida:** CD 5-12 (variabile approccio)
 
 **Descrizione Scenario:**
@@ -146,7 +146,7 @@ SUD ↓
 
 **Tipo:** Osservazione tattica  
 **Scala:** 1 quadrato = 1,5 metri (la griglia della L1)  
-**Quota:** la base del torrione a ~930 m s.l.m., +60 m sulla piana del campo `[INFERRED]`  
+**Quota:** la base del torrione a ~930 m s.l.m., +60 m sulla piana del campo `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
 **Altezza:** Torrione 18m, Dirupo 40m caduta
 
 **Descrizione Scenario:**
@@ -201,7 +201,7 @@ Antica torre di guardia in pietra (rovina) si erge sul bordo di un dirupo scosce
 **Immagine:** [150] `hammerfist-1a3.png` — **reale (C3)**: `immagini/03.webp` (orda schierata)
 
 **Tipo:** Vista strategica narrativa  
-**Scala:** strategica, 3 m/quadretto; il campo è sulla piana (870 m s.l.m. `[INFERRED]`), a qualche miglio dalle mura e a 400 m dal Torrione; nell'assedio l'orda si riaccampa a 500 m-1 km dalle mura  
+**Scala:** strategica, 3 m/quadretto; il campo è sulla piana (870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`), a qualche miglio dalle mura e a 400 m dal Torrione; nell'assedio l'orda si riaccampa a 500 m-1 km dalle mura  
   ⚠️ **Vista strategica — NON è una griglia di combattimento.**
 **Visione:** Cannocchiale Dara dal Torrione
 
@@ -274,7 +274,7 @@ Alba Giorno 1 assedio. Esercito Mano Rossa dispiegato formazioni militari perfet
 - 25 Worg Riders (Sinistra)
 - 25 Worg Riders (Destra)
 
-**0m - DIFESE NANICHE (950 m s.l.m., +80 m sulla piana `[INFERRED]`):**
+**0m - DIFESE NANICHE (950 m s.l.m., +80 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Fossato 6m
 - Ponte Levatoio
 - Cancello Principale
@@ -432,11 +432,11 @@ Vista laterale sezionata (Sud-Nord) mostra tutti livelli verticali fortezza dall
 **Sezione Sud → Nord (Livelli Altezza):** le quote sono riferite alla piana; la tabella delle quote è in testa alla L2 (MISURE, «la fortezza a gradoni»).
 
 **ESTERNO SUD (Attaccanti):**
-- 0 m (870 m s.l.m. `[INFERRED]`): la piana, gli accampamenti a 500 m-1 km
+- 0 m (870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`): la piana, gli accampamenti a 500 m-1 km
 - Da 0 a +80 m: il pendio, ~300 m in pianta (~27%), e la strada a tornanti al 15%
 - Fossato: 3 m sotto il piede del muro
 
-**FRONTE SUD E CORTILE ESTERNO (+80 m, 950 m s.l.m. `[INFERRED]`):**
+**FRONTE SUD E CORTILE ESTERNO (+80 m, 950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Soglia del cancello e pavimento del cortile esterno: la quota di riferimento
 - +12 m sul cortile: camminamento delle mura
 - +15 m sul cortile: Bastioni Sud G1-G2
@@ -446,10 +446,10 @@ Vista laterale sezionata (Sud-Nord) mostra tutti livelli verticali fortezza dall
 - Una scarpa di 20 m fra il cortile esterno e quello interno, con due scale di 30 m e un pianerottolo
 - La Porta Interna (il muro del 372) sta in cima, soglia a +100 m
 
-**CORTILE INTERNO (+100 m, 970 m s.l.m. `[INFERRED]`):**
+**CORTILE INTERNO (+100 m, 970 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Comando Centrale qui (Protetto)
 
-**BASTIONI NORD E CITTADELLA (+120 m, 990 m s.l.m. `[INFERRED]`):**
+**BASTIONI NORD E CITTADELLA (+120 m, 990 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Bastioni Nord B1-B2, 20 m sopra il cortile interno, contro la roccia
 - Dietro il portale dell'atrio una scala interna sale alla cittadella
 - Cuore Montagna: Profondo interno (Sessione 3)
@@ -1130,12 +1130,12 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 **Timing:** Post-Cuore Montagna rally, prima carica finale
 
 **Descrizione Scenario:**
-Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfist fortress elevated rocky terrain 80 m above the plain (950 m s.l.m. `[INFERRED]`). 90 nani superstiti + 4 PG schierati fuori cancello principale (Ora controllano exit), ready charge downhill. Il pendio (~27%, la strada al 15%) favorisce momentum carica. 120 metri distanza, ~30 m più in basso: Resti esercito Mano Rossa (400 superstiti) demoralized, disorganized in valley below.
+Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfist fortress elevated rocky terrain 80 m above the plain (950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`). 90 nani superstiti + 4 PG schierati fuori cancello principale (Ora controllano exit), ready charge downhill. Il pendio (~27%, la strada al 15%) favorisce momentum carica. 120 metri distanza, ~30 m più in basso: Resti esercito Mano Rossa (400 superstiti) demoralized, disorganized in valley below.
 
 **Geografia Verticale:**
 
 **OVEST (Hammerfist):**
-- **Fortezza Base:** +80 m sulla piana (950 m s.l.m. `[INFERRED]`)
+- **Fortezza Base:** +80 m sulla piana (950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`)
 - **Cancello Principale:** Exit controllato nani (Ripreso Sessione 3 controffensiva)
 - **Pendenza:** ~27% sul pendio, 15% sulla strada a tornanti (120 m in pianta = ~30 m di quota, dalle mura alla linea hobgoblin a ~920 m)
 - **Vantaggio:** Gravity assist carica (Velocity +50%, Impact damage +2)

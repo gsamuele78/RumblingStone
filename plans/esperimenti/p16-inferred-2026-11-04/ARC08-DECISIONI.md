@@ -106,7 +106,7 @@ o superata, e la card lo dice con la prova; il resto è una decisione vera.
 **Risposte del DM, 2026-11-04.** Card 1 (morale): come scritte. Card 3 (drago e
 cavaliere): come scritte tranne la mira di Dara, tolta (Dara a +17 colpisce la
 CA 37 solo col 20, la CA 29 con 12). Card 4 (Grimjaw e il Re): come scritte.
-Card 6 (forze e pregen): come scritte. Card 2 (cancello e Gorthak): come scritte. Card 5 (ritirata e tunnel): come scritte, al Cuore arrivano 90 nani meno le perdite del Registro. L'ottagono del Cuore (L3, MAPPA 3Z) non era in nessuna card: è chiuso perché misurato sulla griglia (27 quadretti, 40,5 m); il condotto della sorgente (L3, MAPPA 5) va a una card sua. Nel testo la marca è
+Card 6 (forze e pregen): come scritte. Card 2 (cancello e Gorthak): come scritte. Card 5 (ritirata e tunnel): come scritte, al Cuore arrivano 90 nani meno le perdite del Registro. Card 7 (dopo la battaglia): come scritte. Quota sul mare: tenuta (piana 870 m), con i gradoni del DM del 2026-10-22 (+80, +100, +120 = 950, 970, 990 m); controllati coerenti: strada 530 m al 15% per 80 m, pendio 80 m su 300 m (27%), canyon +30 e torrione +60 sotto il fronte sud. Condotto della sorgente: tenuto, largo 1,5 m (corretta la COMPRENSIONE che diceva «carponi»), e nell'ondata 3 cinque bugbear lo risalgono e sbucano dietro l'altare. L'ottagono del Cuore (L3, MAPPA 3Z) non era in nessuna card: è chiuso perché misurato sulla griglia (27 quadretti, 40,5 m); il condotto della sorgente (L3, MAPPA 5) va a una card sua. Nel testo la marca è
 `[CANONE — DM 2026-11-04, P16, <tema>]`.
 
 ## 5. Parte B: le scelte del master, da fare canone in blocco

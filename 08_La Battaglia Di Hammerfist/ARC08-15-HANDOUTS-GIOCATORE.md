@@ -67,7 +67,7 @@
 >   alla fine della 3A con la Scena 2 di `ARC07-DEF-5`, poi
 >   `ARC08-11-PONTE-ARRIVO.md` §3.
 > - **La Mente Vuota di Thorik non blocca la visione**, perché la visione
->   viene dalla Corona stessa `[INFERRED — needs DM confirmation]`.
+>   viene dalla Corona stessa `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`.
 > - **Chi gioca chi.** Proposta: Borin a chi gioca Thorik, Thorin
 >   Runaforte a chi gioca Hella, Dara a chi gioca Tordek, Nala a chi gioca
 >   Artemis. Ognuno resta vicino al ruolo che sa già giocare.
