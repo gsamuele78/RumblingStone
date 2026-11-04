@@ -1696,7 +1696,7 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 **AZIONI INIZIALI RUMBLING STONES** *(proposte: decide il giocatore, e valgono i numeri della sua scheda)*:
 
 **THORIK (guerriero 13, Corona di Adamantio, Aegis Fang):**
-- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è `[INFERRED — needs DM confirmation]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
+- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è: conta il tempo di Thorik, per cui sono passati pochi giorni, non i mille anni del mondo `[CANONE — DM 2026-11-04, P16]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
 - **Aegis Fang** (+2 Ritornante *Dragondoom*, 1d10): un bersaglio per attacco. Lanciata vale come arma da lancio improvvisata (−4, incremento 3 m, gittata massima 15 m: SRD) e torna in mano.
 - **Movimento:** si mette davanti a Re Thorek.
 

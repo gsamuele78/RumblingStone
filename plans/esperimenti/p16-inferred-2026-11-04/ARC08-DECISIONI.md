@@ -70,6 +70,7 @@ abbassa al numero nuovo nello stesso commit.
    nella battaglia antica, mille anni prima ma pochi giorni prima per lui.
    *Consigliata*: conta il tempo di Thorik, quindi nella carica finale
    quella settimana non c'è.
+   ✅ **Decisa dal DM il 2026-11-04: come consigliata.** Applicata in GUIDA e scontri.
 4. **Borin che fa da scudo al Re contro il soffio (DEF-2 Scena 6).** In 3.5 un
    soffio a cono non si para con il corpo: chi è nel cono tira i Riflessi, e una
    creatura davanti non dà copertura contro un'area. Il master dava al Re metà
