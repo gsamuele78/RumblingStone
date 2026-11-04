@@ -633,8 +633,9 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   la torre nord con la porta che entra nella montagna a **+120 m**. Le tende
   stanno fra 500 m e 1 km dalle mura, e dalla spianata alla piana si scende
   per una strada a tornanti. Il profilo sotto la pianta le mette in fila. La
-  quota sul mare il DM non l'ha data: le direttive di M7-B e M7-C mettono la
-  piana a 870 m, come le mappe del 1372 di ARC-08 (cortile del duello a 970 m, che nel 1372 è il cortile interno) `[INFERRED — needs DM confirmation]`.
+  quota sul mare l'ha data il DM il 2026-11-04: la piana sta a 520 m, nella
+  fascia delle colline della carta della valle e sopra la piana di Dauth (490 m),
+  come nel 1372 di ARC-08 (cortile del duello a 620 m, che nel 1372 è il cortile interno) `[CANONE — DM 2026-11-04]`.
 - **La rampa della porta** `[INFERRED — needs DM confirmation]`. Gli arieti
   stanno sulla spianata, a +80, e la porta è a +100: dall'una all'altra sale una rampa
   di terra battuta e pietra, larga quanto un ariete e lunga circa 150 m,
@@ -719,7 +720,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
 @luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
-@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
+@quota 620 m ; s.l.m. [CANONE — DM 2026-11-04: piana a 520 m, come nel 1372 di ARC-08]
 @dislivello +100 m ; sulla piana dell'orda, a sud
 ```
 - **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 14** (capostipite
