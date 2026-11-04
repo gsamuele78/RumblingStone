@@ -553,7 +553,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
 | +80 m (950 m s.l.m. `[INFERRED]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
-| +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud) `[INFERRED]`; la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
+| +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud; 30 m su 110 m); la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
 | +50 → +20 m | Resti Mano Rossa (~400) schierati sul pendio, righe 39-55; la riga 68 è a circa +20 m | morale −6 dopo il Cuore della Montagna |
 | 0 m (870 m s.l.m. `[INFERRED]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |

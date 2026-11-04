@@ -2220,7 +2220,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 
 **BONUS DELLA CARICA** *(regole SRD e regolamento di massa, `ARC08-02` §4)*:
 - **Morale: vale solo il più alto** (SRD: due bonus dello stesso tipo non si sommano). Candidati: *Aura della Forgia Eterna* di Thorik +4, se questa settimana non è già spesa; il discorso di Re Thorek +4; il canto delle Cantitrici; la melodia di Tempestas +2. Nel regolamento di massa il morale di un'unità va da −5 a +5.
-- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto») `[INFERRED — needs DM confirmation]`.
+- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto»): senza l'incantesimo il +4 non c'è (SRD, i bonus vengono da una fonte).
 - **Carica:** +2 al tiro per colpire (SRD); nessun bonus ai danni.
 - **Terreno in discesa:** +1 al tiro per colpire dall'altura (SRD).
 

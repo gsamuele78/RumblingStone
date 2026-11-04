@@ -21,7 +21,8 @@ La distinzione che rende il gate utile
   - **aperti** — documenti vivi: canone, moduli d'arco, bestiario, schede PG.
     È il debito vero, ed è l'unico numero che il ratchet sorveglia.
   - **storici** — `plans/**` e i changelog: raccontano debiti, non li aprono.
-  - **meta** — `docs/audit/**`: citano il marcatore *per misurarlo*.
+  - **meta** — `docs/audit/**`, e le righe che *nominano* la convenzione
+    («oggetti marcati `[INFERRED]`»): citano il marcatore, non lo aprono.
 
   I record tipizzati di `campaign/state.yaml` (`inferred:`) sono elencati per
   primi e a parte: sono gli unici che portano già **la domanda da fare al DM**,
@@ -50,6 +51,7 @@ Exit  0 = ok · 1 = il debito aperto è salito sopra la baseline · 2 = errore d
 from __future__ import annotations
 
 import argparse
+import bisect
 import json
 import re
 import sys
@@ -65,10 +67,24 @@ SKIP_DIRS = {".git", "build", ".claude", ".cursor", ".gemini", ".chatgpt",
              ".windsurf", ".kilo", ".agents", ".github", "_ARCHIVIO", "Old"}
 SUFFISSI = {".md", ".yaml", ".yml"}
 
-MARCATORE = re.compile(r"\[INFERRED(?P<coda>[^\]]*)\]")
+# La nota può andare a capo, al massimo tre volte (oltre è un refuso).
+MARCATORE = re.compile(r"\[INFERRED(?P<coda>[^\]\n]*(?:\n[^\]\n]*){0,3})\]")
 
 # `[INFERRED` seguito da `:` o ` —` porta una nota; da solo è nudo.
 NOTA = re.compile(r"^\s*[—:-]\s*(?P<testo>.+)$")
+
+# Una riga che *nomina* la convenzione («oggetti marcati `[INFERRED]`», «flag
+# [INFERRED]», «`null` = [INFERRED]») non apre un debito: dice come si marca.
+# Si guarda solo il testo subito prima del marcatore (P16, 2026-11-04).
+CONVENZIONE = re.compile(
+    r"(?:\bmarcat\w*|\bmarcar\w*|\bflag\w*|\bmarche|\bmarcature|\bmarcatore"
+    r"|\bnon (?:è |sono )?più|`?null`? =|\bscelte)\s*(?:come\s*)?[`(\"«]*\s*$",
+    re.IGNORECASE)
+
+
+def cita_la_convenzione(prima: str) -> bool:
+    """Vero se il marcatore è l'oggetto di «marcato», «flag» e simili."""
+    return bool(CONVENZIONE.search(prima))
 
 
 def classe(rel: str) -> str:
@@ -125,18 +141,29 @@ def scansiona(base: Path) -> list[dict]:
         except OSError:
             continue
         rel = _rel(p, base)
-        for lineno, riga in enumerate(testo.splitlines(), start=1):
-            for m in MARCATORE.finditer(riga):
-                coda = m.group("coda").strip()
-                nota = NOTA.match(coda)
-                trovati.append({
-                    "file": rel,
-                    "line": lineno,
-                    "classe": classe(rel),
-                    "area": area(rel),
-                    "nota": nota.group("testo").strip() if nota else "",
-                    "contesto": riga.strip()[:180],
-                })
+        righe = testo.splitlines()
+        # Sul testo intero, non riga per riga: un marcatore lungo va a capo
+        # dentro le parentesi, e per riga non si vedeva (P16, 2026-11-04).
+        inizi = [0]
+        for r in righe:
+            inizi.append(inizi[-1] + len(r) + 1)
+        for m in MARCATORE.finditer(testo):
+            lineno = bisect.bisect_right(inizi, m.start())
+            riga = righe[lineno - 1] if lineno - 1 < len(righe) else ""
+            col = m.start() - inizi[lineno - 1]
+            coda = " ".join(m.group("coda").split())
+            nota = NOTA.match(coda)
+            cl = classe(rel)
+            if cl == "aperti" and cita_la_convenzione(riga[:col]):
+                cl = "meta"
+            trovati.append({
+                "file": rel,
+                "line": lineno,
+                "classe": cl,
+                "area": area(rel),
+                "nota": nota.group("testo").strip() if nota else "",
+                "contesto": riga.strip()[:180],
+            })
     return trovati
 
 
@@ -179,7 +206,8 @@ def scrivi_inventario(trovati: list[dict], tipizzati: list[dict]) -> str:
       "bestiario, schede. **È il debito vero**, ed è l'unico numero sorvegliato |")
     w(f"| storici | {per_classe['storici']} | `plans/**` e i changelog: *raccontano* un "
       "debito, non lo aprono. Contarli renderebbe il totale incapace di scendere |")
-    w(f"| meta | {per_classe['meta']} | `docs/audit/**`: citano il marcatore **per misurarlo** |")
+    w(f"| meta | {per_classe['meta']} | `docs/audit/**` e le righe che nominano la convenzione "
+      "(«marcati `[INFERRED]`»): citano il marcatore, **non lo aprono** |")
     w("")
 
     if tipizzati:

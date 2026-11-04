@@ -1354,7 +1354,7 @@ da **+1**; le leve di morale si sommano, tetto ±5, sui dadi ±2.
 |---|---|---|
 | 1A · Osservare 25 o più (l'«Intelligence completa») | il Giorno 1, ogni giocatore vede all'inizio di ogni round il primo reparto del mazzo del suo settore | §5.1 Ricognizione «pieno» |
 | 1A · Osservare 20-24 | nessuna | §5.1 Ricognizione «parziale» |
-| 1A · Osservare sotto 20, senza allarme | nessuna | §5.1 Ricognizione «parziale» `[INFERRED — il triage non dava il gradino sotto 20]` |
+| 1A · Osservare sotto 20, senza allarme | nessuna | §5.1 Ricognizione «parziale» («fallito» vuole l'allarme; le righe non elencate valgono «parziale», `ARC08-10` §5.5) |
 | 1A · allarme, e nessuna vista | nella Scena 8 i lupi hanno fronte due dal round 1 | §5.1 Ricognizione «fallito» (+50 rinforzi nel finale) |
 | 1A · «visti ma via» | nella Scena 8 i lupi hanno fronte due dal round 1 | |
 | 1A · «pulito» («Eliminazione silenziosa») | la carta **I giganti** non si gioca il Giorno 1 | |

@@ -504,7 +504,7 @@ I box sono nelle **Scene 2 e 4**.
 **Dati per il DM.** Il settore **Mura** del libretto è la cinta sud fra i
 bastioni e le torri, merlatura di 1,5 m e camminamento di 4,5 m, alta 12 m.
 Il Muro Est (CM-CP, righe 59-63 della 2A) sta nel settore della **Torre
-Est** `[INFERRED]`: se quel settore cede il Giorno 2, la breccia di 7,5 m si
+Est** (stesse colonne CM-CP della torre, MAPPA 2A): se quel settore cede il Giorno 2, la breccia di 7,5 m si
 apre lì, e la cima della torre crolla (MAPPA 4, stati C e D). Se non cede,
 la breccia non si apre: gli stati della MAPPA 4 sono un ritmo, non un copione
 (`ARC08-10` §0).
@@ -1105,7 +1105,7 @@ prima il round di battaglia di tutti, poi la mappa, e chi non è nel duello
 muove due degli orog. Il
 duello si gioca sulla MAPPA 2A, in cima alla rampa e sul camminamento: se la
 carta è nella Torre Est, alla breccia del Muro Est (CM-CP 59-63), che è aperta
-o si apre lì sotto i colpi dei giganti `[INFERRED]`.
+o si apre lì sotto i colpi dei giganti (Scena 3, il Muro Est).
 
 | Chi | Dove | Cosa fa |
 |---|---|---|
@@ -1171,8 +1171,8 @@ il libretto ha già dentro i mazzi.*
 **La riserva.** Il primo settore che cede, il Giorno 1 o il Giorno 2,
 riceve la riserva come terzo reparto: due di balestrieri e uno di veterani
 sono **tre reparti**, e il gruppo ne sceglie uno; gli altri due restano nel
-cortile per il settore dopo `[INFERRED — il libretto dice «entra come terzo
-reparto», al singolare]`. Quando entra, il morale sale di **3** `[INFERRED — la riserva a +3]`.
+cortile per il settore dopo (il libretto dice «entra come terzo
+reparto», al singolare). Quando entra, il morale sale di **3** `[INFERRED — la riserva a +3]`.
 
 > **Read-aloud (Casa di Davide lead) — il cortile esterno, la riserva.** *Il
 > capitano della riserva si alza dalla cassa prima che il corno abbia finito.
@@ -1267,9 +1267,10 @@ mappa.
 | **4** | nessuna | il corno della ritirata alla fine del round |
 
 Il round 2 di battaglia lo tirano i reparti da soli: al corno i quattro eroi
-corrono al cancello (Dara resta sulla Torre Ovest e tira da lì), e nessun
-settore prende tacche in quel round `[INFERRED — è il Sfidare di tutti e
-quattro]`. Il soffio sulle Mura viene prima del corno: Thorin, se è sulle
+corrono al cancello (Dara resta sulla Torre Ovest e tira da lì), e ogni
+settore lasciato da un eroe prende le sue tacche, come per chi scende a un
+duello; la Torre Ovest no, perché Dara tira dalla torre (`[CANONE — DM
+2026-10-22]`, domanda 14; prima qui nessun settore prendeva tacche). Il soffio sulle Mura viene prima del corno: Thorin, se è sulle
 Mura, tira Riflessi CD 29 contro 14d4 come i suoi reparti.
 
 Nei round 3 e 4 ogni eroe sceglie: resta col Re (il suo settore tira senza
