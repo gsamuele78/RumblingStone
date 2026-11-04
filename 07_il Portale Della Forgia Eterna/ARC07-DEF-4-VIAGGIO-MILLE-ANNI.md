@@ -426,7 +426,7 @@ sessioni del viaggio<!-- storico --> (la serata del 2026-09-25)<!-- /storico -->
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
 dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
-**Dove sale l'assalto** `[INFERRED — needs DM confirmation]`. Gli arieti si
+**Dove sale l'assalto** `[CANONE — DM 2026-11-04, P16, le mura del 372]`. Gli arieti si
 montano sulla spianata degli arieti, a +80, e salgono alla porta, a +100, per
 una rampa addossata al gradone. Le scale salgono sul tratto est, dove il fianco
 della montagna arriva al piede delle mura; sul fronte sud le mura stanno sul
@@ -505,7 +505,7 @@ Quando la testa torna a posto, guardano dove sono.
 delle mura**, un quarto d'ora prima del buio. Il bosco copre la spalla della
 montagna a est: dove il portale li lascia è poco sopra la quota delle mura, e
 da lì scende fino al margine del campo, sulla piana, 100 m più in basso
-`[INFERRED — needs DM confirmation]`. È autunno inoltrato: **5 °C**, il
+`[CANONE — DM 2026-11-04, P16, le mura del 372]`. È autunno inoltrato: **5 °C**, il
 fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
 contare con il consiglio, che è la prima delle sue otto tacche: le prime
@@ -1914,7 +1914,7 @@ usa due cose diverse, e tutte e due si possono fare:
   come un visibile. Chi nel gruppo non è nano passa senza niente. Hella in
   forma selvatica resta una nana per la runa: la forma selvatica funziona
   come la forma alternativa dell'SRD, che conserva tipo e sottotipo. Da
-  aquila la fa scattare come da nana `[INFERRED — needs DM confirmation]`.
+  aquila la fa scattare come da nana `[CANONE — DM 2026-11-04, P16, già risolta, SRD forma alternativa]`.
 - **Il silenzio spegne i glifi, non la soglia.** Dentro la bolla della pietra
   nessuno subisce danni sonori e il boato non esce. *Epurare* invece non fa
   rumore, e il silenzio non lo ferma: chi varca la soglia invisibile si ritrova
@@ -3013,7 +3013,7 @@ leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
 piana si vede tutta, 100 m sotto. Il primo ariete sale dalla spianata alla
 porta per la rampa del fronte sud; le scale arrivano sul tratto est, dove il
 fianco della montagna tocca il piede delle mura, ed è lì che sta Hrodgar
-`[INFERRED — needs DM confirmation]` (M7-A, «La rampa della porta»).
+`[CANONE — DM 2026-11-04, P16, le mura del 372]` (M7-A, «La rampa della porta»).
 
 Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 
@@ -3090,7 +3090,7 @@ ed è per questo che vuole buttare giù chi ha davanti.
   guaio è dove si atterra. Chi cade fuori ha un round per rialzarsi, e intorno
   ci sono scale e uncini. Vale per il tratto est, dove fuori c'è il pendio. Dal
   muro sud, che sta sul ciglio del gradone, si cade sulla spianata, 24,5 m più
-  in basso: 8d6 `[INFERRED — needs DM confirmation]`.
+  in basso: 8d6 `[CANONE — DM 2026-11-04, P16, già risolta, SRD caduta]`.
 - **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
   per inseguire nessuno: la breccia è sua.
 - **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
@@ -4558,8 +4558,8 @@ Lo schema ASCII di prima, da cui è stato disegnato lo schema (`scripts/render_s
  tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
-confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
+▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [CANONE — DM 2026-11-04,
+P16, le mura del 372] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
 del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
 della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
 fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗

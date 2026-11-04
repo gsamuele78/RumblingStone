@@ -58,3 +58,8 @@ quattro volumi `.hb.md`, poi `inventory_inferred.py --update-baseline` e
 `memoria.py`.
 
 **Da rivedere se** il DM cambia le quote del 372 o la scheda di Skullcrusher.
+
+## 5. Risposte del DM (2026-11-04)
+
+- Card R (chiuse perché risolte): sì, R1-R4 chiuse.
+- Card 1 (mura del 372): come scritte.

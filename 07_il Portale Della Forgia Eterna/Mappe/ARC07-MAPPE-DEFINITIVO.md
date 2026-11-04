@@ -607,8 +607,8 @@ croce. Therysol veglia ai margini (testimone, non officiante).
  tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
-confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
+▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [CANONE — DM 2026-11-04,
+P16, le mura del 372] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
 del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
 della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
 fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
@@ -636,7 +636,7 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   quota sul mare l'ha data il DM il 2026-11-04: la piana sta a 520 m, nella
   fascia delle colline della carta della valle e sopra la piana di Dauth (490 m),
   come nel 1372 di ARC-08 (cortile del duello a 620 m, che nel 1372 è il cortile interno) `[CANONE — DM 2026-11-04]`.
-- **La rampa della porta** `[INFERRED — needs DM confirmation]`. Gli arieti
+- **La rampa della porta** `[CANONE — DM 2026-11-04, P16, le mura del 372]`. Gli arieti
   stanno sulla spianata, a +80, e la porta è a +100: dall'una all'altra sale una rampa
   di terra battuta e pietra, larga quanto un ariete e lunga circa 150 m,
   addossata al gradone sotto il muro sud. Gli arieti si montano sulla spianata
@@ -645,7 +645,7 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   stanno sul ciglio, 24,5 m sopra la spianata: salgono sul tratto est, dove il
   fianco della montagna arriva al piede delle mura. È il camminamento est di
   Hrodgar (DEF-4 Scena 10).
-- **La torre nord** `[INFERRED — needs DM confirmation]`. Sta sul gradone di
+- **La torre nord** `[CANONE — DM 2026-11-04, P16, già risolta, quote del 2026-10-22]`. Sta sul gradone di
   +120, sopra il muro nord del cortile: su M7-B la riga 04 è il piede della
   roccia, S04 la base della torre e della sua scala, che sale di 20 m dentro
   la pietra. La porta di O-P04 entra nella montagna al livello del cortile,
