@@ -103,6 +103,12 @@ o superata, e la card lo dice con la prova; il resto è una decisione vera.
   `a3-arc08/` e nel canone del 2026-10-30 sul Cuore della Montagna (che fissa lo
   schieramento in ARC-07, non quanti nani arrivano al Cuore in ARC-08).
 
+**Risposte del DM, 2026-11-04.** Card 1 (morale): come scritte. Card 3 (drago e
+cavaliere): come scritte tranne la mira di Dara, tolta (Dara a +17 colpisce la
+CA 37 solo col 20, la CA 29 con 12). Card 4 (Grimjaw e il Re): come scritte.
+Card 6 (forze e pregen): come scritte. Nel testo la marca è
+`[CANONE — DM 2026-11-04, P16, <tema>]`.
+
 ## 5. Parte B: le scelte del master, da fare canone in blocco
 
 Sono le marcature in cui il master ha già scritto una scelta, e la scelta è la

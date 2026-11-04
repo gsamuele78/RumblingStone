@@ -356,8 +356,8 @@ reparti, non ai gesti.
 | la riserva entra nel settore caduto `[INFERRED — la riserva a +3]` | +3 |
 | un comandante nemico fugge | +2 |
 | un giorno senza brecce | +1, la notte |
-| il sorvolo: un eroe colpisce il drago `[INFERRED]` | +1 |
-| il Re cade sul cancello `[INFERRED — il Re ferito nel libretto]` | −2 |
+| il sorvolo: un eroe colpisce il drago `[CANONE — DM 2026-11-04, P16, il morale]` | +1 |
+| il Re cade sul cancello `[CANONE — DM 2026-11-04, P16, il morale]` | −2 |
 
 Il reparto distrutto, il settore che cede, il comandante che fugge e il
 giorno senza brecce sono nel libretto (§6). Le altre quattro righe i
@@ -658,7 +658,7 @@ gigante al gomito invece che contro un reparto: +23, con −2 a −6 per la
 distanza (50-100 m, l'arco ha incrementi di 33 m), contro **CA 20** (gigante
 delle colline, SRD: 102 pf, e un colpo non lo abbatte). Non toglie PFU all'orda, quindi non salva il suo settore dalla tacca, ma
 se colpisce **il macigno di quel round, nel settore che sceglie, non parte**
-`[INFERRED — la carta non lo prevede; non provato negli script]`. Lo stesso
+`[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`. Lo stesso
 vale per la balista di una torre, d20 + 10. I giganti sono otto, sulla
 strada fra il primo e il secondo gomito, a 50-100 m dalle mura
 `[CANONE — DM: otto giganti]`.
@@ -746,8 +746,7 @@ eroe tira dalla cinta sopra il ponte (entro 27 m, tre incrementi del
 giavellotto), al round dopo Gorthak lancia un giavellotto (+12,
 1d8+9) invece del secondo randello. La centrale, una volta nel duello, rinuncia
 a un attacco e grida in gigante agli orchi della riva: un reparto in più sul
-fronte del Cancello, il round dopo `[INFERRED — la scheda dà +2 morale a
-un'unità alleata]`.
+fronte del Cancello, il round dopo `[CANONE — DM 2026-11-04, P16, il morale]`.
 
 **Sotto i 101 pf** `[INFERRED — Gorthak sotto metà]`: per un round la testa sinistra
 vince, e Gorthak è in Furia (+4 Forza: randelli +23, danni 2d6+12 e 2d6+6;
@@ -779,7 +778,7 @@ finale.*
 
 #### Il sorvolo (élite 2B)
 
-Al round 4, dopo la palla di fuoco `[INFERRED — il sorvolo del Giorno 1]`:
+Al round 4, dopo la palla di fuoco `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`:
 
 > **Read-aloud (Tolkien lead) — il cielo sopra le torri.** *L'ombra passa
 > sulle mura prima del drago. Tutti alzano la testa nello stesso momento,
@@ -829,7 +828,7 @@ gesto del round.
 - **Borin**: niente che arrivi a 45 m. La sua Presenza Comandante dà +2 ai
   TS contro la Presenza del drago a chi gli sta entro 9 m.
 
-Un colpo a segno vale **+1** al morale `[INFERRED]`: la rocca vede che sanguina.
+Un colpo a segno vale **+1** al morale `[CANONE — DM 2026-11-04, P16, il morale]`: la rocca vede che sanguina.
 I danni del sorvolo non passano al Giorno 3: il drago torna alla palude e
 guarisce, e il Giorno 3 riparte da 337. Nemmeno al finale contano: lì il suo
 statblocco dipende dal carry-over di ARC-07 (`ARC08-10` §4.1). Contano solo
@@ -1081,7 +1080,7 @@ lontana, lo sa dai reparti il round dopo.
 d'assedio invece che dalla rampa: il box si legge con «la scala» al posto
 di «la rampa», e «dove la pietra del muro è già rotta», e il resto vale.
 
-**Finché la carta c'è** `[INFERRED — Grimjaw senza sfidante]`, i reparti dell'orda nel
+**Finché la carta c'è** `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]`, i reparti dell'orda nel
 suo settore hanno **+1 ad AU e DU** (Tattico Superiore): il bianco (22 + AU)
 sale di uno con loro, non di due.
 
@@ -1111,11 +1110,11 @@ una pozione sotto i 60 e ripiegare sotto i 30: nell'assedio vale la soglia
 del libretto, che arriva prima.
 
 **Se nessuno lo sfida** entro la fine del round 2, il Re scende dal cortile
-interno a cercarlo `[INFERRED — Grimjaw senza sfidante]`. Si racconta, non si tira: due
+interno a cercarlo `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]`. Si racconta, non si tira: due
 re sulla rampa, e le due file che smettono di combattere per guardarli. La conseguenza:
 - La carta esce dal giorno come se Grimjaw fosse fuggito, **senza** il +2 al
   morale: il Re lo ricaccia, non lo sconfigge.
-- Il Re torna con **4d10+20** danni `[INFERRED]`, da segnare: la notte Dana
+- Il Re torna con **4d10+20** danni `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]`, da segnare: la notte Dana
   lo rimette a 196 con una *guarigione* (Scena 3), se ne ha ancora una.
 - «Comandanti logorati», per Grimjaw, resta vuoto: lo ha logorato il Re, e
   il finale lo sa (`ARC08-10` §5.2 conta i comandanti fuggiti).
@@ -1151,7 +1150,7 @@ Il canto non è una carta: è la ragione per cui le Mura devono reggere.
 
 Il Coro della Montagna (*terremoto* sulla roccia, CD 22) fa crollare la
 rampa: il Giorno 3 la breccia del Muro Est, se c'è, non ha la rampa davanti,
-e la Torre Est comincia il giorno con il fronte a 1 `[INFERRED]`.
+e la Torre Est comincia il giorno con il fronte a 1 `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]`.
 
 <!-- storico -->
 *La prima stesura metteva il canto nel cortile, con cinque ondate e un
@@ -1255,7 +1254,7 @@ mappa.
 |---|---|---|
 | **1** | il cancello è caduto: non è una breccia, il Cancello combatte nell'androne, e il fronte resta quello del Giorno 2 `[INFERRED]`. **Grimjaw e la guardia nera**, se il DM gioca la carta: nel settore dove il Giorno 2 non è stato sfidato, o dove è fuggito, coi pf che la notte gli ha lasciato. Si può Sfidare come nella Scena 4, e al corno del drago la guardia lo porta via: la carta esce, senza il +2 | il cancello, il box sopra |
 | **2** | **Il soffio**: ogni reparto sulle Mura perde 1d4 PFU. Poi **il corno del drago**, e la scena del soffio sulla mappa | il box del corno, sotto |
-| **3** | nessuna | il Re a terra sul cancello: morale −2 `[INFERRED — il Re ferito nel libretto]` |
+| **3** | nessuna | il Re a terra sul cancello: morale −2 `[CANONE — DM 2026-11-04, P16, il morale]` |
 | **4** | nessuna | il corno della ritirata alla fine del round |
 
 Il round 2 di battaglia lo tirano i reparti da soli: al corno i quattro eroi
@@ -1325,7 +1324,7 @@ di corsa: arriva al round 2 della sequenza.
 | **2** | scende a 45 m e gira sopra il fossato, cercando il Re. **Presenza terrificante**: Volontà CD 25 per tutti entro 90 m | Dara mira; Nala lancia l'illusione; Thorin protegge |
 | **3** | prepara il **soffio a cono** con un round completo (house-rule della scheda, 1/giorno) e si mette in posizione, a 30 m sopra il fossato, sud | l'ultimo round per spostare il Re, o per colpire prima |
 | **4** | **il soffio a cono**: con Attacco in Volo scende, soffia e risale nello stesso round. 18 m centrato sul Re, 14d4 acido, Riflessi **CD 29** dimezza | vedi sotto |
-| **5** | **la picchiata**: Fauci carica la piattaforma e passa senza fermarsi; il cavaliere, in sella, colpisce il Re con la lancia (+18 in carica contro CA 30, 3d8+21 con Carica Devastante, e Punire il Bene +2/+4) `[INFERRED — l'attacco del cavaliere nella picchiata]`. Un soffio e una carica non stanno nello stesso round: per questo la lancia viene dopo | l'ultimo round per mettersi davanti al Re, o per tirare al cavaliere |
+| **5** | **la picchiata**: Fauci carica la piattaforma e passa senza fermarsi; il cavaliere, in sella, colpisce il Re con la lancia (+18 in carica contro CA 30, 3d8+21 con Carica Devastante, e Punire il Bene +2/+4) `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`. Un soffio e una carica non stanno nello stesso round: per questo la lancia viene dopo | l'ultimo round per mettersi davanti al Re, o per tirare al cavaliere |
 
 Al round 2, quando il drago scende:
 
@@ -1372,12 +1371,12 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
   DM lo dice prima che scelga.
 
 **Dara** — il tiro impossibile.
-- Al round 2 mira (azione completa, +1 al tiro dopo `[INFERRED — non è una
-  regola SRD; la guida lo dava]`), dal round 3 tira: arco +21 con Nemico
-  Prescelto, +1 della mira, −4 per la distanza (circa 80 m, terzo
-  incremento), contro CA 37: colpisce col 19 o 20. Con Tiro Rapido quattro
-  frecce: +19/+19/+14/+9 più gli stessi modificatori. Contro CA 29, se
-  Thorin o Nala hanno dissolto *scudo* e *armatura magica*, colpisce con 11.
+- Al round 2 prende la mira, ma la mira non dà bonus: in 3.5 nessuna regola
+  lo prevede `[CANONE — DM 2026-11-04, P16: la guida dava +1, tolto]`. Dal
+  round 3 tira: arco +21 con Nemico Prescelto, −4 per la distanza (circa
+  80 m, terzo incremento), contro CA 37: colpisce solo col 20. Con Tiro Rapido
+  quattro frecce: +19/+19/+14/+9 più gli stessi modificatori. Contro CA 29, se
+  Thorin o Nala hanno dissolto *scudo* e *armatura magica*, colpisce con 12.
 - **Oppure il cavaliere**: CA 23, 95 pf, a cavallo del collo. Con +15 (+19
   senza Nemico Prescelto, −4 di distanza) colpisce con 8: con Tiro Rapido fa
   circa 15 danni a round, e gliene servono sei. Da sola non lo abbatte prima
@@ -1422,7 +1421,7 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
   crede (SRD). Fauci tira Volontà +19 contro **CD 15** solo se la studia o ci
   soffia sopra, e allora la riconosce salvo un 1; per un round il drago gira
   invece di scendere. La sequenza slitta di un round
-  `[INFERRED]`.
+  `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`.
 - ***Frantumare*** sulla sella del cavaliere: la sella non è di cristallo, e
   l'incantesimo spezza solo oggetti fragili (SRD). Non serve. La prima
   stesura dava 5d6 alla cavalcatura.
@@ -1466,8 +1465,7 @@ piedi. Al tavolo si conta così.
 Il finale lo sa: §5.3 legge «pieno» se il Re è vivo.
 
 **Gli effetti del soffio** (MAPPA 2B, «Meccanica del soffio»). Le armature nel
-cono perdono 1d4 punti di CA, per sempre `[INFERRED — la guida lo dava; l'SRD
-non ha questa regola]`; i quadretti colpiti sono terreno difficile per 10
+cono perdono 1d4 punti di CA, per sempre `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`; i quadretti colpiti sono terreno difficile per 10
 minuti. Delle dodici guardie sulla piattaforma ne cadono sei-otto: è un numero
 fisso, e il DM non lo tira.
 
@@ -1498,7 +1496,7 @@ Se il Re muore qui, vale `ARC08-10` §2 prima di permetterlo.*
 #### I round 3 e 4
 
 Il libretto riprende senza la carta. Il morale ha il **−2** del Re a terra
-`[INFERRED — il Re ferito nel libretto]`. Alla fine del round 4 suona il corno della ritirata
+`[CANONE — DM 2026-11-04, P16, il morale]`. Alla fine del round 4 suona il corno della ritirata
 (la carta «La ritirata»). Si contano i **reparti vivi**: è la riga
 «Posizioni tenute» (`ARC08-19` §4: tre quarti o più pieno, da un terzo a tre
 quarti parziale, meno di un terzo fallito).

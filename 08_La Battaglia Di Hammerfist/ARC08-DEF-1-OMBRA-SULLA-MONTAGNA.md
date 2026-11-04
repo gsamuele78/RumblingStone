@@ -897,8 +897,7 @@ Cancello è il bersaglio di Gorthak; un re che cade il primo giorno fa cadere
 le mura), lo convince a tenere il comando dal cortile. Se non lo convince, il
 Re sta al Cancello il Giorno 1 accanto a Borin: i numeri non cambiano, ma la
 carta di Gorthak al Cancello diventa il pericolo del Re, e il DM lo racconta
-così `[INFERRED — la scelta del Re è narrativa: nessuna regola del libretto la
-legge]`.
+così `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]`.
 
 **La Madre Superiora e le Cantitrici.** Dana vuole le Cantitrici sulle
 Mura. Se i quattro la sostengono, è lì che il secondo giorno saranno da
@@ -1040,8 +1039,7 @@ coi fatti: le baliste lo colpiscono e non succede niente.
     **14d4 acido**, Riflessi **CD 29** dimezza. Poi se ne va, in due round.
 - **Il fumo.** Sulla postazione colpita l'acido scioglie la pietra e alza un
   fumo che morde la gola: chi resta entro 3 m tira Tempra **CD 15**, o è
-  nauseato per 1 round `[INFERRED — il fumo non ha numeri nella scheda di
-  Fauci]`.
+  nauseato per 1 round `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`.
 - **Per chi non vola.** Nessuno dei quattro vola, e non serve: il drago non
   si combatte. Chi resta a terra ha le armi a distanza e gli incantesimi
   qui sopra, oppure tiene i nani al riparo (l'opzione «Ignorarlo»).
@@ -1253,8 +1251,7 @@ Ogni squadra travolta o a 0 PFU ha tolto 1 al morale.
   la ritirata alla fine del 4.
 - **Il tavolo va troppo liscio** (nessuna tacca ai round 1 e 2): l'orda
   **terrificante** (+1 ad AU e DU, `ARC08-19` §4) dal round 3. È la versione
-  più dura, quella che il DM preferisce `[INFERRED — gli script non l'hanno
-  provata sul pendio]`.
+  più dura, quella che il DM preferisce `[CANONE — DM 2026-11-04, P16, il morale]`.
 - **Il tavolo è in difficoltà** (due squadre con due tacche al round 2):
   l'orda **normale** (−1 ad AU e DU) per il resto della scena, e il DM lo dice
   come un fatto del pendio: il sole basso negli occhi dei lupi.
@@ -1431,7 +1428,7 @@ avanti.
 |---|---|---|
 | **Le leve** (tabella del §7) | l'alba del Giorno 1, Sessione 2 | si leggono ad alta voce, prima del primo round |
 | **Il sergente fuggito** | il Giorno 1 o il Giorno 2 | è nelle file degli hobgoblin, con un reparto suo: il DM lo racconta quando la carta di Grimjaw esce, e i giocatori lo riconoscono dall'armatura nanica |
-| **Chi Grimjaw ha visto sul pendio** | la carta «Grimjaw e la guardia nera», Giorni 2-3 | Grimjaw cerca quell'eroe, se ha sfidato il sergente o ha fatto la retroguardia `[INFERRED]` |
+| **Chi Grimjaw ha visto sul pendio** | la carta «Grimjaw e la guardia nera», Giorni 2-3 | Grimjaw cerca quell'eroe, se ha sfidato il sergente o ha fatto la retroguardia `[CANONE — DM 2026-11-04, P16, Grimjaw e il Re]` |
 | **Il torrione sciolto dal drago** | nessuna regola | se Dara l'ha visto, lo racconta lei: è la prima cosa che il drago le ha tolto |
 | **Il Re al Cancello** | il Giorno 1 | se Borin non l'ha convinto, il Re è accanto a lui quando arriva Gorthak |
 | **Le Cantitrici sulle Mura** | l'alba del Giorno 2 | l'obiettivo «Cantitrici protette» (`ARC08-19` §4) |
@@ -1544,8 +1541,7 @@ incantesimo di 2°), *silenzio*, *suggestione*, *velocità*, e la musica
 bardica. Nala non ha pozioni: lancia spontanea, e i suoi incantesimi di 2° al
 giorno sono quattro.
 
-**Restano da verificare** `[INFERRED — da chiudere sul manuale, non per
-gusto]`: il punto in più di Dara a Osservare e Ascoltare (+18 sullo
+**Restano da verificare** `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`: il punto in più di Dara a Osservare e Ascoltare (+18 sullo
 statblocco, +17 dal conto: lo si legge come un bonus dell'Esploratrice dei
 Picchi); i punti abilità della Spia Maestra di Nala (8 + Int a livello) e se
 Osservare è un'abilità di classe della Spia Maestra.
