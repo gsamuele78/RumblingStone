@@ -64,7 +64,7 @@
 >    Giorno 3; la sua carta dei poteri non le ha. Il master le fa dare dal Re
 >    all'alba del Giorno 3, dall'armeria: se il DM non le vuole, Dara tira con
 >    Nemico Prescelto (draghi) e basta.
-> 10. **Quanti nani arrivano al Cuore.** La 3A dice 90; H3-1 parte da 90 e
+> 10. **Quanti nani arrivano al Cuore.** Decisa `[CANONE — DM 2026-11-04, P16]`: sì, la 3A comincia con quelli che restano. La 3A dice 90; H3-1 parte da 90 e
 >     l'imboscata ne costa 5-15. Il master tiene i 90 come tetto e scrive le
 >     perdite nel Registro: la 3A comincia con quelli che restano?
 > 11. **Il sorvolo del Giorno 1** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. non è una carta del mazzo: il master lo gioca
@@ -1539,7 +1539,7 @@ Conoscenze (storia) o *sapere bardico* **CD 15** (Nala, +10: sa dove
 spingere). Ci prova chi è lì; ogni tentativo è un round, e finché la statua
 è chiusa non passa nessuno. Le lanterne della Sessione 1 bruciano alla base,
 e Nala ha **+2**: qualcuno ha già toccato la pietra giusta, mille volte
-`[INFERRED]`.
+`[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`.
 
 **Le tre fasi**, sei round l'una. All'inizio di ogni fase ogni pregen sceglie
 una via da tenere, o resta col Re.
@@ -1568,7 +1568,7 @@ di pietra]`. Se lo lancia qui, al Cuore non ce l'ha più: il DM lo dice prima.
 **Gli esiti** (MAPPA H3-1, stato E): tutti e 90 salvi (Re salvo); 80-89 (dieci
 lasciati alla retroguardia); meno di 80, e il rischio che la colonna si
 spezzi. Si scrivono nel Registro (`ARC08-03`) e passano alla 3A
-`[INFERRED — quanti nani al Cuore]`.
+`[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`.
 
 **Il Re, sulla barella**, porta ancora l'armatura: l'acido gli toglie 2d6 a
 round, e chi gli sta accanto (Thorin in AG10, o Dana) lo tiene sopra lo zero
@@ -1668,8 +1668,7 @@ totale), e vale la pena lo stesso.
 
 **Gli ordini, ai round 3-5.** Senza un ordine, l'anello si sgretola: ogni
 round in cui nessun pregen spende un'azione standard di comando (o Nala il
-canto) cadono **1d4 nani** in più, e un bugbear passa l'anello `[INFERRED —
-la guida diceva solo «servono gli ordini»]`.
+canto) cadono **1d4 nani** in più, e un bugbear passa l'anello `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`.
 
 **I nani caduti si contano così**: 1d4 a round senza ordine; **1** a round
 per ogni bugbear vivo che combatte contro l'anello invece che contro un
@@ -1863,7 +1862,7 @@ la storia va avanti.
 | **Le Cantitrici** | il finale | il Coro e la *cura ferite gravi di massa*, se ne restano almeno tre |
 | **Il Re a 8 pf** | la 3A | Dana gli fa da scudo contro le frecce in caverna `[CANONE — DM 2026-10-21]`, e il discorso della carica (+4 al morale) |
 | **Dana con 20 pf e un muro** | la 3A | il suo ultimo *muro di pietra*, se non l'ha speso nella ritirata |
-| **La corona nera** | la Cerimonia delle 100 Asce | l'acido ha annerito la Corona dei Re Hammerfist: se i Rumbling Stones la vedono, è così che la riconoscono `[INFERRED — la corona nera]`. Vale solo se il soffio ha preso il Re: se no, la Corona resta d'oro |
+| **La corona nera** | la Cerimonia delle 100 Asce | l'acido ha annerito la Corona dei Re Hammerfist: se i Rumbling Stones la vedono, è così che la riconoscono `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`. Vale solo se il soffio ha preso il Re: se no, la Corona resta d'oro |
 | **Le frecce di Dara** | nessuna regola | se una è rimasta, Dara la porta al Cuore |
 | **Il cavaliere** | il finale | se è stato abbattuto dalla sella (Scena 6, le frecce di Dara) ed è vivo, i nani lo prendono, e nel finale lo si interroga (`ARC08-10` §4.2) |
 

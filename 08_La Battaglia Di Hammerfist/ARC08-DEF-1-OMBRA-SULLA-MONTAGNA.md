@@ -732,8 +732,7 @@ dorme mai». È la leva contro Gorthak (§7).
 guardie degli scout passino sotto la torre: una prova di Osservare a round, e
 vale la migliore. Se nella Fase 2 c'è stato uno scontro aperto, ha **due
 round**, e il primo serve a puntare il cannocchiale: **una prova sola**
-`[INFERRED — i cinque round e la prova a round sono la lettura del gradino
-«scontro aperto» del triage]`.
+`[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`.
 
 **La distanza.** Il campo è a 400 m. Per contare un esercito non c'è
 penalità di distanza. **Senza il cannocchiale**, le CD salgono di 10.
@@ -1614,8 +1613,7 @@ LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa
   pendio, ma a quella distanza non tirano.
 - **La frana**: tagliare le corde è un'azione standard da E05-G06. I sassi
   scendono lungo il sentiero, F07-G12: 4d6 contundenti, Riflessi **CD 15**
-  dimezza `[INFERRED — la frana non ha numeri in nessuna fonte: sono quelli
-  di una trappola a caduta di massi dell'SRD, ridotti]`. Una volta sola. Nella
+  dimezza `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`. Una volta sola. Nella
   battaglia campale non conta come trappola: la usa il duello.
 - **Il duello col sergente**: il sergente sale dal sentiero (F11) con due
   hobgoblin di scorta (F12, H12), che non entrano nel duello finché l'eroe
