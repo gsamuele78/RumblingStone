@@ -1208,8 +1208,8 @@ che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
   Conta se è ancora accesa agli scontri di `DEF-4`.
 - **Benedizione di Moradin Incarnato**: +2 sacro att/danni, +4 vs paura/charme,
   **1 ri-tiro**; attiva per 24 ore vissute dalla preghiera, come le altre
-  `[CANONE — DM 2026-10-18, G2-06]`. Quante volte si accende, con che azione e
-  per quanto dura ogni volta `[INFERRED — needs DM confirmation]`.
+  `[CANONE — DM 2026-10-18, G2-06]`. Si accende una volta al giorno, con un'azione
+  veloce, e dura 1 minuto ogni volta `[CANONE — DM 2026-11-04, P16, poteri e luoghi]`.
 
 > **Momento privato Hella + Tordek** (5 min di RP, lasciar improvvisare): la
 > gratitudine, la paura della morte perduta, le promesse di un dopo. È il

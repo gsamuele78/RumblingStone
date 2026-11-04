@@ -3126,8 +3126,8 @@ che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
   Conta se è ancora accesa agli scontri di cap. V.
 - **Benedizione di Moradin Incarnato**: +2 sacro att/danni, +4 vs paura/charme,
   **1 ri-tiro**; attiva per 24 ore vissute dalla preghiera, come le altre
-. Quante volte si accende, con che azione e
-  per quanto dura ogni volta `[INFERRED — needs DM confirmation]`.
+. Si accende una volta al giorno, con un'azione
+  veloce, e dura 1 minuto ogni volta.
 
 > **Momento privato Hella + Tordek** (5 min di RP, lasciar improvvisare): la
 > gratitudine, la paura della morte perduta, le promesse di un dopo. È il
@@ -4630,7 +4630,7 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   e la runa dura 70 minuti. Prezzo di pergamena SRD, 350 mo. Per
   **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido. La
   attiva chi la porta, toccando il bersaglio, perché *resistere all'energia*
-  è a contatto (SRD): su Durik la mette Hella `[INFERRED — needs DM confirmation]`.
+  è a contatto (SRD): su Durik la mette Hella.
 - **Fermarsi o dormire — scelta.** In 3.5 ci sono solo le otto ore di sonno
   e il tempo che passa. **Tre ore di sosta** (2
   tacche) non ridanno incantesimi, perché l'SRD li restituisce solo dopo otto

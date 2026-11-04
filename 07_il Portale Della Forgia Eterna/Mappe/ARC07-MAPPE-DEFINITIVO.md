@@ -833,7 +833,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
 @tipo strategica caverna
 @luogo Hammerfist, il Cuore della Montagna (sotto la fucina grande, livello −3)
-@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
+@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [CANONE — DM 2026-11-04, P16, poteri e luoghi]
 @dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
 

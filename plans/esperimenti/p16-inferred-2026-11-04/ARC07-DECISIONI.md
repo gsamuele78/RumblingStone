@@ -65,3 +65,5 @@ quattro volumi `.hb.md`, poi `inventory_inferred.py --update-baseline` e
 - Card 1 (mura del 372): come scritte.
 - Card 2 (tenda di Zog'tar): come scritte.
 - Card 3 (Skullcrusher): il nome gridato vale da fuoco; Soffio Aderente com'è (l'acido torna una volta, senza prova per toglierselo).
+- Card 4 (poteri e luoghi): come scritte, portale di Dana aperto 1 minuto (10 round); Incarnato 1 al giorno, azione veloce, 1 minuto.
+- Resta aperta solo la riga del 14° livello (DEF-4 r. 3825): serve il totale dei PX di partenza del gruppo.

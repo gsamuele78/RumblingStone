@@ -806,8 +806,8 @@ tavolo.
 preghiera di un round; dall'altra parte entrano il vento e il fumo dei bastioni
 `[CANONE — DM 2026-10-12, D77]`. Il potere è del luogo: lo apre l'altare
 consacrato del Cuore della Montagna, e la preghiera lo chiede
-`[CANONE — DM 2026-10-18, G2-34]`. Quanto resta aperto
-`[INFERRED — needs DM confirmation]`.
+`[CANONE — DM 2026-10-18, G2-34]`. Resta aperto 1 minuto
+(10 round), poi si chiude `[CANONE — DM 2026-11-04, P16, poteri e luoghi]`.
 
 > **Read-aloud (LotR lead) — la caverna, il portale.** *Dana prega per il tempo
 > di un respiro, e sulla parete si apre un arco di luce dorata. Dall'altra parte
@@ -1134,7 +1134,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
 @tipo strategica caverna
 @luogo Hammerfist, il Cuore della Montagna (sotto la fucina grande, livello −3)
-@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
+@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [CANONE — DM 2026-11-04, P16, poteri e luoghi]
 @dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
 <!-- /apparato -->
