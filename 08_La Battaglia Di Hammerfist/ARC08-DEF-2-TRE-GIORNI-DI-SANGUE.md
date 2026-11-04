@@ -36,11 +36,9 @@
 > 1. **Dove sta il Giorno 3. Decisa** `[CANONE — DM 2026-10-22]`: il Giorno
 >    3 resta nella Sessione 2. L'uscita A (Scena 9) è il default, B e C sono
 >    di riserva (§0, «Il punto di taglio»).
-> 2. **Le baliste contro Fauci in volo.** Le mappe dicono che a 45 m è fuori
->    gittata; per la *Guida del DM* 3.5 (fuori SRD) la balista ha incremento
->    36 m e a 45 m tira con −2; la balista pesante di PF1e (*Ultimate Combat*)
->    ha 54 m e a 45 m non ha penalità. Il master regge le due letture: la riga da cambiare è in
->    Scena 2, «Il sorvolo», ed è marcata ⚙️.
+> 2. **Le baliste contro Fauci in volo. Decisa** `[CANONE — DM 2026-11-04,
+>    P16]`: tirano, con la *Guida del DM* 3.5 (incremento 36 m, −2 a 45 m).
+>    La riga è in Scena 2, «Il sorvolo», marcata ⚙️.
 > 3. **Il Re a 8 pf. Decisa** `[CANONE — DM 2026-10-22]`: il Re arriva al
 >    Cuore a 8 pf fissi, e la causa è l'acido rimasto nell'armatura corrosa
 >    (Scena 6). Le cure lo tengono vivo fino al Cuore e non lo rimettono in
@@ -838,22 +836,17 @@ guarisce, e il Giorno 3 riparte da 337. Nemmeno al finale contano: lì il suo
 statblocco dipende dal carry-over di ARC-07 (`ARC08-10` §4.1). Contano solo
 i danni del Giorno 3, per le due soglie della Scena 6.
 
-⚙️ **Le baliste contro il drago** `[INFERRED — le baliste contro il drago: la riga da cambiare]`.
-Scegliere una delle due righe prima della serata; se il DM non sceglie,
-vale la A.
+⚙️ **Le baliste contro il drago** `[CANONE — DM 2026-11-04, P16]`: le
+baliste tirano (*Guida del DM* 3.5, fuori SRD: balista, incremento 36 m,
+quindi −2 a 45 m; la balista pesante di PF1e, 54 m senza penalità, non si usa).
+Le due baliste della torre che il drago sorvola tirano una volta a testa: +16
+(il +18 della MAPPA 3, −2) contro CA 37, 3d8+10, cioè solo col 20 naturale;
+contro 33 o 29, dopo un *dissolvi magie*, con 17 o 13. Ricaricano in due round:
+al passaggio dopo non sono pronte. Il d20 + 10 del libretto è la balista
+contro i reparti, e qui non vale. La nota delle mappe («sorvoli a 45 m, fuori
+gittata baliste») è superata.
 
-- **A · Le baliste non arrivano** (le mappe, L2 MAPPA 3: «sorvoli a 45 m,
-  fuori gittata baliste»). Il drago resta sopra l'angolo morto delle torri, e
-  le baliste non si alzano fin lassù.
-- **B · Le baliste tirano** (*Guida del DM* 3.5, fuori SRD: balista, incremento
-  36 m, quindi −2 a 45 m; con la balista pesante di PF1e, 54 m, il −2 sparisce
-  e il tiro è +18). Le due baliste della torre che il drago sorvola tirano una volta
-  a testa: +16 (il +18 della MAPPA 3, −2) contro CA 37, 3d8+10, cioè solo
-  col 20 naturale; contro 33 o 29, dopo un *dissolvi magie*, con 17 o 13.
-  Ricaricano in due round: al passaggio dopo non sono pronte. Il d20 + 10
-  del libretto è la balista contro i reparti, e qui non vale.
-
-Il resto della scena non cambia. Con la riga B il Giorno 3 vale lo stesso:
+Il resto della scena non cambia. Il Giorno 3 vale lo stesso:
 le baliste delle torri sono su Fauci al round della picchiata (Scena 6).
 
 <!-- storico -->

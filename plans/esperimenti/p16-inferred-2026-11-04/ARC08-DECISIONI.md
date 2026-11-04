@@ -64,7 +64,8 @@ abbassa al numero nuovo nello stesso commit.
 2. **Le baliste contro il drago a 45 m (DEF-2 Scena 2).** A: fuori gittata
    (le mappe, senza fonte). B: *Guida del DM* 3.5, incremento 36 m, a 45 m −2.
    C: balista pesante PF1e, 54 m, nessuna penalità. *Consigliata*: B, la prima
-   fonte nell'ordine e la più dura delle due con fonte.
+   fonte nell'ordine e la più dura delle due con fonte. ✅ **Decisa dal DM il
+   2026-11-04: B.** Applicata in DEF-2 (domanda 2 e Scena 2) e nella MAPPA 3 di L2.
 3. **L'Aura della Forgia Eterna già spesa (GUIDA, scontri).** Thorik l'ha usata
    nella battaglia antica, mille anni prima ma pochi giorni prima per lui.
    *Consigliata*: conta il tempo di Thorik, quindi nella carica finale

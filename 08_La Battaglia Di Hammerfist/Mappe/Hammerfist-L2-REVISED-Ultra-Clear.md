@@ -638,7 +638,7 @@ Le tre rotte tratteggiate sulla griglia sopra SONO la MAPPA 3 della guida. Fasi 
 - 150 orchi caricano 80→0 m (2 round) con scale improvvisate — carne da cannone
 - 500 hobgoblin seguono in formazione; ariete di Gorthak sul Cancello: **3d10+20/round**
 - Worg Riders (rotte viola): aggirano i fianchi cercando sortite/brecce — se trovano un varco, disastro nel cortile
-- Fauci di Palude: sorvoli a 45 m (fuori gittata baliste), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 30 m, 14d4)
+- Fauci di Palude: sorvoli a 45 m (le baliste tirano a −2, *Guida del DM* 3.5: DM 2026-11-04), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 30 m, 14d4)
 - **Risultato atteso:** Cancello a 120 PF a fine Giorno 1 (−80 in tutto), 20% breccia Muro Est, 30-40 nani KO, 50+ orchi e 30+ hobgoblin KO
 
 **FASE 3 — PRESSIONE CONTINUA (round 11-15 + notte):**
