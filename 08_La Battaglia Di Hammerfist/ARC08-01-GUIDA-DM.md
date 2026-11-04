@@ -755,7 +755,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 (Cos 18 per i pf)
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
-**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[INFERRED — da confermare sulla classe]`.
+**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`.
 **Lingue:** Comune, Nanico, Gigante.
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*, cannocchiale (senza, le CD per contare l'orda dal crinale salgono di 10).
 
@@ -857,7 +857,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
 **Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 (Cos 18 per i pf)
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
-**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[INFERRED — da verificare sul manuale]`.
+**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`.
 **Lingue:** Comune, Nanico, Orchesco, Goblin: capisce gli ordini dell'orda entro 9 m con Ascoltare CD 15.
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*.
 
@@ -1314,7 +1314,7 @@ I 90 nani superstiti si barricano nella Caverna Sacra. I PG devono affrontare on
 > *"I nani superstiti formano un cerchio disperato attorno all'altare dove Re Thorek è stato deposto. Madre Superiora Dana e i chierici superstiti sussurrano preghiere frenetiche mentre le loro mani brillano di luce divina, tentando disperatamente di curare le ferite che l'acido draconico ha inflitto. 'Moradin, Forgiatore di Anime,' prega Dana con voce spezzata, 'non lasciarci ora nell'ora più buia!' Ma le ferite sono troppo gravi, l'acido troppo corrosivo. Il respiro del Re si fa sempre più debole."*
 
 **Prove Mediche/Divine:**
-- **Guarigione CD 25, a ogni round** `[CANONE — DM 2026-10-19, D12]`: pronto soccorso, azione standard (SRD). Si tira a ogni round finché nessuno cura il Re per magia. **Al terzo fallimento, anche non consecutivo, Re Thorek muore**, e la battaglia passa alla vittoria costosa (`ARC08-10-ESITI-E-CONTINGENZE.md` §2). Un round in cui nessuno tenta la prova conta come fallito, e il conto parte dal primo round giocato nel Cuore della Montagna: il round 1 coi pregen, o il round 11 se il flashback non è stato giocato (`ARC08-10` §5.5) `[INFERRED — needs DM confirmation: queste due letture]`
+- **Guarigione CD 25, a ogni round** `[CANONE — DM 2026-10-19, D12]`: pronto soccorso, azione standard (SRD). Si tira a ogni round finché nessuno cura il Re per magia. **Al terzo fallimento, anche non consecutivo, Re Thorek muore**, e la battaglia passa alla vittoria costosa (`ARC08-10-ESITI-E-CONTINGENZE.md` §2). Un round in cui nessuno tenta la prova conta come fallito, e il conto parte dal primo round giocato nel Cuore della Montagna: il round 1 coi pregen, o il round 11 se il flashback non è stato giocato (`ARC08-10` §5.5) `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`
 - **La cura, per l'SRD** `[CANONE — DM 2026-10-19, D12]`: *neutralizzare veleno* (Drd 3, Chr 4, Brd 4, Rgr 3) o *guarigione* fanno finire l'avvelenamento, e da quel momento le prove si fermano; *guarigione* rende anche 10 pf per livello. Le *cure ferite* restituiscono pf ma non fermano le prove. Fra i pregen ce l'ha Thorin Runaforte (*guarigione*, `ARC08-02` §3): se la lancia al round 1, il Re è salvo e la tensione passa alle ondate. Fra i PG, Hella. Dana non può: ha speso quasi tutto sulle mura (sotto, «Madre Superiora Dana»)
 
 #### **INCONTRO 3B: L'Assalto Finale**
@@ -1380,7 +1380,7 @@ IL CUORE DELLA MONTAGNA - CAVERNA SACRA (100m x 80m)
 **NEMICI IN ARRIVO:**
 - **Ondata 1:** 30 Orchi Berserker (Round 3-4)
 - **Ondata 2:** 20 Hobgoblin + Sergente (Round 5-6)  
-- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)
+- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`); 5 di loro risalgono il condotto della sorgente e sbucano dietro l'altare (L3, MAPPA 5) `[CANONE — DM 2026-11-04, P16, condotto della sorgente]`
 - **Ondata Finale:** Grimjaw + 10 Guardie Nere, se vivo: corno al round 11, ingresso al round 12, quando i PG sono già in campo `[CANONE — DM 2026-10-19, D11]`
 
 ### **ROUND PER ROUND - LA RESISTENZA DISPERATA:**
@@ -1696,7 +1696,7 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 **AZIONI INIZIALI RUMBLING STONES** *(proposte: decide il giocatore, e valgono i numeri della sua scheda)*:
 
 **THORIK (guerriero 13, Corona di Adamantio, Aegis Fang):**
-- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è `[INFERRED — needs DM confirmation]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
+- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è: conta il tempo di Thorik, per cui sono passati pochi giorni, non i mille anni del mondo `[CANONE — DM 2026-11-04, P16]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
 - **Aegis Fang** (+2 Ritornante *Dragondoom*, 1d10): un bersaglio per attacco. Lanciata vale come arma da lancio improvvisata (−4, incremento 3 m, gittata massima 15 m: SRD) e torna in mano.
 - **Movimento:** si mette davanti a Re Thorek.
 
@@ -1817,9 +1817,9 @@ RESA DEI CONTI FINALE (Round 12-15)
 > | Fanteria orchesca | ~200 | Atlante, MAPPA 4X («200 Fanteria orchesca»). ⚠ Le strafing più sotto dicono 300, e il Registro ne schiera 15 unità da 8 PFU (120) all'inizio della battaglia: i tre numeri non tornano, vale l'Atlante |
 > | Giganti delle colline | 8 | Registro (8 unità) e strafing («8 rimanenti») |
 > | Ettin | 2, più Gorthak | Registro (2 unità); Gorthak in `ARC08-02` §1 |
-> | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[INFERRED — needs DM confirmation]` |
-> | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[INFERRED — needs DM confirmation]` |
-> | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[INFERRED — needs DM confirmation: i 5]` |
+> | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
+> | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
+> | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
 > | Grimjaw e le guardie orog | 0, o quelli usciti vivi dal 3B | Grimjaw è in campo solo se nel 3B ha suonato la ritirata (scheda in `ARC08-02` §1, *Morale*), con le guardie rimaste |
 > | Fauci di Palude e il cavaliere | 1 + 1 | `ARC08-02` §1; pf di partenza qui sotto, «FAUCI DI PALUDE» |
 >
@@ -1972,7 +1972,7 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 **FASE 1 - Apertura (Round 1-2):**
 > *"Il primo scontro è spettacolare. Fauci di Palude sprigiona il suo soffio acido, ma i gufi celestiali lo evitano con grazia soprannaturale, e il veleno scivola sulle loro piume come pioggia su una tegola. Signore Ventolesto affonda gli artigli nel fianco sinistro del drago, strappando scaglie grandi come scudi, mentre i suoi compagni attaccano le ali per limitarne la manovrabilità."*
 
-**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[INFERRED — needs DM confirmation]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
+**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
 
 > **Read-aloud (Casa di Davide lead) — l'inviata.** *Un gufo più piccolo degli altri si stacca dalla formazione e si posa sul bastione, a tre passi da Hella. La cavaliera è un'elfa con una treccia fradicia sulla spalla e l'arco in pugno, senza freccia: guarda Hella a lungo, come si guarda un volto che qualcuno ti ha descritto, e dice soltanto «Sei tu». Che fate?*
 
@@ -2220,7 +2220,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 
 **BONUS DELLA CARICA** *(regole SRD e regolamento di massa, `ARC08-02` §4)*:
 - **Morale: vale solo il più alto** (SRD: due bonus dello stesso tipo non si sommano). Candidati: *Aura della Forgia Eterna* di Thorik +4, se questa settimana non è già spesa; il discorso di Re Thorek +4; il canto delle Cantitrici; la melodia di Tempestas +2. Nel regolamento di massa il morale di un'unità va da −5 a +5.
-- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto») `[INFERRED — needs DM confirmation]`.
+- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto»): senza l'incantesimo il +4 non c'è (SRD, i bonus vengono da una fonte).
 - **Carica:** +2 al tiro per colpire (SRD); nessun bonus ai danni.
 - **Terreno in discesa:** +1 al tiro per colpire dall'altura (SRD).
 
@@ -2250,7 +2250,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 1. **Grimjaw vs I PG** (se sopravvissuto)
 2. **Gorthak vs Formazione Nanica** (se sopravvissuto)
 3. **Cavaliere del Drago vs Capitano Lunapiena** (duello aereo: solo se il cavaliere è ancora in sella e Fauci non è fuggito)
-4. **Ultimi 50 Hobgoblin Élite** vs Nani in carica (come unità di massa usa la «HOBGOBLIN GUERRIERI (Warrior 3)» di `ARC08-02` §5, cinque unità, perché un'unità d'élite di hobgoblin lì non c'è `[INFERRED — needs DM confirmation]`; uno contro uno, `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md`: GS 5, CA 19, pf 43, spada lunga +10/+5, 1d8+2 `[INFERRED — needs DM confirmation]`)
+4. **Ultimi 50 Hobgoblin Élite** vs Nani in carica (come unità di massa usa la «HOBGOBLIN GUERRIERI (Warrior 3)» di `ARC08-02` §5, cinque unità, perché un'unità d'élite di hobgoblin lì non c'è `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`; uno contro uno, `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md`: GS 5, CA 19, pf 43, spada lunga +10/+5, 1d8+2 `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`)
 
 **ULTIMI SCONTRI ÉLITE:**
 
@@ -2387,7 +2387,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 - **Fama Leggendaria:** La storia si diffonde in tutto Faerûn
 - **Alleanze Politiche:** I clan nanici sono ora alleati permanenti
 - **Base Operativa:** Una fortezza personale nei rifugi
-- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[INFERRED — needs DM confirmation]`
+- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`
 
 ### 📚 **EPILOGO: L'EREDITÀ DELLA BATTAGLIA**
 

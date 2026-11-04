@@ -24,7 +24,7 @@
 **Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (Porta Interna a sud + brecce est/ovest)
 **Quando si usa:** subito dopo il soffio del drago (guida: `../ARC08-01-GUIDA-DM.md` § "La Ritirata Disperata"); il master narrativo dell'atlante la chiama MAPPA 3X
 **Dove sta nella 2A:** è il cortile interno della MAPPA 2A REVISED (L2) con la Porta Interna e l'inizio del cortile esterno: colonne Y-CR e righe 18-53 della 2A (colonna H3-1 = colonna 2A − 24, riga H3-1 = riga 2A − 17). Le misure sono quelle della tabella MISURE DI RIFERIMENTO in testa a L2.
-**Quote (decise dal DM il 2026-10-22):** il cortile interno sta a +100 m sulla piana (970 m s.l.m. `[INFERRED]`), il cortile esterno a +80 m; fra i due c'è la scarpa di 20 m (🏰 riga 28) su cui poggia la Porta Interna. Dal cortile esterno si sale per le due scale della scarpa (🪜 O-AH e AM-BF, righe 26-27, 30 m di rampa ciascuna) fino al pianerottolo 🔳 AI-AL 26-27 davanti alla porta. I bastioni nord B1 e B2 stanno a +120 m, contro la roccia.
+**Quote (decise dal DM il 2026-10-22):** il cortile interno sta a +100 m sulla piana (970 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`), il cortile esterno a +80 m; fra i due c'è la scarpa di 20 m (🏰 riga 28) su cui poggia la Porta Interna. Dal cortile esterno si sale per le due scale della scarpa (🪜 O-AH e AM-BF, righe 26-27, 30 m di rampa ciascuna) fino al pianerottolo 🔳 AI-AL 26-27 davanti alla porta. I bastioni nord B1 e B2 stanno a +120 m, contro la roccia.
 
 ### 🎯 COMPRENSIONE: il cortile esterno è perduto e la Porta Interna è sfondata. L'orda entra dalla porta a sud e dalle brecce aperte nella cinta est e ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek, fra la porta e la statua del Re Antenato (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = la statua e il tunnel, che scende nelle viscere della montagna fino al Cuore (MAPPA 5); Sud = Porta Interna sfondata (fronte).
 
@@ -278,7 +278,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ## MAPPA 3Z REVISED: L'INCROCIO SILENZIOSO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map03_mappa-3z-revised-l-incrocio-silenzioso-imboscata.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto); la caverna è un ottagono di 40 m da parete a parete `[INFERRED]`, sei tunnel larghi 4,5 m (il nord-ovest e il nord-est 3 m)
+**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto); la caverna è un ottagono di 40 m da parete a parete (misurato sulla griglia: 27 quadretti da ovest a est, colonne D-AD, 40,5 m; 26 da nord a sud, 39 m), sei tunnel larghi 4,5 m (il nord-ovest e il nord-est 3 m)
 **Contratto:** `fortezza-json/HF-3Z-incrocio-silenzioso.json` (si rigenera con `compile_map_json.py`)
 **Incontro:** imboscata — 8 Bugbear Assassini (Rog5/Asn2, GS 9 cad., scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`) + 7 hobgoblin di diversione (+ eventuali 30 orchi al round 4)
 **Quando si usa:** ~30 minuti dopo l'ingresso nei tunnel (guida narrativa completa: `../ARC08-01-GUIDA-DM.md` § Incontro 2F — read-aloud, sequenza round-per-round, esiti)
@@ -404,7 +404,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 **Incontro:** Incontri 3A/3B — ultima resistenza a ondate + APPARIZIONE DEI RUMBLING STONES (round 9-10, come la guida)
 **Quando si usa:** Sessione 3 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 3; la "MAPPA 3A: Caverna Sacra" e la "MAPPA 3B: La Svolta" della guida sono gli stati A e F di questa griglia)
 
-### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, quattro pilastri che reggono la volta; l'ingresso è la porta di mithral a nord, e dal fondo esce solo il condotto della sorgente, stretto per un nano carponi `[INFERRED]`. Le ondate entrano dal tunnel; al round 9-10 la Sfera dorata esplode sopra l'altare.
+### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, quattro pilastri che reggono la volta; l'ingresso è la porta di mithral a nord, e dal fondo esce solo il condotto della sorgente, largo 1,5 m, da fare in fila indiana `[CANONE — DM 2026-11-04, P16, condotto della sorgente]`. Le ondate entrano dal tunnel; al round 9-10 la Sfera dorata esplode sopra l'altare.
 
 ### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (67×53)
 
@@ -506,7 +506,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Lo schieramento** `[CANONE — DM 2026-10-30]`, rivolto all'unico ingresso: al centro, davanti alla porta, 40 guerrieri su quattro file (righe 18-21), 12 balestrieri dietro (riga 22) e 6 capi (riga 23); ai lati due ali piegate verso l'altare (W-Z e AO-AR, righe 22-25), ciascuna con 10 guerrieri, 4 balestrieri e 2 capi. Il sud dell'altare resta scoperto
 - **Porta di Mithral 🚪 AF05-AI05** (6 m a due battenti, ward collassati; l'unico ingresso per un esercito) — tunnel di 6 m di larghezza e 10 m di lunghezza alle spalle
 - **Pilastri della volta 🟪** U12-W14, AQ12-AS14, U42-W44, AQ42-AS44: 4,5 m di lato, copertura totale; gli assassini dell'ondata 3 li usano per aggirare le ali dello schieramento
-- **Condotto della sorgente 💧 AH49-AH53** `[INFERRED]`: largo 1,5 m, acqua alla caviglia, esce nei tunnel bassi. Ci passa una fila indiana: è la via di fuga se lo schieramento cede, e la strada di un terzo fianco se il DM la dà ai bugbear
+- **Condotto della sorgente 💧 AH49-AH53** `[CANONE — DM 2026-11-04, P16, condotto della sorgente]`: largo 1,5 m, acqua alla caviglia, esce nei tunnel bassi. Ci passa una fila indiana: è la via di fuga se lo schieramento cede. Nell'ondata 3 i bugbear lo usano: 5 dei 15 risalgono il condotto e sbucano alle spalle dell'altare, sul lato sud che nessuno guarda
 - **10 statue 🗿** in cerchio (~20 m dall'altare): occhi di rubino
 
 ### ⚔️ ONDATE (agganciate alle unità in griglia, rotte tratteggiate):
@@ -514,7 +514,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 |---|---|---|---|
 | 1 | 3-4 | 30 Orchi Berserker (furia +4 For, −2 CA) | carica cieca sul centro dello schieramento — imbuto alla porta |
 | 2 | 5-6 | 20 Hobgoblin + Sergente (immuni paura) | muro di scudi, fiancheggiamento coordinato (+2), sergente +1 att entro 6 m |
-| 3 | 7-8 | 15 Bugbear Assassini (`Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`: furtivo +4d6, Nascondersi +17) | aggiramento sui fianchi (rotte viola), bersaglio Re Thorek — INTERROTTI dall'Apparizione (round 9-10) |
+| 3 | 7-8 | 15 Bugbear Assassini (`Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`: furtivo +4d6, Nascondersi +17) | aggiramento sui fianchi (rotte viola) e, con 5 di loro, dal condotto della sorgente alle spalle dell'altare; bersaglio Re Thorek — INTERROTTI dall'Apparizione (round 9-10) |
 | Finale | corno all'11, ingresso al 12 | Grimjaw + 10 Guardie Nere orog (`Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`) se vivo; altrimenti capitano hobgoblin → auto-ritirata | entra dalla porta sulla rotta nera, punta l'altare; sfida personale o ritirata strategica `[CANONE — DM 2026-10-19, D11]` |
 
 ### ✨ ROUND 9-10 — L'APPARIZIONE (climax):
@@ -552,10 +552,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
-| +80 m (950 m s.l.m. `[INFERRED]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
-| +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud) `[INFERRED]`; la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
+| +80 m (950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
+| +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud; 30 m su 110 m); la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
 | +50 → +20 m | Resti Mano Rossa (~400) schierati sul pendio, righe 39-55; la riga 68 è a circa +20 m | morale −6 dopo il Cuore della Montagna |
-| 0 m (870 m s.l.m. `[INFERRED]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
+| 0 m (870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |
 
 **Preparazione (read-aloud e discorso di Re Thorek):** guida § Sessione 4 — "FRATELLI! Oggi non moriamo — oggi VINCIAMO!" (+4 morale; non si somma ad altri bonus morali, vale il più alto: SRD).
@@ -565,7 +565,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ## MAPPA 4 REVISED: BATTAGLIA FINALE TERRESTRE + AEREA - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map05_mappa-4-revised-battaglia-finale-terrestre-caric.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 180m × 204m (60 colonne × 68 righe · 3 m/quadretto) — **mappa strategica** (`@tipo strategica`): la regia della carica, non un tappeto per le miniature
-**Quote:** le mura a 950 m s.l.m., +80 m sulla piana; la linea hobgoblin a ~920 m; il fondo della mappa a ~890 m `[INFERRED]`. La strada a tornanti 🟫 scende dal ponte (AD05) con i gomiti in AW16, M35, AW54 e arriva alla riga 68 in AD
+**Quote:** le mura a 950 m s.l.m., +80 m sulla piana; la linea hobgoblin a ~920 m; il fondo della mappa a ~890 m `[CANONE — DM 2026-11-04, P16, quota sul mare]`. La strada a tornanti 🟫 scende dal ponte (AD05) con i gomiti in AW16, M35, AW54 e arriva alla riga 68 in AD
   ⚠️ Regia della carica finale ("MAPPA 4A/4B" della guida): per il duello col drago a terra passare a scala tattica sul punto di crash. Non mischiare quadretti di scale diverse.
 **Incontro:** Incontri 4A + 4B — carica del cuneo + Fauci di Palude + Gorthak
 **Quando si usa:** Sessione 4, round 1-23 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 4)

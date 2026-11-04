@@ -44,7 +44,7 @@ Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py
 
 Nessuna.
 
-## ▶ In corso: da qui si riparte: 4
+## ▶ In corso: da qui si riparte: 5
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
@@ -54,6 +54,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P02 · AVVENTURE-COMMUNITY 7c**: D4-D6 decise dal DM il 2026-10-23 e applicate (ARC-08 allineato al Bestiario nella #286, possessivo vietato solo sul corpo, fronti e orologi canone da ARC-08). Resta il primo… | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) §Decisioni | il thread di ARC-08, col prossimo master |
 | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
+| **P16 · Le marcature rimaste nel contenuto**: rimisurate il 2026-11-04 con `inventory_inferred.py` corretto (righe di regola in «meta», note che vanno a capo contate): **240 aperte su `main`**, non 44 (il `grep` vedeva… | … | le card di ARC-08, poi un lotto per arco: ARC-07, ARC-09, il resto |
 
 ## 🙋 Aspetta il DM: 11
 
@@ -73,13 +74,12 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P14 · Le promozioni a stable** (ADR-0099): ruff e uv proponibili dal 2026-11-06, pytest-xdist dopo 14 giorni dal 2026-10-23 | [PIATTAFORMA](plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md) | la card nel thread padre |
 | **P29 · Le chat di Claude.ai, la parte che solo il DM può fare**: archiviare a mano le 24 chat del triage (nessuno strumento qui le raggiunge, né i loro allegati) e ripetere la ricerca dentro gli altri progetti di Claud… | triage chat 2026-10-23, «Note oneste» | archiviare; dire se esistono altri progetti RumblingStone |
 
-## ⬜ Da fare, nell'ordine dei piani: 10
+## ⬜ Da fare, nell'ordine dei piani: 9
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
-| **P16 · Le marcature rimaste nel contenuto**: 44 `[INFERRED]` e `[PROPOSTA]` (erano 568 il 2026-09-25; il Bestiario è a 0): ARC-08 3, ARC-09 9, `campaign/` 26 (20 nel `state-changelog`), PG 2, ARC-07 1 fuori archivio | `grep -rc "\[INFERRED\]\\|\[PROPOSTA\]"` | un lotto per arco: prima ARC-08, poi ARC-09 |
 | **P19 · Il rilevatore dei box e le battute etichettate** (`> **2 di 3 — …**`): da riverificare se `misura_craft.box_read_aloud` le apre; se no, allargare l'apertura e rimisurare i residui | `scripts/misura_craft.py` | prima la prova su `DEF-4` (Balvar) |
 | **P20 · Residui di stampa**: «Naviga i capitoli qui sopra» ancora stampato nel Palio (`PALIO-BOOKLET-INTRO.md`); l'ultima riga dell'indice dell'Abbazia sola a pagina 35; i residui d'apparato del Palio e del Drappo (… | §11.3 · CICLO-SESSIONE 2g | una PR di classe M |
 | **P21 · RECUPERO L2 e L4**: R-3 e il suo test; i piani fermi, quando il DM risponde a D5 | [RECUPERO](plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) | L2 subito, L4 dopo D5 |
@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §8 prove scartate rifatte con configurazione rigorosa | ✅ adottati come indicatori: ripetizioni frase per frase (6 vere invece di 1) e box telecomando al plurale (2 su 4 invece di 2 su 15); NLI sulla stessa entità (… |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | ricerca, misura, ADR-0107 | 🟡 14 criteri dalla rete, 8 già misurati sul master e nessuno sul booklet stampato; `misura_standard_tavolo.py`: 6 coppie capitolo × persona complete su 145, nu… |
 | 2026-11-03 | STANDARD-STAMPA | ADR-0105 punto 7, modo «entrambe» | ✅ su richiesta del DM, per il booklet Notte e Alba: scheda intera nel capitolo, accanto a descrizione e ritratto, e in più l'appendice delle creature (solo PDF… |
 | 2026-11-02 | PIATTAFORMA-DI-SVILUPPO | P9 · Dependabot convertitori-settimanale | ✅ minimo di `transformers` portato a 5.22.1 a mano, invece del 5.22.0 di Dependabot: lo stesso valore entrato su EarlRagnar78 con la sua #32, così l'allineamen… |
-| 2026-11-02 | STANDALONE-GIARDINO-SALE-CALCE | card D-a e gruppo PF1e | ✅ il DM sceglie le due consigliate: Karkator al LI 16 col Cuore come chiave, PF1e per un gruppo libero di 13°; già applicate, nessun cambio di testo nei moduli |
 
 ## Le misure che si portano dietro
 
