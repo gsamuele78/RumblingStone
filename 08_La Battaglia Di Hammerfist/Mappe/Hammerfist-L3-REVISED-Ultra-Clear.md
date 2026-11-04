@@ -278,7 +278,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ## MAPPA 3Z REVISED: L'INCROCIO SILENZIOSO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map03_mappa-3z-revised-l-incrocio-silenzioso-imboscata.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto); la caverna è un ottagono di 40 m da parete a parete `[INFERRED]`, sei tunnel larghi 4,5 m (il nord-ovest e il nord-est 3 m)
+**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto); la caverna è un ottagono di 40 m da parete a parete (misurato sulla griglia: 27 quadretti da ovest a est, colonne D-AD, 40,5 m; 26 da nord a sud, 39 m), sei tunnel larghi 4,5 m (il nord-ovest e il nord-est 3 m)
 **Contratto:** `fortezza-json/HF-3Z-incrocio-silenzioso.json` (si rigenera con `compile_map_json.py`)
 **Incontro:** imboscata — 8 Bugbear Assassini (Rog5/Asn2, GS 9 cad., scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`) + 7 hobgoblin di diversione (+ eventuali 30 orchi al round 4)
 **Quando si usa:** ~30 minuti dopo l'ingresso nei tunnel (guida narrativa completa: `../ARC08-01-GUIDA-DM.md` § Incontro 2F — read-aloud, sequenza round-per-round, esiti)

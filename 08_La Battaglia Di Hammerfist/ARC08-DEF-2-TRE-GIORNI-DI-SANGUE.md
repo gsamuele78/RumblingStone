@@ -43,7 +43,7 @@
 >    Cuore a 8 pf fissi, e la causa è l'acido rimasto nell'armatura corrosa
 >    (Scena 6). Le cure lo tengono vivo fino al Cuore e non lo rimettono in
 >    piedi; la procedura è in Scena 6, «Il conto del Re».
-> 4. **Gorthak sotto metà.** La sua scheda (`ARC08-02`) lo manda in Furia fino
+> 4. **Gorthak sotto metà.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. La sua scheda (`ARC08-02`) lo manda in Furia fino
 >    alla morte sotto i 101 pf; il libretto (§5) fa fuggire i comandanti
 >    sotto metà. Il master li tiene tutti e due: un round di Furia, poi la
 >    fuga.
@@ -51,10 +51,10 @@
 >    D6 ancora aperta del piano). Il master li mette accanto a Gorthak nel
 >    duello del cancello, come la versione più dura; senza di loro il duello
 >    è con Gorthak solo.
-> 6. **Lo sportello del cancello.** Per il duello sul ponte serve una via
+> 6. **Lo sportello del cancello.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. Per il duello sul ponte serve una via
 >    d'uscita: il master mette nel battente una porta da un nano, che le
 >    mappe non disegnano.
-> 7. **Grimjaw senza sfidante.** La carta non ha un effetto scritto. Il
+> 7. **Grimjaw senza sfidante.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. La carta non ha un effetto scritto. Il
 >    master gli dà +1 ad AU e DU nel suo settore finché c'è, e, se nessun
 >    eroe lo sfida entro un round, il Re scende a cercarlo (Scena 4).
 > 8. **La riserva e il morale +3.** La riga «Rinforzi» di `ARC08-02` dà +3:
@@ -67,10 +67,10 @@
 > 10. **Quanti nani arrivano al Cuore.** La 3A dice 90; H3-1 parte da 90 e
 >     l'imboscata ne costa 5-15. Il master tiene i 90 come tetto e scrive le
 >     perdite nel Registro: la 3A comincia con quelli che restano?
-> 11. **Il sorvolo del Giorno 1** non è una carta del mazzo: il master lo gioca
+> 11. **Il sorvolo del Giorno 1** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. non è una carta del mazzo: il master lo gioca
 >     al round 4 come un fatto della mappa, con 1d4 PFU ai balestrieri di una
 >     torre, e non è provato negli script.
-> 12. **Il Re ferito, nel libretto.** Nei round 3-4 del Giorno 3 il master dà
+> 12. **Il Re ferito, nel libretto.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. Nei round 3-4 del Giorno 3 il master dà
 >     −2 al morale (come una breccia) quando il Re cade.
 >
 > Domande nuove, dal giro delle letture a freddo del 2026-10-22:
@@ -480,7 +480,7 @@ in due round, e la carta di Gorthak resta in gioco `[CANONE — DM 2026-10-22]`.
 c'è la piattaforma da cui il Giorno 3 il Re guarda l'orda.
 
 Nel battente sinistro c'è uno **sportello** largo un nano, sbarrato
-dall'interno, per le sortite `[INFERRED — lo sportello del cancello]`. Uno spazio di 1,5 m:
+dall'interno, per le sortite `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`. Uno spazio di 1,5 m:
 Gorthak, Grande, ci passa solo spremendosi, con −4 a colpire e alla CA.
 
 **I pf del cancello**, che contano solo sulla mappa coi PG (`ARC08-19` §3).
@@ -488,7 +488,7 @@ Ritmo di riferimento della MAPPA 2A: −80 il Giorno 1, −80 il Giorno 2,
 crolla il Giorno 3 `[CANONE — DM 2026-10-22: il cancello crolla il Giorno 3]`.
 Gorthak all'ariete fa 3d10+20 a round, 36,5 di media: meno la durezza 20
 restano 16,5, e da solo lo sfonda in circa dodici round di mischia. Se Gorthak fugge il Giorno 1, quel
-giorno il cancello perde la metà `[INFERRED]`.
+giorno il cancello perde la metà `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`.
 
 | Occhi | Orecchie | Pelle e naso | Cosa NON dire |
 |---|---|---|---|
@@ -748,7 +748,7 @@ giavellotto), al round dopo Gorthak lancia un giavellotto (+12,
 a un attacco e grida in gigante agli orchi della riva: un reparto in più sul
 fronte del Cancello, il round dopo `[CANONE — DM 2026-11-04, P16, il morale]`.
 
-**Sotto i 101 pf** `[INFERRED — Gorthak sotto metà]`: per un round la testa sinistra
+**Sotto i 101 pf** `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`: per un round la testa sinistra
 vince, e Gorthak è in Furia (+4 Forza: randelli +23, danni 2d6+12 e 2d6+6;
 CA 23). Alla fine di quel round la testa centrale lo tira indietro: Gorthak
 lascia il ponte con la scorta, ferito. È la **fuga** del libretto: **+2** al
@@ -760,7 +760,7 @@ recupera 15 pf, SRD: 1 per DV).
 Gorthak passa dallo sportello spremendosi (−4 a colpire e alla CA) e si trova
 nell'androne con la Guardia del Cancello. Il DM lo dice, una volta: è
 l'unico modo in cui il cancello cade il Giorno 1, e da quel momento il Cancello
-ha preso una tacca a round finché non lo si ricaccia fuori `[INFERRED]`.
+ha preso una tacca a round finché non lo si ricaccia fuori `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`.
 
 **Se il Re è al Cancello** (Borin non l'ha convinto nella Sessione 1): il Re
 esce con chi sfida. Combatte sul ponte col suo martello (+26, 1d8+12) e la
@@ -962,8 +962,7 @@ dormono e recuperano tutto; il morale sale di 1 se il giorno è finito senza
 brecce. Le tacche si azzerano. I reparti distrutti non tornano.
 
 **Il lavoro di notte.** Gli ingegneri riparano il cancello: **+20 pf** per
-notte `[INFERRED — la MAPPA 4 dà «1d4 PF/round» senza dire per quanto; qui una
-notte vale +20]`. Col ritmo della MAPPA 2A il cancello ha 140 pf all'alba del
+notte `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`. Col ritmo della MAPPA 2A il cancello ha 140 pf all'alba del
 Giorno 2. Sul pendio i giganti alzano la rampa di macerie verso il
 Muro Est: Dara, dalla Torre Ovest, la vede crescere (Osservare CD 15 al
 buio, con la scurovisione a 18 m non basta: serve la luna o una luce).
@@ -1252,7 +1251,7 @@ mappa.
 
 | Round | Le carte del DM | Cosa si racconta |
 |---|---|---|
-| **1** | il cancello è caduto: non è una breccia, il Cancello combatte nell'androne, e il fronte resta quello del Giorno 2 `[INFERRED]`. **Grimjaw e la guardia nera**, se il DM gioca la carta: nel settore dove il Giorno 2 non è stato sfidato, o dove è fuggito, coi pf che la notte gli ha lasciato. Si può Sfidare come nella Scena 4, e al corno del drago la guardia lo porta via: la carta esce, senza il +2 | il cancello, il box sopra |
+| **1** | il cancello è caduto: non è una breccia, il Cancello combatte nell'androne, e il fronte resta quello del Giorno 2 `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`. **Grimjaw e la guardia nera**, se il DM gioca la carta: nel settore dove il Giorno 2 non è stato sfidato, o dove è fuggito, coi pf che la notte gli ha lasciato. Si può Sfidare come nella Scena 4, e al corno del drago la guardia lo porta via: la carta esce, senza il +2 | il cancello, il box sopra |
 | **2** | **Il soffio**: ogni reparto sulle Mura perde 1d4 PFU. Poi **il corno del drago**, e la scena del soffio sulla mappa | il box del corno, sotto |
 | **3** | nessuna | il Re a terra sul cancello: morale −2 `[CANONE — DM 2026-11-04, P16, il morale]` |
 | **4** | nessuna | il corno della ritirata alla fine del round |
@@ -1936,7 +1935,7 @@ Fonti nell'ordine del DM: SRD 3.5, poi PF1e, poi il resto. Gli statblocchi
 completi dei PNG sono in `ARC08-02` §1-§2 e nel Bestiario; qui c'è quello che
 si tira stasera, in forma compatta. Se cambiano, cambiano lì.
 
-**A.1 · Gorthak il Trifronte** · `ARC08-02` §1; `Bestiario/villain/Gorthak_il_Trifronte.md` · ettin dell'SRD avanzato a 15 DV (potenziamento dichiarato), GS 12 · gigante Grande, CM · Iniz +6 · scurovisione 18 m, visione crepuscolare · Ascoltare +12, Osservare +12, non può essere fiancheggiato · CA **25**, contatto 11, colto alla sprovvista 23 · pf **202** · Temp +18, Rifl +7, Vol +9 · velocità 9 m · *randello Enorme +1* +21/+16/+11 (2d6+10) e *randello Enorme +1* +21/+16/+11 (2d6+5), senza penalità per le due armi (ogni testa un braccio, SRD); giavellotto grande +12 (1d8+9) · Spazio 3 m, Portata 3 m · Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro · le tre teste: la sinistra +2 danni al primo colpo; la centrale, una volta, rinuncia a un attacco per dare +2 morale a un'unità; la destra dà Iniziativa Migliorata. **All'ariete**: 3d10+20 al cancello (durezza 20). **Sotto 101**: un round in Furia (+4 For: +23, 2d6+12 e 2d6+6; CA 23), poi fugge `[INFERRED — Gorthak sotto metà]`.
+**A.1 · Gorthak il Trifronte** · `ARC08-02` §1; `Bestiario/villain/Gorthak_il_Trifronte.md` · ettin dell'SRD avanzato a 15 DV (potenziamento dichiarato), GS 12 · gigante Grande, CM · Iniz +6 · scurovisione 18 m, visione crepuscolare · Ascoltare +12, Osservare +12, non può essere fiancheggiato · CA **25**, contatto 11, colto alla sprovvista 23 · pf **202** · Temp +18, Rifl +7, Vol +9 · velocità 9 m · *randello Enorme +1* +21/+16/+11 (2d6+10) e *randello Enorme +1* +21/+16/+11 (2d6+5), senza penalità per le due armi (ogni testa un braccio, SRD); giavellotto grande +12 (1d8+9) · Spazio 3 m, Portata 3 m · Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro · le tre teste: la sinistra +2 danni al primo colpo; la centrale, una volta, rinuncia a un attacco per dare +2 morale a un'unità; la destra dà Iniziativa Migliorata. **All'ariete**: 3d10+20 al cancello (durezza 20). **Sotto 101**: un round in Furia (+4 For: +23, 2d6+12 e 2d6+6; CA 23), poi fugge `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`.
 
 **A.2 · Troll dell'ariete** (×2) `[INFERRED — i troll dell'ariete]` · SRD 3.5, *troll* · GS 5 · gigante Grande, CM · Iniz +2 · scurovisione 27 m, visione crepuscolare, fiuto · Ascoltare +5, Osservare +6 · CA **16**, contatto 11, colto alla sprovvista 14 · pf **63** · rigenerazione 5 (il fuoco e l'acido fanno danni normali) · Temp +11, Rifl +4, Vol +3 · velocità 9 m · 2 artigli +9 (1d6+6) e morso +4 (1d6+3); **sbranare** 2d6+9 se colpisce con tutti e due gli artigli · Spazio 3 m, Portata 3 m · Allerta, Volontà di Ferro, Seguire Tracce. Gorthak coi due troll: **EL** circa 13.
 
@@ -1993,7 +1992,7 @@ con gli SVG in `Mappe/rendered/`.
 
 | Duello | Coordinate 2A | Cosa c'è |
 |---|---|---|
-| Gorthak, sul ponte (Scena 2) | ponte BG-BJ righe 74-78; cancello BG-BJ 73; androne 70-72; fossato W-CV 74-77 | il ponte è largo 6 m: Gorthak (3 × 3 m) e due troll lo riempiono. Chi cade nel fossato, 3 m d'acqua, nuota (CD 15, con la penalità d'armatura contata due volte: Borin in armatura completa affonda) e risale in due round se riesce; chi fallisce di 5 o più va a fondo, e trattiene il fiato per un numero di round pari al doppio della Costituzione. Una corda dalle mura lo tira fuori (For CD 10 per chi tira). Lo sportello è nel battente ovest, BG73 `[INFERRED — lo sportello del cancello]` |
+| Gorthak, sul ponte (Scena 2) | ponte BG-BJ righe 74-78; cancello BG-BJ 73; androne 70-72; fossato W-CV 74-77 | il ponte è largo 6 m: Gorthak (3 × 3 m) e due troll lo riempiono. Chi cade nel fossato, 3 m d'acqua, nuota (CD 15, con la penalità d'armatura contata due volte: Borin in armatura completa affonda) e risale in due round se riesce; chi fallisce di 5 o più va a fondo, e trattiene il fiato per un numero di round pari al doppio della Costituzione. Una corda dalle mura lo tira fuori (For CD 10 per chi tira). Lo sportello è nel battente ovest, BG73 `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]` |
 | Grimjaw, alla breccia (Scena 4) | Muro Est CM-CP righe 59-63; camminamento della cinta; cortile esterno sotto | la rampa di macerie sale dall'esterno fino alle merlature; dentro, una caduta di 12 m nel cortile (4d6). Se la carta è in un altro settore, il duello è sul camminamento di quel settore |
 
 <!-- /pagina -->

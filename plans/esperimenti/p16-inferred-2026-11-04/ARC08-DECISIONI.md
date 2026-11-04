@@ -106,7 +106,7 @@ o superata, e la card lo dice con la prova; il resto è una decisione vera.
 **Risposte del DM, 2026-11-04.** Card 1 (morale): come scritte. Card 3 (drago e
 cavaliere): come scritte tranne la mira di Dara, tolta (Dara a +17 colpisce la
 CA 37 solo col 20, la CA 29 con 12). Card 4 (Grimjaw e il Re): come scritte.
-Card 6 (forze e pregen): come scritte. Nel testo la marca è
+Card 6 (forze e pregen): come scritte. Card 2 (cancello e Gorthak): come scritte. L'ottagono del Cuore (L3, MAPPA 3Z) non era in nessuna card: è chiuso perché misurato sulla griglia (27 quadretti, 40,5 m); il condotto della sorgente (L3, MAPPA 5) va a una card sua. Nel testo la marca è
 `[CANONE — DM 2026-11-04, P16, <tema>]`.
 
 ## 5. Parte B: le scelte del master, da fare canone in blocco
