@@ -183,3 +183,16 @@ conto di §1 si aggiorna con `python3 scripts/inventory_inferred.py --check`.
 - Lo strumento conta di nuovo marcature dentro i blocchi di codice o i
   commenti `<!-- storico -->`: oggi le conta, ed è una scelta da rivedere con
   ARC-09.
+
+## 8. Quota sul mare abbassata (DM, 2026-11-04)
+
+Dopo la card, il DM ha chiesto una quota più realistica, in linea con la carta
+della valle (fasce: piana sotto 400 m, colline 400-900, montagna oltre 900 con
+neve). Hammerfist sta nella fascia delle colline sotto il North Wall, sopra la
+piana di Dauth (490 m, Porta Sud 530 m). Scelta del DM: **piana a 520 m**, quindi
+cancello 600, cortile interno 620, cittadella 640; canyon 550, torrione 580,
+linea hobgoblin 570, piede della cinta 595, piattaforma del cancello 615. I
+gradoni +80/+100/+120 non cambiano. Stesso spostamento (−350 m) in ARC-07
+(M7-B, M7-C, M7-H, DEF-4), nella carta regionale e nell'aria del barile
+(1,17 kg/m³ a 520 m, ISA; `simula_barile.py` non la usa, i suoi esiti non
+cambiano).

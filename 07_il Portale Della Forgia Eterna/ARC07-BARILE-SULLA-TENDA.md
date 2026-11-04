@@ -975,5 +975,5 @@ sa che i nani volano, e il resto dell'assedio lo mostra (§10).
   di fuoco*, aree e incroci della griglia, danno massiccio, CD degli oggetti
   magici: d20srd.org, voci omonime
 - La fisica della caduta<!-- apparato --> (`simula_barile.py` nella cartella dell'esperimento)<!-- /apparato -->:
-  densità dell'olio 0,91 kg/l, aria a 870 m 1,12 kg/m³, coefficiente di
+  densità dell'olio 0,91 kg/l, aria a 520 m 1,17 kg/m³, coefficiente di
   resistenza 0,9.

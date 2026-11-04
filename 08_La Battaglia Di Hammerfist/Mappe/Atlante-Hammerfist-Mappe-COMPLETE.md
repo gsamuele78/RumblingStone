@@ -105,7 +105,7 @@ questo file resta il master narrativo (descrizioni, immagini, prompt).
 
 **Tipo:** Infiltrazione tattica  
 **Scala:** 1 quadrato = 1,5 metri (la griglia della L1)  
-**Quota:** il fondo del canyon a ~900 m s.l.m., +30 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
+**Quota:** il fondo del canyon a ~550 m s.l.m., +30 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
 **Livello Sfida:** CD 5-12 (variabile approccio)
 
 **Descrizione Scenario:**
@@ -146,7 +146,7 @@ SUD ↓
 
 **Tipo:** Osservazione tattica  
 **Scala:** 1 quadrato = 1,5 metri (la griglia della L1)  
-**Quota:** la base del torrione a ~930 m s.l.m., +60 m sulla piana del campo `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
+**Quota:** la base del torrione a ~580 m s.l.m., +60 m sulla piana del campo `[CANONE — DM 2026-11-04, P16, quota sul mare]`  
 **Altezza:** Torrione 18m, Dirupo 40m caduta
 
 **Descrizione Scenario:**
@@ -201,7 +201,7 @@ Antica torre di guardia in pietra (rovina) si erge sul bordo di un dirupo scosce
 **Immagine:** [150] `hammerfist-1a3.png` — **reale (C3)**: `immagini/03.webp` (orda schierata)
 
 **Tipo:** Vista strategica narrativa  
-**Scala:** strategica, 3 m/quadretto; il campo è sulla piana (870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`), a qualche miglio dalle mura e a 400 m dal Torrione; nell'assedio l'orda si riaccampa a 500 m-1 km dalle mura  
+**Scala:** strategica, 3 m/quadretto; il campo è sulla piana (520 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`), a qualche miglio dalle mura e a 400 m dal Torrione; nell'assedio l'orda si riaccampa a 500 m-1 km dalle mura  
   ⚠️ **Vista strategica — NON è una griglia di combattimento.**
 **Visione:** Cannocchiale Dara dal Torrione
 
@@ -238,7 +238,7 @@ Rappresentazione visiva di ciò che Dara vede con cannocchiale masterwork. Non �
 **Funzione:** DM overview posizioni iniziali tutte forze
 
 **Descrizione Scenario:**
-Alba Giorno 1 assedio. Esercito Mano Rossa dispiegato formazioni militari perfette davanti mura Hammerfist. L'orda è salita all'alba dagli accampamenti della piana (870 m s.l.m., 500 m-1 km dalle mura) e si schiera sul pendio, che scende di 80 m in 300 m; l'unica via a passo pieno è la strada a tornanti larga 6 m. Vista dall'alto mostra progressione distanze: Drago 300m quota aerea, Artiglieria 200m, Fanteria 100-60m, Fossato 0m.
+Alba Giorno 1 assedio. Esercito Mano Rossa dispiegato formazioni militari perfette davanti mura Hammerfist. L'orda è salita all'alba dagli accampamenti della piana (520 m s.l.m., 500 m-1 km dalle mura) e si schiera sul pendio, che scende di 80 m in 300 m; l'unica via a passo pieno è la strada a tornanti larga 6 m. Vista dall'alto mostra progressione distanze: Drago 300m quota aerea, Artiglieria 200m, Fanteria 100-60m, Fossato 0m.
 
 **Formazioni Distanza (Dal Fossato):**
 
@@ -274,7 +274,7 @@ Alba Giorno 1 assedio. Esercito Mano Rossa dispiegato formazioni militari perfet
 - 25 Worg Riders (Sinistra)
 - 25 Worg Riders (Destra)
 
-**0m - DIFESE NANICHE (950 m s.l.m., +80 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
+**0m - DIFESE NANICHE (600 m s.l.m., +80 m sulla piana `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Fossato 6m
 - Ponte Levatoio
 - Cancello Principale
@@ -432,11 +432,11 @@ Vista laterale sezionata (Sud-Nord) mostra tutti livelli verticali fortezza dall
 **Sezione Sud → Nord (Livelli Altezza):** le quote sono riferite alla piana; la tabella delle quote è in testa alla L2 (MISURE, «la fortezza a gradoni»).
 
 **ESTERNO SUD (Attaccanti):**
-- 0 m (870 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`): la piana, gli accampamenti a 500 m-1 km
+- 0 m (520 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`): la piana, gli accampamenti a 500 m-1 km
 - Da 0 a +80 m: il pendio, ~300 m in pianta (~27%), e la strada a tornanti al 15%
 - Fossato: 3 m sotto il piede del muro
 
-**FRONTE SUD E CORTILE ESTERNO (+80 m, 950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
+**FRONTE SUD E CORTILE ESTERNO (+80 m, 600 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Soglia del cancello e pavimento del cortile esterno: la quota di riferimento
 - +12 m sul cortile: camminamento delle mura
 - +15 m sul cortile: Bastioni Sud G1-G2
@@ -446,10 +446,10 @@ Vista laterale sezionata (Sud-Nord) mostra tutti livelli verticali fortezza dall
 - Una scarpa di 20 m fra il cortile esterno e quello interno, con due scale di 30 m e un pianerottolo
 - La Porta Interna (il muro del 372) sta in cima, soglia a +100 m
 
-**CORTILE INTERNO (+100 m, 970 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
+**CORTILE INTERNO (+100 m, 620 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Comando Centrale qui (Protetto)
 
-**BASTIONI NORD E CITTADELLA (+120 m, 990 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
+**BASTIONI NORD E CITTADELLA (+120 m, 640 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`):**
 - Bastioni Nord B1-B2, 20 m sopra il cortile interno, contro la roccia
 - Dietro il portale dell'atrio una scala interna sale alla cittadella
 - Cuore Montagna: Profondo interno (Sessione 3)
@@ -1130,14 +1130,14 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 **Timing:** Post-Cuore Montagna rally, prima carica finale
 
 **Descrizione Scenario:**
-Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfist fortress elevated rocky terrain 80 m above the plain (950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`). 90 nani superstiti + 4 PG schierati fuori cancello principale (Ora controllano exit), ready charge downhill. Il pendio (~27%, la strada al 15%) favorisce momentum carica. 120 metri distanza, ~30 m più in basso: Resti esercito Mano Rossa (400 superstiti) demoralized, disorganized in valley below.
+Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfist fortress elevated rocky terrain 80 m above the plain (600 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`). 90 nani superstiti + 4 PG schierati fuori cancello principale (Ora controllano exit), ready charge downhill. Il pendio (~27%, la strada al 15%) favorisce momentum carica. 120 metri distanza, ~30 m più in basso: Resti esercito Mano Rossa (400 superstiti) demoralized, disorganized in valley below.
 
 **Geografia Verticale:**
 
 **OVEST (Hammerfist):**
-- **Fortezza Base:** +80 m sulla piana (950 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`)
+- **Fortezza Base:** +80 m sulla piana (600 m s.l.m. `[CANONE — DM 2026-11-04, P16, quota sul mare]`)
 - **Cancello Principale:** Exit controllato nani (Ripreso Sessione 3 controffensiva)
-- **Pendenza:** ~27% sul pendio, 15% sulla strada a tornanti (120 m in pianta = ~30 m di quota, dalle mura alla linea hobgoblin a ~920 m)
+- **Pendenza:** ~27% sul pendio, 15% sulla strada a tornanti (120 m in pianta = ~30 m di quota, dalle mura alla linea hobgoblin a ~570 m)
 - **Vantaggio:** Gravity assist carica (Velocity +50%, Impact damage +2)
 
 **CENTRO - CAMPO BATTAGLIA:**
@@ -1147,7 +1147,7 @@ Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfi
 - **Weather:** Nubi temporale gathering: la tempesta di Orion (*controllare tempo*), con la musica di Maestro Tempestas `[CANONE — DM 2026-10-19, D14]`
 
 **EST (Valle):**
-- **Esercito Mano Rossa:** sul pendio, la linea a ~920 m s.l.m. (+50 m sulla piana)
+- **Esercito Mano Rossa:** sul pendio, la linea a ~570 m s.l.m. (+50 m sulla piana)
 - **Formazione:** Disordinata (Morale -6 post-defeat Cuore Montagna)
 - **Numeri:** 400 superstiti (Da 900 iniziali = -55% casualties)
   - 100 Hobgoblin veterani (Disciplinati ancora)

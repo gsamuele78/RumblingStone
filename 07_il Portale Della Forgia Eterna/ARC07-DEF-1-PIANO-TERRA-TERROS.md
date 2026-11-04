@@ -688,7 +688,7 @@ a parlare, gli Xorn emergono a metà e parla Fauci di Diamante (via C).
   l'angolo di rottura; se la Conoscenze è fallita, la direzione si tira col d8,
   e i PG sulla traiettoria tirano i Riflessi anche loro
   `[CANONE — DM 2026-10-18, G2-43]`. L'area è una striscia larga 3 m e lunga
-  30 m dalla base G08 `[INFERRED — needs DM confirmation]`.
+  30 m dalla base G08 `[CANONE — DM 2026-11-04, P16, poteri e luoghi]`.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
   (Intimidire o Diplomazia **CD 18**, come la via C `[CANONE — DM 2026-10-12, D36]`) per accerchiarli in

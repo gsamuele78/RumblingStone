@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-04 | STATO-E-ORDINE · P16 | Quota sul mare di Hammerfist abbassata: piana a 520 m (scelta del DM, in linea… | ✅ cancello 600, cortile 620, cittadella 640; gradoni invariati |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | prova di ADR-0107 (`plans/esperimenti/prova-adr0107-2026-11-03/`) | 🟡 `dmcore.chi_si_incontra` e `"chi_si_incontra": true` (con `"entrambe"` della #305); misura più severa (3 «complete» vere, non 6); con la prova numeri nel cap… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | ricerca, misura, ADR-0107 | 🟡 14 criteri dalla rete, 8 già misurati sul master e nessuno sul booklet stampato; `misura_standard_tavolo.py`: 6 coppie capitolo × persona complete su 145, nu… |
 | 2026-11-03 | STANDARD-STAMPA | ADR-0105 punto 7, modo «entrambe» | ✅ su richiesta del DM, per il booklet Notte e Alba: scheda intera nel capitolo, accanto a descrizione e ritratto, e in più l'appendice delle creature (solo PDF… |
-| 2026-11-02 | PIATTAFORMA-DI-SVILUPPO | P9 · Dependabot convertitori-settimanale | ✅ minimo di `transformers` portato a 5.22.1 a mano, invece del 5.22.0 di Dependabot: lo stesso valore entrato su EarlRagnar78 con la sua #32, così l'allineamen… |
 
 ## Le misure che si portano dietro
 

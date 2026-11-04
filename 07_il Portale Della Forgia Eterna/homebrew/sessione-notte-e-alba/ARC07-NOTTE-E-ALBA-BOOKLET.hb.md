@@ -1698,7 +1698,7 @@ sa che i nani volano, e il resto dell'assedio lo mostra (§10).
   di fuoco*, aree e incroci della griglia, danno massiccio, CD degli oggetti
   magici: d20srd.org, voci omonime
 - La fisica della caduta:
-  densità dell'olio 0,91 kg/l, aria a 870 m 1,12 kg/m³, coefficiente di
+  densità dell'olio 0,91 kg/l, aria a 520 m 1,17 kg/m³, coefficiente di
   resistenza 0,9.
 
 
@@ -2639,7 +2639,7 @@ sessioni del viaggio.
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
 dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
-**Dove sale l'assalto** `[INFERRED — needs DM confirmation]`. Gli arieti si
+**Dove sale l'assalto**. Gli arieti si
 montano sulla spianata degli arieti, a +80, e salgono alla porta, a +100, per
 una rampa addossata al gradone. Le scale salgono sul tratto est, dove il fianco
 della montagna arriva al piede delle mura; sul fronte sud le mura stanno sul
@@ -2717,7 +2717,7 @@ Quando la testa torna a posto, guardano dove sono.
 delle mura**, un quarto d'ora prima del buio. Il bosco copre la spalla della
 montagna a est: dove il portale li lascia è poco sopra la quota delle mura, e
 da lì scende fino al margine del campo, sulla piana, 100 m più in basso
-`[INFERRED — needs DM confirmation]`. È autunno inoltrato: **5 °C**, il
+. È autunno inoltrato: **5 °C**, il
 fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
 contare con il consiglio, che è la prima delle sue otto tacche: le prime
@@ -3073,7 +3073,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** | **1** · **0** |
 | Spogliare la tenda delle armature (Scena 8, solo se nessuno ha dato l'allarme) | **1** |
-| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) `[INFERRED — needs DM confirmation]` | **1** |
+| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) | **1** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
 | Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) | **1** |
@@ -3304,7 +3304,7 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   e la runa dura 70 minuti. Prezzo di pergamena SRD, 350 mo. Per
   **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido. La
   attiva chi la porta, toccando il bersaglio, perché *resistere all'energia*
-  è a contatto (SRD): su Durik la mette Hella `[INFERRED — needs DM confirmation]`.
+  è a contatto (SRD): su Durik la mette Hella.
 - **Fermarsi o dormire — scelta.** In 3.5 ci sono solo le otto ore di sonno
   e il tempo che passa. **Tre ore di sosta** (2
   tacche) non ridanno incantesimi, perché l'SRD li restituisce solo dopo otto
@@ -4101,7 +4101,7 @@ usa due cose diverse, e tutte e due si possono fare:
   come un visibile. Chi nel gruppo non è nano passa senza niente. Hella in
   forma selvatica resta una nana per la runa: la forma selvatica funziona
   come la forma alternativa dell'SRD, che conserva tipo e sottotipo. Da
-  aquila la fa scattare come da nana `[INFERRED — needs DM confirmation]`.
+  aquila la fa scattare come da nana.
 - **Il silenzio spegne i glifi, non la soglia.** Dentro la bolla della pietra
   nessuno subisce danni sonori e il boato non esce. *Epurare* invece non fa
   rumore, e il silenzio non lo ferma: chi varca la soglia invisibile si ritrova
@@ -4171,7 +4171,7 @@ Dalla gemella sul corno, Skullcrusher ascolta: quello che si dice vicino a
 Grask gli arriva sulle colline come un sussurro, e all'alba sa i nomi che i
 PG si sono detti alla tenda (Scena 7, «Che cosa muove Skullcrusher»). Fuori
 dal telo sente anche chi parla sottovoce; da dentro la tenda, come Grask,
-solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
+solo i gridi.
 
 **Comparse**
 
@@ -4682,7 +4682,7 @@ motivo per cui la Scena 7 viene prima.
     distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
     palo centrale** (Forza **CD 20**, azione standard): il colmo è fatto di due
     travi incastrate sul palo centrale, e senza quello cadono e si portano
-    dietro i pali di testa `[INFERRED — needs DM confirmation]`. Il telo crolla, e chi è
+    dietro i pali di testa. Il telo crolla, e chi è
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
@@ -4787,7 +4787,7 @@ motivo per cui la Scena 7 viene prima.
 - **Il bottino e il tempo**: le armature della tenda, quanto pesano, quando
   si possono togliere e dove stanno nel buco portatile sono in §8 B, «Il
   bottino della tenda e il tempo».
-- **Curarsi prima di ripartire** `[INFERRED — needs DM confirmation]`. Le
+- **Curarsi prima di ripartire**. Le
   bacchette di cura funzionano anche nella tenda, ma la tenda è circondata
   dalle ronde, e ogni carica è il round di chi la usa. Se il gruppo, in tutto,
   spende **più di 20 cariche** di bacchetta prima di ripartire dalla tenda,
@@ -5074,7 +5074,7 @@ al 12° non ha gradi: chiedi al tavolo, prima della scena, se qualcuno li ha
 comprati. Per chi non li ha, il fagotto si strappa di mano: lo afferra chi
 gli mette le mani addosso, Vatore attiva il Cronolito come quando lo tengono,
 e chi stringeva il fagotto se lo ritrova in mano. Vale la riga «Lo derubano»
-riuscita, e Vatore sa chi è stato `[INFERRED — needs DM confirmation]`.
+riuscita, e Vatore sa chi è stato.
 
 **Se uno di loro porta il segno** (la cura con la cera nera, Scena 5). Vatore
 guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
@@ -5162,7 +5162,7 @@ caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
 piana si vede tutta, 100 m sotto. Il primo ariete sale dalla spianata alla
 porta per la rampa del fronte sud; le scale arrivano sul tratto est, dove il
 fianco della montagna tocca il piede delle mura, ed è lì che sta Hrodgar
-`[INFERRED — needs DM confirmation]` (M7-A, «La rampa della porta»).
+ (M7-A, «La rampa della porta»).
 
 Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 
@@ -5239,7 +5239,7 @@ ed è per questo che vuole buttare giù chi ha davanti.
   guaio è dove si atterra. Chi cade fuori ha un round per rialzarsi, e intorno
   ci sono scale e uncini. Vale per il tratto est, dove fuori c'è il pendio. Dal
   muro sud, che sta sul ciglio del gradone, si cade sulla spianata, 24,5 m più
-  in basso: 8d6 `[INFERRED — needs DM confirmation]`.
+  in basso: 8d6.
 - **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
   per inseguire nessuno: la breccia è sua.
 - **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
@@ -5466,7 +5466,7 @@ cambia davvero.
     sente il nome un round prima: chi è nominato sa che sarà colpito, e gli
     altri sanno su chi preparare la corda. Oltre all'*armatura magica* ha sei
     slot di 1°. ⚠ Non SRD: l'incantesimo vuole anche un fuoco, un piccolo
-    bersaglio di legno, e il drago non lo porta `[INFERRED — needs DM confirmation: il nome gridato vale da fuoco]`.
+    bersaglio di legno, e il drago non lo porta.
   - ***Fluttuare*** (SRD, *Hover*), **una volta sola**: alla prima paura, a
     ⅓ dei pf (la soglia qui sotto). Con un'azione di movimento si ferma in
     aria, e da fermo si sposta in ogni direzione, anche in verticale, a metà
@@ -6099,7 +6099,7 @@ Il duello della Scena 11: combatte in passata, dice il nome prima di colpire e f
 }}
 
 **Perché GS 14** (scelta del DM): la nota D8 lo voleva GS 12, un Adulto «potenziato» senza numeri. Adesso è un drago dell'SRD intero, Avanzato senza alzare il GS. EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4. Il vero climax resta Fauci nel 1372: qui si semina.
-- Boost log: due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[INFERRED — needs DM confirmation sulla CD per toglierselo]`.
+- Boost log: due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon.
 - Boost log: un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco.
 
 
