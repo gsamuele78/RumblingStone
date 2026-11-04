@@ -18,6 +18,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
+  degli incantesimi fuori rete, nelle esportazioni PCGen di
+  `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
 - `scripts/misura_fedelta_nli.py`: il riscritto contraddice l'originale? Coppie di righe del diff giudicate da un modello NLI multilingue (solo in locale, `transformers`). Con `--ripara`, e da sé dentro `ciclo_prosa revisione` e `misura`, le righe che contraddicono tornano all'originale. Sulle 26 coppie del DM F1 0,83 contro 0,62 dei soli numeri (RICERCA-GUARDRAIL §9).
 - `misura_box_telecomando.py --check` (cancello in CI) e `misura_ripetizioni_frasi.py --check` (cancello locale, `plans/scrittura/ripetizioni-accettate.json`).
 - `scripts/misura_ripetizioni_frasi.py`: le immagini ripetute fra i box, frase per frase, con embedding (solo in locale, `sentence-transformers`). `scripts/misura_box_telecomando.py`: i box che dicono al gruppo cosa capisce o sa. Indicatori, nati dalle prove scartate rifatte con una configurazione rigorosa (RICERCA-GUARDRAIL §8).
