@@ -358,7 +358,6 @@ reparti, non ai gesti.
 | un giorno senza brecce | +1, la notte |
 | il sorvolo: un eroe colpisce il drago `[INFERRED]` | +1 |
 | il Re cade sul cancello `[INFERRED — il Re ferito nel libretto]` | −2 |
-| Borin prende il soffio al posto del Re `[INFERRED]` | +2 |
 
 Il reparto distrutto, il settore che cede, il comandante che fugge e il
 giorno senza brecce sono nel libretto (§6). Le altre quattro righe i
@@ -1350,12 +1349,12 @@ Al round 3, quando prepara il cono:
 prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
 
 **Borin** — il sacrificio.
-- **A · Interporsi.** Al round 4 si mette fra il Re e il drago (e al round 5
-  davanti alla lancia, se vuole: la prende lui, contro la sua CA 25): prende il
-  soffio lui, con Riflessi +6 (+2 della sua Presenza vale per gli altri, non
-  per sé), e il Re prende **metà** dei danni senza tiro `[INFERRED — la
-  guida: «danni dimezzati da splash»]`. Morale **+2** se Borin resta in
-  piedi `[INFERRED]`. È la scelta che il nipote di un re può fare una volta.
+- **A · Davanti alla lancia.** Il soffio non si para col corpo: in 3.5 chi
+  sta nel cono tira i Riflessi, e una creatura davanti non dà copertura
+  contro un'area `[CANONE — DM 2026-11-04, P16]`. Contro il soffio Borin ha
+  solo la spinta (B). Al round 5 può mettersi davanti alla lancia, se vuole:
+  la prende lui, contro la sua CA 25. È la scelta che il nipote di un re può
+  fare una volta.
 - **B · Spingerlo via.** È una spinta (SRD, *bull rush*): Forza contrapposta,
   Borin +5 (+7 in Postura Difensiva, +9 con la *forza del toro* di Thorin)
   contro il Re +9 (For 20 e +4 di stabilità dei nani), perché il Re non vuole
@@ -1440,8 +1439,8 @@ appena il Re è in ginocchio: le cure lo tengono vivo, non lo rimettono in
 piedi. Al tavolo si conta così.
 
 1. **Il soffio** (round 4). Il Re ha Riflessi +8: contro CD 29 lo prende
-   pieno quasi sempre, 14d4 (35 di media). Metà senza tiro se Borin si è
-   interposto; niente se Borin lo ha spinto sulla terrazza; con la
+   pieno quasi sempre, 14d4 (35 di media). Niente se Borin lo ha spinto sulla
+   terrazza; con la
    *protezione dall'energia*, lo assorbe lei.
 2. **La lancia** (round 5): +18 contro CA 30 meno l'1d4 che il cono ha tolto alla sua armatura (sotto, «Gli effetti del soffio»), 3d8+21, più Punire il Bene se
    il cavaliere lo spende (+2 a colpire, +4 ai danni).
@@ -1499,8 +1498,7 @@ Se il Re muore qui, vale `ARC08-10` §2 prima di permetterlo.*
 #### I round 3 e 4
 
 Il libretto riprende senza la carta. Il morale ha il **−2** del Re a terra
-`[INFERRED — il Re ferito nel libretto]`, e il **+2** se Borin ha preso il soffio al suo posto: le due
-cose insieme fanno zero. Alla fine del round 4 suona il corno della ritirata
+`[INFERRED — il Re ferito nel libretto]`. Alla fine del round 4 suona il corno della ritirata
 (la carta «La ritirata»). Si contano i **reparti vivi**: è la riga
 «Posizioni tenute» (`ARC08-19` §4: tre quarti o più pieno, da un terzo a tre
 quarti parziale, meno di un terzo fallito).
@@ -1790,7 +1788,7 @@ GRIMJAW            fuggito ferito il Giorno ___ □     ricacciato dal Re □   
 CANTITRICI         Mura non cedute il G2 □   cedute al round 4-5 □   entro il 3 □
                    Cantitrici cadute ___  il Coro c'è ancora □
 CANCELLO           pf a sera G1 ___ (+20 la notte)   a sera G2 ___   crollato il G3 □
-IL SOFFIO          Borin: interposto □ spinto □ nessuno □   protezione dall'energia □
+IL SOFFIO          Borin: spinto □ davanti alla lancia □ nessuno □   protezione dall'energia □
                    Fauci ferito ___ danni   atterrato □   frecce di Dara: ___
 RE THOREK          vivo a 8 pf □   morto □   (dove: ________)
 DANA               al Cuore con 20 pf e il muro di pietra □   senza muro □

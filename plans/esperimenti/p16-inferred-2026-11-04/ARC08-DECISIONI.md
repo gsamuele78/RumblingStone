@@ -77,6 +77,12 @@ abbassa al numero nuovo nello stesso commit.
    danni senza tiro e +2 al morale. *Consigliata*: seguire la regola: resta la
    spinta (opzione B, SRD) per togliere il Re dal cono; l'opzione A e il suo +2
    escono.
+   ✅ **Decisa dal DM il 2026-11-04: come consigliata.** In DEF-2 l'opzione A
+   diventa «davanti alla lancia» (round 5, la parte che non riguardava il
+   soffio), escono il dimezzo senza tiro e i due +2 al morale (tabella e round
+   3-4), la scheda della serata dice «spinto / davanti alla lancia», e la MAPPA
+   3 di L2 è allineata. `hammerfist_encounters` ha ancora la versione vecchia:
+   è il file che MASTER-DEF D6 propone di archiviare, e lì resta.
 5. ~~**Le altre scelte del master (§5).**~~ Card ritirata il 2026-11-04: il DM
    ha chiesto che si chiuda solo ciò che è già fatto, risolto o superato, mai in
    blocco per comodità. Rifatta come §4-bis.

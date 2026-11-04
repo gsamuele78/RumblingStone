@@ -770,7 +770,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Effetti collaterali:** armature 1d4 danni permanenti CA; armi metalliche 25% corrose; quadretti colpiti = terreno difficile (acido residuo, 10 min)
 
 ### 📍 OPZIONI DIFENSIVE PNG (dalla guida, con coordinate):
-- **BORIN (S19, nel cono)** — A: si interpone (subisce lui il soffio, Riflessi CD 29; il Re prende solo splash; +4 TS per l'atto eroico) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
+- **BORIN (S19, nel cono)** — A: al round 5 si mette davanti alla lancia (il soffio non si para col corpo: DM 2026-11-04, DEF-2 Scena 6) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
 - **DARA (Torre Ovest, ~45 m FUORI MAPPA a ovest)** — il Tiro Impossibile: round 2 mira (+1), round 3 tiro in picchiata CD 25; freccia *Slaying Dragons*: Tempra CD 20 o morte, altrimenti 6d6+1
 - **THORIN (AC16, sul Bastione G2, fuori dal cono)** — *Heal* preparato su Thorek · *Spell Immunity: Acido* round 1 · *Mass Cure Critical* round 4 · Invocazione a Moradin (Car CD 22: +4 sacro ai TS di tutti / fallita: −2)
 - **NALA (D16, ai piedi della scala ovest)** — round 1 *Immagine Silenziosa* (drago illusorio sul fianco: Volontà CD 17 o −2 att) · round 2 *Frantumare* sulla sella del cavaliere · round 3 Ispirare Coraggio +2
