@@ -1419,7 +1419,9 @@ sul tavolo nelle scene di prima: qui li ritrova.
 | **Ascia nanica di adamantio** | ~3.030 mo |
 | **LORDO restituito** | dalla scheda della giocatrice; gli oggetti MIC si prezzano col manuale |
 
-<!-- storico: fino al 2026-11-05 il corredo era cuoio borchiato +2, Mantello della Resistenza +2, Periapto di Saggezza +2, scudo leggero di legno +1, scimitarra +1, bacchetta di Cura Ferite Moderate (25 cariche), ~17.550 mo. Il DM: «ha quello che c'è scritto nella carta». -->
+<!-- storico -->
+*Fino al 2026-11-05 il corredo era cuoio borchiato +2, Mantello della Resistenza +2, Periapto di Saggezza +2, scudo leggero di legno +1, scimitarra +1, bacchetta di Cura Ferite Moderate (25 cariche), ~17.550 mo. Il DM: «ha quello che c'è scritto nella carta»..*
+<!-- /storico -->
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -1513,7 +1515,9 @@ sensi: scurovisione 27 m (Dream Dwarf)
 
 **Statistiche** For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 10 `[CANONE — DM 2026-11-05, P16, schede PG: la scheda della giocatrice]` · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C; la scheda della giocatrice) corazza di piastre di pelle di drago +1 con cristallo del riposo, brocchiere, ascia nanica di adamantio, Anello di Deviazione +1, anello degli incantesimi (3 livelli), Mantello dello Svanire, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4) · **Artefatto** Collana dei Semi Eterni (§7)
 
-<!-- storico: fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15, corredo con cuoio borchiato, scudo di legno, scimitarra e Mantello della Resistenza; il DM ha dato la scheda della giocatrice (foto del 2026-11-05) -->
+<!-- storico -->
+*Fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15, corredo con cuoio borchiato, scudo di legno, scimitarra e Mantello della Resistenza; il DM ha dato la scheda della giocatrice (foto del 2026-11-05).*
+<!-- /storico -->
 
 **Capacità speciali**
 - **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.

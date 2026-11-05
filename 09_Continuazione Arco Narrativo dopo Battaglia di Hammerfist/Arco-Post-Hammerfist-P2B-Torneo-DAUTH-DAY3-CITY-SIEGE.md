@@ -313,7 +313,9 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
   parte il sigillo di Thorik: al massimo 650 soldati, un terzo di quelli che servono.
   Si tengono le mura sud e ovest, dove preme il Vanguard, e si lasciano leggere quelle
   nord ed est, sopra il versante ripido. Con la sola guarnigione si tiene la Porta Sud.
-  <!-- storico: prima del 2026-11-05 la leva si sommava (circa 1.700 più la guarnigione, che non aveva un numero) -->
+  <!-- storico -->
+  *Prima del 2026-11-05 la leva si sommava (circa 1.700 più la guarnigione, che non aveva un numero).*
+  <!-- /storico -->
 - **HUB Torneo:** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §3 (sfondo Vanguard)
 - **Giorno 3 in arena (Tordek/Artemis):** `Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE3-Giorno3-Finale-e-Invasione.md`
 - **Le 150 lance (fonte):** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-SUBQUEST-Thorik.md` §4

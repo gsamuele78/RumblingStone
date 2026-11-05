@@ -3336,7 +3336,6 @@ sul tavolo nelle scene di prima: qui li ritrova.
 | **Ascia nanica di adamantio** | ~3.030 mo |
 | **LORDO restituito** | dalla scheda della giocatrice; gli oggetti MIC si prezzano col manuale |
 
-<!-- storico: fino al 2026-11-05 il corredo era cuoio borchiato +2, Mantello della Resistenza +2, Periapto di Saggezza +2, scudo leggero di legno +1, scimitarra +1, bacchetta di Cura Ferite Moderate (25 cariche), ~17.550 mo. Il DM: «ha quello che c'è scritto nella carta». -->
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -3416,21 +3415,20 @@ Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +13
 **STATISTICHE**
 ___
 For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana, Car 10 · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C; la scheda della giocatrice) corazza di piastre di pelle di drago +1 con cristallo del riposo, brocchiere, ascia nanica di adamantio, Anello di Deviazione +1, anello degli incantesimi (3 livelli), Mantello dello Svanire, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4) · **Artefatto** Collana dei Semi Eterni (§7)  
+
+**CAPACITÀ SPECIALI**
+___
+- **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.  
+- **Empatia Vegetale** +4 · **Fotosintesi** (1/g: 2d8 pf a 1 ora di sole).  
+- **Radicamento** (1/g, 5 round): immune a spinta, travolgere e sbilanciare; immobile.  
+- **Marchio della Veritade** (Prova I): +4 Diplomazia coi nani di Moradin; 1/g verità → Volontà CD 17 o scosso.  
+- **Radice Silenziosa** (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata.  
+- **Radici del Mondo** (Prova III): guarigione rapida 1 anche su suolo sacro o druidico; 1/g Radicamento corale (+1 morale ai TS degli alleati entro 9 m, 5 round, lei immobile).  
+- **Doni del party** (§5, solo se donati: segna quelli veri dopo il rito): ☐ *Scudo del Custode* (Thorik): 1/g, immediata, prende il danno di un alleato entro 9 m **dimezzato**; Thorik accelerato 3 round verso il protetto. ☐ *Pelle di Adamantio* (Tordek): RD 3/adamantino (la sua **unica** RD). ☐ *Rovo Eldritch* (Artemis): **a volontà**, standard, contatto a distanza 18 m, 2d6 (metà rovi, metà fuoco).  
+- **Restituzione** (Collana #6): una volta sola per seme, immediata, Hella rende al donatore ciò che aveva dato per una scena intera. Poi mai più.  
+- **Incantesimi da druida** (LI 12), slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2 (base SRD del druido di 12°, più i bonus di SAG 20). Preparati tipici prima di una battaglia: 1° Entangle, Faerie Fire, Produce Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI.  
+- **Compagno, Durik riforgiato** (12 DV, 102 pf): CA 21 (contatto 12, sprovvisto 19) · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3) · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo. Scheda completa: il foglio «Durik, il guardiano di pietra». Sempre presente; il 3° seme della Collana lo richiama se è distrutto. Il rinoceronte visto in gioco è la **forma selvatica** di Hella, non un compagno.  
 }}
-
-<!-- storico: fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15, corredo con cuoio borchiato, scudo di legno, scimitarra e Mantello della Resistenza; il DM ha dato la scheda della giocatrice (foto del 2026-11-05) -->
-
-**Capacità speciali**
-- **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.
-- **Empatia Vegetale** +4 · **Fotosintesi** (1/g: 2d8 pf a 1 ora di sole).
-- **Radicamento** (1/g, 5 round): immune a spinta, travolgere e sbilanciare; immobile.
-- **Marchio della Veritade** (Prova I): +4 Diplomazia coi nani di Moradin; 1/g verità → Volontà CD 17 o scosso.
-- **Radice Silenziosa** (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata.
-- **Radici del Mondo** (Prova III): guarigione rapida 1 anche su suolo sacro o druidico; 1/g Radicamento corale (+1 morale ai TS degli alleati entro 9 m, 5 round, lei immobile).
-- **Doni del party** (§5, solo se donati: segna quelli veri dopo il rito): ☐ *Scudo del Custode* (Thorik): 1/g, immediata, prende il danno di un alleato entro 9 m **dimezzato**; Thorik accelerato 3 round verso il protetto. ☐ *Pelle di Adamantio* (Tordek): RD 3/adamantino (la sua **unica** RD). ☐ *Rovo Eldritch* (Artemis): **a volontà**, standard, contatto a distanza 18 m, 2d6 (metà rovi, metà fuoco).
-- **Restituzione** (Collana #6): una volta sola per seme, immediata, Hella rende al donatore ciò che aveva dato per una scena intera. Poi mai più.
-- **Incantesimi da druida** (LI 12), slot dal 0 al 6°: 6/5+2/4+1/4+1/3+1/3+1/2 (base SRD del druido di 12°, più i bonus di SAG 20). Preparati tipici prima di una battaglia: 1° Entangle, Faerie Fire, Produce Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI.
-- **Compagno, Durik riforgiato** (12 DV, 102 pf): CA 21 (contatto 12, sprovvisto 19) · morso +15 (2d6+6), attacco completo morso +15 e 2 artigli +13 (1d4+3) · Temp +11 Rifl +10 Vol +6 · RD 5/adamantio · percezione tellurica 18 m · legame telepatico entro 18 m · senza ordini si frappone tra Hella e il pericolo. Scheda completa: il foglio «Durik, il guardiano di pietra». Sempre presente; il 3° seme della Collana lo richiama se è distrutto. Il rinoceronte visto in gioco è la **forma selvatica** di Hella, non un compagno.
 
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
