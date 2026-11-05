@@ -28,3 +28,10 @@ che cambierebbero la durata dell'effetto.
   scheda dei dodici gufi (8 DV, GS 6) ma quella di Signore Ventolesto in `ARC08-01`
   (10 DV, 105 pf, 2 artigli +15, GS 8). Allineata anche la scheda di Lythiel, che gli
   dava 35 PF e GS 5; i valori vecchi restano in un blocco `<!-- storico -->`.
+
+## Il Drappo di Tarsilia (stessa serie di card)
+
+- **Quota della piazza della corsa:** **1,5 m sul Sellen in magra** (DM 2026-11-05),
+  invece dei 3 m scritti. Il Ponte Storto resta a +1,5 m sulla pista, cioè 3 m sul
+  fiume. Così la piena del G3 sera (`06-VILLAIN-E-AGENDE.md` §4) entra davvero in
+  piazza e nel deposito dell'Oca. Applicata nelle due mappe `tarsilia-la-ruota*.md`.
