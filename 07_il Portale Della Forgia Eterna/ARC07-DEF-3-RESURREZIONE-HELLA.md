@@ -1407,15 +1407,19 @@ sul tavolo nelle scene di prima: qui li ritrova.
 > dal suo corpo nell'ARC-06 e custodito con lei nella Sala) **torna a lei** —
 > ricchezza ordinaria che rientra nel WBL del party, itemizzata:
 
-| Oggetto (corredo di Hella, restituito) | Valore |
+| Oggetto (corredo di Hella, restituito: la scheda della giocatrice `[CANONE — DM 2026-11-05, P16, schede PG]`) | Valore |
 |---|---|
-| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido; le borchie sono nodi di legno di ferro, non metallo `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: il druido SRD non porta il cuoio borchiato, che ha borchie di metallo) | ~4.000 mo |
-| **Mantello della Resistenza +2** | ~4.000 mo |
+| **Corazza di piastre di pelle di drago +1** (*dragonhide full plate*: niente metallo, la porta un druido; armatura +9, DES max +1, penalità −5) con il **cristallo del riposo** (*restful crystal*, MIC) e un secondo cristallo d'armatura (*crystal of …*, MIC; sulla carta la scritta non si legge tutta) | ~4.300 mo più i cristalli |
+| **Brocchiere** (CA +1) | ~15 mo |
+| **Anello di Deviazione +1** | ~2.000 mo |
+| **Mantello dello Svanire** (*vanisher cloak*, MIC) | prezzo del MIC |
+| **Anello degli incantesimi**, 3 livelli (sulla carta «anello incant. 3L») | come l'anello di immagazzinare incantesimi minore |
+| **Guanti della Forza dell'Orco +2** (FOR 14 → 16) | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo leggero di legno +1** | ~1.000 mo |
-| **Scimitarra +1** | ~2.300 mo |
-| **Bacchetta di Cura Ferite Moderate** (25 cariche; da chierico, 2° livello, LI 3: SRD 750 × 2 × 3 = 4.500 mo a 50 cariche) | ~2.250 mo |
-| **LORDO restituito** | **~17.550 mo** |
+| **Ascia nanica di adamantio** | ~3.030 mo |
+| **LORDO restituito** | dalla scheda della giocatrice; gli oggetti MIC si prezzano col manuale |
+
+<!-- storico: fino al 2026-11-05 il corredo era cuoio borchiato +2, Mantello della Resistenza +2, Periapto di Saggezza +2, scudo leggero di legno +1, scimitarra +1, bacchetta di Cura Ferite Moderate (25 cariche), ~17.550 mo. Il DM: «ha quello che c'è scritto nella carta». -->
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -1491,11 +1495,11 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
 nome: Hella Oakenshield, risorta
 gs: PG di 13°
 tipo: Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media
-ca: 21
-ca-dettaglio: contatto 11, colta alla sprovvista 20
+ca: 25
+ca-dettaglio: contatto 12, colta alla sprovvista 24
 pf: 80
 pf-dado: 13 DV
-ts: Temp +13, Rifl +9, Vol +15
+ts: Temp +11, Rifl +7, Vol +13
 attributi: For 16 Des 13 Cos 12 Int 12 Sag 20 Car 10
 velocita: 6 m
 iniziativa: +1
@@ -1503,13 +1507,13 @@ sensi: scurovisione 27 m (Dream Dwarf)
 ```
 **Iniziativa** +1 · **Sensi** scurovisione 27 m (Dream Dwarf)
 
-**Difesa** **CA 21** (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo leggero di legno +1, +3 naturale della Collana, DES +1) `[CANONE — DM 2026-10-18]`, contatto 11, colta alla sprovvista 20 · **pf 80** (13 DV, dalla scheda della giocatrice) · TS Tempra +13, Riflessi +9, Volontà +15 (base Ranger 1 + Druida 12 +10/+6/+8, COS +1, DES +1, SAG +5, Mantello della Resistenza +2; tabelle SRD) `[CANONE — DM 2026-11-05, P16, schede PG]` · **Vulnerabilità al fuoco** ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco) `[CANONE — DM 2026-10-18]`: è la guarigione rapida SRD, Hella muore come chiunque altro
+**Difesa** **CA 25** (+9 corazza di piastre di pelle di drago +1, +1 brocchiere, +1 deviazione, +3 naturale della Collana, DES +1) `[CANONE — DM 2026-11-05, P16, schede PG]`, contatto 12, colta alla sprovvista 24 · **pf 80** (13 DV, dalla scheda della giocatrice) · TS Tempra +11, Riflessi +7, Volontà +13 (base Ranger 1 + Druida 12 +10/+6/+8, COS +1, DES +1, SAG +5; tabelle SRD) · **Vulnerabilità al fuoco** ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco) `[CANONE — DM 2026-10-18]`: è la guarigione rapida SRD, Hella muore come chiunque altro
 
 **Attacco** Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +13
 
-**Statistiche** For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 10 `[CANONE — DM 2026-11-05, P16, schede PG: la scheda della giocatrice]` · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C) cuoio borchiato +2 a borchie vegetali, scudo leggero di legno +1, scimitarra +1, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, bacchetta di Cura Ferite Moderate (25 cariche) · **Artefatto** Collana dei Semi Eterni (§7)
+**Statistiche** For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 10 `[CANONE — DM 2026-11-05, P16, schede PG: la scheda della giocatrice]` · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C; la scheda della giocatrice) corazza di piastre di pelle di drago +1 con cristallo del riposo, brocchiere, ascia nanica di adamantio, Anello di Deviazione +1, anello degli incantesimi (3 livelli), Mantello dello Svanire, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4) · **Artefatto** Collana dei Semi Eterni (§7)
 
-<!-- storico: fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15; il DM ha dato la scheda della giocatrice (foto del 2026-11-05) -->
+<!-- storico: fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15, corredo con cuoio borchiato, scudo di legno, scimitarra e Mantello della Resistenza; il DM ha dato la scheda della giocatrice (foto del 2026-11-05) -->
 
 **Capacità speciali**
 - **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.

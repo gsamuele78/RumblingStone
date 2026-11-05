@@ -33,7 +33,12 @@ I numeri più incerti nella foto sono i bonus di alcune righe e le abilità. Le 
   - DES 13, COS 12, INT 12, CAR 10;
   - SAG 20: base 16 più il +4 della Collana. Il Periapto non si somma, perché sono due bonus di potenziamento.
 
-  Lo statblocco A.1 di DEF-3 è allineato: CA 21, 80 PF, tiri salvezza +13/+9/+15, Lotta +13. L'equipaggiamento resta quello del modulo, deciso dal DM il 2026-10-18.
+  Il DM poi ha detto anche: «ha quello che c'è scritto nella carta». Quindi l'equipaggiamento è quello della carta:
+  - corazza di piastre di pelle di drago +1, con il cristallo del riposo e un secondo cristallo che non si legge tutto;
+  - brocchiere, Anello di Deviazione +1, anello degli incantesimi (3 livelli), Mantello dello Svanire;
+  - guanti, periapto e ascia nanica di adamantio.
+
+  Lo statblocco A.1 di DEF-3 e il tesoro C di §11 sono allineati: CA 25 (contatto 12, colta alla sprovvista 24) con il +3 naturale della Collana, 80 PF, tiri salvezza +11/+7/+13, Lotta +13.
 
 ## Riscontro con le abilità senza gradi
 
