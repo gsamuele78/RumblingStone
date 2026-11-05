@@ -3768,8 +3768,7 @@ della Corona.
 | **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~10.210/PG** col Vecchio e le wyvern, stasera (duello a ≈ 4.060); **~7.775/PG** con l'Adulto e le wyvern (duello a 1.625); **~7.610/PG** con l'Adulto da solo |
 
 > **Il gruppo di oggi, dal registro dei PX**.
-> Il foglio del DM (`00_Red Hand Of Doom/CalcoloPuntiEperienza-current.ods`,
-> copia in `campaign/REGISTRO-PX.md`) arriva al consiglio della Scena 4 con:
+> Il foglio dei PX del DM arriva al consiglio della Scena 4 con:
 > - **Thorik, Tordek e Artemis** oltre i 105.000 PX (Fuoco 7.700 con Therysol,
 >   Terra 11.800, Sala 400, affreschi 1.900, rito 1.900, Scene 1-4 600, più il
 >   finale dell'ARC-06 e la prova della Corona);

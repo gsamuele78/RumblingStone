@@ -886,8 +886,8 @@ Ogni fallimento di questo master è un costo, non un blocco.
 
 > **Somma d'arco (ARC-07)**: Terra ~11.600 + Affreschi ~1.900 + Resurrezione
 > ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**, più il Fuoco (P3).
-> **Per il gruppo di oggi** il conto vero è nel registro dei PX
-> (`campaign/REGISTRO-PX.md`) `[CANONE — DM 2026-11-05, P16, PX]`:
+> **Per il gruppo di oggi** il conto vero è nel registro dei PX<!-- apparato -->
+> (`campaign/REGISTRO-PX.md`)<!-- /apparato --> `[CANONE — DM 2026-11-05, P16, PX]`:
 > Thorik, Tordek e Artemis hanno i PX del 14° già all'arrivo e restano fermi a
 > 104.999 (un livello alla volta). Hella li raggiunge durante la notte di `DEF-4`.
 > Il livello si prende al
