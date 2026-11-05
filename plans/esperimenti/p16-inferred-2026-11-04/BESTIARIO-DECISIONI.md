@@ -45,3 +45,6 @@ che cambierebbero la durata dell'effetto.
   gigante sale di 1 GS ogni 4 DV, quindi il troll a 10 DV è **GS 6**, non 7, e Gorthak
   coi due troll resta **EL 13**, non 14. Applicato in `ARC08-DEF-2` (nota 5, tabella
   dei nemici, Scena 2, Appendice A.2 con il blocco storico).
+- **La riserva nanica:** **+3 al morale, come scritto** (DM 2026-11-05), per ogni
+  reparto di riserva che entra in un settore caduto. Applicato nelle due righe di
+  `ARC08-DEF-2` (tabella del morale e paragrafo «La riserva»).

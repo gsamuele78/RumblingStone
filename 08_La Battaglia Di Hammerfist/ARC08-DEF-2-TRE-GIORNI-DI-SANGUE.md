@@ -352,7 +352,7 @@ reparti, non ai gesti.
 |---|---|
 | un reparto nanico distrutto | −1 |
 | un settore cede | −2 |
-| la riserva entra nel settore caduto `[INFERRED — la riserva a +3]` | +3 |
+| la riserva entra nel settore caduto `[CANONE — DM 2026-11-05, P16, la riserva a +3]` | +3 |
 | un comandante nemico fugge | +2 |
 | un giorno senza brecce | +1, la notte |
 | il sorvolo: un eroe colpisce il drago `[CANONE — DM 2026-11-04, P16, il morale]` | +1 |
@@ -1161,7 +1161,7 @@ il libretto ha già dentro i mazzi.*
 riceve la riserva come terzo reparto: due di balestrieri e uno di veterani
 sono **tre reparti**, e il gruppo ne sceglie uno; gli altri due restano nel
 cortile per il settore dopo (il libretto dice «entra come terzo
-reparto», al singolare). Quando entra, il morale sale di **3** `[INFERRED — la riserva a +3]`.
+reparto», al singolare). Quando entra, il morale sale di **3** `[CANONE — DM 2026-11-05, P16, la riserva a +3]`.
 
 > **Read-aloud (Casa di Davide lead) — il cortile esterno, la riserva.** *Il
 > capitano della riserva si alza dalla cassa prima che il corno abbia finito.
