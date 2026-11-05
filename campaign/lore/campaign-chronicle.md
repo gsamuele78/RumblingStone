@@ -64,6 +64,7 @@ The party has no rogue. They handle traps via Tordek's high Monk saves, arcane u
   - the **necromancer of Castel Wrath** raises the giants' skeletons and the remains of the Death Moon tribe (the ogres stay skeletons, the orcs become zombies);
   - a **cyclops giant** and a **mantimera** replace the chimera;
   - the goblins fight alongside orcs, ogres, orc shamans and ogre magi **enslaved by the hobgoblins**, with two orc barbarians in the major fights.
+- **Jorr Natherson**, the NPC companion (8th level), **dies in the vale** before the descent `[DM 2026-11-05]`. Moradin brings Thorik back with no level lost (the XP ledger: «Thorik il grigio, Thorik il bianco», −4,000 and +4,000) `[DM 2026-11-05]`.
 - Source files: `00_Red Hand Of Doom/`, `PG/Artefatti/Artefatti-Pg/Aegis Fang/`, `Bestiario/png/Lorana/Lorana/Lorana.md`, `Bestiario/png/Tempestas/Tempestas.md`
 
 ### Phase B: Hammerfist Hills & The Quest for the Corona (Level 8)
@@ -186,7 +187,7 @@ The party descends through a chain of connected underground locations:
 #### Arc 01 — La Miniera (Ancient Dwarven Mine)
 
 - **Source:** `01_LaMiniera/`
-- **Enemies:** Grell Necromancer lair, Grell Patriarch (aberration, defeated)
+- **Enemies:** Grell Necromancer lair, Grell Patriarch (aberration, defeated). The **Grell Patriarch** is the «grell filosofo» of the XP ledger and is fought in the Fungi Tower, before the portal `[DM 2026-11-05]`
 - **Cristal Warriors** — Encountered in this area (source: *Underdark* p.93)
 - **Notes:** First part of the ancient dwarven mine. Cristal Warriors encountered in early rooms after portal arrival to the mine complex.
 - **Arrival** `[DM 2026-07-26]`: the party reaches this area through the **one-way
