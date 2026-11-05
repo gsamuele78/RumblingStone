@@ -3326,15 +3326,16 @@ sul tavolo nelle scene di prima: qui li ritrova.
 
 | Oggetto (corredo di Hella, restituito: la scheda della giocatrice) | Valore |
 |---|---|
-| **Corazza di piastre di pelle di drago +1** (*dragonhide full plate*: niente metallo, la porta un druido; armatura +9, DES max +1, penalità −5) con il **cristallo del riposo** (*restful crystal*, MIC) e un secondo cristallo d'armatura (*crystal of …*, MIC; sulla carta la scritta non si legge tutta) | ~4.300 mo più i cristalli |
+| **Corazza di piastre di pelle di drago +1** (*dragonhide full plate*: niente metallo, la porta un druido; armatura +9, DES max +1, penalità −5; SRD, materiali speciali: costo doppio della versione perfetta) | ~4.300 mo |
+| **Cristallo del riposo** sulla corazza (*restful crystal*, cristallo d'armatura; dormire con l'armatura addosso non affatica) `[Private source — Magic Item Compendium]` | 500 mo |
 | **Brocchiere** (CA +1) | ~15 mo |
 | **Anello di Deviazione +1** | ~2.000 mo |
-| **Mantello dello Svanire** (*vanisher cloak*, MIC) | prezzo del MIC |
-| **Anello degli incantesimi**, 3 livelli (sulla carta «anello incant. 3L») | come l'anello di immagazzinare incantesimi minore |
+| **Mantello dello Svanire** (*vanisher cloak*, spalle; 3 cariche al giorno, azione standard: 1 carica invisibile 4 round, 2 cariche lei e un alleato adiacente 3 round, 3 cariche lei e fino a tre alleati adiacenti 2 round, come *invisibilità*) `[Private source — Magic Item Compendium]` | 2.500 mo |
+| **Anello degli Incantesimi Silenziosi** (*ring of silent spells*; 1 volta al giorno, azione veloce: *silenzio* centrato su di lei, e finché dura lancia fino a tre incantesimi di 3° livello o meno senza componenti verbali, senza slot più alti né tempo in più) `[Private source — Magic Item Compendium]` | 2.000 mo |
 | **Guanti della Forza dell'Orco +2** (FOR 14 → 16) | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Ascia nanica di adamantio** | ~3.030 mo |
-| **LORDO restituito** | dalla scheda della giocatrice; gli oggetti MIC si prezzano col manuale |
+| **Ascia nanica di adamantio** con il **cristallo del ritorno minore** (*crystal of return*, lesser, cristallo d'arma: la estrae come azione gratuita e, se nessuno la tiene, la richiama in mano da 9 m come azione di movimento; il superiore aggiunge solo «ritornante», che vale per le armi da lancio) `[Private source — Magic Item Compendium]` | ~3.030 mo + 1.000 mo |
+| **LORDO restituito** | **~23.345 mo** |
 
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
@@ -3414,7 +3415,7 @@ Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +13
 
 **STATISTICHE**
 ___
-For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana, Car 10 · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C; la scheda della giocatrice) corazza di piastre di pelle di drago +1 con cristallo del riposo, brocchiere, ascia nanica di adamantio, Anello di Deviazione +1, anello degli incantesimi (3 livelli), Mantello dello Svanire, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4) · **Artefatto** Collana dei Semi Eterni (§7)  
+For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana, Car 10 · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C; la scheda della giocatrice) corazza di piastre di pelle di drago +1 con cristallo del riposo, brocchiere, ascia nanica di adamantio con cristallo del ritorno minore, Anello di Deviazione +1, Anello degli Incantesimi Silenziosi, Mantello dello Svanire (3 cariche al giorno), Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4) · **Artefatto** Collana dei Semi Eterni (§7)  
 
 **CAPACITÀ SPECIALI**
 ___

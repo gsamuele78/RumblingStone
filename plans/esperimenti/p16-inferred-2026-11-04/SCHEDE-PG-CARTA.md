@@ -55,3 +55,16 @@ Nelle abilità senza gradi il numero è il bonus della caratteristica più la pe
   - Percepire Intenzioni 4 vuol dire SAG 18.
 
   I PF 80 vanno bene con COS 12. L'appendice A.1 di DEF-3 (COS 18, ~110 PF) non torna con la carta.
+
+## Oggetti del Magic Item Compendium di Hella (DM 2026-11-05)
+
+Il DM conferma che vengono tutti dal Magic Item Compendium. I dati sono presi dal testo del manuale:
+
+| Oggetto | Prezzo | Cosa fa |
+|---|---|---|
+| Cristallo del riposo (*restful crystal*), sulla corazza | 500 mo | dormire con l'armatura addosso non affatica |
+| Cristallo del ritorno (*crystal of return*), sull'ascia | 1.000 mo (minore) | estrarre l'arma è un'azione gratuita; se nessuno la tiene, la richiama in mano da 9 m come azione di movimento |
+| Mantello dello Svanire (*vanisher cloak*) | 2.500 mo | 3 cariche al giorno, come *invisibilità* per 2-4 round, anche per gli alleati adiacenti |
+| Anello degli Incantesimi Silenziosi (*ring of silent spells*) | 2.000 mo | 1 volta al giorno: *silenzio* su di lei e fino a tre incantesimi di 3° livello o meno senza componenti verbali |
+
+Il cristallo del ritorno è un cristallo d'arma, non d'armatura, quindi va sull'ascia. Ho scelto il grado minore: il superiore aggiunge solo «ritornante», che funziona con le armi da lancio e all'ascia non dà niente. Il corredo vale circa 23.345 mo.
