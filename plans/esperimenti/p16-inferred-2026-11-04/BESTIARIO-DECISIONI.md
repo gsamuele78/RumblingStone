@@ -23,3 +23,8 @@ la versione più forte; fonti in ordine 3.5, PF1e, SRD, e ciò che non è SRD si
 
 **Da rivedere se** il DM porta in gioco le regole del veleno di PF1e (frequenza e cura),
 che cambierebbero la durata dell'effetto.
+
+- **Il gufo di Lythiel (Inathiel):** **un gufo più forte** (DM 2026-11-05). Non usa la
+  scheda dei dodici gufi (8 DV, GS 6) ma quella di Signore Ventolesto in `ARC08-01`
+  (10 DV, 105 pf, 2 artigli +15, GS 8). Allineata anche la scheda di Lythiel, che gli
+  dava 35 PF e GS 5; i valori vecchi restano in un blocco `<!-- storico -->`.
