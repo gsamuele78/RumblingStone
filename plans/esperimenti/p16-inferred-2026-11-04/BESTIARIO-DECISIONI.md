@@ -48,3 +48,8 @@ che cambierebbero la durata dell'effetto.
 - **La riserva nanica:** **+3 al morale, come scritto** (DM 2026-11-05), per ogni
   reparto di riserva che entra in un settore caduto. Applicato nelle due righe di
   `ARC08-DEF-2` (tabella del morale e paragrafo «La riserva»).
+- **Thorik afferra il cavaliere che cade:** **Riflessi CD 20, ma il colpo si sente**
+  (DM 2026-11-05). Se riesce, i 15d6 della caduta da 45 m si dividono a metà fra il
+  cavaliere e Thorik, che finisce prono; se fallisce, il cavaliere li prende tutti.
+  Regola della casa (l'SRD non ne ha una), segnata. Applicata in `ARC08-01` e nella
+  Guida agli Scontri di Hammerfist.

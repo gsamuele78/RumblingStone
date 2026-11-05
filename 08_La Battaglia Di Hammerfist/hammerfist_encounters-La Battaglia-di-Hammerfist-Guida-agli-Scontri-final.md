@@ -1128,7 +1128,7 @@ SE IL CAVALIERE CADE (dal round 3)
 ```
 
 **OPZIONI PER I PG:**
-- **Thorik:** afferrarlo al volo, Riflessi CD 20 `[INFERRED — needs DM confirmation: l'SRD non ha una regola per afferrare chi cade; una CD sola, quella dello schema]`
+- **Thorik:** afferrarlo al volo, Riflessi CD 20. Se riesce, i danni della caduta (15d6 da 45 m) si dividono: metà al cavaliere, metà a Thorik, che finisce prono. Se fallisce, il cavaliere li prende tutti ⚠ regola della casa: l'SRD non ha una regola per afferrare chi cade `[CANONE — DM 2026-11-05, P16, la presa al volo]`
 - **Tordek:** Deviare Frecce non devia una caduta; può aspettarlo dove atterra e lottarci
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito
