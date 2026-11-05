@@ -47,10 +47,9 @@
 >    alla morte sotto i 101 pf; il libretto (§5) fa fuggire i comandanti
 >    sotto metà. Il master li tiene tutti e due: un round di Furia, poi la
 >    fuga.
-> 5. **I due troll dell'ariete** (D7 del censimento delle versioni, dentro la
->    D6 ancora aperta del piano). Il master li mette accanto a Gorthak nel
->    duello del cancello, come la versione più dura; senza di loro il duello
->    è con Gorthak solo.
+> 5. **I due troll dell'ariete.** Decisa `[CANONE — DM 2026-11-05, P16, i troll dell'ariete]`: ci sono, accanto a
+>    Gorthak nel duello del cancello, e sono troll avanzati a 10 DV
+>    (Appendice A.2).
 > 6. **Lo sportello del cancello.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. Per il duello sul ponte serve una via
 >    d'uscita: il master mette nel battente una porta da un nano, che le
 >    mappe non disegnano.
@@ -305,7 +304,7 @@ sono quelle del manuale o delle schede.
 | Chi | Quanti | CA | pf | Attacco | Quando smette |
 |---|---|---|---|---|---|
 | **Gorthak il Trifronte** | 1 | 25 | 202 | due randelli +21/+16/+11 (2d6+10 e 2d6+5) | sotto **101**: un round di Furia, poi fugge |
-| troll dell'ariete | 2 | 16 | 63 | 2 artigli +9 (1d6+6), morso +4, sbranare 2d6+9; rigenerazione 5 | quando Gorthak fugge, lo seguono |
+| troll dell'ariete (10 DV) | 2 | 16 | 105 | 2 artigli +13 (1d6+7), morso +8 (1d6+3), sbranare 2d6+10; rigenerazione 5 | quando Gorthak fugge, lo seguono |
 | **Grimjaw** | 1 | 26 | 178 | *spada bastarda* +22/+17/+12 (1d10+9, 17-20) | sotto **89** fugge (libretto); la scheda: pozione sotto 60 |
 | orog della guardia nera | 4 | 19 | 63 | ascia bipenne +13/+8 (1d12+10) | mai, finché Grimjaw è vivo |
 | **Fauci di Palude** | 1 | 29 (37 con *armatura magica* e *scudo*) | 337 | soffio 14d4, Riflessi CD 29; a terra morso +33 (2d8+10), artigli, ali e coda +31 | il Giorno 1 dopo un passaggio; il Giorno 3 sotto ~**230** sale in quota |
@@ -737,7 +736,7 @@ bordo del ponte, e solo se nessuno gli sta ancora davanti.
 | Chi | Dove | Cosa fa |
 |---|---|---|
 | **Gorthak** | sul ponte, contro il cancello (BH-BI 74-75) | round 1: lascia l'ariete e carica chi esce (+2 a colpire, −2 CA). Poi attacco completo: due randelli, sei colpi |
-| i due **troll** `[INFERRED — i troll dell'ariete]` | ai lati dell'ariete (BG76, BJ76) | round 1: tengono l'ariete. Dal round 2 lo lasciano cadere ed entrano nel duello; sbranano chi prendono con tutti e due gli artigli |
+| i due **troll** `[CANONE — DM 2026-11-05, P16, i troll dell'ariete]` | ai lati dell'ariete (BG76, BJ76) | round 1: tengono l'ariete. Dal round 2 lo lasciano cadere ed entrano nel duello; sbranano chi prendono con tutti e due gli artigli |
 | l'orda | sulla riva, dietro il ponte | non entra: aspetta che il cancello ceda |
 
 **Le tre teste in combattimento.** La sinistra fa +2 danni al primo colpo del
@@ -1936,7 +1935,11 @@ si tira stasera, in forma compatta. Se cambiano, cambiano lì.
 
 **A.1 · Gorthak il Trifronte** · `ARC08-02` §1; `Bestiario/villain/Gorthak_il_Trifronte.md` · ettin dell'SRD avanzato a 15 DV (potenziamento dichiarato), GS 12 · gigante Grande, CM · Iniz +6 · scurovisione 18 m, visione crepuscolare · Ascoltare +12, Osservare +12, non può essere fiancheggiato · CA **25**, contatto 11, colto alla sprovvista 23 · pf **202** · Temp +18, Rifl +7, Vol +9 · velocità 9 m · *randello Enorme +1* +21/+16/+11 (2d6+10) e *randello Enorme +1* +21/+16/+11 (2d6+5), senza penalità per le due armi (ogni testa un braccio, SRD); giavellotto grande +12 (1d8+9) · Spazio 3 m, Portata 3 m · Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro · le tre teste: la sinistra +2 danni al primo colpo; la centrale, una volta, rinuncia a un attacco per dare +2 morale a un'unità; la destra dà Iniziativa Migliorata. **All'ariete**: 3d10+20 al cancello (durezza 20). **Sotto 101**: un round in Furia (+4 For: +23, 2d6+12 e 2d6+6; CA 23), poi fugge `[CANONE — DM 2026-11-04, P16, il cancello e Gorthak]`.
 
-**A.2 · Troll dell'ariete** (×2) `[INFERRED — i troll dell'ariete]` · SRD 3.5, *troll* · GS 5 · gigante Grande, CM · Iniz +2 · scurovisione 27 m, visione crepuscolare, fiuto · Ascoltare +5, Osservare +6 · CA **16**, contatto 11, colto alla sprovvista 14 · pf **63** · rigenerazione 5 (il fuoco e l'acido fanno danni normali) · Temp +11, Rifl +4, Vol +3 · velocità 9 m · 2 artigli +9 (1d6+6) e morso +4 (1d6+3); **sbranare** 2d6+9 se colpisce con tutti e due gli artigli · Spazio 3 m, Portata 3 m · Allerta, Volontà di Ferro, Seguire Tracce. Gorthak coi due troll: **EL** circa 13.
+**A.2 · Troll dell'ariete** (×2) `[CANONE — DM 2026-11-05, P16, i troll dell'ariete]` · SRD 3.5, *troll* avanzato a **10 DV** (avanzamento dell'SRD: 7-14 DV Grande; +1 GS ogni 4 DV da gigante) · GS **6** · gigante Grande, CM · Iniz +2 · scurovisione 27 m, visione crepuscolare, fiuto · Ascoltare +7, Osservare +8 · CA **16**, contatto 11, colto alla sprovvista 14 · pf **105** (10d8+60) · rigenerazione 5 (il fuoco e l'acido fanno danni normali) · Temp +13, Rifl +5, Vol +4 · velocità 9 m · BAB +7, Lotta +18 · For 24 (+1 all'8° DV) Des 14 Cos 23 Int 6 Sag 9 Car 6 · 2 artigli +13 (1d6+7) e morso +8 (1d6+3); **sbranare** 2d6+10 se colpisce con tutti e due gli artigli · Spazio 3 m, Portata 3 m · Allerta, Volontà di Ferro, Seguire Tracce, Attacco Poderoso (il talento del 9° DV). Gorthak coi due troll: **EL** circa 13 (due GS 6 valgono un GS 8).
+
+<!-- storico -->
+*Prima del 2026-11-05: troll comuni dell'SRD, 6 DV, GS 5, pf 63, artigli +9 (1d6+6), morso +4, sbranare 2d6+9, Temp +11 Rifl +4 Vol +3, Ascoltare +5 Osservare +6.*
+<!-- /storico -->
 
 **A.3 · Grimjaw** · `ARC08-02` §1; `Bestiario/villain/Generale_Grimjaw.md` · orog Guerriero 10 / Signore della Guerra 3, ⚠️ non SRD (orog e classe di prestigio [Private source]) · GS 14 · Iniz +5 · scurovisione 18 m · Ascoltare +13, Osservare +13 · CA **26**, contatto 12, colto alla sprovvista 24 · pf **178** · Temp +18, Rifl +8, Vol +10 · velocità 6 m · *spada bastarda demoniaca +1* +22/+17/+12 (1d10+9, 17-20, +1d6 fuoco sul critico); *arco lungo composito +1* +15/+10/+5 (1d8+7) · **Furia Comandante** 1/giorno, 8 round: +4 For e Cos (+24/+19/+14, 1d10+11; +26 pf), alleati entro 6 m +2 a colpire e danni · **Presenza intimidatoria**: entro 9 m −2 a colpire, Volontà **CD 19** nega · **Tattico Superiore**: azione gratuita, +2 a un tipo di tiro agli alleati entro 18 m per un round · 2 pozioni di *cura ferite gravi* · **fugge sotto 89** nell'assedio (libretto §5).
 

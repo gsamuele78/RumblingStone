@@ -35,3 +35,13 @@ che cambierebbero la durata dell'effetto.
   invece dei 3 m scritti. Il Ponte Storto resta a +1,5 m sulla pista, cioè 3 m sul
   fiume. Così la piena del G3 sera (`06-VILLAIN-E-AGENDE.md` §4) entra davvero in
   piazza e nel deposito dell'Oca. Applicata nelle due mappe `tarsilia-la-ruota*.md`.
+
+## ARC-08 (stessa serie di card)
+
+- **I troll dell'ariete di Gorthak:** **troll avanzati a 10 DV** (DM 2026-11-05).
+  Conto fatto con l'avanzamento dell'SRD: 105 pf (10d8+60), BAB +7, For 24 (+1
+  all'8° DV), artigli +13 (1d6+7), morso +8, sbranare 2d6+10, Temp +13 Rifl +5 Vol +4,
+  Attacco Poderoso come quarto talento. ⚠ Correzione rispetto alla card: per l'SRD un
+  gigante sale di 1 GS ogni 4 DV, quindi il troll a 10 DV è **GS 6**, non 7, e Gorthak
+  coi due troll resta **EL 13**, non 14. Applicato in `ARC08-DEF-2` (nota 5, tabella
+  dei nemici, Scena 2, Appendice A.2 con il blocco storico).
