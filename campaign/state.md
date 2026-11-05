@@ -45,14 +45,14 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
 
 | Arc | Fase | Stato | March Clock | PG Lv | Note |
 |---|---|---|---|---|---|
-| 00 Setup RHoD | ✅ | completato | Day 0 | 5 | — |
-| 01 Miniera | ✅ | completato | — | 6 | — |
-| 02 Scaladossa-abbattor-funghi | ✅ | completato | — | 7 | — |
-| 03 La Cittadella | ✅ | completato | — | 8 | — |
-| 04 Tomba di Belkram | ✅ | completato | — | 9 | — |
-| 05 Stanza Runica | ✅ | completato | — | 10 | — |
-| 06 Corona di Adamantio | ✅ | completato | — | 11 | — |
-| 07 Portale della Forgia Eterna | 🟡 | **in corso** | — | 13 (D8) | Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito); **in corso: Piano della Terra (P4)** |
+| 00 Setup RHoD | ✅ | completato | Day 0 | 8 | — |
+| 01 Miniera | ✅ | completato | — | 10-11 | — |
+| 02 Scaladossa-abbattor-funghi | ✅ | completato | — | 11 | — |
+| 03 La Cittadella | ✅ | completato | — | 11 | — |
+| 04 Tomba di Belkram | ✅ | completato | — | 12 | — |
+| 05 Stanza Runica | ✅ | completato | — | 12 | — |
+| 06 Corona di Adamantio | ✅ | completato | — | 13 | — |
+| 07 Portale della Forgia Eterna | 🟡 | **in corso** | — | 13 (14 dai PX, al primo riposo dopo Hammerfist) | Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito); **in corso: Piano della Terra (P4)** |
 | 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni | ⬜ | da giocare | — | 13 | Si gioca DOPO la Terra (ARC-07 D2); raccordo D16 (Rubino) riporta i PG al 1372, Cuore della Montagna → ARC-08 |
 | 08 Battaglia di Hammerfist | ⬜ | **pianificato — canone preparato, NON giocato** | **Day 19 (target sync)** | 13 (consolida, D9) | Esito atteso: vittoria, Cerimonia 100 Asce, Custodi Eterni (piano ARC-08 §0, E1-E8) |
 | 09 P1A Quest Hella (Cerchio Sacro) | ⬜ | **preparato in anticipo** | Day 20-30 window | 13 | Deadline Day 30 |
