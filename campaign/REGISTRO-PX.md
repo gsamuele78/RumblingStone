@@ -68,7 +68,7 @@ le mancano 4.646 PX, cioè la tenda di Zog'tar, Vatore e le mura di `ARC07-DEF-4
 | 30 | Minotauri 5 cr5 1 cr6 alla miniera | 900 | 900 | 900 | 900 |  |
 | 31 | Il capo dei minotauri maur cr 11 una gorgone cr 8 un rakasa (il collezionista fuggito cr 10) 5 minorauri cr5 | 1.175 | 1.175 | 1.175 | 1.175 |  |
 
-## Pre-arco 02 · La torre fungina (riga 36: il Grell Patriarca; righe 43-62: la compagnia drow della torre; righe 63-64: gli ultimi piani; DM 2026-11-05)
+## Pre-arco 02 · La torre fungina (riga 36: il Grell Patriarca, battuto nella miniera dove ci sono le torrette e segnato qui fuori ordine; righe 43-62: la compagnia drow della torre; righe 63-64: gli ultimi piani; DM 2026-11-05)
 
 | Riga | Scontro o evento | Th | To | Ar | He | Jo |
 |---:|---|---:|---:|---:|---:|---:|

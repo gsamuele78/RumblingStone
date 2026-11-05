@@ -110,7 +110,7 @@ il **portale a senso unico** ed è la prima offesa ai funghi.
 | 33 | Il ciambellano miconide demoniaco (GS 7) e 2 protoplasmi neri | 675 |
 | 34 | Tordek trattiene il respiro | To 50 |
 | 35 | Trappola di gas e acido coi cadaveri, la maledizione di Zuggtmoy | 675 (Ar no) |
-| 36 | 5 grick e 1 grell filosofo: **il Grell Patriarca** (DM 2026-11-05) | 591 · Ar 700 |
+| 36 | 5 grick e 1 grell filosofo: **il Grell Patriarca**, battuto nella miniera dove ci sono le torrette; nel foglio è segnato qui, fuori ordine (DM 2026-11-05) | 591 · Ar 700 |
 | 37 | 15 trappole d'acido per salire al 2° e al 3° piano | 844 |
 | 38 | Sporebat | 1.013 |
 | 39 | 10 trappole di spore e ragnatele per il 4° piano | 844 |
@@ -142,7 +142,7 @@ necromante** e del **Grell Patriarca**, e la frase che chiude le porte della
 | 72-73 | 5 pipistrelli crudeli, 2 wight | 0 |
 
 **Schede**: grell in `01_LaMiniera/` (trascrizioni WotC, non convertite per D12).
-Il Grell Patriarca si batte già nella torre (riga 36): la cronaca dell'arco 01 va corretta.
+Il Grell Patriarca si batte qui, nella miniera dove ci sono le torrette: nel foglio è alla riga 36, fuori ordine.
 **Cosa manca**:
 - il Grell Patriarca come scheda (P30-a);
 - dove stanno il grell e i grick della riga 36 (§9).
@@ -231,7 +231,7 @@ morendo, si redime.
 ## 9. I dubbi, sciolti dal DM il 2026-11-05
 
 1. Righe 43-62: sono la **compagnia drow della torre fungina**.
-2. Riga 36: il grell filosofo è il **Grell Patriarca**, battuto nella torre e non nella miniera.
+2. Riga 36: il grell filosofo è il **Grell Patriarca**, battuto **nella miniera, dove ci sono le torrette**. Nel foglio è segnato fuori ordine, fra le righe della torre.
 3. Righe 63-64, statue barbute e vrock: sono gli **ultimi piani della torre**.
 4. Riga 74: sono i **cavalieri non morti della Cittadella** (arco 03). Nel foglio stanno prima del chierico di Abbathor, quindi lì il foglio non segue l'ordine di gioco.
 5. Righe 78-81: sono le **prime sale della Cittadella**.

@@ -187,7 +187,7 @@ The party descends through a chain of connected underground locations:
 #### Arc 01 — La Miniera (Ancient Dwarven Mine)
 
 - **Source:** `01_LaMiniera/`
-- **Enemies:** Grell Necromancer lair, Grell Patriarch (aberration, defeated). The **Grell Patriarch** is the «grell filosofo» of the XP ledger and is fought in the Fungi Tower, before the portal `[DM 2026-11-05]`
+- **Enemies:** Grell Necromancer lair, Grell Patriarch (aberration, defeated). The **Grell Patriarch** is the «grell filosofo» of the XP ledger (row 36, written there out of order) and is fought **in the mine, where the defensive turrets are** `[DM 2026-11-05]`
 - **Cristal Warriors** — Encountered in this area (source: *Underdark* p.93)
 - **Notes:** First part of the ancient dwarven mine. Cristal Warriors encountered in early rooms after portal arrival to the mine complex.
 - **Arrival** `[DM 2026-07-26]`: the party reaches this area through the **one-way
