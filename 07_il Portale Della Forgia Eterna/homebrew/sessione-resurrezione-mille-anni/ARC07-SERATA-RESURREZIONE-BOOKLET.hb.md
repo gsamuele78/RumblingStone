@@ -7268,14 +7268,23 @@ della Corona.
 | Scene 12-13: il Rituale e il Rubino | premio di storia maggiore | 800 |
 | **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~10.210/PG** col Vecchio e le wyvern, stasera (duello a ≈ 4.060); **~7.775/PG** con l'Adulto e le wyvern (duello a 1.625); **~7.610/PG** con l'Adulto da solo |
 
-> Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
-> party **non** arrivava al 14° in questo master: ci arrivava **dopo «Il Ritorno a Hammerfist»**.
-> Con le Scene 6-8 alla tabella il beat
-> sale di circa 1.250 a testa: se basti per il 14° prima del ritorno al 1372 dipende dai
-> PX con cui il gruppo è partito, che il master non fissa. Le parti giocate non
-> si ritoccano. Col Vecchio il duello vale circa 2.435 a testa più dell'Adulto
-> con le wyvern: il 14° può arrivare qui e non dopo «Il Ritorno a Hammerfist», e allora la riga
-> qui sopra non vale più `[INFERRED — needs DM confirmation: dipende dai PX di partenza]`.
+> **Il gruppo di oggi, dal registro dei PX**.
+> Il foglio dei PX del DM arriva al consiglio della Scena 4 con:
+> - **Thorik, Tordek e Artemis** oltre i 105.000 PX (Fuoco 7.700 con Therysol,
+>   Terra 11.800, Sala 400, affreschi 1.900, rito 1.900, Scene 1-4 600, più il
+>   finale dell'ARC-06 e la prova della Corona);
+> - **Hella** a **86.354**: è morta dalla Corona al rito, e ha preso il finale
+>   dell'ARC-06, la prova della Corona, il viaggio dello spirito (800), i 300 di A8
+>   e la serata del 25/09.
+>
+> Vale la regola 3.5 di un livello alla volta: i tre salgono al **14°** e i loro
+> PX restano fermi a **104.999**, quindi i PX di questo beat per loro non contano
+> più. **Hella prende il 14° in questa notte**: le mancano 4.646 PX, e la tenda
+> intera (≈ 3.650), Vatore (500) e le mura (600) li coprono prima del duello.
+> Per tutti e quattro il livello si prende al primo riposo, dopo la battaglia
+> («Il Ritorno a Hammerfist» §8, D90). Le parti giocate non si ritoccano.
+>
+> 
 
 ⚠️ **Il conto SRD è più basso.** La tabella dei PX della DMG dà il totale
 dell'incontro, da dividere fra i PG: Skullcrusher (GS 14) contro un gruppo di

@@ -885,10 +885,11 @@ Ogni fallimento di questo master è un costo, non un blocco.
 | **TOTALE beat** | **~3.300/PG** |
 
 > **Somma d'arco (ARC-07)**: Terra ~11.600 + Affreschi ~1.900 + Resurrezione
-> ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**. Con il Fuoco (P3)
-> già alle spalle, i PG hanno i PX del **14°** già all'arrivo, se il registro PX
-> del gruppo lo conferma: per il gruppo di oggi i PX del Fuoco hanno ancora tre
-> valori che non coincidono, e il DM non ha scelto (`sessione-4`, «XP awarded»).
+> ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**, più il Fuoco (P3).
+> **Per il gruppo di oggi** il conto vero è nel registro dei PX<!-- apparato -->
+> (`campaign/REGISTRO-PX.md`)<!-- /apparato --> `[CANONE — DM 2026-11-05, P16, PX]`:
+> Thorik, Tordek e Artemis hanno i PX del 14° già all'arrivo e restano fermi a
+> 104.999 (un livello alla volta). Hella li raggiunge durante la notte di `DEF-4`.
 > Il livello si prende al
 > primo riposo, cioè dopo la battaglia di Hammerfist `[CANONE — DM 2026-10-15, D90]`. Se dormono nel Cuore della Montagna, quello è il primo riposo e il livello si prende lì, al prezzo della breccia (§6) `[CANONE — DM 2026-10-18]`. Le parti giocate non si ritoccano.
 
