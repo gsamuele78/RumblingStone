@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 4: le caratteristiche dei PG dalla scheda di carta del DM | ✅ foto del DM del 2026-11-05 riscontrata con le abilità senza gradi: Artemis 10/18/14/10/10/18; Thorik con il rito dello Smeraldo che la carta non aveva (DES 1… |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 3: le marcature aperte di ARC-09 | ✅ tre card del DM: la leva non sale sulle mura (Rethmar e Dauth), guarnigione fissa di Dauth 200 nani, Witchwood a 300 m. ARC-09 da 3 a 0 aperte, repo 58 |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 2-bis: i PX del gruppo e il 14° livello, dal registro del DM | ✅ registro completato dall'arco 06 al 25/09 con le scelte del DM, riga per riga; Thorik, Tordek e Artemis al 14° fermi a 104.999 (un livello alla volta), Hella… |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Quota sul mare di Hammerfist abbassata: piana a 520 m (scelta del DM, in linea… | ✅ cancello 600, cortile 620, cittadella 640; gradoni invariati |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §7 le etichette, ADR-0108 | ✅ ADR-0108 accettata; NLI provata fino in fondo (F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle prime 30 sul repo) e non adottata |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | adozione di ADR-0107 (#305 dentro #306) | ✅ ADR-0107 accettata: `"entrambe"` + `"chi_si_incontra"` in 6 booklet, numeri nel capitolo 8 → 25, mappe vicine 5 → 9 su 42, Zog'tar 23,5 → 4,5 pagine; Terros… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | guardrail, tecniche avanzate, ADR-0108 (… | 🟡 `conformita_statblocchi --master` legge i recinti di ADR-0091: 6 conti veri (fra cui *corrompere l'acqua* del Vecchio 25/26 e la scurovisione di Zog'tar, tro… |
-| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | prova di ADR-0107 (`plans/esperimenti/prova-adr0107-2026-11-03/`) | 🟡 `dmcore.chi_si_incontra` e `"chi_si_incontra": true` (con `"entrambe"` della #305); misura più severa (3 «complete» vere, non 6); con la prova numeri nel cap… |
 
 ## Le misure che si portano dietro
 

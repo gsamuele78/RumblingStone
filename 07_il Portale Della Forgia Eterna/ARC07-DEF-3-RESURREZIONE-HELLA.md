@@ -1491,23 +1491,25 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
 nome: Hella Oakenshield, risorta
 gs: PG di 13°
 tipo: Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media
-ca: 20
-ca-dettaglio: contatto 10, colta alla sprovvista 20
-pf: ~110
+ca: 21
+ca-dettaglio: contatto 11, colta alla sprovvista 20
+pf: 80
 pf-dado: 13 DV
-ts: Temp +16, Rifl +8, Vol +15
-attributi: For 12 Des 10 Cos 18 Int 13 Sag 20 Car 12
+ts: Temp +13, Rifl +9, Vol +15
+attributi: For 16 Des 13 Cos 12 Int 12 Sag 20 Car 10
 velocita: 6 m
-iniziativa: +0
+iniziativa: +1
 sensi: scurovisione 27 m (Dream Dwarf)
 ```
-**Iniziativa** +0 · **Sensi** scurovisione 27 m (Dream Dwarf)
+**Iniziativa** +1 · **Sensi** scurovisione 27 m (Dream Dwarf)
 
-**Difesa** **CA 20** (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo leggero di legno +1, +3 naturale della Collana) `[CANONE — DM 2026-10-18]`, contatto 10, colta alla sprovvista 20 · **pf ~110** (13 DV) · TS Tempra +16, Riflessi +8, Volontà +15 (base Ranger 1 + Druida 12 +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD) · **Vulnerabilità al fuoco** ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco) `[CANONE — DM 2026-10-18]`: è la guarigione rapida SRD, Hella muore come chiunque altro
+**Difesa** **CA 21** (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo leggero di legno +1, +3 naturale della Collana, DES +1) `[CANONE — DM 2026-10-18]`, contatto 11, colta alla sprovvista 20 · **pf 80** (13 DV, dalla scheda della giocatrice) · TS Tempra +13, Riflessi +9, Volontà +15 (base Ranger 1 + Druida 12 +10/+6/+8, COS +1, DES +1, SAG +5, Mantello della Resistenza +2; tabelle SRD) `[CANONE — DM 2026-11-05, P16, schede PG]` · **Vulnerabilità al fuoco** ×1,5 · resistenza al freddo 15 · guarigione rapida 1 (a contatto con terra o pietra; sospesa nel round dopo un danno da fuoco) `[CANONE — DM 2026-10-18]`: è la guarigione rapida SRD, Hella muore come chiunque altro
 
-**Attacco** Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +11
+**Attacco** Vel 6 m (nana: l'armatura non la riduce) · BAB +10; Lotta +13
 
-**Statistiche** For 12, Des 10, Cos 18, Int 13, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 12 · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C) cuoio borchiato +2 a borchie vegetali, scudo leggero di legno +1, scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, bacchetta di Cura Ferite Moderate (25 cariche) · **Artefatto** Collana dei Semi Eterni (§7)
+**Statistiche** For 16 (14 più i Guanti della Forza dell'Orco +2), Des 13, Cos 12, Int 12, SAG 20(+5), con il +4 della Collana `[CANONE — DM 2026-10-18]`, Car 10 `[CANONE — DM 2026-11-05, P16, schede PG: la scheda della giocatrice]` · **Talenti** Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom) · **Equipaggiamento** (recuperato dal corpo, §11 C) cuoio borchiato +2 a borchie vegetali, scudo leggero di legno +1, scimitarra +1, Guanti della Forza dell'Orco +2, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, bacchetta di Cura Ferite Moderate (25 cariche) · **Artefatto** Collana dei Semi Eterni (§7)
+
+<!-- storico: fino al 2026-11-05 For 12 Des 10 Cos 18 Int 13 Car 12, CA 20, pf ~110, TS +16/+8/+15; il DM ha dato la scheda della giocatrice (foto del 2026-11-05) -->
 
 **Capacità speciali**
 - **Ibrido Treant** (dal viaggio e dal rito): doppio tipo Umanoide (Nano) / Vegetale.
