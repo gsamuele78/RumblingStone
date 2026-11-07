@@ -274,8 +274,20 @@ FINE_CAMPO = re.compile(
     r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|QS|TS)\b")
 
 
+# «Incidere Rune (Inscribe Rune)», «Stile del Serpente (Snake Style, PF1e)»: il nome italiano non è in tabella
+# ma il DM ha messo tra parentesi il talento inglese di un manuale (2026-11-07). Si controlla l'inglese.
+INGLESE_TRA_PARENTESI = re.compile(r"(?<![\w*])([A-ZÀ-Ý][^,;·()]*?)\s*\(\s*([A-Z][A-Za-z' -]+?)\s*(?:[,;][^)]*)?\)")
+
+
+def _inglese_tra_parentesi(m: re.Match) -> str:
+    k = norma(m.group(2))
+    noto = k in talenti_dei_manuali() or k in inglesi_dei_manuali() or k in talenti_pf1_dei_manuali()
+    return m.group(2) if noto else m.group(0)
+
+
 def termini_della_riga(lista: str) -> list[str]:
     lista = FINE_CAMPO.split(lista.replace("Arms/Armor", "Arms and Armor"))[0]
+    lista = INGLESE_TRA_PARENTESI.sub(_inglese_tra_parentesi, lista)
     lista = re.sub(r"\([^)]*\)|\([^)]*$", "", lista)  # anche la parentesi lasciata aperta dalla fine del campo
     lista = re.split(r"(?<=\S)\s{2,}(?=[A-Z])|--", lista)[0]  # «Dodge (nota) In terms of…», «Focus (x)--Bonus»
     out = []
@@ -319,6 +331,8 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
     for n, riga in enumerate(righe, 1):
         if riga.lstrip().startswith("#"):
             continue  # un titolo («## Feats: Key Categories») non è uno statblocco
+        if re.match(r"\s*(?:>\s*)*era:", riga):
+            continue  # «era: talenti …» registra la versione di prima, corretta sopra: è storia
         m = RIGA_TALENTI.search(riga)
         if not m:
             continue

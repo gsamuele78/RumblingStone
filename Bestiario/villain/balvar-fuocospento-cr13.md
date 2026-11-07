@@ -17,7 +17,7 @@ sensi: scurovisione 18 m; Ascoltare +5, Osservare +5
 attacchi:
   - Mischia martello da guerra runico +1 +11/+6 (1d8+2)
 voci:
-  - Talenti: Incidere Rune, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
+  - Talenti: Incidere Rune (Inscribe Rune), Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
   - Abilità: Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19
 ```
 

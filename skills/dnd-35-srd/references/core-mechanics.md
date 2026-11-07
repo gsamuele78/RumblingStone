@@ -7,7 +7,7 @@
 - Armor Class
 - Size Modifiers
 - Skills (Complete SRD List)
-- Feats: Key Categories
+- Feats (key categories)
 - Ability Score Increases
 - Experience Points and Level Progression
 - Carrying Capacity (Medium Creature, STR-based)

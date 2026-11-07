@@ -6,7 +6,7 @@
 gs: 12
 tipo: Medium humanoid (dwarf, Shield Dwarf), Cleric 12, LG
 ca: 23
-ca-dettaglio: touch 10, flat-footed 23 (armatura completa +1, Ottimizzazione dell'Armatura Pesante +1, scudo pesante +1, anello di protezione +1, −1 Des)
+ca-dettaglio: touch 10, flat-footed 23 (armatura completa +1, Ottimizzazione delle Armature Pesanti +1, scudo pesante +1, anello di protezione +1, −1 Des)
 pf: 93
 pf-dado: 12d8+36
 ts: Temp +13, Rifl +5, Vol +14
@@ -18,7 +18,7 @@ attacchi:
   - Mischia colpo di scudo pesante +12 (1d4+3)
   - Distanza balestra pesante +1 +9/+4 (1d10+1/19-20)
 voci:
-  - Talenti: Creare Armi e Armature Magiche, Incantare in Combattimento, Ottimizzazione dell'Armatura Pesante, Arma Focalizzata (martello da guerra), Attacco Poderoso
+  - Talenti: Creare Armi e Armature Magiche, Incantare in Combattimento, Ottimizzazione delle Armature Pesanti, Arma Focalizzata (martello da guerra), Attacco Poderoso
   - Incantesimi: chierico 12, LI 12, 6/6+1/5+1/6+1/5+1/3+1/2+1, CD 14 + livello
 ```
 
@@ -41,7 +41,7 @@ voci:
 - 1° — *benedizione*, *comando* (CD 15), *favore divino*, *protezione dal male* (D), *scudo della fede*, *rimuovi paura*, *santuario*
 - 0 — *individuazione del magico*, *individuazione del veleno*, *guida*, *lettura del magico*, *evocare simbolo sacro* [Private source — supplemento WotC non SRD], *resistenza*
 
-**Statistiche** For 16, Des 8, Cos 16, Int 10, Sag 19, Car 10 · BAB +9; Lotta +12 · **Talenti** **Creare Armi e Armature Magiche**, Incantare in Combattimento, Ottimizzazione dell'Armatura Pesante [Private source — Player's Handbook II], Arma Focalizzata (martello da guerra), Attacco Poderoso; gratuiti: Abilità Focalizzata (Artigianato, fabbro), competenze in armature pesanti e martello da guerra · **Abilità** Concentrazione +18 (+22 sulla difensiva), Artigianato (fabbro) +20, Artigianato (armaiolo) +2, Trattare le Ferite +4, Ascoltare +4, Osservare +4 (30 punti: 15 gradi in Concentrazione, 15 nel fabbro; +2 razziale al lavoro del metallo) · **Linguaggi** Comune, Nanico · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +2, balestra pesante +1 e 20 quadrelli, periapto della saggezza +2, anello di protezione +1, guanti della potenza dell'orco, mantello della resistenza +2, pozioni (2 *cura ferite leggere*, 2 *cura ferite moderate*, 1 *cura ferite gravi*, 1 *volare*), 2 pergamene di *cura ferite moderate*
+**Statistiche** For 16, Des 8, Cos 16, Int 10, Sag 19, Car 10 · BAB +9; Lotta +12 · **Talenti** **Creare Armi e Armature Magiche**, Incantare in Combattimento, Ottimizzazione delle Armature Pesanti [Private source — Player's Handbook II], Arma Focalizzata (martello da guerra), Attacco Poderoso; gratuiti: Abilità Focalizzata (Artigianato, fabbro), competenze in armature pesanti e martello da guerra · **Abilità** Concentrazione +18 (+22 sulla difensiva), Artigianato (fabbro) +20, Artigianato (armaiolo) +2, Trattare le Ferite +4, Ascoltare +4, Osservare +4 (30 punti: 15 gradi in Concentrazione, 15 nel fabbro; +2 razziale al lavoro del metallo) · **Linguaggi** Comune, Nanico · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +2, balestra pesante +1 e 20 quadrelli, periapto della saggezza +2, anello di protezione +1, guanti della potenza dell'orco, mantello della resistenza +2, pozioni (2 *cura ferite leggere*, 2 *cura ferite moderate*, 1 *cura ferite gravi*, 1 *volare*), 2 pergamene di *cura ferite moderate*
 
 **Capacità speciali**
 - **Chierico 12 di Moradin**: domini **Artigianato** [Private source — Forgotten Realms Campaign Setting] (incantesimi di creazione a +1 LI, Abilità Focalizzata nell'Artigianato) e **Bene** (SRD: incantesimi del bene a +1 LI); lancio spontaneo delle *cure*.

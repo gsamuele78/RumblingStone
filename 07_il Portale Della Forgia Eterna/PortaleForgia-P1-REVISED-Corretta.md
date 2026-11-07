@@ -73,7 +73,7 @@
 **BAB:** +13/+8/+3  
 **Attacco Aegis Fang:** +20/+15/+10 (1d10+7, crit x3, +2d6 vs draghi)
 
-**Talenti:** Arma Focalizzata (ascia), Arma Specializzata (ascia), Robustezza, Volontà di Ferro, Iniziativa Migliorata, Critico Migliorato (ascia), Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Preferita
+**Talenti:** Arma Focalizzata (ascia), Arma Specializzata (ascia), Robustezza, Volontà di Ferro, Iniziativa Migliorata, Critico Migliorato (ascia), Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata Superiore (ascia)
 
 **Stato Attuale (Parte 1):** Ha appena indossato la Corona dopo la battaglia. Sente presenza di Moradin. È scosso dalla morte di Hella ma determinato a recuperare le gemme per resuscitarla.
 
@@ -126,7 +126,7 @@
 - Purezze del Corpo: guarigione 18 HP 1/giorno
 - Colpo Stordente: TS Tempra CD 19 o stordito 1 round
 
-**Talenti:** Stile del Serpente, Pugno Stordente, Deviare Frecce, Afferrare Frecce, Mobilità, Iniziativa Migliorata, Arma Focalizzata (colpo senz'armi), Attacco Poderoso
+**Talenti:** Stile del Serpente (Snake Style, PF1e), Pugno Stordente, Deviare Frecce, Afferrare Frecce, Mobilità, Iniziativa Migliorata, Arma Focalizzata (colpo senz'armi), Attacco Poderoso
 
 **Stato Attuale (Parte 1):** Medita su morte Hella. Ha iniziato comunicazione spirituale con il suo fantasma. I Cintura della Devastazione gli conferiscono capacità letale contro nemici critici.
 

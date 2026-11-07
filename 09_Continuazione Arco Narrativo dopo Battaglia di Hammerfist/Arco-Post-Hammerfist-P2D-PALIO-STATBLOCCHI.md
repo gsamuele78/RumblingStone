@@ -25,7 +25,7 @@ attacchi:
 
 **Attacco** **Mischia** nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato
 
-**Statistiche** For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Cavalcata Poderosa*, *Attacco in Corsa*
+**Statistiche** For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Carica Devastante*, *Attacco in Sella*
 
 **Capacità speciali**
 - **Legame col cavallo**: +2 alle prove di Cavalcare del proprio destriero (empatia).
