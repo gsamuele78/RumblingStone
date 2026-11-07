@@ -316,3 +316,18 @@ class TestRilevamentoUnico(unittest.TestCase):
         import json
         cfg = json.loads((REPO / "plans/domande-developer.json").read_text(encoding="utf-8"))
         self.assertFalse([f for f, p in cfg["profili"].items() if "sistema" in p])
+
+
+class TestEPf1(unittest.TestCase):
+    """L2: lessico_regole.e_pf1() segue sistemi.toml. Prima diceva PF1e per 3
+    file del Drappo su 22, e il controllo dei termini leggeva gli altri in 3.5."""
+
+    def test_tutto_il_drappo_e_pf1e(self):
+        import lessico_regole as LR
+        file = sorted((REPO / "10-stand-alone/Il-Drappo-di-Tarsilia").glob("*.md"))
+        self.assertGreater(len(file), 10)
+        self.assertEqual([f.name for f in file if not LR.e_pf1(str(f.relative_to(REPO)), "")], [])
+
+    def test_un_modulo_3_5_resta_3_5(self):
+        import lessico_regole as LR
+        self.assertFalse(LR.e_pf1("07_il Portale Della Forgia Eterna/x.md", "**Sistema:** D&D 3.5"))

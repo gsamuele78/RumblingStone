@@ -102,7 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L2: un rilevamento solo del sistema (catalogo dei mostri, censimento, domande d… | 🟡 M1 5 → 2; Giardino PF1e fuori dal catalogo (7/120 → 0/120 incontri a EL 17-18); 18 righe «Sistema», 0 divergenze; manca `e_pf1` dopo la #319 |
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L2: un rilevamento solo del sistema (catalogo dei mostri, censimento, domande d… | ✅ M1 5 → 1; Giardino PF1e fuori dal catalogo (7/120 → 0/120 incontri a EL 17-18); `e_pf1` 3/22 → 22/22 file del Drappo, talenti sconosciuti 133 → 131; 18 righe… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1-bis: PF1e supportato nei 5 casi non supportati (PE, incontri, tesoro, classi… | ✅ pf1e 7/6/0 (dati/codice/non supportato); impronte 3.5 12/12; 21 test nuovi |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1: fondazione dei plugin dei sistemi di gioco | ✅ 0 problemi; 24 righe di matrice; dnd35 2/10/0, pf1e 1/6/5 (dati/codice/non supportato); impronte 12/12 dopo la correzione dell'orologio di `update_xp` |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Razze PF1e nella tabella italiano → PRD, chieste dal plugin PF1e (ADR-0111) | ✅ 37 razze su 37 del PRD in cache (Core 7, ARG 30), nome inglese dal link di Golarion a d20pfsrd; PF1e 9.334 → 9.371 voci |
