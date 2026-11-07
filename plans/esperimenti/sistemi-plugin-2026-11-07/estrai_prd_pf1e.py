@@ -125,7 +125,8 @@ def incontri(base: Path) -> str:
     out = ["# sistemi/pf1e/dati/incontri.toml — PE per GS e difficoltà (generato da estrai_prd_pf1e.py)",
            "# Un incontro PF1e vale la somma dei PE delle creature; il suo GS è il più alto",
            "# il cui valore in PE non supera la somma («Designing Encounters», book-cr 3652).",
-           fonte("cr", 3655, n1), f'fonte_difficolta = "book-cr.db sezione 3653 «{n2}»"', "", "[px_per_gs]"]
+           fonte("cr", 3655, n1), f'fonte_difficolta = "book-cr.db sezione 3653 «{n2}»"',
+           'metodo = "somma_px"  # letto da suggest_encounter (ADR-0111, L4)', "", "[px_per_gs]"]
     def chiave(g):
         a, _, b = g.partition("/")
         return int(a) / int(b) if b else int(a)

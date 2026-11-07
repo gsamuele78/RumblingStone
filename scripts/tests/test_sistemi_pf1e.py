@@ -47,7 +47,7 @@ class Dati(unittest.TestCase):
 
     def test_dati_rifiuta_una_capacita_in_codice(self):
         with self.assertRaises(S.ErroreSistemi):
-            S.dati("dnd35", "pe.soglie")
+            S.dati("dnd35", "creature.costruzione")
 
     def test_opzioni_di_campagna(self):
         self.assertEqual(S.opzione("pf1e", "traccia_pe"), "media")
@@ -68,13 +68,21 @@ class PE(unittest.TestCase):
 
     def test_predefinito_resta_3_5(self):
         soglie, etichetta = X.soglie_di()
-        self.assertIs(soglie, X.THRESHOLDS)
+        self.assertEqual(soglie, X.THRESHOLDS)
         self.assertEqual(etichetta, "3.5")
 
     def test_livello_e_mancanti(self):
         soglie, _ = X.soglie_di("pf1e", "media")
         self.assertEqual(X.next_threshold(1025, soglie), (1, 975))
         self.assertEqual(X.next_threshold(1025), (2, 1975))  # 3.5, come prima
+
+    def test_soglie_3_5_dai_dati_invariate(self):
+        """L4: i numeri spostati in sistemi/dnd35/dati/pe.toml sono quelli di prima."""
+        prima = {1: 0, 2: 1000, 3: 3000, 4: 6000, 5: 10000, 6: 15000, 7: 21000, 8: 28000,
+                 9: 36000, 10: 45000, 11: 55000, 12: 66000, 13: 78000, 14: 91000,
+                 15: 105000, 16: 120000, 17: 136000, 18: 153000, 19: 171000, 20: 190000}
+        self.assertEqual(X.THRESHOLDS, prima)
+        self.assertEqual(X.soglie_di("dnd35", "media"), (prima, "3.5"))  # una traccia sola
 
     def test_sistema_spento_rifiutato(self):
         with self.assertRaises(SystemExit):
@@ -92,6 +100,12 @@ class Incontri(unittest.TestCase):
 
     def test_predefinito_resta_3_5(self):
         self.assertIs(E.COMBINA, E.combine_el)
+
+    def test_metodo_dal_plugin(self):
+        """L4: il metodo di combinazione lo dice il plugin, non un `if pf1e`."""
+        for crs in ([10, 10], [10, 10, 10], [3, 5, 7, 7], [0.5, 0.5], [16]):
+            self.assertEqual(E.combinatore("dnd35")(crs), E.combine_el(crs))
+            self.assertEqual(E.combinatore("pf1e")(crs), E.combina_gs_pf1e(crs))
 
 
 class Tesoro(unittest.TestCase):
