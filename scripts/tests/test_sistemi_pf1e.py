@@ -123,6 +123,8 @@ class ClassiERazze(unittest.TestCase):
         classi, razze = C.entita_di("pf1e")
         self.assertTrue(frozenset(C.CLASSI) <= classi)
         self.assertTrue(frozenset(C.RAZZE) <= razze)
+        self.assertIn("kitsune", razze)          # razze ARG dalla PR #318
+        self.assertNotIn("kitsune", C.entita_di("dnd35")[1])
 
 
 class Creature(unittest.TestCase):

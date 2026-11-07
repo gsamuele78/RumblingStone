@@ -697,7 +697,7 @@ jobs:
           $L verifica-tabella
           $L casi plans/esperimenti/regole-ufficiali-2026-11-07/casi.json --check
           { echo "## Termini ufficiali (ADR-0110)"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
-          $L controlla --tutto --volumi --check --massimo-sconosciuti 137 | tee -a "$GITHUB_STEP_SUMMARY"
+          $L controlla --tutto --volumi --check --massimo-sconosciuti 133 | tee -a "$GITHUB_STEP_SUMMARY"
           # Incantesimi, abilità e oggetti delle schede: per ora solo il conto, non blocca (ADR-0110, lotto 2).
           $L controlla --tutto --volumi --campi | grep '^lessico campi' | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
