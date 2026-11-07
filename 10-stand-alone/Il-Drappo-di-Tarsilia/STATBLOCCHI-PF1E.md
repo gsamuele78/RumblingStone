@@ -41,7 +41,7 @@ attacchi:
 
 **Attacco** **Mischia** bastone +4 (1d6) · **BAB** +4 · **CMB** +4 · **CMD** 15
 
-**Statistiche** For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Percepire Intenzioni **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6
+**Statistiche** For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Intuizione **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6
 
 *Forestiera residente da trentotto anni. Terzo mandato. Non si compra e — cosa più
 scomoda — non si convince.*
@@ -62,7 +62,7 @@ decidono che non si può.
 
 | Capitano | Contrada | Classe | GS | pf | CA | Il numero che conta |
 |---|---|---|---|---|---|---|
-| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Percepire Intenzioni +11, Diplomazia +10 |
+| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Intuizione +11, Diplomazia +10 |
 | **Gerlando Attu** | Oca | esperto 5 | 3 | 25 | 13 | Valutare +13, Raggirare +11 |
 | **Zoe Barbanera** | Onda | guerriera 4 | 3 | 38 | 17 | Professione (pilota) +9, Intimidire +8 |
 | **Ubalda Trenchi** | Torre | guerriera 6 | 5 | 55 | 20 | attacco +11 (1d8+5), e **dodici miliziani** |

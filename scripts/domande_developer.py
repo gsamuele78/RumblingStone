@@ -165,7 +165,10 @@ USCITA = re.compile(r"(?i)il giocatore|chi è (?:dominat|paralizzat|pietrificat|
 #: «Se lo divinano» della D9: una riga **Domanda:** o **Posta in gioco:** che
 #: finisce col punto di domanda. Si accetta anche la domanda già scritta nella
 #: prosa del DM, «la domanda non è X, ma se Y» (DEF-4, Scena 4).
-SOCIALE = re.compile(r"\b(?:Diplomazia|Raggirare|Intimidire|Percepire Intenzioni)\b")
+#: «Intuizione» è il nome PF1e di Sense Motive (3.5: Percepire Intenzioni); è
+#: anche una parola comune, quindi conta solo nella forma meccanica (CD o bonus).
+SOCIALE = re.compile(r"\b(?:Diplomazia|Raggirare|Intimidire|Percepire Intenzioni)\b"
+                     r"|\bIntuizione\s*(?:CD\s*\d|[+−-]\d|\()")
 DOMANDA = re.compile(r"(?im)^[>\s*-]*\*\*(?:Domanda(?: drammatica)?|Posta in gioco)\s*:?\*\*\s*:?[^\n]*\?"
                      r"|\b[Ll]a domanda (?:della scena )?(?:è se\b|non è[^.\n]{0,80}?\bma se\b)"
                      r"|^#*\s*\*\*Obiettivo\b")

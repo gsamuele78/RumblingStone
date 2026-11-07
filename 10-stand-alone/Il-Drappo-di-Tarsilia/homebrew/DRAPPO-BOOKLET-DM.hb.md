@@ -872,7 +872,7 @@ transennato), il **15** (le bandiere). Sono i tre punti in cui il tavolo tace.
 | Chiamare il cavallo (Add. Animali, curva nord) | 15 |
 | Il canto sopra il rumore (Intrattenere, dal carro) | 16 |
 | Protestare dal palco (Diplomazia) | 18 |
-| Testimoniare un fallo (Percepire Intenzioni) | 15 |
+| Testimoniare un fallo (Intuizione) | 15 |
 | Urlare un ordine (Intimidire, alle funi) | 15 |
 | **Truccare la Sorte** (per prova) | 14-18 |
 | Patto normale / che costa una posizione | atteggiamento / **+5** |
@@ -1214,7 +1214,7 @@ NOME     Corvino Salle, mediatore. Conoscenze (locali) CD 18, oppure
 | **Costituzione** (fisica) | l'odore: cera e resina di banco, non di stalla. Chi l'ha scritta sta in un ufficio |
 | **Destrezza** (fisica) | la piega: quattro pieghe uguali, fatte prima di essere data. Carta d'ufficio, non di fretta |
 | Sapienza (locali) | le tre lettere sono iniziali, e a Tarsilia si usano così solo negli atti |
-| Percepire Intenzioni | su Sfregio: **crede davvero** che sia una compagnia di trasporti |
+| Intuizione | su Sfregio: **crede davvero** che sia una compagnia di trasporti |
 
 > ⚠️ **Sfregio non mente e non sa.** È il punto in cui il tavolo si convince che
 > mente, e comincia a picchiare l'uomo sbagliato. Lascialo succedere: è §7.
@@ -1646,8 +1646,7 @@ Testo giocabile, da cantare male e in coro:
 fine della Corsa, per chi lo canta.
 
 **Bruco — *Il filo*** — cantata piano, quasi parlata. Tema: la minaccia
-detta con gentilezza. Chi perde contro questo canto subisce **−2 a Percepire
-Intenzioni** per il resto della serata: dopo, non si fida più di nessuno e sbaglia
+detta con gentilezza. Chi perde contro questo canto subisce **−2 a Intuizione** per il resto della serata: dopo, non si fida più di nessuno e sbaglia
 bersaglio.
 
 **Oca — *La conta*** — è letteralmente un elenco di cifre in rima, e
@@ -1717,7 +1716,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Tutto il resto lo puoi leggere mentre i giocatori parlano.
 >
 > **Sistema**: PF1e Core Rulebook. Le abilità sono chiamate all'italiana come al
-> tavolo: Cavalcare, Percezione, Raggirare, Percepire Intenzioni, Intrattenere,
+> tavolo: Cavalcare, Percezione, Raggirare, Intuizione, Intrattenere,
 > Furtività, Addestrare Animali, Sapienza Magica.
 
 ---
@@ -1845,7 +1844,7 @@ mette al centro del tavolo. In Corsa vale così com'è scritto, non come i gioca
 ricordano di averlo inteso — ed è il punto: **leggete le clausole**.
 
 **Rompere un patto** durante la Corsa: si può, sempre. Costa **Morale −2** e un nemico
-per tutta la vita. Percepire Intenzioni CD 20 durante la trattativa rivela se
+per tutta la vita. Intuizione CD 20 durante la trattativa rivela se
 l'altro ha già intenzione di romperlo (Attu sì, sulla clausola piccola; Barbanera no,
 mai).
 
@@ -1921,7 +1920,7 @@ le azioni della folla.
 | Posto | Chi ci sta bene | Azioni disponibili |
 |---|---|---|
 | **Alle funi** | Capitano | *Urlare un ordine* (Intimidire CD 15: il proprio fantino ripete un tiro); *Trattenere* (§5.2) |
-| **Palco della Sovrintendente** | Tenente, Vicario | *Protestare* (Diplomazia CD 18: annulla una scudisciata avversaria); *Testimoniare* (Percepire Intenzioni CD 15: smaschera un fallo, l'avversario perde 1 Lunghezza) |
+| **Palco della Sovrintendente** | Tenente, Vicario | *Protestare* (Diplomazia CD 18: annulla una scudisciata avversaria); *Testimoniare* (Intuizione CD 15: smaschera un fallo, l'avversario perde 1 Lunghezza) |
 | **Curva Nord, dentro il transennato** | Stalliere | *Chiamare il cavallo* (Addestrare Animali CD 15: +2 al tiro del tratto); *Fermare un cavallo scosso* (Addestrare Animali CD 20) |
 | **Sul carro degli alfieri** | Alfiere | *Il canto sopra il rumore* (Intrattenere CD 16: +2 a tutti i tiri della propria contrada per un tratto) |
 | **Fra la folla, alla curva sud** | chiunque | *Aprire un varco* (Furtività CD 15 per non farsi vedere + Forza CD 13); *Raccogliere chi cade* (§6.5) |
@@ -2106,7 +2105,7 @@ sessione** sì, altrimenti qualcuno passa la serata a guardare.
 
 | | |
 |---|---|
-| **G1 · La coda** | Alla bilancia, Attu la fa passare avanti a tre persone. Uno dei tre è **Orsa della Zoppa**, che non dice niente e la guarda passare. La sera, alla Zoppa, Orsa le versa da bere e le chiede: *«Quanto gli devi?»* — **Scelta**: dire la cifra, mentire (Raggirare vs Percepire Intenzioni +4), o non rispondere. Chi dice la cifra: **Morale +1** e Orsa comincia a mettere da parte |
+| **G1 · La coda** | Alla bilancia, Attu la fa passare avanti a tre persone. Uno dei tre è **Orsa della Zoppa**, che non dice niente e la guarda passare. La sera, alla Zoppa, Orsa le versa da bere e le chiede: *«Quanto gli devi?»* — **Scelta**: dire la cifra, mentire (Raggirare vs Intuizione +4), o non rispondere. Chi dice la cifra: **Morale +1** e Orsa comincia a mettere da parte |
 | **G2 · Il registro** | Ai Partiti, Attu apre il libro dei debiti su un tavolo dove passano altri due Capitani. La pagina è quella di Vanna e resta aperta trenta secondi. **Scelta**: chiuderlo (Rapidità di Mano CD 15, e Attu se ne accorge), lasciarlo aperto (**Morale −1**, ma nessuno può più ricattarla con quello), o chiedergli di chiuderlo (Diplomazia CD 18: lo chiude, e da quel momento le deve una cortesia) |
 | **G3 · Il conto** | Un'ora prima dello Stacco, Attu le chiede la cortesia: **che l'Istrice non ostacoli l'Oca alla curva sud**. Non minaccia. Ricorda. **Scelta**: accettare (in Corsa perdi la manovra alla Curva Sud), rifiutare (il debito si riscuote a dicembre, per intero), o offrire altro |
 
@@ -2132,7 +2131,7 @@ di undici anni. Il ragazzo era **il figlio di Nonna Grasa**.
 
 | | |
 |---|---|
-| **G1 · Il fieno nuovo** | Nella stalla c'è fieno buono comprato la settimana scorsa con soldi che il rione non aveva. **Chi l'ha pagato**: Nonna Grasa, di tasca. Non lo dirà. Se Ombra glielo chiede in faccia (Percepire Intenzioni CD 14 per capire che mente male), Grasa risponde: *«Il cavallo deve mangiare. Anche i cavalli che non c'entrano niente.»* |
+| **G1 · Il fieno nuovo** | Nella stalla c'è fieno buono comprato la settimana scorsa con soldi che il rione non aveva. **Chi l'ha pagato**: Nonna Grasa, di tasca. Non lo dirà. Se Ombra glielo chiede in faccia (Intuizione CD 14 per capire che mente male), Grasa risponde: *«Il cavallo deve mangiare. Anche i cavalli che non c'entrano niente.»* |
 | **G2 · La notte in stalla** | Prima dell'assalto, la scena tranquilla: il cavallo non si fa toccare i garretti. Addestrare Animali CD 15. Riuscendo, Ombra capisce che ha paura **delle mani**, non di lei — qualcuno l'ha già maltrattato altrove. **Ritmo +1** al primo giro se lo tratta di conseguenza |
 | **G3 · Le quaranta candele** | All'alba, Nonna Grasa mette in fila le sue quaranta candele. Ne prende una e la porge a Ombra. Una sola. **Nessuna prova, nessuna spiegazione, nessun effetto meccanico.** Vent'anni per una candela |
 
@@ -2144,7 +2143,7 @@ per nome — **Berta** — per la prima volta da vent'anni. Falla sentire.
 | | |
 |---|---|
 | **G1 · Il foglio del 4692** | Il confine del bosco, cinquanta passi più a est. La correzione è del 4705, mano ferma, **senza firma**. Conoscenze (locali) CD 15: quella mano è la stessa che compare in altri quattro atti, tutti a favore del Bruco |
-| **G2 · Qualcuno sa** | Sirena Occo lo ferma per strada e gli dice, cordiale: *«Lei ha delle copie che il catasto non sa di aver perso.»* Non chiede niente. **Adesso**. **Scelta**: negare (Raggirare CD 22, lei ha Percepire Intenzioni +12), ammettere, o offrirle qualcosa prima che lo chieda |
+| **G2 · Qualcuno sa** | Sirena Occo lo ferma per strada e gli dice, cordiale: *«Lei ha delle copie che il catasto non sa di aver perso.»* Non chiede niente. **Adesso**. **Scelta**: negare (Raggirare CD 22, lei ha Intuizione +12), ammettere, o offrirle qualcosa prima che lo chieda |
 | **G3 · La consegna** | Portare il registro alla Sovrintendente davanti a tutti apre il finale alternativo (`03-GIORNO-3` §7.1) — **e costa a Tesio il posto**, perché quelle copie non doveva averle. Lo sa. **Scelta**: farlo, non farlo, o farlo tramite un altro |
 
 **L'eco**: se lo fa, entro un anno la Sovrintendente lo assume come *suo* scrivano. Se
@@ -2154,7 +2153,7 @@ non lo fa, i cinquanta passi restano al Bruco per sempre.
 
 | | |
 |---|---|
-| **G1 · Il manifesto** | Legge il nome del pittore sul cartiglio e cambia strada. Chi la vede: Percepire Intenzioni CD 12 per capire che non è disgusto — è vergogna |
+| **G1 · Il manifesto** | Legge il nome del pittore sul cartiglio e cambia strada. Chi la vede: Intuizione CD 12 per capire che non è disgusto — è vergogna |
 | **G2 · La domanda dal palco** | `02-GIORNO-2` §3. Rasca le fa una domanda a cui non si può rispondere bene. **Suggerimento per il DM**: *«Perché non hai mai chiesto com'è finita?»* — e lascia che il giocatore decida di cosa parla |
 | **G3 · Il retro del Drappo** | In basso a destra, sul retro del telo, a matita, c'è un nome scritto e cancellato. Si legge lo stesso. **Non è il suo.** È il nome di sua madre, che era del Leocorno |
 
@@ -2315,7 +2314,7 @@ che non si compra.
 
 **Chi c'è**: il **coro del Bruco** (Intrattenere +11 in gruppo), e nell'angolo
 **Sfregio**, che non beve. *(Percezione CD 18 per notare che è la stessa faccia vista
-altrove; Percepire Intenzioni CD 20 per capire che sta contando le uscite.)*
+altrove; Intuizione CD 20 per capire che sta contando le uscite.)*
 **Cosa si compra**: veleni no, **acquavite di guado** sì (2 mo, +2 a un tiro di
 Intimidire nell'ora seguente, poi −2 a tutto per un'ora).
 **Il gancio** `G2`: il duello dei canti più duro (`02-GIORNO-2` §3). Chi ci entra
@@ -2382,7 +2381,7 @@ la tua. Tre righe di regia e poi la tabella:
 > ordinate per altezza, e sa a memoria quale pila è quale. Ti fa sedere davanti alla
 > pila più bassa, che è quella dove ci sei tu.
 
-**Come funziona**: il PG offre un'informazione. Occo tira **Percepire Intenzioni +12**
+**Come funziona**: il PG offre un'informazione. Occo tira **Intuizione +12**
 contro il **Raggirare** del PG per capire se è vera e se è già nota. Poi vende.
 
 | Cosa vendono | Costo | Verità |
@@ -2595,7 +2594,7 @@ d'oro pagate a Cassomir.
 | G1 | offre l'anticipo del Peso a Vanna, con la clausola | se i PG **leggono il foglio**, la clausola è lì, scritta piccola |
 | G2 | compra da Sirena Occo la storia delle quaranta monete di Nocca | Percezione CD 15 per vederli parlare al mercato del grano |
 | G3 mattina | usa la storia in pubblico (`03-GIORNO-3` §3) | se Nocca ha confessato, la carta è bruciata |
-| G3 corsa | il suo fantino scudiscia alla Curva Sud, dove il palco non vede | un PG che *testimonia* dal palco (Percepire Intenzioni CD 15) |
+| G3 corsa | il suo fantino scudiscia alla Curva Sud, dove il palco non vede | un PG che *testimonia* dal palco (Intuizione CD 15) |
 | G3 sera | se ha perso: **la piena**. Cinquecento sacchi di grano assicurato e il fiume che sale | è rovinato, e nessuno se ne accorgerà per mesi |
 
 ---
@@ -2961,7 +2960,7 @@ Istrice. Chiede se può entrare. Aspetta che le dicano di sì.
 > *«Il vostro registro dei morti l'ho letto anch'io. Quei nove sono morti di resina
 > scaldata male, e nella mia tintoria si scalda bene.»*
 
-**L'offerta è vera.** Percepire Intenzioni CD 20: Vesca **non sta mentendo su
+**L'offerta è vera.** Intuizione CD 20: Vesca **non sta mentendo su
 niente**, e questo la rende molto più difficile da odiare. Chi supera la CD 25 coglie
 anche l'altra cosa: le fa schifo essere quella che scioglie una contrada, e lo fa lo
 stesso.
@@ -3024,7 +3023,7 @@ settimane. Serve **tutto il rione**, e il rione va convinto.
 La Oca anticipa il Peso intero. Nessuna prova: basta chiedere.
 **Costo**: il debito sale di 150 mo e — clausola detta ad alta voce, con
 noncuranza — l'Istrice **non ostacoleranno l'Oca in Corsa**.
-Chi ascolta con Percepire Intenzioni CD 15 capisce che quella clausola vale più dei
+Chi ascolta con Intuizione CD 15 capisce che quella clausola vale più dei
 150 mo.
 
 ### Via 3 — Il legno vecchio (grigia)
@@ -3323,7 +3322,7 @@ regge.
 
 | Chi | Chiede | Offre | La trappola |
 |---|---|---|---|
-| **Attu** (Oca) | ostacolare l'Onda alla curva nord | cancella un terzo del debito | vale **solo se l'Oca arriva prima**. Percepire Intenzioni CD 20 per accorgersene, oppure **leggere il foglio** — che è lì, e nessuno lo legge mai |
+| **Attu** (Oca) | ostacolare l'Onda alla curva nord | cancella un terzo del debito | vale **solo se l'Oca arriva prima**. Intuizione CD 20 per accorgersene, oppure **leggere il foglio** — che è lì, e nessuno lo legge mai |
 | **Barbanera** (Onda) | niente, se non che l'Istrice non aiutino Attu | scorta ai battellieri per il cavallo e la stalla, stanotte | mantiene alla lettera e non oltre: se il patto dice «alla stalla», al fantino non ci pensa nessuno |
 | **Vesca** (Bruco) | il ritiro, ancora | il contratto di ieri, immutato | nessuna. E questo è il problema |
 
@@ -3691,7 +3690,7 @@ facilmente: è il patto.
 **3 · Vanno loro al Bruco, di notte.** Vesca è sveglia, in tintoria, e
 sta lavorando. Lascia che la trovino così. Non nega niente e non ammette niente:
 dice che di Sfregio non sa nulla, ed è vero. Se lo dice guardando in faccia Melchio
-(Percepire Intenzioni +9), il giocatore ci crederà, e avrà ragione.
+(Intuizione +9), il giocatore ci crederà, e avrà ragione.
 
 **4 · Denunciano tutto alla milizia.** Ubalda Trenchi apre un'inchiesta, che è la
 cosa più lenta di Tarsilia. Manda due miliziani a fare la guardia alla stalla:
@@ -4152,7 +4151,7 @@ ___
 
 **STATISTICHE**
 ___
-For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Percepire Intenzioni **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6  
+For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Intuizione **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6  
 }}
 
 *Forestiera residente da trentotto anni. Terzo mandato. Non si compra e — cosa più
@@ -4174,7 +4173,7 @@ decidono che non si può.
 
 | Capitano | Contrada | Classe | GS | pf | CA | Il numero che conta |
 |---|---|---|---|---|---|---|
-| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Percepire Intenzioni +11, Diplomazia +10 |
+| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Intuizione +11, Diplomazia +10 |
 | **Gerlando Attu** | Oca | esperto 5 | 3 | 25 | 13 | Valutare +13, Raggirare +11 |
 | **Zoe Barbanera** | Onda | guerriera 4 | 3 | 38 | 17 | Professione (pilota) +9, Intimidire +8 |
 | **Ubalda Trenchi** | Torre | guerriera 6 | 5 | 55 | 20 | attacco +11 (1d8+5), e **dodici miliziani** |
@@ -4630,7 +4629,7 @@ Incantare in Combattimento · Iniziativa Migliorata
 **Famiglio**: **Conto**, un corvo *(il padrone guadagna +3 a Valutare)*
 **Abilità**: Sapienza Magica +10, Conoscenze (locali) +10, Valutare **+12**,
 Linguistica +9, Conoscenze (arcane) +9, Raggirare +4, Furtività +4, Percezione +3,
-Percepire Intenzioni +3
+Intuizione +3
 **Equipaggiamento**: libro degli incantesimi · balestra leggera e 20 quadrelli (37) ·
 pugnale (2) · **borsa conservante di tipo I** (2.500) · 2 pergamene di *comprensione
 dei linguaggi* (50) · pergamena di *invisibilità* (150) · calamaio, penne, quaranta
@@ -4684,7 +4683,7 @@ ferite leggere*, *ventriloquio*
 Persuasivo · Incantare in Combattimento
 **Abilità**: **Intrattenere (canto) +13**, Diplomazia **+12**, Raggirare +10,
 Intrattenere (danza) +8, Acrobazia +7, Percezione +7, Conoscenze (locali) +6,
-Percepire Intenzioni +5, Conoscenze (storia) +5, Sapienza Magica +5, Furtività +4
+Intuizione +5, Conoscenze (storia) +5, Sapienza Magica +5, Furtività +4
 **Conoscenza bardica**: +1 a **tutte** le Conoscenze, anche senza gradi
 **Equipaggiamento**: camicia di maglia da maestro (250) · spada lunga (15) · frusta
 (1) · **liuto da maestro** (100) · **bandiera della contrada, asta di frassino** (5) ·
@@ -4738,7 +4737,7 @@ più spesso di quanto credi)*
   ferite moderate*
 
 **Talenti**: Incanalare Selettivo · Incantare in Combattimento · Robustezza
-**Abilità**: **Guarire +10**, **Percepire Intenzioni +9**, Diplomazia +7, Conoscenze
+**Abilità**: **Guarire +10**, **Intuizione +9**, Diplomazia +7, Conoscenze
 (religioni) +4
 **Equipaggiamento**: camicia di maglia da maestro (250) · scudo pesante di legno (7) ·
 scimitarra (15) · **simbolo sacro d'argento** (25) · 4 pozioni di *cura ferite
@@ -4754,7 +4753,7 @@ Sarenrae come si fa.
 ### Come si gioca in un minuto
 Sei la coscienza del tavolo, e la coscienza qui costa: **ogni patto che gli altri
 stringono, tu lo devi guardare in faccia**. Curi (Guarire +10, canalizzare 4 volte,
-periapto), e con **Percepire Intenzioni +9** sei quello che capisce quando un
+periapto), e con **Intuizione +9** sei quello che capisce quando un
 Capitano sta mentendo. In Corsa stai **al palco**, accanto a Tesio: lui protesta, tu
 testimoni. Quando qualcuno cade in pista, corri tu.
 

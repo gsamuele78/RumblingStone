@@ -397,3 +397,15 @@ class TestLessicoDalPlugin(unittest.TestCase):
         self.assertEqual(C.CLASSI, set(e["classi"]))
         self.assertEqual(C.RAZZE, set(e["razze"]))
         self.assertIn("guerriero", C.CLASSI)
+
+
+class TestScenaSocialePf1e(unittest.TestCase):
+    """Il nome PF1e di Sense Motive fa una scena sociale come quello 3.5. Con il
+    Drappo rinominato in «Intuizione» la D18 aveva smesso di vedere §3 «L'offerta»."""
+
+    def test_intuizione_meccanica_conta(self):
+        import domande_developer as D
+        for testo in ("Intuizione CD 20: Vesca non mente", "lei ha Intuizione +12",
+                      "Percepire Intenzioni CD 15"):
+            self.assertTrue(D.SOCIALE.search(testo), testo)
+        self.assertFalse(D.SOCIALE.search("ebbe un'Intuizione improvvisa"))
