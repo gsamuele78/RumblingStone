@@ -6228,10 +6228,12 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 874,
+    "senza_note": 1044,
     "sestine_citate": [],
     "taglia": 0,
-    "talenti": {},
+    "talenti": {
+     "init": 4
+    },
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
