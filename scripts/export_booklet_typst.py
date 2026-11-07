@@ -63,6 +63,16 @@ from dmcore.statblock import (  # noqa: E402
 )
 
 import binari  # noqa: E402  (accanto a questo file)
+from dmcore import sistemi as _SIS  # noqa: E402
+
+#: Le sigle del riquadro dal plugin del sistema del booklet (ADR-0111, L7);
+#: `main()` le rilegge per il manifest, qui vale il predefinito.
+ET: dict[str, str] = _SIS.etichette()
+
+
+def _etichette_per(manifest_path: Path) -> None:
+    global ET
+    ET = _SIS.etichette(_SIS.sistema_di(manifest_path.resolve()))
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
@@ -679,7 +689,7 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
     nome = sb.nome or titolo_corrente
     voci = [f"nome: {json.dumps(nome, ensure_ascii=False)}"]
     for chiave, valore in (
-        ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs)), ("iniziativa", sb.iniziativa),
+        ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs, ET["gs"])), ("iniziativa", sb.iniziativa),
         ("sensi", sb.sensi), ("pf", (sb.pf + (f" ({sb.pf_dado})" if sb.pf_dado else "")).strip()),
         ("velocita", sb.velocita), ("tattica", sb.tattica), ("fonte", sb.fonte),
     ):
@@ -716,6 +726,9 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
             f"{json.dumps(s.etichetta, ensure_ascii=False)}: "
             f"[{_sezione_typ(s, len(caratteristiche(sb.attributi)) == 6)}], "
             for s in sezioni) + ")")
+    voci.append("etichette: (" + ", ".join(
+        f"{k}: {json.dumps(ET[k], ensure_ascii=False)}"
+        for k in ("ca", "pf", "ts", "vel", "iniziativa", "sensi")) + ")")
     return "#statblocco(\n  " + ",\n  ".join(voci) + ",\n)"
 
 
@@ -726,7 +739,7 @@ def _sezione_typ(s, con_griglia: bool) -> str:
         testo = senza_caratteristiche(testo)
     pezzi = [inline(testo)] if testo else []
     if s.etichetta == "Iniziativa" and pezzi:
-        pezzi[0] = "*Iniziativa* " + pezzi[0]    # la riga sotto il nome, senza fascia
+        pezzi[0] = f"*{ET['iniziativa']}* " + pezzi[0]    # la riga sotto il nome, senza fascia
     pezzi += ["- " + inline(v) for v in s.voci]
     return "\n".join(pezzi)
 
@@ -1195,6 +1208,7 @@ def main() -> int:
         return 2
     man = json.loads(mp.read_text(encoding="utf-8"))
     base = mp.parent
+    _etichette_per(mp)
 
     if args.list:
         for cap, t, f in capitoli(man, base, True):

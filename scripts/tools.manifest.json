@@ -384,7 +384,12 @@
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "stampa.etichette"
+        ]
+      }
     },
     {
       "id": "build_chapter_marks",
@@ -2711,7 +2716,12 @@
         "docs/guides/GUIDA-FLUSSO-LOCALE.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "stampa.etichette"
+        ]
+      }
     },
     {
       "id": "export_map_png",

@@ -24,3 +24,4 @@
 "creature.incantesimi" = "le liste di incantesimi per classe"
 "creature.regole_di_tipo" = "le regole di tipo che cambiano i conti (es. il non morto PF1e usa il Carisma)"
 "statblocco.campi" = "i campi meccanici del blocco statistiche"
+"stampa.etichette" = "le sigle meccaniche stampate nel riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sensi)"

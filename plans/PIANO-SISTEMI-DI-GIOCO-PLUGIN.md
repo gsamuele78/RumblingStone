@@ -65,7 +65,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | **L4** ✅ | regole semplici: soglie PE 3.5 in `sistemi/dnd35/dati/pe.toml` (`update_xp` legge ogni sistema dal plugin, `THRESHOLDS` caricato dai dati); EL con il `metodo` del plugin (`potenze` con `raddoppio = 2` per il 3.5, `somma_px` per PF1e; `suggest_encounter.combinatore()`); `suggest_loot` sceglie dal predefinito di `sistemi.toml`. Il PF1e supportato l'aveva già fatto L1-bis | 3 + test | capacità dnd35 nel codice 7 → 5; nomi di sistema cablati nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 resta 79 |
 | L5 ✅ (L5a, L5b, L5c, L5d) | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` — **L5a** (2026-11-07): tipi, classi (con BAB e classi PNG), taglie, armature, scudi e matrici elite/standard in `sistemi/dnd35/dati/creature.toml`, letti da `dmcore/tabelle.py` con gli stessi nomi; **L5b** (2026-11-07): griglie degli incantatori e incantesimi conosciuti, classi incantatrici, classi di prestigio, profili di ruolo, modificatori per taglia e razziali; **L5c** (2026-11-07): liste degli incantesimi 3.5 nel plugin dnd35, aggiunte APG nel plugin pf1e | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
 | L6 ✅ | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
-| L7 | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
+| L7 ✅ | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
 | L8 | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
 
 ### §2.1 Il file generale (L1, con le consigliate di D1, D2 e D4; i file veri sono `sistemi.toml` e `sistemi/*/sistema.toml`)
@@ -202,6 +202,12 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - **Con la configurazione di oggi non cambia niente**: 18 di 18, quindi i pacchetti della CI («Build skill packages») sono gli stessi.
 - **Limite**: `forgotten-realms-lore` è un'ambientazione, non un sistema, e D4 la mette in una sezione separata che ancora non esiste. Per ora si installa sempre.
 
+### §2.12 Cosa ha trovato L7
+
+- **Una capacità nuova, la tredicesima**: `stampa.etichette` (CA, pf, TS, Vel, GS, Iniziativa, Sensi) in `sistemi/d20/dati/stampa.toml`; dnd35 e pf1e la ereditano. `build_booklet_html.py` ed `export_booklet_typst.py` la leggono per il sistema del manifest (`sistema_di`), `statblock.etichetta_gs` per la sigla del GS; il tema Typst riceve le sigle come parametro `etichette:` di `#statblocco()`.
+- **Misura**: i 19 booklet rigenerati in HTML e in `.hb.md` sono **identici byte per byte** a prima. Il sorgente `.typ` cambia in 98 righe, e sono tutte la riga `etichette: (…)` aggiunta a ogni riquadro, con le stesse sigle che il tema scriveva prima a mano. Il PDF non l'ho compilato in locale (typst non è installato e lo scaricamento è stato negato); l'identità del PDF segue dal fatto che i valori passati sono quelli che il tema aveva cablati.
+- **Cosa non fa ancora**: BMC/DMC sulla scheda del PG PF1e. Le schede di oggi non le stampano, e aggiungerle è una scelta di contenuto, non una migrazione: resta per quando il DM vorrà le schede PF1e complete.
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -235,5 +241,5 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L4 · regole semplici (2026-11-07): PE ed EL dal plugin, nessun «dnd35» cablato in update_xp, suggest_encounter, suggest_loot
 - [x] L5 · nucleo delle creature (2026-11-07): L5a tabelle base, L5b incantatori, prestigio, profili, taglie e razze, L5c liste di incantesimi, L5d regole di tipo e campi dello statblocco, tutto dal plugin con impronte dei valori identiche
 - [x] L6 · skill e agent (2026-11-07): build-skills.sh e sync-skills.sh saltano le skill dei sistemi né attivi né di rinforzo (`sistemi.py --skill-escluse`)
-- [ ] L7 · etichette di stampa
+- [x] L7 · etichette di stampa (2026-11-07): capacità `stampa.etichette` della famiglia d20, lette dalle due catene per il sistema del manifest
 - [ ] L8 · prova del nove

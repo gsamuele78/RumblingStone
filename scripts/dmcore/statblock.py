@@ -541,13 +541,15 @@ def caratteristiche(attributi: str) -> list[tuple[str, str]]:
     return [(k, v) for k, v in coppie]
 
 
-def etichetta_gs(gs: str) -> str:
+def etichetta_gs(gs: str, sigla: str | None = None) -> str:
     """Quel che il riquadro scrive accanto al nome: «GS 12» per un numero,
     il testo così com'è per un PG («PG di 13°»), niente per «—»."""
     gs = gs.strip()
     if gs in ("", "—", "-"):
         return ""
-    return f"GS {gs}" if re.match(r"[~≈½\d]", gs) else gs
+    if sigla is None:
+        sigla = _S.etichette().get("gs", "GS")   # stampa.etichette (ADR-0111, L7)
+    return f"{sigla} {gs}" if re.match(r"[~≈½\d]", gs) else gs
 
 
 def accosta_parte_leggibile(testo: str) -> str:

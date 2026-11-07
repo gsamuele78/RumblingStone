@@ -13,4 +13,5 @@ skill = []
 
 [capacita]
 "termini.vietati" = { dati = ["sistemi/d20/dati/termini-vietati.toml"], nota = "una lista sola, letta da validate_modules e validate_standalone" }
+"stampa.etichette" = { dati = ["sistemi/d20/dati/stampa.toml"], nota = "L7: le sigle del riquadro, uguali in 3.5 e PF1e" }
 "statblocco.campi" = { dati = ["sistemi/d20/dati/statblocco.toml"], nota = "L5d: campi obbligatori, ammessi e a lista del blocco statblock" }
