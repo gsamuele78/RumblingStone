@@ -13,6 +13,10 @@
 #                 abbinato all'SRD inglese per scuola, livelli, componenti, raggio, TS, RI e tempo di lancio, senza usare il nome
 #   editori folli (forma SRD)  il nome dell'SRD italiano senza il mago (Freccia acida per Freccia acida di Melf);
 #                 Spada, Trappola e Capanna non entrano: sono parole comuni
+#   editori folli (tabella SRD …)  equipaggiamento: coppia per firma (costo, danni o CA, peso) unica nelle due
+#                 tabelle; il nome inglese è una riga della tabella di equipment.md
+#   5clone        mostri: «Nome (Ita)» e «Nome (Ing)» della scheda del Bestiario 3.5 del 5° Clone (5clone.com), con
+#                 la pagina del Manuale dei Mostri; ci sono solo le voci da Aasimar a Basilisco (31)
 # Le voci di scripts/lessico_it.yaml (curate, con varianti e note) prevalgono su queste.
 italiano	srd35	tipo	abbinamento
 Acrobatico	Acrobatic	talento	doppia fonte
@@ -2070,3 +2074,34 @@ Deviazione	Deflection (Ex)	tipo di bonus	mephit
 Resistenza	Resistance (Ex)	tipo di bonus	mephit
 Schivare	Dodge	tipo di bonus	mephit
 Scudo	Shield	tipo di bonus	mephit
+Aasimar	Aasimar	mostro	5clone (MM 3.5, pag. 233)
+Aboleth	Aboleth	mostro	5clone (MM 3.5, pag. 8)
+Aboleth Magi	Aboleth Mage	mostro	5clone (MM 3.5, pag. 8)
+Abominio	Abomination	mostro	5clone (MM 3.5, pag. 264)
+Achaierai	Achaierai	mostro	5clone (MM 3.5, pag. 9)
+Ala Notturna	Nightwing	mostro	5clone (MM 3.5, pag. 196)
+Allip	Allip	mostro	5clone (MM 3.5, pag. 10)
+Ameba Paglierina	Ochre Jelly	mostro	5clone (MM 3.5, pag. 171)
+Androsfinge	Androsphinx	mostro	5clone (MM 3.5, pag. 224)
+Animale Crudele	Dire Animal	mostro	5clone (MM 3.5, pag. 13)
+Ankheg	Ankheg	mostro	5clone (MM 3.5, pag. 17)
+Annis	Annis	mostro	5clone (MM 3.5, pag. 235)
+Ape Gigante	Giant Bee	mostro	5clone (MM 3.5, pag. 284)
+Aquila	Eagle	mostro	5clone (MM 3.5, pag. 268)
+Aquila Gigante	Eagle, Giant	mostro	5clone (MM 3.5, pag. 18; inglese nella forma SRD)
+Aranea	Aranea	mostro	5clone (MM 3.5, pag. 18)
+Arconte Lanterna	Lantern Archon	mostro	5clone (MM 3.5, pag. 19)
+Arconte Segugio	Hound Archon	mostro	5clone (MM 3.5, pag. 20)
+Arconte Segugio Eroe	Hound Archon Hero	mostro	5clone (MM 3.5, pag. 21)
+Arconte Tromba	Trumpet Archon	mostro	5clone (MM 3.5, pag. 22)
+Arpia	Harpy	mostro	5clone (MM 3.5, pag. 22)
+Assimilatore	Digester	mostro	5clone (MM 3.5, pag. 23)
+Athach	Athach	mostro	5clone (MM 3.5, pag. 24)
+Avoral	Avoral	mostro	5clone (MM 3.5, pag. 135)
+Azer	Azer	mostro	5clone (MM 3.5, pag. 25)
+Babau	Babau	mostro	5clone (MM 3.5, pag. 43)
+Balor	Balor	mostro	5clone (MM 3.5, pag. 43)
+Barghest	Barghest	mostro	5clone (MM 3.5, pag. 26)
+Barghest Superiore	Greater Barghest	mostro	5clone (MM 3.5, pag. 26)
+Basilisco	Basilisk	mostro	5clone (MM 3.5, pag. 27)
+Basilisco Superiore Abissale	Abyssal Greater Basilisk	mostro	5clone (MM 3.5, pag. 27)
