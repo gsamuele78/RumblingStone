@@ -144,7 +144,7 @@ d'oro pagate a Cassomir.
 | G1 | offre l'anticipo del Peso a Vanna, con la clausola | se i PG **leggono il foglio**, la clausola è lì, scritta piccola |
 | G2 | compra da Sirena Occo la storia delle quaranta monete di Nocca | Percezione CD 15 per vederli parlare al mercato del grano |
 | G3 mattina | usa la storia in pubblico (`03-GIORNO-3` §3) | se Nocca ha confessato, la carta è bruciata |
-| G3 corsa | il suo fantino scudiscia alla Curva Sud, dove il palco non vede | un PG che *testimonia* dal palco (Percepire Intenzioni CD 15) |
+| G3 corsa | il suo fantino scudiscia alla Curva Sud, dove il palco non vede | un PG che *testimonia* dal palco (Intuizione CD 15) |
 | G3 sera | se ha perso: **la piena**. Cinquecento sacchi di grano assicurato e il fiume che sale | è rovinato, e nessuno se ne accorgerà per mesi |
 
 ---

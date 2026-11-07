@@ -207,7 +207,7 @@ Incantare in Combattimento · Iniziativa Migliorata
 **Famiglio**: **Conto**, un corvo *(il padrone guadagna +3 a Valutare)*
 **Abilità**: Sapienza Magica +10, Conoscenze (locali) +10, Valutare **+12**,
 Linguistica +9, Conoscenze (arcane) +9, Raggirare +4, Furtività +4, Percezione +3,
-Percepire Intenzioni +3
+Intuizione +3
 **Equipaggiamento**: libro degli incantesimi · balestra leggera e 20 quadrelli (37) ·
 pugnale (2) · **borsa conservante di tipo I** (2.500) · 2 pergamene di *comprensione
 dei linguaggi* (50) · pergamena di *invisibilità* (150) · calamaio, penne, quaranta
@@ -261,7 +261,7 @@ ferite leggere*, *ventriloquio*
 Persuasivo · Incantare in Combattimento
 **Abilità**: **Intrattenere (canto) +13**, Diplomazia **+12**, Raggirare +10,
 Intrattenere (danza) +8, Acrobazia +7, Percezione +7, Conoscenze (locali) +6,
-Percepire Intenzioni +5, Conoscenze (storia) +5, Sapienza Magica +5, Furtività +4
+Intuizione +5, Conoscenze (storia) +5, Sapienza Magica +5, Furtività +4
 **Conoscenza bardica**: +1 a **tutte** le Conoscenze, anche senza gradi
 **Equipaggiamento**: camicia di maglia da maestro (250) · spada lunga (15) · frusta
 (1) · **liuto da maestro** (100) · **bandiera della contrada, asta di frassino** (5) ·
@@ -315,7 +315,7 @@ più spesso di quanto credi)*
   ferite moderate*
 
 **Talenti**: Incanalare Selettivo · Incantare in Combattimento · Robustezza
-**Abilità**: **Guarire +10**, **Percepire Intenzioni +9**, Diplomazia +7, Conoscenze
+**Abilità**: **Guarire +10**, **Intuizione +9**, Diplomazia +7, Conoscenze
 (religioni) +4
 **Equipaggiamento**: camicia di maglia da maestro (250) · scudo pesante di legno (7) ·
 scimitarra (15) · **simbolo sacro d'argento** (25) · 4 pozioni di *cura ferite
@@ -331,7 +331,7 @@ Sarenrae come si fa.
 ### Come si gioca in un minuto
 Sei la coscienza del tavolo, e la coscienza qui costa: **ogni patto che gli altri
 stringono, tu lo devi guardare in faccia**. Curi (Guarire +10, canalizzare 4 volte,
-periapto), e con **Percepire Intenzioni +9** sei quello che capisce quando un
+periapto), e con **Intuizione +9** sei quello che capisce quando un
 Capitano sta mentendo. In Corsa stai **al palco**, accanto a Tesio: lui protesta, tu
 testimoni. Quando qualcuno cade in pista, corri tu.
 
