@@ -27,4 +27,4 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "creature.costruzione" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5a: tipi, classi, BAB, taglie, armature, scudi, matrici; L5b: griglie degli incantatori, classi incantatrici, prestigio, profili, taglie e razze" }
 "creature.statistiche_per_gs" = { eredita = "pf1e", motivo = "l'SRD 3.5 non ha bersagli per GS: si usa la Tab. 1-1 PF1e come guardia, non come fonte (dmcore/tabelle.py)" }
 "creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml"], nota = "L5c: liste per classe × funzione, nomi canonici, ripieghi; le funzioni tattiche restano in dmcore/incantesimi.py" }
-"creature.regole_di_tipo" = { codice = ["scripts/dmcore/tabelle.py:TIPI"], lotto = "L5" }
+"creature.regole_di_tipo" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5d: [tipi] e [alias_tipo]; normalizza_tipo in dmcore/tabelle.py" }

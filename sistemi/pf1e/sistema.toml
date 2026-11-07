@@ -27,4 +27,4 @@ skill = ["pathfinder-1e-srd"]
 "creature.costruzione" = { dati = ["sistemi/pf1e/dati/creature.toml"], nota = "tipi (DV, BAB, TS buoni, gradi) e taglie (CA/attacco, BMC/DMC); calcolo in dmcore/creature_pf1e.py" }
 "creature.statistiche_per_gs" = { dati = ["scripts/pf1e-statistiche-per-gs.yaml"] }
 "creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml", "sistemi/pf1e/dati/incantesimi.toml"], nota = "L5c: la lista core PF1e è abbastanza vicina alla 3.5 da usare quella; in più gli incantesimi dell'APG (solo)" }
-"creature.regole_di_tipo" = { codice = ["scripts/dmcore/lettura_creatura.py:NON_MORTO_PF1E"], lotto = "L5" }
+"creature.regole_di_tipo" = { dati = ["sistemi/pf1e/dati/creature.toml"], nota = "L5d: il non morto PF1e (d8, BAB 3/4, Vol, Carisma) viene da [tipi.undead]; la regola del Carisma in dmcore/lettura_creatura.py" }

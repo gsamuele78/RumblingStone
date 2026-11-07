@@ -67,15 +67,7 @@ _DATI = _S.dati("dnd35", "creature.costruzione")
 TIPI = {k: (v["dv"], v["bab"], tuple(v["ts_buoni"])) for k, v in _DATI["tipi"].items()}
 
 #: Come il tipo si scrive nelle schede — italiano, inglese, e le forme miste.
-ALIAS_TIPO = {
-    "aberrazione": "aberration", "animale": "animal", "costrutto": "construct",
-    "drago": "dragon", "elementale": "elemental", "folletto": "fey",
-    "gigante": "giant", "umanoide": "humanoid", "bestia magica": "magical beast",
-    "umanoide mostruoso": "monstrous humanoid", "melma": "ooze",
-    "esterno": "outsider", "pianta": "plant", "non-morto": "undead",
-    "nonmorto": "undead", "parassita": "vermin", "immondo": "outsider",
-    "tiefling": "outsider", "mezzodrago": "dragon",
-}
+ALIAS_TIPO = dict(_DATI["alias_tipo"])
 
 #: classe → (faccia del dado dei DV, tiri salvezza buoni). Le classi PNG del SRD
 #: (warrior, adept, expert, aristocrat, commoner) stanno qui come le altre: sono
