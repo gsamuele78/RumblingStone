@@ -18,6 +18,7 @@ Legge `sistemi.toml`, i plugin in `sistemi/<id>/sistema.toml` e il campo
     python3 scripts/sistemi.py                    # sistemi e matrice
     python3 scripts/sistemi.py --di FILE          # il sistema di un file
     python3 scripts/sistemi.py --skill            # le skill da installare (D5)
+    python3 scripts/sistemi.py --skill-escluse    # quelle che build/sync saltano (L6)
     python3 scripts/sistemi.py --json             # tutto, per altri strumenti
     python3 scripts/sistemi.py --check            # il cancello
 
@@ -113,6 +114,8 @@ def main(argv=None) -> int:
     g = ap.add_mutually_exclusive_group()
     g.add_argument("--di", metavar="FILE", help="stampa il sistema di FILE")
     g.add_argument("--skill", action="store_true", help="le skill da installare, una per riga")
+    g.add_argument("--skill-escluse", action="store_true",
+                   help="le skill di sistemi né attivi né di rinforzo, che build/sync saltano (L6)")
     g.add_argument("--json", action="store_true", help="tutto il rapporto in JSON")
     g.add_argument("--check", action="store_true", help="cancello: esce 1 se c'è un problema")
     ap.add_argument("--root", type=Path, default=S.ROOT, help=argparse.SUPPRESS)
@@ -130,6 +133,11 @@ def main(argv=None) -> int:
             return 0
         if a.skill:
             print("\n".join(S.skill_da_installare(root)))
+            return 0
+        if a.skill_escluse:
+            escluse = S.skill_escluse(root)
+            if escluse:
+                print("\n".join(escluse))
             return 0
         r = rapporto(root)
     except (S.ErroreSistemi, FileNotFoundError, KeyError) as e:

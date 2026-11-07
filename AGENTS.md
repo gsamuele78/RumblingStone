@@ -433,7 +433,12 @@ può accenderli da solo.
 ## Supported Agents
 
 The canonical skill source is the whole `skills/` tree (every directory with
-a `SKILL.md`; `build-skills.sh` auto-discovers them). Per-agent mirrors are
+a `SKILL.md`; `build-skills.sh` auto-discovers them). The one exception is the
+game-system skills (ADR-0111, L6): a skill listed by a plugin in
+`sistemi/<id>/sistema.toml` is built and synced only when that system is
+`attivi` or `rinforzo` in `sistemi.toml`. `python3 scripts/sistemi.py
+--skill-escluse` prints the skills that are skipped (none with the current
+configuration). Skills no plugin lists are always built. Per-agent mirrors are
 **generated artifacts**, not committed to git (see `.gitignore`). Each
 developer/CI runs the build pipeline locally:
 

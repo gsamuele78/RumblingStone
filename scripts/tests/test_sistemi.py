@@ -121,6 +121,34 @@ class Albero:
         self._tmp.cleanup()
 
 
+class TestSkillEscluse(unittest.TestCase):
+    """L6: build-skills.sh e sync-skills.sh saltano le skill dei sistemi spenti."""
+
+    def test_tutti_accesi_nessuna_esclusa(self):
+        with Albero() as r:
+            self.assertEqual(S.skill_escluse(r), [])
+
+    def test_sistema_spento_le_sue_skill_escono(self):
+        cfg = CONFIG.replace('attivi = ["alfa", "beta"]', 'attivi = ["alfa"]')
+        self.assertNotEqual(cfg, CONFIG)
+        with Albero(**{"sistemi.toml": cfg}) as r:
+            self.assertEqual(S.skill_escluse(r), ["skill-beta"])
+            self.assertNotIn("skill-beta", S.skill_da_installare(r))
+
+    def test_il_rinforzo_basta_a_tenerla(self):
+        cfg = CONFIG.replace('attivi = ["alfa", "beta"]', 'attivi = ["alfa"]').replace(
+            'rinforzo = ["alfa"]', 'rinforzo = ["beta"]')
+        with Albero(**{"sistemi.toml": cfg}) as r:
+            self.assertEqual(S.skill_escluse(r), [])
+
+    def test_repo_vero_installa_tutto(self):
+        self.assertEqual(S.skill_escluse(REPO), [])
+
+    def test_gli_script_chiedono_a_sistemi(self):
+        for f in ("build-skills.sh", "sync-skills.sh"):
+            self.assertIn("sistemi.py\" --skill-escluse", (REPO / "scripts" / f).read_text(encoding="utf-8"), f)
+
+
 class TestRepoVero(unittest.TestCase):
     def test_il_cancello_e_verde(self):
         self.assertEqual(S.problemi(REPO, CLI.strumenti(REPO)), [])
