@@ -143,7 +143,7 @@ gs: 1/2
 tipo: Umano guerriero 1
 ca: 16
 ca-dettaglio: +4 camicia di maglia, +2 scudo
-pf: 13
+pf: 16
 ts: Tem +4, Rif +1, Vol +0
 attributi: For 15 Des 12 Cos 14 Int 9 Sag 10 Car 8
 iniziativa: +1
@@ -153,11 +153,11 @@ attacchi:
 ```
 **Iniziativa** +1
 
-**Difesa** **CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 13 · TS Tem +4, Rif +1, Vol +0
+**Difesa** **CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 16 · TS Tem +4, Rif +1, Vol +0
 
 **Attacco** **Mischia** mazza pesante +4 (1d8+2) · coltello +4 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14
 
-**Statistiche** For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Vigore Sovrannaturale
+**Statistiche** For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Robustezza
 
 **Tattiche** Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 14 fatto da chi ne ha appena messo giù uno. Nessuno di loro morirà per Sfregio.
 

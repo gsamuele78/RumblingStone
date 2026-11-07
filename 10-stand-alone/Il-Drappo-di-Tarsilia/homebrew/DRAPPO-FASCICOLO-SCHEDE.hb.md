@@ -179,7 +179,7 @@ parto.*
   *ammorbidire terra e pietra*
 
 **Talenti**: Abilità Focalizzata (Addestrare Animali) · Incantare in
-Combattimento · Vigore Sovrannaturale
+Combattimento · Robustezza
 **Abilità**: **Addestrare Animali +9**, **Guarire +10**, Sopravvivenza +10,
 Percezione +10, Cavalcare +6, Conoscenze (natura) +6, Sapienza Magica +6
 **Equipaggiamento**: armatura di cuoio (10) · scudo di legno leggero (3) · falcetto
@@ -345,8 +345,7 @@ più spesso di quanto credi)*
 - **2°** (2 + 1 dominio): **ristorare inferiore** · *aiuto* · **dominio**: *cura
   ferite moderate*
 
-**Talenti**: Incanalare Selettivo · Incantare in Combattimento · Vigore
-Sovrannaturale
+**Talenti**: Incanalare Selettivo · Incantare in Combattimento · Robustezza
 **Abilità**: **Guarire +10**, **Percepire Intenzioni +9**, Diplomazia +7, Conoscenze
 (religioni) +4
 **Equipaggiamento**: camicia di maglia da maestro (250) · scudo pesante di legno (7) ·
