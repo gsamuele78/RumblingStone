@@ -4,8 +4,13 @@
 #   abilità dall'elenco della pagina Abilità e condizioni dai titoli della pagina Condizioni, dove Golarion
 #   non dà il nome inglese: lì la coppia l'ha fatta Claude e ogni nome inglese è stato riscontrato nel PRD.
 # Tenute solo le coppie il cui nome inglese è un titolo del PRD PF1e (PSRD-Data@76ea4784), versioni mitiche escluse.
+# Classi, classi di prestigio, domini, sottodomini, stirpi, mostri e oggetti magici: ogni pagina italiana di Golarion
+# porta il link alla sua pagina inglese (API MediaWiki di Golarion, exturlusage/extlinks, 2026-11-07). La quarta
+# colonna dice da dove viene il nome inglese: golarion→prd (link, e il nome è nel PRD), golarion→aon (ItemName del
+# link ad Archives of Nethys; «fuori PRD» se il volume non è nel PRD in cache), golarion→d20pfsrd (ultimo pezzo
+# dell'URL; per mostri e oggetti tenuto solo se coincide con un nome del PRD). Senza quarta colonna: righe sopra.
 # Solo nomi, niente testo delle regole.
-italiano	pf1	tipo
+italiano	pf1	tipo	abbinamento
 Abbraccio Letale	Final Embrace	talento
 Abilità Focalizzata	Skill Focus	talento
 Accuratezza Elfica	Elven Accuracy	talento
@@ -2613,3 +2618,2158 @@ Rotto	Broken	condizione
 Sanguinante	Bleed	condizione
 Stabilizzato	Stable	condizione
 Stordito	Stunned	condizione
+Peste Demoniaca	Demonplague	afflizione	golarion→aon, fuori PRD
+Archetipo Animale Fatato	Fey Animal	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Animale Mummificato	Mummified Animal	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Creatura Calcificata	Calcified	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Ghiaccio Oscuro	Dark Ice	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Gigante Meticcio	Mongrel Giant	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Mezzo-Immondo	Half-Fiend	archetipo di mostro	golarion→aon
+Archetipo Morto Alluvionato	Floodslain	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Mummia Osiriana	Osirion Mummy	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Mutante delle Desolazioni del Mana	Mana Wastes Mutant	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Ospite Costrutto di Granuli	Granule Construct Host	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Schiavo delle Rune	Runeslave	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Signore delle Mummie	Mummy Lord	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Toccato dal Colore	Colour-Blighted	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Tulpa	Tulpa	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Vahana	Vahana	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Vampiro Vetala	Vetala	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Votato al Mare	Sea-Sworn	archetipo di mostro	golarion→aon, fuori PRD
+Archetipo Zombi Riarso	Sunbaked Zombie	archetipo di mostro	golarion→aon, fuori PRD
+Babbuino Mummificato	Mummified Animal	archetipo di mostro	golarion→aon, fuori PRD
+Coccodrillo Mummificato	Mummified Animal	archetipo di mostro	golarion→aon, fuori PRD
+Elefante Mummificato	Mummified Animal	archetipo di mostro	golarion→aon, fuori PRD
+Ippopotamo Mummificato	Mummified Animal	archetipo di mostro	golarion→aon, fuori PRD
+Mutante delle Desolazioni del Mana	Mana Wastes Mutant	archetipo di mostro	golarion→aon, fuori PRD
+Alchimista	Alchemist	classe	golarion→prd
+Antipaladino	Antipaladin	classe	golarion→prd
+Arcanista	Arcanist	classe	golarion→prd
+Attaccabrighe	Brawler	classe	golarion→prd
+Barbaro	Barbarian	classe	golarion→prd
+Barbaro Rivisitato	Barbarian (Unchained)	classe	golarion→d20pfsrd
+Bardo	Bard	classe	golarion→prd
+Cacciatore	Hunter	classe	golarion→prd
+Cavaliere	Cavalier	classe	golarion→prd
+Chierico	Cleric	classe	golarion→prd
+Cineta	Kineticist	classe	golarion→d20pfsrd
+Convocatore	Summoner	classe	golarion→prd
+Convocatore Rivisitato	Summoner (Unchained)	classe	golarion→d20pfsrd
+Druido	Druid	classe	golarion→prd
+Fattucchiere	Witch	classe	golarion→prd
+Guerriero	Fighter	classe	golarion→prd
+Inquisitore	Inquisitor	classe	golarion→prd
+Intrepido	Swashbuckler	classe	golarion→prd
+Investigatore	Investigator	classe	golarion→prd
+Iracondo di Stirpe	Bloodrager	classe	golarion→prd
+Ladro	Rogue	classe	golarion→prd
+Ladro Rivisitato	Rogue (Unchained)	classe	golarion→d20pfsrd
+Mago	Wizard	classe	golarion→prd
+Magus	Magus	classe	golarion→prd
+Medium	Medium	classe	golarion→d20pfsrd
+Mesmerista	Mesmerist	classe	golarion→d20pfsrd
+Monaco	Monk	classe	golarion→prd
+Monaco Rivisitato	Monk (Unchained)	classe	golarion→d20pfsrd
+Morfico	Shifter	classe	golarion→d20pfsrd
+Ninja	Ninja	classe	golarion→prd
+Occultista	Occultist	classe	golarion→d20pfsrd
+Oracolo	Oracle	classe	golarion→prd
+Paladino	Paladin	classe	golarion→prd
+Parapsichico	Psychic	classe	golarion→d20pfsrd
+Pistolero	Gunslinger	classe	golarion→prd
+Predatore	Slayer	classe	golarion→prd
+Ranger	Ranger	classe	golarion→prd
+Sacerdote Guerriero	Warpriest	classe	golarion→prd
+Samurai	Samurai	classe	golarion→prd
+Scaldo	Skald	classe	golarion→prd
+Sciamano	Shaman	classe	golarion→prd
+Spiritista	Spiritualist	classe	golarion→d20pfsrd
+Stregone	Sorcerer	classe	golarion→prd
+Vigilante	Vigilante	classe	golarion→aon
+Accolito della Fede Verde	Green Faith Acolyte	classe di prestigio	golarion→d20pfsrd
+Adepto del Fuoco Nero	Darkfire Adept	classe di prestigio	golarion→d20pfsrd
+Agente del Sepolcro	Agent of the Grave	classe di prestigio	golarion→d20pfsrd
+Agente dell'Aspide	Aspis Agent	classe di prestigio	golarion→aon
+Agente della Corte Ombratile	Umbral Agent	classe di prestigio	golarion→d20pfsrd
+Agente sul Campo dei Cercatori	Pathfinder Field Agent	classe di prestigio	golarion→aon, fuori PRD
+Alchimista Thuviano	Natural Alchemist	classe di prestigio	golarion→d20pfsrd
+Angelo Sanguinario	Sanguine Angel	classe di prestigio	golarion→aon
+Apprensore	Harrower	classe di prestigio	golarion→d20pfsrd
+Araldo Condottiero	Battle Herald	classe di prestigio	golarion→prd
+Arcanista Magaambyano	Magaambyan Arcanist	classe di prestigio	golarion→aon
+Arciere Arcano	Arcane Archer	classe di prestigio	golarion→prd
+Arconte del Nex	Mage of the Third Eye	classe di prestigio	golarion→d20pfsrd
+Artiglio del Crepuscolo	Twilight Talon	classe di prestigio	golarion→aon
+Asavir	Asavir	classe di prestigio	golarion→aon
+Assaporatore di Dolore	Pain Taster	classe di prestigio	golarion→aon, fuori PRD
+Assassino	Assassin	classe di prestigio	golarion→prd
+Assassino della Mantide Rossa	Red Mantis Assassin	classe di prestigio	golarion→aon
+Avvelenatore del Daggermark	Guild Poisoner	classe di prestigio	golarion→d20pfsrd
+Campione di Irori	Champion of the Enlightened	classe di prestigio	golarion→d20pfsrd
+Cavalca Mammut	Mammoth Rider	classe di prestigio	golarion→aon
+Cavaliere di Ozem	Celestial Knight	classe di prestigio	golarion→d20pfsrd
+Cavaliere Infernale	Hellknight	classe di prestigio	golarion→aon
+Cerca Cielo	Sun Seeker	classe di prestigio	golarion→d20pfsrd
+Cercatore del Chiarore	Brightness Seeker	classe di prestigio	golarion→aon, fuori PRD
+Coltivatore di Campanule	Bellflower Tiller	classe di prestigio	golarion→aon
+Corsaro Grigio	Gray Corsair	classe di prestigio	golarion→aon
+Costrittore di Geni	Genie Binder	classe di prestigio	golarion→aon, fuori PRD
+Crociato dell'Erede	Inheritor's Crusader	classe di prestigio	golarion→d20pfsrd
+Custode della Natura	Nature Warden	classe di prestigio	golarion→prd
+Daivrat	Daivrat	classe di prestigio	golarion→d20pfsrd
+Demonico	Demoniac	classe di prestigio	golarion→d20pfsrd
+Detective della Vigile	Sleepless Detective	classe di prestigio	golarion→d20pfsrd
+Diavolo di Westcrown	Westcrown Devil	classe di prestigio	golarion→aon
+Difensore Indomito	Stalwart Defender	classe di prestigio	golarion→prd
+Discepolo dei Draghi	Dragon Disciple	classe di prestigio	golarion→prd
+Dissidente del Fiore dell'Alba	Dissident of Dawn	classe di prestigio	golarion→d20pfsrd
+Drammaturgo d'Argento	Argent Dramaturge	classe di prestigio	golarion→aon
+Duellante	Duelist	classe di prestigio	golarion→prd
+Emissario di Rivethun	Rivethun Emissary	classe di prestigio	golarion→aon
+Erede Divino	Divine Scion	classe di prestigio	golarion→d20pfsrd
+Esploratore dei Cercatori	Pathfinder Delver	classe di prestigio	golarion→aon
+Falcone d'Acciaio	Steel Falcon	classe di prestigio	golarion→aon
+Fomentatempesta	Storm Kindler	classe di prestigio	golarion→aon
+Fratello del Sigillo	Brother of the Seal	classe di prestigio	golarion→d20pfsrd
+Gendarme della Legione Pura	Purity Legion Enforcer	classe di prestigio	golarion→d20pfsrd
+Giardiniere Grigio	Gray Warden	classe di prestigio	golarion→d20pfsrd
+Giustiziere	Justicar	classe di prestigio	golarion→aon, fuori PRD
+Glifomante	Cyphermage	classe di prestigio	golarion→aon
+Guardanime	Soul Warden	classe di prestigio	golarion→aon, fuori PRD
+Guardia Ulfena	Furious Guardian	classe di prestigio	golarion→d20pfsrd
+Guardiano dello Squarcio	Riftwarden	classe di prestigio	golarion→aon, fuori PRD
+Guerriero Arcano	Eldritch Knight	classe di prestigio	golarion→prd
+Guerriero della Fossa	Pit Fighter	classe di prestigio	golarion→d20pfsrd
+Illusionista Velato	Veiled Illusionist	classe di prestigio	golarion→d20pfsrd
+Lama del Leone	Lion Blade	classe di prestigio	golarion→aon, fuori PRD
+Legionario Dorato	Golden Legionnaire	classe di prestigio	golarion→aon
+Liberatore (Classe di Prestigio)	Liberator	classe di prestigio	golarion→aon
+Maestro del Sapere	Loremaster	classe di prestigio	golarion→prd
+Maestro Spia	Master Spy	classe di prestigio	golarion→prd
+Mago Enfio	Bloatmage	classe di prestigio	golarion→aon, fuori PRD
+Mastro Chimico	Master Chymist	classe di prestigio	golarion→prd
+Mistico Tatuato	Tattooed Mystic	classe di prestigio	golarion→d20pfsrd
+Mistificatore Arcano	Arcane Trickster	classe di prestigio	golarion→prd
+Monolito Vivente	Living Monolith	classe di prestigio	golarion→d20pfsrd
+Nobile Rampollo	Noble Scion	classe di prestigio	golarion→d20pfsrd
+Ombra Danzante	Shadowdancer	classe di prestigio	golarion→prd
+Opportunista Halfling	Halfling Opportunist	classe di prestigio	golarion→d20pfsrd
+Pirata dei Ceppi	Shackles Pirate	classe di prestigio	golarion→aon, fuori PRD
+Pirata del Mare Interno	Inner Sea Pirate	classe di prestigio	golarion→aon, fuori PRD
+Portalanterna	Lantern Bearer	classe di prestigio	golarion→aon
+Predatore di Morte	Death Slayer	classe di prestigio	golarion→aon
+Prode	Chevalier	classe di prestigio	golarion→aon, fuori PRD
+Profeta di Kalistrade	Sanctified Prophet	classe di prestigio	golarion→d20pfsrd
+Profeta Furioso	Rage Prophet	classe di prestigio	golarion→prd
+Sacerdote Razmirano	False Priest	classe di prestigio	golarion→d20pfsrd
+Saggio dei Cercatori	Pathfinder Savant	classe di prestigio	golarion→aon
+Sceriffo con lo Scudo	Grand Marshal	classe di prestigio	golarion→d20pfsrd
+Signifer dei Cavalieri Infernali	Hellknight Signifer	classe di prestigio	golarion→aon
+Signore della Spada Aldori	Aldori Swordlord	classe di prestigio	golarion→aon
+Strega Invernale	Winter Witch	classe di prestigio	golarion→d20pfsrd
+Studente della Guerra	Student of War	classe di prestigio	golarion→aon
+Studente della Perfezione	Student of Perfection	classe di prestigio	golarion→aon
+Templare Inferiore	Low Templar	classe di prestigio	golarion→d20pfsrd
+Teurgo Mistico	Mystic Theurge	classe di prestigio	golarion→prd
+Trovatore	Pathfinder Chronicler	classe di prestigio	golarion→prd
+Vendicatore Divino	Holy Vindicator	classe di prestigio	golarion→prd
+Viandante dell'Orizzonte	Horizon Walker	classe di prestigio	golarion→prd
+Viandante delle Sfere	Spherewalker	classe di prestigio	golarion→aon, fuori PRD
+Dominio Animale	Animal Domain	dominio	golarion→d20pfsrd
+Dominio dei Rettili	Scalykind Domain	dominio	golarion→d20pfsrd
+Dominio del Bene	Good Domain	dominio	golarion→d20pfsrd
+Dominio del Caos	Chaos Domain	dominio	golarion→d20pfsrd
+Dominio del Fuoco	Fire Domain	dominio	golarion→d20pfsrd
+Dominio del Male	Evil Domain	dominio	golarion→d20pfsrd
+Dominio del Riposo	Repose Domain	dominio	golarion→d20pfsrd
+Dominio del Sole	Sun Domain	dominio	golarion→d20pfsrd
+Dominio del Tempo Atmosferico	Weather Domain	dominio	golarion→d20pfsrd
+Dominio del Viaggio	Travel Domain	dominio	golarion→d20pfsrd
+Dominio del Vuoto	Void Domain	dominio	golarion→d20pfsrd
+Dominio dell'Acqua	Water Domain	dominio	golarion→d20pfsrd
+Dominio dell'Aria	Air Domain	dominio	golarion→d20pfsrd
+Dominio dell'Artificio	Artifice Domain	dominio	golarion→d20pfsrd
+Dominio dell'Inganno	Trickery Domain	dominio	golarion→d20pfsrd
+Dominio dell'Oscurità	Darkness Domain	dominio	golarion→d20pfsrd
+Dominio della Comunità	Community Domain	dominio	golarion→d20pfsrd
+Dominio della Conoscenza	Knowledge Domain	dominio	golarion→d20pfsrd
+Dominio della Distruzione	Destruction Domain	dominio	golarion→d20pfsrd
+Dominio della Follia	Madness Domain	dominio	golarion→d20pfsrd
+Dominio della Fortuna	Luck Domain	dominio	golarion→d20pfsrd
+Dominio della Forza	Strength Domain	dominio	golarion→d20pfsrd
+Dominio della Gloria	Glory Domain	dominio	golarion→d20pfsrd
+Dominio della Guarigione	Healing Domain	dominio	golarion→d20pfsrd
+Dominio della Guerra	War Domain	dominio	golarion→d20pfsrd
+Dominio della Legge	Law Domain	dominio	golarion→d20pfsrd
+Dominio della Libertà	Liberation Domain	dominio	golarion→d20pfsrd
+Dominio della Magia	Magic Domain	dominio	golarion→d20pfsrd
+Dominio della Morte	Death Domain	dominio	golarion→d20pfsrd
+Dominio della Nobiltà	Nobility Domain	dominio	golarion→d20pfsrd
+Dominio della Protezione	Protection Domain	dominio	golarion→d20pfsrd
+Dominio della Terra	Earth Domain	dominio	golarion→d20pfsrd
+Dominio delle Rune	Rune Domain	dominio	golarion→d20pfsrd
+Dominio dello Charme	Charm Domain	dominio	golarion→d20pfsrd
+Dominio Vegetale	Plant Domain	dominio	golarion→d20pfsrd
+Aasimar	Aasimar	mostro	golarion→d20pfsrd
+Abaia	Abaia	mostro	golarion→d20pfsrd
+Abitante di Leng	Denizen of Leng	mostro	golarion→d20pfsrd
+Abitatore del Profondo	Deep One	mostro	golarion→aon, fuori PRD
+Abitatore del Profondo Antico	Elder Deep One	mostro	golarion→aon, fuori PRD
+Aboleth	Aboleth	mostro	golarion→d20pfsrd
+Abysogh	Abysogh	mostro	golarion→aon, fuori PRD
+Acaro Pescatore	Cave Fisher	mostro	golarion→d20pfsrd
+Acchiappamosche Gigante	Flytrap, Giant	mostro	golarion→d20pfsrd
+Accolito d'Ebano	Ebon Acolytus	mostro	golarion→aon, fuori PRD
+Achaekek	Achaekek, the Mantis God	mostro	golarion→aon, fuori PRD
+Achaierai	Achaierai	mostro	golarion→d20pfsrd
+Adaro	Adaro	mostro	golarion→d20pfsrd
+Aderitore	Adherer	mostro	golarion→d20pfsrd
+Adhukait	Asura, Adhukait	mostro	golarion→d20pfsrd
+Adlet	Adlet	mostro	golarion→d20pfsrd
+Adlet Sciamano	Adlet	mostro	golarion→d20pfsrd
+Aghash	Div, Aghash	mostro	golarion→d20pfsrd
+Aghasura	Asura, Aghasura	mostro	golarion→d20pfsrd
+Agmazar	Agmazar the Star Titan	mostro	golarion→aon, fuori PRD
+Agyra	Kaiju, Agyra	mostro	golarion→d20pfsrd
+Ahkhat	Ahkhat	mostro	golarion→aon, fuori PRD
+Ahriman	Ahriman, Lord of All Divs	mostro	golarion→aon, fuori PRD
+Ahuizotl	Ahuizotl	mostro	golarion→d20pfsrd
+Airone Ciuffonero	Blackwisp Egret	mostro	golarion→aon, fuori PRD
+Akaruzug	Akaruzug	mostro	golarion→aon, fuori PRD
+Akata	Akata	mostro	golarion→d20pfsrd
+Akhana	Aeon, Akhana	mostro	golarion→d20pfsrd
+Akhlut	Akhlut	mostro	golarion→d20pfsrd
+Akvan	Div, Akvan	mostro	golarion→d20pfsrd
+Alaoscura	Gloomwing	mostro	golarion→d20pfsrd
+Albero dell'Impiccato	Hangman Tree	mostro	golarion→d20pfsrd
+Alce di Fiume	River Elk	mostro	golarion→aon, fuori PRD
+Ali della Protezione	Wings of Protection	mostro	golarion→aon, fuori PRD
+Allip	Allip	mostro	golarion→d20pfsrd
+Almiraj	Almiraj	mostro	golarion→d20pfsrd
+Alpluachra	Alpluachra	mostro	golarion→d20pfsrd
+Alraune	Alraune	mostro	golarion→d20pfsrd
+Amadriade	Hamadryad	mostro	golarion→d20pfsrd
+Amargasauro	Amargasaurus	mostro	golarion→aon, fuori PRD
+Ameba Gigante	Amoeba, Giant	mostro	golarion→d20pfsrd
+Ammasso di Frammenti	Shard Slag	mostro	golarion→d20pfsrd
+Ammut	Ammut	mostro	golarion→aon, fuori PRD
+Amniotico	Caulborn	mostro	golarion→d20pfsrd
+Anemone Bara	Coffin Anemone	mostro	golarion→aon, fuori PRD
+Anemone di Mare Gigante	Sea Anemone, Giant	mostro	golarion→d20pfsrd
+Anfisbena	Amphisbaena	mostro	golarion→d20pfsrd
+Anguilla Elettrica	Eel, Electric	mostro	golarion→d20pfsrd
+Angustiden	Angustiden	mostro	golarion→aon, fuori PRD
+Ankheg	Ankheg	mostro	golarion→d20pfsrd
+Ankhrav	Ankhrav	mostro	golarion→aon, fuori PRD
+Ankou	Ankou	mostro	golarion→d20pfsrd
+Aoandon	Aoandon	mostro	golarion→d20pfsrd
+Ape Gigante	Bee, Giant	mostro	golarion→d20pfsrd
+Apocrisario	Apocrisiarius	mostro	golarion→aon, fuori PRD
+Appostato	Lurker Above	mostro	golarion→d20pfsrd
+Aquila	Eagle	mostro	golarion→d20pfsrd
+Aquila Gigante	Eagle	mostro	golarion→d20pfsrd
+Aranea	Aranea	mostro	golarion→d20pfsrd
+Arazni	Arazni	mostro	golarion→aon, fuori PRD
+Arbitro	Inevitable, Arbiter	mostro	golarion→d20pfsrd
+Arcanathos	Witchwyrd	mostro	golarion→d20pfsrd
+Arcanaton	Arcanaton	mostro	golarion→aon, fuori PRD
+Archaeopteryx	Archaeopteryx	mostro	golarion→d20pfsrd
+Archelone	Megafauna, Archelon	mostro	golarion→d20pfsrd
+Archetipo Creatura Micotica	Fungal Creature	mostro	golarion→d20pfsrd
+Archetipo Creatura Pattuente del Diavolo	Devilbound Creature	mostro	golarion→d20pfsrd
+Archetipo Fantasma	Ghost	mostro	golarion→d20pfsrd
+Archetipo Guardiano Protettore	Guardian	mostro	golarion→d20pfsrd
+Archetipo Lich	Lich	mostro	golarion→d20pfsrd
+Archetipo Mezzo-Celestiale	Half-Celestial	mostro	golarion→d20pfsrd
+Archetipo Signore degli Zombi	Zombie Lord	mostro	golarion→d20pfsrd
+Archetipo Vampiro	Vampire	mostro	golarion→d20pfsrd
+Archetipo Vampiro Jiang-Shi	Vampire, Jiang-Shi	mostro	golarion→d20pfsrd
+Arconte Annunciatore	Archon, Harbinger	mostro	golarion→d20pfsrd
+Arconte Exscinder	Exscinder	mostro	golarion→aon, fuori PRD
+Arconte Legionario	Archon, Legion	mostro	golarion→d20pfsrd
+Arconte Scudo	Archon, Shield	mostro	golarion→d20pfsrd
+Arconte Stella	Archon, Star	mostro	golarion→d20pfsrd
+Argorth	Argorth	mostro	golarion→aon, fuori PRD
+Argus	Argus	mostro	golarion→d20pfsrd
+Ariete dei Capogiro	Mindspin Ram	mostro	golarion→aon, fuori PRD
+Armatura Fantasma Gigante	Giant Phantom Armor	mostro	golarion→aon
+Arpia	Harpy	mostro	golarion→d20pfsrd
+Arsinoiterio	Megafauna, Arsinoitherium	mostro	golarion→d20pfsrd
+Arsinoterio Morto Alluvionato	Floodslain Arsinoitherium	mostro	golarion→aon, fuori PRD
+Ascomoide	Ascomoid	mostro	golarion→d20pfsrd
+Ashava	Ashava	mostro	golarion→aon, fuori PRD
+Aspidochelone	Aspidochelone	mostro	golarion→aon, fuori PRD
+Assassino Meccanico	Clockwork Assassin	mostro	golarion→aon, fuori PRD
+Assiomita	Axiomite	mostro	golarion→d20pfsrd
+Asurendra	Asura, Asurendra	mostro	golarion→d20pfsrd
+Athach	Athach	mostro	golarion→d20pfsrd
+Atomie	Atomie	mostro	golarion→d20pfsrd
+Augnagar	Qlippoth, Augnagar	mostro	golarion→d20pfsrd
+Augure	Kyton, Augur	mostro	golarion→d20pfsrd
+Aurumvorax	Aurumvorax	mostro	golarion→d20pfsrd
+Avoral	Agathion, Avoral	mostro	golarion→d20pfsrd
+Avvoltoio	Vulture	mostro	golarion→d20pfsrd
+Avvoltoio della Cascata Mormorante	Whisperfall Vulture	mostro	golarion→aon, fuori PRD
+Avvoltoio Gigante	Vulture, Giant	mostro	golarion→d20pfsrd
+Azer	Azer	mostro	golarion→d20pfsrd
+Azruverda	Azruverda	mostro	golarion→d20pfsrd
+Babbuino	Primate, Baboon	mostro	golarion→d20pfsrd
+Babbuino Mummificato	Mummified Baboon	mostro	golarion→aon, fuori PRD
+Baku	Baku	mostro	golarion→d20pfsrd
+Balena	Whale	mostro	golarion→d20pfsrd
+Balena Bianca	Whale, Great White	mostro	golarion→d20pfsrd
+Balena Cremisi	Crimson Whale	mostro	golarion→aon, fuori PRD
+Balena di Fuoco	Whale	mostro	golarion→d20pfsrd
+Balenottera Azzurra	Blue Whale	mostro	golarion→aon, fuori PRD
+Balisse	Balisse	mostro	golarion→aon, fuori PRD
+Balor	Balor	mostro	golarion→aon, fuori PRD
+Balravnus	Balravnus, Lord of the Deep Pools	mostro	golarion→aon, fuori PRD
+Baluchiterio	Megafauna, Baluchitherium	mostro	golarion→d20pfsrd
+Bambino Splendente di Thassilon	Shining Child of Thassilon	mostro	golarion→aon, fuori PRD
+Banshee	Banshee	mostro	golarion→d20pfsrd
+Baphomet	Baphomet	mostro	golarion→aon, fuori PRD
+Baregara	Baregara	mostro	golarion→d20pfsrd
+Barghest	Barghest	mostro	golarion→d20pfsrd
+Barghest Superiore	Barghest	mostro	golarion→d20pfsrd
+Barometz	Barometz	mostro	golarion→d20pfsrd
+Barracuda delle Paludi	Swamp Barracuda	mostro	golarion→aon, fuori PRD
+Basidirond	Basidirond	mostro	golarion→d20pfsrd
+Basileus	Basileus	mostro	golarion→aon, fuori PRD
+Basilisco	Basilisk	mostro	golarion→d20pfsrd
+Basilosauro	Megafauna, Basilosaurus	mostro	golarion→d20pfsrd
+Baykok	Baykok	mostro	golarion→d20pfsrd
+Beatificato	Beatific One	mostro	golarion→aon, fuori PRD
+Bebilith	Bebilith	mostro	golarion→d20pfsrd
+Behemoth Divoratore	Ravener	mostro	golarion→aon
+Behemoth Leggendario	Ravener	mostro	golarion→aon
+Behemoth Talassico	Behemoth, Thalassic	mostro	golarion→d20pfsrd
+Behemoth Tempestoso	Behemoth, Tempest	mostro	golarion→d20pfsrd
+Behemoth Tonante	Behemoth, Thunder	mostro	golarion→d20pfsrd
+Behir	Behir	mostro	golarion→d20pfsrd
+Belker	Belker	mostro	golarion→d20pfsrd
+Berbalang	Berbalang	mostro	golarion→d20pfsrd
+Berretto Rosso	Redcap	mostro	golarion→d20pfsrd
+Bestia Assassina	The Stabbing Beast	mostro	golarion→aon, fuori PRD
+Bestia del Caos	Chaos Beast	mostro	golarion→d20pfsrd
+Bestia Lunare	Moon-Beast	mostro	golarion→d20pfsrd
+Bezilak	Bezilak, the Silken Fang	mostro	golarion→aon, fuori PRD
+Bezravnis	Kaiju, Bezravnis	mostro	golarion→d20pfsrd
+Bhole	Bhole	mostro	golarion→d20pfsrd
+Bhuta	Bhuta	mostro	golarion→d20pfsrd
+Birelu	Birelu	mostro	golarion→aon, fuori PRD
+Blatta Gigante	Cockroach, Giant	mostro	golarion→d20pfsrd
+Blindheim	Blindheim	mostro	golarion→d20pfsrd
+Blodeuwedd	Blodeuwedd	mostro	golarion→aon, fuori PRD
+Blodeuwedd Regina	Blodeuwedd	mostro	golarion→aon, fuori PRD
+Bodak	Bodak	mostro	golarion→d20pfsrd
+Boggard	Boggard	mostro	golarion→d20pfsrd
+Bokrug	Bokrug	mostro	golarion→aon
+Bonzo di Mare	Sea Bonze	mostro	golarion→d20pfsrd
+Boruta	Boruta	mostro	golarion→aon, fuori PRD
+Bradipo	Sloth	mostro	golarion→d20pfsrd
+Brethedano	Brethedan	mostro	golarion→d20pfsrd
+Brijidine	Azata, Brijidine	mostro	golarion→d20pfsrd
+Brownie	Brownie	mostro	golarion→d20pfsrd
+Brownie del Ghiaccio Oscuro	Dark Ice Brownie	mostro	golarion→aon, fuori PRD
+Bubbone Purulento	Boilborn	mostro	golarion→d20pfsrd
+Bubbone Purulento Abissale	Boilborn	mostro	golarion→d20pfsrd
+Bubbone Purulento Accecante	Boilborn	mostro	golarion→d20pfsrd
+Bubbone Purulento Epidemico	Boilborn	mostro	golarion→d20pfsrd
+Bubbone Purulento Infernale	Boilborn	mostro	golarion→d20pfsrd
+Bugbear	Bugbear	mostro	golarion→d20pfsrd
+Buggane	Buggane	mostro	golarion→d20pfsrd
+Bulette	Bulette	mostro	golarion→d20pfsrd
+Bunyip	Bunyip	mostro	golarion→d20pfsrd
+Buraq	Buraq	mostro	golarion→aon, fuori PRD
+Bythos	Aeon, Bythos	mostro	golarion→d20pfsrd
+Cacciatore Invisibile	Invisible Stalker	mostro	golarion→d20pfsrd
+Cacciatore Kapoacinth	Kapoacinth Hunter	mostro	golarion→aon, fuori PRD
+Caimano Nano	Dwarf Caiman	mostro	golarion→aon, fuori PRD
+Calamaro	Squid	mostro	golarion→d20pfsrd
+Calamaro Gigante	Squid	mostro	golarion→d20pfsrd
+Calathgar	Calathgar	mostro	golarion→aon, fuori PRD
+Caligni Ladro I	Caligni	mostro	golarion→aon, fuori PRD
+Calpina	Calpina	mostro	golarion→aon, fuori PRD
+Cammello	Camel	mostro	golarion→d20pfsrd
+Campione dei Cavalieri	Olethrodaemon	mostro	golarion→d20pfsrd
+Cane	Dog	mostro	golarion→d20pfsrd
+Cane da Galoppo	Dog	mostro	golarion→d20pfsrd
+Cane della Morte	Death Dog	mostro	golarion→d20pfsrd
+Cane Foo	Foo Dog	mostro	golarion→d20pfsrd
+Cane Goblin	Goblin Dog	mostro	golarion→d20pfsrd
+Cane Ibrido Infernale Chelaxiano	Chelish Hell-Bred Dog	mostro	golarion→aon, fuori PRD
+Cane Intermittente	Blink Dog	mostro	golarion→d20pfsrd
+Cane Intermittente Saggio	Blink Dog	mostro	golarion→d20pfsrd
+Cane Luna	Dog	mostro	golarion→d20pfsrd
+Canguro	Marsupial, Kangaroo	mostro	golarion→d20pfsrd
+Canopia Rampicante	Canopy Creeper	mostro	golarion→aon, fuori PRD
+Capitano delle Guardie Progenie del Baccello	Bodythief	mostro	golarion→d20pfsrd
+Capitano Fantasma	Ghost Captain	mostro	golarion→aon, fuori PRD
+Cappuccino Corallino	Coral Capuchin	mostro	golarion→aon, fuori PRD
+Capra	Goat	mostro	golarion→d20pfsrd
+Capra dei Tumuli	Skittergoat	mostro	golarion→aon, fuori PRD
+Carbonchio	Carbuncle	mostro	golarion→d20pfsrd
+Cariatide	Caryatid Column	mostro	golarion→d20pfsrd
+Cariddi	Charybdis	mostro	golarion→d20pfsrd
+Carne Famelica	Hungry Flesh	mostro	golarion→d20pfsrd
+Carnimmondo	Fleshdreg	mostro	golarion→d20pfsrd
+Cassisian	Angel, Cassisian	mostro	golarion→d20pfsrd
+Cataboligno	Cataboligne	mostro	golarion→aon, fuori PRD
+Catoblepa	Catoblepas	mostro	golarion→d20pfsrd
+Catrina	Psychopomp, Catrina	mostro	golarion→d20pfsrd
+Cavalcatura Scheletrica	Skeletal Mount	mostro	golarion→aon, fuori PRD
+Cavallo dell'Apocalisse	Horse	mostro	golarion→d20pfsrd
+Cavallo Dragone	Dragon Horse	mostro	golarion→d20pfsrd
+Cecaelia	Cecaelia	mostro	golarion→d20pfsrd
+Cefaloforo	Cephalophore	mostro	golarion→d20pfsrd
+Centauro	Centaur	mostro	golarion→d20pfsrd
+Ceratioide	Ceratioidi	mostro	golarion→d20pfsrd
+Cerbero	Cerberi	mostro	golarion→d20pfsrd
+Cerbero di Malebolge	Malbolgian Cerberi	mostro	golarion→aon, fuori PRD
+Cercapeccati	Sin Seeker	mostro	golarion→aon, fuori PRD
+Cernunnos	Cernunnos	mostro	golarion→aon, fuori PRD
+Ceru	Ceru	mostro	golarion→aon, fuori PRD
+Cervo	Herd Animal, Stag	mostro	golarion→d20pfsrd
+Cesellatore Ghiacciato	Frosty Chiseler	mostro	golarion→aon, fuori PRD
+Cetaceal	Agathion, Cetaceal	mostro	golarion→d20pfsrd
+Chaneque	Chaneque	mostro	golarion→d20pfsrd
+Changeling	Changeling	mostro	golarion→d20pfsrd
+Charda	Charda	mostro	golarion→d20pfsrd
+Chemnosit	Chemnosit (The Monarch Worm)	mostro	golarion→aon, fuori PRD
+Chernobue	Qlippoth, Chernobue	mostro	golarion→d20pfsrd
+Chiappabana	Bandersnatch	mostro	golarion→d20pfsrd
+Chiappabana Confondente	Confounding	mostro	golarion→d20pfsrd
+Chickcharney	Chickcharney	mostro	golarion→aon, fuori PRD
+Chimera	Chimera	mostro	golarion→d20pfsrd
+Chon Chon	Chon Chon	mostro	golarion→aon, fuori PRD
+Chortov	Chortov	mostro	golarion→aon, fuori PRD
+Chupacabra	Chupacabra	mostro	golarion→d20pfsrd
+Chupacabra Grande	Chupacabra	mostro	golarion→d20pfsrd
+Chupacabra Volante	Flying	mostro	golarion→d20pfsrd
+Chuul	Chuul	mostro	golarion→d20pfsrd
+Ciciarampa	Jabberwock	mostro	golarion→d20pfsrd
+Ciclope	Cyclops	mostro	golarion→d20pfsrd
+Ciclope Oracolare	Oracular Cyclops	mostro	golarion→aon, fuori PRD
+Cigno Trombettiere	Swan, Trumpeter	mostro	golarion→d20pfsrd
+Cimice Assassina Gigante	Giant Assassin Bug	mostro	golarion→aon, fuori PRD
+Cinghiale	Boar	mostro	golarion→d20pfsrd
+Cinghiale Crudele	Boar	mostro	golarion→d20pfsrd
+Cinghiale Mannaro	Wereboar (Human Form)	mostro	golarion→d20pfsrd
+Cinosfinge	Cynosphinx	mostro	golarion→aon, fuori PRD
+Coboldo	Kobold	mostro	golarion→d20pfsrd
+Cobra di Ferro	Iron Cobra	mostro	golarion→d20pfsrd
+Cobra di Ferro Freddo	Iron Cobra	mostro	golarion→d20pfsrd
+Coccodrillo	Crocodile	mostro	golarion→d20pfsrd
+Coccodrillo Crudele	Crocodile	mostro	golarion→d20pfsrd
+Coccodrillo d'Acqua Salata	Saltwater Crocodile	mostro	golarion→aon, fuori PRD
+Coccodrillo Mannaro	Werecrocodile (Human Form)	mostro	golarion→d20pfsrd
+Coccodrillo Marino	Marine Crocodile	mostro	golarion→aon, fuori PRD
+Coccodrillo Mummificato	Mummified Crocodile	mostro	golarion→aon, fuori PRD
+Cockatrice	Cockatrice	mostro	golarion→d20pfsrd
+Coeurl	Coeurl	mostro	golarion→aon, fuori PRD
+Collera del Kelpie	Kelpie’s Wrath	mostro	golarion→aon, fuori PRD
+Collettore	Bagman	mostro	golarion→aon, fuori PRD
+Colore Venuto dallo Spazio	Colour Out of Space	mostro	golarion→d20pfsrd
+Colosso di Pietra	Stone	mostro	golarion→d20pfsrd
+Colosso Sepolcrale	Charnel Colossus	mostro	golarion→aon, fuori PRD
+Congrega di Graie	Graeae	mostro	golarion→d20pfsrd
+Contemplativo	Contemplative	mostro	golarion→d20pfsrd
+Corale	Choral	mostro	golarion→aon, fuori PRD
+Corvo	Raven	mostro	golarion→d20pfsrd
+Corvo del Profondo	Deep Crow	mostro	golarion→aon, fuori PRD
+Corvo Gigante	Giant Raven	mostro	golarion→aon, fuori PRD
+Couatl	Couatl	mostro	golarion→d20pfsrd
+Couatl Xium	Xiuh Couatl	mostro	golarion→aon, fuori PRD
+Crepitus	Crepitus	mostro	golarion→aon, fuori PRD
+Cristallo Carnivoro	Carnivorous Crystal	mostro	golarion→d20pfsrd
+Crocotta	Leucrotta	mostro	golarion→d20pfsrd
+Cronospettro	Chronogeist	mostro	golarion→aon, fuori PRD
+Crysmal	Crysmal	mostro	golarion→d20pfsrd
+Cubo Gelatinoso	Gelatinous Cube	mostro	golarion→d20pfsrd
+Cucciolo Oscuro di Shub-Niggurath	Dark Young of Shub-Niggurath	mostro	golarion→aon, fuori PRD
+Cumulo di Tesori Animato	Animated Object	mostro	golarion→d20pfsrd
+Cumulo Strisciante	Shambling Mound	mostro	golarion→d20pfsrd
+Cupo Cervo Bianco	The Grim White Stag	mostro	golarion→aon, fuori PRD
+Custode delle Cripte	Crypt Thing	mostro	golarion→d20pfsrd
+Cythnigot	Qlippoth, Cythnigot	mostro	golarion→d20pfsrd
+Dahzagan	Dahzagan	mostro	golarion→aon, fuori PRD
+Dandasuka	Rakshasa, Dandasuka	mostro	golarion→d20pfsrd
+Danse Macabre	Danse Macabre	mostro	golarion→aon, fuori PRD
+Decapitato Gigante	Giant Beheaded	mostro	golarion→aon, fuori PRD
+Decapode	Decapus	mostro	golarion→d20pfsrd
+Deinosuco	Deinosuchus	mostro	golarion→aon, fuori PRD
+Deinoterio	Deinotherium	mostro	golarion→aon, fuori PRD
+Delfino	Dolphin	mostro	golarion→d20pfsrd
+Demilich	Demilich	mostro	golarion→aon
+Demilich Risvegliato	Demilich	mostro	golarion→aon
+Demodand Catramoso	Demodand, Tarry	mostro	golarion→d20pfsrd
+Demodand Irsuto	Demodand, Shaggy	mostro	golarion→d20pfsrd
+Demodand Viscido	Demodand, Slimy	mostro	golarion→d20pfsrd
+Demone Larva	Larva	mostro	golarion→aon, fuori PRD
+Derhii	Derhii	mostro	golarion→d20pfsrd
+Derro	Derro	mostro	golarion→d20pfsrd
+Deskari	Deskari	mostro	golarion→aon, fuori PRD
+Destrachan	Destrachan	mostro	golarion→d20pfsrd
+Destriero Appestato	Plagued Horse	mostro	golarion→aon, fuori PRD
+Destriero da Battaglia Meccanico	Clockwork Steed	mostro	golarion→d20pfsrd
+Destriero Meccanico	Clockwork Steed	mostro	golarion→d20pfsrd
+Deva Monadico	Angel, Monadic Deva	mostro	golarion→d20pfsrd
+Deva Movanico	Angel, Movanic Deva	mostro	golarion→d20pfsrd
+Dhampir	Dhampir	mostro	golarion→d20pfsrd
+Diavolo Acciarino	Tinder Devil (Ukobach)	mostro	golarion→aon, fuori PRD
+Diavolo Accusatore	Devil, Accuser	mostro	golarion→d20pfsrd
+Diavolo Ancillare	Devil, Handmaiden	mostro	golarion→d20pfsrd
+Diavolo Annegatore	Devil, Drowning	mostro	golarion→d20pfsrd
+Diavolo Apostata	Apostate Devil (Deimavigga)	mostro	golarion→aon, fuori PRD
+Diavolo Cabalista	Cabal Devil (Uniila)	mostro	golarion→aon, fuori PRD
+Diavolo d'Ossa	Bone	mostro	golarion→d20pfsrd
+Diavolo del Contratto	Devil, Contract	mostro	golarion→d20pfsrd
+Diavolo della Fossa	Pit Fiend	mostro	golarion→d20pfsrd
+Diavolo Immolatore	Devil, Immolation	mostro	golarion→d20pfsrd
+Diavolo Ingannatore	Devil, Belier	mostro	golarion→d20pfsrd
+Diavolo Nemesi	Devil, Nemesis	mostro	golarion→d20pfsrd
+Diavolo Possessore Inferiore	Possession Devil, Lesser (Gidim)	mostro	golarion→aon, fuori PRD
+Diavolo Possessore Superiore	Possession Devil, Greater (Gidim)	mostro	golarion→aon, fuori PRD
+Diavolo Scommettitore	Gambling Devil (Magadaz)	mostro	golarion→aon, fuori PRD
+Dimensionale del Tempo	Time Dimensional	mostro	golarion→aon, fuori PRD
+Dimetrodonte	Dinosaur, Dimetrodon	mostro	golarion→d20pfsrd
+Diplodoco	Dinosaur, Diplodocus	mostro	golarion→d20pfsrd
+Disincantatore	Disenchanter	mostro	golarion→d20pfsrd
+Divora Anime	Soul Eater	mostro	golarion→d20pfsrd
+Divora-Incantesimi	Spellgorger	mostro	golarion→aon, fuori PRD
+Divoracervelli	Intellect Devourer	mostro	golarion→d20pfsrd
+Divoraragni	Spider Eater	mostro	golarion→d20pfsrd
+Divoratore	Devourer	mostro	golarion→d20pfsrd
+Djinni Nero	Black Jinni	mostro	golarion→aon, fuori PRD
+Dodo	Dodo	mostro	golarion→d20pfsrd
+Donnola	Weasel	mostro	golarion→d20pfsrd
+Donnola Crudele	Weasel, Dire	mostro	golarion→d20pfsrd
+Donnola Gigante	Weasel, Giant	mostro	golarion→d20pfsrd
+Doppelganger	Doppelganger	mostro	golarion→d20pfsrd
+Doru	Div, Doru	mostro	golarion→d20pfsrd
+Dorvae	Dorvae	mostro	golarion→d20pfsrd
+Dosojin	Dosojin	mostro	golarion→aon, fuori PRD
+Dossenus	Dossenus	mostro	golarion→d20pfsrd
+Draco del Focolare	House Drake	mostro	golarion→aon, fuori PRD
+Draco di Bruma	Drake, Mist	mostro	golarion→d20pfsrd
+Draco di Crepaccio	Drake, Rift	mostro	golarion→d20pfsrd
+Draco di Deserto	Drake, Desert	mostro	golarion→d20pfsrd
+Draco di Fiamma	Drake, Flame	mostro	golarion→d20pfsrd
+Draco di Fiume	Drake, River	mostro	golarion→d20pfsrd
+Draco di Foresta	Drake, Forest	mostro	golarion→d20pfsrd
+Draco di Ghiaccio	Drake, Frost	mostro	golarion→d20pfsrd
+Draco di Guglia	Drake, Spire	mostro	golarion→d20pfsrd
+Draco di Lava	Drake, Lava	mostro	golarion→d20pfsrd
+Draco di Mare	Drake, Sea	mostro	golarion→d20pfsrd
+Draco di Ombra	Drake, Shadow	mostro	golarion→d20pfsrd
+Draconal Bianco	Agathion, Draconal	mostro	golarion→d20pfsrd
+Draconal Giallo	Agathion, Draconal	mostro	golarion→d20pfsrd
+Draconal Nero	Agathion, Draconal	mostro	golarion→d20pfsrd
+Draconal Rosso	Agathion, Draconal	mostro	golarion→d20pfsrd
+Draconal Verde	Agathion, Draconal	mostro	golarion→d20pfsrd
+Drago Bianco Antico Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Bianco Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Bianco Grande Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Blu Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Blu Giovane	Young Blue Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Adolescente	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Adulto	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Adulto Giovane	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Adulto Maturo	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Antico	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Cucciolo	Young Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Dragone	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Giovane	Young Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Grande Dragone	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Molto Giovane	Young Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Molto Vecchio	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago dell'Apocalisse Vecchio	Adult Apocalypse Dragon	mostro	golarion→aon, fuori PRD
+Drago della Pozza di Marea	Tidepool Dragon	mostro	golarion→aon, fuori PRD
+Drago delle Ombre Antico Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago delle Ombre Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago delle Ombre Grande Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Fatato	Dragon, Faerie	mostro	golarion→d20pfsrd
+Drago Guardiano	Guardian	mostro	golarion→d20pfsrd
+Drago Meccanico	Clockwork Dragon	mostro	golarion→d20pfsrd
+Drago Nero Antico Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Nero Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Nero Grande Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Rosso Antico Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Rosso Grande Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Spinato	Spine Dragon	mostro	golarion→aon, fuori PRD
+Drago Verde Antico Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Verde Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Drago Verde Grande Dragone Vorace	Ravener	mostro	golarion→d20pfsrd
+Dragone della Piaga	Woundwyrm	mostro	golarion→aon, fuori PRD
+Dragonne	Dragonne	mostro	golarion→d20pfsrd
+Drakainia	Drakainia	mostro	golarion→d20pfsrd
+Draugr	Draugr	mostro	golarion→d20pfsrd
+Draugr Capitano	Draugr	mostro	golarion→d20pfsrd
+Draugr Capitano dei Pirati	Draugr Captain	mostro	golarion→aon, fuori PRD
+Draugr Pirata	Draugr Pirate	mostro	golarion→aon, fuori PRD
+Drekavac	Drekavac	mostro	golarion→aon, fuori PRD
+Driade	Dryad	mostro	golarion→d20pfsrd
+Drider	Drider	mostro	golarion→d20pfsrd
+Drow Nobile	Drow Noble	mostro	golarion→d20pfsrd
+Duergar	Duergar	mostro	golarion→d20pfsrd
+Dullahan	Dullahan	mostro	golarion→d20pfsrd
+Dullahan Superiore	Dullahan	mostro	golarion→d20pfsrd
+Dwiergeth	Dwiergeth	mostro	golarion→aon, fuori PRD
+Dybbuk	Dybbuk	mostro	golarion→d20pfsrd
+Ecatonchiro	Titan, Hekatonkheires	mostro	golarion→d20pfsrd
+Ecorché	Ecorche	mostro	golarion→d20pfsrd
+Edimmu	Edimmu	mostro	golarion→aon, fuori PRD
+Effigie Vivente	Living Effigy	mostro	golarion→aon, fuori PRD
+Efialte	Ephialtes	mostro	golarion→aon, fuori PRD
+Eidolon Slegato	Eidolon, Unfettered	mostro	golarion→d20pfsrd
+Einherji	Einherji	mostro	golarion→d20pfsrd
+Elefante	Elephant	mostro	golarion→d20pfsrd
+Elefante Mummificato	Mummified Elephant	mostro	golarion→aon, fuori PRD
+Elicoprione	Helicoprion	mostro	golarion→aon, fuori PRD
+Elmo Vuoto	Hollow Helm	mostro	golarion→aon, fuori PRD
+Elohim	Elohim	mostro	golarion→d20pfsrd
+Emboloterio	Embolotherium	mostro	golarion→aon, fuori PRD
+Embrione Sottaceto	Pickled Punk	mostro	golarion→d20pfsrd
+Emissario dello Stormo	Steward of the Skein	mostro	golarion→aon, fuori PRD
+Emkrah	Emkrah	mostro	golarion→aon, fuori PRD
+Erba Vorace	Gluttongrass	mostro	golarion→aon, fuori PRD
+Erbafrusta	Weedwhip	mostro	golarion→d20pfsrd
+Ercinee	Ercinee	mostro	golarion→aon, fuori PRD
+Eremita	Kyton, Eremite	mostro	golarion→d20pfsrd
+Erlking	Erlking	mostro	golarion→d20pfsrd
+Errante Dimensionale	Dimensional Shambler	mostro	golarion→aon, fuori PRD
+Ettercap	Ettercap	mostro	golarion→d20pfsrd
+Ettercap d'Incubo	Ettercap	mostro	golarion→d20pfsrd
+Ettin	Ettin	mostro	golarion→d20pfsrd
+Euripteride Comune	Common Eurypterid	mostro	golarion→aon, fuori PRD
+Euripteride Ocra	Ochre Eurypterid	mostro	golarion→aon, fuori PRD
+Euripteride Puntablu	Bluetip Eurypterid	mostro	golarion→aon, fuori PRD
+Euripteride Sputatore	Spitting Eurypterid	mostro	golarion→aon, fuori PRD
+Ez-Azael	Ez-azael	mostro	golarion→aon, fuori PRD
+Fachen	Fachen	mostro	golarion→d20pfsrd
+Fafnheir	Fafnheir	mostro	golarion→aon, fuori PRD
+Falco	Hawk	mostro	golarion→d20pfsrd
+Falco del Sole	Sun Falcon	mostro	golarion→aon, fuori PRD
+Fanciulla Cigno	Swan Maiden	mostro	golarion→d20pfsrd
+Fanciulla Pietrificata	Petrified Maiden	mostro	golarion→aon, fuori PRD
+Fantasma	Ghost	mostro	golarion→d20pfsrd
+Fantasma dei Congegni	Gearghost	mostro	golarion→d20pfsrd
+Fantasma Sciagurato	Wretchghost	mostro	golarion→aon, fuori PRD
+Fatina dei Denti	Tooth Fairy	mostro	golarion→d20pfsrd
+Fauce Gorgogliante	Gibbering Mouther	mostro	golarion→d20pfsrd
+Fauce Vorticante	Whirlmaw	mostro	golarion→aon, fuori PRD
+Fauci della Madre	Mother's Maw	mostro	golarion→aon, fuori PRD
+Fauno	Faun	mostro	golarion→d20pfsrd
+Felinide	Catfolk	mostro	golarion→d20pfsrd
+Felino Marino	Sea Cat	mostro	golarion→aon
+Fenice	Phoenix	mostro	golarion→d20pfsrd
+Festrog	Festrog	mostro	golarion→d20pfsrd
+Fext della Piagamagica	Spellscar Fext	mostro	golarion→aon, fuori PRD
+Ficomide	Phycomid	mostro	golarion→d20pfsrd
+Figlio della Perdizione	Son of Perdition	mostro	golarion→aon, fuori PRD
+Figlio Splendente	Shining Child	mostro	golarion→d20pfsrd
+Filatterio del Lich	Lich	mostro	golarion→d20pfsrd
+Fiorlunare	Moonflower	mostro	golarion→d20pfsrd
+Fitanatos	Treerazer	mostro	golarion→aon, fuori PRD
+Flagello delle Acque Fredde	Sea Scourge	mostro	golarion→aon, fuori PRD
+Flagello Fumante	Sea Scourge	mostro	golarion→aon, fuori PRD
+Flagello Marino	Sea Scourge	mostro	golarion→aon, fuori PRD
+Flotta in Bottiglia	Bottled Armada	mostro	golarion→aon, fuori PRD
+Flumph	Flumph	mostro	golarion→d20pfsrd
+Flusso Congelante	Freezing Flow	mostro	golarion→d20pfsrd
+Folletto Parodista	Mockingfey	mostro	golarion→aon, fuori PRD
+Forgia Spenta	Forge Spurned	mostro	golarion→aon, fuori PRD
+Forlarren	Forlarren	mostro	golarion→d20pfsrd
+Formian Combattente	Formian Warrior	mostro	golarion→d20pfsrd
+Formian Lavoratore	Formian Worker	mostro	golarion→d20pfsrd
+Formian Mirmarca	Formian Myrmarch	mostro	golarion→d20pfsrd
+Formian Regina	Formian Queen	mostro	golarion→d20pfsrd
+Formian Sorvegliante	Formian Taskmaster	mostro	golarion→d20pfsrd
+Formica Cavaliere	Knight	mostro	golarion→d20pfsrd
+Foschia Affamata	Hungry Mist	mostro	golarion→aon, fuori PRD
+Fosco Divoratore	Grimslake	mostro	golarion→aon, fuori PRD
+Fossegrim	Fossegrim	mostro	golarion→d20pfsrd
+Froghemoth	Froghemoth	mostro	golarion→d20pfsrd
+Fuath	Gremlin, Fuath	mostro	golarion→d20pfsrd
+Fukujin	Fukujin	mostro	golarion→aon, fuori PRD
+Fuoco Fatuo	Will-o'-Wisp	mostro	golarion→d20pfsrd
+Fustigatore	Roper	mostro	golarion→d20pfsrd
+Fustigatore d'Ombra	Roper	mostro	golarion→d20pfsrd
+Gaki	Gaki	mostro	golarion→d20pfsrd
+Galundari	Galundari, the Scourge of Heaven	mostro	golarion→aon, fuori PRD
+Galvo	Galvo	mostro	golarion→d20pfsrd
+Gandareva	Gandareva	mostro	golarion→aon, fuori PRD
+Gargiya	Gargiya	mostro	golarion→aon, fuori PRD
+Gargoyle	Gargoyle	mostro	golarion→d20pfsrd
+Gargoyle a Quattro Braccia	Four-Armed Gargoyle	mostro	golarion→aon, fuori PRD
+Gargoyle Guardiano	Gargoyle Guardian	mostro	golarion→aon, fuori PRD
+Gargoyle Rapitore	Gargoyle Abductor	mostro	golarion→aon, fuori PRD
+Garuda	Garuda	mostro	golarion→d20pfsrd
+Gathlain	Gathlain	mostro	golarion→d20pfsrd
+Gatto	Cat	mostro	golarion→d20pfsrd
+Gatto da Guerra di Rull	Warcat of Rull	mostro	golarion→aon, fuori PRD
+Gatto del Dweomer	Dweomercat	mostro	golarion→aon, fuori PRD
+Gatto del Dweomer Cucciolo	Dweomercat Cub	mostro	golarion→aon, fuori PRD
+Gatto di Skelt	Skeltercat	mostro	golarion→aon, fuori PRD
+Gatto Infernale	Hellcat	mostro	golarion→d20pfsrd
+Geco Gigante	Lizard, Giant Gecko	mostro	golarion→d20pfsrd
+Geist	Geist	mostro	golarion→d20pfsrd
+Gelatina Tirannica	Tyrant Jelly	mostro	golarion→d20pfsrd
+Gelido Cavaliere	Cold Rider	mostro	golarion→d20pfsrd
+Gerride Gigante	Water Strider, Giant	mostro	golarion→d20pfsrd
+Gerride Ninfa	Water Strider, Nymph	mostro	golarion→d20pfsrd
+Ghalshoaton	Ghalshoaton	mostro	golarion→aon, fuori PRD
+Ghawwas	Div, Ghawwas	mostro	golarion→d20pfsrd
+Ghermito	Fetchling	mostro	golarion→d20pfsrd
+Ghiottone	Wolverine	mostro	golarion→d20pfsrd
+Ghiottone Crudele	Wolverine, Dire	mostro	golarion→d20pfsrd
+Ghiottone Fatato	Fey Animal	mostro	golarion→aon, fuori PRD
+Gholdako	Gholdako	mostro	golarion→d20pfsrd
+Gholdako del Terrore	Gholdako	mostro	golarion→d20pfsrd
+Ghonhatine	Fleshwarp, Ghonhatine	mostro	golarion→d20pfsrd
+Ghorazagh	Ghorazagh	mostro	golarion→d20pfsrd
+Ghoul	Ghoul	mostro	golarion→d20pfsrd
+Ghul	Ghul	mostro	golarion→d20pfsrd
+Gigante degli Oceani	Giant, Ocean	mostro	golarion→d20pfsrd
+Gigante dei Boschi	Giant, Wood	mostro	golarion→d20pfsrd
+Gigante dei Deserti	Giant, Desert	mostro	golarion→d20pfsrd
+Gigante dei Fiumi	Giant, River	mostro	golarion→d20pfsrd
+Gigante del Fuoco	Giant, Fire	mostro	golarion→d20pfsrd
+Gigante del Gelo	Giant, Frost	mostro	golarion→d20pfsrd
+Gigante del Sole	Sun Giant	mostro	golarion→aon, fuori PRD
+Gigante della Luna	Moon Giant	mostro	golarion→aon, fuori PRD
+Gigante della Taiga	Giant, Taiga	mostro	golarion→d20pfsrd
+Gigante delle Caverne	Giant, Cave	mostro	golarion→d20pfsrd
+Gigante delle Caverne Meticcio	Mongrel Cave Giant	mostro	golarion→aon, fuori PRD
+Gigante delle Ceneri	Giant, Ash	mostro	golarion→d20pfsrd
+Gigante delle Colline	Giant, Hill	mostro	golarion→d20pfsrd
+Gigante delle Giungle	Giant, Jungle	mostro	golarion→d20pfsrd
+Gigante delle Nuvole	Giant, Cloud	mostro	golarion→d20pfsrd
+Gigante delle Paludi	Giant, Marsh	mostro	golarion→d20pfsrd
+Gigante delle Paludi Nato dal Mare	Giant, Marsh	mostro	golarion→d20pfsrd
+Gigante delle Rocce	Giant, Stone	mostro	golarion→d20pfsrd
+Gigante delle Rocce Anziano	Giant, Stone	mostro	golarion→d20pfsrd
+Gigante delle Rune	Giant, Rune	mostro	golarion→d20pfsrd
+Gigante delle Rupi	Giant, Cliff	mostro	golarion→d20pfsrd
+Gigante delle Scorie	Giant, Slag	mostro	golarion→d20pfsrd
+Gigante delle Tempeste	Giant, Storm	mostro	golarion→d20pfsrd
+Gigante delle Tombe	Tomb Giant	mostro	golarion→aon, fuori PRD
+Gigante Zombi	Giant Zombie	mostro	golarion→aon, fuori PRD
+Gigas Abaddoniano	Abaddon Gigas	mostro	golarion→aon, fuori PRD
+Gigas Infernale	Hell Gigas	mostro	golarion→aon, fuori PRD
+Giraffa	Herd Animal, Giraffe	mostro	golarion→d20pfsrd
+Girallon	Girallon	mostro	golarion→d20pfsrd
+Girallon Avanzato	Girallon	mostro	golarion→d20pfsrd
+Girtablilu	Girtablilu	mostro	golarion→d20pfsrd
+Globster	Globster	mostro	golarion→d20pfsrd
+Gnefro	Mite	mostro	golarion→d20pfsrd
+Gnoll	Gnoll	mostro	golarion→d20pfsrd
+Gnoll Scartato	Unchosen	mostro	golarion→aon, fuori PRD
+Gnoph-Keh	Gnoph-Keh	mostro	golarion→aon, fuori PRD
+Goblin	Goblin	mostro	golarion→d20pfsrd
+Golem Alchemico	Golem, Alchemical	mostro	golarion→d20pfsrd
+Golem Cannone	Golem, Cannon	mostro	golarion→d20pfsrd
+Golem d'Oro	Gold Golem	mostro	golarion→aon, fuori PRD
+Golem di Adamantio	Golem, Adamantine	mostro	golarion→d20pfsrd
+Golem di Argilla	Golem, Clay	mostro	golarion→d20pfsrd
+Golem di Cadaveri	Golem, Carrion	mostro	golarion→d20pfsrd
+Golem di Carne	Golem, Flesh	mostro	golarion→d20pfsrd
+Golem di Cera Senziente	Sentient Wax Golem	mostro	golarion→aon, fuori PRD
+Golem di Corallo	Coral Golem	mostro	golarion→aon, fuori PRD
+Golem di Ferro	Golem, Iron	mostro	golarion→d20pfsrd
+Golem di Fossili	Golem, Fossil	mostro	golarion→d20pfsrd
+Golem di Ghiaccio	Golem, Ice	mostro	golarion→d20pfsrd
+Golem di Legno	Golem, Wood	mostro	golarion→d20pfsrd
+Golem di Magnetite	Magnetitie Golem	mostro	golarion→aon, fuori PRD
+Golem di Medullortite	Marrowstone Golem	mostro	golarion→aon, fuori PRD
+Golem di Mithral	Golem, Mithral	mostro	golarion→d20pfsrd
+Golem di Noqual	Noqual Golem	mostro	golarion→aon, fuori PRD
+Golem di Ombra	Shadow Golem	mostro	golarion→aon, fuori PRD
+Golem di Ossa	Golem, Bone	mostro	golarion→d20pfsrd
+Golem di Ottone	Golem, Brass	mostro	golarion→d20pfsrd
+Golem di Pietra	Golem, Stone	mostro	golarion→d20pfsrd
+Golem di Piombo	Lead Golem	mostro	golarion→aon, fuori PRD
+Golem di Quantium	Quantium Golem	mostro	golarion→aon, fuori PRD
+Golem di Quintessenza	Quintessence Golem	mostro	golarion→aon, fuori PRD
+Golem di Rifiuti	Junk	mostro	golarion→d20pfsrd
+Golem di Sangue	Golem, Blood	mostro	golarion→d20pfsrd
+Golem di Vetro	Golem, Glass	mostro	golarion→d20pfsrd
+Golem di Vetro Colorato	Golem, Glass	mostro	golarion→d20pfsrd
+Golem Meccanico	Golem, Clockwork	mostro	golarion→d20pfsrd
+Golem Panterino	Panthereon	mostro	golarion→aon, fuori PRD
+Golem Panterino Portatore d'Incantesimi	Panthereon	mostro	golarion→aon, fuori PRD
+Golem Panterino Schiavista	Panthereon	mostro	golarion→aon, fuori PRD
+Golem Panterino Stimato	Panthereon	mostro	golarion→aon, fuori PRD
+Golem Panterino Vero Cacciatore	Panthereon	mostro	golarion→aon, fuori PRD
+Golia Meccanico	Clockwork Goliath	mostro	golarion→d20pfsrd
+Gorgone	Gorgon	mostro	golarion→d20pfsrd
+Gorilla Crudele	Ape, Dire	mostro	golarion→d20pfsrd
+Gorynych	Gorynych	mostro	golarion→d20pfsrd
+Gracchiatore	Croaker	mostro	golarion→aon, fuori PRD
+Graia	Graeae	mostro	golarion→d20pfsrd
+Granchio del Cocco	Crab	mostro	golarion→d20pfsrd
+Granchio delle Rocce	Crab	mostro	golarion→d20pfsrd
+Granchio Gigante	Crab	mostro	golarion→d20pfsrd
+Granchio Mangiasquali	Crab, Shark-Eating	mostro	golarion→d20pfsrd
+Granchio Reale	Crab	mostro	golarion→d20pfsrd
+Granchio Spezzanavi	Crab, Shipwrecker	mostro	golarion→d20pfsrd
+Grande Anziano Iuu	Great Elder Iuu	mostro	golarion→aon, fuori PRD
+Grande Ciclope	Cyclops, Great	mostro	golarion→d20pfsrd
+Grande Ciclope Selvaggio	Savage Great Cyclops	mostro	golarion→aon, fuori PRD
+Grendel	Grendel	mostro	golarion→d20pfsrd
+Grick	Grick	mostro	golarion→d20pfsrd
+Grick della Giungla	Grick	mostro	golarion→d20pfsrd
+Grifo	Gryph	mostro	golarion→d20pfsrd
+Grifone	Griffon	mostro	golarion→d20pfsrd
+Grig	Grig	mostro	golarion→d20pfsrd
+Grimple	Gremlin, Grimple	mostro	golarion→d20pfsrd
+Grindylow	Grindylow	mostro	golarion→d20pfsrd
+Grindylow Gigante	Grindylow	mostro	golarion→d20pfsrd
+Grippli	Grippli	mostro	golarion→d20pfsrd
+Grodair	Grodair	mostro	golarion→d20pfsrd
+Grootslang	Grootslang	mostro	golarion→d20pfsrd
+Grothlut	Fleshwarp, Grothlut	mostro	golarion→d20pfsrd
+Guardiano Angelico	Angelic Guardian	mostro	golarion→aon, fuori PRD
+Guardiano di Set	Set Guardian	mostro	golarion→aon, fuori PRD
+Guardiano di Set Elevato	Set Guardian	mostro	golarion→aon, fuori PRD
+Guecubu	Guecubu	mostro	golarion→d20pfsrd
+Guerrafondaio	Warmonger	mostro	golarion→aon, fuori PRD
+Gufo	Owl	mostro	golarion→d20pfsrd
+Gufo della Vigna	Owl, Great Horned	mostro	golarion→d20pfsrd
+Gufo Gigante	Owl	mostro	golarion→d20pfsrd
+Gug	Gug	mostro	golarion→d20pfsrd
+Guscio Lega Anima	Soulbound Shell	mostro	golarion→d20pfsrd
+Hadhayosh	Hadhayosh	mostro	golarion→aon, fuori PRD
+Halsora	Fleshwarp, Halsora	mostro	golarion→d20pfsrd
+Haniver	Gremlin, Haniver	mostro	golarion→d20pfsrd
+Hanshepsu	Hanshepsu	mostro	golarion→aon, fuori PRD
+Harionago	Harionago	mostro	golarion→d20pfsrd
+Harridan	Harridan	mostro	golarion→aon, fuori PRD
+Herne	Herne	mostro	golarion→aon, fuori PRD
+Hiracapath	Hiracapath	mostro	golarion→aon, fuori PRD
+Hobgoblin	Hobgoblin	mostro	golarion→d20pfsrd
+Hobgoblin Bombardiere	Hobgoblin Bombardier	mostro	golarion→aon
+Hodag	Hodag	mostro	golarion→d20pfsrd
+Huecuva	Huecuva	mostro	golarion→d20pfsrd
+Huldra	Huldra	mostro	golarion→aon
+Humbaba	Humbaba	mostro	golarion→d20pfsrd
+Hupia	Hupia	mostro	golarion→aon, fuori PRD
+Hyakume	Hyakume	mostro	golarion→d20pfsrd
+Ibridato	Mongrelman	mostro	golarion→d20pfsrd
+Ibrido Abitatore del Profondo	Deep One Hybrid	mostro	golarion→aon, fuori PRD
+Icelo	Ikelos	mostro	golarion→aon, fuori PRD
+Icore Immortale	Immortal Ichor	mostro	golarion→d20pfsrd
+Idolo d'Ossa	Bone	mostro	golarion→aon
+Idolo di Giada	Jade	mostro	golarion→aon, fuori PRD
+Idolo di Legno	Wood	mostro	golarion→aon, fuori PRD
+Idolo di Pietra	Stone	mostro	golarion→aon
+Idra a 5 Teste	Hydra	mostro	golarion→d20pfsrd
+Idra Guardiano Divino	Divine Guardian	mostro	golarion→d20pfsrd
+Iena	Hyena	mostro	golarion→d20pfsrd
+Iena Crudele	Hyena, Dire	mostro	golarion→d20pfsrd
+Ifrit	Ifrit	mostro	golarion→d20pfsrd
+Iguanodonte	Dinosaur, Iguanodon	mostro	golarion→d20pfsrd
+Ijiraq	Ijiraq	mostro	golarion→d20pfsrd
+Iku-Turso	Iku-Turso	mostro	golarion→d20pfsrd
+Imentesh	Protean, Imentesh	mostro	golarion→d20pfsrd
+Immondo Forgiato	Forgefiend (Scanderig)	mostro	golarion→aon, fuori PRD
+Incubo	Nightmare	mostro	golarion→d20pfsrd
+Incutilis	Incutilis	mostro	golarion→aon
+Indarugant	Indarugant	mostro	golarion→aon, fuori PRD
+Infestazione Fumosa	Smoke Haunt	mostro	golarion→aon, fuori PRD
+Inkariax	Inkariax	mostro	golarion→aon, fuori PRD
+Insetto Stecco Gigante	Giant Walking Stick	mostro	golarion→aon, fuori PRD
+Interlocutore	Kyton, Interlocutor	mostro	golarion→d20pfsrd
+Intrappolatrice	Trapper	mostro	golarion→d20pfsrd
+Ippocampo	Hippocampus	mostro	golarion→d20pfsrd
+Ippocampo Gigante	Hippocampus	mostro	golarion→d20pfsrd
+Ippocampo Polare	Hippocampus	mostro	golarion→d20pfsrd
+Ippogrifo	Hippogriff	mostro	golarion→d20pfsrd
+Ippopotamo	Hippopotamus	mostro	golarion→d20pfsrd
+Ippopotamo Behemoth	Hippopotamus, Behemoth	mostro	golarion→d20pfsrd
+Ippopotamo Mummificato	Mummified Hippopotamus	mostro	golarion→aon, fuori PRD
+Irlgaunt	Irlgaunt	mostro	golarion→aon, fuori PRD
+Irminsul	Irminsul	mostro	golarion→d20pfsrd
+Irnakurse	Fleshwarp, Irnakurse	mostro	golarion→d20pfsrd
+Irriducibile della Guerra	Warsworn	mostro	golarion→d20pfsrd
+Irthak	Yrthak	mostro	golarion→d20pfsrd
+Isitoq	Isitoq	mostro	golarion→d20pfsrd
+Isopoda Gigante	Giant Isopod	mostro	golarion→aon, fuori PRD
+Ja Noi	Ja Noi	mostro	golarion→aon, fuori PRD
+Jack il Saltatore	Spring-Heeled Jack	mostro	golarion→d20pfsrd
+Jack Lanterna	Jack-o'-Lantern	mostro	golarion→d20pfsrd
+Jackrametto	Twigjack	mostro	golarion→d20pfsrd
+Jarl Gnargorak	Jarl Gnargorak	mostro	golarion→aon, fuori PRD
+Jinkin	Gremlin, Jinkin	mostro	golarion→d20pfsrd
+Jinushigami	Kami, Jinushigami	mostro	golarion→d20pfsrd
+Jorogumo	Jorogumo	mostro	golarion→d20pfsrd
+Juggerloathe	Juggerloathe	mostro	golarion→aon, fuori PRD
+Juggernaut	Juggernaut	mostro	golarion→d20pfsrd
+Julunggali	Julunggali	mostro	golarion→d20pfsrd
+Jyoti	Jyoti	mostro	golarion→d20pfsrd
+Kaenju	Raiju	mostro	golarion→aon, fuori PRD
+Kamadan	Kamadan	mostro	golarion→d20pfsrd
+Kanko	Pipefox	mostro	golarion→d20pfsrd
+Kappa	Kappa	mostro	golarion→d20pfsrd
+Kapre	Kapre	mostro	golarion→d20pfsrd
+Karkinoi	Karkinoi	mostro	golarion→d20pfsrd
+Kasatha	Kasatha	mostro	golarion→d20pfsrd
+Katpaskir	Katpaskir	mostro	golarion→aon, fuori PRD
+Kech	Kech	mostro	golarion→d20pfsrd
+Keketar	Protean, Keketar	mostro	golarion→d20pfsrd
+Khaei	Khaei	mostro	golarion→aon, fuori PRD
+Kijimuna	Kijimuna	mostro	golarion→aon, fuori PRD
+Kirin	Kirin	mostro	golarion→d20pfsrd
+Kitsune	Kitsune	mostro	golarion→d20pfsrd
+Kodama	Kami, Kodama	mostro	golarion→d20pfsrd
+Kolyarut	Inevitable, Kolyarut	mostro	golarion→d20pfsrd
+Kongamato	Kongamato	mostro	golarion→d20pfsrd
+Korir-Kokembe	Korir-Kokembe	mostro	golarion→aon, fuori PRD
+Korred	Korred	mostro	golarion→d20pfsrd
+Kortash Khain	Kortash Khain	mostro	golarion→aon, fuori PRD
+Kraken	Kraken	mostro	golarion→d20pfsrd
+Krenshar	Krenshar	mostro	golarion→d20pfsrd
+Kronosauro	Kronosaurus	mostro	golarion→aon, fuori PRD
+Kuribu	Kuribu	mostro	golarion→aon, fuori PRD
+Kuru	Kuru	mostro	golarion→aon, fuori PRD
+Kuwa	Oni, Kuwa	mostro	golarion→d20pfsrd
+Kyton	Kyton	mostro	golarion→d20pfsrd
+Kyton Evangelista	Kyton	mostro	golarion→d20pfsrd
+Lacridaemon	Lacridaemon	mostro	golarion→aon, fuori PRD
+Ladro di Corpi	Bodythief	mostro	golarion→d20pfsrd
+Lama	Llama	mostro	golarion→aon, fuori PRD
+Lamhigyn	Lamhigyn	mostro	golarion→aon, fuori PRD
+Lamia	Lamia	mostro	golarion→d20pfsrd
+Lamia Matriarca	Lamia Matriarch	mostro	golarion→d20pfsrd
+Lamiade Famelica	Hungerer	mostro	golarion→aon, fuori PRD
+Lamiade Kuchrima	Kuchrima	mostro	golarion→aon, fuori PRD
+Lammasu	Lammasu	mostro	golarion→d20pfsrd
+Lampade	Lampad	mostro	golarion→d20pfsrd
+Lanciere Fantasma	Phantom Lancer	mostro	golarion→aon, fuori PRD
+Langusta	Reefclaw	mostro	golarion→d20pfsrd
+Lapsudaemon	Lapsudaemon	mostro	golarion→aon, fuori PRD
+Larabay	Larabay	mostro	golarion→aon, fuori PRD
+Lare	Lar	mostro	golarion→aon, fuori PRD
+Larva di Mosca Gigante	Maggot, Giant	mostro	golarion→d20pfsrd
+Lashunta	Lashunta	mostro	golarion→aon, fuori PRD
+Leanan Sidhe	Leanan Sidhe	mostro	golarion→d20pfsrd
+Leonal	Agathion, Leonal	mostro	golarion→d20pfsrd
+Leone	Lion	mostro	golarion→d20pfsrd
+Leone Crudele	Lion	mostro	golarion→d20pfsrd
+Leone Foo	Foo Lion	mostro	golarion→d20pfsrd
+Leprecauno	Leprechaun	mostro	golarion→d20pfsrd
+Leshy Alga	Leshy, Seaweed	mostro	golarion→d20pfsrd
+Leshy Foglia	Leshy, Leaf	mostro	golarion→d20pfsrd
+Leshy Fungo	Leshy, Fungus	mostro	golarion→d20pfsrd
+Leshy Zucca	Leshy, Gourd	mostro	golarion→d20pfsrd
+Leucrotta	Leucrotta	mostro	golarion→d20pfsrd
+Leviatano Astrale	Astral Leviathan	mostro	golarion→d20pfsrd
+Leviatano Meccanico	Clockwork Leviathan	mostro	golarion→d20pfsrd
+Lhaksharut	Inevitable, Lhaksharut	mostro	golarion→d20pfsrd
+Liana Assassina	Assassin Vine	mostro	golarion→d20pfsrd
+Liana Vipera	Viper Vine	mostro	golarion→d20pfsrd
+Libitinarii	Libitinarii	mostro	golarion→aon, fuori PRD
+Lich	Lich	mostro	golarion→aon
+Lich Dimenticato	Forsaken Lich	mostro	golarion→aon, fuori PRD
+Lillend Anima Spezzata	Broken Soul	mostro	golarion→d20pfsrd
+Lince Consacrata	Hallowed Lynx	mostro	golarion→aon, fuori PRD
+Lingua del Rimprovero	Tongue of Rebuke	mostro	golarion→aon, fuori PRD
+Linnorm dei Fiordi	Linnorm, Fjord	mostro	golarion→d20pfsrd
+Linnorm dei Ghiacci	Linnorm, Ice	mostro	golarion→d20pfsrd
+Linnorm dei Laghi	Linnorm, Tarn	mostro	golarion→d20pfsrd
+Linnorm dei Pinnacoli	Linnorm, Tor	mostro	golarion→d20pfsrd
+Linnorm dei Tumuli	Linnorm, Cairn	mostro	golarion→d20pfsrd
+Linnorm della Taiga	Linnorm, Taiga	mostro	golarion→d20pfsrd
+Linnorm delle Rupi	Linnorm, Crag	mostro	golarion→d20pfsrd
+Locathah	Locathah	mostro	golarion→d20pfsrd
+Locusta dell'Apocalisse	Apocalypse Locust	mostro	golarion→d20pfsrd
+Locusta Gigante	Locust, Giant	mostro	golarion→d20pfsrd
+Lontra	Otter	mostro	golarion→d20pfsrd
+Lorelei	Lorelei	mostro	golarion→d20pfsrd
+Lorthact	Lorthact	mostro	golarion→aon, fuori PRD
+Loto Cadaverico	Corpse Lotus	mostro	golarion→aon, fuori PRD
+Luccio	Gar	mostro	golarion→d20pfsrd
+Luccio Alligatore	Gar	mostro	golarion→d20pfsrd
+Luccio Gigante	Gar, Giant	mostro	golarion→d20pfsrd
+Lucertola Folgorante	Shocker Lizard	mostro	golarion→d20pfsrd
+Lucertoloide	Lizardfolk	mostro	golarion→d20pfsrd
+Lukwata	Lukwata	mostro	golarion→d20pfsrd
+Lumaca Gigante	Slug, Giant	mostro	golarion→d20pfsrd
+Lumafrusto	Flail Snail	mostro	golarion→d20pfsrd
+Lunarma	Lunarma	mostro	golarion→d20pfsrd
+Lupo	Wolf	mostro	golarion→d20pfsrd
+Lupo Cinereo	Cinder Wolf	mostro	golarion→aon, fuori PRD
+Lupo Crudele	Wolf	mostro	golarion→d20pfsrd
+Lupo Invernale	Wolf	mostro	golarion→d20pfsrd
+Lupo Mannaro	Werewolf	mostro	golarion→d20pfsrd
+Lupo Sarusano	Brush Thylacine	mostro	golarion→aon, fuori PRD
+Lupo Zombi	Zombie Wolf	mostro	golarion→aon, fuori PRD
+Lusca	Lusca	mostro	golarion→aon, fuori PRD
+Lyrakien	Azata, Lyrakien	mostro	golarion→d20pfsrd
+Macchia Nera	Black Spot	mostro	golarion→aon, fuori PRD
+Macchia Rigonfia di Papiro Strangolatore	Stranglereed	mostro	golarion→aon, fuori PRD
+Madre dell'Oblio	Black Magga	mostro	golarion→aon, fuori PRD
+Maftet	Maftet	mostro	golarion→d20pfsrd
+Magga Nera	Black Magga	mostro	golarion→aon, fuori PRD
+Magio Meccanico	Clockwork Mage	mostro	golarion→d20pfsrd
+Magmin	Magmin	mostro	golarion→d20pfsrd
+Mago Scheletrico	Skeletal Mage	mostro	golarion→aon, fuori PRD
+Magro Notturno	Nightgaunt	mostro	golarion→d20pfsrd
+Maiale	Pig	mostro	golarion→d20pfsrd
+Manananggal	Manananggal	mostro	golarion→d20pfsrd
+Mandragora	Mandragora	mostro	golarion→d20pfsrd
+Mangvhune	Mangvhune, the Temple Hill Slasher	mostro	golarion→aon, fuori PRD
+Manichino Lega Anima	Soulbound Mannequin	mostro	golarion→d20pfsrd
+Manitù	Manitou	mostro	golarion→d20pfsrd
+Mano dell'Erede	Hand of the Inheritor	mostro	golarion→aon, fuori PRD
+Mano Strisciante	Crawling Hand	mostro	golarion→d20pfsrd
+Mano Strisciante Gigante	Crawling Hand, Giant	mostro	golarion→d20pfsrd
+Manticora	Manticore	mostro	golarion→d20pfsrd
+Mantide Mortale del Mediogalti	Deadly Mantis	mostro	golarion→aon, fuori PRD
+Manto Assassino	Cloaker	mostro	golarion→d20pfsrd
+Mantoscuro	Darkmantle	mostro	golarion→d20pfsrd
+Marai	Rakshasa, Marai	mostro	golarion→d20pfsrd
+Marinide	Merfolk	mostro	golarion→d20pfsrd
+Marut	Inevitable, Marut	mostro	golarion→d20pfsrd
+Mastino Ombra	Shadow Mastiff	mostro	golarion→d20pfsrd
+Mastodonte	Elephant, Mastodon	mostro	golarion→d20pfsrd
+Matriarca dei Cappuccini Corallini	Coral Capuchin	mostro	golarion→aon, fuori PRD
+Meccanico Guardiano	Guardian	mostro	golarion→d20pfsrd
+Mederach	Mederach	mostro	golarion→aon, fuori PRD
+Medusa	Medusa	mostro	golarion→d20pfsrd
+Medusa Gigante	Jellyfish, Giant	mostro	golarion→d20pfsrd
+Medusa Zaffiro	Jellyfish, Sapphire	mostro	golarion→d20pfsrd
+Megaterio	Megafauna, Megatherium	mostro	golarion→d20pfsrd
+Megera Annis Alter Ego	Annis Hag Alter Ego	mostro	golarion→aon, fuori PRD
+Megera Ardente	Witchfire	mostro	golarion→d20pfsrd
+Megera Invernale	Winter Hag	mostro	golarion→d20pfsrd
+Megera Regina	Queen	mostro	golarion→d20pfsrd
+Melma Carnivora	Carnivorous Blob	mostro	golarion→d20pfsrd
+Melma Putrida	Putrid Ooze	mostro	golarion→aon, fuori PRD
+Melma Verdeggiante	Verdurous Ooze	mostro	golarion→aon, fuori PRD
+Melma Verdeggiante Superiore	Greater Verduous Ooze	mostro	golarion→aon, fuori PRD
+Menade	Maenad	mostro	golarion→d20pfsrd
+Menoteria	The Menotherian	mostro	golarion→aon, fuori PRD
+Mercano	Mercane	mostro	golarion→d20pfsrd
+Merlucente	Merlucent	mostro	golarion→aon, fuori PRD
+Merrow d'Acqua Dolce	Merrow, Freshwater	mostro	golarion→d20pfsrd
+Merrow d'Acqua Salata	Merrow, Saltwater	mostro	golarion→d20pfsrd
+Mi-go	Mi-Go	mostro	golarion→d20pfsrd
+Miceloide	Myceloid	mostro	golarion→d20pfsrd
+Micogrillo	Fungal Crawler	mostro	golarion→d20pfsrd
+Miengu	Miengu	mostro	golarion→aon, fuori PRD
+Mihstu	Mihstu	mostro	golarion→d20pfsrd
+Millepiedi Domestico	Centipede, House	mostro	golarion→d20pfsrd
+Millepiedi Gigante	Centipede, Giant	mostro	golarion→d20pfsrd
+Millepiedi Gigante Sferzante	Centipede, Giant Whiptail	mostro	golarion→d20pfsrd
+Millepiedi Titano	Centipede, Titan	mostro	golarion→d20pfsrd
+Mimic	Mimic	mostro	golarion→d20pfsrd
+Minotauro	Minotaur	mostro	golarion→d20pfsrd
+Mirmeleontide	Myrmecoleon	mostro	golarion→d20pfsrd
+Missina Varisiana	Varisian Hagfish	mostro	golarion→aon, fuori PRD
+Mitilo Gigas	Gigas Clam	mostro	golarion→aon, fuori PRD
+Mobat	Bat, Mobat	mostro	golarion→d20pfsrd
+Mobogo	Mobogo	mostro	golarion→d20pfsrd
+Mogaru	Kaiju, Mogaru	mostro	golarion→d20pfsrd
+Mohrg	Mohrg	mostro	golarion→d20pfsrd
+Monaciello	Gremlin, Monaciello	mostro	golarion→d20pfsrd
+Monarca Stellare	Star Monarch	mostro	golarion→aon, fuori PRD
+Morgodea	Morgodea	mostro	golarion→aon, fuori PRD
+Morlock	Morlock	mostro	golarion→d20pfsrd
+Morrigna	Psychopomp, Morrigna	mostro	golarion→d20pfsrd
+Mosca Gigante	Fly, Giant	mostro	golarion→d20pfsrd
+Mostro di Sargassi	Sargassum Fiend	mostro	golarion→d20pfsrd
+Moxix	Moxix	mostro	golarion→aon, fuori PRD
+Muffa della Schiavitù Mentale	Mindslaver Mold	mostro	golarion→aon
+Mummia di Osirion	Osirion Mummy	mostro	golarion→aon, fuori PRD
+Munavri	Munavri	mostro	golarion→aon, fuori PRD
+Muntjac Grigiastro	Hoary Muntjac	mostro	golarion→aon, fuori PRD
+Muro Vivente	Living Wall	mostro	golarion→d20pfsrd
+Muschio Giallo Rampicante	Yellow Musk Creeper	mostro	golarion→d20pfsrd
+Mustelidal	Mustelidal	mostro	golarion→aon, fuori PRD
+Mutante delle Desolazioni del Mana	Mana Wastes Mutant (Gnoll)	mostro	golarion→aon, fuori PRD
+Naga Acquatico	Naga, Water	mostro	golarion→d20pfsrd
+Naga Guardiano	Naga, Guardian	mostro	golarion→d20pfsrd
+Naga Lunare	Naga, Lunar	mostro	golarion→d20pfsrd
+Naga Oscuro	Naga, Dark	mostro	golarion→d20pfsrd
+Naga Reale	Naga, Royal	mostro	golarion→d20pfsrd
+Naga Spirituale	Naga, Spirit	mostro	golarion→d20pfsrd
+Nagaji	Nagaji	mostro	golarion→d20pfsrd
+Narvalo	Narwhal	mostro	golarion→aon, fuori PRD
+Naunet	Protean, Naunet	mostro	golarion→d20pfsrd
+Nave in Bottiglia	Ship in a Bottle	mostro	golarion→aon, fuori PRD
+Nebbia Affamata	Hungry Fog	mostro	golarion→d20pfsrd
+Nebbia Vampirica	Vampiric Mist	mostro	golarion→d20pfsrd
+Necrofidio	Necrophidius	mostro	golarion→d20pfsrd
+Necroibrido	Necrocraft	mostro	golarion→d20pfsrd
+Neh-Thalggu	Neh-Thalggu	mostro	golarion→d20pfsrd
+Neothelid	Neothelid	mostro	golarion→d20pfsrd
+Nependis	Nependis	mostro	golarion→d20pfsrd
+Nephilim	Nephilim	mostro	golarion→d20pfsrd
+Nereide	Nereid	mostro	golarion→d20pfsrd
+Neshmaal	Neshmaal	mostro	golarion→aon, fuori PRD
+Nihiloi	Nihiloi	mostro	golarion→aon, fuori PRD
+Ninfa	Nymph	mostro	golarion→d20pfsrd
+Ninfa Micotica	Nymph	mostro	golarion→d20pfsrd
+Ningyo	Ningyo	mostro	golarion→d20pfsrd
+Nirento	Nirento	mostro	golarion→aon, fuori PRD
+Nirento Antico	Elder Nirento	mostro	golarion→aon, fuori PRD
+Nixie	Nixie	mostro	golarion→d20pfsrd
+Nixudaemon	Nixudaemon	mostro	golarion→aon, fuori PRD
+Norna	Norn	mostro	golarion→d20pfsrd
+Nosoi	Psychopomp, Nosoi	mostro	golarion→d20pfsrd
+Notosauro	Nothosaur	mostro	golarion→aon, fuori PRD
+Nualidu	Nualidu	mostro	golarion→aon, fuori PRD
+Nuckelavee	Nuckelavee	mostro	golarion→d20pfsrd
+Nue	Nue	mostro	golarion→d20pfsrd
+Nuglub	Gremlin, Nuglub	mostro	golarion→d20pfsrd
+Nycar	Nycar	mostro	golarion→d20pfsrd
+Nyogoth	Qlippoth, Nyogoth	mostro	golarion→d20pfsrd
+Oceanide	Oceanid	mostro	golarion→d20pfsrd
+Oggetto Animato	Animated Object	mostro	golarion→d20pfsrd
+Ogre	Ogre	mostro	golarion→d20pfsrd
+Ogre Magi	Oni, Ogre Mage	mostro	golarion→d20pfsrd
+Oletrodaemon	Olethrodaemon	mostro	golarion→d20pfsrd
+Olifante di Jandelay	Oliphaunt of Jandelay	mostro	golarion→aon, fuori PRD
+Olio Torbido	Oil	mostro	golarion→d20pfsrd
+Oma	Oma	mostro	golarion→d20pfsrd
+Ombra	Shadow	mostro	golarion→d20pfsrd
+Ombra del Disastro	Blast Shadow	mostro	golarion→aon, fuori PRD
+Ombra in Agguato	Shadowy Lurker	mostro	golarion→aon, fuori PRD
+Ombra Randagia	Shadowgarm	mostro	golarion→aon, fuori PRD
+Ombra Superiore	Shadow, Greater	mostro	golarion→d20pfsrd
+Omox	Omox	mostro	golarion→aon, fuori PRD
+Omuncolo	Homunculus	mostro	golarion→d20pfsrd
+Ondine	Undine	mostro	golarion→d20pfsrd
+Onwu Azu	Onwu Azu	mostro	golarion→aon, fuori PRD
+Orco	Orc	mostro	golarion→d20pfsrd
+Orco Morto Alluvionato	Floodslain Orc	mostro	golarion→aon, fuori PRD
+Oreade	Oread	mostro	golarion→d20pfsrd
+Ornitorinco	Platypus	mostro	golarion→d20pfsrd
+Orso Mannaro	Werebear (Human Form)	mostro	golarion→d20pfsrd
+Orsogufo	Owlbear	mostro	golarion→d20pfsrd
+Oscuro Danzatore	Dark Dancer	mostro	golarion→d20pfsrd
+Oscuro Predatore	Dark Stalker	mostro	golarion→d20pfsrd
+Oscuro Richiamatore	Dark Caller	mostro	golarion→d20pfsrd
+Oscuro Strisciante	Dark Creeper	mostro	golarion→d20pfsrd
+Oscuro Uccisore	Dark Slayer	mostro	golarion→d20pfsrd
+Ossidiana	Obsidian	mostro	golarion→d20pfsrd
+Ostiario	Kyton, Ostiarius	mostro	golarion→d20pfsrd
+Otyugh	Otyugh	mostro	golarion→d20pfsrd
+Ourdivar	Ourdivar	mostro	golarion→aon, fuori PRD
+Owb	Owb	mostro	golarion→d20pfsrd
+Pachicefalosauro	Dinosaur, Pachycephalosaurus	mostro	golarion→d20pfsrd
+Padrone Velato	Veiled Master	mostro	golarion→aon, fuori PRD
+Pairaka	Div, Pairaka	mostro	golarion→d20pfsrd
+Pallido Straniero	Pale Stranger	mostro	golarion→d20pfsrd
+Panda	Panda	mostro	golarion→aon, fuori PRD
+Papiro Strangolatore	Stranglereed	mostro	golarion→aon, fuori PRD
+Papiro Strangolatore Succhiatore	Stranglereed	mostro	golarion→aon, fuori PRD
+Papiro Strangolatore Tossico	Stranglereed	mostro	golarion→aon, fuori PRD
+Paracleto	Aeon, Paracletus	mostro	golarion→d20pfsrd
+Pard	Pard	mostro	golarion→d20pfsrd
+Pastinaca	Ray, Stingray	mostro	golarion→d20pfsrd
+Pastinaca Giovane	Ray, Stingray	mostro	golarion→d20pfsrd
+Pastore Ombratile	Umbral Shepherd	mostro	golarion→aon, fuori PRD
+Pech	Pech	mostro	golarion→d20pfsrd
+Pegaso	Pegasus	mostro	golarion→d20pfsrd
+Pellecucita	Skinstitch	mostro	golarion→d20pfsrd
+Pellecucita Potenziato	Skinstitch	mostro	golarion→d20pfsrd
+Pellecucita Resistente	Skinstitch	mostro	golarion→d20pfsrd
+Peri	Peri	mostro	golarion→d20pfsrd
+Peryton	Peryton	mostro	golarion→d20pfsrd
+Pesce Diavolo	Devilfish	mostro	golarion→d20pfsrd
+Pesce Palla Gigante	Giant Blowfish	mostro	golarion→aon, fuori PRD
+Pesce Spada	Swordfish	mostro	golarion→aon, fuori PRD
+Pesce Tigre	Tiger Fish	mostro	golarion→aon, fuori PRD
+Peuchen	Peuchen	mostro	golarion→aon, fuori PRD
+Piaga di Rovi	Brambleblight	mostro	golarion→aon, fuori PRD
+Piovra	Octopus	mostro	golarion→d20pfsrd
+Piovra Gigante	Octopus, Giant	mostro	golarion→d20pfsrd
+Pipistrello	Bat	mostro	golarion→d20pfsrd
+Pipistrello Artiglio	Clawbat	mostro	golarion→aon, fuori PRD
+Pipistrello Artiglio Gigante	Clawbat	mostro	golarion→aon, fuori PRD
+Pipistrello Crudele	Bat, Dire	mostro	golarion→d20pfsrd
+Pipistrello Incubo	Nightmare Bats	mostro	golarion→aon, fuori PRD
+Pipistrello Mannaro	Werebat (Human Form)	mostro	golarion→d20pfsrd
+Piropesce	Pyropiscis	mostro	golarion→aon, fuori PRD
+Pittura Rupestre Vivente	Living Cave Painting	mostro	golarion→aon, fuori PRD
+Pixie	Pixie	mostro	golarion→d20pfsrd
+Pièveloce	Quickling	mostro	golarion→d20pfsrd
+Pleroma	Aeon, Pleroma	mostro	golarion→d20pfsrd
+Polipo Volante	Flying Polyp	mostro	golarion→d20pfsrd
+Pollo	Chicken	mostro	golarion→d20pfsrd
+Poltergeist	Poltergeist	mostro	golarion→d20pfsrd
+Popobala	Popobala	mostro	golarion→d20pfsrd
+Porcospino	Porcupine	mostro	golarion→d20pfsrd
+Porcospino Gigante	Porcupine, Giant	mostro	golarion→d20pfsrd
+Predatore della Luce	Lurker in Light	mostro	golarion→d20pfsrd
+Predatore Rosso	Red Reaver	mostro	golarion→aon, fuori PRD
+Prima Lama	The First Blade	mostro	golarion→aon, fuori PRD
+Principe degli Akvan	Div, Akvan	mostro	golarion→d20pfsrd
+Procione	Raccoon	mostro	golarion→d20pfsrd
+Procyal	Procyal	mostro	golarion→aon, fuori PRD
+Progenie di Iblis	Get of Iblis	mostro	golarion→aon, fuori PRD
+Progenie di Yog-Sothoth	Spawn of Yog-Sothoth	mostro	golarion→d20pfsrd
+Progenie Stellare di Cthulhu	Star-Spawn of Cthulhu	mostro	golarion→d20pfsrd
+Progenie Vampirica	Vampire Spawn	mostro	golarion→d20pfsrd
+Protettore di Legno	Wooden Protector	mostro	golarion→aon, fuori PRD
+Pseudodrago	Pseudodragon	mostro	golarion→d20pfsrd
+Pugwampi	Gremlin, Pugwampi	mostro	golarion→d20pfsrd
+Pukwudgie	Pukwudgie	mostro	golarion→d20pfsrd
+Puma di Sangue	Brush Thylacine	mostro	golarion→aon, fuori PRD
+Puzzola	Skunk	mostro	golarion→d20pfsrd
+Puzzola Gigante	Skunk, Giant	mostro	golarion→d20pfsrd
+Púca	Pooka	mostro	golarion→d20pfsrd
+Qallupilluk	Qallupilluk	mostro	golarion→d20pfsrd
+Querciaviva	Quickwood	mostro	golarion→d20pfsrd
+Quetzalcoatl	Quetzalcoatlus	mostro	golarion→aon, fuori PRD
+Ragazzo Bruciante	Burning Child	mostro	golarion→aon, fuori PRD
+Ragno degli Scoli	Drain Spider	mostro	golarion→aon, fuori PRD
+Ragno del Sogno	Dream Spider	mostro	golarion→aon, fuori PRD
+Ragno delle Rupi	Crag Spider	mostro	golarion→aon, fuori PRD
+Ragno di Leng	Leng Spider	mostro	golarion→d20pfsrd
+Ragno Fase	Phase Spider	mostro	golarion→d20pfsrd
+Ragno Gigante	Spider	mostro	golarion→d20pfsrd
+Ragno Gigante Cacciatore	Spider	mostro	golarion→d20pfsrd
+Ragno Gigante Tessitore	Spider	mostro	golarion→d20pfsrd
+Ragno Golia	Spider, Goliath	mostro	golarion→d20pfsrd
+Ragno Granchio Gigante	Spider, Giant Crab	mostro	golarion→d20pfsrd
+Ragno Ogre	Spider, Ogre	mostro	golarion→d20pfsrd
+Ragno Scarlatto	Spider	mostro	golarion→d20pfsrd
+Ragno Scimitarra	Cutlass Spider	mostro	golarion→aon, fuori PRD
+Raiju	Raiju	mostro	golarion→aon, fuori PRD
+Rajbut Ambari	Rajbut Ambari	mostro	golarion→aon, fuori PRD
+Rakshasa	Rakshasa	mostro	golarion→d20pfsrd
+Rakshasa Maragià	Rakshasa, Maharaja	mostro	golarion→d20pfsrd
+Raktavarna	Rakshasa, Raktavarna	mostro	golarion→d20pfsrd
+Rana Gigante	Frog, Giant	mostro	golarion→d20pfsrd
+Raskineya	Raskineya, the Dark Comet	mostro	golarion→aon, fuori PRD
+Rast	Rast	mostro	golarion→d20pfsrd
+Ratto Asino	Donkey Rat	mostro	golarion→d20pfsrd
+Ratto Crudele	Rat	mostro	golarion→d20pfsrd
+Ratto Mannaro	Wererat (Human Form)	mostro	golarion→d20pfsrd
+Rattoide	Ratfolk	mostro	golarion→d20pfsrd
+Razza Foglia	Leaf Ray	mostro	golarion→d20pfsrd
+Re dei Ratti	Rat King	mostro	golarion→d20pfsrd
+Re Maledetto	King	mostro	golarion→d20pfsrd
+Recuperatore	Retriever	mostro	golarion→d20pfsrd
+Regina dei Funghi	Queen	mostro	golarion→d20pfsrd
+Regina dell'Alveare	Queen	mostro	golarion→d20pfsrd
+Regina Sanguinaria	Blood Queen	mostro	golarion→aon, fuori PRD
+Regina Shriezyx	Shriezyx Queen	mostro	golarion→aon, fuori PRD
+Regina-Veggente Viandante delle Paludi	Bog Strider	mostro	golarion→aon, fuori PRD
+Relitto Caduto	Fell Flotsam	mostro	golarion→aon, fuori PRD
+Remorhaz	Remorhaz	mostro	golarion→d20pfsrd
+Renna	Moose	mostro	golarion→aon, fuori PRD
+Riccio	Hedgehog	mostro	golarion→d20pfsrd
+Riccio Diadema Gigante	Great Diadem Urchin	mostro	golarion→aon, fuori PRD
+Rinoceronte	Rhinoceros	mostro	golarion→d20pfsrd
+Rinoceronte di Ferro	Iron Rhinoceros	mostro	golarion→aon, fuori PRD
+Rinoceronte Lanoso	Rhinoceros	mostro	golarion→d20pfsrd
+Ritornante	Revenant	mostro	golarion→d20pfsrd
+Roc	Roc	mostro	golarion→d20pfsrd
+Roncaccia	Axe Beak	mostro	golarion→d20pfsrd
+Rorkoun	Rorkoun	mostro	golarion→aon, fuori PRD
+Rospo	Toad	mostro	golarion→d20pfsrd
+Rospo dei Ghiacci	Toad	mostro	golarion→d20pfsrd
+Rospo Gigante	Toad, Giant	mostro	golarion→d20pfsrd
+Rovo Sanguinario	Blood Bramble	mostro	golarion→aon, fuori PRD
+Rubapelle	Skin Stealer	mostro	golarion→aon, fuori PRD
+Rugginofago	Rust Monster	mostro	golarion→d20pfsrd
+Rukh	Rukh	mostro	golarion→d20pfsrd
+Rukh Adolescente	Rukh	mostro	golarion→d20pfsrd
+Rusalka	Rusalka	mostro	golarion→d20pfsrd
+Sabosan	Sabosan	mostro	golarion→d20pfsrd
+Sagari	Sagari	mostro	golarion→d20pfsrd
+Sagrestano	Kyton, Sacristan	mostro	golarion→d20pfsrd
+Saguaroi	Saguaroi	mostro	golarion→d20pfsrd
+Sahuagin	Sahuagin	mostro	golarion→d20pfsrd
+Salamandra	Salamander	mostro	golarion→d20pfsrd
+Salikotal	Salikotal	mostro	golarion→aon, fuori PRD
+Samsaran	Samsaran	mostro	golarion→d20pfsrd
+Sard	Sard	mostro	golarion→d20pfsrd
+Sasquatch	Sasquatch	mostro	golarion→d20pfsrd
+Satiro	Satyr	mostro	golarion→d20pfsrd
+Sayona	Sayona	mostro	golarion→d20pfsrd
+Sbandato Trascina Viscere	Gutdragging Lurcher	mostro	golarion→aon, fuori PRD
+Scarabeo da Trasporto Azlanti	Azlanti Chariot Beetle	mostro	golarion→aon, fuori PRD
+Scarabeo del Fuoco	Beetle, Fire	mostro	golarion→d20pfsrd
+Scarabeo dello Stelo	Stalk Beetle	mostro	golarion→aon, fuori PRD
+Scarabeo Gigante dell'Osirion	Scarab Beetle	mostro	golarion→aon, fuori PRD
+Scarabeo Goliath	Beetle, Goliath Stag	mostro	golarion→d20pfsrd
+Scarabeo Mietitore	Beetle, Slicer	mostro	golarion→d20pfsrd
+Scavapolvere	Dust Digger	mostro	golarion→d20pfsrd
+Sceaduinar	Sceaduinar	mostro	golarion→d20pfsrd
+Scheggia dell'Anima	Soulsliver	mostro	golarion→d20pfsrd
+Scheletro	Medium	mostro	golarion→d20pfsrd
+Scheletro Bruciante	Burning	mostro	golarion→d20pfsrd
+Scheletro Campione	Skeletal Champion	mostro	golarion→d20pfsrd
+Scheletro Corazzato di Ogre	Armored Ogre Skeleton	mostro	golarion→aon, fuori PRD
+Scheletro Mudra a 4 Braccia	Four-Armed Mudra Skeleton	mostro	golarion→aon, fuori PRD
+Schiavo delle Rune	Runeslave Hill Giant	mostro	golarion→aon, fuori PRD
+Sciacalloide	Jackalwere	mostro	golarion→d20pfsrd
+Sciame Chiacchierone	Chatterer Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Chon Chon	Chon Chon Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Costrutti di Granuli	Granule Construct Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Covata Karkinoi	Karkinoi Brood Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Drocha	Drocha Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Locuste della Piaga	Plague Locust Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Macachi Sikari	Sikari Macaque Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Melma Collerica	Choleric Ooze Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Melma Flemmatica	Phlegmatic Ooze Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Melma Malinconica	Melancholic Ooze Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Melma Sanguigna	Sanguine Ooze Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Ricci Famelici	Ravenous Urchin Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Stinfalidi	Stymphalides Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Teschi	Skull Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Torbilli	Torble Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vespe di Terra	Ground Wasp Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vespe Infernali	Swarm, Hellwasp	mostro	golarion→d20pfsrd
+Sciame di Vetri del Fuoco Infernale	Scythe Glass Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vetri del Veleno	Scythe Glass Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vetri dell'Incantesimo	Scythe Glass Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vetri delle Ombre	Scythe Glass Swarm	mostro	golarion→aon, fuori PRD
+Sciame di Vetri Taglienti	Scythe Glass Swarm	mostro	golarion→aon, fuori PRD
+Sciame Piaga dei Pipistrelli	Swarm, Bat	mostro	golarion→d20pfsrd
+Sciame Piaga dei Ratti	Swarm, Rat	mostro	golarion→d20pfsrd
+Scilla	Scylla	mostro	golarion→d20pfsrd
+Scimmia	Monkey	mostro	golarion→d20pfsrd
+Scoiattolo Volante	Flying	mostro	golarion→d20pfsrd
+Scorpione di Caverna	Scorpion, Cave	mostro	golarion→d20pfsrd
+Scorpione Gigante	Scorpion, Giant	mostro	golarion→d20pfsrd
+Scorpione Imperatore Gigante	Scorpion, Giant Emperor	mostro	golarion→d20pfsrd
+Scorpione Morterapida	Scorpion, Deadfall	mostro	golarion→d20pfsrd
+Scorpione Nero	Scorpion, Black	mostro	golarion→d20pfsrd
+Scorpione Pungiglione Verde	Scorpion, Greensting	mostro	golarion→d20pfsrd
+Scorpione Spettro	Scorpion, Ghost	mostro	golarion→d20pfsrd
+Scrivanita	Scrivenite	mostro	golarion→aon, fuori PRD
+Scuoiato	Shredskin	mostro	golarion→d20pfsrd
+Segugio di Cayden	Cayhound	mostro	golarion→aon, fuori PRD
+Segugio di Tindalos	Hound of Tindalos	mostro	golarion→d20pfsrd
+Segugio Infernale	Hell Hound	mostro	golarion→d20pfsrd
+Segugio Infernale Nessiano	Hell Hound	mostro	golarion→d20pfsrd
+Segugio Troll	Trollhound	mostro	golarion→d20pfsrd
+Segugio Urlatore	Yeth Hound	mostro	golarion→d20pfsrd
+Selkie	Selkie	mostro	golarion→d20pfsrd
+Sentinella delle Lande Tenebrose	Darklands Sentinel	mostro	golarion→aon, fuori PRD
+Sentinella di Ferro	Iron Sentinel	mostro	golarion→aon, fuori PRD
+Sentinella Navale	Ship Sentinel	mostro	golarion→aon, fuori PRD
+Senzafaccia	Faceless Stalker	mostro	golarion→d20pfsrd
+Sepid	Div, Sepid	mostro	golarion→d20pfsrd
+Seps	Seps	mostro	golarion→d20pfsrd
+Seps Adolescente	Seps, Juvenile	mostro	golarion→d20pfsrd
+Serpe d'Acqua	Water Orm	mostro	golarion→d20pfsrd
+Serpe di Mare	Sea Snake	mostro	golarion→aon, fuori PRD
+Serpe di Mare Gigante	Giant Sea Snake	mostro	golarion→aon, fuori PRD
+Serpentana	Tatzlwyrm	mostro	golarion→d20pfsrd
+Serpente Goblin	Goblin Snake	mostro	golarion→d20pfsrd
+Serpente Marino	Sea Serpent	mostro	golarion→d20pfsrd
+Serpente Strangolatore	Snake, Constrictor	mostro	golarion→d20pfsrd
+Serpente Velenoso	Snake, Venomous	mostro	golarion→d20pfsrd
+Serpente Vuoto	Hollow Serpent	mostro	golarion→d20pfsrd
+Serpopardo	Serpopard	mostro	golarion→aon, fuori PRD
+Seru	Seru	mostro	golarion→aon
+Servitore Meccanico	Clockwork Servant	mostro	golarion→d20pfsrd
+Seugathi	Seugathi	mostro	golarion→d20pfsrd
+Sfinge	Sphinx	mostro	golarion→d20pfsrd
+Sfinge Anziana	Elder Sphinx	mostro	golarion→aon, fuori PRD
+Sfinge Colosso	Sphinx Colossus	mostro	golarion→aon, fuori PRD
+Sha	Sha	mostro	golarion→aon, fuori PRD
+Sha Sacro	Sha	mostro	golarion→aon, fuori PRD
+Shabti	Shabti	mostro	golarion→aon, fuori PRD
+Shachath	Shachath	mostro	golarion→aon, fuori PRD
+Shae	Shae	mostro	golarion→d20pfsrd
+Shalkeshka	Shalkeshka	mostro	golarion→aon, fuori PRD
+Shantak	Shantak	mostro	golarion→d20pfsrd
+Shasalqu	Shasalqu	mostro	golarion→aon, fuori PRD
+Shax	Shax	mostro	golarion→aon, fuori PRD
+Shedu	Shedu	mostro	golarion→d20pfsrd
+Shikigami	Kami, Shikigami	mostro	golarion→d20pfsrd
+Shinigami	Shinigami	mostro	golarion→d20pfsrd
+Shira	Div, Shira	mostro	golarion→d20pfsrd
+Shobhad	Shobhad	mostro	golarion→d20pfsrd
+Shoggoth	Shoggoth	mostro	golarion→d20pfsrd
+Shoggti	Qlippoth, Shoggti	mostro	golarion→d20pfsrd
+Shriezyx	Shriezyx	mostro	golarion→d20pfsrd
+Shulsaga	Shulsaga	mostro	golarion→d20pfsrd
+Sifkesh	Sifkesh	mostro	golarion→aon, fuori PRD
+Signore degli Incutilis	Incutilis Lord	mostro	golarion→aon, fuori PRD
+Signore del Fango	Mudlord	mostro	golarion→d20pfsrd
+Signore del Muschio	Mosslord	mostro	golarion→aon, fuori PRD
+Signore delle Mummie	Mummy Lord	mostro	golarion→aon, fuori PRD
+Siktempora della Miseria	Misery Siktempora	mostro	golarion→aon, fuori PRD
+Silfide	Sylph	mostro	golarion→d20pfsrd
+Silvanshee	Agathion, Silvanshee	mostro	golarion→d20pfsrd
+Simurgh	Simurgh	mostro	golarion→d20pfsrd
+Sirena	Siren	mostro	golarion→d20pfsrd
+Siyokoy	Siyokoy	mostro	golarion→d20pfsrd
+Skapraun	Skapraun	mostro	golarion→aon, fuori PRD
+Skrik Urticante	Skirk Nettle	mostro	golarion→aon, fuori PRD
+Skulk	Skulk	mostro	golarion→d20pfsrd
+Skum	Skum	mostro	golarion→d20pfsrd
+Sleipnir	Sleipnir	mostro	golarion→d20pfsrd
+Slurk	Slurk	mostro	golarion→d20pfsrd
+Snallygaster	Snallygaster	mostro	golarion→d20pfsrd
+Sogno Animato	Animate Dream	mostro	golarion→d20pfsrd
+Soldato di Terracotta	Terra-Cotta Soldier	mostro	golarion→d20pfsrd
+Soldato Meccanico	Clockwork Soldier	mostro	golarion→d20pfsrd
+Soucouyant	Soucouyant	mostro	golarion→aon, fuori PRD
+Spartolos	Spartolos	mostro	golarion→aon, fuori PRD
+Spaventapasseri	Scarecrow	mostro	golarion→d20pfsrd
+Spettro	Spectre	mostro	golarion→d20pfsrd
+Spia Meccanica	Clockwork Spy	mostro	golarion→d20pfsrd
+Spinosauro	Dinosaur, Spinosaurus	mostro	golarion→d20pfsrd
+Spiritello	Sprite	mostro	golarion→d20pfsrd
+Spiritello di Palissandro	Roseblood Sprite	mostro	golarion→aon, fuori PRD
+Spirito di Adorazione	Spirit of Adoration	mostro	golarion→aon, fuori PRD
+Spirito di Burrasca	Gale Spirit	mostro	golarion→aon, fuori PRD
+Spirito Marcescente	Festering Spirit	mostro	golarion→d20pfsrd
+Spora Mu	Mu Spore	mostro	golarion→d20pfsrd
+Squalo	Shark	mostro	golarion→d20pfsrd
+Squalo Crudele	Shark	mostro	golarion→d20pfsrd
+Squalo Leuca	Shark, Bull	mostro	golarion→d20pfsrd
+Squalo Mannaro	Wereshark (Human Form)	mostro	golarion→d20pfsrd
+Squalo Martello	Shark	mostro	golarion→d20pfsrd
+Squalo Rompicapo	Jigsaw Shark	mostro	golarion→aon, fuori PRD
+Squalo Tigre	Shark	mostro	golarion→d20pfsrd
+Squartatore Grigio	Gray Render	mostro	golarion→d20pfsrd
+Squartatore Notturno	Nightripper	mostro	golarion→aon, fuori PRD
+Sruvara	Sruvara	mostro	golarion→aon, fuori PRD
+Stinfalide	Stymphalidies	mostro	golarion→d20pfsrd
+Stinfalide Gigante	Giant Stymphalidies	mostro	golarion→aon, fuori PRD
+Stiracosauro	Dinosaur, Styracosaurus	mostro	golarion→d20pfsrd
+Stormo Necrofago	Carrionstorm	mostro	golarion→aon, fuori PRD
+Strangolatore	Choker	mostro	golarion→d20pfsrd
+Strappateschi	Skull Ripper	mostro	golarion→aon, fuori PRD
+Strige	Stirge	mostro	golarion→d20pfsrd
+Sturzstromer	Sturzstromer	mostro	golarion→aon, fuori PRD
+Sturzstromer Glaciale	Sturzstromer	mostro	golarion→aon, fuori PRD
+Sturzstromer Piroclastico	Sturzstromer	mostro	golarion→aon, fuori PRD
+Stygira	Stygira	mostro	golarion→aon, fuori PRD
+Suli	Suli	mostro	golarion→d20pfsrd
+Supplicante	Petitioner	mostro	golarion→d20pfsrd
+Sussurrante	Attic Whisperer	mostro	golarion→d20pfsrd
+Svartalfar	Svartalfar	mostro	golarion→d20pfsrd
+Svirfneblin	Svirfneblin	mostro	golarion→d20pfsrd
+Syrinx	Syrinx	mostro	golarion→aon, fuori PRD
+T-Rex Scheletrico Moltiplicante	Multiplying T-Rex Skeleton	mostro	golarion→aon, fuori PRD
+Taniniver	Taniniver	mostro	golarion→d20pfsrd
+Tanuki	Tanuki	mostro	golarion→d20pfsrd
+Taotieh	Taotieh	mostro	golarion→d20pfsrd
+Tar-Baphon	The Whispering Tyrant	mostro	golarion→aon, fuori PRD
+Targotha	Targotha	mostro	golarion→aon, fuori PRD
+Tarrasque	Tarrasque	mostro	golarion→d20pfsrd
+Tartaruga	Turtle	mostro	golarion→d20pfsrd
+Tartaruga Azzannatrice	Turtle	mostro	golarion→d20pfsrd
+Tartaruga Azzannatrice Gigante	Turtle, Giant Snapping	mostro	golarion→d20pfsrd
+Tasso	Badger	mostro	golarion→d20pfsrd
+Tasso Crudele	Badger, Dire	mostro	golarion→d20pfsrd
+Tataka	Rakshasa, Tataka	mostro	golarion→d20pfsrd
+Tekenu	Tekenu	mostro	golarion→aon, fuori PRD
+Tela Assassina	Deathweb	mostro	golarion→d20pfsrd
+Tempesta d'Ossa	Bonestorm	mostro	golarion→aon, fuori PRD
+Tendriculos	Tendriculos	mostro	golarion→d20pfsrd
+Tengu	Tengu	mostro	golarion→d20pfsrd
+Tengu Yamabushi	Yamabushi Tengu	mostro	golarion→aon, fuori PRD
+Tentacolo di Havero	Havero Tentacle	mostro	golarion→aon, fuori PRD
+Tentamort	Tentamort	mostro	golarion→d20pfsrd
+Tentamort Superiore	Tentamort	mostro	golarion→d20pfsrd
+Termagant	Termagant	mostro	golarion→aon, fuori PRD
+Teschio Fiammeggiante	Flaming Skull	mostro	golarion→aon, fuori PRD
+Testa di Medusa	Medusa Head	mostro	golarion→aon, fuori PRD
+Testuggine Dragona	Dragon Turtle	mostro	golarion→d20pfsrd
+Testuggine Gigante	Tortoise, Giant	mostro	golarion→d20pfsrd
+Testuggine Immensa	Tortoise, Immense	mostro	golarion→d20pfsrd
+Tetrolimulus	Tetrolimulus	mostro	golarion→aon, fuori PRD
+Thais	Thais	mostro	golarion→aon, fuori PRD
+Thalachos	Sunlord Thalachos	mostro	golarion→aon, fuori PRD
+Thawn	Thawn	mostro	golarion→aon, fuori PRD
+Theletos	Aeon, Theletos	mostro	golarion→d20pfsrd
+Thoqqua	Thoqqua	mostro	golarion→d20pfsrd
+Thoxel	Thoxel Demon	mostro	golarion→aon, fuori PRD
+Thrasfyr	Thrasfyr	mostro	golarion→d20pfsrd
+Thremindyr	Thremindyr	mostro	golarion→aon, fuori PRD
+Thriae Danzatrice	Thriae Dancer	mostro	golarion→aon, fuori PRD
+Thriae Regina	Thriae Queen	mostro	golarion→d20pfsrd
+Thriae Soldato	Thriae Soldier	mostro	golarion→d20pfsrd
+Thriae Veggente	Thriae Seer	mostro	golarion→d20pfsrd
+Thulgant	Qlippoth, Thulgant	mostro	golarion→d20pfsrd
+Tiberolith	Tiberolith	mostro	golarion→d20pfsrd
+Tiefling	Tiefling	mostro	golarion→d20pfsrd
+Tifilipode	Typhilipede	mostro	golarion→aon, fuori PRD
+Tigre	Tiger	mostro	golarion→d20pfsrd
+Tigre Crudele	Tiger	mostro	golarion→d20pfsrd
+Tigre Mannara	Weretiger (Human Form)	mostro	golarion→d20pfsrd
+Tikbalang	Tikbalang	mostro	golarion→d20pfsrd
+Tilacino	Marsupial, Thylacine	mostro	golarion→d20pfsrd
+Tilacino dei Boschi	Brush Thylacine	mostro	golarion→aon, fuori PRD
+Tilacino di Casmar	Brush Thylacine	mostro	golarion→aon, fuori PRD
+Tojanida	Tojanida	mostro	golarion→d20pfsrd
+Tophet	Tophet	mostro	golarion→d20pfsrd
+Topiario Vivente	Living Topiary	mostro	golarion→d20pfsrd
+Torbillo	Torble	mostro	golarion→aon, fuori PRD
+Tordo	Thrush	mostro	golarion→d20pfsrd
+Toro di Zagresh	Bull of Zagresh	mostro	golarion→aon, fuori PRD
+Toshigami	Kami, Toshigami	mostro	golarion→d20pfsrd
+Totenmaske	Totenmaske	mostro	golarion→d20pfsrd
+Tramite Esangue	Bloodless Vessel	mostro	golarion→aon, fuori PRD
+Treant	Treant	mostro	golarion→d20pfsrd
+Tricheco	Walrus	mostro	golarion→d20pfsrd
+Tricheco Imperatore	Walrus, Emperor	mostro	golarion→d20pfsrd
+Tripurasura	Asura, Tripurasura	mostro	golarion→d20pfsrd
+Tritone	Triton	mostro	golarion→d20pfsrd
+Troglodita	Troglodyte	mostro	golarion→d20pfsrd
+Troll	Troll	mostro	golarion→d20pfsrd
+Troll dei Ghiacci	Troll, Ice	mostro	golarion→d20pfsrd
+Troll del Muschio	Troll, Moss	mostro	golarion→d20pfsrd
+Troll della Piena	Flood Troll	mostro	golarion→aon, fuori PRD
+Troll delle Rocce	Troll, Rock	mostro	golarion→d20pfsrd
+Troll di Montagna	Mountain Troll	mostro	golarion→aon, fuori PRD
+Troll Jotund	Troll, Jotund	mostro	golarion→d20pfsrd
+Trox	Trox	mostro	golarion→d20pfsrd
+Truppa di Arconti Segugio	Hound Archon Troop	mostro	golarion→aon, fuori PRD
+Truppa di Cavalieri Eredi	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Truppa di Ingegneri d'Assedio	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Truppa di Inquisitori	Inquisitor Troop	mostro	golarion→aon, fuori PRD
+Truppa di Ospedalieri da Campo	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Truppa di Rassofori	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Truppa di Sergenti d'Arme	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Truppa di Uccisori di Diavoli	Glorious Reclamation	mostro	golarion→aon, fuori PRD
+Tuatara	Tuatara	mostro	golarion→d20pfsrd
+Tumore Proliferante	Spawning Canker	mostro	golarion→aon, fuori PRD
+Tunche	Tunche	mostro	golarion→d20pfsrd
+Tupilaq	Tupilaq	mostro	golarion→d20pfsrd
+Tzitzimitl	Tzitzimitl	mostro	golarion→d20pfsrd
+Uccello del Tuono	Thunderbird	mostro	golarion→d20pfsrd
+Uccello Jubjub	Jubjub Bird	mostro	golarion→d20pfsrd
+Udeo	Udaeus	mostro	golarion→d20pfsrd
+Ugash-Iram	Ugash-Iram	mostro	golarion→aon, fuori PRD
+Ulkreth	Ulkreth	mostro	golarion→aon, fuori PRD
+Ululatore	Howler	mostro	golarion→d20pfsrd
+Ulunat	Festering Ulunat (The Unholy First)	mostro	golarion→aon, fuori PRD
+Unicorno	Unicorn	mostro	golarion→d20pfsrd
+Uomo di Vimini	Wickerman	mostro	golarion→d20pfsrd
+Uomo Esile	Thin Man	mostro	golarion→aon, fuori PRD
+Uomo Falena	Mothman	mostro	golarion→d20pfsrd
+Uomo Nero	Bogeyman	mostro	golarion→d20pfsrd
+Uomo Sabbia	Sandman	mostro	golarion→d20pfsrd
+Uomo Serpente	Serpentfolk	mostro	golarion→d20pfsrd
+Uomo Serpente Degenerato	Serpentfolk	mostro	golarion→d20pfsrd
+Uomo Serpente Illusionista	Serpentfolk Illusionist	mostro	golarion→aon
+Upasunda	Upasunda	mostro	golarion→aon, fuori PRD
+Urdefhan	Urdefhan	mostro	golarion→d20pfsrd
+Uro delle Tempeste	Storm Aurochs	mostro	golarion→aon, fuori PRD
+Urtleytlar	Urtleytlar, The Tempest Queen	mostro	golarion→aon, fuori PRD
+Vagabondo della Neve	Snowdrifter	mostro	golarion→aon, fuori PRD
+Valchiria	Valkyrie	mostro	golarion→d20pfsrd
+Vampiro	Vampire	mostro	golarion→d20pfsrd
+Vanara	Vanara	mostro	golarion→d20pfsrd
+Vanth	Psychopomp, Vanth	mostro	golarion→d20pfsrd
+Varano	Lizard	mostro	golarion→d20pfsrd
+Vargouille	Vargouille	mostro	golarion→d20pfsrd
+Vecchio Uomo	The Old Man	mostro	golarion→aon, fuori PRD
+Vecchio-Mago Jatembe	Old-Mage Jatembe	mostro	golarion→aon, fuori PRD
+Vegepigmeo	Vegepygmy	mostro	golarion→d20pfsrd
+Vellosa	Peluda	mostro	golarion→aon
+Vemerak	Vemerak	mostro	golarion→d20pfsrd
+Veranallia	Veranallia	mostro	golarion→aon, fuori PRD
+Veranallia Anziana	Veranallia	mostro	golarion→aon, fuori PRD
+Verme del Gelo	Frost Worm	mostro	golarion→d20pfsrd
+Verme Mortale	Death Worm	mostro	golarion→d20pfsrd
+Verme Purpureo	Purple Worm	mostro	golarion→d20pfsrd
+Verme Tenebroso	Tenebrous Worm	mostro	golarion→d20pfsrd
+Verme Tessitore	Weaverworm	mostro	golarion→aon, fuori PRD
+Vermevuoto	Protean, Voidworm	mostro	golarion→d20pfsrd
+Vespa da Massacro	Warmonger Wasp	mostro	golarion→aon, fuori PRD
+Vespa di Terra Gigante	Giant Ground Wasp	mostro	golarion→aon, fuori PRD
+Vespa Gigante	Wasp, Giant	mostro	golarion→d20pfsrd
+Vespa Guerrafondaia	Warmonger Wasp	mostro	golarion→aon, fuori PRD
+Vetala	Vetala	mostro	golarion→aon, fuori PRD
+Vexenion	Vexenion	mostro	golarion→aon, fuori PRD
+Vexgit	Gremlin, Vexgit	mostro	golarion→d20pfsrd
+Viandante delle Paludi	Bog Strider	mostro	golarion→aon, fuori PRD
+Viandante Scarlatto	Scarlet Walker	mostro	golarion→aon, fuori PRD
+Vildeis	Vildeis	mostro	golarion→aon, fuori PRD
+Vilkacis	Vilkacis	mostro	golarion→aon, fuori PRD
+Vipera	Snake, Viper	mostro	golarion→d20pfsrd
+Viridio	Viridium	mostro	golarion→d20pfsrd
+Vishkanya	Vishkanya	mostro	golarion→d20pfsrd
+Vivarano	Wyvaran	mostro	golarion→d20pfsrd
+Viverna	Wyvern	mostro	golarion→d20pfsrd
+Viverna di Aashaq	Aashaq's Wyvern	mostro	golarion→aon, fuori PRD
+Vodyanoi	Vodyanoi	mostro	golarion→d20pfsrd
+Volnagur	Volnagur (The End-Singer)	mostro	golarion→aon, fuori PRD
+Volpe	Fox	mostro	golarion→d20pfsrd
+Voonith	Voonith	mostro	golarion→d20pfsrd
+Vouivre	Vouivre	mostro	golarion→d20pfsrd
+Vrock	Vrock	mostro	golarion→aon, fuori PRD
+Vrykolakas	Vrykolakas	mostro	golarion→aon, fuori PRD
+Vulpinal	Agathion, Vulpinal	mostro	golarion→d20pfsrd
+Vydrarch	Vydrarch	mostro	golarion→aon, fuori PRD
+Wayang	Wayang	mostro	golarion→d20pfsrd
+Wendigo	Wendigo	mostro	golarion→d20pfsrd
+Wight	Wight	mostro	golarion→d20pfsrd
+Wight del Gelo	Frost	mostro	golarion→d20pfsrd
+Wight Invernale	Winterwight	mostro	golarion→d20pfsrd
+Wikkawak	Wikkawak	mostro	golarion→d20pfsrd
+Worg	Worg	mostro	golarion→d20pfsrd
+Worg della Morte	Death Dog	mostro	golarion→d20pfsrd
+Wraith	Wraith	mostro	golarion→d20pfsrd
+Wraith Alato	Wraithwing	mostro	golarion→aon, fuori PRD
+Wraith dell'Acqua	Water Wraith	mostro	golarion→aon, fuori PRD
+Wraith dell'Apostasia	Apostasy Wraith	mostro	golarion→aon, fuori PRD
+Wyrwood	Wyrwood	mostro	golarion→d20pfsrd
+Xacarba	Xacarba	mostro	golarion→d20pfsrd
+Xanthos	Xanthos	mostro	golarion→d20pfsrd
+Xenopterid	Xenopterid	mostro	golarion→d20pfsrd
+Xill	Xill	mostro	golarion→d20pfsrd
+Xorn	Xorn	mostro	golarion→d20pfsrd
+Xorn Anziano	Xorn	mostro	golarion→d20pfsrd
+Xorn Giovane	Xorn	mostro	golarion→d20pfsrd
+Xotani	Xotani (The Firebleeder)	mostro	golarion→aon, fuori PRD
+Xtabay	Xtabay	mostro	golarion→d20pfsrd
+Yai del Fuoco	Oni, Fire Yai	mostro	golarion→d20pfsrd
+Yai del Ghiaccio	Oni, Ice Yai	mostro	golarion→d20pfsrd
+Yai del Vento	Wind Yai	mostro	golarion→aon, fuori PRD
+Yai del Vuoto	Oni, Void Yai	mostro	golarion→d20pfsrd
+Yai dell'Acqua	Oni, Water Yai	mostro	golarion→d20pfsrd
+Yai della Terra	Earth Yai	mostro	golarion→aon, fuori PRD
+Yai della Terra Daifu	Earth Yai	mostro	golarion→aon, fuori PRD
+Yamaraj	Psychopomp, Yamaraj	mostro	golarion→d20pfsrd
+Yaoguai	Yaoguai	mostro	golarion→d20pfsrd
+Yeti	Yeti	mostro	golarion→d20pfsrd
+Yithian	Yithian	mostro	golarion→d20pfsrd
+Ypnale	Hypnalis	mostro	golarion→d20pfsrd
+Ypotryll	Ypotryll	mostro	golarion→d20pfsrd
+Yuki-Onna	Yuki-Onna	mostro	golarion→d20pfsrd
+Zahhak	Zahhak	mostro	golarion→aon, fuori PRD
+Zana	Zana	mostro	golarion→aon, fuori PRD
+Zanzara della Giungla	Mosquito, Giant	mostro	golarion→d20pfsrd
+Zanzara Gigante	Mosquito, Giant	mostro	golarion→d20pfsrd
+Zanzara Goblin	Mosquito, Giant	mostro	golarion→d20pfsrd
+Zecca Gigante	Tick, Giant	mostro	golarion→d20pfsrd
+Zelekhut	Inevitable, Zelekhut	mostro	golarion→d20pfsrd
+Zelishkar	Zelishkar of the Bitter Flame	mostro	golarion→aon, fuori PRD
+Zeuglodonte	Zeuglodon	mostro	golarion→aon, fuori PRD
+Zombi dell'Apocalisse	Apocalypse Zombie	mostro	golarion→aon, fuori PRD
+Zombi Riarso	Sunbaked Zombie	mostro	golarion→aon, fuori PRD
+Zombi Spina del Vuoto	Voidstick Zombie	mostro	golarion→aon, fuori PRD
+Zomok	Zomok	mostro	golarion→d20pfsrd
+Zoog	Zoog	mostro	golarion→d20pfsrd
+Zuishin	Kami, Zuishin	mostro	golarion→d20pfsrd
+Zuvembie	Zuvembie	mostro	golarion→d20pfsrd
+Acchiappadiavoli	Devil Catcher	oggetto magico	golarion→aon, fuori PRD
+Agrimmosh	Agrimmosh	oggetto magico	golarion→aon, fuori PRD
+Ali del Volo	Wings of Flying	oggetto magico	golarion→d20pfsrd
+Ampolla di Ferro	Iron Flask	oggetto magico	golarion→d20pfsrd
+Amuleto degli Spiriti	Amulet of the Spirits	oggetto magico	golarion→d20pfsrd
+Amuleto del Pozzo delle Rune (Avarizia)	Runewell Amulet (Greed)	oggetto magico	golarion→aon, fuori PRD
+Amuleto della Luce Nascosta	Amulet of Hidden Light	oggetto magico	golarion→d20pfsrd
+Amuleto della Stirpe	Amulet of the Blooded	oggetto magico	golarion→d20pfsrd
+Amuleto della Vita Incanalata	Amulet of Channeled Life	oggetto magico	golarion→d20pfsrd
+Amuleto Mitico dell'Abisso	Mythic Amulet of the Abyss	oggetto magico	golarion→aon, fuori PRD
+Anelli dei Portali	Ring Gates	oggetto magico	golarion→d20pfsrd
+Anello Accumula Incantesimi	Ring of Spell Storing	oggetto magico	golarion→d20pfsrd
+Anello Accumula Incantesimi Maggiore	Ring of Spell Storing, Major	oggetto magico	golarion→d20pfsrd
+Anello Accumula Incantesimi Minore	Ring of Spell Storing, Minor	oggetto magico	golarion→d20pfsrd
+Anello degli Eroi	Staff of Fortune	oggetto magico	golarion→d20pfsrd
+Anello del Saltare	Ring of Jumping	oggetto magico	golarion→d20pfsrd
+Anello dell'Eloquenza	Ring of Eloquence	oggetto magico	golarion→d20pfsrd
+Anello dell'Ossessione	Obsession Ring	oggetto magico	golarion→aon
+Anello della Magia di Stirpe Ancestrale	Ring of Ancestral Blood Magic	oggetto magico	golarion→d20pfsrd
+Anello della Magia di Stirpe Persistente	Ring of Lingering Blood Magic	oggetto magico	golarion→d20pfsrd
+Anello della Magia di Stirpe Poderosa	Ring of powerful Blood Magic	oggetto magico	golarion→d20pfsrd
+Anello della Magia di Stirpe Vendicativa	Ring of Vengeful Blood Magic	oggetto magico	golarion→d20pfsrd
+Anello della Resilienza	Ring of Resilience	oggetto magico	golarion→d20pfsrd
+Anello della Ricercatezza	Ring of the Sophisticate	oggetto magico	golarion→d20pfsrd
+Anello della Telecinesi	Ring of Telekinesis	oggetto magico	golarion→d20pfsrd
+Anello dello Scalare Migliorato	Ring of Climbing, Improved	oggetto magico	golarion→d20pfsrd
+Anello dello Scudo di Forza	Ring of Force Shield	oggetto magico	golarion→d20pfsrd
+Anello di Protezione	Ring of Protection	oggetto magico	golarion→d20pfsrd
+Apparato del Granchio	Apparatus of the Crab	oggetto magico	golarion→d20pfsrd
+Apprendista della Metamagia	metamagician's apprentice	oggetto magico	golarion→aon
+Archivio Anatema	Anathema Archive	oggetto magico	golarion→aon, fuori PRD
+Arco del Fulmine	Lightning Bow	oggetto magico	golarion→aon
+Arco del Giuramento	Oathbow	oggetto magico	golarion→d20pfsrd
+Arcosciame	Swarmbow	oggetto magico	golarion→aon, fuori PRD
+Armatura Celestiale	Celestial Armor	oggetto magico	golarion→d20pfsrd
+Armatura Completa del Cadavere	Full Plate of the Corpse	oggetto magico	golarion→d20pfsrd
+Armatura Completa delle Profondità	Plate Armor of the Deep	oggetto magico	golarion→d20pfsrd
+Armatura Completa di Linnorm delle Rupi	Crag Linnorm Plate	oggetto magico	golarion→aon, fuori PRD
+Armatura Completa Nanica	Dwarven Plate	oggetto magico	golarion→d20pfsrd
+Armatura Completa Pieghevole	Folding Plate	oggetto magico	golarion→d20pfsrd
+Armatura da Campo del Comandante	War Commander's Field Plate	oggetto magico	golarion→aon, fuori PRD
+Armatura da Ricognizione	Scouting Leather	oggetto magico	golarion→aon, fuori PRD
+Armatura dei Teschi Ululanti	Howling Skull Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura del Combattente Infaticabile	Armor of the Tireless Warrior	oggetto magico	golarion→aon, fuori PRD
+Armatura del Gelugon	Gelugon Plate	oggetto magico	golarion→aon, fuori PRD
+Armatura del Montanaro	Man Mountain Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura del Signore delle Ombre	Armor of the Shadow Lord	oggetto magico	golarion→aon
+Armatura dell'Assassino Rosso	Red Stalker Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura della Giungla degli Ekujae	Ekujae Jungle Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura dello Specchio Fantasma	Ghost Mirror Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura Demoniaca	Demon Armor	oggetto magico	golarion→d20pfsrd
+Armatura di Akhentepi	Akhentepi's Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura di Carapace di Xill	Xill Carapace Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura di Cuoio Corrotta da Acquamuschio	Mosswater Stained Leather	oggetto magico	golarion→aon, fuori PRD
+Armatura di Pelle dell'Anguilla	Eel Skin Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura di Pelle di Gigante	Giant-Hide Armor	oggetto magico	golarion→d20pfsrd
+Armatura di Piastre Celestiale	Celestial Plate Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura di Scaglie di Drago	Dragonhide Plate	oggetto magico	golarion→d20pfsrd
+Armatura di Teschi	Relic of Kazavon, Armor of Skulls	oggetto magico	golarion→aon, fuori PRD
+Armatura in Mithral della Velocità	Mithral Full Plate of Speed	oggetto magico	golarion→d20pfsrd
+Armatura Lamellare Celeste	Skyplate Armor	oggetto magico	golarion→aon, fuori PRD
+Armatura Persecutrice	Stalking Armor	oggetto magico	golarion→d20pfsrd
+Arnesi Manufatturieri Meravigliosi	Amazing Tools of Manufacture	oggetto magico	golarion→d20pfsrd
+Arpa del Terrore	Doomharp	oggetto magico	golarion→d20pfsrd
+Arpa dello Charme	Harp of Charming	oggetto magico	golarion→d20pfsrd
+Arpione di Chada	Chada's Harpoon	oggetto magico	golarion→aon, fuori PRD
+Arpione Vendicativo	Vindictive Harpoon	oggetto magico	golarion→aon, fuori PRD
+Artigli Sanguinari di Thercerrod	Goreclaw of Thercerrod	oggetto magico	golarion→aon, fuori PRD
+Ascia Bipenne Rapida di Ossidiana	Swift Obsidian Greataxe	oggetto magico	golarion→d20pfsrd
+Ascia da Battaglia in Adamantio	Adamantine	oggetto magico	golarion→d20pfsrd
+Ascia Debilitante	Undercutting Axe	oggetto magico	golarion→d20pfsrd
+Ascia dell'Imperativo	Axe of the Imperative	oggetto magico	golarion→aon, fuori PRD
+Ascia della Vita Forzata	Axe of Forced Life	oggetto magico	golarion→aon, fuori PRD
+Ascia Runagelida	Runechill Hatchet	oggetto magico	golarion→aon, fuori PRD
+Asheia	Sword of Lust, Asheia	oggetto magico	golarion→aon, fuori PRD
+Astrum del Cacciatore	Hunter's Starknife	oggetto magico	golarion→aon, fuori PRD
+Astrum del Sentiero Scintillante	Sparkwake Starknife	oggetto magico	golarion→d20pfsrd
+Aureola della Calma Interiore	Halo of Inner Calm	oggetto magico	golarion→d20pfsrd
+Aureola della Minaccia	Halo of Menace	oggetto magico	golarion→d20pfsrd
+Averla Sussurrante	Whispering Shrike	oggetto magico	golarion→aon, fuori PRD
+Bacchetta ad Anelli	Wand Key Ring	oggetto magico	golarion→d20pfsrd
+Bacio del Fiore dell'Alba	Dawnflower's Kiss	oggetto magico	golarion→aon, fuori PRD
+Bacio di Aiger	Aiger's Kiss	oggetto magico	golarion→aon, fuori PRD
+Bacio di Calistria	Calistrian Kiss	oggetto magico	golarion→aon, fuori PRD
+Bacio Mortale (Arma)	Deadly Kiss	oggetto magico	golarion→aon, fuori PRD
+Bagliore Argenteo	Silversheen	oggetto magico	golarion→d20pfsrd
+Balestra del Castigo	Crossbow of Retribution	oggetto magico	golarion→aon, fuori PRD
+Balestra del Persecutore	Stalker's Crossbow	oggetto magico	golarion→aon, fuori PRD
+Balestra della Sentinella Silente	Silent Sentry Crossbow	oggetto magico	golarion→aon, fuori PRD
+Balestra Razzo Celeste	Skyrocket Crossbow	oggetto magico	golarion→aon, fuori PRD
+Balsamo della Pietra	Stone Salve	oggetto magico	golarion→d20pfsrd
+Balsamo della Scivolosità	Salve of Slipperiness	oggetto magico	golarion→d20pfsrd
+Baluardo Spara Bordate	Broadside Bulwark	oggetto magico	golarion→aon, fuori PRD
+Barca Pieghevole	Boat, Folding	oggetto magico	golarion→d20pfsrd
+Bardatura della Luce Piegata	Barding of Pleated Light	oggetto magico	golarion→aon, fuori PRD
+Bastone Animato del Furfante	Scoundrel’s Sword Cane	oggetto magico	golarion→aon, fuori PRD
+Bastone del Cobra	Staff of the Hooded Cobra	oggetto magico	golarion→aon, fuori PRD
+Bastone del Legittimo Controllo	Staff of Rightful Rule	oggetto magico	golarion→aon, fuori PRD
+Bastone del Maestro (Necromanzia)	Staff of the Master	oggetto magico	golarion→aon
+Bastone del Potere	Staff of Power	oggetto magico	golarion→d20pfsrd
+Bastone del Tessipietra	Staff of Stoneweaving	oggetto magico	golarion→aon, fuori PRD
+Bastone dell'Onniveggenza di Drazmorg	Drazmorg's Staff of All-Sight	oggetto magico	golarion→aon, fuori PRD
+Bastone dell'Ucciso	Relic of Kazavon, Staff of the Slain	oggetto magico	golarion→aon, fuori PRD
+Bastone della Comunicazione con gli Spiriti	Staff of Spirit-Talking	oggetto magico	golarion→aon, fuori PRD
+Bastone della Contemplazione	Quarterstaff of Contemplation	oggetto magico	golarion→aon, fuori PRD
+Bastone della Fortuna	Staff of Fortune	oggetto magico	golarion→d20pfsrd
+Bastone della Mostrificazione	Monstrification Staff	oggetto magico	golarion→d20pfsrd
+Bastone delle Braci	Ember Staff	oggetto magico	golarion→d20pfsrd
+Bastone delle Scintille	Spark Staff	oggetto magico	golarion→d20pfsrd
+Bendaggi del Rapido Recupero	Bandages of Rapid Recovery	oggetto magico	golarion→d20pfsrd
+Berretto delle Sembianze Umane	Cap of Human Guise	oggetto magico	golarion→d20pfsrd
+Biglia di Forza	Bead of Force	oggetto magico	golarion→d20pfsrd
+Bolas Spirituali degli Shadde-Quah	Shadde-Quah Spirit Bolas	oggetto magico	golarion→aon, fuori PRD
+Bolla Portagioie	Bubble Vault	oggetto magico	golarion→d20pfsrd
+Borsa Conservante	Bag of Holding	oggetto magico	golarion→d20pfsrd
+Borsa degli Animali	Bag of Tricks	oggetto magico	golarion→d20pfsrd
+Borsa delle Nubi d'Ombra	Bag of Shadow Clouds	oggetto magico	golarion→d20pfsrd
+Bottiglia d'Aria	Bottle of Air	oggetto magico	golarion→d20pfsrd
+Bottiglia dei Messaggi	Bottle of Messages	oggetto magico	golarion→d20pfsrd
+Bracciali dell'Armatura	Bracers of Armor	oggetto magico	golarion→d20pfsrd
+Bracciali della Caccia Imperitura	Bracers of the Immortal Hunt	oggetto magico	golarion→aon, fuori PRD
+Bracciali della Vendetta Giurata	Bracers of Sworn Vengeance	oggetto magico	golarion→d20pfsrd
+Brocca per Bevande Tengu	Tengu Drinking Jug	oggetto magico	golarion→d20pfsrd
+Buckler in Legnoscuro	Darkwood Buckler	oggetto magico	golarion→d20pfsrd
+Buco Portatile	Portable Hole	oggetto magico	golarion→d20pfsrd
+Calderone degli Schiavi delle Rune	Runeslave Cauldron	oggetto magico	golarion→aon, fuori PRD
+Calderone del Volo	Cauldron of Flying	oggetto magico	golarion→d20pfsrd
+Calderone dell'Abbondanza	Cauldron of Plenty	oggetto magico	golarion→d20pfsrd
+Calderone dell'Infusione	Cauldron of Brewing	oggetto magico	golarion→d20pfsrd
+Calderone della Resurrezione	Cauldron of Resurrection	oggetto magico	golarion→d20pfsrd
+Calderone della Visione	Cauldron of Seeing	oggetto magico	golarion→d20pfsrd
+Calice di Ozem	Chalice of Ozem	oggetto magico	golarion→aon, fuori PRD
+Campana degli Spiriti Ritornanti	Bell of Returning Spirits	oggetto magico	golarion→d20pfsrd
+Campana dell'Apertura	Chime of Opening	oggetto magico	golarion→d20pfsrd
+Campana dell'Interruzione	Chime of Interruption	oggetto magico	golarion→d20pfsrd
+Candela dell'Invocazione	Candle of Invocation	oggetto magico	golarion→d20pfsrd
+Candela della Verità	Candle of Truth	oggetto magico	golarion→d20pfsrd
+Cannone Scirocco	Sirocco Cannon	oggetto magico	golarion→aon, fuori PRD
+Cappa del Fintare	Cape of Feinting	oggetto magico	golarion→d20pfsrd
+Cappa del Saltimbanco	Cape of the Mountebank	oggetto magico	golarion→d20pfsrd
+Cappa delle Gesta Audaci	Cape of Daring Deeds	oggetto magico	golarion→d20pfsrd
+Cappello del Camuffamento	Hat of Disguise	oggetto magico	golarion→d20pfsrd
+Caraffa dell'Acqua Eterna	Decanter of Endless Water	oggetto magico	golarion→d20pfsrd
+Carillon del Clamore	Clamor Box	oggetto magico	golarion→d20pfsrd
+Casa d'Ossa	Bone House	oggetto magico	golarion→aon, fuori PRD
+Catene delle Ombre	Shadowbound Chains	oggetto magico	golarion→aon, fuori PRD
+Cesello Nahyndriano	Nahyndrian Chisel	oggetto magico	golarion→aon, fuori PRD
+Chellan, la Spada dell'Avarizia	Sword of Greed, Chellan	oggetto magico	golarion→aon, fuori PRD
+Chiave Bloccaserratura	Key of Lock Jamming	oggetto magico	golarion→d20pfsrd
+Chiave del Faraone	Pharaoh's Key	oggetto magico	golarion→aon, fuori PRD
+Chiave Primaverile	Vernal Key	oggetto magico	golarion→aon, fuori PRD
+Clessidra delle Ombre	Hourglass of Shadows	oggetto magico	golarion→aon, fuori PRD
+Colla Meravigliosa	Sovereign Glue	oggetto magico	golarion→d20pfsrd
+Collare Crudele	Dire Collar	oggetto magico	golarion→d20pfsrd
+Collare Crudele Superiore	Dire Collar	oggetto magico	golarion→d20pfsrd
+Collera della Cortigiana	Courtesan's Ire	oggetto magico	golarion→aon, fuori PRD
+Coppe del Buon Rapporto	Cups of Rapport	oggetto magico	golarion→d20pfsrd
+Corazza degli Spezzaschiena	Backbreaker Mail	oggetto magico	golarion→aon, fuori PRD
+Corazza della Resistenza Numeriana	Numerian Resistance Plate	oggetto magico	golarion→aon, fuori PRD
+Corazza di Bande della Fortuna	Banded Mail of Luck	oggetto magico	golarion→d20pfsrd
+Corazza di Bande Derelitta	Forsaken Banded Mail	oggetto magico	golarion→d20pfsrd
+Corazza di Piastre del Comando	Breastplate of Command	oggetto magico	golarion→d20pfsrd
+Corazza di Piastre in Adamantio	Adamantine Breastplate	oggetto magico	golarion→d20pfsrd
+Corazza di Pietra del Difensore dei Tunnel	Tunnel Defender Stoneplate	oggetto magico	golarion→aon, fuori PRD
+Corazza Locusta	Locust Cuirass	oggetto magico	golarion→aon, fuori PRD
+Corda per Intralciare	Rope of Entanglement	oggetto magico	golarion→d20pfsrd
+Corda per Scalare	Rope of Climbing	oggetto magico	golarion→d20pfsrd
+Corde Dorso di Mulo	Muleback Cords	oggetto magico	golarion→d20pfsrd
+Corno del Signore della Caccia	Horn of the Huntmaster	oggetto magico	golarion→d20pfsrd
+Corno del Valhalla	Horn of Valhalla	oggetto magico	golarion→d20pfsrd
+Corno dell'Antagonismo	Horn of Antagonism	oggetto magico	golarion→d20pfsrd
+Corno della Distruzione	Horn of Blasting	oggetto magico	golarion→d20pfsrd
+Corno della Distruzione Superiore	Horn of Blasting	oggetto magico	golarion→d20pfsrd
+Corno della Nebbia	Horn of Fog	oggetto magico	golarion→d20pfsrd
+Corno per Polvere a Carica Asciutta	Powder Horn	oggetto magico	golarion→d20pfsrd
+Corno Ululante	Relic of Kazavon, Howling Horn	oggetto magico	golarion→aon, fuori PRD
+Corona del Simurgh	Crown of the Simurgh	oggetto magico	golarion→aon, fuori PRD
+Corona della Conquista	Crown of Conquest	oggetto magico	golarion→d20pfsrd
+Corona delle Spade	Crown of Swords	oggetto magico	golarion→d20pfsrd
+Corona di Stagno	Stannum Crown	oggetto magico	golarion→aon, fuori PRD
+Corona Smeraldina	The Viridian Crown	oggetto magico	golarion→aon, fuori PRD
+Corsetto di Abrogail	Abrogalian Corset	oggetto magico	golarion→aon, fuori PRD
+Cotta dello Speleologo	Spelunker's Mail	oggetto magico	golarion→aon, fuori PRD
+Cotta di Maglia Elfica	Elven Chain	oggetto magico	golarion→d20pfsrd
+Creafenditure	Riftcarver	oggetto magico	golarion→aon, fuori PRD
+Cristallo della Necropira	Necropyre Crystal	oggetto magico	golarion→aon, fuori PRD
+Cristallo Nahyndriano	Nahyndrian Crystal	oggetto magico	golarion→aon, fuori PRD
+Cubo dei Portali	Cubic Gate	oggetto magico	golarion→d20pfsrd
+Cubo della Resistenza al Gelo	Cube of Frost Resistance	oggetto magico	golarion→d20pfsrd
+Cubo di Forza	Cube of Force	oggetto magico	golarion→d20pfsrd
+Cucchiaio del Sostentamento	Sustaining Spoon	oggetto magico	golarion→d20pfsrd
+Cuoio Senz'Ossa	Boneless Leather	oggetto magico	golarion→d20pfsrd
+Cuore dell'Araldo	Heart of the Herald	oggetto magico	golarion→aon, fuori PRD
+Cuore dell'Inverno	Winter's Heart	oggetto magico	golarion→aon, fuori PRD
+Dardo del Recupero	Dart of Recovery	oggetto magico	golarion→aon, fuori PRD
+Dente del Serpente	Serpent's Fang	oggetto magico	golarion→aon, fuori PRD
+Dente di Deskari	Deskari's Tooth	oggetto magico	golarion→aon, fuori PRD
+Deskari	Riftcarver	oggetto magico	golarion→aon, fuori PRD
+Diadema della Luna	Moon Circlet	oggetto magico	golarion→d20pfsrd
+Diadema della Persuasione	Circlet of Persuasion	oggetto magico	golarion→d20pfsrd
+Do-Maru delle Piaghe	Do-Maru of Broken Flesh	oggetto magico	golarion→aon, fuori PRD
+Egida della Fanciulla	Maiden's Aegis	oggetto magico	golarion→aon, fuori PRD
+Elisir d'Amore	Elixir of Love	oggetto magico	golarion→d20pfsrd
+Elisir del Nuotare	Elixir of Swimming	oggetto magico	golarion→d20pfsrd
+Elisir del Soffio di Fuoco	Elixir of Fire Breath	oggetto magico	golarion→d20pfsrd
+Elisir dell'Acrobazia	Elixir of Tumbling	oggetto magico	golarion→d20pfsrd
+Elisir della Furtività	Elixir of Hiding	oggetto magico	golarion→d20pfsrd
+Elisir della Potente Esalazione	Elixir of Forceful Exhalation	oggetto magico	golarion→d20pfsrd
+Elisir della Verità	Elixir of Truth	oggetto magico	golarion→d20pfsrd
+Elisir della Visione	Elixir of Vision	oggetto magico	golarion→d20pfsrd
+Elisir di Fortuna	Elixir of Luck	oggetto magico	golarion→d20pfsrd
+Elisir Nahyndriano	Nahyndrian Elixir	oggetto magico	golarion→aon, fuori PRD
+Elmetto del Generale d'Oro	Helmet of the Golden General	oggetto magico	golarion→aon
+Elmo dall'Aspetto Terrificante	Helm of Fearsome Mien	oggetto magico	golarion→d20pfsrd
+Elmo del Movimento Subacqueo	Helm of Underwater Action	oggetto magico	golarion→d20pfsrd
+Elmo del Teletrasporto	Helm of Teleportation	oggetto magico	golarion→d20pfsrd
+Elmo della Conoscenza	Helm of Comprehend Languages and Read Magic	oggetto magico	golarion→d20pfsrd
+Elmo della Luminosità	Helm of Brilliance	oggetto magico	golarion→d20pfsrd
+Elmo della Telepatia	Helm of Telepathy	oggetto magico	golarion→d20pfsrd
+Elmo delle Valchirie	Helm of the Valkyrie	oggetto magico	golarion→d20pfsrd
+En-Nebi	En-Nebi, Blade of the Leopard	oggetto magico	golarion→aon, fuori PRD
+Erbapipa del Fumo Solido	Solidsmoke Pipeweed	oggetto magico	golarion→d20pfsrd
+Falcata Epuratrice	Purging Falcata	oggetto magico	golarion→aon, fuori PRD
+Falchion Zannuto	Fanged Falchion	oggetto magico	golarion→aon, fuori PRD
+Falcione Bruciante di Karzoug	Karzoug's Burning Glaive	oggetto magico	golarion→aon, fuori PRD
+Falcione-Giusarma dell'Avanguardia	Glaive-Guisarme of the Vanguard	oggetto magico	golarion→aon, fuori PRD
+Faretra Efficiente	Efficient Quiver	oggetto magico	golarion→d20pfsrd
+Faro della Vera Fede	Beacon of True Faith	oggetto magico	golarion→d20pfsrd
+Fasce Metalliche Leganti	Iron Bands of Binding	oggetto magico	golarion→d20pfsrd
+Fascia del Campione di Guerra	Sash of the War Champion	oggetto magico	golarion→d20pfsrd
+Fascia del Lupo	Headband of the Wolf	oggetto magico	golarion→d20pfsrd
+Fascia del Saggio	Headband of the sage	oggetto magico	golarion→aon
+Fasciculus Labyrinthum	Fasciculus Labyrinthum	oggetto magico	golarion→aon, fuori PRD
+Fazzoletto della Localizzazione	Handkerchief of Finding	oggetto magico	golarion→d20pfsrd
+Felhart	Felhart	oggetto magico	golarion→aon, fuori PRD
+Femore del Povero	Pauper's Thighbone	oggetto magico	golarion→aon, fuori PRD
+Fermaglio del Mimetismo	Brooch of Blending	oggetto magico	golarion→d20pfsrd
+Fiamma Infernale	Hellcaller's Edge	oggetto magico	golarion→aon, fuori PRD
+Filetto di Rondinone Imburrato	Buttered Sparrowfish Fillet	oggetto magico	golarion→aon, fuori PRD
+Filtro d'Amore	Philter of Love	oggetto magico	golarion→d20pfsrd
+Finestra Fluttuante	Lambent Window	oggetto magico	golarion→d20pfsrd
+Finestra Unidirezionale	One-Way Window	oggetto magico	golarion→d20pfsrd
+Fischietto del Richiamo	Whistle of Calling	oggetto magico	golarion→d20pfsrd
+Flauto dei Suoni	Pipes of Sounding	oggetto magico	golarion→d20pfsrd
+Flauto dei Topi	Pipes of the Sewers	oggetto magico	golarion→d20pfsrd
+Flauto del Guardiano dei Cunicoli	Pipes of the Warren Guardian	oggetto magico	golarion→d20pfsrd
+Flauto Incantatore	Pipes of Haunting	oggetto magico	golarion→d20pfsrd
+Fodero del Tamponamento	Scabbard of Stanching	oggetto magico	golarion→d20pfsrd
+Fodero del Vigore	Scabbard of Vigor	oggetto magico	golarion→d20pfsrd
+Fodero della Lama Furtiva	Sheath of Bladestealth	oggetto magico	golarion→d20pfsrd
+Fodero delle Estremità Affilate	Scabbard of Keen Edges	oggetto magico	golarion→d20pfsrd
+Fodero delle Molte Lame	Scabbard of Many Blades	oggetto magico	golarion→d20pfsrd
+Fortezza Istantanea	Instant Fortress	oggetto magico	golarion→d20pfsrd
+Frammento di Ghiaccio del Fattucchiere	Witch Ice Shard	oggetto magico	golarion→aon, fuori PRD
+Freccia Assassina	Slaying Arrow	oggetto magico	golarion→d20pfsrd
+Freccia del Sonno	Sleep Arrow	oggetto magico	golarion→d20pfsrd
+Freccia Incandescente	Searing Arrow	oggetto magico	golarion→d20pfsrd
+Freccia Sfrigolante	Sizzling Arrow	oggetto magico	golarion→d20pfsrd
+Frusta Coda di Scorpione	Scorpion Tail Whip	oggetto magico	golarion→aon, fuori PRD
+Fuso della Perfetta Conoscenza	Spindle of Perfect Knowledge	oggetto magico	golarion→d20pfsrd
+Gemma della Luminosità	Gem of Brightness	oggetto magico	golarion→d20pfsrd
+Gemma della Visione	Gem of Seeing	oggetto magico	golarion→d20pfsrd
+Gemma Fantasma	Phantasmal Gem	oggetto magico	golarion→d20pfsrd
+Gemma Stella Kitsune	Kitsune Star Gem	oggetto magico	golarion→d20pfsrd
+Giaccanera	Blackjacket	oggetto magico	golarion→aon, fuori PRD
+Giaco delle Nebbie	Mistmail	oggetto magico	golarion→d20pfsrd
+Giaco di Maglia in Mithral	Mithral Shirt	oggetto magico	golarion→d20pfsrd
+Giavellotto del Fulmine	Javelin of Lightning	oggetto magico	golarion→d20pfsrd
+Giurante	Oathtaker	oggetto magico	golarion→aon, fuori PRD
+Globo delle Tempeste	Orb of Storms	oggetto magico	golarion→d20pfsrd
+Grande Cubo di Jayalakshmi	Greatcube of Jayalakshmi	oggetto magico	golarion→aon, fuori PRD
+Guanti dei Detriti	Rubble Gloves	oggetto magico	golarion→d20pfsrd
+Guanti della Marchiatura	Gloves of Marking	oggetto magico	golarion→d20pfsrd
+Guanti delle Abilità Marziali	Gauntlets of Skill at Arms	oggetto magico	golarion→d20pfsrd
+Guanti delle Dita Leste	Quickfingers Gloves	oggetto magico	golarion→d20pfsrd
+Guanti Elfici	Gloves of Elvenkind	oggetto magico	golarion→d20pfsrd
+Guanti Insanguinati	Bloodstained Gloves	oggetto magico	golarion→d20pfsrd
+Guardia dell'Uomo	Guard of Man	oggetto magico	golarion→aon, fuori PRD
+Guardiana Monastica	Monastic Warden	oggetto magico	golarion→aon, fuori PRD
+Ikarikurusai	Ikarikurusai, the Raging Cyclone	oggetto magico	golarion→aon, fuori PRD
+Il Demonscopio	The Demonscope	oggetto magico	golarion→aon, fuori PRD
+Il Tomo della Gola	The Gluttonous Tome	oggetto magico	golarion→aon, fuori PRD
+Il Totemrix	The Totemrix	oggetto magico	golarion→aon, fuori PRD
+Impalatore di Spine	Impaler of Thorns	oggetto magico	golarion→aon, fuori PRD
+Impiastro per Ferite	Wound Paste	oggetto magico	golarion→d20pfsrd
+Infusione di Fuoco Infernale	Hellfire Infusion	oggetto magico	golarion→aon, fuori PRD
+Inganno Cremisi	Crimson Bluff	oggetto magico	golarion→aon, fuori PRD
+Involtini di Cheya	Cheya Dumplings	oggetto magico	golarion→aon, fuori PRD
+Klar dei Lyrune-Quah	Lyrune-Quah Klar	oggetto magico	golarion→aon, fuori PRD
+L'Intramontabile	The Morrowfall	oggetto magico	golarion→aon, fuori PRD
+L'Occhio Impossibile	The Impossible Eye	oggetto magico	golarion→aon, fuori PRD
+L'Ultimo Teorema	The Last Theorem	oggetto magico	golarion→aon, fuori PRD
+La Verga che Non Dovrebbe Esistere (Minore)	Rod that Should Not Be (Lesser)	oggetto magico	golarion→aon
+Lama del Cavaliere della Rosa	Rose Knight's Blade	oggetto magico	golarion→aon, fuori PRD
+Lama del Cecchino	Sharpshooter’s Blade	oggetto magico	golarion→aon, fuori PRD
+Lama del Coniglio	Rabbit's Blade	oggetto magico	golarion→aon, fuori PRD
+Lama del Martire Volontario	Blade of the Willing Martyr	oggetto magico	golarion→aon, fuori PRD
+Lama del Risentimento	Grudge Blade	oggetto magico	golarion→aon, fuori PRD
+Lama del Rostland	Rostland Edge	oggetto magico	golarion→aon, fuori PRD
+Lama dell'Occhio della Mente	Mind's Eye Blade	oggetto magico	golarion→aon, fuori PRD
+Lama della Mantide	Mantis Blade	oggetto magico	golarion→aon, fuori PRD
+Lama Finale	Final Blade	oggetto magico	golarion→aon, fuori PRD
+Lama Legata	Relic of Kazavon, Bound Blade	oggetto magico	golarion→aon, fuori PRD
+Lama Risorta	Risen Blade	oggetto magico	golarion→aon, fuori PRD
+Lama Squartacuore	Heartripper Blade	oggetto magico	golarion→aon, fuori PRD
+Lama Tonante del Casato Sugimatu	The Thundering Blade of the House of Sugimatu	oggetto magico	golarion→aon, fuori PRD
+Lamaspora	Sporeblade	oggetto magico	golarion→aon, fuori PRD
+Lancia da Guerra	War Lance	oggetto magico	golarion→aon, fuori PRD
+Lancia del Cavaliere-Capitano	Knight-Captain's Lance	oggetto magico	golarion→aon, fuori PRD
+Lancia del Guardiano Vigile	Spear of the Watchful Guardian	oggetto magico	golarion→aon, fuori PRD
+Lancia del Mammut	Mammoth Lance	oggetto magico	golarion→aon, fuori PRD
+Lancia del Wendifisa	Wendifisa Spear	oggetto magico	golarion→aon, fuori PRD
+Lancia Sacrificale	Sacrificial Spear	oggetto magico	golarion→aon, fuori PRD
+Lanterna della Vita	Life Lantern	oggetto magico	golarion→aon, fuori PRD
+Lente dell'Anima	Soul Lens	oggetto magico	golarion→aon, fuori PRD
+Lente dell'Immagine	Imago Lens	oggetto magico	golarion→aon, fuori PRD
+Liquore dell'Eroe	Hero's Brew	oggetto magico	golarion→aon, fuori PRD
+Liuto della Discordia	Lute of Discord	oggetto magico	golarion→aon
+Machete dello Sgombero	Machete of Clearing (normal)	oggetto magico	golarion→aon, fuori PRD
+Madu di Okeno	Okeno Madu	oggetto magico	golarion→aon, fuori PRD
+Manto dal Collare Salvavita	Lifecollar Coat	oggetto magico	golarion→aon, fuori PRD
+Martella Nemici	Hammer of Enemies	oggetto magico	golarion→aon
+Mascella del Venerabile Galevius	Jawbone of the Venerable Galevius	oggetto magico	golarion→aon, fuori PRD
+Maschera del Faraone Dimenticato	Mask of the Forgotten Pharaoh	oggetto magico	golarion→aon, fuori PRD
+Maschera Funeraria dei Quattro Faraoni dell'Ascensione	Funeral Mask of the Four Pharaohs of Ascension	oggetto magico	golarion→aon, fuori PRD
+Mazzo del Fato Infranto	Deck of Slivering Fate	oggetto magico	golarion→aon, fuori PRD
+Mazzo dell'Apprensura di Zellara	Zellara's Harrow Deck	oggetto magico	golarion→aon, fuori PRD
+Molvenn	Molvënn	oggetto magico	golarion→aon, fuori PRD
+Morso del Barracuda	Barracuda's Bite	oggetto magico	golarion→aon, fuori PRD
+Noriznigath	Noriznigath	oggetto magico	golarion→aon, fuori PRD
+Nunchaku Fauci di Drago	Dragonmaw Nunchaku	oggetto magico	golarion→aon, fuori PRD
+O-Yoroi Imperiale	O-Yoroi of Imperial Rule	oggetto magico	golarion→aon, fuori PRD
+Occhio del Delirio	Eye of Rapture	oggetto magico	golarion→aon, fuori PRD
+Oculo di Abaddon	Oculus of Abaddon	oggetto magico	golarion→aon, fuori PRD
+Ombra e Sussurro	Whisper and Shadow	oggetto magico	golarion→aon, fuori PRD
+Ovinrbaane	Ovinrbaane, Enemy of All Enemies	oggetto magico	golarion→aon, fuori PRD
+Pan di Via	Waybread	oggetto magico	golarion→aon, fuori PRD
+Panoplia della Fanciulla	Maiden's Panoply	oggetto magico	golarion→aon, fuori PRD
+Pelle di Ghoul	Ghoul Hide	oggetto magico	golarion→aon, fuori PRD
+Pelle di Klendar il Re dei Troll	Skin of Klendar the Troll King	oggetto magico	golarion→aon, fuori PRD
+Pelle di Mammut	Mammoth Hide	oggetto magico	golarion→aon, fuori PRD
+Pelle Tritata	Relic of Kazavon, Shredskin	oggetto magico	golarion→aon, fuori PRD
+Penna della Rivelazione	Revelation Quill	oggetto magico	golarion→aon, fuori PRD
+Pepaiola a Doppio Colpo	Doubleshot Pepperbox	oggetto magico	golarion→aon, fuori PRD
+Pergamena di Kakishon	Scroll of Kakishon	oggetto magico	golarion→aon, fuori PRD
+Picca da Arrembaggio del Respingimento	Boarding Pike of Repelling	oggetto magico	golarion→aon, fuori PRD
+Pietra di Sigillo Azlanti	Azlanti Sealstone	oggetto magico	golarion→aon, fuori PRD
+Pietre Magiche Thassiloniane	Ioun Stones, Thassilonian	oggetto magico	golarion→aon, fuori PRD
+Pistola Debilitante	Enervating Pistol	oggetto magico	golarion→aon, fuori PRD
+Pistola del Paciere	Peacekeeping Pistol	oggetto magico	golarion→aon, fuori PRD
+Pozzo delle Rune dell'Avarizia	Runewell of Greed	oggetto magico	golarion→aon, fuori PRD
+Pozzo delle Rune Minore	Runewell, Minor	oggetto magico	golarion→aon, fuori PRD
+Protezione dello Sceriffo con lo Scudo	Shieldmarshal's Ward	oggetto magico	golarion→aon, fuori PRD
+Pugnale del Morso di Serpente	Snakebite Dagger	oggetto magico	golarion→aon, fuori PRD
+Pugno del Signifer	Signifer's Fist	oggetto magico	golarion→aon, fuori PRD
+Pungiglione della Viverna	Wyvernsting	oggetto magico	golarion→aon, fuori PRD
+Pungiglione Marino	Brine’s Sting	oggetto magico	golarion→aon, fuori PRD
+Ramo di Quiema	Quiema's Branch	oggetto magico	golarion→aon, fuori PRD
+Rasoio Luttuoso	Mournful Razor	oggetto magico	golarion→aon, fuori PRD
+Ritratto dell'Id	Id Portrait	oggetto magico	golarion→aon, fuori PRD
+Rixbrand	Rixbrand	oggetto magico	golarion→aon, fuori PRD
+Sbiancatore	Blancher	oggetto magico	golarion→aon, fuori PRD
+Sciabola da Abbordaggio della Marea	Tidewater Cutlass	oggetto magico	golarion→aon, fuori PRD
+Sciarpa del Vagabondo	Wanderer's Scarf	oggetto magico	golarion→aon, fuori PRD
+Scimitarra del Colpo d'Ala	Scimitar of the Striking Wing	oggetto magico	golarion→aon, fuori PRD
+Scorpione d'Acqua	Water Scorpion	oggetto magico	golarion→aon, fuori PRD
+Scorze di Limone Lanterino	Sun-Dried Lantern Lemons	oggetto magico	golarion→aon, fuori PRD
+Scudo degli Artigli	Clawhand Shield	oggetto magico	golarion→aon
+Scudo del Malioso	Shield of the Mage	oggetto magico	golarion→aon
+Scudo del Massacro Sanguinario	Bloodfeast shield	oggetto magico	golarion→aon
+Scudo dell'Aurora	Shield of Sunrise	oggetto magico	golarion→aon, fuori PRD
+Scudo Infranto di Arnisant	Shattered Shield of Arnisant	oggetto magico	golarion→aon, fuori PRD
+Scudo Scarabeo	Scarab Shield	oggetto magico	golarion→aon, fuori PRD
+Scudo Spirituale Mwangi	Mwangi Spirit Shield	oggetto magico	golarion→aon, fuori PRD
+Seme di Peperoncino Fuoconeve	Snowberry Fire Peppers	oggetto magico	golarion→aon, fuori PRD
+Sferza del Padrone	Master's Lash	oggetto magico	golarion→aon, fuori PRD
+Sferza del Sadico	Sadist's Lash	oggetto magico	golarion→aon, fuori PRD
+Shinobi Fuhonsen	Shinobi Fuhonsen	oggetto magico	golarion→aon, fuori PRD
+Sorgente Cantoriana	Cantorian Spring	oggetto magico	golarion→aon, fuori PRD
+Spaccaimmondi	Fiendsplitter	oggetto magico	golarion→aon, fuori PRD
+Spaccaterra dell'Ingiustizia Vendicata	Earth Breaker of Righted Injustice	oggetto magico	golarion→aon, fuori PRD
+Spada Canterina	Singing Sword	oggetto magico	golarion→aon
+Spada dell'Artigliata	Talonstrike Sword	oggetto magico	golarion→aon, fuori PRD
+Spada dello Spirito delle Nove Spire	Nine-Fold Spirit Sword	oggetto magico	golarion→aon, fuori PRD
+Spadone Fendente	Shearing Sword	oggetto magico	golarion→aon, fuori PRD
+Sparadardi della Distrazione	Launcher of Distraction	oggetto magico	golarion→aon, fuori PRD
+Spilla della Guida	Bellwether Brooch	oggetto magico	golarion→aon, fuori PRD
+Spirale della Signora	Lady's Spiral	oggetto magico	golarion→aon, fuori PRD
+Stella Indiscreta	Prying Star	oggetto magico	golarion→aon, fuori PRD
+Stiletto della Sofferenza del Maestro	Master's Woe Stiletto	oggetto magico	golarion→aon, fuori PRD
+Stocco di Luthier	Luthier's Rapier	oggetto magico	golarion→aon, fuori PRD
+Stocco di Vesper	Vesper's Rapier	oggetto magico	golarion→aon, fuori PRD
+Stola dell'Erede	Stole of the Inheritor	oggetto magico	golarion→aon, fuori PRD
+Testa di Corvo	Raven's Head	oggetto magico	golarion→aon, fuori PRD
+Torta Salterina	Leap Cake	oggetto magico	golarion→aon, fuori PRD
+Trono di Nalt	Relic of Kazavon, Throne of Nalt	oggetto magico	golarion→aon, fuori PRD
+Tsuruhashi	Tsuruhashi, the Silent Crane	oggetto magico	golarion→aon, fuori PRD
+Tunica delle Fenditure	Robe of the Rifts	oggetto magico	golarion→aon, fuori PRD
+Ultima Parola	Final Word	oggetto magico	golarion→aon, fuori PRD
+Uncino del Mago	Wizard Hook	oggetto magico	golarion→aon, fuori PRD
+Uncino e Flagello dei Re	Crook and Flail of Kings	oggetto magico	golarion→aon, fuori PRD
+Uniforme del Cavaliere dell'Aquila	Eagle Knight Dress Uniform	oggetto magico	golarion→aon, fuori PRD
+Urlo della Banshee	Banshee's Howl	oggetto magico	golarion→aon, fuori PRD
+Urna dell'Ombra	Shadow Urn	oggetto magico	golarion→aon, fuori PRD
+Urumi Risoluta	Steadfast Urumi	oggetto magico	golarion→aon, fuori PRD
+Vendetta Elfica	Elven Vengeance	oggetto magico	golarion→aon, fuori PRD
+Verga Annunciatrice	harbinger rod	oggetto magico	golarion→aon
+Verga del Fomentatempesta	Storm Kindler's Rod	oggetto magico	golarion→aon, fuori PRD
+Vespa Danzante	Dancing Wasp	oggetto magico	golarion→aon, fuori PRD
+Veste della Notte	Nightskin	oggetto magico	golarion→aon, fuori PRD
+Vesti della Vera Fede	Truefaith Vestments	oggetto magico	golarion→aon, fuori PRD
+Zanna di Erebo	Fang of Erebus	oggetto magico	golarion→aon, fuori PRD
+Zanna di Natron	Natron Fang	oggetto magico	golarion→aon, fuori PRD
+Zul	Zul	oggetto magico	golarion→aon, fuori PRD
+Zuppa Nuovavita	Newlife Soup	oggetto magico	golarion→aon, fuori PRD
+Sottodominio degli Agathion	Agathion Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio degli Antenati	Ancestors Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio degli Arconti	Archon Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio degli Azata	Azata Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio degli Inevitabili	Inevitable Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio degli Oceani	Oceans Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dei Daemon	Daemon Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dei Demoni	Demon Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dei Diavoli	Devil Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dei Protean	Protean Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Commercio	Trade Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Costrutto	Construct Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Divino	Divine Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Fato	Fate Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Fumo	Smoke Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Furto	Thievery Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Ghiaccio	Ice Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Giorno	Day Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Linguaggio	Language Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Martirio	Martyr Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Metallo	Metal Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Pensiero	Thought Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Risanamento	Restoration Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Sangue	Blood Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Sotterfugio	Deception Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio del Vento	Wind Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Alienazione	Insanity Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Amore	Love Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Arazzo Oscuro	Dark Tapestry Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Arcano	Arcane Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Assassinio	Murder Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Autorità	Leadership Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Eroismo	Heroism Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Esplorazione	Exploration Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Incubo	Nightmare Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Ira	Rage Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Isolamento	Isolation Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio dell'Onore	Honor Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Casa	Home Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Catastrofe	Catastrophe Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Cenere	Ash Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Crescita	Growth Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Decomposizione	Decay Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Difesa	Defense Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Famiglia	Family Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Fatica	Toil Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Ferocia	Ferocity Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Liberazione	Freedom Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Luce	Light Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Lussuria	Lust Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Maledizione	Curse Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Memoria	Memory Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Notte	Night Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Pelliccia	Fur Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Perdita	Loss Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Piuma	Feather Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Purezza	Purity Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Resurrezione	Resurrection Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Risolutezza	Resolve Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio della Rivoluzione	Revolution Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Anime	Souls Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Caverne	Caves Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Interdizioni	Wards Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Nubi	Cloud Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Stagioni	Seasons Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Stelle	Stars Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Tattiche	Tactics Subdomain	sottodominio	golarion→d20pfsrd
+Sottodominio delle Tempeste	Storms Subdomain	sottodominio	golarion→d20pfsrd
+Stirpe Aberrante	Aberrant Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Abissale	Abyssal Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Acquatica	Aquatic Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Arcana	Arcane Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Boreale	Boreal Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Celestiale	Celestial Bloodline	stirpe	golarion→d20pfsrd
+Stirpe dello Stregone Coboldo	Kobold Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Djinni	Djinni Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Draconica	Draconic Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Ectoplasmatica	Ectoplasm Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Efreeti	Efreeti Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Elementale	Elemental Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Eletta	Destined Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Fatata	Fey Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Imperiosa	Imperious Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Infernale	Infernal Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Magistrale	Maestro Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Maledetta	Accursed Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Marid	Marid Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Non Morta	Undead Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Ombra	Shadow Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Parapsichica	Psychic Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Protean	Protean Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Rakshasa	Rakshasa Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Serpentiforme	Serpentine Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Shaitan	Shaitan Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Sognatrice	Dreamspun Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Sotterranea	Deep Earth Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Stellare	Starsoul Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Tempestosa	Stormborn Bloodline	stirpe	golarion→d20pfsrd
+Stirpe Verdeggiante	Verdant Bloodline	stirpe	golarion→d20pfsrd

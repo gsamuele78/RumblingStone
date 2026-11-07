@@ -664,6 +664,35 @@ jobs:
             --md "$RUNNER_TEMP/riscontro.md"
           { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
 
+  # ADR-0110, canale STABLE (bloccante da subito, su richiesta del DM dopo la
+  # misura 13/40 → 40/40): i nomi dei talenti nelle schede sono quelli della
+  # tabella o delle fonti, o portano una marca. Varianti e nomi 3.5 nei moduli
+  # PF1e bloccano; gli sconosciuti hanno un ratchet che può solo scendere.
+  lessico-regole:
+    name: Termini ufficiali 3.5 e PF1e (ADR-0110)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Scarica le fonti a commit fissato e genera l'elenco dei termini
+        run: |
+          python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" scarica
+          python scripts/lessico_regole.py --cache "$RUNNER_TEMP/srd" indice
+
+      - name: Tabella, casi veri e schede
+        run: |
+          set -o pipefail
+          L="python scripts/lessico_regole.py --cache $RUNNER_TEMP/srd --offline"
+          $L verifica-tabella
+          $L casi plans/esperimenti/regole-ufficiali-2026-11-07/casi.json --check
+          { echo "## Termini ufficiali (ADR-0110)"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          $L controlla --tutto --volumi --check --massimo-sconosciuti 151 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
   build:
     name: Build skill packages
     runs-on: ubuntu-24.04

@@ -1,0 +1,1990 @@
+# Tabella italiano D&D 3.5 -> SRD 3.5 (lessico_regole.py). Solo nomi, niente testo delle regole.
+# Nomi italiani: miniaturefantasy.com (talenti, incantesimi, abilità, glossario delle condizioni, classi) e
+# Sigil online (classi di prestigio), letti il 2026-11-07, e il database di Mephit (github.com/mephitrpg/mephit,
+# _sql_backup/mephit_test.7z, tabelle srd35_*, colonne name_en/name_it; solo i nomi). Ogni nome inglese è un titolo dell'SRD 3.5
+# (olimot/srd-v3.5-md@c7f30a0c). Colonna «abbinamento», cioè chi lega l'italiano all'inglese:
+#   doppia fonte  lo stesso nome italiano è in Golarion con il suo nome inglese, e quel nome è nell'SRD
+#   prefisso      il nome italiano 3.5 aggiunge il mago (Freccia acida di Melf), il resto è come sopra
+#   derivato      serie numerata dalla prima voce (Evoca mostri II..IX da Evoca mostri I)
+#   mephit        coppia del database di Mephit, nome inglese trovato nell'SRD; fonte unica, non incrociata
+#   claude        abbinato da Claude e controllato nell'SRD; «non riscontrato» = l'italiano non è in fonte
+# Le voci di scripts/lessico_it.yaml (curate, con varianti e note) prevalgono su queste.
+italiano	srd35	tipo	abbinamento
+Acrobatico	Acrobatic	talento	doppia fonte
+Afferrare frecce	Snatch Arrows	talento	doppia fonte
+Affinità animale	Animal Affinity	talento	doppia fonte
+Agile	Agile	talento	claude
+Allerta	Alertness	talento	doppia fonte
+Arma accurata	Weapon Finesse	talento	doppia fonte
+Arma focalizzata	Weapon Focus	talento	doppia fonte
+Arma focalizzata superiore	Greater Weapon Focus	talento	doppia fonte
+Arma specializzata	Weapon Specialization	talento	doppia fonte
+Arma specializzata superiore	Greater Weapon Specialization	talento	doppia fonte
+Armatura naturale migliorata	Improved Natural Armor	talento	doppia fonte
+Atletico	Athletic	talento	doppia fonte
+Attacco con lo scudo migliorato	Improved Shield Bash	talento	doppia fonte
+Attacco in sella	Ride-By Attack	talento	doppia fonte
+Attacco in volo	Flyby Attack	talento	doppia fonte
+Attacco naturale migliorato	Improved Natural Attack	talento	doppia fonte
+Attacco poderoso	Power Attack	talento	doppia fonte
+Attacco rapido	Spring Attack	talento	doppia fonte
+Attacco turbinante	Whirlwind Attack	talento	doppia fonte
+Aumentare evocazione	Augment Summoning	talento	doppia fonte
+Autorità	Leadership	talento	doppia fonte
+Autosufficiente	Self-Sufficient	talento	doppia fonte
+Capacità focalizzata	Ability Focus	talento	doppia fonte
+Capacità magica potenziata	Empower Spell-Like Ability	talento	doppia fonte
+Capacità magica rapida	Quicken Spell-Like Ability	talento	doppia fonte
+Carica devastante	Spirited Charge	talento	doppia fonte
+Colpo senz'armi migliorato	Improved Unarmed Strike	talento	doppia fonte
+Colpo terrificante	Awesome Blow	talento	doppia fonte
+Combattere alla cieca	Blind-Fight	talento	doppia fonte
+Combattere con due armi	Two-Weapon Fighting	talento	doppia fonte
+Combattere con due armi migliorato	Improved Two-Weapon Fighting	talento	doppia fonte
+Combattere con due armi superiore	Greater Two-Weapon Fighting	talento	doppia fonte
+Combattere con più armi	Multiweapon Fighting	talento	doppia fonte
+Combattere in sella	Mounted Combat	talento	doppia fonte
+Competenza negli scudi	Shield Proficiency	talento	doppia fonte
+Competenza negli scudi torre	Tower Shield Proficiency	talento	doppia fonte
+Competenza nelle armature (leggere)	Armor Proficiency (Light)	talento	claude
+Competenza nelle armi da guerra	Martial Weapon Proficiency	talento	doppia fonte
+Competenza nelle armi esotiche	Exotic Weapon Proficiency	talento	doppia fonte
+Competenza nelle armi semplici	Simple Weapon Proficiency	talento	doppia fonte
+Controincantesimo migliorato	Improved Counterspell	talento	doppia fonte
+Correre	Run	talento	doppia fonte
+Creare armi e armature magiche	Craft Magic Arms and Armor	talento	doppia fonte
+Creare bacchette	Craft Wand	talento	doppia fonte
+Creare bastoni	Craft Staff	talento	doppia fonte
+Creare costrutti	Craft Construct	talento	doppia fonte
+Creare oggetti meravigliosi	Craft Wondrous Item	talento	doppia fonte
+Creare verghe	Craft Rod	talento	doppia fonte
+Critico migliorato	Improved Critical	talento	doppia fonte
+Deviare frecce	Deflect Arrows	talento	doppia fonte
+Difendere con due armi	Two-Weapon Defense	talento	doppia fonte
+Diligente	Diligent	talento	claude
+Disarmare migliorato	Improved Disarm	talento	doppia fonte
+Dita sottili	Nimble Fingers	talento	claude
+Duro a morire	Diehard	talento	doppia fonte
+Escludere materiali	Eschew Materials	talento	doppia fonte
+Estrazione rapida	Quick Draw	talento	doppia fonte
+Famiglio Migliorato	Improved Familiar	talento	doppia fonte
+Fintare migliorato	Improved Feint	talento	doppia fonte
+Fluttuare	Hover	talento	doppia fonte
+Forgiare anelli	Forge Ring	talento	doppia fonte
+Furtivo	Stealthy	talento	doppia fonte
+Ghermire	Snatch	talento	doppia fonte
+Incalzare	Cleave	talento	doppia fonte
+Incalzare potenziato	Great Cleave	talento	doppia fonte
+Incantare in combattimento	Combat Casting	talento	doppia fonte
+Incantesimi ampliati	Widen Spell	talento	doppia fonte
+Incantesimi estesi	Extend Spell	talento	doppia fonte
+Incantesimi focalizzati (bene, caos, legge o male)	Spell Focus	talento	doppia fonte
+Incantesimi focalizzati superiore	Greater Spell Focus	talento	doppia fonte
+Incantesimi immobili	Still Spell	talento	doppia fonte
+Incantesimi inarrestabili	Spell Penetration	talento	doppia fonte
+Incantesimi inarrestabili superiore	Greater Spell Penetration	talento	doppia fonte
+Incantesimi ingranditi	Enlarge Spell	talento	doppia fonte
+Incantesimi intensificati	Heighten Spell	talento	doppia fonte
+Incantesimi massimizzati	Maximize Spell	talento	doppia fonte
+Incantesimi naturali	Natural Spell	talento	doppia fonte
+Incantesimi persistenti	Persistent Spell	talento	doppia fonte
+Incantesimi potenziati	Empower Spell	talento	doppia fonte
+Incantesimi rapidi	Quicken Spell	talento	doppia fonte
+Incantesimi silenziosi	Silent Spell	talento	doppia fonte
+Ingannevole	Deceitful	talento	doppia fonte
+Iniziativa migliorata	Improved Initiative	talento	doppia fonte
+Lottare migliorato	Improved Grapple	talento	doppia fonte
+Maestria in combattimento	Combat Expertise	talento	doppia fonte
+Manolesta	Deft Hands	talento	doppia fonte
+Mescere pozioni	Brew Potion	talento	doppia fonte
+Mobilità	Mobility	talento	doppia fonte
+Multiattacco	Multiattack	talento	doppia fonte
+Negoziatore	Negotiator	talento	claude
+Oltrepassare migliorato	Improved Overrun	talento	doppia fonte
+Padronanza degli incantesimi	Spell Mastery	talento	doppia fonte
+Persuasivo	Persuasive	talento	doppia fonte
+Pugno stordente	Stunning Fist	talento	doppia fonte
+Resistenza fisica	Endurance	talento	doppia fonte
+Ricarica rapida	Rapid Reload	talento	doppia fonte
+Riflessi fulminei	Lightning Reflexes	talento	doppia fonte
+Riflessi in combattimento	Combat Reflexes	talento	doppia fonte
+Robustezza	Toughness	talento	doppia fonte
+Sbilanciare migliorato	Improved Trip	talento	doppia fonte
+Scacciare extra	Extra Turning	talento	claude
+Scacciare migliorato	Improved Turning	talento	claude
+Schivare	Dodge	talento	doppia fonte
+Scrivere pergamene	Scribe Scroll	talento	doppia fonte
+Seguire tracce	Track	talento	claude
+Spezzare migliorato	Improved Sunder	talento	doppia fonte
+Spingere migliorato	Improved Bull Rush	talento	doppia fonte
+Tempra possente	Great Fortitude	talento	doppia fonte
+Tirare in sella	Mounted Archery	talento	doppia fonte
+Tiro in movimento	Shot on the Run	talento	claude
+Tiro lontano	Far Shot	talento	doppia fonte
+Tiro multiplo	Manyshot	talento	doppia fonte
+Tiro preciso	Precise Shot	talento	doppia fonte
+Tiro preciso migliorato	Improved Precise Shot	talento	doppia fonte
+Tiro rapido	Rapid Shot	talento	doppia fonte
+Tiro ravvicinato	Point-Blank Shot	talento	doppia fonte
+Travolgere	Trample	talento	doppia fonte
+Virare	Wingover	talento	doppia fonte
+Vocazione magica	Magical Aptitude	talento	doppia fonte
+Volontà di ferro	Iron Will	talento	doppia fonte
+Aiuto	Aid	incantesimo	doppia fonte
+Allarme	Alarm	incantesimo	doppia fonte
+Alleato planare	Planar Ally	incantesimo	doppia fonte
+Alleato planare inferiore	Planar Ally, Lesser	incantesimo	doppia fonte
+Alleato planare superiore	Planar Ally, Greater	incantesimo	doppia fonte
+Allineamento imperscrutabile	Undetectable Alignment	incantesimo	doppia fonte
+Allineare arma	Align Weapon	incantesimo	doppia fonte
+Allucinazione mortale	Phantasmal Killer	incantesimo	doppia fonte
+Alterare se stesso	Alter Self	incantesimo	doppia fonte
+Ammorbidire terra e pietra	Soften Earth and Stone	incantesimo	doppia fonte
+Analizzare dweomer	Analyze Dweomer	incantesimo	doppia fonte
+Anatema	Bane	incantesimo	doppia fonte
+Ancora dimensionale	Dimensional Anchor	incantesimo	doppia fonte
+Animale messaggero	Animal Messenger	incantesimo	doppia fonte
+Animare corde	Animate Rope	incantesimo	doppia fonte
+Animare morti	Animate Dead	incantesimo	doppia fonte
+Animare oggetti	Animate Objects	incantesimo	doppia fonte
+Animare vegetali	Animate Plants	incantesimo	doppia fonte
+Anti-individuazione	Nondetection	incantesimo	doppia fonte
+Antipatia	Antipathy	incantesimo	doppia fonte
+Aprire chiudere	Open-Close	incantesimo	doppia fonte
+Arma distruttiva	Disrupting Weapon	incantesimo	doppia fonte
+Arma magica	Magic Weapon	incantesimo	doppia fonte
+Arma magica superiore	Magic Weapon, Greater	incantesimo	doppia fonte
+Arma spirituale	Spiritual Weapon	incantesimo	doppia fonte
+Armatura magica	Mage Armor	incantesimo	doppia fonte
+Astuzia della volpe	Fox's Cunning	incantesimo	doppia fonte
+Astuzia della volpe di massa	Fox's Cunning, Mass	incantesimo	doppia fonte
+Aura magica di Nystul	Magic Aura	incantesimo	prefisso
+Aura sacra	Holy Aura	incantesimo	doppia fonte
+Aura sacrilega	Unholy Aura	incantesimo	doppia fonte
+Bacche benefiche	Goodberry	incantesimo	doppia fonte
+Bagliore solare	Sunbeam	incantesimo	doppia fonte
+Banchetto degli eroi	Heroes' Feast	incantesimo	doppia fonte
+Barriera di lame	Blade Barrier	incantesimo	doppia fonte
+Bastone dell'incantesimo	Spellstaff	incantesimo	doppia fonte
+Benedire l'acqua	Bless Water	incantesimo	doppia fonte
+Benedire un'arma	Bless Weapon	incantesimo	doppia fonte
+Benedizione	Bless	incantesimo	doppia fonte
+Blasfemia	Blasphemy	incantesimo	doppia fonte
+Blocca animali	Hold Animal	incantesimo	doppia fonte
+Blocca mostri	Hold Monster	incantesimo	doppia fonte
+Blocca mostri di massa	Hold Monster, Mass	incantesimo	doppia fonte
+Blocca persone	Hold Person	incantesimo	doppia fonte
+Blocca persone di massa	Hold Person, Mass	incantesimo	doppia fonte
+Blocca porte	Hold Portal	incantesimo	doppia fonte
+Bocca magica	Magic Mouth	incantesimo	doppia fonte
+Buone speranze	Good Hope	incantesimo	doppia fonte
+Caduta morbida	Feather Fall	incantesimo	doppia fonte
+Calappio	Snare	incantesimo	doppia fonte
+Calmare animali	Calm Animals	incantesimo	doppia fonte
+Calmare emozioni	Calm Emotions	incantesimo	doppia fonte
+Camminare nel vento	Wind Walk	incantesimo	doppia fonte
+Camminare nell'aria	Air Walk	incantesimo	doppia fonte
+Camminare nelle ombre	Shadow Walk	incantesimo	doppia fonte
+Camminare sull'acqua	Water Walk	incantesimo	doppia fonte
+Campo anti-magia	Antimagic Field	incantesimo	claude
+Camuffare se stesso	Disguise Self	incantesimo	doppia fonte
+Cancellare	Erase	incantesimo	doppia fonte
+Canto di discordia	Song of Discord	incantesimo	doppia fonte
+Capanna di Leomund	Tiny Hut	incantesimo	prefisso
+Carne in pietra	Flesh to Stone	incantesimo	doppia fonte
+Catena di fulmini	Chain Lightning	incantesimo	doppia fonte
+Cavalcatura	Mount	incantesimo	doppia fonte
+Cecità/Sordità	Blindness-Deafness	incantesimo	doppia fonte
+Celare	Sequester	incantesimo	doppia fonte
+Cerchio di morte	Circle of Death	incantesimo	doppia fonte
+Cerchio di teletrasporto	Teleportation Circle	incantesimo	doppia fonte
+Cerchio magico contro il bene	Magic Circle against Good	incantesimo	doppia fonte
+Cerchio magico contro il caos	Magic Circle against Chaos	incantesimo	doppia fonte
+Cerchio magico contro il male	Magic Circle against Evil	incantesimo	doppia fonte
+Cerchio magico contro la legge	Magic Circle against Law	incantesimo	doppia fonte
+Charme su animali	Charm Animal	incantesimo	doppia fonte
+Charme su persone	Charm Person	incantesimo	doppia fonte
+Charme sui mostri	Charm Monster	incantesimo	doppia fonte
+Charme sui mostri di massa	Charm Monster, Mass	incantesimo	doppia fonte
+Chiaroudienza/Chiaroveggenza	Clairaudience-Clairvoyance	incantesimo	doppia fonte
+Clone	Clone	incantesimo	doppia fonte
+Colpo accurato	True Strike	incantesimo	doppia fonte
+Colpo infuocato	Flame Strike	incantesimo	doppia fonte
+Comandare non morti	Command Undead	incantesimo	doppia fonte
+Comandare vegetali	Command Plants	incantesimo	doppia fonte
+Comando	Command	incantesimo	doppia fonte
+Comando superiore	Command, Greater	incantesimo	doppia fonte
+Comprensione dei linguaggi	Comprehend Languages	incantesimo	doppia fonte
+Comunione	Commune	incantesimo	doppia fonte
+Comunione con la natura	Commune with Nature	incantesimo	doppia fonte
+Confusione	Confusion	incantesimo	doppia fonte
+Confusione inferiore	Confusion, Lesser	incantesimo	doppia fonte
+Congedo	Dismissal	incantesimo	doppia fonte
+Cono di freddo	Cone of Cold	incantesimo	doppia fonte
+Conoscenza delle leggende	Legend Lore	incantesimo	doppia fonte
+Conoscere direzione	Know Direction	incantesimo	doppia fonte
+Consacrare	Consecrate	incantesimo	doppia fonte
+Contagio	Contagion	incantesimo	doppia fonte
+Contattare altri piani	Contact Other Plane	incantesimo	doppia fonte
+Contingenza	Contingency	incantesimo	doppia fonte
+Contrastare elementi	Endure Elements	incantesimo	doppia fonte
+Controllare acqua	Control Water	incantesimo	doppia fonte
+Controllare non morti	Control Undead	incantesimo	doppia fonte
+Controllare tempo atmosferico	Control Weather	incantesimo	doppia fonte
+Controllare vegetali	Control Plants	incantesimo	doppia fonte
+Controllare venti	Control Winds	incantesimo	doppia fonte
+Corpo di ferro	Iron Body	incantesimo	doppia fonte
+Costrizione inferiore	Geas, Lesser	incantesimo	doppia fonte
+Costrizione/Cerca	Geas-Quest	incantesimo	doppia fonte
+Creare acqua	Create Water	incantesimo	doppia fonte
+Creare cibo e acqua	Create Food and Water	incantesimo	doppia fonte
+Creare non morti	Create Undead	incantesimo	doppia fonte
+Creare non morti superiori	Create Greater Undead	incantesimo	doppia fonte
+Creazione maggiore	Major Creation	incantesimo	doppia fonte
+Creazione minore	Minor Creation	incantesimo	doppia fonte
+Crescita animale	Animal Growth	incantesimo	doppia fonte
+Crescita di spine	Spike Growth	incantesimo	doppia fonte
+Crescita vegetale	Plant Growth	incantesimo	doppia fonte
+Cumulo strisciante	Shambler	incantesimo	doppia fonte
+Cura ferite critiche	Cure Critical Wounds	incantesimo	doppia fonte
+Cura ferite critiche di massa	Cure Critical Wounds, Mass	incantesimo	doppia fonte
+Cura ferite gravi	Cure Serious Wounds	incantesimo	doppia fonte
+Cura ferite gravi di massa	Cure Serious Wounds, Mass	incantesimo	doppia fonte
+Cura ferite leggere	Cure Light Wounds	incantesimo	doppia fonte
+Cura ferite leggere di massa	Cure Light Wounds, Mass	incantesimo	doppia fonte
+Cura ferite minori	Cure Minor Wounds	incantesimo	claude
+Cura ferite moderate	Cure Moderate Wounds	incantesimo	doppia fonte
+Cura ferite moderate di massa	Cure Moderate Wounds, Mass	incantesimo	doppia fonte
+Danza irresistibile di Otto	Irresistible Dance	incantesimo	prefisso
+Dardo incantato	Magic Missile	incantesimo	doppia fonte
+Debilitazione	Enervation	incantesimo	doppia fonte
+Deformare legno	Warp Wood	incantesimo	doppia fonte
+Demenza	Insanity	incantesimo	doppia fonte
+Desiderio	Wish	incantesimo	doppia fonte
+Desiderio limitato	Limited Wish	incantesimo	doppia fonte
+Destriero fantasma	Phantom Steed	incantesimo	claude
+Dettame	Dictum	incantesimo	doppia fonte
+Devastazione	Doom	incantesimo	doppia fonte
+Disco fluttuante di Tenser	Floating Disk	incantesimo	claude
+Disgiunzione di Mordenkainen	Mage’s Disjunction	incantesimo	claude
+Disintegrazione	Disintegrate	incantesimo	doppia fonte
+Disperazione opprimente	Crushing Despair	incantesimo	doppia fonte
+Dissacrare	Desecrate	incantesimo	doppia fonte
+Dissimulare	Misdirection	incantesimo	doppia fonte
+Dissolvi il bene	Dispel Good	incantesimo	doppia fonte
+Dissolvi il caos	Dispel Chaos	incantesimo	doppia fonte
+Dissolvi il male	Dispel Evil	incantesimo	doppia fonte
+Dissolvi la legge	Dispel Law	incantesimo	doppia fonte
+Dissolvi magie	Dispel Magic	incantesimo	doppia fonte
+Dissolvi magie superiore	Dispel Magic, Greater	incantesimo	doppia fonte
+Distorsione	Displacement	incantesimo	doppia fonte
+Distruggere non morti	Disrupt Undead	incantesimo	doppia fonte
+Distruggere viventi	Slay Living	incantesimo	doppia fonte
+Distruzione	Destruction	incantesimo	doppia fonte
+Dito della morte	Finger of Death	incantesimo	doppia fonte
+Divinare	Divination	incantesimo	claude
+Dominare animali	Dominate Animal	incantesimo	doppia fonte
+Dominare mostri	Dominate Monster	incantesimo	doppia fonte
+Dominare persone	Dominate Person	incantesimo	doppia fonte
+Elucubrazione di Mordenkainen	Mage’s Lucubration	incantesimo	claude
+Epurare invisibilità	Invisibility Purge	incantesimo	doppia fonte
+Eroismo	Heroism	incantesimo	doppia fonte
+Eroismo superiore	Heroism, Greater	incantesimo	doppia fonte
+Esigere	Demand	incantesimo	doppia fonte
+Esilio	Banishment	incantesimo	doppia fonte
+Espiazione	Atonement	incantesimo	doppia fonte
+Esplosione solare	Sunburst	incantesimo	doppia fonte
+Estasiare	Enthrall	incantesimo	doppia fonte
+Estinguere fuoco	Quench	incantesimo	doppia fonte
+Estremità affilata	Keen Edge	incantesimo	doppia fonte
+Evoca alleato naturale I	Summon Nature's Ally I	incantesimo	doppia fonte
+Evoca alleato naturale II	Summon Nature’s Ally II	incantesimo	derivato
+Evoca alleato naturale III	Summon Nature’s Ally III	incantesimo	derivato
+Evoca alleato naturale IV	Summon Nature’s Ally IV	incantesimo	derivato
+Evoca alleato naturale IX	Summon Nature’s Ally IX	incantesimo	derivato
+Evoca alleato naturale V	Summon Nature’s Ally V	incantesimo	derivato
+Evoca alleato naturale VI	Summon Nature’s Ally VI	incantesimo	derivato
+Evoca alleato naturale VII	Summon Nature’s Ally VII	incantesimo	derivato
+Evoca alleato naturale VIII	Summon Nature’s Ally VIII	incantesimo	derivato
+Evoca mostri I	Summon Monster I	incantesimo	doppia fonte
+Evoca mostri II	Summon Monster II	incantesimo	derivato
+Evoca mostri III	Summon Monster III	incantesimo	derivato
+Evoca mostri IV	Summon Monster IV	incantesimo	derivato
+Evoca mostri IX	Summon Monster IX	incantesimo	derivato
+Evoca mostri V	Summon Monster V	incantesimo	derivato
+Evoca mostri VI	Summon Monster VI	incantesimo	derivato
+Evoca mostri VII	Summon Monster VII	incantesimo	derivato
+Evoca mostri VIII	Summon Monster VIII	incantesimo	derivato
+Evoca sciame	Summon Swarm	incantesimo	doppia fonte
+Evoca strumento	Summon Instrument	incantesimo	doppia fonte
+Evocazioni istantanee di Drawmij	Instant Summons	incantesimo	prefisso
+Fabbricare	Fabricate	incantesimo	doppia fonte
+Fatale	Weird	incantesimo	doppia fonte
+Favore divino	Divine Favor	incantesimo	doppia fonte
+Ferire	Harm	incantesimo	doppia fonte
+Fermare il tempo	Time Stop	incantesimo	doppia fonte
+Fermare non morti	Halt Undead	incantesimo	doppia fonte
+Fiamma perenne	Continual Flame	incantesimo	doppia fonte
+Fiotto acido	Acid Splash	incantesimo	doppia fonte
+Folata di vento	Gust of Wind	incantesimo	doppia fonte
+Fondersi nella pietra	Meld into Stone	incantesimo	doppia fonte
+Forma arborea	Tree Shape	incantesimo	doppia fonte
+Forma eterea	Etherealness	incantesimo	doppia fonte
+Forma gassosa	Gaseous Form	incantesimo	doppia fonte
+Forme animali	Animal Shapes	incantesimo	doppia fonte
+Forza del toro	Bull's Strength	incantesimo	doppia fonte
+Forza del toro di massa	Bull's Strength, Mass	incantesimo	doppia fonte
+Foschia occultante	Obscuring Mist	incantesimo	doppia fonte
+Frantumare	Shatter	incantesimo	doppia fonte
+Frastornare	Daze	incantesimo	doppia fonte
+Frastornare mostri	Daze Monster	incantesimo	doppia fonte
+Freccia acida di Melf	Acid Arrow	incantesimo	prefisso
+Freccia infuocata	Flame Arrow	incantesimo	doppia fonte
+Fulmine	Lightning Bolt	incantesimo	doppia fonte
+Fuorviare	Mislead	incantesimo	doppia fonte
+Gabbia di forza	Forcecage	incantesimo	doppia fonte
+Gelare il metallo	Chill Metal	incantesimo	doppia fonte
+Giara magica	Magic Jar	incantesimo	doppia fonte
+Giusto potere	Righteous Might	incantesimo	doppia fonte
+Glifo di interdizione	Glyph of Warding	incantesimo	doppia fonte
+Glifo di interdizione superiore	Glyph of Warding, Greater	incantesimo	doppia fonte
+Globo di invulnerabilità	Globe of Invulnerability	incantesimo	doppia fonte
+Globo di invulnerabilità inferiore	Globe of Invulnerability, Lesser	incantesimo	doppia fonte
+Grazia del gatto	Cat's Grace	incantesimo	doppia fonte
+Grazia del gatto di massa	Cat's Grace, Mass	incantesimo	doppia fonte
+Grido	Shout	incantesimo	doppia fonte
+Grido superiore	Shout, Greater	incantesimo	doppia fonte
+Guarigione	Heal	incantesimo	doppia fonte
+Guarigione di massa	Heal, Mass	incantesimo	doppia fonte
+Guarire cavalcatura	Heal Mount	incantesimo	doppia fonte
+Guida	Guidance	incantesimo	doppia fonte
+Guscio anti-vegetali	Antiplant Shell	incantesimo	claude
+Guscio anti-vita	Antilife Shell	incantesimo	claude
+Identificare	Identify	incantesimo	doppia fonte
+Immagine maggiore	Major Image	incantesimo	doppia fonte
+Immagine minore	Minor Image	incantesimo	doppia fonte
+Immagine permanente	Permanent Image	incantesimo	doppia fonte
+Immagine persistente	Persistent Image	incantesimo	doppia fonte
+Immagine programmata	Programmed Image	incantesimo	doppia fonte
+Immagine proiettata	Project Image	incantesimo	doppia fonte
+Immagine silenziosa	Silent Image	incantesimo	doppia fonte
+Immagine speculare	Mirror Image	incantesimo	doppia fonte
+Immunità agli incantesimi	Spell Immunity	incantesimo	doppia fonte
+Immunità agli incantesimi superiore	Spell Immunity, Greater	incantesimo	doppia fonte
+Implosione	Implosion	incantesimo	doppia fonte
+Imprigionare	Imprisonment	incantesimo	doppia fonte
+Inaridire	Blight	incantesimo	doppia fonte
+Incubo	Nightmare	incantesimo	doppia fonte
+Incuti paura	Cause Fear	incantesimo	doppia fonte
+Individuazione dei non morti	Detect Undead	incantesimo	doppia fonte
+Individuazione dei pensieri	Detect Thoughts	incantesimo	doppia fonte
+Individuazione del bene	Detect Good	incantesimo	doppia fonte
+Individuazione del caos	Detect Chaos	incantesimo	doppia fonte
+Individuazione del magico	Detect Magic	incantesimo	doppia fonte
+Individuazione del male	Detect Evil	incantesimo	doppia fonte
+Individuazione del veleno	Detect Poison	incantesimo	doppia fonte
+Individuazione della legge	Detect Law	incantesimo	doppia fonte
+Individuazione delle porte segrete	Detect Secret Doors	incantesimo	doppia fonte
+Individuazione dello scrutamento	Detect Scrying	incantesimo	doppia fonte
+Individuazione di animali o vegetali	Detect Animals or Plants	incantesimo	doppia fonte
+Individuazione di calappi e trabocchetti	Detect Snares and Pits	incantesimo	doppia fonte
+Infliggi ferite critiche	Inflict Critical Wounds	incantesimo	doppia fonte
+Infliggi ferite critiche di massa	Inflict Critical Wounds, Mass	incantesimo	doppia fonte
+Infliggi ferite gravi	Inflict Serious Wounds	incantesimo	doppia fonte
+Infliggi ferite gravi di massa	Inflict Serious Wounds, Mass	incantesimo	doppia fonte
+Infliggi ferite leggere	Inflict Light Wounds	incantesimo	doppia fonte
+Infliggi ferite leggere di massa	Inflict Light Wounds, Mass	incantesimo	doppia fonte
+Infliggi ferite minori	Inflict Minor Wounds	incantesimo	claude
+Infliggi ferite moderate	Inflict Moderate Wounds	incantesimo	doppia fonte
+Infliggi ferite moderate di massa	Inflict Moderate Wounds, Mass	incantesimo	doppia fonte
+Influenza sacrilega	Unholy Blight	incantesimo	doppia fonte
+Infondere capacità magiche	Imbue with Spell Ability	incantesimo	doppia fonte
+Ingrandire persone	Enlarge Person	incantesimo	doppia fonte
+Ingrandire persone di massa	Enlarge Person, Mass	incantesimo	doppia fonte
+Interdizione alla morte	Death Ward	incantesimo	doppia fonte
+Intermittenza	Blink	incantesimo	doppia fonte
+Intralciare	Entangle	incantesimo	doppia fonte
+Intrappolare l'anima	Trap the Soul	incantesimo	doppia fonte
+Inversione della gravità	Reverse Gravity	incantesimo	doppia fonte
+Inviare	Sending	incantesimo	doppia fonte
+Invisibilità	Invisibility	incantesimo	doppia fonte
+Invisibilità di massa	Invisibility, Mass	incantesimo	doppia fonte
+Invisibilità superiore	Invisibility, Greater	incantesimo	doppia fonte
+Invocare il fulmine	Call Lightning	incantesimo	doppia fonte
+Invocare tempesta di fulmini	Call Lightning Storm	incantesimo	doppia fonte
+Ipnosi	Hypnotism	incantesimo	doppia fonte
+Ira	Rage	incantesimo	doppia fonte
+Ira dell'ordine	Order’s Wrath	incantesimo	claude
+Labirinto	Maze	incantesimo	doppia fonte
+Lama infuocata	Flame Blade	incantesimo	doppia fonte
+Lamento della banshee	Wail of the Banshee	incantesimo	doppia fonte
+Lampo	Flare	incantesimo	doppia fonte
+Legame	Binding	incantesimo	doppia fonte
+Legame planare	Planar Binding	incantesimo	doppia fonte
+Legame planare inferiore	Planar Binding, Lesser	incantesimo	doppia fonte
+Legame planare superiore	Planar Binding, Greater	incantesimo	doppia fonte
+Legame telepatico di Rary	Telepathic Bond	incantesimo	claude
+Legare anima	Soul Bind	incantesimo	doppia fonte
+Legno di ferro	Ironwood	incantesimo	doppia fonte
+Lentezza	Slow	incantesimo	doppia fonte
+Lettura del magico	Read Magic	incantesimo	doppia fonte
+Levitazione	Levitate	incantesimo	doppia fonte
+Libertà	Freedom	incantesimo	doppia fonte
+Libertà di movimento	Freedom of Movement	incantesimo	doppia fonte
+Linguaggi	Tongues	incantesimo	doppia fonte
+Localizza creatura	Locate Creature	incantesimo	doppia fonte
+Localizza oggetto	Locate Object	incantesimo	doppia fonte
+Loquacità	Glibness	incantesimo	doppia fonte
+Luce	Light	incantesimo	doppia fonte
+Luce diurna	Daylight	incantesimo	doppia fonte
+Luce incandescente	Searing Light	incantesimo	doppia fonte
+Luci danzanti	Dancing Lights	incantesimo	doppia fonte
+Luminescenza	Faerie Fire	incantesimo	doppia fonte
+Maledire l'acqua	Curse Water	incantesimo	doppia fonte
+Mani brucianti	Burning Hands	incantesimo	doppia fonte
+Mano in aiuto	Helping Hand	incantesimo	doppia fonte
+Mano interposta di Bigby	Interposing Hand	incantesimo	prefisso
+Mano magica	Mage Hand	incantesimo	doppia fonte
+Mano possente di Bigby	Forceful Hand	incantesimo	prefisso
+Mano spettrale	Spectral Hand	incantesimo	doppia fonte
+Mano stringente di Bigby	Grasping Hand	incantesimo	prefisso
+Mano stritolatrice di Bigby	Crushing Hand	incantesimo	prefisso
+Mantello del caos	Cloak of Chaos	incantesimo	doppia fonte
+Martello del caos	Chaos Hammer	incantesimo	doppia fonte
+Messaggio	Message	incantesimo	doppia fonte
+Metamorfosi	Polymorph	incantesimo	doppia fonte
+Metamorfosi di un oggetto	Polymorph Any Object	incantesimo	claude
+Metamorfosi funesta	Baleful Polymorph	incantesimo	doppia fonte
+Miracolo	Miracle	incantesimo	doppia fonte
+Miraggio arcano	Mirage Arcana	incantesimo	doppia fonte
+Modellare suono	Sculpt Sound	incantesimo	doppia fonte
+Modificare memoria	Modify Memory	incantesimo	doppia fonte
+Momento di prescienza	Moment of Prescience	incantesimo	doppia fonte
+Movimenti del ragno	Spider Climb	incantesimo	doppia fonte
+Muovere il terreno	Move Earth	incantesimo	doppia fonte
+Muro di ferro	Wall of Iron	incantesimo	doppia fonte
+Muro di forza	Wall of Force	incantesimo	doppia fonte
+Muro di fuoco	Wall of Fire	incantesimo	doppia fonte
+Muro di ghiaccio	Wall of Ice	incantesimo	doppia fonte
+Muro di pietra	Wall of Stone	incantesimo	doppia fonte
+Muro di spine	Wall of Thorns	incantesimo	doppia fonte
+Muro di vento	Wind Wall	incantesimo	doppia fonte
+Muro illusorio	Illusory Wall	incantesimo	doppia fonte
+Muro prismatico	Prismatic Wall	incantesimo	doppia fonte
+Nascondersi agli animali	Hide from Animals	incantesimo	doppia fonte
+Nascondersi ai non morti	Hide from Undead	incantesimo	doppia fonte
+Nebbia acida	Acid Fog	incantesimo	doppia fonte
+Nebbia mentale	Mind Fog	incantesimo	doppia fonte
+Nebbia solida	Solid Fog	incantesimo	doppia fonte
+Neutralizza veleno	Neutralize Poison	incantesimo	doppia fonte
+Ninnananna	Lullaby	incantesimo	claude
+Non morto a morto	Undeath to Death	incantesimo	doppia fonte
+Nube di nebbia	Fog Cloud	incantesimo	doppia fonte
+Nube incendiaria	Incendiary Cloud	incantesimo	doppia fonte
+Nube maleodorante	Stinking Cloud	incantesimo	doppia fonte
+Nube mortale	Cloudkill	incantesimo	doppia fonte
+Occhi indagatori	Prying Eyes	incantesimo	doppia fonte
+Occhi indagatori superiore	Prying Eyes, Greater	incantesimo	doppia fonte
+Occhio arcano	Arcane Eye	incantesimo	doppia fonte
+Occulta oggetto	Obscure Object	incantesimo	doppia fonte
+Ombra di una evocazione	Shadow Conjuration	incantesimo	doppia fonte
+Ombra di una evocazione superiore	Shadow Conjuration, Greater	incantesimo	doppia fonte
+Ombra di una invocazione	Shadow Evocation	incantesimo	doppia fonte
+Ombra di una invocazione superiore	Shadow Evocation, Greater	incantesimo	doppia fonte
+Ombre	Shades	incantesimo	doppia fonte
+Onde di affaticamento	Waves of Fatigue	incantesimo	doppia fonte
+Onde di esaurimento	Waves of Exhaustion	incantesimo	doppia fonte
+Orrido avvizzimento	Horrid Wilting	incantesimo	doppia fonte
+Oscurità	Darkness	incantesimo	doppia fonte
+Oscurità profonda	Deeper Darkness	incantesimo	doppia fonte
+Pagina segreta	Secret Page	incantesimo	doppia fonte
+Palla di fuoco	Fireball	incantesimo	doppia fonte
+Palla di fuoco ritardata	Delayed Blast Fireball	incantesimo	doppia fonte
+Parassiti giganti	Giant Vermin	incantesimo	doppia fonte
+Parlare con gli animali	Speak with Animals	incantesimo	doppia fonte
+Parlare con i morti	Speak with Dead	incantesimo	doppia fonte
+Parlare con i vegetali	Speak with Plants	incantesimo	doppia fonte
+Parola del caos	Word of Chaos	incantesimo	doppia fonte
+Parola del potere, accecare	Power Word Blind	incantesimo	doppia fonte
+Parola del potere, stordire	Power Word Stun	incantesimo	doppia fonte
+Parola del potere, uccidere	Power Word Kill	incantesimo	doppia fonte
+Parola del ritiro	Word of Recall	incantesimo	doppia fonte
+Parola sacra	Holy Word	incantesimo	doppia fonte
+Passapareti	Passwall	incantesimo	doppia fonte
+Passare senza tracce	Pass without Trace	incantesimo	doppia fonte
+Passo veloce	Longstrider	incantesimo	doppia fonte
+Paura	Fear	incantesimo	doppia fonte
+Pelle coriacea	Barkskin	incantesimo	doppia fonte
+Pelle di pietra	Stoneskin	incantesimo	doppia fonte
+Permanenza	Permanency	incantesimo	doppia fonte
+Piaga degli insetti	Insect Plague	incantesimo	doppia fonte
+Piaga strisciante	Creeping Doom	incantesimo	doppia fonte
+Pietra in carne	Stone to Flesh	incantesimo	doppia fonte
+Pietra magica	Magic Stone	incantesimo	doppia fonte
+Pietre parlanti	Stone Tell	incantesimo	doppia fonte
+Pirotecnica	Pyrotechnics	incantesimo	doppia fonte
+Polvere luccicante	Glitterdust	incantesimo	doppia fonte
+Porta dimensionale	Dimension Door	incantesimo	doppia fonte
+Porta in fase	Phase Door	incantesimo	doppia fonte
+Portale	Gate	incantesimo	doppia fonte
+Potenziatore mnemonico di Rary	Mnemonic Enhancer	incantesimo	prefisso
+Potere divino	Divine Power	incantesimo	doppia fonte
+Preghiera	Prayer	incantesimo	doppia fonte
+Presagio	Augury	incantesimo	doppia fonte
+Prestidigitazione	Prestidigitation	incantesimo	doppia fonte
+Previsione	Foresight	incantesimo	doppia fonte
+Produrre fiamma	Produce Flame	incantesimo	doppia fonte
+Profanare	Unhallow	incantesimo	doppia fonte
+Proibizione	Forbiddance	incantesimo	doppia fonte
+Proiezione astrale	Astral Projection	incantesimo	doppia fonte
+Protezione dagli incantesimi	Protection from Spells	incantesimo	doppia fonte
+Protezione dal bene	Protection from Good	incantesimo	doppia fonte
+Protezione dal caos	Protection from Chaos	incantesimo	doppia fonte
+Protezione dal male	Protection from Evil	incantesimo	doppia fonte
+Protezione dall'energia	Protection from Energy	incantesimo	doppia fonte
+Protezione dalla legge	Protection from Law	incantesimo	doppia fonte
+Protezione dalle frecce	Protection from Arrows	incantesimo	doppia fonte
+Pugno serrato di Bigby	Clenched Fist	incantesimo	prefisso
+Punizione sacra	Holy Smite	incantesimo	doppia fonte
+Purificare cibo e bevande	Purify Food and Drink	incantesimo	doppia fonte
+Querciaviva	Liveoak	incantesimo	doppia fonte
+Raggio di esaurimento	Ray of Exhaustion	incantesimo	doppia fonte
+Raggio di gelo	Ray of Frost	incantesimo	doppia fonte
+Raggio di indebolimento	Ray of Enfeeblement	incantesimo	doppia fonte
+Raggio polare	Polar Ray	incantesimo	doppia fonte
+Raggio rovente	Scorching Ray	incantesimo	doppia fonte
+Ragnatela	Web	incantesimo	doppia fonte
+Randello incantato	Shillelagh	incantesimo	doppia fonte
+Reggia meravigliosa di Mordenkainen	Mage’s Magnificent Mansion	incantesimo	prefisso
+Regressione mentale	Feeblemind	incantesimo	doppia fonte
+Reincarnazione	Reincarnate	incantesimo	doppia fonte
+Rendere integro	Make Whole	incantesimo	doppia fonte
+Repulsione	Repulsion	incantesimo	doppia fonte
+Resistenza	Resistance	incantesimo	doppia fonte
+Resistenza agli incantesimi	Spell Resistance	incantesimo	doppia fonte
+Resistenza dell'orso	Bear's Endurance	incantesimo	doppia fonte
+Resistenza dell'orso di massa	Bear's Endurance, Mass	incantesimo	doppia fonte
+Resistere all'energia	Resist Energy	incantesimo	doppia fonte
+Respingere legno	Repel Wood	incantesimo	doppia fonte
+Respingere metallo o pietra	Repel Metal or Stone	incantesimo	doppia fonte
+Respingere parassiti	Repel Vermin	incantesimo	doppia fonte
+Respirare sott'acqua	Water Breathing	incantesimo	doppia fonte
+Restringere oggetti	Shrink Item	incantesimo	claude
+Resurrezione	Resurrection	incantesimo	doppia fonte
+Resurrezione pura	True Resurrection	incantesimo	doppia fonte
+Rianimare morti	Raise Dead	incantesimo	doppia fonte
+Ridurre animali	Reduce Animal	incantesimo	doppia fonte
+Ridurre persone	Reduce Person	incantesimo	doppia fonte
+Ridurre persone di massa	Reduce Person, Mass	incantesimo	doppia fonte
+Riflettere incantesimo	Spell Turning	incantesimo	doppia fonte
+Rifugio	Refuge	incantesimo	doppia fonte
+Rigenerazione	Regenerate	incantesimo	doppia fonte
+Rimpicciolire vegetali	Diminish Plants	incantesimo	doppia fonte
+Rimuovi cecità/sordità	Remove Blindness-Deafness	incantesimo	doppia fonte
+Rimuovi malattia	Remove Disease	incantesimo	doppia fonte
+Rimuovi maledizione	Remove Curse	incantesimo	doppia fonte
+Rimuovi paralisi	Remove Paralysis	incantesimo	doppia fonte
+Rimuovi paura	Remove Fear	incantesimo	doppia fonte
+Rintocco di morte	Death Knell	incantesimo	doppia fonte
+Riparare	Mending	incantesimo	doppia fonte
+Riparo sicuro di Leomund	Secure Shelter	incantesimo	prefisso
+Riposo inviolato	Gentle Repose	incantesimo	doppia fonte
+Risata incontenibile di Tasha	Hideous Laughter	incantesimo	prefisso
+Riscaldare il metallo	Heat Metal	incantesimo	doppia fonte
+Ristorare	Restoration	incantesimo	doppia fonte
+Ristorare inferiore	Restoration, Lesser	incantesimo	doppia fonte
+Ristorare superiore	Restoration, Greater	incantesimo	doppia fonte
+Risucchio di energia	Energy Drain	incantesimo	doppia fonte
+Risveglio	Awaken	incantesimo	doppia fonte
+Ritarda veleno	Delay Poison	incantesimo	doppia fonte
+Ritirata rapida	Expeditious Retreat	incantesimo	doppia fonte
+Rivela bugie	Discern Lies	incantesimo	doppia fonte
+Rivela locazioni	Discern Location	incantesimo	doppia fonte
+Rocce aguzze	Spike Stones	incantesimo	doppia fonte
+Rune esplosive	Explosive Runes	incantesimo	doppia fonte
+Saggezza del gufo	Owl's Wisdom	incantesimo	doppia fonte
+Saggezza del gufo di massa	Owl's Wisdom, Mass	incantesimo	doppia fonte
+Saltare	Jump	incantesimo	doppia fonte
+Santificare	Hallow	incantesimo	doppia fonte
+Santuario	Sanctuary	incantesimo	doppia fonte
+Santuario privato di Mordenkainen	Mage’s Private Sanctum	incantesimo	prefisso
+Scagliare maledizione	Bestow Curse	incantesimo	doppia fonte
+Scassinare	Knock	incantesimo	doppia fonte
+Schermo	Screen	incantesimo	doppia fonte
+Sciame di meteore	Meteor Swarm	incantesimo	doppia fonte
+Sciame elementale	Elemental Swarm	incantesimo	doppia fonte
+Scolpire legno	Wood Shape	incantesimo	doppia fonte
+Scolpire pietra	Stone Shape	incantesimo	doppia fonte
+Scopri il percorso	Find the Path	incantesimo	doppia fonte
+Scopri trappole	Find Traps	incantesimo	doppia fonte
+Scrigno segreto di Leomund	Secret Chest	incantesimo	prefisso
+Scritto illusorio	Illusory Script	incantesimo	doppia fonte
+Scrutare	Scrying	incantesimo	doppia fonte
+Scrutare superiore	Scrying, Greater	incantesimo	doppia fonte
+Scudo	Shield	incantesimo	doppia fonte
+Scudo della fede	Shield of Faith	incantesimo	doppia fonte
+Scudo della legge	Shield of Law	incantesimo	doppia fonte
+Scudo di fuoco	Fire Shield	incantesimo	doppia fonte
+Scudo entropico	Entropic Shield	incantesimo	doppia fonte
+Scudo su altri	Shield Other	incantesimo	doppia fonte
+Scurovisione	Darkvision	incantesimo	doppia fonte
+Segugio fedele di Mordenkainen	Mage’s Faithful Hound	incantesimo	prefisso
+Sembrare	Seeming	incantesimo	doppia fonte
+Semi di fuoco	Fire Seeds	incantesimo	doppia fonte
+Serratura arcana	Arcane Lock	incantesimo	doppia fonte
+Serratura dimensionale	Dimensional Lock	incantesimo	doppia fonte
+Servitore inosservato	Unseen Servant	incantesimo	doppia fonte
+Sfera congelante di Otiluke	Freezing Sphere	incantesimo	prefisso
+Sfera di invisibilità	Invisibility Sphere	incantesimo	doppia fonte
+Sfera elastica di Otiluke	Resilient Sphere	incantesimo	prefisso
+Sfera infuocata	Flaming Sphere	incantesimo	doppia fonte
+Sfera prismatica	Prismatic Sphere	incantesimo	doppia fonte
+Sfera telecinetica di Otiluke	Telekinetic Sphere	incantesimo	prefisso
+Sfocatura	Blur	incantesimo	doppia fonte
+Sguardo penetrante	Eyebite	incantesimo	doppia fonte
+Sigillo arcano	Arcane Mark	incantesimo	doppia fonte
+Sigillo del serpente	Sepia Snake Sigil	incantesimo	doppia fonte
+Sigillo di giustizia	Mark of Justice	incantesimo	doppia fonte
+Silenzio	Silence	incantesimo	doppia fonte
+Simbolo di debolezza	Symbol of Weakness	incantesimo	doppia fonte
+Simbolo di demenza	Symbol of Insanity	incantesimo	doppia fonte
+Simbolo di dolore	Symbol of Pain	incantesimo	doppia fonte
+Simbolo di morte	Symbol of Death	incantesimo	doppia fonte
+Simbolo di paura	Symbol of Fear	incantesimo	doppia fonte
+Simbolo di persuasione	Symbol of Persuasion	incantesimo	doppia fonte
+Simbolo di sonno	Symbol of Sleep	incantesimo	doppia fonte
+Simbolo di stordimento	Symbol of Stunning	incantesimo	doppia fonte
+Simpatia	Sympathy	incantesimo	doppia fonte
+Simulacro	Simulacrum	incantesimo	doppia fonte
+Sogno	Dream	incantesimo	doppia fonte
+Sonno	Sleep	incantesimo	doppia fonte
+Sonno profondo	Deep Slumber	incantesimo	doppia fonte
+Spada di Mordenkainen	Mage’s Sword	incantesimo	claude
+Spada sacra	Holy Sword	incantesimo	doppia fonte
+Spaventare	Scare	incantesimo	doppia fonte
+Spezzare incantamento	Break Enchantment	incantesimo	doppia fonte
+Splendore dell'aquila	Eagle's Splendor	incantesimo	doppia fonte
+Splendore dell'aquila di massa	Eagle's Splendor, Mass	incantesimo	doppia fonte
+Spostamento planare	Plane Shift	incantesimo	doppia fonte
+Spruzzo colorato	Color Spray	incantesimo	doppia fonte
+Spruzzo prismatico	Prismatic Spray	incantesimo	doppia fonte
+Stasi temporale	Temporal Stasis	incantesimo	doppia fonte
+Statua	Statue	incantesimo	doppia fonte
+Status	Status	incantesimo	doppia fonte
+Stretta corrosiva	Rusting Grasp	incantesimo	doppia fonte
+Stretta folgorante	Shocking Grasp	incantesimo	doppia fonte
+Suggestione	Suggestion	incantesimo	doppia fonte
+Suggestione di massa	Suggestion, Mass	incantesimo	doppia fonte
+Suono dirompente	Sound Burst	incantesimo	doppia fonte
+Suono fantasma	Ghost Sound	incantesimo	doppia fonte
+Telecinesi	Telekinesis	incantesimo	doppia fonte
+Teletrasporto	Teleport	incantesimo	doppia fonte
+Teletrasporto degli oggetti	Teleport Object	incantesimo	doppia fonte
+Teletrasporto superiore	Teleport, Greater	incantesimo	doppia fonte
+Tempesta di fuoco	Fire Storm	incantesimo	doppia fonte
+Tempesta di ghiaccio	Ice Storm	incantesimo	doppia fonte
+Tempesta di nevischio	Sleet Storm	incantesimo	doppia fonte
+Tempesta di vendetta	Storm of Vengeance	incantesimo	doppia fonte
+Tentacoli neri di Evard	Black Tentacles	incantesimo	prefisso
+Terremoto	Earthquake	incantesimo	doppia fonte
+Terreno illusorio	Hallucinatory Terrain	incantesimo	doppia fonte
+Tocco del Ghoul	Ghoul Touch	incantesimo	doppia fonte
+Tocco del vampiro	Vampiric Touch	incantesimo	doppia fonte
+Tocco di affaticamento	Touch of Fatigue	incantesimo	doppia fonte
+Tocco di idiozia	Touch of Idiocy	incantesimo	doppia fonte
+Tocco gelido	Chill Touch	incantesimo	doppia fonte
+Trama ipnotica	Hypnotic Pattern	incantesimo	doppia fonte
+Trama iridescente	Rainbow Pattern	incantesimo	doppia fonte
+Trama scintillante	Scintillating Pattern	incantesimo	doppia fonte
+Trance animale	Animal Trance	incantesimo	doppia fonte
+Transizione eterea	Ethereal Jaunt	incantesimo	doppia fonte
+Trappola di fuoco	Fire Trap	incantesimo	doppia fonte
+Trappola fantasma	Phantom Trap	incantesimo	doppia fonte
+Trasforma bastone	Changestaff	incantesimo	doppia fonte
+Trasformazione	Shapechange	incantesimo	doppia fonte
+Trasformazione di Tenser	Transformation	incantesimo	claude
+Traslazione arborea	Tree Stride	incantesimo	doppia fonte
+Trasmutare fango in roccia	Transmute Mud to Rock	incantesimo	doppia fonte
+Trasmutare metallo in legno	Transmute Metal to Wood	incantesimo	doppia fonte
+Trasmutare roccia in fango	Transmute Rock to Mud	incantesimo	doppia fonte
+Trasporto vegetale	Transport via Plants	incantesimo	doppia fonte
+Trucco della corda	Rope Trick	incantesimo	doppia fonte
+Turbine	Whirlwind	incantesimo	doppia fonte
+Unto	Grease	incantesimo	doppia fonte
+Vedere invisibilità	See Invisibility	incantesimo	doppia fonte
+Veleno	Poison	incantesimo	doppia fonte
+Velo	Veil	incantesimo	doppia fonte
+Velocità	Haste	incantesimo	doppia fonte
+Vento sussurrante	Whispering Wind	incantesimo	doppia fonte
+Ventriloquio	Ventriloquism	incantesimo	doppia fonte
+Veste magica	Magic Vestment	incantesimo	doppia fonte
+Vibrazione armonica	Sympathetic Vibration	incantesimo	doppia fonte
+Vigilanza e interdizione	Guards and Wards	incantesimo	doppia fonte
+Virtù	Virtue	incantesimo	doppia fonte
+Visione	Vision	incantesimo	doppia fonte
+Visione del vero	True Seeing	incantesimo	doppia fonte
+Visione della morte	Deathwatch	incantesimo	doppia fonte
+Visione falsa	False Vision	incantesimo	doppia fonte
+Vista arcana	Arcane Sight	incantesimo	doppia fonte
+Vista arcana superiore	Arcane Sight, Greater	incantesimo	doppia fonte
+Vita falsata	False Life	incantesimo	doppia fonte
+Volare	Fly	incantesimo	doppia fonte
+Volo giornaliero	Overland Flight	incantesimo	doppia fonte
+Vuoto mentale	Mind Blank	incantesimo	doppia fonte
+Zanna magica	Magic Fang	incantesimo	doppia fonte
+Zanna magica superiore	Magic Fang, Greater	incantesimo	doppia fonte
+Zona di silenzio	Zone of Silence	incantesimo	doppia fonte
+Zona di verità	Zone of Truth	incantesimo	doppia fonte
+Acrobazia	Tumble	abilità	claude, nome italiano da miniaturefantasy
+Addestrare Animali	Handle Animal	abilità	claude, nome italiano da miniaturefantasy
+Artigianato	Craft	abilità	claude, nome italiano da miniaturefantasy
+Artista della Fuga	Escape Artist	abilità	claude, nome italiano da miniaturefantasy
+Ascoltare	Listen	abilità	claude, nome italiano da miniaturefantasy
+Camuffare	Disguise	abilità	claude, nome italiano da miniaturefantasy
+Cavalcare	Ride	abilità	claude, nome italiano da miniaturefantasy
+Cercare	Search	abilità	claude, nome italiano da miniaturefantasy
+Concentrazione	Concentration	abilità	claude, nome italiano da miniaturefantasy
+Conoscenze	Knowledge	abilità	claude, nome italiano da miniaturefantasy
+Decifrare Scritture	Decipher Script	abilità	claude, nome italiano da miniaturefantasy
+Diplomazia	Diplomacy	abilità	claude, nome italiano da miniaturefantasy
+Disattivare Congegni	Disable Device	abilità	claude, nome italiano da miniaturefantasy
+Equilibrio	Balance	abilità	claude, nome italiano da miniaturefantasy
+Falsificare	Forgery	abilità	claude, nome italiano da miniaturefantasy
+Guarire	Heal	abilità	claude, nome italiano da miniaturefantasy
+Intimidire	Intimidate	abilità	claude, nome italiano da miniaturefantasy
+Intrattenere	Perform	abilità	claude, nome italiano da miniaturefantasy
+Muoversi Silenziosamente	Move Silently	abilità	claude, nome italiano da miniaturefantasy
+Nascondersi	Hide	abilità	claude, nome italiano da miniaturefantasy
+Nuotare	Swim	abilità	claude, nome italiano da miniaturefantasy
+Osservare	Spot	abilità	claude, nome italiano da miniaturefantasy
+Parlare Linguaggi	Speak Language	abilità	claude, nome italiano da miniaturefantasy
+Percepire Intenzioni	Sense Motive	abilità	claude, nome italiano da miniaturefantasy
+Professione	Profession	abilità	claude, nome italiano da miniaturefantasy
+Raccogliere Informazioni	Gather Information	abilità	claude, nome italiano da miniaturefantasy
+Raggirare	Bluff	abilità	claude, nome italiano da miniaturefantasy
+Rapidità di Mano	Sleight of Hand	abilità	claude, nome italiano da miniaturefantasy
+Saltare	Jump	abilità	claude, nome italiano da miniaturefantasy
+Sapienza Magica	Spellcraft	abilità	claude, nome italiano da miniaturefantasy
+Scalare	Climb	abilità	claude, nome italiano da miniaturefantasy
+Scassinare Serrature	Open Lock	abilità	claude, nome italiano da miniaturefantasy
+Sopravvivenza	Survival	abilità	claude, nome italiano da miniaturefantasy
+Utilizzare Corde	Use Rope	abilità	claude, nome italiano da miniaturefantasy
+Utilizzare Oggetti Magici	Use Magic Device	abilità	claude, nome italiano da miniaturefantasy
+Valutare	Appraise	abilità	claude, nome italiano da miniaturefantasy
+Abbagliato	Dazzled	condizione	claude, nome italiano da miniaturefantasy
+Accecato	Blinded	condizione	claude, nome italiano da miniaturefantasy
+Affascinato	Fascinated	condizione	claude, nome italiano da miniaturefantasy
+Affaticato	Fatigued	condizione	claude, nome italiano da miniaturefantasy
+Assordato	Deafened	condizione	claude, nome italiano da miniaturefantasy
+Atterrato	Knocked Down	condizione	claude, nome italiano non riscontrato
+Barcollante	Staggered	condizione	claude, nome italiano da miniaturefantasy
+Colto alla sprovvista	Flat-Footed	condizione	claude, nome italiano da miniaturefantasy
+Confuso	Confused	condizione	claude, nome italiano da miniaturefantasy
+Danni alle caratteristiche	Ability Damaged	condizione	claude, nome italiano da miniaturefantasy
+Esausto	Exhausted	condizione	claude, nome italiano da miniaturefantasy
+Frastornato	Dazed	condizione	claude, nome italiano da miniaturefantasy
+Immobilizzato	Pinned	condizione	claude, nome italiano da miniaturefantasy
+In lotta	Grappling	condizione	claude, nome italiano da miniaturefantasy
+In preda al panico	Panicked	condizione	claude, nome italiano da miniaturefantasy
+Inabile	Disabled	condizione	claude, nome italiano da miniaturefantasy
+Incorporeo	Incorporeal	condizione	claude, nome italiano non riscontrato
+Indifeso	Helpless	condizione	claude, nome italiano da miniaturefantasy
+Infermo	Sickened	condizione	claude, nome italiano da miniaturefantasy
+Intralciato	Entangled	condizione	claude, nome italiano da miniaturefantasy
+Invisibile	Invisible	condizione	claude, nome italiano non riscontrato
+Livello negativo	Energy Drained	condizione	claude, nome italiano da miniaturefantasy
+Morente	Dying	condizione	claude, nome italiano da miniaturefantasy
+Morto	Dead	condizione	claude, nome italiano non riscontrato
+Nauseato	Nauseated	condizione	claude, nome italiano da miniaturefantasy
+Paralizzato	Paralyzed	condizione	claude, nome italiano da miniaturefantasy
+Pietrificato	Petrified	condizione	claude, nome italiano non riscontrato
+Privo di sensi	Unconscious	condizione	claude, nome italiano da miniaturefantasy
+Prono	Prone	condizione	claude, nome italiano da miniaturefantasy
+Risucchio di caratteristica	Ability Drained	condizione	claude, nome italiano non riscontrato
+Scacciato	Turned	condizione	claude, nome italiano non riscontrato
+Scosso	Shaken	condizione	claude, nome italiano da miniaturefantasy
+Spaventato	Frightened	condizione	claude, nome italiano da miniaturefantasy
+Spazzato via	Blown Away	condizione	claude, nome italiano non riscontrato
+Stabile	Stable	condizione	claude, nome italiano da miniaturefantasy
+Stordito	Stunned	condizione	claude, nome italiano da miniaturefantasy
+Trattenuto	Checked	condizione	claude, nome italiano non riscontrato
+Tremante	Cowering	condizione	claude, nome italiano da miniaturefantasy
+Adepto	Adept	classe	claude, nome italiano non riscontrato
+Arciere Arcano	Arcane Archer	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Arcimago	Archmage	classe	claude, nome italiano non riscontrato
+Aristocratico	Aristocrat	classe	claude, nome italiano non riscontrato
+Assassino	Assassin	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Barbaro	Barbarian	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Bardo	Bard	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Cavaliere Mistico	Eldritch Knight	classe	claude, nome italiano non riscontrato
+Chierico	Cleric	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Combattente	Warrior	classe	claude, nome italiano non riscontrato
+Difensore Nanico	Dwarven Defender	classe	claude, nome italiano non riscontrato
+Discepolo dei Draghi	Dragon Disciple	classe	claude, nome italiano non riscontrato
+Druido	Druid	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Duellante	Duelist	classe	claude, nome italiano non riscontrato
+Esperto	Expert	classe	claude, nome italiano non riscontrato
+Guardia Nera	Blackguard	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Guerriero	Fighter	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Ierofante	Hierophant	classe	claude, nome italiano non riscontrato
+Ladro	Rogue	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Maestro del Sapere	Loremaster	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Mago	Wizard	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Mistificatore Arcano	Arcane Trickster	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Monaco	Monk	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Ombra Danzante	Shadowdancer	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Paladino	Paladin	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Popolano	Commoner	classe	claude, nome italiano non riscontrato
+Ranger	Ranger	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Stregone	Sorcerer	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Taumaturgo	Thaumaturgist	classe	claude, nome italiano non riscontrato
+Teurgo Mistico	Mystic Theurge	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Viandante dell'Orizzonte	Horizon Walker	classe	claude, nome italiano da miniaturefantasy o Sigil online
+Analfabetismo	Illiteracy	abilità	mephit
+Autoipnosi	Autohypnosis	abilità	mephit
+Sapienza Psionica	Psicraft	abilità	mephit
+Utilizzare Oggetti Psionici	Use Psionic Device	abilità	mephit
+Combattente psichico	Psychic Warrior	classe	mephit
+Innato	Wilder	classe	mephit
+Psion	Psion	classe	mephit
+Spadaccino spirituale	Soulknife	classe	mephit
+Agente cercatore	Agent Retriever	classe di prestigio	mephit
+Araldo divino	Divine Emissary	classe di prestigio	mephit
+Asservitore	Thrallherd	classe di prestigio	mephit
+Cerebromante	Cerebremancer	classe di prestigio	mephit
+Colosso leggendario	Legendary Dreadnought	classe di prestigio	mephit
+Elocatore	Elocater	classe di prestigio	mephit
+Guardiano esemplare	Guardian Paramount	classe di prestigio	mephit
+Infiltratore epico	Epic Infiltrator	classe di prestigio	mephit
+Mente guerriera	War Mind	classe di prestigio	mephit
+Metamente	Metamind	classe di prestigio	mephit
+Pirocineta	Pyrokineticist	classe di prestigio	mephit
+Psion disincarnato	Psion Uncarnate	classe di prestigio	mephit
+Pugno psionico	Psionic Fist	classe di prestigio	mephit
+Scrutatore cosmico	Cosmic Descryer	classe di prestigio	mephit
+Sentinella di Union	Union Sentinel	classe di prestigio	mephit
+Sommo predicatore	High Proselytizer	classe di prestigio	mephit
+Spettro perfetto	Perfect Wight	classe di prestigio	mephit
+Uccisore	Slayer	classe di prestigio	mephit
+Acqua	Water Domain	dominio	mephit
+Animale	Animal Domain	dominio	mephit
+Aria	Air Domain	dominio	mephit
+Artificio	Artifice Domain	dominio	mephit
+Bene	Good Domain	dominio	mephit
+Caos	Chaos Domain	dominio	mephit
+Charme	Charm Domain	dominio	mephit
+Comunità	Community Domain	dominio	mephit
+Conoscenza	Knowledge Domain	dominio	mephit
+Creazione	Creation Domain	dominio	mephit
+Distruzione	Destruction Domain	dominio	mephit
+Follia	Madness Domain	dominio	mephit
+Fortuna	Luck Domain	dominio	mephit
+Forza	Strength Domain	dominio	mephit
+Fuoco	Fire Domain	dominio	mephit
+Gloria	Glory Domain	dominio	mephit
+Guarigione	Healing Domain	dominio	mephit
+Guerra	War Domain	dominio	mephit
+Inganno	Trickery Domain	dominio	mephit
+Legge	Law Domain	dominio	mephit
+Liberazione	Liberation Domain	dominio	mephit
+Magia	Magic Domain	dominio	mephit
+Male	Evil Domain	dominio	mephit
+Morte	Death Domain	dominio	mephit
+Nobiltà	Nobility Domain	dominio	mephit
+Oscurità	Darkness Domain	dominio	mephit
+Protezione	Protection Domain	dominio	mephit
+Rettili	Scalykind Domain	dominio	mephit
+Riposo	Repose Domain	dominio	mephit
+Rune	Rune Domain	dominio	mephit
+Sole	Sun Domain	dominio	mephit
+Tempo atmosferico	Weather Domain	dominio	mephit
+Terra	Earth Domain	dominio	mephit
+Vegetale	Plant Domain	dominio	mephit
+Viaggio	Travel Domain	dominio	mephit
+Abito da artigiano	Artisan’s Outfit	equipaggiamento	mephit
+Abito da contadino	Peasant’s Outfit	equipaggiamento	mephit
+Abito da cortigiano	Courtier’s Outfit	equipaggiamento	mephit
+Abito da esploratore	Explorer’s Outfit	equipaggiamento	mephit
+Abito da intrattenitore	Entertainer’s Outfit	equipaggiamento	mephit
+Abito da monaco	Monk’s Outfit	equipaggiamento	mephit
+Abito da nobile	Noble’s Outfit	equipaggiamento	mephit
+Abito da studioso	Scholar’s Outfit	equipaggiamento	mephit
+Abito da viaggiatore	Traveler’s Outfit	equipaggiamento	mephit
+Abito invernale	Cold Weather Outfit	equipaggiamento	mephit
+Abito reale	Royal Outfit	equipaggiamento	mephit
+Acciarino e pietra focaia	Flint and Steel	equipaggiamento	mephit
+Acido (ampolla)	Acid	equipaggiamento	mephit
+Acquasanta (ampolla)	Holy Water	equipaggiamento	mephit
+Alabarda	Halberd	equipaggiamento	mephit
+Antitossina (fiala)	Antitoxin	equipaggiamento	mephit
+Arco corto	Shortbow	equipaggiamento	mephit
+Arco corto composito	Shortbow, Composite	equipaggiamento	mephit
+Arco lungo	Longbow	equipaggiamento	mephit
+Arco lungo composito	Longbow, Composite	equipaggiamento	mephit
+Ariete portatile	Ram, Portable	equipaggiamento	mephit
+Armatura chiodata	Spiked Armor	equipaggiamento	mephit
+Armatura completa	Full Plate	equipaggiamento	mephit
+Arnesi da artigiano	Artisan’s Tools	equipaggiamento	mephit
+Arnesi da artigiano perfetti	Artisan’s Tools, Masterwork	equipaggiamento	mephit
+Arnesi da scasso	Thieves’ Tools	equipaggiamento	mephit
+Arnesi da scasso perfetti	Thieves’ Tools, Masterwork	equipaggiamento	mephit
+Ascia da guerra nanica	Waraxe, Dwarven	equipaggiamento	mephit
+Asino o mulo	Donkey or Mule	equipaggiamento	mephit
+Attrezzi da scalatore	Climber’s Kit	equipaggiamento	mephit
+Attrezzi perfetti	Tool, Masterwork	equipaggiamento	mephit
+Balestra a mano	Crossbow, Hand	equipaggiamento	mephit
+Balestra leggera	Crossbow, Light	equipaggiamento	mephit
+Balestra pesante	Crossbow, Heavy	equipaggiamento	mephit
+Barca a remi	Rowboat	equipaggiamento	mephit
+Barcone	Keelboat	equipaggiamento	mephit
+Bastone di fumo	Smokestick	equipaggiamento	mephit
+Bastone ferrato	Quarterstaff	equipaggiamento	mephit
+Bilancia da mercante	Scale, Merchant’s	equipaggiamento	mephit
+Bolas	Bolas	equipaggiamento	mephit
+Borsa del guaritore	Healer’s Kit	equipaggiamento	mephit
+Borsa dell'impedimento	Tanglefoot Bag	equipaggiamento	mephit
+Borsa per componenti di incantesimi	Spell Component Pouch	equipaggiamento	mephit
+Brocca di ceramica	Jug, Clay	equipaggiamento	mephit
+Buckler	Buckler	equipaggiamento	mephit
+Candela	Candle	equipaggiamento	mephit
+Cane da galoppo	Dog, Riding	equipaggiamento	mephit
+Cannocchiale	Spyglass	equipaggiamento	mephit
+Carretto	Cart	equipaggiamento	mephit
+Carro	Wagon	equipaggiamento	mephit
+Carrozza	Carriage	equipaggiamento	mephit
+Catena (3 m)	Chain	equipaggiamento	mephit
+Catena chiodata	Chain, Spiked	equipaggiamento	mephit
+Chiodature per armatura	Armor Spikes	equipaggiamento	mephit
+Chiodature per scudo	Shield Spikes	equipaggiamento	mephit
+Colpo senz'armi	Unarmed Strike	equipaggiamento	mephit
+Corazza a scaglie	Scale Mail	equipaggiamento	mephit
+Corazza a strisce	Splint Mail	equipaggiamento	mephit
+Corazza di bande	Banded Mail	equipaggiamento	mephit
+Corazza di piastre	Breastplate	equipaggiamento	mephit
+Corda canapa (15 m)	Rope, Hempen	equipaggiamento	mephit
+Corda di seta (15 m)	Rope, Silk	equipaggiamento	mephit
+Corsesca	Ranseur	equipaggiamento	mephit
+Cotta di maglia	Chainmail	equipaggiamento	mephit
+Diligenza pubblica	Coach Cab	equipaggiamento	mephit
+Doppia ascia orchesca	Axe, Orc Double	equipaggiamento	mephit
+Falce	Scythe	equipaggiamento	mephit
+Falcetto	Sickle	equipaggiamento	mephit
+Falcione	Glaive	equipaggiamento	mephit
+Fionda	Sling	equipaggiamento	mephit
+Freccie (20)	Arrows	equipaggiamento	mephit
+Frusta	Whip	equipaggiamento	mephit
+Fuoco dell'alchimista (ampolla)	Alchemist’s Fire	equipaggiamento	mephit
+Galea	Galley	equipaggiamento	mephit
+Giaco di maglia	Chain Shirt	equipaggiamento	mephit
+Giavellotto	Javelin	equipaggiamento	mephit
+Giusarma	Guisarme	equipaggiamento	mephit
+Guando d'arme con sicura	Gauntlet, Locked	equipaggiamento	mephit
+Guanto d'arme	Gauntlet	equipaggiamento	mephit
+Guanto d'arme chiodato	Gauntlet, Spiked	equipaggiamento	mephit
+Inchiostro (fiala da 30 g)	Ink	equipaggiamento	mephit
+Kama	Kama	equipaggiamento	mephit
+Laboratorio da alchimista	Alchemist’s Lab	equipaggiamento	mephit
+Lampada comune	Lamp, Common	equipaggiamento	mephit
+Lancia	Spear	equipaggiamento	mephit
+Lancia corta	Shortspear	equipaggiamento	mephit
+Lancia da cavaliere	Lance	equipaggiamento	mephit
+Lancia lunga	Longspear	equipaggiamento	mephit
+Lanterna a lente sporgente	Lantern, Bullseye	equipaggiamento	mephit
+Lanterna schermabile	Lantern, Hooded	equipaggiamento	mephit
+Lente d'ingrandimento	Magnifying Glass	equipaggiamento	mephit
+Libro degli incantesimi da mago (vuoto)	Spellbook, Wizard’s (Blank)	equipaggiamento	mephit
+Martello	Hammer	equipaggiamento	mephit
+Matelo-picca gnomesco	Hammer, Gnome Hooked	equipaggiamento	mephit
+Mazzafrusto doppio	Flail, Dire	equipaggiamento	mephit
+Mercenario esperto	Hireling, Trained	equipaggiamento	mephit
+Mercenario normale	Hireling, Untrained	equipaggiamento	mephit
+Messaggero	Messenger	equipaggiamento	mephit
+Mezza armatura	Half-Plate	equipaggiamento	mephit
+Nave a vela	Sailing Ship	equipaggiamento	mephit
+Nave da guerra	Warship	equipaggiamento	mephit
+Nave lunga	Longship	equipaggiamento	mephit
+Nunchaku	Nunchaku	equipaggiamento	mephit
+Nutrimento (al giorno)	Feed	equipaggiamento	mephit
+Olio (ampolla da 0,5 l)	Oil	equipaggiamento	mephit
+Orologio ad acqua	Water Clock	equipaggiamento	mephit
+Passaggio in nave	Ship’s Passage	equipaggiamento	mephit
+Pedaggio stradale o d'ingresso	Road or Gate Toll	equipaggiamento	mephit
+Pelle	Hide	equipaggiamento	mephit
+Piede di porco	Crowbar	equipaggiamento	mephit
+Pietra del tuono	Thunderstone	equipaggiamento	mephit
+Proiettili per fionda (10)	Bullets, Sling	equipaggiamento	mephit
+Pugnale	Dagger	equipaggiamento	mephit
+Quadrelli (10)	Bolts	equipaggiamento	mephit
+Rampino	Grappling Hook	equipaggiamento	mephit
+Rete	Net	equipaggiamento	mephit
+Sai	Sai	equipaggiamento	mephit
+Scudo torre	Shield, Tower	equipaggiamento	mephit
+Sella da carico	Saddle, Pack	equipaggiamento	mephit
+Sella da galoppo	Saddle, Riding	equipaggiamento	mephit
+Sella militare	Saddle, Military	equipaggiamento	mephit
+Shuriken (5)	Shuriken	equipaggiamento	mephit
+Siangham	Siangham	equipaggiamento	mephit
+Slitta	Sled	equipaggiamento	mephit
+Spada a due lame	Sword, Two-Bladed	equipaggiamento	mephit
+Spada bastarda	Sword, Bastard	equipaggiamento	mephit
+Stocco	Rapier	equipaggiamento	mephit
+Tizzone ardente	Tindertwig	equipaggiamento	mephit
+Torcia	Torch	equipaggiamento	mephit
+Torcia inestinguibile	Everburning Torch	equipaggiamento	mephit
+Triboli	Caltrops	equipaggiamento	mephit
+Tridente	Trident	equipaggiamento	mephit
+Trucchi per il camuffamento	Disguise Kit	equipaggiamento	mephit
+Urgrosh nanico	Urgrosh, Dwarven	equipaggiamento	mephit
+Verga del sole	Sunrod	equipaggiamento	mephit
+Veste da chierico	Cleric’s Vestments	equipaggiamento	mephit
+Dissolvi il bene/caos/legge/male	Dispel Chaos/Evil/Good/Law	incantesimo	mephit
+Individuazione del Caos/Male/Bene/Legge	Detect Chaos/Evil/Good/Law	incantesimo	mephit
+Gigante	Giant	linguaggio	mephit
+Gnoll	Gnoll	linguaggio	mephit
+Gnomesco	Gnome	linguaggio	mephit
+Goblin	Goblin	linguaggio	mephit
+Halfling	Halfling	linguaggio	mephit
+Infernale	Infernal	linguaggio	mephit
+Orchesco	Orc	linguaggio	mephit
+Adamantio	Adamantine	materiale	mephit
+Legnoscuro	Darkwood	materiale	mephit
+Mithral	Mithral	materiale	mephit
+Pelle	Hide	materiale	mephit
+Pelle di drago	Dragonhide	materiale	mephit
+Pietra	Stone	materiale	mephit
+A distanza	Ranged	oggetto magico	mephit
+Abiurazione	Abjuration	oggetto magico	mephit
+Accecante	Blinding (Ex)	oggetto magico	mephit
+Accumula incantesimi	Spell Storing	oggetto magico	mephit
+Accumula incantesimi, maggiore	Spell Storing, Major	oggetto magico	mephit
+Accumula incantesimi, minore	Spell Storing, Minor	oggetto magico	mephit
+Accumula potere	Power Storing	oggetto magico	mephit
+Accuratezza infallibile	Unerring Accuracy	oggetto magico	mephit
+Affilata	Keen	oggetto magico	mephit
+Aiuto	Aid	oggetto magico	mephit
+Ali del volo	Wings of Flying	oggetto magico	mephit
+Allerta	Alertness	oggetto magico	mephit
+Allineamento Imperscrutabile	Undetectable Alignment	oggetto magico	mephit
+Alterazione della Taglia	Size Alteration	oggetto magico	mephit
+Amicizia con gli animali	Animal Friendship	oggetto magico	mephit
+Ammaliamento	Enchantment	oggetto magico	mephit
+Ampolla delle maledizioni	Flask of Curses	oggetto magico	mephit
+Ampolla di ferro	Iron Flask	oggetto magico	mephit
+Amuleto anti-individuazione e localizzazione	Amulet of Proof against Detection and Location	oggetto magico	mephit
+Amuleto dei piani	Amulet of the Planes	oggetto magico	mephit
+Amuleto della catapsi	Amulet of Catapsi	oggetto magico	mephit
+Amuleto della localizzazione inevitabile	Amulet of Inescapable Location	oggetto magico	mephit
+Anarchica	Anarchic	oggetto magico	mephit
+Anatema	Bane	oggetto magico	mephit
+Anatema psionico	Psibane	oggetto magico	mephit
+Ancora dimensionale	Dimensional Anchor	oggetto magico	mephit
+Anelli dei portali	Ring Gates	oggetto magico	mephit
+Anello della goffaggine	Ring of Clumsiness	oggetto magico	mephit
+Anello delle nove faccette	Ring of Nine Facets	oggetto magico	mephit
+Animato	Animated	oggetto magico	mephit
+Annulus	Annulus	oggetto magico	mephit
+Anti-Individuazione	Nondetection	oggetto magico	mephit
+Apparato del granchio	Apparatus of the Crab	oggetto magico	mephit
+Arco del giuramento	Oathbow	oggetto magico	mephit
+Arco grande elfico	Elven Greatbow	oggetto magico	mephit
+Ariete	Ram	oggetto magico	mephit
+Arma Magica	Magic Weapon	oggetto magico	mephit
+Armatura anti-magia	Antimagic Armor	oggetto magico	mephit
+Armatura celestiale	Celestial Armor	oggetto magico	mephit
+Armatura completa delle profondità	Plate Armor of the Deep	oggetto magico	mephit
+Armatura completa nanica	Dwarven Plate	oggetto magico	mephit
+Armatura del battaglione celestiale	Armor of the Celestial Battalion	oggetto magico	mephit
+Armatura del golem	Golem Armor	oggetto magico	mephit
+Armatura del mutaforma	Shapeshifter’s Armor	oggetto magico	mephit
+Armatura dell'attrazione delle frecce	Armor of Arrow Attraction	oggetto magico	mephit
+Armatura dell'ira	Armor of Rage	oggetto magico	mephit
+Armatura dell'orda abissale	Armor of the Abyssal Horde	oggetto magico	mephit
+Armatura demoniaca	Demon Armor	oggetto magico	mephit
+Armatura di pelle di drago	Dragonskin Armor	oggetto magico	mephit
+Armatura di scaglie di drago	Dragonhide Plate	oggetto magico	mephit
+Armatura in mithral della velocità	Mithral Full Plate of Speed	oggetto magico	mephit
+Armatura Magica	Mage Armor	oggetto magico	mephit
+Armatura mentale	Mindarmor	oggetto magico	mephit
+Arpa dello charme	Harp of Charming	oggetto magico	mephit
+Artiglio dell'anima	Gripsoul	oggetto magico	mephit
+Ascia da battaglia in adamantio	Adamantine Battleaxe	oggetto magico	mephit
+Ascia dei signori dei nani	Axe of the Dwarvish Lords	oggetto magico	mephit
+Assedio	Besiegement	oggetto magico	mephit
+Assiomatica	Axiomatic	oggetto magico	mephit
+Assorbimento	Absorption	oggetto magico	mephit
+Assorbimento epico	Epic Absorption	oggetto magico	mephit
+Astuzia della Volpe	Fox’s Cunning	oggetto magico	mephit
+Attento osservatore	Discerning Watcher	oggetto magico	mephit
+Atterraggio	Landing	oggetto magico	mephit
+Attirare frecce	Arrow Catching	oggetto magico	mephit
+Avversione	Averter	oggetto magico	mephit
+Bagliore argenteo	Silversheen	oggetto magico	mephit
+Balsamo della pietra	Stone Salve	oggetto magico	mephit
+Balsamo della scivolosità	Salve of Slipperiness	oggetto magico	mephit
+Baluardo del grande drago	Bulwark of the Great Dragon	oggetto magico	mephit
+Barca pieghevole	Boat, Folding	oggetto magico	mephit
+Bastone dei magi	Staff of the Magi	oggetto magico	mephit
+Bastone ferrato della celerità	Quarterstaff of Alacrity	oggetto magico	mephit
+Bastone Ombra	The Shadowstaff	oggetto magico	mephit
+Bene virtuoso	Virtuous Good	oggetto magico	mephit
+Benedire un'Arma	Bless Weapon	oggetto magico	mephit
+Bestia	Beast	oggetto magico	mephit
+Biglia di forza	Bead of Force	oggetto magico	mephit
+Blocca persone	Hold Person	oggetto magico	mephit
+Boccia del comando degli elementali dell'acqua	Bowl of Commanding Water Elementals	oggetto magico	mephit
+Borsa divorante	Bag of Devouring	oggetto magico	mephit
+Boschi	Woodlands	oggetto magico	mephit
+Bottiglia d'aria	Bottle of Air	oggetto magico	mephit
+Bottiglia del fumo perenne	Eversmoking Bottle	oggetto magico	mephit
+Bottiglia dell'efreeti	Efreeti Bottle	oggetto magico	mephit
+Braccialetto dell'amicizia	Bracelet of Friends	oggetto magico	mephit
+Bracciali dell'arciere, inferiori	Bracers of Archery, Lesser	oggetto magico	mephit
+Bracciali dell'arciere, superiori	Bracers of Archery, Greater	oggetto magico	mephit
+Bracciali dell'inidfeso	Bracers of Defenselessness	oggetto magico	mephit
+Bracciali della potenza implacabile	Bracers of Relentless Might	oggetto magico	mephit
+Braciere del comando degli elementali del fuoco	Brazier of Commanding Fire Elementals	oggetto magico	mephit
+Brando delle tempeste	Stormbrand	oggetto magico	mephit
+Buckler in legnoscuro	Darkwood Buckler	oggetto magico	mephit
+Buco portatile	Portable Hole	oggetto magico	mephit
+Buone Speranze	Good Hope	oggetto magico	mephit
+Caduta morbida	Feather Falling	oggetto magico	mephit
+Camminare nell'Aria	Water Walk	oggetto magico	mephit
+Camminare sull'acqua	Water Walking	oggetto magico	mephit
+Campana dell'apertura	Chime of Opening	oggetto magico	mephit
+Campana dell'interruzione	Chime of Interruption	oggetto magico	mephit
+Cancellazione	Cancellation	oggetto magico	mephit
+Cancellazione epica	Epic Cancellation	oggetto magico	mephit
+Candela dell'invocazione	Candle of Invocation	oggetto magico	mephit
+Candela della verità	Candle of Truth	oggetto magico	mephit
+Cappa del saltimbanco	Cape of the Mountebank	oggetto magico	mephit
+Cappello del camuffamento	Hat of Disguise	oggetto magico	mephit
+Caraffa dell'acqua eterna	Decanter of Endless Water	oggetto magico	mephit
+Catena turbinante perenne	Everwhirling Chain	oggetto magico	mephit
+Cauto guerriero	Cautious Warrior	oggetto magico	mephit
+Celante	Sequestering	oggetto magico	mephit
+Cerchio Magico contro Bene	Magic Circle Against Good (Su)	oggetto magico	mephit
+Cerchio Magico contro Legge	Magic Circle Against Law	oggetto magico	mephit
+Cerchio Magico contro Male	Magic Circle against Evil (Su)	oggetto magico	mephit
+Charme	Charming	oggetto magico	mephit
+Charme su animali	Charm Animal	oggetto magico	mephit
+Charme su persone	Charm Person	oggetto magico	mephit
+Charme sui mostri	Charm Monster	oggetto magico	mephit
+Chiave dei portali	Gate Key	oggetto magico	mephit
+Cintura del monaco	Belt, Monk’s	oggetto magico	mephit
+Cintura nanica	Belt of Dwarvenkind	oggetto magico	mephit
+Codice dei piani infiniti	Codex of the Infinite Planes	oggetto magico	mephit
+Colla meravigliosa	Sovereign Glue	oggetto magico	mephit
+Collana dell'adattamento	Necklace of Adaptation	oggetto magico	mephit
+Collana delle palle di fuoco	Necklace of Fireballs	oggetto magico	mephit
+Collana dello strangolamento	Necklace of Strangulation	oggetto magico	mephit
+Collare del libero arbitrio	Torc of Free Will	oggetto magico	mephit
+Collare della libertà dell'assorbimento	Torc of Leech Freedom	oggetto magico	mephit
+Collare della preservazione del potere	Torc of Power Preservation	oggetto magico	mephit
+Collegata	Linked	oggetto magico	mephit
+Collisione	Collision	oggetto magico	mephit
+Colpo di grazia	Coup de Grace	oggetto magico	mephit
+Contagio	Contagion	oggetto magico	mephit
+Contenitore inverso	Reverse Capacitor	oggetto magico	mephit
+Contrastare Elementi	Endure Elements	oggetto magico	mephit
+Controincatesimi	Counterspells	oggetto magico	mephit
+Controllo dei morti	Undead Controlling	oggetto magico	mephit
+Coppa e talismano del semidio	Cup and Talisman of the Demigod	oggetto magico	mephit
+Corazza di bande della fortuna	Banded Mail of Luck	oggetto magico	mephit
+Corazza di piastre adamantina	Adamantine Breastplate	oggetto magico	mephit
+Corazza di piastre del comando	Breastplate of Command	oggetto magico	mephit
+Corazza di piastre del signore della guerra	Warlord’s Breastplate	oggetto magico	mephit
+Corda per intralciare	Rope of Entanglement	oggetto magico	mephit
+Corda per scalare	Rope of Climbing	oggetto magico	mephit
+Corno dei tritoni	Horn of the Tritons	oggetto magico	mephit
+Corno del bene/del male	Horn of Goodness/Evil	oggetto magico	mephit
+Corno del Valhalla	Horn of Valhalla	oggetto magico	mephit
+Corno della distruzione	Horn of Blasting	oggetto magico	mephit
+Corno della distruzione, superiore	Horn of Blasting, Greater	oggetto magico	mephit
+Corno della nebbia	Horn of Fog	oggetto magico	mephit
+Cosmo	Cosmos	oggetto magico	mephit
+Cotta di maglia elfica	Elven Chain	oggetto magico	mephit
+Credenza dei banchetti	Cabinet of Feasting	oggetto magico	mephit
+Cubo dei portali	Cubic Gate	oggetto magico	mephit
+Cubo della resistenza al gelo	Cube of Frost Resistance	oggetto magico	mephit
+Cubo di forza	Cube of Force	oggetto magico	mephit
+Cucchiaio del nutrimento	Sustaining Spoon	oggetto magico	mephit
+Cura ferite critiche	Cure Critical Wounds	oggetto magico	mephit
+Cura Ferite Gravi	Cure Serious Wounds	oggetto magico	mephit
+Cura Ferite Leggere	Cure Light Wounds	oggetto magico	mephit
+Cura Ferite Moderate	Cure Moderate Wounds	oggetto magico	mephit
+Danzante	Dancing	oggetto magico	mephit
+Danzante perenne	Everdancing	oggetto magico	mephit
+Dardo incantato (1°)	Magic Missile	oggetto magico	mephit
+Deperimento	Withering	oggetto magico	mephit
+Devastatore sacro	Holy Devastator	oggetto magico	mephit
+Deviazione delle frecce	Arrow Deflection	oggetto magico	mephit
+Deviazione delle frecce infinita	Infinite Arrow Deflection	oggetto magico	mephit
+Deviazione delle frecce straordinaria	Exceptional Arrow Deflection	oggetto magico	mephit
+Diadema della persuasione	Circlet of Persuasion	oggetto magico	mephit
+Diadema incandescente, maggiore	Circlet of Blasting, Major	oggetto magico	mephit
+Diadema incandescente, minore	Circlet of Blasting, Minor	oggetto magico	mephit
+Diamante del caos	Chaos Diamond	oggetto magico	mephit
+Difensiva	Defending	oggetto magico	mephit
+Difesa	Defense	oggetto magico	mephit
+Dislocatrice	Dislocator	oggetto magico	mephit
+Dislocatrice superiore	Great Dislocator	oggetto magico	mephit
+Dissimulare	Misdirection	oggetto magico	mephit
+Dissipatrice	Dissipater	oggetto magico	mephit
+Dissolvi magie	Dispel Magic	oggetto magico	mephit
+Distanza	Distance	oggetto magico	mephit
+Distorsione	Displacement (Su)	oggetto magico	mephit
+Distruzione	Disruption	oggetto magico	mephit
+Distruzione possente	Mighty Disruption	oggetto magico	mephit
+Divinazione	Divination	oggetto magico	mephit
+Dominatore	Dominator	oggetto magico	mephit
+Dominio	Domination	oggetto magico	mephit
+Ectoplasmica	Ectoplasmic	oggetto magico	mephit
+Elisir d'amore	Elixir of Love	oggetto magico	mephit
+Elisir del nascondersi	Elixir of Hiding	oggetto magico	mephit
+Elisir del nuotare	Elixir of Swimming	oggetto magico	mephit
+Elisir del soffio di fuoco	Elixir of Fire Breath	oggetto magico	mephit
+Elisir della furtività	Elixir of Sneaking	oggetto magico	mephit
+Elisir della verità	Elixir of Truth	oggetto magico	mephit
+Elisir della visione	Elixir of Vision	oggetto magico	mephit
+Elmo del cambio di allineamento	Helm of Opposite Alignment	oggetto magico	mephit
+Elmo del movimento subacqueo	Helm of Underwater Action	oggetto magico	mephit
+Elmo del teletrasfporto	Helm of Teleportation	oggetto magico	mephit
+Elmo della comprensione linguaggi e lettura del magico	Helm of Comprehend Languages and Read Magic	oggetto magico	mephit
+Elmo della luminosità	Helm of Brilliance	oggetto magico	mephit
+Elmo della telepatia	Helm of Telepathy	oggetto magico	mephit
+Eludere	Evasion (Ex)	oggetto magico	mephit
+Energia luminosa	Brilliant Energy	oggetto magico	mephit
+Eroismo	Heroism	oggetto magico	mephit
+Esplosione d'acido	Acidic Blast	oggetto magico	mephit
+Esplosione di fiamme	Flaming Burst	oggetto magico	mephit
+Esplosione di fulmini	Lightning Blast	oggetto magico	mephit
+Esplosione di fuoco	Fiery Blast	oggetto magico	mephit
+Esplosione folgorante	Shocking Burst	oggetto magico	mephit
+Esplosione psicocinetica	Psychokinetic Burst	oggetto magico	mephit
+Esplosione sonora	Sonic Blast	oggetto magico	mephit
+Estenzione delle Fiamme	Flame Extinguishing	oggetto magico	mephit
+Estremità Affiliata	Keen Edge	oggetto magico	mephit
+Evasore	Evader	oggetto magico	mephit
+Evoca Mostri I	Summon Monster I	oggetto magico	mephit
+Evoca Mostri II	Summon Monster II	oggetto magico	mephit
+Evoca Mostri III	Summon Monster III	oggetto magico	mephit
+Evoca Mostri IV	Summon Monster IV	oggetto magico	mephit
+Evocazione	Conjuration	oggetto magico	mephit
+Faretra efficiente	Efficient Quiver	oggetto magico	mephit
+Fasce metalliche della stretta	Iron Bands of Binding	oggetto magico	mephit
+Ferimento	Wounding	oggetto magico	mephit
+Fermaglio dello scudo	Brooch of Shielding	oggetto magico	mephit
+Ferri della cavalcatura impareggiabile	Horseshoes of the Peerless Steed	oggetto magico	mephit
+Ferri della velocità	Horseshoes of Speed	oggetto magico	mephit
+Ferri dello zefiro	Horseshoes of a Zephyr	oggetto magico	mephit
+Filatterio della fedeltà	Phylactery of Faithfulness	oggetto magico	mephit
+Filatterio dello scacciare non morti	Phylactery of Undead Turning	oggetto magico	mephit
+Flagellazione	Flailing	oggetto magico	mephit
+Flauto dei suoni	Pipes of Sounding	oggetto magico	mephit
+Flauto dei topi	Pipes of the Sewers	oggetto magico	mephit
+Flauto del dolore	Pipes of Pain	oggetto magico	mephit
+Flauto incantatore	Pipes of Haunting	oggetto magico	mephit
+Fodero delle estremità affilate	Scabbard of Keen Edges	oggetto magico	mephit
+Folgorante	Shock	oggetto magico	mephit
+Forma eterea	Etherealness	oggetto magico	mephit
+Forma Gassosa	Gaseous Form	oggetto magico	mephit
+Fortezza istantanea	Instant Fortress	oggetto magico	mephit
+Fortificazione	Fortification	oggetto magico	mephit
+Fortunata	Lucky	oggetto magico	mephit
+Forza del Toro	Bull’s Strength	oggetto magico	mephit
+Forza possente	Mighty Force	oggetto magico	mephit
+Frantuma mente	Mindcrusher	oggetto magico	mephit
+Frantuma-armi	Weaponbreaking	oggetto magico	mephit
+Frantumare	Shatter (Su)	oggetto magico	mephit
+Freccia acida	Acid Arrow	oggetto magico	mephit
+Freccia del sonno	Sleep Arrow	oggetto magico	mephit
+Freccia Infuocata	Flame Arrow	oggetto magico	mephit
+Fulmine (5°)	Lightning Bolt	oggetto magico	mephit
+Fuoco	Fire	oggetto magico	mephit
+Furia caotica	Chaotic Fury	oggetto magico	mephit
+Furia della natura	Nature’s Fury	oggetto magico	mephit
+Galleggiante	Floating	oggetto magico	mephit
+Gelida	Frost	oggetto magico	mephit
+Gemma della luminosità	Gem of Brightness	oggetto magico	mephit
+Gemma della visione	Gem of Seeing	oggetto magico	mephit
+Gemma elementale	Elemental Gem	oggetto magico	mephit
+Gemma Gemente	The Moaning Diamond	oggetto magico	mephit
+Gerofanti	The Hierophants	oggetto magico	mephit
+Giaco di maglia in mithral	Mithral Shirt	oggetto magico	mephit
+Giaco invulnerabile	Invulnerable Coat	oggetto magico	mephit
+Giavellotto del fulmine	Javelin of Lightning	oggetto magico	mephit
+Giocoliere temporale	Temporal Juggler	oggetto magico	mephit
+Globi del Drago	The Orbs of Dragonkind	oggetto magico	mephit
+Globo delle tempeste	Orb of Storms	oggetto magico	mephit
+Grande dominatore	Great Dominator	oggetto magico	mephit
+Grazia del Gatto	Cat’s Grace	oggetto magico	mephit
+Guanti catturafrecce	Gloves of Arrow Snaring	oggetto magico	mephit
+Guanti del nuotare e dello scalare	Gloves of Swimming and Climbing	oggetto magico	mephit
+Guanti del potere orchesco	Gauntlets of Ogre Power	oggetto magico	mephit
+Guanti della lettura degli oggetti	Gloves of Object Reading	oggetto magico	mephit
+Guanti della presa del titano	Gloves of Titan’s Grip	oggetto magico	mephit
+Guanti maldestri	Gauntlets of Fumbling	oggetto magico	mephit
+Guanto corrosivo	Gauntlet of Rust	oggetto magico	mephit
+Guanto d'arme di ferro della guerra	Iron Gauntlet of War	oggetto magico	mephit
+Guanto della conservazione	Glove of Storing	oggetto magico	mephit
+Guarigione	Healing	oggetto magico	mephit
+Guarigione rapida	Rapid Healing	oggetto magico	mephit
+Illuminazione	Illumination	oggetto magico	mephit
+Illusione	Illusion	oggetto magico	mephit
+Immagine maggiore	Major Image	oggetto magico	mephit
+Immagine speculare	Mirror Image	oggetto magico	mephit
+Immorale	Vicious	oggetto magico	mephit
+Immunità agli elementi	Energy Immunity	oggetto magico	mephit
+Immunità agli elementi universale	Universal Energy Immunity	oggetto magico	mephit
+In fase	Phasing	oggetto magico	mephit
+Incalzare rafforzato	Mighty Cleaving	oggetto magico	mephit
+Incantatore epico	Epic Spellcaster	oggetto magico	mephit
+Incensiere del controllo degli elementali dell'aria	Censer of Controlling Air Elementals	oggetto magico	mephit
+Incenso dell'ossessione	Incense of Obsession	oggetto magico	mephit
+Incenso della meditazione	Incense of Meditation	oggetto magico	mephit
+Incubi	Nightmares	oggetto magico	mephit
+Individuazione dei Metalli e dei Minerali	Metal and Mineral Detection	oggetto magico	mephit
+Individuazione dei Nemici	Enemy Detection	oggetto magico	mephit
+Individuazione del magico	Detect Magic	oggetto magico	mephit
+Individuazione delle porte segrete	Detect Secret Doors	oggetto magico	mephit
+Infliggi ferite critiche	Inflict Critical Wounds	oggetto magico	mephit
+Influenza sacrilega (8°)	Unholy Blight	oggetto magico	mephit
+Infrangi anima	Soulbreaker	oggetto magico	mephit
+Infuocata	Flaming	oggetto magico	mephit
+Ingrandire Persone	Enlarge Person	oggetto magico	mephit
+Interdizione al freddo	Cold Warding	oggetto magico	mephit
+Interdizione al fulmine	Lightning Warding	oggetto magico	mephit
+Interdizione al fuoco	Fire Warding	oggetto magico	mephit
+Interdizione al suono	Sonic Warding	oggetto magico	mephit
+Interdizione all'acido	Acid Warding	oggetto magico	mephit
+Intermittenza	Blinking	oggetto magico	mephit
+Inverno	Winter	oggetto magico	mephit
+Invisibilità	Invisibility	oggetto magico	mephit
+Invisibilità superiore	Greater Invisibility (Su)	oggetto magico	mephit
+Invocare il fulmine (5°)	Call Lightning	oggetto magico	mephit
+Invocazione	Evocation	oggetto magico	mephit
+Invulnerabilità	Invulnerability	oggetto magico	mephit
+Invulnerabilità potenziata (10/magia)	Great Invulnerability	oggetto magico	mephit
+Ira	Rage (Ex)	oggetto magico	mephit
+Ira dell'ordine (8°)	Order’s Wrath	oggetto magico	mephit
+Lama del sole	Sun Blade	oggetto magico	mephit
+Lama della fortuna (0 desideri)	Luck Blade	oggetto magico	mephit
+Lancia maledetta della ritorsione	Spear, Cursed Backbiter	oggetto magico	mephit
+Lancio	Throwing	oggetto magico	mephit
+Lancio triplo	Triple-Throw	oggetto magico	mephit
+Lanterna della rivelazione	Lantern of Revealing	oggetto magico	mephit
+Legge adamantina	Adamant Law	oggetto magico	mephit
+Legione astrale	Astral Legion	oggetto magico	mephit
+Lentezza	Slow (Su)	oggetto magico	mephit
+Lenti assorbi poteri	Eyes of Power Leech	oggetto magico	mephit
+Lenti assorbi poteri vampiriche	Eyes of Power Leech, Vampiric	oggetto magico	mephit
+Lenti dell'aquila	Eyes of the Eagle	oggetto magico	mephit
+Lenti dell'individuazione	Lens of Detection	oggetto magico	mephit
+Lenti della devastazione	Eyes of Doom	oggetto magico	mephit
+Lenti della pietrificazione	Eyes of Petrification	oggetto magico	mephit
+Lenti della vista espansa	Eyes of Expanded Vision	oggetto magico	mephit
+Lenti dello charme	Eyes of Charming	oggetto magico	mephit
+Levitazione	Levitate	oggetto magico	mephit
+Libertà di movimento	Freedom of Movement	oggetto magico	mephit
+Libro benedetto di Boccob	Blessed Book	oggetto magico	mephit
+Libro degli incantesimi infiniti	Book of Infinite Spells	oggetto magico	mephit
+Linguaggi	Tongues (Su)	oggetto magico	mephit
+Lira della costruzione	Lyre of Building	oggetto magico	mephit
+Luccicante	Gleaming	oggetto magico	mephit
+Luce	Light	oggetto magico	mephit
+Luce Diurna	Daylight	oggetto magico	mephit
+Luce incandescente (6°)	Searing Light	oggetto magico	mephit
+Luminescente	Radiant	oggetto magico	mephit
+Magia eccellente	Excellent Magic	oggetto magico	mephit
+Maglio dei titani	Maul of the Titans	oggetto magico	mephit
+Male ineffabile	Ineffable Evil	oggetto magico	mephit
+Manette dimensionali	Dimensional Shackles	oggetto magico	mephit
+Mani brucianti	Burning Hands	oggetto magico	mephit
+Manifestante	Manifester	oggetto magico	mephit
+Mano del mago	Hand of the Mage	oggetto magico	mephit
+Mano della gloria	Hand of Glory	oggetto magico	mephit
+Mantello del pipistrello	Cloak of the Bat	oggetto magico	mephit
+Mantello dell'aracnide	Cloak of Arachnida	oggetto magico	mephit
+Mantello dell'avvelenamento	Cloak of Poisonousness	oggetto magico	mephit
+Mantello della distorsione, maggiore	Cloak of Displacement, Major	oggetto magico	mephit
+Mantello della distorsione, minore	Cloak of Displacement, Minor	oggetto magico	mephit
+Mantello della fede	Mantle of Faith	oggetto magico	mephit
+Mantello della forma eterea	Cloak of Etherealness	oggetto magico	mephit
+Mantello della manta	Cloak of the Manta Ray	oggetto magico	mephit
+Mantello della resistenza agli incantesimi	Mantle of Spell Resistance	oggetto magico	mephit
+Mantello elfico	Cloak of Elvenkind	oggetto magico	mephit
+Manto della furtività potenziata	Mantle of Great Stealth	oggetto magico	mephit
+Manto della resistenza agli incantesimi epica	Mantle of Epic Spell Resistance	oggetto magico	mephit
+Manuale dei golem	Golem Manual	oggetto magico	mephit
+Martello dei fulmini	Hammer of Thunderbolts	oggetto magico	mephit
+Martello del caos (8°)	Chaos Hammer	oggetto magico	mephit
+Martello nanico da lancio	Dwarven Thrower	oggetto magico	mephit
+Maschera del teschio	Mask of the Skull	oggetto magico	mephit
+Mascheramento	Glamered	oggetto magico	mephit
+Mazza del Santo	The Saint’s Mace	oggetto magico	mephit
+Mazza del terrore	Mace of Terror	oggetto magico	mephit
+Mazza della punizione	Mace of Smiting	oggetto magico	mephit
+Mazza della rovina	Mace of Ruin	oggetto magico	mephit
+Mazza sanguinaria	Mace of Blood	oggetto magico	mephit
+Mazzo delle illusioni	Deck of Illusions	oggetto magico	mephit
+Mazzo delle meraviglie	Deck of Many Things	oggetto magico	mephit
+Medaglione dei pensieri	Medallion of Thoughts	oggetto magico	mephit
+Medaglione della proiezione dei pensieri	Medallion of Thought Projection	oggetto magico	mephit
+Meraviglie	Wonder	oggetto magico	mephit
+Metamorfosi	Polymorph	oggetto magico	mephit
+Morte finale	Finaldeath	oggetto magico	mephit
+Morte irrequieta	Restless Death	oggetto magico	mephit
+Movimenti del Ragno	Spider Climb (Ex)	oggetto magico	mephit
+Movimento silenzioso	Silent Moves	oggetto magico	mephit
+Movimento silenzioso migliorato	Silent Moves, Improved	oggetto magico	mephit
+Movimento silenzioso superiore	Silent Moves, Greater	oggetto magico	mephit
+Muri	Walls	oggetto magico	mephit
+Muro	Wall	oggetto magico	mephit
+Muro di fuoco	Wall of Fire	oggetto magico	mephit
+Muro di ghiaccio	Wall of Ice	oggetto magico	mephit
+Nascondersi agli Animali	Hide from Animals	oggetto magico	mephit
+Nascondersi ai Non Morti	Hide from Undead	oggetto magico	mephit
+Necromanzia	Necromancy	oggetto magico	mephit
+Negazione epica	Epic Negation	oggetto magico	mephit
+Neutralizza Veleno	Neutralize Poison	oggetto magico	mephit
+Nuotare	Swimming	oggetto magico	mephit
+Nuotare, migliorato	Swimming, Improved	oggetto magico	mephit
+Nutrimento corporeo	Bodyfeeder	oggetto magico	mephit
+Nutrimento mentale	Mindfeeder	oggetto magico	mephit
+Occhiali della notte	Goggles of Night	oggetto magico	mephit
+Occhiali della visione dettagliata	Goggles of Minute Seeing	oggetto magico	mephit
+Occhio dell'orco	Eye of the Orc	oggetto magico	mephit
+Ombra	Shadow	oggetto magico	mephit
+Ombra migliorata	Shadow, Improved	oggetto magico	mephit
+Ombra superiore	Shadow, Greater	oggetto magico	mephit
+Oscurità	Darkness	oggetto magico	mephit
+Palla di fuoco (5°)	Fireball	oggetto magico	mephit
+Pantofole del ragno	Slippers of Spider Climbing	oggetto magico	mephit
+Paradiso	Paradise	oggetto magico	mephit
+Parare	Parrying	oggetto magico	mephit
+Passaggio	Passage	oggetto magico	mephit
+Passo senza Tracce	Pass Without Trace (Ex)	oggetto magico	mephit
+Paura	Fear	oggetto magico	mephit
+Pelle di rinoceronte	Rhino Hide	oggetto magico	mephit
+Perla del chiavistello cerebrale	Pearl, Brain Lock	oggetto magico	mephit
+Perla del potere 1°	Pearl of Power	oggetto magico	mephit
+Perla del seme mentale	Pearl, Mind Seed	oggetto magico	mephit
+Perla della crisi respiratoria	Pearl, Breath Crisis	oggetto magico	mephit
+Perla della personalità parassitica	Pearl, Personality Parasite	oggetto magico	mephit
+Perla delle sirene	Pearl of the Sirines	oggetto magico	mephit
+Pietosa	Merciful	oggetto magico	mephit
+Pietra del controllo degli elementali della terra	Stone of Controlling Earth Elementals	oggetto magico	mephit
+Pietra del peso	Stone of Weight (Loadstone)	oggetto magico	mephit
+Pietra dell'allarme	Stone of Alarm	oggetto magico	mephit
+Pietra della buona fortuna (pietrafortuna)	Stone of Good Luck (Luckstone)	oggetto magico	mephit
+Pietra filosofale	Philosopher’s Stone	oggetto magico	mephit
+Pietra Magica	Magic Stone	oggetto magico	mephit
+Pietre magiche	Ioun Stones	oggetto magico	mephit
+Pigmenti meravigliosi	Marvelous Pigments	oggetto magico	mephit
+Pitone	Python	oggetto magico	mephit
+Polvere dell'apparizione	Dust of Appearance	oggetto magico	mephit
+Polvere dell'illusione	Dust of Illusion	oggetto magico	mephit
+Polvere della sparizione	Dust of Disappearance	oggetto magico	mephit
+Polvere dello starnuto e del soffocamento	Dust of Sneezing and Choking	oggetto magico	mephit
+Polvere nascondi tracce	Dust of Tracelessness	oggetto magico	mephit
+Polvere prosciugante	Dust of Dryness	oggetto magico	mephit
+Portatrice di caos	Chaosbringer	oggetto magico	mephit
+Potenza	Lordly Might	oggetto magico	mephit
+Potenza epica	Epic Might	oggetto magico	mephit
+Potenza planare	Planar Might	oggetto magico	mephit
+Potere	Power	oggetto magico	mephit
+Potere caotico	Anarchic Power	oggetto magico	mephit
+Potere del camaleonte	Chameleon Power	oggetto magico	mephit
+Potere infuocato	Fiery Power	oggetto magico	mephit
+Potere legale	Axiomatic Power	oggetto magico	mephit
+Potere sacrilego	Unholy Power	oggetto magico	mephit
+Potere sacro	Holy Power	oggetto magico	mephit
+Pozione del veleno	Potion of Poison	oggetto magico	mephit
+Pozzo dei Mondi	Well of Many Worlds	oggetto magico	mephit
+Prismatico	Prism	oggetto magico	mephit
+Profanatore sacrilego	Unholy Despoiler	oggetto magico	mephit
+Prosciuga-vita	Life-Drinker	oggetto magico	mephit
+Protezione dall'Energia (Tipo)	Protection from Energy	oggetto magico	mephit
+Psichica	Psychic	oggetto magico	mephit
+Psicocinetica	Psychokinetic	oggetto magico	mephit
+Psicorona della mente cristallina	Psicrown of the Crystal Mind	oggetto magico	mephit
+Pugnalatore alle spalle	Backstabber	oggetto magico	mephit
+Pugnale avvelenato	Dagger of Venom	oggetto magico	mephit
+Pugnale d'argento perfetto	Silver Dagger, Masterwork	oggetto magico	mephit
+Pugnale dell'assassino	Assassin’s Dagger	oggetto magico	mephit
+Pugnale in adamantio	Adamantine Dagger	oggetto magico	mephit
+Punizione sacra (8°)	Holy Smite	oggetto magico	mephit
+Quadrello urlante	Screaming Bolt	oggetto magico	mephit
+Ragnatela	Web (Ex)	oggetto magico	mephit
+Randello Incantato	Shillelagh	oggetto magico	mephit
+Rapidità	Quickness (Su)	oggetto magico	mephit
+Resistenza agli elementi universale maggiore	Universal Energy Resistance, Greater	oggetto magico	mephit
+Resistenza agli elementi universale minore	Universal Energy Resistance, Minor	oggetto magico	mephit
+Resistenza agli incantesimi (13)	Spell Resistance (Ex)	oggetto magico	mephit
+Resistenza agli incantesimi potenziata (21)	Great Spell Resistance	oggetto magico	mephit
+Resistenza ai poteri (13)	Power Resistance	oggetto magico	mephit
+Resistenza al freddo	Cold Resistance	oggetto magico	mephit
+Resistenza al freddo migliorata	Cold Resistance, Improved	oggetto magico	mephit
+Resistenza al freddo superiore	Cold Resistance, Greater	oggetto magico	mephit
+Resistenza al fuoco	Fire Resistance	oggetto magico	mephit
+Resistenza al fuoco migliorata	Fire Resistance, Improved	oggetto magico	mephit
+Resistenza al fuoco superiore	Fire Resistance, Greater	oggetto magico	mephit
+Resistenza al suono	Sonic Resistance	oggetto magico	mephit
+Resistenza al suono migliorata	Sonic Resistance, Improved	oggetto magico	mephit
+Resistenza al suono superiore	Sonic Resistance, Greater	oggetto magico	mephit
+Resistenza all'acido	Acid Resistance	oggetto magico	mephit
+Resistenza all'acido migliorata	Acid Resistance, Improved	oggetto magico	mephit
+Resistenza all'acido superiore	Acid Resistance, Greater	oggetto magico	mephit
+Resistenza all'elettricità	Electricity Resistance	oggetto magico	mephit
+Resistenza all'elettricità migliorata	Electricity Resistance, Improved	oggetto magico	mephit
+Resistenza all'elettricità superiore	Electricity Resistance, Greater	oggetto magico	mephit
+Resistenza dell'Orso	Bear’s Endurance	oggetto magico	mephit
+Respirare sott'Acqua	Water Breathing (Ex)	oggetto magico	mephit
+Rete dell'intrappolamento	Net of Snaring	oggetto magico	mephit
+Ricercante	Seeking	oggetto magico	mephit
+Richiamo del djinni	Djinni Calling	oggetto magico	mephit
+Ridurre Persone	Reduce Person	oggetto magico	mephit
+Riflettente	Reflecting	oggetto magico	mephit
+Riflettere potenziato	Great Reflection	oggetto magico	mephit
+Rifletti incantesimo	Spell Turning	oggetto magico	mephit
+Rigenerazione	Regeneration	oggetto magico	mephit
+Rimuovi Cecità/Sordità	Remove Blindness/Deafness	oggetto magico	mephit
+Rimuovi Malattia	Remove Disease	oggetto magico	mephit
+Rimuovi Maledizione	Remove Curse	oggetto magico	mephit
+Rimuovi Paralisi	Remove Paralysis	oggetto magico	mephit
+Rimuovi Paura	Remove Fear	oggetto magico	mephit
+Rincuorante	Heartening	oggetto magico	mephit
+Ristorare	Restoration	oggetto magico	mephit
+Ritarda Veleno	Delay Poison	oggetto magico	mephit
+Ritornante	Returning	oggetto magico	mephit
+Rovina infuocata	Fiery Ruin	oggetto magico	mephit
+Sacra	Holy	oggetto magico	mephit
+Sacrilega	Unholy	oggetto magico	mephit
+Sacro vendicatore	Holy Avenger	oggetto magico	mephit
+Saggezza del Gufo	Owl’s Wisdom	oggetto magico	mephit
+Saltare, migliorato	Jumping, Improved	oggetto magico	mephit
+Santuario	Sanctuary	oggetto magico	mephit
+Sbarramento rapido	Rapid Barrage	oggetto magico	mephit
+Scalare	Climbing	oggetto magico	mephit
+Scalare, migliorato	Climbing, Improved	oggetto magico	mephit
+Scarabeo dell'anatema dei golem	Scarab, Golembane	oggetto magico	mephit
+Scarabeo della morte	Scarab of Death	oggetto magico	mephit
+Scarabeo della protezione	Scarab of Protection	oggetto magico	mephit
+Scassinare	Knock	oggetto magico	mephit
+Sciame di Insetti	Swarming Insects	oggetto magico	mephit
+Scimitarra silvana	Sylvan Scimitar	oggetto magico	mephit
+Scivolosa	Slick	oggetto magico	mephit
+Scivolosa migliorata	Slick, Improved	oggetto magico	mephit
+Scivolosa superiore	Slick, Greater	oggetto magico	mephit
+Scopa dell'attacco animato	Broom of Animated Attack	oggetto magico	mephit
+Scopa volante	Broom of Flying	oggetto magico	mephit
+Scudo alato	Winged Shield	oggetto magico	mephit
+Scudo amico	Friend Shield	oggetto magico	mephit
+Scudo assorbente	Absorbing Shield	oggetto magico	mephit
+Scudo del leone	Lion’s Shield	oggetto magico	mephit
+Scudo dell'incantatore	Caster’s Shield	oggetto magico	mephit
+Scudo di forza	Force Shield	oggetto magico	mephit
+Scudo di spine	Spined Shield	oggetto magico	mephit
+Scudo in legnoscuro	Darkwood Shield	oggetto magico	mephit
+Scudo mentale	Mind Shielding	oggetto magico	mephit
+Scudo pesante in mithral	Mithral Heavy Shield	oggetto magico	mephit
+Scurovisione	Darkvision (Su)	oggetto magico	mephit
+Selvatica	Wild	oggetto magico	mephit
+Sentiero	The Path	oggetto magico	mephit
+Sete di anime	Souldrinker	oggetto magico	mephit
+Sfera dell'annientamento	Sphere of Annihilation	oggetto magico	mephit
+Sfera di Cristallo	Crystal Ball	oggetto magico	mephit
+Sfera di cristallo ipnotica	Crystal Hypnosis Ball	oggetto magico	mephit
+Sfere	Spheres	oggetto magico	mephit
+Sfocatura	Blur (Su)	oggetto magico	mephit
+Sfondamento	Bashing	oggetto magico	mephit
+Sicurezza	Security	oggetto magico	mephit
+Silenzio	Silence	oggetto magico	mephit
+Solvente universale	Universal Solvent	oggetto magico	mephit
+Soppresione	Suppression	oggetto magico	mephit
+Sostegno temporale	Time Buttress	oggetto magico	mephit
+Sostentamento	Sustenance	oggetto magico	mephit
+Sovranità	Rulership	oggetto magico	mephit
+Sovranità epica	Epic Rulership	oggetto magico	mephit
+Spada berseker	Sword, Berserking	oggetto magico	mephit
+Spada dei piani	Sword of the Planes	oggetto magico	mephit
+Spada del furto vitale	Sword of Life Stealing	oggetto magico	mephit
+Spada della furtività	Sword of Subtlety	oggetto magico	mephit
+Spada lingua di fuoco	Flame Tongue	oggetto magico	mephit
+Spada lunga di ferro freddo perfetta	Masterwork Cold Iron Longsword	oggetto magico	mephit
+Spada ruba nove vite	Nine Lives Stealer	oggetto magico	mephit
+Spadone del gelo	Frost Brand	oggetto magico	mephit
+Specchio del balzo temporale	Mirror of Time Hop	oggetto magico	mephit
+Specchio dell'abilità mentale	Mirror of Mental Prowess	oggetto magico	mephit
+Specchio dell'antagonismo	Mirror of Opposition	oggetto magico	mephit
+Specchio della suggestione	Mirror of Suggestion	oggetto magico	mephit
+Specchio dello scambio mentale	Mirror of Mind Switch	oggetto magico	mephit
+Specchio imprigionante	Mirror of Life Trapping	oggetto magico	mephit
+Spezzante	Sundering	oggetto magico	mephit
+Spina frantumante	Shatterspike	oggetto magico	mephit
+Splendore	Splendor	oggetto magico	mephit
+Splendore dell'Aquila	Eagle’s Splendor	oggetto magico	mephit
+Splendore epico	Epic Splendor	oggetto magico	mephit
+Spruzzo colorato	Color Spray	oggetto magico	mephit
+Statuine del potere meraviglioso	Figurines of Wondrous Power	oggetto magico	mephit
+Stelle cadenti	Shooting Stars	oggetto magico	mephit
+Stivali alati	Boots, Winged	oggetto magico	mephit
+Stivali danzanti	Boots of Dancing	oggetto magico	mephit
+Stivali del pattinare	Boots of Skating	oggetto magico	mephit
+Stivali del piè pesante	Boots of Stomping	oggetto magico	mephit
+Stivali del teletrasporto	Boots of Teleportation	oggetto magico	mephit
+Stivali dell'accelerazione temporale	Boots of Temporal Acceleration	oggetto magico	mephit
+Stivali dell'atterraggio	Boots of Landing	oggetto magico	mephit
+Stivali dell'inverno	Boots of the Winterlands	oggetto magico	mephit
+Stivali della levitazione	Boots of Levitation	oggetto magico	mephit
+Stivali della rapidità	Boots of Swiftness	oggetto magico	mephit
+Stivali della velocità	Boots of Speed	oggetto magico	mephit
+Stivali elfici	Boots of Elvenkind	oggetto magico	mephit
+Stivali molleggiati	Boots of Striding and Springing	oggetto magico	mephit
+Stocco pungente	Rapier of Puncturing	oggetto magico	mephit
+Stretta folgorante	Shocking Grasp	oggetto magico	mephit
+Sudario di disintegrazione	Shrouds of Disintegration	oggetto magico	mephit
+Suggestione	Suggestion	oggetto magico	mephit
+Sutra del placido pensiero	Sutra of Tranquil Thought	oggetto magico	mephit
+Svanire	Vanishing	oggetto magico	mephit
+Sventura del mutaforma	Shifter’s Sorrow	oggetto magico	mephit
+Talismano anti-veleno	Periapt of Proof against Poison	oggetto magico	mephit
+Talismano del bene puro	Talisman of Pure Good	oggetto magico	mephit
+Talismano del male estremo	Talisman of Ultimate Evil	oggetto magico	mephit
+Talismano della putrefazione	Periapt of Foul Rotting	oggetto magico	mephit
+Talismano della rimarginazione	Periapt of Wound Closure	oggetto magico	mephit
+Talismano della salute	Periapt of Health	oggetto magico	mephit
+Talismano della sfera	Talisman of the Sphere	oggetto magico	mephit
+Talismano non incline ai desideri	Talisman of Reluctant Wishes	oggetto magico	mephit
+Tamburi del panico	Drums of Panic	oggetto magico	mephit
+Tatuaggio strisciante	Crawling Tattoos	oggetto magico	mephit
+Telecinesi	Telekinesis	oggetto magico	mephit
+Teletrasportante	Teleporting	oggetto magico	mephit
+Tempesta di ghiaccio	Ice Storm	oggetto magico	mephit
+Terra e Pietra	Earth and Stone	oggetto magico	mephit
+Terrore	Dread	oggetto magico	mephit
+Teschioscuro	Darkskull	oggetto magico	mephit
+Tiro distante	Distant Shot	oggetto magico	mephit
+Tocco del ghoul	Ghoul Touch	oggetto magico	mephit
+Tocco fantasma	Ghost Touch	oggetto magico	mephit
+Tonante	Thundering	oggetto magico	mephit
+Trasmutazione	Transmutation	oggetto magico	mephit
+Trasportante	Aporter	oggetto magico	mephit
+Tre desideri	Three Wishes	oggetto magico	mephit
+Tridente del comando dei pesci	Trident of Fish Command	oggetto magico	mephit
+Tridente dell'avvertimento	Trident of Warning	oggetto magico	mephit
+Tunica degli occhi	Robe of Eyes	oggetto magico	mephit
+Tunica degli oggetti utili	Robe of Useful Items	oggetto magico	mephit
+Tunica dei colori scintillanti	Robe of Scintillating Colors	oggetto magico	mephit
+Tunica dei parassiti	Robe of Vermin	oggetto magico	mephit
+Tunica del mimetismo	Robe of Blending	oggetto magico	mephit
+Tunica dell'arcimago	Robe of the Archmagi	oggetto magico	mephit
+Tunica dell'indebolimento	Robe of Powerlessness	oggetto magico	mephit
+Tunica delle ossa	Robe of Bones	oggetto magico	mephit
+Tunica delle stelle	Robe of Stars	oggetto magico	mephit
+Tuoni e Fulmini	Thunder and Lightning	oggetto magico	mephit
+Unguento corroborante	Restorative Ointment	oggetto magico	mephit
+Unguento della conservazione	Unguent of Timelessness	oggetto magico	mephit
+Vacuo grimorio	Vacuous Grimoire	oggetto magico	mephit
+Veleno	Poison	oggetto magico	mephit
+Ventaglio	Wind Fan	oggetto magico	mephit
+Verga Inamovibile	Immovable Rod	oggetto magico	mephit
+Veste della fuga	Vest of Escape	oggetto magico	mephit
+Vesti del druido	Vestment, Druid’s	oggetto magico	mephit
+Viaggiatore	Traveler	oggetto magico	mephit
+Vipera	Viper	oggetto magico	mephit
+Vista	Seeing	oggetto magico	mephit
+Vista a Raggi X	X-Ray Vision	oggetto magico	mephit
+Vita	Life	oggetto magico	mephit
+Vita sfalsata	False Life	oggetto magico	mephit
+Volare	Fly (Ex)	oggetto magico	mephit
+Vorpal	Vorpal	oggetto magico	mephit
+Zainetto pratico	Handy Haversack	oggetto magico	mephit
+Zanna Magica	Magic Fang	oggetto magico	mephit
+Zappa dei titani	Mattock of the Titans	oggetto magico	mephit
+Analfabetismo	Illiteracy	privilegio	mephit
+Ira	Rage (Ex)	privilegio	mephit
+Ira infaticabile	Tireless Rage (Ex)	privilegio	mephit
+Ira possente	Mighty Rage (Ex)	privilegio	mephit
+Ira superiore	Greater Rage (Ex)	privilegio	mephit
+Movimento veloce	Fast Movement (Ex)	privilegio	mephit
+Percepire trappole	Trap Sense (Ex)	privilegio	mephit
+Riduzione del danno	Damage Reduction (Ex)	privilegio	mephit
+Schivare prodigioso	Uncanny Dodge (Ex)	privilegio	mephit
+Schivare prodigioso migliorato	Improved Uncanny Dodge (Ex)	privilegio	mephit
+Volontà indomita	Indomitable Will (Ex)	privilegio	mephit
+Elfo	Elf	razza	mephit
+Gnomo	Gnome	razza	mephit
+Halfling	Halfling	razza	mephit
+Mezzelfo	Half-Elf	razza	mephit
+Nano	Dwarf	razza	mephit
+Abilità Focalizzata	Skill Focus	talento	mephit
+Abilità Focalizzata Epica	Epic Skill Focus	talento	mephit
+Accesso Spontaneo al Dominio	Spontaneous Domain Access	talento	mephit
+Accuratezza Prodigiosa	Uncanny Accuracy	talento	mephit
+Affinità allo Psicocristallo	Psicrystal Affinity	talento	mephit
+Affinità Psionica	Psionic Affinity	talento	mephit
+Alchimia Accresciuta	Augmented Alchemy	talento	mephit
+Alimentazione Corporea	Body Fuel	talento	mephit
+Anatema dei Nemici	Bane of Enemies	talento	mephit
+Arciere da Combattimento	Combat Archery	talento	mephit
+Arco Vitale Prolungato	Extended Life Span	talento	mephit
+Arma Focalizzata Epica	Epic Weapon Focus	talento	mephit
+Arma Psionica	Psionic Weapon	talento	mephit
+Arma Psionica Superiore	Greater Psionic Weapon	talento	mephit
+Assaltatore di Incantatori	Spellcasting Harrier	talento	mephit
+Attacco Allineato	Aligned Attack	talento	mephit
+Attacco di Opportunità Furtivo	Sneak Attack of Opportunity	talento	mephit
+Attacco Fantasma	Ghost Attack	talento	mephit
+Attacco Furtivo Migliirato	Improved Sneak Attack	talento	mephit
+Attacco in Volo Migliorato	Improved Flyby Attack	talento	mephit
+Attacco Mortale Migliorato	Improved Death Attack	talento	mephit
+Attacco Temerario	Reckless Offense	talento	mephit
+Attacco Turbinante Migliorato	Improved Whirlwind Attack	talento	mephit
+Aura di Coraggio Ampliata	Widen Aura of Courage	talento	mephit
+Aura di Coraggio Migliorata	Improved Aura of Courage	talento	mephit
+Aura di Disperazione Ampliata	Widen Aura of Despair	talento	mephit
+Aura di Disperazione Migliorata	Improved Aura of Despair	talento	mephit
+Aura di Energia Positiva	Positive Energy Aura	talento	mephit
+Auto-Occultamento	Self-Concealment	talento	mephit
+Autonomo	Autonomous	talento	mephit
+Autorità Epica	Epic Leadership	talento	mephit
+Baluardo di Difesa	Bulwark of Defense	talento	mephit
+Buco Psionico	Psionic Hole	talento	mephit
+Buttare a Terra	Knock-Down	talento	mephit
+Canto Assordante	Deafening Song	talento	mephit
+Canto di Interferenza	Hindering Song	talento	mephit
+Capienza di Incantesimi Migliorata	Improved Spell Capacity	talento	mephit
+Carica Crudele	Dire Charge	talento	mephit
+Carica Psionica	Psionic Charge	talento	mephit
+Carisma Possente	Great Charisma	talento	mephit
+Cavalcatore Leggendario	Legendary Rider	talento	mephit
+Colpo Affilato	Keen Strike	talento	mephit
+Colpo Frantumatore	Shattering Strike	talento	mephit
+Colpo inevitabile	Unavoidable Strike	talento	mephit
+Colpo Ki Migliorato	Improved Ki Strike	talento	mephit
+Colpo Sacrilego	Unholy Strike	talento	mephit
+Colpo Sacro	Holy Strike	talento	mephit
+Colpo Spettrale	Spectral Strike	talento	mephit
+Colpo Vorpal	Vorpal Strike	talento	mephit
+Comandante Leggendario	Legendary Commander	talento	mephit
+Combattere con Due Armi Perfetto	Perfect Two-Weapon Fighting	talento	mephit
+Combattere con Più Armi Migliorato	Improved Multiweapon Fighting	talento	mephit
+Combattere con Più Armi Perfetto	Perfect Multiweapon Fighting	talento	mephit
+Combattere con Più Armi Superiore	Greater Multiweapon Fighting	talento	mephit
+Compagno Bestiale Magico	Magical Beast Companion	talento	mephit
+Conoscenza di Incantesimi	Spell Knowledge	talento	mephit
+Conoscenza Poderosa	Power Knowledge	talento	mephit
+Contenmento dello Psicocristallo	Psicrystal Containment	talento	mephit
+Controcanto Reattivo	Reactive Countersong	talento	mephit
+Controllare Vegetali	Plant Control	talento	mephit
+Corpo Psionico	Psionic Body	talento	mephit
+Corsa sulle Pareti	Up the Walls	talento	mephit
+Costituzione Possente	Great Constitution	talento	mephit
+Creare Armi e Armature Magiche Epiche	Craft Epic Magic Arms and Armor	talento	mephit
+Creare Armi e Armature Psioniche	Craft Psionic Arms and Armor	talento	mephit
+Creare Bastoni Epici	Craft Epic Staff	talento	mephit
+Creare Costrutti Psionici	Craft Psionic Construct	talento	mephit
+Creare Cristalli Coscienti	Craft Cognizance Crystal	talento	mephit
+Creare Dorje	Craft Dorje	talento	mephit
+Creare Oggetti Meravigliosi Epici	Craft Epic Wondrous Item	talento	mephit
+Creare Oggetti Universali	Craft Universal Item	talento	mephit
+Creare Psicorone	Craft Psicrown	talento	mephit
+Creare Verghe Epiche	Craft Epic Rod	talento	mephit
+Creazione Oggetto Efficiente	Efficient Item Creation	talento	mephit
+Critico Devastante	Devastating Critical	talento	mephit
+Critico Poderoso	Power Critical	talento	mephit
+Critico Soverchiante	Overwhelming Critical	talento	mephit
+Danno Persistente	Lingering Damage	talento	mephit
+Danza Ammantata	Cloak Dance	talento	mephit
+Deflettere Frecce	Reflect Arrows	talento	mephit
+Destrezza Possente	Great Dexterity	talento	mephit
+Deviare Straordinario	Exceptional Deflection	talento	mephit
+Deviazione Infinita	Infinite Deflection	talento	mephit
+Difesa Mobile	Mobile Defense (Ex)	talento	mephit
+Dividere Raggio Psionico	Split Psionic Ray	talento	mephit
+Dominio Bonus	Bonus Domain	talento	mephit
+Dono Psionico	Psionic Endowment	talento	mephit
+Dono Psionico Superiore	Greater Psionic Endowment	talento	mephit
+Dotato Psionicamente	Talented	talento	mephit
+Dote Naturale	Wild Talent	talento	mephit
+Dote Psionica	Psionic Talent	talento	mephit
+Eludere Carica	Sidestep Charge (Ex)	talento	mephit
+Emanazione Permanente	Permanent Emanation	talento	mephit
+Espandere Conoscenza	Expanded Knowledge	talento	mephit
+Espandere Conoscenza Epica	Epic Expanded Knowledge	talento	mephit
+Esplosione di Energia Negativa	Negative Energy Burst	talento	mephit
+Factotum	Jack of All Trades	talento	mephit
+Ferita Profonda	Wounding Attack	talento	mephit
+Forgiare Anelli Epici	Forge Epic Ring	talento	mephit
+Forma Selvatica Bestia Magica	Magical Beast Wild Shape	talento	mephit
+Forma Selvatica Colossale	Colossal Wild Shape	talento	mephit
+Forma Selvatica Draghesca	Dragon Wild Shape	talento	mephit
+Forma Selvatica Elementale Migliorata	Improved Elemental Wild Shape	talento	mephit
+Forma Selvatica Mastodontica	Gargantuan Wild Shape	talento	mephit
+Forma Selvatica Minuta	Diminutive Wild Shape	talento	mephit
+Forma Selvatica Parassita	Vermin Wild Shape	talento	mephit
+Forma Selvatica Piccolissima	Fine Wild Shape	talento	mephit
+Forma Selvatica Vegetale	Plant Wild Shape	talento	mephit
+Forza di Volontà	Force of Will	talento	mephit
+Forza Possente	Great Strength	talento	mephit
+Freccia della Morte Migliorata	Improved Arrow of Death	talento	mephit
+Giusto Colpo	Righteous Strike	talento	mephit
+Guarigione Rapida	Fast Healing	talento	mephit
+Ignorare Componenti Materiali	Ignore Material Components	talento	mephit
+Impatto Profondo	Deep Impact	talento	mephit
+Incantatore Epico	Epic Spellcasting	talento	mephit
+Incantesimi Aumentati	Enhance Spell	talento	mephit
+Incantesimi Camuffati	Disguise Spell	talento	mephit
+Incantesimi Immobili Automatici	Automatic Still Spell	talento	mephit
+Incantesimi in Combattimento Migliorati	Improved Combat Casting	talento	mephit
+Incantesimi Inarrestabili Epici	Epic Spell Penetration	talento	mephit
+Incantesimi Intensificati Migliorati	Improved Heighten Spell	talento	mephit
+Incantesimi Lontani	Reach Spell	talento	mephit
+Incantesimi Migliorati Basati sull'Allineamento	Improved Alignment-Based Casting	talento	mephit
+Incantesimi Rapidi Automatici	Automatic Quicken Spell	talento	mephit
+Incantesimi Rinforzati	Intensify Spell \[Metamagic\]	talento	mephit
+Incantesimi Ripetuti	Repeat Spell	talento	mephit
+Incantesimi Silenziosi Automatici	Automatic Silent Spell	talento	mephit
+Incantesimi Spontanei	Spontaneous Spell	talento	mephit
+Incantesimo Clandestino	Spell Stowaway	talento	mephit
+Incantesimo del Famiglio	Familiar Spell	talento	mephit
+Incantesimo di Opportunità	Spell Opportunity	talento	mephit
+Incantesimo Focalizzato Epico	Epic Spell Focus	talento	mephit
+Incantesimo Sacro	Sacred Spell	talento	mephit
+Incidere Tatuaggi	Scribe Tattoo	talento	mephit
+Incitare Ira	Incite Rage	talento	mephit
+Incrementare Costrutto	Boost Construct	talento	mephit
+Indagatore	Investigator	talento	mephit
+Iniziativa Superiore	Superior Initiative	talento	mephit
+Inquisitore	Inquisitor	talento	mephit
+Intelligenza Possente	Great Intelligence	talento	mephit
+Ira Caotica	Chaotic Rage	talento	mephit
+Ira Demolitrice	Ruinous Rage	talento	mephit
+Ira Possente	Mighty Rage (Ex)	talento	mephit
+Ira Terrificante	Terrifying Rage	talento	mephit
+Ira Tonante	Thundering Rage	talento	mephit
+Ispirare Eccellenza	Inspire Excellence	talento	mephit
+Ispirazione a Distanza	Ranged Inspiration	talento	mephit
+Ispirazione di Gruppo	Group Inspiration	talento	mephit
+Ispirazione Duratura	Lasting Inspiration	talento	mephit
+Ispirazione Epica	Epic Inspiration	talento	mephit
+Ispirazione Rapida	Rapid Inspiration	talento	mephit
+Lacerare con Due Armi	Two-Weapon Rend	talento	mephit
+Lacerare con Più Armi	Multiweapon Rend	talento	mephit
+Lottatore Leggendario	Legendary Wrestler	talento	mephit
+Maestria Superiore	Superior Expertise	talento	mephit
+Magia Antipsionica	Antipsionic Magic	talento	mephit
+Magia Tenace	Tenacious Magic	talento	mephit
+Manifestare in Combattimento	Combat Manifestation	talento	mephit
+Manifestazione Migliorata	Improved Manifestation	talento	mephit
+Mantenere la Posizione	Stand Still	talento	mephit
+Meditazione Psionica	Psionic Meditation	talento	mephit
+Mente Affinata	Narrow Mind	talento	mephit
+Mente Aperta	Open Minded	talento	mephit
+Mente Caotica	Chaotic Mind	talento	mephit
+Mente Chiusa	Closed Mind	talento	mephit
+Mente Ostile	Hostile Mind	talento	mephit
+Mente sul Corpo	Mind Over Body	talento	mephit
+Metabolismo Rapido	Rapid Metabolism	talento	mephit
+Metamagia Migliorata	Improved Metamagic	talento	mephit
+Metapsionica Migliorata	Improved Metapsionics	talento	mephit
+Mira Precisa	Sharp-Shooting	talento	mephit
+Morte dei Nemici	Death of Enemies	talento	mephit
+Multiattacco Migliorato	Improved Multiattack	talento	mephit
+Multincantesimo	Multispell	talento	mephit
+Musica degli Dei	Music of the Gods	talento	mephit
+Musica Extra	Extra Music	talento	mephit
+Nemico Prescelto Migliorato	Improved Favored Enemy	talento	mephit
+Occhi Dietro la Testa	Eyes in the Back of Your Head	talento	mephit
+Padronanza dei Bastoni	Master Staff	talento	mephit
+Padronanza dei Non Morti	Undead Mastery	talento	mephit
+Padronanza delle Bacchette	Master Wand	talento	mephit
+Pelle Corazzata	Armor Skin	talento	mephit
+Penetrare Riduzione del Danno	Penetrate Damage Reduction	talento	mephit
+Percepire Trappole	Trap Sense (Ex)	talento	mephit
+Piè Veloce	Fleet of Foot	talento	mephit
+Poliglotta	Polyglot	talento	mephit
+Potere dello Psicocristallo	Psicrystal Power	talento	mephit
+Potere Divino	Divine Might	talento	mephit
+Potere Focalizzato Epico	Epic Psionic Focus	talento	mephit
+Poteri Ampliati	Widen Power	talento	mephit
+Poteri Concatenati	Chain Power	talento	mephit
+Poteri di Opportunità	Opportunity Power	talento	mephit
+Poteri Estesi	Extend Power	talento	mephit
+Poteri Inarrestabili	Power Penetration	talento	mephit
+Poteri Inarrestabili Superiore	Greater Power Penetration	talento	mephit
+Poteri Incondizionati	Unconditional Power	talento	mephit
+Poteri Ingranditi	Enlarge Power	talento	mephit
+Poteri Massimizzati	Maximize Power	talento	mephit
+Poteri Potenziati	Empower Power	talento	mephit
+Poteri Raddoppiati	Twin Power	talento	mephit
+Poteri Rapidi	Quicken Power	talento	mephit
+Poteri Ritardati	Delay Power	talento	mephit
+Poteri Scavanti	Burrowing Power	talento	mephit
+Poteri Specializzati	Power Specialization	talento	mephit
+Poteri Specializzati Superiore	Greater Power Specialization	talento	mephit
+Precisione Mortale	Deadly Precision	talento	mephit
+Preparare Pietre	Imprint Stone	talento	mephit
+Prodezza Epica	Epic Prowess	talento	mephit
+Psicocristallo Migliorato	Improved Psicrystal	talento	mephit
+Pugno Psionico	Psionic Fist	talento	mephit
+Pugno Psionico Superiore	Greater Psionic Fist	talento	mephit
+Pugno Stordente Migliorato	Improved Stunning Fist	talento	mephit
+Punire Possente	Great Smiting	talento	mephit
+Reputazione Epica	Epic Reputation	talento	mephit
+Resistenza agli Incantesimi Migliorata	Improved Spell Resistance	talento	mephit
+Resistenza all’Energia	Energy Resistance	talento	mephit
+Resistenza Fisica Epica	Epic Endurance	talento	mephit
+Resistenza Mentale	Mental Resistance	talento	mephit
+Resistere alla Carica	Hold the Line	talento	mephit
+Ricarica Istantanea	Instant Reload	talento	mephit
+Riduzione del Danno	Damage Reduction (Ex)	talento	mephit
+Riflessi da Combattimento Migliorati	Improved Combat Reflexes	talento	mephit
+Riflessi Epici	Epic Reflexes	talento	mephit
+Robustezza Epica	Epic Toughness	talento	mephit
+Saggezza Possente	Great Wisdom	talento	mephit
+Saltatore Leggendario	Legendary Leaper	talento	mephit
+Salto Mentale	Mental Leap	talento	mephit
+Salute Perfetta	Perfect Health	talento	mephit
+Scacciare Planare	Planar Turning	talento	mephit
+Scalatore Leggendario	Legendary Climber	talento	mephit
+Schivare Epico	Epic Dodge	talento	mephit
+Schivare Psionico	Psionic Dodge	talento	mephit
+Sciame di Frecce	Swarm of Arrows	talento	mephit
+Scrivere Pergamene Epiche	Scribe Epic Scroll	talento	mephit
+Scurovisione Migliorata	Improved Darkvision	talento	mephit
+Segugio Leggendario	Legendary Tracker	talento	mephit
+Sfidare Vegetali	Plant Defiance	talento	mephit
+Sostituzione Debilitante	Subdual Substitution	talento	mephit
+Sostituzione Energetica	Energy Substitution	talento	mephit
+Sovraccaricare	Overchannel	talento	mephit
+Spazio per Oggetti Magici Aggiuntivi	Additional Magic Item Space	talento	mephit
+Specializzazione Epica in un'Arma	Epic Weapon Specialization	talento	mephit
+Spezzare Focalizzato	Focused Sunder	talento	mephit
+Tempesta di Lanci	Storm of Throws	talento	mephit
+Tempra Epica	Epic Fortitude	talento	mephit
+Tempra Scattante	Dexterous Fortitude	talento	mephit
+Tiro Distante	Distant Shot	talento	mephit
+Tiro Multiplo Migliorato	Improved Manyshot	talento	mephit
+Tiro Multiplo Superiore	Greater Manyshot	talento	mephit
+Tiro Perforante	Fell Shot	talento	mephit
+Tiro Psionico	Psionic Shot	talento	mephit
+Tiro Psionico Superiore	Greater Psionic Shot	talento	mephit
+Tiro Respinto	Return Shot	talento	mephit
+Trasferimento Metamorfico	Metamorphic Transfer	talento	mephit
+Velocità Accecante	Blinding Speed	talento	mephit
+Velocità di Pensiero	Speed of Thought	talento	mephit
+Velocità Epica	Epic Speed	talento	mephit
+Vendetta Divina	Divine Vengeance	talento	mephit
+Visione Crepuscolare Migliorata	Improved Low-Light Vision	talento	mephit
+Vista Cieca, nel Raggio di 1.5 m	Blindsight,5-Ft.Radius	talento	mephit
+Volontà Epica	Epic Will	talento	mephit
+Volontà Scattante	Dexterous Will	talento	mephit
+Zona di Animazione	Zone of Animation	talento	mephit
+Armatura	Armor	tipo di bonus	mephit
+Armatura naturale	Natural Armor	tipo di bonus	mephit
+Deviazione	Deflection (Ex)	tipo di bonus	mephit
+Resistenza	Resistance (Ex)	tipo di bonus	mephit
+Schivare	Dodge	tipo di bonus	mephit
+Scudo	Shield	tipo di bonus	mephit

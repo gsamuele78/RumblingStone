@@ -42,6 +42,7 @@ import riscontro_srd as R  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 TABELLA = ROOT / "scripts" / "lessico_it.yaml"
 TABELLA_PF1 = ROOT / "scripts" / "lessico_it_pf1.tsv"
+TABELLA_35 = ROOT / "scripts" / "lessico_it_35.tsv"
 # Un modulo è PF1e se lo dice il percorso o l'intestazione: lì vale la tabella
 # diretta italiano PF1e → PRD, mai il passaggio per la 3.5 (DM, 2026-11-07).
 MODULO_PF1 = re.compile(r"PF1e|Pathfinder", re.I)
@@ -57,7 +58,9 @@ TIPI_PF1 = {"feat": "talento", "spell": "incantesimo", "skill": "abilità",
             "trap": "trappola", "affliction": "afflizione"}
 
 TITOLO = re.compile(r"^#{2,4}\s+(?P<n>[^\n]+?)\s*$", re.M)
-GRASSETTO = re.compile(r"^\*\*(?P<n>[A-Z][^*\n]{1,60}?):?\*\*:?", re.M)
+GRASSETTO = re.compile(r"^\*\*_?(?P<n>[A-Z][^*_\n]{1,60}?):?_?\*\*:?", re.M)
+# Le condizioni dell'SRD sono voci in grassetto corsivo («**_Confused:_**») in questo file.
+CONDIZIONI_SRD = "special-abilities-and-conditions"
 PICCOLO = re.compile(r"<small>.*?</small>", re.S)
 
 
@@ -91,7 +94,8 @@ def indice(cache: Path, rete: bool = True) -> dict[str, list[dict]]:
         for rx in (TITOLO, GRASSETTO):
             for m in rx.finditer(testo):
                 nome = PICCOLO.sub("", m.group("n")).strip()
-                metti(norma(nome), {"fonte": "srd35", "tipo": tipo if rx is TITOLO else "regola",
+                tipo_v = tipo if rx is TITOLO else ("condizione" if CONDIZIONI_SRD in rel else "regola")
+                metti(norma(nome), {"fonte": "srd35", "tipo": tipo_v,
                                     "nome": nome, "dove": f"{rel}:{R.riga_di(testo, m.start())}"})
     base = R.assicura(R.PF1, cache, rete=rete)
     for db in sorted(R.PF1.file):
@@ -151,6 +155,19 @@ def tabella_pf1(percorso: Path = TABELLA_PF1, tipo: str = "talento") -> dict[str
 def e_pf1(file: str, testo: str) -> bool:
     return bool(MODULO_PF1.search(file)) or bool(re.search(
         r"^(?:\*\*)?(?:Sistema|Regole|System)(?:\*\*)?\s*:?\s*(?:\*\*)?\s*(?:Pathfinder|PF1e)", testo[:3000], re.I | re.M))
+
+
+def tabella_35(percorso: Path = TABELLA_35) -> list[dict]:
+    """Le voci generate italiano 3.5 → SRD 3.5, nella forma di carica_tabella()."""
+    voci = []
+    if not percorso.is_file():
+        return voci
+    for riga in percorso.read_text(encoding="utf-8").splitlines():
+        if riga.startswith("#") or "\t" not in riga or riga.startswith("italiano\t"):
+            continue
+        it, en, tipo, abb = (riga.split("\t") + ["", ""])[:4]
+        voci.append({"it": it, "srd35": en, "tipo": tipo, "abbinamento": abb})
+    return voci
 
 
 def mappa_italiana(tabella: list[dict]) -> dict[str, dict]:
@@ -285,7 +302,11 @@ def main(argv: list[str] | None = None) -> int:
     m.add_argument("file")
     m.add_argument("--check", action="store_true")
     k = sub.add_parser("controlla")
-    k.add_argument("percorsi", nargs="+")
+    k.add_argument("percorsi", nargs="*", help="file o cartelle; con --tutto, il repo fuori da plans/")
+    k.add_argument("--tutto", action="store_true",
+                   help="tutte le cartelle del repo tranne plans/ (storia, ADR-0109), scripts/ e .github/")
+    k.add_argument("--massimo-sconosciuti", type=int, default=None,
+                   help="con --check: fallisce se i talenti sconosciuti superano questo numero (ratchet)")
     k.add_argument("--json", action="store_true")
     k.add_argument("--check", action="store_true")
     k.add_argument("--volumi", action="store_true", help="legge anche i volumi .hb.md generati (conto prima e dopo dei booklet)")
@@ -298,7 +319,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"lessico: {len(idx)} termini in {cache / 'lessico-indice.json'}")
         return 0
     idx = carica_indice(cache, rete=not a.offline)
-    ita = mappa_italiana(carica_tabella())
+    # Le voci curate di lessico_it.yaml prevalgono su quelle generate di lessico_it_35.tsv.
+    ita = {**mappa_italiana(tabella_35()), **mappa_italiana(carica_tabella())}
     if a.cmd == "verifica-tabella":
         errori = verifica_tabella(carica_tabella(), idx)
         print("\n".join(errori) or f"lessico: tabella ok, {len(carica_tabella())} voci tutte nelle fonti")
@@ -325,8 +347,17 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{e['fonte']:6} {e['tipo']:12} {e['nome']}  [{e['dove']}]")
         return 0 if trovate or v else 1
     pf1 = tabella_pf1()
-    rilievi = [r for f in file_da(a.percorsi, a.volumi)
-               for r in controlla_testo(f.read_text(encoding="utf-8", errors="ignore"), idx, ita,
+    percorsi = list(a.percorsi)
+    if a.tutto:
+        percorsi += [str(d) for d in sorted(ROOT.iterdir()) if d.is_dir()
+                     and d.name not in ("plans", "scripts", ".git", ".github") and not d.name.startswith(".")]
+        percorsi += [str(f) for f in sorted(ROOT.glob("*.md"))]
+    if not percorsi:
+        ap.error("controlla: servono dei percorsi, o --tutto")
+    # Le righe dei talenti si confrontano solo con i talenti della tabella.
+    ita_t = {k: v for k, v in ita.items() if v.get("tipo", "talento") == "talento"}
+    rilievi = [r for f in file_da(percorsi, a.volumi)
+               for r in controlla_testo(f.read_text(encoding="utf-8", errors="ignore"), idx, ita_t,
                                         str(f.relative_to(ROOT)) if f.is_relative_to(ROOT) else str(f), pf1)]
     ignoti = [r for r in rilievi if r["esito"] in ("sconosciuto", "variante", "nome 3.5")]
     if a.json:
@@ -338,7 +369,18 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{r['file']}:{r['riga']}: {cosa} «{r['termine']}»")
         conti = {e: sum(1 for r in rilievi if r["esito"] == e) for e in ("tabella", "fonte", "marcato", "variante", "nome 3.5", "sconosciuto")}
         print(f"lessico: {len(rilievi)} talenti letti · " + " · ".join(f"{k} {v}" for k, v in conti.items()))
-    return 1 if a.check and ignoti else 0
+    if not a.check:
+        return 0
+    # Varianti e nomi 3.5 nei moduli PF1e hanno sempre il nome giusto in tabella: bloccano subito.
+    # Gli sconosciuti chiedono il DM o una marca: il ratchet impedisce solo che crescano.
+    sbagliati = [r for r in ignoti if r["esito"] != "sconosciuto"]
+    sconosciuti = len(ignoti) - len(sbagliati)
+    if a.massimo_sconosciuti is None:
+        return 1 if ignoti else 0
+    if sconosciuti > a.massimo_sconosciuti:
+        print(f"lessico: {sconosciuti} talenti sconosciuti, più del massimo {a.massimo_sconosciuti}: "
+              "usa il nome della tabella, o marca la fonte (GUIDA-MARCATURE)", file=sys.stderr)
+    return 1 if sbagliati or sconosciuti > a.massimo_sconosciuti else 0
 
 
 if __name__ == "__main__":
