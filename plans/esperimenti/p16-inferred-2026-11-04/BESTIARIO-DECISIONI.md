@@ -77,3 +77,10 @@ che cambierebbero la durata dell'effetto.
 
 Riscritte con la parola senza parentesi o nella forma di regola che lo strumento riconosce;
 nessun contenuto di gioco cambiato.
+
+- **Tordek ingrandito contro Fauci:** **A, le regole scritte** (DM 2026-11-07, con il
+  termine giusto: «Sbilanciare», non «sgambetto»). Schema in `ARC08-01` dopo i colpi
+  mirati: lotta +24 contro +43 (non riesce mai), Sbilanciare +14 contro +22 quando Fauci
+  è a terra (66 su 400), attacco subito con Sbilanciare Migliorato, rialzarsi provoca
+  attacchi di opportunità. Riscontro su d20srd: *Special Attacks › Trip* e *Feats ›
+  Improved Trip* (2026-11-07).
