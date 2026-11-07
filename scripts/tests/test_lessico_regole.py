@@ -53,6 +53,16 @@ class TestLetturaDelleRighe(unittest.TestCase):
         self.assertIn(("Attacco Poderoso", "tabella"), esiti(testo))
         self.assertEqual(len(esiti(testo)), 2)
 
+    def test_toglie_la_sigla_del_manuale_attaccata(self):
+        self.assertEqual(L.termini_della_riga("GoadCAd, Improved Initiative"), ["Goad", "Improved Initiative"])
+
+    def test_divide_sulla_e_ma_non_i_nomi_che_la_contengono(self):
+        self.assertEqual(L.termini_della_riga("Incalzare e Attacco Poderoso, Creare Armi e Armature Magiche"),
+                         ["Incalzare", "Attacco Poderoso", "Creare Armi e Armature Magiche"])
+
+    def test_talento_di_un_manuale_3_5(self):
+        self.assertIn(L.norma("Goad"), L.talenti_dei_manuali())
+
 
 class TestEsiti(unittest.TestCase):
     def test_nome_ufficiale_variante_e_sconosciuto(self):

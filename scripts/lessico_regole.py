@@ -46,6 +46,8 @@ TABELLA = ROOT / "scripts" / "lessico_it.yaml"
 TABELLA_PF1 = ROOT / "scripts" / "lessico_it_pf1.tsv"
 TABELLA_35 = ROOT / "scripts" / "lessico_it_35.tsv"
 # Gli oggetti unici della campagna: un nome qui non è un termine sconosciuto (DM, 2026-11-07).
+# I nomi inglesi dei talenti di tutti i manuali 3.5 (indici crystalkeep e realmshelps, solo nomi).
+TALENTI_MANUALI = ROOT / "scripts" / "talenti_manuali_35.tsv"
 OGGETTI_CAMPAGNA = ROOT / "campaign" / "OGGETTI-DELLA-CAMPAGNA.md"
 # Un modulo è PF1e se lo dice il percorso o l'intestazione: lì vale la tabella
 # diretta italiano PF1e → PRD, mai il passaggio per la 3.5 (DM, 2026-11-07).
@@ -185,6 +187,32 @@ def tabella_35(percorso: Path = TABELLA_35) -> list[dict]:
 
 
 @functools.lru_cache(maxsize=None)
+def nomi_con_e() -> frozenset[str]:
+    """I nomi delle tabelle che contengono « e »/« and »: non vanno divisi in due."""
+    nomi = set()
+    for v in tabella_35() + carica_tabella():
+        nomi.update(norma(x) for x in (v.get("it") or "", v.get("srd35") or ""))
+    for riga in TABELLA_PF1.read_text(encoding="utf-8").splitlines():
+        if not riga.startswith("#") and "\t" in riga:
+            nomi.update(norma(x) for x in riga.split("\t")[:2])
+    nomi.update(talenti_dei_manuali())
+    return frozenset(n for n in nomi if " e " in n or " and " in n)
+
+
+@functools.lru_cache(maxsize=None)
+def talenti_dei_manuali(percorso: Path = TALENTI_MANUALI) -> dict[str, dict]:
+    """Nome inglese normalizzato → {srd35, manuale}: un talento che esiste in un manuale 3.5."""
+    m: dict[str, dict] = {}
+    if percorso.is_file():
+        for riga in percorso.read_text(encoding="utf-8").splitlines():
+            if riga.startswith("#") or riga.startswith("inglese\t") or "\t" not in riga:
+                continue
+            en, man, *_ = riga.split("\t") + [""]
+            m.setdefault(norma(en), {"srd35": en, "manuale": man, "tipo": "talento"})
+    return m
+
+
+@functools.lru_cache(maxsize=None)
 def oggetti_campagna(percorso: Path = OGGETTI_CAMPAGNA) -> set[str]:
     """I nomi della prima colonna delle tabelle di OGGETTI-DELLA-CAMPAGNA.md, normalizzati."""
     if not percorso.is_file():
@@ -226,11 +254,25 @@ def termini_della_riga(lista: str) -> list[str]:
     lista = FINE_CAMPO.split(lista)[0]
     lista = re.sub(r"\([^)]*\)", "", lista)
     out = []
-    for pezzo in re.split(r"[,;·]", lista):
-        t = re.sub(r"\[[^\]]*\]|\*|`|\bB\b|\bx\d+\b|\+\d+", "", pezzo).strip(" .:")
+    pezzi = []
+    for p in re.split(r"[,;·]", lista):
+        # «Tiro Rapido e Tiro Multiplo» sono due talenti; «Creare Armi e Armature Magiche» è uno solo.
+        intero = norma(re.sub(r"\[[^\]]*\]|\*|`", "", p).strip(" .:"))
+        pezzi += [p] if intero in nomi_con_e() else re.split(r"\s+(?:e|and)\s+(?=[A-Z])", p)
+    for pezzo in pezzi:
+        t = re.sub(r"\[[^\]]*\]|\*|`|\bB\b|\bx\d+\b|\+\d+", "", pezzo)
+        t = CODA.sub("", t.replace("\u2011", "-").replace("\\", "")).strip(" .:»«")
+        t = SIGLA.sub("", t)
         if 2 < len(t) < 45 and not re.search(r"\d", t) and t[0].isupper():
             out.append(t)
     return out
+
+
+# «GoadCAd», «EnduranceB»: le sigle del manuale (o la B del talento bonus) attaccate al nome, come negli
+# statblock dei manuali inglesi; «fonte: SRD», «opzionale» in coda. Si staccano prima di cercare il nome.
+SIGLA = re.compile(r"(?<=[a-z\)])(?:B|CAd|CAr|CC|CD|CM|CP|CS|CV|CW|CoV|CSc|DMG|DotU|DrM|Dra|ECS|EPH|FF|FRCS|"
+                   r"HoB|LoM|LM|MH|MIC|MM\d?|MoF|PH2|PHB2|PlH|RoD|RoE|RoS|RotW|SpC|SS|ToB|UA|Und|XPH)+$")
+CODA = re.compile(r"\s+(?:fonte\s*:.*|opzionale.*)$", re.I)
 
 
 _INGLESI: dict[str, dict] = {}
@@ -285,6 +327,9 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
                 # nome inglese di un talento di un manuale ufficiale (5° Clone): esiste, il nome
                 # italiano è in tabella; la correzione dei booklet lo porta in italiano.
                 esito, v = "fonte", inglesi_dei_manuali()[k]
+            elif k in talenti_dei_manuali():
+                # nome inglese di un talento di un manuale 3.5 non tradotto in tabella (indice dei manuali)
+                esito, v = "fonte", talenti_dei_manuali()[k]
             elif MARCA_FUORI_SRD.search(riga):
                 esito = "marcato"
             else:
