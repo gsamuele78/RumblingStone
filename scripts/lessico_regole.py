@@ -23,6 +23,7 @@ Uso
   python3 scripts/lessico_regole.py indice
   python3 scripts/lessico_regole.py cerca "Sbilanciare migliorato"
   python3 scripts/lessico_regole.py controlla Bestiario/ PG/ [--json] [--check]
+  python3 scripts/lessico_regole.py controlla --tutto --campi   # anche incantesimi, abilità, oggetti
 
 Exit 0 ok · 1 con --check, almeno un termine sconosciuto non marcato · 2 uso
 """
@@ -250,6 +251,105 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
     return rilievi
 
 
+# Gli altri campi dello statblocco (ADR-0110, lotto 2): incantesimi e capacità magiche, abilità, oggetti.
+# Il tipo è quello delle tabelle; i nomi si leggono dai corsivi (incantesimi, oggetti) o prima del bonus (abilità).
+CAMPI = (
+    ("incantesimo", re.compile(
+        r"^\W{0,6}(?:Incantesimi|Capacità magiche|Spells|Spell-Like Abilities|Spell-like abilities)\b(?P<lista>.*)$", re.I)),
+    ("abilità", re.compile(r"^\W{0,6}(?:Abilità|Skills)\b\W{0,6}(?P<lista>[^\n]*[+−-]\d.*)$", re.I)),
+    ("oggetto magico", re.compile(
+        r"^\W{0,6}(?:Equipaggiamento|Possedimenti|Gear|Combat Gear|Other Gear|Oggetti magici)\b(?P<lista>.*)$", re.I)),
+)
+CORSIVO = re.compile(r"(?<![*\w])\*(?!\*)(?P<n>[^*\n]{3,60}?)\*(?!\*)|(?<![_\w])_(?P<m>[^_\n]{3,60}?)_(?![_\w])")
+NON_NOME = re.compile(r"\d|\b(?:a volontà|at will|giorno|day|CD|DC|LI|CL|livello|level|conosciut|prepar|inutile)\b", re.I)
+
+
+def termini_del_campo(tipo: str, lista: str) -> list[str]:
+    if tipo == "abilità":
+        out = []
+        for pezzo in re.split(r"[,;·]", re.sub(r"\([^)]*\)", "", lista)):
+            m = re.match(r"\s*\**\s*(?P<n>[A-Za-zÀ-ÿ’' ]{3,40}?)\s*\**\s*[+−-]\s*\d", pezzo)
+            if m:
+                out.append(m.group("n").strip())
+        return out
+    out = []
+    for m in CORSIVO.finditer(lista):
+        for t in re.split(r"\s*[,;/]\s*", m.group("n") or m.group("m")):
+            t = re.sub(r"\s*[+−-]\s*\d+\s*$", "", t.strip(" .,:;"))
+            if t and not NON_NOME.search(t) and len(t.split()) <= 7:
+                out.append(t)
+    return out
+
+
+# «pozione di cura ferite gravi», «bacchetta di dardo incantato»: il nome dopo è un incantesimo.
+CONTENITORE = re.compile(r"^(?:pozion[ei]|pergamen[ae]|bacchett[ae]|olio|oli|potions?|scrolls?|wands?|oils?)"
+                         r"\s+(?:di|del|della|dello|dell|of)\s+(?P<n>.+)$", re.I)
+
+
+def tabelle_per_tipo() -> tuple[dict[str, dict], dict[str, dict]]:
+    """{tipo: {chiave italiana: voce}} per la 3.5 (tsv e yaml curato) e per PF1e."""
+    t35: dict[str, dict] = {}
+    for v in tabella_35() + carica_tabella():
+        tipo = v.get("tipo") or "talento"
+        tipo = "oggetto magico" if tipo == "oggetto" else tipo
+        for nome in [v.get("it", "")] + [x.strip() for x in (v.get("varianti") or "").split("|") if x.strip()]:
+            t35.setdefault(tipo, {})[norma(nome)] = v
+    tpf: dict[str, dict] = {}
+    for tipo, _ in CAMPI:
+        tpf[tipo] = tabella_pf1(tipo=tipo)
+    tpf["oggetto magico"].update(tabella_pf1(tipo="proprietà magica"))
+    tpf["equipaggiamento"] = tabella_pf1(tipo="equipaggiamento")
+    return t35, tpf
+
+
+GRADO = re.compile(r"^(greater|lesser|mass|improved|superior|communal|major|minor)\s+(.+)$")
+
+
+def chiavi_inglesi(k: str) -> list[str]:
+    """«greater teleport» si cerca anche come «teleport greater», l'ordine dei titoli dell'SRD."""
+    m = GRADO.match(k)
+    return [k, f"{m.group(2)} {m.group(1)}"] if m else [k]
+
+
+def controlla_campi(testo: str, idx: dict, t35: dict, tpf: dict, file: str = "") -> list[dict]:
+    """Incantesimi, abilità e oggetti magici dei campi dello statblocco, contro le tabelle del loro tipo."""
+    rilievi = []
+    modulo_pf1 = e_pf1(file, testo)
+    fonte = "pf1" if modulo_pf1 else "srd35"
+    for n, riga in enumerate(testo.splitlines(), 1):
+        for tipo, rx in CAMPI:
+            m = rx.search(riga)
+            if not m:
+                continue
+            for t in termini_del_campo(tipo, m.group("lista")):
+                tipo_t = tipo
+                c = CONTENITORE.match(t) if tipo == "oggetto magico" else None
+                if c:
+                    t, tipo_t = c.group("n"), "incantesimo"
+                k = norma(t)
+                tab = tpf.get(tipo_t, {}) if modulo_pf1 else t35.get(tipo_t, {})
+                if tipo_t == "oggetto magico":
+                    tab = {**(tpf if modulo_pf1 else t35).get("equipaggiamento", {}), **tab}
+                v = tab.get(k)
+                if v and not modulo_pf1 and k != norma(v.get("it", "")):
+                    esito = "variante"
+                elif v:
+                    esito = "tabella"
+                elif modulo_pf1 and t35.get(tipo_t, {}).get(k):
+                    esito, v = "nome 3.5", t35[tipo_t][k]
+                elif any(e["fonte"] == fonte for ch in chiavi_inglesi(k) for e in idx.get(ch, [])):
+                    esito = "fonte"
+                elif MARCA_FUORI_SRD.search(riga):
+                    esito = "marcato"
+                else:
+                    esito = "sconosciuto"
+                rilievi.append({"file": file, "riga": n, "termine": t, "esito": esito, "tipo": tipo,
+                                "sistema": "pf1" if modulo_pf1 else "3.5",
+                                "en": (v or {}).get("pf1" if modulo_pf1 else "srd35")})
+            break
+    return rilievi
+
+
 def risolvi(termine: str, idx: dict, ita: dict) -> dict:
     """Il termine nelle due fonti: dalla tabella italiana se c'è, se no dall'indice."""
     v = ita.get(norma(termine))
@@ -310,6 +410,8 @@ def main(argv: list[str] | None = None) -> int:
     k.add_argument("--json", action="store_true")
     k.add_argument("--check", action="store_true")
     k.add_argument("--volumi", action="store_true", help="legge anche i volumi .hb.md generati (conto prima e dopo dei booklet)")
+    k.add_argument("--campi", action="store_true",
+                   help="anche incantesimi, abilità e oggetti magici dei campi dello statblocco (conto per tipo)")
     a = ap.parse_args(argv)
     cache = R.cartella_cache(a.cache)
 
@@ -360,6 +462,23 @@ def main(argv: list[str] | None = None) -> int:
                for r in controlla_testo(f.read_text(encoding="utf-8", errors="ignore"), idx, ita_t,
                                         str(f.relative_to(ROOT)) if f.is_relative_to(ROOT) else str(f), pf1)]
     ignoti = [r for r in rilievi if r["esito"] in ("sconosciuto", "variante", "nome 3.5")]
+    if a.campi:
+        t35, tpf = tabelle_per_tipo()
+        campi = [r for f in file_da(percorsi, a.volumi)
+                 for r in controlla_campi(f.read_text(encoding="utf-8", errors="ignore"), idx, t35, tpf,
+                                          str(f.relative_to(ROOT)) if f.is_relative_to(ROOT) else str(f))]
+        if a.json:
+            rilievi = rilievi + campi
+        else:
+            for r in campi:
+                if r["esito"] in ("variante", "nome 3.5", "sconosciuto"):
+                    print(f"{r['file']}:{r['riga']}: {r['tipo']} {r['esito']} «{r['termine']}»"
+                          + (f" → {r['en']}" if r.get("en") else ""))
+            for tipo, _ in CAMPI:
+                rr = [r for r in campi if r["tipo"] == tipo]
+                print(f"lessico campi: {tipo} {len(rr)} letti · " + " · ".join(
+                    f"{e} {sum(1 for r in rr if r['esito'] == e)}"
+                    for e in ("tabella", "fonte", "marcato", "variante", "nome 3.5", "sconosciuto")))
     if a.json:
         print(json.dumps(rilievi, ensure_ascii=False, indent=1))
     else:

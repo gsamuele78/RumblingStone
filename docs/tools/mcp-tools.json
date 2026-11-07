@@ -3802,6 +3802,54 @@
       "deterministic": true
     },
     {
+      "name": "lessico_regole",
+      "description": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»\n\nI termini ufficiali di D&D 3.5 e PF1e e chi li usa male (ADR-0110). Genera dall'SRD 3.5 e dal PRD PF1e in cache l'indice dei termini; legge le tabelle italiano → SRD 3.5 (scripts/lessico_it.yaml, scripts/lessico_it_35.tsv) e italiano → PRD PF1e (scripts/lessico_it_pf1.tsv, per i moduli PF1e senza passare dalla 3.5); controlla le righe dei talenti delle schede e, con --campi, incantesimi, abilità e oggetti, segnalando varianti non ufficiali, nomi 3.5 nei moduli PF1e e termini sconosciuti non marcati.",
+      "use_case": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»",
+      "invocation": "python3 scripts/lessico_regole.py [--offline] {indice|cerca NOME|verifica-tabella|casi FILE|controlla PERCORSI [--tutto] [--campi] [--check]}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cache": {
+            "type": "string",
+            "description": "Cartella della cache delle fonti (come riscontro_srd.py)."
+          },
+          "offline": {
+            "type": "boolean",
+            "description": "Non scarica: solo la cache."
+          },
+          "comando": {
+            "type": "string",
+            "description": "indice | cerca | verifica-tabella | casi | controlla.",
+            "enum": [
+              "indice",
+              "cerca",
+              "verifica-tabella",
+              "casi",
+              "controlla"
+            ]
+          },
+          "campi": {
+            "type": "boolean",
+            "description": "Con controlla: anche incantesimi, abilità e oggetti magici dei campi dello statblocco."
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout",
+        "<cache>/lessico-indice.json"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto",
+        "1": "con --check: termini sbagliati o sconosciuti oltre il massimo; verifica-tabella con nomi fuori fonte; casi sbagliati",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "lettura_a_scene",
       "description": "«Il lettore a freddo ha trovato davvero quello che arriva tardi, o l'ha visto perché aveva già letto la scena dopo?»\n\nServe un master ai lettori a freddo una scena alla volta da 127.0.0.1: la scena dopo arriva solo dopo una riga di diario (ago, mi aspettavo, ho trovato, so adesso) e dopo il tempo per leggerla; alla chiusura scrive impronte, mai il testo. Adattato da first-reader/feed.py (Apache 2.0, ADR-0076).",
       "use_case": "«Il lettore a freddo ha trovato davvero quello che arriva tardi, o l'ha visto perché aveva già letto la scena dopo?»",

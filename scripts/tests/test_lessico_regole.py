@@ -109,5 +109,53 @@ class TestTabelle(unittest.TestCase):
                 self.assertGreaterEqual(len(L.tabella_pf1(tipo=tipo)), minimo)
 
 
+# Campi dello statblocco: tabelle finte per tipo.
+T35 = {"incantesimo": {L.norma("Luminescenza"): {"it": "Luminescenza", "srd35": "Faerie Fire"},
+                       L.norma("Cura ferite gravi"): {"it": "Cura ferite gravi", "srd35": "Cure Serious Wounds"}},
+       "abilità": {L.norma("Nascondersi"): {"it": "Nascondersi", "srd35": "Hide"}},
+       "oggetto magico": {L.norma("Mantello della resistenza"): {"it": "Mantello della resistenza",
+                                                                "srd35": "Cloak of Resistance"}},
+       "equipaggiamento": {L.norma("Spada lunga"): {"it": "Spada lunga", "srd35": "Longsword"}}}
+TPF = {"incantesimo": {L.norma("Fuoco Fatato"): {"it": "Fuoco Fatato", "pf1": "Faerie Fire"}},
+       "abilità": {}, "oggetto magico": {}, "equipaggiamento": {}}
+IDX_C = {L.norma("teleport greater"): [{"fonte": "srd35", "tipo": "incantesimo", "nome": "Teleport, Greater"}]}
+
+
+def campi(testo: str, file: str = "modulo.md") -> list[tuple[str, str, str]]:
+    return [(r["tipo"], r["termine"], r["esito"]) for r in L.controlla_campi(testo, IDX_C, T35, TPF, file)]
+
+
+class TestCampi(unittest.TestCase):
+    """ADR-0110, lotto 2: incantesimi, abilità e oggetti delle schede."""
+
+    def test_incantesimi_in_corsivo_anche_in_elenco(self):
+        self.assertEqual(campi("**Capacità magiche** (CL 9): *a volontà* — *luminescenza*, *fuoco fatuo, greater teleport*\n"),
+                         [("incantesimo", "luminescenza", "tabella"), ("incantesimo", "fuoco fatuo", "sconosciuto"),
+                          ("incantesimo", "greater teleport", "fonte")])
+
+    def test_abilita_prima_del_bonus(self):
+        self.assertEqual(campi("**Abilità**: Nascondersi +12, Furtività +8\n"),
+                         [("abilità", "Nascondersi", "tabella"), ("abilità", "Furtività", "sconosciuto")])
+
+    def test_oggetti_pozioni_e_armi(self):
+        e = campi("**Equipaggiamento**: *mantello della resistenza +2*, *spada lunga*, 2 *pozioni di cura ferite gravi*\n")
+        self.assertEqual(e, [("oggetto magico", "mantello della resistenza", "tabella"),
+                             ("oggetto magico", "spada lunga", "tabella"),
+                             ("oggetto magico", "cura ferite gravi", "tabella")])
+
+    def test_nel_modulo_pf1e_il_nome_3_5_e_un_errore(self):
+        self.assertEqual(campi("**Incantesimi**: *luminescenza*, *fuoco fatato*\n", "PF1e/modulo.md"),
+                         [("incantesimo", "luminescenza", "nome 3.5"), ("incantesimo", "fuoco fatato", "tabella")])
+
+    def test_le_tabelle_del_repo_per_tipo(self):
+        t35, tpf = L.tabelle_per_tipo()
+        for tipo, minimo in (("incantesimo", 600), ("abilità", 35), ("oggetto magico", 600), ("equipaggiamento", 180)):
+            with self.subTest(tipo=tipo):
+                self.assertGreaterEqual(len(t35.get(tipo, {})), minimo)
+        for tipo, minimo in (("incantesimo", 2000), ("oggetto magico", 2000), ("equipaggiamento", 250)):
+            with self.subTest(tipo=tipo, sistema="pf1"):
+                self.assertGreaterEqual(len(tpf.get(tipo, {})), minimo)
+
+
 if __name__ == "__main__":
     unittest.main()
