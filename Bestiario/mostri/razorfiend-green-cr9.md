@@ -1,4 +1,4 @@
-# Razorfiend — Green Variant [ACCEPTED — DM-canon 2026-05-05]
+# Razorfiend — Green Variant [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: ambusher-gas | **Environment**: forest/wetland | **CR**: 9 | **Source**: RHoD Razorfiend + Draconomicon green | **Status**: inferred
 
 ```statblocco

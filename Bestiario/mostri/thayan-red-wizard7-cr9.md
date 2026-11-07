@@ -1,4 +1,4 @@
-# Thayan Red Wizard 7 (Evoker) [ACCEPTED — DM-canon 2026-05-05]
+# Thayan Red Wizard 7 (Evoker) [CANONE — DM 2026-05-05]
 **Faction**: teschio-nero-thay | **Role**: arcane-blaster | **Environment**: any | **CR**: 9 | **Source**: FRCS p.88 Red Wizard PrC + Wizard base | **Status**: inferred
 
 

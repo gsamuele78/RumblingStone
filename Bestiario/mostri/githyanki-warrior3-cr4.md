@@ -1,4 +1,4 @@
-# Githyanki Warrior (Ftr 3) [ACCEPTED — DM-canon 2026-05-05]
+# Githyanki Warrior (Ftr 3) [CANONE — DM 2026-05-05]
 **Faction**: githyanki-vaereth | **Role**: melee-elite | **Environment**: astral/any | **CR**: 4 | **Source**: MM p.128 Githyanki + Fighter 3 | **Status**: inferred
 
 

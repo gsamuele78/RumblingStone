@@ -1,4 +1,4 @@
-# Centaur Chieftain (Fighter 6) [ACCEPTED — DM-canon 2026-05-05]
+# Centaur Chieftain (Fighter 6) [CANONE — DM 2026-05-05]
 **Faction**: loxo-centaur-corrupted | **Role**: melee-boss | **Environment**: plain | **CR**: 7 | **Source**: MM Centaur + Fighter 6 | **Status**: inferred
 
 

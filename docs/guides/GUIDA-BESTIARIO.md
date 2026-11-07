@@ -65,7 +65,7 @@ proprio → `mostri/`. Se ha un nome, una storia e degli obiettivi → `villain/
 ## 3. Il formato dello statblock (obbligatorio)
 
 ```markdown
-# Nome Creatura (contesto) [ACCEPTED — DM-canon 2026-05-05]
+# Nome Creatura (contesto) [CANONE — DM 2026-05-05]
 **Faction**: ghostlord-undead | **Role**: caster-melee | **Environment**: any | **CR**: 10 | **Source**: MM II p.146 | **Status**: inferred
 
 Large aberration (undead) HD 13d12 (84 HP). AC 18 (-1 size, +3 Dex, +6 natural).
@@ -83,14 +83,14 @@ Notes: guardiana della lair del Ghostlord.
 | `Role` | funzione tattica (`melee`, `caster`, `skirmisher`, `boss`, `caster-melee`…) |
 | `Environment` | dove compare (`any`, `underground`, `forest`, `urban`…) |
 | `CR` | numero, coerente col filename |
-| `Source` | **sempre citata**: `MM p.NNN`, `RHoD p.NN`, `FRCS`, `SRD`, o `[INFERRED]` se costruita |
+| `Source` | **sempre citata**: `MM p.NNN`, `RHoD p.NN`, `FRCS`, `SRD`, o una marca `[INFERRED — domanda; base: …]` se costruita |
 | `Status` | `accepted` (canone confermato dal DM) o `inferred` (proposta) |
 
 **Regole di contenuto:**
 - niente **testo verbatim non-SRD** (copyright): degli incantesimi si citano
   nome, livello e CD, non la descrizione;
 - niente **poteri inventati senza flag**: se non è attestato, marcalo
-  `[INFERRED — needs DM confirmation]`;
+  `[INFERRED — <domanda al DM>; base: <fonte o dato>]` ([GUIDA-MARCATURE](GUIDA-MARCATURE.md));
 - `Notes:` finale = **come si usa nella campagna** (dove compare, con chi,
   perché): è la parte che ti serve davvero al tavolo.
 
@@ -98,8 +98,11 @@ Notes: guardiana della lair del Ghostlord.
 
 Nel titolo H1 ci va il flag:
 
-- `[ACCEPTED — DM-canon YYYY-MM-DD]` → il DM l'ha confermato: è canone;
-- `[INFERRED — needs DM confirmation]` → ricostruito o proposto, in attesa.
+- `[CANONE — DM AAAA-MM-GG]` → il DM l'ha confermato: è canone;
+- `[INFERRED — <domanda>; base: <…>]` → ricostruito o proposto, in attesa.
+
+La grammatica completa è in [GUIDA-MARCATURE](GUIDA-MARCATURE.md); le schede
+vecchie con `[ACCEPTED — DM-canon …]` sono state migrate il 2026-11-07 (ADR-0109).
 
 Lo stesso stato va ripetuto in `**Status**`. Quando il DM approva: cambi il
 flag, aggiorni `Status`, e se tocca il canone di campagna aggiorni
@@ -410,7 +413,7 @@ te le dà (§6-ter).
 | **catalogo non in sync** | hai toccato uno statblock senza rigenerare → `python3 scripts/build_monster_catalog.py` e committa lo YAML |
 | **header mancante** | manca uno dei sei (`Faction/Role/Environment/CR/Source/Status`) → aggiungilo, sulla riga singola separata da ` | ` |
 | **CR filename ≠ CR header** | allinea i due (ricorda `05` = ½) |
-| **stato non dichiarato** | metti `[ACCEPTED — DM-canon …]` o `[INFERRED — …]` nel titolo **e** `Status:` nell'header |
+| **stato non dichiarato** | metti `[CANONE — DM …]` o `[INFERRED — …; base: …]` nel titolo **e** `Status:` nell'header |
 | **filename non conforme** | kebab-case minuscolo + `-crN.md`, niente spazi o maiuscole |
 | **`mostri/` contiene non-statblock** | spostalo: i dossier vanno in `villain/` o `png/` |
 | **dossier senza titolo** | aggiungi un `# Titolo` in cima |

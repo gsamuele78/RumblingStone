@@ -1,6 +1,6 @@
 # Zin'thara Vel'Ryn — «la Voce di Ragnatela» [RIMANDO]
 
-> **[ACCEPTED — DM-canon]** Approvata dal DM il **2026-08-05**.
+> **[CANONE — DM 2026-08-05]** Approvata dal DM il **2026-08-05**.
 > Statblock: `zin-thara-vel-ryn-cr12.md` (questa cartella).
 > Righe di canone applicate in `campaign/state.md` §3 (clock 2/8) e §4.
 

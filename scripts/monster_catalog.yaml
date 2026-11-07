@@ -2149,8 +2149,8 @@ monsters:
     role: melee-heavy
     environment: urban
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md"
-  - id: durgan-tozzefort-comandante-dei-300-mercenari-nani-cr-12-accepted-dm-canon-2026-225055
-    name: "Durgan Tozzefort — Comandante dei 300 Mercenari Nani (CR 12) `[ACCEPTED — DM-canon 2026-07-12]`"
+  - id: durgan-tozzefort-comandante-dei-300-mercenari-nani-cr-12-canone-dm-2026-07-12-ab78ca
+    name: "Durgan Tozzefort — Comandante dei 300 Mercenari Nani (CR 12) `[CANONE — DM 2026-07-12]`"
     cr: 12.0
     faction: rethmar-defender
     role: generalist

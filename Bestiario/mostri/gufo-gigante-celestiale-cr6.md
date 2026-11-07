@@ -1,4 +1,4 @@
-# Gufo gigante celestiale — cavalcatura dei ranger (bestia magica) [ACCEPTED — DM-canon 2026-10-19, D10]
+# Gufo gigante celestiale — cavalcatura dei ranger (bestia magica) [CANONE — DM 2026-10-19, D10]
 **Faction**: alleati-del-vale | **Role**: skirmisher | **Environment**: forest | **CR**: 6 | **Source**: SRD 3.5 (gufo gigante, avanzamento a 8 DV, modello celestiale); unità da `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` (i dodici gufi dei ranger, Sessione 4) | **Status**: ACCEPTED — DM-canon 2026-10-19 (D10: scheda nuova, versione più forte)
 
 ```statblocco

@@ -1,4 +1,4 @@
-# azarr-kul-final-cr17 [ACCEPTED — DM-canon 2026-05-05]
+# azarr-kul-final-cr17 [CANONE — DM 2026-05-05]
 
 **Faction**: red-hand | **Role**: boss-warpriest-dragonrider | **Environment**: any | **CR**: 17
 

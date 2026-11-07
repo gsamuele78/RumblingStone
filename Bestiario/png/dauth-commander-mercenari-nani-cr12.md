@@ -1,4 +1,4 @@
-# dauth-commander-mercenari-nani-cr12 [ACCEPTED — DM-canon 2026-05-05]
+# dauth-commander-mercenari-nani-cr12 [CANONE — DM 2026-05-05]
 
 **Faction**: dauth-defender | **Role**: leader-commander | **Environment**: mountain,urban | **CR**: 12
 

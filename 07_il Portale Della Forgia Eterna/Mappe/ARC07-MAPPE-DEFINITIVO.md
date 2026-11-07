@@ -16,7 +16,7 @@
 > (`00_Red Hand Of Doom/Immagini/Area Map/…/MappeIncontri/*.webp`: griglia +
 > add-on DM per posizioni, ambiente e tattiche di PNG/villain/mostri).
 >
-> **ASCII = fonte canonica** (decisione DM 2026-07-23): l'ASCII ultra-clear porta
+> **ASCII = fonte canonica** [CANONE — DM 2026-07-23]: l'ASCII ultra-clear porta
 > **tutti** i dettagli senza perdite. Le **6 mappe a griglia rettangolare**
 > (T-2, T-3, T-6, S-2, M7-B, CM-1, più la carta CM-2) sono **rese a pergamena SVG** in
 > `Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map*.svg` col renderer a fedeltà piena

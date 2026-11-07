@@ -1,4 +1,4 @@
-# Khorn, ufficiale nanico di Hammerfist (Fighter 8) [ACCEPTED — DM-canon 2026-07-12]
+# Khorn, ufficiale nanico di Hammerfist (Fighter 8) [CANONE — DM 2026-07-12]
 **Faction**: dauth-defender | **Role**: leader-commander | **Environment**: mountain | **CR**: 8 | **Source**: generato via `skills/npc-villain-boosting/` (benchmark PF1e Monster-Statistics-by-CR, riga CR 8) in L2; **confermato canone dal DM 2026-07-12** | **Status**: accepted
 
 

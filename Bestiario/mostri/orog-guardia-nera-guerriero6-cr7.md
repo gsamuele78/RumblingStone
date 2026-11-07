@@ -1,4 +1,4 @@
-# Orog Guardia Nera — Guerriero 6 (guardia del corpo di Grimjaw) [ACCEPTED — DM-canon 2026-10-19, D10]
+# Orog Guardia Nera — Guerriero 6 (guardia del corpo di Grimjaw) [CANONE — DM 2026-10-19, D10]
 **Faction**: red-hand | **Role**: melee-heavy | **Environment**: underground | **CR**: 7 | **Source**: `[Private source — Monsters of Faerûn / Races of Faerûn]` (orog) + SRD 3.5 (Guerriero); unità da `08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §5 («OROG GUARDIE NERE») e `ARC08-01-GUIDA-DM.md` («OROG GUARDIE NERE (4 Orog scelti)») | **Status**: ACCEPTED — DM-canon 2026-10-19 (D10: scheda nuova, versione più forte)
 
 ```statblocco

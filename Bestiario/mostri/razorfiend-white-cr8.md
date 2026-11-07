@@ -1,4 +1,4 @@
-# Razorfiend — White Variant [ACCEPTED — DM-canon 2026-05-05]
+# Razorfiend — White Variant [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: guard-melee | **Environment**: cold | **CR**: 8 | **Source**: RHoD Razorfiend + Draconomicon white | **Status**: inferred
 
 ```statblocco

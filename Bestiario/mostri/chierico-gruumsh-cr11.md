@@ -1,4 +1,4 @@
-# Chierico di Gruumsh (Orco, Chierico 11) [ACCEPTED — DM-canon]
+# Chierico di Gruumsh (Orco, Chierico 11) [CANONE — DM 2026-10-06]
 **Faction**: mano-rossa | **Role**: caster-divino/supporto-terreno | **Environment**: underground/hills | **CR**: 11 | **Source**: SRD *Orc* + Chierico 11 (SRD PHB), dominî **Guerra** e **Forza** (SRD); Gruumsh e i suoi dominî da `skills/forgotten-realms-lore/references/fr-deities-complete.md` | **Status**: accepted
 
 

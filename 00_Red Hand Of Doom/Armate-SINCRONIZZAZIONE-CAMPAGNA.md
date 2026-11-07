@@ -4,7 +4,7 @@
 > (Karruk, Saarvith, Zalkatar, Xal'thor, Zarim, Emissario, Azarr Kul,
 > Tiamat Avatar, Il Collezionista, Ondata Giganti, Warpriest élite,
 > Hobgoblin Captain, Ghost Lion) sono **accettate come canone DM**.
-> Flag: `[ACCEPTED — DM-canon 2026-05-05]`. I trigger scheduling sono
+> Flag: `[CANONE — DM 2026-05-05]`. I trigger scheduling sono
 > vincolanti per l'Arco-09 salvo override esplicito in session log.
 
 > **Versione**: v2.1 (AP-canon March Clock Day 1→42, sync point Day 19 =

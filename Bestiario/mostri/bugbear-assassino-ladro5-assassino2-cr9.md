@@ -1,4 +1,4 @@
-# Bugbear assassino — Ladro 5 / Assassino 2 (umanoide goblinoide) [ACCEPTED — DM-canon 2026-10-19, D10]
+# Bugbear assassino — Ladro 5 / Assassino 2 (umanoide goblinoide) [CANONE — DM 2026-10-19, D10]
 **Faction**: red-hand | **Role**: skirmisher | **Environment**: underground | **CR**: 9 | **Source**: SRD 3.5 (bugbear, Ladro, classe di prestigio Assassino); unità da `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` (imboscata dei tunnel e terza ondata del 3B) | **Status**: ACCEPTED — DM-canon 2026-10-19 (D10: scheda nuova, versione più forte)
 
 ```statblocco

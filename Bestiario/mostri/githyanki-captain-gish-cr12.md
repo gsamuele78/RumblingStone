@@ -1,4 +1,4 @@
-# Githyanki Captain (Ftr 8/Wiz 3 Gish) [ACCEPTED — DM-canon 2026-05-05]
+# Githyanki Captain (Ftr 8/Wiz 3 Gish) [CANONE — DM 2026-05-05]
 **Faction**: githyanki-vaereth | **Role**: gish-elite | **Environment**: any | **CR**: 12 | **Source**: MM Githyanki + multiclass | **Status**: inferred
 
 

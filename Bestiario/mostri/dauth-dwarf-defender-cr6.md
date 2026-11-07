@@ -1,4 +1,4 @@
-# Dauth Dwarf Defender (Fighter 6) [ACCEPTED — DM-canon 2026-05-05]
+# Dauth Dwarf Defender (Fighter 6) [CANONE — DM 2026-05-05]
 **Faction**: dauth-defender | **Role**: melee-heavy | **Environment**: urban/dungeon | **CR**: 6 | **Source**: FRCS Dauth + PHB Fighter 6 | **Status**: inferred
 
 

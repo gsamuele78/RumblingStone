@@ -1,4 +1,4 @@
-# Ghaurush «Cenerevento» — Generale Elementalista della Mano Rossa [ACCEPTED — DM-canon]
+# Ghaurush «Cenerevento» — Generale Elementalista della Mano Rossa [CANONE — DM 2026-08-05]
 **Faction**: mano-rossa | **Role**: boss-caster-brute | **Environment**: any (colline/accampamenti/assedio) | **CR**: 16 | **Source**: SRD *Ogre Mage* (base CR 8) + livelli di Stregone (SRD PHB); template PF1e *Advanced* per la variante | **Status**: accepted
 
 

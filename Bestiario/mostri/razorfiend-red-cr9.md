@@ -1,4 +1,4 @@
-# Razorfiend (Draconic Spawn) — Red Variant [ACCEPTED — DM-canon 2026-05-05]
+# Razorfiend (Draconic Spawn) — Red Variant [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: melee-heavy | **Environment**: any | **CR**: 9 | **Source**: RHoD Razorfiend base + Draconomicon color variants | **Status**: inferred
 
 ```statblocco

@@ -1,4 +1,4 @@
-# Rethmar City Guard (Fighter 2) [ACCEPTED — DM-canon 2026-05-05]
+# Rethmar City Guard (Fighter 2) [CANONE — DM 2026-05-05]
 **Faction**: rethmar-defender | **Role**: melee-defender | **Environment**: urban | **CR**: 2 | **Source**: PHB Fighter 2 | **Status**: inferred
 
 

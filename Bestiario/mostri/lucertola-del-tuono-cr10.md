@@ -1,4 +1,4 @@
-# Lucertola del tuono — progenie azzurra di Tiamat (drago) [ACCEPTED — DM-canon 2026-10-18]
+# Lucertola del tuono — progenie azzurra di Tiamat (drago) [CANONE — DM 2026-10-18]
 **Faction**: red-hand | **Role**: brute | **Environment**: desert | **CR**: 10 | **Source**: ricostruito su SRD 3.5 (tipo drago); idea da `[Private — Red Hand of Doom WE, p. 25]` | **Status**: ACCEPTED — DM-canon 2026-10-18 (PR #247, poi canone su richiesta del DM)
 
 ```statblocco

@@ -284,8 +284,8 @@ Tre regole tengono in ordine questo traffico:
   entrano solo le misure e il markdown che il progetto ha scritto
   ([GUIDA-CONDIVISIONE-IP](guides/GUIDA-CONDIVISIONE-IP.md)).
 - **Ogni dato di regole porta la sua fonte.** Uno statblocco dice da dove
-  viene il numero (SRD, PF1e, `[GENERATO]` da uno script, `[INFERRED]` in
-  attesa del DM); il gioco preferisce la versione più forte e segna dove
+  viene il numero (SRD, PF1e, `[GENERATO]` da uno script, una marca INFERRED con
+  domanda e base in attesa del DM, [GUIDA-MARCATURE](guides/GUIDA-MARCATURE.md)); il gioco preferisce la versione più forte e segna dove
   diverge dall'SRD.
 - **Un componente nuovo passa dai canali.** Un modello di Hugging Face, una
   libreria di sintassi o un generatore nuovo entrano in unstable e salgono

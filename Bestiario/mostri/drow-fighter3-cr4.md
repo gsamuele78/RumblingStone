@@ -1,4 +1,4 @@
-# Drow Fighter 3 (House Soldier) [ACCEPTED — DM-canon 2026-05-05]
+# Drow Fighter 3 (House Soldier) [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: melee-skirmisher | **Environment**: underdark | **CR**: 4 | **Source**: FRCS drow + PHB Fighter 3 | **Status**: inferred
 
 ```statblocco

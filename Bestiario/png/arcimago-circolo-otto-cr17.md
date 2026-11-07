@@ -1,4 +1,4 @@
-# arcimago-circolo-otto-cr17 [ACCEPTED — DM-canon 2026-05-05]
+# arcimago-circolo-otto-cr17 [CANONE — DM 2026-05-05]
 
 **Faction**: starsong-elf | **Role**: caster-arcane-boss | **Environment**: any | **CR**: 17
 

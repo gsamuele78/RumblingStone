@@ -42,7 +42,7 @@ durata, TS e CD, RI, scuola, effetto in una riga e pagina del PHB
 caratteristica dell'incantatore. È un riassunto di PCGen, non il testo SRD:
 basta per controllare un numero, non per citare la regola. Una regola
 verificata solo così si scrive con la fonte (`PCGen, PHB p. NNN`), e se il
-riassunto non basta resta `[INFERRED — needs DM confirmation]` finché non si
+riassunto non basta resta `[INFERRED — <domanda al DM>; base: <fonte o dato>]` finché non si
 legge su d20srd.org (STATO-E-ORDINE §8.3; dal 2026-10-23 d20srd.org si
 raggiunge anche dal container, quindi è la via di riserva, non la prima).
 

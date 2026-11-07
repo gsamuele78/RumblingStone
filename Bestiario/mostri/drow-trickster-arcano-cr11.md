@@ -1,4 +1,4 @@
-# Drow Trickster Arcano — «Dita di Ragnatela» (Ladro 3 / Mago 5 / Trickster Arcano 2) [ACCEPTED — DM-canon]
+# Drow Trickster Arcano — «Dita di Ragnatela» (Ladro 3 / Mago 5 / Trickster Arcano 2) [CANONE — DM 2026-09-23]
 **Faction**: drow-sonjak | **Role**: caster-subdolo/saboteur | **Environment**: underdark/urban | **CR**: 11 | **Source**: SRD drow + Ladro/Mago + CdP **Trickster Arcano** (SRD) | **Status**: accepted
 
 

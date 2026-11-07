@@ -1,4 +1,4 @@
-# Teschio Nero Commander (Ftr 8/Bbn 2) [ACCEPTED — DM-canon 2026-05-05]
+# Teschio Nero Commander (Ftr 8/Bbn 2) [CANONE — DM 2026-05-05]
 **Faction**: teschio-nero-thay | **Role**: melee-boss | **Environment**: any | **CR**: 10 | **Source**: FRCS + multiclass | **Status**: inferred
 
 
