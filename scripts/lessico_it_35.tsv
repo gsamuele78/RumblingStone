@@ -17,6 +17,12 @@
 #                 tabelle; il nome inglese è una riga della tabella di equipment.md
 #   5clone        mostri: «Nome (Ita)» e «Nome (Ing)» della scheda del Bestiario 3.5 del 5° Clone (5clone.com), con
 #                 la pagina del Manuale dei Mostri; ci sono solo le voci da Aasimar a Basilisco (31)
+#   tesoro GDM    oggetti magici e proprietà di armi e armature: le tabelle italiane del tesoro del GDM 3.5 (scheda
+#                 «Tesoro e oggetti magici» di Mindbender, con le pagine del GDM) abbinate alle tabelle dell'SRD per
+#                 intervalli di d% e prezzo, senza usare i nomi; poi Claude controlla che sia la stessa cosa. Scartata
+#                 quasi tutta la tabella degli oggetti meravigliosi maggiori: lì l'ordine e i prezzi del GDM italiano
+#                 non sono quelli dell'SRD. Anelli, verghe e bastoni hanno solo il resto del nome («Protezione»)
+#                 come in Mephit; il controllo toglie «anello di», «verga della»…
 # Le voci di scripts/lessico_it.yaml (curate, con varianti e note) prevalgono su queste.
 italiano	srd35	tipo	abbinamento
 Acrobatico	Acrobatic	talento	doppia fonte
@@ -1272,7 +1278,7 @@ Colpo di grazia	Coup de Grace	oggetto magico	mephit
 Contagio	Contagion	oggetto magico	mephit
 Contenitore inverso	Reverse Capacitor	oggetto magico	mephit
 Contrastare Elementi	Endure Elements	oggetto magico	mephit
-Controincatesimi	Counterspells	oggetto magico	mephit
+Controincantesimi	Counterspells	oggetto magico	mephit, refuso corretto col tesoro GDM
 Controllo dei morti	Undead Controlling	oggetto magico	mephit
 Coppa e talismano del semidio	Cup and Talisman of the Demigod	oggetto magico	mephit
 Corazza di bande della fortuna	Banded Mail of Luck	oggetto magico	mephit
@@ -1334,7 +1340,7 @@ Elisir della verità	Elixir of Truth	oggetto magico	mephit
 Elisir della visione	Elixir of Vision	oggetto magico	mephit
 Elmo del cambio di allineamento	Helm of Opposite Alignment	oggetto magico	mephit
 Elmo del movimento subacqueo	Helm of Underwater Action	oggetto magico	mephit
-Elmo del teletrasfporto	Helm of Teleportation	oggetto magico	mephit
+Elmo del teletrasporto	Helm of Teleportation	oggetto magico	mephit, refuso corretto col tesoro GDM
 Elmo della comprensione linguaggi e lettura del magico	Helm of Comprehend Languages and Read Magic	oggetto magico	mephit
 Elmo della luminosità	Helm of Brilliance	oggetto magico	mephit
 Elmo della telepatia	Helm of Telepathy	oggetto magico	mephit
@@ -1348,7 +1354,7 @@ Esplosione di fuoco	Fiery Blast	oggetto magico	mephit
 Esplosione folgorante	Shocking Burst	oggetto magico	mephit
 Esplosione psicocinetica	Psychokinetic Burst	oggetto magico	mephit
 Esplosione sonora	Sonic Blast	oggetto magico	mephit
-Estenzione delle Fiamme	Flame Extinguishing	oggetto magico	mephit
+Estinzione delle fiamme	Flame Extinguishing	oggetto magico	mephit, refuso corretto col tesoro GDM
 Estremità Affiliata	Keen Edge	oggetto magico	mephit
 Evasore	Evader	oggetto magico	mephit
 Evoca Mostri I	Summon Monster I	oggetto magico	mephit
@@ -2121,3 +2127,173 @@ Talismano della saggezza	Periapt of Wisdom	oggetto magico	mephit (senza il +N de
 Tomo del chiaro pensiero	Tome of Clear Thought	oggetto magico	mephit (senza il +N delle voci Tomo del chiaro pensiero +N; inglese titolo SRD)
 Tomo del comando e dell'influenza	Tome of Leadership and Influence	oggetto magico	mephit (senza il +N delle voci Tomo del comando e dell'influenza +N; inglese titolo SRD)
 Tomo della comprensione	Tome of Understanding	oggetto magico	mephit (senza il +N delle voci Tomo della comprensione +N; inglese titolo SRD)
+Resistenza all'energia, minore	Energy resistance, minor	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Stregoneria (I)	Wizardry (I)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'energia, maggiore	Energy resistance, major	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Stregoneria (II)	Wizardry (II)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'energia, superiore	Energy resistance, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Scudo amico (coppia)	Friend shield (pair)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Stregoneria (III)	Wizardry (III)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Stregoneria (IV)	Wizardry (IV)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Comando degli elementali (aria)	Elemental command (air)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Comando degli elementali (terra)	Elemental command (earth)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Comando degli elementali (fuoco)	Elemental command (fire)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Comando degli elementali (acqua)	Elemental command (water)	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Ingrandimento, minore	Metamagic, Enlarge, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Estensione, minore	Metamagic, Extend, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Silenzio, minore	Metamagic, Silent, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Inamovibile	Immovable	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Potenziamento, minore	Metamagic, Empower, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Ingrandimento	Metamagic, Enlarge	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Estensione	Metamagic, Extend	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Silenzio	Metamagic, Silent	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Massimizzazione, minore	Metamagic, Maximize, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Ingrandimento, superiore	Metamagic, Enlarge, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Estensione, superiore	Metamagic, Extend, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Silenzio, superiore	Metamagic, Silent, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Potenziamento	Metamagic, Empower	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Rapidità, minore	Metamagic, Quicken, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Negazione	Negation	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Massimizzazione	Metamagic, Maximize	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Potenziamento, superiore	Metamagic, Empower, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Rapidità	Metamagic, Quicken	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Massimizzazione, superiore	Metamagic, Maximize, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Metamagica, Rapidità, superiore	Metamagic, Quicken, greater	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Piuma di Quaal, ancora	Feather token, anchor	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Piuma di Quaal, ventaglio	Feather token, fan	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, corvo d'argento	Figurine of wondrous power, silver raven	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude, refuso corretto
+Piuma di Quaal, uccello	Feather token, bird	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Piuma di Quaal, albero	Feather token, tree	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Piuma di Quaal, barca cigno	Feather token, swan boat	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Piuma di Quaal, frusta	Feather token, whip	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, fuso trasparente	Ioun stone, clear spindle	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa dei trucchi, grigia	Bag of tricks, gray	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 2° livello	Pearl of power, 2nd-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 1° livello	Pearl of power, 1st-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo III	Necklace of fireballs type III	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa conservante tipo II	Bag of holding type II	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, prisma rosa polvere	Ioun stone, dusty rose prism	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo I	Necklace of fireballs type I	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo IV	Necklace of fireballs type IV	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo V	Necklace of fireballs type V	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa conservante tipo I	Bag of holding type I	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa dei trucchi, marrone	Bag of tricks, tan	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo II	Necklace of fireballs type II	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude, refuso corretto
+Borsa conservante tipo III	Bag of holding type III	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa dei trucchi, ruggine	Bag of tricks, rust	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Manuale del golem di carne	Golem manual, flesh	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, sfera rosso scuro	Ioun stone, deep red sphere	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 4° livello	Pearl of power, 4th-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, sfera blu incandescente	Ioun stone, incandescent blue sphere	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, romboide blu chiaro	Ioun stone, pale blue rhomboid	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, sfera rosa e verde	Ioun stone, pink and green sphere	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, leoni d'oro	Figurine of wondrous power, golden lions	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, romboide rosa	Ioun stone, pink rhomboid	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, sfera blu e scarlatta	Ioun stone, scarlet and blue sphere	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, elefante di marmo	Figurine of wondrous power, marble elephant	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo VI	Necklace of fireballs type VI	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, fuso iridescente	Ioun stone, iridescent spindle	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Tappeto volante, 1,5 m x 1,5 m	Carpet of flying, 5 ft. by 5 ft.	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, ellissoide lavanda chiaro	Ioun stone, pale lavender ellipsoid	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 3° livello	Pearl of power, 3rd-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, fuso madreperla	Ioun stone, pearly white spindle	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, gufo di serpentino	Figurine of wondrous power, serpentine owl	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana delle palle di fuoco tipo VII	Necklace of fireballs type VII	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, capre d'avorio	Figurine of wondrous power, ivory goats	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana del rosario, minore	Strand of prayer beads, lesser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Borsa conservante tipo IV	Bag of holding type IV	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Manuale del golem di pietra	Golem manual, stone	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, grifone di bronzo	Figurine of wondrous power, bronze griffon	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, mosca d'ebano	Figurine of wondrous power, ebony fly	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, romboide blu scuro	Ioun stone, dark blue rhomboid	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Cavallo di pietra, palafreno	Stone horse, courser	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Manuale del golem d'argilla	Golem manual, clay	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 5° livello	Pearl of power, 5th-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Collana del rosario	Strand of prayer beads	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Cavallo di pietra, destriero	Stone horse, destrier	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, cane d'onice	Figurine of wondrous power, onyx dog	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Statuina del potere meraviglioso, stallone di ossidiana	Figurine of wondrous power, obsidian steed	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, arancione	Ioun stone, orange	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, prisma verde chiaro	Ioun stone, pale green prism	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude, refuso corretto
+Tappeto volante, 1,5 m x 3 m	Carpet of flying, 5 ft. by 10 ft.	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Manuale del golem di ferro	Golem manual, iron	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, prisma porpora vibrante	Ioun stone, vibrant purple prism	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 6° livello	Pearl of power, 6th-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietra magica, ellissoide lavanda e verde	Ioun stone, lavender and green ellipsoid	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Manuale del golem di pietra superiore	Golem manual, greater stone	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Perla del potere, incantesimo di 7° livello	Pearl of power, 7th-level spell	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Sfera di cristallo con vedere invisibilità	Crystal ball with see invisibility	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Sfera di cristallo con individuazione dei pensieri	Crystal ball with detect thoughts	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Protezione	Protection	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Saltare	Jumping	oggetto magico	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Mascheramento	Glamered	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Fortificazione, leggera	Fortification, light	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Scivolosa	Slick	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ombra	Shadow	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Movimento silenzioso	Silent moves	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza agli incantesimi (RI 13)	Spell resistance (13)	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Scivolosa, migliorata	Slick, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ombra, migliorata	Shadow, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Movimento silenzioso, migliorata	Silent moves, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'acido	Acid resistance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al freddo	Cold resistance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'elettricità	Electricity resistance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al fuoco	Fire resistance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al suono	Sonic resistance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Tocco fantasma	Ghost touch	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Invulnerabilità	Invulnerability	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Fortificazione, moderata	Fortification, moderate	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza agli incantesimi (RI 15)	Spell resistance (15)	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Selvatica	Wild	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Scivolosa, superiore	Slick, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ombra, superiore	Shadow, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Movimento silenzioso, superiore	Silent moves, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'acido, migliorata	Acid resistance, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al freddo, migliorata	Cold resistance, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'elettricità, migliorata	Electricity resistance, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al fuoco, migliorata	Fire resistance, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al suono, migliorata	Sonic resistance, improved	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza agli incantesimi (RI 17)	Spell resistance (17)	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Forma eterea	Etherealness	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Controllo dei non morti	Undead controlling	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Fortificazione, pesante	Fortification, heavy	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza agli incantesimi (RI 19)	Spell resistance (19)	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'acido, superiore	Acid resistance, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al freddo, superiore	Cold resistance, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza all'elettricità, superiore	Electricity resistance, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al fuoco, superiore	Fire resistance, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Resistenza al suono, superiore	Sonic resistance, greater	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Attirare frecce	Arrow catching	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Sfondamento	Bashing	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Accecante	Blinding	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Deviazione delle frecce	Arrow deflection	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Animato	Animated	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Riflettente	Reflecting	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Anatema	Bane	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Difensiva	Defending	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Infuocata	Flaming	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Gelida	Frost	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Folgorante	Shock	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Affilata	Keen	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Focalizza ki	Ki Focus	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Pietosa	Merciful	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Incalzare rafforzato	Mighty cleaving	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Accumula incantesimi	Spell storing	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Lancio	Throwing	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Tonante	Thundering	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Immorale	Vicious	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Anarchica	Anarchic	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Assiomatica	Axiomatic	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Esplosione di fiamme	Flaming burst	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Esplosione di ghiaccio	Icy burst	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Sacra	Holy	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Esplosione folgorante	Shocking burst	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Sacrilega	Unholy	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ferimento	Wounding	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Velocità	Speed	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Energia luminosa	Brilliant energy	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Danzante	Dancing	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Vorpal	Vorpal	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Distanza	Distance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ritornante	Returning	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Ricercante	Seeking	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude

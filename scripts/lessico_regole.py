@@ -286,9 +286,27 @@ CONTENITORE = re.compile(r"^(?:pozion[ei]|pergamen[ae]|bacchett[ae]|olio|oli|pot
                          r"\s+(?:di|del|della|dello|dell|of)\s+(?P<n>.+)$", re.I)
 
 
+# «anello di protezione», «verga della negazione»: nelle tabelle del GDM e di Mephit c'è solo il resto.
+PORTATORE = re.compile(r"^(?:anell[oi]|verg[ae]|baston[ei]|rings?|rods?|staffs?)\s+"
+                       r"(?:dell['’]|della|dello|delle|degli|dei|del|di|of(?:\s+the)?)\s*(?P<n>\S.*)$", re.I)
+
+
+def composto(t: str, equip: dict, proprieta: dict) -> bool:
+    """«Martello da guerra sacro»: un'arma o armatura della tabella più proprietà magiche note.
+
+    Le proprietà sono aggettivi: si confrontano senza la vocale finale (sacra/sacro, affilata/affilato).
+    """
+    parole = norma(t).split()
+    radici = {norma(k)[:-1] for k in proprieta if " " not in k}
+    for i in range(len(parole) - 1, 0, -1):
+        if " ".join(parole[:i]) in equip and all(p[:-1] in radici for p in parole[i:]):
+            return True
+    return False
+
+
 def tabelle_per_tipo() -> tuple[dict[str, dict], dict[str, dict]]:
     """{tipo: {chiave italiana: voce}} per la 3.5 (tsv e yaml curato) e per PF1e."""
-    t35: dict[str, dict] = {}
+    t35: dict[str, dict] = {"proprietà magica": {}}
     for v in tabella_35() + carica_tabella():
         tipo = v.get("tipo") or "talento"
         tipo = "oggetto magico" if tipo == "oggetto" else tipo
@@ -297,7 +315,8 @@ def tabelle_per_tipo() -> tuple[dict[str, dict], dict[str, dict]]:
     tpf: dict[str, dict] = {}
     for tipo, _ in CAMPI:
         tpf[tipo] = tabella_pf1(tipo=tipo)
-    tpf["oggetto magico"].update(tabella_pf1(tipo="proprietà magica"))
+    tpf["proprietà magica"] = tabella_pf1(tipo="proprietà magica")
+    tpf["oggetto magico"].update(tpf["proprietà magica"])
     tpf["equipaggiamento"] = tabella_pf1(tipo="equipaggiamento")
     return t35, tpf
 
@@ -330,7 +349,14 @@ def controlla_campi(testo: str, idx: dict, t35: dict, tpf: dict, file: str = "")
                 tab = tpf.get(tipo_t, {}) if modulo_pf1 else t35.get(tipo_t, {})
                 if tipo_t == "oggetto magico":
                     tab = {**(tpf if modulo_pf1 else t35).get("equipaggiamento", {}), **tab}
+                    p = PORTATORE.match(t)
+                    if k not in tab and p and norma(p.group("n")) in tab:
+                        k = norma(p.group("n"))
                 v = tab.get(k)
+                tabs = tpf if modulo_pf1 else t35
+                if (not v and tipo_t == "oggetto magico"
+                        and composto(t, tabs.get("equipaggiamento", {}), tabs.get("proprietà magica", {}))):
+                    v = {"it": t}
                 if v and not modulo_pf1 and k != norma(v.get("it", "")):
                     esito = "variante"
                 elif v:

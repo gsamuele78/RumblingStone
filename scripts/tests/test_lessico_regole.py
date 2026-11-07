@@ -114,8 +114,12 @@ T35 = {"incantesimo": {L.norma("Luminescenza"): {"it": "Luminescenza", "srd35": 
                        L.norma("Cura ferite gravi"): {"it": "Cura ferite gravi", "srd35": "Cure Serious Wounds"}},
        "abilità": {L.norma("Nascondersi"): {"it": "Nascondersi", "srd35": "Hide"}},
        "oggetto magico": {L.norma("Mantello della resistenza"): {"it": "Mantello della resistenza",
-                                                                "srd35": "Cloak of Resistance"}},
-       "equipaggiamento": {L.norma("Spada lunga"): {"it": "Spada lunga", "srd35": "Longsword"}}}
+                                                                "srd35": "Cloak of Resistance"},
+                          L.norma("Protezione"): {"it": "Protezione", "srd35": "Protection"},
+                          L.norma("Negazione"): {"it": "Negazione", "srd35": "Negation"}},
+       "equipaggiamento": {L.norma("Spada lunga"): {"it": "Spada lunga", "srd35": "Longsword"}},
+       "proprietà magica": {L.norma("Sacra"): {"it": "Sacra", "srd35": "Holy"},
+                            L.norma("Affilata"): {"it": "Affilata", "srd35": "Keen"}}}
 TPF = {"incantesimo": {L.norma("Fuoco Fatato"): {"it": "Fuoco Fatato", "pf1": "Faerie Fire"}},
        "abilità": {}, "oggetto magico": {}, "equipaggiamento": {}}
 IDX_C = {L.norma("teleport greater"): [{"fonte": "srd35", "tipo": "incantesimo", "nome": "Teleport, Greater"}]}
@@ -142,6 +146,17 @@ class TestCampi(unittest.TestCase):
         self.assertEqual(e, [("oggetto magico", "mantello della resistenza", "tabella"),
                              ("oggetto magico", "spada lunga", "tabella"),
                              ("oggetto magico", "cura ferite gravi", "tabella")])
+
+    def test_anelli_e_verghe_col_nome_del_gdm(self):
+        e = campi("**Equipaggiamento**: *anello di protezione +2*, *verga della negazione*, *anello dell'invisibilità totale*\n")
+        self.assertEqual(e, [("oggetto magico", "anello di protezione", "tabella"),
+                             ("oggetto magico", "verga della negazione", "tabella"),
+                             ("oggetto magico", "anello dell'invisibilità totale", "sconosciuto")])
+
+    def test_arma_con_proprieta_magiche(self):
+        e = campi("**Equipaggiamento**: *spada lunga sacra affilata +2*, *spada lunga runica*\n")
+        self.assertEqual(e, [("oggetto magico", "spada lunga sacra affilata", "tabella"),
+                             ("oggetto magico", "spada lunga runica", "sconosciuto")])
 
     def test_nel_modulo_pf1e_il_nome_3_5_e_un_errore(self):
         self.assertEqual(campi("**Incantesimi**: *luminescenza*, *fuoco fatato*\n", "PF1e/modulo.md"),
