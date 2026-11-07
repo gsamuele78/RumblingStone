@@ -2,6 +2,12 @@
   "_cos_e": "I numeri ADR prenotati da un ramo o da una PR prima che l'ADR arrivi su main (D7 di PIANO-RECUPERO, 2026-10-10). Chi apre un ramo con un ADR nuovo prende il numero da `python3 scripts/validate_docs.py --prossimo-adr` e lo scrive qui, su main, prima di aprire il ramo. Quando l'ADR arriva, la sua voce si toglie nello stesso commit: validate_docs --sorgenti lo esige.",
   "prenotati": [
     {
+      "numero": "0109",
+      "slug": "una-marcatura-sola-e-il-dm-decide-il-canone",
+      "chi": "PR #314",
+      "dal": "2026-11-07"
+    },
+    {
       "numero": "0110",
       "slug": "i-termini-ufficiali-hanno-una-tabella-e-un-cancello",
       "chi": "ramo regole-ufficiali (thread «Standardizzare marcatura INFERRED e skill vincolate»)",
