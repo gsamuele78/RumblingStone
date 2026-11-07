@@ -261,6 +261,22 @@ def skill_da_installare(root: "Path | None" = None) -> "list[str]":
     return fuori
 
 
+def skill_escluse(root: "Path | None" = None) -> "list[str]":
+    """Le skill di un sistema che non è né attivo né di rinforzo (ADR-0111, L6).
+
+    Sono le sole che build-skills.sh e sync-skills.sh saltano: una skill che
+    nessun plugin dichiara (campagna, prosa, mappe, ambientazione) si installa
+    sempre, perché non dipende dal sistema di gioco."""
+    _, _, plug = carica(root)
+    tenute = set(skill_da_installare(root))
+    fuori: "list[str]" = []
+    for i in sorted(plug):
+        for s in plug[i].get("skill", []):
+            if s not in tenute and s not in fuori:
+                fuori.append(s)
+    return fuori
+
+
 _NOME_IN_CODICE = r"^(?:def\s+{n}\b|class\s+{n}\b|{n}\s*(?::[^=\n]+)?=)"
 
 

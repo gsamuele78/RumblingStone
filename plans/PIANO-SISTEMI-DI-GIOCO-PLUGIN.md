@@ -64,7 +64,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | **L3** ✅ | termini: una lista 5e sola (`sistemi/d20/dati/termini-vietati.toml`, letta da `validate_modules` e `validate_standalone`), abilità per sistema (`lessico.abilita` di dnd35 e pf1e, letta da `validate_prosa` e `domande_developer`), classi e razze 3.5 di `coerenza_campagna` in `sistemi/dnd35/dati/entita.toml` | 5 + test | M2 2 → 1; 0 rilievi nuovi su master e stand-alone; nei moduli PF1e le forme meccaniche riconosciute da `validate_prosa` passano da 64 a 93 |
 | **L4** ✅ | regole semplici: soglie PE 3.5 in `sistemi/dnd35/dati/pe.toml` (`update_xp` legge ogni sistema dal plugin, `THRESHOLDS` caricato dai dati); EL con il `metodo` del plugin (`potenze` con `raddoppio = 2` per il 3.5, `somma_px` per PF1e; `suggest_encounter.combinatore()`); `suggest_loot` sceglie dal predefinito di `sistemi.toml`. Il PF1e supportato l'aveva già fatto L1-bis | 3 + test | capacità dnd35 nel codice 7 → 5; nomi di sistema cablati nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 resta 79 |
 | L5 ✅ (L5a, L5b, L5c, L5d) | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` — **L5a** (2026-11-07): tipi, classi (con BAB e classi PNG), taglie, armature, scudi e matrici elite/standard in `sistemi/dnd35/dati/creature.toml`, letti da `dmcore/tabelle.py` con gli stessi nomi; **L5b** (2026-11-07): griglie degli incantatori e incantesimi conosciuti, classi incantatrici, classi di prestigio, profili di ruolo, modificatori per taglia e razziali; **L5c** (2026-11-07): liste degli incantesimi 3.5 nel plugin dnd35, aggiunte APG nel plugin pf1e | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
-| L6 | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
+| L6 ✅ | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
 | L7 | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
 | L8 | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
 
@@ -187,6 +187,21 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - **Capacità ancora nel codice**: solo `fonti.regole` (URL e sha256 delle fonti), assegnata a L8. **M3 72 → 68.**
 - **Ancora vero dal limite della matrice**: una capacità «dati» dice dove sta la regola, non che ogni strumento la legga per il sistema del file. `derive_statblocks`, `conformita_statblocchi` e `genera_attributi` leggono ancora le tabelle 3.5 anche su una scheda PF1e; il cambio di sistema per file è il lavoro di L6-L8.
 
+### §2.11 Cosa ha trovato L6
+
+- **Cosa cambia**: `build-skills.sh` e `sync-skills.sh` chiedono a `sistemi.py --skill-escluse` quali skill saltare. Si saltano solo le skill che un plugin dichiara (`skill = [...]` in `sistema.toml`) quando quel sistema non è né in `attivi` né in `rinforzo` (D5). Le altre 14 (campagna, prosa, mappe, ambientazione, …) si costruiscono sempre. `--skill=<nome>` vince sull'esclusione.
+- **Misura, skill costruite per configurazione** (`build-skills.sh --dry-run`):
+
+| `attivi` | `rinforzo` | skill costruite |
+|---|---|---|
+| dnd35, pf1e | dnd35, pf1e (oggi) | 18 di 18 |
+| dnd35 | pf1e | 18 |
+| dnd35 | — | 17 (salta `pathfinder-1e-srd`) |
+| pf1e | — | 15 (salta le 3 del 3.5) |
+
+- **Con la configurazione di oggi non cambia niente**: 18 di 18, quindi i pacchetti della CI («Build skill packages») sono gli stessi.
+- **Limite**: `forgotten-realms-lore` è un'ambientazione, non un sistema, e D4 la mette in una sezione separata che ancora non esiste. Per ora si installa sempre.
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -219,6 +234,6 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L3 · termini (2026-11-07): lista 5e unica nel plugin d20, abilità e entità dai dati dei plugin; M2 2 → 1
 - [x] L4 · regole semplici (2026-11-07): PE ed EL dal plugin, nessun «dnd35» cablato in update_xp, suggest_encounter, suggest_loot
 - [x] L5 · nucleo delle creature (2026-11-07): L5a tabelle base, L5b incantatori, prestigio, profili, taglie e razze, L5c liste di incantesimi, L5d regole di tipo e campi dello statblocco, tutto dal plugin con impronte dei valori identiche
-- [ ] L6 · skill e agent
+- [x] L6 · skill e agent (2026-11-07): build-skills.sh e sync-skills.sh saltano le skill dei sistemi né attivi né di rinforzo (`sistemi.py --skill-escluse`)
 - [ ] L7 · etichette di stampa
 - [ ] L8 · prova del nove
