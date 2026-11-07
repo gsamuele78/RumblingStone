@@ -210,7 +210,8 @@ Tutti i valori sono pensati per un party di livello 11–12. Adatta leggermente 
 - TS: Temp +5, Rif +6, Vol +15 (Iron Will, Lightning Reflexes).
 - RI 25.
 - Abilità chiave: Bluff +12, Conoscenze (arcane, planari, dungeoneering) +18 ciascuna, Camuffare +14 (+22 con *Disguise Self* psionico), Diplomazia +12, Ascoltare/Osservare +14, Psicocrafting +18.
-- Talenti: Improved Initiative, Combat Casting, Psicocrafter, Inner Strength, Iron Will, Lightning Reflexes.
+- Talenti: Improved Initiative, Combat Casting, Combat Manifestation, Psionic Talent, Iron Will, Lightning Reflexes.
+  - *Psionic Talent* (Dote Psionica, ⚠ **Non SRD** [Private source — Expanded Psionics Handbook]) al posto di *Inner Strength*, il talento del Psionics Handbook 3.0 che dava punti potere extra: la 3.5 lo ha sostituito con questo (DM 2026-11-07). *Combat Manifestation* al posto di «Psicocrafter», come nella scheda di Sethrax (DM 2026-10-18).
 
 ### Capacità speciali
 

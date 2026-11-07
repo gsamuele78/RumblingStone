@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Sethrax: Inner Strength (Psionics Handbook 3.0) diventa Psionic Talent (XPH, No… | ✅ talenti sconosciuti 37 → 35, cricchetto CI a 35 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Capitano githyanki gish: «Spell Sword synergy» (non è un talento) diventa l'ele… | ✅ scelta del DM («quello che ha più senso») |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1-bis: PF1e supportato nei 5 casi non supportati (PE, incontri, tesoro, classi… | ✅ pf1e 7/6/0 (dati/codice/non supportato); impronte 3.5 12/12; 21 test nuovi |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1: fondazione dei plugin dei sistemi di gioco | ✅ 0 problemi; 24 righe di matrice; dnd35 2/10/0, pf1e 1/6/5 (dati/codice/non supportato); impronte 12/12 dopo la correzione dell'orologio di `update_xp` |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Skill forgotten-realms-lore: talenti regionali riscontrati sull'indice dei manu… | 🟡 14 nomi su 46 in nessun indice (Chultan Jungle Fighter, Cormyrean Conscript, Serpent Blood…) marcati INFERRED; nelle regioni Chult, Cormyr e Waterdeep i tale… |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Indice dei talenti di tutti i manuali 3.5 (solo nomi, sigla e pagina) e lettura… | 🟡 3.846 nomi inglesi (1.297 con manuale e pagina); talenti sconosciuti 133 → 97, cricchetto a 97; 5 talenti FR della skill dnd-35-rules non sono in nessun indi… |
 
 ## Le misure che si portano dietro
 
