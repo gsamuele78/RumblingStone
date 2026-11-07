@@ -53,3 +53,10 @@ che cambierebbero la durata dell'effetto.
   cavaliere e Thorik, che finisce prono; se fallisce, il cavaliere li prende tutti.
   Regola della casa (l'SRD non ne ha una), segnata. Applicata in `ARC08-01` e nella
   Guida agli Scontri di Hammerfist.
+
+## ARC-06 (stessa serie di card)
+
+- **Le due copie della Corona di Adamantio:** **vince la copia PG** (DM 2026-11-07).
+  Prova: 12 file identici byte per byte, i 7 diversi tutti più nuovi in PG. Copiate in
+  PG le due immagini che mancavano. `_SNAPSHOT-STORICO.md` aggiornato, il testo vecchio
+  in un blocco storico.
