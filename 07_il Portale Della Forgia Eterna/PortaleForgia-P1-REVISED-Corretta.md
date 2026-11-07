@@ -73,7 +73,7 @@
 **BAB:** +13/+8/+3  
 **Attacco Aegis Fang:** +20/+15/+10 (1d10+7, crit x3, +2d6 vs draghi)
 
-**Talenti:** Arma Focalizzata (ascia), Specializzazione (ascia), Robustezza, Volontà di Ferro, Iniziativa Migliorata, Critico Migliorato (ascia), Attacco Poderoso, Incalzare, Fendente Poderoso, Arma Preferita
+**Talenti:** Arma Focalizzata (ascia), Specializzazione (ascia), Robustezza, Volontà di Ferro, Iniziativa Migliorata, Critico Migliorato (ascia), Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Preferita
 
 **Stato Attuale (Parte 1):** Ha appena indossato la Corona dopo la battaglia. Sente presenza di Moradin. È scosso dalla morte di Hella ma determinato a recuperare le gemme per resuscitarla.
 

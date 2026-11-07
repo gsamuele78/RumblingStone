@@ -131,6 +131,7 @@
   tipo: talento
   srd35: Great Cleave
   pf1: Great Cleave
+  varianti: Fendente Poderoso
 - it: Spingere Migliorato
   tipo: talento
   srd35: Improved Bull Rush
@@ -372,3 +373,9 @@
   tipo: talento
   srd35: Improved Shield Bash
   pf1: Improved Shield Bash
+- it: Colpo Terrificante
+  tipo: talento
+  srd35: Awesome Blow
+  pf1: Awesome Blow
+  varianti: Colpo Devastante | Colpo Tremendo | Colpo Possente
+  nota: "nome scelto dal DM il 2026-11-07 (è quello dell'edizione italiana PF1e); talento da mostro dell'SRD 3.5"
