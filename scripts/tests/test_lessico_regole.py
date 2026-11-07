@@ -103,6 +103,13 @@ class TestLetturaDelleRighe(unittest.TestCase):
         self.assertEqual(L.termini_della_riga("Brew Potion, Craft Magic Arms/Armor"),
                          ["Brew Potion", "Craft Magic Arms and Armor"])
 
+    def test_nome_italiano_con_l_inglese_tra_parentesi(self):
+        self.assertIn(("Inscribe Rune", "fonte"), esiti("- Talenti: Incidere Rune (Inscribe Rune), Allerta\n"))
+        self.assertIn(("Snake Style", "marcato"), esiti("**Talenti:** Stile del Serpente (Snake Style, PF1e)\n"))
+
+    def test_la_riga_era_e_storia(self):
+        self.assertEqual(esiti("era: talenti Attacco in Volata, Fluttuare\n"), [])
+
     def test_talento_pf1e_di_un_manuale(self):
         self.assertIn(L.norma("Combat Vigor"), L.talenti_pf1_dei_manuali())
 

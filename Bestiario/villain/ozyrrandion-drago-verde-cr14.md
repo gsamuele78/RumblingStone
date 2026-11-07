@@ -19,7 +19,7 @@ attacchi:
 voci:
   - Soffio: cono di 15 m di gas corrosivo, 12d6 acido, Rifl CD 27 dimezza, 1d4 round
   - Presenza terrificante: 54 m, Vol CD 24, scossi per 4d6 round
-  - Talenti: Attacco in Volata, Fluttuare, Multiattacco, Multiattacco Migliorato, Armatura Naturale Migliorata, Iniziativa Migliorata, Attacco Poderoso, Virata
+  - Talenti: Attacco in Volo, Fluttuare, Multiattacco, Multiattacco Migliorato, Armatura Naturale Migliorata, Iniziativa Migliorata, Attacco Poderoso, Virata
 ```
 
 > **Versione scelta**: drago verde **adulto** dell'SRD 3.5 (le caratteristiche sono quelle della sua tabella, Cos +2 dall'amuleto), colore deciso dal DM (Jfs): «Ozyrrandion è dello stesso colore di quello presente in RHoD». L'età viene dai file delle Armate e dell'arco 09, che lo danno «Adult (AP)» con un GS intorno a 14 («Zalkatar + Ozyrrandion (CR 13 + dragon 14)»). L'adulto verde SRD è GS 13 con 20 DV; l'avanzamento dell'adulto arriva a 22 DV, e +2 DV in un drago valgono +1 GS: a 22 DV è **GS 14**, il numero delle Armate, senza cambiare età. Dalla build PCGen del giovane restano i cinque talenti, l'amuleto della salute +2, i bracciali dell'armatura +3 e la pozione.

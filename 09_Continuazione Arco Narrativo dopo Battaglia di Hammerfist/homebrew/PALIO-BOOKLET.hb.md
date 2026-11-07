@@ -3135,7 +3135,7 @@ ___
 
 **STATISTICHE**
 ___
-For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Cavalcata Poderosa*, *Attacco in Corsa*  
+For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Carica Devastante*, *Attacco in Sella*  
 
 **CAPACITÀ SPECIALI**
 ___

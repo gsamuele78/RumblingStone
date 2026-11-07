@@ -252,7 +252,7 @@ Spirito corrotto (template: spirito incorporeo + demone minore).
 - **Abilità**: Intimidire +26, Ascoltare +23, Osservare +23, Conoscenze
   (religioni) +22
 - **Talenti**: Attacco Poderoso, Competenza nelle Armi da Guerra, Riflessi in
-  Combattimento, Volontà di Ferro, Attacco Vitale, Critico Migliorato
+  Combattimento, Volontà di Ferro, Attacco Vitale (Vital Strike, PF1e), Critico Migliorato
 - **GS**: 14
 
 **Fasi del combattimento**
