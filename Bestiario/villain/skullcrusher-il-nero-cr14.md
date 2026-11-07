@@ -20,7 +20,7 @@ Questa voce esiste perché `build_monster_catalog.py` e `suggest_encounter.py` s
 
 Boost log: 2026-10-07 — template Avanzato PF1e, versione completa (+4 a tutte le caratteristiche, +2 di armatura naturale; SRD drago nero adulto maturo sotto) — CR 14 → 14 (vale 15, il GS non sale per scelta del DM, Q37) — più forte senza salire di EL. Numeri nel file d'arco, Appendice A.1.
 
-Boost log: 2026-10-19 — due talenti, scelti fra le versioni più forti del 3.5 completo e dell'SRD — CR 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante: *Virata* → Capacità Focalizzata (soffio) (SRD, soffio CD 28 → 30) e *Attacco Poderoso* → Soffio Aderente `[Private source — Draconomicon, p. 67]`, fuori dall'SRD. Numeri e nota di divergenza nel file d'arco, Appendice A.1.
+Boost log: 2026-10-19 — due talenti, scelti fra le versioni più forti del 3.5 completo e dell'SRD — CR 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante: *Virata* → Capacità Focalizzata (soffio) (SRD, soffio CD 28 → 30) e *Attacco Poderoso* → Soffio Impregnante `[Private source — Draconomicon, p. 67]`, fuori dall'SRD. Numeri e nota di divergenza nel file d'arco, Appendice A.1.
 
 Boost log: 2026-10-19 — un talento: *Ghermire* → *Virata* (SRD, *Wingover*), sull'Adulto (A.1) e sul Vecchio (A.1-bis), che ne ha i talenti — CR 14 → 14 (vale 15); il Vecchio resta GS 17 — la presa in bocca è la firma di Fauci di Palude contro Thorik. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*; *Fluttuare* una volta sola, alla prima paura; *oscurità* solo per la fuga `[CANONE — DM 2026-10-19]`. Numeri nel file d'arco, Appendici A.1 e A.1-bis.
 
