@@ -261,6 +261,13 @@ def skill_da_installare(root: "Path | None" = None) -> "list[str]":
     return fuori
 
 
+def etichette(id_: str | None = None, root: "Path | None" = None) -> "dict[str, str]":
+    """Le sigle stampate nel riquadro della creatura (capacità stampa.etichette, L7).
+
+    Senza `id_` vale il predefinito: chi stampa un file passa `sistema_di(file)`."""
+    return dict(dati(id_ or predefinito(root), "stampa.etichette", root).get("etichette", {}))
+
+
 def skill_escluse(root: "Path | None" = None) -> "list[str]":
     """Le skill di un sistema che non è né attivo né di rinforzo (ADR-0111, L6).
 

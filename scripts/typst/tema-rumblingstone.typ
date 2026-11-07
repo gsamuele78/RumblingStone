@@ -349,6 +349,9 @@
   attributi: (), attacchi: (), voci: (), tattica: "", fonte: "",
   sezioni: (:),
   larga: false,
+  // Le sigle del riquadro vengono dal plugin del sistema (stampa.etichette,
+  // ADR-0111, L7): export_booklet_typst.py le passa a ogni chiamata.
+  etichette: (ca: "CA", pf: "pf", ts: "TS", vel: "Vel", iniziativa: "Iniziativa", sensi: "Sensi"),
 ) = {
   let fascia(titolo, corpo) = if corpo != none [
     #v(3.5pt)
@@ -363,9 +366,9 @@
     let piene = coppie.filter(c => c.at(1) != "" and c.at(1) != [])
     if piene.len() == 0 { none } else { piene.map(c => [*#c.at(0)* #c.at(1)]).join([ · ]) }
   }
-  let difesa = sezioni.at("Difesa", default: in-riga((("CA", ca), ("pf", pf), ("TS", ts))))
+  let difesa = sezioni.at("Difesa", default: in-riga(((etichette.ca, ca), (etichette.pf, pf), (etichette.ts, ts))))
   let attacco = sezioni.at("Attacco", default: in-riga(
-    (("Vel", velocita),) + attacchi.map(a => (a.at(0), a.at(1)))))
+    ((etichette.vel, velocita),) + attacchi.map(a => (a.at(0), a.at(1)))))
   // La griglia delle caratteristiche solo quando ci sono tutte e sei: con
   // tre colonne su sei il riquadro sembra rotto. Altrimenti stanno in riga.
   let griglia-car = attributi.len() == 6
@@ -388,8 +391,8 @@
   let tattiche = sezioni.at("Tattiche", default: if tattica == "" { none } else [#tattica])
   let apertura = sezioni.at("Iniziativa", default: {
     let pezzi = ()
-    if iniziativa != "" { pezzi.push([*Iniziativa* #iniziativa]) }
-    if sensi != "" { pezzi.push([*Sensi* #sensi]) }
+    if iniziativa != "" { pezzi.push([*#etichette.iniziativa* #iniziativa]) }
+    if sensi != "" { pezzi.push([*#etichette.sensi* #sensi]) }
     if pezzi.len() == 0 { none } else { pezzi.join([ · ]) }
   })
 

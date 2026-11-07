@@ -16,6 +16,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 
 [capacita]
 "termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
+"stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
 "lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
 "lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }

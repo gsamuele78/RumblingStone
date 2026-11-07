@@ -108,12 +108,12 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Capitano githyanki gish: «Spell Sword synergy» (non è un talento) diventa l'ele… | ✅ scelta del DM («quello che ha più senso») |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L7: le sigle del riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sens… | ✅ 19 booklet HTML e .hb.md identici byte per byte; .typ: 98 righe, solo il parametro `etichette:`; PDF non compilato in locale |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L6: build-skills.sh e sync-skills.sh installano solo le skill dei sistemi attiv… | ✅ skill costruite: 18/18 oggi, 17 solo 3.5, 15 solo PF1e; pacchetti CI identici con la configurazione attuale |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5d: regole di tipo (dnd35, pf1e) e campi dello statblocco (d20) dai plugin; L5… | ✅ 5 impronte identiche; capacità nel codice: resta solo `fonti.regole` (L8); impronte dei generatori 12/12; M3 72 → 68 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5c: liste di incantesimi 3.5 dal plugin dnd35, aggiunte APG dal plugin pf1e | ✅ 5 costanti spostate con impronte identiche; `creature.incantesimi` in dati per dnd35 e pf1e; incantesimi.py 711 → 236 righe; impronte dei generatori 12/12; M… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5b: incantatori, classi di prestigio, profili di ruolo, taglie e razze 3.5 dal… | ✅ 19 costanti spostate con impronte identiche; impronte dei generatori 12/12; M3 76 → 73; resta `incantesimi.LISTE` (L5c) |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | Drappo: «Intuizione» al posto di «Percepire Intenzioni» (scelta del DM, card de… | ✅ 77 sostituzioni; abilità «nome 3.5» nei campi 3 → 0, in tabella 194 → 197; validate_standalone, validate_booklets e validate_prosa verdi |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5a: tabelle base delle creature 3.5 dal plugin dnd35 | ✅ 9 costanti spostate con impronte identiche; capacità dnd35 nel codice 5 → 4; impronte dei generatori 12/12; talenti sconosciuti 0 |
 
 ## Le misure che si portano dietro
 
