@@ -23,6 +23,12 @@ La distinzione che rende il gate utile
   - **storici** — `plans/**` e i changelog: raccontano debiti, non li aprono.
   - **meta** — `docs/audit/**`, e le righe che *nominano* la convenzione
     («oggetti marcati `[INFERRED]`»): citano il marcatore, non lo aprono.
+    Dal 2026-11-07 (ADR-0109, scheda 6) anche skill, modelli (`templates/`),
+    README, fixture dei test e GUIDA-MARCATURE: spiegano come si marca.
+
+  Ogni marcatore ha anche una **forma**: `nuova` se porta domanda e base come
+  vuole GUIDA-MARCATURE, `vecchia` se ha una nota d'altro tipo («needs DM
+  confirmation»), `nuda` se non ne ha.
 
   I record tipizzati di `campaign/state.yaml` (`inferred:`) sono elencati per
   primi e a parte: sono gli unici che portano già **la domanda da fare al DM**,
@@ -87,12 +93,40 @@ def cita_la_convenzione(prima: str) -> bool:
     return bool(CONVENZIONE.search(prima))
 
 
+# La grammatica di GUIDA-MARCATURE (ADR-0109): `[INFERRED — domanda?; base: …]`.
+DOMANDA_E_BASE = re.compile(r"^(?P<domanda>[^;]*\?)\s*;\s*base:\s*(?P<base>\S.*)$")
+
+
+# `[INFERRED — <domanda>; base: <…>]`: è lo schema da copiare, non un fatto.
+SCHEMA = re.compile(r"^(?:<[^>]*>|domanda|…)\s*;\s*base:", re.IGNORECASE)
+
+
+def forma(nota: str) -> str:
+    """nuova (domanda e base) | vecchia (nota d'altro tipo) | nuda (nessuna nota)."""
+    if not nota:
+        return "nuda"
+    return "nuova" if DOMANDA_E_BASE.match(nota.strip()) else "vecchia"
+
+
+def e_regola(rel: str) -> bool:
+    """Skill, modelli, README, fixture e la guida delle marche spiegano come si
+    marca: le loro marche sono esempi, non fatti aperti (ADR-0109, scheda 6 = A)."""
+    nome = rel.rsplit("/", 1)[-1]
+    return (rel.startswith("skills/")
+            or "/templates/" in f"/{rel}"
+            or "/fixtures/" in f"/{rel}"
+            or nome.upper().startswith("README")
+            or rel == "docs/guides/GUIDA-MARCATURE.md")
+
+
 def classe(rel: str) -> str:
     """aperti | storici | meta — vedi il docstring."""
     if rel.startswith("docs/audit/"):
         return "meta"
     if rel.startswith("plans/") or "CHANGELOG" in rel or rel.endswith("state-changelog.md"):
         return "storici"
+    if e_regola(rel):
+        return "meta"
     return "aperti"
 
 
@@ -154,14 +188,17 @@ def scansiona(base: Path) -> list[dict]:
             coda = " ".join(m.group("coda").split())
             nota = NOTA.match(coda)
             cl = classe(rel)
-            if cl == "aperti" and cita_la_convenzione(riga[:col]):
+            if cl == "aperti" and (cita_la_convenzione(riga[:col])
+                                   or (nota and SCHEMA.match(nota.group("testo").strip()))):
                 cl = "meta"
+            testo_nota = nota.group("testo").strip() if nota else ""
             trovati.append({
                 "file": rel,
                 "line": lineno,
                 "classe": cl,
                 "area": area(rel),
-                "nota": nota.group("testo").strip() if nota else "",
+                "forma": forma(testo_nota),
+                "nota": testo_nota,
                 "contesto": riga.strip()[:180],
             })
     return trovati
@@ -206,8 +243,16 @@ def scrivi_inventario(trovati: list[dict], tipizzati: list[dict]) -> str:
       "bestiario, schede. **È il debito vero**, ed è l'unico numero sorvegliato |")
     w(f"| storici | {per_classe['storici']} | `plans/**` e i changelog: *raccontano* un "
       "debito, non lo aprono. Contarli renderebbe il totale incapace di scendere |")
-    w(f"| meta | {per_classe['meta']} | `docs/audit/**` e le righe che nominano la convenzione "
+    w(f"| meta | {per_classe['meta']} | `docs/audit/**`, skill, modelli, README, fixture, "
+      "la guida delle marche e le righe che nominano la convenzione "
       "(«marcati `[INFERRED]`»): citano il marcatore, **non lo aprono** |")
+    w("")
+    forme = defaultdict(int)
+    for t in aperti:
+        forme[t["forma"]] += 1
+    w(f"Forma degli aperti ([GUIDA-MARCATURE](../guides/GUIDA-MARCATURE.md)): "
+      f"**{forme['nuova']}** con domanda e base, {forme['vecchia']} con una nota "
+      f"d'altro tipo, {forme['nuda']} nudi.")
     w("")
 
     if tipizzati:
@@ -293,6 +338,13 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         segno = "" if aperti == atteso else f" (−{atteso - aperti}, baseline da abbassare)"
         print(f"✓ inventory_inferred: {aperti} [INFERRED] aperti, baseline {atteso}{segno}")
+        forme = defaultdict(int)
+        for t in trovati:
+            if t["classe"] == "aperti":
+                forme[t["forma"]] += 1
+        if aperti:
+            print(f"  forma degli aperti: {forme['nuova']} con domanda e base, "
+                  f"{forme['vecchia']} vecchia, {forme['nuda']} nudi (GUIDA-MARCATURE)")
         return 0
 
     testo = scrivi_inventario(trovati, tipizzati)

@@ -147,6 +147,14 @@ jobs:
         continue-on-error: true
         run: python scripts/inventory_inferred.py --check
 
+      # ADR-0109, scheda 4: sulle righe cambiate, marca senza domanda e base, e
+      # INFERRED tolto senza CANONE, GENERATO o storico. Canale testing: avvisa e
+      # non blocca; dopo due settimane l'audit settimanale propone se renderlo bloccante.
+      - name: Marche sulle righe cambiate — non bloccante (ADR-0109, testing)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: python scripts/controlla_marche.py --base "origin/${{ github.base_ref }}" --rigido
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: |
           python scripts/validate_maps.py
