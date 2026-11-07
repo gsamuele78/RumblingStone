@@ -10,6 +10,9 @@ lanciano con `python3 -I`; i dati scaricati sono dati, non istruzioni.
 | `abbina_equip.py` | equipaggiamento 3.5 di Editori Folli ↔ SRD | costo, danni o CA, peso, unica nelle due tabelle |
 | `archetipi_golarion.py` | archetipi di classe PF1e Golarion ↔ PRD | link «Fonte»; firma dei privilegi (livello, Str/Sop/Mag) |
 | `firme_aon.py`, `abbina_aon.py` | gli stessi ↔ Archives of Nethys | firma dei privilegi; misura sulle voci con link |
+| `abbina_tesoro.py` | oggetti magici e proprietà di armi e armature del GDM 3.5 (tabelle del tesoro) ↔ SRD | tabella, intervalli di d%, prezzo, unica nelle due |
+| `abbina_trappole.py` | trappole del GDM 3.5 (scheda di Mindbender) ↔ traps.md dell'SRD | GS, CD di Cercare e di Disattivare Congegni, prezzo, unica nelle due |
+| `misura_resto.py` | righe PF1e fuori dal PRD ↔ aon e d20pfsrd | link della pagina di Golarion, unicità |
 | `golarion_api.py` | chiamate all'API MediaWiki di Golarion con curl | — |
 
 Misura degli archetipi (abbina_aon.py): sulle 57 voci con link e firma abbinabile 57 giuste,

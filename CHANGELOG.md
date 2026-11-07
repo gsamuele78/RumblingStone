@@ -19,6 +19,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Aggiunto
 - `scripts/controlla_marche.py` (ADR-0109): sulle righe cambiate di una PR avvisa per una marca INFERRED senza domanda e base e per un INFERRED tolto senza CANONE, GENERATO o storico. In CI non blocca (canale testing).
+- Termini ufficiali (ADR-0110): `scripts/lessico_regole.py` con le tabelle `lessico_it_35.tsv` (italiano → SRD 3.5) e `lessico_it_pf1.tsv` (italiano PF1e → PRD), ogni riga con la fonte; `controlla` sui talenti (cricchetto in CI) e `controlla --campi` su incantesimi, abilità e oggetti magici delle schede (conto nel riepilogo della CI, non blocca).
 - Marcature dei fatti (ADR-0109): grammatica unica in `docs/guides/GUIDA-MARCATURE.md` (`[INFERRED — domanda; base: …]`, `[CANONE — DM data, codice]`, `[GENERATO]`, fonti). Dieci skill di contenuto hanno la sezione «Vincoli sui fatti», uguale alla guida (`test_vincoli_delle_skill.py`); AGENTS.md e le skill non riscrivono più la regola.
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di

@@ -79,6 +79,38 @@ delle fonti, o porta una marca di fonte; un controllo lo verifica a ogni PR.**
 - I 140 sconosciuti restano: nomi inglesi fuori SRD senza marca, nomi italiani
   ambigui, residui di lettura. Si chiudono a lotti, ognuno con il conto.
 
+## Aggiornamento 2026-11-07 (pomeriggio): tabelle complete e cancello sui campi
+
+Su richiesta del DM («servono complete… e solo dopo fai le prove e misuri»), le tabelle sono
+cresciute prima delle prove. L'esito è in
+[plans/esperimenti/regole-ufficiali-2026-11-07/README.md](../esperimenti/regole-ufficiali-2026-11-07/README.md).
+
+- **3.5**: da 1.978 a 3.944 voci.
+  - Fonti nuove: 5° Clone (incantesimi, talenti, classi e classi di prestigio dei manuali
+    italiani, anche quelli non base, con la pagina), tabelle del tesoro del GDM, SRD di Editori
+    Folli, tapionx (CC0), prontuari del DM.
+  - Dove una fonte non dà l'inglese, l'abbinamento si fa per firma, senza usare i nomi:
+    scuola+livelli+componenti per gli incantesimi, costo+danni+peso per l'equipaggiamento,
+    d%+prezzo per il tesoro, GS+CD+prezzo per le trappole.
+- **PF1e**: da 4.762 a 9.334 voci (archetipi, equipaggiamento, proprietà magiche, voci fuori
+  dal PRD).
+- **Misura fonte contro fonte**: fra il 97% e il 100% di voci concordi.
+  - Incantesimi 505/506 e 600/605, talenti 181/188, classi 30/31, equipaggiamento 118/125,
+    abilità 35/35, archetipi PF1e 57/57.
+  - Ogni discordanza vista è un refuso di una fonte o una scelta del DM.
+- **Cancello sui campi** (`controlla --campi`): incantesimi, abilità e oggetti magici delle schede
+  si controllano anche loro. «Anello di…» e «verga della…» si cercano col resto del nome; un'arma
+  o armatura della tabella con proprietà note («martello da guerra sacro») è valida. Per ora non
+  blocca e il conto va nel riepilogo della CI. Su 40 casi per tipo: prima 10-11, dopo 40.
+- **Talenti**: il nome inglese di un talento di un manuale ufficiale conta come fonte; gli
+  sconosciuti scendono da 151 a 137, e il cricchetto della CI è a 137.
+- **Decisioni del DM**:
+  - i nomi con il mago seguono il manuale italiano, e la forma SRD è una variante;
+  - Blown Away = Portato via;
+  - Cowering = Accovacciato.
+- **Resta aperto**: i mostri 3.5 oltre le 31 voci (nessun elenco legale completo in rete) e circa
+  270 archetipi PF1e senza abbinamento sicuro.
+
 **Da rivedere se**: il ratchet blocca PR legittime più di una volta su dieci;
 o se il thread dei plugin (ADR-0111) sposta le tabelle in un descrittore per
 sistema di gioco.

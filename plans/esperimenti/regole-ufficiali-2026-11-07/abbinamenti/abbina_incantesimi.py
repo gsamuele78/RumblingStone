@@ -9,7 +9,7 @@ from collections import defaultdict
 
 EF = Path.home() / ".cache/rumblingstone/editorifolli"
 SRD = next((Path.home() / ".cache/rumblingstone/srd").glob("srd-v3.5-md-*")) / "spells"
-TSV = Path("/home/user/RumblingStone/scripts/lessico_it_35.tsv")
+TSV = Path(__file__).resolve().parents[4] / "scripts" / "lessico_it_35.tsv"
 
 SCUOLE = {"abiurazione": "abjuration", "ammaliamento": "enchantment", "divinazione": "divination",
           "evocazione": "conjuration", "illusione": "illusion", "invocazione": "evocation",

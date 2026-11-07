@@ -26,6 +26,12 @@
 #   5clone (manuale, pag.)  incantesimi, talenti, classi e classi di prestigio dell'enciclopedia 3.5 del 5° Clone
 #                 (5clone.com/enciclopedia/d-d-3-5, «Nome (Ita)» e «Nome (Ing)» con il manuale italiano e la pagina);
 #                 anche i manuali non base (Perfetto Arcanista, Libro delle Imprese Eroiche…), fuori dall'SRD
+#   trappole del GDM  trappole della scheda «Trappole» di Mindbender (PDF caricato dal DM il 2026-11-07), abbinate a
+#                 traps.md dell'SRD per GS, CD di Cercare e di Disattivare Congegni e prezzo, senza usare i nomi
+#                 (abbinamenti/abbina_trappole.py); le trappole-incantesimo a pari firma col nome dell'incantesimo in tabella
+#   elenco oggetti del DM  armi, armature, scudi e oggetti maledetti specifici dell'elenco oggetti magici 3.5 (PDF caricato
+#                 dal DM il 2026-11-07), abbinati all'SRD per prezzo e pagina del GDM; corretti con lo stesso confronto due
+#                 refusi di Mephit (Bracciali dell'indifeso, Spada berserker)
 # Le voci di scripts/lessico_it.yaml (curate, con varianti e note) prevalgono su queste.
 italiano	srd35	tipo	abbinamento
 Acrobatico	Acrobatic	talento	doppia fonte
@@ -1235,7 +1241,7 @@ Bottiglia dell'efreeti	Efreeti Bottle	oggetto magico	mephit
 Braccialetto dell'amicizia	Bracelet of Friends	oggetto magico	mephit
 Bracciali dell'arciere, inferiori	Bracers of Archery, Lesser	oggetto magico	mephit
 Bracciali dell'arciere, superiori	Bracers of Archery, Greater	oggetto magico	mephit
-Bracciali dell'inidfeso	Bracers of Defenselessness	oggetto magico	mephit
+Bracciali dell'indifeso	Bracers of Defenselessness	oggetto magico	mephit
 Bracciali della potenza implacabile	Bracers of Relentless Might	oggetto magico	mephit
 Braciere del comando degli elementali del fuoco	Brazier of Commanding Fire Elementals	oggetto magico	mephit
 Brando delle tempeste	Stormbrand	oggetto magico	mephit
@@ -1701,7 +1707,7 @@ Sostegno temporale	Time Buttress	oggetto magico	mephit
 Sostentamento	Sustenance	oggetto magico	mephit
 Sovranità	Rulership	oggetto magico	mephit
 Sovranità epica	Epic Rulership	oggetto magico	mephit
-Spada berseker	Sword, Berserking	oggetto magico	mephit
+Spada berserker	Sword, Berserking	oggetto magico	mephit
 Spada dei piani	Sword of the Planes	oggetto magico	mephit
 Spada del furto vitale	Sword of Life Stealing	oggetto magico	mephit
 Spada della furtività	Sword of Subtlety	oggetto magico	mephit
@@ -3890,3 +3896,85 @@ Strega del Terrore	Dread Witch	classe di prestigio	5clone (Eroi dell'Orrore, pag
 Mezzosangue Immondo	Fiend-blooded	classe di prestigio	5clone (Eroi dell'Orrore, pag. 93)
 Purificatore della Dottrina Consacrata	Purifier of the Hallowed Doctrine	classe di prestigio	5clone (Eroi dell'Orrore, pag. 98)
 Studioso Corrotto	Tainted Scholar	classe di prestigio	5clone (Eroi dell'Orrore, pag. 109)
+Spada lunga di ferro freddo perfetta	Cold Iron Longsword, Masterwork	oggetto magico	elenco oggetti del DM (PDF caricato 2026-11-07, firma prezzo+pagina del GDM)
+Freccia assassina	Slaying Arrow	oggetto magico	elenco oggetti del DM (PDF caricato 2026-11-07, firma prezzo+pagina del GDM)
+Freccia assassina superiore	Slaying Arrow (Greater)	oggetto magico	elenco oggetti del DM (PDF caricato 2026-11-07, firma prezzo+pagina del GDM)
+Ago avvelenato	Poison Needle Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Allucinazione mortale	Phantasmal Killer Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Anatema esteso	Extended Bane Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Barriera di lame	Blade Barrier Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Blocchi chiodati in caduta	Spiked Blocks from Ceiling	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Blocchi di pietra in caduta	Stone Blocks from Ceiling	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Blocco in caduta	Falling Block Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Blocco oscillante	Swinging Block Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Boia semovente	Moving Executioner Statue	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Catena di fulmini	Chain Lightning Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Catena sbilanciante	Tripping Chain	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Colonna vacillante	Collapsing Column	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Colpo infuocato	Flame Strike Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Crollo del muro intenzionale	Built-to-Collapse Wall	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Dardo avvelenato	Poison Dart Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Dardo avvelenato	Poisoned Dart Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Distruzione	Destruction Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Evoca mostri VI	Summon Monster VI Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Falce a parete	Wall Scythe Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Falce a parete avvelenata	Deathblade Wall Scythe	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Filo tagliente in tensione	Razor-Wire across Hallway	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Foschia di demenza	Insanity Mist Vapor Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa	Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa ben celata	Well-Camouflaged Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa celata	Camouflaged Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa con spuntoni	Spiked Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa con spuntoni (30 metri)	Spiked Pit Trap (100 Ft. Deep)	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa con spuntoni avvelenati	Poisoned Spiked Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa larga	Wide-Mouth Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa larga con spuntoni	Spiked Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa larga con spuntoni	Wide-Mouth Spiked Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa larga con spuntoni avvelenati	Wide-Mouth Spiked Pit with Poisoned Spikes	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fossa profonda	Deeper Pit Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Freccia	Basic Arrow Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Freccia acida di Melf	Acid Arrow Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Freccia avvelenata	Poisoned Arrow Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Freccia della viverna	Wyvern Arrow Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fulmine	Lightning Bolt Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Fumi di othur vaporizzati	Burnt Othur Vapor Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Gabbia di forza e evoca mostri VII	Forcecage and Summon Monster VII trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Giavellotto	Javelin Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Glifo di interdizione (esplosivo)	Glyph of Warding (Blast)	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Infliggi ferite leggere	Inflict Light Wounds Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Inversione della gravità	Reverse Gravity Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Lama falciante	Scything Blade Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Lame rotanti avvelenate	Whirling Poison Blades	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Lamento della banshee	Wail of the Banshee Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Mani brucianti	Burning Hands Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Maniglia cosparsa di veleno	Doorknob Smeared with Contact Poison	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Mattoni in caduta	Bricks from Ceiling	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Muri schiaccianti	Crushing Wall Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Nebbia acida	Acid Fog Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Palla di fuoco	Fireball Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Parete con spuntoni avvelenati	Poison Wall Spikes	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Parola del caos	Word of Chaos Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Parola del potere, stordire	Power Word Stun Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Pendolo in sospensione	Ceiling Pendulum	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Polvere di ungol vaporizzata	Ungol Dust Vapor Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Pomello di cassetto cosparso di veleno a contatto	Drawer Handle Smeared with Contact Poison	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Raffica di dardi	Fusillade of Darts	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Raffica di dardi avvelenati	Fusillade of Greenblood Oil Darts	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Raffiche di lance	Fusillade of Spears	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Rete grande	Large Net Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Risucchio di energia	Energy Drain Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Roccia rotolante	Rolling Rock Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Saracinesca	Portcullis Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Scagliare maledizione	Bestow Curse Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Scatola di muffa bruna	Box of Brown Mold	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Serratura cosparsa di bile di drago	Lock Covered in Dragon Bile	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Sigillo del serpente	Sepia Snake Sigil Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Soffitto schiacciante	Dropping Ceiling	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Spruzzo prismatico	Prismatic Spray Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Stanza allagata	Water-Filled Room	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Stanza allagata	Water-Filled Room Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Stanza inondata	Flooding Room Trap	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Stanza schiacciante	Compacting Room	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Stanza schiacciante	Crushing Room	trappola	trappole del GDM (scheda di Mindbender, PDF caricato dal DM 2026-11-07; firma GS+CD+prezzo)
+Terremoto	Earthquake Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
+Tocco del ghoul	Ghoul Touch Trap	trappola	trappole del GDM (scheda di Mindbender; stessa firma, incantesimo dalla tabella)
