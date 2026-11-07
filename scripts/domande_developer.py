@@ -75,6 +75,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import copertura_scene as cs  # noqa: E402
 from dmcore.sistemi import sistema_di  # noqa: E402
+from dmcore import sistemi as _S  # noqa: E402
 import componenti as comp  # noqa: E402
 
 CONFIG = ROOT / "plans" / "domande-developer.json"
@@ -121,13 +122,12 @@ SC_CHI = re.compile(r"(?i)prova di gruppo|tirano tutti|tutti e \w+ i PG|ogni PG|
 SC_SUCCESSO = re.compile(r"(?i)\b(?:ogni|un|il) (?:successo|blocco)\b|\briesce se\b|\bsuccesso\s*\(|"
                          r"\*\*\d+ successi\*\*|successo pieno|\bSuccesso\b")
 SC_COPPIA = re.compile(r"(\d+)\s+successi\s*(?:prima di|/)\s*(\d+)\s+fallimenti")
-#: Le abilità che nel sistema del modulo non esistono. In PF1e Percezione,
-#: Furtività e Intuizione ci sono (Perception, Stealth, Sense Motive): alla
-#: prima prova il Drappo, che è PF1e, ne risultava pieno.
+#: Le abilità che nel sistema del modulo non esistono, dal plugin del sistema
+#: (`estranee` di lessico.abilita, ADR-0111 L3). In PF1e Percezione, Furtività
+#: e Intuizione ci sono: alla prima prova il Drappo, che è PF1e, ne risultava pieno.
 #: Il nome del sistema in ABILITA_ESTRANEE per l'id del plugin (sistemi/).
 SISTEMA_DEL_PLUGIN = {"dnd35": "3.5", "pf1e": "pf1e"}
-ABILITA_ESTRANEE = {"3.5": ("Atletica", "Intuizione", "Percezione", "Furtività"),
-                    "pf1e": ("Atletica",)}
+ABILITA_ESTRANEE = {nome: tuple(_S.abilita(pid)["estranee"]) for pid, nome in SISTEMA_DEL_PLUGIN.items()}
 
 
 def _abilita_estranee(sistema: str) -> "re.Pattern":
