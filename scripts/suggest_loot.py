@@ -326,14 +326,18 @@ def main():
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--all-proposals", action="store_true",
                     help="Generate loot for every proposal in the encounter file.")
-    ap.add_argument("--sistema", default="dnd35",
+    ap.add_argument("--sistema", default=None,
                     help="sistema di gioco del valore del tesoro (sistemi.toml; predefinito dnd35)")
     ap.add_argument("--velocita", choices=("lenta", "media", "veloce"), default=None,
                     help="velocità PF1e (predefinita: opzioni.pf1e.velocita_tesoro)")
     args = ap.parse_args()
 
     global TESORO_SISTEMA
-    if args.sistema != "dnd35":
+    sys.path.insert(0, str(HERE))
+    from dmcore import sistemi as S
+    # Il predefinito (3.5) ha le tabelle per EL di loot_tables.yaml; un altro
+    # sistema il valore per incontro del suo plugin (tesoro.per_livello).
+    if args.sistema and args.sistema != S.predefinito():
         TESORO_SISTEMA = tesoro_di(args.sistema, args.velocita)
 
     rng = random.Random(args.seed)

@@ -274,7 +274,7 @@ def _parse_list(lines, i, indent):
 
 
 # ───────────────────────── EL / CR math ─────────────────────────
-def combine_el(crs: list[float]) -> float:
+def combine_el(crs: list[float], raddoppio: float = 2.0) -> float:
     """Combine CRs into an Encounter Level per D&D 3.5 DMG.
 
     In 3.5 doubling the number of equal-CR creatures raises EL by +2
@@ -284,9 +284,13 @@ def combine_el(crs: list[float]) -> float:
         EL = 2 · log2( Σ 2^(CR/2) )
 
     Example: two CR 10 creatures → 2·log2(2·2^5) = 2·log2(64) = 12 ✓
+
+    `raddoppio` è il parametro r di EL = r·log2(Σ 2^(GS/r)): di quanto sale
+    l'EL raddoppiando le creature (3.5: 2, da sistemi/dnd35/dati/incontri.toml).
     """
     if not crs: return 0.0
-    return 2.0 * math.log2(sum(2 ** (c / 2.0) for c in crs))
+    r = float(raddoppio)
+    return r * math.log2(sum(2 ** (c / r) for c in crs))
 
 def _px_pf1e(cr: float, tab: dict[str, int]) -> int:
     """PE di una creatura PF1e per GS (PRD, Experience Point Awards).
@@ -321,6 +325,25 @@ def combina_gs_pf1e(crs: list[float], tab: dict[str, int] | None = None) -> floa
     while gs >= alto and _px_pf1e(gs + 1, tab) <= tot:
         gs += 1
     return gs
+
+
+#: I metodi per combinare i GS che un plugin può nominare in `incontri.livello`
+#: (campo `metodo`). Un sistema nuovo che usa uno di questi non tocca il codice.
+METODI = {
+    "potenze": lambda dati: (lambda crs: combine_el(crs, dati.get("raddoppio", 2))),
+    "somma_px": lambda dati: (lambda crs: combina_gs_pf1e(crs, dati["px_per_gs"])),
+}
+
+
+def combinatore(sistema: "str | None" = None, root=None):
+    """La funzione GS → EL del sistema, dal metodo dichiarato nel suo plugin."""
+    from dmcore import sistemi as S
+    dati = S.dati(sistema or S.predefinito(), "incontri.livello", root)
+    metodo = dati.get("metodo")
+    if metodo not in METODI:
+        raise SystemExit(f"[suggest_encounter] {sistema}: metodo «{metodo}» sconosciuto "
+                         f"(noti: {', '.join(METODI)})")
+    return METODI[metodo](dati)
 
 
 # Il modo di combinare i GS: 3.5 (combine_el) salvo `--sistema` (ADR-0111).
@@ -636,22 +659,23 @@ def main():
     ap.add_argument("--list-environments", action="store_true")
     ap.add_argument("--list-npcs", action="store_true",
                     help="List all injectable NPCs (canonical Bestiario dossiers + named catalog entries).")
-    ap.add_argument("--sistema", default="dnd35",
+    ap.add_argument("--sistema", default=None,
                     help="sistema di gioco con cui combinare i GS (sistemi.toml; predefinito dnd35)")
     ap.add_argument("--list-all", action="store_true",
                     help="Dump factions + alliances + environments + NPCs + wild envs.")
     args = ap.parse_args()
 
     global COMBINA
-    if args.sistema != "dnd35":
-        from dmcore import sistemi as S
-        if args.sistema not in S.attivi():
-            print(f"[suggest_encounter] sistema «{args.sistema}» non attivo in sistemi.toml", file=sys.stderr)
-            return 2
-        tab = S.dati(args.sistema, "incontri.livello")["px_per_gs"]
-        COMBINA = lambda crs: combina_gs_pf1e(crs, tab)  # noqa: E731
-        print(f"[suggest_encounter] sistema {args.sistema}: GS dell'incontro dalla somma dei PE (PRD); "
-              "le creature vengono ancora dal catalogo comune (L2)", file=sys.stderr)
+    from dmcore import sistemi as S
+    sistema = args.sistema or S.predefinito()
+    if sistema not in S.attivi():
+        print(f"[suggest_encounter] sistema «{sistema}» non attivo in sistemi.toml", file=sys.stderr)
+        return 2
+    COMBINA = combinatore(sistema)
+    if sistema != S.predefinito():
+        print(f"[suggest_encounter] sistema {sistema}: GS dell'incontro col metodo "
+              f"«{S.dati(sistema, 'incontri.livello')['metodo']}» del plugin; "
+              "le creature vengono ancora dal catalogo 3.5", file=sys.stderr)
 
     cat = load_catalog()
     all_data = load_alliances()
