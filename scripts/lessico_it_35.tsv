@@ -8,6 +8,10 @@
 #   derivato      serie numerata dalla prima voce (Evoca mostri II..IX da Evoca mostri I)
 #   mephit        coppia del database di Mephit, nome inglese trovato nell'SRD; fonte unica, non incrociata
 #   claude        abbinato da Claude e controllato nell'SRD; «non riscontrato» = l'italiano non è in fonte
+#   + editori folli  la coppia è confermata dall'SRD 3.5 in italiano di Editori Folli (editorifolli.it/gdr/d20system),
+#                 abbinato all'SRD inglese per scuola, livelli, componenti, raggio, TS, RI e tempo di lancio, senza usare il nome
+#   editori folli (forma SRD)  il nome dell'SRD italiano senza il mago (Freccia acida per Freccia acida di Melf);
+#                 Spada, Trappola e Capanna non entrano: sono parole comuni
 # Le voci di scripts/lessico_it.yaml (curate, con varianti e note) prevalgono su queste.
 italiano	srd35	tipo	abbinamento
 Acrobatico	Acrobatic	talento	doppia fonte
@@ -130,611 +134,611 @@ Travolgere	Trample	talento	doppia fonte
 Virare	Wingover	talento	doppia fonte
 Vocazione magica	Magical Aptitude	talento	doppia fonte
 Volontà di ferro	Iron Will	talento	doppia fonte
-Aiuto	Aid	incantesimo	doppia fonte
-Allarme	Alarm	incantesimo	doppia fonte
-Alleato planare	Planar Ally	incantesimo	doppia fonte
-Alleato planare inferiore	Planar Ally, Lesser	incantesimo	doppia fonte
-Alleato planare superiore	Planar Ally, Greater	incantesimo	doppia fonte
-Allineamento imperscrutabile	Undetectable Alignment	incantesimo	doppia fonte
-Allineare arma	Align Weapon	incantesimo	doppia fonte
-Allucinazione mortale	Phantasmal Killer	incantesimo	doppia fonte
-Alterare se stesso	Alter Self	incantesimo	doppia fonte
-Ammorbidire terra e pietra	Soften Earth and Stone	incantesimo	doppia fonte
-Analizzare dweomer	Analyze Dweomer	incantesimo	doppia fonte
-Anatema	Bane	incantesimo	doppia fonte
-Ancora dimensionale	Dimensional Anchor	incantesimo	doppia fonte
-Animale messaggero	Animal Messenger	incantesimo	doppia fonte
-Animare corde	Animate Rope	incantesimo	doppia fonte
-Animare morti	Animate Dead	incantesimo	doppia fonte
-Animare oggetti	Animate Objects	incantesimo	doppia fonte
-Animare vegetali	Animate Plants	incantesimo	doppia fonte
-Anti-individuazione	Nondetection	incantesimo	doppia fonte
-Antipatia	Antipathy	incantesimo	doppia fonte
+Aiuto	Aid	incantesimo	doppia fonte + editori folli
+Allarme	Alarm	incantesimo	doppia fonte + editori folli
+Alleato planare	Planar Ally	incantesimo	doppia fonte + editori folli
+Alleato planare inferiore	Planar Ally, Lesser	incantesimo	doppia fonte + editori folli
+Alleato planare superiore	Planar Ally, Greater	incantesimo	doppia fonte + editori folli
+Allineamento imperscrutabile	Undetectable Alignment	incantesimo	doppia fonte + editori folli
+Allineare arma	Align Weapon	incantesimo	doppia fonte + editori folli
+Allucinazione mortale	Phantasmal Killer	incantesimo	doppia fonte + editori folli
+Alterare se stesso	Alter Self	incantesimo	doppia fonte + editori folli
+Ammorbidire terra e pietra	Soften Earth and Stone	incantesimo	doppia fonte + editori folli
+Analizzare dweomer	Analyze Dweomer	incantesimo	doppia fonte + editori folli
+Anatema	Bane	incantesimo	doppia fonte + editori folli
+Ancora dimensionale	Dimensional Anchor	incantesimo	doppia fonte + editori folli
+Animale messaggero	Animal Messenger	incantesimo	doppia fonte + editori folli
+Animare corde	Animate Rope	incantesimo	doppia fonte + editori folli
+Animare morti	Animate Dead	incantesimo	doppia fonte + editori folli
+Animare oggetti	Animate Objects	incantesimo	doppia fonte + editori folli
+Animare vegetali	Animate Plants	incantesimo	doppia fonte + editori folli
+Anti-individuazione	Nondetection	incantesimo	doppia fonte + editori folli
+Antipatia	Antipathy	incantesimo	doppia fonte + editori folli
 Aprire chiudere	Open-Close	incantesimo	doppia fonte
-Arma distruttiva	Disrupting Weapon	incantesimo	doppia fonte
-Arma magica	Magic Weapon	incantesimo	doppia fonte
-Arma magica superiore	Magic Weapon, Greater	incantesimo	doppia fonte
-Arma spirituale	Spiritual Weapon	incantesimo	doppia fonte
-Armatura magica	Mage Armor	incantesimo	doppia fonte
-Astuzia della volpe	Fox's Cunning	incantesimo	doppia fonte
-Astuzia della volpe di massa	Fox's Cunning, Mass	incantesimo	doppia fonte
+Arma distruttiva	Disrupting Weapon	incantesimo	doppia fonte + editori folli
+Arma magica	Magic Weapon	incantesimo	doppia fonte + editori folli
+Arma magica superiore	Magic Weapon, Greater	incantesimo	doppia fonte + editori folli
+Arma spirituale	Spiritual Weapon	incantesimo	doppia fonte + editori folli
+Armatura magica	Mage Armor	incantesimo	doppia fonte + editori folli
+Astuzia della volpe	Fox's Cunning	incantesimo	doppia fonte + editori folli
+Astuzia della volpe di massa	Fox's Cunning, Mass	incantesimo	doppia fonte + editori folli
 Aura magica di Nystul	Magic Aura	incantesimo	prefisso
-Aura sacra	Holy Aura	incantesimo	doppia fonte
-Aura sacrilega	Unholy Aura	incantesimo	doppia fonte
-Bacche benefiche	Goodberry	incantesimo	doppia fonte
-Bagliore solare	Sunbeam	incantesimo	doppia fonte
-Banchetto degli eroi	Heroes' Feast	incantesimo	doppia fonte
-Barriera di lame	Blade Barrier	incantesimo	doppia fonte
-Bastone dell'incantesimo	Spellstaff	incantesimo	doppia fonte
-Benedire l'acqua	Bless Water	incantesimo	doppia fonte
-Benedire un'arma	Bless Weapon	incantesimo	doppia fonte
-Benedizione	Bless	incantesimo	doppia fonte
-Blasfemia	Blasphemy	incantesimo	doppia fonte
-Blocca animali	Hold Animal	incantesimo	doppia fonte
-Blocca mostri	Hold Monster	incantesimo	doppia fonte
-Blocca mostri di massa	Hold Monster, Mass	incantesimo	doppia fonte
-Blocca persone	Hold Person	incantesimo	doppia fonte
+Aura sacra	Holy Aura	incantesimo	doppia fonte + editori folli
+Aura sacrilega	Unholy Aura	incantesimo	doppia fonte + editori folli
+Bacche benefiche	Goodberry	incantesimo	doppia fonte + editori folli
+Bagliore solare	Sunbeam	incantesimo	doppia fonte + editori folli
+Banchetto degli eroi	Heroes' Feast	incantesimo	doppia fonte + editori folli
+Barriera di lame	Blade Barrier	incantesimo	doppia fonte + editori folli
+Bastone dell'incantesimo	Spellstaff	incantesimo	doppia fonte + editori folli
+Benedire l'acqua	Bless Water	incantesimo	doppia fonte + editori folli
+Benedire un'arma	Bless Weapon	incantesimo	doppia fonte + editori folli
+Benedizione	Bless	incantesimo	doppia fonte + editori folli
+Blasfemia	Blasphemy	incantesimo	doppia fonte + editori folli
+Blocca animali	Hold Animal	incantesimo	doppia fonte + editori folli
+Blocca mostri	Hold Monster	incantesimo	doppia fonte + editori folli
+Blocca mostri di massa	Hold Monster, Mass	incantesimo	doppia fonte + editori folli
+Blocca persone	Hold Person	incantesimo	doppia fonte + editori folli
 Blocca persone di massa	Hold Person, Mass	incantesimo	doppia fonte
-Blocca porte	Hold Portal	incantesimo	doppia fonte
-Bocca magica	Magic Mouth	incantesimo	doppia fonte
-Buone speranze	Good Hope	incantesimo	doppia fonte
-Caduta morbida	Feather Fall	incantesimo	doppia fonte
-Calappio	Snare	incantesimo	doppia fonte
-Calmare animali	Calm Animals	incantesimo	doppia fonte
-Calmare emozioni	Calm Emotions	incantesimo	doppia fonte
-Camminare nel vento	Wind Walk	incantesimo	doppia fonte
-Camminare nell'aria	Air Walk	incantesimo	doppia fonte
-Camminare nelle ombre	Shadow Walk	incantesimo	doppia fonte
-Camminare sull'acqua	Water Walk	incantesimo	doppia fonte
-Campo anti-magia	Antimagic Field	incantesimo	claude
-Camuffare se stesso	Disguise Self	incantesimo	doppia fonte
-Cancellare	Erase	incantesimo	doppia fonte
-Canto di discordia	Song of Discord	incantesimo	doppia fonte
+Blocca porte	Hold Portal	incantesimo	doppia fonte + editori folli
+Bocca magica	Magic Mouth	incantesimo	doppia fonte + editori folli
+Buone speranze	Good Hope	incantesimo	doppia fonte + editori folli
+Caduta morbida	Feather Fall	incantesimo	doppia fonte + editori folli
+Calappio	Snare	incantesimo	doppia fonte + editori folli
+Calmare animali	Calm Animals	incantesimo	doppia fonte + editori folli
+Calmare emozioni	Calm Emotions	incantesimo	doppia fonte + editori folli
+Camminare nel vento	Wind Walk	incantesimo	doppia fonte + editori folli
+Camminare nell'aria	Air Walk	incantesimo	doppia fonte + editori folli
+Camminare nelle ombre	Shadow Walk	incantesimo	doppia fonte + editori folli
+Camminare sull'acqua	Water Walk	incantesimo	doppia fonte + editori folli
+Campo anti-magia	Antimagic Field	incantesimo	claude + editori folli
+Camuffare se stesso	Disguise Self	incantesimo	doppia fonte + editori folli
+Cancellare	Erase	incantesimo	doppia fonte + editori folli
+Canto di discordia	Song of Discord	incantesimo	doppia fonte + editori folli
 Capanna di Leomund	Tiny Hut	incantesimo	prefisso
-Carne in pietra	Flesh to Stone	incantesimo	doppia fonte
-Catena di fulmini	Chain Lightning	incantesimo	doppia fonte
-Cavalcatura	Mount	incantesimo	doppia fonte
-Cecità/Sordità	Blindness-Deafness	incantesimo	doppia fonte
-Celare	Sequester	incantesimo	doppia fonte
-Cerchio di morte	Circle of Death	incantesimo	doppia fonte
-Cerchio di teletrasporto	Teleportation Circle	incantesimo	doppia fonte
-Cerchio magico contro il bene	Magic Circle against Good	incantesimo	doppia fonte
-Cerchio magico contro il caos	Magic Circle against Chaos	incantesimo	doppia fonte
-Cerchio magico contro il male	Magic Circle against Evil	incantesimo	doppia fonte
-Cerchio magico contro la legge	Magic Circle against Law	incantesimo	doppia fonte
-Charme su animali	Charm Animal	incantesimo	doppia fonte
-Charme su persone	Charm Person	incantesimo	doppia fonte
+Carne in pietra	Flesh to Stone	incantesimo	doppia fonte + editori folli
+Catena di fulmini	Chain Lightning	incantesimo	doppia fonte + editori folli
+Cavalcatura	Mount	incantesimo	doppia fonte + editori folli
+Cecità/Sordità	Blindness-Deafness	incantesimo	doppia fonte + editori folli
+Celare	Sequester	incantesimo	doppia fonte + editori folli
+Cerchio di morte	Circle of Death	incantesimo	doppia fonte + editori folli
+Cerchio di teletrasporto	Teleportation Circle	incantesimo	doppia fonte + editori folli
+Cerchio magico contro il bene	Magic Circle against Good	incantesimo	doppia fonte + editori folli
+Cerchio magico contro il caos	Magic Circle against Chaos	incantesimo	doppia fonte + editori folli
+Cerchio magico contro il male	Magic Circle against Evil	incantesimo	doppia fonte + editori folli
+Cerchio magico contro la legge	Magic Circle against Law	incantesimo	doppia fonte + editori folli
+Charme su animali	Charm Animal	incantesimo	doppia fonte + editori folli
+Charme su persone	Charm Person	incantesimo	doppia fonte + editori folli
 Charme sui mostri	Charm Monster	incantesimo	doppia fonte
-Charme sui mostri di massa	Charm Monster, Mass	incantesimo	doppia fonte
-Chiaroudienza/Chiaroveggenza	Clairaudience-Clairvoyance	incantesimo	doppia fonte
-Clone	Clone	incantesimo	doppia fonte
-Colpo accurato	True Strike	incantesimo	doppia fonte
-Colpo infuocato	Flame Strike	incantesimo	doppia fonte
-Comandare non morti	Command Undead	incantesimo	doppia fonte
-Comandare vegetali	Command Plants	incantesimo	doppia fonte
-Comando	Command	incantesimo	doppia fonte
-Comando superiore	Command, Greater	incantesimo	doppia fonte
-Comprensione dei linguaggi	Comprehend Languages	incantesimo	doppia fonte
-Comunione	Commune	incantesimo	doppia fonte
-Comunione con la natura	Commune with Nature	incantesimo	doppia fonte
-Confusione	Confusion	incantesimo	doppia fonte
-Confusione inferiore	Confusion, Lesser	incantesimo	doppia fonte
-Congedo	Dismissal	incantesimo	doppia fonte
-Cono di freddo	Cone of Cold	incantesimo	doppia fonte
-Conoscenza delle leggende	Legend Lore	incantesimo	doppia fonte
-Conoscere direzione	Know Direction	incantesimo	doppia fonte
-Consacrare	Consecrate	incantesimo	doppia fonte
-Contagio	Contagion	incantesimo	doppia fonte
-Contattare altri piani	Contact Other Plane	incantesimo	doppia fonte
-Contingenza	Contingency	incantesimo	doppia fonte
-Contrastare elementi	Endure Elements	incantesimo	doppia fonte
-Controllare acqua	Control Water	incantesimo	doppia fonte
-Controllare non morti	Control Undead	incantesimo	doppia fonte
-Controllare tempo atmosferico	Control Weather	incantesimo	doppia fonte
-Controllare vegetali	Control Plants	incantesimo	doppia fonte
-Controllare venti	Control Winds	incantesimo	doppia fonte
-Corpo di ferro	Iron Body	incantesimo	doppia fonte
-Costrizione inferiore	Geas, Lesser	incantesimo	doppia fonte
-Costrizione/Cerca	Geas-Quest	incantesimo	doppia fonte
-Creare acqua	Create Water	incantesimo	doppia fonte
-Creare cibo e acqua	Create Food and Water	incantesimo	doppia fonte
-Creare non morti	Create Undead	incantesimo	doppia fonte
-Creare non morti superiori	Create Greater Undead	incantesimo	doppia fonte
-Creazione maggiore	Major Creation	incantesimo	doppia fonte
-Creazione minore	Minor Creation	incantesimo	doppia fonte
-Crescita animale	Animal Growth	incantesimo	doppia fonte
-Crescita di spine	Spike Growth	incantesimo	doppia fonte
-Crescita vegetale	Plant Growth	incantesimo	doppia fonte
-Cumulo strisciante	Shambler	incantesimo	doppia fonte
-Cura ferite critiche	Cure Critical Wounds	incantesimo	doppia fonte
-Cura ferite critiche di massa	Cure Critical Wounds, Mass	incantesimo	doppia fonte
-Cura ferite gravi	Cure Serious Wounds	incantesimo	doppia fonte
-Cura ferite gravi di massa	Cure Serious Wounds, Mass	incantesimo	doppia fonte
-Cura ferite leggere	Cure Light Wounds	incantesimo	doppia fonte
-Cura ferite leggere di massa	Cure Light Wounds, Mass	incantesimo	doppia fonte
-Cura ferite minori	Cure Minor Wounds	incantesimo	claude
-Cura ferite moderate	Cure Moderate Wounds	incantesimo	doppia fonte
-Cura ferite moderate di massa	Cure Moderate Wounds, Mass	incantesimo	doppia fonte
+Charme sui mostri di massa	Charm Monster, Mass	incantesimo	doppia fonte + editori folli
+Chiaroudienza/Chiaroveggenza	Clairaudience-Clairvoyance	incantesimo	doppia fonte + editori folli
+Clone	Clone	incantesimo	doppia fonte + editori folli
+Colpo accurato	True Strike	incantesimo	doppia fonte + editori folli
+Colpo infuocato	Flame Strike	incantesimo	doppia fonte + editori folli
+Comandare non morti	Command Undead	incantesimo	doppia fonte + editori folli
+Comandare vegetali	Command Plants	incantesimo	doppia fonte + editori folli
+Comando	Command	incantesimo	doppia fonte + editori folli
+Comando superiore	Command, Greater	incantesimo	doppia fonte + editori folli
+Comprensione dei linguaggi	Comprehend Languages	incantesimo	doppia fonte + editori folli
+Comunione	Commune	incantesimo	doppia fonte + editori folli
+Comunione con la natura	Commune with Nature	incantesimo	doppia fonte + editori folli
+Confusione	Confusion	incantesimo	doppia fonte + editori folli
+Confusione inferiore	Confusion, Lesser	incantesimo	doppia fonte + editori folli
+Congedo	Dismissal	incantesimo	doppia fonte + editori folli
+Cono di freddo	Cone of Cold	incantesimo	doppia fonte + editori folli
+Conoscenza delle leggende	Legend Lore	incantesimo	doppia fonte + editori folli
+Conoscere direzione	Know Direction	incantesimo	doppia fonte + editori folli
+Consacrare	Consecrate	incantesimo	doppia fonte + editori folli
+Contagio	Contagion	incantesimo	doppia fonte + editori folli
+Contattare altri piani	Contact Other Plane	incantesimo	doppia fonte + editori folli
+Contingenza	Contingency	incantesimo	doppia fonte + editori folli
+Contrastare elementi	Endure Elements	incantesimo	doppia fonte + editori folli
+Controllare acqua	Control Water	incantesimo	doppia fonte + editori folli
+Controllare non morti	Control Undead	incantesimo	doppia fonte + editori folli
+Controllare tempo atmosferico	Control Weather	incantesimo	doppia fonte + editori folli
+Controllare vegetali	Control Plants	incantesimo	doppia fonte + editori folli
+Controllare venti	Control Winds	incantesimo	doppia fonte + editori folli
+Corpo di ferro	Iron Body	incantesimo	doppia fonte + editori folli
+Costrizione inferiore	Geas, Lesser	incantesimo	doppia fonte + editori folli
+Costrizione/Cerca	Geas-Quest	incantesimo	doppia fonte + editori folli
+Creare acqua	Create Water	incantesimo	doppia fonte + editori folli
+Creare cibo e acqua	Create Food and Water	incantesimo	doppia fonte + editori folli
+Creare non morti	Create Undead	incantesimo	doppia fonte + editori folli
+Creare non morti superiori	Create Greater Undead	incantesimo	doppia fonte + editori folli
+Creazione maggiore	Major Creation	incantesimo	doppia fonte + editori folli
+Creazione minore	Minor Creation	incantesimo	doppia fonte + editori folli
+Crescita animale	Animal Growth	incantesimo	doppia fonte + editori folli
+Crescita di spine	Spike Growth	incantesimo	doppia fonte + editori folli
+Crescita vegetale	Plant Growth	incantesimo	doppia fonte + editori folli
+Cumulo strisciante	Shambler	incantesimo	doppia fonte + editori folli
+Cura ferite critiche	Cure Critical Wounds	incantesimo	doppia fonte + editori folli
+Cura ferite critiche di massa	Cure Critical Wounds, Mass	incantesimo	doppia fonte + editori folli
+Cura ferite gravi	Cure Serious Wounds	incantesimo	doppia fonte + editori folli
+Cura ferite gravi di massa	Cure Serious Wounds, Mass	incantesimo	doppia fonte + editori folli
+Cura ferite leggere	Cure Light Wounds	incantesimo	doppia fonte + editori folli
+Cura ferite leggere di massa	Cure Light Wounds, Mass	incantesimo	doppia fonte + editori folli
+Cura ferite minori	Cure Minor Wounds	incantesimo	claude + editori folli
+Cura ferite moderate	Cure Moderate Wounds	incantesimo	doppia fonte + editori folli
+Cura ferite moderate di massa	Cure Moderate Wounds, Mass	incantesimo	doppia fonte + editori folli
 Danza irresistibile di Otto	Irresistible Dance	incantesimo	prefisso
-Dardo incantato	Magic Missile	incantesimo	doppia fonte
-Debilitazione	Enervation	incantesimo	doppia fonte
-Deformare legno	Warp Wood	incantesimo	doppia fonte
-Demenza	Insanity	incantesimo	doppia fonte
-Desiderio	Wish	incantesimo	doppia fonte
-Desiderio limitato	Limited Wish	incantesimo	doppia fonte
-Destriero fantasma	Phantom Steed	incantesimo	claude
-Dettame	Dictum	incantesimo	doppia fonte
-Devastazione	Doom	incantesimo	doppia fonte
+Dardo incantato	Magic Missile	incantesimo	doppia fonte + editori folli
+Debilitazione	Enervation	incantesimo	doppia fonte + editori folli
+Deformare legno	Warp Wood	incantesimo	doppia fonte + editori folli
+Demenza	Insanity	incantesimo	doppia fonte + editori folli
+Desiderio	Wish	incantesimo	doppia fonte + editori folli
+Desiderio limitato	Limited Wish	incantesimo	doppia fonte + editori folli
+Destriero fantomatico	Phantom Steed	incantesimo	editori folli (era claude: Destriero fantasma)
+Dettame	Dictum	incantesimo	doppia fonte + editori folli
+Devastazione	Doom	incantesimo	doppia fonte + editori folli
 Disco fluttuante di Tenser	Floating Disk	incantesimo	claude
 Disgiunzione di Mordenkainen	Mage’s Disjunction	incantesimo	claude
-Disintegrazione	Disintegrate	incantesimo	doppia fonte
-Disperazione opprimente	Crushing Despair	incantesimo	doppia fonte
-Dissacrare	Desecrate	incantesimo	doppia fonte
-Dissimulare	Misdirection	incantesimo	doppia fonte
-Dissolvi il bene	Dispel Good	incantesimo	doppia fonte
-Dissolvi il caos	Dispel Chaos	incantesimo	doppia fonte
-Dissolvi il male	Dispel Evil	incantesimo	doppia fonte
-Dissolvi la legge	Dispel Law	incantesimo	doppia fonte
-Dissolvi magie	Dispel Magic	incantesimo	doppia fonte
-Dissolvi magie superiore	Dispel Magic, Greater	incantesimo	doppia fonte
-Distorsione	Displacement	incantesimo	doppia fonte
-Distruggere non morti	Disrupt Undead	incantesimo	doppia fonte
-Distruggere viventi	Slay Living	incantesimo	doppia fonte
-Distruzione	Destruction	incantesimo	doppia fonte
-Dito della morte	Finger of Death	incantesimo	doppia fonte
-Divinare	Divination	incantesimo	claude
-Dominare animali	Dominate Animal	incantesimo	doppia fonte
-Dominare mostri	Dominate Monster	incantesimo	doppia fonte
-Dominare persone	Dominate Person	incantesimo	doppia fonte
+Disintegrazione	Disintegrate	incantesimo	doppia fonte + editori folli
+Disperazione opprimente	Crushing Despair	incantesimo	doppia fonte + editori folli
+Dissacrare	Desecrate	incantesimo	doppia fonte + editori folli
+Dissimulare	Misdirection	incantesimo	doppia fonte + editori folli
+Dissolvi il bene	Dispel Good	incantesimo	doppia fonte + editori folli
+Dissolvi il caos	Dispel Chaos	incantesimo	doppia fonte + editori folli
+Dissolvi il male	Dispel Evil	incantesimo	doppia fonte + editori folli
+Dissolvi la legge	Dispel Law	incantesimo	doppia fonte + editori folli
+Dissolvi magie	Dispel Magic	incantesimo	doppia fonte + editori folli
+Dissolvi magie superiore	Dispel Magic, Greater	incantesimo	doppia fonte + editori folli
+Distorsione	Displacement	incantesimo	doppia fonte + editori folli
+Distruggere non morti	Disrupt Undead	incantesimo	doppia fonte + editori folli
+Distruggere viventi	Slay Living	incantesimo	doppia fonte + editori folli
+Distruzione	Destruction	incantesimo	doppia fonte + editori folli
+Dito della morte	Finger of Death	incantesimo	doppia fonte + editori folli
+Divinazione	Divination	incantesimo	editori folli (era claude: Divinare)
+Dominare animali	Dominate Animal	incantesimo	doppia fonte + editori folli
+Dominare mostri	Dominate Monster	incantesimo	doppia fonte + editori folli
+Dominare persone	Dominate Person	incantesimo	doppia fonte + editori folli
 Elucubrazione di Mordenkainen	Mage’s Lucubration	incantesimo	claude
-Epurare invisibilità	Invisibility Purge	incantesimo	doppia fonte
-Eroismo	Heroism	incantesimo	doppia fonte
-Eroismo superiore	Heroism, Greater	incantesimo	doppia fonte
-Esigere	Demand	incantesimo	doppia fonte
-Esilio	Banishment	incantesimo	doppia fonte
-Espiazione	Atonement	incantesimo	doppia fonte
-Esplosione solare	Sunburst	incantesimo	doppia fonte
-Estasiare	Enthrall	incantesimo	doppia fonte
-Estinguere fuoco	Quench	incantesimo	doppia fonte
-Estremità affilata	Keen Edge	incantesimo	doppia fonte
-Evoca alleato naturale I	Summon Nature's Ally I	incantesimo	doppia fonte
-Evoca alleato naturale II	Summon Nature’s Ally II	incantesimo	derivato
-Evoca alleato naturale III	Summon Nature’s Ally III	incantesimo	derivato
-Evoca alleato naturale IV	Summon Nature’s Ally IV	incantesimo	derivato
-Evoca alleato naturale IX	Summon Nature’s Ally IX	incantesimo	derivato
-Evoca alleato naturale V	Summon Nature’s Ally V	incantesimo	derivato
-Evoca alleato naturale VI	Summon Nature’s Ally VI	incantesimo	derivato
-Evoca alleato naturale VII	Summon Nature’s Ally VII	incantesimo	derivato
-Evoca alleato naturale VIII	Summon Nature’s Ally VIII	incantesimo	derivato
-Evoca mostri I	Summon Monster I	incantesimo	doppia fonte
-Evoca mostri II	Summon Monster II	incantesimo	derivato
-Evoca mostri III	Summon Monster III	incantesimo	derivato
-Evoca mostri IV	Summon Monster IV	incantesimo	derivato
-Evoca mostri IX	Summon Monster IX	incantesimo	derivato
-Evoca mostri V	Summon Monster V	incantesimo	derivato
-Evoca mostri VI	Summon Monster VI	incantesimo	derivato
-Evoca mostri VII	Summon Monster VII	incantesimo	derivato
-Evoca mostri VIII	Summon Monster VIII	incantesimo	derivato
-Evoca sciame	Summon Swarm	incantesimo	doppia fonte
-Evoca strumento	Summon Instrument	incantesimo	doppia fonte
+Epurare invisibilità	Invisibility Purge	incantesimo	doppia fonte + editori folli
+Eroismo	Heroism	incantesimo	doppia fonte + editori folli
+Eroismo superiore	Heroism, Greater	incantesimo	doppia fonte + editori folli
+Esigere	Demand	incantesimo	doppia fonte + editori folli
+Esilio	Banishment	incantesimo	doppia fonte + editori folli
+Espiazione	Atonement	incantesimo	doppia fonte + editori folli
+Esplosione solare	Sunburst	incantesimo	doppia fonte + editori folli
+Estasiare	Enthrall	incantesimo	doppia fonte + editori folli
+Estinguere fuoco	Quench	incantesimo	doppia fonte + editori folli
+Estremità affilata	Keen Edge	incantesimo	doppia fonte + editori folli
+Evoca alleato naturale I	Summon Nature's Ally I	incantesimo	doppia fonte + editori folli
+Evoca alleato naturale II	Summon Nature’s Ally II	incantesimo	derivato + editori folli
+Evoca alleato naturale III	Summon Nature’s Ally III	incantesimo	derivato + editori folli
+Evoca alleato naturale IV	Summon Nature’s Ally IV	incantesimo	derivato + editori folli
+Evoca alleato naturale IX	Summon Nature’s Ally IX	incantesimo	derivato + editori folli
+Evoca alleato naturale V	Summon Nature’s Ally V	incantesimo	derivato + editori folli
+Evoca alleato naturale VI	Summon Nature’s Ally VI	incantesimo	derivato + editori folli
+Evoca alleato naturale VII	Summon Nature’s Ally VII	incantesimo	derivato + editori folli
+Evoca alleato naturale VIII	Summon Nature’s Ally VIII	incantesimo	derivato + editori folli
+Evoca mostri I	Summon Monster I	incantesimo	doppia fonte + editori folli
+Evoca mostri II	Summon Monster II	incantesimo	derivato + editori folli
+Evoca mostri III	Summon Monster III	incantesimo	derivato + editori folli
+Evoca mostri IV	Summon Monster IV	incantesimo	derivato + editori folli
+Evoca mostri IX	Summon Monster IX	incantesimo	derivato + editori folli
+Evoca mostri V	Summon Monster V	incantesimo	derivato + editori folli
+Evoca mostri VI	Summon Monster VI	incantesimo	derivato + editori folli
+Evoca mostri VII	Summon Monster VII	incantesimo	derivato + editori folli
+Evoca mostri VIII	Summon Monster VIII	incantesimo	derivato + editori folli
+Evoca sciame	Summon Swarm	incantesimo	doppia fonte + editori folli
+Evoca strumento	Summon Instrument	incantesimo	doppia fonte + editori folli
 Evocazioni istantanee di Drawmij	Instant Summons	incantesimo	prefisso
-Fabbricare	Fabricate	incantesimo	doppia fonte
-Fatale	Weird	incantesimo	doppia fonte
-Favore divino	Divine Favor	incantesimo	doppia fonte
-Ferire	Harm	incantesimo	doppia fonte
+Fabbricare	Fabricate	incantesimo	doppia fonte + editori folli
+Fatale	Weird	incantesimo	doppia fonte + editori folli
+Favore divino	Divine Favor	incantesimo	doppia fonte + editori folli
+Ferire	Harm	incantesimo	doppia fonte + editori folli
 Fermare il tempo	Time Stop	incantesimo	doppia fonte
-Fermare non morti	Halt Undead	incantesimo	doppia fonte
-Fiamma perenne	Continual Flame	incantesimo	doppia fonte
-Fiotto acido	Acid Splash	incantesimo	doppia fonte
-Folata di vento	Gust of Wind	incantesimo	doppia fonte
-Fondersi nella pietra	Meld into Stone	incantesimo	doppia fonte
-Forma arborea	Tree Shape	incantesimo	doppia fonte
-Forma eterea	Etherealness	incantesimo	doppia fonte
-Forma gassosa	Gaseous Form	incantesimo	doppia fonte
-Forme animali	Animal Shapes	incantesimo	doppia fonte
-Forza del toro	Bull's Strength	incantesimo	doppia fonte
-Forza del toro di massa	Bull's Strength, Mass	incantesimo	doppia fonte
-Foschia occultante	Obscuring Mist	incantesimo	doppia fonte
-Frantumare	Shatter	incantesimo	doppia fonte
-Frastornare	Daze	incantesimo	doppia fonte
-Frastornare mostri	Daze Monster	incantesimo	doppia fonte
+Fermare non morti	Halt Undead	incantesimo	doppia fonte + editori folli
+Fiamma perenne	Continual Flame	incantesimo	doppia fonte + editori folli
+Fiotto acido	Acid Splash	incantesimo	doppia fonte + editori folli
+Folata di vento	Gust of Wind	incantesimo	doppia fonte + editori folli
+Fondersi nella pietra	Meld into Stone	incantesimo	doppia fonte + editori folli
+Forma arborea	Tree Shape	incantesimo	doppia fonte + editori folli
+Forma eterea	Etherealness	incantesimo	doppia fonte + editori folli
+Forma gassosa	Gaseous Form	incantesimo	doppia fonte + editori folli
+Forme animali	Animal Shapes	incantesimo	doppia fonte + editori folli
+Forza del toro	Bull's Strength	incantesimo	doppia fonte + editori folli
+Forza del toro di massa	Bull's Strength, Mass	incantesimo	doppia fonte + editori folli
+Foschia occultante	Obscuring Mist	incantesimo	doppia fonte + editori folli
+Frantumare	Shatter	incantesimo	doppia fonte + editori folli
+Frastornare	Daze	incantesimo	doppia fonte + editori folli
+Frastornare mostri	Daze Monster	incantesimo	doppia fonte + editori folli
 Freccia acida di Melf	Acid Arrow	incantesimo	prefisso
-Freccia infuocata	Flame Arrow	incantesimo	doppia fonte
-Fulmine	Lightning Bolt	incantesimo	doppia fonte
-Fuorviare	Mislead	incantesimo	doppia fonte
-Gabbia di forza	Forcecage	incantesimo	doppia fonte
-Gelare il metallo	Chill Metal	incantesimo	doppia fonte
-Giara magica	Magic Jar	incantesimo	doppia fonte
-Giusto potere	Righteous Might	incantesimo	doppia fonte
-Glifo di interdizione	Glyph of Warding	incantesimo	doppia fonte
-Glifo di interdizione superiore	Glyph of Warding, Greater	incantesimo	doppia fonte
-Globo di invulnerabilità	Globe of Invulnerability	incantesimo	doppia fonte
-Globo di invulnerabilità inferiore	Globe of Invulnerability, Lesser	incantesimo	doppia fonte
-Grazia del gatto	Cat's Grace	incantesimo	doppia fonte
-Grazia del gatto di massa	Cat's Grace, Mass	incantesimo	doppia fonte
-Grido	Shout	incantesimo	doppia fonte
-Grido superiore	Shout, Greater	incantesimo	doppia fonte
-Guarigione	Heal	incantesimo	doppia fonte
-Guarigione di massa	Heal, Mass	incantesimo	doppia fonte
-Guarire cavalcatura	Heal Mount	incantesimo	doppia fonte
-Guida	Guidance	incantesimo	doppia fonte
-Guscio anti-vegetali	Antiplant Shell	incantesimo	claude
-Guscio anti-vita	Antilife Shell	incantesimo	claude
-Identificare	Identify	incantesimo	doppia fonte
-Immagine maggiore	Major Image	incantesimo	doppia fonte
-Immagine minore	Minor Image	incantesimo	doppia fonte
-Immagine permanente	Permanent Image	incantesimo	doppia fonte
-Immagine persistente	Persistent Image	incantesimo	doppia fonte
-Immagine programmata	Programmed Image	incantesimo	doppia fonte
-Immagine proiettata	Project Image	incantesimo	doppia fonte
-Immagine silenziosa	Silent Image	incantesimo	doppia fonte
-Immagine speculare	Mirror Image	incantesimo	doppia fonte
-Immunità agli incantesimi	Spell Immunity	incantesimo	doppia fonte
-Immunità agli incantesimi superiore	Spell Immunity, Greater	incantesimo	doppia fonte
-Implosione	Implosion	incantesimo	doppia fonte
-Imprigionare	Imprisonment	incantesimo	doppia fonte
-Inaridire	Blight	incantesimo	doppia fonte
-Incubo	Nightmare	incantesimo	doppia fonte
+Freccia infuocata	Flame Arrow	incantesimo	doppia fonte + editori folli
+Fulmine	Lightning Bolt	incantesimo	doppia fonte + editori folli
+Fuorviare	Mislead	incantesimo	doppia fonte + editori folli
+Gabbia di forza	Forcecage	incantesimo	doppia fonte + editori folli
+Gelare il metallo	Chill Metal	incantesimo	doppia fonte + editori folli
+Giara magica	Magic Jar	incantesimo	doppia fonte + editori folli
+Giusto potere	Righteous Might	incantesimo	doppia fonte + editori folli
+Glifo di interdizione	Glyph of Warding	incantesimo	doppia fonte + editori folli
+Glifo di interdizione superiore	Glyph of Warding, Greater	incantesimo	doppia fonte + editori folli
+Globo di invulnerabilità	Globe of Invulnerability	incantesimo	doppia fonte + editori folli
+Globo di invulnerabilità inferiore	Globe of Invulnerability, Lesser	incantesimo	doppia fonte + editori folli
+Grazia del gatto	Cat's Grace	incantesimo	doppia fonte + editori folli
+Grazia del gatto di massa	Cat's Grace, Mass	incantesimo	doppia fonte + editori folli
+Grido	Shout	incantesimo	doppia fonte + editori folli
+Grido superiore	Shout, Greater	incantesimo	doppia fonte + editori folli
+Guarigione	Heal	incantesimo	doppia fonte + editori folli
+Guarigione di massa	Heal, Mass	incantesimo	doppia fonte + editori folli
+Guarire cavalcatura	Heal Mount	incantesimo	doppia fonte + editori folli
+Guida	Guidance	incantesimo	doppia fonte + editori folli
+Guscio anti-vegetali	Antiplant Shell	incantesimo	claude + editori folli
+Guscio anti-vita	Antilife Shell	incantesimo	claude + editori folli
+Identificare	Identify	incantesimo	doppia fonte + editori folli
+Immagine maggiore	Major Image	incantesimo	doppia fonte + editori folli
+Immagine minore	Minor Image	incantesimo	doppia fonte + editori folli
+Immagine permanente	Permanent Image	incantesimo	doppia fonte + editori folli
+Immagine persistente	Persistent Image	incantesimo	doppia fonte + editori folli
+Immagine programmata	Programmed Image	incantesimo	doppia fonte + editori folli
+Immagine proiettata	Project Image	incantesimo	doppia fonte + editori folli
+Immagine silenziosa	Silent Image	incantesimo	doppia fonte + editori folli
+Immagine speculare	Mirror Image	incantesimo	doppia fonte + editori folli
+Immunità agli incantesimi	Spell Immunity	incantesimo	doppia fonte + editori folli
+Immunità agli incantesimi superiore	Spell Immunity, Greater	incantesimo	doppia fonte + editori folli
+Implosione	Implosion	incantesimo	doppia fonte + editori folli
+Imprigionare	Imprisonment	incantesimo	doppia fonte + editori folli
+Inaridire	Blight	incantesimo	doppia fonte + editori folli
+Incubo	Nightmare	incantesimo	doppia fonte + editori folli
 Incuti paura	Cause Fear	incantesimo	doppia fonte
-Individuazione dei non morti	Detect Undead	incantesimo	doppia fonte
-Individuazione dei pensieri	Detect Thoughts	incantesimo	doppia fonte
-Individuazione del bene	Detect Good	incantesimo	doppia fonte
-Individuazione del caos	Detect Chaos	incantesimo	doppia fonte
-Individuazione del magico	Detect Magic	incantesimo	doppia fonte
-Individuazione del male	Detect Evil	incantesimo	doppia fonte
-Individuazione del veleno	Detect Poison	incantesimo	doppia fonte
-Individuazione della legge	Detect Law	incantesimo	doppia fonte
-Individuazione delle porte segrete	Detect Secret Doors	incantesimo	doppia fonte
-Individuazione dello scrutamento	Detect Scrying	incantesimo	doppia fonte
-Individuazione di animali o vegetali	Detect Animals or Plants	incantesimo	doppia fonte
-Individuazione di calappi e trabocchetti	Detect Snares and Pits	incantesimo	doppia fonte
-Infliggi ferite critiche	Inflict Critical Wounds	incantesimo	doppia fonte
-Infliggi ferite critiche di massa	Inflict Critical Wounds, Mass	incantesimo	doppia fonte
-Infliggi ferite gravi	Inflict Serious Wounds	incantesimo	doppia fonte
-Infliggi ferite gravi di massa	Inflict Serious Wounds, Mass	incantesimo	doppia fonte
-Infliggi ferite leggere	Inflict Light Wounds	incantesimo	doppia fonte
-Infliggi ferite leggere di massa	Inflict Light Wounds, Mass	incantesimo	doppia fonte
-Infliggi ferite minori	Inflict Minor Wounds	incantesimo	claude
-Infliggi ferite moderate	Inflict Moderate Wounds	incantesimo	doppia fonte
-Infliggi ferite moderate di massa	Inflict Moderate Wounds, Mass	incantesimo	doppia fonte
-Influenza sacrilega	Unholy Blight	incantesimo	doppia fonte
-Infondere capacità magiche	Imbue with Spell Ability	incantesimo	doppia fonte
-Ingrandire persone	Enlarge Person	incantesimo	doppia fonte
+Individuazione dei non morti	Detect Undead	incantesimo	doppia fonte + editori folli
+Individuazione dei pensieri	Detect Thoughts	incantesimo	doppia fonte + editori folli
+Individuazione del bene	Detect Good	incantesimo	doppia fonte + editori folli
+Individuazione del caos	Detect Chaos	incantesimo	doppia fonte + editori folli
+Individuazione del magico	Detect Magic	incantesimo	doppia fonte + editori folli
+Individuazione del male	Detect Evil	incantesimo	doppia fonte + editori folli
+Individuazione del veleno	Detect Poison	incantesimo	doppia fonte + editori folli
+Individuazione della legge	Detect Law	incantesimo	doppia fonte + editori folli
+Individuazione delle porte segrete	Detect Secret Doors	incantesimo	doppia fonte + editori folli
+Individuazione dello scrutamento	Detect Scrying	incantesimo	doppia fonte + editori folli
+Individuazione di animali o vegetali	Detect Animals or Plants	incantesimo	doppia fonte + editori folli
+Individuazione di calappi e trabocchetti	Detect Snares and Pits	incantesimo	doppia fonte + editori folli
+Infliggi ferite critiche	Inflict Critical Wounds	incantesimo	doppia fonte + editori folli
+Infliggi ferite critiche di massa	Inflict Critical Wounds, Mass	incantesimo	doppia fonte + editori folli
+Infliggi ferite gravi	Inflict Serious Wounds	incantesimo	doppia fonte + editori folli
+Infliggi ferite gravi di massa	Inflict Serious Wounds, Mass	incantesimo	doppia fonte + editori folli
+Infliggi ferite leggere	Inflict Light Wounds	incantesimo	doppia fonte + editori folli
+Infliggi ferite leggere di massa	Inflict Light Wounds, Mass	incantesimo	doppia fonte + editori folli
+Infliggi ferite minori	Inflict Minor Wounds	incantesimo	claude + editori folli
+Infliggi ferite moderate	Inflict Moderate Wounds	incantesimo	doppia fonte + editori folli
+Infliggi ferite moderate di massa	Inflict Moderate Wounds, Mass	incantesimo	doppia fonte + editori folli
+Influenza sacrilega	Unholy Blight	incantesimo	doppia fonte + editori folli
+Infondere capacità magiche	Imbue with Spell Ability	incantesimo	doppia fonte + editori folli
+Ingrandire persone	Enlarge Person	incantesimo	doppia fonte + editori folli
 Ingrandire persone di massa	Enlarge Person, Mass	incantesimo	doppia fonte
-Interdizione alla morte	Death Ward	incantesimo	doppia fonte
-Intermittenza	Blink	incantesimo	doppia fonte
-Intralciare	Entangle	incantesimo	doppia fonte
-Intrappolare l'anima	Trap the Soul	incantesimo	doppia fonte
-Inversione della gravità	Reverse Gravity	incantesimo	doppia fonte
-Inviare	Sending	incantesimo	doppia fonte
-Invisibilità	Invisibility	incantesimo	doppia fonte
-Invisibilità di massa	Invisibility, Mass	incantesimo	doppia fonte
-Invisibilità superiore	Invisibility, Greater	incantesimo	doppia fonte
-Invocare il fulmine	Call Lightning	incantesimo	doppia fonte
-Invocare tempesta di fulmini	Call Lightning Storm	incantesimo	doppia fonte
-Ipnosi	Hypnotism	incantesimo	doppia fonte
-Ira	Rage	incantesimo	doppia fonte
-Ira dell'ordine	Order’s Wrath	incantesimo	claude
-Labirinto	Maze	incantesimo	doppia fonte
-Lama infuocata	Flame Blade	incantesimo	doppia fonte
-Lamento della banshee	Wail of the Banshee	incantesimo	doppia fonte
-Lampo	Flare	incantesimo	doppia fonte
-Legame	Binding	incantesimo	doppia fonte
-Legame planare	Planar Binding	incantesimo	doppia fonte
-Legame planare inferiore	Planar Binding, Lesser	incantesimo	doppia fonte
-Legame planare superiore	Planar Binding, Greater	incantesimo	doppia fonte
+Interdizione alla morte	Death Ward	incantesimo	doppia fonte + editori folli
+Intermittenza	Blink	incantesimo	doppia fonte + editori folli
+Intralciare	Entangle	incantesimo	doppia fonte + editori folli
+Intrappolare l'anima	Trap the Soul	incantesimo	doppia fonte + editori folli
+Inversione della gravità	Reverse Gravity	incantesimo	doppia fonte + editori folli
+Inviare	Sending	incantesimo	doppia fonte + editori folli
+Invisibilità	Invisibility	incantesimo	doppia fonte + editori folli
+Invisibilità di massa	Invisibility, Mass	incantesimo	doppia fonte + editori folli
+Invisibilità superiore	Invisibility, Greater	incantesimo	doppia fonte + editori folli
+Invocare il fulmine	Call Lightning	incantesimo	doppia fonte + editori folli
+Invocare tempesta di fulmini	Call Lightning Storm	incantesimo	doppia fonte + editori folli
+Ipnosi	Hypnotism	incantesimo	doppia fonte + editori folli
+Ira	Rage	incantesimo	doppia fonte + editori folli
+Ira dell'ordine	Order’s Wrath	incantesimo	claude + editori folli
+Labirinto	Maze	incantesimo	doppia fonte + editori folli
+Lama infuocata	Flame Blade	incantesimo	doppia fonte + editori folli
+Lamento della banshee	Wail of the Banshee	incantesimo	doppia fonte + editori folli
+Lampo	Flare	incantesimo	doppia fonte + editori folli
+Legame	Binding	incantesimo	doppia fonte + editori folli
+Legame planare	Planar Binding	incantesimo	doppia fonte + editori folli
+Legame planare inferiore	Planar Binding, Lesser	incantesimo	doppia fonte + editori folli
+Legame planare superiore	Planar Binding, Greater	incantesimo	doppia fonte + editori folli
 Legame telepatico di Rary	Telepathic Bond	incantesimo	claude
-Legare anima	Soul Bind	incantesimo	doppia fonte
-Legno di ferro	Ironwood	incantesimo	doppia fonte
-Lentezza	Slow	incantesimo	doppia fonte
-Lettura del magico	Read Magic	incantesimo	doppia fonte
-Levitazione	Levitate	incantesimo	doppia fonte
-Libertà	Freedom	incantesimo	doppia fonte
-Libertà di movimento	Freedom of Movement	incantesimo	doppia fonte
-Linguaggi	Tongues	incantesimo	doppia fonte
-Localizza creatura	Locate Creature	incantesimo	doppia fonte
-Localizza oggetto	Locate Object	incantesimo	doppia fonte
-Loquacità	Glibness	incantesimo	doppia fonte
-Luce	Light	incantesimo	doppia fonte
-Luce diurna	Daylight	incantesimo	doppia fonte
-Luce incandescente	Searing Light	incantesimo	doppia fonte
-Luci danzanti	Dancing Lights	incantesimo	doppia fonte
-Luminescenza	Faerie Fire	incantesimo	doppia fonte
-Maledire l'acqua	Curse Water	incantesimo	doppia fonte
-Mani brucianti	Burning Hands	incantesimo	doppia fonte
-Mano in aiuto	Helping Hand	incantesimo	doppia fonte
+Legare anima	Soul Bind	incantesimo	doppia fonte + editori folli
+Legno di ferro	Ironwood	incantesimo	doppia fonte + editori folli
+Lentezza	Slow	incantesimo	doppia fonte + editori folli
+Lettura del magico	Read Magic	incantesimo	doppia fonte + editori folli
+Levitazione	Levitate	incantesimo	doppia fonte + editori folli
+Libertà	Freedom	incantesimo	doppia fonte + editori folli
+Libertà di movimento	Freedom of Movement	incantesimo	doppia fonte + editori folli
+Linguaggi	Tongues	incantesimo	doppia fonte + editori folli
+Localizza creatura	Locate Creature	incantesimo	doppia fonte + editori folli
+Localizza oggetto	Locate Object	incantesimo	doppia fonte + editori folli
+Loquacità	Glibness	incantesimo	doppia fonte + editori folli
+Luce	Light	incantesimo	doppia fonte + editori folli
+Luce diurna	Daylight	incantesimo	doppia fonte + editori folli
+Luce incandescente	Searing Light	incantesimo	doppia fonte + editori folli
+Luci danzanti	Dancing Lights	incantesimo	doppia fonte + editori folli
+Luminescenza	Faerie Fire	incantesimo	doppia fonte + editori folli
+Maledire l'acqua	Curse Water	incantesimo	doppia fonte + editori folli
+Mani brucianti	Burning Hands	incantesimo	doppia fonte + editori folli
+Mano in aiuto	Helping Hand	incantesimo	doppia fonte + editori folli
 Mano interposta di Bigby	Interposing Hand	incantesimo	prefisso
-Mano magica	Mage Hand	incantesimo	doppia fonte
+Mano magica	Mage Hand	incantesimo	doppia fonte + editori folli
 Mano possente di Bigby	Forceful Hand	incantesimo	prefisso
-Mano spettrale	Spectral Hand	incantesimo	doppia fonte
+Mano spettrale	Spectral Hand	incantesimo	doppia fonte + editori folli
 Mano stringente di Bigby	Grasping Hand	incantesimo	prefisso
 Mano stritolatrice di Bigby	Crushing Hand	incantesimo	prefisso
-Mantello del caos	Cloak of Chaos	incantesimo	doppia fonte
-Martello del caos	Chaos Hammer	incantesimo	doppia fonte
-Messaggio	Message	incantesimo	doppia fonte
-Metamorfosi	Polymorph	incantesimo	doppia fonte
-Metamorfosi di un oggetto	Polymorph Any Object	incantesimo	claude
+Mantello del caos	Cloak of Chaos	incantesimo	doppia fonte + editori folli
+Martello del caos	Chaos Hammer	incantesimo	doppia fonte + editori folli
+Messaggio	Message	incantesimo	doppia fonte + editori folli
+Metamorfosi	Polymorph	incantesimo	doppia fonte + editori folli
+Metamorfosi di un oggetto	Polymorph Any Object	incantesimo	claude + editori folli
 Metamorfosi funesta	Baleful Polymorph	incantesimo	doppia fonte
-Miracolo	Miracle	incantesimo	doppia fonte
-Miraggio arcano	Mirage Arcana	incantesimo	doppia fonte
-Modellare suono	Sculpt Sound	incantesimo	doppia fonte
-Modificare memoria	Modify Memory	incantesimo	doppia fonte
-Momento di prescienza	Moment of Prescience	incantesimo	doppia fonte
-Movimenti del ragno	Spider Climb	incantesimo	doppia fonte
-Muovere il terreno	Move Earth	incantesimo	doppia fonte
-Muro di ferro	Wall of Iron	incantesimo	doppia fonte
-Muro di forza	Wall of Force	incantesimo	doppia fonte
-Muro di fuoco	Wall of Fire	incantesimo	doppia fonte
-Muro di ghiaccio	Wall of Ice	incantesimo	doppia fonte
-Muro di pietra	Wall of Stone	incantesimo	doppia fonte
-Muro di spine	Wall of Thorns	incantesimo	doppia fonte
-Muro di vento	Wind Wall	incantesimo	doppia fonte
-Muro illusorio	Illusory Wall	incantesimo	doppia fonte
-Muro prismatico	Prismatic Wall	incantesimo	doppia fonte
-Nascondersi agli animali	Hide from Animals	incantesimo	doppia fonte
-Nascondersi ai non morti	Hide from Undead	incantesimo	doppia fonte
-Nebbia acida	Acid Fog	incantesimo	doppia fonte
-Nebbia mentale	Mind Fog	incantesimo	doppia fonte
-Nebbia solida	Solid Fog	incantesimo	doppia fonte
-Neutralizza veleno	Neutralize Poison	incantesimo	doppia fonte
-Ninnananna	Lullaby	incantesimo	claude
-Non morto a morto	Undeath to Death	incantesimo	doppia fonte
-Nube di nebbia	Fog Cloud	incantesimo	doppia fonte
-Nube incendiaria	Incendiary Cloud	incantesimo	doppia fonte
-Nube maleodorante	Stinking Cloud	incantesimo	doppia fonte
-Nube mortale	Cloudkill	incantesimo	doppia fonte
-Occhi indagatori	Prying Eyes	incantesimo	doppia fonte
-Occhi indagatori superiore	Prying Eyes, Greater	incantesimo	doppia fonte
-Occhio arcano	Arcane Eye	incantesimo	doppia fonte
-Occulta oggetto	Obscure Object	incantesimo	doppia fonte
-Ombra di una evocazione	Shadow Conjuration	incantesimo	doppia fonte
-Ombra di una evocazione superiore	Shadow Conjuration, Greater	incantesimo	doppia fonte
-Ombra di una invocazione	Shadow Evocation	incantesimo	doppia fonte
-Ombra di una invocazione superiore	Shadow Evocation, Greater	incantesimo	doppia fonte
-Ombre	Shades	incantesimo	doppia fonte
-Onde di affaticamento	Waves of Fatigue	incantesimo	doppia fonte
-Onde di esaurimento	Waves of Exhaustion	incantesimo	doppia fonte
-Orrido avvizzimento	Horrid Wilting	incantesimo	doppia fonte
-Oscurità	Darkness	incantesimo	doppia fonte
-Oscurità profonda	Deeper Darkness	incantesimo	doppia fonte
-Pagina segreta	Secret Page	incantesimo	doppia fonte
-Palla di fuoco	Fireball	incantesimo	doppia fonte
-Palla di fuoco ritardata	Delayed Blast Fireball	incantesimo	doppia fonte
-Parassiti giganti	Giant Vermin	incantesimo	doppia fonte
-Parlare con gli animali	Speak with Animals	incantesimo	doppia fonte
-Parlare con i morti	Speak with Dead	incantesimo	doppia fonte
-Parlare con i vegetali	Speak with Plants	incantesimo	doppia fonte
-Parola del caos	Word of Chaos	incantesimo	doppia fonte
-Parola del potere, accecare	Power Word Blind	incantesimo	doppia fonte
-Parola del potere, stordire	Power Word Stun	incantesimo	doppia fonte
-Parola del potere, uccidere	Power Word Kill	incantesimo	doppia fonte
-Parola del ritiro	Word of Recall	incantesimo	doppia fonte
-Parola sacra	Holy Word	incantesimo	doppia fonte
-Passapareti	Passwall	incantesimo	doppia fonte
-Passare senza tracce	Pass without Trace	incantesimo	doppia fonte
-Passo veloce	Longstrider	incantesimo	doppia fonte
-Paura	Fear	incantesimo	doppia fonte
-Pelle coriacea	Barkskin	incantesimo	doppia fonte
-Pelle di pietra	Stoneskin	incantesimo	doppia fonte
-Permanenza	Permanency	incantesimo	doppia fonte
-Piaga degli insetti	Insect Plague	incantesimo	doppia fonte
-Piaga strisciante	Creeping Doom	incantesimo	doppia fonte
-Pietra in carne	Stone to Flesh	incantesimo	doppia fonte
-Pietra magica	Magic Stone	incantesimo	doppia fonte
-Pietre parlanti	Stone Tell	incantesimo	doppia fonte
-Pirotecnica	Pyrotechnics	incantesimo	doppia fonte
-Polvere luccicante	Glitterdust	incantesimo	doppia fonte
-Porta dimensionale	Dimension Door	incantesimo	doppia fonte
-Porta in fase	Phase Door	incantesimo	doppia fonte
-Portale	Gate	incantesimo	doppia fonte
+Miracolo	Miracle	incantesimo	doppia fonte + editori folli
+Miraggio arcano	Mirage Arcana	incantesimo	doppia fonte + editori folli
+Modellare suono	Sculpt Sound	incantesimo	doppia fonte + editori folli
+Modificare memoria	Modify Memory	incantesimo	doppia fonte + editori folli
+Momento di prescienza	Moment of Prescience	incantesimo	doppia fonte + editori folli
+Movimenti del ragno	Spider Climb	incantesimo	doppia fonte + editori folli
+Muovere il terreno	Move Earth	incantesimo	doppia fonte + editori folli
+Muro di ferro	Wall of Iron	incantesimo	doppia fonte + editori folli
+Muro di forza	Wall of Force	incantesimo	doppia fonte + editori folli
+Muro di fuoco	Wall of Fire	incantesimo	doppia fonte + editori folli
+Muro di ghiaccio	Wall of Ice	incantesimo	doppia fonte + editori folli
+Muro di pietra	Wall of Stone	incantesimo	doppia fonte + editori folli
+Muro di spine	Wall of Thorns	incantesimo	doppia fonte + editori folli
+Muro di vento	Wind Wall	incantesimo	doppia fonte + editori folli
+Muro illusorio	Illusory Wall	incantesimo	doppia fonte + editori folli
+Muro prismatico	Prismatic Wall	incantesimo	doppia fonte + editori folli
+Nascondersi agli animali	Hide from Animals	incantesimo	doppia fonte + editori folli
+Nascondersi ai non morti	Hide from Undead	incantesimo	doppia fonte + editori folli
+Nebbia acida	Acid Fog	incantesimo	doppia fonte + editori folli
+Nebbia mentale	Mind Fog	incantesimo	doppia fonte + editori folli
+Nebbia solida	Solid Fog	incantesimo	doppia fonte + editori folli
+Neutralizza veleno	Neutralize Poison	incantesimo	doppia fonte + editori folli
+Ninna nanna	Lullaby	incantesimo	editori folli (era claude: Ninnananna)
+Non morto a morto	Undeath to Death	incantesimo	doppia fonte + editori folli
+Nube di nebbia	Fog Cloud	incantesimo	doppia fonte + editori folli
+Nube incendiaria	Incendiary Cloud	incantesimo	doppia fonte + editori folli
+Nube maleodorante	Stinking Cloud	incantesimo	doppia fonte + editori folli
+Nube mortale	Cloudkill	incantesimo	doppia fonte + editori folli
+Occhi indagatori	Prying Eyes	incantesimo	doppia fonte + editori folli
+Occhi indagatori superiore	Prying Eyes, Greater	incantesimo	doppia fonte + editori folli
+Occhio arcano	Arcane Eye	incantesimo	doppia fonte + editori folli
+Occulta oggetto	Obscure Object	incantesimo	doppia fonte + editori folli
+Ombra di una evocazione	Shadow Conjuration	incantesimo	doppia fonte + editori folli
+Ombra di una evocazione superiore	Shadow Conjuration, Greater	incantesimo	doppia fonte + editori folli
+Ombra di una invocazione	Shadow Evocation	incantesimo	doppia fonte + editori folli
+Ombra di una invocazione superiore	Shadow Evocation, Greater	incantesimo	doppia fonte + editori folli
+Ombre	Shades	incantesimo	doppia fonte + editori folli
+Onde di affaticamento	Waves of Fatigue	incantesimo	doppia fonte + editori folli
+Onde di esaurimento	Waves of Exhaustion	incantesimo	doppia fonte + editori folli
+Orrido avvizzimento	Horrid Wilting	incantesimo	doppia fonte + editori folli
+Oscurità	Darkness	incantesimo	doppia fonte + editori folli
+Oscurità profonda	Deeper Darkness	incantesimo	doppia fonte + editori folli
+Pagina segreta	Secret Page	incantesimo	doppia fonte + editori folli
+Palla di fuoco	Fireball	incantesimo	doppia fonte + editori folli
+Palla di fuoco ritardata	Delayed Blast Fireball	incantesimo	doppia fonte + editori folli
+Parassiti giganti	Giant Vermin	incantesimo	doppia fonte + editori folli
+Parlare con gli animali	Speak with Animals	incantesimo	doppia fonte + editori folli
+Parlare con i morti	Speak with Dead	incantesimo	doppia fonte + editori folli
+Parlare con i vegetali	Speak with Plants	incantesimo	doppia fonte + editori folli
+Parola del caos	Word of Chaos	incantesimo	doppia fonte + editori folli
+Parola del potere, accecare	Power Word Blind	incantesimo	doppia fonte + editori folli
+Parola del potere, stordire	Power Word Stun	incantesimo	doppia fonte + editori folli
+Parola del potere, uccidere	Power Word Kill	incantesimo	doppia fonte + editori folli
+Parola del ritiro	Word of Recall	incantesimo	doppia fonte + editori folli
+Parola sacra	Holy Word	incantesimo	doppia fonte + editori folli
+Passapareti	Passwall	incantesimo	doppia fonte + editori folli
+Passare senza tracce	Pass without Trace	incantesimo	doppia fonte + editori folli
+Passo veloce	Longstrider	incantesimo	doppia fonte + editori folli
+Paura	Fear	incantesimo	doppia fonte + editori folli
+Pelle coriacea	Barkskin	incantesimo	doppia fonte + editori folli
+Pelle di pietra	Stoneskin	incantesimo	doppia fonte + editori folli
+Permanenza	Permanency	incantesimo	doppia fonte + editori folli
+Piaga degli insetti	Insect Plague	incantesimo	doppia fonte + editori folli
+Piaga strisciante	Creeping Doom	incantesimo	doppia fonte + editori folli
+Pietra in carne	Stone to Flesh	incantesimo	doppia fonte + editori folli
+Pietra magica	Magic Stone	incantesimo	doppia fonte + editori folli
+Pietre parlanti	Stone Tell	incantesimo	doppia fonte + editori folli
+Pirotecnica	Pyrotechnics	incantesimo	doppia fonte + editori folli
+Polvere luccicante	Glitterdust	incantesimo	doppia fonte + editori folli
+Porta dimensionale	Dimension Door	incantesimo	doppia fonte + editori folli
+Porta in fase	Phase Door	incantesimo	doppia fonte + editori folli
+Portale	Gate	incantesimo	doppia fonte + editori folli
 Potenziatore mnemonico di Rary	Mnemonic Enhancer	incantesimo	prefisso
-Potere divino	Divine Power	incantesimo	doppia fonte
-Preghiera	Prayer	incantesimo	doppia fonte
-Presagio	Augury	incantesimo	doppia fonte
-Prestidigitazione	Prestidigitation	incantesimo	doppia fonte
-Previsione	Foresight	incantesimo	doppia fonte
-Produrre fiamma	Produce Flame	incantesimo	doppia fonte
-Profanare	Unhallow	incantesimo	doppia fonte
-Proibizione	Forbiddance	incantesimo	doppia fonte
-Proiezione astrale	Astral Projection	incantesimo	doppia fonte
-Protezione dagli incantesimi	Protection from Spells	incantesimo	doppia fonte
-Protezione dal bene	Protection from Good	incantesimo	doppia fonte
-Protezione dal caos	Protection from Chaos	incantesimo	doppia fonte
-Protezione dal male	Protection from Evil	incantesimo	doppia fonte
-Protezione dall'energia	Protection from Energy	incantesimo	doppia fonte
-Protezione dalla legge	Protection from Law	incantesimo	doppia fonte
-Protezione dalle frecce	Protection from Arrows	incantesimo	doppia fonte
+Potere divino	Divine Power	incantesimo	doppia fonte + editori folli
+Preghiera	Prayer	incantesimo	doppia fonte + editori folli
+Presagio	Augury	incantesimo	doppia fonte + editori folli
+Prestidigitazione	Prestidigitation	incantesimo	doppia fonte + editori folli
+Previsione	Foresight	incantesimo	doppia fonte + editori folli
+Produrre fiamma	Produce Flame	incantesimo	doppia fonte + editori folli
+Profanare	Unhallow	incantesimo	doppia fonte + editori folli
+Proibizione	Forbiddance	incantesimo	doppia fonte + editori folli
+Proiezione astrale	Astral Projection	incantesimo	doppia fonte + editori folli
+Protezione dagli incantesimi	Protection from Spells	incantesimo	doppia fonte + editori folli
+Protezione dal bene	Protection from Good	incantesimo	doppia fonte + editori folli
+Protezione dal caos	Protection from Chaos	incantesimo	doppia fonte + editori folli
+Protezione dal male	Protection from Evil	incantesimo	doppia fonte + editori folli
+Protezione dall'energia	Protection from Energy	incantesimo	doppia fonte + editori folli
+Protezione dalla legge	Protection from Law	incantesimo	doppia fonte + editori folli
+Protezione dalle frecce	Protection from Arrows	incantesimo	doppia fonte + editori folli
 Pugno serrato di Bigby	Clenched Fist	incantesimo	prefisso
-Punizione sacra	Holy Smite	incantesimo	doppia fonte
-Purificare cibo e bevande	Purify Food and Drink	incantesimo	doppia fonte
-Querciaviva	Liveoak	incantesimo	doppia fonte
-Raggio di esaurimento	Ray of Exhaustion	incantesimo	doppia fonte
-Raggio di gelo	Ray of Frost	incantesimo	doppia fonte
-Raggio di indebolimento	Ray of Enfeeblement	incantesimo	doppia fonte
-Raggio polare	Polar Ray	incantesimo	doppia fonte
-Raggio rovente	Scorching Ray	incantesimo	doppia fonte
-Ragnatela	Web	incantesimo	doppia fonte
-Randello incantato	Shillelagh	incantesimo	doppia fonte
+Punizione sacra	Holy Smite	incantesimo	doppia fonte + editori folli
+Purificare cibo e bevande	Purify Food and Drink	incantesimo	doppia fonte + editori folli
+Querciaviva	Liveoak	incantesimo	doppia fonte + editori folli
+Raggio di esaurimento	Ray of Exhaustion	incantesimo	doppia fonte + editori folli
+Raggio di gelo	Ray of Frost	incantesimo	doppia fonte + editori folli
+Raggio di indebolimento	Ray of Enfeeblement	incantesimo	doppia fonte + editori folli
+Raggio polare	Polar Ray	incantesimo	doppia fonte + editori folli
+Raggio rovente	Scorching Ray	incantesimo	doppia fonte + editori folli
+Ragnatela	Web	incantesimo	doppia fonte + editori folli
+Randello incantato	Shillelagh	incantesimo	doppia fonte + editori folli
 Reggia meravigliosa di Mordenkainen	Mage’s Magnificent Mansion	incantesimo	prefisso
-Regressione mentale	Feeblemind	incantesimo	doppia fonte
-Reincarnazione	Reincarnate	incantesimo	doppia fonte
-Rendere integro	Make Whole	incantesimo	doppia fonte
-Repulsione	Repulsion	incantesimo	doppia fonte
-Resistenza	Resistance	incantesimo	doppia fonte
-Resistenza agli incantesimi	Spell Resistance	incantesimo	doppia fonte
-Resistenza dell'orso	Bear's Endurance	incantesimo	doppia fonte
-Resistenza dell'orso di massa	Bear's Endurance, Mass	incantesimo	doppia fonte
-Resistere all'energia	Resist Energy	incantesimo	doppia fonte
-Respingere legno	Repel Wood	incantesimo	doppia fonte
-Respingere metallo o pietra	Repel Metal or Stone	incantesimo	doppia fonte
-Respingere parassiti	Repel Vermin	incantesimo	doppia fonte
-Respirare sott'acqua	Water Breathing	incantesimo	doppia fonte
-Restringere oggetti	Shrink Item	incantesimo	claude
-Resurrezione	Resurrection	incantesimo	doppia fonte
-Resurrezione pura	True Resurrection	incantesimo	doppia fonte
-Rianimare morti	Raise Dead	incantesimo	doppia fonte
-Ridurre animali	Reduce Animal	incantesimo	doppia fonte
-Ridurre persone	Reduce Person	incantesimo	doppia fonte
-Ridurre persone di massa	Reduce Person, Mass	incantesimo	doppia fonte
-Riflettere incantesimo	Spell Turning	incantesimo	doppia fonte
-Rifugio	Refuge	incantesimo	doppia fonte
-Rigenerazione	Regenerate	incantesimo	doppia fonte
-Rimpicciolire vegetali	Diminish Plants	incantesimo	doppia fonte
-Rimuovi cecità/sordità	Remove Blindness-Deafness	incantesimo	doppia fonte
-Rimuovi malattia	Remove Disease	incantesimo	doppia fonte
-Rimuovi maledizione	Remove Curse	incantesimo	doppia fonte
-Rimuovi paralisi	Remove Paralysis	incantesimo	doppia fonte
-Rimuovi paura	Remove Fear	incantesimo	doppia fonte
-Rintocco di morte	Death Knell	incantesimo	doppia fonte
+Regressione mentale	Feeblemind	incantesimo	doppia fonte + editori folli
+Reincarnazione	Reincarnate	incantesimo	doppia fonte + editori folli
+Rendere integro	Make Whole	incantesimo	doppia fonte + editori folli
+Repulsione	Repulsion	incantesimo	doppia fonte + editori folli
+Resistenza	Resistance	incantesimo	doppia fonte + editori folli
+Resistenza agli incantesimi	Spell Resistance	incantesimo	doppia fonte + editori folli
+Resistenza dell'orso	Bear's Endurance	incantesimo	doppia fonte + editori folli
+Resistenza dell'orso di massa	Bear's Endurance, Mass	incantesimo	doppia fonte + editori folli
+Resistere all'energia	Resist Energy	incantesimo	doppia fonte + editori folli
+Respingere legno	Repel Wood	incantesimo	doppia fonte + editori folli
+Respingere metallo o pietra	Repel Metal or Stone	incantesimo	doppia fonte + editori folli
+Respingere parassiti	Repel Vermin	incantesimo	doppia fonte + editori folli
+Respirare sott'acqua	Water Breathing	incantesimo	doppia fonte + editori folli
+Restringere oggetto	Shrink Item	incantesimo	editori folli (era claude: Restringere oggetti)
+Resurrezione	Resurrection	incantesimo	doppia fonte + editori folli
+Resurrezione pura	True Resurrection	incantesimo	doppia fonte + editori folli
+Rianimare morti	Raise Dead	incantesimo	doppia fonte + editori folli
+Ridurre animali	Reduce Animal	incantesimo	doppia fonte + editori folli
+Ridurre persone	Reduce Person	incantesimo	doppia fonte + editori folli
+Ridurre persone di massa	Reduce Person, Mass	incantesimo	doppia fonte + editori folli
+Riflettere incantesimo	Spell Turning	incantesimo	doppia fonte + editori folli
+Rifugio	Refuge	incantesimo	doppia fonte + editori folli
+Rigenerazione	Regenerate	incantesimo	doppia fonte + editori folli
+Rimpicciolire vegetali	Diminish Plants	incantesimo	doppia fonte + editori folli
+Rimuovi cecità/sordità	Remove Blindness-Deafness	incantesimo	doppia fonte + editori folli
+Rimuovi malattia	Remove Disease	incantesimo	doppia fonte + editori folli
+Rimuovi maledizione	Remove Curse	incantesimo	doppia fonte + editori folli
+Rimuovi paralisi	Remove Paralysis	incantesimo	doppia fonte + editori folli
+Rimuovi paura	Remove Fear	incantesimo	doppia fonte + editori folli
+Rintocco di morte	Death Knell	incantesimo	doppia fonte + editori folli
 Riparare	Mending	incantesimo	doppia fonte
 Riparo sicuro di Leomund	Secure Shelter	incantesimo	prefisso
-Riposo inviolato	Gentle Repose	incantesimo	doppia fonte
+Riposo inviolato	Gentle Repose	incantesimo	doppia fonte + editori folli
 Risata incontenibile di Tasha	Hideous Laughter	incantesimo	prefisso
-Riscaldare il metallo	Heat Metal	incantesimo	doppia fonte
-Ristorare	Restoration	incantesimo	doppia fonte
-Ristorare inferiore	Restoration, Lesser	incantesimo	doppia fonte
-Ristorare superiore	Restoration, Greater	incantesimo	doppia fonte
-Risucchio di energia	Energy Drain	incantesimo	doppia fonte
-Risveglio	Awaken	incantesimo	doppia fonte
-Ritarda veleno	Delay Poison	incantesimo	doppia fonte
-Ritirata rapida	Expeditious Retreat	incantesimo	doppia fonte
-Rivela bugie	Discern Lies	incantesimo	doppia fonte
-Rivela locazioni	Discern Location	incantesimo	doppia fonte
-Rocce aguzze	Spike Stones	incantesimo	doppia fonte
-Rune esplosive	Explosive Runes	incantesimo	doppia fonte
-Saggezza del gufo	Owl's Wisdom	incantesimo	doppia fonte
-Saggezza del gufo di massa	Owl's Wisdom, Mass	incantesimo	doppia fonte
-Saltare	Jump	incantesimo	doppia fonte
-Santificare	Hallow	incantesimo	doppia fonte
-Santuario	Sanctuary	incantesimo	doppia fonte
+Riscaldare il metallo	Heat Metal	incantesimo	doppia fonte + editori folli
+Ristorare	Restoration	incantesimo	doppia fonte + editori folli
+Ristorare inferiore	Restoration, Lesser	incantesimo	doppia fonte + editori folli
+Ristorare superiore	Restoration, Greater	incantesimo	doppia fonte + editori folli
+Risucchio di energia	Energy Drain	incantesimo	doppia fonte + editori folli
+Risveglio	Awaken	incantesimo	doppia fonte + editori folli
+Ritarda veleno	Delay Poison	incantesimo	doppia fonte + editori folli
+Ritirata rapida	Expeditious Retreat	incantesimo	doppia fonte + editori folli
+Rivela bugie	Discern Lies	incantesimo	doppia fonte + editori folli
+Rivela locazioni	Discern Location	incantesimo	doppia fonte + editori folli
+Rocce aguzze	Spike Stones	incantesimo	doppia fonte + editori folli
+Rune esplosive	Explosive Runes	incantesimo	doppia fonte + editori folli
+Saggezza del gufo	Owl's Wisdom	incantesimo	doppia fonte + editori folli
+Saggezza del gufo di massa	Owl's Wisdom, Mass	incantesimo	doppia fonte + editori folli
+Saltare	Jump	incantesimo	doppia fonte + editori folli
+Santificare	Hallow	incantesimo	doppia fonte + editori folli
+Santuario	Sanctuary	incantesimo	doppia fonte + editori folli
 Santuario privato di Mordenkainen	Mage’s Private Sanctum	incantesimo	prefisso
-Scagliare maledizione	Bestow Curse	incantesimo	doppia fonte
-Scassinare	Knock	incantesimo	doppia fonte
-Schermo	Screen	incantesimo	doppia fonte
-Sciame di meteore	Meteor Swarm	incantesimo	doppia fonte
-Sciame elementale	Elemental Swarm	incantesimo	doppia fonte
-Scolpire legno	Wood Shape	incantesimo	doppia fonte
-Scolpire pietra	Stone Shape	incantesimo	doppia fonte
-Scopri il percorso	Find the Path	incantesimo	doppia fonte
-Scopri trappole	Find Traps	incantesimo	doppia fonte
+Scagliare maledizione	Bestow Curse	incantesimo	doppia fonte + editori folli
+Scassinare	Knock	incantesimo	doppia fonte + editori folli
+Schermo	Screen	incantesimo	doppia fonte + editori folli
+Sciame di meteore	Meteor Swarm	incantesimo	doppia fonte + editori folli
+Sciame elementale	Elemental Swarm	incantesimo	doppia fonte + editori folli
+Scolpire legno	Wood Shape	incantesimo	doppia fonte + editori folli
+Scolpire pietra	Stone Shape	incantesimo	doppia fonte + editori folli
+Scopri il percorso	Find the Path	incantesimo	doppia fonte + editori folli
+Scopri trappole	Find Traps	incantesimo	doppia fonte + editori folli
 Scrigno segreto di Leomund	Secret Chest	incantesimo	prefisso
-Scritto illusorio	Illusory Script	incantesimo	doppia fonte
-Scrutare	Scrying	incantesimo	doppia fonte
-Scrutare superiore	Scrying, Greater	incantesimo	doppia fonte
-Scudo	Shield	incantesimo	doppia fonte
-Scudo della fede	Shield of Faith	incantesimo	doppia fonte
-Scudo della legge	Shield of Law	incantesimo	doppia fonte
-Scudo di fuoco	Fire Shield	incantesimo	doppia fonte
-Scudo entropico	Entropic Shield	incantesimo	doppia fonte
-Scudo su altri	Shield Other	incantesimo	doppia fonte
-Scurovisione	Darkvision	incantesimo	doppia fonte
+Scritto illusorio	Illusory Script	incantesimo	doppia fonte + editori folli
+Scrutare	Scrying	incantesimo	doppia fonte + editori folli
+Scrutare superiore	Scrying, Greater	incantesimo	doppia fonte + editori folli
+Scudo	Shield	incantesimo	doppia fonte + editori folli
+Scudo della fede	Shield of Faith	incantesimo	doppia fonte + editori folli
+Scudo della legge	Shield of Law	incantesimo	doppia fonte + editori folli
+Scudo di fuoco	Fire Shield	incantesimo	doppia fonte + editori folli
+Scudo entropico	Entropic Shield	incantesimo	doppia fonte + editori folli
+Scudo su altri	Shield Other	incantesimo	doppia fonte + editori folli
+Scurovisione	Darkvision	incantesimo	doppia fonte + editori folli
 Segugio fedele di Mordenkainen	Mage’s Faithful Hound	incantesimo	prefisso
-Sembrare	Seeming	incantesimo	doppia fonte
-Semi di fuoco	Fire Seeds	incantesimo	doppia fonte
-Serratura arcana	Arcane Lock	incantesimo	doppia fonte
-Serratura dimensionale	Dimensional Lock	incantesimo	doppia fonte
-Servitore inosservato	Unseen Servant	incantesimo	doppia fonte
+Sembrare	Seeming	incantesimo	doppia fonte + editori folli
+Semi di fuoco	Fire Seeds	incantesimo	doppia fonte + editori folli
+Serratura arcana	Arcane Lock	incantesimo	doppia fonte + editori folli
+Serratura dimensionale	Dimensional Lock	incantesimo	doppia fonte + editori folli
+Servitore inosservato	Unseen Servant	incantesimo	doppia fonte + editori folli
 Sfera congelante di Otiluke	Freezing Sphere	incantesimo	prefisso
-Sfera di invisibilità	Invisibility Sphere	incantesimo	doppia fonte
+Sfera di invisibilità	Invisibility Sphere	incantesimo	doppia fonte + editori folli
 Sfera elastica di Otiluke	Resilient Sphere	incantesimo	prefisso
-Sfera infuocata	Flaming Sphere	incantesimo	doppia fonte
-Sfera prismatica	Prismatic Sphere	incantesimo	doppia fonte
+Sfera infuocata	Flaming Sphere	incantesimo	doppia fonte + editori folli
+Sfera prismatica	Prismatic Sphere	incantesimo	doppia fonte + editori folli
 Sfera telecinetica di Otiluke	Telekinetic Sphere	incantesimo	prefisso
-Sfocatura	Blur	incantesimo	doppia fonte
-Sguardo penetrante	Eyebite	incantesimo	doppia fonte
-Sigillo arcano	Arcane Mark	incantesimo	doppia fonte
-Sigillo del serpente	Sepia Snake Sigil	incantesimo	doppia fonte
-Sigillo di giustizia	Mark of Justice	incantesimo	doppia fonte
-Silenzio	Silence	incantesimo	doppia fonte
-Simbolo di debolezza	Symbol of Weakness	incantesimo	doppia fonte
-Simbolo di demenza	Symbol of Insanity	incantesimo	doppia fonte
-Simbolo di dolore	Symbol of Pain	incantesimo	doppia fonte
-Simbolo di morte	Symbol of Death	incantesimo	doppia fonte
-Simbolo di paura	Symbol of Fear	incantesimo	doppia fonte
-Simbolo di persuasione	Symbol of Persuasion	incantesimo	doppia fonte
-Simbolo di sonno	Symbol of Sleep	incantesimo	doppia fonte
-Simbolo di stordimento	Symbol of Stunning	incantesimo	doppia fonte
-Simpatia	Sympathy	incantesimo	doppia fonte
-Simulacro	Simulacrum	incantesimo	doppia fonte
-Sogno	Dream	incantesimo	doppia fonte
-Sonno	Sleep	incantesimo	doppia fonte
-Sonno profondo	Deep Slumber	incantesimo	doppia fonte
+Sfocatura	Blur	incantesimo	doppia fonte + editori folli
+Sguardo penetrante	Eyebite	incantesimo	doppia fonte + editori folli
+Sigillo arcano	Arcane Mark	incantesimo	doppia fonte + editori folli
+Sigillo del serpente	Sepia Snake Sigil	incantesimo	doppia fonte + editori folli
+Sigillo di giustizia	Mark of Justice	incantesimo	doppia fonte + editori folli
+Silenzio	Silence	incantesimo	doppia fonte + editori folli
+Simbolo di debolezza	Symbol of Weakness	incantesimo	doppia fonte + editori folli
+Simbolo di demenza	Symbol of Insanity	incantesimo	doppia fonte + editori folli
+Simbolo di dolore	Symbol of Pain	incantesimo	doppia fonte + editori folli
+Simbolo di morte	Symbol of Death	incantesimo	doppia fonte + editori folli
+Simbolo di paura	Symbol of Fear	incantesimo	doppia fonte + editori folli
+Simbolo di persuasione	Symbol of Persuasion	incantesimo	doppia fonte + editori folli
+Simbolo di sonno	Symbol of Sleep	incantesimo	doppia fonte + editori folli
+Simbolo di stordimento	Symbol of Stunning	incantesimo	doppia fonte + editori folli
+Simpatia	Sympathy	incantesimo	doppia fonte + editori folli
+Simulacro	Simulacrum	incantesimo	doppia fonte + editori folli
+Sogno	Dream	incantesimo	doppia fonte + editori folli
+Sonno	Sleep	incantesimo	doppia fonte + editori folli
+Sonno profondo	Deep Slumber	incantesimo	doppia fonte + editori folli
 Spada di Mordenkainen	Mage’s Sword	incantesimo	claude
-Spada sacra	Holy Sword	incantesimo	doppia fonte
-Spaventare	Scare	incantesimo	doppia fonte
-Spezzare incantamento	Break Enchantment	incantesimo	doppia fonte
-Splendore dell'aquila	Eagle's Splendor	incantesimo	doppia fonte
-Splendore dell'aquila di massa	Eagle's Splendor, Mass	incantesimo	doppia fonte
-Spostamento planare	Plane Shift	incantesimo	doppia fonte
-Spruzzo colorato	Color Spray	incantesimo	doppia fonte
-Spruzzo prismatico	Prismatic Spray	incantesimo	doppia fonte
-Stasi temporale	Temporal Stasis	incantesimo	doppia fonte
-Statua	Statue	incantesimo	doppia fonte
-Status	Status	incantesimo	doppia fonte
-Stretta corrosiva	Rusting Grasp	incantesimo	doppia fonte
-Stretta folgorante	Shocking Grasp	incantesimo	doppia fonte
-Suggestione	Suggestion	incantesimo	doppia fonte
-Suggestione di massa	Suggestion, Mass	incantesimo	doppia fonte
-Suono dirompente	Sound Burst	incantesimo	doppia fonte
-Suono fantasma	Ghost Sound	incantesimo	doppia fonte
-Telecinesi	Telekinesis	incantesimo	doppia fonte
-Teletrasporto	Teleport	incantesimo	doppia fonte
-Teletrasporto degli oggetti	Teleport Object	incantesimo	doppia fonte
-Teletrasporto superiore	Teleport, Greater	incantesimo	doppia fonte
-Tempesta di fuoco	Fire Storm	incantesimo	doppia fonte
-Tempesta di ghiaccio	Ice Storm	incantesimo	doppia fonte
-Tempesta di nevischio	Sleet Storm	incantesimo	doppia fonte
-Tempesta di vendetta	Storm of Vengeance	incantesimo	doppia fonte
+Spada sacra	Holy Sword	incantesimo	doppia fonte + editori folli
+Spaventare	Scare	incantesimo	doppia fonte + editori folli
+Spezzare incantamento	Break Enchantment	incantesimo	doppia fonte + editori folli
+Splendore dell'aquila	Eagle's Splendor	incantesimo	doppia fonte + editori folli
+Splendore dell'aquila di massa	Eagle's Splendor, Mass	incantesimo	doppia fonte + editori folli
+Spostamento planare	Plane Shift	incantesimo	doppia fonte + editori folli
+Spruzzo colorato	Color Spray	incantesimo	doppia fonte + editori folli
+Spruzzo prismatico	Prismatic Spray	incantesimo	doppia fonte + editori folli
+Stasi temporale	Temporal Stasis	incantesimo	doppia fonte + editori folli
+Statua	Statue	incantesimo	doppia fonte + editori folli
+Status	Status	incantesimo	doppia fonte + editori folli
+Stretta corrosiva	Rusting Grasp	incantesimo	doppia fonte + editori folli
+Stretta folgorante	Shocking Grasp	incantesimo	doppia fonte + editori folli
+Suggestione	Suggestion	incantesimo	doppia fonte + editori folli
+Suggestione di massa	Suggestion, Mass	incantesimo	doppia fonte + editori folli
+Suono dirompente	Sound Burst	incantesimo	doppia fonte + editori folli
+Suono fantasma	Ghost Sound	incantesimo	doppia fonte + editori folli
+Telecinesi	Telekinesis	incantesimo	doppia fonte + editori folli
+Teletrasporto	Teleport	incantesimo	doppia fonte + editori folli
+Teletrasporto degli oggetti	Teleport Object	incantesimo	doppia fonte + editori folli
+Teletrasporto superiore	Teleport, Greater	incantesimo	doppia fonte + editori folli
+Tempesta di fuoco	Fire Storm	incantesimo	doppia fonte + editori folli
+Tempesta di ghiaccio	Ice Storm	incantesimo	doppia fonte + editori folli
+Tempesta di nevischio	Sleet Storm	incantesimo	doppia fonte + editori folli
+Tempesta di vendetta	Storm of Vengeance	incantesimo	doppia fonte + editori folli
 Tentacoli neri di Evard	Black Tentacles	incantesimo	prefisso
-Terremoto	Earthquake	incantesimo	doppia fonte
-Terreno illusorio	Hallucinatory Terrain	incantesimo	doppia fonte
-Tocco del Ghoul	Ghoul Touch	incantesimo	doppia fonte
-Tocco del vampiro	Vampiric Touch	incantesimo	doppia fonte
-Tocco di affaticamento	Touch of Fatigue	incantesimo	doppia fonte
-Tocco di idiozia	Touch of Idiocy	incantesimo	doppia fonte
-Tocco gelido	Chill Touch	incantesimo	doppia fonte
-Trama ipnotica	Hypnotic Pattern	incantesimo	doppia fonte
-Trama iridescente	Rainbow Pattern	incantesimo	doppia fonte
-Trama scintillante	Scintillating Pattern	incantesimo	doppia fonte
-Trance animale	Animal Trance	incantesimo	doppia fonte
-Transizione eterea	Ethereal Jaunt	incantesimo	doppia fonte
-Trappola di fuoco	Fire Trap	incantesimo	doppia fonte
+Terremoto	Earthquake	incantesimo	doppia fonte + editori folli
+Terreno illusorio	Hallucinatory Terrain	incantesimo	doppia fonte + editori folli
+Tocco del Ghoul	Ghoul Touch	incantesimo	doppia fonte + editori folli
+Tocco del vampiro	Vampiric Touch	incantesimo	doppia fonte + editori folli
+Tocco di affaticamento	Touch of Fatigue	incantesimo	doppia fonte + editori folli
+Tocco di idiozia	Touch of Idiocy	incantesimo	doppia fonte + editori folli
+Tocco gelido	Chill Touch	incantesimo	doppia fonte + editori folli
+Trama ipnotica	Hypnotic Pattern	incantesimo	doppia fonte + editori folli
+Trama iridescente	Rainbow Pattern	incantesimo	doppia fonte + editori folli
+Trama scintillante	Scintillating Pattern	incantesimo	doppia fonte + editori folli
+Trance animale	Animal Trance	incantesimo	doppia fonte + editori folli
+Transizione eterea	Ethereal Jaunt	incantesimo	doppia fonte + editori folli
+Trappola di fuoco	Fire Trap	incantesimo	doppia fonte + editori folli
 Trappola fantasma	Phantom Trap	incantesimo	doppia fonte
-Trasforma bastone	Changestaff	incantesimo	doppia fonte
-Trasformazione	Shapechange	incantesimo	doppia fonte
+Trasforma bastone	Changestaff	incantesimo	doppia fonte + editori folli
+Trasformazione	Shapechange	incantesimo	doppia fonte + editori folli
 Trasformazione di Tenser	Transformation	incantesimo	claude
-Traslazione arborea	Tree Stride	incantesimo	doppia fonte
-Trasmutare fango in roccia	Transmute Mud to Rock	incantesimo	doppia fonte
-Trasmutare metallo in legno	Transmute Metal to Wood	incantesimo	doppia fonte
-Trasmutare roccia in fango	Transmute Rock to Mud	incantesimo	doppia fonte
-Trasporto vegetale	Transport via Plants	incantesimo	doppia fonte
-Trucco della corda	Rope Trick	incantesimo	doppia fonte
-Turbine	Whirlwind	incantesimo	doppia fonte
-Unto	Grease	incantesimo	doppia fonte
-Vedere invisibilità	See Invisibility	incantesimo	doppia fonte
-Veleno	Poison	incantesimo	doppia fonte
-Velo	Veil	incantesimo	doppia fonte
-Velocità	Haste	incantesimo	doppia fonte
-Vento sussurrante	Whispering Wind	incantesimo	doppia fonte
-Ventriloquio	Ventriloquism	incantesimo	doppia fonte
-Veste magica	Magic Vestment	incantesimo	doppia fonte
-Vibrazione armonica	Sympathetic Vibration	incantesimo	doppia fonte
-Vigilanza e interdizione	Guards and Wards	incantesimo	doppia fonte
-Virtù	Virtue	incantesimo	doppia fonte
-Visione	Vision	incantesimo	doppia fonte
-Visione del vero	True Seeing	incantesimo	doppia fonte
-Visione della morte	Deathwatch	incantesimo	doppia fonte
-Visione falsa	False Vision	incantesimo	doppia fonte
-Vista arcana	Arcane Sight	incantesimo	doppia fonte
-Vista arcana superiore	Arcane Sight, Greater	incantesimo	doppia fonte
-Vita falsata	False Life	incantesimo	doppia fonte
-Volare	Fly	incantesimo	doppia fonte
-Volo giornaliero	Overland Flight	incantesimo	doppia fonte
-Vuoto mentale	Mind Blank	incantesimo	doppia fonte
-Zanna magica	Magic Fang	incantesimo	doppia fonte
-Zanna magica superiore	Magic Fang, Greater	incantesimo	doppia fonte
-Zona di silenzio	Zone of Silence	incantesimo	doppia fonte
-Zona di verità	Zone of Truth	incantesimo	doppia fonte
+Traslazione arborea	Tree Stride	incantesimo	doppia fonte + editori folli
+Trasmutare fango in roccia	Transmute Mud to Rock	incantesimo	doppia fonte + editori folli
+Trasmutare metallo in legno	Transmute Metal to Wood	incantesimo	doppia fonte + editori folli
+Trasmutare roccia in fango	Transmute Rock to Mud	incantesimo	doppia fonte + editori folli
+Trasporto vegetale	Transport via Plants	incantesimo	doppia fonte + editori folli
+Trucco della corda	Rope Trick	incantesimo	doppia fonte + editori folli
+Turbine	Whirlwind	incantesimo	doppia fonte + editori folli
+Unto	Grease	incantesimo	doppia fonte + editori folli
+Vedere invisibilità	See Invisibility	incantesimo	doppia fonte + editori folli
+Veleno	Poison	incantesimo	doppia fonte + editori folli
+Velo	Veil	incantesimo	doppia fonte + editori folli
+Velocità	Haste	incantesimo	doppia fonte + editori folli
+Vento sussurrante	Whispering Wind	incantesimo	doppia fonte + editori folli
+Ventriloquio	Ventriloquism	incantesimo	doppia fonte + editori folli
+Veste magica	Magic Vestment	incantesimo	doppia fonte + editori folli
+Vibrazione armonica	Sympathetic Vibration	incantesimo	doppia fonte + editori folli
+Vigilanza e interdizione	Guards and Wards	incantesimo	doppia fonte + editori folli
+Virtù	Virtue	incantesimo	doppia fonte + editori folli
+Visione	Vision	incantesimo	doppia fonte + editori folli
+Visione del vero	True Seeing	incantesimo	doppia fonte + editori folli
+Visione della morte	Deathwatch	incantesimo	doppia fonte + editori folli
+Visione falsa	False Vision	incantesimo	doppia fonte + editori folli
+Vista arcana	Arcane Sight	incantesimo	doppia fonte + editori folli
+Vista arcana superiore	Arcane Sight, Greater	incantesimo	doppia fonte + editori folli
+Vita falsata	False Life	incantesimo	doppia fonte + editori folli
+Volare	Fly	incantesimo	doppia fonte + editori folli
+Volo giornaliero	Overland Flight	incantesimo	doppia fonte + editori folli
+Vuoto mentale	Mind Blank	incantesimo	doppia fonte + editori folli
+Zanna magica	Magic Fang	incantesimo	doppia fonte + editori folli
+Zanna magica superiore	Magic Fang, Greater	incantesimo	doppia fonte + editori folli
+Zona di silenzio	Zone of Silence	incantesimo	doppia fonte + editori folli
+Zona di verità	Zone of Truth	incantesimo	doppia fonte + editori folli
 Acrobazia	Tumble	abilità	claude, nome italiano da miniaturefantasy
 Addestrare Animali	Handle Animal	abilità	claude, nome italiano da miniaturefantasy
 Artigianato	Craft	abilità	claude, nome italiano da miniaturefantasy
@@ -1039,6 +1043,30 @@ Verga del sole	Sunrod	equipaggiamento	mephit
 Veste da chierico	Cleric’s Vestments	equipaggiamento	mephit
 Dissolvi il bene/caos/legge/male	Dispel Chaos/Evil/Good/Law	incantesimo	mephit
 Individuazione del Caos/Male/Bene/Legge	Detect Chaos/Evil/Good/Law	incantesimo	mephit
+Aprire/chiudere	Open/Close	incantesimo	editori folli (forma SRD)
+Aura magica	Magic Aura	incantesimo	editori folli (forma SRD)
+Danza irresistibile	Irresistible Dance	incantesimo	editori folli (forma SRD)
+Disco fluttuante	Floating Disk	incantesimo	editori folli (forma SRD)
+Disgiunzione	Mage’s Disjunction	incantesimo	editori folli (forma SRD)
+Evocazioni istantanee	Instant Summons	incantesimo	editori folli (forma SRD)
+Freccia acida	Acid Arrow	incantesimo	editori folli (forma SRD)
+Legame telepatico	Telepathic Bond	incantesimo	editori folli (forma SRD)
+Mano interposta	Interposing Hand	incantesimo	editori folli (forma SRD)
+Mano possente	Forceful Hand	incantesimo	editori folli (forma SRD)
+Mano stringente	Grasping Hand	incantesimo	editori folli (forma SRD)
+Mano stritolatrice	Crushing Hand	incantesimo	editori folli (forma SRD)
+Pugno serrato	Clenched Fist	incantesimo	editori folli (forma SRD)
+Reggia meravigliosa	Mage’s Magnificent Mansion	incantesimo	editori folli (forma SRD)
+Riparo sicuro	Secure Shelter	incantesimo	editori folli (forma SRD)
+Risata incontenibile	Hideous Laughter	incantesimo	editori folli (forma SRD)
+Santuario privato	Mage’s Private Sanctum	incantesimo	editori folli (forma SRD)
+Scrigno segreto	Secret Chest	incantesimo	editori folli (forma SRD)
+Segugio fedele	Mage’s Faithful Hound	incantesimo	editori folli (forma SRD)
+Sfera congelante	Freezing Sphere	incantesimo	editori folli (forma SRD)
+Sfera elastica	Resilient Sphere	incantesimo	editori folli (forma SRD)
+Sfera telecinetica	Telekinetic Sphere	incantesimo	editori folli (forma SRD)
+Tentacoli neri	Black Tentacles	incantesimo	editori folli (forma SRD)
+Trasformazione del mago	Transformation	incantesimo	editori folli (forma SRD)
 Gigante	Giant	linguaggio	mephit
 Gnoll	Gnoll	linguaggio	mephit
 Gnomesco	Gnome	linguaggio	mephit
