@@ -144,6 +144,52 @@ def capacita(id_: str, nome: str, root: "Path | None" = None) -> Copertura:
         return Copertura(id_, nome, "mancante", corrente, tuple(catena), (), "modo sconosciuto")
 
 
+#: La riga con cui un modulo dichiara il proprio sistema: «**Sistema:** …»,
+#: «**Regole**: …», anche in un elenco o in una citazione, nelle prime righe.
+DICHIARAZIONE = re.compile(
+    r"^\s*(?:[-*>]\s*)?\*\*(?:Sistema|Regole|System)(?:\*\*\s*:|:\*\*)\s*(.+)$", re.I | re.M)
+TESTA = 3000
+
+
+def sistema_dichiarato(testo: str, root: "Path | None" = None) -> "str | None":
+    """Il sistema che il testo dichiara nella riga «**Sistema:**», o None.
+
+    Ogni plugin dice con `riconosci` come si scrive il suo nome; vince quello
+    che compare per primo nella riga («D&D 3.5 (max PF1e)» è 3.5)."""
+    m = DICHIARAZIONE.search(testo[:TESTA])
+    if not m:
+        return None
+    valore, migliore = m.group(1), None
+    for i, p in carica(root)[2].items():
+        for pat in p.get("riconosci", []):
+            t = re.search(pat, valore, re.I)
+            if t and (migliore is None or t.start() < migliore[0]):
+                migliore = (t.start(), i)
+    return migliore[1] if migliore else None
+
+
+def dichiarazioni_divergenti(root: "Path | None" = None) -> "list[tuple[str, str, str]]":
+    """(file, sistema dichiarato, sistema di sistemi.toml) dove i due non coincidono.
+
+    Si leggono i markdown delle cartelle d'arco e degli stand-alone (`0*`, `1*`),
+    fuori da `homebrew/` (booklet generati) e `_ARCHIVIO/` (copie)."""
+    r = (root or ROOT).resolve()
+    fuori = []
+    for base in sorted(list(r.glob("0*")) + list(r.glob("1*"))):
+        if not base.is_dir():
+            continue
+        for f in sorted(base.rglob("*.md")):
+            rel = f.relative_to(r)
+            if "homebrew" in rel.parts or "_ARCHIVIO" in rel.parts:
+                continue
+            d = sistema_dichiarato(f.read_text(encoding="utf-8", errors="replace"), r)
+            if d is not None:
+                c = sistema_di(rel, r)
+                if d != c:
+                    fuori.append((str(rel), d, c))
+    return fuori
+
+
 def dati(id_: str, nome: str, root: "Path | None" = None) -> dict:
     """I dati TOML con cui `id_` copre `nome`, dopo l'eredità.
 
@@ -270,4 +316,7 @@ def problemi(root: "Path | None" = None, strumenti: "dict[str, list[str]] | None
                 if c.modo == "mancante":
                     fuori.append(f"«{sid}» chiede «{nome}», che «{i}» non dichiara: "
                                  "dichiararla (dati, codice, eredita o non_supportato)")
+    for f, d, c in dichiarazioni_divergenti(r):
+        fuori.append(f"{f}: la riga «Sistema» dice «{d}», {CONFIG} [moduli] dice «{c}»: "
+                     "correggere la riga o aggiungere la cartella a [moduli]")
     return fuori

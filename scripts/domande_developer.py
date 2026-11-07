@@ -74,6 +74,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import copertura_scene as cs  # noqa: E402
+from dmcore.sistemi import sistema_di  # noqa: E402
 import componenti as comp  # noqa: E402
 
 CONFIG = ROOT / "plans" / "domande-developer.json"
@@ -123,6 +124,8 @@ SC_COPPIA = re.compile(r"(\d+)\s+successi\s*(?:prima di|/)\s*(\d+)\s+fallimenti"
 #: Le abilità che nel sistema del modulo non esistono. In PF1e Percezione,
 #: Furtività e Intuizione ci sono (Perception, Stealth, Sense Motive): alla
 #: prima prova il Drappo, che è PF1e, ne risultava pieno.
+#: Il nome del sistema in ABILITA_ESTRANEE per l'id del plugin (sistemi/).
+SISTEMA_DEL_PLUGIN = {"dnd35": "3.5", "pf1e": "pf1e"}
 ABILITA_ESTRANEE = {"3.5": ("Atletica", "Intuizione", "Percezione", "Furtività"),
                     "pf1e": ("Atletica",)}
 
@@ -466,6 +469,12 @@ def esegui(cfg: dict) -> "tuple[list, list, list]":
         if not f.exists():
             continue
         prof = {**mod, **profili.get(mod["file"], {})}
+        # Il sistema viene da sistemi.toml [moduli], un posto solo (ADR-0111, L2):
+        # prima stava anche nei profili di plans/domande-developer.json.
+        if "sistema" in profili.get(mod["file"], {}):
+            raise SystemExit(f"domande_developer: «sistema» nel profilo di {mod['file']}: "
+                             "il sistema di un modulo si dichiara in sistemi.toml [moduli]")
+        prof["sistema"] = SISTEMA_DEL_PLUGIN.get(sistema_di(mod["file"]), sistema_di(mod["file"]))
         testo = f.read_text(encoding="utf-8")
         gruppo = prof.get("modulo")
         for regola, scena, dettaglio in analizza(testo, prof, con_ts=not gruppo):
