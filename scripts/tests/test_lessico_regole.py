@@ -60,6 +60,13 @@ class TestLetturaDelleRighe(unittest.TestCase):
         self.assertEqual(L.termini_della_riga("Incalzare e Attacco Poderoso, Creare Armi e Armature Magiche"),
                          ["Incalzare", "Attacco Poderoso", "Creare Armi e Armature Magiche"])
 
+    def test_campo_qs_chiude_i_talenti(self):
+        self.assertEqual(L.termini_della_riga("Allerta, Iniziativa Migliorata · **QS** anfibio"),
+                         ["Allerta", "Iniziativa Migliorata"])
+
+    def test_talento_pf1e_di_un_manuale(self):
+        self.assertIn(L.norma("Combat Vigor"), L.talenti_pf1_dei_manuali())
+
     def test_talento_di_un_manuale_3_5(self):
         self.assertIn(L.norma("Goad"), L.talenti_dei_manuali())
 

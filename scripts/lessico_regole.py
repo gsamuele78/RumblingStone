@@ -48,6 +48,7 @@ TABELLA_35 = ROOT / "scripts" / "lessico_it_35.tsv"
 # Gli oggetti unici della campagna: un nome qui non è un termine sconosciuto (DM, 2026-11-07).
 # I nomi inglesi dei talenti di tutti i manuali 3.5 (indici crystalkeep e realmshelps, solo nomi).
 TALENTI_MANUALI = ROOT / "scripts" / "talenti_manuali_35.tsv"
+TALENTI_PF1 = ROOT / "scripts" / "talenti_manuali_pf1.tsv"
 OGGETTI_CAMPAGNA = ROOT / "campaign" / "OGGETTI-DELLA-CAMPAGNA.md"
 # Un modulo è PF1e se lo dice il percorso o l'intestazione: lì vale la tabella
 # diretta italiano PF1e → PRD, mai il passaggio per la 3.5 (DM, 2026-11-07).
@@ -222,6 +223,15 @@ def talenti_dei_manuali(percorso: Path = TALENTI_MANUALI) -> dict[str, dict]:
 
 
 @functools.lru_cache(maxsize=None)
+def talenti_pf1_dei_manuali(percorso: Path = TALENTI_PF1) -> set[str]:
+    """Nomi inglesi normalizzati dei talenti PF1e di tutti i manuali (Archives of Nethys)."""
+    if not percorso.is_file():
+        return set()
+    return {norma(r.split("\t")[0]) for r in percorso.read_text(encoding="utf-8").splitlines()
+            if r and not r.startswith("#") and not r.startswith("inglese\t")}
+
+
+@functools.lru_cache(maxsize=None)
 def oggetti_campagna(percorso: Path = OGGETTI_CAMPAGNA) -> set[str]:
     """I nomi della prima colonna delle tabelle di OGGETTI-DELLA-CAMPAGNA.md, normalizzati."""
     if not percorso.is_file():
@@ -254,7 +264,7 @@ MARCA_FUORI_SRD = re.compile(
 # Dove finisce l'elenco dei talenti: il campo seguente dello statblocco, una frase, una cella.
 FINE_CAMPO = re.compile(
     r"\*\*[^*]{1,40}\*\*\s*:|\*\*(?:Abilit|Skills|Talenti (?:da|bonus)|Equipaggiamento|Tattiche|Lingu|"
-    r"Qualit|SQ|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
+    r"Qualit|SQ|QS\b|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
     r"(?<=[a-z\)])\.\s|\s—\s|\||"
     r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|TS)\b")
 
@@ -318,6 +328,8 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
                     esito, v = "nome 3.5", ita.get(k)
                 elif any(e["fonte"] == "pf1" for e in idx.get(k, [])):
                     esito = "fonte"
+                elif k in talenti_pf1_dei_manuali():
+                    esito = "fonte"  # nome inglese di un talento PF1e fuori dal PRD (Archives of Nethys)
                 elif MARCA_FUORI_SRD.search(riga.replace("PF1e", "").replace("Pathfinder", "")):
                     esito = "marcato"
                 else:

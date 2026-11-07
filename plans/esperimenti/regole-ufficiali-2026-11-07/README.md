@@ -12,6 +12,7 @@ Il DM ha chiesto vincoli su tutti i termini ufficiali, «una volta per tutte», 
 | `scripts/lessico_it_35.tsv` (italiano → SRD 3.5) | 3.944 | incantesimi 1.398, talenti 986, oggetti magici 776, trappole 79, classi di prestigio 220, equipaggiamento 189, proprietà magiche 71, classi 46, abilità 40, condizioni 38, domini 35, mostri 31 |
 | `scripts/lessico_it_pf1.tsv` (italiano PF1e → PRD) | 9.371 | mostri 2.213, incantesimi 2.112, oggetti magici 1.958, talenti 1.741, archetipi 395, equipaggiamento 271, proprietà magiche 196, archetipi di mostro 120, classi 44, razze 37 (Core e ARG, 37 su 37) |
 | `scripts/talenti_manuali_35.tsv` (talenti inglesi di tutti i manuali 3.5, solo nomi) | 3.846 | 1.297 con sigla e pagina (crystalkeep, Chet Erez e Outlands 2007), il resto dall'elenco realmshelps; generata da `abbinamenti/indice_talenti_35.py` |
+| `scripts/talenti_manuali_pf1.tsv` (talenti inglesi di tutti i manuali PF1e, solo nomi) | 3.432 | Archives of Nethys, `aonprd.com/Feats.aspx`; generata da `abbinamenti/indice_talenti_pf1.py` |
 
 Ogni riga dice da dove viene la coppia (quarta colonna). Le fonti e il metodo di abbinamento
 sono nell'intestazione di ciascuna tabella e in [abbinamenti/README.md](abbinamenti/README.md).
