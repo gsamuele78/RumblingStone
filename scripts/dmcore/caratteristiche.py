@@ -45,42 +45,10 @@ ARRAY_STANDARD = T.BASIC
 #: Il ruolo dichiarato decide **l'ordine di priorita'** delle sei
 #: caratteristiche: il valore piu' alto dell'array va alla prima della riga.
 #: Si cerca la prima parola chiave che compare nel ruolo, in quest'ordine.
-PROFILI = (
-    ("psionic",     ("Int", "Cos", "Des", "Sag", "Car", "For")),
-    ("psi",         ("Int", "Cos", "Des", "Sag", "Car", "For")),
-    ("arcane",      ("Int", "Des", "Cos", "Car", "Sag", "For")),
-    ("blaster",     ("Int", "Des", "Cos", "Car", "Sag", "For")),
-    ("divine",      ("Sag", "Cos", "For", "Car", "Des", "Int")),
-    ("divino",      ("Sag", "Cos", "For", "Car", "Des", "Int")),
-    ("warpriest",   ("Sag", "For", "Cos", "Car", "Des", "Int")),
-    ("envoy",       ("Car", "Des", "Cos", "Int", "Sag", "For")),
-    ("subdolo",     ("Car", "Des", "Cos", "Int", "Sag", "For")),
-    ("infiltrator", ("Des", "Car", "Cos", "Int", "Sag", "For")),
-    ("stealth",     ("Des", "Car", "Cos", "Int", "Sag", "For")),
-    ("caster",      ("Car", "Des", "Cos", "Int", "Sag", "For")),
-    ("gish",        ("For", "Int", "Cos", "Des", "Sag", "Car")),
-    ("ranged",      ("Des", "For", "Cos", "Sag", "Int", "Car")),
-    ("scout",       ("Des", "Sag", "Cos", "For", "Int", "Car")),
-    ("skirmisher",  ("Des", "For", "Cos", "Sag", "Int", "Car")),
-    ("ambusher",    ("Des", "Sag", "Cos", "For", "Int", "Car")),
-    ("flier",       ("Des", "For", "Cos", "Sag", "Car", "Int")),
-    ("aerial",      ("Des", "Cos", "For", "Sag", "Car", "Int")),
-    ("mount",       ("For", "Cos", "Des", "Sag", "Car", "Int")),
-    ("brute",       ("For", "Cos", "Des", "Sag", "Car", "Int")),
-    ("defender",    ("Cos", "For", "Des", "Sag", "Car", "Int")),
-    ("guard",       ("Cos", "For", "Des", "Sag", "Car", "Int")),
-    ("tank",        ("Cos", "For", "Des", "Sag", "Car", "Int")),
-    ("guardian",    ("Cos", "For", "Des", "Sag", "Car", "Int")),
-    ("commander",   ("Car", "For", "Cos", "Sag", "Des", "Int")),
-    ("leader",      ("Car", "For", "Cos", "Sag", "Des", "Int")),
-    ("officer",     ("Car", "For", "Cos", "Sag", "Des", "Int")),
-    ("shock",       ("For", "Des", "Cos", "Sag", "Car", "Int")),
-    ("melee",       ("For", "Cos", "Des", "Sag", "Car", "Int")),
-    ("fodder",      ("For", "Cos", "Des", "Sag", "Car", "Int")),
-    ("wave",        ("For", "Cos", "Des", "Sag", "Car", "Int")),
-    ("hazard",      ("Cos", "For", "Des", "Sag", "Car", "Int")),
-)
-PROFILO_DI_RIPIEGO = ("For", "Cos", "Des", "Sag", "Car", "Int")
+#: Le righe stanno in `[[profili.ruolo]]` del plugin dnd35 (ADR-0111, L5b),
+#: nello stesso ordine.
+PROFILI = tuple((r["chiave"], tuple(r["ordine"])) for r in T._DATI["profili"]["ruolo"])
+PROFILO_DI_RIPIEGO = tuple(T._DATI["profili"]["ripiego"])
 ELITE = T.RUOLI_ELITE
 DES_SCRITTA = re.compile(r"([+-]\s*\d+)\s*(?:Des|Dex|destrezza)\b", re.I)
 CONTATTO = re.compile(r"(?:touch|contatto)\s*(\d+)", re.I)
@@ -302,34 +270,11 @@ def matrice_png(profilo: str, livelli: int, elite: bool,
 #: SRD 3.5, *Improving Monsters*, «Changes to Statistics by Size», sommati a
 #: partire da Media. Si applicano solo alle **creature**: un PNG con livelli
 #: di classe ha gia' la taglia nella razza.
-PER_TAGLIA = {
-    8: (-10, 8, -2), 4: (-10, 6, -2), 2: (-8, 4, -2), 1: (-4, 2, -2), 0: (0, 0, 0),
-    -1: (8, -2, 4), -2: (16, -4, 8), -4: (24, -4, 12), -8: (32, -4, 16),
-}
-#: SRD 3.5, modificatori razziali, per i PNG con livelli di classe. L'ordine
-#: conta: `hobgoblin` prima di `goblin`, `duergar` prima di `nano`.
-RAZZE = (
-    ("hobgoblin",   {"Des": 2, "Cos": 2}),
-    ("bugbear",     {"For": 4, "Des": 2, "Cos": 2, "Car": -2}),
-    ("goblin",      {"For": -2, "Des": 2, "Car": -2}),
-    ("half-orc",    {"For": 2, "Int": -2, "Car": -2}),
-    ("mezzorc",     {"For": 2, "Int": -2, "Car": -2}),
-    ("orc",         {"For": 4, "Int": -2, "Sag": -2, "Car": -2}),
-    ("orco",        {"For": 4, "Int": -2, "Sag": -2, "Car": -2}),
-    ("duergar",     {"Cos": 2, "Car": -4}),
-    ("dwarf",       {"Cos": 2, "Car": -2}),
-    ("nano",        {"Cos": 2, "Car": -2}),
-    ("drow",        {"Des": 2, "Cos": -2, "Int": 2, "Car": 2}),
-    ("elf",         {"Des": 2, "Cos": -2}),
-    ("elfo",        {"Des": 2, "Cos": -2}),
-    ("svirfneblin", {"For": -2, "Des": 2, "Sag": 2, "Car": -4}),
-    ("gnome",       {"For": -2, "Cos": 2}),
-    ("gnomo",       {"For": -2, "Cos": 2}),
-    ("halfling",    {"For": -2, "Des": 2}),
-    ("kobold",      {"For": -4, "Des": 2, "Cos": -2}),
-    ("gnoll",       {"For": 4, "Cos": 2, "Int": -2, "Car": -2}),
-    ("lizardfolk",  {"For": 2, "Cos": 2, "Int": -2}),
-)
+PER_TAGLIA = {int(k): tuple(v) for k, v in T._DATI["per_taglia"].items()}
+#: SRD 3.5, modificatori razziali, per i PNG con livelli di classe. Stanno in
+#: `[[razze]]` del plugin dnd35 (ADR-0111, L5b). L'ordine conta: `hobgoblin`
+#: prima di `goblin`, `duergar` prima di `nano`.
+RAZZE = tuple((r["nome"], dict(r["modificatori"])) for r in T._DATI["razze"])
 
 
 def razza_di(nome_file: str, tipo: str) -> "tuple[str, dict] | None":
