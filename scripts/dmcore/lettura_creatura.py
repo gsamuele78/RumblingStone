@@ -566,7 +566,11 @@ def leggi(p: Path) -> "Scheda | None":
 #: posto della Costituzione per pf e Tempra. Vale solo dove la scheda lo
 #: dichiara nel `tipo` («… PF1e»): il leone spettrale (D5, 2026-09-23) e' un
 #: fantasma PF1e perche' il DM ha scelto la versione piu' forte fra le due.
-NON_MORTO_PF1E = (8, 0.75, ("vol",))
+#: Viene dal tipo `undead` del plugin pf1e (ADR-0111, L5d), non da una copia qui.
+from dmcore import sistemi as _S  # noqa: E402
+
+_NM = _S.dati("pf1e", "creature.regole_di_tipo")["tipi"]["undead"]
+NON_MORTO_PF1E = (_NM["dv"], _NM["bab"], tuple(_NM["ts_buoni"]))
 PF1E = re.compile(r"\bPF1e\b", re.I)
 
 

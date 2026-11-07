@@ -48,12 +48,14 @@ CHIUSURA = "```"
 
 # I campi obbligatori perché una scheda sia utilizzabile al tavolo: senza uno
 # di questi il riquadro sarebbe una cornice con dentro dei buchi.
-OBBLIGATORI = ("gs", "ca", "pf", "ts")
-AMMESSI = (
-    "nome", "gs", "tipo", "ca", "ca-dettaglio", "pf", "pf-dado", "ts", "velocita",
-    "iniziativa", "sensi", "attributi", "attacchi", "voci", "tattica", "fonte",
-)
-LISTE = ("attacchi", "voci")
+#: I campi stanno nel plugin della famiglia d20 (ADR-0111, L5d):
+#: `sistemi/d20/dati/statblocco.toml`, capacità `statblocco.campi`.
+from . import sistemi as _S  # noqa: E402
+
+_CAMPI = _S.dati("d20", "statblocco.campi")
+OBBLIGATORI = tuple(_CAMPI["obbligatori"])
+AMMESSI = tuple(_CAMPI["ammessi"])
+LISTE = tuple(_CAMPI["liste"])
 
 
 class StatblockError(ValueError):

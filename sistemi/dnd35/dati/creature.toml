@@ -555,3 +555,25 @@ modificatori = { For = 4, Cos = 2, Int = -2, Car = -2 }
 [[razze]]
 nome = "lizardfolk"
 modificatori = { For = 2, Cos = 2, Int = -2 }
+
+# --- L5d: come il tipo si scrive nelle schede (italiano, inglese, forme miste) ---
+[alias_tipo]
+"aberrazione" = "aberration"
+"animale" = "animal"
+"costrutto" = "construct"
+"drago" = "dragon"
+"elementale" = "elemental"
+"folletto" = "fey"
+"gigante" = "giant"
+"umanoide" = "humanoid"
+"bestia magica" = "magical beast"
+"umanoide mostruoso" = "monstrous humanoid"
+"melma" = "ooze"
+"esterno" = "outsider"
+"pianta" = "plant"
+"non-morto" = "undead"
+"nonmorto" = "undead"
+"parassita" = "vermin"
+"immondo" = "outsider"
+"tiefling" = "outsider"
+"mezzodrago" = "dragon"

@@ -147,5 +147,32 @@ class ListeIncantesimiDalPlugin(unittest.TestCase):
         self.assertIn("solo", pf)
 
 
+
+class RegoleDiTipoECampiDalPlugin(unittest.TestCase):
+    """L5d: alias dei tipi (dnd35), non morto PF1e (pf1e), campi dello statblocco (d20)."""
+
+    IMPRONTE = {
+        "ALIAS_TIPO": "ee9d0a3a4dd5bd38",
+        "OBBLIGATORI": "76269d2a7d4a1fc5",
+        "AMMESSI": "25ad1456d85f8cd5",
+        "LISTE": "95c5850902a37d41",
+        "NON_MORTO_PF1E": "b1097a871dea2f15",
+    }
+
+    def test_stessi_valori_di_prima(self):
+        from dmcore import lettura_creatura as LC
+        from dmcore import statblock as SB
+        dove = {"ALIAS_TIPO": T, "OBBLIGATORI": SB, "AMMESSI": SB, "LISTE": SB, "NON_MORTO_PF1E": LC}
+        for nome, attesa in self.IMPRONTE.items():
+            self.assertEqual(impronta(getattr(dove[nome], nome)), attesa, nome)
+
+    def test_nessuna_capacita_l5_resta_nel_codice(self):
+        for id_ in ("d20", "dnd35", "pf1e"):
+            for nome in ("statblocco.campi", "creature.regole_di_tipo", "creature.incantesimi",
+                         "creature.costruzione"):
+                c = S.capacita(id_, nome)
+                self.assertNotEqual(c.modo, "codice", f"{id_} {nome}")
+
+
 if __name__ == "__main__":
     unittest.main()
