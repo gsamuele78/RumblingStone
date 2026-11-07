@@ -501,7 +501,7 @@ La terza opzione richiede 6 ore di Tordek (che ha altre priorità) e produce un 
 - HP: 65 | AC: 18 (full plate, shield)
 - BAB: +7/+2 | Fort +9, Ref +3, Will +3
 - Atk: Longsword +10/+5 (1d8+4) o Shortbow +8/+3 (1d6+2)
-- Feats: Leadership, Weapon Focus (longsword), Power Attack, Iron Will, Tactician (non-SRD: +1 alle truppe sotto comando quando vede l'azione del nemico)
+- Feats: Leadership, Weapon Focus (longsword), Power Attack, Iron Will, Inspirational Leadership (⚠ Non SRD [Private source — Heroes of Battle]; al posto di «Tactician», che come talento non esiste: Expert Tactician e Combat Tactician sono vantaggi personali, il bonus alle truppe sotto comando è questo; scelta del 2026-11-07, da confermare al DM)
 
 **Personalità**: Pragmatica ma con profondo senso etico. Non ha mai visto una guerra vera prima dell'invasione della Mano Rossa — la sua esperienza è di polizia cittadina e ordine. È terrificata ma non lo mostra. È esattamente il tipo di persona che Thorik può rispettare perché fa cose difficili senza lamentarsi.
 
