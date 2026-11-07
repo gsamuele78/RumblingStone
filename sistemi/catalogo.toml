@@ -1,0 +1,26 @@
+# sistemi/catalogo.toml — le capacità che un plugin può dichiarare (ADR-0111 §2)
+#
+# Ogni strumento che dipende dal sistema le chiede nel suo campo
+# `sistema.capacita` di scripts/tools.manifest.json. Un nome che non sta qui
+# fa fallire `python3 scripts/sistemi.py --check`.
+#
+# Un plugin dichiara ogni capacità in uno di quattro modi:
+#   { dati = ["percorso", …] }                 i dati stanno in file del plugin o del repo
+#   { codice = ["file:NOME", …], lotto = "Ln" }   ancora nel codice (costante o funzione), da migrare
+#   { eredita = "id", motivo = "…" }           presa da un altro plugin, con il perché
+#   { non_supportato = "motivo" }              lo strumento rifiuta il modulo
+
+[capacita]
+"termini.vietati" = "le meccaniche di altri sistemi che in un modulo non hanno posto (oggi le 5e)"
+"lessico.abilita" = "i nomi delle abilità del sistema, e quelli di altri sistemi da segnalare"
+"lessico.entita" = "classi e razze con cui si riconoscono i personaggi nel testo"
+"lessico.italiano" = "i nomi ufficiali italiani delle regole e il loro corrispondente SRD/PRD (ADR-0110)"
+"fonti.regole" = "il testo di riferimento in cache su cui si riscontrano le regole (ADR-0103)"
+"pe.soglie" = "i punti esperienza per passare di livello"
+"tesoro.per_livello" = "il tesoro per livello d'incontro o per GS"
+"incontri.livello" = "come si somma la sfida di più creature in un incontro"
+"creature.costruzione" = "le tabelle per costruire una creatura: tipi, classi, DV, TS, BAB, taglie, armature, array"
+"creature.statistiche_per_gs" = "i bersagli numerici per GS (pf, CA, attacco, CD)"
+"creature.incantesimi" = "le liste di incantesimi per classe"
+"creature.regole_di_tipo" = "le regole di tipo che cambiano i conti (es. il non morto PF1e usa il Carisma)"
+"statblocco.campi" = "i campi meccanici del blocco statistiche"

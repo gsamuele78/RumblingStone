@@ -1,6 +1,6 @@
 # PIANO — I sistemi di gioco come plugin attivabili
 
-> **Stato**: 🟡 proposta (2026-11-07), L0 fatto, D1-D5 al DM · **Classe**: G per la regola, C per i lotti
+> **Stato**: 🟡 in corso (2026-11-07), L0 e L1 fatti, D1-D5 al DM (L1 segue le consigliate) · **Classe**: G per la regola, C per i lotti
 > **Nasce da**: il messaggio del DM del 2026-11-07 (citato in [ADR-0111](adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md)): plugin per tutto il giro di strumenti, skill e agent, un set di regole diverso senza rifare tutto, in modo misurabile e deterministico, con un file di configurazione generale che attiva e disattiva i sistemi e mostra quelli supportati.
 > **Decisione**: [ADR-0111](adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md), proposta.
 > **Dipende da**: ADR-0110 (termini ufficiali, ramo `regole-ufficiali`): `lessico_it.yaml`, `lessico_it_pf1.tsv`, `lessico_regole.py` sono il primo contenuto dei plugin, e restano loro.
@@ -58,7 +58,8 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | Lotto | Cosa | File toccati | Misura |
 |---|---|---|---|
 | **L0** ✅ | censimento, banco d'invarianza, ADR-0111 proposta, questo piano | `plans/` | M1-M4 di partenza |
-| L1 | fondazione: `sistemi.toml`, `sistemi/dnd35/` e `sistemi/pf1e/` con i soli descrittori, `scripts/dmcore/sistemi.py` (caricatore), `scripts/sistemi.py` (elenco, `--di FILE`, `--check`), campo `sistema` nello schema del manifest, test | nessuno strumento esistente | impronte 12/12; `sistemi.py` elenca 2 sistemi | <!-- validate-docs: futuro -->
+| **L1** ✅ | fondazione: `sistemi.toml`, `sistemi/catalogo.toml` (12 capacità), plugin `sistemi/d20/` (famiglia), `sistemi/dnd35/`, `sistemi/pf1e/`; `scripts/dmcore/sistemi.py` (caricatore), `scripts/sistemi.py` (elenco, matrice, `--di`, `--skill`, `--json`, `--check`, in CI); campo `sistema.capacita` nello schema e in 16 voci del manifest; `test_sistemi.py` | nessuno strumento esistente cambia comportamento | impronte 12/12; matrice di 24 righe; dnd35 2 capacità in dati e 10 nel codice, pf1e 1 · 6 · 5 non supportate; 0 mancanti |
+| **L1-bis** ✅ | PF1e supportato nei 5 casi che L1 dichiarava «non supportato» (richiesta del DM del 2026-11-07): `estrai_prd_pf1e.py` scrive `sistemi/pf1e/dati/{pe,incontri,tesoro,creature}.toml` dal PRD in cache, con la fonte; `sistemi.toml` `[opzioni.pf1e]` (traccia PE, velocità del tesoro); `--sistema` in `update_xp`, `suggest_encounter`, `suggest_loot`, `genera_creatura`; classi, classi di prestigio e razze PF1e in `coerenza_campagna` per i file dei moduli PF1e; `dmcore/creature_pf1e.py`; `test_sistemi_pf1e.py` | il predefinito resta dnd35: uscita 3.5 identica | impronte 12/12; pf1e da 2 · 6 · 5 a 7 · 6 · 0 (dati · codice · non supportato) |
 | L2 | un rilevamento solo: `domande_developer`, `dmcore/censimento`, `build_monster_catalog` leggono `sistema_di()`; la riga «**Sistema:**» dei master diventa testo controllato (deve dire lo stesso sistema della configurazione); `e_pf1()` involucro, con l'ok del thread delle regole | 3 + test | M1 3 → 1 |
 | L3 | termini: una lista 5e sola (nel plugin di famiglia d20, letta da tutti e due i validatori), `ABILITA_ESTRANEE`, le abilità di `validate_prosa`, classi e razze di `coerenza_campagna` | 5 | M2 2 → 1; stessi rilievi sui master |
 | L4 | regole semplici: soglie PE (`update_xp`, e la traccia PF1e lenta/media/veloce come dato), tesoro per EL/GS (`suggest_loot`), EL (`suggest_encounter`) | 3 | M3 scende; PF1e passa da `non supportato` a supportato dove il dato c'è |
@@ -67,7 +68,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | L7 | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
 | L8 | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
 
-### §2.1 Come sarebbe il file generale (bozza, D1-D4 aperte)
+### §2.1 Il file generale (L1, con le consigliate di D1, D2 e D4; i file veri sono `sistemi.toml` e `sistemi/*/sistema.toml`)
 
 ```toml
 # sistemi.toml — i sistemi di gioco del progetto (ADR-0111)
@@ -118,6 +119,22 @@ genera_creatura      creature.costruzione      ✅      ⬜ non supportato
 validate_modules     termini.vietati           ✅      ↪ eredita d20
 ```
 
+### §2.2 Cosa ha trovato L1
+
+- Il banco d'invarianza aveva un difetto suo: `update_xp --check` stampa l'ora, e l'impronta cambiava a ogni minuto. Adesso `impronte.py` sostituisce la riga dell'orologio; la base è stata riscritta da `main` (99337894, poi 9fc7f515 dopo #314 e #316), e 12 impronte su 12 tornano.
+- `build_monster_catalog.py` esclude dal catalogo il Drappo ma non il Giardino PF1e: oggi `scripts/monster_catalog.yaml` contiene una voce PF1e (l'appendice delle creature del Giardino, GS 16, ruolo boss) che `suggest_encounter` può proporre in un incontro 3.5. Con un rilevamento solo (L2) il buco si chiude. È il primo caso misurato di tre rilevamenti che divergono.
+
+- Con ADR-0110 su main (#316) è arrivato `scripts/lessico_regole.py`, che decide il sistema con `e_pf1()`: i rilevamenti in fascia C salgono a 3 e M4 a 25. Le sue tabelle (`lessico_it_35.tsv`, `lessico_it_pf1.tsv`) entrano nei plugin come capacità `lessico.italiano` in dati, senza toccarle.
+
+### §2.3 Cosa ha trovato L1-bis (PF1e nei 5 casi)
+
+- **Numeri**: nessuno scritto a mano. Sei tabelle del PRD (book-cr 2743, 3653, 3655, 3661; book-b1 116, 160) diventano quattro file TOML; `estrai_prd_pf1e.py --check` rifà l'estrazione e confronta i byte (in `test_sistemi_pf1e.py`, saltato dove il PRD non è in cache).
+- **Incontri**: in PF1e il GS dell'incontro è la somma dei PE, poi il GS più alto che la somma raggiunge. Coincide col 3.5 sui casi pari (due GS 10 → 12, quattro → 14) e diverge sui dispari (tre GS 10: 13 in PF1e, 13,17 in 3.5; due GS ½: 1 contro 2,5). Le creature proposte vengono ancora dal catalogo comune, che contiene mostri 3.5: separarlo è L2.
+- **Tesoro**: il PRD dà il valore per incontro per APL e velocità, non la ripartizione. Monete, gemme e oggetti restano nelle proporzioni della riga 3.5 dello stesso livello, e la nota in fondo lo dice. Il PRD lo tara su 4 PG; con `--pcs` diverso lo strumento divide la stessa somma.
+- **Creature**: la conversione parte dal blocco 3.5 già sul bersaglio del GS e risolve di nuovo la caratteristica dei pf sul dado PF1e (Carisma per i non morti). Senza questo un non morto GS 7 passava da 105 a 35 pf. Dove il BAB PF1e del tipo è più alto (costrutto, non morto) l'attacco sale sopra il bersaglio: è la regola del tipo, e il conto lo dice. Gigante ed elementale diventano umanoide ed esterno. Mancano: i pf bonus dei costrutti per taglia (la tabella non c'è nel PRD in cache, il conto lo segnala) e i livelli di classe (rifiutati con un messaggio).
+- **Classi e razze**: 3.5 invariato; nei file dei moduli PF1e `coerenza_campagna` riconosce anche l'ultima parola di ogni classe e classe di prestigio PF1e (174 parole contro 67). Le razze PF1e sono arrivate con la PR #318 del thread delle regole ufficiali (37 righe `razza`, lette con `lessico_regole.tabella_pf1`): 49 parole contro le 23 del 3.5. `RAZZE` oggi non la legge nessun controllo di `coerenza_campagna`.
+- **Limite della matrice, ancora vero**: una riga ✅ dice che il sistema ha il dato, non che ogni strumento della riga lo legga. Per `creature.costruzione` lo legge solo `genera_creatura`; `derive_statblocks`, `conformita_statblocchi`, `genera_attributi` e `suggest_encounter` lavorano ancora in 3.5 (L5).
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -144,7 +161,8 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 
 - [x] L0 · censimento, banco d'invarianza, ADR-0111 proposta, piano (2026-11-07)
 - [ ] D1-D5 decise
-- [ ] L1 · fondazione
+- [x] L1 · fondazione (2026-11-07): la matrice dice per ogni sistema come copre ogni capacità; finché L3-L5 non migrano gli strumenti, una riga dice dove sta la regola del sistema, non che quello strumento la legga già da lì (es. `validate_prosa` usa ancora le abilità 3.5 anche su un modulo PF1e)
+- [x] L1-bis · PF1e nei 5 casi non supportati (2026-11-07): PE, incontri, tesoro, classi e razze, costruzione delle creature
 - [ ] L2 · un rilevamento solo
 - [ ] L3 · termini
 - [ ] L4 · regole semplici

@@ -919,6 +919,9 @@ def costruisci_parser() -> argparse.ArgumentParser:
     p.add_argument("--piu-cattivi", action="store_true",
                    help="sale ai bersagli PF1e, più duri a pari GS. Ogni rincaro "
                         "è elencato in fonte:")
+    p.add_argument("--sistema", default="dnd35",
+                   help="sistema di gioco del blocco (sistemi.toml): pf1e ricalcola dado, BAB, "
+                        "TS, BMC/DMC e gradi dal PRD (dmcore/creature_pf1e.py)")
     p.add_argument("--quanti", type=int, default=1)
     p.add_argument("--seed", type=int, default=None,
                    help="per riprodurre la stessa creatura")
@@ -953,6 +956,17 @@ def main(argv: list[str] | None = None) -> int:
         _rifiuta_bestiario(args.cartella)
         args.cartella.mkdir(parents=True, exist_ok=True)
 
+    if args.sistema != "dnd35":
+        from dmcore import sistemi as S
+        if args.sistema not in S.attivi():
+            raise SystemExit(f"genera_creatura: sistema «{args.sistema}» non attivo in sistemi.toml")
+        if args.sistema != "pf1e":
+            raise SystemExit(f"genera_creatura: nessuna conversione per «{args.sistema}»")
+        if args.classe:
+            raise SystemExit("genera_creatura: --sistema pf1e converte i DV razziali; "
+                             "i livelli di classe PF1e non sono ancora supportati")
+        from dmcore import creature_pf1e as CP
+
     rng = random.Random(args.seed)
     fuori = []
     for i in range(args.quanti):
@@ -962,6 +976,9 @@ def main(argv: list[str] | None = None) -> int:
                            rng=rng, funzione=args.funzione,
                            incantesimi_pf1e=(None if args.incantesimi is None
                                              else args.incantesimi == "pf1e"))
+        if args.sistema == "pf1e":
+            sb, righe = CP.converti(sb, args.tipo, args.taglia)
+            conto.righe.extend(righe)
         fuori.append((sb, conto))
 
     if args.json:

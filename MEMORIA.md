@@ -102,6 +102,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1-bis: PF1e supportato nei 5 casi non supportati (PE, incontri, tesoro, classi… | ✅ pf1e 7/6/0 (dati/codice/non supportato); impronte 3.5 12/12; 21 test nuovi |
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1: fondazione dei plugin dei sistemi di gioco | ✅ 0 problemi; 24 righe di matrice; dnd35 2/10/0, pf1e 1/6/5 (dati/codice/non supportato); impronte 12/12 dopo la correzione dell'orologio di `update_xp` |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Razze PF1e nella tabella italiano → PRD, chieste dal plugin PF1e (ADR-0111) | ✅ 37 razze su 37 del PRD in cache (Core 7, ARG 30), nome inglese dal link di Golarion a d20pfsrd; PF1e 9.334 → 9.371 voci |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Fase 5 di ADR-0110: nomi ufficiali corretti in ARC-07 e ARC-08, prima e dopo | 🟡 6 nomi corretti; sconosciuti ARC-07+08 64 → 52, talenti del repo 137 → 133 (cricchetto a 133); restano gli oggetti unici da marcare |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Termini ufficiali 3.5 e PF1e: tabelle complete, misure fonte contro fonte, canc… | 🟡 3.5 3.944 voci (con 79 trappole), PF1e 9.334; fonte contro fonte 97-100% concordi; cancello dei campi prima 10-11/40, dopo 40/40; talenti sconosciuti 151 → 1… |
@@ -112,8 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 4: le caratteristiche dei PG dalla scheda di carta del DM | ✅ foto del DM del 2026-11-05 riscontrata con le abilità senza gradi: Artemis 10/18/14/10/10/18; Thorik con il rito dello Smeraldo che la carta non aveva (DES 1… |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 3: le marcature aperte di ARC-09 | ✅ tre card del DM: la leva non sale sulle mura (Rethmar e Dauth), guarnigione fissa di Dauth 200 nani, Witchwood a 300 m. ARC-09 da 3 a 0 aperte, repo 58 |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 2-bis: i PX del gruppo e il 14° livello, dal registro del DM | ✅ registro completato dall'arco 06 al 25/09 con le scelte del DM, riga per riga; Thorik, Tordek e Artemis al 14° fermi a 104.999 (un livello alla volta), Hella… |
-| 2026-11-04 | STATO-E-ORDINE · P16 | Quota sul mare di Hammerfist abbassata: piana a 520 m (scelta del DM, in linea… | ✅ cancello 600, cortile 620, cittadella 640; gradoni invariati |
-| 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
 
 ## Le misure che si portano dietro
 

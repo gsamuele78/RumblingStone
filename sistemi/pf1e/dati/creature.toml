@@ -1,0 +1,31 @@
+# sistemi/pf1e/dati/creature.toml — tipi e taglie PF1e (generato da estrai_prd_pf1e.py)
+fonte = "PRD PF1e, devonjones/PSRD-Data@76ea4784, book-b1.db sezione 116 «Table: Creature Statistics by Type»"
+fonte_taglie = "book-b1.db sezione 160 «Table: Size Bonuses and Penalties»"
+
+# tipo = { dv = faccia del dado, bab = per DV, ts_buoni, ts_a_scelta (umanoide 1, esterno 2), gradi = per DV + Int }
+[tipi]
+"aberration" = { dv = 8, bab = 0.75, ts_buoni = ["vol"], ts_a_scelta = 0, gradi = 4 }
+"animal" = { dv = 8, bab = 0.75, ts_buoni = ["temp", "rifl"], ts_a_scelta = 0, gradi = 2 }
+"construct" = { dv = 10, bab = 1.0, ts_buoni = [], ts_a_scelta = 0, gradi = 2 }
+"dragon" = { dv = 12, bab = 1.0, ts_buoni = ["temp", "rifl", "vol"], ts_a_scelta = 0, gradi = 6 }
+"fey" = { dv = 6, bab = 0.5, ts_buoni = ["rifl", "vol"], ts_a_scelta = 0, gradi = 6 }
+"humanoid" = { dv = 8, bab = 0.75, ts_buoni = [], ts_a_scelta = 1, gradi = 2 }
+"magical beast" = { dv = 10, bab = 1.0, ts_buoni = ["temp", "rifl"], ts_a_scelta = 0, gradi = 2 }
+"monstrous humanoid" = { dv = 10, bab = 1.0, ts_buoni = ["rifl", "vol"], ts_a_scelta = 0, gradi = 4 }
+"ooze" = { dv = 8, bab = 0.75, ts_buoni = [], ts_a_scelta = 0, gradi = 2 }
+"outsider" = { dv = 10, bab = 1.0, ts_buoni = [], ts_a_scelta = 2, gradi = 6 }
+"plant" = { dv = 8, bab = 0.75, ts_buoni = ["temp"], ts_a_scelta = 0, gradi = 2 }
+"undead" = { dv = 8, bab = 0.75, ts_buoni = ["vol"], ts_a_scelta = 0, gradi = 4 }
+"vermin" = { dv = 8, bab = 0.75, ts_buoni = ["temp"], ts_a_scelta = 0, gradi = 2 }
+
+# taglia = { ca_attacco, bmc_dmc }
+[taglie]
+"fine" = { ca_attacco = 8, bmc_dmc = -8 }
+"diminutive" = { ca_attacco = 4, bmc_dmc = -4 }
+"tiny" = { ca_attacco = 2, bmc_dmc = -2 }
+"small" = { ca_attacco = 1, bmc_dmc = -1 }
+"medium" = { ca_attacco = 0, bmc_dmc = 0 }
+"large" = { ca_attacco = -1, bmc_dmc = 1 }
+"huge" = { ca_attacco = -2, bmc_dmc = 2 }
+"gargantuan" = { ca_attacco = -4, bmc_dmc = 4 }
+"colossal" = { ca_attacco = -8, bmc_dmc = 8 }

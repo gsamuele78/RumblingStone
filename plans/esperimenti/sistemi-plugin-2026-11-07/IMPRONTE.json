@@ -40,8 +40,8 @@
   "uscita": 0
  },
  "update_xp_check": {
-  "byte": 1045,
-  "sha256": "5c6d2f45f736aef1700a9a329c56d84ec634b73c4eb2ea1eb8fdeb3eb84153cd",
+  "byte": 1024,
+  "sha256": "d9941e83a69eb134d31f03e93caa31237d061253000452c8dbb5c3ba7c8f9992",
   "uscita": 0
  },
  "validate_bestiario": {
