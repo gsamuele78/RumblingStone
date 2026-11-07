@@ -69,6 +69,40 @@ class TestLetturaDelleRighe(unittest.TestCase):
         self.assertEqual(L.termini_della_riga("GoadCAdv, Improved TripPH e Combat ExpertisePH"),
                          ["Goad", "Improved Trip", "Combat Expertise"])
 
+    def test_la_prosa_non_e_un_elenco_di_talenti(self):
+        testo = ("they've got more feats. Basically, take two.\n"
+                 "Elusive Target is a feat worth consideration, I'm told.\n"
+                 "Un guerriero 8 ha 8 talenti (3 di livello, 5 bonus) e la scheda.\n"
+                 "- Talenti e capacità: Death Attack, Schivare Prodigioso\n"
+                 "## Feats: Key Categories\n")
+        self.assertEqual(esiti(testo), [])
+
+    def test_elenco_dopo_la_parentesi_e_in_minuscolo_con_due_punti(self):
+        self.assertIn(("Attacco Poderoso", "tabella"), esiti("· **Talenti** (7) Attacco Poderoso, Incalzare\n"))
+        self.assertIn(("Discipline", "fonte"), esiti("Regional feats: Discipline (PGF p38)\n"))
+
+    def test_statblock_inglese_con_la_barra_a_fine_riga(self):
+        testo = ("Feats Blind-Fight, Exotic Weapon Proficiency (bastard \\\n"
+                 "sword)B, Rapid Reload, Weapon Focus (bastard sword)B, \\\n"
+                 "Weapon Specialization (bastard sword)B\n")
+        self.assertEqual([t for t, _ in esiti(testo)],
+                         ["Blind-Fight", "Exotic Weapon Proficiency", "Rapid Reload", "Weapon Focus",
+                          "Weapon Specialization"])
+
+    def test_skills_and_feats_legge_solo_i_talenti(self):
+        testo = "Skills and Feats: Hide +15, Listen +16; Combat Casting, Improved Initiative\n"
+        self.assertEqual([t for t, _ in esiti(testo)], ["Combat Casting", "Improved Initiative"])
+
+    def test_fine_campo_su_parentesi_aperta_doppio_spazio_e_trattini(self):
+        self.assertEqual(L.termini_della_riga("Multiattacco, Capacità Focalizzata (aura): la scheda non li"),
+                         ["Multiattacco", "Capacità Focalizzata"])
+        self.assertEqual(L.termini_della_riga("Shot on the Run, Expeditious Dodge  In terms of equipment"),
+                         ["Shot on the Run", "Expeditious Dodge"])
+        self.assertEqual(L.termini_della_riga("Power Attack, Spell Focus --Bonus from Domination Domain"),
+                         ["Power Attack", "Spell Focus"])
+        self.assertEqual(L.termini_della_riga("Brew Potion, Craft Magic Arms/Armor"),
+                         ["Brew Potion", "Craft Magic Arms and Armor"])
+
     def test_talento_pf1e_di_un_manuale(self):
         self.assertIn(L.norma("Combat Vigor"), L.talenti_pf1_dei_manuali())
 

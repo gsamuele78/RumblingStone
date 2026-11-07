@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L4: PE ed EL dai plugin (soglie 3.5 nei dati, metodo di combinazione dei GS dic… | ✅ capacità dnd35 nel codice 7 → 5; «dnd35» cablato nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 79 → 79 (THRESHOLDS esce, METODI entra) |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Manuale dei talenti 3.5 senza sigla, dalle pagine di realmshelps | ✅ talenti con il manuale 1.297 → 3.529 su 3.846; 317 restano senza; nessuno dei 14 nomi FR marcati c'è sul modulo di realmshelps (3.478 talenti) |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Skill forgotten-realms-lore: talenti regionali riscontrati sull'indice dei manu… | 🟡 14 nomi su 46 in nessun indice (Chultan Jungle Fighter, Cormyrean Conscript, Serpent Blood…) marcati INFERRED; nelle regioni Chult, Cormyr e Waterdeep i tale… |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Indice dei talenti di tutti i manuali 3.5 (solo nomi, sigla e pagina) e lettura… | 🟡 3.846 nomi inglesi (1.297 con manuale e pagina); talenti sconosciuti 133 → 97, cricchetto a 97; 5 talenti FR della skill dnd-35-rules non sono in nessun indi… |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Elenco degli oggetti della campagna, letto dal controllo dei termini (esito… | 🟡 7 oggetti e 1 proprietà; oggetti sconosciuti del repo 41 → 24; aperti la regola di Annientatore e il Martello degli Avi |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Prova A/B rifatta sulle 3 consegne peggiorate (C10, C11, C16) con la skill di m… | ✅ inventati senza marca 2 contro 15 e 12 delle versioni precedenti; marche con domanda e base 44 contro 23 e 3; solo 3 consegne |
 
 ## Le misure che si portano dietro
 

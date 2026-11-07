@@ -255,7 +255,12 @@ def mappa_italiana(tabella: list[dict]) -> dict[str, dict]:
 
 # ---------------------------------------------------------------- controllo
 
-RIGA_TALENTI = re.compile(r"(?:\*\*)?\b(?:Talenti|Feats)\b(?:\*\*)?\s*:?\s*(?:\*\*)?\s*(?P<lista>.+)$", re.I)
+# Dopo «Talenti»/«Feats» l'elenco comincia con un nome (maiuscola, o corsivo/grassetto): «Feats Blind-Fight»,
+# «Regional feats: Cosmopolitan», «i talenti Tiro Rapido». Non sono elenchi «more feats. Basically», «feats worth»,
+# «4 metamagic feats; Spellcraft», «I talenti sono quelli di», «8 talenti (3 di livello», «Feats (1,600+ general)»,
+# «Talenti e capacità».
+RIGA_TALENTI = re.compile(r"\b(?i:talenti|feats)\b(?:\s+di\s+\w+)?(?:\*\*)?(?:\s*\([^)]*\))?(?:\*\*)?:?(?:\*\*)?:?[ \t]+"
+                          r"(?=[*_]*[A-ZÀ-Ý])(?P<lista>.+)$")
 MARCA_FUORI_SRD = re.compile(
     r"Private source|Non SRD|PF1e|Pathfinder|homebrew|della casa|\[CANONE|Celestial|"
     r"Complete |Races of|Draconomicon|Monster Manual|Manuale dei Mostri|Libro delle", re.I)
@@ -265,13 +270,14 @@ MARCA_FUORI_SRD = re.compile(
 FINE_CAMPO = re.compile(
     r"\*\*[^*]{1,40}\*\*\s*:|\*\*(?:Abilit|Skills|Talenti (?:da|bonus)|Equipaggiamento|Tattiche|Lingu|"
     r"Qualit|SQ|QS\b|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
-    r"(?<=[a-z\)])\.\s|\s—\s|\||"
+    r"(?<=[a-z\)])\.\s|\s—\s|\||\):\s|"
     r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|QS|TS)\b")
 
 
 def termini_della_riga(lista: str) -> list[str]:
-    lista = FINE_CAMPO.split(lista)[0]
-    lista = re.sub(r"\([^)]*\)", "", lista)
+    lista = FINE_CAMPO.split(lista.replace("Arms/Armor", "Arms and Armor"))[0]
+    lista = re.sub(r"\([^)]*\)|\([^)]*$", "", lista)  # anche la parentesi lasciata aperta dalla fine del campo
+    lista = re.split(r"(?<=\S)\s{2,}(?=[A-Z])|--", lista)[0]  # «Dodge (nota) In terms of…», «Focus (x)--Bonus»
     out = []
     pezzi = []
     for p in re.split(r"[,;·]", lista):
@@ -311,14 +317,25 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
     modulo_pf1 = pf1 is not None and e_pf1(file, testo)
     righe = testo.splitlines()
     for n, riga in enumerate(righe, 1):
+        if riga.lstrip().startswith("#"):
+            continue  # un titolo («## Feats: Key Categories») non è uno statblocco
         m = RIGA_TALENTI.search(riga)
         if not m:
             continue
+        # Statblock dei manuali inglesi trascritti con «\» a fine riga: il campo continua sotto.
+        k = n
+        while riga.rstrip().endswith("\\") and k < len(righe) and k - n < 12:
+            riga = riga.rstrip()[:-1].rstrip() + " " + righe[k].strip()
+            k += 1
+        m = RIGA_TALENTI.search(riga)
         # L'elenco va a capo: si legge anche la riga dopo, se continua lo stesso campo.
-        if n < len(righe) and righe[n].strip() and not re.match(r"\s*(?:\*\*|[|#>`-]|\d)", righe[n]) \
+        if k == n and n < len(righe) and righe[n].strip() and not re.match(r"\s*(?:\*\*|[|#>`-]|\d)", righe[n]) \
                 and re.search(r"[·,\w]\s*$", riga) and not FINE_CAMPO.search(m.group("lista")):
             m = RIGA_TALENTI.search(riga.rstrip() + " " + righe[n].strip())
-        for t in termini_della_riga(m.group("lista")):
+        lista = m.group("lista")
+        if re.search(r"Skills and Feats", riga):
+            lista = lista.rsplit(";", 1)[-1]  # formato 3.0: le abilità, poi «;» e i talenti
+        for t in termini_della_riga(lista):
             k = norma(t)
             if modulo_pf1:
                 v = pf1.get(k)

@@ -16,7 +16,7 @@ iniziativa: +4
 attacchi:
   - Mischia morso +24 (3d6+10 + 1d6 acido)
 voci:
-  - Talenti: Iniziativa Migliorata, Attacco Poderoso, Multiattacco, Armatura
+  - Talenti: Iniziativa Migliorata, Attacco Poderoso, Multiattacco, Armatura Naturale Migliorata, Sventrare, Volare
 fonte: valori approssimati nella prosa d'origine (scritti con «~»)
 ```
 
