@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L3: termini e lessico dai plugin (lista 5e unica, abilità per sistema, entità 3… | ✅ M2 2 → 1; 0 rilievi nuovi su master e stand-alone; forme meccaniche PF1e riconosciute 64 → 93; impronte 12/12 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Talenti PF1e di tutti i manuali (Archives of Nethys, solo nomi) e riscontro del… | 🟡 3.432 nomi; la tabella italiana PF1e è su aon per 1.731 talenti su 1.732 (fuori solo Extra Mythic Power, talento mitico); nei moduli PF1e 82 talenti in tabel… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L2: un rilevamento solo del sistema (catalogo dei mostri, censimento, domande d… | ✅ M1 5 → 1; Giardino PF1e fuori dal catalogo (7/120 → 0/120 incontri a EL 17-18); `e_pf1` 3/22 → 22/22 file del Drappo, talenti sconosciuti 133 → 131; 18 righe… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1-bis: PF1e supportato nei 5 casi non supportati (PE, incontri, tesoro, classi… | ✅ pf1e 7/6/0 (dati/codice/non supportato); impronte 3.5 12/12; 21 test nuovi |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Razze PF1e nella tabella italiano → PRD, chieste dal plugin PF1e (ADR-0111) | ✅ 37 razze su 37 del PRD in cache (Core 7, ARG 30), nome inglese dal link di Golarion a d20pfsrd; PF1e 9.334 → 9.371 voci |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Fase 5 di ADR-0110: nomi ufficiali corretti in ARC-07 e ARC-08, prima e dopo | 🟡 6 nomi corretti; sconosciuti ARC-07+08 64 → 52, talenti del repo 137 → 133 (cricchetto a 133); restano gli oggetti unici da marcare |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Termini ufficiali 3.5 e PF1e: tabelle complete, misure fonte contro fonte, canc… | 🟡 3.5 3.944 voci (con 79 trappole), PF1e 9.334; fonte contro fonte 97-100% concordi; cancello dei campi prima 10-11/40, dopo 40/40; talenti sconosciuti 151 → 1… |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L0: censimento degli strumenti, banco d'invarianza, ADR-0111 proposta | ✅ 31 script su 202 dipendono dal sistema; M1 3, M2 2, M3 76, M4 24; 12 impronte riproducibili; D1-D5 al DM |
 
 ## Le misure che si portano dietro
 

@@ -319,22 +319,14 @@ NON_ENTITA = re.compile(
     r"analisi|sidebar|come |cosa |chi |se |quando |perch|il giro|le cd|i nemici|"
     r"supporto|armi|regola|riepilogo|struttura|rapporto|composizione|interazione|"
     r"effetti|eventi|opzioni|azioni|errata|a\.|b\.|c\.)")
-CLASSI = {
-    "guerriero", "guerriera", "chierico", "chierica", "mago", "maga", "stregone", "strega",
-    "ladro", "ladra", "ranger", "druido", "druida", "bardo", "barda", "monaco", "monaca",
-    "paladino", "barbaro", "warlock", "nobile", "nera", "guerra", "divina", "divino",
-    "tempeste", "nanico", "picchi", "rune", "maestra", "maestro", "illusionista", "ombre",
-    "esperto", "popolano", "combattente", "adepto", "aristocratico", "warpriest",
-    "fighter", "cleric", "wizard", "sorcerer", "rogue", "monk", "druid", "bard",
-    "barbarian", "paladin", "blackguard", "assassino", "assassin", "psion", "gish",
-    "esploratore", "esploratrice", "difensore", "campione", "sacerdote", "spia",
-    "danzatrice", "teurgo", "arcano", "runaio", "fabbro", "berserker", "templare",
-}
+from dmcore import sistemi as _S  # noqa: E402
+
+_ENTITA_35 = _S.dati(_S.predefinito(), "lessico.entita")
+CLASSI = set(_ENTITA_35["classi"])
 """L'ultima parola di una classe o di una classe di prestigio, come la scrivono
-gli archi: senza questo filtro «APL 13» e «CA 28» diventavano classi."""
-RAZZE = {"nano", "nana", "umano", "umana", "elfo", "elfa", "mezzelfo", "mezzelfa",
-         "mezzorco", "orog", "drow", "gnomo", "halfling", "hobgoblin", "goblin",
-         "orco", "dwarf", "human", "dream", "mezzo-ogre", "ogre", "dello", "scudo"}
+gli archi: senza questo filtro «APL 13» e «CA 28» diventavano classi. Dal
+plugin del sistema predefinito (sistemi/dnd35/dati/entita.toml, ADR-0111 L3)."""
+RAZZE = set(_ENTITA_35["razze"])
 
 STORICO_RIGA = re.compile(
     r"→|->|~~|prima della correzione|diceva|superat|storico|errata|boost log|"
@@ -423,8 +415,8 @@ def chiave_entita(nome: str) -> tuple[str | None, str | None]:
 def entita_di(sistema: str = "dnd35") -> "tuple[frozenset, frozenset]":
     """(classi, razze) che chiudono un nome nel sistema (capacità lessico.entita).
 
-    Il 3.5 resta CLASSI/RAZZE di questo file (ADR-0111, L3). Un sistema in modo
-    «dati» aggiunge l'ultima parola di ogni sua classe, classe di prestigio e
+    Il 3.5 è CLASSI/RAZZE, lette dal suo plugin (ADR-0111, L3). Un altro sistema
+    in modo «dati» aggiunge l'ultima parola di ogni sua classe, classe di prestigio e
     razza dal lessico italiano (italiano, inglese, tipo): un modulo PF1e scrive
     «Inquisitore 9» o «Fattucchiere 12», che il 3.5 non conosce."""
     if sistema == "dnd35":
@@ -437,7 +429,7 @@ def entita_di(sistema: str = "dnd35") -> "tuple[frozenset, frozenset]":
 
     def ultime(tipo: str) -> set:
         fuori = set()
-        for v in c.voci:
+        for v in (x for x in c.voci if x.endswith(".tsv")):
             for voce in tabella_pf1(ROOT / v, tipo).values():
                 parole = re.findall(r"[A-Za-zÀ-ÿ]+", voce["it"].lower())
                 if parole:
