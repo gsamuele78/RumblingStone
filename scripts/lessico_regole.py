@@ -289,8 +289,8 @@ def termini_della_riga(lista: str) -> list[str]:
 
 # «GoadCAd», «EnduranceB»: le sigle del manuale (o la B del talento bonus) attaccate al nome, come negli
 # statblock dei manuali inglesi; «fonte: SRD», «opzionale» in coda. Si staccano prima di cercare il nome.
-SIGLA = re.compile(r"(?<=[a-z\)])(?:B|CAdv|CArc|CDiv|CWar|CMage|CSco|CAd|CAr|CC|CD|CM|CP|CS|CV|CW|CoV|CSc|DMG|DotU|DrM|Dra|ECS|EPH|FF|FRCS|"
-                   r"HoB|LoM|LM|MH|MIC|MM\d?|MoF|PH2|PHB2|PHB|PH|PGF|RoF|LEoF|UE|PlH|RoD|RoE|RoS|RotW|SpC|SS|ToB|UA|Und|XPH)+$")
+SIGLA = re.compile(r"(?<=[a-z\)])(?>(?:CMage|CAdv|CArc|CDiv|CSco|CWar|DotU|FRCS|LEoF|PHB2|RotW|CAd|CAr|CSc|CoV|DMG|DrM|Dra|ECS|EPH|HoB|LoM|MIC|MM\d?|MoF|"
+                   r"PGF|PH2|PlH|RoD|RoE|RoF|RoS|SpC|ToB|Und|XPH|CC|CD|CM|CP|CS|CV|CW|FF|LM|MH|PH|SS|UA|UE|B)){1,4}$")
 CODA = re.compile(r"\s+(?:fonte\s*:.*|opzionale.*)$", re.I)
 
 
