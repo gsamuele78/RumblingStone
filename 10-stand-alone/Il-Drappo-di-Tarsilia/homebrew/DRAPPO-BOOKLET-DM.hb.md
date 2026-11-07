@@ -2740,7 +2740,7 @@ Capita, se il gruppo arriva da un'altra avventura. Tre correzioni e basta:
 | Scontro | pf da togliere | **Round previsti** | Chi rischia |
 |---|---|---|---|
 | **La rissa alla fontana** (5 tintori, pf 6, CA 12) | 30, e sono CA 12: si colpisce quasi sempre | **2 round** | nessuno: è **danno non letale**, e si fermano appena vedono una lama vera |
-| **L'assalto alle stalle** (Sfregio 26 pf CA 18 + 4 bravacci 13 pf CA 16) | 78 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
+| **L'assalto alle stalle** (Sfregio 26 pf CA 18 + 4 bravacci 16 pf CA 16) | 90 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
 | **La curva nord** | — | non è un incontro: è un **hazard a costo di azioni** (§7.4) | chi resta sul transennato |
 
 ### ⚠️ Le tre cose che l'aritmetica dice e la lettura no
@@ -4255,7 +4255,7 @@ ___
 
 **DIFESA**
 ___
-**CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 13 · TS Tem +4, Rif +1, Vol +0  
+**CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 16 · TS Tem +4, Rif +1, Vol +0  
 
 **ATTACCO**
 ___
@@ -4263,7 +4263,7 @@ ___
 
 **STATISTICHE**
 ___
-For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Vigore Sovrannaturale  
+For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Robustezza  
 
 **TATTICHE**
 ___
@@ -4571,7 +4571,7 @@ parto.*
   *ammorbidire terra e pietra*
 
 **Talenti**: Abilità Focalizzata (Addestrare Animali) · Incantare in
-Combattimento · Vigore Sovrannaturale
+Combattimento · Robustezza
 **Abilità**: **Addestrare Animali +9**, **Guarire +10**, Sopravvivenza +10,
 Percezione +10, Cavalcare +6, Conoscenze (natura) +6, Sapienza Magica +6
 **Equipaggiamento**: armatura di cuoio (10) · scudo di legno leggero (3) · falcetto
@@ -4737,8 +4737,7 @@ più spesso di quanto credi)*
 - **2°** (2 + 1 dominio): **ristorare inferiore** · *aiuto* · **dominio**: *cura
   ferite moderate*
 
-**Talenti**: Incanalare Selettivo · Incantare in Combattimento · Vigore
-Sovrannaturale
+**Talenti**: Incanalare Selettivo · Incantare in Combattimento · Robustezza
 **Abilità**: **Guarire +10**, **Percepire Intenzioni +9**, Diplomazia +7, Conoscenze
 (religioni) +4
 **Equipaggiamento**: camicia di maglia da maestro (250) · scudo pesante di legno (7) ·
