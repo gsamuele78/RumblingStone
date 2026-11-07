@@ -168,7 +168,17 @@ def tabella_35(percorso: Path = TABELLA_35) -> list[dict]:
             continue
         it, en, tipo, abb = (riga.split("\t") + ["", ""])[:4]
         voci.append({"it": it, "srd35": en, "tipo": tipo, "abbinamento": abb})
-    return voci
+    # «variante …» nell'abbinamento: il nome si corregge con la voce dello stesso tipo e dello stesso
+    # inglese che non è una variante (per esempio la forma SRD senza il mago, DM 2026-11-07).
+    giuste = {(v["tipo"], norma(v["srd35"])): v for v in voci if not v["abbinamento"].startswith("variante")}
+    out = []
+    for v in voci:
+        g = giuste.get((v["tipo"], norma(v["srd35"]))) if v["abbinamento"].startswith("variante") else None
+        if g:
+            g["varianti"] = "|".join(x for x in (g.get("varianti"), v["it"]) if x)
+        else:
+            out.append(v)
+    return out
 
 
 def mappa_italiana(tabella: list[dict]) -> dict[str, dict]:

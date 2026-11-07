@@ -94,6 +94,15 @@ class TestTabelle(unittest.TestCase):
         self.assertGreaterEqual(len(voci), 80)
         self.assertTrue(all(v.get("it") for v in voci))
 
+    def test_la_variante_della_tabella_3_5_si_corregge(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "t.tsv"
+            p.write_text("italiano\tsrd35\ttipo\tabbinamento\n"
+                         "Freccia acida di Melf\tAcid Arrow\tincantesimo\tprefisso\n"
+                         "Freccia acida\tAcid Arrow\tincantesimo\tvariante (forma SRD)\n", encoding="utf-8")
+            voci = L.tabella_35(p)
+            self.assertEqual([(v["it"], v.get("varianti")) for v in voci], [("Freccia acida di Melf", "Freccia acida")])
+
     def test_tabella_pf1_per_tipo(self):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "t.tsv"

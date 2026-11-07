@@ -823,7 +823,7 @@ Portato via	Blown Away	condizione	prontuario delle condizioni del DM (PDF carica
 Stabile	Stable	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
 Stordito	Stunned	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
 Frenato	Checked	condizione	editori folli + dragons lair (era: Trattenuto)
-Tremante	Cowering	condizione	claude, nome italiano da miniaturefantasy + editori folli
+Accovacciato	Cowering	condizione	CANONE — DM 2026-11-07 (card), dal prontuario delle condizioni del DM; miniaturefantasy ed Editori Folli dicono «Tremante»
 Adepto	Adept	classe	claude, nome italiano non riscontrato
 Arciere Arcano	Arcane Archer	classe	claude, nome italiano da miniaturefantasy o Sigil online
 Arcimago	Archmage	classe	claude, nome italiano non riscontrato
@@ -1108,28 +1108,28 @@ Zaino (vuoto)	Backpack (empty)	equipaggiamento	editori folli (tabella SRD equipm
 Dissolvi il bene/caos/legge/male	Dispel Chaos/Evil/Good/Law	incantesimo	mephit
 Individuazione del Caos/Male/Bene/Legge	Detect Chaos/Evil/Good/Law	incantesimo	mephit
 Aprire/chiudere	Open/Close	incantesimo	editori folli (forma SRD)
-Aura magica	Magic Aura	incantesimo	editori folli (forma SRD)
-Danza irresistibile	Irresistible Dance	incantesimo	editori folli (forma SRD)
-Disco fluttuante	Floating Disk	incantesimo	editori folli (forma SRD)
+Aura magica	Magic Aura	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Danza irresistibile	Irresistible Dance	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Disco fluttuante	Floating Disk	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
 Disgiunzione	Mage’s Disjunction	incantesimo	editori folli (forma SRD)
-Evocazioni istantanee	Instant Summons	incantesimo	editori folli (forma SRD)
-Freccia acida	Acid Arrow	incantesimo	editori folli (forma SRD)
-Legame telepatico	Telepathic Bond	incantesimo	editori folli (forma SRD)
-Mano interposta	Interposing Hand	incantesimo	editori folli (forma SRD)
-Mano possente	Forceful Hand	incantesimo	editori folli (forma SRD)
-Mano stringente	Grasping Hand	incantesimo	editori folli (forma SRD)
-Mano stritolatrice	Crushing Hand	incantesimo	editori folli (forma SRD)
-Pugno serrato	Clenched Fist	incantesimo	editori folli (forma SRD)
-Reggia meravigliosa	Mage’s Magnificent Mansion	incantesimo	editori folli (forma SRD)
-Riparo sicuro	Secure Shelter	incantesimo	editori folli (forma SRD)
-Risata incontenibile	Hideous Laughter	incantesimo	editori folli (forma SRD)
-Santuario privato	Mage’s Private Sanctum	incantesimo	editori folli (forma SRD)
-Scrigno segreto	Secret Chest	incantesimo	editori folli (forma SRD)
-Segugio fedele	Mage’s Faithful Hound	incantesimo	editori folli (forma SRD)
-Sfera congelante	Freezing Sphere	incantesimo	editori folli (forma SRD)
-Sfera elastica	Resilient Sphere	incantesimo	editori folli (forma SRD)
-Sfera telecinetica	Telekinetic Sphere	incantesimo	editori folli (forma SRD)
-Tentacoli neri	Black Tentacles	incantesimo	editori folli (forma SRD)
+Evocazioni istantanee	Instant Summons	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Freccia acida	Acid Arrow	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Legame telepatico	Telepathic Bond	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Mano interposta	Interposing Hand	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Mano possente	Forceful Hand	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Mano stringente	Grasping Hand	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Mano stritolatrice	Crushing Hand	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Pugno serrato	Clenched Fist	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Reggia meravigliosa	Mage’s Magnificent Mansion	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Riparo sicuro	Secure Shelter	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Risata incontenibile	Hideous Laughter	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Santuario privato	Mage’s Private Sanctum	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Scrigno segreto	Secret Chest	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Segugio fedele	Mage’s Faithful Hound	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Sfera congelante	Freezing Sphere	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Sfera elastica	Resilient Sphere	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Sfera telecinetica	Telekinetic Sphere	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
+Tentacoli neri	Black Tentacles	incantesimo	variante (forma SRD senza il mago; DM 2026-11-07: vale la forma del manuale)
 Trasformazione del mago	Transformation	incantesimo	editori folli (forma SRD)
 Gigante	Giant	linguaggio	mephit
 Gnoll	Gnoll	linguaggio	mephit
@@ -1176,7 +1176,7 @@ Anello delle nove faccette	Ring of Nine Facets	oggetto magico	mephit
 Animato	Animated	oggetto magico	mephit
 Annulus	Annulus	oggetto magico	mephit
 Anti-Individuazione	Nondetection	oggetto magico	mephit
-Apparato del granchio	Apparatus of the Crab	oggetto magico	mephit
+Apparato del granchio	Apparatus of the Crab	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Arco del giuramento	Oathbow	oggetto magico	mephit
 Arco grande elfico	Elven Greatbow	oggetto magico	mephit
 Ariete	Ram	oggetto magico	mephit
@@ -1299,7 +1299,7 @@ Credenza dei banchetti	Cabinet of Feasting	oggetto magico	mephit
 Cubo dei portali	Cubic Gate	oggetto magico	mephit
 Cubo della resistenza al gelo	Cube of Frost Resistance	oggetto magico	mephit
 Cubo di forza	Cube of Force	oggetto magico	mephit
-Cucchiaio del nutrimento	Sustaining Spoon	oggetto magico	mephit
+Cucchiaio del nutrimento	Sustaining Spoon	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Cura ferite critiche	Cure Critical Wounds	oggetto magico	mephit
 Cura Ferite Gravi	Cure Serious Wounds	oggetto magico	mephit
 Cura Ferite Leggere	Cure Light Wounds	oggetto magico	mephit
@@ -1362,8 +1362,8 @@ Evoca Mostri II	Summon Monster II	oggetto magico	mephit
 Evoca Mostri III	Summon Monster III	oggetto magico	mephit
 Evoca Mostri IV	Summon Monster IV	oggetto magico	mephit
 Evocazione	Conjuration	oggetto magico	mephit
-Faretra efficiente	Efficient Quiver	oggetto magico	mephit
-Fasce metalliche della stretta	Iron Bands of Binding	oggetto magico	mephit
+Faretra efficiente	Efficient Quiver	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
+Fasce metalliche della stretta	Iron Bands of Binding	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Ferimento	Wounding	oggetto magico	mephit
 Fermaglio dello scudo	Brooch of Shielding	oggetto magico	mephit
 Ferri della cavalcatura impareggiabile	Horseshoes of the Peerless Steed	oggetto magico	mephit
@@ -1380,7 +1380,7 @@ Fodero delle estremità affilate	Scabbard of Keen Edges	oggetto magico	mephit
 Folgorante	Shock	oggetto magico	mephit
 Forma eterea	Etherealness	oggetto magico	mephit
 Forma Gassosa	Gaseous Form	oggetto magico	mephit
-Fortezza istantanea	Instant Fortress	oggetto magico	mephit
+Fortezza istantanea	Instant Fortress	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Fortificazione	Fortification	oggetto magico	mephit
 Fortunata	Lucky	oggetto magico	mephit
 Forza del Toro	Bull’s Strength	oggetto magico	mephit
@@ -1572,7 +1572,7 @@ Pietra della buona fortuna (pietrafortuna)	Stone of Good Luck (Luckstone)	oggett
 Pietra filosofale	Philosopher’s Stone	oggetto magico	mephit
 Pietra Magica	Magic Stone	oggetto magico	mephit
 Pietre magiche	Ioun Stones	oggetto magico	mephit
-Pigmenti meravigliosi	Marvelous Pigments	oggetto magico	mephit
+Pigmenti meravigliosi	Marvelous Pigments	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Pitone	Python	oggetto magico	mephit
 Polvere dell'apparizione	Dust of Appearance	oggetto magico	mephit
 Polvere dell'illusione	Dust of Illusion	oggetto magico	mephit
@@ -1775,7 +1775,7 @@ Tunica dell'indebolimento	Robe of Powerlessness	oggetto magico	mephit
 Tunica delle ossa	Robe of Bones	oggetto magico	mephit
 Tunica delle stelle	Robe of Stars	oggetto magico	mephit
 Tuoni e Fulmini	Thunder and Lightning	oggetto magico	mephit
-Unguento corroborante	Restorative Ointment	oggetto magico	mephit
+Unguento corroborante	Restorative Ointment	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Unguento della conservazione	Unguent of Timelessness	oggetto magico	mephit
 Vacuo grimorio	Vacuous Grimoire	oggetto magico	mephit
 Veleno	Poison	oggetto magico	mephit
@@ -1791,7 +1791,7 @@ Vita	Life	oggetto magico	mephit
 Vita sfalsata	False Life	oggetto magico	mephit
 Volare	Fly (Ex)	oggetto magico	mephit
 Vorpal	Vorpal	oggetto magico	mephit
-Zainetto pratico	Handy Haversack	oggetto magico	mephit
+Zainetto pratico	Handy Haversack	oggetto magico	variante (mephit, forma SRD; DM 2026-11-07: vale la forma del manuale)
 Zanna Magica	Magic Fang	oggetto magico	mephit
 Zappa dei titani	Mattock of the Titans	oggetto magico	mephit
 Analfabetismo	Illiteracy	privilegio	mephit
@@ -2297,3 +2297,13 @@ Vorpal	Vorpal	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezz
 Distanza	Distance	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
 Ritornante	Returning	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
 Ricercante	Seeking	proprietà magica	tesoro GDM (scheda di Mindbender, firma d%+prezzo) + controllo di Claude
+Apparato di Kwalish	Apparatus of the Crab	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Cucchiaio di Murlynd	Sustaining Spoon	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Faretra di Ehlonna	Efficient Quiver	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Fasce metalliche di Bilarro	Iron Bands of Binding	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Fortezza istantanea di Daern	Instant Fortress	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07), «Daem» della scheda corretto in Daern
+Pigmenti meravigliosi di Nolzur	Marvelous Pigments	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Unguento di Keoghtom	Restorative Ointment	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Zainetto pratico di Heward	Handy Haversack	oggetto magico	tesoro GDM, nome del manuale con il mago (DM 2026-11-07)
+Disco fluttuante di Tenser	Floating Disk	incantesimo	tesoro GDM (pergamene), nome del manuale con il mago (DM 2026-11-07)
+Legame telepatico di Rary	Telepathic Bond	incantesimo	tesoro GDM (pergamene), nome del manuale con il mago (DM 2026-11-07)
