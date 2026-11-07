@@ -13,11 +13,12 @@ for l in open('../aon/liste/tutti.txt'):
 D20=[('magic/all-spells','incantesimo'),('bestiary/monster-listings','mostro'),('magic-items/','oggetto magico'),('feats/','talento')]
 def abbina(v):
     for u in v:
-        m=re.search(r'aonprd\.com/(\w+)\.aspx\?(?:ItemName|FinalName)=([^&#]+)',u)
+        m=re.search(r'^https?://(?:www\.|legacy\.)?aonprd\.com/(\w+)\.aspx\?(?:ItemName|FinalName)=([^&#]+)',u)
         if m and m.group(1) in KIND:
             return re.sub(r'\s*\([A-Z0-9]{1,5}\)$','',urllib.parse.unquote(m.group(2)).strip()),KIND[m.group(1)],'aon'
-        if 'd20pfsrd.com/' in u and 'mythic' not in u:
-            path=u.split('d20pfsrd.com/')[1].lower(); kind=next((k for p,k in D20 if path.startswith(p)),None)
+        pu=urllib.parse.urlparse(u)
+        if pu.hostname in ('d20pfsrd.com','www.d20pfsrd.com') and 'mythic' not in pu.path:
+            path=pu.path.lstrip('/').lower(); kind=next((k for p,k in D20 if path.startswith(p)),None)
             if not kind: continue
             s=[x for x in path.rstrip('/').split('/') if x][-1]; s=re.sub(r'-cr-[\w-]*$','',s); s=re.sub(r'-\d+$','',s)
             c=aon[kind].get(A(s),set())
