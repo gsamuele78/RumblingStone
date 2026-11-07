@@ -38,3 +38,11 @@ toccati a mano. L'impronta delle creature resta identica: cambiano solo nomi, ne
 - **Campi letti male**: «Tiro Rapido e Tiro Multiplo» sono due talenti giusti uniti da «e»;
   «Attacco Furtivo» e «Sapere bardico» sono privilegi di classe finiti nel campo delle abilità.
 - `epurare` (ARC-07 DEF-4) e «Incidere Rune» non hanno un riscontro: restano da decidere.
+
+## Oggetti della campagna (2026-11-07, scelta del DM sulla card)
+
+Gli oggetti unici adesso stanno in [campaign/OGGETTI-DELLA-CAMPAGNA.md](../../../campaign/OGGETTI-DELLA-CAMPAGNA.md), ognuno
+con la base SRD, il portatore e la scheda. Il controllo li legge con l'esito `campagna`. Nei campi
+oggetto del repo (volumi compresi) gli sconosciuti scendono da 41 a 24, e 17 letture diventano
+`campagna`. Due punti restano aperti nell'elenco, marcati INFERRED: la regola di *Annientatore* e
+il legame fra il Martello degli Avi e quello degli Antenati.

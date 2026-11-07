@@ -71,7 +71,6 @@ def equipaggiamento(file_ef: Path, sql: Path) -> dict:
         cols = re.findall(r"^\s+`([^`]+)`", m.group(1), re.M)
         for ins in re.finditer(r"INSERT INTO `%s`(?: \([^)]*\))? VALUES\s*(.*?\));\s*\n" % t, testo, re.S):
             for riga in re.findall(r"\((.*?)\)(?:,|;|$)", ins.group(1), re.S):
-                val = re.findall(r"'((?:[^'\\]|\\.|'')*)'|NULL|[-0-9.]+", riga)
                 campi = re.findall(r"'(?:[^'\\]|\\.|'')*'|NULL|[-0-9.]+", riga)
                 if len(campi) != len(cols):
                     continue

@@ -18,7 +18,7 @@ attacchi:
   - Mischia colpo di scudo pesante +11 (1d4+3)
   - Distanza balestra pesante +9 (1d10/19-20)
 voci:
-  - Talenti: Attacco Poderoso, Incalzare, Arma Focalizzata, Arma Focalizzata Superiore e Specializzazione in un'Arma (martello da guerra), Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata
+  - Talenti: Attacco Poderoso, Incalzare, Arma Focalizzata, Arma Focalizzata Superiore e Arma Specializzata (martello da guerra), Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata
 ```
 
 > **Caratteristiche riscritte a mano.** Quelle generate davano Des 4: torna con l'iniziativa +1 (−3, +4 del talento), ma non con il contatto 11 né col «+1 Des» che la scheda scrive nella CA, perché un nano con Des 4 ha contatto 7. Si tengono i numeri canonizzati dal DM e si cercano le caratteristiche che li fanno tornare: **Des 12** (contatto 11, Rifl +3, iniziativa +5 con il talento), **Cos 16** (Tempra +9; i pf 76 sono un tiro sopra la media di 8d10+24, che è 68, e si tengono), **Sag 14** (Vol +4); **Car 15** resta quella generata (Autorità).
