@@ -61,8 +61,13 @@ class TestLetturaDelleRighe(unittest.TestCase):
                          ["Incalzare", "Attacco Poderoso", "Creare Armi e Armature Magiche"])
 
     def test_campo_qs_chiude_i_talenti(self):
-        self.assertEqual(L.termini_della_riga("Allerta, Iniziativa Migliorata · **QS** anfibio"),
+        self.assertEqual(L.termini_della_riga("Allerta, Iniziativa Migliorata · **QS** Anfibio"),
                          ["Allerta", "Iniziativa Migliorata"])
+        self.assertEqual(L.termini_della_riga("Allerta · QS Anfibio"), ["Allerta"])
+
+    def test_sigle_cadv_e_ph(self):
+        self.assertEqual(L.termini_della_riga("GoadCAdv, Improved TripPH e Combat ExpertisePH"),
+                         ["Goad", "Improved Trip", "Combat Expertise"])
 
     def test_talento_pf1e_di_un_manuale(self):
         self.assertIn(L.norma("Combat Vigor"), L.talenti_pf1_dei_manuali())

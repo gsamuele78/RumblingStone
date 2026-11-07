@@ -266,7 +266,7 @@ FINE_CAMPO = re.compile(
     r"\*\*[^*]{1,40}\*\*\s*:|\*\*(?:Abilit|Skills|Talenti (?:da|bonus)|Equipaggiamento|Tattiche|Lingu|"
     r"Qualit|SQ|QS\b|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
     r"(?<=[a-z\)])\.\s|\s—\s|\||"
-    r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|TS)\b")
+    r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|QS|TS)\b")
 
 
 def termini_della_riga(lista: str) -> list[str]:
@@ -289,8 +289,8 @@ def termini_della_riga(lista: str) -> list[str]:
 
 # «GoadCAd», «EnduranceB»: le sigle del manuale (o la B del talento bonus) attaccate al nome, come negli
 # statblock dei manuali inglesi; «fonte: SRD», «opzionale» in coda. Si staccano prima di cercare il nome.
-SIGLA = re.compile(r"(?<=[a-z\)])(?:B|CAd|CAr|CC|CD|CM|CP|CS|CV|CW|CoV|CSc|DMG|DotU|DrM|Dra|ECS|EPH|FF|FRCS|"
-                   r"HoB|LoM|LM|MH|MIC|MM\d?|MoF|PH2|PHB2|PlH|RoD|RoE|RoS|RotW|SpC|SS|ToB|UA|Und|XPH)+$")
+SIGLA = re.compile(r"(?<=[a-z\)])(?:B|CAdv|CArc|CDiv|CWar|CMage|CSco|CAd|CAr|CC|CD|CM|CP|CS|CV|CW|CoV|CSc|DMG|DotU|DrM|Dra|ECS|EPH|FF|FRCS|"
+                   r"HoB|LoM|LM|MH|MIC|MM\d?|MoF|PH2|PHB2|PHB|PH|PGF|RoF|LEoF|UE|PlH|RoD|RoE|RoS|RotW|SpC|SS|ToB|UA|Und|XPH)+$")
 CODA = re.compile(r"\s+(?:fonte\s*:.*|opzionale.*)$", re.I)
 
 
