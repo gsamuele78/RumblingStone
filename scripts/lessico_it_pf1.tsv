@@ -1,0 +1,2615 @@
+# Tabella diretta italiano PF1e -> PRD PF1e (lessico_regole.py, per i moduli PF1e: mai il passaggio per la 3.5).
+# Fonte dei nomi italiani: Golarion Insider (golarion.altervista.org), letto il 2026-11-07 con Firecrawl:
+#   talenti e incantesimi dalle colonne «nome» e «Nome Originale» di Database_Talenti e Database_Incantesimi;
+#   abilità dall'elenco della pagina Abilità e condizioni dai titoli della pagina Condizioni, dove Golarion
+#   non dà il nome inglese: lì la coppia l'ha fatta Claude e ogni nome inglese è stato riscontrato nel PRD.
+# Tenute solo le coppie il cui nome inglese è un titolo del PRD PF1e (PSRD-Data@76ea4784), versioni mitiche escluse.
+# Solo nomi, niente testo delle regole.
+italiano	pf1	tipo
+Abbraccio Letale	Final Embrace	talento
+Abilità Focalizzata	Skill Focus	talento
+Accuratezza Elfica	Elven Accuracy	talento
+Acrobatico	Acrobatic	talento
+Acrobazia Astuta	Canny Tumble	talento
+Addestramento Arcano nelle Armature	Arcane Armor Training	talento
+Addestramento Difensivo Contro Armi	Defensive Weapon Training	talento
+Addestramento Marziale Elfico	Elven Battle Training	talento
+Addestramento al Combattimento Bestiale	Feral Combat Training	talento
+Addestramento nel Combattimento Difensivo	Defensive Combat Training	talento
+Addestramento nelle Armature Fortificate	Fortified Armor Training	talento
+Adepto del Manganello	Sap Adept	talento
+Adepto della Rete	Net Adept	talento
+Afferrare Frecce	Snatch Arrows	talento
+Affinità Animale	Animal Affinity	talento
+Affondo Arguto	Insightful Delivery	talento
+Agile	Fleet	talento
+Agile Attaccante	Nimble Striker	talento
+Agilità Dimensionale	Dimensional Agility	talento
+Aiutare Rapido	Swift Aid	talento
+Al Riparo	Duck and Cover	talento
+Al Riparo Migliorato	Improved Duck and Cover	talento
+Ala della Gru	Crane Wing	talento
+Alchimia Ispirata	Inspired Alchemy	talento
+Ali Angeliche	Angel Wings	talento
+Ali Metalliche	Metallic Wings	talento
+Ali Sviluppate	Stretched Wings	talento
+Ali Tengu	Tengu Wings	talento
+Ali di Aria	Wings of Air	talento
+Alleato Naturale Spontaneo	Spontaneous Nature's Ally	talento
+Allerta	Alertness	talento
+Allerta Prodigiosa	Uncanny Alertness	talento
+Amico dei Parassiti	Vermin Heart	talento
+Ammazza Nemici	Foeslayer	talento
+Anatema Esteso	Extended Bane	talento
+Anatema Extra	Extra Bane	talento
+Anatema Incantato	Spell Bane	talento
+Anatema Intimidatorio	Intimidating Bane	talento
+Anatema Minaccioso	Menacing Bane	talento
+Anatema Pietoso	Merciful Bane	talento
+Ancora Dolorosa	Painful Anchor	talento
+Ancora un Passo	Following Step	talento
+Andatura Fulminea	Lightning Stance	talento
+Andatura Mistica	Mystic Stride	talento
+Anima di Ferro	Steel Soul	talento
+Animale Focalizzato Esteso	Extended Animal Focus	talento
+Apprendimento Rapido	Fast Learner	talento
+Approfittarne per Muoversi	Seize the Moment	talento
+Arma Accurata	Weapon Finesse	talento
+Arma Focalizzata	Weapon Focus	talento
+Arma Focalizzata Gnomesca	Gnome Weapon Focus	talento
+Arma Focalizzata Superiore	Greater Weapon Focus	talento
+Arma Scheggiata	Splintering Weapon	talento
+Arma Specializzata	Weapon Specialization	talento
+Arma Specializzata Superiore	Greater Weapon Specialization	talento
+Arma Usa e Getta	Disposable Weapon	talento
+Arma del Prescelto	Weapon of the Chosen	talento
+Arma del Prescelto Migliorata	Improved Weapon of the Chosen	talento
+Arma del Prescelto Superiore	Greater Weapon of the Chosen	talento
+Armaiolo	Gunsmithing	talento
+Armatura Naturale Migliorata	Improved Natural Armor	talento
+Armatura Resiliente	Resilient Armor	talento
+Armatura della Fossa	Armor of the Pit	talento
+Armi Roventi	Scorching Weapons	talento
+Armi a Spargimento Rimbalzanti	Ricochet Splash Weapon	talento
+Armonia con le Terre Selvagge	Attuned to the Wild	talento
+Artigli Arcani	Eldritch Claws	talento
+Artigli Squartanti	Rending Claws	talento
+Artigli della Pantera	Panther Claw	talento
+Artigli della Tigre	Tiger Claws	talento
+Artiglitaglienti	Sharpclaw	talento
+Artista del Knockout	Knockout Artist	talento
+Aspetto Draconico	Draconic Aspect	talento
+Aspetto Infantile	Childlike	talento
+Aspetto Realistico	Realistic Likeness	talento
+Aspetto della Bestia	Aspect of the Beast	talento
+Assalitore Coboldo	Kobold Ambusher	talento
+Assalto Cruento	Gory Finish	talento
+Assalto Dimensionale	Dimensional Assault	talento
+Assalto Elementale Extra	Extra Elemental Assault	talento
+Assalto Elementale Incrementale	Incremental Elemental Assault	talento
+Assalto Frastornante	Dazing Assault	talento
+Assalto Furioso	Furious Finish	talento
+Assalto Mortale	Deadly Finish	talento
+Assalto Respingente	Pushing Assault	talento
+Assalto Sanguinario	Bloody Assault	talento
+Assalto Stordente	Stunning Assault	talento
+Assalto del Janni	Janni Rush	talento
+Assalto dello Gnomo Stregato	Haunted Gnome Assault	talento
+Assorbimento Iracondo	Raging Absorption	talento
+Astuto	Cunning	talento
+Atletico	Athletic	talento
+Attaccante Benedetto	Blessed Striker	talento
+Attacco Lacerante a Due Armi	Two-Weapon Rend	talento
+Attacco Naturale Migliorato	Improved Natural Attack	talento
+Attacco Poderoso	Power Attack	talento
+Attacco Rapido	Spring Attack	talento
+Attacco Rischioso	Risky Striker	talento
+Attacco Turbinante	Whirlwind Attack	talento
+Attacco con lo Scudo Migliorato	Improved Shield Bash	talento
+Attacco di Gruppo	Pack Attack	talento
+Attacco in Sella	Ride-By Attack	talento
+Attacco in Volo	Flyby Attack	talento
+Attraversare	Charge Through	talento
+Aumentare Evocazione	Augment Summoning	talento
+Aura Anatema dei Draghi	Dragonbane Aura	talento
+Aura Fiammante	Blazing Aura	talento
+Aura Indomita	Fearless Aura	talento
+Autorità	Leadership	talento
+Autosufficiente	Self-Sufficient	talento
+Azione Feroce	Ferocious Action	talento
+Balzo Graffiante	Claw Pounce	talento
+Balzo della Tigre	Tiger Pounce	talento
+Banchettatore di Sangue	Blood Feaster	talento
+Basso Profilo	Low Profile	talento
+Bastone Sbilanciante	Tripping Staff	talento
+Becco Sanguinario	Blood Beak	talento
+Ben Preparato	Well-Prepared	talento
+Benedizione Incanalata	Channeled Blessing	talento
+Benedizione Rapida	Quicken Blessing	talento
+Benedizione da Battaglia	War Blessing	talento
+Benedizione del Distruttore	Destroyer's Blessing	talento
+Bere a Garganella	Fast Drinker	talento
+Bersaglio del Cacciatore	Stalker's Focus	talento
+Bersaglio di Opportunità	Target of Opportunity	talento
+Bomba a Distanza	Remote Bomb	talento
+Bombe Extra	Extra Bombs	talento
+Borseggiare in Gruppo	Team Pickpocketing	talento
+Botta Sbilanciante	Felling Smash	talento
+Botta di Scudo	Shield Slam	talento
+Bravura dell'Uccisore	Slayer's Knack	talento
+Brivido dell'Uccisione	Thrill of the Kill	talento
+Brucia! Brucia! Brucia!	Burn! Burn! Burn!	talento
+Brutalità Indomabile	Raging Brutality	talento
+Cacciatore Cambiaforma	Shapeshifting Hunter	talento
+Cacciatore Marino	Sea Hunter	talento
+Calcio Distruttivo	Punishing Kick	talento
+Camminatore delle Cenge	Ledge Walker	talento
+Camminatore delle Ombre	Shadow Walker	talento
+Campione	Champion	talento
+Campione Esperto	Adept Champion	talento
+Canale Energetico	Energy Channel	talento
+Canto Silvano	Leaf Singer	talento
+Canto delle Pietre	Stone Singer	talento
+Cantore di Guerra	War Singer	talento
+Canzone Incantata	Spellsong	talento
+Capacità Focalizzata	Ability Focus	talento
+Capacità Magica Potenziata	Empower Spell-Like Ability	talento
+Capacità Magica Rapida	Quicken Spell-Like Ability	talento
+Carica Coordinata	Coordinated Charge	talento
+Carica Devastante	Spirited Charge	talento
+Carica Distraente	Distracting Charge	talento
+Carica Esplosiva	Blasting Charge	talento
+Carica Radiosa	Radiant Charge	talento
+Carica dei Pestaggi	Pummeling Charge	talento
+Carica dell'Orda	Horde Charge	talento
+Carneficina Spietata	Merciless Butchery	talento
+Carni Angeliche	Angelic Flesh	talento
+Cascatore Lento	Slow Faller	talento
+Cavalca Bestie	Beast Rider	talento
+Cavalcatura Ridotta	Undersized Mount	talento
+Cavallerizzo	Trick Riding	talento
+Cavallerizzo da Guerra	Mounted Skirmisher	talento
+Chiusura con Scudo	Bashing Finish	talento
+Coda Afferrante	Grasping Tail	talento
+Coda Magica	Magical Tail	talento
+Coda Temibile	Tail Terror	talento
+Cogliere di Sorpresa	Catch Off-Guard	talento
+Collera della Medusa	Medusa's Wrath	talento
+Colpi Incantati Massimizzati	Maximized Spellstrike	talento
+Colpi Raggruppati	Clustered Shots	talento
+Colpire fra le Ombre	Shadow Strike	talento
+Colpo Arcano	Arcane Strike	talento
+Colpo Arcano Sanguinario	Blooded Arcane Strike	talento
+Colpo Avvinghiante	Grasping Strike	talento
+Colpo Basso Migliorato	Improved Low Blow	talento
+Colpo Confusionario	Befuddling Strike	talento
+Colpo Critico Impattante	Impact Critical Shot	talento
+Colpo Devastante	Devastating Strike	talento
+Colpo Devastante Migliorato	Improved Devastating Strike	talento
+Colpo Disarmante	Disarming Strike	talento
+Colpo Disimpegnante	Disengaging Shot	talento
+Colpo Disperato	Desperate Swing	talento
+Colpo Fatato	Faerie's Strike	talento
+Colpo Focalizzante	Focusing Blow	talento
+Colpo Fortunato	Lucky Strike	talento
+Colpo Infido	Wave Strike	talento
+Colpo Ispirato	Inspired Strike	talento
+Colpo Lacerante	Riving Strike	talento
+Colpo Mirato Migliorato	Improved Called Shot	talento
+Colpo Mirato Superiore	Greater Called Shot	talento
+Colpo Mortale	Deadly Stroke	talento
+Colpo Paralizzante	Paralyzing Strike	talento
+Colpo Penetrante	Penetrating Strike	talento
+Colpo Penetrante Superiore	Greater Penetrating Strike	talento
+Colpo Perfetto	Perfect Strike	talento
+Colpo Preciso	Precise Strike	talento
+Colpo Prepotente	Bullying Blow	talento
+Colpo Prosciugante	Draining Strike	talento
+Colpo Ravvicinato	Close-Quarters Thrower	talento
+Colpo Respingente	Bull Rush Strike	talento
+Colpo Riposizionante	Repositioning Strike	talento
+Colpo Rivelante	Revelation Strike	talento
+Colpo Sanguinario Stregonesco	Sorcerous Bloodstrike	talento
+Colpo Sbilanciante	Tripping Strike	talento
+Colpo Senz'Armi Migliorato	Improved Unarmed Strike	talento
+Colpo Spezzante	Sundering Strike	talento
+Colpo Stregonesco	Sorcerous Strike	talento
+Colpo Tenebroso	Gloom Strike	talento
+Colpo Terrificante	Awesome Blow	talento
+Colpo Terrificante Migliorato	Improved Awesome Blow	talento
+Colpo Tremendo	Crushing Blow	talento
+Colpo Vitale	Vital Strike	talento
+Colpo Vitale Migliorato	Improved Vital Strike	talento
+Colpo Vitale Superiore	Greater Vital Strike	talento
+Colpo a Sorpresa	Surprise Strike	talento
+Colpo da Incubo	Nightmare Striker	talento
+Colpo del Dominio	Domain Strike	talento
+Colpo del Kirin	Kirin Strike	talento
+Colpo dell'Aspide	Adder Strike	talento
+Colpo dell'Inverno	Winter's Strike	talento
+Colpo della Cockatrice	Cockatrice Strike	talento
+Colpo della Fattura	Hex Strike	talento
+Colpo della Scuola	School Strike	talento
+Colpo di Addio	Parting Shot	talento
+Colpo di Grazia Indomabile	Raging Deathblow	talento
+Colpo di Ritorno	Strike Back	talento
+Coltello del Fattucchiere	Witch Knife	talento
+Comandante d'Assedio	Siege Commander	talento
+Comandare Non Morti	Command Undead	talento
+Combattente Studiato	Studied Combatant	talento
+Combattente Studiato Migliorato	Improved Studied Combatant	talento
+Combattente da Esibizione	Performing Combatant	talento
+Combattente da Palcoscenico	Stage Combatant	talento
+Combattente di Pattuglia	Combat Patrol	talento
+Combattere Ancora	Fight On	talento
+Combattere alla Cieca	Blind-Fight	talento
+Combattere alla Cieca Migliorato	Improved Blind-Fight	talento
+Combattere alla Cieca Superiore	Greater Blind-Fight	talento
+Combattere con Due Armi	Two-Weapon Fighting	talento
+Combattere con Due Armi Migliorato	Improved Two-Weapon Fighting	talento
+Combattere con Due Armi Superiore	Greater Two-Weapon Fighting	talento
+Combattere con Più Armi	Multiweapon Fighting	talento
+Combattere in Sella	Mounted Combat	talento
+Compagno Evoluto	Evolved Companion	talento
+Competenza negli Scudi	Shield Proficiency	talento
+Competenza negli Scudi Torre	Tower Shield Proficiency	talento
+Competenza nelle Armature Leggere	Armor Proficiency, Light	talento
+Competenza nelle Armature Medie	Armor Proficiency, Medium	talento
+Competenza nelle Armature Pesanti	Armor Proficiency, Heavy	talento
+Competenza nelle Armi Esotiche	Exotic Weapon Proficiency	talento
+Competenza nelle Armi Semplici	Simple Weapon Proficiency	talento
+Competenza nelle Armi da Guerra	Martial Weapon Proficiency	talento
+Comunicatore Spirituale	Spirit Talker	talento
+Concedere Copertura	Covering Defense	talento
+Concedere Fortuna	Bestow Luck	talento
+Concedere Iniziativa	Grant Initiative	talento
+Concentrazione Iraconda	Raging Concentration	talento
+Concentrazione Prodigiosa	Uncanny Concentration	talento
+Condividere Incantesimi Migliorato	Improved Share Spells	talento
+Condividere Percezioni	Shared Insight	talento
+Conoscenza Non Autorizzata	Unsanctioned Knowledge	talento
+Conoscenza dei Mostri Migliorata	Improved Monster Lore	talento
+Contrastare Riflessi	Counter Reflexes	talento
+Controfinta	Reverse-Feint	talento
+Controincantesimo Migliorato	Improved Counterspell	talento
+Correre	Run	talento
+Cosmopolita	Cosmopolitan	talento
+Costruttore di Monumenti	Monument Builder	talento
+Creare Armi e Armature Magiche	Craft Magic Arms and Armor	talento
+Creare Armi e Armature Reliquiari	Create Reliquary Arms and Shields	talento
+Creare Bacchette	Craft Wand	talento
+Creare Bastoni	Craft Staff	talento
+Creare Costrutti	Craft Construct	talento
+Creare Elisir Sanguigno	Create Sanguine Elixir	talento
+Creare Oggetti Meravigliosi	Craft Wondrous Item	talento
+Creare Verghe	Craft Rod	talento
+Creazione Cooperativa	Cooperative Crafting	talento
+Critico Accecante	Blinding Critical	talento
+Critico Affaticante	Tiring Critical	talento
+Critico Assordante	Deafening Critical	talento
+Critico Debilitante	Sickening Critical	talento
+Critico Dissolvente	Dispelling Critical	talento
+Critico Focalizzato	Critical Focus	talento
+Critico Impalante	Impaling Critical	talento
+Critico Impalante Migliorato	Improved Impaling Critical	talento
+Critico Incapacitante	Staggering Critical	talento
+Critico Inesorabile	Exhausting Critical	talento
+Critico Maledetto	Accursed Critical	talento
+Critico Menomante	Crippling Critical	talento
+Critico Migliorato	Improved Critical	talento
+Critico Piagante	Blighted Critical	talento
+Critico Piagante Prodigioso	Blighted Critical Mastery	talento
+Critico Piagante Superiore	Greater Blighted Critical	talento
+Critico Prodigioso	Critical Mastery	talento
+Critico Sanguinante	Bleeding Critical	talento
+Critico Stordente	Stunning Critical	talento
+Cuore Ferino	Feral Heart	talento
+Cuore di Fiamma	Flame Heart	talento
+Cura Reattiva	Reactive Healing	talento
+Curiosità Intrepida	Fearless Curiosity	talento
+Dannato	Damned	talento
+Danzatore degli Affondi	Jabbing Dancer	talento
+Denti da Scavo	Burrowing Teeth	talento
+Derviscio Dimensionale	Dimensional Dervish	talento
+Destino Impavido	Dauntless Destiny	talento
+Destino dell'Eroe	Hero's Fortune	talento
+Deviare Frecce	Deflect Arrows	talento
+Difendere con Due Armi	Two-Weapon Defense	talento
+Difesa Coordinata	Coordinated Defense	talento
+Difesa Impacciata	Blundering Defense	talento
+Difesa Prescelta	Favored Defense	talento
+Difesa Prodigiosa	Uncanny Defense	talento
+Dirompente	Disruptive	talento
+Disarcionare	Unseat	talento
+Disarmare Migliorato	Improved Disarm	talento
+Disarmare Superiore	Greater Disarm	talento
+Disattivare Dweomer	Disable Dweomer	talento
+Discendenza Acquatica	Aquatic Ancestry	talento
+Discendenza Oscura	Umbral Scion	talento
+Discendenza Oscura Migliorata	Improved Umbral Scion	talento
+Discernimento Oculato	Thoughtful Discernment	talento
+Disciplina Hobgoblin	Hobgoblin Discipline	talento
+Disposizione dell'Ambiente	Lay of the Land	talento
+Dissolvere Distruttivo	Destructive Dispel	talento
+Distruttore di Trappole	Trap Wrecker	talento
+Dividere Fatture	Split Hex	talento
+Dividere Fatture Maggiori	Split Major Hex	talento
+Domatore del Fuoco	Fire Tamer	talento
+Dono del Credente	Believer's Boon	talento
+Dono della Madre	Mother's Gift	talento
+Dono dello Spirito	Spirit's Gift	talento
+Doppi Opportunisti	Paired Opportunists	talento
+Doppi Tuoni	Twin Thunders	talento
+Doppio Anatema	Double Bane	talento
+Doppio Taglio	Double Slice	talento
+Dote Arcana	Arcane Talent	talento
+Dote da Investigatore Extra	Extra Investigator Talent	talento
+Dote da Ladro Extra	Extra Rogue Talent	talento
+Dote da Predatore Extra	Extra Slayer Talent	talento
+Duplice Potenziamento	Dual Enhancement	talento
+Duro a Morire	Diehard	talento
+Echi della Pietra	Echoes of Stone	talento
+Eidolon Difensore	Defending Eidolon	talento
+Eidolon Focalizzante	Focused Eidolon	talento
+Eidolon Persistente	Resilient Eidolon	talento
+Eidolon Vigile	Vigilant Eidolon	talento
+Eleganza Extra	Extra Panache	talento
+Elemento Focalizzato	Elemental Focus	talento
+Elemento Focalizzato Superiore	Greater Elemental Focus	talento
+Elmo Ammaccabile	Dented Helm	talento
+Elmo Deformabile	Cloven Helm	talento
+Empatia Rapida	Fast Empathy	talento
+Empatia Selvatica Superiore	Greater Wild Empathy	talento
+Ensemble	Ensemble	talento
+Eredità Monastica	Monastic Legacy	talento
+Eredità Razziale	Racial Heritage	talento
+Escludere Materiali	Eschew Materials	talento
+Esemplare Draconico	Draconic Paragon	talento
+Esibizione Bardica Extra	Extra Performance	talento
+Esibizione Durevole	Lingering Performance	talento
+Esibizione Intimidatrice	Intimidating Performance	talento
+Esperto Armonico	Harmonic Sage	talento
+Esperto Minatore Migliorato	Improved Stonecunning	talento
+Esplosione Arcana	Arcane Blast	talento
+Esplosione Assordante	Deafening Explosion	talento
+Estrazione Rapida	Quick Draw	talento
+Evocatore di Ragni	Spider Summoner	talento
+Evocatore di Scheletri	Skeleton Summoner	talento
+Evocazione Superiore	Superior Summoning	talento
+Evocazioni Extra	Extra Summons	talento
+Evocazioni Feroci	Ferocious Summons	talento
+Evocazioni Sacre	Sacred Summons	talento
+Evocazioni della Luce Lunare	Moonlight Summons	talento
+Evocazioni della Luce Solare	Sunlight Summons	talento
+Evocazioni della Luce Stellare	Starlight Summons	talento
+Evoluzione Extra	Extra Evolution	talento
+Exploit dell'Arcanista Extra	Extra Arcanist Exploit	talento
+Falsa Apertura	False Opening	talento
+Famiglio Evoluto	Evolved Familiar	talento
+Famiglio Migliorato	Improved Familiar	talento
+Famiglio Senza Restrizioni	Unfettered Familiar	talento
+Fantasma delle Ombre	Shadow Ghost	talento
+Farsi Scudo	Body Shield	talento
+Fattura Extra	Extra Hex	talento
+Fattura Flessibile	Flexible Hex	talento
+Fattura Incantata	Spell Hex	talento
+Fattura Maledetta	Accursed Hex	talento
+Fede Pura	Pure Faith	talento
+Felinide Esemplare	Catfolk Exemplar	talento
+Fermezza Suprema	Ultimate Resolve	talento
+Ferocia del Cinghiale	Boar Ferocity	talento
+Ferocia del Drago	Dragon Ferocity	talento
+Fiamma Interiore	Inner Flame	talento
+Fiancheggiare in Branco	Pack Flanking	talento
+Finta Gemella	Twinned Feint	talento
+Finta Ustionante	Blistering Feint	talento
+Finta del Compagno	Feint Partner	talento
+Finta del Compagno Migliorata	Improved Feint Partner	talento
+Finta del Predatore	Slayer's Feint	talento
+Fintare Disimpegnante	Disengaging Feint	talento
+Fintare Migliorato	Improved Feint	talento
+Fintare Superiore	Greater Feint	talento
+Fintare con Due Armi	Two-Weapon Feint	talento
+Fintare con Due Armi Migliorato	Improved Two-Weapon Feint	talento
+Fintare del Predatore del Chiar di Luna	Moonlight Stalker Feint	talento
+Fionda Mazzafrusto	Sling Flail	talento
+Fiutare Paura	Smell Fear	talento
+Flessibilità Marziale Extra	Extra Martial Flexibility	talento
+Fluttuare	Hover	talento
+Focovisione	Firesight	talento
+Fondatore di Nazioni	Nation Builder	talento
+Forgiare Anelli	Forge Ring	talento
+Forma Possente	Powerful Shape	talento
+Forma Selvatica Planare	Planar Wild Shape	talento
+Forma Selvatica Rapida	Quick Wild Shape	talento
+Forma dal Naso Lungo	Long-Nose Form	talento
+Forma di Corvo Tengu	Tengu Raven Form	talento
+Formazione di Cavalleria	Cavalry Formation	talento
+Forme Focalizzate	Shaping Focus	talento
+Fortuna Adattiva	Adaptive Fortune	talento
+Fortuna Inspiegabile	Inexplicable Luck	talento
+Fortuna Sprezzante	Defiant Luck	talento
+Fortuna dell'Eroe	Luck of Heroes	talento
+Frantumaincantesimi	Shatterspell	talento
+Frantumare	Smash	talento
+Frapporsi	In Harm's Way	talento
+Fromboliere	Arc Slinger	talento
+Fromboliere Prono	Prone Slinger	talento
+Fuga Sbilanciante	Felling Escape	talento
+Fuoco di Infilata	Enfilading Fire	talento
+Furia Focalizzata	Furious Focus	talento
+Furia Lacerante	Rending Fury	talento
+Furia Lacerante Migliorata	Improved Rending Fury	talento
+Furia Lacerante Superiore	Greater Rending Fury	talento
+Furia Vitale	Raging Vitality	talento
+Furtivo	Stealthy	talento
+Gagliardia del Bruto	Resilient Brute	talento
+Gambe da Marinaio	Sea Legs	talento
+Gambetto dell'Ala Spezzata	Broken Wing Gambit	talento
+Gambetto della Zampa Ferita	Wounded Paw Gambit	talento
+Gatto Nero	Black Cat	talento
+Gesta Personali	Signature Deed	talento
+Gesta del Colpo con l'Elsa	Pommel Strike Deed	talento
+Gesta del Colpo di Rimbalzo	Ricochet Shot Deed	talento
+Gesta del Nascondiglio Segreto	Secret Stash Deed	talento
+Gesta dell'Acrobazia Confondente	Confounding Tumble Deed	talento
+Gesta della Minaccia Disarmante	Disarming Threat Deed	talento
+Ghermire	Snatch	talento
+Giravolta Sbilanciante	Tripping Twirl	talento
+Giudizio Condiviso	Shared Judgment	talento
+Giudizio Istantaneo	Instant Judgment	talento
+Giudizio Prescelto	Favored Judgment	talento
+Giusta Guarigione	Righteous Healing	talento
+Gloria o Morte	Death or Glory	talento
+Gnomo Ingannatore	Gnome Trickster	talento
+Gnomo Stregato	Haunted Gnome	talento
+Grande Esperienza	Breadth of Experience	talento
+Grande Fiancheggiatore	Outflank	talento
+Grande Odio	Great Hatred	talento
+Grazia Felina	Feline Grace	talento
+Grazia Tagliente	Slashing Grace	talento
+Grido di Battaglia	Battle Cry	talento
+Grinta Extra	Extra Grit	talento
+Guardare Oltre	Glimpse Beyond	talento
+Guardia del Corpo	Bodyguard	talento
+Guardiano Spirituale	Spiritual Guardian	talento
+Guardiano delle Terre Selvagge	Guardian of the Wild	talento
+Guarigione Condivisa	Share Healing	talento
+Guarire Rapidamente	Fast Healer	talento
+Guaritore Fortunato	Lucky Healer	talento
+Guaritore da Campo	Battlefield Healer	talento
+Guerriero Prudente	Cautious Fighter	talento
+Guerriero Rancoroso	Grudge Fighter	talento
+Guidatore Abile	Skilled Driver	talento
+Guidatore Esperto	Expert Driver	talento
+Guscio della Tartaruga Azzannatrice	Snapping Turtle Shell	talento
+Halfling Fortunato	Lucky Halfling	talento
+Illusionista Disinvolto	Casual Illusionist	talento
+Imparare Trappole da Ranger	Learn Ranger Trap	talento
+Impedire il Movimento	Stand Still	talento
+Impiantare Bomba	Implant Bomb	talento
+Imposizione delle Mani Extra	Extra Lay on Hands	talento
+Improvvisazione	Improvisation	talento
+Improvvisazione Migliorata	Improved Improvisation	talento
+Impulso Giudicante	Judgment Surge	talento
+Impulso di Successo	Surge of Success	talento
+In Guardia	Lookout	talento
+In Mezzo ai Piedi	Tangle Feet	talento
+Incalzare	Cleave	talento
+Incalzare Mobile	Cleave Through	talento
+Incalzare Potenziato	Great Cleave	talento
+Incalzare Sorprendente	Surprise Follow-Through	talento
+Incalzare Sorprendente Migliorato	Improved Surprise Follow-Through	talento
+Incalzare Terminale	Cleaving Finish	talento
+Incalzare Terminale Migliorato	Improved Cleaving Finish	talento
+Incalzatore di Goblin	Goblin Cleaver	talento
+Incanalare Allineamento	Alignment Channel	talento
+Incanalare Barriera Protettiva	Channeled Shield Wall	talento
+Incanalare Contingente	Contingent Channeling	talento
+Incanalare Elementale	Elemental Channel	talento
+Incanalare Extra	Extra Channel	talento
+Incanalare Flagello	Channeling Scourge	talento
+Incanalare Forza	Channel Force	talento
+Incanalare Forza Migliorato	Improved Channel Force	talento
+Incanalare Forza Superiore	Greater Channel Force	talento
+Incanalare Forza Vitale	Channeled Revival	talento
+Incanalare Migliorato	Improved Channel	talento
+Incanalare Punizione	Channel Smite	talento
+Incanalare Punizione Superiore	Greater Channel Smite	talento
+Incanalare Rapido	Quick Channel	talento
+Incanalare Selettivo	Selective Channeling	talento
+Incanalare Versatile	Versatile Channeler	talento
+Incantamento Furioso	Rage Casting	talento
+Incantare in Combattimento	Combat Casting	talento
+Incantatore Alleato	Allied Spellcaster	talento
+Incantatore Protetto	Shielded Caster	talento
+Incantatore Sperimentale	Experimental Spellcaster	talento
+Incantatore del Vapore	Steam Caster	talento
+Incantatore delle Ombre	Shadow Caster	talento
+Incantesimi Aggiuntivi	Expanded Arcana	talento
+Incantesimi Ampliati	Widen Spell	talento
+Incantesimi Brillanti	Flaring Spell	talento
+Incantesimi Brucianti	Burning Spell	talento
+Incantesimi Concentrati	Focused Spell	talento
+Incantesimi Concussivi	Concussive Spell	talento
+Incantesimi Debilitanti	Sickening Spell	talento
+Incantesimi Dirompenti	Disruptive Spell	talento
+Incantesimi Durevoli	Lingering Spell	talento
+Incantesimi Echeggianti	Echoing Spell	talento
+Incantesimi Ectoplasmatici	Ectoplasmic Spell	talento
+Incantesimi Elementali	Elemental Spell	talento
+Incantesimi Estesi	Extend Spell	talento
+Incantesimi Focalizzati	Spell Focus	talento
+Incantesimi Focalizzati Superiore	Greater Spell Focus	talento
+Incantesimi Frastornanti	Dazing Spell	talento
+Incantesimi Gelidi	Rime Spell	talento
+Incantesimi Immobili	Still Spell	talento
+Incantesimi Inarrestabili	Spell Penetration	talento
+Incantesimi Inarrestabili Superiore	Greater Spell Penetration	talento
+Incantesimi Ingannevoli	Spell Bluff	talento
+Incantesimi Ingranditi	Enlarge Spell	talento
+Incantesimi Intensi	Intensified Spell	talento
+Incantesimi Intensificati	Heighten Spell	talento
+Incantesimi Massimizzati	Maximize Spell	talento
+Incantesimi Naturali	Natural Spell	talento
+Incantesimi Penetranti	Piercing Spell	talento
+Incantesimi Persistenti	Persistent Spell	talento
+Incantesimi Pietosi	Merciful Spell	talento
+Incantesimi Potenziati	Empower Spell	talento
+Incantesimi Rapidi	Quicken Spell	talento
+Incantesimi Rimbalzanti	Bouncing Spell	talento
+Incantesimi Sbilancianti	Toppling Spell	talento
+Incantesimi Selettivi	Selective Spell	talento
+Incantesimi Silenziosi	Silent Spell	talento
+Incantesimi Tanatopici	Thanatopic Spell	talento
+Incantesimi Tonanti	Thundering Spell	talento
+Incantesimi Trenodici	Threnodic Spell	talento
+Incantesimi con Portata	Reach Spell	talento
+Incantesimo Perfetto	Spell Perfection	talento
+Incantesimo Preferito	Preferred Spell	talento
+Incantesimo Specializzato	Spell Specialization	talento
+Incantesimo Specializzato Superiore	Greater Spell Specialization	talento
+Incantesimo di Contatto in Allungo	Lunging Spell Touch	talento
+Incastrare	Pin Down	talento
+Indimenticato	Unforgotten	talento
+Individuazione Non Autorizzata	Unsanctioned Detection	talento
+Indulgenza Extra	Extra Mercy	talento
+Indulgenza Superiore	Greater Mercy	talento
+Indulgenza Suprema	Ultimate Mercy	talento
+Infervorare il Sangue	Foment the Blood	talento
+Ingannevole	Deceitful	talento
+Inganno della Rete	Net Trickery	talento
+Ingegnere d'Assedio	Siege Engineer	talento
+Iniziativa Migliorata	Improved Initiative	talento
+Iniziato dell'Immortalità	Deathless Initiate	talento
+Inosservato	Go Unnoticed	talento
+Inseguire	Step Up	talento
+Inseguire e Colpire	Step Up and Strike	talento
+Intercettare Carica	Intercept Charge	talento
+Interferenza Divina	Divine Interference	talento
+Intrepido Amatoriale	Amateur Swashbuckler	talento
+Intuito Oracolare	Oracular Intuition	talento
+Investigatore Amatoriale	Amateur Investigator	talento
+Invisibilità Durevole	Lingering Invisibility	talento
+Ira Armonica	Sympathetic Rage	talento
+Ira Avventata	Reckless Rage	talento
+Ira Extra	Extra Rage	talento
+Ira Recuperata	Recovered Rage	talento
+Iracondo Esperto	Skilled Rager	talento
+Iracondo Risoluto	Resolute Rager	talento
+Ispirare Terrore Migliorato	Improved Dirge of Doom	talento
+Ispirare Terrore Superiore	Greater Dirge of Doom	talento
+Ispirato dalla Paura	Inspired by Fear	talento
+Ispirazione Extra	Extra Inspiration	talento
+Ispirazione Focalizzata	Focused Inspiration	talento
+Istigare	Antagonize	talento
+Ki Extra	Extra Ki	talento
+Ladro Leggendario	Thief of Legend	talento
+Ladro Studioso	Bookish Rogue	talento
+Lanciare Oggetti	Throw Anything	talento
+Lanciare a Due Mani	Two-Handed Thrower	talento
+Lanciare in Carica	Charging Hurler	talento
+Lanciare in Carica Migliorato	Improved Charging Hurler	talento
+Lanciatore Indomabile	Raging Hurler	talento
+Lancio Indomabile	Raging Throw	talento
+Lancio Ki	Ki Throw	talento
+Lancio Ki Migliorato	Improved Ki Throw	talento
+Lancio Opprimente	Binding Throw	talento
+Lancio Rotante	Spinning Throw	talento
+Legame Percettivo	Sense Link	talento
+Legato del Figlio della Terra	Earth Child Binder	talento
+Liberatore	Liberator	talento
+Lingua Agile	Agile Tongue	talento
+Lingua Selvaggia	Wild Speech	talento
+Linguistica Esoterica	Esoteric Linguistics	talento
+Lottare Migliorato	Improved Grapple	talento
+Lottare Superiore	Greater Grapple	talento
+Lottatore Rapido	Rapid Grappler	talento
+Maestria Arcana nelle Armature	Arcane Armor Mastery	talento
+Maestria Demoralizzante	Disheartening Display	talento
+Maestria Intimorente	Dazzling Display	talento
+Maestria Terrificante	Terrorizing Display	talento
+Maestria con la Frusta	Whip Mastery	talento
+Maestria con la Frusta Migliorata	Improved Whip Mastery	talento
+Maestria con la Frusta Superiore	Greater Whip Mastery	talento
+Maestria del Predatore del Chiar di Luna	Moonlight Stalker Master	talento
+Maestria in Combattimento	Combat Expertise	talento
+Maestria negli Incantesimi Maggiore	Major Spell Expertise	talento
+Maestria negli Incantesimi Minore	Minor Spell Expertise	talento
+Maestria negli Scudi	Shield Master	talento
+Maestria negli Stili di Combattimento	Combat Style Master	talento
+Maestria nei Bastoni Ferrati	Quarterstaff Master	talento
+Maestria nell'Individuazione	Detect Expertise	talento
+Maestria nelle Armi Improvvisate	Improvised Weapon Mastery	talento
+Maestria nelle Armi Orchesche	Orc Weapon Expertise	talento
+Maestria nelle Armi da Esibizione	Performance Weapon Mastery	talento
+Maestro Alchimista	Master Alchemist	talento
+Maestro Ravvicinato	Point-Blank Master	talento
+Maestro degli Affondi	Jabbing Master	talento
+Maestro dei Doppi Tuoni	Twin Thunders Master	talento
+Maestro del Manganello	Sap Master	talento
+Maestro dell'Abbraccio Letale	Final Embrace Master	talento
+Maestro dell'Esibizione in Combattimento	Master Combat Performer	talento
+Maestro dell'Immortalità	Deathless Master	talento
+Maestro delle Cavalcature	Horse Master	talento
+Maestro delle Prese	Grabbing Master	talento
+Magia Adattabile	Flexible Wizardry	talento
+Magia Adattabile Migliorata	Improved Flexible Wizardry	talento
+Magia della Natura	Nature Magic	talento
+Maledetto	Accursed	talento
+Malioso Dotato	Talented Magician	talento
+Malioso delle Terre Selvagge	Mage of the Wild	talento
+Mangia Carogne	Carrion Feeder	talento
+Mani del Credente	Believer's Hands	talento
+Manipolazione Condivisa	Shared Manipulation	talento
+Mano Guidata	Guided Hand	talento
+Mano di Fuoco	Fire Hand	talento
+Manolesta	Deft Hands	talento
+Manovra Disorientante	Disorienting Maneuver	talento
+Manovra Idraulica	Hydraulic Maneuver	talento
+Manovra a Sorpresa	Surprise Maneuver	talento
+Manovra della Rete	Net Maneuvering	talento
+Manovre Agili	Agile Maneuvers	talento
+Manovre Coordinate	Coordinated Maneuvers	talento
+Manovre Dimensionali	Dimensional Maneuvers	talento
+Marchiato dal Castigo	Branded for Retribution	talento
+Martellare lo Squarcio	Hammer the Gap	talento
+Massacratore di Orchi	Orc Hewer	talento
+Massacro Terrificante	Dreadful Carnage	talento
+Mastro Artigiano	Master Craftsman	talento
+Mastro Birraio	Brewmaster	talento
+Mastro Ingegnere d'Assedio	Master Siege Engineer	talento
+Medico da Battaglia	Combat Medic	talento
+Mescere Pozioni	Brew Potion	talento
+Metafocus Spontaneo	Spontaneous Metafocus	talento
+Mezzodrow Esemplare	Half-Drow Paragon	talento
+Mira Inesorabile	Pinpoint Targeting	talento
+Mira Letale	Deadly Aim	talento
+Mobilità	Mobility	talento
+Morsa Soffocante	Chokehold	talento
+Morte dall'Alto	Death from Above	talento
+Mossa Infame	Vicious Stomp	talento
+Mostri Evocati Evoluti	Evolved Summoned Monster	talento
+Movimenti Agili	Light Step	talento
+Movimenti della Scimmia	Monkey Moves	talento
+Mulinello Disimpegnante	Disengaging Flourish	talento
+Multiattacco	Multiattack	talento
+Muori per il Tuo Padrone	Die for Your Master	talento
+Muro di Scudi	Shield Wall	talento
+Musica della Fiamma	Fire Music	talento
+Nemesi	Nemesis	talento
+Nemico Prescelto per gli Incantesimi	Favored Enemy Spellcasting	talento
+Nobiltà Drow	Drow Nobility	talento
+Nobiltà Drow Migliorata	Improved Drow Nobility	talento
+Nobiltà Drow Superiore	Greater Drow Nobility	talento
+Né Elfo né Umano	Neither Elf nor Human	talento
+Occhi Acuti	Discerning Eye	talento
+Occhi del Giudizio	Eyes of Judgment	talento
+Occhio del Dissotterratore	Scavenger's Eye	talento
+Occhio di Falco	Eagle Eyes	talento
+Odio Immenso	Vast Hatred	talento
+Odio Ribollente	Seething Hatred	talento
+Olfatto Acuto	Keen Scent	talento
+Oltrepassare Migliorato	Improved Overrun	talento
+Oltrepassare Superiore	Greater Overrun	talento
+Ondata Gelida del Marid	Marid Coldsnap	talento
+Opera Magna	Magnum Opus	talento
+Oratore	Orator	talento
+Orazioni o Trucchetti Extra	Extra Cantrips or Orisons	talento
+Oreade Scavatore	Oread Burrower	talento
+Orribile Massacro	Gruesome Slaughter	talento
+Orrore dell'Abbraccio Letale	Final Embrace Horror	talento
+Osservatore tra le Nubi	Cloud Gazer	talento
+Ostentazione di Retorica	Rhetorical Flourish	talento
+Ottimo Bevitore	Deep Drinker	talento
+Padronanza Marziale	Martial Mastery	talento
+Padronanza degli Incantesimi	Spell Mastery	talento
+Padronanza delle Balestre	Crossbow Mastery	talento
+Padronanza delle Doti Innate	Multitalented Mastery	talento
+Padronanza delle Metaparole	Meta Word Mastery	talento
+Padrone dei Non Morti	Undead Master	talento
+Paggio	Page	talento
+Palato Diverso	Diverse Palate	talento
+Parare Incantesimo	Parry Spell	talento
+Parata della Pantera	Panther Parry	talento
+Parola Extra	Extra Word	talento
+Parola di Guarigione	Word of Healing	talento
+Passaggio Truccato	Passing Trick	talento
+Passare per Umano	Pass For Human	talento
+Passato Dimenticato	Forgotten Past	talento
+Passi da Gigante	Giant Steps	talento
+Passo Acrobatico	Acrobatic Steps	talento
+Passo Arioso	Airy Step	talento
+Passo Laterale	Sidestep	talento
+Passo Laterale Migliorato	Improved Sidestep	talento
+Passo Leggero	Nimble Moves	talento
+Passo Pattinato	Gliding Steps	talento
+Passo Pietroso	Stony Step	talento
+Passo del Ragno	Spider Step	talento
+Passo delle Nuvole	Cloud Step	talento
+Pelle d'Acqua	Water Skinned	talento
+Pelle dello Shaitan	Shaitan Skin	talento
+Pelle di Ferro	Ironhide	talento
+Penzolare dai Rami	Tree Hanger	talento
+Percezione della Pietra	Stone Sense	talento
+Percorso del Kirin	Kirin Path	talento
+Personalità Incrollabile	Steadfast Personality	talento
+Persuasivo	Persuasive	talento
+Picchiare Immobilizzati	Pinning Knockout	talento
+Picchiatore	Bludgeoner	talento
+Pistolero Amatoriale	Amateur Gunslinger	talento
+Pistolero Goblin	Goblin Gunslinger	talento
+Planata Draconica	Draconic Glide	talento
+Portale del Tritone	Triton Portal	talento
+Posizione Velata	Wind Stance	talento
+Posizione dell'Efreeti	Efreeti Stance	talento
+Postura Stoica	Stoic Pose	talento
+Potere d'Ira Extra	Extra Rage Power	talento
+Precisione Furtiva	Sneaking Precision	talento
+Predatore del Chiar di Luna	Moonlight Stalker	talento
+Predisporre Trappole	Trapper's Setup	talento
+Pregiudizio Estremo	Extreme Prejudice	talento
+Prendere il Vantaggio	Seize Advantage	talento
+Preparazione Aggiuntiva	Expanded Preparation	talento
+Prepotenza dei Pestaggi	Pummeling Bully	talento
+Presa Salda	Sure Grasp	talento
+Preservatore Planare	Planar Preservationist	talento
+Prestante	Stalwart	talento
+Prestante Migliorato	Improved Stalwart	talento
+Prete Combattente	Warrior Priest	talento
+Prevenire Schivare	Anticipate Dodge	talento
+Prodezza Intimidatrice	Intimidating Prowess	talento
+Prodigio	Prodigy	talento
+Profeta	Prophet	talento
+Proteggere Alleato	Saving Shield	talento
+Protezione Divina	Divine Protection	talento
+Pugno Barcollante	Staggering Fist	talento
+Pugno Dissolvente	Dispelling Fist	talento
+Pugno Elementale	Elemental Fist	talento
+Pugno Frastornante	Dazing Fist	talento
+Pugno Stordente	Stunning Fist	talento
+Pugno da Incubo	Nightmare Fist	talento
+Pugno del Crociato	Crusader's Fist	talento
+Pugno della Gorgone	Gorgon's Fist	talento
+Pugno di Risposta	Counterpunch	talento
+Punte Avvelenate	Pinpoint Poisoner	talento
+Radianza Paradisiaca	Heavenly Radiance	talento
+Raffica del Crociato	Crusader's Flurry	talento
+Raffica di Doppi Tuoni	Twin Thunders Flurry	talento
+Ratto dei Tunnel	Tunnel Rat	talento
+Recuperare Sangue	Blood Salvage	talento
+Recupero Eroico	Heroic Recovery	talento
+Recupero dalle Tossine	Toxic Recovery	talento
+Redenzione	Redemption	talento
+Resistenza Ampliata	Expanded Resistance	talento
+Resistenza Fisica	Endurance	talento
+Resistenza Nobile alla Magia	Noble Spell Resistance	talento
+Resistenza Potenziata	Bolstered Resilience	talento
+Resistenze Immonde Ampliate	Expanded Fiendish Resistance	talento
+Respingere il Mietitore	Deny the Reaper	talento
+Respiro Interiore	Inner Breath	talento
+Retaggio Perduto	Lost Legacy	talento
+Retaggio Stregonesco	Eldritch Heritage	talento
+Retaggio Stregonesco Migliorato	Improved Eldritch Heritage	talento
+Retaggio Stregonesco Superiore	Greater Eldritch Heritage	talento
+Rete e Tridente	Net and Trident	talento
+Rialzarsi Ki	Ki Stand	talento
+Ricarica Rapida	Rapid Reload	talento
+Ricerca del Divinatore	Diviner's Delving	talento
+Ricercatore Arcano	Eldritch Researcher	talento
+Richiamo del Convocatore	Summoner's Call	talento
+Richiamo della Vita	Life Lure	talento
+Ricompensa di Grazia	Reward of Grace	talento
+Ricompensa di Vita	Reward of Life	talento
+Ricordare Distruttivo	Disruptive Recall	talento
+Ricordare Formula	Formula Recollection	talento
+Ridirigere Elusivo	Elusive Redirection	talento
+Riduzione Respingente	Rebuffing Reduction	talento
+Rifiutare la Morte	Deny Death	talento
+Riflessi Fulminei	Lightning Reflexes	talento
+Riflessi Fulminei Migliorati	Improved Lightning Reflexes	talento
+Riflessi in Combattimento	Combat Reflexes	talento
+Rimonta Portentosa	Strong Comeback	talento
+Rimontare al Volo	Rebounding Leap	talento
+Riparazione sul Campo	Field Repair	talento
+Riposizionare Migliorato	Improved Reposition	talento
+Riposizionare Rapido	Quick Reposition	talento
+Riposizionare Superiore	Greater Reposition	talento
+Ripulisci Città	Town Tamer	talento
+Riserva Arcana Extra	Extra Arcane Pool	talento
+Risolutezza Coraggiosa	Courageous Resolve	talento
+Risolutezza Feroce	Ferocious Resolve	talento
+Risorto	Arisen	talento
+Risposta della Gru	Crane Riposte	talento
+Rissa	Gang Up	talento
+Rissa della Scimmia	Monkey Shine	talento
+Rissaiolo da Taverna	Barroom Brawler	talento
+Rivelazione Extra	Extra Revelation	talento
+Rivelazioni Abbondanti	Abundant Revelations	talento
+Robustezza	Toughness	talento
+Roccaforte	Stronghold	talento
+Rompere la Guardia	Break Guard	talento
+Rotolare per Terra	Landing Roll	talento
+Rovesciata del Figlio della Terra	Earth Child Topple	talento
+Rubare Migliorato	Improved Steal	talento
+Rubare Rapido	Quick Steal	talento
+Rubare Superiore	Greater Steal	talento
+Ruggito del Drago	Dragon Roar	talento
+Ruotare Via	Twist Away	talento
+Saggezza della Mantide	Mantis Wisdom	talento
+Saggio Dimensionale	Dimensional Savant	talento
+Saldo e Agile	Sure and Fleet	talento
+Salva Iniziale	Opening Volley	talento
+Sangue Angelico	Angelic Blood	talento
+Sangue Furioso	Raging Blood	talento
+Sangue Innocente	Innocent Blood	talento
+Sangue Nanico	Dwarf Blooded	talento
+Sangue dell'Eroe	Blood of Heroes	talento
+Sangue di Vita	Life's Blood	talento
+Sanguinario Immondo	Gore Fiend	talento
+Sbilanciare Migliorato	Improved Trip	talento
+Sbilanciare Superiore	Greater Trip	talento
+Sbilanciare in Tandem	Tandem Trip	talento
+Scacciare Non Morti	Turn Undead	talento
+Scambiare Posto	Swap Places	talento
+Scambiare Posto Migliorato	Improved Swap Places	talento
+Scambio Ingannevole	Deceptive Exchange	talento
+Scatto Ombroso	Shadowy Dash	talento
+Scatto del Serpente	Snake Sidewind	talento
+Scatto di Forza	Force Dash	talento
+Schernire	Taunt	talento
+Schiena Contro Schiena	Back to Back	talento
+Schiena Contro Schiena Migliorato	Improved Back to Back	talento
+Schivare	Dodge	talento
+Schivare Ruotando	Cartwheel Dodge	talento
+Scivolata Beffarda	Under and Over	talento
+Scoperta Extra	Extra Discovery	talento
+Scoppio Terroso dello Shaitan	Shaitan Earthblast	talento
+Scorrere sulla Terra Oreade	Oread Earth Glider	talento
+Scorta Extra	Extra Reservoir	talento
+Scrivere Pergamene	Scribe Scroll	talento
+Scrollarselo di Dosso	Shake It Off	talento
+Scudo Arcano	Arcane Shield	talento
+Scudo Contro Proiettili	Missile Shield	talento
+Scudo Contro Raggi	Ray Shield	talento
+Scudo Focalizzato	Shield Focus	talento
+Scudo Focalizzato Superiore	Greater Shield Focus	talento
+Scudo Specializzato	Shield Specialization	talento
+Scudo Specializzato Superiore	Greater Shield Specialization	talento
+Scudo di Fendenti	Shield of Swings	talento
+Scudo in Sella	Mounted Shield	talento
+Seconda Possibilità	Second Chance	talento
+Seconda Possibilità Migliorato	Improved Second Chance	talento
+Seduttore Naturale	Natural Charmer	talento
+Segreto Extra	Extra Arcana	talento
+Sensi Accurati	Sharp Senses	talento
+Senza Nome	No Name	talento
+Servitore Celestiale	Celestial Servant	talento
+Sferzata Demoralizzante	Demoralizing Lash	talento
+Sfida Eroica	Heroic Defiance	talento
+Sfruttare Conoscenze	Exploit Lore	talento
+Sgattaiolare	Underfoot	talento
+Sgherro	Enforcer	talento
+Sguardo Intimidatorio	Intimidating Gaze	talento
+Sguardo Perspicace	Insightful Gaze	talento
+Sicurezza Intimidatrice	Intimidating Confidence	talento
+Signore della Caccia	Huntmaster	talento
+Sinergia Dissolvente	Dispel Synergy	talento
+Sinergia alla Furtività	Stealth Synergy	talento
+Socievole	Sociable	talento
+Soffio Draconico	Draconic Breath	talento
+Sollevare Calciando	Kick Up	talento
+Sorvegliante Tirannico	Taskmaster	talento
+Spaccacollo	Neckbreaker	talento
+Spaccamascella	Jawbreaker	talento
+Spaccaossa	Bonebreaker	talento
+Spada e Pistola	Sword and Pistol	talento
+Sparatore Prono	Prone Shooter	talento
+Spezzaincantesimi	Spellbreaker	talento
+Spezzare Migliorato	Improved Sunder	talento
+Spezzare Superiore	Greater Sunder	talento
+Spezzare le Difese	Shatter Defenses	talento
+Spingere Migliorato	Improved Bull Rush	talento
+Spingere Rapido	Quick Bull Rush	talento
+Spingere Superiore	Greater Bull Rush	talento
+Spirito Animale	Animal Soul	talento
+Spirito Elfico	Elven Spirit	talento
+Spirito Umano	Human Spirit	talento
+Spirito del Djinni	Djinni Spirit	talento
+Spirito del Marid	Marid Spirit	talento
+Spirito delle Terre Selvagge	Spirit of the Wild	talento
+Sporco Trucco Migliorato	Improved Dirty Trick	talento
+Sporco Trucco Rapido	Quick Dirty Trick	talento
+Sporco Trucco Superiore	Greater Dirty Trick	talento
+Sputare Veleno	Spit Venom	talento
+Squartare Immobilizzati	Pinning Rend	talento
+Stile degli Affondi	Jabbing Style	talento
+Stile dei Pestaggi	Pummeling Style	talento
+Stile del Cinghiale	Boar Style	talento
+Stile del Djinni	Djinni Style	talento
+Stile del Drago	Dragon Style	talento
+Stile del Figlio della Terra	Earth Child Style	talento
+Stile del Janni	Janni Style	talento
+Stile del Kirin	Kirin Style	talento
+Stile del Marid	Marid Style	talento
+Stile del Serpente	Snake Style	talento
+Stile dell'Efreeti	Efreeti Style	talento
+Stile della Gru	Crane Style	talento
+Stile della Mantide	Mantis Style	talento
+Stile della Pantera	Panther Style	talento
+Stile della Scimmia	Monkey Style	talento
+Stile della Tartaruga Azzannatrice	Snapping Turtle Style	talento
+Stile della Tigre	Tiger Style	talento
+Stile delle Prese	Grabbing Style	talento
+Stile dello Scorpione	Scorpion Style	talento
+Stile dello Shaitan	Shaitan Style	talento
+Stirpe Manifesta	Manifested Blood	talento
+Stoccata	Lunge	talento
+Stomaco di Ferro	Ironguts	talento
+Strada dell'Esilio	Exile's Path	talento
+Studio a Distanza	Ranged Study	talento
+Succhiasangue	Blood Drinker	talento
+Sudario dello Gnomo Stregato	Haunted Gnome Shroud	talento
+Sussurri della Terra	Murmurs of Earth	talento
+Sventare Fiancheggiamento	Flanking Foil	talento
+Sventare Metamorfosi	Shapeshifter Foil	talento
+Talenti/Strangolatore	Strangler	talento
+Tattico Esperto	Practiced Tactician	talento
+Tattico del Teletrasporto	Teleport Tactician	talento
+Tempesta del Janni	Janni Tempest	talento
+Tempra Possente	Great Fortitude	talento
+Tempra Possente Migliorata	Improved Great Fortitude	talento
+Tenacia Feroce	Ferocious Tenacity	talento
+Tenacia del Sopravvissuto	Tenacious Survivor	talento
+Terricolo	Groundling	talento
+Tessitore di Incubi	Nightmare Weaver	talento
+Testa Dura	Hard-Headed	talento
+Teurgia	Theurgy	talento
+Tipo Fortunato	Fortunate One	talento
+Tirare in Movimento	Shot on the Run	talento
+Tirare in Sella	Mounted Archery	talento
+Tiratore Coboldo	Kobold Sniper	talento
+Tiratore d'Assedio	Siege Gunner	talento
+Tiro Concentrato	Focused Shot	talento
+Tiro Coordinato	Coordinated Shot	talento
+Tiro Dirompente	Disrupting Shot	talento
+Tiro Lontano	Far Shot	talento
+Tiro Multiplo	Manyshot	talento
+Tiro Preciso	Precise Shot	talento
+Tiro Preciso Migliorato	Improved Precise Shot	talento
+Tiro Pugnalante	Stabbing Shot	talento
+Tiro Rapido	Rapid Shot	talento
+Tiro Ravvicinato	Point-Blank Shot	talento
+Tiro Scattante	Snap Shot	talento
+Tiro Scattante Migliorato	Improved Snap Shot	talento
+Tiro Scattante Superiore	Greater Snap Shot	talento
+Tiro a Distanza	Distance Thrower	talento
+Tocco dell'Efreeti	Efreeti Touch	talento
+Tocco di Serenità	Touch of Serenity	talento
+Tormento della Mantide	Mantis Torment	talento
+Traditore	Betrayer	talento
+Trama del Djinni	Djinni Spin	talento
+Transizione Elementale	Elemental Jaunt	talento
+Trappola da Ranger Extra	Extra Ranger Trap	talento
+Trappole da Ranger Avanzate	Advanced Ranger Trap	talento
+Trascinare Giù	Drag Down	talento
+Trascinare Migliorato	Improved Drag	talento
+Trascinare Rapido	Quick Drag	talento
+Trascinare Superiore	Greater Drag	talento
+Trascinata con Presa	Grabbing Drag	talento
+Trasmutazione Tenace	Tenacious Transmutation	talento
+Tratti Addizionali	Additional Traits	talento
+Travolgere	Trample	talento
+Trinciatura del Cinghiale	Boar Shred	talento
+Tumore Aberrante	Aberrant Tumor	talento
+Uccisione Plateale	Killing Flourish	talento
+Uccisione Silenziosa	Silent Kill	talento
+Uccisore di Giganti	Giant Killer	talento
+Umiliato	Shamed	talento
+Unico Nato	Born Alone	talento
+Unirsi	Team Up	talento
+Valoroso	Stouthearted	talento
+Vedere Peccato	Sin Seer	talento
+Veleno del Sonno	Sleep Venom	talento
+Vendetta	Vengeance	talento
+Vendetta di Sangue	Blood Vengeance	talento
+Vero Amore	True Love	talento
+Versatilità	Eclectic	talento
+Versatilità Critica	Critical Versatility	talento
+Versatilità Marziale	Martial Versatility	talento
+Via di Fuga	Escape Route	talento
+Vigore dello Scaldo	Skald's Vigor	talento
+Vigore dello Scaldo Superiore	Greater Skald's Vigor	talento
+Vile Uccisione	Dastardly Finish	talento
+Virare	Wingover	talento
+Visionario Profetico	Prophetic Visionary	talento
+Visione Oscura	Dark Sight	talento
+Visione Oscura Migliorata	Improved Dark Sight	talento
+Visione Tenebrosa	Gloom Sight	talento
+Vista Immonda	Fiend Sight	talento
+Vista delle Profondità	Deepsight	talento
+Visto e Non Visto	Seen and Unseen	talento
+Vocazione Magica	Magical Aptitude	talento
+Voce Discordante	Discordant Voice	talento
+Voce della Sibilla	Voice of the Sibyl	talento
+Volontà Eroica	Heroic Will	talento
+Volontà di Ferro	Iron Will	talento
+Volontà di Ferro Migliorata	Improved Iron Will	talento
+Volto di Pietra	Stone-Faced	talento
+Zampata della Tartaruga Azzannatrice	Snapping Turtle Clutch	talento
+Zanna Affilata	Razortusk	talento
+Zanna del Serpente	Snake Fang	talento
+Zelo Indomito	Fearless Zeal	talento
+Zelota dell'Immortalità	Deathless Zealot	talento
+Abilità in Prestito	Borrow Skill	incantesimo
+Accelerare Veleno	Accelerate Poison	incantesimo
+Accompagnamento Raffinato	Exquisite Accompaniment	incantesimo
+Accordo di Schegge	Chord of Shards	incantesimo
+Acume Tattico	Tactical Acumen	incantesimo
+Adattamento Planare	Planar Adaptation	incantesimo
+Adattamento Planare di Massa	Planar Adaptation, Mass	incantesimo
+Addestrare Animale a Compito Generico	Animal Purpose Training	incantesimo
+Adorazione	Adoration	incantesimo
+Affondo Sonico	Sonic Thrust	incantesimo
+Agitazione da Insetti	Jitterbugs	incantesimo
+Agonia Ululante	Howling Agony	incantesimo
+Agonizzare	Agonize	incantesimo
+Aiuto	Aid	incantesimo
+Ali Forti	Strong Wings	incantesimo
+Allarme	Alarm	incantesimo
+Allarme Invisibilità	Invisibility Alarm	incantesimo
+Alleato Compassionevole	Compassionate Ally	incantesimo
+Alleato Involontario	Unwitting Ally	incantesimo
+Alleato Planare	Planar Ally	incantesimo
+Alleato Planare Inferiore	Planar Ally, Lesser	incantesimo
+Alleato Planare Superiore	Planar Ally, Greater	incantesimo
+Alleato Spirituale	Spiritual Ally	incantesimo
+Allegro	Allegro	incantesimo
+Allineamento Imperscrutabile	Undetectable Alignment	incantesimo
+Allineare Arma	Align Weapon	incantesimo
+Allineare Arma Collettivo	Align Weapon, Communal	incantesimo
+Allucinazione Folle	Mad Hallucination	incantesimo
+Allucinazione Mortale	Phantasmal Killer	incantesimo
+Alterare Se Stesso	Alter Self	incantesimo
+Alterare Strumento Musicale	Alter Musical Instrument	incantesimo
+Alterare Venti	Alter Winds	incantesimo
+Alterazione Vocale	Vocal Alteration	incantesimo
+Amico della Foresta	Forest Friend	incantesimo
+Ammonimento	Castigate	incantesimo
+Ammonimento di Massa	Castigate, Mass	incantesimo
+Ammorbidire Terra e Pietra	Soften Earth and Stone	incantesimo
+Amplificare Elisir	Amplify Elixir	incantesimo
+Analizzare Dweomer	Analyze Dweomer	incantesimo
+Anatema	Bane	incantesimo
+Anatomia Non Morta I	Undead Anatomy I	incantesimo
+Anatomia Non Morta II	Undead Anatomy II	incantesimo
+Anatomia Non Morta III	Undead Anatomy III	incantesimo
+Anatomia Non Morta IV	Undead Anatomy IV	incantesimo
+Ancora Dimensionale	Dimensional Anchor	incantesimo
+Ancora d'Ombra	Shadow Anchor	incantesimo
+Animale Antropomorfico	Anthropomorphic Animal	incantesimo
+Animale Messaggero	Animal Messenger	incantesimo
+Animare Corde	Animate Rope	incantesimo
+Animare Morti	Animate Dead	incantesimo
+Animare Morti Inferiore	Animate Dead, Lesser	incantesimo
+Animare Oggetti	Animate Objects	incantesimo
+Animare Pelle	Skinsend	incantesimo
+Animare Vegetali	Animate Plants	incantesimo
+Anti-individuazione	Nondetection	incantesimo
+Anti-individuazione Collettivo	Nondetection, Communal	incantesimo
+Anticipare Pericolo	Anticipate Peril	incantesimo
+Antipatia	Antipathy	incantesimo
+Antiproiettile	Bullet Shield	incantesimo
+Aprire/Chiudere	Open-Close	incantesimo
+Arco della Gravità	Gravity Bow	incantesimo
+Arco di Fulmini	Lightning Arc	incantesimo
+Arcobaleno Splendente	Blazing Rainbow	incantesimo
+Arcobastone	Bowstaff	incantesimo
+Arma Distruttiva	Disrupting Weapon	incantesimo
+Arma Infallibile	Unerring Weapon	incantesimo
+Arma Magica	Magic Weapon	incantesimo
+Arma Magica Superiore	Magic Weapon, Greater	incantesimo
+Arma Protettiva	Warding Weapon	incantesimo
+Arma Ritornante	Returning Weapon	incantesimo
+Arma Ritornante Collettivo	Returning Weapon, Communal	incantesimo
+Arma Spirituale	Spiritual Weapon	incantesimo
+Arma Stupefacente	Weapon of Awe	incantesimo
+Arma Versatile	Versatile Weapon	incantesimo
+Arma di Ghiaccio Sacra	Holy Ice Weapon	incantesimo
+Arma di Ghiaccio Sacrilega	Unholy Ice Weapon	incantesimo
+Armatura Istantanea	Instant Armor	incantesimo
+Armatura Magica	Mage Armor	incantesimo
+Armatura Passiva	Effortless Armor	incantesimo
+Armatura del Sangue	Blood Armor	incantesimo
+Armeggio Alchemico	Alchemical Tinkering	incantesimo
+Arrocco	King's Castle	incantesimo
+Artigli Insanguinati	Bloody Claws	incantesimo
+Ascensione	Ascension	incantesimo
+Asfissia	Suffocation	incantesimo
+Asfissia di Massa	Suffocation, Mass	incantesimo
+Aspetto Animale	Animal Aspect	incantesimo
+Aspetto Animale Superiore	Animal Aspect, Greater	incantesimo
+Aspetto Giovanile	Youthful Appearance	incantesimo
+Aspetto Terrificante	Frightful Aspect	incantesimo
+Aspetto del Cervo	Aspect of the Stag	incantesimo
+Aspetto del Falco	Aspect of the Falcon	incantesimo
+Aspetto del Folletto Stregato	Haunted Fey Aspect	incantesimo
+Aspetto del Lupo	Aspect of the Wolf	incantesimo
+Aspetto dell'Orso	Aspect of the Bear	incantesimo
+Assedio di Alberi	Siege of Trees	incantesimo
+Assedio di Alberi Superiore	Siege of Trees, Greater	incantesimo
+Assemblaggio Telecinetico	Telekinetic Assembly	incantesimo
+Assorbire Tossicità	Absorb Toxicity	incantesimo
+Astuzia della Volpe	Fox's Cunning	incantesimo
+Astuzia della Volpe di Massa	Fox's Cunning, Mass	incantesimo
+Atavismo	Atavism	incantesimo
+Atavismo di Massa	Atavism, Mass	incantesimo
+Aura Elementale	Elemental Aura	incantesimo
+Aura Magica	Magic Aura	incantesimo
+Aura Sacra	Holy Aura	incantesimo
+Aura Sacrilega	Unholy Aura	incantesimo
+Aura dell'Arconte	Archon's Aura	incantesimo
+Aura di Coraggio Superiore	Aura of Greater Courage	incantesimo
+Aura di Devastazione	Aura of Doom	incantesimo
+Aure Ampliate	Widen Auras	incantesimo
+Avversione Pura	Unadulterated Loathing	incantesimo
+Azione Condizionata	Contingent Action	incantesimo
+Bacche Benefiche	Goodberry	incantesimo
+Bagliore Solare	Sunbeam	incantesimo
+Balzo del Saltimbanco	Jester's Jaunt	incantesimo
+Banchetto degli Eroi	Heroes' Feast	incantesimo
+Banchetto di Cenere	Feast of Ashes	incantesimo
+Banchetto di Paura	Feast on Fear	incantesimo
+Bande Protettive	Cushioning Bands	incantesimo
+Bandire Sembianze	Banish Seeming	incantesimo
+Barba di Ferro	Ironbeard	incantesimo
+Barriera Ablativa	Ablative Barrier	incantesimo
+Barriera Stordente	Stunning Barrier	incantesimo
+Barriera Stordente Superiore	Stunning Barrier, Greater	incantesimo
+Barriera di Lame	Blade Barrier	incantesimo
+Bastione	Rampart	incantesimo
+Bastone Serpente	Snake Staff	incantesimo
+Bastone dell'Incantesimo	Spellstaff	incantesimo
+Benedire l'Acqua	Bless Water	incantesimo
+Benedire un'Arma	Bless Weapon	incantesimo
+Benedizione	Bless	incantesimo
+Benedizione Karmica	Karmic Blessing	incantesimo
+Benedizione del Coraggio e della Vita	Blessing of Courage and Life	incantesimo
+Benedizione del Fervore	Blessing of Fervor	incantesimo
+Benedizione della Salamandra	Blessing of the Salamander	incantesimo
+Benedizione della Talpa	Blessing of the Mole	incantesimo
+Biga Fantomatica	Phantom Chariot	incantesimo
+Biografia del Sangue	Blood Biography	incantesimo
+Blasfemia	Blasphemy	incantesimo
+Blocca Animali	Hold Animal	incantesimo
+Blocca Mostri	Hold Monster	incantesimo
+Blocca Mostri di Massa	Hold Monster, Mass	incantesimo
+Blocca Persone	Hold Person	incantesimo
+Blocca Persone di Massa	Hold Person, Mass	incantesimo
+Blocca Porte	Hold Portal	incantesimo
+Bloccare Sguardo	Lock Gaze	incantesimo
+Bocca Magica	Magic Mouth	incantesimo
+Bolla d'Aria	Air Bubble	incantesimo
+Bolla di Vita	Life Bubble	incantesimo
+Bollire Sangue	Boiling Blood	incantesimo
+Bomba Gonfia	Bloatbomb	incantesimo
+Borseggio Prensile	Prehensile Pilfer	incantesimo
+Boschetto del Riposo	Grove of Respite	incantesimo
+Braccio Lungo	Long Arm	incantesimo
+Brezza Gentile	Gentle Breeze	incantesimo
+Bruciare Legami	Burst Bonds	incantesimo
+Buchetta	Stumble Gap	incantesimo
+Buone Speranze	Good Hope	incantesimo
+Cacofonia Diversiva	Distracting Cacophony	incantesimo
+Caduta Morbida	Feather Fall	incantesimo
+Calappio	Snare	incantesimo
+Calmare Animali	Calm Animals	incantesimo
+Calmare Costrutto	Soothe Construct	incantesimo
+Calmare Emozioni	Calm Emotions	incantesimo
+Calore Curativo	Healing Warmth	incantesimo
+Camminare nel Vento	Wind Walk	incantesimo
+Camminare nell'Aria	Air Walk	incantesimo
+Camminare nell'Aria Collettivo	Air Walk, Communal	incantesimo
+Camminare nelle Ombre	Shadow Walk	incantesimo
+Camminare nello Spazio	Walk Through Space	incantesimo
+Camminare sull'Acqua	Water Walk	incantesimo
+Camminare sull'Acqua Collettivo	Water Walk, Communal	incantesimo
+Campana Accrescente	Magnifying Chime	incantesimo
+Campo Antimagia	Antimagic Field	incantesimo
+Camuffamento Fantasma	Ghostly Disguise	incantesimo
+Camuffamento Regolabile	Adjustable Disguise	incantesimo
+Camuffare Altri	Disguise Other	incantesimo
+Camuffare Arma	Disguise Weapon	incantesimo
+Camuffare Se Stesso	Disguise Self	incantesimo
+Cancellare	Erase	incantesimo
+Candela di Morte	Death Candle	incantesimo
+Cannone Arcano	Arcane Cannon	incantesimo
+Canto Laborioso	Toilsome Chant	incantesimo
+Canto di Discordia	Song of Discord	incantesimo
+Canto di Marcia	Marching Chant	incantesimo
+Capanna	Tiny Hut	incantesimo
+Capelli Strangolanti	Strangling Hair	incantesimo
+Cappa di Vespe	Cape of Wasps	incantesimo
+Carica Telecinetica	Telekinetic Charge	incantesimo
+Carica dell'Uncino di Forza	Force Hook Charge	incantesimo
+Carico della Formica	Ant Haul	incantesimo
+Carico della Formica Collettivo	Ant Haul, Communal	incantesimo
+Carne in Pietra	Flesh to Stone	incantesimo
+Castigo	Retribution	incantesimo
+Catena di Fulmini	Chain Lightning	incantesimo
+Catena di Perdizione	Chain of Perdition	incantesimo
+Catene di Fuoco	Chains of Fire	incantesimo
+Cavalcare il Fulmine	Ride the Lightning	incantesimo
+Cavalcare le Onde	Ride the Waves	incantesimo
+Cavalcatura	Mount	incantesimo
+Cavalcatura Addestrata alla Guerra	Wartrain Mount	incantesimo
+Cavalcatura Collettivo	Mount, Communal	incantesimo
+Cecità/Sordità	Blindness-Deafness	incantesimo
+Celare	Sequester	incantesimo
+Cercare Pensieri	Seek Thoughts	incantesimo
+Cerchio Magico Contro il Bene	Magic Circle against Good	incantesimo
+Cerchio Magico Contro il Caos	Magic Circle against Chaos	incantesimo
+Cerchio Magico Contro il Male	Magic Circle against Evil	incantesimo
+Cerchio Magico Contro la Legge	Magic Circle against Law	incantesimo
+Cerchio di Chiarezza	Circle of Clarity	incantesimo
+Cerchio di Morte	Circle of Death	incantesimo
+Cerchio di Teletrasporto	Teleportation Circle	incantesimo
+Charme su Animali	Charm Animal	incantesimo
+Charme su Persone	Charm Person	incantesimo
+Charme sui Mostri	Charm Monster	incantesimo
+Charme sui Mostri di Massa	Charm Monster, Mass	incantesimo
+Chiaroudienza/Chiaroveggenza	Clairaudience-Clairvoyance	incantesimo
+Clone	Clone	incantesimo
+Collegamento Vitale al Compagno	Companion Life Link	incantesimo
+Collera dell'Ordine	Order's Wrath	incantesimo
+Colpi Debilitanti	Sickening Strikes	incantesimo
+Colpo Accurato	True Strike	incantesimo
+Colpo Doloroso	Pain Strike	incantesimo
+Colpo Doloroso di Massa	Pain Strike, Mass	incantesimo
+Colpo Fragoroso	Recoil Fire	incantesimo
+Colpo Infuocato	Flame Strike	incantesimo
+Colpo Riflesso	Mirror Strike	incantesimo
+Colpo Riverberante	Resounding Blow	incantesimo
+Colpo del Corvo Sanguinario	Blood Crow Strike	incantesimo
+Colpo di Energia d'Assedio	Energy Siege Shot	incantesimo
+Colpo di Energia d'Assedio Superiore	Energy Siege Shot, Greater	incantesimo
+Colpo di Ghiaccio Freddo	Cold Ice Strike	incantesimo
+Colpo di Ragnatela	Web Bolt	incantesimo
+Colpo di Rimbalzo	Ricochet Shot	incantesimo
+Colpo di Rinculo	Recoil Fire	incantesimo
+Comandare Non Morti	Command Undead	incantesimo
+Comandare Vegetali	Command Plants	incantesimo
+Comando	Command	incantesimo
+Comando Omicida	Murderous Command	incantesimo
+Comando Superiore	Command, Greater	incantesimo
+Comando di Liberazione	Liberating Command	incantesimo
+Combattente Impreparato	Unprepared Combatant	incantesimo
+Comprensione dei Linguaggi	Comprehend Languages	incantesimo
+Comunione	Commune	incantesimo
+Comunione con gli Uccelli	Commune with Birds	incantesimo
+Comunione con la Natura	Commune with Nature	incantesimo
+Concedere Aure	Bestow Auras	incantesimo
+Concedere Cognizione	Bestow Insight	incantesimo
+Concedere Giudizio	Lend Judgment	incantesimo
+Concedere Giudizio Superiore	Lend Judgment, Greater	incantesimo
+Concedere Grazia	Bestow Grace	incantesimo
+Concedere Grazia del Campione	Bestow Grace of the Champion	incantesimo
+Concedere Percorso	Lend Path	incantesimo
+Concordanza Arcana	Arcane Concordance	incantesimo
+Condividere Furia	Shared Wrath	incantesimo
+Condividere Gloria	Share Glory	incantesimo
+Condividere Linguaggio	Share Language	incantesimo
+Condividere Linguaggio Collettivo	Share Language, Communal	incantesimo
+Condividere Memoria	Share Memory	incantesimo
+Condividere Sensi	Share Senses	incantesimo
+Condotto Vitale	Life Conduit	incantesimo
+Condotto Vitale Migliorato	Life Conduit, Improved	incantesimo
+Condotto Vitale Superiore	Life Conduit, Greater	incantesimo
+Condotto dell'Evocatore	Summoner Conduit	incantesimo
+Conferire Competenza nelle Armi	Bestow Weapon Proficiency	incantesimo
+Confessione	Confess	incantesimo
+Confessione Cremisi	Crimson Confession	incantesimo
+Confondere Ammaliamento	Enchantment Foil	incantesimo
+Confusione	Confusion	incantesimo
+Confusione Inferiore	Confusion, Lesser	incantesimo
+Congedo	Dismissal	incantesimo
+Congelamento	Frostbite	incantesimo
+Cono di Freddo	Cone of Cold	incantesimo
+Conoscenza delle Leggende	Legend Lore	incantesimo
+Conoscere Direzione	Know Direction	incantesimo
+Conoscere il Nemico	Know the Enemy	incantesimo
+Consacrare	Consecrate	incantesimo
+Consapevolezza Intensificata	Heightened Awareness	incantesimo
+Consumo Ritardato	Delayed Consumption	incantesimo
+Consunzione Corrosiva	Corrosive Consumption	incantesimo
+Contagio	Contagion	incantesimo
+Contagio Superiore	Contagion, Greater	incantesimo
+Contattare Altri Piani	Contact Other Plane	incantesimo
+Contingenza	Contingency	incantesimo
+Contrastare Elementi	Endure Elements	incantesimo
+Contrastare Elementi Collettivo	Endure Elements, Communal	incantesimo
+Controllare Acqua	Control Water	incantesimo
+Controllare Costrutti	Control Construct	incantesimo
+Controllare Creature Evocate	Control Summoned Creature	incantesimo
+Controllare Non Morti	Control Undead	incantesimo
+Controllare Tempo Atmosferico	Control Weather	incantesimo
+Controllare Vegetali	Control Plants	incantesimo
+Controllare Venti	Control Winds	incantesimo
+Copia Spaventosa	Fearsome Duplicate	incantesimo
+Coppa di Polvere	Cup of Dust	incantesimo
+Corno dell'Inseguimento	Horn of Pursuit	incantesimo
+Coro Ossessionante	Haunting Choir	incantesimo
+Corona di Lame	Wreath of Blades	incantesimo
+Corpo Capacitivo	Body Capacitance	incantesimo
+Corpo Elementale I	Elemental Body I	incantesimo
+Corpo Elementale II	Elemental Body II	incantesimo
+Corpo Elementale III	Elemental Body III	incantesimo
+Corpo Elementale IV	Elemental Body IV	incantesimo
+Corpo Infuocato	Fiery Body	incantesimo
+Corpo di Ferro	Iron Body	incantesimo
+Corpo di Ghiaccio	Ice Body	incantesimo
+Corpo di Spine	Thorn Body	incantesimo
+Costrizione Inferiore	Geas, Lesser	incantesimo
+Costrizione/Cerca	Geas-Quest	incantesimo
+Costrutto Infrangibile	Unbreakable Construct	incantesimo
+Creare Acqua	Create Water	incantesimo
+Creare Cibo e Acqua	Create Food and Water	incantesimo
+Creare Fossa	Create Pit	incantesimo
+Creare Mappa del Tesoro	Create Treasure Map	incantesimo
+Creare Non Morti	Create Undead	incantesimo
+Creare Non Morti Superiori	Create Greater Undead	incantesimo
+Creare Semipiano	Create Demiplane	incantesimo
+Creare Semipiano Inferiore	Create Demiplane, Lesser	incantesimo
+Creare Semipiano Superiore	Create Demiplane, Greater	incantesimo
+Creazione Maggiore	Major Creation	incantesimo
+Creazione Minore	Minor Creation	incantesimo
+Crescita Animale	Animal Growth	incantesimo
+Crescita Vegetale	Plant Growth	incantesimo
+Crescita di Spine	Spike Growth	incantesimo
+Cumulo Strisciante	Shambler	incantesimo
+Cuore Affranto	Stricken Heart	incantesimo
+Cuore del Metallo	Heart of the Metal	incantesimo
+Cuore del Nemico	Enemy's Heart	incantesimo
+Cura Ferite Critiche	Cure Critical Wounds	incantesimo
+Cura Ferite Critiche di Massa	Cure Critical Wounds, Mass	incantesimo
+Cura Ferite Gravi	Cure Serious Wounds	incantesimo
+Cura Ferite Gravi di Massa	Cure Serious Wounds, Mass	incantesimo
+Cura Ferite Leggere	Cure Light Wounds	incantesimo
+Cura Ferite Leggere di Massa	Cure Light Wounds, Mass	incantesimo
+Cura Ferite Moderate	Cure Moderate Wounds	incantesimo
+Cura Ferite Moderate di Massa	Cure Moderate Wounds, Mass	incantesimo
+Da Nemico ad Amico	Foe to Friend	incantesimo
+Danza Irresistibile	Irresistible Dance	incantesimo
+Danza dei Cento Tagli	Dance of a Hundred Cuts	incantesimo
+Danza dei Mille Tagli	Dance of a Thousand Cuts	incantesimo
+Dardi Tempestosi	Stormbolts	incantesimo
+Dardi d'Argento	Silver Darts	incantesimo
+Dardi di Tenebra	Gloomblind Bolts	incantesimo
+Dardo Incantato	Magic Missile	incantesimo
+Dardo Nauseante	Nauseating Dart	incantesimo
+De-evolvere	Devolution	incantesimo
+Debilitazione	Enervation	incantesimo
+Decomporre Cadavere	Decompose Corpse	incantesimo
+Deflettere	Deflection	incantesimo
+Deformare Legno	Warp Wood	incantesimo
+Deformazione Straziante	Excruciating Deformation	incantesimo
+Demenza	Insanity	incantesimo
+Denunciare	Denounce	incantesimo
+Desiderio	Wish	incantesimo
+Desiderio Limitato	Limited Wish	incantesimo
+Destriero Fantomatico	Phantom Steed	incantesimo
+Destriero Fantomatico Collettivo	Phantom Steed, Communal	incantesimo
+Detonazione	Detonate	incantesimo
+Dettame	Dictum	incantesimo
+Devastazione	Doom	incantesimo
+Diagnosticare Malattia	Diagnose Disease	incantesimo
+Difesa di Proiettili	Bullet Ward	incantesimo
+Disattivare Costrutto	Disable Construct	incantesimo
+Disco Fluttuante	Floating Disk	incantesimo
+Disco di Pietra	Stone Discus	incantesimo
+Disgiunzione Arcana	Mage's Disjunction	incantesimo
+Disintegrazione	Disintegrate	incantesimo
+Disperazione Opprimente	Crushing Despair	incantesimo
+Dispetto	Spite	incantesimo
+Dispiacere Soverchiante	Overwhelming Grief	incantesimo
+Disprezzo Malevolo	Malicious Spite	incantesimo
+Disprezzo Totale	Utter Contempt	incantesimo
+Dissacrare	Desecrate	incantesimo
+Dissanguare	Bleed	incantesimo
+Dissanguare Gloria	Bleed Glory	incantesimo
+Dissimulare	Misdirection	incantesimo
+Dissolvi Magie	Dispel Magic	incantesimo
+Dissolvi Magie Superiore	Dispel Magic, Greater	incantesimo
+Dissolvi il Bene	Dispel Good	incantesimo
+Dissolvi il Caos	Dispel Chaos	incantesimo
+Dissolvi il Male	Dispel Evil	incantesimo
+Dissolvi la Legge	Dispel Law	incantesimo
+Distorsione	Displacement	incantesimo
+Distribuzione Alchemica	Alchemical Allocation	incantesimo
+Distruggere Non Morti	Disrupt Undead	incantesimo
+Distruggere Viventi	Slay Living	incantesimo
+Distruzione	Destruction	incantesimo
+Dito della Morte	Finger of Death	incantesimo
+Divinazione	Divination	incantesimo
+Dominare Animali	Dominate Animal	incantesimo
+Dominare Mostri	Dominate Monster	incantesimo
+Dominare Persone	Dominate Person	incantesimo
+Dono Seducente	Beguiling Gift	incantesimo
+Dono Tossico	Toxic Gift	incantesimo
+Draghi d'Artificio	Snapdragon Fireworks	incantesimo
+Dubbio Improvviso	Qualm	incantesimo
+Ecolocazione	Echolocation	incantesimo
+Elucubrazione Arcana	Mage's Lucubration	incantesimo
+Eludere il Tempo	Elude Time	incantesimo
+Epidemia	Epidemic	incantesimo
+Epurare Invisibilità	Invisibility Purge	incantesimo
+Eroismo	Heroism	incantesimo
+Eroismo Superiore	Heroism, Greater	incantesimo
+Eruzione Caustica	Caustic Eruption	incantesimo
+Eruzione di Frecce	Arrow Eruption	incantesimo
+Esibizione Virtuosa	Virtuoso Performance	incantesimo
+Esigere	Demand	incantesimo
+Esilio	Banishment	incantesimo
+Esilio dalla Natura	Nature's Exile	incantesimo
+Espellere	Cast Out	incantesimo
+Espiazione	Atonement	incantesimo
+Esplosione Discordante	Discordant Blast	incantesimo
+Esplosione Solare	Sunburst	incantesimo
+Esplosione della Banshee	Banshee Blast	incantesimo
+Esplosione di Ortiche	Burst of Nettles	incantesimo
+Esplosione di Pallini	Pellet Blast	incantesimo
+Esplosione di Velocità	Burst of Speed	incantesimo
+Estasi Gioiosa	Joyful Rapture	incantesimo
+Estasiare	Enthrall	incantesimo
+Estinguere Fuoco	Quench	incantesimo
+Estrazione del Sangue Umano	Half Blood Extraction	incantesimo
+Estremità Affilata	Keen Edge	incantesimo
+Evoca Alleato Minore	Summon Minor Ally	incantesimo
+Evoca Alleato Naturale I	Summon Nature's Ally I	incantesimo
+Evoca Alleato Naturale II	Summon Nature's Ally II	incantesimo
+Evoca Alleato Naturale III	Summon Nature's Ally III	incantesimo
+Evoca Alleato Naturale IV	Summon Nature's Ally IV	incantesimo
+Evoca Alleato Naturale IX	Summon Nature's Ally IX	incantesimo
+Evoca Alleato Naturale V	Summon Nature's Ally V	incantesimo
+Evoca Alleato Naturale VI	Summon Nature's Ally VI	incantesimo
+Evoca Alleato Naturale VII	Summon Nature's Ally VII	incantesimo
+Evoca Alleato Naturale VIII	Summon Nature's Ally VIII	incantesimo
+Evoca Eidolon	Summon Eidolon	incantesimo
+Evoca Froghemoth	Summon Froghemoth	incantesimo
+Evoca Mostri I	Summon Monster I	incantesimo
+Evoca Mostri II	Summon Monster II	incantesimo
+Evoca Mostri III	Summon Monster III	incantesimo
+Evoca Mostri IV	Summon Monster IV	incantesimo
+Evoca Mostri IX	Summon Monster IX	incantesimo
+Evoca Mostri Minori	Summon Minor Monster	incantesimo
+Evoca Mostri V	Summon Monster V	incantesimo
+Evoca Mostri VI	Summon Monster VI	incantesimo
+Evoca Mostri VII	Summon Monster VII	incantesimo
+Evoca Mostri VIII	Summon Monster VIII	incantesimo
+Evoca Protoplasma Nero	Conjure Black Pudding	incantesimo
+Evoca Sciame	Summon Swarm	incantesimo
+Evoca Strumento	Summon Instrument	incantesimo
+Evoca Verme Antico	Summon Elder Worm	incantesimo
+Evocazioni Istantanee	Instant Summons	incantesimo
+Fabbricare	Fabricate	incantesimo
+Fabbricare Proiettili	Fabricate Bullets	incantesimo
+Fagiolo Rampicante	Climbing Beanstalk	incantesimo
+Falange di Legno	Wooden Phalanx	incantesimo
+Fango Rallentante	Slowing Mud	incantesimo
+Farfuglio	Fumbletongue	incantesimo
+Fatale	Weird	incantesimo
+Fato Spezzato	Severed Fate	incantesimo
+Fauci Robuste	Strong Jaw	incantesimo
+Favore Divino	Divine Favor	incantesimo
+Febbre Arcana	Eldritch Fever	incantesimo
+Ferire	Harm	incantesimo
+Fermare Non Morti	Halt Undead	incantesimo
+Fermare il Colpo	Stay the Hand	incantesimo
+Fermare il Tempo	Time Stop	incantesimo
+Ferocia del Tasso	Badger's Ferocity	incantesimo
+Fiamma Contagiosa	Contagious Flame	incantesimo
+Fiamma Perenne	Continual Flame	incantesimo
+Fiammata	Flash Fire	incantesimo
+Fiamme del Fedele	Flames of the Faithful	incantesimo
+Fiamme della Gloria	Blaze of Glory	incantesimo
+Finale Curativo	Reviving Finale	incantesimo
+Finale Eroico	Heroic Finale	incantesimo
+Finale Mortale	Deadly Finale	incantesimo
+Finale Ristorativo	Purging Finale	incantesimo
+Finale Stordente	Stunning Finale	incantesimo
+Finale in Soccorso	Saving Finale	incantesimo
+Fiotto Acido	Acid Splash	incantesimo
+Fisico Mostruoso I	Monstrous Physique I	incantesimo
+Fisico Mostruoso II	Monstrous Physique II	incantesimo
+Fisico Mostruoso III	Monstrous Physique III	incantesimo
+Fisico Mostruoso IV	Monstrous Physique IV	incantesimo
+Fiume di Vento	River of Wind	incantesimo
+Fiutare Sangue	Blood Scent	incantesimo
+Flauto Magico	Pied Piping	incantesimo
+Flessibilità Estrema	Extreme Flexibility	incantesimo
+Flusso di Ossidiana	Obsidian Flow	incantesimo
+Folata di Vento	Gust of Wind	incantesimo
+Fondersi con il Famiglio	Familiar Melding	incantesimo
+Fondersi nella Pietra	Meld into Stone	incantesimo
+Fonte di Magia dello Spirito	Font of Spirit Magic	incantesimo
+Forma Arborea	Tree Shape	incantesimo
+Forma Eterea	Etherealness	incantesimo
+Forma Ferina I	Beast Shape I	incantesimo
+Forma Ferina II	Beast Shape II	incantesimo
+Forma Ferina III	Beast Shape III	incantesimo
+Forma Ferina IV	Beast Shape IV	incantesimo
+Forma Fluida	Fluid Form	incantesimo
+Forma Gassosa	Gaseous Form	incantesimo
+Forma Gemella	Twin Form	incantesimo
+Forma Parassitica I	Vermin Shape I	incantesimo
+Forma Parassitica II	Vermin Shape II	incantesimo
+Forma Sonica	Sonic Form	incantesimo
+Forma di Braci Ardenti	Scorching Ash Form	incantesimo
+Forma di Cucciolo	Pup Shape	incantesimo
+Forma di Drago I	Form of the Dragon I	incantesimo
+Forma di Drago II	Form of the Dragon II	incantesimo
+Forma di Drago III	Form of the Dragon III	incantesimo
+Forma di Gigante I	Giant Form I	incantesimo
+Forma di Gigante II	Giant Form II	incantesimo
+Forma di Nube	Cloud Shape	incantesimo
+Forma di Polvere	Dust Form	incantesimo
+Forma di Vegetale I	Plant Shape I	incantesimo
+Forma di Vegetale II	Plant Shape II	incantesimo
+Forma di Vegetale III	Plant Shape III	incantesimo
+Forme Animali	Animal Shapes	incantesimo
+Formula Universale	Universal Formula	incantesimo
+Fortuna Eroica	Heroic Fortune	incantesimo
+Fortuna Eroica di Massa	Heroic Fortune, Mass	incantesimo
+Fortuna dell'Artigiano	Crafter's Fortune	incantesimo
+Fortuna in Prestito	Borrow Fortune	incantesimo
+Forza del Toro	Bull's Strength	incantesimo
+Forza del Toro di Massa	Bull's Strength, Mass	incantesimo
+Foschia Corrosiva	Vitriolic Mist	incantesimo
+Foschia Crepuscolare	Twilight Haze	incantesimo
+Foschia Infestante	Haunting Mists	incantesimo
+Foschia Occultante	Obscuring Mist	incantesimo
+Foschia Tombale	Barrow Haze	incantesimo
+Foschia di Sangue	Blood Mist	incantesimo
+Fossa Acida	Acid Pit	incantesimo
+Fossa Affamata	Hungry Pit	incantesimo
+Fossa con Spuntoni	Spiked Pit	incantesimo
+Frantuma Spezzare	Sunder Breaker	incantesimo
+Frantumare	Shatter	incantesimo
+Frasi Nascoste	Hidden Speech	incantesimo
+Frastornare	Daze	incantesimo
+Frastornare Mostri	Daze Monster	incantesimo
+Frastornare di Massa	Daze, Mass	incantesimo
+Freccia Acida	Acid Arrow	incantesimo
+Freccia Divina	Divine Arrow	incantesimo
+Freccia Infuocata	Flame Arrow	incantesimo
+Freccia Ki	Ki Arrow	incantesimo
+Freccia dell'Alba	Daybreak Arrow	incantesimo
+Freccia della Legge	Arrow of Law	incantesimo
+Fremito del Tempo	Time Shudder	incantesimo
+Frusta Fluviale	River Whip	incantesimo
+Frusta della Bocca Infernale	Hellmouth Lash	incantesimo
+Frusta di Formiche	Whip of Ants	incantesimo
+Frusta di Millepiedi	Whip of Centipedes	incantesimo
+Frusta di Ragni	Whip of Spiders	incantesimo
+Fuga	Getaway	incantesimo
+Fuga nel Vento	Windy Escape	incantesimo
+Fulmine	Lightning Bolt	incantesimo
+Fulmine Globulare	Ball Lightning	incantesimo
+Fuoco Intralciante	Fire of Entanglement	incantesimo
+Fuoco del Giudizio	Fire of Judgment	incantesimo
+Fuoco della Vendetta	Fire of Vengeance	incantesimo
+Fuorviare	Mislead	incantesimo
+Furia	Wrath	incantesimo
+Furia Flessibile	Flexible Fury	incantesimo
+Furto Arcano	Arcana Theft	incantesimo
+Gabbia di Forza	Forcecage	incantesimo
+Galleggiabilità	Buoyancy	incantesimo
+Gelare il Metallo	Chill Metal	incantesimo
+Gelo Pungente	Unshakable Chill	incantesimo
+Gemello di Vomito	Vomit Twin	incantesimo
+Getto di Fuoco	Firestream	incantesimo
+Geyser	Geyser	incantesimo
+Geyser d'Aria	Air Geyser	incantesimo
+Ghiaccio Sacrilego	Unholy Ice	incantesimo
+Ghiaccio Sacro	Holy Ice	incantesimo
+Ghiaccio Strisciante	Creeping Ice	incantesimo
+Giara Magica	Magic Jar	incantesimo
+Giavellotto Spina	Thorn Javelin	incantesimo
+Giustapposizione Ostile	Hostile Juxtaposition	incantesimo
+Giustapposizione Ostile Superiore	Hostile Juxtaposition, Greater	incantesimo
+Giusto Potere	Righteous Might	incantesimo
+Giusto Vigore	Righteous Vigor	incantesimo
+Glifo Fattura	Hex Glyph	incantesimo
+Glifo Fattura Superiore	Hex Glyph, Greater	incantesimo
+Glifo di Interdizione	Glyph of Warding	incantesimo
+Glifo di Interdizione Superiore	Glyph of Warding, Greater	incantesimo
+Globo Fuso	Molten Orb	incantesimo
+Globo del Vuoto	Orb of the Void	incantesimo
+Globo di Invulnerabilità	Globe of Invulnerability	incantesimo
+Globo di Invulnerabilità Inferiore	Globe of Invulnerability, Lesser	incantesimo
+Grazia	Grace	incantesimo
+Grazia Urbana	Urban Grace	incantesimo
+Grazia del Gatto	Cat's Grace	incantesimo
+Grazia del Gatto di Massa	Cat's Grace, Mass	incantesimo
+Grazia della Nereide	Nereid's Grace	incantesimo
+Grido	Shout	incantesimo
+Grido Ki	Ki Shout	incantesimo
+Grido Penetrante	Piercing Shriek	incantesimo
+Grido Superiore	Shout, Greater	incantesimo
+Guardiano della Fede	Guardian of Faith	incantesimo
+Guarigione	Heal	incantesimo
+Guarigione di Massa	Heal, Mass	incantesimo
+Guarire Cavalcatura	Heal Mount	incantesimo
+Guarire Eidolon	Rejuvenate Eidolon	incantesimo
+Guarire Eidolon Inferiore	Rejuvenate Eidolon, Lesser	incantesimo
+Guarire Eidolon Superiore	Rejuvenate Eidolon, Greater	incantesimo
+Guida	Guidance	incantesimo
+Guidatore Fantomatico	Phantom Driver	incantesimo
+Guscio Anti-incorporeo	Anti-Incorporeal Shell	incantesimo
+Guscio Antivegetali	Antiplant Shell	incantesimo
+Guscio Antivita	Antilife Shell	incantesimo
+Identificare	Identify	incantesimo
+Illusione di Calma	Illusion of Calm	incantesimo
+Immagine Maggiore	Major Image	incantesimo
+Immagine Minore	Minor Image	incantesimo
+Immagine Permanente	Permanent Image	incantesimo
+Immagine Persistente	Persistent Image	incantesimo
+Immagine Programmata	Programmed Image	incantesimo
+Immagine Proiettata	Project Image	incantesimo
+Immagine Scioccante	Shocking Image	incantesimo
+Immagine Silenziosa	Silent Image	incantesimo
+Immagine Speculare	Mirror Image	incantesimo
+Immolazione Spontanea	Spontaneous Immolation	incantesimo
+Immortalità	Deathless	incantesimo
+Immunità agli Incantesimi	Spell Immunity	incantesimo
+Immunità agli Incantesimi Collettivo	Spell Immunity, Communal	incantesimo
+Immunità agli Incantesimi Superiore	Spell Immunity, Greater	incantesimo
+Immunità agli Incantesimi Superiore Collettivo	Spell Immunity, Greater Communal	incantesimo
+Implosione	Implosion	incantesimo
+Imporre Ostilità	Compel Hostility	incantesimo
+Imprigionare	Imprisonment	incantesimo
+Impulso di Fierezza Razziale	Paragon Surge	incantesimo
+Inalazione Assorbente	Absorbing Inhalation	incantesimo
+Inaridire	Blight	incantesimo
+Incanalare Vita	Life Channel	incantesimo
+Incubo	Nightmare	incantesimo
+Incuti Paura	Cause Fear	incantesimo
+Indebolire Polveri	Weaken Powder	incantesimo
+Individuazione dei Non Morti	Detect Undead	incantesimo
+Individuazione dei Pensieri	Detect Thoughts	incantesimo
+Individuazione del Bene	Detect Good	incantesimo
+Individuazione del Caos	Detect Chaos	incantesimo
+Individuazione del Magico	Detect Magic	incantesimo
+Individuazione del Male	Detect Evil	incantesimo
+Individuazione del Veleno	Detect Poison	incantesimo
+Individuazione della Legge	Detect Law	incantesimo
+Individuazione delle Aberrazioni	Detect Aberration	incantesimo
+Individuazione delle Porte Segrete	Detect Secret Doors	incantesimo
+Individuazione dello Scrutamento	Detect Scrying	incantesimo
+Individuazione di Animali o Vegetali	Detect Animals or Plants	incantesimo
+Individuazione di Calappi e Trabocchetti	Detect Snares and Pits	incantesimo
+Infatuazione Avventata	Reckless Infatuation	incantesimo
+Infestazione Micotica	Fungal Infestation	incantesimo
+Infestazione di Vermi Mangia Carne	Fleshworm Infestation	incantesimo
+Infliggi Ferite Critiche	Inflict Critical Wounds	incantesimo
+Infliggi Ferite Critiche di Massa	Inflict Critical Wounds, Mass	incantesimo
+Infliggi Ferite Gravi	Inflict Serious Wounds	incantesimo
+Infliggi Ferite Gravi di Massa	Inflict Serious Wounds, Mass	incantesimo
+Infliggi Ferite Leggere	Inflict Light Wounds	incantesimo
+Infliggi Ferite Leggere di Massa	Inflict Light Wounds, Mass	incantesimo
+Infliggi Ferite Moderate	Inflict Moderate Wounds	incantesimo
+Infliggi Ferite Moderate di Massa	Inflict Moderate Wounds, Mass	incantesimo
+Influenza Sacrilega	Unholy Blight	incantesimo
+Infondere Aura	Imbue with Aura	incantesimo
+Infondere Capacità Magiche	Imbue with Spell Ability	incantesimo
+Infondere Possanza Elementale	Imbue with Elemental Might	incantesimo
+Ingrandire Persone	Enlarge Person	incantesimo
+Ingrandire Persone di Massa	Enlarge Person, Mass	incantesimo
+Iniezione a Contatto	Touch Injection	incantesimo
+Innalzamento del Suolo	Groundswell	incantesimo
+Innocenza	Innocence	incantesimo
+Inseguimento Divino	Divine Pursuit	incantesimo
+Inseguimento Instancabile	Tireless Pursuit	incantesimo
+Inseguitori Instancabili	Tireless Pursuers	incantesimo
+Instillare Invidia	Envious Urge	incantesimo
+Interazione Anonima	Anonymous Interaction	incantesimo
+Interdizione alla Morte	Death Ward	incantesimo
+Interdizione del Furto	Theft Ward	incantesimo
+Interdizione della Fuga	Escaping Ward	incantesimo
+Interdizione della Progenie	Spawn Ward	incantesimo
+Interdizione della Stagione	Ward of the Season	incantesimo
+Intermittenza	Blink	incantesimo
+Interrogazione	Interrogation	incantesimo
+Interrogazione Superiore	Interrogation, Greater	incantesimo
+Intimorire	Rebuke	incantesimo
+Intralciare	Entangle	incantesimo
+Intralcio Debilitante	Sickening Entanglement	incantesimo
+Intralcio Spinoso	Thorny Entanglement	incantesimo
+Intrappolare l'Anima	Trap the Soul	incantesimo
+Inumidire Polveri	Damp Powder	incantesimo
+Inversione della Gravità	Reverse Gravity	incantesimo
+Invettiva Feroce	Blistering Invective	incantesimo
+Inviare	Sending	incantesimo
+Invisibilità	Invisibility	incantesimo
+Invisibilità Superiore	Invisibility, Greater	incantesimo
+Invisibilità di Massa	Invisibility, Mass	incantesimo
+Invocare Tempesta di Fulmini	Call Lightning Storm	incantesimo
+Invocare il Fulmine	Call Lightning	incantesimo
+Invocazione Eroica	Heroic Invocation	incantesimo
+Ipnosi	Hypnotism	incantesimo
+Ira	Rage	incantesimo
+Ira Non Morta	Unliving Rage	incantesimo
+Irsura	Bristle	incantesimo
+Ispirazione Brillante	Brilliant Inspiration	incantesimo
+Ispirazione Tempestiva	Timely Inspiration	incantesimo
+Ispirazione Valorosa	Gallant Inspiration	incantesimo
+Juggernaut Letale	Deadly Juggernaut	incantesimo
+Labirinto	Maze	incantesimo
+Lama Infuocata	Flame Blade	incantesimo
+Lama dell'Oscuro Trionfo	Blade of Dark Triumph	incantesimo
+Lama della Vittoria Sfolgorante	Blade of Bright Victory	incantesimo
+Lame di Piombo	Lead Blades	incantesimo
+Lame di Vento	Wind Blades	incantesimo
+Lamento del Codardo	Coward's Lament	incantesimo
+Lamento della Banshee	Wail of the Banshee	incantesimo
+Lampo	Flare	incantesimo
+Lancia di Luce	Light Lance	incantesimo
+Lancia di Purezza	Spear of Purity	incantesimo
+Lanterna Danzante	Dancing Lantern	incantesimo
+Legame	Binding	incantesimo
+Legame Mentale con il Compagno	Companion Mind Link	incantesimo
+Legame Planare	Planar Binding	incantesimo
+Legame Planare Inferiore	Planar Binding, Lesser	incantesimo
+Legame Planare Superiore	Planar Binding, Greater	incantesimo
+Legame Sacro	Sacred Bond	incantesimo
+Legame Telepatico	Telepathic Bond	incantesimo
+Legame di Battaglia	Battlemind Link	incantesimo
+Legame di Pace	Peacebond	incantesimo
+Legare Anima	Soul Bind	incantesimo
+Legarsi all'Ambiente	Terrain Bond	incantesimo
+Legno di Ferro	Ironwood	incantesimo
+Lentezza	Slow	incantesimo
+Lettura del Magico	Read Magic	incantesimo
+Levitazione	Levitate	incantesimo
+Levitazione Ostile	Hostile Levitation	incantesimo
+Libertà	Freedom	incantesimo
+Libertà di Movimento	Freedom of Movement	incantesimo
+Linea nella Sabbia	Line in the Sand	incantesimo
+Lingua Elementale	Elemental Speech	incantesimo
+Lingua di Miele	Honeyed Tongue	incantesimo
+Linguaggi	Tongues	incantesimo
+Linguaggi Collettivo	Tongues, Communal	incantesimo
+Linguaggio Primevo	Truespeak	incantesimo
+Litania di Debolezza	Litany of Weakness	incantesimo
+Litania di Difesa	Litany of Defense	incantesimo
+Litania di Eloquenza	Litany of Eloquence	incantesimo
+Litania di Follia	Litany of Madness	incantesimo
+Litania di Fuga	Litany of Escape	incantesimo
+Litania di Guardia	Litany of Warding	incantesimo
+Litania di Indolenza	Litany of Sloth	incantesimo
+Litania di Intralcio	Litany of Entanglement	incantesimo
+Litania di Rettitudine	Litany of Righteousness	incantesimo
+Litania di Tuono	Litany of Thunder	incantesimo
+Litania di Vendetta	Litany of Vengeance	incantesimo
+Litania di Visione	Litany of Sight	incantesimo
+Localizza Creatura	Locate Creature	incantesimo
+Localizza Oggetto	Locate Object	incantesimo
+Localizzare Debolezza	Locate Weakness	incantesimo
+Loquacità	Glibness	incantesimo
+Luce	Light	incantesimo
+Luce Diurna	Daylight	incantesimo
+Luce Incandescente	Searing Light	incantesimo
+Luce del Giudizio	Judgment Light	incantesimo
+Luci Danzanti	Dancing Lights	incantesimo
+Lucidatura a Specchio	Mirror Polish	incantesimo
+Luminescenza	Faerie Fire	incantesimo
+Luminosità Insopportabile	Unbearable Brightness	incantesimo
+Lunaticismo	Moonstruck	incantesimo
+Lupo Fantasma	Ghost Wolf	incantesimo
+Lussuria Innaturale	Unnatural Lust	incantesimo
+Macchina d'Assedio Magica	Magic Siege Engine	incantesimo
+Macchina d'Assedio Magica Superiore	Magic Siege Engine, Greater	incantesimo
+Maestria del Marid	Marid's Mastery	incantesimo
+Malaugurio	Ill Omen	incantesimo
+Maledire l'Acqua	Curse Water	incantesimo
+Maledizione	Malediction	incantesimo
+Maledizione Maggiore	Curse Major	incantesimo
+Maledizione del Disgusto	Curse of Disgust	incantesimo
+Maledizione del Sonno Ardente	Curse of Burning Sleep	incantesimo
+Maledizione dell'Artigiano	Crafter's Curse	incantesimo
+Maledizione dell'Ondine	Undine's Curse	incantesimo
+Maledizione dell'Uomo di Mare	Old Salt's Curse	incantesimo
+Maledizione della Negazione Magica	Curse of Magic Negation	incantesimo
+Malfunzione	Malfunction	incantesimo
+Manette Leganti	Leashed Shackles	incantesimo
+Mani Brucianti	Burning Hands	incantesimo
+Mani Ricaricanti	Reloading Hands	incantesimo
+Mano Interposta	Interposing Hand	incantesimo
+Mano Magica	Mage Hand	incantesimo
+Mano Possente	Forceful Hand	incantesimo
+Mano Sgraffignante	Pilfering Hand	incantesimo
+Mano Spettrale	Spectral Hand	incantesimo
+Mano Stringente	Grasping Hand	incantesimo
+Mano Stritolatrice	Crushing Hand	incantesimo
+Mano in Aiuto	Helping Hand	incantesimo
+Mantello del Caos	Cloak of Chaos	incantesimo
+Manto Furioso	Wrathful Mantle	incantesimo
+Manto dei Sogni	Cloak of Dreams	incantesimo
+Manto dei Venti	Cloak of Winds	incantesimo
+Manto del Mare	Seamantle	incantesimo
+Manto delle Ombre	Cloak of Shade	incantesimo
+Manto di Calma	Mantle of Calm	incantesimo
+Marchio	Brand	incantesimo
+Marchio Superiore	Brand, Greater	incantesimo
+Marchio dell'Etica Ovvia	Mark of Obvious Ethics	incantesimo
+Marchio di Fuoco	Firebrand	incantesimo
+Marchio di Protezione	Marks of Forbiddance	incantesimo
+Martello Arboreo	Arboreal Hammer	incantesimo
+Martello del Caos	Chaos Hammer	incantesimo
+Mascelle Serrate	Lockjaw	incantesimo
+Mascherare Dweomer	Mask Dweomer	incantesimo
+Mascherare Dweomer Collettivo	Mask Dweomer, Communal	incantesimo
+Memorizza Pagina	Memorize Page	incantesimo
+Mente Investigativa	Investigative Mind	incantesimo
+Messaggero Vincolato	Mindlocked Messenger	incantesimo
+Messaggio	Message	incantesimo
+Metallo Solare	Sun Metal	incantesimo
+Metamorfosi	Polymorph	incantesimo
+Metamorfosi Funesta	Baleful Polymorph	incantesimo
+Metamorfosi Regolabile	Adjustable Polymorph	incantesimo
+Metamorfosi Superiore	Polymorph, Greater	incantesimo
+Metamorfosi Suprema	Polymorph Any Object	incantesimo
+Metamorfosi del Famiglio	Polymorph Familiar	incantesimo
+Mezzanotte Polare	Polar Midnight	incantesimo
+Migliora Trappola	Improve Trap	incantesimo
+Mimetizzazione	Blend	incantesimo
+Miracolo	Miracle	incantesimo
+Miraggio Arcano	Mirage Arcana	incantesimo
+Mistura per Bombe Fiaccanti	Languid Bomb Admixture	incantesimo
+Mistura per Bombe Imprigionanti	Caging Bomb Admixture	incantesimo
+Mistura per Bombe Mirate	Targeted Bomb Admixture	incantesimo
+Mistura per Bombe Sferzata Fulminante	Lightning Lash Bomb Admixture	incantesimo
+Mistura per Bombe Vipera	Viper Bomb Admixture	incantesimo
+Mistura per Bombe d'Ombra	Shadow Bomb Admixture	incantesimo
+Modellare Suono	Sculpt Sound	incantesimo
+Modificare Memoria	Modify Memory	incantesimo
+Momento di Grandezza	Moment of Greatness	incantesimo
+Momento di Prescienza	Moment of Prescience	incantesimo
+Monotonia Oppressiva	Oppressive Boredom	incantesimo
+Morte dal Basso	Death From Below	incantesimo
+Movimenti del Ragno	Spider Climb	incantesimo
+Movimenti del Ragno Collettivo	Spider Climb, Communal	incantesimo
+Movimento Sfocato	Blurred Movement	incantesimo
+Munizioni Abbondanti	Abundant Ammunition	incantesimo
+Muovere il Terreno	Move Earth	incantesimo
+Muro Illusorio	Illusory Wall	incantesimo
+Muro Prismatico	Prismatic Wall	incantesimo
+Muro di Cecità/Sordità	Wall of Blindness/Deafness	incantesimo
+Muro di Ferro	Wall of Iron	incantesimo
+Muro di Forza	Wall of Force	incantesimo
+Muro di Fuoco	Wall of Fire	incantesimo
+Muro di Ghiaccio	Wall of Ice	incantesimo
+Muro di Lava	Wall of Lava	incantesimo
+Muro di Nausea	Wall of Nausea	incantesimo
+Muro di Pietra	Wall of Stone	incantesimo
+Muro di Soppressione	Wall of Suppression	incantesimo
+Muro di Spine	Wall of Thorns	incantesimo
+Muro di Suono	Wall of Sound	incantesimo
+Muro di Vento	Wind Wall	incantesimo
+Muro per Campo	Campfire Wall	incantesimo
+Narcisismo Compiaciuto	Smug Narcissism	incantesimo
+Nascondere Campo	Hide Campsite	incantesimo
+Nascondersi agli Animali	Hide from Animals	incantesimo
+Nascondersi ai Non Morti	Hide from Undead	incantesimo
+Nascondiglio Speculare	Mirror Hideaway	incantesimo
+Nebbia Acida	Acid Fog	incantesimo
+Nebbia Mentale	Mind Fog	incantesimo
+Nebbia Solida	Solid Fog	incantesimo
+Negare Odore	Negate Aroma	incantesimo
+Nembo Aggressivo	Aggressive Thundercloud	incantesimo
+Nembo Aggressivo Superiore	Aggressive Thundercloud, Greater	incantesimo
+Nemico Come Arma	Enemy Hammer	incantesimo
+Nemico Istantaneo	Instant Enemy	incantesimo
+Neutralizza Veleno	Neutralize Poison	incantesimo
+Nido d'Aquila	Eagle Aerie	incantesimo
+Ninna Nanna	Lullaby	incantesimo
+Non Morto a Morto	Undeath to Death	incantesimo
+Nota Congelata	Frozen Note	incantesimo
+Nota Solida	Solid Note	incantesimo
+Nove Vite	Nine Lives	incantesimo
+Nube Euforica	Euphoric Cloud	incantesimo
+Nube Incendiaria	Incendiary Cloud	incantesimo
+Nube Maleodorante	Stinking Cloud	incantesimo
+Nube Mortale	Cloudkill	incantesimo
+Nube di Nebbia	Fog Cloud	incantesimo
+Nube di Ragnatela	Web Cloud	incantesimo
+Occhi Indagatori	Prying Eyes	incantesimo
+Occhi Indagatori Superiore	Prying Eyes, Greater	incantesimo
+Occhi Innumerevoli	Countless Eyes	incantesimo
+Occhi del Vuoto	Eyes of the Void	incantesimo
+Occhio Arcano	Arcane Eye	incantesimo
+Occhio d'Aquila	Eagle Eye	incantesimo
+Occhio del Bombarolo	Bomber's Eye	incantesimo
+Occhio del Cacciatore	Hunter's Eye	incantesimo
+Occulta Oggetto	Obscure Object	incantesimo
+Oggetto Fantasma Maggiore	Major Phantom Object	incantesimo
+Oggetto Fantasma Minore	Minor Phantom Object	incantesimo
+Oltraggio da Vendicare	Vengeful Outrage	incantesimo
+Ombra di un Bardo	Shadowbard	incantesimo
+Ombra di un'Arma	Shadow Weapon	incantesimo
+Ombra di una Evocazione	Shadow Conjuration	incantesimo
+Ombra di una Evocazione Superiore	Shadow Conjuration, Greater	incantesimo
+Ombra di una Invocazione	Shadow Evocation	incantesimo
+Ombra di una Invocazione Superiore	Shadow Evocation, Greater	incantesimo
+Ombre	Shades	incantesimo
+Onda del Mondo	World Wave	incantesimo
+Onde di Affaticamento	Waves of Fatigue	incantesimo
+Onde di Esaurimento	Waves of Exhaustion	incantesimo
+Onde di Estasi	Waves of Ecstasy	incantesimo
+Orgoglio Illusorio	Delusional Pride	incantesimo
+Orrido Avvizzimento	Horrid Wilting	incantesimo
+Oscurità	Darkness	incantesimo
+Oscurità Profonda	Deeper Darkness	incantesimo
+Pagina Segreta	Secret Page	incantesimo
+Palla di Catrame	Tar Ball	incantesimo
+Palla di Fango	Mudball	incantesimo
+Palla di Fuoco	Fireball	incantesimo
+Palla di Fuoco Ritardata	Delayed Blast Fireball	incantesimo
+Panacea Polivalente	Polypurpose Panacea	incantesimo
+Parassiti Giganti	Giant Vermin	incantesimo
+Parlare con gli Animali	Speak with Animals	incantesimo
+Parlare con i Morti	Speak with Dead	incantesimo
+Parlare con i Vegetali	Speak with Plants	incantesimo
+Parlare con le Infestazioni	Speak with Haunt	incantesimo
+Parlata Bestiale	Beastspeak	incantesimo
+Parola Risonante	Resonating Word	incantesimo
+Parola Sacra	Holy Word	incantesimo
+Parola del Caos	Word of Chaos	incantesimo
+Parola del Potere, Accecare	Power Word Blind	incantesimo
+Parola del Potere, Stordire	Power Word Stun	incantesimo
+Parola del Potere, Uccidere	Power Word Kill	incantesimo
+Parola del Ritiro	Word of Recall	incantesimo
+Parola di Risolutezza	Word of Resolve	incantesimo
+Passaggio di Luce	Wake of Light	incantesimo
+Passapareti	Passwall	incantesimo
+Passare Senza Tracce	Pass without Trace	incantesimo
+Passo Ancorato	Anchored Step	incantesimo
+Passo Morbido	Feather Step	incantesimo
+Passo Morbido di Massa	Feather Step	incantesimo
+Passo Scongiurante	Adjuring Step	incantesimo
+Passo Tonante	Thunderstomp	incantesimo
+Passo Tonante Superiore	Thunderstomp, Greater	incantesimo
+Passo Veloce	Longstrider	incantesimo
+Passo Veloce Superiore	Longstrider, Greater	incantesimo
+Passo del Camaleonte	Chameleon Stride	incantesimo
+Passo del Camaleonte Superiore	Chameleon Stride, Greater	incantesimo
+Passo nell'Aria	Air Step	incantesimo
+Passo nell'Ombra	Shadow Step	incantesimo
+Passo sulle Ninfee	Lily Pad Stride	incantesimo
+Pasticcio	Bungle	incantesimo
+Patto di Vita	Life Pact	incantesimo
+Paura	Fear	incantesimo
+Pelle Coriacea	Barkskin	incantesimo
+Pelle Resinosa	Resinous Skin	incantesimo
+Pelle di Pietra	Stoneskin	incantesimo
+Pelle di Pietra Collettivo	Stoneskin, Communal	incantesimo
+Pelle di Sciami	Swarm Skin	incantesimo
+Penetra Camuffamento	Pierce Disguise	incantesimo
+Penetrare Immagine	Enter Image	incantesimo
+Penombra Protettiva	Protective Penumbra	incantesimo
+Pentimento Forzato	Forced Repentance	incantesimo
+Percepire Espressioni	Perceive Cues	incantesimo
+Percepire Magia dello Spirito	Sense Spirit Magic	incantesimo
+Percezione del Nemico	Enemy Insight	incantesimo
+Percezioni Acute	Acute Senses	incantesimo
+Percorso dei Venti	Path of the Winds	incantesimo
+Pergamena Condizionata	Contingent Scroll	incantesimo
+Permanenza	Permanency	incantesimo
+Pesce Scimmia	Monkey Fish	incantesimo
+Peso dell'Oracolo	Oracle's Burden	incantesimo
+Piaga Strisciante	Creeping Doom	incantesimo
+Piaga degli Insetti	Insect Plague	incantesimo
+Pietra Magica	Magic Stone	incantesimo
+Pietra in Carne	Stone to Flesh	incantesimo
+Pietre Parlanti	Stone Tell	incantesimo
+Pietrisco Rotolante	Raging Rubble	incantesimo
+Pietà Miserevole	Miserable Pity	incantesimo
+Pilastro di Vita	Pillar of Life	incantesimo
+Pinne in Piedi	Fins to Feet	incantesimo
+Pioggia di Fuoco	Firefall	incantesimo
+Pioggia di Rane	Rain of Frogs	incantesimo
+Pirotecnica	Pyrotechnics	incantesimo
+Piumaggio Invernale	Winter Feathers	incantesimo
+Planare	Glide	incantesimo
+Plasmare Cadavere	Sculpt Corpse	incantesimo
+Polmoni da Aboleth	Aboleth's Lung	incantesimo
+Polvere Luccicante	Glitterdust	incantesimo
+Polvere di Crepuscolo	Dust of Twilight	incantesimo
+Porta Dimensionale	Dimension Door	incantesimo
+Porta in Fase	Phase Door	incantesimo
+Portale	Gate	incantesimo
+Possedere un Oggetto	Possess Object	incantesimo
+Possessione della Marionetta	Marionette Possession	incantesimo
+Potenziatore Mnemonico	Mnemonic Enhancer	incantesimo
+Potere Divino	Divine Power	incantesimo
+Pozza di Catrame	Tar Pool	incantesimo
+Predizione di Fallimento	Prediction of Failure	incantesimo
+Preghiera	Prayer	incantesimo
+Presa Sicura	Certain Grip	incantesimo
+Presagio	Augury	incantesimo
+Presagio Debilitante	Debilitating Portent	incantesimo
+Presagio Sconvolgente	Jolting Portent	incantesimo
+Presenza Soverchiante	Overwhelming Presence	incantesimo
+Prestidigitazione	Prestidigitation	incantesimo
+Previsione	Foresight	incantesimo
+Prigione di Ghiaccio	Icy Prison	incantesimo
+Prigione di Ghiaccio di Massa	Icy Prison, Mass	incantesimo
+Produrre Fiamma	Produce Flame	incantesimo
+Profanare	Unhallow	incantesimo
+Proibire Azione	Forbid Action	incantesimo
+Proibire Azione Superiore	Forbid Action, Greater	incantesimo
+Proibizione	Forbiddance	incantesimo
+Proiettare Ombra	Shadow Projection	incantesimo
+Proiettile Nominativo	Named Bullet	incantesimo
+Proiettile Nominativo Superiore	Named Bullet, Greater	incantesimo
+Proiettile Sonoro Assordante	Deafening Song Bolt	incantesimo
+Proiettile Velenoso	Venomous Bolt	incantesimo
+Proiezione Astrale	Astral Projection	incantesimo
+Proiezione Astrale Inferiore	Astral Projection, Lesser	incantesimo
+Proteggere i Fedeli	Ward the Faithful	incantesimo
+Protezione dagli Incantesimi	Protection from Spells	incantesimo
+Protezione dal Bene	Protection from Good	incantesimo
+Protezione dal Bene Collettivo	Protection from Good, Communal	incantesimo
+Protezione dal Caos	Protection from Chaos	incantesimo
+Protezione dal Caos Collettivo	Protection from Chaos, Communal	incantesimo
+Protezione dal Male	Protection from Evil	incantesimo
+Protezione dal Male Collettivo	Protection from Evil, Communal	incantesimo
+Protezione dall'Energia	Protection from Energy	incantesimo
+Protezione dall'Energia Collettivo	Protection from Energy, Communal	incantesimo
+Protezione dalla Legge	Protection from Law	incantesimo
+Protezione dalla Legge Collettivo	Protection from Law, Communal	incantesimo
+Protezione dalle Fatture	Hex Ward	incantesimo
+Protezione dalle Frecce	Protection from Arrows	incantesimo
+Protezione dalle Frecce Collettivo	Protection from Arrows, Communal	incantesimo
+Protezione del Buffone	Fool's Forbiddance	incantesimo
+Pugnale del Crepuscolo	Twilight Knife	incantesimo
+Pugnale di Ghiaccio	Icicle Dagger	incantesimo
+Pugni di Pietra	Stone Fist	incantesimo
+Pugno Benedetto	Blessed Fist	incantesimo
+Pugno Potente della Terra	Mighty Fist of the Earth	incantesimo
+Pugno Serrato	Clenched Fist	incantesimo
+Pugno di Forza	Force Punch	incantesimo
+Pungolo Persuasivo	Persuasive Goad	incantesimo
+Punizione Sacra	Holy Smite	incantesimo
+Punto di Ritrovo	Rally Point	incantesimo
+Purificare	Cleanse	incantesimo
+Purificare Cibo e Bevande	Purify Food and Drink	incantesimo
+Pustole del Vaiolo	Pox Pustules	incantesimo
+Putrefare Cibo e Bevande	Putrefy Food and Drink	incantesimo
+Puzza di Preda	Stench of Prey	incantesimo
+Quadrello Terrificante	Dread Bolt	incantesimo
+Querciaviva	Liveoak	incantesimo
+Quiete Forzata	Forced Quiet	incantesimo
+Raddoppia Famiglio	Familiar Double	incantesimo
+Raffinare Arma Improvvisata	Refine Improvised Weapon	incantesimo
+Raggio Accecante	Blinding Ray	incantesimo
+Raggio Polare	Polar Ray	incantesimo
+Raggio Rovente	Scorching Ray	incantesimo
+Raggio di Debilitazione	Ray of Sickening	incantesimo
+Raggio di Esaurimento	Ray of Exhaustion	incantesimo
+Raggio di Gelo	Ray of Frost	incantesimo
+Raggio di Indebolimento	Ray of Enfeeblement	incantesimo
+Ragnatela	Web	incantesimo
+Ragnatela Fantasma	Phantasmal Web	incantesimo
+Randello Incantato	Shillelagh	incantesimo
+Reazione Negativa	Negative Reaction	incantesimo
+Recipiente Divino	Divine Vessel	incantesimo
+Recipiente dell'Oracolo	Oracle's Vessel	incantesimo
+Reggia Meravigliosa	Mage's Magnificent Mansion	incantesimo
+Regressione Ancestrale	Ancestral Regression	incantesimo
+Regressione Mentale	Feeblemind	incantesimo
+Reincarnazione	Reincarnate	incantesimo
+Rendere Integro	Make Whole	incantesimo
+Repulsione	Repulsion	incantesimo
+Requiem del Fantasma	Ghostbane Dirge	incantesimo
+Requiem del Fantasma di Massa	Ghostbane Dirge, Mass	incantesimo
+Resistenza	Resistance	incantesimo
+Resistenza agli Incantesimi	Spell Resistance	incantesimo
+Resistenza all'Invecchiamento	Age Resistance	incantesimo
+Resistenza all'Invecchiamento Inferiore	Age Resistance, Lesser	incantesimo
+Resistenza all'Invecchiamento Superiore	Age Resistance, Greater	incantesimo
+Resistenza alla Corruzione	Corruption Resistance	incantesimo
+Resistenza dell'Orso	Bear's Endurance	incantesimo
+Resistenza dell'Orso di Massa	Bear's Endurance, Mass	incantesimo
+Resistere all'Energia	Resist Energy	incantesimo
+Resistere all'Energia Collettivo	Resist Energy, Communal	incantesimo
+Respingere Legno	Repel Wood	incantesimo
+Respingere Metallo o Pietra	Repel Metal or Stone	incantesimo
+Respingere Parassiti	Repel Vermin	incantesimo
+Respirare Sott'Acqua	Water Breathing	incantesimo
+Respiro di Vita	Breath of Life	incantesimo
+Restringere Oggetto	Shrink Item	incantesimo
+Resurrezione	Resurrection	incantesimo
+Resurrezione Pura	True Resurrection	incantesimo
+Resurrezione Temporanea	Temporary Resurrection	incantesimo
+Rianimare Compagno Animale	Raise Animal Companion	incantesimo
+Rianimare Morti	Raise Dead	incantesimo
+Ricamare Tesoro	Treasure Stitching	incantesimo
+Ricaricare Magia Innata	Recharge Innate Magic	incantesimo
+Richiamare Animale	Call Animal	incantesimo
+Richiamare Costrutti	Call Construct	incantesimo
+Richiamare Pietre	Stone Call	incantesimo
+Richiamo Cacofonico	Cacophonous Call	incantesimo
+Richiamo Cacofonico di Massa	Cacophonous Call, Mass	incantesimo
+Richiamo Purificatore	Purified Calling	incantesimo
+Richiamo del Cavaliere	Knight's Calling	incantesimo
+Richiamo del Nixie	Nixie's Lure	incantesimo
+Ridurre Animali	Reduce Animal	incantesimo
+Ridurre Persone	Reduce Person	incantesimo
+Ridurre Persone di Massa	Reduce Person, Mass	incantesimo
+Riflessi Intensificati	Heightened Reflexes	incantesimo
+Riflettere Incantesimo	Spell Turning	incantesimo
+Rifugio	Refuge	incantesimo
+Rifugio delle Ombre	Shadowy Haven	incantesimo
+Rigenerazione	Regenerate	incantesimo
+Rimbalzo Dimensionale	Dimensional Bounce	incantesimo
+Rimpicciolire Vegetali	Diminish Plants	incantesimo
+Rimprovero Agonizzante	Agonizing Rebuke	incantesimo
+Rimuovere Infermità	Remove Sickness	incantesimo
+Rimuovi Cecità/Sordità	Remove Blindness-Deafness	incantesimo
+Rimuovi Malattia	Remove Disease	incantesimo
+Rimuovi Maledizione	Remove Curse	incantesimo
+Rimuovi Paralisi	Remove Paralysis	incantesimo
+Rimuovi Paura	Remove Fear	incantesimo
+Rimutare	Transmogrify	incantesimo
+Rinforzare Armamenti	Reinforce Armaments	incantesimo
+Rinforzare Armamenti Collettivo	Reinforce Armaments, Communal	incantesimo
+Rintocco di Morte	Death Knell	incantesimo
+Rinvigorire	Invigorate	incantesimo
+Rinvigorire di Massa	Invigorate, Mass	incantesimo
+Riparare	Mending	incantesimo
+Riparare Non Morti	Repair Undead	incantesimo
+Riparare Non Morti di Massa	Repair Undead, Mass	incantesimo
+Riparazione Rapida	Rapid Repair	incantesimo
+Riparazione di Fortuna	Jury Rig	incantesimo
+Riparo Fatato	Fairy Ring Retreat	incantesimo
+Riparo Sicuro	Secure Shelter	incantesimo
+Riparo di Ragnatele	Web Shelter	incantesimo
+Riposo Eterno	Rest Eternal	incantesimo
+Riposo Inviolato	Gentle Repose	incantesimo
+Riprovazione	Reprobation	incantesimo
+Risata Incontenibile	Hideous Laughter	incantesimo
+Riscaldare il Metallo	Heat Metal	incantesimo
+Riserva Draconica	Draconic Reservoir	incantesimo
+Riserva di Resistenza	Resilient Reservoir	incantesimo
+Risonanza Cinetica	Kinetic Reverberation	incantesimo
+Ristorare	Restoration	incantesimo
+Ristorare Cadavere	Restore Corpse	incantesimo
+Ristorare Eidolon	Restore Eidolon	incantesimo
+Ristorare Eidolon Inferiore	Restore Eidolon, Lesser	incantesimo
+Ristorare Inferiore	Restoration, Lesser	incantesimo
+Ristorare Superiore	Restoration, Greater	incantesimo
+Risucchio	Slipstream	incantesimo
+Risucchio di Energia	Energy Drain	incantesimo
+Risveglio	Awaken	incantesimo
+Ritarda Malattia	Delay Disease	incantesimo
+Ritarda Veleno	Delay Poison	incantesimo
+Ritarda Veleno Collettivo	Delay Poison, Communal	incantesimo
+Ritardare Dolore	Delay Pain	incantesimo
+Ritirata Rapida	Expeditious Retreat	incantesimo
+Ritmo Naturale	Natural Rhythm	incantesimo
+Rivela Bugie	Discern Lies	incantesimo
+Rivela Locazioni	Discern Location	incantesimo
+Rivela Parente	Discern Next of Kin	incantesimo
+Rocce Aguzze	Spike Stones	incantesimo
+Rocce Cozzanti	Clashing Rocks	incantesimo
+Rompere	Break	incantesimo
+Rovina Gelida	Frost Fall	incantesimo
+Ruba Guarigione	Healing Thief	incantesimo
+Rubare Potere	Steal Power	incantesimo
+Rubare Respiro	Steal Breath	incantesimo
+Rubare Voce	Steal Voice	incantesimo
+Rune Esplosive	Explosive Runes	incantesimo
+Sabbie Mobili	Shifting Sand	incantesimo
+Sabbie del Tempo	Sands of Time	incantesimo
+Sacrificio del Paladino	Paladin's Sacrifice	incantesimo
+Saggezza del Gufo	Owl's Wisdom	incantesimo
+Saggezza del Gufo di Massa	Owl's Wisdom, Mass	incantesimo
+Salasso Ki	Ki Leech	incantesimo
+Saltare	Jump	incantesimo
+Sangue Adesivo	Adhesive Blood	incantesimo
+Sangue Fantomatico	Phantom Blood	incantesimo
+Santificare	Hallow	incantesimo
+Santificare Armatura	Sanctify Armor	incantesimo
+Santificare Cadavere	Sanctify Corpse	incantesimo
+Santuario	Sanctuary	incantesimo
+Santuario Privato	Mage's Private Sanctum	incantesimo
+Sapere Sussurrante	Whispering Lore	incantesimo
+Sapienza dell'Occhio Letale	Deadeye's Lore	incantesimo
+Sbrogliare il Destino	Unravel Destiny	incantesimo
+Scagliare Maledizione	Bestow Curse	incantesimo
+Scassinare	Knock	incantesimo
+Scavare	Burrow	incantesimo
+Scavo Rapido	Expeditious Excavation	incantesimo
+Scheggia di Caos	Shard of Chaos	incantesimo
+Schermo	Screen	incantesimo
+Schiantamagia	Spellcrash	incantesimo
+Schiantamagia Inferiore	Spellcrash, Lesser	incantesimo
+Schiantamagia Superiore	Spellcrash, Greater	incantesimo
+Scia Infuocata	Fire Trail	incantesimo
+Sciame Elementale	Elemental Swarm	incantesimo
+Sciame di Meteore	Meteor Swarm	incantesimo
+Scimmie Folli	Mad Monkeys	incantesimo
+Scintilla	Spark	incantesimo
+Sciogliere Legame	Unfetter	incantesimo
+Scirocco	Sirocco	incantesimo
+Scolpire Legno	Wood Shape	incantesimo
+Scolpire Pietra	Stone Shape	incantesimo
+Scolpire Simulacro	Sculpt Simulacrum	incantesimo
+Scoppio di Lampi	Flare Burst	incantesimo
+Scopri Trappole	Find Traps	incantesimo
+Scopri il Percorso	Find the Path	incantesimo
+Scorrere sulla Terra	Earth Glide	incantesimo
+Scossa Difensiva	Defensive Shock	incantesimo
+Scrigno Segreto	Secret Chest	incantesimo
+Scritto Illusorio	Illusory Script	incantesimo
+Scrutare	Scrying	incantesimo
+Scrutare Superiore	Scrying, Greater	incantesimo
+Scrutinio Focalizzato	Focused Scrutiny	incantesimo
+Scudo	Shield	incantesimo
+Scudo Entropico	Entropic Shield	incantesimo
+Scudo Involontario	Unwilling Shield	incantesimo
+Scudo Ombra del Vampiro	Vampiric Shadow Shield	incantesimo
+Scudo Sacro	Holy Shield	incantesimo
+Scudo Scossa	Shock Shield	incantesimo
+Scudo Su Altri	Shield Other	incantesimo
+Scudo d'Onda	Wave Shield	incantesimo
+Scudo della Fede	Shield of Faith	incantesimo
+Scudo della Legge	Shield of Law	incantesimo
+Scudo di Fortificazione	Shield of Fortification	incantesimo
+Scudo di Fortificazione Superiore	Shield of Fortification, Greater	incantesimo
+Scudo di Fuoco	Fire Shield	incantesimo
+Scudo di Pietra	Stone Shield	incantesimo
+Scudo su Compagno	Shield Companion	incantesimo
+Scurovisione	Darkvision	incantesimo
+Scurovisione Collettivo	Darkvision, Communal	incantesimo
+Scurovisione Superiore	Darkvision, Greater	incantesimo
+Segugio	Bloodhound	incantesimo
+Segugio Fedele	Mage's Faithful Hound	incantesimo
+Seguire Aura	Follow Aura	incantesimo
+Sembrare	Seeming	incantesimo
+Semi di Fuoco	Fire Seeds	incantesimo
+Seminare Pensieri	Sow Thought	incantesimo
+Sensi Sviluppati	Keen Senses	incantesimo
+Sentiero di Gloria	Path of Glory	incantesimo
+Sentiero di Gloria Superiore	Path of Glory, Greater	incantesimo
+Sentinella di Sangue	Blood Sentinel	incantesimo
+Serenità	Serenity	incantesimo
+Serpente di Fuoco	Fire Snake	incantesimo
+Serratura Arcana	Arcane Lock	incantesimo
+Serratura Dimensionale	Dimensional Lock	incantesimo
+Servitore Inosservato	Unseen Servant	incantesimo
+Seta in Ferro	Silk to Steel	incantesimo
+Setacciare	Sift	incantesimo
+Sfera Acquea	Aqueous Orb	incantesimo
+Sfera Congelante	Freezing Sphere	incantesimo
+Sfera Elastica	Resilient Sphere	incantesimo
+Sfera Infuocata	Flaming Sphere	incantesimo
+Sfera Infuocata Superiore	Flaming Sphere, Greater	incantesimo
+Sfera Prismatica	Prismatic Sphere	incantesimo
+Sfera Telecinetica	Telekinetic Sphere	incantesimo
+Sfera di Invisibilità	Invisibility Sphere	incantesimo
+Sfera di Raffiche di Vento	Gusting Sphere	incantesimo
+Sferza di Lame	Blade Lash	incantesimo
+Sfida dell'Eroe	Hero's Defiance	incantesimo
+Sfidare il Male	Challenge Evil	incantesimo
+Sfocatura	Blur	incantesimo
+Sforzi Coordinati	Coordinated Effort	incantesimo
+Sguardo Bruciante	Burning Gaze	incantesimo
+Sguardo Penetrante	Eyebite	incantesimo
+Shuriken Ardente	Fiery Shuriken	incantesimo
+Sigillo Arcano	Arcane Mark	incantesimo
+Sigillo Nero	Black Mark	incantesimo
+Sigillo del Serpente	Sepia Snake Sigil	incantesimo
+Sigillo di Colla	Glue Seal	incantesimo
+Sigillo di Giustizia	Mark of Justice	incantesimo
+Silenzio	Silence	incantesimo
+Simbolo di Attacco	Symbol of Striking	incantesimo
+Simbolo di Conflitto	Symbol of Strife	incantesimo
+Simbolo di Debolezza	Symbol of Weakness	incantesimo
+Simbolo di Demenza	Symbol of Insanity	incantesimo
+Simbolo di Dolore	Symbol of Pain	incantesimo
+Simbolo di Guarigione	Symbol of Healing	incantesimo
+Simbolo di Morte	Symbol of Death	incantesimo
+Simbolo di Paura	Symbol of Fear	incantesimo
+Simbolo di Persuasione	Symbol of Persuasion	incantesimo
+Simbolo di Rallentamento	Symbol of Slowing	incantesimo
+Simbolo di Riflesso	Symbol of Mirroring	incantesimo
+Simbolo di Risata	Symbol of Laughter	incantesimo
+Simbolo di Rivelazione	Symbol of Revelation	incantesimo
+Simbolo di Scrutamento	Symbol of Scrying	incantesimo
+Simbolo di Sigillamento	Symbol of Sealing	incantesimo
+Simbolo di Sonno	Symbol of Sleep	incantesimo
+Simbolo di Stordimento	Symbol of Stunning	incantesimo
+Simbolo di Vulnerabilità	Symbol of Vulnerability	incantesimo
+Simpatia	Sympathy	incantesimo
+Simulacro	Simulacrum	incantesimo
+Simulacro Inferiore	Simulacrum, Lesser	incantesimo
+Sinergia in Sella	Saddle Surge	incantesimo
+Soffio del Drago	Dragon's Breath	incantesimo
+Soffio di Fuoco	Fire Breath	incantesimo
+Sogno	Dream	incantesimo
+Sogno Minore	Minor Dream	incantesimo
+Soldati delle Terre Selvagge	Wilderness Soldiers	incantesimo
+Sonnambulismo	Sleepwalk	incantesimo
+Sonnellino	Nap Stack	incantesimo
+Sonno	Sleep	incantesimo
+Sonno Immemore	Forgetful Slumber	incantesimo
+Sonno Profondo	Deep Slumber	incantesimo
+Sonno Ristoratore	Restful Sleep	incantesimo
+Sorgente Evolutiva	Evolution Surge	incantesimo
+Sorgente Evolutiva Inferiore	Evolution Surge, Lesser	incantesimo
+Sorgente Evolutiva Superiore	Evolution Surge, Greater	incantesimo
+Spada Magica	Mage's Sword	incantesimo
+Spada Sacra	Holy Sword	incantesimo
+Spada Sacrilega	Unholy Sword	incantesimo
+Spaventare	Scare	incantesimo
+Spazio Contorto	Twisted Space	incantesimo
+Spazio Sacro	Sacred Space	incantesimo
+Spezzalinee	Linebreaker	incantesimo
+Spezzare Incantamento	Break Enchantment	incantesimo
+Spezzare in Frammenti	Sundering Shards	incantesimo
+Spinta Idraulica	Hydraulic Push	incantesimo
+Spirito Protettivo	Protective Spirit	incantesimo
+Spirito dell'Arco	Bow Spirit	incantesimo
+Splendore dell'Aquila	Eagle's Splendor	incantesimo
+Splendore dell'Aquila di Massa	Eagle's Splendor, Mass	incantesimo
+Spostamento Planare	Plane Shift	incantesimo
+Sprecare	Expend	incantesimo
+Spruzzo Acido	Acidic Spray	incantesimo
+Spruzzo Colorato	Color Spray	incantesimo
+Spruzzo Prismatico	Prismatic Spray	incantesimo
+Sputare Veleno	Spit Venom	incantesimo
+Sputo Adesivo	Adhesive Spittle	incantesimo
+Squarcia Fronte	Brow Gasher	incantesimo
+Stabilizzare	Stabilize	incantesimo
+Stabilizzare Polveri	Stabilize Powder	incantesimo
+Stasi Temporale	Temporal Stasis	incantesimo
+Statua	Statue	incantesimo
+Status	Status	incantesimo
+Stella Guida	Guiding Star	incantesimo
+Stelle Vagabonde	Wandering Star Motes	incantesimo
+Stretta Corrosiva	Rusting Grasp	incantesimo
+Stretta Folgorante	Shocking Grasp	incantesimo
+Stridio	Screech	incantesimo
+Stringersi	Squeeze	incantesimo
+Strumento di Agonia	Instrument of Agony	incantesimo
+Suggestione	Suggestion	incantesimo
+Suggestione Attivata	Triggered Suggestion	incantesimo
+Suggestione di Massa	Suggestion, Mass	incantesimo
+Suonare Strumento	Play Instrument	incantesimo
+Suono Attenuato	Muffle Sound	incantesimo
+Suono Dirompente	Sound Burst	incantesimo
+Suono Fantasma	Ghost Sound	incantesimo
+Superare Afflizione	Surmount Affliction	incantesimo
+Suppurazione	Fester	incantesimo
+Suppurazione di Massa	Fester, Mass	incantesimo
+Sussurro Sacro	Holy Whisper	incantesimo
+Svanire	Vanish	incantesimo
+Tamburi Tonanti	Thundering Drums	incantesimo
+Tavola Silente	Silent Table	incantesimo
+Telecinesi	Telekinesis	incantesimo
+Teletrasporto	Teleport	incantesimo
+Teletrasporto Interplanetario	Interplanetary Teleport	incantesimo
+Teletrasporto Superiore	Teleport, Greater	incantesimo
+Teletrasporto degli Oggetti	Teleport Object	incantesimo
+Teletrasporto nel Cristallo di Ghiaccio	Ice Crystal Teleport	incantesimo
+Tempesta Infettiva	Plague Storm	incantesimo
+Tempesta Vulcanica	Volcanic Storm	incantesimo
+Tempesta di Cenere	Ash Storm	incantesimo
+Tempesta di Fuoco	Fire Storm	incantesimo
+Tempesta di Ghiaccio	Ice Storm	incantesimo
+Tempesta di Nevischio	Sleet Storm	incantesimo
+Tempesta di Vendetta	Storm of Vengeance	incantesimo
+Tentacoli Neri	Black Tentacles	incantesimo
+Terra Maledetta	Cursed Earth	incantesimo
+Terraformare	Terraform	incantesimo
+Terremoto	Earthquake	incantesimo
+Terreno Illusorio	Hallucinatory Terrain	incantesimo
+Terribile Rimorso	Terrible Remorse	incantesimo
+Teschio Ridente	Cackling Skull	incantesimo
+Teschio Sentinella	Sentry Skull	incantesimo
+Testimoniare	Witness	incantesimo
+Tiro Lungo	Longshot	incantesimo
+Tocco Assorbente	Absorbing Touch	incantesimo
+Tocco Calcificante	Calcific Touch	incantesimo
+Tocco Corrosivo	Corrosive Touch	incantesimo
+Tocco Elementale	Elemental Touch	incantesimo
+Tocco Gelido	Chill Touch	incantesimo
+Tocco Glaciale	Frigid Touch	incantesimo
+Tocco Mutagenico	Mutagenic Touch	incantesimo
+Tocco Sfigurante	Disfiguring Touch	incantesimo
+Tocco del Ghoul	Ghoul Touch	incantesimo
+Tocco del Mare	Touch of the Sea	incantesimo
+Tocco del Vampiro	Vampiric Touch	incantesimo
+Tocco di Affaticamento	Touch of Fatigue	incantesimo
+Tocco di Combustione	Touch of Combustion	incantesimo
+Tocco di Fanghiglia	Touch of Slime	incantesimo
+Tocco di Goffaggine	Touch of Gracelessness	incantesimo
+Tocco di Idiozia	Touch of Idiocy	incantesimo
+Tono Angosciante	Distressing Tone	incantesimo
+Torcia della Scoperta	Discovery Torch	incantesimo
+Torrente Idraulico	Hydraulic Torrent	incantesimo
+Traccia Nauseante	Nauseating Trail	incantesimo
+Traccia Olfattiva	Scent Trail	incantesimo
+Traccia Residua	Residual Tracking	incantesimo
+Trama Ipnotica	Hypnotic Pattern	incantesimo
+Trama Iridescente	Rainbow Pattern	incantesimo
+Trama Scintillante	Scintillating Pattern	incantesimo
+Trance Animale	Animal Trance	incantesimo
+Trance da Battaglia	Battle Trance	incantesimo
+Tranquillità Euforica	Euphoric Tranquility	incantesimo
+Transizione Eterea	Ethereal Jaunt	incantesimo
+Trappola Fantasma	Phantom Trap	incantesimo
+Trappola di Fuoco	Fire Trap	incantesimo
+Trascrivere con il Sangue	Blood Transcription	incantesimo
+Trasferimento Divino	Divine Transfer	incantesimo
+Trasforma Bastone	Changestaff	incantesimo
+Trasformazione	Shapechange	incantesimo
+Trasformazione Arcana	Transformation	incantesimo
+Trasformazione Curativa	Resurgent Transformation	incantesimo
+Trasformazione Perfetta	Masterwork Transformation	incantesimo
+Traslazione Arborea	Tree Stride	incantesimo
+Trasmutare Fango in Roccia	Transmute Mud to Rock	incantesimo
+Trasmutare Metallo in Legno	Transmute Metal to Wood	incantesimo
+Trasmutare Pozione in Veleno	Transmute Potion to Poison	incantesimo
+Trasmutare Roccia in Fango	Transmute Rock to Mud	incantesimo
+Trasmutare Sangue in Acido	Transmute Blood to Acid	incantesimo
+Trasporto Speculare	Mirror Transport	incantesimo
+Trasporto Vegetale	Transport via Plants	incantesimo
+Triplice Aspetto	Threefold Aspect	incantesimo
+Trovare Preda	Find Quarry	incantesimo
+Trucco della Corda	Rope Trick	incantesimo
+Tsunami	Tsunami	incantesimo
+Turbine	Whirlwind	incantesimo
+Tutto è Cibo	Allfood	incantesimo
+Ululato del Cacciatore	Hunter's Howl	incantesimo
+Unto	Grease	incantesimo
+Untore	Plague Carrier	incantesimo
+Urlo Primordiale	Primal Scream	incantesimo
+Urlo Sonico	Sonic Scream	incantesimo
+Urlo Spacca Timpani	Ear Piercing Scream	incantesimo
+Uscita di Scena	Bard's Escape	incantesimo
+Vampata di Sangue	Blood Blaze	incantesimo
+Vedere Allineamento	See Alignment	incantesimo
+Vedere Invisibilità	See Invisibility	incantesimo
+Veleno	Poison	incantesimo
+Veleno Pernicioso	Pernicious Poison	incantesimo
+Velo	Veil	incantesimo
+Velo Lunare	Lunar Veil	incantesimo
+Velo Ripugnante	Loathsome Veil	incantesimo
+Velo dei Cieli	Veil of Heaven	incantesimo
+Velo del Villaggio	Village Veil	incantesimo
+Velo di Energia Positiva	Veil of Positive Energy	incantesimo
+Velocità	Haste	incantesimo
+Vendetta Fantasma	Phantasmal Revenge	incantesimo
+Venti Erosivi	Scouring Winds	incantesimo
+Venti Mutevoli	Fickle Winds	incantesimo
+Venti di Vendetta	Winds of Vengeance	incantesimo
+Vento Sussurrante	Whispering Wind	incantesimo
+Ventriloquio	Ventriloquism	incantesimo
+Vera Forma	True Form	incantesimo
+Veste Magica	Magic Vestment	incantesimo
+Veste del Campione	Vestment of the Champion	incantesimo
+Vibrazione Armonica	Sympathetic Vibration	incantesimo
+Vigilanza e Interdizione	Guards and Wards	incantesimo
+Vigore Persistente	Persistent Vigor	incantesimo
+Vincolare alla Terra	Binding Earth	incantesimo
+Vincolare alla Terra di Massa	Binding Earth, Mass	incantesimo
+Violare Armatura	Defile Armor	incantesimo
+Virtù	Virtue	incantesimo
+Visione	Vision	incantesimo
+Visione Falsa	False Vision	incantesimo
+Visione del Vero	True Seeing	incantesimo
+Visione dell'Aura	Aura Sight	incantesimo
+Visione dell'Inferno	Vision of Hell	incantesimo
+Visione della Morte	Deathwatch	incantesimo
+Vista Arcana	Arcane Sight	incantesimo
+Vista Arcana Superiore	Arcane Sight, Greater	incantesimo
+Vita Falsata	False Life	incantesimo
+Vita Falsata Superiore	False Life, Greater	incantesimo
+Volare	Fly	incantesimo
+Volare di Massa	Fly, Mass	incantesimo
+Volo Giornaliero	Overland Flight	incantesimo
+Vomitare Sciame	Vomit Swarm	incantesimo
+Vortice	Vortex	incantesimo
+Voto Sacrificale	Sacrificial Oath	incantesimo
+Voto di Pace	Oath of Peace	incantesimo
+Vulnerabilità alla Fattura	Hex Vulnerability	incantesimo
+Vuoto Mentale	Mind Blank	incantesimo
+Vuoto Mentale Collettivo	Mind Blank, Communal	incantesimo
+Vuoto di Memoria	Memory Lapse	incantesimo
+Zanna Magica	Magic Fang	incantesimo
+Zanna Magica Superiore	Magic Fang, Greater	incantesimo
+Zona di Silenzio	Zone of Silence	incantesimo
+Zona di Verità	Zone of Truth	incantesimo
+Acrobazia	Acrobatics	abilità
+Addestrare Animali	Handle Animal	abilità
+Artigianato	Craft	abilità
+Artista della Fuga	Escape Artist	abilità
+Camuffare	Disguise	abilità
+Cavalcare	Ride	abilità
+Conoscenze	Knowledge	abilità
+Diplomazia	Diplomacy	abilità
+Disattivare Congegni	Disable Device	abilità
+Furtività	Stealth	abilità
+Guarire	Heal	abilità
+Intimidire	Intimidate	abilità
+Intrattenere	Perform	abilità
+Intuizione	Sense Motive	abilità
+Linguistica	Linguistics	abilità
+Nuotare	Swim	abilità
+Percezione	Perception	abilità
+Professione	Profession	abilità
+Raggirare	Bluff	abilità
+Rapidità di Mano	Sleight of Hand	abilità
+Sapienza Magica	Spellcraft	abilità
+Scalare	Climb	abilità
+Sopravvivenza	Survival	abilità
+Utilizzare Congegni Magici	Use Magic Device	abilità
+Valutare	Appraise	abilità
+Volare	Fly	abilità
+Abbagliato	Dazzled	condizione
+Accecato	Blinded	condizione
+Accovacciato	Cowering	condizione
+Affascinato	Fascinated	condizione
+Affaticato	Fatigued	condizione
+Assordato	Deafened	condizione
+Barcollante	Staggered	condizione
+Confuso	Confused	condizione
+Esausto	Exhausted	condizione
+Frastornato	Dazed	condizione
+Immobilizzato	Pinned	condizione
+Impreparato	Flat-Footed	condizione
+In Lotta	Grappled	condizione
+Inabile	Disabled	condizione
+Incorporeo	Incorporeal	condizione
+Indifeso	Helpless	condizione
+Infermo	Sickened	condizione
+Intralciato	Entangled	condizione
+Invisibile	Invisible	condizione
+Livelli Negativi	Energy Drained	condizione
+Morente	Dying	condizione
+Morto	Dead	condizione
+Nauseato	Nauseated	condizione
+Paralizzato	Paralyzed	condizione
+Scosso	Shaken	condizione
+Spaventato	Frightened	condizione
+In Preda al Panico	Panicked	condizione
+Pietrificato	Petrified	condizione
+Privo di Sensi	Unconscious	condizione
+Prono	Prone	condizione
+Rotto	Broken	condizione
+Sanguinante	Bleed	condizione
+Stabilizzato	Stable	condizione
+Stordito	Stunned	condizione

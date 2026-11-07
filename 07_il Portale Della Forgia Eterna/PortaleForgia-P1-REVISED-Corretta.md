@@ -126,7 +126,7 @@
 - Purezze del Corpo: guarigione 18 HP 1/giorno
 - Colpo Stordente: TS Tempra CD 19 o stordito 1 round
 
-**Talenti:** Stile del Serpente, Colpo Stordente, Deviazione Frecce, Afferrare Frecce, Mobilità, Iniziativa Migliorata, Arma Focalizzata (colpo senz'armi), Attacco Poderoso
+**Talenti:** Stile del Serpente, Pugno Stordente, Deviare Frecce, Afferrare Frecce, Mobilità, Iniziativa Migliorata, Arma Focalizzata (colpo senz'armi), Attacco Poderoso
 
 **Stato Attuale (Parte 1):** Medita su morte Hella. Ha iniziato comunicazione spirituale con il suo fantasma. I Cintura della Devastazione gli conferiscono capacità letale contro nemici critici.
 
