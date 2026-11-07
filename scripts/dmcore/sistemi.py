@@ -144,6 +144,28 @@ def capacita(id_: str, nome: str, root: "Path | None" = None) -> Copertura:
         return Copertura(id_, nome, "mancante", corrente, tuple(catena), (), "modo sconosciuto")
 
 
+def dati(id_: str, nome: str, root: "Path | None" = None) -> dict:
+    """I dati TOML con cui `id_` copre `nome`, dopo l'eredità.
+
+    Fonde i file `.toml` elencati in `dati = [...]`, nell'ordine. Se la
+    capacità non è in modo «dati» è un errore: lo strumento deve usare il
+    suo codice (modo «codice») o dire che il sistema non è supportato."""
+    r = (root or ROOT).resolve()
+    c = capacita(id_, nome, r)
+    if c.modo != "dati":
+        raise ErroreSistemi(f"{id_}: «{nome}» è {c.modo}" + (f" ({c.nota})" if c.nota else ""))
+    out: dict = {}
+    for v in c.voci:
+        if v.endswith(".toml"):
+            out.update(_leggi(r / v))
+    return out
+
+
+def opzione(id_: str, chiave: str, default=None, root: "Path | None" = None):
+    """Un'opzione di campagna del sistema, da `[opzioni.<id>]` in sistemi.toml."""
+    return carica(root)[0].get("opzioni", {}).get(id_, {}).get(chiave, default)
+
+
 def skill_da_installare(root: "Path | None" = None) -> "list[str]":
     """Le skill dei sistemi attivi e di quelli di rinforzo, e delle loro famiglie (D5)."""
     pr = progetto(root)

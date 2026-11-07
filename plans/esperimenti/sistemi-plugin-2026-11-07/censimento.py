@@ -59,6 +59,7 @@ CLASSI = {
     "scripts/dmcore/progressione.py": ("A", "DV di classe, base dei TS (2+L/2, L/3), BAB, classi di prestigio SRD"),
     "scripts/dmcore/caratteristiche.py": ("A", "array del Manuale del DM, razze SRD, profili per ruolo, taglia"),
     "scripts/dmcore/lettura_creatura.py": ("A", "regola NON_MORTO_PF1E cablata (Car al posto di Cos), tetti dei TS"),
+    "scripts/dmcore/creature_pf1e.py": ("A", "formule PF1e cablate (pf, TS buoni/scarsi, BMC/DMC, gradi); i numeri di tipi e taglie dal plugin pf1e (2026-11-07)"),
     "scripts/dmcore/incantesimi.py": ("A", "liste di classe 3.5 e variante PF1e nello stesso dizionario"),
     "scripts/dmcore/statblock.py": ("A", "campi obbligatori gs/ca/pf/ts: lo schema della famiglia d20"),
     "scripts/genera_creatura.py": ("A", "generatore: template Advanced PF1e, tabelle di dmcore"),

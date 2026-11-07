@@ -59,6 +59,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 |---|---|---|---|
 | **L0** ✅ | censimento, banco d'invarianza, ADR-0111 proposta, questo piano | `plans/` | M1-M4 di partenza |
 | **L1** ✅ | fondazione: `sistemi.toml`, `sistemi/catalogo.toml` (12 capacità), plugin `sistemi/d20/` (famiglia), `sistemi/dnd35/`, `sistemi/pf1e/`; `scripts/dmcore/sistemi.py` (caricatore), `scripts/sistemi.py` (elenco, matrice, `--di`, `--skill`, `--json`, `--check`, in CI); campo `sistema.capacita` nello schema e in 16 voci del manifest; `test_sistemi.py` | nessuno strumento esistente cambia comportamento | impronte 12/12; matrice di 24 righe; dnd35 2 capacità in dati e 10 nel codice, pf1e 1 · 6 · 5 non supportate; 0 mancanti |
+| **L1-bis** ✅ | PF1e supportato nei 5 casi che L1 dichiarava «non supportato» (richiesta del DM del 2026-11-07): `estrai_prd_pf1e.py` scrive `sistemi/pf1e/dati/{pe,incontri,tesoro,creature}.toml` dal PRD in cache, con la fonte; `sistemi.toml` `[opzioni.pf1e]` (traccia PE, velocità del tesoro); `--sistema` in `update_xp`, `suggest_encounter`, `suggest_loot`, `genera_creatura`; classi, classi di prestigio e razze PF1e in `coerenza_campagna` per i file dei moduli PF1e; `dmcore/creature_pf1e.py`; `test_sistemi_pf1e.py` | il predefinito resta dnd35: uscita 3.5 identica | impronte 12/12; pf1e da 2 · 6 · 5 a 7 · 6 · 0 (dati · codice · non supportato) |
 | L2 | un rilevamento solo: `domande_developer`, `dmcore/censimento`, `build_monster_catalog` leggono `sistema_di()`; la riga «**Sistema:**» dei master diventa testo controllato (deve dire lo stesso sistema della configurazione); `e_pf1()` involucro, con l'ok del thread delle regole | 3 + test | M1 3 → 1 |
 | L3 | termini: una lista 5e sola (nel plugin di famiglia d20, letta da tutti e due i validatori), `ABILITA_ESTRANEE`, le abilità di `validate_prosa`, classi e razze di `coerenza_campagna` | 5 | M2 2 → 1; stessi rilievi sui master |
 | L4 | regole semplici: soglie PE (`update_xp`, e la traccia PF1e lenta/media/veloce come dato), tesoro per EL/GS (`suggest_loot`), EL (`suggest_encounter`) | 3 | M3 scende; PF1e passa da `non supportato` a supportato dove il dato c'è |
@@ -125,6 +126,15 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 
 - Con ADR-0110 su main (#316) è arrivato `scripts/lessico_regole.py`, che decide il sistema con `e_pf1()`: i rilevamenti in fascia C salgono a 3 e M4 a 25. Le sue tabelle (`lessico_it_35.tsv`, `lessico_it_pf1.tsv`) entrano nei plugin come capacità `lessico.italiano` in dati, senza toccarle.
 
+### §2.3 Cosa ha trovato L1-bis (PF1e nei 5 casi)
+
+- **Numeri**: nessuno scritto a mano. Sei tabelle del PRD (book-cr 2743, 3653, 3655, 3661; book-b1 116, 160) diventano quattro file TOML; `estrai_prd_pf1e.py --check` rifà l'estrazione e confronta i byte (in `test_sistemi_pf1e.py`, saltato dove il PRD non è in cache).
+- **Incontri**: in PF1e il GS dell'incontro è la somma dei PE, poi il GS più alto che la somma raggiunge. Coincide col 3.5 sui casi pari (due GS 10 → 12, quattro → 14) e diverge sui dispari (tre GS 10: 13 in PF1e, 13,17 in 3.5; due GS ½: 1 contro 2,5). Le creature proposte vengono ancora dal catalogo comune, che contiene mostri 3.5: separarlo è L2.
+- **Tesoro**: il PRD dà il valore per incontro per APL e velocità, non la ripartizione. Monete, gemme e oggetti restano nelle proporzioni della riga 3.5 dello stesso livello, e la nota in fondo lo dice. Il PRD lo tara su 4 PG; con `--pcs` diverso lo strumento divide la stessa somma.
+- **Creature**: la conversione parte dal blocco 3.5 già sul bersaglio del GS e risolve di nuovo la caratteristica dei pf sul dado PF1e (Carisma per i non morti). Senza questo un non morto GS 7 passava da 105 a 35 pf. Dove il BAB PF1e del tipo è più alto (costrutto, non morto) l'attacco sale sopra il bersaglio: è la regola del tipo, e il conto lo dice. Gigante ed elementale diventano umanoide ed esterno. Mancano: i pf bonus dei costrutti per taglia (la tabella non c'è nel PRD in cache, il conto lo segnala) e i livelli di classe (rifiutati con un messaggio).
+- **Classi e razze**: 3.5 invariato; nei file dei moduli PF1e `coerenza_campagna` riconosce anche l'ultima parola di ogni classe e classe di prestigio PF1e (174 parole contro 67). Le razze PF1e arrivano con la PR #318 del thread delle regole ufficiali (37 righe `razza`), lette con `lessico_regole.tabella_pf1`; fino ad allora il gruppo delle razze resta quello 3.5. `RAZZE` oggi non la legge nessun controllo di `coerenza_campagna`.
+- **Limite della matrice, ancora vero**: una riga ✅ dice che il sistema ha il dato, non che ogni strumento della riga lo legga. Per `creature.costruzione` lo legge solo `genera_creatura`; `derive_statblocks`, `conformita_statblocchi`, `genera_attributi` e `suggest_encounter` lavorano ancora in 3.5 (L5).
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -152,6 +162,7 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L0 · censimento, banco d'invarianza, ADR-0111 proposta, piano (2026-11-07)
 - [ ] D1-D5 decise
 - [x] L1 · fondazione (2026-11-07): la matrice dice per ogni sistema come copre ogni capacità; finché L3-L5 non migrano gli strumenti, una riga dice dove sta la regola del sistema, non che quello strumento la legga già da lì (es. `validate_prosa` usa ancora le abilità 3.5 anche su un modulo PF1e)
+- [x] L1-bis · PF1e nei 5 casi non supportati (2026-11-07): PE, incontri, tesoro, classi e razze, costruzione delle creature
 - [ ] L2 · un rilevamento solo
 - [ ] L3 · termini
 - [ ] L4 · regole semplici

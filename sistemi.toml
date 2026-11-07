@@ -22,3 +22,9 @@ rinforzo = ["dnd35", "pf1e"]
 # contiene il file; un file fuori da tutti usa `predefinito`.
 "10-stand-alone/Il-Drappo-di-Tarsilia" = "pf1e"
 "10-stand-alone/Il Giardino di Sale e Calce PF1e" = "pf1e"
+
+[opzioni.pf1e]
+# Scelte di campagna che il PRD lascia al GM. Valgono quando uno strumento
+# lavora in PF1e e non riceve l'opzione da riga di comando.
+traccia_pe = "media"        # lenta · media · veloce (PRD, Character Advancement)
+velocita_tesoro = "media"   # lenta · media · veloce (PRD, Treasure Values per Encounter)
