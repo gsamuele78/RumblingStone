@@ -53,6 +53,10 @@ che cambierebbero la durata dell'effetto.
   cavaliere e Thorik, che finisce prono; se fallisce, il cavaliere li prende tutti.
   Regola della casa (l'SRD non ne ha una), segnata. Applicata in `ARC08-01` e nella
   Guida agli Scontri di Hammerfist.
+  **Superata il 2026-11-07** (DM, card «Thorik può ancora afferrarlo?»: «No, nessuno lo
+  afferra»): non è realistico prendere al volo un corpo in armatura da 45 m. Il cavaliere
+  prende i 15d6 della caduta (SRD) e arriva a terra ferito; Thorik può solo aspettarlo.
+  L'unica presa al volo resta quella di Fauci su Thorik (canone del 2026-10-20).
 
 ## ARC-06 (stessa serie di card)
 
