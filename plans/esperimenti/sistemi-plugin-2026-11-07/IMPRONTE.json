@@ -26,7 +26,7 @@
  },
  "suggest_encounter": {
   "byte": 2120,
-  "sha256": "2d514d40d3f99faeada3667bfb45c72af2c6b41ca2209506d72a5e3a96d3db25",
+  "sha256": "a548f36e94e5b9d6b44ee6d178f8bd9417ad3b35fc76ed98adaac1e5d81ac131",
   "uscita": 0
  },
  "suggest_loot_el13": {

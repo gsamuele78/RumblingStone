@@ -10,6 +10,8 @@ tipo = "sistema"
 famiglia = "d20"
 licenza = "OGL 1.0a"
 fonti = ["SRD 3.5 in cache (riscontro_srd.py, chiave srd35)"]
+# Come si scrive il sistema nella riga «**Sistema:**» di un modulo (regex).
+riconosci = ["3\\.5", "D&D", "Dungeons & Dragons"]
 skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 
 [capacita]

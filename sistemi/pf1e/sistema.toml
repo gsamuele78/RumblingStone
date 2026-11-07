@@ -10,6 +10,8 @@ tipo = "sistema"
 famiglia = "d20"
 licenza = "OGL 1.0a"
 fonti = ["PRD PF1e in cache (riscontro_srd.py, chiave pf1)"]
+# Come si scrive il sistema nella riga «**Sistema:**» di un modulo (regex).
+riconosci = ["Pathfinder", "PF1e?\\b"]
 skill = ["pathfinder-1e-srd"]
 
 [capacita]

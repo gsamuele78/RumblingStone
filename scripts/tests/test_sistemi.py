@@ -256,3 +256,63 @@ class TestRigaDiComando(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRigaSistema(unittest.TestCase):
+    """L2: la riga «**Sistema:**» di un modulo e sistemi.toml dicono lo stesso
+    sistema. Prima il Drappo era PF1e per sistemi.toml e 3.5 per e_pf1() in 19
+    file su 22, e nessun controllo lo vedeva."""
+
+    ALFA_R = ALFA.replace('skill = ["skill-alfa"]', 'riconosci = ["Alfa"]\nskill = ["skill-alfa"]')
+    BETA_R = BETA.replace('skill = ["skill-beta"]', 'riconosci = ["Beta"]\nskill = ["skill-beta"]')
+
+    def albero(self, **file):
+        cfg = CONFIG.replace('"moduli/beta" = "beta"', '"moduli/beta" = "beta"\n"10-beta" = "beta"')
+        return Albero(**{"sistemi.toml": cfg, "sistemi/alfa/sistema.toml": self.ALFA_R,
+                         "sistemi/beta/sistema.toml": self.BETA_R, "10-beta/x.md": "", **file})
+
+    def test_vince_il_nome_che_compare_prima(self):
+        with self.albero() as r:
+            self.assertEqual(S.sistema_dichiarato("**Sistema:** Alfa (con rinforzo Beta)", r), "alfa")
+            self.assertEqual(S.sistema_dichiarato("- **Regole**: Beta, poi Alfa", r), "beta")
+            self.assertIsNone(S.sistema_dichiarato("**Sistema di movimento:** a esagoni", r))
+            self.assertIsNone(S.sistema_dichiarato("x" * S.TESTA + "\n**Sistema:** Beta", r))
+
+    def test_divergenza_e_un_problema(self):
+        with self.albero(**{"10-beta/m.md": "# M\n\n**Sistema:** Alfa\n", "05-alfa/ok.md": "**Sistema:** Alfa"}) as r:
+            div = S.dichiarazioni_divergenti(r)
+            self.assertEqual(div, [("10-beta/m.md", "alfa", "beta")])
+            self.assertTrue(any("10-beta/m.md" in p and "Sistema" in p for p in S.problemi(r)))
+
+    def test_homebrew_e_archivio_non_contano(self):
+        with self.albero(**{"10-beta/homebrew/b.md": "**Sistema:** Alfa",
+                            "10-beta/_ARCHIVIO/a.md": "**Sistema:** Alfa"}) as r:
+            self.assertEqual(S.dichiarazioni_divergenti(r), [])
+
+    def test_repo_vero_senza_divergenze(self):
+        self.assertEqual(S.dichiarazioni_divergenti(REPO), [])
+        drappo = "10-stand-alone/Il-Drappo-di-Tarsilia/REGOLE-DELLA-CORSA-PF1E.md"
+        self.assertEqual(S.sistema_dichiarato((REPO / drappo).read_text(encoding="utf-8")), "pf1e")
+
+
+class TestRilevamentoUnico(unittest.TestCase):
+    """L2: catalogo dei mostri, censimento e domande del developer prendono il
+    sistema da sistemi.toml. Il Giardino PF1e era nel catalogo dei mostri 3.5
+    (proposto in 7 incontri su 120 a EL 17-18) e nel censimento del Bestiario."""
+
+    def test_catalogo_salta_i_moduli_pf1e(self):
+        import build_monster_catalog as B
+        for rel in ("10-stand-alone/Il Giardino di Sale e Calce PF1e/appendice_creature.md",
+                    "10-stand-alone/Il-Drappo-di-Tarsilia/STATBLOCCHI-PF1E.md"):
+            self.assertTrue(B.should_skip(Path(rel)), rel)
+        self.assertFalse(B.should_skip(Path("10-stand-alone/Il Giardino di Sale e Calce/appendice_creature.md")))
+
+    def test_censimento_senza_moduli_pf1e(self):
+        from dmcore import censimento as C
+        docs = C.documenti_con_statistiche(REPO)
+        self.assertFalse([d for d in docs if S.sistema_di(d) != "dnd35"])
+
+    def test_domande_developer_non_accetta_il_sistema_nei_profili(self):
+        import json
+        cfg = json.loads((REPO / "plans/domande-developer.json").read_text(encoding="utf-8"))
+        self.assertFalse([f for f, p in cfg["profili"].items() if "sistema" in p])
