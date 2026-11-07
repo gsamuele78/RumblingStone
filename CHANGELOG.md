@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Marcature dei fatti (ADR-0109): grammatica unica in `docs/guides/GUIDA-MARCATURE.md` (`[INFERRED — domanda; base: …]`, `[CANONE — DM data, codice]`, `[GENERATO]`, fonti). Dieci skill di contenuto hanno la sezione «Vincoli sui fatti», uguale alla guida (`test_vincoli_delle_skill.py`); AGENTS.md e le skill non riscrivono più la regola.
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di
   `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
