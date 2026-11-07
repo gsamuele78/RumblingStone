@@ -21,6 +21,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from dmcore import sistemi as S  # noqa: E402
 from dmcore import caratteristiche as C  # noqa: E402
+from dmcore import incantesimi as INC  # noqa: E402
 from dmcore import progressione as P  # noqa: E402
 from dmcore import tabelle as T  # noqa: E402
 
@@ -60,6 +61,16 @@ IMPRONTE_L5B = {
     "C.PROFILO_DI_RIPIEGO": "6f6caace7ceb23dc",
     "C.PER_TAGLIA": "08bcc3ca27cf6cb0",
     "C.RAZZE": "7a128d76c0baa3ce",
+}
+
+#: L5c (2026-11-07): impronte delle liste di incantesimi di main prima dello
+#: spostamento in `sistemi/{dnd35,pf1e}/dati/incantesimi.toml`.
+IMPRONTE_L5C = {
+    "LISTE": "4c8e220c48c68ff5",
+    "CANONICA": "2074748d8ae338a2",
+    "FUNZIONE_DI_RIPIEGO": "ce42176472ca1491",
+    "SENZA_LISTA": "cbad0fe52ade2682",
+    "PF1E_SOLO": "495b22c2645cf41b",
 }
 
 
@@ -115,6 +126,25 @@ class IncantatoriEProfiliDalPlugin(unittest.TestCase):
         nomi = [n for n, _ in C.RAZZE]
         self.assertLess(nomi.index("hobgoblin"), nomi.index("goblin"))
         self.assertLess(nomi.index("duergar"), nomi.index("nano"))
+
+
+
+class ListeIncantesimiDalPlugin(unittest.TestCase):
+    """L5c: liste 3.5 dal plugin dnd35, aggiunte APG dal plugin pf1e."""
+
+    def test_stessi_valori_di_prima(self):
+        for nome, attesa in IMPRONTE_L5C.items():
+            self.assertEqual(impronta(getattr(INC, nome)), attesa, nome)
+
+    def test_alias_arcano_e_un_oggetto_solo(self):
+        self.assertIs(INC.LISTE["mago"], INC.LISTE["stregone"])
+        self.assertIs(INC.PF1E_SOLO["mago"], INC.PF1E_SOLO["stregone"])
+
+    def test_pf1e_eredita_le_liste_core_e_aggiunge_le_sue(self):
+        self.assertEqual(S.capacita("pf1e", "creature.incantesimi").modo, "dati")
+        pf = S.dati("pf1e", "creature.incantesimi")
+        self.assertEqual(set(pf["liste"]), set(S.dati("dnd35", "creature.incantesimi")["liste"]))
+        self.assertIn("solo", pf)
 
 
 if __name__ == "__main__":

@@ -26,5 +26,5 @@ skill = ["pathfinder-1e-srd"]
 "incontri.livello" = { dati = ["sistemi/pf1e/dati/incontri.toml"], nota = "GS dell'incontro = il GS più alto il cui valore in PE non supera la somma dei PE" }
 "creature.costruzione" = { dati = ["sistemi/pf1e/dati/creature.toml"], nota = "tipi (DV, BAB, TS buoni, gradi) e taglie (CA/attacco, BMC/DMC); calcolo in dmcore/creature_pf1e.py" }
 "creature.statistiche_per_gs" = { dati = ["scripts/pf1e-statistiche-per-gs.yaml"] }
-"creature.incantesimi" = { codice = ["scripts/dmcore/incantesimi.py:LISTE"], lotto = "L5" }
+"creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml", "sistemi/pf1e/dati/incantesimi.toml"], nota = "L5c: la lista core PF1e è abbastanza vicina alla 3.5 da usare quella; in più gli incantesimi dell'APG (solo)" }
 "creature.regole_di_tipo" = { codice = ["scripts/dmcore/lettura_creatura.py:NON_MORTO_PF1E"], lotto = "L5" }

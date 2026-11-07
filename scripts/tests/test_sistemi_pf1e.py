@@ -47,7 +47,7 @@ class Dati(unittest.TestCase):
 
     def test_dati_rifiuta_una_capacita_in_codice(self):
         with self.assertRaises(S.ErroreSistemi):
-            S.dati("dnd35", "creature.incantesimi")
+            S.dati("dnd35", "creature.regole_di_tipo")
 
     def test_opzioni_di_campagna(self):
         self.assertEqual(S.opzione("pf1e", "traccia_pe"), "media")
