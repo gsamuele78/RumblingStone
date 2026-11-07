@@ -1,0 +1,62 @@
+{
+ "conformita_statblocchi": {
+  "byte": 593,
+  "sha256": "4bf46b12d292936b82b2906b4a9d3246cc6806c817e3e8db22d93f0c18330bab",
+  "uscita": 0
+ },
+ "derive_statblocks": {
+  "byte": 1176,
+  "sha256": "d4291e3cd5b8c6903a8904facc64bb793fd4e60a89a78991f79fcbc604c75e1b",
+  "uscita": 0
+ },
+ "domande_developer": {
+  "byte": 12995,
+  "sha256": "4c8ea86f85d0c8ab19e47d2825bdb7e11696e8b73b84ed048c49ae4a856db3d3",
+  "uscita": 0
+ },
+ "genera_creatura_gs14": {
+  "byte": 1133,
+  "sha256": "dfbbab1f2e8ee05c8626bac8841a5d67d0cf669af9d9c10753413be4dca53b9e",
+  "uscita": 0
+ },
+ "genera_creatura_gs7": {
+  "byte": 1126,
+  "sha256": "4e89a23502e3414fb80cd425e5b0773725cb045fba0fcb7143fb4abfb223fd13",
+  "uscita": 0
+ },
+ "suggest_encounter": {
+  "byte": 2120,
+  "sha256": "2d514d40d3f99faeada3667bfb45c72af2c6b41ca2209506d72a5e3a96d3db25",
+  "uscita": 0
+ },
+ "suggest_loot_el13": {
+  "byte": 1466,
+  "sha256": "3ef80978731aff58455e7a78c1e4ebb605ce7621ef0f04db96f8ef61aeafd940",
+  "uscita": 0
+ },
+ "suggest_loot_wild": {
+  "byte": 289,
+  "sha256": "b3ed11e4676754f6bed4b9b5c2d9c27ded8f9c65adc54dc80fa9c01add0d1767",
+  "uscita": 0
+ },
+ "update_xp_check": {
+  "byte": 1045,
+  "sha256": "5c6d2f45f736aef1700a9a329c56d84ec634b73c4eb2ea1eb8fdeb3eb84153cd",
+  "uscita": 0
+ },
+ "validate_bestiario": {
+  "byte": 78,
+  "sha256": "ed10b67582afa3b57eac246518a46e88d73734bf5240ba95cf31bbe9c60138e1",
+  "uscita": 0
+ },
+ "validate_modules": {
+  "byte": 953,
+  "sha256": "5d5a75d9ea36d73cfdeb837813e7116c40f907bbaf89cad8adace3f3448fca13",
+  "uscita": 0
+ },
+ "validate_standalone": {
+  "byte": 145,
+  "sha256": "895924a7c5db6cb4317ff965c70404665991592d2f4e634f5c494080e8be1750",
+  "uscita": 0
+ }
+}
