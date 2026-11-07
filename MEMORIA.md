@@ -108,12 +108,12 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Capitano githyanki gish: «Spell Sword synergy» (non è un talento) diventa l'ele… | ✅ scelta del DM («quello che ha più senso») |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5b: incantatori, classi di prestigio, profili di ruolo, taglie e razze 3.5 dal… | ✅ 19 costanti spostate con impronte identiche; impronte dei generatori 12/12; M3 76 → 73; resta `incantesimi.LISTE` (L5c) |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | Drappo: «Intuizione» al posto di «Percepire Intenzioni» (scelta del DM, card de… | ✅ 77 sostituzioni; abilità «nome 3.5» nei campi 3 → 0, in tabella 194 → 197; validate_standalone, validate_booklets e validate_prosa verdi |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5a: tabelle base delle creature 3.5 dal plugin dnd35 | ✅ 9 costanti spostate con impronte identiche; capacità dnd35 nel codice 5 → 4; impronte dei generatori 12/12; talenti sconosciuti 0 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L4: PE ed EL dai plugin (soglie 3.5 nei dati, metodo di combinazione dei GS dic… | ✅ capacità dnd35 nel codice 7 → 5; «dnd35» cablato nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 79 → 79 (THRESHOLDS esce, METODI entra) |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Manuale dei talenti 3.5 senza sigla, dalle pagine di realmshelps | ✅ talenti con il manuale 1.297 → 3.529 su 3.846; 317 restano senza; nessuno dei 14 nomi FR marcati c'è sul modulo di realmshelps (3.478 talenti) |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L3: termini e lessico dai plugin (lista 5e unica, abilità per sistema, entità 3… | ✅ M2 2 → 1; 0 rilievi nuovi su master e stand-alone; forme meccaniche PF1e riconosciute 64 → 93; impronte 12/12 |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Talenti PF1e di tutti i manuali (Archives of Nethys, solo nomi) e riscontro del… | 🟡 3.432 nomi; la tabella italiana PF1e è su aon per 1.731 talenti su 1.732 (fuori solo Extra Mythic Power, talento mitico); nei moduli PF1e 82 talenti in tabel… |
 
 ## Le misure che si portano dietro
 
