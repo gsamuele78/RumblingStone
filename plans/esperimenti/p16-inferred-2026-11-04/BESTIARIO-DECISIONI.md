@@ -60,3 +60,16 @@ che cambierebbero la durata dell'effetto.
   Prova: 12 file identici byte per byte, i 7 diversi tutti più nuovi in PG. Copiate in
   PG le due immagini che mancavano. `_SNAPSHOT-STORICO.md` aggiornato, il testo vecchio
   in un blocco storico.
+
+## Chiuse perché già risolte (con la prova)
+
+| Dove | Prova |
+|---|---|
+| `CENSIMENTO-MOSTRI-PNG-VILLAIN.md` r. 50, 140, 146, 161 (×2) | Khorn e Durgan Tozzefort canonizzati dal DM il 2026-07-12 (lo dice lo stesso file, r. 145); `Bestiario/png/Khorn/khorn-ufficiale-hammerfist-cr8.md` porta `[ACCEPTED — DM-canon 2026-07-12]` e 0 marcatori |
+| `CENSIMENTO-MOSTRI-PNG-VILLAIN.md` r. 202 | Secondo Anello e Witchwood/Tiri Kitor: 0 marcatori nei due file, sciolti dal commit «Censimento INFERRED: chiuse le voci decidibili» del 2026-10-18 |
+| `campaign/DM-QUICKSTART-ARC09.md` r. 8 | la riga stessa dice che le unità sono `[ACCEPTED — DM-canon]` dal 2026-05-05 |
+| `campaign/sessions/RETROATTIVI-ARC07-INFERRED.md` r. 92 | la riga dice «questo NON è» un'inferenza: era una negazione |
+| `08_…/ERRATA-ARC08-35-Verification.md` r. 8 | è la regola del file («dove manca il dato si marca»), non un dato |
+
+Riscritte con la parola senza parentesi o nella forma di regola che lo strumento riconosce;
+nessun contenuto di gioco cambiato.

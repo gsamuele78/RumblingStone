@@ -5,7 +5,7 @@
 > Questo file **indicizza** tutti gli strumenti già pronti: workflow,
 > script, atlas unità, scheduling, scenari, checklist.
 
-**Stato canonizzato 2026-05-05**: tutte le unità `[INFERRED]` sono
+**Stato canonizzato 2026-05-05**: tutte le unità prima marcate INFERRED sono
 `[ACCEPTED — DM-canon]`. March Clock = Day 19. Ritual Clock = 9/18.
 APL = 13.
 
