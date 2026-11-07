@@ -18,6 +18,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `scripts/controlla_marche.py` (ADR-0109): sulle righe cambiate di una PR avvisa per una marca INFERRED senza domanda e base e per un INFERRED tolto senza CANONE, GENERATO o storico. In CI non blocca (canale testing).
+- Marcature dei fatti (ADR-0109): grammatica unica in `docs/guides/GUIDA-MARCATURE.md` (`[INFERRED — domanda; base: …]`, `[CANONE — DM data, codice]`, `[GENERATO]`, fonti). Dieci skill di contenuto hanno la sezione «Vincoli sui fatti», uguale alla guida (`test_vincoli_delle_skill.py`); AGENTS.md e le skill non riscrivono più la regola.
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di
   `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
@@ -123,6 +125,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Rimosso
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
+
+### Cambiato
+- `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 
 ## [1.0.0] - 2026-10-23
 

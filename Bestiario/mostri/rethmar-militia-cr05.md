@@ -1,4 +1,4 @@
-# Rethmar Militia (Warrior 1) [ACCEPTED — DM-canon 2026-05-05]
+# Rethmar Militia (Warrior 1) [CANONE — DM 2026-05-05]
 **Faction**: rethmar-defender | **Role**: fodder-defender | **Environment**: urban | **CR**: 0.5 | **Source**: PHB Warrior 1 | **Status**: inferred
 
 

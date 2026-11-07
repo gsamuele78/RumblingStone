@@ -689,7 +689,7 @@ Poteri della Corona
 ◦ Sblocco: Rituale 1. Attivazione: Continuo. LI: 20°.
 ◦ Effetto: +1 morale attacco/danni e +2 intuizione CA toccando pietra/terra. Individuare
 
-Porte Segrete, Scoprire Trappole e Comprendere Linguaggi a volontà *(decisione DM 2026-07-04: valgono entrambe le liste master/HTML)*.
+Porte Segrete, Scoprire Trappole e Comprendere Linguaggi a volontà [CANONE — DM 2026-07-04: valgono entrambe le liste master/HTML].
 
 • Power: Crown of Protection +2 (Corona della Protezione +2) (Str)
 
@@ -725,7 +725,7 @@ Le Gemme Divine
 
 • Gem: Gem of Immutable Time (Gemma del Tempo Immutabile)
 
-◦ Sblocco: Rituale 2. Attivazione: 1 ora di concentrazione in un Nodo Terrestre *(decisione DM 2026-07-04: vale la versione HTML `02`; «10 minuti» superato)*.
+◦ Sblocco: Rituale 2. Attivazione: 1 ora di concentrazione in un Nodo Terrestre [CANONE — DM 2026-07-04: vale la versione HTML `02`; «10 minuti» superato].
 
 Frequenza: 1/mese. LI: 20°. TS: Tempra CD 25 (per alleati non protetti).
 

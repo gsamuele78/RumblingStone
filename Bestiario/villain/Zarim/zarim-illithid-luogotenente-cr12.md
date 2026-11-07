@@ -1,4 +1,4 @@
-# Zarim — luogotenente illithid di Xal'thor (illithid, Psion 4) [ACCEPTED — DM-canon 2026-05-05]
+# Zarim — luogotenente illithid di Xal'thor (illithid, Psion 4) [CANONE — DM 2026-05-05]
 
 **Faction**: illithid-xal-thor | **Role**: elite-psi-caster | **Environment**: urban,dungeon | **CR**: 12
 

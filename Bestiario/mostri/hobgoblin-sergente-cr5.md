@@ -1,4 +1,4 @@
-# Hobgoblin Sergente (Fighter 5) [ACCEPTED — DM-canon 2026-05-05; ricalcolato al conto SRD — DM 2026-10-12, D78]
+# Hobgoblin Sergente (Fighter 5) [CANONE — DM 2026-05-05; ricalcolato al conto SRD — DM 2026-10-12, D78]
 **Faction**: red-hand | **Role**: melee-leader | **Environment**: any | **CR**: 5 | **Source**: MM p.153 Hobgoblin + PHB Fighter 5 | **Status**: inferred
 
 ```statblocco

@@ -1,4 +1,4 @@
-# Gnoll Hyenodon Rider [ACCEPTED — DM-canon 2026-05-05]
+# Gnoll Hyenodon Rider [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: mounted-melee | **Environment**: plain | **CR**: 4 | **Source**: MM Gnoll + MM Dire Hyena (Hyenodon) | **Status**: inferred
 
 

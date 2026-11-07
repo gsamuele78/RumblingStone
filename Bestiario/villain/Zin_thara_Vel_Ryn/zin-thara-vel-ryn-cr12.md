@@ -1,4 +1,4 @@
-# Zin'thara Vel'Ryn «la Voce di Ragnatela» — Ombraiola di Sonjak [ACCEPTED — DM-canon]
+# Zin'thara Vel'Ryn «la Voce di Ragnatela» — Ombraiola di Sonjak [CANONE — DM 2026-08-05]
 **Faction**: drow-sonjak | **Role**: boss-caster-subdolo | **Environment**: underdark/urban notturno | **CR**: 12 | **Source**: SRD drow + Mago (Illusionista) 9 + CdP **Danzatore delle Ombre** (SRD) | **Status**: accepted
 
 

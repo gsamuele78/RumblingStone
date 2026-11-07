@@ -11,7 +11,7 @@ Fa rispettare lo standard della libreria di mostri/villain/PNG (T-D12):
      - header obbligatori: **Faction**, **Role**, **Environment**, **CR**,
        **Source**, **Status**;
      - CR del filename coerente col CR dichiarato nell'header;
-     - stato dichiarato nel titolo o nell'header ([ACCEPTED]/[INFERRED]/Status).
+     - stato dichiarato nel titolo o nell'header ([CANONE]/[INFERRED]/Status).
   3. Ogni DOSSIER (gli altri .md in villain|png) ha un titolo H1.
   4. `mostri/` contiene SOLO statblock (+ README*).
   5. `scripts/monster_catalog.yaml` è in sync con la libreria (rigenerazione
@@ -123,9 +123,11 @@ def check_statblock(path: Path):
     if h_cr is None:
         err(f"{rel}: CR non leggibile dall'header **CR**")
     first = text.splitlines()[0] if text.splitlines() else ""
-    if not (re.search(r"\[(ACCEPTED|INFERRED)", first)
+    # CANONE è la marca di GUIDA-MARCATURE (ADR-0109); ACCEPTED resta letto
+    # finché esistono schede non migrate fuori dalla libreria.
+    if not (re.search(r"\[(CANONE|ACCEPTED|INFERRED)", first)
             or re.search(r"\*\*Status\*\*[:\s]*\S", text)):
-        err(f"{rel}: stato non dichiarato ([ACCEPTED]/[INFERRED] nel titolo o **Status** valorizzato)")
+        err(f"{rel}: stato non dichiarato ([CANONE — DM data]/[INFERRED — domanda; base: …] nel titolo o **Status** valorizzato)")
 
 
 def check_dossier(path: Path):

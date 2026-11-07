@@ -11733,7 +11733,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/inventory_inferred.py",
-      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/ (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI.",
+      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/, skill, modelli, README e fixture (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI. Ogni marcatore ha anche la forma (con domanda e base, vecchia, nuda) secondo GUIDA-MARCATURE (ADR-0109).",
       "stability": "beta",
       "stdlib_only": true,
       "external_bins": [],
@@ -11843,12 +11843,83 @@
         "scripts/tests/test_inventory_inferred.py"
       ],
       "docs": [
-        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md"
+        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
+        "docs/guides/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
         "pyyaml"
       ]
+    },
+    {
+      "id": "controlla_marche",
+      "path": "scripts/controlla_marche.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/controlla_marche.py --base origin/main",
+      "summary": "I due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Canale testing: in CI avvisa e non blocca.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "--base",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ref di confronto, es. origin/main."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'è almeno un avviso."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun avviso, o avvisi senza --rigido",
+        "1": "avvisi con --rigido",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende dal diff fra --base e HEAD"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/controlla_marche.py --help",
+      "tests": [
+        "scripts/tests/test_controlla_marche.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MARCATURE.md",
+        "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
+      ],
+      "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
+      "optional_deps": []
     },
     {
       "id": "misura_derivazione",

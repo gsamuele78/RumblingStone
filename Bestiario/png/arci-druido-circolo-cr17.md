@@ -1,4 +1,4 @@
-# arci-druido-circolo-cr17 [ACCEPTED — DM-canon 2026-05-05]
+# arci-druido-circolo-cr17 [CANONE — DM 2026-05-05]
 
 **Faction**: cerchio-druid | **Role**: caster-divine-boss | **Environment**: forest,mountain | **CR**: 17
 

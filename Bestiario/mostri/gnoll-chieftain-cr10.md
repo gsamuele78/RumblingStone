@@ -1,4 +1,4 @@
-# Gnoll Chieftain (Barbarian 8) [ACCEPTED — DM-canon 2026-05-05]
+# Gnoll Chieftain (Barbarian 8) [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: melee-boss | **Environment**: any | **CR**: 10 | **Source**: MM Gnoll + PHB Barbarian 8 | **Status**: inferred
 
 

@@ -1,4 +1,4 @@
-# Drow Assassina di Lolth (Ladro 4 / Assassino 5) [ACCEPTED — DM-canon]
+# Drow Assassina di Lolth (Ladro 4 / Assassino 5) [CANONE — DM 2026-09-23]
 **Faction**: drow-sonjak | **Role**: caster-subdolo/infiltratrice | **Environment**: underdark/urban | **CR**: 10 | **Source**: SRD drow + Ladro 4 + CdP **Assassino** (SRD) | **Status**: accepted
 
 

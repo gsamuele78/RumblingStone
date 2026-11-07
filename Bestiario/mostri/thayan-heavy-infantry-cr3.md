@@ -1,4 +1,4 @@
-# Thayan Heavy Infantry (Fighter 3) [ACCEPTED — DM-canon 2026-05-05]
+# Thayan Heavy Infantry (Fighter 3) [CANONE — DM 2026-05-05]
 **Faction**: teschio-nero-thay | **Role**: melee-heavy | **Environment**: any | **CR**: 3 | **Source**: FRCS Thay + PHB Fighter 3 | **Status**: inferred
 
 

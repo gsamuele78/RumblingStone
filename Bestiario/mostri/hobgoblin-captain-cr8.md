@@ -1,4 +1,4 @@
-# hobgoblin-captain-cr8 [ACCEPTED — DM-canon 2026-05-05]
+# hobgoblin-captain-cr8 [CANONE — DM 2026-05-05]
 
 **Faction**: red-hand | **Role**: elite-officer | **Environment**: any | **CR**: 8
 

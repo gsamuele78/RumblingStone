@@ -1,4 +1,4 @@
-# Deathlock (Ghostlord mage) [ACCEPTED — DM-canon 2026-05-05]
+# Deathlock (Ghostlord mage) [CANONE — DM 2026-05-05]
 **Faction**: ghostlord-undead | **Role**: arcane-caster | **Environment**: any | **CR**: 8 | **Source**: MM III Deathlock | **Status**: inferred
 
 

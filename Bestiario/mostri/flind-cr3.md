@@ -1,4 +1,4 @@
-# Flind (Gnoll Elite — MM II) [ACCEPTED — DM-canon 2026-05-05]
+# Flind (Gnoll Elite — MM II) [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: melee-elite | **Environment**: any | **CR**: 3 | **Source**: MM II p.104 Flind | **Status**: inferred
 
 

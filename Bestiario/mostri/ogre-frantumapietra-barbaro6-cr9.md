@@ -1,4 +1,4 @@
-# Ogre Frantumapietra delle Fauci Profonde (Barbaro 6) [ACCEPTED — DM-canon]
+# Ogre Frantumapietra delle Fauci Profonde (Barbaro 6) [CANONE — DM 2026-10-06]
 **Faction**: mano-rossa | **Role**: melee-heavy | **Environment**: underground/mountain | **CR**: 9 | **Source**: SRD *Ogre* (CR 3) + Barbaro 6 (SRD PHB); talento *Awesome Blow* (SRD, Monster Feats) | **Status**: accepted
 
 

@@ -1,4 +1,4 @@
-# Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto» [ACCEPTED — DM-canon]
+# Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto» [CANONE — DM 2026-08-05]
 **Faction**: mano-rossa | **Role**: boss-caster/negazione-del-contatto | **Environment**: any (quota, rovine, assedio) | **CR**: 18 | **Source**: SRD *Ogre Mage* (base GS 8) + **Stregone 10** (SRD PHB), classe associata GS +1/liv | **Status**: accepted
 
 

@@ -1,4 +1,4 @@
-# Gnoll Warrior 2 [ACCEPTED — DM-canon 2026-05-05]
+# Gnoll Warrior 2 [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: melee-fodder | **Environment**: any | **CR**: 2 | **Source**: MM p.130 Gnoll + PHB Warrior 2 | **Status**: inferred
 
 

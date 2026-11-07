@@ -183,7 +183,7 @@ Non serve dettagliare tutta la lista: il suo ruolo è “batteria” del rituale
 
 ---
 
-## 7. Durgan Tozzefort — Comandante dei 300 Mercenari Nani (CR 12) `[ACCEPTED — DM-canon 2026-07-12]`
+## 7. Durgan Tozzefort — Comandante dei 300 Mercenari Nani (CR 12) `[CANONE — DM 2026-07-12]`
 
 - Classe: Guerriero 12.
 - PF: 126.

@@ -1,4 +1,4 @@
-# Gnoll Cleric 6 of Yeenoghu [ACCEPTED — DM-canon 2026-05-05]
+# Gnoll Cleric 6 of Yeenoghu [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: divine-caster | **Environment**: any | **CR**: 7 | **Source**: MM Gnoll + PHB Cleric 6 + Yeenoghu demon lord (Fiendish Codex I) | **Status**: inferred
 
 

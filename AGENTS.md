@@ -315,7 +315,9 @@ non hanno alcun meccanismo di scoperta. È questa sezione a instradarli.
    `skills/rumblingstone-campaign/references/campaign-coherence.md`.
 4. Cita le fonti: sezione SRD, FRCS p.X, oppure `[Private — Red Hand of Doom, p.X]`.
 5. **Non inventare mai** blocchi statistiche, effetti di incantesimi, statistiche
-   di PNG o poteri di artefatti. Marca `[INFERRED — needs DM confirmation]`.
+   di PNG o poteri di artefatti. Se manca la fonte, marca INFERRED con
+   domanda e base: la grammatica sta in `docs/guides/GUIDA-MARCATURE.md`
+   (ADR-0109).
 
 ---
 
