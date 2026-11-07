@@ -15,6 +15,10 @@
 # (Archetypes.aspx, 1.252 archetipi, 2026-11-07). Misura sulle 57 voci con link e firma abbinabile: 57 giuste
 # (2 solo col prefisso di regione di aon), 0 sbagliate; PRD e aon d'accordo su 132 coppie su 133 (l'ultima per
 # una maiuscola). Fra parentesi quadre le classi. Script in plans/esperimenti/regole-ufficiali-2026-11-07/.
+# Equipaggiamento e proprietà magiche di armi e armature: pagine «Armi/…» e «Armature/…» di Golarion, nome inglese
+# dal link (ItemName di aon, o percorso di d20pfsrd riscontrato su un nome del PRD a meno dell'ordine delle parole).
+# Tolte 3 coppie dove due nomi italiani puntano allo stesso inglese per un link sbagliato (Brillante, Interdittiva,
+# Pallini); le munizioni e le pagine comuni a più voci le ha abbinate Claude, e la quarta colonna lo dice.
 # Solo nomi, niente testo delle regole.
 italiano	pf1	tipo	abbinamento
 Abbraccio Letale	Final Embrace	talento
@@ -5271,3 +5275,470 @@ Visir	Vizier	archetipo	golarion, firma dei privilegi uguale ad aon, fuori PRD [M
 Vox	Vox	archetipo	golarion, firma dei privilegi uguale ad aon, fuori PRD [Mesmerista]
 Zanna della Natura	Nature Fang	archetipo	golarion, firma dei privilegi uguale al PRD [Druido]
 Zelota della Mantide	Mantis Zealot	archetipo	golarion, firma dei privilegi uguale ad aon, fuori PRD [Sacerdote Guerriero]
+Accecante	Blinding	proprietà magica	golarion→aon, nome nel PRD
+Accetta Nanica	Dwarven maulaxe	equipaggiamento	golarion→aon, fuori PRD
+Accumula Incantesimi	Spell Storing	proprietà magica	golarion→aon, nome nel PRD
+Adattiva	Adaptive	proprietà magica	golarion→aon, nome nel PRD
+Adesiva	Adhesive	proprietà magica	golarion→aon, nome nel PRD
+Affettacani	Dogslicer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Affidabile	Reliable	proprietà magica	golarion→aon, nome nel PRD
+Affidabile Superiore	Reliable, Greater	proprietà magica	golarion→aon, nome nel PRD
+Affilata	Keen	proprietà magica	golarion→aon, nome nel PRD
+Agile	Agile	proprietà magica	golarion→aon, fuori PRD
+Aklys	Aklys	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Alabarda	Halberd	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Alabarda Tridente	Tiger Fork	equipaggiamento	golarion→aon, nome nel PRD
+Alleanza	Allying	proprietà magica	golarion→aon, nome nel PRD
+Amara	Bitter	proprietà magica	golarion→aon, nome nel PRD
+Amentum	Amentum	equipaggiamento	golarion→aon, nome nel PRD
+Amorfa	Amorphous	proprietà magica	golarion→aon, nome nel PRD
+Anarchica	Anarchic	proprietà magica	golarion→aon, nome nel PRD
+Anatema Mitico	Mythic Bane	proprietà magica	golarion→aon, nome nel PRD
+Ancorante	Anchoring	proprietà magica	golarion→aon, nome nel PRD
+Animato	Animated	proprietà magica	golarion→aon, nome nel PRD
+Antiemorragica	Stanching	proprietà magica	golarion→aon, nome nel PRD
+Appariscente	Flamboyant	proprietà magica	golarion→aon, nome nel PRD
+Appariscente Superiore	Flamboyant, Greater	proprietà magica	golarion→aon, nome nel PRD
+Archibugio Lungo	Double Hackbut	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Arco Corto	Shortbow	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Arco Corto Composito	Shortbow, Composite	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Arco Lungo	Longbow	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Arco Lungo Composito	Longbow, Composite	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ariete	Ramming	proprietà magica	golarion→aon, nome nel PRD
+Armatura Chiodata	Spiked Armor	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Armatura Completa	Full Plate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Armatura Kikko	Kikko Armor	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Armatura Lamellare	Lamellar (Leather) Armor	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Armatura a Dischi	Four-Mirror Armor	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Armatura da Parata	Parade Armor	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Armatura del Cavaliere Infernale	Hellknight plate	equipaggiamento	golarion→aon, fuori PRD
+Armatura della Fanciulla Grigia	Gray maiden plate	equipaggiamento	golarion→aon, fuori PRD
+Armatura della Montagna	Mountain Pattern Armor	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Armatura di Legno	Wooden	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Arpione	Harpoon	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ascia	Handaxe	equipaggiamento	golarion→aon, nome nel PRD
+Ascia Bipenne	Greataxe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ascia Uncinata	Hooked Axe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ascia da Battaglia	Battleaxe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ascia da Guerra Nanica	Waraxe, Dwarven	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ascia da Lancio	Throwing Axe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Aspersorio da Battaglia	Battle Aspergillum	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Assicurante	Vouchsafing	proprietà magica	golarion→aon, nome nel PRD
+Assiomatica	Axiomatic	proprietà magica	golarion→aon, nome nel PRD
+Astrum	Starknife	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Astuzia	Cunning	proprietà magica	golarion→aon, nome nel PRD
+Attaccabrighe	Brawling	proprietà magica	golarion→aon, nome nel PRD
+Attirare Frecce	Arrow Catching	proprietà magica	golarion→aon, nome nel PRD
+Autoadattante	Fitting	proprietà magica	golarion→aon, fuori PRD
+Autoridimensionante	Resizing	proprietà magica	golarion→aon, fuori PRD
+Avanzante	Advancing	proprietà magica	golarion→aon, nome nel PRD
+Baionetta	Bayonet	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra Doppia	Double Crossbow	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra Leggera	Crossbow, Light	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra Pesante	Crossbow, Heavy	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra Subacquea Leggera	Underwater Light Crossbow	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra Subacquea Pesante	Underwater Crossbow	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra a Mano	Crossbow, Hand	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra a Ripetizione Leggera	Crossbow, Repeating Light	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra a Ripetizione Pesante	Crossbow, Repeating Heavy	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Balestra a Ripetizione a Mano	Repeating Hand Crossbow	equipaggiamento	golarion→aon, nome nel PRD
+Bastone Animato	Sword Cane	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Bastone Animato a Doppia Katana	Katana, Double Walking Stick	equipaggiamento	golarion→aon, nome nel PRD
+Bastone Bo	Bo Staff	equipaggiamento	golarion→aon, nome nel PRD
+Bastone Ferrato	Quarterstaff	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Bastone Fionda Halfling	Sling Staff, Halfling	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Bec de Corbin	Bec de Corbin	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Benevola	Benevolent	proprietà magica	golarion→aon, nome nel PRD
+Berdica	Bardiche	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Bilanciata	Balanced	proprietà magica	golarion→aon, nome nel PRD
+Blocca Fase	Phase Locking	proprietà magica	golarion→aon, nome nel PRD
+Bolas	Bolas	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Boomerang	Boomerang	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Buckler	Buckler	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Caccia Spiriti	Spirit-Hunting	proprietà magica	golarion→aon, nome nel PRD
+Caccia Stirpe	Blood-Hunting	proprietà magica	golarion→aon, nome nel PRD
+Cacciatore	Huntsman	proprietà magica	golarion→aon, nome nel PRD
+Calmante	Calming	proprietà magica	golarion→aon, nome nel PRD
+Canto di Sangue	Bloodsong	proprietà magica	golarion→aon, nome nel PRD
+Carica Asciutta	Dry Load	proprietà magica	golarion→aon, nome nel PRD
+Carico	Burdenless	proprietà magica	golarion→aon, nome nel PRD
+Cartuccia Alchemica	Alchemical Cartridges	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cartuccia Dragone	Dragoon Cartridge	equipaggiamento	golarion→aon, fuori PRD
+Cartuccia di Metallo	Metal Cartridge	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Catena Chiodata	Chain, Spiked	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cerbottana	Blowgun	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cercacuore	Heartseeker	proprietà magica	golarion→aon, nome nel PRD
+Cerimoniale di Seta	Silken Ceremonial Armor	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cestus	Cestus	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Chakram	Chakram	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Chiodature per Armatura	Armor Spikes	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Chiodature per Scudo	Shield Spikes	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Colpo Agile	Nimble Shot	proprietà magica	golarion→aon, nome nel PRD
+Colpo Senz'Armi	Strike, Unarmed	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Conduttiva	Conductive	proprietà magica	golarion→aon, nome nel PRD
+Confondente	Confounding	proprietà magica	golarion→aon, nome nel PRD
+Confortevole	Comfort	proprietà magica	golarion→aon, fuori PRD
+Consacrata	Sacred	proprietà magica	golarion→aon, nome nel PRD
+Contrastante	Countering	proprietà magica	golarion→aon, nome nel PRD
+Controllo dei Non Morti	Undead Controlling	proprietà magica	golarion→aon, nome nel PRD
+Coraggiosa	Courageous	proprietà magica	golarion→aon, nome nel PRD
+Corazza Lamellare	Lamellar Cuirass	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza a Scaglie	Scale Mail	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza a Strisce	Splint Mail	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza di Bande	Banded Mail	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza di Piastre	Breastplate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza di Piastre Flessibile	Agile Breastplate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corazza di Pietra	Stoneplate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Corrosiva	Corrosive	proprietà magica	golarion→aon, nome nel PRD
+Corsesca	Ranseur	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cotta di Maglia	Chainmail	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Crudele	Cruel	proprietà magica	golarion→aon, nome nel PRD
+Cuoio	Leather	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cuoio Borchiato	Studded Leather	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Cuoio Borchiato del Cavaliere Infernale	Hellknight leather	equipaggiamento	golarion→aon, fuori PRD
+Dan Bong	Dan Bong	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Danzante	Dancing	proprietà magica	golarion→aon, nome nel PRD
+Dao a Nove Anelli	Broadsword, Nine-Ring	equipaggiamento	golarion→aon, nome nel PRD
+Dardi Piuma	Featherweight dart	equipaggiamento	golarion→aon, fuori PRD
+Dardi da Kestros	Kestros Dart	equipaggiamento	golarion→aon, nome nel PRD
+Dardi per Cerbottana	Blowgun Darts	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Dardo	Dart	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Dardo Wushu	Wushu Dart	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Dardo da Propulsore	Atlatl Dart	equipaggiamento	golarion→aon, nome nel PRD
+Deflettente	Deflecting	proprietà magica	golarion→aon, nome nel PRD
+Delineante	Limning	proprietà magica	golarion→aon, nome nel PRD
+Denegante	Denying	proprietà magica	golarion→aon, nome nel PRD
+Dentellata	Grinding	proprietà magica	golarion→aon, nome nel PRD
+Designante Inferiore	Designating, Lesser	proprietà magica	golarion→aon, nome nel PRD
+Designante Superiore	Designating, Greater	proprietà magica	golarion→aon, nome nel PRD
+Determinazione	Determination	proprietà magica	golarion→aon, nome nel PRD
+Deviazione delle Frecce	Arrow Deflection	proprietà magica	golarion→aon, nome nel PRD
+Difensiva	Defending	proprietà magica	golarion→aon, nome nel PRD
+Dissolvente	Dispelling	proprietà magica	golarion→aon, nome nel PRD
+Distanza	Distance	proprietà magica	golarion→aon, nome nel PRD
+Distraente	Distracting	proprietà magica	golarion→aon, nome nel PRD
+Distraente Superiore	Distracting, Greater	proprietà magica	golarion→aon, nome nel PRD
+Distruzione	Disruption	proprietà magica	golarion→aon, nome nel PRD
+Do-Maru	Do-Maru	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Doppia Ascia Orchesca	Axe, Orc Double	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Doppietta	Shotgun, Double-Barreled	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Doppio Kama Incatenato	Kama, Double-Chained	equipaggiamento	golarion→aon, nome nel PRD
+Duellante PSFG	Dueling (PSFG)	proprietà magica	golarion→aon, fuori PRD
+Duello	Dueling	proprietà magica	golarion→aon, nome nel PRD
+Emeici	Emei Piercer	equipaggiamento	golarion→aon, nome nel PRD
+Energia Luminosa	Brilliant Energy	proprietà magica	golarion→aon, nome nel PRD
+Esplosione Corrosiva	Corrosive Burst	proprietà magica	golarion→aon, nome nel PRD
+Esplosione Dissolvente	Dispelling Burst	proprietà magica	golarion→aon, nome nel PRD
+Esplosione Folgorante	Shocking Burst	proprietà magica	golarion→aon, nome nel PRD
+Esplosione di Fiamme	Flaming Burst	proprietà magica	golarion→aon, nome nel PRD
+Esplosione di Ghiaccio	Icy Burst	proprietà magica	golarion→aon, nome nel PRD
+Estenuante	Exhausting	proprietà magica	golarion→aon, nome nel PRD
+Estingui Fuoco	Quenching	proprietà magica	golarion→aon, nome nel PRD
+Falcata	Falcata	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Falce	Scythe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Falcetto	Sickle	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Falchion	Falchion	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Falcione	Glaive	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Falcione-Giusarma	Glaive-Guisarme	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ferimento	Wounding	proprietà magica	golarion→aon, nome nel PRD
+Fiammagrigia	Grayflame	proprietà magica	golarion→aon, nome nel PRD
+Fionda	Sling	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Focalizza Ki	Ki Focus	proprietà magica	golarion→aon, nome nel PRD
+Foglialama Elfica	Elven leafblade	equipaggiamento	golarion→aon, fuori PRD
+Folgorante	Shock	proprietà magica	golarion→aon, nome nel PRD
+Forca da Prigionieri	Mancatcher	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Fortificazione	Fortification	proprietà magica	golarion→aon, fuori PRD
+Fortuita	Fortuitous	proprietà magica	golarion→aon, nome nel PRD
+Fortunata	Lucky	proprietà magica	golarion→aon, nome nel PRD
+Fortunata Superiore	Lucky, Greater	proprietà magica	golarion→aon, nome nel PRD
+Fragoroso	Clangorous	proprietà magica	golarion→aon, nome nel PRD
+Frantumazione	Shattering	proprietà magica	golarion→aon, fuori PRD
+Frecce	Arrows	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Frecce Alleggerite	Flight Arrows	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Frecce Fischianti	Whistling Arrows	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Frecce Smussate	Blunt Arrows	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Frecce con Punta di Ferro da Tiro Lungo	Arrow, Iron-Tipped Distance	equipaggiamento	golarion→aon, nome nel PRD
+Frecce di Bambù	Bamboo Shaft Arrow	equipaggiamento	golarion→aon, nome nel PRD
+Freccia Fumogena	Smokescreen Arrow	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Frusta	Whip	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Frusta Scorpione	Scorpion Whip	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Frusta a Nove Sezioni	Nine-Section Whip	equipaggiamento	golarion→aon, nome nel PRD
+Fucile	Rifle	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Fucile a Pepaiola	Rifle, Pepperbox	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Fucile da Caccia	Shotgun	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Furia Innata	Furyborn	proprietà magica	golarion→aon, nome nel PRD
+Furiosa	Furious	proprietà magica	golarion→aon, nome nel PRD
+Furtiva	Sneaky	proprietà magica	golarion→aon, nome nel PRD
+Fusione	Merging	proprietà magica	golarion→aon, nome nel PRD
+Gelida	Frost	proprietà magica	golarion→aon, nome nel PRD
+Giaco di Maglia	Chain Shirt	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Giavellotto	Javelin	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Giurista	Jurist	proprietà magica	golarion→aon, nome nel PRD
+Giusarma	Guisarme	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Giusto	Righteous	proprietà magica	golarion→aon, nome nel PRD
+Gladio	Gladius	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Gloriosa	Glorious	proprietà magica	golarion→aon, nome nel PRD
+Gravina	Mattock	equipaggiamento	golarion→aon, nome nel PRD
+Guanto d'Arme	Gauntlet	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Guanto d'Arme Chiodato	Gauntlet, Spiked	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Guanto d'Arme con Sicura	Gauntlet, Locked	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Guardia	Guarding	proprietà magica	golarion→aon, fuori PRD
+Guardia Superiore	Guarding, Greater	proprietà magica	golarion→aon, fuori PRD
+Guardiana	Guardian	proprietà magica	golarion→aon, nome nel PRD
+Haramaki	Haramaki	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Hunga Munga	Hunga Munga	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Imbottita	Padded	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Imbottitura Trapuntata	Quilted Cloth	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Immorale	Vicious	proprietà magica	golarion→aon, nome nel PRD
+Impatto	Impact	proprietà magica	golarion→aon, nome nel PRD
+Imperturbabile	Impervious	proprietà magica	golarion→aon, nome nel PRD
+Impulso Vitale	Lifesurge	proprietà magica	golarion→aon, nome nel PRD
+Incalzare Rafforzato	Mighty Cleaving	proprietà magica	golarion→aon, nome nel PRD
+Incendiaria	Igniting	proprietà magica	golarion→aon, nome nel PRD
+Infausta	Ominous	proprietà magica	golarion→aon, nome nel PRD
+Infuocata	Flaming	proprietà magica	golarion→aon, nome nel PRD
+Ingannevole	Deceptive	proprietà magica	golarion→aon, fuori PRD
+Iniquo	Unrighteous	proprietà magica	golarion→aon, nome nel PRD
+Inosservata	Unseen	proprietà magica	golarion→aon, fuori PRD
+Intensifica Ki	Ki Intensifying	proprietà magica	golarion→aon, nome nel PRD
+Invulnerabilità	Invulnerability	proprietà magica	golarion→aon, nome nel PRD
+Irrintracciabile	Trackless	proprietà magica	golarion→aon, nome nel PRD
+Isolante	Grounding	proprietà magica	golarion→aon, nome nel PRD
+Ispirata	Inspired	proprietà magica	golarion→aon, nome nel PRD
+Ji Dao Lian Doppio	Double Chicken Saber	equipaggiamento	golarion→aon, nome nel PRD
+Jutte	Jutte	equipaggiamento	golarion→aon, nome nel PRD
+Kama	Kama	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Katana	Katana	equipaggiamento	golarion→aon, nome nel PRD
+Kerambit	Kerambit	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Kestros	Kestros	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Khopesh	Khopesh	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Klar	Klar	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Kukri	Kukri	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Kusari Gusoku	Kusari Gusoku	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Kusarigama	Kusarigama	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Kyoketsu Shoge	Kyoketsu Shoge	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lama Volante	Flying Blade	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lama a Scatto	Spring blade	equipaggiamento	golarion→aon, fuori PRD
+Lancia	Spear	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia Corta	Shortspear	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia Lunga	Longspear	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia Uncinata	Hooked Lance	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia con Catena	Chain Spear	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia da Cavaliere	Lance	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia da Cinghiale	Boar Spear	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancia da Fuoco	Fire Lance	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lancio	Throwing	proprietà magica	golarion→aon, nome nel PRD
+Lazo	Lasso	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Letale	Deadly	proprietà magica	golarion→aon, nome nel PRD
+Liberatrice	Liberating (UI)	proprietà magica	golarion→aon, fuori PRD
+Liuxing Chui	Meteor Hammer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Lungchuan Tamo	Lungchuan Tamo	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Madu	Madu	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Manganello	Sap	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Manto Corazzato	Armored Coat	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Marina	Seaborne	proprietà magica	golarion→aon, nome nel PRD
+Martello Leggero	Light Hammer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Martello Lungo Nanico	Longhammer, Dwarven	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Martello da Guerra	Warhammer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Martello-Picco Gnomesco	Hammer, Gnome Hooked	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Martirio	Martyring	proprietà magica	golarion→aon, nome nel PRD
+Mascheramento	Glamered	proprietà magica	golarion→aon, nome nel PRD
+Mazza Leggera	Light Mace	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mazza Pesante	Mace, Heavy	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mazzafrusto Doppio	Flail, Dire	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mazzafrusto Leggero	Light Flail	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mazzafrusto Pesante	Flail, Heavy	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mazzapicchio	Lucerne Hammer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Melodica	Harmonizing	proprietà magica	golarion→aon, nome nel PRD
+Mezza Armatura	Half-Plate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mezza Armatura Flessibile	Agile Half-Plate	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Mezza Armatura del Cavaliere Infernale	Hellknight half-plate	equipaggiamento	golarion→aon, fuori PRD
+Mietitrice	Harvesting	proprietà magica	golarion→aon, nome nel PRD
+Mimetica	Mimetic	proprietà magica	golarion→aon, nome nel PRD
+Minacciosa	Menacing	proprietà magica	golarion→aon, nome nel PRD
+Morning Star	Morningstar	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Moschetto	Musket	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Moschetto Ascia	Musket, Axe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Moschetto Dragone	Dragoon Musket	equipaggiamento	golarion→aon, fuori PRD
+Moschetto Martello da Guerra	Musket, Warhammer	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Moschetto a Doppia Canna	Musket, Double-Barreled	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Munizione Fantomatica	Phantom Ammunition	proprietà magica	golarion→aon, nome nel PRD
+Munizioni Infinite	endless ammunition	proprietà magica	golarion→aon, nome nel PRD
+Naginata	Naginata	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Negante	Negating	proprietà magica	golarion→aon, nome nel PRD
+Neutralizzante	Neutralizing	proprietà magica	golarion→aon, nome nel PRD
+Noccoliera ad Ascia	Knuckle Axe	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Nodachi	Nodachi	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Nube Esplosiva	Cloudburst	proprietà magica	golarion→aon, fuori PRD
+Nullificante	Nullifying	proprietà magica	golarion→aon, nome nel PRD
+Nunchaku	Nunchaku	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+O-Yoroi	O-Yoroi	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ombra Migliorata	Shadow, Improved	proprietà magica	golarion→aon, nome nel PRD
+Ospitale	Hosteling	proprietà magica	golarion→aon, nome nel PRD
+Pacifica	Peaceful	proprietà magica	golarion→aon, fuori PRD
+Paletto di Legno	Wooden Stake	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pata	Pata	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pelle	Hide	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pennello di Ferro	Iron Brush	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pepaiola	Pepperbox	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Percettiva	Sensing	proprietà magica	golarion→aon, nome nel PRD
+Piccone Leggero	Light Pick	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Piccone Pesante	Heavy Pick	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pietosa	Merciful	proprietà magica	golarion→aon, nome nel PRD
+Pilum	Pilum	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola	Pistol	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola Bastone Animato	Pistol, Sword Cane	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola Buckler	Buckler Gun	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola Drago	Pistol, Dragon	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola Dragone	Dragoon Pistol	equipaggiamento	golarion→aon, fuori PRD
+Pistola Pugnale	Pistol, Dagger	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola a Doppia Canna	Pistol, Double-Barreled	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pistola da Giacca	Pistol, Coat	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Planare	Planar	proprietà magica	golarion→aon, nome nel PRD
+Polvere Nera	Black Powder	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Possente	Potent	proprietà magica	golarion→aon, nome nel PRD
+Posta	Stalking	proprietà magica	golarion→aon, nome nel PRD
+Prensile	Prehensile	proprietà magica	golarion→aon, nome nel PRD
+Preservante	Conserving	proprietà magica	golarion→aon, nome nel PRD
+Proiettile Poroso	Bullet, Pitted	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Proiettile d'Argento	Bullet, Silver	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Proiettile di Adamantio	Bullet, Adamantine	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Proiettile per Arma da Fuoco	Bullet	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Proiettili per Fionda	Sling Bullets	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Propulsore	Atlatl	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pugnale	Dagger	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pugnale Spaccaspada	Swordbreaker Dagger	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Pugnale da Mischia	Dagger, Punching	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Putrida	Putrid	proprietà magica	golarion→aon, nome nel PRD
+Quadrelli da Balestra	Crossbow Bolts	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Quadrens	Quadrens	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Rancorosa	Spiteful	proprietà magica	golarion→aon, nome nel PRD
+Randello	Club	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Randello Mere	Mere Club	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Randello Pesante	Greatclub	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Rapida	Expeditious	proprietà magica	golarion→aon, nome nel PRD
+Rasoio da Guerra	War razor	equipaggiamento	golarion→aon, fuori PRD
+Rescindente	Disjoining	proprietà magica	golarion→aon, nome nel PRD
+Resistenza al Veleno	Poison-Resistant	proprietà magica	golarion→aon, nome nel PRD
+Resistenza all'Energia	Energy Resistance	proprietà magica	golarion→aon, nome nel PRD
+Resistenza all'Energia Migliorata	Energy Resistance, Improved	proprietà magica	golarion→aon, nome nel PRD
+Resistenza all'Energia Superiore	Energy Resistance, Greater	proprietà magica	golarion→aon, nome nel PRD
+Rete	Net	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Rete da Cattura	Snag Net	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Revolver	Revolver	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Rhomphaia	Rhomphaia	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ricercante	Seeking	proprietà magica	golarion→aon, nome nel PRD
+Richiamabile	Called	proprietà magica	golarion→aon, nome nel PRD
+Riflettente	Reflecting	proprietà magica	golarion→aon, nome nel PRD
+Rincuorante	Rallying	proprietà magica	golarion→aon, nome nel PRD
+Rinvigorente	Invigorating	proprietà magica	golarion→aon, nome nel PRD
+Riposante	Restful	proprietà magica	golarion→aon, nome nel PRD
+Riposizionante	Repositioning	proprietà magica	golarion→aon, nome nel PRD
+Risonante	Resonating	proprietà magica	golarion→aon, nome nel PRD
+Rispondente	Answering	proprietà magica	golarion→aon, nome nel PRD
+Rissosa	Brawling	proprietà magica	golarion→aon, nome nel PRD
+Ritornante	Returning	proprietà magica	golarion→aon, nome nel PRD
+Rompimento	Breaking	proprietà magica	golarion→aon, nome nel PRD
+Roncone	Bill	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Ruba Fato	Fate-Stealing	proprietà magica	golarion→aon, nome nel PRD
+Rubaincantesimi	Spellstealing	proprietà magica	golarion→aon, nome nel PRD
+Runaforgiata	Runeforged	proprietà magica	golarion→aon, fuori PRD
+Sacra	Holy	proprietà magica	golarion→aon, nome nel PRD
+Sacrilega	Unholy	proprietà magica	golarion→aon, nome nel PRD
+Sacrosanta	Sacrosanct	proprietà magica	golarion→aon, nome nel PRD
+Sai	Sai	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sansetsukon	Sansetsukon	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Scansatrappole	Trapwarding	proprietà magica	golarion→aon, fuori PRD
+Scavatrice	Delving	proprietà magica	golarion→aon, nome nel PRD
+Schiva Incantesimi	Spell Dodging	proprietà magica	golarion→aon, nome nel PRD
+Sciabola Dentata	Sawtooth Sabre	equipaggiamento	golarion→aon, nome nel PRD
+Sciabola Elfica	Curve Blade, Elven	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sciabola d'Abbordaggio	Cutlass	equipaggiamento	golarion→aon, fuori PRD
+Scimitarra	Scimitar	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Scissor	Scizore	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Scivolosa	Slick	proprietà magica	golarion→aon, nome nel PRD
+Scivolosa Migliorata	Slick, Improved	proprietà magica	golarion→aon, nome nel PRD
+Scivolosa Superiore	Slick, Greater	proprietà magica	golarion→aon, nome nel PRD
+Scongelante	Thawing	proprietà magica	golarion→aon, nome nel PRD
+Scudo Chiodato Leggero	Spiked Light Shield	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Scudo Chiodato Pesante	Spiked Heavy Shield	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Scudo Leggero di Legno	Shield, Light Wooden	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Leggero di Metallo	Shield, Light Steel	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Pesante di Legno	Shield, Heavy Wooden	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Pesante di Metallo	Shield, Heavy Steel	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Rapido Leggero di Legno	Quickdraw Shield, Light Wooden	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Rapido Leggero di Metallo	Quickdraw Shield, Light Steel	equipaggiamento	golarion→d20pfsrd (pagina comune a legno e metallo): coppia di Claude
+Scudo Torre	Shield, Tower	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Scudo da Lancio	Throwing Shield	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Selettiva	Exclusionary	proprietà magica	golarion→aon, nome nel PRD
+Selvatica	Wild	proprietà magica	golarion→aon, nome nel PRD
+Sfondamento	Bashing	proprietà magica	golarion→aon, nome nel PRD
+Shang Gou	Shang Gou	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sheng Biao	Rope Dart	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Shotel	Shotel	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Siangham	Siangham	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sibat	Sibat	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sica	Sica	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Silenziante	Silencing	proprietà magica	golarion→aon, fuori PRD
+Sincera	Truthful	proprietà magica	golarion→aon, fuori PRD
+Soffio del Dragone	Wyrmsbreath	proprietà magica	golarion→aon, nome nel PRD
+Sostegno	Bolstering	proprietà magica	golarion→aon, nome nel PRD
+Sovversivo	Unbound	proprietà magica	golarion→aon, nome nel PRD
+Spaccaterra	Earth Breaker	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada Aldori	Aldori dueling sword	equipaggiamento	golarion→aon, fuori PRD
+Spada Bastarda	Sword, Bastard	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada Corta	Shortsword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada Farfalla	Butterfly Sword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada Lunga	Longsword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada Rhoka	Rhoka Sword	equipaggiamento	golarion→d20pfsrd, nome dal percorso del link: coppia di Claude
+Spada a Doppia Lama a Tre Punte	Tri-Point Double-Edged Sword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada a Due Lame	Sword, Two-Bladed	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada a Sette Rami	Sword, Seven-Branched	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spada del Tempio	Temple Sword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Spadone	Greatsword	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Sparadardi da Polso	Wrist launcher	equipaggiamento	golarion→aon, fuori PRD
+Sparadardi da Polso Pesante	Heavy wrist launcher	equipaggiamento	golarion→aon, fuori PRD
+Specchio	Mirrored	proprietà magica	golarion→aon, nome nel PRD
+Spinalama Elfica	Elven thornblade	equipaggiamento	golarion→aon, fuori PRD
+Spranga del Flind	Flindbar	equipaggiamento	golarion→aon, nome nel PRD
+Sprezzante	Defiant	proprietà magica	golarion→aon, nome nel PRD
+Squartacavalli	Horsechopper	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Stocco	Rapier	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Stridente	Jarring	proprietà magica	golarion→aon, nome nel PRD
+Strisciante	Creeping	proprietà magica	golarion→aon, nome nel PRD
+Strisciante	Slithering	proprietà magica	golarion→aon, fuori PRD
+Taiaha	Taiaha	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tatami-Do	Tatami-Do	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tekko-Kagi	Tekko-Kagi	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tepoztopilli	Tepoztopilli	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Terbutje	Terbutje	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Terbutje Pesante	Terbutje, great	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tetsubo	Tetsubo	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tirapugni	Brass Knuckles	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Titanica	Titanic	proprietà magica	golarion→aon, nome nel PRD
+Tocco Fantasma	Ghost Touch	proprietà magica	golarion→aon, nome nel PRD
+Tonante	Thundering	proprietà magica	golarion→aon, nome nel PRD
+Tonfa	Tonfa	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Torneo	Jousting	proprietà magica	golarion→aon, nome nel PRD
+Trasformante	Transformative	proprietà magica	golarion→aon, nome nel PRD
+Tridente	Trident	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Trombone	Blunderbuss	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tubo Lancia Frecce	Tube Arrow Shooter	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Tubo della Polvere Velenosa	Poisoned Sand Tube	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Umbratile	Umbral	proprietà magica	golarion→aon, nome nel PRD
+Uncino	Hook hand	equipaggiamento	golarion→aon, fuori PRD
+Uncino Ogre	Ogre Hook	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Urgrosh Nanico	Urgrosh, Dwarven	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Urumi	Urumi	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Valente	Valiant	proprietà magica	golarion→aon, nome nel PRD
+Vampirica	Vampiric	proprietà magica	golarion→aon, fuori PRD
+Vampirica Superiore	Vampiric, Greater	proprietà magica	golarion→aon, fuori PRD
+Velocità	Speed	proprietà magica	golarion→aon, nome nel PRD
+Ventaglio da Guerra	Fighting Fan	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Vigilante	Vigilant	proprietà magica	golarion→aon, nome nel PRD
+Vile	Dastard	proprietà magica	golarion→aon, nome nel PRD
+Volante	Flying	proprietà magica	golarion→aon, nome nel PRD
+Vorpal	Vorpal	proprietà magica	golarion→aon, nome nel PRD
+Wahaika	Wahaika	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Wakizashi	Wakizashi	equipaggiamento	golarion→d20pfsrd, nome nel PRD
+Yueyachan	Monk's Spade	equipaggiamento	golarion→d20pfsrd, nome nel PRD
