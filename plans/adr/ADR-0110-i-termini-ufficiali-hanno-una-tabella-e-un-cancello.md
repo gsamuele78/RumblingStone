@@ -110,6 +110,8 @@ cresciute prima delle prove. L'esito è in
   - Cowering = Accovacciato.
 - **Razze PF1e** (aggiunta, 2026-11-07): 37 voci di tipo «razza», tutte le razze del Core Rulebook e
   dell'Advanced Race Guide nel PRD in cache, per il plugin PF1e (ADR-0111); PF1e sale a 9.371 voci.
+- **Talenti di tutti i manuali 3.5** (aggiunta, 2026-11-07, richiesta del DM «se il termine c'è in 3.5 perché non dovrebbe essere usato»): `scripts/talenti_manuali_35.tsv` tiene 3.846 nomi inglesi, solo nomi, con sigla e pagina per 1.297 (indice di Chet Erez e Outlands, crystalkeep, 2007; elenco realmshelps). Un nome di quell'indice conta come fonte. Il controllo stacca la sigla attaccata al nome («GoadCAd») e divide «A e B» tranne nei nomi di tabella che contengono « e ». Talenti sconosciuti 133 → 97, cricchetto a 97. Nel repo e nelle skill non ci sono i manuali (ADR-0103): la skill dnd-35-rules ha solo riassunti di talenti FR, e 5 di quei nomi non sono in nessun indice.
+- **Talenti PF1e di tutti i manuali** (aggiunta, 2026-11-07): `scripts/talenti_manuali_pf1.tsv` tiene 3.432 nomi inglesi da Archives of Nethys, solo nomi; nei moduli PF1e un nome di quell'elenco conta come fonte. La tabella italiana PF1e è su aon per 1.731 talenti su 1.732. Nei moduli PF1e restano 5 «Vigore Sovrannaturale» (Il Drappo), un talento che in PF1e non esiste.
 - **Resta aperto**: i mostri 3.5 oltre le 31 voci (nessun elenco legale completo in rete) e circa
   270 archetipi PF1e senza abbinamento sicuro.
 

@@ -53,6 +53,28 @@ class TestLetturaDelleRighe(unittest.TestCase):
         self.assertIn(("Attacco Poderoso", "tabella"), esiti(testo))
         self.assertEqual(len(esiti(testo)), 2)
 
+    def test_toglie_la_sigla_del_manuale_attaccata(self):
+        self.assertEqual(L.termini_della_riga("GoadCAd, Improved Initiative"), ["Goad", "Improved Initiative"])
+
+    def test_divide_sulla_e_ma_non_i_nomi_che_la_contengono(self):
+        self.assertEqual(L.termini_della_riga("Incalzare e Attacco Poderoso, Creare Armi e Armature Magiche"),
+                         ["Incalzare", "Attacco Poderoso", "Creare Armi e Armature Magiche"])
+
+    def test_campo_qs_chiude_i_talenti(self):
+        self.assertEqual(L.termini_della_riga("Allerta, Iniziativa Migliorata · **QS** Anfibio"),
+                         ["Allerta", "Iniziativa Migliorata"])
+        self.assertEqual(L.termini_della_riga("Allerta · QS Anfibio"), ["Allerta"])
+
+    def test_sigle_cadv_e_ph(self):
+        self.assertEqual(L.termini_della_riga("GoadCAdv, Improved TripPH e Combat ExpertisePH"),
+                         ["Goad", "Improved Trip", "Combat Expertise"])
+
+    def test_talento_pf1e_di_un_manuale(self):
+        self.assertIn(L.norma("Combat Vigor"), L.talenti_pf1_dei_manuali())
+
+    def test_talento_di_un_manuale_3_5(self):
+        self.assertIn(L.norma("Goad"), L.talenti_dei_manuali())
+
 
 class TestEsiti(unittest.TestCase):
     def test_nome_ufficiale_variante_e_sconosciuto(self):
@@ -166,6 +188,11 @@ class TestCampi(unittest.TestCase):
         e = campi("**Equipaggiamento**: *spada lunga sacra affilata +2*, *spada lunga runica*\n")
         self.assertEqual(e, [("oggetto magico", "spada lunga sacra affilata", "tabella"),
                              ("oggetto magico", "spada lunga runica", "sconosciuto")])
+
+    def test_oggetto_della_campagna(self):
+        e = campi("**Equipaggiamento**: *Corona dei Re Hammerfist*, *Martello da Guerra degli Antenati +3*\n")
+        self.assertEqual(e, [("oggetto magico", "Corona dei Re Hammerfist", "campagna"),
+                             ("oggetto magico", "Martello da Guerra degli Antenati", "campagna")])
 
     def test_nel_modulo_pf1e_il_nome_3_5_e_un_errore(self):
         self.assertEqual(campi("**Incantesimi**: *luminescenza*, *fuoco fatato*\n", "PF1e/modulo.md"),

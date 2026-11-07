@@ -30,6 +30,7 @@ Exit 0 ok · 1 con --check, almeno un termine sconosciuto non marcato · 2 uso
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import re
 import sqlite3
@@ -44,6 +45,11 @@ ROOT = Path(__file__).resolve().parent.parent
 TABELLA = ROOT / "scripts" / "lessico_it.yaml"
 TABELLA_PF1 = ROOT / "scripts" / "lessico_it_pf1.tsv"
 TABELLA_35 = ROOT / "scripts" / "lessico_it_35.tsv"
+# Gli oggetti unici della campagna: un nome qui non è un termine sconosciuto (DM, 2026-11-07).
+# I nomi inglesi dei talenti di tutti i manuali 3.5 (indici crystalkeep e realmshelps, solo nomi).
+TALENTI_MANUALI = ROOT / "scripts" / "talenti_manuali_35.tsv"
+TALENTI_PF1 = ROOT / "scripts" / "talenti_manuali_pf1.tsv"
+OGGETTI_CAMPAGNA = ROOT / "campaign" / "OGGETTI-DELLA-CAMPAGNA.md"
 # Un modulo è PF1e se lo dice il percorso o l'intestazione: lì vale la tabella
 # diretta italiano PF1e → PRD, mai il passaggio per la 3.5 (DM, 2026-11-07).
 MODULO_PF1 = re.compile(r"PF1e|Pathfinder", re.I)
@@ -190,6 +196,55 @@ def tabella_35(percorso: Path = TABELLA_35) -> list[dict]:
     return out
 
 
+@functools.lru_cache(maxsize=None)
+def nomi_con_e() -> frozenset[str]:
+    """I nomi delle tabelle che contengono « e »/« and »: non vanno divisi in due."""
+    nomi = set()
+    for v in tabella_35() + carica_tabella():
+        nomi.update(norma(x) for x in (v.get("it") or "", v.get("srd35") or ""))
+    for riga in TABELLA_PF1.read_text(encoding="utf-8").splitlines():
+        if not riga.startswith("#") and "\t" in riga:
+            nomi.update(norma(x) for x in riga.split("\t")[:2])
+    nomi.update(talenti_dei_manuali())
+    return frozenset(n for n in nomi if " e " in n or " and " in n)
+
+
+@functools.lru_cache(maxsize=None)
+def talenti_dei_manuali(percorso: Path = TALENTI_MANUALI) -> dict[str, dict]:
+    """Nome inglese normalizzato → {srd35, manuale}: un talento che esiste in un manuale 3.5."""
+    m: dict[str, dict] = {}
+    if percorso.is_file():
+        for riga in percorso.read_text(encoding="utf-8").splitlines():
+            if riga.startswith("#") or riga.startswith("inglese\t") or "\t" not in riga:
+                continue
+            en, man, *_ = riga.split("\t") + [""]
+            m.setdefault(norma(en), {"srd35": en, "manuale": man, "tipo": "talento"})
+    return m
+
+
+@functools.lru_cache(maxsize=None)
+def talenti_pf1_dei_manuali(percorso: Path = TALENTI_PF1) -> set[str]:
+    """Nomi inglesi normalizzati dei talenti PF1e di tutti i manuali (Archives of Nethys)."""
+    if not percorso.is_file():
+        return set()
+    return {norma(r.split("\t")[0]) for r in percorso.read_text(encoding="utf-8").splitlines()
+            if r and not r.startswith("#") and not r.startswith("inglese\t")}
+
+
+@functools.lru_cache(maxsize=None)
+def oggetti_campagna(percorso: Path = OGGETTI_CAMPAGNA) -> set[str]:
+    """I nomi della prima colonna delle tabelle di OGGETTI-DELLA-CAMPAGNA.md, normalizzati."""
+    if not percorso.is_file():
+        return set()
+    nomi = set()
+    for riga in percorso.read_text(encoding="utf-8").splitlines():
+        celle = [c.strip() for c in riga.strip().strip("|").split("|")]
+        if riga.lstrip().startswith("|") and celle and celle[0] and celle[0] != "Nome" \
+                and not set(celle[0]) <= set("-: "):
+            nomi.add(norma(celle[0].strip("*_ ")))
+    return nomi
+
+
 def mappa_italiana(tabella: list[dict]) -> dict[str, dict]:
     m = {}
     for v in tabella:
@@ -209,20 +264,34 @@ MARCA_FUORI_SRD = re.compile(
 # Dove finisce l'elenco dei talenti: il campo seguente dello statblocco, una frase, una cella.
 FINE_CAMPO = re.compile(
     r"\*\*[^*]{1,40}\*\*\s*:|\*\*(?:Abilit|Skills|Talenti (?:da|bonus)|Equipaggiamento|Tattiche|Lingu|"
-    r"Qualit|SQ|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
+    r"Qualit|SQ|QS\b|Ambiente|Organizzazione|Tesoro|Allineamento|Avanzamento|Attacc|Difesa|Iniziativa)|"
     r"(?<=[a-z\)])\.\s|\s—\s|\||"
-    r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|TS)\b")
+    r"(?:^|(?<=[\s·,;]))(?:Abilità|Skills|Linguaggi|Lingue|Languages|Qualità speciali|Equipaggiamento|SQ|QS|TS)\b")
 
 
 def termini_della_riga(lista: str) -> list[str]:
     lista = FINE_CAMPO.split(lista)[0]
     lista = re.sub(r"\([^)]*\)", "", lista)
     out = []
-    for pezzo in re.split(r"[,;·]", lista):
-        t = re.sub(r"\[[^\]]*\]|\*|`|\bB\b|\bx\d+\b|\+\d+", "", pezzo).strip(" .:")
+    pezzi = []
+    for p in re.split(r"[,;·]", lista):
+        # «Tiro Rapido e Tiro Multiplo» sono due talenti; «Creare Armi e Armature Magiche» è uno solo.
+        intero = norma(re.sub(r"\[[^\]]*\]|\*|`", "", p).strip(" .:"))
+        pezzi += [p] if intero in nomi_con_e() else re.split(r"\s+(?:e|and)\s+(?=[A-Z])", p)
+    for pezzo in pezzi:
+        t = re.sub(r"\[[^\]]*\]|\*|`|\bB\b|\bx\d+\b|\+\d+", "", pezzo)
+        t = CODA.sub("", t.replace("\u2011", "-").replace("\\", "")).strip(" .:»«")
+        t = SIGLA.sub("", t)
         if 2 < len(t) < 45 and not re.search(r"\d", t) and t[0].isupper():
             out.append(t)
     return out
+
+
+# «GoadCAd», «EnduranceB»: le sigle del manuale (o la B del talento bonus) attaccate al nome, come negli
+# statblock dei manuali inglesi; «fonte: SRD», «opzionale» in coda. Si staccano prima di cercare il nome.
+SIGLA = re.compile(r"(?<=[a-z\)])(?>(?:CMage|CAdv|CArc|CDiv|CSco|CWar|DotU|FRCS|LEoF|PHB2|RotW|CAd|CAr|CSc|CoV|DMG|DrM|Dra|ECS|EPH|HoB|LoM|MIC|MM\d?|MoF|"
+                   r"PGF|PH2|PlH|RoD|RoE|RoF|RoS|SpC|ToB|Und|XPH|CC|CD|CM|CP|CS|CV|CW|FF|LM|MH|PH|SS|UA|UE|B)){1,4}$")
+CODA = re.compile(r"\s+(?:fonte\s*:.*|opzionale.*)$", re.I)
 
 
 _INGLESI: dict[str, dict] = {}
@@ -259,6 +328,8 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
                     esito, v = "nome 3.5", ita.get(k)
                 elif any(e["fonte"] == "pf1" for e in idx.get(k, [])):
                     esito = "fonte"
+                elif k in talenti_pf1_dei_manuali():
+                    esito = "fonte"  # nome inglese di un talento PF1e fuori dal PRD (Archives of Nethys)
                 elif MARCA_FUORI_SRD.search(riga.replace("PF1e", "").replace("Pathfinder", "")):
                     esito = "marcato"
                 else:
@@ -277,6 +348,9 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
                 # nome inglese di un talento di un manuale ufficiale (5° Clone): esiste, il nome
                 # italiano è in tabella; la correzione dei booklet lo porta in italiano.
                 esito, v = "fonte", inglesi_dei_manuali()[k]
+            elif k in talenti_dei_manuali():
+                # nome inglese di un talento di un manuale 3.5 non tradotto in tabella (indice dei manuali)
+                esito, v = "fonte", talenti_dei_manuali()[k]
             elif MARCA_FUORI_SRD.search(riga):
                 esito = "marcato"
             else:
@@ -400,6 +474,8 @@ def controlla_campi(testo: str, idx: dict, t35: dict, tpf: dict, file: str = "")
                     esito, v = "nome 3.5", t35[tipo_t][k]
                 elif any(e["fonte"] == fonte for ch in chiavi_inglesi(k) for e in idx.get(ch, [])):
                     esito = "fonte"
+                elif tipo_t == "oggetto magico" and k in oggetti_campagna():
+                    esito = "campagna"
                 elif MARCA_FUORI_SRD.search(riga):
                     esito = "marcato"
                 else:
@@ -539,7 +615,7 @@ def main(argv: list[str] | None = None) -> int:
                 rr = [r for r in campi if r["tipo"] == tipo]
                 print(f"lessico campi: {tipo} {len(rr)} letti · " + " · ".join(
                     f"{e} {sum(1 for r in rr if r['esito'] == e)}"
-                    for e in ("tabella", "fonte", "marcato", "variante", "nome 3.5", "sconosciuto")))
+                    for e in ("tabella", "fonte", "campagna", "marcato", "variante", "nome 3.5", "sconosciuto")))
     if a.json:
         print(json.dumps(rilievi, ensure_ascii=False, indent=1))
     else:

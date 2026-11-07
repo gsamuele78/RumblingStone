@@ -97,7 +97,6 @@ def leggi_it():
                 if scuola not in SCUOLE:
                     continue
                 blocco = righe[i + 1:i + 14]
-                fine = next((k for k, b in enumerate(blocco) if not b.strip()), len(blocco))
                 liv = next((b.split(":", 1)[1] for b in blocco if b.startswith("Livello:")), "")
                 comp = next((b.split(":", 1)[1] for b in blocco if b.startswith("Componenti:")), "")
                 voci.append({"it": r.strip(), "scuola": SCUOLE[scuola], "liv": livelli(liv, True),
