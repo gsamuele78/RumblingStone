@@ -54,7 +54,8 @@ class TestRigheDiRegola(unittest.TestCase):
                     "campaign/templates/png-dossier-template.md",
                     "Bestiario/README.md",
                     "scripts/tests/fixtures/ultraclear/golden.md",
-                    "docs/guides/GUIDA-MARCATURE.md"):
+                    "docs/guides/GUIDA-MARCATURE.md",
+                    "AGENTS.md"):
             self.assertEqual(inv.classe(rel), "meta", rel)
 
     def test_forma_della_marca(self):

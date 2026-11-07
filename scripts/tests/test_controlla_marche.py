@@ -93,6 +93,14 @@ class TestCancelli(unittest.TestCase):
         self.r.commit()
         self.assertEqual(self.r.avvisi(), [])
 
+    def test_togliere_una_citazione_non_e_togliere_un_fatto(self):
+        self.r.scrivi("docs/guides/GUIDA-Y.md", "i fatti marcati `[INFERRED]` restano.\n")
+        self.r.commit()
+        git(self.r.d, "branch", "-f", "base")
+        self.r.scrivi("docs/guides/GUIDA-Y.md", "i fatti marcati restano.\n")
+        self.r.commit()
+        self.assertEqual(self.r.avvisi(), [])
+
 
 if __name__ == "__main__":
     unittest.main()

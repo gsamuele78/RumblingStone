@@ -36,7 +36,6 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import inventory_inferred as inv  # noqa: E402
 
-APERTURA = re.compile(r"\[INFERRED")
 CHIUSURA = re.compile(r"\[CANONE|\[GENERATO|<!--\s*storico")
 SUFFISSI = (".md", ".yaml", ".yml")
 
@@ -82,25 +81,32 @@ def da_guardare(rel: str) -> bool:
     return inv.classe(rel) == "aperti"
 
 
+def marche_di_fatto(testo: str):
+    """I marcatori INFERRED della riga che aprono un fatto: non le citazioni
+    («marcati `[INFERRED]`») né lo schema da copiare."""
+    for m in inv.MARCATORE.finditer(testo):
+        if inv.cita_la_convenzione(testo[:m.start()]):
+            continue
+        coda = " ".join(m.group("coda").split())
+        nota = inv.NOTA.match(coda)
+        testo_nota = nota.group("testo").strip() if nota else ""
+        if testo_nota and inv.SCHEMA.match(testo_nota):
+            continue
+        yield testo_nota
+
+
 def avvisi(cambi: dict[str, dict[str, list]]) -> list[str]:
     out: list[str] = []
     for rel, d in sorted(cambi.items()):
         if not da_guardare(rel):
             continue
         for n, testo in d["+"]:
-            for m in inv.MARCATORE.finditer(testo):
-                if inv.cita_la_convenzione(testo[:m.start()]):
-                    continue
-                coda = " ".join(m.group("coda").split())
-                nota = inv.NOTA.match(coda)
-                testo_nota = nota.group("testo").strip() if nota else ""
-                if testo_nota and inv.SCHEMA.match(testo_nota):
-                    continue
+            for testo_nota in marche_di_fatto(testo):
                 if inv.forma(testo_nota) != "nuova":
                     out.append(f"{rel}:{n}: marca senza domanda e base — scrivi "
                                f"`[INFERRED — domanda?; base: …]` (GUIDA-MARCATURE)")
-        tolti = sum(len(APERTURA.findall(t)) for _, t in d["-"])
-        messi = sum(len(APERTURA.findall(t)) for _, t in d["+"])
+        tolti = sum(len(list(marche_di_fatto(t))) for _, t in d["-"])
+        messi = sum(len(list(marche_di_fatto(t))) for _, t in d["+"])
         chiusi = any(CHIUSURA.search(t) for _, t in d["+"])
         if tolti > messi and not chiusi:
             out.append(f"{rel}: {tolti - messi} INFERRED tolti senza CANONE, GENERATO o "

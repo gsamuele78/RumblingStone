@@ -83,7 +83,7 @@ NOTA = re.compile(r"^\s*[—:-]\s*(?P<testo>.+)$")
 # [INFERRED]», «`null` = [INFERRED]») non apre un debito: dice come si marca.
 # Si guarda solo il testo subito prima del marcatore (P16, 2026-11-04).
 CONVENZIONE = re.compile(
-    r"(?:\bmarcat\w*|\bmarcar\w*|\bflag\w*|\bmarche|\bmarcature|\bmarcatore"
+    r"(?:\bmarcat\w*|\bmarcar\w*|\bmarca|\bflag\w*|\bmarche|\bmarcature|\bmarcatore"
     r"|\bnon (?:è |sono )?più|`?null`? =|\bscelte)\s*(?:come\s*)?[`(\"«]*\s*$",
     re.IGNORECASE)
 
@@ -109,13 +109,14 @@ def forma(nota: str) -> str:
 
 
 def e_regola(rel: str) -> bool:
-    """Skill, modelli, README, fixture e la guida delle marche spiegano come si
+    """Skill, modelli, README, fixture, AGENTS.md e la guida delle marche spiegano come si
     marca: le loro marche sono esempi, non fatti aperti (ADR-0109, scheda 6 = A)."""
     nome = rel.rsplit("/", 1)[-1]
     return (rel.startswith("skills/")
             or "/templates/" in f"/{rel}"
             or "/fixtures/" in f"/{rel}"
             or nome.upper().startswith("README")
+            or rel in ("AGENTS.md", "CLAUDE.md")
             or rel == "docs/guides/GUIDA-MARCATURE.md")
 
 
