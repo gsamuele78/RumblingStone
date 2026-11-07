@@ -8,6 +8,7 @@
 #   derivato      serie numerata dalla prima voce (Evoca mostri II..IX da Evoca mostri I)
 #   mephit        coppia del database di Mephit, nome inglese trovato nell'SRD; fonte unica, non incrociata
 #   claude        abbinato da Claude e controllato nell'SRD; «non riscontrato» = l'italiano non è in fonte
+#   + dragons lair  il nome è nel prontuario delle condizioni 3.5 di Dragons' Lair (dragonslair.it, file 115)
 #   + editori folli  la coppia è confermata dall'SRD 3.5 in italiano di Editori Folli (editorifolli.it/gdr/d20system),
 #                 abbinato all'SRD inglese per scuola, livelli, componenti, raggio, TS, RI e tempo di lancio, senza usare il nome
 #   editori folli (forma SRD)  il nome dell'SRD italiano senza il mago (Freccia acida per Freccia acida di Melf);
@@ -775,44 +776,44 @@ Sopravvivenza	Survival	abilità	claude, nome italiano da miniaturefantasy
 Utilizzare Corde	Use Rope	abilità	claude, nome italiano da miniaturefantasy
 Utilizzare Oggetti Magici	Use Magic Device	abilità	claude, nome italiano da miniaturefantasy
 Valutare	Appraise	abilità	claude, nome italiano da miniaturefantasy
-Abbagliato	Dazzled	condizione	claude, nome italiano da miniaturefantasy
-Accecato	Blinded	condizione	claude, nome italiano da miniaturefantasy
-Affascinato	Fascinated	condizione	claude, nome italiano da miniaturefantasy
-Affaticato	Fatigued	condizione	claude, nome italiano da miniaturefantasy
-Assordato	Deafened	condizione	claude, nome italiano da miniaturefantasy
-Atterrato	Knocked Down	condizione	claude, nome italiano non riscontrato
-Barcollante	Staggered	condizione	claude, nome italiano da miniaturefantasy
-Colto alla sprovvista	Flat-Footed	condizione	claude, nome italiano da miniaturefantasy
-Confuso	Confused	condizione	claude, nome italiano da miniaturefantasy
-Danni alle caratteristiche	Ability Damaged	condizione	claude, nome italiano da miniaturefantasy
-Esausto	Exhausted	condizione	claude, nome italiano da miniaturefantasy
-Frastornato	Dazed	condizione	claude, nome italiano da miniaturefantasy
-Immobilizzato	Pinned	condizione	claude, nome italiano da miniaturefantasy
-In lotta	Grappling	condizione	claude, nome italiano da miniaturefantasy
-In preda al panico	Panicked	condizione	claude, nome italiano da miniaturefantasy
-Inabile	Disabled	condizione	claude, nome italiano da miniaturefantasy
-Incorporeo	Incorporeal	condizione	claude, nome italiano non riscontrato
-Indifeso	Helpless	condizione	claude, nome italiano da miniaturefantasy
-Infermo	Sickened	condizione	claude, nome italiano da miniaturefantasy
-Intralciato	Entangled	condizione	claude, nome italiano da miniaturefantasy
-Invisibile	Invisible	condizione	claude, nome italiano non riscontrato
-Livello negativo	Energy Drained	condizione	claude, nome italiano da miniaturefantasy
-Morente	Dying	condizione	claude, nome italiano da miniaturefantasy
-Morto	Dead	condizione	claude, nome italiano non riscontrato
-Nauseato	Nauseated	condizione	claude, nome italiano da miniaturefantasy
-Paralizzato	Paralyzed	condizione	claude, nome italiano da miniaturefantasy
-Pietrificato	Petrified	condizione	claude, nome italiano non riscontrato
-Privo di sensi	Unconscious	condizione	claude, nome italiano da miniaturefantasy
-Prono	Prone	condizione	claude, nome italiano da miniaturefantasy
-Risucchio di caratteristica	Ability Drained	condizione	claude, nome italiano non riscontrato
-Scacciato	Turned	condizione	claude, nome italiano non riscontrato
-Scosso	Shaken	condizione	claude, nome italiano da miniaturefantasy
-Spaventato	Frightened	condizione	claude, nome italiano da miniaturefantasy
+Abbagliato	Dazzled	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Accecato	Blinded	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Affascinato	Fascinated	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Affaticato	Fatigued	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Assordato	Deafened	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Buttato a terra	Knocked Down	condizione	dragons lair + editori folli, folata di vento (era: Atterrato)
+Barcollante	Staggered	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Colto alla sprovvista	Flat-Footed	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Confuso	Confused	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Danni alle caratteristiche	Ability Damaged	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Esausto	Exhausted	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Frastornato	Dazed	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Immobilizzato	Pinned	condizione	claude, nome italiano da miniaturefantasy + dragons lair
+In lotta	Grappling	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+In preda al panico	Panicked	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Inabile	Disabled	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Incorporeo	Incorporeal	condizione	claude, nome italiano non riscontrato + editori folli + dragons lair
+Indifeso	Helpless	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Infermo	Sickened	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Intralciato	Entangled	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Invisibile	Invisible	condizione	claude, nome italiano non riscontrato + editori folli + dragons lair
+Risucchio di energia	Energy Drained	condizione	editori folli (era: Livello negativo)
+Morente	Dying	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Morto	Dead	condizione	claude, nome italiano non riscontrato + editori folli + dragons lair
+Nauseato	Nauseated	condizione	claude, nome italiano da miniaturefantasy + dragons lair
+Paralizzato	Paralyzed	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Pietrificato	Petrified	condizione	claude, nome italiano non riscontrato + editori folli + dragons lair
+Privo di sensi	Unconscious	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Prono	Prone	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Risucchio di caratteristica	Ability Drained	condizione	claude, nome italiano non riscontrato + editori folli
+Scacciato	Turned	condizione	claude, nome italiano non riscontrato + editori folli + dragons lair
+Scosso	Shaken	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Spaventato	Frightened	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
 Spazzato via	Blown Away	condizione	claude, nome italiano non riscontrato
-Stabile	Stable	condizione	claude, nome italiano da miniaturefantasy
-Stordito	Stunned	condizione	claude, nome italiano da miniaturefantasy
-Trattenuto	Checked	condizione	claude, nome italiano non riscontrato
-Tremante	Cowering	condizione	claude, nome italiano da miniaturefantasy
+Stabile	Stable	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Stordito	Stunned	condizione	claude, nome italiano da miniaturefantasy + editori folli + dragons lair
+Frenato	Checked	condizione	editori folli + dragons lair (era: Trattenuto)
+Tremante	Cowering	condizione	claude, nome italiano da miniaturefantasy + editori folli
 Adepto	Adept	classe	claude, nome italiano non riscontrato
 Arciere Arcano	Arcane Archer	classe	claude, nome italiano da miniaturefantasy o Sigil online
 Arcimago	Archmage	classe	claude, nome italiano non riscontrato
