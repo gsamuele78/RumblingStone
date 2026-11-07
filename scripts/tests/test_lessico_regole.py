@@ -167,6 +167,11 @@ class TestCampi(unittest.TestCase):
         self.assertEqual(e, [("oggetto magico", "spada lunga sacra affilata", "tabella"),
                              ("oggetto magico", "spada lunga runica", "sconosciuto")])
 
+    def test_oggetto_della_campagna(self):
+        e = campi("**Equipaggiamento**: *Corona dei Re Hammerfist*, *Martello da Guerra degli Antenati +3*\n")
+        self.assertEqual(e, [("oggetto magico", "Corona dei Re Hammerfist", "campagna"),
+                             ("oggetto magico", "Martello da Guerra degli Antenati", "campagna")])
+
     def test_nel_modulo_pf1e_il_nome_3_5_e_un_errore(self):
         self.assertEqual(campi("**Incantesimi**: *luminescenza*, *fuoco fatato*\n", "PF1e/modulo.md"),
                          [("incantesimo", "luminescenza", "nome 3.5"), ("incantesimo", "fuoco fatato", "tabella")])

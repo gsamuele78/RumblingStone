@@ -30,6 +30,7 @@ Exit 0 ok · 1 con --check, almeno un termine sconosciuto non marcato · 2 uso
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import re
 import sqlite3
@@ -44,6 +45,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TABELLA = ROOT / "scripts" / "lessico_it.yaml"
 TABELLA_PF1 = ROOT / "scripts" / "lessico_it_pf1.tsv"
 TABELLA_35 = ROOT / "scripts" / "lessico_it_35.tsv"
+# Gli oggetti unici della campagna: un nome qui non è un termine sconosciuto (DM, 2026-11-07).
+OGGETTI_CAMPAGNA = ROOT / "campaign" / "OGGETTI-DELLA-CAMPAGNA.md"
 # Un modulo è PF1e se lo dice il percorso o l'intestazione: lì vale la tabella
 # diretta italiano PF1e → PRD, mai il passaggio per la 3.5 (DM, 2026-11-07).
 MODULO_PF1 = re.compile(r"PF1e|Pathfinder", re.I)
@@ -179,6 +182,20 @@ def tabella_35(percorso: Path = TABELLA_35) -> list[dict]:
         else:
             out.append(v)
     return out
+
+
+@functools.lru_cache(maxsize=None)
+def oggetti_campagna(percorso: Path = OGGETTI_CAMPAGNA) -> set[str]:
+    """I nomi della prima colonna delle tabelle di OGGETTI-DELLA-CAMPAGNA.md, normalizzati."""
+    if not percorso.is_file():
+        return set()
+    nomi = set()
+    for riga in percorso.read_text(encoding="utf-8").splitlines():
+        celle = [c.strip() for c in riga.strip().strip("|").split("|")]
+        if riga.lstrip().startswith("|") and celle and celle[0] and celle[0] != "Nome" \
+                and not set(celle[0]) <= set("-: "):
+            nomi.add(norma(celle[0].strip("*_ ")))
+    return nomi
 
 
 def mappa_italiana(tabella: list[dict]) -> dict[str, dict]:
@@ -391,6 +408,8 @@ def controlla_campi(testo: str, idx: dict, t35: dict, tpf: dict, file: str = "")
                     esito, v = "nome 3.5", t35[tipo_t][k]
                 elif any(e["fonte"] == fonte for ch in chiavi_inglesi(k) for e in idx.get(ch, [])):
                     esito = "fonte"
+                elif tipo_t == "oggetto magico" and k in oggetti_campagna():
+                    esito = "campagna"
                 elif MARCA_FUORI_SRD.search(riga):
                     esito = "marcato"
                 else:
@@ -530,7 +549,7 @@ def main(argv: list[str] | None = None) -> int:
                 rr = [r for r in campi if r["tipo"] == tipo]
                 print(f"lessico campi: {tipo} {len(rr)} letti · " + " · ".join(
                     f"{e} {sum(1 for r in rr if r['esito'] == e)}"
-                    for e in ("tabella", "fonte", "marcato", "variante", "nome 3.5", "sconosciuto")))
+                    for e in ("tabella", "fonte", "campagna", "marcato", "variante", "nome 3.5", "sconosciuto")))
     if a.json:
         print(json.dumps(rilievi, ensure_ascii=False, indent=1))
     else:
