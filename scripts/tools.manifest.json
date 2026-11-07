@@ -12251,6 +12251,136 @@
         "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
         "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
       ]
+    },
+    {
+      "id": "lessico_regole",
+      "path": "scripts/lessico_regole.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/lessico_regole.py [--offline] {indice|cerca NOME|verifica-tabella|casi FILE|controlla PERCORSI [--tutto] [--campi] [--check]}",
+      "summary": "I termini ufficiali di D&D 3.5 e PF1e e chi li usa male (ADR-0110). Genera dall'SRD 3.5 e dal PRD PF1e in cache l'indice dei termini; legge le tabelle italiano → SRD 3.5 (scripts/lessico_it.yaml, scripts/lessico_it_35.tsv) e italiano → PRD PF1e (scripts/lessico_it_pf1.tsv, per i moduli PF1e senza passare dalla 3.5); controlla le righe dei talenti delle schede e, con --campi, incantesimi, abilità e oggetti, segnalando varianti non ufficiali, nomi 3.5 nei moduli PF1e e termini sconosciuti non marcati.",
+      "use_case": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "optional_deps": [],
+      "args": [
+        {
+          "name": "--cache",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella della cache delle fonti (come riscontro_srd.py)."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: solo la cache."
+        },
+        {
+          "name": "comando",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "indice",
+            "cerca",
+            "verifica-tabella",
+            "casi",
+            "controlla"
+          ],
+          "repeatable": false,
+          "desc": "indice | cerca | verifica-tabella | casi | controlla."
+        },
+        {
+          "name": "--campi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con controlla: anche incantesimi, abilità e oggetti magici dei campi dello statblocco."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/lessico_it.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_35.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_pf1.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/lessico-indice.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto",
+        "1": "con --check: termini sbagliati o sconosciuti oltre il massimo; verifica-tabella con nomi fuori fonte; casi sbagliati",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Fonti fissate per commit; tabelle nel repo; output nell'ordine dei file."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/lessico_regole.py --help",
+      "tests": [
+        "scripts/tests/test_lessico_regole.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md"
+      ]
     }
   ]
 }

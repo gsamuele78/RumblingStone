@@ -43,7 +43,7 @@ Slot al giorno da Mago 9 con Int 22 e lo slot dell'illusionista (+1 per livello)
 | 5 | 2+1 | **invocazione delle ombre** (CD 23), *teletrasporto*, *immagine persistente* (CD 23) |
 
 **Statistiche** For 8, Des 18, Cos 12, Int 22 (20 + *fascia dell'intelletto +2*), Sag 12, Car 16 · **BAB/Lotta** +5/+4
-**Talenti** Scrivere Pergamene, Schivare, Mobilità, Riflessi in Combattimento, **Incantesimi Focalizzati (Illusione)**, **Incantesimi Focalizzati Superiori (Illusione)**, Incantesimo Silenzioso.
+**Talenti** Scrivere Pergamene, Schivare, Mobilità, Riflessi in Combattimento, **Incantesimi Focalizzati (Illusione)**, **Incantesimi Focalizzati Superiore (Illusione)**, Incantesimi Silenziosi.
 
 > ⚠ Prerequisito: la Danzatrice delle Ombre (SRD) chiede Nascondersi 10 gradi e Muoversi Silenziosamente 8; per un mago sono abilità di classe incrociata, e 10 gradi arrivano solo al 17° livello del personaggio. Tenuta, perché è nella scheda. PF1e: Danzatore delle Ombre (classe di prestigio PRD/OGL) — si avvicina: chiede Furtività 5 gradi, quindi un mago 9 ci entra, e dà *nascondersi in piena vista* già al 1° livello.
 

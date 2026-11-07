@@ -28,7 +28,7 @@ Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *a
 **Car** For 8, Des 18, Cos 12, Int 20, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **individuazione delle trappole**, schivare prodigioso, **prestidigitazione a distanza**.
 **Capacità magiche** (1/giorno, CL 10): *luci danzanti*, *oscurità*, *fuoco fatuo*.
-**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Mira Precisa (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
+**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Tiro Preciso (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
 
 **Prestidigitazione a Distanza (Str, 1/giorno)**: usa **Rapidità di Mano**, Disattivare Congegni o Scassinare Serrature **a 9 m di distanza**, come azione standard. La prova subisce +5 alla CD e provoca un attacco di opportunità se il DM lo ritiene percepibile.
 

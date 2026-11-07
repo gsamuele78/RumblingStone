@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Termini ufficiali 3.5 e PF1e: tabelle complete, misure fonte contro fonte, canc… | 🟡 3.5 3.944 voci (con 79 trappole), PF1e 9.334; fonte contro fonte 97-100% concordi; cancello dei campi prima 10-11/40, dopo 40/40; talenti sconosciuti 151 → 1… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L0: censimento degli strumenti, banco d'invarianza, ADR-0111 proposta | ✅ 31 script su 202 dipendono dal sistema; M1 3, M2 2, M3 76, M4 24; 12 impronte riproducibili; D1-D5 al DM |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Contatore, migrazione e cancelli dopo la #313 (schede 2, 4, 6) | ✅ P16 da 25 a 0 aperti, 138 righe migrate, due cancelli non bloccanti |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Grammatica unica delle marche, guida e blocco vincoli nelle skill (schede 1-8 d… | 🟡 grammatica e guida fatte; prova A/B, contatore e migrazione da fare |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
-| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §8 prove scartate rifatte con configurazione rigorosa | ✅ adottati come indicatori: ripetizioni frase per frase (6 vere invece di 1) e box telecomando al plurale (2 su 4 invece di 2 su 15); NLI sulla stessa entità (… |
 
 ## Le misure che si portano dietro
 
