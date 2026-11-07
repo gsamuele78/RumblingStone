@@ -776,7 +776,7 @@ attacchi:
 
 **Attacco** Vel 6 m, Scavare 6 m (non lascia tunnel), Earth Glide · **Mischia** morso +29 (4d8+8: BAB 21, FOR +8, taglia −1, Arma Focalizzata +1); attacco completo morso +29 (4d8+8) e 3 artigli +26 (1d6+4; secondari, −2 con Multiattacco) · Spazio 3 m, portata 3 m
 
-**Statistiche** For 27, Des 10, Cos 19, Int 10, Sag 11, Car 10 (+2 alla FOR dai DV 16 e 20) · BAB +21; Lotta +33 (21, FOR +8, taglia +4) · **Talenti** (8 per 21 DV, più Incalzare bonus come nell'SRD) Attacco Poderoso, Incalzare (bonus), Spinta Migliorata, Colpo Possente, Multiattacco, Robustezza, Spaccare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · **Abilità** Ascoltare +24, Osservare +24, Cercare +24
+**Statistiche** For 27, Des 10, Cos 19, Int 10, Sag 11, Car 10 (+2 alla FOR dai DV 16 e 20) · BAB +21; Lotta +33 (21, FOR +8, taglia +4) · **Talenti** (8 per 21 DV, più Incalzare bonus come nell'SRD) Attacco Poderoso, Incalzare (bonus), Spingere Migliorato, Colpo Terrificante, Multiattacco, Robustezza, Spezzare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · **Abilità** Ascoltare +24, Osservare +24, Cercare +24
 
 **Capacità speciali**
 - **Divoratore d'armi**: se morde un'arma o uno scudo magico che non è un artefatto, fa Spaccare (prova contrapposta, morso +37: +4 di Spaccare Migliorato e +4 perché è Grande contro un'arma Media, SRD *Spezzare*) e il morso ignora la durezza sotto 20; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
@@ -1886,7 +1886,7 @@ attacchi:
 
 **Attacco** Vel 9 m; Earth Glide 9 m (attraverso pietra). Non vola: in zero-G si spinge dalle superfici (azione di movimento, Equilibrio CD 10) · **Mischia** schianto +33 (2d10+12, 19-20/×2); attacco completo 2 schianti +33/+33 (2d10+12) · **Distanza** lancio di roccia (18 m) +19 (2d8+12) · Portata 4,5 m · **Poteri con ricarica**: ognuno è la sua azione del round, sostituisce l'attacco completo quando lo usa e non è gratuito (sotto, nelle capacità speciali)
 
-**Statistiche** For 34 (+12), Des 8 (−1), Cos 25 (+7), Int 10, Sag 15 (+2), Car 11 · BAB +22; Lotta +42 · **Talenti** Attacco Poderoso, Incalzare, Fendente Poderoso, Spinta Migliorata, Critico Migliorato (schianto), Spaccare Migliorato, Volontà di Ferro, Colpo Terrificante, Allerta, Robustezza, Arma Focalizzata (schianto) · **Abilità** Ascoltare +20, Osservare +20, Intimidire +15
+**Statistiche** For 34 (+12), Des 8 (−1), Cos 25 (+7), Int 10, Sag 15 (+2), Car 11 · BAB +22; Lotta +42 · **Talenti** Attacco Poderoso, Incalzare, Incalzare Potenziato, Spingere Migliorato, Critico Migliorato (schianto), Spezzare Migliorato, Volontà di Ferro, Colpo Terrificante, Allerta, Robustezza, Arma Focalizzata (schianto) · **Abilità** Ascoltare +20, Osservare +20, Intimidire +15
 
 **Capacità speciali** (regole 3.5, tutte nel turno di Terros)
 - **Earth Mastery** (Str, costante): +1 att/danno contro chi tocca terra o pietra (l'Altare conta come terra); −4 att/danno contro chi è in aria o in volo. È il dilemma dei PG: la stabilità dell'Altare, o evitare il bonus del boss nello zero-G.

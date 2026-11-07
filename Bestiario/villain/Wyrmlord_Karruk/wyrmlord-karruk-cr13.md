@@ -1,4 +1,4 @@
-# Wyrmlord Karruk [ACCEPTED — DM-canon 2026-05-05]
+# Wyrmlord Karruk [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: melee-commander | **Environment**: battlefield | **CR**: 13 | **Source**: AP RHoD Karruk (Hill Giant barbarian) base + campaign upscale | **Status**: inferred
 
 ```statblocco

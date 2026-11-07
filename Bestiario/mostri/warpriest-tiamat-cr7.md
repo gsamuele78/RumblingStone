@@ -1,4 +1,4 @@
-# Warpriest di Tiamat (Cleric 7) [ACCEPTED — DM-canon 2026-05-05]
+# Warpriest di Tiamat (Cleric 7) [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: divine-caster | **Environment**: any | **CR**: 7 | **Source**: PHB Cleric + FRCS Tiamat faith | **Status**: inferred
 
 ```statblocco

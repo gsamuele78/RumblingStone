@@ -14,6 +14,7 @@
 "termini.vietati" = "le meccaniche di altri sistemi che in un modulo non hanno posto (oggi le 5e)"
 "lessico.abilita" = "i nomi delle abilità del sistema, e quelli di altri sistemi da segnalare"
 "lessico.entita" = "classi e razze con cui si riconoscono i personaggi nel testo"
+"lessico.italiano" = "i nomi ufficiali italiani delle regole e il loro corrispondente SRD/PRD (ADR-0110)"
 "fonti.regole" = "il testo di riferimento in cache su cui si riscontrano le regole (ADR-0103)"
 "pe.soglie" = "i punti esperienza per passare di livello"
 "tesoro.per_livello" = "il tesoro per livello d'incontro o per GS"

@@ -4,7 +4,7 @@ Zero-burden helpers that read what the DM already writes (session logs,
 state.md, Armate atlas) and produce prep material. **Nothing overwrites
 canon** — scripts either generate new files or print suggestions for
 manual review. Respects `AGENTS.md`: we never invent statblocks; we only
-index/compose what exists (or mark `[INFERRED]`).
+index/compose what exists (or mark it INFERRED with a question and a base, see `docs/guides/GUIDA-MARCATURE.md`).
 
 > **Disambiguazione**: questa cartella `scripts/` è l'automazione DM. I
 > convertitori di contenuto (pdf→md, html→md, immagini→webp) vivono in

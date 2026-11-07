@@ -1038,7 +1038,7 @@ all'alba. Le scelte, con quello che cambiano:
 | Dove | Cosa cambia | Quanto costa |
 |---|---|---|
 | **Fuori dalla tenda, contro i rinforzi** (Scena 8, dopo un allarme) | la RD 10/adamantio rende un Treant quasi intoccabile per le ronde (orchi combattenti, falchion 2d4+4, Appendice A.6) e per gli squadroni (spada lunga 1d8+3). **Uno** tiene un lato: le ronde arrivano in **2d4+2** round invece di 1d4+2, gli squadroni in **3d4+2**. **Due** tengono la tenda: dentro non entra nessuno finché restano in piedi, e lo scontro resta contro il generale. Gli sciamani passano, perché la RD non ferma un incantesimo | un Treant nel campo si vede da tutto il pendio: è l'allarme, anche se il corno non ha ancora suonato. **Due** chiamati insieme di notte spengono l'Evocazione per un mese. Il drago arriva al corno come sempre, in 70 round, e sui Treant soffia per primo |
-| **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il colmo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD. Il **Colpo Devastante** su di lui non funziona, perché l'SRD lo vuole contro un avversario più piccolo e il Treant è Grande come Zog'tar: il generale lo colpisce con l'Attacco Poderoso e tiene il Colpo Devastante per i PG. La *barriera di lame* di Balvar sul palo centrale lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
+| **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il colmo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD. Il **Colpo Terrificante** su di lui non funziona, perché l'SRD lo vuole contro un avversario più piccolo e il Treant è Grande come Zog'tar: il generale lo colpisce con l'Attacco Poderoso e tiene il Colpo Terrificante per i PG. La *barriera di lame* di Balvar sul palo centrale lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
 | **Sul fianco dell'orda, all'alba** (come scritto qui sopra) | **un successo in più** sulle mura (Scena 10, Q49), solo con **tutti e due** sul fianco | i Treant non sono nel duello |
 | **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (Scena 11, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Un albero non ha un nome da gridare (Scena 11, «Chi sceglie»): il drago li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
 
@@ -2584,7 +2584,7 @@ motivo per cui la Scena 7 viene prima.
 - **Round 2-3**: carica il bersaglio che fa più danni, **Attacco Poderoso**
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
-  normale) non alza l'Attacco Poderoso: usa il **Colpo Devastante** e lo
+  normale) non alza l'Attacco Poderoso: usa il **Colpo Terrificante** e lo
   scaglia lontano, contro un palo o fuori dal telo. Un nano scagliato contro
   il telo del seggio (N15–P15) fa scattare il glifo legato ai nani `[CANONE — DM 2026-10-19, giro 4 n. 14]`,
   e il boato è un allarme. Separa il gruppo e lascia
@@ -3081,7 +3081,7 @@ ed è per questo che vuole buttare giù chi ha davanti.
 - **Round 1**: Ira, e l'Occhio di Ossidiana su chi porta la Corona. Le quattro
   guardie tengono la testa delle scale alle sue spalle: chi vuole arrivargli
   dietro deve passare da loro.
-- **Round 2 e dopo**: il **Colpo Devastante** (Appendice A.2) su chi gli sta
+- **Round 2 e dopo**: il **Colpo Terrificante** (Appendice A.2) su chi gli sta
   davanti, perché non deve entrare nel suo spazio; **Spingere Migliorato** solo
   se il bersaglio è già al bordo. Thorik e Tordek hanno la stabilità dei nani,
   +4 contro la spinta (SRD). Sul camminamento non c'è dove arretrare, e un PG
@@ -4137,9 +4137,9 @@ attacchi:
 
 **Difesa** **CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)
 
-**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · **Colpo Devastante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
+**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
 
-**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Devastante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
+**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
 
 **Capacità speciali**
 - **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).
@@ -4169,7 +4169,7 @@ attacchi:
 <!-- storico -->
 - Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata) — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza da reggere più di un round. PF massimi per dado: scelta del DM.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo (+4 a tutte le caratteristiche, +2 di armatura naturale) — GS 15 → 15 (vale 16): il GS non sale perché la tenda è già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi più di due round contro questi PG e questi artefatti.
-- Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 / Guerriero 1 (stessi 15 DV), armatura di mithral, Colpo Devastante e Spingere Migliorato al posto di Robustezza ×2, Arma Specializzata e Critico Migliorato — GS 15 → 15 — il DM vuole RD 3/— e Volontà Indomita, e un colpo che separi il gruppo invece di un danno che uccide Artemis in un colpo.
+- Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 / Guerriero 1 (stessi 15 DV), armatura di mithral, Colpo Terrificante e Spingere Migliorato al posto di Robustezza ×2, Arma Specializzata e Critico Migliorato — GS 15 → 15 — il DM vuole RD 3/— e Volontà Indomita, e un colpo che separi il gruppo invece di un danno che uccide Artemis in un colpo.
 - Boost log: 2026-10-12 — Presenza Minacciosa, capacità straordinaria fuori SRD, costruita come la presenza terrificante dei draghi (10 + ½ DV + mod. CAR = CD 21, scosso 1d4 round entro 9 m) — GS 15 → 15 — il DM la tiene perché il generale deve far paura prima di colpire.
 - I gradi nelle abilità di Zog'tar e delle guardie sono canone: DM 2026-10-07, Q30.
 <!-- /storico -->

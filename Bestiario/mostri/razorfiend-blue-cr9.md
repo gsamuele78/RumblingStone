@@ -1,4 +1,4 @@
-# Razorfiend — Blue Variant [ACCEPTED — DM-canon 2026-05-05]
+# Razorfiend — Blue Variant [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: skirmisher-shock | **Environment**: aerial/desert | **CR**: 9 | **Source**: RHoD Razorfiend + Draconomicon blue | **Status**: inferred
 
 ```statblocco

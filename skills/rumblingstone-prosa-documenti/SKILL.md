@@ -35,8 +35,8 @@ Il trattino è il primo tell, ed è quello su cui la ripulitura ha lavorato: la
 mediana dei 157 documenti passa da **109 a 73** trattini ogni mille righe di
 prosa, la densità globale da 126 a 72. `AGENTS.md` era a 315 e `plans/INDEX.md`
 a 831; oggi sono a 0 e 25, e i due trattoni rimasti in `INDEX.md` sono dentro i
-marcatori `[PROPOSTA — needs DM confirmation]` e `[ACCEPTED — DM-canon]`, che
-sono notazione e non prosa.
+marcatori di stato dei piani (la proposta in attesa del DM e quella
+accettata), che sono notazione e non prosa.
 
 Gli altri due tic scendono poco, e il motivo va detto: la maggior parte delle
 occorrenze rimaste sono **numeri misurati** («cinque difetti chiusi», «erano

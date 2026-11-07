@@ -1,4 +1,4 @@
-# Razorfiend «Blackspawn Alfa» — spawn draconico d'élite [ACCEPTED — DM-canon 2026-07-20]
+# Razorfiend «Blackspawn Alfa» — spawn draconico d'élite [CANONE — DM 2026-07-20]
 
 **Faction**: red-hand | **Role**: elite-brute | **Environment**: any | **CR**: 13 | **Source**: boost della base **Razorfiend (Draconic Spawn)** del repo (`razorfiend-red/blue/green/white-cr8-9.md`) via `skills/npc-villain-boosting/` (advancement HD + taglia) | **Status**: ACCEPTED — DM-canon 2026-07-20 (tier élite per l'orda ingrandita)
 

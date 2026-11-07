@@ -1,4 +1,4 @@
-# Drow Noble House Guard (Ftr 2/Rog 2) [ACCEPTED — DM-canon 2026-05-05]
+# Drow Noble House Guard (Ftr 2/Rog 2) [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: elite-skirmisher | **Environment**: underdark | **CR**: 5 | **Source**: FRCS drow noble + PHB multiclass | **Status**: inferred
 
 ```statblocco

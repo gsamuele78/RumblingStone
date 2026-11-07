@@ -1,4 +1,4 @@
-# Gnoll Ranger 4 (Artigli Neri scout) [ACCEPTED — DM-canon 2026-05-05]
+# Gnoll Ranger 4 (Artigli Neri scout) [CANONE — DM 2026-05-05]
 **Faction**: gnoll | **Role**: ranged-scout | **Environment**: forest/plain | **CR**: 5 | **Source**: MM Gnoll + PHB Ranger 4 | **Status**: inferred
 
 

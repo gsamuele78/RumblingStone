@@ -4207,7 +4207,7 @@ ___
 
 **STATISTICHE**
 ___
-For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Finezza nell'Arma · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*  
+For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Arma Accurata · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*  
 
 **TATTICHE**
 ___
@@ -4462,7 +4462,7 @@ racconta. Ha le mani rovinate dalla resina come tutti quelli del rione.*
 ### Statistiche
 **For** 17 (+3) · **Des** 13 (+1) · **Cos** 14 (+2) · **Int** 10 (+0) · **Sag** 12 (+1) · **Car** 13 (+1)
 
-**Talenti**: Attacco Poderoso · Focalizzazione nell'Arma (spada lunga) · Iniziativa
+**Talenti**: Attacco Poderoso · Arma Focalizzata (spada lunga) · Iniziativa
 Migliorata · Persuasivo · Volontà di Ferro
 **Abilità**: Intimidire **+9**, Diplomazia **+6**, Cavalcare **+4**, Percezione +3,
 Sopravvivenza +5, Nuotare +2
@@ -4513,7 +4513,7 @@ ulteriore contro la paura)*
 ### Statistiche
 **For** 10 (+0) · **Des** 18 (+4) · **Cos** 13 (+1) · **Int** 10 (+0) · **Sag** 13 (+1) · **Car** 14 (+2)
 
-**Talenti**: Finezza nell'Arma · Combattere con Due Armi *(stile di combattimento)* ·
+**Talenti**: Arma Accurata · Combattere con Due Armi *(stile di combattimento)* ·
 Combattere in Sella
 **Capacità di classe**: seguire tracce, empatia selvatica +5, andatura nella
 boscaglia *(la sua, di fatto, è "andatura nei vicoli")*
@@ -4570,7 +4570,7 @@ parto.*
 - **2°** (2 + 1 dominio): **ritardare veleno** · *forza toro* · **dominio**:
   *ammorbidire terra e pietra*
 
-**Talenti**: Addestramento nelle Abilità (Addestrare Animali) · Incantesimi in
+**Talenti**: Abilità Focalizzata (Addestrare Animali) · Incantare in
 Combattimento · Vigore Sovrannaturale
 **Abilità**: **Addestrare Animali +9**, **Guarire +10**, Sopravvivenza +10,
 Percezione +10, Cavalcare +6, Conoscenze (natura) +6, Sapienza Magica +6
@@ -4625,8 +4625,8 @@ slot a memorizzarle)*
 - **2°** (2 + 1 scuola): *individuazione dei pensieri* (CD 16) · *tocco dell'idiota* ·
   **scuola**: *invisibilità*
 
-**Talenti**: Vergare Pergamene *(bonus)* · Focalizzazione Incantatore (illusione) ·
-Incantesimi in Combattimento · Iniziativa Migliorata
+**Talenti**: Scrivere Pergamene *(bonus)* · Incantesimi Focalizzati (illusione) ·
+Incantare in Combattimento · Iniziativa Migliorata
 **Famiglio**: **Conto**, un corvo *(il padrone guadagna +3 a Valutare)*
 **Abilità**: Sapienza Magica +10, Conoscenze (locali) +10, Valutare **+12**,
 Linguistica +9, Conoscenze (arcane) +9, Raggirare +4, Furtività +4, Percezione +3,
@@ -4680,8 +4680,8 @@ abilità: è il talento che decide la Corsa)* · distrazione
 *prestidigitazione*, *lettura del magico* · 1°: *ammaliare persone* (CD 15), *cura
 ferite leggere*, *ventriloquio*
 
-**Talenti**: Addestramento nelle Abilità (Intrattenere: canto) *(razziale)* ·
-Persuasivo · Incantesimi in Combattimento
+**Talenti**: Abilità Focalizzata (Intrattenere: canto) *(razziale)* ·
+Persuasivo · Incantare in Combattimento
 **Abilità**: **Intrattenere (canto) +13**, Diplomazia **+12**, Raggirare +10,
 Intrattenere (danza) +8, Acrobazia +7, Percezione +7, Conoscenze (locali) +6,
 Percepire Intenzioni +5, Conoscenze (storia) +5, Sapienza Magica +5, Furtività +4
@@ -4737,7 +4737,7 @@ più spesso di quanto credi)*
 - **2°** (2 + 1 dominio): **ristorare inferiore** · *aiuto* · **dominio**: *cura
   ferite moderate*
 
-**Talenti**: Canalizzazione Selettiva · Incantesimi in Combattimento · Vigore
+**Talenti**: Incanalare Selettivo · Incantare in Combattimento · Vigore
 Sovrannaturale
 **Abilità**: **Guarire +10**, **Percepire Intenzioni +9**, Diplomazia +7, Conoscenze
 (religioni) +4

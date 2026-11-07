@@ -1,4 +1,4 @@
-# Drow Warrior [ACCEPTED — DM-canon 2026-05-05]
+# Drow Warrior [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: fodder-melee | **Environment**: underdark | **CR**: 1 | **Source**: FRCS p.17 drow traits + MM p.103 Elf Warrior 1 | **Status**: inferred
 
 ```statblocco

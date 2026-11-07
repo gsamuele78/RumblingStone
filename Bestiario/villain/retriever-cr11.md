@@ -66,5 +66,5 @@ Boost log: correzione sul SRD — GS 11 → 11 — quarto raggio di pietrificazi
 <!-- storico -->
 era: «⚠ La prosa diceva BAB +10 e «4 zampe (1d6+…)»: il SRD dice BAB +7 e 2d6+10. Corretto sulla fonte.»
 era: raggio degli occhi «fuoco/freddo/elettricità/*rendere lento*, 1/round, danno alto»; afferrare migliorato sulle zampe.
-era: talenti Fendere, Multiattacco, Attacco Poderoso; immunità scritta «a incantesimi di ammaliamento/schema».
+era: talenti Incalzare, Multiattacco, Attacco Poderoso; immunità scritta «a incantesimi di ammaliamento/schema».
 <!-- /storico -->

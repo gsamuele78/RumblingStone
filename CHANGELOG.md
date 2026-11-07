@@ -19,6 +19,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Aggiunto
 - I sistemi di gioco come plugin di dati (ADR-0111, proposta): `sistemi.toml` in radice dice quali sistemi sono attivi, quali di rinforzo e quale usa ogni cartella; i plugin stanno in `sistemi/<id>/sistema.toml` con le capacità dichiarate; `scripts/sistemi.py` stampa i sistemi supportati e la matrice strumenti × sistemi, `--di FILE` il sistema di un file, `--check` è il cancello (in CI). Le voci di `scripts/tools.manifest.json` possono dichiarare `sistema.capacita`. Nessuno strumento esistente cambia comportamento.
+- `scripts/controlla_marche.py` (ADR-0109): sulle righe cambiate di una PR avvisa per una marca INFERRED senza domanda e base e per un INFERRED tolto senza CANONE, GENERATO o storico. In CI non blocca (canale testing).
+- Termini ufficiali (ADR-0110): `scripts/lessico_regole.py` con le tabelle `lessico_it_35.tsv` (italiano → SRD 3.5) e `lessico_it_pf1.tsv` (italiano PF1e → PRD), ogni riga con la fonte; `controlla` sui talenti (cricchetto in CI) e `controlla --campi` su incantesimi, abilità e oggetti magici delle schede (conto nel riepilogo della CI, non blocca).
+- Marcature dei fatti (ADR-0109): grammatica unica in `docs/guides/GUIDA-MARCATURE.md` (`[INFERRED — domanda; base: …]`, `[CANONE — DM data, codice]`, `[GENERATO]`, fonti). Dieci skill di contenuto hanno la sezione «Vincoli sui fatti», uguale alla guida (`test_vincoli_delle_skill.py`); AGENTS.md e le skill non riscrivono più la regola.
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di
   `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).
@@ -124,6 +127,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Rimosso
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
+
+### Cambiato
+- `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 
 ## [1.0.0] - 2026-10-23
 

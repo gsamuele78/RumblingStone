@@ -1,4 +1,4 @@
-# Drow Priestess of Lolth 9 (Sajak rituals) [ACCEPTED — DM-canon 2026-05-05]
+# Drow Priestess of Lolth 9 (Sajak rituals) [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: divine-caster-boss | **Environment**: underdark/ritual | **CR**: 11 | **Source**: FRCS p.17 drow + PHB Cleric 9 + Lolth faith | **Status**: inferred
 
 ```statblocco

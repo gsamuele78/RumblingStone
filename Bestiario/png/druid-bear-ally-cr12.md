@@ -1,4 +1,4 @@
-# druid-bear-ally-cr12 [ACCEPTED — DM-canon 2026-05-05]
+# druid-bear-ally-cr12 [CANONE — DM 2026-05-05]
 
 **Faction**: cerchio-druid | **Role**: ally-wildshape-tank | **Environment**: forest | **CR**: 12
 

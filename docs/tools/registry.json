@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 132,
+  "tool_count": 134,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -8557,6 +8557,76 @@
       "idempotent": true
     },
     {
+      "id": "controlla_marche",
+      "path": "scripts/controlla_marche.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/controlla_marche.py --base origin/main",
+      "summary": "I due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Canale testing: in CI avvisa e non blocca.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "--base",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ref di confronto, es. origin/main."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'è almeno un avviso."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun avviso, o avvisi senza --rigido",
+        "1": "avvisi con --rigido",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende dal diff fra --base e HEAD"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/controlla_marche.py --help",
+      "tests": [
+        "scripts/tests/test_controlla_marche.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MARCATURE.md",
+        "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
+      ],
+      "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
+      "optional_deps": []
+    },
+    {
       "id": "copertura_scene",
       "path": "scripts/copertura_scene.py",
       "category": "G-orchestration-governance",
@@ -9453,7 +9523,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/inventory_inferred.py",
-      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/ (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI.",
+      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/, skill, modelli, README e fixture (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI. Ogni marcatore ha anche la forma (con domanda e base, vecchia, nuda) secondo GUIDA-MARCATURE (ADR-0109).",
       "stability": "beta",
       "stdlib_only": true,
       "external_bins": [],
@@ -9563,11 +9633,148 @@
         "scripts/tests/test_inventory_inferred.py"
       ],
       "docs": [
-        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md"
+        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
+        "docs/guides/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
         "pyyaml"
+      ]
+    },
+    {
+      "id": "lessico_regole",
+      "path": "scripts/lessico_regole.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/lessico_regole.py [--offline] {indice|cerca NOME|verifica-tabella|casi FILE|controlla PERCORSI [--tutto] [--campi] [--check]}",
+      "summary": "I termini ufficiali di D&D 3.5 e PF1e e chi li usa male (ADR-0110). Genera dall'SRD 3.5 e dal PRD PF1e in cache l'indice dei termini; legge le tabelle italiano → SRD 3.5 (scripts/lessico_it.yaml, scripts/lessico_it_35.tsv) e italiano → PRD PF1e (scripts/lessico_it_pf1.tsv, per i moduli PF1e senza passare dalla 3.5); controlla le righe dei talenti delle schede e, con --campi, incantesimi, abilità e oggetti, segnalando varianti non ufficiali, nomi 3.5 nei moduli PF1e e termini sconosciuti non marcati.",
+      "use_case": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "optional_deps": [],
+      "args": [
+        {
+          "name": "--cache",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella della cache delle fonti (come riscontro_srd.py)."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: solo la cache."
+        },
+        {
+          "name": "comando",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "indice",
+            "cerca",
+            "verifica-tabella",
+            "casi",
+            "controlla"
+          ],
+          "repeatable": false,
+          "desc": "indice | cerca | verifica-tabella | casi | controlla."
+        },
+        {
+          "name": "--campi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con controlla: anche incantesimi, abilità e oggetti magici dei campi dello statblocco."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/lessico_it.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_35.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_pf1.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/lessico-indice.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto",
+        "1": "con --check: termini sbagliati o sconosciuti oltre il massimo; verifica-tabella con nomi fuori fonte; casi sbagliati",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Fonti fissate per commit; tabelle nel repo; output nell'ordine dei file."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.italiano",
+          "fonti.regole"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/lessico_regole.py --help",
+      "tests": [
+        "scripts/tests/test_lessico_regole.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md"
       ]
     },
     {

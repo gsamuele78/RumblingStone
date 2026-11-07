@@ -16,7 +16,7 @@ iniziativa: +1
 attacchi:
   - Mischia spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni)
 voci:
-  - Talenti: Fendere, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga)
+  - Talenti: Incalzare, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga)
   - Colpire il bene 3/giorno, attacco furtivo +3d6, aura di disperazione
 ```
 
@@ -36,7 +36,7 @@ Medium humanoid (dwarf), Blackguard 10, LE.
 
 **Attacco** Vel 6 m · **Mischia** spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni) · **Colpire il bene** 3/giorno (+3 al tiro, +10 ai danni) · **Attacco furtivo** +3d6 · **Aura di disperazione** (i nemici entro 3 m hanno −2 ai TS) · **Incantesimi da Blackguard** (LI 10°; CD 13 + livello): 1° (3) — *arma corrotta, infliggi ferite leggere, causare paura*; 2° (3) — *forza del toro, infliggi ferite moderate, frantumare*; 3° (3) — *contagio, infliggi ferite gravi, oscurità profonda*; 4° (1) — *veleno*
 
-**Statistiche** For 18, Des 12, Cos 16, Int 10, Sag 16, Car 16 · BAB +10; Lotta +14 · **Talenti** Fendere, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga) · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, spada lunga sacrilega +1, mantello della resistenza +1, amuleto dell'armatura naturale +1, periapto della saggezza +4, mantello del carisma +2, 2 pozioni di *cura ferite moderate*, 2 pozioni di *forza del toro*
+**Statistiche** For 18, Des 12, Cos 16, Int 10, Sag 16, Car 16 · BAB +10; Lotta +14 · **Talenti** Incalzare, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga) · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, spada lunga sacrilega +1, mantello della resistenza +1, amuleto dell'armatura naturale +1, periapto della saggezza +4, mantello del carisma +2, 2 pozioni di *cura ferite moderate*, 2 pozioni di *forza del toro*
 
 **Capacità speciali**
 - **Benedizione oscura** (Sop): Car ai TS, già nel conto.

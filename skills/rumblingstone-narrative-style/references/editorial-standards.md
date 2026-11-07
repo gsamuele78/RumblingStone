@@ -78,7 +78,7 @@ token): l'agente non la ri-verifica a mano.
 - Niente code conversazionali AI («Perfetto! Procedo…»), niente meta-testo
   rivolto all'engine dentro i file di gioco: le note di lavorazione vivono
   nei banner di testa o nei commenti `> ⚠️`.
-- Ogni fatto non attestato: `[INFERRED — needs DM confirmation]` inline,
+- Ogni fatto non attestato: `[INFERRED — <domanda al DM>; base: <fonte o dato>]` inline,
   MAI inventato in silenzio.
 - Tono floor (coherence §4): adulto, slow-build, niente slang moderno,
   niente strizzate d'occhio alla quarta parete, nessuna vittoria senza costo.

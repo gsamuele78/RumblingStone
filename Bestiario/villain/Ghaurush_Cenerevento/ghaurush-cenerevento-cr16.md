@@ -1,4 +1,4 @@
-# Ghaurush «Cenerevento» — Generale Elementalista della Mano Rossa [ACCEPTED — DM-canon]
+# Ghaurush «Cenerevento» — Generale Elementalista della Mano Rossa [CANONE — DM 2026-08-05]
 **Faction**: mano-rossa | **Role**: boss-caster-brute | **Environment**: any (colline/accampamenti/assedio) | **CR**: 16 | **Source**: SRD *Ogre Mage* (base CR 8) + livelli di Stregone (SRD PHB); template PF1e *Advanced* per la variante | **Status**: accepted
 
 
@@ -46,7 +46,7 @@ Large giant (ogre magi), LE.
 
 > ⚠️ Uno Stregone 8 **conosce un solo incantesimo di 4° livello**. La varietà elementale di Ghaurush viene dall'**equipaggiamento**, non da slot inventati.
 
-**Statistiche** For 21, Des 10, Cos 21, Int 14, Sag 14, Car 22 (20 base + *mantello del carisma +2*) · **BAB/Lotta** +7/**+16** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantesimi in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimo Esteso · **Qualità speciali** tratti dei giganti
+**Statistiche** For 21, Des 10, Cos 21, Int 14, Sag 14, Car 22 (20 base + *mantello del carisma +2*) · **BAB/Lotta** +7/**+16** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantare in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimi Estesi · **Qualità speciali** tratti dei giganti
 
 **Equipaggiamento** (tabella PNG livello 16, DMG): *amuleto di salute +4*, *mantello del carisma +2*, giaco di maglia +2 (Large), *anello di protezione +2*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di **assorbimento vitale** (*enervation*: tocco a distanza, 1d4 livelli negativi, **nessun TS**), 2 pergamene di *dissolvi magie*, spadone Large.
 

@@ -1,4 +1,4 @@
-# Blue (Psionic Goblinoid) [ACCEPTED — DM-canon 2026-05-05]
+# Blue (Psionic Goblinoid) [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: psionic-support | **Environment**: any | **CR**: 1 | **Source**: MM II p.38 Blue | **Status**: inferred
 
 ```statblocco

@@ -17,6 +17,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
 "lessico.abilita" = { codice = ["scripts/validate_prosa.py:ABILITA", "scripts/domande_developer.py:ABILITA_ESTRANEE"], lotto = "L3" }
 "lessico.entita" = { codice = ["scripts/coerenza_campagna.py:CLASSI", "scripts/coerenza_campagna.py:RAZZE"], lotto = "L3" }
+"lessico.italiano" = { dati = ["scripts/lessico_it_35.tsv"] }
 "fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L3" }
 "pe.soglie" = { codice = ["scripts/update_xp.py:THRESHOLDS"], lotto = "L4" }
 "tesoro.per_livello" = { dati = ["scripts/loot_tables.yaml", "scripts/magic_items_srd.yaml"] }

@@ -1,4 +1,4 @@
-# Ogre Micelio — Sporeborn di Sonjak (Barbaro 4) [ACCEPTED — DM-canon]
+# Ogre Micelio — Sporeborn di Sonjak (Barbaro 4) [CANONE — DM 2026-10-06]
 **Faction**: drow-sonjak / mano-rossa (prestato) | **Role**: melee-heavy-aberrante | **Environment**: underground | **CR**: 8 | **Source**: SRD *Ogre* (CR 3) + Barbaro 4 (SRD PHB) + innesto fungino derivato dalla riga canonica **Sporeborn** di `00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md` (For +4, immunità al dolore, berserk, rischio fuoco amico 1/10 round) | **Status**: accepted
 
 

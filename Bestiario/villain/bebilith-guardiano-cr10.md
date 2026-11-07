@@ -20,7 +20,7 @@ attacchi:
 voci:
   - RD 10/bene
   - Veleno (Temp CD 24, 1d6 Cos / 2d6 Cos), squarciare armatura (4d6+18 all'armatura), ragnatela, spostamento planare
-  - Talenti: Fendere, Iniziativa Migliorata, Lottare Migliorato, Attacco Poderoso, Seguire Tracce
+  - Talenti: Incalzare, Iniziativa Migliorata, Lottare Migliorato, Attacco Poderoso, Seguire Tracce
 fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/00_cr10_…_SRD_Bebilith - D&D Wiki.htm`); la scheda diceva «CA da SRD» e il numero è 22, non uno dei valori che si ricordano a memoria
 ```
 
@@ -36,7 +36,7 @@ Huge outsider (chaotic, evil, extraplanar), 12d8+96.
 
 **Attacco** Vel 12 m, scalare 6 m · Spazio 4,5 m, portata 3 m · **Mischia** morso +19 (2d6+9 più veleno) e 2 artigli +14 (2d4+4) · **Distanza** ragnatela +11 contatto (4/giorno, gittata 9 m) · **Veleno** (Str): ferimento, Temp CD 24, 1d6 Cos iniziale e 2d6 Cos secondario · **Squarciare armatura** (Str): se colpisce con entrambi gli artigli, 4d6+18 danni all'armatura del bersaglio · le sue armi naturali contano come caotiche e malvagie per superare la RD
 
-**Statistiche** For 28, Des 12, Cos 26, Int 11, Sag 13, Car 13 · BAB +12; Lotta +33 · **Talenti** Fendere, Iniziativa Migliorata, Lottare Migliorato, Attacco Poderoso, Seguire Tracce · **Abilità** Scalare +24, Nascondersi +16, Saltare +28, Muoversi Silenziosamente +16, Cercare +15, Percepire Intenzioni +16 · **Linguaggi** capisce l'abissale, non lo parla; telepatia
+**Statistiche** For 28, Des 12, Cos 26, Int 11, Sag 13, Car 13 · BAB +12; Lotta +33 · **Talenti** Incalzare, Iniziativa Migliorata, Lottare Migliorato, Attacco Poderoso, Seguire Tracce · **Abilità** Scalare +24, Nascondersi +16, Saltare +28, Muoversi Silenziosamente +16, Cercare +15, Percepire Intenzioni +16 · **Linguaggi** capisce l'abissale, non lo parla; telepatia
 
 **Capacità speciali**
 - **Ragnatela** (Str): 4 volte al giorno, come una rete, gittata 9 m (incremento 3 m), contro creature fino a Mastodontica. Ancora il bersaglio sul posto. Per uscirne: Artista della Fuga CD 24 o Forza CD 24; la ragnatela ha 14 pf e durezza 0, e ha il 75% di probabilità di non prendere fuoco.

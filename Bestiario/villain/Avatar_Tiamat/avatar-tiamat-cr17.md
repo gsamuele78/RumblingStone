@@ -1,4 +1,4 @@
-# avatar-tiamat-cr17 [ACCEPTED — DM-canon 2026-05-05]
+# avatar-tiamat-cr17 [CANONE — DM 2026-05-05]
 
 **Faction**: red-hand | **Role**: boss-epic-dragon | **Environment**: any | **CR**: 17
 

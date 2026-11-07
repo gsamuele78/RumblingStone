@@ -1,4 +1,4 @@
-# Cultista Rakshasa (Rog 3) [ACCEPTED — DM-canon 2026-05-05]
+# Cultista Rakshasa (Rog 3) [CANONE — DM 2026-05-05]
 **Faction**: rakshasa | **Role**: skirmisher-stealth | **Environment**: urban | **CR**: 3 | **Source**: MM Rakshasa + PHB Rogue 3 | **Status**: inferred
 
 

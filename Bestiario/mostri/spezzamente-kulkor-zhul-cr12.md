@@ -1,4 +1,4 @@
-# Spezzamente del Kulkor Zhul — la voce che fa voltare le spade (hobgoblin, mago ammaliatore 12) [ACCEPTED — DM-canon 2026-10-18]
+# Spezzamente del Kulkor Zhul — la voce che fa voltare le spade (hobgoblin, mago ammaliatore 12) [CANONE — DM 2026-10-18]
 **Faction**: red-hand | **Role**: controller | **Environment**: any | **CR**: 12 | **Source**: classe e regole SRD 3.5; idea da `[Private — Red Hand of Doom WE, p. 26]` | **Status**: ACCEPTED — DM-canon 2026-10-18 (PR #247, poi canone su richiesta del DM)
 
 ```statblocco

@@ -1,4 +1,4 @@
-# Centaur Ranger 4 (Corrupted) [ACCEPTED — DM-canon 2026-05-05]
+# Centaur Ranger 4 (Corrupted) [CANONE — DM 2026-05-05]
 **Faction**: loxo-centaur-corrupted | **Role**: ranged-skirmisher | **Environment**: plain/forest | **CR**: 5 | **Source**: MM p.33 Centaur + PHB Ranger 4 | **Status**: inferred
 
 

@@ -1,4 +1,4 @@
-# Furia della Mano — chi grida il nome dei suoi morti (hobgoblin, barbaro 10) [ACCEPTED — DM-canon 2026-10-18]
+# Furia della Mano — chi grida il nome dei suoi morti (hobgoblin, barbaro 10) [CANONE — DM 2026-10-18]
 **Faction**: red-hand | **Role**: brute | **Environment**: any | **CR**: 10 | **Source**: classe e regole SRD 3.5; idea da `[Private — Red Hand of Doom WE, pp. 7, 12, 25]` | **Status**: ACCEPTED — DM-canon 2026-10-18 (PR #247, poi canone su richiesta del DM)
 
 ```statblocco

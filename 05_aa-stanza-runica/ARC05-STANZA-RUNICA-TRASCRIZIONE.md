@@ -251,7 +251,7 @@ Spirito corrotto (template: spirito incorporeo + demone minore).
 - **Caratteristiche**: For —, Des 22, Cos 20, Int 16, Sag 18, Car 24
 - **Abilità**: Intimidire +26, Ascoltare +23, Osservare +23, Conoscenze
   (religioni) +22
-- **Talenti**: Attacco Poderoso, Competenza Marziale, Riflessi da
+- **Talenti**: Attacco Poderoso, Competenza nelle Armi da Guerra, Riflessi in
   Combattimento, Volontà di Ferro, Attacco Vitale, Critico Migliorato
 - **GS**: 14
 

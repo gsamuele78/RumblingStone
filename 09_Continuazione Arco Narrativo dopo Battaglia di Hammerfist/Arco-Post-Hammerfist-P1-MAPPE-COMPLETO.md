@@ -290,7 +290,7 @@ Esempio Guerriero 6 (CR 6):
 - PF: ~63 (8d6+3d6+11).  
 - CA: 22 (armatura leggera + Des + eventuale anello).  
 - Attacchi: 2× pugnali o spade corte, furtivo +5d6.  
-- Talenti e capacità: Death Attack (studio 3 round, CD 18), Schivare Prodigioso, Evasione migliorata.  
+- Talenti e capacità: Death Attack (studio 3 round, CD 18), Schivare Prodigioso, Evasione Migliorata.  
 
 ---
 

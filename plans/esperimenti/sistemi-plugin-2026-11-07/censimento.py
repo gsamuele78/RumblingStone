@@ -77,6 +77,7 @@ CLASSI = {
     "scripts/validate_standalone.py": ("B", "termini 5e vietati (seconda copia, forme diverse)"),
     "scripts/validate_prosa.py": ("B", "ABILITA: i nomi delle abilità 3.5"),
     "scripts/domande_developer.py": ("C", "ABILITA_ESTRANEE per sistema e il sistema letto dal profilo in plans/domande-developer.json"),
+    "scripts/lessico_regole.py": ("C", "e_pf1(): il sistema dal percorso o dalla riga Sistema; tabelle dei termini ufficiali (ADR-0110, arrivato il 2026-11-07)"),
     "scripts/dmcore/censimento.py": ("C", "esclude il Drappo perché PF1e, per percorso"),
     "scripts/coerenza_campagna.py": ("B", "CLASSI e RAZZE per riconoscere le entità: lessico 3.5"),
     "scripts/build_booklet_html.py": ("D", "etichette Iniziativa/CA/pf/TS nel riquadro della creatura"),

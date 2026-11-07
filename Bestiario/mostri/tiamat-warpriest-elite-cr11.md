@@ -1,4 +1,4 @@
-# tiamat-warpriest-elite-cr11 [ACCEPTED — DM-canon 2026-05-05]
+# tiamat-warpriest-elite-cr11 [CANONE — DM 2026-05-05]
 
 **Faction**: red-hand | **Role**: caster-divine-elite | **Environment**: any | **CR**: 11
 

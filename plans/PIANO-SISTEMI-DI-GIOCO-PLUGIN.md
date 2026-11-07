@@ -120,8 +120,10 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 
 ### §2.2 Cosa ha trovato L1
 
-- Il banco d'invarianza aveva un difetto suo: `update_xp --check` stampa l'ora, e l'impronta cambiava a ogni minuto. Adesso `impronte.py` sostituisce la riga dell'orologio; la base è stata riscritta da `main` (99337894), e 12 impronte su 12 tornano.
+- Il banco d'invarianza aveva un difetto suo: `update_xp --check` stampa l'ora, e l'impronta cambiava a ogni minuto. Adesso `impronte.py` sostituisce la riga dell'orologio; la base è stata riscritta da `main` (99337894, poi 9fc7f515 dopo #314 e #316), e 12 impronte su 12 tornano.
 - `build_monster_catalog.py` esclude dal catalogo il Drappo ma non il Giardino PF1e: oggi `scripts/monster_catalog.yaml` contiene una voce PF1e (l'appendice delle creature del Giardino, GS 16, ruolo boss) che `suggest_encounter` può proporre in un incontro 3.5. Con un rilevamento solo (L2) il buco si chiude. È il primo caso misurato di tre rilevamenti che divergono.
+
+- Con ADR-0110 su main (#316) è arrivato `scripts/lessico_regole.py`, che decide il sistema con `e_pf1()`: i rilevamenti in fascia C salgono a 3 e M4 a 25. Le sue tabelle (`lessico_it_35.tsv`, `lessico_it_pf1.tsv`) entrano nei plugin come capacità `lessico.italiano` in dati, senza toccarle.
 
 ## §3 · Validazione
 

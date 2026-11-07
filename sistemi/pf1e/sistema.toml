@@ -18,6 +18,7 @@ skill = ["pathfinder-1e-srd"]
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
 "lessico.abilita" = { codice = ["scripts/domande_developer.py:ABILITA_ESTRANEE"], lotto = "L3" }
 "lessico.entita" = { non_supportato = "coerenza_campagna riconosce solo classi e razze 3.5" }
+"lessico.italiano" = { dati = ["scripts/lessico_it_pf1.tsv"] }
 "fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L3" }
 "pe.soglie" = { non_supportato = "update_xp conosce solo le soglie 3.5; PF1e ha tre tracce (lenta, media, veloce)" }
 "tesoro.per_livello" = { non_supportato = "suggest_loot usa la DMG 3.5 Tab. 3-5; PF1e ha il tesoro per GS a tre velocità" }

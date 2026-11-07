@@ -1,4 +1,4 @@
-# Bruto Deforme del Sottosuolo (Gigante di Pietra deforme, Barbaro 2) [ACCEPTED — DM-canon]
+# Bruto Deforme del Sottosuolo (Gigante di Pietra deforme, Barbaro 2) [CANONE — DM 2026-08-05]
 **Faction**: mano-rossa / drow-sonjak (mercenario) | **Role**: melee-heavy/artiglieria-corta | **Environment**: underdark | **CR**: 11 | **Source**: SRD *Stone Giant* (GS 8) + template semplice PF1e **Giant** (GS +1) + Barbaro 2 (classe associata, GS +1/liv) | **Status**: accepted
 
 

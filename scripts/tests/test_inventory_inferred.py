@@ -46,6 +46,33 @@ class TestClassificazione(unittest.TestCase):
         self.assertEqual(inv.classe("docs/guides/GUIDA-IMMAGINI.md"), "aperti")
 
 
+class TestRigheDiRegola(unittest.TestCase):
+    """ADR-0109, scheda 6 = A: skill, modelli, README, fixture e GUIDA-MARCATURE sono meta."""
+
+    def test_regole_e_modelli_sono_meta(self):
+        for rel in ("skills/dnd-35-srd/references/resources.md",
+                    "campaign/templates/png-dossier-template.md",
+                    "Bestiario/README.md",
+                    "scripts/tests/fixtures/ultraclear/golden.md",
+                    "docs/guides/GUIDA-MARCATURE.md",
+                    "AGENTS.md"):
+            self.assertEqual(inv.classe(rel), "meta", rel)
+
+    def test_forma_della_marca(self):
+        self.assertEqual(inv.forma("Quanti PF ha?; base: MM 3.5"), "nuova")
+        self.assertEqual(inv.forma("needs DM confirmation"), "vecchia")
+        self.assertEqual(inv.forma("Quanti PF ha; base: MM"), "vecchia")  # manca la domanda
+        self.assertEqual(inv.forma(""), "nuda")
+
+    def test_lo_schema_da_copiare_e_meta(self):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "x.md").write_text("marca `[INFERRED — <domanda>; base: <…>]`;\n"
+                                          "fatto [INFERRED — Quanti PF?; base: MM]\n", encoding="utf-8")
+            voci = inv.scansiona(Path(d))
+        self.assertEqual([v["classe"] for v in voci], ["meta", "aperti"])
+        self.assertEqual(voci[1]["forma"], "nuova")
+
+
 class TestConvenzione(unittest.TestCase):
     """P16, 2026-11-04: una regola che dice come si marca non è un debito."""
 
