@@ -226,7 +226,7 @@ attacchi:
 
 **Capacità speciali**
 - **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).
-- **Soffio aderente**, come A.1, ma toglierselo è Riflessi CD 31, la CD del suo soffio.
+- **Soffio impregnante**, come A.1, ma toglierselo è Riflessi CD 31, la CD del suo soffio.
 
 **Tattiche** Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 <!-- /include -->

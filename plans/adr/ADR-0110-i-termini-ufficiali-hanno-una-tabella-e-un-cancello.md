@@ -103,7 +103,7 @@ cresciute prima delle prove. L'esito è in
   o armatura della tabella con proprietà note («martello da guerra sacro») è valida. Per ora non
   blocca e il conto va nel riepilogo della CI. Su 40 casi per tipo: prima 10-11, dopo 40.
 - **Talenti**: il nome inglese di un talento di un manuale ufficiale conta come fonte; gli
-  sconosciuti scendono da 151 a 137, e il cricchetto della CI è a 137.
+  sconosciuti scendono da 151 a 137, e il cricchetto della CI è a 137; dopo le correzioni di ARC-07 e ARC-08 (fase 5) è a 133.
 - **Decisioni del DM**:
   - i nomi con il mago seguono il manuale italiano, e la forma SRD è una variante;
   - Blown Away = Portato via;
