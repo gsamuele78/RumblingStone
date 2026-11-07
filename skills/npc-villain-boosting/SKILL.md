@@ -107,6 +107,15 @@ Grammatica delle marche in `docs/guides/GUIDA-MARCATURE.md` (ADR-0109).
    scritto: ha una fonte, una marca CANONE o GENERATO, o è INFERRED con
    domanda e base. Se no, correggi e rileggi da capo.
 
+**In questa skill lo statblock potenziato si costruisce, non si inventa**
+(prova A/B del 2026-11-07, consegne 10 e 11: i numeri nudi erano il difetto).
+Ogni numero parte da una base citata (voce SRD o scheda del repo) e cambia
+solo per un passo dichiarato: DV avanzati, classe aggiunta, archetipo,
+oggetto. Il conto si scrive accanto al numero o nella tabella del potenziamento
+(dadi, modificatore, talento o oggetto, e la fonte di ciascuno). Un numero senza conto è INFERRED
+con domanda e base. Se il PNG non è nel repo, nome, classi, equipaggiamento e
+tattiche sono INFERRED: la consegna lo dice in testa.
+
 ## Cancelli deterministici
 
 I controlli che non chiedono un giudizio, da far girare prima di consegnare.
