@@ -1,0 +1,24 @@
+# sistemi.toml — i sistemi di gioco del progetto (ADR-0111)
+#
+# Il file generale: quali sistemi sono attivi, in che ordine si cerca la
+# versione più potente di una regola, e quale sistema usa ogni cartella.
+# Lo legge scripts/dmcore/sistemi.py; `python3 scripts/sistemi.py` mostra
+# i sistemi supportati dal repo e cosa ogni strumento sa fare con ciascuno,
+# `--check` è il cancello.
+#
+# I plugin stanno in sistemi/<id>/sistema.toml. Spegnere un sistema vuol
+# dire toglierlo da `attivi`: il suo plugin resta nel repo e resta elencato.
+
+[progetto]
+predefinito = "dnd35"
+attivi = ["dnd35", "pf1e"]
+# Dove si cerca la versione più potente di una regola, in ordine: prima il
+# 3.5, poi Pathfinder 1e (preferenza del DM del 2026-10-18). Un sistema di
+# rinforzo serve anche quando non è il sistema base di nessun modulo.
+rinforzo = ["dnd35", "pf1e"]
+
+[moduli]
+# Percorso dalla radice del repo = sistema. Vince il percorso più lungo che
+# contiene il file; un file fuori da tutti usa `predefinito`.
+"10-stand-alone/Il-Drappo-di-Tarsilia" = "pf1e"
+"10-stand-alone/Il Giardino di Sale e Calce PF1e" = "pf1e"

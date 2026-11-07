@@ -1,0 +1,28 @@
+# sistemi/pf1e/sistema.toml — Pathfinder 1ª edizione (ADR-0111)
+#
+# Due ruoli: sistema base del Drappo e del Giardino a Qasr al-Milah, e
+# sistema di rinforzo dei moduli 3.5 (template, bersagli per GS). Le
+# capacità «non supportato» sono il lavoro che manca perché uno strumento
+# lavori su un modulo PF1e: si dicono, non si nascondono.
+
+id = "pf1e"
+nome = "Pathfinder 1ª edizione (PRD)"
+tipo = "sistema"
+famiglia = "d20"
+licenza = "OGL 1.0a"
+fonti = ["PRD PF1e in cache (riscontro_srd.py, chiave pf1)"]
+skill = ["pathfinder-1e-srd"]
+
+[capacita]
+"termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
+"statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
+"lessico.abilita" = { codice = ["scripts/domande_developer.py:ABILITA_ESTRANEE"], lotto = "L3" }
+"lessico.entita" = { non_supportato = "coerenza_campagna riconosce solo classi e razze 3.5" }
+"fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L3" }
+"pe.soglie" = { non_supportato = "update_xp conosce solo le soglie 3.5; PF1e ha tre tracce (lenta, media, veloce)" }
+"tesoro.per_livello" = { non_supportato = "suggest_loot usa la DMG 3.5 Tab. 3-5; PF1e ha il tesoro per GS a tre velocità" }
+"incontri.livello" = { non_supportato = "PF1e misura l'incontro con un budget di PE: da riscontrare sul PRD prima di ereditare dal 3.5" }
+"creature.costruzione" = { non_supportato = "si costruisce in 3.5 con il rinforzo PF1e; creature PF1e native (BMC/DMC, abilità fuse) sono lavoro nuovo" }
+"creature.statistiche_per_gs" = { dati = ["scripts/pf1e-statistiche-per-gs.yaml"] }
+"creature.incantesimi" = { codice = ["scripts/dmcore/incantesimi.py:LISTE"], lotto = "L5" }
+"creature.regole_di_tipo" = { codice = ["scripts/dmcore/lettura_creatura.py:NON_MORTO_PF1E"], lotto = "L5" }

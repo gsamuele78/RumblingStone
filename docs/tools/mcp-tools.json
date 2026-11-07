@@ -4333,6 +4333,44 @@
       "deterministic": true
     },
     {
+      "name": "sistemi",
+      "description": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»\n\nI sistemi di gioco come plugin di dati (ADR-0111): legge sistemi.toml, i plugin in sistemi/<id>/sistema.toml e il campo sistema.capacita del manifest, e stampa i sistemi supportati (attivi, spenti, di rinforzo), la matrice strumenti × sistemi (dati, ancora nel codice con il lotto, ereditata, non supportata, mancante) e le skill da installare. Con --di dice il sistema di un file (il percorso più lungo di [moduli], altrimenti il predefinito); con --check fa da cancello.",
+      "use_case": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»",
+      "invocation": "python3 scripts/sistemi.py [--di FILE | --skill | --json | --check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "di": {
+            "type": "string",
+            "description": "Stampa il sistema del file."
+          },
+          "skill": {
+            "type": "boolean",
+            "description": "Le skill da installare: sistemi attivi e di rinforzo, con la loro famiglia."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto il rapporto in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Cancello: esce 1 se configurazione, plugin o manifest non tornano."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: problemi nella configurazione, nei plugin o nel manifest",
+        "2": "configurazione illeggibile"
+      },
+      "deterministic": true
+    },
+    {
       "name": "tools_manifest",
       "description": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»\n\nFonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json.",
       "use_case": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»",

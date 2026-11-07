@@ -211,6 +211,13 @@ jobs:
       - name: Domande del developer — si gioca?
         run: python scripts/domande_developer.py --check
 
+      # ADR-0111: i sistemi di gioco come plugin. sistemi.toml, i plugin in
+      # sistemi/<id>/ e le capacità chieste dal manifest dei tool tornano:
+      # nessuna capacità chiesta e non dichiarata, nessuna tabella puntata
+      # che nel codice non c'è più, nessuna eredità senza motivo.
+      - name: Sistemi di gioco — plugin e capacità
+        run: python scripts/sistemi.py --check
+
       # Lotto 7c di AVVENTURE-COMMUNITY: lo stesso PNG o mostro con GS, pf, CA,
       # CD o classi diversi in due scene. Solo ARC-07 e ARC-08, dove la
       # precisione è misurata (4 su 4); le contraddizioni che aspettano il DM

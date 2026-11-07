@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- I sistemi di gioco come plugin di dati (ADR-0111, proposta): `sistemi.toml` in radice dice quali sistemi sono attivi, quali di rinforzo e quale usa ogni cartella; i plugin stanno in `sistemi/<id>/sistema.toml` con le capacità dichiarate; `scripts/sistemi.py` stampa i sistemi supportati e la matrice strumenti × sistemi, `--di FILE` il sistema di un file, `--check` è il cancello (in CI). Le voci di `scripts/tools.manifest.json` possono dichiarare `sistema.capacita`. Nessuno strumento esistente cambia comportamento.
 - Skill `dnd-35-srd`: `references/resources.md` dice dove trovare il testo
   degli incantesimi fuori rete, nelle esportazioni PCGen di
   `Bestiario/pregen-pcgen/`, e cosa portano (un riassunto, non il testo SRD).

@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1: fondazione dei plugin dei sistemi di gioco | ✅ 0 problemi; 24 righe di matrice; dnd35 2/10/0, pf1e 1/6/5 (dati/codice/non supportato); impronte 12/12 dopo la correzione dell'orologio di `update_xp` |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L0: censimento degli strumenti, banco d'invarianza, ADR-0111 proposta | ✅ 31 script su 202 dipendono dal sistema; M1 3, M2 2, M3 76, M4 24; 12 impronte riproducibili; D1-D5 al DM |
 | 2026-11-07 | STATO-E-ORDINE · P16 | Lotto 5: Bestiario, ARC-08, Tarsilia, Corona e menzioni storiche | ✅ card del DM: lama mortale al bugbear, orog e gufo di Lythiel nella versione forte, piazza di Tarsilia a 1,5 m, troll dell'ariete a 10 DV, riserva +3, nessuno… |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 4: le caratteristiche dei PG dalla scheda di carta del DM | ✅ foto del DM del 2026-11-05 riscontrata con le abilità senza gradi: Artemis 10/18/14/10/10/18; Thorik con il rito dello Smeraldo che la carta non aveva (DES 1… |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §9 fedeltà del riscritto (NLI) e correzioni | ✅ 30 coppie al DM alla cieca: NLI F1 0,83 contro 0,62 dei numeri; `misura_fedelta_nli.py` corregge da sé dentro `ciclo_prosa`; corretti i 2 box telecomando (4… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §8 prove scartate rifatte con configurazione rigorosa | ✅ adottati come indicatori: ripetizioni frase per frase (6 vere invece di 1) e box telecomando al plurale (2 su 4 invece di 2 su 15); NLI sulla stessa entità (… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | conti dei master all'SRD (scelta del DM) | ✅ Treant di Adamantio 95 pf (10d8+50), scurovisione 18 m a Durin e alle wyvern; Balvar 101 resta, perché i PNG con classi hanno il primo dado al massimo (DMG 3… |
-| 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | §7 le etichette, ADR-0108 | ✅ ADR-0108 accettata; NLI provata fino in fondo (F1 0,86 su coppie etichettate, 0 contraddizioni nuove nelle prime 30 sul repo) e non adottata |
 
 ## Le misure che si portano dietro
 
