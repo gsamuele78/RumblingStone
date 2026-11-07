@@ -216,6 +216,18 @@ def termini_della_riga(lista: str) -> list[str]:
     return out
 
 
+_INGLESI: dict[str, dict] = {}
+
+
+def inglesi_dei_manuali() -> dict[str, dict]:
+    """Nome inglese → voce, per i talenti della tabella 3.5 (anche fuori SRD)."""
+    if not _INGLESI:
+        for v in tabella_35():
+            if v["tipo"] == "talento" and v["srd35"]:
+                _INGLESI.setdefault(norma(v["srd35"]), v)
+    return _INGLESI
+
+
 def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict | None = None) -> list[dict]:
     rilievi = []
     modulo_pf1 = pf1 is not None and e_pf1(file, testo)
@@ -252,6 +264,10 @@ def controlla_testo(testo: str, idx: dict, ita: dict, file: str = "", pf1: dict 
                 esito = "tabella"
             elif k in idx:
                 esito = "fonte"
+            elif k in inglesi_dei_manuali():
+                # nome inglese di un talento di un manuale ufficiale (5° Clone): esiste, il nome
+                # italiano è in tabella; la correzione dei booklet lo porta in italiano.
+                esito, v = "fonte", inglesi_dei_manuali()[k]
             elif MARCA_FUORI_SRD.search(riga):
                 esito = "marcato"
             else:
