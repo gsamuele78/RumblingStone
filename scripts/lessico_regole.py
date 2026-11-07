@@ -159,6 +159,15 @@ def tabella_pf1(percorso: Path = TABELLA_PF1, tipo: str = "talento") -> dict[str
 
 
 def e_pf1(file: str, testo: str) -> bool:
+    """Il file è di un modulo PF1e? Lo dice sistemi.toml (ADR-0111, L2), più la
+    riga «Sistema» del testo; senza dmcore.sistemi (test isolati) come prima,
+    dal percorso o dalla riga."""
+    try:
+        from dmcore.sistemi import sistema_di
+        if sistema_di(file) == "pf1e":
+            return True
+    except Exception:  # noqa: BLE001 — ripiego chiesto dal thread delle regole
+        pass
     return bool(MODULO_PF1.search(file)) or bool(re.search(
         r"^(?:\*\*)?(?:Sistema|Regole|System)(?:\*\*)?\s*:?\s*(?:\*\*)?\s*(?:Pathfinder|PF1e)", testo[:3000], re.I | re.M))
 

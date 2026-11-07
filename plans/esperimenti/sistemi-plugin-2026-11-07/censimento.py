@@ -59,6 +59,8 @@ CLASSI = {
     "scripts/dmcore/progressione.py": ("A", "DV di classe, base dei TS (2+L/2, L/3), BAB, classi di prestigio SRD"),
     "scripts/dmcore/caratteristiche.py": ("A", "array del Manuale del DM, razze SRD, profili per ruolo, taglia"),
     "scripts/dmcore/lettura_creatura.py": ("A", "regola NON_MORTO_PF1E cablata (Car al posto di Cos), tetti dei TS"),
+    "scripts/dmcore/sistemi.py": ("C", "il rilevamento unico (ADR-0111 L2): sistema_di() da sistemi.toml e la riga «Sistema» controllata contro la configurazione"),
+    "scripts/dmcore/creature_pf1e.py": ("A", "formule PF1e cablate (pf, TS buoni/scarsi, BMC/DMC, gradi); i numeri di tipi e taglie dal plugin pf1e (2026-11-07)"),
     "scripts/dmcore/incantesimi.py": ("A", "liste di classe 3.5 e variante PF1e nello stesso dizionario"),
     "scripts/dmcore/statblock.py": ("A", "campi obbligatori gs/ca/pf/ts: lo schema della famiglia d20"),
     "scripts/genera_creatura.py": ("A", "generatore: template Advanced PF1e, tabelle di dmcore"),
@@ -77,6 +79,7 @@ CLASSI = {
     "scripts/validate_standalone.py": ("B", "termini 5e vietati (seconda copia, forme diverse)"),
     "scripts/validate_prosa.py": ("B", "ABILITA: i nomi delle abilità 3.5"),
     "scripts/domande_developer.py": ("C", "ABILITA_ESTRANEE per sistema e il sistema letto dal profilo in plans/domande-developer.json"),
+    "scripts/lessico_regole.py": ("C", "e_pf1(): il sistema dal percorso o dalla riga Sistema; tabelle dei termini ufficiali (ADR-0110, arrivato il 2026-11-07)"),
     "scripts/dmcore/censimento.py": ("C", "esclude il Drappo perché PF1e, per percorso"),
     "scripts/coerenza_campagna.py": ("B", "CLASSI e RAZZE per riconoscere le entità: lessico 3.5"),
     "scripts/build_booklet_html.py": ("D", "etichette Iniziativa/CA/pf/TS nel riquadro della creatura"),
@@ -125,10 +128,25 @@ def rilevamenti() -> dict:
         "riga_sistema_nei_master": len(master),
         "grafie_diverse_della_riga": len(grafie),
         "profili_con_sistema_in_domande_developer": len(con_sistema),
-        "per_percorso": ["lessico_regole.e_pf1 (ramo regole-ufficiali)",
-                         "dmcore/censimento.py (Drappo)",
-                         "build_monster_catalog.py (moduli PF1e)"],
+        "fuori_da_sistemi_toml": rilevamenti_indipendenti(),
     }
+
+
+def rilevamenti_indipendenti() -> "list[str]":
+    """Gli script che decidono il sistema senza sistemi.toml (misurato, L2).
+
+    Un nome di modulo scritto nel codice («Il-Drappo-di-Tarsilia» fra
+    virgolette), o una funzione e_pf1/e_pf1e che non passa da sistema_di()."""
+    fuori = []
+    for f in sorted((ROOT / "scripts").rglob("*.py")):
+        rel = str(f.relative_to(ROOT))
+        if "/tests/" in rel or rel == "scripts/dmcore/sistemi.py":
+            continue
+        codice = "\n".join(r.split("#", 1)[0] for r in f.read_text(encoding="utf-8", errors="ignore").splitlines())
+        if (re.search(r"[\"']Il-Drappo-di-Tarsilia[\"']", codice)
+                or (re.search(r"def e_pf1e?\b", codice) and "sistema_di" not in codice)):
+            fuori.append(rel)
+    return fuori
 
 
 def misure(righe: "list[tuple[str, dict]]") -> dict:
@@ -140,7 +158,10 @@ def misure(righe: "list[tuple[str, dict]]") -> dict:
     return {
         "file_esaminati": len(righe),
         "per_fascia": {k: len(v) for k, v in sorted(per_fascia.items())},
-        "M1_meccanismi_di_rilevamento": 3,
+        # sistemi.toml, più ogni rilevamento che non lo legge, più i profili con
+        # «sistema». Da L0: 3 (percorso, riga «Sistema», profili). Obiettivo di L2: 1.
+        "M1_meccanismi_di_rilevamento": 1 + len(rilevamenti_indipendenti())
+        + (1 if rilevamenti()["profili_con_sistema_in_domande_developer"] else 0),
         "M2_copie_della_lista_5e": copie_5e,
         "M3_tabelle_costanti_nei_file_A": tabelle_a,
         "M4_file_da_toccare_per_un_sistema_nuovo": sum(len(per_fascia.get(k, [])) for k in "ABC"),

@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -38,10 +39,19 @@ COMANDI = {
 }
 
 
+#: Le righe che cambiano con l'orologio e non con il codice. Senza questa
+#: pulizia `update_xp --check` cambiava impronta a ogni minuto (trovato al
+#: primo confronto di L1, 2026-11-07).
+OROLOGIO = [re.compile(rb"^_Last update: .*$", re.M)]
+
+
 def impronta(argv: "list[str]") -> dict:
     r = subprocess.run([sys.executable, *argv], cwd=ROOT, capture_output=True, timeout=600)
-    return {"uscita": r.returncode, "sha256": hashlib.sha256(r.stdout).hexdigest(),
-            "byte": len(r.stdout)}
+    uscita = r.stdout
+    for rx in OROLOGIO:
+        uscita = rx.sub(b"<orologio>", uscita)
+    return {"uscita": r.returncode, "sha256": hashlib.sha256(uscita).hexdigest(),
+            "byte": len(uscita)}
 
 
 def main(argv=None) -> int:

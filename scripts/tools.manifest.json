@@ -1323,6 +1323,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/build_monster_catalog.py --help",
@@ -2249,7 +2254,13 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.statistiche_per_gs"
+        ]
+      }
     },
     {
       "id": "dm",
@@ -3101,6 +3112,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": "scripts/schemas/statblock.schema.json",
       "produces_schema": "scripts/schemas/statblock.schema.json",
       "ci_smoke": "python scripts/extract_statblocks.py --help",
@@ -3355,7 +3371,15 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.incantesimi",
+          "creature.statistiche_per_gs",
+          "statblocco.campi"
+        ]
+      }
     },
     {
       "id": "hype_homebrew",
@@ -5677,6 +5701,12 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "incontri.livello",
+          "creature.costruzione"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/suggest_encounter.py --help",
@@ -5800,6 +5830,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "tesoro.per_livello"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/suggest_loot.py --help",
@@ -6104,6 +6139,11 @@
         "network": true
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "fonti.regole"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/riscontro_srd.py --help",
@@ -6276,6 +6316,11 @@
         "notes": "xp-ledger e' un file derivato, non canone editato a mano."
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "pe.soglie"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/update_xp.py --check",
@@ -6359,6 +6404,12 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.statistiche_per_gs",
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/validate_bestiario.py --help",
@@ -7069,6 +7120,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "termini.vietati"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/validate_modules.py",
@@ -7313,7 +7369,12 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.abilita"
+        ]
+      }
     },
     {
       "id": "validate_skills",
@@ -7449,7 +7510,12 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "termini.vietati"
+        ]
+      }
     },
     {
       "id": "validate_state",
@@ -7697,6 +7763,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/genera_attributi.py --help",
@@ -7818,6 +7889,13 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.regole_di_tipo",
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/conformita_statblocchi.py --help",
@@ -8462,6 +8540,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.abilita"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/domande_developer.py --check",
@@ -8471,6 +8554,118 @@
       "docs": [
         "skills/rumblingstone-module-standard/references/sviluppo-degli-incontri.md",
         "plans/esperimenti/domande-developer-def4/CALIBRAZIONE.md"
+      ]
+    },
+    {
+      "id": "sistemi",
+      "path": "scripts/sistemi.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/sistemi.py [--di FILE | --skill | --json | --check]",
+      "summary": "I sistemi di gioco come plugin di dati (ADR-0111): legge sistemi.toml, i plugin in sistemi/<id>/sistema.toml e il campo sistema.capacita del manifest, e stampa i sistemi supportati (attivi, spenti, di rinforzo), la matrice strumenti × sistemi (dati, ancora nel codice con il lotto, ereditata, non supportata, mancante) e le skill da installare. Con --di dice il sistema di un file (il percorso più lungo di [moduli], altrimenti il predefinito); con --check fa da cancello.",
+      "use_case": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "--di",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa il sistema del file."
+        },
+        {
+          "name": "--skill",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le skill da installare: sistemi attivi e di rinforzo, con la loro famiglia."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto il rapporto in JSON."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cancello: esce 1 se configurazione, plugin o manifest non tornano."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "sistemi.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "sistemi/*/sistema.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "sistemi/catalogo.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/tools.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: problemi nella configurazione, nei plugin o nel manifest",
+        "2": "configurazione illeggibile"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Solo tomllib e ordinamenti fissi."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/sistemi.py --check",
+      "tests": [
+        "scripts/tests/test_sistemi.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md",
+        "plans/PIANO-SISTEMI-DI-GIOCO-PLUGIN.md"
       ]
     },
     {
@@ -11424,6 +11619,11 @@
         "notes": "Scrive solo con `tutto`, nella cartella --out."
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.entita"
+        ]
+      },
       "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
       "produces_schema": null,
       "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
@@ -12372,6 +12572,12 @@
         "network": true
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.italiano",
+          "fonti.regole"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/lessico_regole.py --help",
