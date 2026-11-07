@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L4: PE ed EL dai plugin (soglie 3.5 nei dati, metodo di combinazione dei GS dic… | ✅ capacità dnd35 nel codice 7 → 5; «dnd35» cablato nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 79 → 79 (THRESHOLDS esce, METODI entra) |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L3: termini e lessico dai plugin (lista 5e unica, abilità per sistema, entità 3… | ✅ M2 2 → 1; 0 rilievi nuovi su master e stand-alone; forme meccaniche PF1e riconosciute 64 → 93; impronte 12/12 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L2: un rilevamento solo del sistema (catalogo dei mostri, censimento, domande d… | ✅ M1 5 → 1; Giardino PF1e fuori dal catalogo (7/120 → 0/120 incontri a EL 17-18); `e_pf1` 3/22 → 22/22 file del Drappo, talenti sconosciuti 133 → 131; 18 righe… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L1-bis: PF1e supportato nei 5 casi non supportati (PE, incontri, tesoro, classi… | ✅ pf1e 7/6/0 (dati/codice/non supportato); impronte 3.5 12/12; 21 test nuovi |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Contatore, migrazione e cancelli dopo la #313 (schede 2, 4, 6) | ✅ P16 da 25 a 0 aperti, 138 righe migrate, due cancelli non bloccanti |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Grammatica unica delle marche, guida e blocco vincoli nelle skill (schede 1-8 d… | 🟡 grammatica e guida fatte; prova A/B, contatore e migrazione da fare |
 | 2026-11-07 | STATO-E-ORDINE · P16 | Lotto 5: Bestiario, ARC-08, Tarsilia, Corona e menzioni storiche | ✅ card del DM: lama mortale al bugbear, orog e gufo di Lythiel nella versione forte, piazza di Tarsilia a 1,5 m, troll dell'ariete a 10 DV, riserva +3, nessuno… |
-| 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 4: le caratteristiche dei PG dalla scheda di carta del DM | ✅ foto del DM del 2026-11-05 riscontrata con le abilità senza gradi: Artemis 10/18/14/10/10/18; Thorik con il rito dello Smeraldo che la carta non aveva (DES 1… |
 
 ## Le misure che si portano dietro
 

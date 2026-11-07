@@ -33,27 +33,31 @@ ROOT = Path(__file__).resolve().parent.parent
 SESS = ROOT / "campaign" / "sessions"
 OUT = ROOT / "campaign" / "pg" / "xp-ledger.md"
 
-# D&D 3.5 XP thresholds (DMG p.58). level -> cumulative XP needed.
-THRESHOLDS = {
-    1: 0, 2: 1000, 3: 3000, 4: 6000, 5: 10000, 6: 15000, 7: 21000, 8: 28000,
-    9: 36000, 10: 45000, 11: 55000, 12: 66000, 13: 78000, 14: 91000,
-    15: 105000, 16: 120000, 17: 136000, 18: 153000, 19: 171000, 20: 190000,
-}
+sys.path.insert(0, str(ROOT / "scripts"))
+from dmcore import sistemi as S  # noqa: E402
 
-def soglie_di(sistema: str = "dnd35", traccia: str | None = None) -> tuple[dict[int, int], str]:
-    """(livello → PE, etichetta) del sistema. Il 3.5 resta THRESHOLDS (ADR-0111 L4);
-    gli altri sistemi leggono `pe.soglie` dal loro plugin."""
-    if sistema == "dnd35":
-        return THRESHOLDS, "3.5"
-    sys.path.insert(0, str(ROOT / "scripts"))
-    from dmcore import sistemi as S
+
+def soglie_di(sistema: str | None = None, traccia: str | None = None) -> tuple[dict[int, int], str]:
+    """(livello → PE, etichetta) dal plugin del sistema (`pe.soglie`, ADR-0111 L4).
+
+    Un sistema con una traccia sola (3.5) la usa; con più tracce (PF1e) vale
+    `traccia`, poi l'opzione `traccia_pe` di sistemi.toml, poi «media»."""
+    sistema = sistema or S.predefinito()
     if sistema not in S.attivi():
         raise SystemExit(f"[update_xp] sistema «{sistema}» non attivo in sistemi.toml (attivi: {', '.join(S.attivi())})")
+    dati = S.dati(sistema, "pe.soglie")
+    tracce = dati.get("soglie", {})
+    if len(tracce) == 1:  # una traccia sola: --traccia non si applica
+        nome, = tracce
+        return {int(k): int(v) for k, v in tracce[nome].items()}, dati.get("etichetta", sistema)
     traccia = traccia or S.opzione(sistema, "traccia_pe", "media")
-    tracce = S.dati(sistema, "pe.soglie").get("soglie", {})
     if traccia not in tracce:
         raise SystemExit(f"[update_xp] {sistema}: traccia «{traccia}» assente (ci sono: {', '.join(tracce)})")
     return {int(k): int(v) for k, v in tracce[traccia].items()}, f"{sistema}, traccia {traccia}"
+
+
+# Le soglie del sistema predefinito (3.5: PHB Tab. 3-2), dal plugin.
+THRESHOLDS = soglie_di()[0]
 
 
 def level_for_xp(xp: int, soglie: dict[int, int] | None = None) -> int:
@@ -165,7 +169,7 @@ def build_ledger(sessions: list[dict], soglie: dict[int, int] | None = None,
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="print diff, don't write")
-    ap.add_argument("--sistema", default="dnd35",
+    ap.add_argument("--sistema", default=None,
                     help="sistema di gioco delle soglie (sistemi.toml; predefinito dnd35)")
     ap.add_argument("--traccia", choices=("lenta", "media", "veloce"), default=None,
                     help="traccia PE PF1e (predefinita: opzioni.pf1e.traccia_pe)")

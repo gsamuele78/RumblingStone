@@ -62,7 +62,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | **L1-bis** ✅ | PF1e supportato nei 5 casi che L1 dichiarava «non supportato» (richiesta del DM del 2026-11-07): `estrai_prd_pf1e.py` scrive `sistemi/pf1e/dati/{pe,incontri,tesoro,creature}.toml` dal PRD in cache, con la fonte; `sistemi.toml` `[opzioni.pf1e]` (traccia PE, velocità del tesoro); `--sistema` in `update_xp`, `suggest_encounter`, `suggest_loot`, `genera_creatura`; classi, classi di prestigio e razze PF1e in `coerenza_campagna` per i file dei moduli PF1e; `dmcore/creature_pf1e.py`; `test_sistemi_pf1e.py` | il predefinito resta dnd35: uscita 3.5 identica | impronte 12/12; pf1e da 2 · 6 · 5 a 7 · 6 · 0 (dati · codice · non supportato) |
 | **L2** ✅ | un rilevamento solo: `build_monster_catalog` e `dmcore/censimento` escludono i moduli non 3.5 con `sistema_di()` invece che per nome; `domande_developer` prende il sistema da `sistemi.toml` e rifiuta «sistema» nei profili (tolto da 3 profili del Drappo); la riga «**Sistema:**» dei moduli è controllata contro `sistemi.toml` da `sistemi.py --check` (campo `riconosci` nei plugin); `e_pf1()` involucro di `sistema_di()`, con l'ok del thread delle regole (dopo la #319) | 5 + test | M1 misurato 5 → 1; il Giardino PF1e esce dal catalogo dei mostri (proposto in 7 incontri su 120 a EL 17-18, ora 0) e dal censimento del Bestiario |
 | **L3** ✅ | termini: una lista 5e sola (`sistemi/d20/dati/termini-vietati.toml`, letta da `validate_modules` e `validate_standalone`), abilità per sistema (`lessico.abilita` di dnd35 e pf1e, letta da `validate_prosa` e `domande_developer`), classi e razze 3.5 di `coerenza_campagna` in `sistemi/dnd35/dati/entita.toml` | 5 + test | M2 2 → 1; 0 rilievi nuovi su master e stand-alone; nei moduli PF1e le forme meccaniche riconosciute da `validate_prosa` passano da 64 a 93 |
-| L4 | regole semplici: soglie PE (`update_xp`, e la traccia PF1e lenta/media/veloce come dato), tesoro per EL/GS (`suggest_loot`), EL (`suggest_encounter`) | 3 | M3 scende; PF1e passa da `non supportato` a supportato dove il dato c'è |
+| **L4** ✅ | regole semplici: soglie PE 3.5 in `sistemi/dnd35/dati/pe.toml` (`update_xp` legge ogni sistema dal plugin, `THRESHOLDS` caricato dai dati); EL con il `metodo` del plugin (`potenze` con `raddoppio = 2` per il 3.5, `somma_px` per PF1e; `suggest_encounter.combinatore()`); `suggest_loot` sceglie dal predefinito di `sistemi.toml`. Il PF1e supportato l'aveva già fatto L1-bis | 3 + test | capacità dnd35 nel codice 7 → 5; nomi di sistema cablati nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 resta 79 |
 | L5 | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
 | L6 | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
 | L7 | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
@@ -149,6 +149,14 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - **Abilità PF1e nei moduli PF1e**: `validate_prosa --caratteristiche` cercava nei moduli PF1e le abilità 3.5 (31 nomi). Ora prende quelle del sistema del file: le 26 PF1e dal TSV delle regole, più le 3.5 per i nomi comuni. Nei moduli PF1e le forme meccaniche riconosciute passano da 64 a 93 (sono le abilità PF1e come «Percezione +12»); 0 abilità minuscole nuove, il controllo resta verde su 587 file.
 - **Non è cambiato**: `domande_developer` 55 rilievi come prima, `coerenza_campagna fatti --check` verde, impronte 12/12. M3 resta 79: conta le tabelle dei file di fascia A, e L3 tocca file di fascia B. M4 resta 27: i file da toccare per un sistema nuovo scendono solo con L4-L5.
 
+### §2.6 Cosa ha trovato L4
+
+- **La misura che si muove**: le capacità dnd35 ancora nel codice passano da 7 a 5 (`pe.soglie` e `incontri.livello` diventano dati); nei tre strumenti i confronti con il nome `"dnd35"` passano da 7 a 0, così un sistema predefinito diverso in `sistemi.toml` cambia le loro uscite senza toccarli.
+- **Le uscite non cambiano**: impronte 12/12 sul 3.5; con `--sistema pf1e` le uscite di `update_xp` (tracce media e veloce), `suggest_encounter --seed 42` e `suggest_loot --el 10` hanno lo stesso md5 prima e dopo.
+- **M3 non scende, e il perché**: `THRESHOLDS` non è più una tabella nel codice, ma `suggest_encounter` ha guadagnato `METODI` (i due modi di combinare i GS). Il censimento conta tutte e due come «tabelle costanti»: METODI è un elenco di funzioni, non di numeri di regole, ma non lo distinguo con un'eccezione fatta apposta. Il numero onesto è 79 → 79.
+- **Cosa resta codice, per scelta**: le due formule (EL = r·log2 Σ 2^(GS/r) e la somma dei PE PF1e). Il plugin sceglie il metodo e il parametro; un sistema nuovo con un modo di combinare diverso aggiunge una riga a `METODI`. Le fonti scaricate di `riscontro_srd.FONTI` (URL e sha256 fissati) passano al lotto L8: si spostano solo se la prova del nove ne ha bisogno.
+- **Fonte dei numeri 3.5**: la tabella dei PE e la regola dell'EL non sono nell'SRD in cache (sono PHB Tab. 3-2 e DMG p. 49). Sono spostati senza cambiare un numero, e un test lo controlla.
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -179,7 +187,7 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L1-bis · PF1e nei 5 casi non supportati (2026-11-07): PE, incontri, tesoro, classi e razze, costruzione delle creature
 - [x] L2 · un rilevamento solo (2026-11-07): catalogo, censimento, domande del developer, `e_pf1`, cancello della riga «Sistema»; M1 5 → 1
 - [x] L3 · termini (2026-11-07): lista 5e unica nel plugin d20, abilità e entità dai dati dei plugin; M2 2 → 1
-- [ ] L4 · regole semplici
+- [x] L4 · regole semplici (2026-11-07): PE ed EL dal plugin, nessun «dnd35» cablato in update_xp, suggest_encounter, suggest_loot
 - [ ] L5 · nucleo delle creature
 - [ ] L6 · skill e agent
 - [ ] L7 · etichette di stampa

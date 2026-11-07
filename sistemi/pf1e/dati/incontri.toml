@@ -3,6 +3,7 @@
 # il cui valore in PE non supera la somma («Designing Encounters», book-cr 3652).
 fonte = "PRD PF1e, devonjones/PSRD-Data@76ea4784, book-cr.db sezione 3655 «Table: Experience Point Awards»"
 fonte_difficolta = "book-cr.db sezione 3653 «Table: Encounter Design»"
+metodo = "somma_px"  # letto da suggest_encounter (ADR-0111, L4)
 
 [px_per_gs]
 "1/8" = 50
