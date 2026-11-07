@@ -5,7 +5,7 @@
 > Verification.md` e `.../ERRATA-PARTE2-3-35-Verification.md`.
 > **Regola**: solo **3.5 SRD/MM/DMG/FRCS** — nessun 5e-ismo (azione
 > bonus, vantaggio/svantaggio, reazione, CMB/CMD). Dove manca il dato
-> originale, la correzione è `[INFERRED]`.
+> originale, la correzione va marcata come `[INFERRED]`.
 > **Stato**: canonico (verifica; piano ARC-08 B5). **Ultima revisione**:
 > 2026-07-02.
 
