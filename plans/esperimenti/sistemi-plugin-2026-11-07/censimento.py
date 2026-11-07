@@ -55,7 +55,7 @@ SOGLIA = 10
 
 #: (fascia, motivo). Le righe si leggono nel codice, non nei commenti di testa.
 CLASSI = {
-    "scripts/dmcore/tabelle.py": ("A", "TIPI, CLASSI, BAB_CLASSE, TAGLIE, ARMATURE, array ELITE/BASIC: SRD 3.5 con i bersagli PF1e per GS"),
+    "scripts/dmcore/tabelle.py": ("A", "TIPI, CLASSI, BAB, TAGLIE, ARMATURE, ELITE/BASIC dal plugin dnd35 (L5a); restano INCANTATORI e i bersagli PF1e per GS"),
     "scripts/dmcore/progressione.py": ("A", "DV di classe, base dei TS (2+L/2, L/3), BAB, classi di prestigio SRD"),
     "scripts/dmcore/caratteristiche.py": ("A", "array del Manuale del DM, razze SRD, profili per ruolo, taglia"),
     "scripts/dmcore/lettura_creatura.py": ("A", "regola NON_MORTO_PF1E cablata (Car al posto di Cos), tetti dei TS"),

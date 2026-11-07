@@ -56,24 +56,15 @@ PROVENIENZA = {
 # SRD 3.5 — le creature
 # ===========================================================================
 
+#: Le tabelle base 3.5 stanno nel plugin (ADR-0111, L5a):
+#: `sistemi/dnd35/dati/creature.toml`, capacità `creature.costruzione`. Qui si
+#: caricano una volta e si espongono con i nomi e le forme di sempre.
+from . import sistemi as _S  # noqa: E402
+
+_DATI = _S.dati("dnd35", "creature.costruzione")
+
 #: tipo → (faccia del dado dei DV, BAB per DV, tiri salvezza buoni)
-TIPI = {
-    "aberration":         (8,  0.75, ("vol",)),
-    "animal":             (8,  0.75, ("temp", "rifl")),
-    "construct":          (10, 0.75, ()),
-    "dragon":             (12, 1.0,  ("temp", "rifl", "vol")),
-    "elemental":          (8,  0.75, ("rifl",)),
-    "fey":                (6,  0.5,  ("rifl", "vol")),
-    "giant":              (8,  0.75, ("temp",)),
-    "humanoid":           (8,  0.75, ("temp",)),
-    "magical beast":      (10, 1.0,  ("temp", "rifl")),
-    "monstrous humanoid": (8,  1.0,  ("rifl", "vol")),
-    "ooze":               (10, 0.75, ()),
-    "outsider":           (8,  1.0,  ("temp", "rifl", "vol")),
-    "plant":              (8,  0.75, ("temp",)),
-    "undead":             (12, 0.5,  ("vol",)),
-    "vermin":             (8,  0.75, ("temp",)),
-}
+TIPI = {k: (v["dv"], v["bab"], tuple(v["ts_buoni"])) for k, v in _DATI["tipi"].items()}
 
 #: Come il tipo si scrive nelle schede — italiano, inglese, e le forme miste.
 ALIAS_TIPO = {
@@ -89,75 +80,24 @@ ALIAS_TIPO = {
 #: classe → (faccia del dado dei DV, tiri salvezza buoni). Le classi PNG del SRD
 #: (warrior, adept, expert, aristocrat, commoner) stanno qui come le altre: sono
 #: SRD a tutti gli effetti, ed è con quelle che si fa il fondale.
-CLASSI = {
-    "barbarian": (12, ("temp",)),        "barbaro":    (12, ("temp",)),
-    "bard":      (6,  ("rifl", "vol")),  "bardo":      (6,  ("rifl", "vol")),
-    "cleric":    (8,  ("temp", "vol")),  "chierico":   (8,  ("temp", "vol")),
-    "druid":     (8,  ("temp", "vol")),  "druido":     (8,  ("temp", "vol")),
-    "fighter":   (10, ("temp",)),        "guerriero":  (10, ("temp",)),
-    "monk":      (8,  ("temp", "rifl", "vol")),
-    "monaco":    (8,  ("temp", "rifl", "vol")),
-    "paladin":   (10, ("temp",)),        "paladino":   (10, ("temp",)),
-    "ranger":    (8,  ("temp", "rifl")),
-    "rogue":     (6,  ("rifl",)),        "ladro":      (6,  ("rifl",)),
-    "sorcerer":  (4,  ("vol",)),         "stregone":   (4,  ("vol",)),
-    "wizard":    (4,  ("vol",)),         "mago":       (4,  ("vol",)),
-    "warrior":   (8,  ("temp",)),        "guerriero-png": (8, ("temp",)),
-    "adept":     (6,  ("vol",)),         "adepto":     (6,  ("vol",)),
-    "expert":    (6,  ("vol",)),         "esperto":    (6,  ("vol",)),
-    "aristocrat": (8, ("vol",)),         "aristocratico": (8, ("vol",)),
-    "commoner":  (4,  ()),               "popolano":   (4,  ()),
-}
+CLASSI = {k: (v["dv"], tuple(v["ts_buoni"])) for k, v in _DATI["classi"].items()}
 
 #: Le classi PNG del SRD. Contano meno per il GS, ed è il loro scopo.
-CLASSI_PNG = frozenset({"warrior", "guerriero-png", "adept", "adepto", "expert",
-                        "esperto", "aristocrat", "aristocratico", "commoner",
-                        "popolano"})
+CLASSI_PNG = frozenset(k for k, v in _DATI["classi"].items() if v.get("png"))
 
 #: BAB per livello di classe.
-BAB_CLASSE = {
-    "barbarian": 1.0, "barbaro": 1.0, "fighter": 1.0, "guerriero": 1.0,
-    "paladin": 1.0, "paladino": 1.0, "ranger": 1.0, "warrior": 1.0,
-    "guerriero-png": 1.0,
-    "bard": 0.75, "bardo": 0.75, "cleric": 0.75, "chierico": 0.75,
-    "druid": 0.75, "druido": 0.75, "monk": 0.75, "monaco": 0.75,
-    "rogue": 0.75, "ladro": 0.75, "expert": 0.75, "esperto": 0.75,
-    "aristocrat": 0.75, "aristocratico": 0.75,
-    "sorcerer": 0.5, "stregone": 0.5, "wizard": 0.5, "mago": 0.5,
-    "adept": 0.5, "adepto": 0.5, "commoner": 0.5, "popolano": 0.5,
-}
+BAB_CLASSE = {k: v["bab"] for k, v in _DATI["classi"].items()}
 
 #: taglia → (armatura naturale tipica, modificatore di CA e attacco)
-TAGLIE = {
-    "fine": (0, +8), "diminutive": (0, +4), "minuta": (0, +4),
-    "tiny": (0, +2), "minuscola": (0, +2),
-    "small": (0, +1), "piccola": (0, +1),
-    "medium": (0, 0), "media": (0, 0),
-    "large": (2, -1), "grande": (2, -1),
-    "huge": (5, -2), "enorme": (5, -2),
-    "gargantuan": (9, -4), "mastodontica": (9, -4),
-    "colossal": (14, -8), "colossale": (14, -8),
-}
+TAGLIE = {k: (v["armatura_naturale"], v["ca_attacco"]) for k, v in _DATI["taglie"].items()}
 
 #: armatura → (bonus di CA, massimo di Destrezza)
-ARMATURE = {
-    "full plate": (8, 1), "piastre": (8, 1), "fullplate": (8, 1),
-    "half-plate": (7, 0), "mezza piastra": (7, 0),
-    "breastplate": (5, 3), "corazza": (5, 3),
-    "chainmail": (5, 2), "cotta di maglia": (5, 2),
-    "chain shirt": (4, 4), "camicia di maglia": (4, 4), "maglia": (4, 4),
-    "scale mail": (4, 3), "scaglie": (4, 3),
-    "studded leather": (3, 5), "cuoio borchiato": (3, 5),
-    "leather": (2, 6), "cuoio": (2, 6),
-    "padded": (1, 8), "imbottita": (1, 8),
-}
-SCUDI = {"heavy shield": 2, "scudo pesante": 2, "tower": 4, "torre": 4,
-         "light shield": 1, "scudo leggero": 1, "buckler": 1, "brocchiere": 1,
-         "shield": 2, "scudo": 2}
+ARMATURE = {k: (v["ca"], v["des_max"]) for k, v in _DATI["armature"].items()}
+SCUDI = dict(_DATI["scudi"])
 
 #: Le due matrici. Identiche fra SRD 3.5 e PF1e — una sola per tutti e due.
-ELITE = (15, 14, 13, 12, 10, 8)
-BASIC = (13, 12, 11, 10, 9, 8)
+ELITE = tuple(_DATI["matrici"]["elite"])
+BASIC = tuple(_DATI["matrici"]["standard"])
 
 #: Chi merita la matrice elite: chi ha un nome, chi comanda, chi è un boss. Il
 #: fondale prende quella standard, ed è il punto — un mook con le caratteristiche

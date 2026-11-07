@@ -1,0 +1,116 @@
+# sistemi/dnd35/dati/creature.toml — le tabelle base per costruire una creatura 3.5 (ADR-0111, L5a)
+#
+# Spostate senza cambiare un valore da scripts/dmcore/tabelle.py (2026-11-07).
+# Le fonti per tabella sono quelle di tabelle.PROVENIENZA; le chiavi italiane
+# sono alias delle inglesi, come prima.
+
+# tipo = { dv = faccia del dado, bab = per DV, ts_buoni }
+[tipi]
+"aberration" = { dv = 8, bab = 0.75, ts_buoni = ["vol"] }
+"animal" = { dv = 8, bab = 0.75, ts_buoni = ["temp", "rifl"] }
+"construct" = { dv = 10, bab = 0.75, ts_buoni = [] }
+"dragon" = { dv = 12, bab = 1.0, ts_buoni = ["temp", "rifl", "vol"] }
+"elemental" = { dv = 8, bab = 0.75, ts_buoni = ["rifl"] }
+"fey" = { dv = 6, bab = 0.5, ts_buoni = ["rifl", "vol"] }
+"giant" = { dv = 8, bab = 0.75, ts_buoni = ["temp"] }
+"humanoid" = { dv = 8, bab = 0.75, ts_buoni = ["temp"] }
+"magical beast" = { dv = 10, bab = 1.0, ts_buoni = ["temp", "rifl"] }
+"monstrous humanoid" = { dv = 8, bab = 1.0, ts_buoni = ["rifl", "vol"] }
+"ooze" = { dv = 10, bab = 0.75, ts_buoni = [] }
+"outsider" = { dv = 8, bab = 1.0, ts_buoni = ["temp", "rifl", "vol"] }
+"plant" = { dv = 8, bab = 0.75, ts_buoni = ["temp"] }
+"undead" = { dv = 12, bab = 0.5, ts_buoni = ["vol"] }
+"vermin" = { dv = 8, bab = 0.75, ts_buoni = ["temp"] }
+
+# classe = { dv, ts_buoni, bab = per livello, png = classe PNG dell'SRD }
+[classi]
+"barbarian" = { dv = 12, ts_buoni = ["temp"], bab = 1.0 }
+"barbaro" = { dv = 12, ts_buoni = ["temp"], bab = 1.0 }
+"bard" = { dv = 6, ts_buoni = ["rifl", "vol"], bab = 0.75 }
+"bardo" = { dv = 6, ts_buoni = ["rifl", "vol"], bab = 0.75 }
+"cleric" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"chierico" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"druid" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"druido" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"fighter" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"guerriero" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"monk" = { dv = 8, ts_buoni = ["temp", "rifl", "vol"], bab = 0.75 }
+"monaco" = { dv = 8, ts_buoni = ["temp", "rifl", "vol"], bab = 0.75 }
+"paladin" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"paladino" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"ranger" = { dv = 8, ts_buoni = ["temp", "rifl"], bab = 1.0 }
+"rogue" = { dv = 6, ts_buoni = ["rifl"], bab = 0.75 }
+"ladro" = { dv = 6, ts_buoni = ["rifl"], bab = 0.75 }
+"sorcerer" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"stregone" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"wizard" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"mago" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"warrior" = { dv = 8, ts_buoni = ["temp"], bab = 1.0, png = true }
+"guerriero-png" = { dv = 8, ts_buoni = ["temp"], bab = 1.0, png = true }
+"adept" = { dv = 6, ts_buoni = ["vol"], bab = 0.5, png = true }
+"adepto" = { dv = 6, ts_buoni = ["vol"], bab = 0.5, png = true }
+"expert" = { dv = 6, ts_buoni = ["vol"], bab = 0.75, png = true }
+"esperto" = { dv = 6, ts_buoni = ["vol"], bab = 0.75, png = true }
+"aristocrat" = { dv = 8, ts_buoni = ["vol"], bab = 0.75, png = true }
+"aristocratico" = { dv = 8, ts_buoni = ["vol"], bab = 0.75, png = true }
+"commoner" = { dv = 4, ts_buoni = [], bab = 0.5, png = true }
+"popolano" = { dv = 4, ts_buoni = [], bab = 0.5, png = true }
+
+# taglia = { armatura_naturale tipica, ca_attacco }
+[taglie]
+"fine" = { armatura_naturale = 0, ca_attacco = 8 }
+"diminutive" = { armatura_naturale = 0, ca_attacco = 4 }
+"minuta" = { armatura_naturale = 0, ca_attacco = 4 }
+"tiny" = { armatura_naturale = 0, ca_attacco = 2 }
+"minuscola" = { armatura_naturale = 0, ca_attacco = 2 }
+"small" = { armatura_naturale = 0, ca_attacco = 1 }
+"piccola" = { armatura_naturale = 0, ca_attacco = 1 }
+"medium" = { armatura_naturale = 0, ca_attacco = 0 }
+"media" = { armatura_naturale = 0, ca_attacco = 0 }
+"large" = { armatura_naturale = 2, ca_attacco = -1 }
+"grande" = { armatura_naturale = 2, ca_attacco = -1 }
+"huge" = { armatura_naturale = 5, ca_attacco = -2 }
+"enorme" = { armatura_naturale = 5, ca_attacco = -2 }
+"gargantuan" = { armatura_naturale = 9, ca_attacco = -4 }
+"mastodontica" = { armatura_naturale = 9, ca_attacco = -4 }
+"colossal" = { armatura_naturale = 14, ca_attacco = -8 }
+"colossale" = { armatura_naturale = 14, ca_attacco = -8 }
+
+# armatura = { ca, des_max }
+[armature]
+"full plate" = { ca = 8, des_max = 1 }
+"piastre" = { ca = 8, des_max = 1 }
+"fullplate" = { ca = 8, des_max = 1 }
+"half-plate" = { ca = 7, des_max = 0 }
+"mezza piastra" = { ca = 7, des_max = 0 }
+"breastplate" = { ca = 5, des_max = 3 }
+"corazza" = { ca = 5, des_max = 3 }
+"chainmail" = { ca = 5, des_max = 2 }
+"cotta di maglia" = { ca = 5, des_max = 2 }
+"chain shirt" = { ca = 4, des_max = 4 }
+"camicia di maglia" = { ca = 4, des_max = 4 }
+"maglia" = { ca = 4, des_max = 4 }
+"scale mail" = { ca = 4, des_max = 3 }
+"scaglie" = { ca = 4, des_max = 3 }
+"studded leather" = { ca = 3, des_max = 5 }
+"cuoio borchiato" = { ca = 3, des_max = 5 }
+"leather" = { ca = 2, des_max = 6 }
+"cuoio" = { ca = 2, des_max = 6 }
+"padded" = { ca = 1, des_max = 8 }
+"imbottita" = { ca = 1, des_max = 8 }
+
+[scudi]  # bonus di CA
+"heavy shield" = 2
+"scudo pesante" = 2
+"tower" = 4
+"torre" = 4
+"light shield" = 1
+"scudo leggero" = 1
+"buckler" = 1
+"brocchiere" = 1
+"shield" = 2
+"scudo" = 2
+
+[matrici]  # caratteristiche: elite (PF1e «heroic») e standard (PF1e «basic»)
+elite = [15, 14, 13, 12, 10, 8]
+standard = [13, 12, 11, 10, 9, 8]
