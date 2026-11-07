@@ -331,3 +331,69 @@ class TestEPf1(unittest.TestCase):
     def test_un_modulo_3_5_resta_3_5(self):
         import lessico_regole as LR
         self.assertFalse(LR.e_pf1("07_il Portale Della Forgia Eterna/x.md", "**Sistema:** D&D 3.5"))
+
+
+class TestTerminiDalPlugin(unittest.TestCase):
+    """L3: la lista dei termini 5e è una sola, nel plugin d20. Prima c'erano due
+    copie con forme diverse: validate_modules non vedeva «azione bonus» né «con
+    vantaggio», validate_standalone non vedeva «bonus action» né «lair action»."""
+
+    def test_una_lista_per_i_due_validatori(self):
+        import validate_modules as VM
+        import validate_standalone as VS
+        f = REPO / "10-stand-alone/x.md"
+        self.assertEqual(VS.vietati(f), S.termini_vietati())
+        self.assertEqual(VM.banditi(f)[: len(S.termini_vietati())], S.termini_vietati())
+        self.assertEqual(VM.banditi(f)[len(S.termini_vietati()):], VM.CANONE_DEPRECATO)
+
+    def test_le_forme_che_mancavano_a_ciascuno(self):
+        regex = [r for r, _ in S.termini_vietati()]
+        def preso(testo):
+            import re
+            return any(re.search(r, testo, re.I) for r in regex)
+        for testo in ("con un'azione bonus colpisce", "attacca con vantaggio", "come bonus action",
+                      "una lair action del drago", "DC 15", "dopo un riposo lungo"):
+            self.assertTrue(preso(testo), testo)
+        for testo in ("ottiene un vantaggio tattico", "CD 15", "un'azione di movimento"):
+            self.assertFalse(preso(testo), testo)
+
+    def test_pf1e_eredita_la_lista(self):
+        self.assertEqual(S.termini_vietati("pf1e"), S.termini_vietati("dnd35"))
+
+
+class TestLessicoDalPlugin(unittest.TestCase):
+    """L3: abilità e entità lette dai dati dei plugin, non da costanti nel codice."""
+
+    def test_abilita_3_5_invariate(self):
+        import validate_prosa as VP
+        vecchie = subprocess.run(["git", "show", "fe4ca17:scripts/validate_prosa.py"], cwd=REPO,
+                                 capture_output=True, text=True).stdout
+        if vecchie:
+            import re
+            m = re.search(r"^ABILITA = \(([^)]*)\)", vecchie, re.M)
+            self.assertEqual(VP.ABILITA, tuple(re.findall(r'"([^"]+)"', m.group(1))))
+        self.assertEqual(len(VP.ABILITA), 31)
+        self.assertIn("osservare", VP.ABILITA)
+        self.assertNotIn("percezione", VP.ABILITA)
+
+    def test_abilita_pf1e_nei_moduli_pf1e(self):
+        import validate_prosa as VP
+        pf = S.abilita("pf1e")["nomi"]
+        self.assertIn("percezione", pf)
+        self.assertNotIn("osservare", pf)
+        forme = dict((n, rx) for n, rx, _ in VP.forme_caratteristica("pf1e"))
+        self.assertTrue(forme["F2 abilità col modificatore"].search("Percezione +12"))
+        self.assertFalse(dict((n, rx) for n, rx, _ in VP.FORME_CARATTERISTICA)
+                         ["F2 abilità col modificatore"].search("Percezione +12"))
+
+    def test_abilita_estranee_per_sistema(self):
+        import domande_developer as D
+        self.assertIn("Percezione", D.ABILITA_ESTRANEE["3.5"])
+        self.assertEqual(D.ABILITA_ESTRANEE["pf1e"], ("Atletica",))
+
+    def test_entita_3_5_dai_dati(self):
+        import coerenza_campagna as C
+        e = S.dati("dnd35", "lessico.entita")
+        self.assertEqual(C.CLASSI, set(e["classi"]))
+        self.assertEqual(C.RAZZE, set(e["razze"]))
+        self.assertIn("guerriero", C.CLASSI)

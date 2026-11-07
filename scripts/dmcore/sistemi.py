@@ -207,6 +207,41 @@ def dati(id_: str, nome: str, root: "Path | None" = None) -> dict:
     return out
 
 
+def termini_vietati(id_: str | None = None, root: "Path | None" = None) -> "list[tuple[str, str]]":
+    """(regex, perché) dei termini vietati in un sistema (capacità termini.vietati).
+
+    Senza `id_` vale il predefinito. È la lista sola che validate_modules e
+    validate_standalone leggono (ADR-0111, L3)."""
+    voci = dati(id_ or predefinito(root), "termini.vietati", root).get("vietato", [])
+    return [(v["regex"], v["perche"]) for v in voci]
+
+
+def abilita(id_: str | None = None, root: "Path | None" = None) -> dict:
+    """{"nomi": [...], "estranee": [...]} di un sistema (capacità lessico.abilita).
+
+    I file `.toml` danno le liste; un `.tsv` del lessico (italiano, inglese,
+    tipo) aggiunge ai `nomi` le righe di tipo «abilità», in minuscolo."""
+    r = (root or ROOT).resolve()
+    id_ = id_ or predefinito(r)
+    c = capacita(id_, "lessico.abilita", r)
+    if c.modo != "dati":
+        raise ErroreSistemi(f"{id_}: «lessico.abilita» è {c.modo}")
+    out = {"nomi": [], "estranee": []}
+    for v in c.voci:
+        if v.endswith(".toml"):
+            d = _leggi(r / v)
+            for k in out:
+                out[k] += [x for x in d.get(k, []) if x not in out[k]]
+        elif v.endswith(".tsv"):
+            for riga in (r / v).read_text(encoding="utf-8").splitlines():
+                campi = riga.split("\t")
+                if len(campi) >= 3 and campi[2] == "abilità" and not riga.startswith("#"):
+                    nome = campi[0].lower()
+                    if nome not in out["nomi"]:
+                        out["nomi"].append(nome)
+    return out
+
+
 def opzione(id_: str, chiave: str, default=None, root: "Path | None" = None):
     """Un'opzione di campagna del sistema, da `[opzioni.<id>]` in sistemi.toml."""
     return carica(root)[0].get("opzioni", {}).get(id_, {}).get(chiave, default)
