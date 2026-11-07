@@ -24,7 +24,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "pe.soglie" = { dati = ["sistemi/dnd35/dati/pe.toml"] }
 "tesoro.per_livello" = { dati = ["scripts/loot_tables.yaml", "scripts/magic_items_srd.yaml"] }
 "incontri.livello" = { dati = ["sistemi/dnd35/dati/incontri.toml"], nota = "metodo e parametro nei dati, la formula in suggest_encounter.combine_el" }
-"creature.costruzione" = { codice = ["scripts/dmcore/tabelle.py:TIPI", "scripts/dmcore/tabelle.py:CLASSI", "scripts/dmcore/tabelle.py:BAB_CLASSE", "scripts/dmcore/tabelle.py:TAGLIE", "scripts/dmcore/tabelle.py:ARMATURE", "scripts/dmcore/tabelle.py:ELITE", "scripts/dmcore/tabelle.py:BASIC", "scripts/dmcore/progressione.py:PRESTIGIO", "scripts/dmcore/caratteristiche.py:PROFILI"], lotto = "L5" }
+"creature.costruzione" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5a: tipi, classi, BAB, taglie, armature, scudi, matrici; restano nel codice fino a L5b progressione.PRESTIGIO e caratteristiche.PROFILI" }
 "creature.statistiche_per_gs" = { eredita = "pf1e", motivo = "l'SRD 3.5 non ha bersagli per GS: si usa la Tab. 1-1 PF1e come guardia, non come fonte (dmcore/tabelle.py)" }
 "creature.incantesimi" = { codice = ["scripts/dmcore/incantesimi.py:LISTE"], lotto = "L5" }
 "creature.regole_di_tipo" = { codice = ["scripts/dmcore/tabelle.py:TIPI"], lotto = "L5" }

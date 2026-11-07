@@ -63,7 +63,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | **L2** ✅ | un rilevamento solo: `build_monster_catalog` e `dmcore/censimento` escludono i moduli non 3.5 con `sistema_di()` invece che per nome; `domande_developer` prende il sistema da `sistemi.toml` e rifiuta «sistema» nei profili (tolto da 3 profili del Drappo); la riga «**Sistema:**» dei moduli è controllata contro `sistemi.toml` da `sistemi.py --check` (campo `riconosci` nei plugin); `e_pf1()` involucro di `sistema_di()`, con l'ok del thread delle regole (dopo la #319) | 5 + test | M1 misurato 5 → 1; il Giardino PF1e esce dal catalogo dei mostri (proposto in 7 incontri su 120 a EL 17-18, ora 0) e dal censimento del Bestiario |
 | **L3** ✅ | termini: una lista 5e sola (`sistemi/d20/dati/termini-vietati.toml`, letta da `validate_modules` e `validate_standalone`), abilità per sistema (`lessico.abilita` di dnd35 e pf1e, letta da `validate_prosa` e `domande_developer`), classi e razze 3.5 di `coerenza_campagna` in `sistemi/dnd35/dati/entita.toml` | 5 + test | M2 2 → 1; 0 rilievi nuovi su master e stand-alone; nei moduli PF1e le forme meccaniche riconosciute da `validate_prosa` passano da 64 a 93 |
 | **L4** ✅ | regole semplici: soglie PE 3.5 in `sistemi/dnd35/dati/pe.toml` (`update_xp` legge ogni sistema dal plugin, `THRESHOLDS` caricato dai dati); EL con il `metodo` del plugin (`potenze` con `raddoppio = 2` per il 3.5, `somma_px` per PF1e; `suggest_encounter.combinatore()`); `suggest_loot` sceglie dal predefinito di `sistemi.toml`. Il PF1e supportato l'aveva già fatto L1-bis | 3 + test | capacità dnd35 nel codice 7 → 5; nomi di sistema cablati nei tre strumenti 7 → 0; uscite 3.5 e PF1e identiche; M3 resta 79 |
-| L5 | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
+| L5 (L5a ✅) | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` — **L5a** (2026-11-07): tipi, classi (con BAB e classi PNG), taglie, armature, scudi e matrici elite/standard in `sistemi/dnd35/dati/creature.toml`, letti da `dmcore/tabelle.py` con gli stessi nomi; **L5b**: incantatori, incantesimi, progressione, caratteristiche | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
 | L6 | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
 | L7 | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
 | L8 | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
@@ -157,6 +157,13 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - **Cosa resta codice, per scelta**: le due formule (EL = r·log2 Σ 2^(GS/r) e la somma dei PE PF1e). Il plugin sceglie il metodo e il parametro; un sistema nuovo con un modo di combinare diverso aggiunge una riga a `METODI`. Le fonti scaricate di `riscontro_srd.FONTI` (URL e sha256 fissati) passano al lotto L8: si spostano solo se la prova del nove ne ha bisogno.
 - **Fonte dei numeri 3.5**: la tabella dei PE e la regola dell'EL non sono nell'SRD in cache (sono PHB Tab. 3-2 e DMG p. 49). Sono spostati senza cambiare un numero, e un test lo controlla.
 
+### §2.7 Cosa ha trovato L5a
+
+- **Le tabelle base delle creature 3.5 sono dati**: tipi, classi, BAB per classe, classi PNG, taglie, armature, scudi e matrici stanno in `sistemi/dnd35/dati/creature.toml`, e `dmcore/tabelle.py` le carica una volta con i nomi di sempre, così i 7 consumatori non cambiano. `creature.costruzione` del 3.5 passa da codice a dati: le capacità dnd35 nel codice scendono da 5 a 4.
+- **Prova che nessun numero si è mosso**: `test_sistemi_creature.py` confronta l'impronta di ogni tabella con quella delle costanti di main b0a74ae; impronte dei generatori 12/12; talenti sconosciuti 0 (cancello `--massimo-sconosciuti 0`). L'ordine di `BAB_CLASSE` ora segue quello di `CLASSI`: nessuno lo scorre, si legge solo per chiave.
+- **M3 79 → 76**, ma conta male: le tabelle diventate comprensioni sopra i dati (`TIPI = {k: … for …}`) il censimento le conta ancora come tabelle costanti. Il numero vero di tabelle con numeri di regole scritte nel codice scende di 9 (le 9 costanti spostate).
+- **Cosa resta per L5b**: `INCANTATORI` e `CONOSCIUTI` di tabelle.py, `progressione.PRESTIGIO`, `caratteristiche.PROFILI`/`RAZZE`, `incantesimi.LISTE`. La lettura del DM di un booklet 3.5 rigenerato si fa a L5b, dove possono cambiare le uscite; L5a ha valori identici per test.
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -188,7 +195,7 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L2 · un rilevamento solo (2026-11-07): catalogo, censimento, domande del developer, `e_pf1`, cancello della riga «Sistema»; M1 5 → 1
 - [x] L3 · termini (2026-11-07): lista 5e unica nel plugin d20, abilità e entità dai dati dei plugin; M2 2 → 1
 - [x] L4 · regole semplici (2026-11-07): PE ed EL dal plugin, nessun «dnd35» cablato in update_xp, suggest_encounter, suggest_loot
-- [ ] L5 · nucleo delle creature
+- [ ] L5 · nucleo delle creature — L5a fatto (2026-11-07): tabelle base 3.5 dal plugin, impronte dei valori identiche; resta L5b
 - [ ] L6 · skill e agent
 - [ ] L7 · etichette di stampa
 - [ ] L8 · prova del nove
