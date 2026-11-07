@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Grammatica unica delle marche, guida e blocco vincoli nelle skill (schede 1-8 d… | 🟡 grammatica e guida fatte; prova A/B, contatore e migrazione da fare |
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 2-bis: i PX del gruppo e il 14° livello, dal registro del DM | ✅ registro completato dall'arco 06 al 25/09 con le scelte del DM, riga per riga; Thorik, Tordek e Artemis al 14° fermi a 104.999 (un livello alla volta), Hella… |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Quota sul mare di Hammerfist abbassata: piana a 520 m (scelta del DM, in linea… | ✅ cancello 600, cortile 620, cittadella 640; gradoni invariati |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | adozione di ADR-0107 (#305 dentro #306) | ✅ ADR-0107 accettata: `"entrambe"` + `"chi_si_incontra"` in 6 booklet, numeri nel capitolo 8 → 25, mappe vicine 5 → 9 su 42, Zog'tar 23,5 → 4,5 pagine; Terros… |
 | 2026-11-03 | RICERCA-GUARDRAIL-E-TECNICHE | guardrail, tecniche avanzate, ADR-0108 (… | 🟡 `conformita_statblocchi --master` legge i recinti di ADR-0091: 6 conti veri (fra cui *corrompere l'acqua* del Vecchio 25/26 e la scurovisione di Zog'tar, tro… |
 | 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | prova di ADR-0107 (`plans/esperimenti/prova-adr0107-2026-11-03/`) | 🟡 `dmcore.chi_si_incontra` e `"chi_si_incontra": true` (con `"entrambe"` della #305); misura più severa (3 «complete» vere, non 6); con la prova numeri nel cap… |
-| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO | ricerca, misura, ADR-0107 | 🟡 14 criteri dalla rete, 8 già misurati sul master e nessuno sul booklet stampato; `misura_standard_tavolo.py`: 6 coppie capitolo × persona complete su 145, nu… |
 
 ## Le misure che si portano dietro
 
