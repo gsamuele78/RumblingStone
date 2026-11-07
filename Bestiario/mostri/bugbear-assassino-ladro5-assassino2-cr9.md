@@ -26,7 +26,7 @@ fonte: ricostruzione del repo su SRD 3.5, 2026-10-19
 
 **Attacco** Vel 9 m · Mischia morning star perfetta +11 (1d8+3) · Distanza giavellotto +9 (1d6+3) · attacco furtivo +4d6, attacco mortale (Tempra CD 16)
 
-**Statistiche** For 17 Des 17 Cos 14 Int 18 Sag 10 Car 6 · BAB +6; Lotta +9 · Talenti Allerta, Arma Focalizzata (morning star), Iniziativa Migliorata, Furtivo · Abilità Acrobazia +11, Ascoltare +13, Camuffare +6, Muoversi Silenziosamente +21, Nascondersi +17, Osservare +13, Scalare +9 · Linguaggi Comune, Goblin, Draconico, Gigante, Orchesco · Equipaggiamento cuoio borchiato +1, morning star perfetta, 3 giavellotti, fascia dell'intelletto +2, due dosi di veleno sulla lama `[INFERRED — needs DM confirmation: il tipo di veleno]`
+**Statistiche** For 17 Des 17 Cos 14 Int 18 Sag 10 Car 6 · BAB +6; Lotta +9 · Talenti Allerta, Arma Focalizzata (morning star), Iniziativa Migliorata, Furtivo · Abilità Acrobazia +11, Ascoltare +13, Camuffare +6, Muoversi Silenziosamente +21, Nascondersi +17, Osservare +13, Scalare +9 · Linguaggi Comune, Goblin, Draconico, Gigante, Orchesco · Equipaggiamento cuoio borchiato +1, morning star perfetta, 3 giavellotti, fascia dell'intelletto +2, due dosi di **lama mortale** sulla lama (*deathblade*, ferimento, Tempra CD 20, 1d6 COS / 2d6 COS, 1.800 mo la dose; SRD, Veleni) `[CANONE — DM 2026-11-05, P16, Bestiario]`
 
 **Capacità speciali**
 - *Attacco mortale (Str)*: dopo 3 round passati a studiare un bersaglio che non lo ha scoperto, un attacco furtivo in mischia che fa danni può paralizzarlo per 1d6+2 round o ucciderlo; Tempra CD 16 (10 + livello da assassino + mod. Int) nega. Fallito o non tentato entro 3 round, lo studio ricomincia (SRD, Assassino).

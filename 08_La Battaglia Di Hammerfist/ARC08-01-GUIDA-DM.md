@@ -227,6 +227,19 @@ SIMBOLI TATTICI:
 - **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[CANONE — DM 2026-10-20]` (la distanza la regola PF1e non la dice).
 - **Da dove.** In mischia senza penalità se il bersaglio è adiacente, −2 altrimenti; a distanza le penalità di gittata raddoppiano, minimo −2 oltre i 9 m. Dal collo del drago l'occhio è a portata: meglio Aegis Fang in mano che lanciata, perché un attacco a distanza fatto nello spazio di chi minaccia provoca un attacco di opportunità (SRD).
 
+**Tordek ingrandito contro Fauci** `[CANONE — DM 2026-11-07, P16, Tordek contro Fauci]`. Tutto da regole SRD 3.5, nessuna regola nuova. Tordek (guerriero 4 / monaco 9) diventa Grande con i Bracieri («Diventare una Collina», come *ingrandire persona*): portata 3 m, FOR 22. I Bracieri si accendono da soli la prima volta che uno scontro con una creatura Enorme lo porta sotto metà pf.
+
+| | Tordek ingrandito | Fauci |
+|---|---|---|
+| Lotta | **+24** (attacco base +10, FOR +6, taglia +4, Lottare Migliorato +4) | **+43** (attacco base +25, FOR +10, taglia +8) |
+| Sbilanciare | **+14** (FOR +6, taglia +4, Sbilanciare Migliorato +4) | **+22** per resistere (FOR +10, taglia +8, più di due zampe +4) |
+| CA di contatto | — | 8 |
+
+- **La lotta non riesce.** Attacco di contatto contro CA 8, poi prova contrapposta +24 contro +43; a parità vince chi ha il modificatore più alto. Tordek dovrebbe superarlo di 20 col dado: non succede mai (0 su 400; 3 su 400 con l'aiuto di un compagno, +2). La scheda PCGen del 12° livello scrive Lotta +15 e sembra non contare il +4 di Lottare Migliorato, che pure elenca.
+- **Sbilanciare, solo quando Fauci è a terra.** Si sbilancia chi è al massimo una taglia più grande: Grande contro Enorme va bene (SRD, *Trip*). In volo, a 30-45 m, Tordek non lo raggiunge. Attacco di contatto senz'armi contro CA 8; con **Sbilanciare Migliorato** non provoca attacchi di opportunità. Poi FOR +14 contro +22: Tordek vince **circa 1 volta su 6** (66 su 400). Se perde, Fauci può provare subito a sbilanciare lui.
+- **Se Fauci cade prono.** Sbilanciare Migliorato dà a Tordek **un attacco in mischia subito**, come se non avesse usato l'attacco per sbilanciare. Prono, Fauci ha −4 ai suoi attacchi in mischia e chi lo colpisce in mischia ha +4. **Rialzarsi** è un'azione di movimento che **provoca attacchi di opportunità** da tutti quelli che lo minacciano: è il momento in cui il gruppo lo colpisce in più. Finché non si rialza non decolla.
+- PF1e, solo come riscontro: lì *Improved Trip* dà +2 alla manovra e *Greater Trip* fa provocare un attacco di opportunità a chi viene sbilanciato; Tordek non ha *Greater Trip*, quindi al tavolo vale la versione 3.5 qui sopra.
+
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
 > di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
 > portato a 25 DV. ⚠️ L'SRD fa avanzare l'adulto maturo a 23-24 DV, e 25 DV
@@ -2025,14 +2038,19 @@ SE IL CAVALIERE CADE (dal round 3)
     30m    
     
     15m    💥 CAVALIERE CADE 💥
-           (CHI LO AFFERRA: RIFLESSI CD 20)
+           (NESSUNO LO AFFERRA: 15d6 A TERRA)
     
      0m  [PG] POSSONO INTERCETTARE
          ===============TERRENO===============
 ```
 
 **OPZIONI PER I PG:**
-- **Thorik:** afferrarlo al volo, Riflessi CD 20 `[INFERRED — needs DM confirmation: l'SRD non ha una regola per afferrare chi cade; una CD sola, quella dello schema]`
+- **Thorik:** non può afferrarlo: un corpo in armatura che cade da 45 m non si prende al volo. Può aspettarlo dove atterra (Aegis Fang pronta) `[CANONE — DM 2026-11-07, P16, la caduta del cavaliere]`
+
+<!-- storico -->
+*Dal 2026-11-05 al 2026-11-07: afferrarlo al volo con Riflessi CD 20, danni della caduta divisi a metà (regola della casa). Prima: Riflessi CD 20 senza danni.*
+<!-- /storico -->
+
 - **Tordek:** Deviare Frecce non devia una caduta; può aspettarlo dove atterra e lottarci
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito

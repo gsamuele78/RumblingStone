@@ -1121,14 +1121,19 @@ SE IL CAVALIERE CADE (dal round 3)
     30m    
     
     15m    💥 CAVALIERE CADE 💥
-           (CHI LO AFFERRA: RIFLESSI CD 20)
+           (NESSUNO LO AFFERRA: 15d6 A TERRA)
     
      0m  [PG] POSSONO INTERCETTARE
          ===============TERRENO===============
 ```
 
 **OPZIONI PER I PG:**
-- **Thorik:** afferrarlo al volo, Riflessi CD 20 `[INFERRED — needs DM confirmation: l'SRD non ha una regola per afferrare chi cade; una CD sola, quella dello schema]`
+- **Thorik:** non può afferrarlo: un corpo in armatura che cade da 45 m non si prende al volo. Può aspettarlo dove atterra (Aegis Fang pronta) `[CANONE — DM 2026-11-07, P16, la caduta del cavaliere]`
+
+<!-- storico -->
+*Dal 2026-11-05 al 2026-11-07: afferrarlo al volo con Riflessi CD 20, danni della caduta divisi a metà (regola della casa). Prima: Riflessi CD 20 senza danni.*
+<!-- /storico -->
+
 - **Tordek:** Deviare Frecce non devia una caduta; può aspettarlo dove atterra e lottarci
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito
