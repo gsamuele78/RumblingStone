@@ -108,6 +108,8 @@ cresciute prima delle prove. L'esito è in
   - i nomi con il mago seguono il manuale italiano, e la forma SRD è una variante;
   - Blown Away = Portato via;
   - Cowering = Accovacciato.
+- **Razze PF1e** (aggiunta, 2026-11-07): 37 voci di tipo «razza», tutte le razze del Core Rulebook e
+  dell'Advanced Race Guide nel PRD in cache, per il plugin PF1e (ADR-0111); PF1e sale a 9.371 voci.
 - **Resta aperto**: i mostri 3.5 oltre le 31 voci (nessun elenco legale completo in rete) e circa
   270 archetipi PF1e senza abbinamento sicuro.
 

@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Razze PF1e nella tabella italiano → PRD, chieste dal plugin PF1e (ADR-0111) | ✅ 37 razze su 37 del PRD in cache (Core 7, ARG 30), nome inglese dal link di Golarion a d20pfsrd; PF1e 9.334 → 9.371 voci |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Fase 5 di ADR-0110: nomi ufficiali corretti in ARC-07 e ARC-08, prima e dopo | 🟡 6 nomi corretti; sconosciuti ARC-07+08 64 → 52, talenti del repo 137 → 133 (cricchetto a 133); restano gli oggetti unici da marcare |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Termini ufficiali 3.5 e PF1e: tabelle complete, misure fonte contro fonte, canc… | 🟡 3.5 3.944 voci (con 79 trappole), PF1e 9.334; fonte contro fonte 97-100% concordi; cancello dei campi prima 10-11/40, dopo 40/40; talenti sconosciuti 151 → 1… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L0: censimento degli strumenti, banco d'invarianza, ADR-0111 proposta | ✅ 31 script su 202 dipendono dal sistema; M1 3, M2 2, M3 76, M4 24; 12 impronte riproducibili; D1-D5 al DM |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-05 | STATO-E-ORDINE · P16 | Lotto 2-bis: i PX del gruppo e il 14° livello, dal registro del DM | ✅ registro completato dall'arco 06 al 25/09 con le scelte del DM, riga per riga; Thorik, Tordek e Artemis al 14° fermi a 104.999 (un livello alla volta), Hella… |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Quota sul mare di Hammerfist abbassata: piana a 520 m (scelta del DM, in linea… | ✅ cancello 600, cortile 620, cittadella 640; gradoni invariati |
 | 2026-11-04 | STATO-E-ORDINE · P16 | Lotto 1, ARC-08: conto vero e marcature chiuse da conti e decisioni | ✅ le aperte erano 240, non 44: il contatore ora mette in «meta» le 21 righe che descrivono la convenzione e vede le 17 note che vanno a capo (3 test). ARC-08 d… |
-| 2026-11-03 | RICERCA-USABILITA-AL-TAVOLO, RICERCA-GU… | documentazione dopo la #306 | ✅ ARCHITETTURA §11-§13, §16, §18, §19, README, GUIDA-BOOKLET-E-PDF e CHANGELOG allineati ad ADR-0102, ADR-0105…ADR-0108 e ai cancelli della #308 e della #309;… |
 
 ## Le misure che si portano dietro
 

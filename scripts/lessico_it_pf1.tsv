@@ -25,6 +25,10 @@
 # nome. Misura sulle voci già in tabella: aon 1.699 giuste su 1.701, d20pfsrd 1.975 su 2.015; delle 42 diverse, 33
 # erano righe della tabella col nome della pagina madre (Aquila Gigante = Eagle) e sono corrette nella quarta colonna.
 # Script: plans/esperimenti/regole-ufficiali-2026-11-07/abbinamenti/misura_resto.py.
+# Razze (2026-11-07): pagine di Golarion col link a www.d20pfsrd.com/races/ (exturlusage); il pezzo finale
+# dell'URL deve coincidere con una sezione «race» del PRD in cache (Core Rulebook e Advanced Race Guide), e il
+# nome inglese è quel titolo così com'è (Dwarves, Catfolk). 37 razze del PRD su 37; scartate «Drow Nobile» (stesso
+# link di Drow) e 21 razze fuori dal PRD in cache. Script: abbinamenti/abbina_razze.py.
 # Solo nomi, niente testo delle regole.
 italiano	pf1	tipo	abbinamento
 Abbraccio Letale	Final Embrace	talento
@@ -4886,6 +4890,43 @@ Stirpe Sotterranea	Deep Earth Bloodline	stirpe	golarion→d20pfsrd
 Stirpe Stellare	Starsoul Bloodline	stirpe	golarion→d20pfsrd
 Stirpe Tempestosa	Stormborn Bloodline	stirpe	golarion→d20pfsrd
 Stirpe Verdeggiante	Verdant Bloodline	stirpe	golarion→d20pfsrd
+Aasimar	Aasimars	razza	golarion→d20pfsrd
+Changeling	Changelings	razza	golarion→d20pfsrd
+Coboldo	Kobolds	razza	golarion→d20pfsrd
+Dhampir	Dhampirs	razza	golarion→d20pfsrd
+Drow	Drow	razza	golarion→d20pfsrd
+Duergar	Duergar	razza	golarion→d20pfsrd
+Elfo	Elves	razza	golarion→d20pfsrd
+Felinide	Catfolk	razza	golarion→d20pfsrd
+Ghermito	Fetchlings	razza	golarion→d20pfsrd
+Gnomo	Gnomes	razza	golarion→d20pfsrd
+Goblin	Goblins	razza	golarion→d20pfsrd
+Grippli	Gripplis	razza	golarion→d20pfsrd
+Halfling	Halflings	razza	golarion→d20pfsrd
+Hobgoblin	Hobgoblins	razza	golarion→d20pfsrd
+Ifrit	Ifrits	razza	golarion→d20pfsrd
+Kitsune	Kitsune	razza	golarion→d20pfsrd
+Marinide	Merfolk	razza	golarion→d20pfsrd
+Mezzelfo	Half-Elves	razza	golarion→d20pfsrd
+Mezzorco	Half-Orcs	razza	golarion→d20pfsrd
+Nagaji	Nagaji	razza	golarion→d20pfsrd
+Nano	Dwarves	razza	golarion→d20pfsrd
+Ondine	Undines	razza	golarion→d20pfsrd
+Orco	Orcs	razza	golarion→d20pfsrd
+Oreade	Oreads	razza	golarion→d20pfsrd
+Rattoide	Ratfolk	razza	golarion→d20pfsrd
+Samsaran	Samsarans	razza	golarion→d20pfsrd
+Silfide	Sylphs	razza	golarion→d20pfsrd
+Strix	Strix	razza	golarion→d20pfsrd
+Suli	Sulis	razza	golarion→d20pfsrd
+Svirfneblin	Svirfneblin	razza	golarion→d20pfsrd
+Tengu	Tengus	razza	golarion→d20pfsrd
+Tiefling	Tieflings	razza	golarion→d20pfsrd
+Umano	Humans	razza	golarion→d20pfsrd
+Uomini Pesce	Gillmen	razza	golarion→d20pfsrd
+Vanara	Vanaras	razza	golarion→d20pfsrd
+Vishkanya	Vishkanyas	razza	golarion→d20pfsrd
+Wayang	Wayangs	razza	golarion→d20pfsrd
 Abbatti Titani	Titan Mauler	archetipo	golarion, firma dei privilegi uguale al PRD [Barbaro]
 Accendilanterne	Lantern Lighter	archetipo	golarion, firma dei privilegi uguale ad aon, fuori PRD [Ranger]
 Adepto Ondine	Undine Adept	archetipo	golarion, firma dei privilegi uguale ad aon, fuori PRD [Druido]
