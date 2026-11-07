@@ -66,7 +66,7 @@ Ogni lotto è una PR. Ogni PR lancia `impronte.py --confronta` prima e dopo: le 
 | L5 ✅ (L5a, L5b, L5c, L5d) | nucleo delle creature: `dmcore/tabelle`, `progressione`, `caratteristiche`, `incantesimi`, `lettura_creatura` leggono le tabelle dal plugin; il grafo d'import resta quello di `test_grafo_import_creature.py` — **L5a** (2026-11-07): tipi, classi (con BAB e classi PNG), taglie, armature, scudi e matrici elite/standard in `sistemi/dnd35/dati/creature.toml`, letti da `dmcore/tabelle.py` con gli stessi nomi; **L5b** (2026-11-07): griglie degli incantatori e incantesimi conosciuti, classi incantatrici, classi di prestigio, profili di ruolo, modificatori per taglia e razziali; **L5c** (2026-11-07): liste degli incantesimi 3.5 nel plugin dnd35, aggiunte APG nel plugin pf1e | 5 + 7 consumatori | M3 al minimo; impronte dei generatori identiche |
 | L6 ✅ | skill e agent: `build-skills.sh`/`sync-skills.sh` chiedono a `sistemi.py --skill` quali skill installare (D5); `AGENTS.md` e `skills/ORCHESTRAZIONE.md` lo dicono | 4 | numero di skill installate per configurazione |
 | L7 ✅ | etichette di stampa dal plugin (serve solo per BMC/DMC sulla scheda PF1e o per un sistema non d20) | 3 | stampa identica sui booklet 3.5 |
-| L8 | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
+| L8 ✅ | prova del nove: un sistema d20 finto nei dati dei test (`prova-d20`) si aggiunge senza toccare codice | 0 | M4 = 0 |
 
 ### §2.1 Il file generale (L1, con le consigliate di D1, D2 e D4; i file veri sono `sistemi.toml` e `sistemi/*/sistema.toml`)
 
@@ -208,6 +208,18 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - **Misura**: i 19 booklet rigenerati in HTML e in `.hb.md` sono **identici byte per byte** a prima. Il sorgente `.typ` cambia in 98 righe, e sono tutte la riga `etichette: (…)` aggiunta a ogni riquadro, con le stesse sigle che il tema scriveva prima a mano. Il PDF non l'ho compilato in locale (typst non è installato e lo scaricamento è stato negato); l'identità del PDF segue dal fatto che i valori passati sono quelli che il tema aveva cablati.
 - **Cosa non fa ancora**: BMC/DMC sulla scheda del PG PF1e. Le schede di oggi non le stampano, e aggiungerle è una scelta di contenuto, non una migrazione: resta per quando il DM vorrà le schede PF1e complete.
 
+### §2.13 Cosa ha trovato L8 (la prova del nove)
+
+- **La prova**: `scripts/tests/test_sistemi_prova_del_nove.py` costruisce un repo temporaneo con `sistemi/`, `sistemi.toml`, il manifest degli strumenti e i file che i plugin elencano, ci aggiunge il plugin finto `scripts/tests/dati/prova-d20/` (tre file `.toml`, nessun codice) e una riga in `[progetto] attivi` e in `[moduli]`. Poi usa gli strumenti veri senza cambiarne una riga.
+- **Cosa passa** (9 test): il cancello `sistemi --check` resta verde; tutte le 13 capacità del catalogo sono coperte; un modulo dichiarato prende il sistema nuovo e gli altri restano 3.5; le soglie PE finte arrivano in `update_xp.soglie_di`; il raddoppio 3 arriva in `suggest_encounter.combinatore` (due GS 10: EL 12 in 3.5, EL 13 nel sistema di prova); quello che il plugin eredita è identico al 3.5; nessuna skill cambia.
+- **M4 vero = 0 per un sistema d20 che cambia dati**. Il numero del censimento (27) conta i file che *dipendono* dal sistema, non quelli da toccare: non scende con L8, e non è il criterio giusto per la prova. Il criterio di §3 («un sistema finto si aggiunge con 0 file di codice toccati») è soddisfatto.
+- **Dove la prova non arriva, detto chiaro**:
+  - un sistema con un **modo nuovo di combinare i GS** aggiunge una riga a `METODI` in `suggest_encounter.py`: è codice, ed è voluto (§2.6);
+  - un sistema **non d20** (niente GS, CA, TS) non eredita `statblocco.campi` e i generatori di creature non lo sanno costruire: la prova vale per la famiglia d20;
+  - `fonti.regole` resta nel codice: il plugin di prova la eredita dal 3.5 e non ne ha avuto bisogno, quindi per la regola di L4 non si sposta;
+  - `derive_statblocks`, `conformita_statblocchi` e `genera_attributi` leggono ancora le tabelle del 3.5 anche su una scheda PF1e (§2.10).
+- **Lettura del DM**: la prova non cambia nessuna uscita della campagna, perché il sistema finto vive solo nel test. La lettura di un booklet 3.5 rigenerato non serve per nessun lotto: tutte le uscite sono rimaste identiche (impronte 12/12, 19 booklet HTML identici byte per byte).
+
 ## §3 · Validazione
 
 | Controllo | Quando | Criterio |
@@ -242,4 +254,4 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 - [x] L5 · nucleo delle creature (2026-11-07): L5a tabelle base, L5b incantatori, prestigio, profili, taglie e razze, L5c liste di incantesimi, L5d regole di tipo e campi dello statblocco, tutto dal plugin con impronte dei valori identiche
 - [x] L6 · skill e agent (2026-11-07): build-skills.sh e sync-skills.sh saltano le skill dei sistemi né attivi né di rinforzo (`sistemi.py --skill-escluse`)
 - [x] L7 · etichette di stampa (2026-11-07): capacità `stampa.etichette` della famiglia d20, lette dalle due catene per il sistema del manifest
-- [ ] L8 · prova del nove
+- [x] L8 · prova del nove (2026-11-07): `test_sistemi_prova_del_nove.py`, plugin finto `prova-d20` di soli dati, 0 file di codice toccati
