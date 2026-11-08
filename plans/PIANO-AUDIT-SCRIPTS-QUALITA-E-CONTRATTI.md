@@ -40,7 +40,12 @@
   promuovere a bloccante dopo una passata pulita su `converters/Image-to-webp`.
 - opzionale: portare i convertitori (`converters/`) allo standard pieno
   (argparse/test) — oggi marcati `external-toolchain` nel manifest.
-- opzionale: fallback pyyaml in `compress_skills.py` (oggi `external_deps`).
+- ~~opzionale: fallback pyyaml in `compress_skills.py` (oggi `external_deps`).~~
+  ✅ **Chiusa il 2026-11-08: non si fa, misurato.** Il ripiego funziona (18 skill
+  su 18 uguali), ma serve solo a chi salta `pip install -r requirements.txt`, e lì
+  falliscono altri 17 script. PyYAML ha le wheel cp313 per tutte le piattaforme del
+  bundle. Misura e motivo in
+  [`esperimenti/ripiego-pyyaml-2026-11-08/ESITO.md`](esperimenti/ripiego-pyyaml-2026-11-08/ESITO.md).
 
 ## Invarianti rispettate
 
