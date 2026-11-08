@@ -31,3 +31,7 @@ skill = ["pathfinder-1e-srd"]
 "creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml", "sistemi/pf1e/dati/incantesimi.toml"], nota = "L5c: la lista core PF1e è abbastanza vicina alla 3.5 da usare quella; in più gli incantesimi dell'APG (solo)" }
 "creature.regole_di_tipo" = { dati = ["sistemi/pf1e/dati/creature.toml"], nota = "L5d: il non morto PF1e (d8, BAB 3/4, Vol, Carisma) viene da [tipi.undead]; la regola del Carisma in dmcore/lettura_creatura.py" }
 "creature.conformita" = { dati = ["sistemi/pf1e/dati/conformita.toml"], nota = "F4 di ADR-0112: pf col primo dado al massimo e mezzi in su; lotta, scurovisione e corrompere l'acqua mancano e si saltano" }
+
+# F5 di ADR-0112: il codice del plugin, per nome (modulo:funzione in codice/).
+[moduli]
+somma_px = "incontri:somma_px"

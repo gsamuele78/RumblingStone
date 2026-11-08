@@ -23,7 +23,7 @@ DMG 3.5 EL math:  EL ≈ 2 · log2(Σ 2^(CR/2))
    NOT +1 as in 4e/5e. Power scales as 2^(CR/2).)
 """
 from __future__ import annotations
-import sys, argparse, random, math, re
+import sys, argparse, random, re
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -274,76 +274,40 @@ def _parse_list(lines, i, indent):
 
 
 # ───────────────────────── EL / CR math ─────────────────────────
+# F5 di ADR-0112: gli algoritmi che combinano i GS sono codice dei plugin
+# (`sistemi/d20/codice/incontri.py` per «potenze», `sistemi/pf1e/codice/
+# incontri.py` per «somma_px»), caricati per nome da `dmcore.sistemi.modulo`.
+# Qui restano solo i nomi di sempre, che li chiamano.
 def combine_el(crs: list[float], raddoppio: float = 2.0) -> float:
-    """Combine CRs into an Encounter Level per D&D 3.5 DMG.
+    """EL di un incontro 3.5 (DMG 3.5 p. 49): r · log2(Σ 2^(GS/r)), r = `raddoppio`.
 
-    In 3.5 doubling the number of equal-CR creatures raises EL by +2
-    (not +1 as in 4e/5e). Power therefore scales as 2^(CR/2) and the
-    combined EL is:
-
-        EL = 2 · log2( Σ 2^(CR/2) )
-
-    Example: two CR 10 creatures → 2·log2(2·2^5) = 2·log2(64) = 12 ✓
-
-    `raddoppio` è il parametro r di EL = r·log2(Σ 2^(GS/r)): di quanto sale
-    l'EL raddoppiando le creature (3.5: 2, da sistemi/dnd35/dati/incontri.toml).
+    Due GS 10 → 12. L'algoritmo è il modulo «potenze» del plugin d20.
     """
-    if not crs: return 0.0
-    r = float(raddoppio)
-    return r * math.log2(sum(2 ** (c / r) for c in crs))
-
-def _px_pf1e(cr: float, tab: dict[str, int]) -> int:
-    """PE di una creatura PF1e per GS (PRD, Experience Point Awards).
-    Sopra il GS 25 la tabella si raddoppia ogni 2 GS, come fa fino al 25."""
-    if cr < 1:
-        chiave = f"1/{round(1 / cr)}" if cr > 0 else "1/8"
-        return tab.get(chiave, tab["1/8"])
-    c = int(round(cr))
-    if str(c) in tab:
-        return tab[str(c)]
-    alto = max(int(k) for k in tab if "/" not in k)
-    return tab[str(alto - (c - alto) % 2)] * 2 ** ((c - alto + 1) // 2) if c > alto else tab["1"]
+    from dmcore import sistemi as S
+    return S.modulo("d20", "potenze")({"raddoppio": raddoppio})(crs)
 
 
 def combina_gs_pf1e(crs: list[float], tab: dict[str, int] | None = None) -> float:
-    """GS di un incontro PF1e: la somma dei PE delle creature, poi il GS più
-    alto il cui valore in PE non supera la somma (PRD, Designing Encounters).
-    Due GS 10 → 19.200 PE → GS 12, come nel 3.5; tre GS 10 → 28.800 → GS 13."""
-    if not crs:
-        return 0.0
+    """GS di un incontro PF1e dalla somma dei PE (PRD, Designing Encounters).
+
+    Due GS 10 → GS 12, tre → GS 13. L'algoritmo è il modulo «somma_px» del plugin pf1e.
+    """
+    from dmcore import sistemi as S
     if tab is None:
-        from dmcore import sistemi as S
         tab = S.dati("pf1e", "incontri.livello")["px_per_gs"]
-    tot = sum(_px_pf1e(c, tab) for c in crs)
-    gs = 0.0
-    for chiave, px in tab.items():
-        a, _, b = chiave.partition("/")
-        v = int(a) / int(b) if b else float(a)
-        if px <= tot and v > gs:
-            gs = v
-    alto = max(int(k) for k in tab if "/" not in k)
-    while gs >= alto and _px_pf1e(gs + 1, tab) <= tot:
-        gs += 1
-    return gs
-
-
-#: I metodi per combinare i GS che un plugin può nominare in `incontri.livello`
-#: (campo `metodo`). Un sistema nuovo che usa uno di questi non tocca il codice.
-METODI = {
-    "potenze": lambda dati: (lambda crs: combine_el(crs, dati.get("raddoppio", 2))),
-    "somma_px": lambda dati: (lambda crs: combina_gs_pf1e(crs, dati["px_per_gs"])),
-}
+    return S.modulo("pf1e", "somma_px")({"px_per_gs": tab})(crs)
 
 
 def combinatore(sistema: "str | None" = None, root=None):
-    """La funzione GS → EL del sistema, dal metodo dichiarato nel suo plugin."""
+    """La funzione GS → EL del sistema: il modulo che il suo `incontri.livello` nomina."""
     from dmcore import sistemi as S
-    dati = S.dati(sistema or S.predefinito(), "incontri.livello", root)
+    sistema = sistema or S.predefinito(root)
+    dati = S.dati(sistema, "incontri.livello", root)
     metodo = dati.get("metodo")
-    if metodo not in METODI:
-        raise SystemExit(f"[suggest_encounter] {sistema}: metodo «{metodo}» sconosciuto "
-                         f"(noti: {', '.join(METODI)})")
-    return METODI[metodo](dati)
+    try:
+        return S.modulo(sistema, metodo, root)(dati)
+    except S.ErroreSistemi as e:
+        raise SystemExit(f"[suggest_encounter] {sistema}: metodo «{metodo}»: {e}") from e
 
 
 # Il modo di combinare i GS: 3.5 (combine_el) salvo `--sistema` (ADR-0111).

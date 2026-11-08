@@ -2,8 +2,8 @@
 #
 # In 3.5 raddoppiare le creature di pari GS alza l'EL di 2 (DMG 3.5 p. 49):
 # EL = r · log2( Σ 2^(GS/r) ), con r = raddoppio = 2. Due GS 10 → EL 12.
-# È la formula di suggest_encounter.combine_el; qui stanno il metodo e il suo
-# parametro, la formula resta codice (dmcore non ha un interprete di formule).
+# Il metodo «potenze» è codice del plugin d20 (sistemi/d20/codice/incontri.py,
+# F5 di ADR-0112); qui stanno il nome del metodo e il suo parametro.
 fonte = "DMG 3.5 p. 49, «Encounter Level» (non nell'SRD in cache)"
 metodo = "potenze"
 raddoppio = 2

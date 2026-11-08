@@ -20,6 +20,8 @@ rete: stesso albero, stesso risultato.
 """
 from __future__ import annotations
 
+import importlib.util
+import inspect
 import re
 import tomllib
 from dataclasses import dataclass
@@ -295,6 +297,70 @@ def regole_diverse(id_: str, strumento: str, scritto_per: str = "dnd35",
     return fuori
 
 
+#: F5 di ADR-0112 (indagine I3): il codice di un plugin sta in
+#: `sistemi/<id>/codice/` ed è registrato per nome in `[moduli]` del suo
+#: `sistema.toml`, come «modulo:funzione». Nomi semplici, niente punti né dunder.
+CODICE = "codice"
+_NOME_MODULO = re.compile(r"^[a-z_][a-z0-9_]*$")
+
+
+@lru_cache(maxsize=64)
+def _risolvi(id_: str, rif: str, root: Path):
+    """La funzione di `rif` («modulo:funzione») dentro `sistemi/<id>/codice/`.
+
+    Rifiuta, prima di eseguire qualunque file, ogni riferimento che esce dalla
+    cartella: `..`, percorsi assoluti, moduli della libreria standard, symlink
+    verso fuori. Il modulo prende un nome unico per sistema
+    (`rs_plugin.<id>.<modulo>`), così due plugin con un `incontri.py` non si
+    scambiano il codice. ⚠️ Il file del plugin viene eseguito: è codice Python
+    rivisto in PR come il nucleo, non una sandbox.
+    """
+    mod, sep, fun = (rif or "").partition(":")
+    if not sep or not _NOME_MODULO.match(mod) or not _NOME_MODULO.match(fun) or fun.startswith("__"):
+        raise ErroreSistemi(f"{id_}: modulo «{rif}»: serve «modulo:funzione» con nomi semplici")
+    cartella = (root / CARTELLA / plugin(id_, root)["_cartella"] / CODICE).resolve()
+    file = (cartella / f"{mod}.py").resolve()  # resolve() segue i symlink
+    if file.parent != cartella or not file.is_file():
+        raise ErroreSistemi(f"{id_}: modulo «{rif}»: {mod}.py non è in {CARTELLA}/{id_}/{CODICE}/")
+    spec = importlib.util.spec_from_file_location(f"rs_plugin.{id_.replace('-', '_')}.{mod}", file)
+    modulo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modulo)
+    f = getattr(modulo, fun, None)
+    if not inspect.isfunction(f) or f.__module__ != modulo.__name__:
+        raise ErroreSistemi(f"{id_}: modulo «{rif}»: {fun} non è una funzione definita in {mod}.py")
+    return f
+
+
+@lru_cache(maxsize=64)
+def _modulo(id_: str, nome: str, root: Path):
+    for i in _catena_moduli(id_, root):
+        rif = plugin(i, root).get("moduli", {}).get(nome)
+        if rif is not None:
+            return _risolvi(i, rif, root)
+    noti = ", ".join(moduli(id_, root)) or "nessuno"
+    raise ErroreSistemi(f"{id_}: nessun modulo «{nome}» nel plugin né nella famiglia (ci sono: {noti})")
+
+
+def _catena_moduli(id_: str, root: Path) -> "list[str]":
+    """Il plugin e poi la sua famiglia: dove si cerca un modulo per nome."""
+    catena, corrente = [], id_
+    while corrente and corrente not in catena:
+        catena.append(corrente)
+        corrente = plugin(corrente, root).get("famiglia")
+    return catena
+
+
+def modulo(id_: str, nome: str, root: "Path | None" = None):
+    """La funzione registrata come `nome` in `[moduli]` del plugin `id_` o della sua famiglia."""
+    return _modulo(id_, nome, (root or ROOT).resolve())
+
+
+def moduli(id_: str, root: "Path | None" = None) -> "list[str]":
+    """I nomi dei moduli che `id_` vede, suoi e della famiglia."""
+    r = (root or ROOT).resolve()
+    return sorted({n for i in _catena_moduli(id_, r) for n in plugin(i, r).get("moduli", {})})
+
+
 def termini_vietati(id_: str | None = None, root: "Path | None" = None) -> "list[tuple[str, str]]":
     """(regex, perché) dei termini vietati in un sistema (capacità termini.vietati).
 
@@ -465,6 +531,11 @@ def problemi(root: "Path | None" = None, strumenti: "dict[str, list[str]] | None
                 capacita(i, nome, r)
             except ErroreSistemi as e:
                 fuori.append(str(e))
+        for nome, rif in sorted(plug[i].get("moduli", {}).items()):
+            try:
+                _risolvi(i, rif, r)
+            except ErroreSistemi as e:
+                fuori.append(f"{CARTELLA}/{plug[i]['_cartella']}/sistema.toml [moduli] {nome}: {e}")
     for sid, chieste in sorted((strumenti or {}).items()):
         for nome in chieste:
             if nome not in cat:

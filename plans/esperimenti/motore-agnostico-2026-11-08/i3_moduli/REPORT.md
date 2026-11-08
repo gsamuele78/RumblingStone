@@ -2,7 +2,7 @@
 
 **Domanda.** Alcune regole sono algoritmi e non si riducono a dati. Oggi sono due: il metodo `potenze` del 3.5 e il metodo `somma_px` del PF1e, tutti e due in `METODI` di `suggest_encounter`. Vogliamo che vivano nel plugin del loro sistema e non nel nucleo. Con quale meccanismo li carichiamo, senza `pip`, senza che due plugin si pestino i piedi e senza che una dichiarazione possa puntare fuori da `sistemi/<id>/codice/`?
 
-**Come si rifà.** Si lancia `banco_moduli.py`, che sta in questa cartella. Per il terzo candidato serve `pluggy`, da installare in un ambiente separato. I dati grezzi sono in [RISULTATI.json](RISULTATI.json). Il banco è deterministico: due esecuzioni producono file identici (`cmp`).
+**Come si rifà.** Si lancia `banco_moduli.py`, che sta in questa cartella. Per il terzo candidato serve `pluggy`, da installare in un ambiente separato. I dati grezzi sono in [RISULTATI.json](RISULTATI.json). Il banco è deterministico: due esecuzioni producono file identici (`cmp`). ⚠️ Dopo F5 (2026-11-08) gli algoritmi non stanno più in `suggest_encounter`, e il banco legge il loro sorgente da lì: si rifà dal commit `aee16d0`. Le stesse misure, sul codice nuovo, le rifà `scripts/tests/test_moduli_plugin.py`.
 
 ## Metodo
 
