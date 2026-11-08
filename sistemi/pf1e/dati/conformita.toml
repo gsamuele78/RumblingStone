@@ -7,10 +7,10 @@ fonte = "PRD PF1e (pathfinder-1e-srd): Bestiary «Monster Creation», Core «Get
 [punti_ferita]
 # Media dei dadi vita come in 3.5 (Bestiary, «Hit Dice»: totale in giù).
 media = "giu"
-# Un PNG con livelli di classe ha il primo dado al massimo; per i dadi dopo
-# il primo le due schede PF1e del repo (Sfregio del Drappo, Sgherro del
-# Giardino) usano la mezza in su. Scelta consigliata nella card F4 2 del
-# 2026-11-08, in attesa della risposta del DM.
+# Un PNG con livelli di classe ha il primo dado al massimo e i dadi dopo il
+# primo a mezza in su. Scelta del DM, card F4 2 del 2026-11-08 (la versione
+# più forte; Sfregio e lo Sgherro la usavano già, l'Asservito armato è
+# passato da 34 a 35 pf).
 primo_dado_di_classe = "massimo"
 mezzi_dopo_il_primo = "su"
 
@@ -19,7 +19,7 @@ mezzi_dopo_il_primo = "su"
 fatti = ["pf", "CA", "prosa", "iniziativa", "CD", "ereditate"]
 
 [conti.mancanti]
-# Card F4 3 (consigliata «lo dice e salta il conto»): finché la regola PF1e
+# Card F4 3, scelta del DM del 2026-11-08 («lo dice e salta il conto»): finché la regola PF1e
 # non c'è, il conto si salta e il rapporto lo scrive.
 lotta = "PF1e non ha la lotta: usa BMC e DMC, e il conto BMC non c'è ancora"
 scurovisione = "la lista dei tipi con scurovisione è quella dell'SRD 3.5; la lista PF1e non c'è ancora"

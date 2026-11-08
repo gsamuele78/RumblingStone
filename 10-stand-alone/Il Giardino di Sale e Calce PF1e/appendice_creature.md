@@ -189,7 +189,7 @@ gs: 3
 tipo: Umano guerriero 4 · N (asservito) Medio
 ca: 16
 ca-dettaglio: contatto 11, colto alla sprovvista 15 (+4 armatura, +1 Des, +1 scudo)
-pf: 34
+pf: 35
 pf-dado: 4d10+8
 ts: Tem +6, Rif +2, Vol +1
 attributi: For 15 Des 12 Cos 14 Int 9 Sag 10 Car 8

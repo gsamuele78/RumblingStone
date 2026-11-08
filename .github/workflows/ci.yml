@@ -189,6 +189,13 @@ jobs:
       - name: pf-dado registra i dadi vita, e le correzioni sono riproducibili
         run: python scripts/conformita_statblocchi.py --check
 
+      # F4 di ADR-0112, scelta del DM del 2026-11-08 (card F4 1): le schede dei
+      # moduli di un altro sistema (Drappo e Giardino PF1e) si contano con le
+      # regole del loro sistema, e un conto che non torna blocca. I conti senza
+      # regola PF1e (lotta, scurovisione, corrompere l'acqua) si saltano e si dicono.
+      - name: Le schede dei moduli PF1e tornano con le regole PF1e
+        run: python scripts/conformita_statblocchi.py --cancello-moduli
+
       # Ogni creatura dei booklet esce nello stesso riquadro (ADR-0105): una
       # scheda nuova scritta in prosa o in un recinto qualunque fa salire il
       # conto del suo booklet sopra il tetto.

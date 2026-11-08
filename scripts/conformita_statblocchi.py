@@ -1000,9 +1000,24 @@ def main(argv=None) -> int:
     ap.add_argument("--check", action="store_true",
                     help="gate: ogni `pf-dado` registra i dadi vita, e quelli riscritti tornano")
     ap.add_argument("--master", nargs="*", metavar="FILE",
-                    help="rapporto sugli statblocchi scritti nei master (default: i DEF e ARC-08); "
-                         "non e' un cancello, esce sempre 0")
+                    help="rapporto sugli statblocchi scritti nei master (default: i DEF e ARC-08, "
+                         "più i moduli di un altro sistema); non e' un cancello, esce sempre 0")
+    ap.add_argument("--cancello-moduli", action="store_true",
+                    help="cancello (in CI): ogni conto delle schede dei moduli di un sistema "
+                         "diverso dal predefinito (oggi il Drappo e il Giardino PF1e) torna")
     args = ap.parse_args(argv)
+    if args.cancello_moduli:
+        files = [p for p in master_di_default() if S.sistema_di(p) != S.predefinito()]
+        r = rapporto_master(files)
+        for x in r:
+            print(f"✗ {x['file']}:{x['riga']} [{x['titolo'][:50]}] {x['campo']} "
+                  f"{x['scritto']} ≠ {x['atteso']} ({x['nota']})")
+        saltati = sorted({x["conto"] for x in saltati_master(files)})
+        if r:
+            return 1
+        print(f"✓ conformita_statblocchi: {len(files)} moduli di un altro sistema, ogni conto torna"
+              + (f" (saltati perché manca la regola: {', '.join(saltati)})" if saltati else ""))
+        return 0
     if args.master is not None:
         files = [Path(f).resolve() for f in args.master] or master_di_default()
         r = rapporto_master(files)

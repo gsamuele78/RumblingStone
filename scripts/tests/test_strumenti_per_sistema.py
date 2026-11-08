@@ -114,6 +114,19 @@ class IContiSenzaRegola(unittest.TestCase):
         saltati = C.saltati_master(pf1e)
         self.assertEqual({x["file"] for x in saltati}, {str(p.relative_to(ROOT)) for p in pf1e})
 
+    def test_il_cancello_dei_moduli_e_verde(self):
+        # card F4 1 del 2026-11-08: «Sì, e blocca la CI»
+        self.assertEqual(C.main(["--cancello-moduli"]), 0)
+
+    def test_il_cancello_blocca_uno_scarto(self):
+        vero = C.rapporto_master
+        try:
+            C.rapporto_master = lambda files: [{"file": "x.md", "riga": 1, "titolo": "X", "campo": "pf",
+                                                "scritto": 34, "atteso": 35, "nota": "prova"}]
+            self.assertEqual(C.main(["--cancello-moduli"]), 1)
+        finally:
+            C.rapporto_master = vero
+
 
 if __name__ == "__main__":
     unittest.main()
