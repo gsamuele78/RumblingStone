@@ -22,6 +22,13 @@ per questi strumenti). La promozione lo accorcia (−18 s di installazione, −1
 di `compileall`): nessun peggioramento possibile oltre il 5%, da riscontrare
 sul run della PR.
 
+Riscontro sul run della PR #353 (020e2fe): «Validate» 584 s, con
+installazione 8 s e pytest 274 s. La media di 540 s non è il confronto giusto,
+perché la suite è cresciuta in questi 16 giorni (pytest da 205 s in media a
+267-270 s oggi). Contro i tre run di `main` dello stesso giorno (590, 572 e
+532 s, media 565 s) è +3%: dentro il 5%, e nel rumore fra un runner e
+l'altro. L'installazione passa da 26-34 s a 8 s.
+
 ## Perché i «success» non nascondevano niente, e dove sì
 
 - Un passo con `continue-on-error: true` che fallisce risulta `success` nell'API
