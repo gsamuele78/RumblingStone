@@ -26,4 +26,17 @@ PATH=$PWD/.strumenti/bin:$PATH python3 scripts/misura_stampa.py --tutti --json >
 cmp prima.json dopo.json
 ```
 
-Il tempo della CI si legge sui run della PR #338, job `validate` e `stampa-misurata`.
+## Tempo della CI
+
+Run di `main` (e06c2cf, 2026-11-07) contro run della PR (71e3a8f, 2026-11-08):
+
+| Passo | Prima | Dopo |
+|---|---|---|
+| installazione in «Validate skills & scripts» | 1 s (`curl` di typst) | 5 s (typst + pdfcpu, sha256, `verifica`) |
+| installazione in «Misure di stampa» | 1 s | 4 s |
+| job «Validate skills & scripts» intero | 9 min 45 s | 9 min 37 s (rumore) |
+| job nuovo «Strumenti con mise» (non bloccante, in parallelo) | — | 36 s |
+
+Il costo è di 3-4 secondi per job, in cambio di sha256 verificato, pdfcpu in CI e i
+tentativi ripetuti sui 5xx (un 504 di GitHub Releases ha fatto rossa la PR #340 il
+2026-11-08 col `curl` di prima).
