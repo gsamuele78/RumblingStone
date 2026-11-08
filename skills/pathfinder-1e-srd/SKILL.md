@@ -70,9 +70,12 @@ Grammatica delle marche in `docs/guides/GUIDA-MARCATURE.md` (ADR-0109).
 
 1. Stesso nucleo: d20 + modificatore contro CD/CA/TS; lo specifico prevale
    sul generale.
-2. **Questa campagna è D&D 3.5.** Regola PF1e in conflitto con una 3.5 al
-   tavolo (es. lotta contro CMB, nomi delle abilità): **vince la 3.5**, salvo
-   `campaign/lore/house-rules.md`. I numeri PF1e (pf, CA, attacco, CD) si
+2. **Vince il sistema del modulo** (ADR-0111): lo dice `[moduli]` di
+   `sistemi.toml` (`python3 scripts/sistemi.py --di <file>`). La
+   campagna è D&D 3.5: lì una regola PF1e in conflitto con la 3.5 (es. lotta
+   contro CMB, nomi delle abilità) **perde**, salvo `campaign/lore/house-rules.md`.
+   Nei moduli PF1e (Il Drappo di Tarsilia, Il Giardino di Sale e Calce PF1e)
+   **vince la PF1e**. I numeri PF1e (pf, CA, attacco, CD) si
    importano tali e quali; i *sottosistemi* PF1e vanno convertiti.
 3. Cita le fonti: `[PF1e: Bestiary]`, `[PF1e: Core Rulebook]`, `[PF1e: GameMastery
    Guide]`, con un URL aonprd.com o d20pfsrd.com quando puoi.
@@ -90,7 +93,7 @@ con una riga `Conversion notes:` per ogni meccanica solo PF1e tradotta.
 ## Prima di consegnare
 
 - Fonte `[PF1e: …]` e, se possibile, URL?
-- **3.5 delta** scritto; nei conflitti vince la 3.5?
+- **3.5 delta** scritto; nei conflitti vince il sistema del modulo (3.5 in campagna, PF1e nei moduli PF1e)?
 - Mostro importato: `Conversion notes:` completo?
 
 ## Cancelli deterministici
