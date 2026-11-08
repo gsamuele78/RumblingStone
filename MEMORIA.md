@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 2: le 18 skill nella scheda (descrizioni in italiano, termini di gioco or… | ✅ lotto 2 fatto; resta il cancello bloccante dopo due settimane |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 (accettata): typst da PyPI (`typst==0.15.2` in requirements.txt) diven… | in corso |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Piano e ADR-0112 proposta: microkernel guidato dai dati, ambito d20, formule co… | 🟡 F0 ✅ |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Scelte del DM sui 34 talenti sconosciuti: 13 nomi italiani sbagliati sostituiti… | ✅ talenti sconosciuti 34 → 0, cricchetto CI a 0 |
 
 ## Le misure che si portano dietro
 

@@ -75,6 +75,9 @@ Incantesimi: spell-block SRD. Mostri: stat-block SRD.
 ## Prima di consegnare
 
 - Ogni regola ha fonte o `[Non-SRD: <book>]`? `python3 scripts/riscontro_srd.py`.
+- Ogni regola che attribuisci all'SRD l'hai letta in `references/` o con
+  `riscontro_srd.py`, non a memoria? Penalità, talenti bonus ed esiti di un
+  fallimento sono i punti dove la memoria sbaglia più spesso.
 - Regola ambigua: RAW e RAI scritti?
 
 ## Cancelli deterministici

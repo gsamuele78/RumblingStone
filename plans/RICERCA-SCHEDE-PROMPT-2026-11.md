@@ -129,4 +129,14 @@ corregge e si rimisura; se resta peggio, si tiene la vecchia.
 - **Forma delle prove**: quella dei casi di `claude plugin eval` (`evals/<caso>/prompt.md`,
   `case.yaml`, `graders/`), che è la forma documentata dalla skill-creator di
   Anthropic; il `prove.json` nostro della proposta è scartato.
-- Aperte: dimensione della A/B e lingua delle descrizioni.
+- **Dimensione della A/B**: 54 consegne, circa 110 agenti.
+- **Lingua**: italiano, con i termini di gioco originali fra parentesi o fra virgolette.
+
+## 8 · Esito del lotto 2 (2026-11-08)
+
+A/B alla cieca, 108 esecuzioni e 18 giudici: inventati senza marca 32 → 30, marche
+con domanda e base 74 → 95, per caso 4 meglio, 4 peggio, 46 pari (p = 0,64).
+`dnd-35-srd` sembrava peggiorare (0 → 3); rimisurata con due esecuzioni per
+versione è pari (3 a 3). La scheda si adotta perché non peggiora; non è dimostrato
+che riduca le invenzioni. AGENTS.md passa da 485 a 367 righe. Dettagli in
+[ab-lotto2/ESITO](esperimenti/schede-prompt-2026-11-08/ab-lotto2/ESITO.md).

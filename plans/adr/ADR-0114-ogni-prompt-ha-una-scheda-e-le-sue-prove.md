@@ -1,6 +1,6 @@
 # ADR-0114 — Ogni prompt ha una scheda, e ogni skill le sue prove
 
-**Stato**: proposta (2026-11-08). Si accetta quando la prova A/B del secondo lotto non peggiora gli inventati senza marca
+**Stato**: accettata (2026-11-08): la prova A/B del secondo lotto non peggiora gli inventati senza marca (32 → 30 su 54 consegne, marche complete 74 → 95; [ESITO](../esperimenti/schede-prompt-2026-11-08/ab-lotto2/ESITO.md))
 **Data**: 2026-11-08
 **Decisione-fonte**: il DM (Jfs), 2026-11-08: *«fissiamo uno standard del repo per tutti i prompt magari in schede per limitare le allucinazioni e la direzione di sviluppo in maniera professionale»* *«usa sempre la versione migliore adottata dalla comunità degli sviluppatori e standard de facto migliore»* e *«in ogni indagine il candidato di base è lo standard di fatto della comunità. Una soluzione nostra entra solo se la misura boccia lo standard, e in quel caso il motivo va scritto nell'ADR […] per tutte le parti del progetto ma sempre con misura come decisione»*. Thread «Fissare lo standard dei prompt a schede»: perimetro = skill e brief, AGENTS.md snellito con misura.
 **Rapporti**: usa la grammatica e il blocco vincoli di [ADR-0109](ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md), i cancelli di [ADR-0108](ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md), i canali di [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md). Lascia i prompt immagine ad [ADR-0015](ADR-0015-standard-prompt-immagine.md). Ricerca e misura in [RICERCA-SCHEDE-PROMPT-2026-11](../RICERCA-SCHEDE-PROMPT-2026-11.md).
@@ -69,6 +69,9 @@ e ogni skill ha almeno tre prove con trappola in `skills/<nome>/evals/`.**
   più il giudice.
 - Il giudice è un modello: le sue somme possono sbagliare, e il voto del DM resta
   il riscontro vero.
+- Esito del lotto 2: le schede non riducono le invenzioni in modo dimostrato
+  (4 casi meglio, 4 peggio, p = 0,64); aumentano le marche scritte nella forma
+  giusta. Il guadagno è di ordine e di costo (AGENTS.md −25%), non di verità.
 - Gli studi citati misurano compiti di codice e modelli precisi. Per gli altri
   agenti di `agents.conf` (Gemini, Codex…) non abbiamo misure.
 
