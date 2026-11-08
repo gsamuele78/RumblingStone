@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F2 contesto esplicito: `dmcore.sistemi.regole(id)`/`regole_di(file)`; i 7 modul… | ✅ |
 | 2026-11-08 | MASTER-DEF | D6 rivista dal DM: per ogni voce del censimento la versione più forte, e sulle… | ✅ |
 | 2026-11-08 | RECUPERO-DECISIONI (card sulle decision… | 15 decisioni del DM nei piani: INVENTARIO D1-D6, BOX-LUOGO D2-D6, CODA D2-D3, R… | ✅ decisioni scritte; da fare i lotti che ne nascono (mini-boss, confronto statblocchi, etichette dei box, template d'area, *d* eufonica, pulizia del Bestiario) |
 | 2026-11-08 | STATO-E-ORDINE-DEI-PIANI | P05 chiusa come già fatta: i 9 valori dei PG sono su main dal 2026-11-05 (P16 l… | ✅ |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2, aggiunta su domanda del DM: pydantic generato dagli schemi del plugin (data… | ✅ scelta confermata |
 
 ## Le misure che si portano dietro
 
