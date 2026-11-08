@@ -174,6 +174,35 @@ class TestRepoVero(unittest.TestCase):
         self.assertIn("pe.soglie", st["update_xp"])
 
 
+class TestAmbientazioni(unittest.TestCase):
+    """D4 di ADR-0111: il mondo è un asse diverso dal sistema."""
+
+    def test_il_drappo_e_golarion_e_il_giardino_pf1e_nessuna(self):
+        self.assertEqual(S.ambientazione_di("10-stand-alone/Il-Drappo-di-Tarsilia/01.md", REPO), "golarion")
+        self.assertEqual(S.ambientazione_di("10-stand-alone/Il Giardino di Sale e Calce PF1e/x.md", REPO), "nessuna")
+
+    def test_la_campagna_e_i_reami(self):
+        self.assertEqual(S.ambientazione_di("campaign/state.md", REPO), "forgotten-realms")
+        self.assertEqual(S.ambientazione_di("10-stand-alone/Il Giardino di Sale e Calce/x.md", REPO), "forgotten-realms")
+
+    def test_ambientazione_sconosciuta_e_rossa(self):
+        cfg = CONFIG + """
+[ambientazioni]
+predefinito = "mondo"
+[ambientazioni.elenco]
+mondo = { nome = "Mondo", skill = [] }
+[ambientazioni.moduli]
+"moduli/beta" = "altrove"
+"""
+        with Albero(**{"sistemi.toml": cfg}) as r:
+            self.assertTrue(any("«altrove»" in p for p in S.problemi(r)))
+
+    def test_senza_sezione_vale_nessuna(self):
+        with Albero() as r:
+            self.assertEqual(S.ambientazione_di("moduli/beta/x.md", r), "nessuna")
+            self.assertEqual(S.problemi(r), [])
+
+
 class TestRilevamento(unittest.TestCase):
     def test_vince_il_percorso_piu_lungo(self):
         with Albero() as r:

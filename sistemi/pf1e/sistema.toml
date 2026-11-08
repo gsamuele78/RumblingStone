@@ -21,7 +21,7 @@ skill = ["pathfinder-1e-srd"]
 "lessico.abilita" = { dati = ["sistemi/pf1e/dati/abilita.toml", "scripts/lessico_it_pf1.tsv"], nota = "i nomi dalle righe «abilità» del lessico PF1e" }
 "lessico.entita" = { dati = ["scripts/lessico_it_pf1.tsv"], nota = "righe di tipo classe, classe di prestigio e razza, lette con lessico_regole.tabella_pf1" }
 "lessico.italiano" = { dati = ["scripts/lessico_it_pf1.tsv"] }
-"fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L8", nota = "URL e sha256 fissati delle fonti scaricate: si spostano solo se la prova del nove (L8) ne ha bisogno, e restano rivisti nel diff" }
+"fonti.regole" = { dati = ["sistemi/pf1e/dati/fonti.toml"], nota = "F1 di ADR-0112: repo, commit, licenza e sha256 delle fonti scaricate; li legge riscontro_srd.py" }
 "pe.soglie" = { dati = ["sistemi/pf1e/dati/pe.toml"], nota = "tre tracce; la scelta è opzioni.pf1e.traccia_pe" }
 "tesoro.per_livello" = { dati = ["sistemi/pf1e/dati/tesoro.toml"], nota = "mo per incontro per APL a tre velocità; la scelta è opzioni.pf1e.velocita_tesoro" }
 "incontri.livello" = { dati = ["sistemi/pf1e/dati/incontri.toml"], nota = "GS dell'incontro = il GS più alto il cui valore in PE non supera la somma dei PE" }

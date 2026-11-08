@@ -46,8 +46,30 @@ class Dati(unittest.TestCase):
         self.assertEqual([n for n, m in modi.items() if m not in ("dati", "codice")], [])
 
     def test_dati_rifiuta_una_capacita_in_codice(self):
-        with self.assertRaises(S.ErroreSistemi):
-            S.dati("dnd35", "fonti.regole")
+        # Dopo F1 di ADR-0112 nessuna capacità vera resta «codice»: la prova si
+        # fa su una copia dei plugin dove fonti.regole torna codice.
+        import shutil
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            r = Path(tmp)
+            shutil.copytree(REPO / "sistemi", r / "sistemi")
+            shutil.copy2(REPO / "sistemi.toml", r / "sistemi.toml")
+            desc = r / "sistemi" / "dnd35" / "sistema.toml"
+            righe = [('"fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "F1" }'
+                      if riga.startswith('"fonti.regole"') else riga)
+                     for riga in desc.read_text(encoding="utf-8").splitlines()]
+            desc.write_text("\n".join(righe) + "\n", encoding="utf-8")
+            with self.assertRaises(S.ErroreSistemi):
+                S.dati("dnd35", "fonti.regole", r)
+
+    def test_le_fonti_stanno_nei_dati_del_plugin(self):
+        # F1 di ADR-0112: repo, commit e sha256 delle fonti sono dati del plugin.
+        for sis, chiave in (("dnd35", "srd35"), ("pf1e", "pf1")):
+            d = S.dati(sis, "fonti.regole")
+            self.assertEqual(d["chiave"], chiave)
+            self.assertRegex(d["commit"], r"^[0-9a-f]{40}$")
+            self.assertIn(d["file_licenza"], d["file"])
+            self.assertTrue(all(len(v) == 64 for v in d["file"].values()))
 
     def test_opzioni_di_campagna(self):
         self.assertEqual(S.opzione("pf1e", "traccia_pe"), "media")

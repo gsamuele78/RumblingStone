@@ -21,7 +21,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
 "lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }
 "lessico.italiano" = { dati = ["scripts/lessico_it_35.tsv"] }
-"fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L8", nota = "URL e sha256 fissati delle fonti scaricate: si spostano solo se la prova del nove (L8) ne ha bisogno, e restano rivisti nel diff" }
+"fonti.regole" = { dati = ["sistemi/dnd35/dati/fonti.toml"], nota = "F1 di ADR-0112: repo, commit, licenza e sha256 delle fonti scaricate; li legge riscontro_srd.py" }
 "pe.soglie" = { dati = ["sistemi/dnd35/dati/pe.toml"] }
 "tesoro.per_livello" = { dati = ["scripts/loot_tables.yaml", "scripts/magic_items_srd.yaml"] }
 "incontri.livello" = { dati = ["sistemi/dnd35/dati/incontri.toml"], nota = "metodo e parametro nei dati, la formula in suggest_encounter.combine_el" }
