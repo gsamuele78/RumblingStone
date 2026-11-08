@@ -226,6 +226,40 @@ def dati(id_: str, nome: str, root: "Path | None" = None) -> dict:
     return out
 
 
+@dataclass(frozen=True)
+class Regole:
+    """Il contesto esplicito di un sistema (F2 di ADR-0112).
+
+    Chi ha bisogno delle regole le chiede con `regole(id)` **quando gli
+    servono**, non all'import: così il sistema lo sceglie il chiamante (il
+    file, `sistema_di`), non l'ordine in cui Python carica i moduli."""
+
+    id: str
+    root: Path
+
+    def dati(self, nome: str) -> dict:
+        return dati(self.id, nome, self.root)
+
+    def capacita(self, nome: str) -> Copertura:
+        return capacita(self.id, nome, self.root)
+
+
+@lru_cache(maxsize=16)
+def _regole(id_: str, root: Path) -> Regole:
+    plugin(id_, root)  # un id sconosciuto fallisce qui, non al primo dato
+    return Regole(id_, root)
+
+
+def regole(id_: str, root: "Path | None" = None) -> Regole:
+    """Le regole del sistema `id_`, come contesto da passare a chi calcola."""
+    return _regole(id_, (root or ROOT).resolve())
+
+
+def regole_di(percorso: "str | Path", root: "Path | None" = None) -> Regole:
+    """Le regole del sistema che usa questo file (`sistema_di`)."""
+    return regole(sistema_di(percorso, root), root)
+
+
 def termini_vietati(id_: str | None = None, root: "Path | None" = None) -> "list[tuple[str, str]]":
     """(regex, perché) dei termini vietati in un sistema (capacità termini.vietati).
 

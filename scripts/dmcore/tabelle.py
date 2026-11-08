@@ -57,39 +57,11 @@ PROVENIENZA = {
 # ===========================================================================
 
 #: Le tabelle base 3.5 stanno nel plugin (ADR-0111, L5a):
-#: `sistemi/dnd35/dati/creature.toml`, capacità `creature.costruzione`. Qui si
-#: caricano una volta e si espongono con i nomi e le forme di sempre.
+#: `sistemi/dnd35/dati/creature.toml`, capacità `creature.costruzione`. Si
+#: caricano alla prima richiesta (`di`) e si espongono con i nomi e le forme di sempre.
+from functools import cache as _cache  # noqa: E402
+
 from . import sistemi as _S  # noqa: E402
-
-_DATI = _S.dati("dnd35", "creature.costruzione")
-
-#: tipo → (faccia del dado dei DV, BAB per DV, tiri salvezza buoni)
-TIPI = {k: (v["dv"], v["bab"], tuple(v["ts_buoni"])) for k, v in _DATI["tipi"].items()}
-
-#: Come il tipo si scrive nelle schede — italiano, inglese, e le forme miste.
-ALIAS_TIPO = dict(_DATI["alias_tipo"])
-
-#: classe → (faccia del dado dei DV, tiri salvezza buoni). Le classi PNG del SRD
-#: (warrior, adept, expert, aristocrat, commoner) stanno qui come le altre: sono
-#: SRD a tutti gli effetti, ed è con quelle che si fa il fondale.
-CLASSI = {k: (v["dv"], tuple(v["ts_buoni"])) for k, v in _DATI["classi"].items()}
-
-#: Le classi PNG del SRD. Contano meno per il GS, ed è il loro scopo.
-CLASSI_PNG = frozenset(k for k, v in _DATI["classi"].items() if v.get("png"))
-
-#: BAB per livello di classe.
-BAB_CLASSE = {k: v["bab"] for k, v in _DATI["classi"].items()}
-
-#: taglia → (armatura naturale tipica, modificatore di CA e attacco)
-TAGLIE = {k: (v["armatura_naturale"], v["ca_attacco"]) for k, v in _DATI["taglie"].items()}
-
-#: armatura → (bonus di CA, massimo di Destrezza)
-ARMATURE = {k: (v["ca"], v["des_max"]) for k, v in _DATI["armature"].items()}
-SCUDI = dict(_DATI["scudi"])
-
-#: Le due matrici. Identiche fra SRD 3.5 e PF1e — una sola per tutti e due.
-ELITE = tuple(_DATI["matrici"]["elite"])
-BASIC = tuple(_DATI["matrici"]["standard"])
 
 #: Chi merita la matrice elite: chi ha un nome, chi comanda, chi è un boss. Il
 #: fondale prende quella standard, ed è il punto — un mook con le caratteristiche
@@ -97,18 +69,6 @@ BASIC = tuple(_DATI["matrici"]["standard"])
 RUOLI_ELITE = ("boss", "elite", "villain", "commander", "captain", "lieutenant",
                "alfa", "leader", "mastermind", "officer", "ally", "caster")
 
-
-# ===========================================================================
-# SRD 3.5 — gli incantatori
-# ===========================================================================
-# Il DM ha ragione: le tabelle per GS esistono anche per gli incantatori. Ma la
-# cosa da cui si costruisce **non** è quella: è la tabella della classe, che dà
-# gli incantesimi al giorno per livello. La riga per GS serve dopo, a controllare
-# che la CD primaria sia dove dovrebbe.
-#
-# Griglia: livello di classe → slot per livello d'incantesimo, da 0 a 9.
-# Gli slot di dominio del chierico NON sono contati: sono +1 per livello, e vanno
-# aggiunti quando il dominio è scelto — che è una decisione, non un conto.
 
 def _griglia(testo: str) -> dict[int, tuple[int, ...]]:
     fuori = {}
@@ -118,58 +78,133 @@ def _griglia(testo: str) -> dict[int, tuple[int, ...]]:
     return fuori
 
 
-#: Le griglie stanno nel plugin (ADR-0111, L5b): `[griglie]` di
-#: `sistemi/dnd35/dati/creature.toml`, con le stesse fonti e ancore di prima:
-#: «Table: The Wizard», «The Sorcerer», «Sorcerer Spells Known», «The Cleric»
-#: (= «The Druid»), «The Adept», «The Bard», «Bard Spells Known», «The Ranger»
-#: (= «The Paladin»). Ancore verificate in repo ai livelli 1, 5, 10, 15, 20
-#: (`dnd-35-srd/references/classes.md`), tranne l'adepto.
-#:
-#: Per il chierico va aggiunto **+1 slot per livello** quando i domini sono
-#: scelti. Ranger e paladino non hanno incantesimi di livello 0: la prima cifra
-#: di ogni riga è lo **0 finto** che tiene l'indice allineato con le altre
-#: griglie, e sotto il 4° livello di classe la riga è di soli zeri invece che
-#: assente, così nessun chiamante deve gestire un'assenza.
-_GRIGLIE = {nome: {int(liv): tuple(slot) for liv, slot in righe.items()}
-            for nome, righe in _DATI["griglie"].items()}
-MAGO = _GRIGLIE["mago"]
-STREGONE = _GRIGLIE["stregone"]
-#: Uno stregone non prepara: la lista è la creatura.
-STREGONE_CONOSCIUTI = _GRIGLIE["stregone_conosciuti"]
-CHIERICO = _GRIGLIE["chierico"]
-DRUIDO = CHIERICO
-#: L'adepto arriva al 5° livello d'incantesimo e non ha un'ancora in repo come
-#: le altre: è dichiarato in `INCANTATORI_SENZA_ANCORA`.
-ADEPTO = _GRIGLIE["adepto"]
-#: ⚠️ Il bardo serve davvero: `Bestiario/png/lomyn-redtongue-bardo8-cr8.md`.
-BARDO = _GRIGLIE["bardo"]
-BARDO_CONOSCIUTI = _GRIGLIE["bardo_conosciuti"]
-RANGER = _GRIGLIE["ranger"]
-PALADINO = RANGER
+_NOMI = (
+    "_DATI", "TIPI", "ALIAS_TIPO", "CLASSI", "CLASSI_PNG", "BAB_CLASSE", "TAGLIE",
+    "ARMATURE", "SCUDI", "ELITE", "BASIC", "_GRIGLIE", "MAGO", "STREGONE",
+    "STREGONE_CONOSCIUTI", "CHIERICO", "DRUIDO", "ADEPTO", "BARDO", "BARDO_CONOSCIUTI",
+    "RANGER", "PALADINO", "LIVELLO_INCANTATORE_RIDOTTO", "INCANTATORI",
+    "INCANTATORI_SENZA_ANCORA",
+)
 
-#: Le classi il cui livello dell'incantatore **non** coincide col livello di
-#: classe. Nel SRD sono ranger e paladino: `livello − 3`, con un minimo di 1 e
-#: un massimo di 4° livello d'incantesimo.
-LIVELLO_INCANTATORE_RIDOTTO = frozenset(_DATI["incantatori_regole"]["livello_ridotto"])
 
-#: classe incantatrice → (griglia, caratteristica primaria, spontaneo?)
-#: ⚠️ Ranger e paladino lanciano su **Saggezza**, non su Carisma (quella è la
-#: regola di PF1e): nel SRD 3.5 la CD del paladino è 10 + livello +
-#: modificatore di Saggezza. Il valore sta nei dati e il test delle impronte
-#: (`test_sistemi_creature.py`) dice se cambia.
-INCANTATORI = {c: (_GRIGLIE[v["griglia"]], v["caratteristica"], v["spontaneo"])
-               for c, v in _DATI["incantatori"].items()}
+def di(id_: str = "dnd35") -> dict:
+    """Le tabelle di costruzione del sistema `id_` (capacità `creature.costruzione`).
 
-#: Le griglie che NON hanno una riga d'ancora nel repo. Usarle è lecito; farlo
-#: senza dirlo no.
-INCANTATORI_SENZA_ANCORA = frozenset(_DATI["incantatori_regole"]["senza_ancora"])
+    Si leggono alla prima richiesta, non all'import (F2 di ADR-0112): chi
+    vuole un sistema preciso chiama `di(id)`, e i nomi di sempre (`T.TIPI`,
+    `T.MAGO`, …) restano e danno quelli del 3.5."""
+    return _di(id_)
+
+
+@_cache
+def _di(id_: str) -> dict:
+    _DATI = _S.regole(id_).dati("creature.costruzione")
+
+    #: tipo → (faccia del dado dei DV, BAB per DV, tiri salvezza buoni)
+    TIPI = {k: (v["dv"], v["bab"], tuple(v["ts_buoni"])) for k, v in _DATI["tipi"].items()}
+
+    #: Come il tipo si scrive nelle schede — italiano, inglese, e le forme miste.
+    ALIAS_TIPO = dict(_DATI["alias_tipo"])
+
+    #: classe → (faccia del dado dei DV, tiri salvezza buoni). Le classi PNG del SRD
+    #: (warrior, adept, expert, aristocrat, commoner) stanno qui come le altre: sono
+    #: SRD a tutti gli effetti, ed è con quelle che si fa il fondale.
+    CLASSI = {k: (v["dv"], tuple(v["ts_buoni"])) for k, v in _DATI["classi"].items()}
+
+    #: Le classi PNG del SRD. Contano meno per il GS, ed è il loro scopo.
+    CLASSI_PNG = frozenset(k for k, v in _DATI["classi"].items() if v.get("png"))
+
+    #: BAB per livello di classe.
+    BAB_CLASSE = {k: v["bab"] for k, v in _DATI["classi"].items()}
+
+    #: taglia → (armatura naturale tipica, modificatore di CA e attacco)
+    TAGLIE = {k: (v["armatura_naturale"], v["ca_attacco"]) for k, v in _DATI["taglie"].items()}
+
+    #: armatura → (bonus di CA, massimo di Destrezza)
+    ARMATURE = {k: (v["ca"], v["des_max"]) for k, v in _DATI["armature"].items()}
+    SCUDI = dict(_DATI["scudi"])
+
+    #: Le due matrici. Identiche fra SRD 3.5 e PF1e — una sola per tutti e due.
+    ELITE = tuple(_DATI["matrici"]["elite"])
+    BASIC = tuple(_DATI["matrici"]["standard"])
+
+
+
+    # ===========================================================================
+    # SRD 3.5 — gli incantatori
+    # ===========================================================================
+    # Il DM ha ragione: le tabelle per GS esistono anche per gli incantatori. Ma la
+    # cosa da cui si costruisce **non** è quella: è la tabella della classe, che dà
+    # gli incantesimi al giorno per livello. La riga per GS serve dopo, a controllare
+    # che la CD primaria sia dove dovrebbe.
+    #
+    # Griglia: livello di classe → slot per livello d'incantesimo, da 0 a 9.
+    # Gli slot di dominio del chierico NON sono contati: sono +1 per livello, e vanno
+    # aggiunti quando il dominio è scelto — che è una decisione, non un conto.
+
+
+
+    #: Le griglie stanno nel plugin (ADR-0111, L5b): `[griglie]` di
+    #: `sistemi/dnd35/dati/creature.toml`, con le stesse fonti e ancore di prima:
+    #: «Table: The Wizard», «The Sorcerer», «Sorcerer Spells Known», «The Cleric»
+    #: (= «The Druid»), «The Adept», «The Bard», «Bard Spells Known», «The Ranger»
+    #: (= «The Paladin»). Ancore verificate in repo ai livelli 1, 5, 10, 15, 20
+    #: (`dnd-35-srd/references/classes.md`), tranne l'adepto.
+    #:
+    #: Per il chierico va aggiunto **+1 slot per livello** quando i domini sono
+    #: scelti. Ranger e paladino non hanno incantesimi di livello 0: la prima cifra
+    #: di ogni riga è lo **0 finto** che tiene l'indice allineato con le altre
+    #: griglie, e sotto il 4° livello di classe la riga è di soli zeri invece che
+    #: assente, così nessun chiamante deve gestire un'assenza.
+    _GRIGLIE = {nome: {int(liv): tuple(slot) for liv, slot in righe.items()}
+                for nome, righe in _DATI["griglie"].items()}
+    MAGO = _GRIGLIE["mago"]
+    STREGONE = _GRIGLIE["stregone"]
+    #: Uno stregone non prepara: la lista è la creatura.
+    STREGONE_CONOSCIUTI = _GRIGLIE["stregone_conosciuti"]
+    CHIERICO = _GRIGLIE["chierico"]
+    DRUIDO = CHIERICO
+    #: L'adepto arriva al 5° livello d'incantesimo e non ha un'ancora in repo come
+    #: le altre: è dichiarato in `INCANTATORI_SENZA_ANCORA`.
+    ADEPTO = _GRIGLIE["adepto"]
+    #: ⚠️ Il bardo serve davvero: `Bestiario/png/lomyn-redtongue-bardo8-cr8.md`.
+    BARDO = _GRIGLIE["bardo"]
+    BARDO_CONOSCIUTI = _GRIGLIE["bardo_conosciuti"]
+    RANGER = _GRIGLIE["ranger"]
+    PALADINO = RANGER
+
+    #: Le classi il cui livello dell'incantatore **non** coincide col livello di
+    #: classe. Nel SRD sono ranger e paladino: `livello − 3`, con un minimo di 1 e
+    #: un massimo di 4° livello d'incantesimo.
+    LIVELLO_INCANTATORE_RIDOTTO = frozenset(_DATI["incantatori_regole"]["livello_ridotto"])
+
+    #: classe incantatrice → (griglia, caratteristica primaria, spontaneo?)
+    #: ⚠️ Ranger e paladino lanciano su **Saggezza**, non su Carisma (quella è la
+    #: regola di PF1e): nel SRD 3.5 la CD del paladino è 10 + livello +
+    #: modificatore di Saggezza. Il valore sta nei dati e il test delle impronte
+    #: (`test_sistemi_creature.py`) dice se cambia.
+    INCANTATORI = {c: (_GRIGLIE[v["griglia"]], v["caratteristica"], v["spontaneo"])
+                   for c, v in _DATI["incantatori"].items()}
+
+    #: Le griglie che NON hanno una riga d'ancora nel repo. Usarle è lecito; farlo
+    #: senza dirlo no.
+    INCANTATORI_SENZA_ANCORA = frozenset(_DATI["incantatori_regole"]["senza_ancora"])
+    luogo = locals()
+    return {n: luogo[n] for n in _NOMI}
+
+
+def __getattr__(nome: str):
+    if nome in _NOMI:
+        return di()[nome]
+    raise AttributeError(f"module {__name__!r} has no attribute {nome!r}")
+
 
 #: Il livello dell'incantatore per una classe e un livello di classe. Per quasi
 #: tutti è lo stesso numero; per ranger e paladino è `livello − 3`, e chiamare
 #: questa funzione invece di usare il livello di classe è ciò che evita di
 #: stampare «incantatore di livello 12» per un paladino che lancia da 9°.
 def livello_incantatore(classe: str, livello_classe: int) -> int:
-    if classe.lower() in LIVELLO_INCANTATORE_RIDOTTO:
+    if classe.lower() in di()["LIVELLO_INCANTATORE_RIDOTTO"]:
         return max(0, livello_classe - 3)
     return livello_classe
 
@@ -308,14 +343,14 @@ def media_dado(faccia: int) -> float:
 def normalizza_tipo(testo: str) -> str | None:
     """Il tipo di creatura, comunque sia scritto nella scheda."""
     t = (testo or "").strip().lower()
-    if t in TIPI:
+    if t in di()["TIPI"]:
         return t
-    if t in ALIAS_TIPO:
-        return ALIAS_TIPO[t]
-    for chiave in sorted(TIPI, key=len, reverse=True):
+    if t in di()["ALIAS_TIPO"]:
+        return di()["ALIAS_TIPO"][t]
+    for chiave in sorted(di()["TIPI"], key=len, reverse=True):
         if chiave in t:
             return chiave
-    for alias in sorted(ALIAS_TIPO, key=len, reverse=True):
+    for alias in sorted(di()["ALIAS_TIPO"], key=len, reverse=True):
         if alias in t:
-            return ALIAS_TIPO[alias]
+            return di()["ALIAS_TIPO"][alias]
     return None
