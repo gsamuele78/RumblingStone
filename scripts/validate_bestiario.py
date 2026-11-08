@@ -74,6 +74,7 @@ def warn(msg: str):
 #: le fasce si ricavano dalla Tabella 1–1 in `pf1e-statistiche-per-gs.yaml`
 #: con la tolleranza scritta nello stesso file: un dato, un posto.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore import sistemi as S  # noqa: E402
 from dmcore.tabelle import TABELLA_1_1, TOLLERANZA_PER_GS  # noqa: E402
 
 
@@ -372,6 +373,13 @@ def main(argv=None):
             if path.name.startswith("README") or in_archivio(path):
                 continue
             if is_statblock(path):
+                # F4 di ADR-0112: i bersagli per GS e i campi devono essere
+                # quelli del sistema del file, non solo del 3.5
+                diverse = S.regole_diverse(S.sistema_di(path), "validate_bestiario")
+                if diverse:
+                    warn(f"{path.relative_to(ROOT)}: sistema {S.sistema_di(path)}, "
+                         f"regole {', '.join(diverse)} diverse da quelle 3.5: scheda non controllata")
+                    continue
                 check_statblock(path)
                 if do_rules:
                     check_rules(path)

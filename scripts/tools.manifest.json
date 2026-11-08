@@ -7943,7 +7943,8 @@
         "capacita": [
           "creature.costruzione",
           "creature.regole_di_tipo",
-          "statblocco.campi"
+          "statblocco.campi",
+          "creature.conformita"
         ]
       },
       "consumes_schema": null,
@@ -8041,7 +8042,12 @@
       ],
       "docs": [
         "plans/PIANO-QUALITA-DEL-CODICE.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "creature.costruzione"
+        ]
+      }
     },
     {
       "id": "contenuti_nei_rami",

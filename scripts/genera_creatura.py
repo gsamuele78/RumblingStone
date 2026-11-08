@@ -919,9 +919,10 @@ def costruisci_parser() -> argparse.ArgumentParser:
     p.add_argument("--piu-cattivi", action="store_true",
                    help="sale ai bersagli PF1e, più duri a pari GS. Ogni rincaro "
                         "è elencato in fonte:")
-    p.add_argument("--sistema", default="dnd35",
+    p.add_argument("--sistema", default=None,
                    help="sistema di gioco del blocco (sistemi.toml): pf1e ricalcola dado, BAB, "
-                        "TS, BMC/DMC e gradi dal PRD (dmcore/creature_pf1e.py)")
+                        "TS, BMC/DMC e gradi dal PRD (dmcore/creature_pf1e.py). Se omesso, "
+                        "quello della cartella di --in (sistema_di), altrimenti dnd35")
     p.add_argument("--quanti", type=int, default=1)
     p.add_argument("--seed", type=int, default=None,
                    help="per riprodurre la stessa creatura")
@@ -956,6 +957,10 @@ def main(argv: list[str] | None = None) -> int:
         _rifiuta_bestiario(args.cartella)
         args.cartella.mkdir(parents=True, exist_ok=True)
 
+    if args.sistema is None:
+        # F4 di ADR-0112: il blocco si scrive nel sistema della cartella in cui va
+        from dmcore import sistemi as S
+        args.sistema = S.sistema_di(args.cartella) if args.cartella else "dnd35"
     if args.sistema != "dnd35":
         from dmcore import sistemi as S
         if args.sistema not in S.attivi():

@@ -11,14 +11,7 @@
     ],
     "A3_formule_in_python": [],
     "A4_capacita_in_codice": [],
-    "A5_strumenti_senza_sistema_del_file": [
-      "scripts/conformita_statblocchi.py",
-      "scripts/derive_statblocks.py",
-      "scripts/genera_attributi.py",
-      "scripts/genera_creatura.py",
-      "scripts/impronta_creature.py",
-      "scripts/validate_bestiario.py"
-    ]
+    "A5_strumenti_senza_sistema_del_file": []
   },
   "file_letti": 160,
   "misure": {
@@ -26,6 +19,6 @@
     "A2_importatori_del_nucleo": 6,
     "A3_formule_in_python": 0,
     "A4_capacita_in_codice": 0,
-    "A5_strumenti_senza_sistema_del_file": 6
+    "A5_strumenti_senza_sistema_del_file": 0
   }
 }

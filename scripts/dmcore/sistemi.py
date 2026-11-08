@@ -7,6 +7,8 @@ Risponde a tre domande e non ne fa altre:
     attivi() / plugin(id)         quali sistemi ci sono e cosa dichiarano
     capacita(id, nome)            come un sistema copre una capacità, seguendo
                                   l'eredità fino in fondo
+    regole_diverse(id, strumento) quali capacità di uno strumento 3.5 il
+                                  sistema `id` legge da altri dati (F4)
 
 Una capacità si dichiara in quattro modi (`sistemi/catalogo.toml`): `dati`,
 `codice` (ancora cablata, con il lotto che la migra), `eredita` (con il
@@ -258,6 +260,39 @@ def regole(id_: str, root: "Path | None" = None) -> Regole:
 def regole_di(percorso: "str | Path", root: "Path | None" = None) -> Regole:
     """Le regole del sistema che usa questo file (`sistema_di`)."""
     return regole(sistema_di(percorso, root), root)
+
+
+MANIFEST = "scripts/tools.manifest.json"
+
+
+@lru_cache(maxsize=4)
+def _manifest(root: Path) -> "dict[str, tuple[str, ...]]":
+    import json
+    m = json.loads((root / MANIFEST).read_text(encoding="utf-8"))
+    return {t["id"]: tuple(t["sistema"]["capacita"]) for t in m["tools"] if t.get("sistema")}
+
+
+def capacita_chieste(strumento: str, root: "Path | None" = None) -> "tuple[str, ...]":
+    """Le capacità che `strumento` chiede nel suo campo `sistema.capacita` del manifest."""
+    return _manifest((root or ROOT).resolve()).get(strumento, ())
+
+
+def regole_diverse(id_: str, strumento: str, scritto_per: str = "dnd35",
+                   root: "Path | None" = None) -> "list[str]":
+    """Le capacità di `strumento` che `id_` legge da dati diversi da `scritto_per` (F4 di ADR-0112).
+
+    Uno strumento scritto sulle tabelle di `scritto_per` può lavorare su un file
+    di `id_` solo se, per ogni capacità che chiede, i due sistemi arrivano agli
+    stessi dati (eredità compresa). Vuoto = può lavorare; altrimenti salta il
+    file e dice quali regole mancano, invece di usare quelle di un altro
+    sistema senza dirlo.
+    """
+    fuori = []
+    for nome in capacita_chieste(strumento, root):
+        a, b = capacita(id_, nome, root), capacita(scritto_per, nome, root)
+        if not a.utilizzabile or (a.da, a.voci) != (b.da, b.voci):
+            fuori.append(nome)
+    return fuori
 
 
 def termini_vietati(id_: str | None = None, root: "Path | None" = None) -> "list[tuple[str, str]]":

@@ -395,9 +395,12 @@ class TestRecintiNeiMaster(unittest.TestCase):
 
     #: Il cricchetto: i rilievi veri di oggi, per file, col perché. Uno in più è
     #: rosso. Le correzioni sono canone e le decide il DM : quando scendono, il tetto si abbassa a mano.
-    RESIDUI: dict = {}   # 2026-11-03, scelta del DM: tutti i conti all'SRD (Treant 95,
-                          # scurovisione di Durin e delle wyvern); Balvar 101 è giusto
-                          # col primo dado al massimo dei PNG con classi
+    # 2026-11-03, scelta del DM: tutti i conti all'SRD (Treant 95, scurovisione
+    # di Durin e delle wyvern); Balvar 101 è giusto col primo dado al massimo dei
+    # PNG con classi. 2026-11-08, F4 di ADR-0112: le schede PF1e del Giardino
+    # entrano nel rapporto; l'Asservito armato (34 pf, 35 con la mezza in su)
+    # aspetta la lettura del DM (F4-DIFF-PF1E.md).
+    RESIDUI: dict = {"appendice_creature.md": 1}
 
     def test_png_con_classi_primo_dado_al_massimo(self):
         # Balvar: 13d8+39, primo dado 8 e gli altri alla media = 101 (DMG 3.5, cap. 4)

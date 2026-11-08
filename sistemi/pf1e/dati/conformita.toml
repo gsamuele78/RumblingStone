@@ -1,0 +1,26 @@
+# sistemi/pf1e/dati/conformita.toml — i conti che conformita_statblocchi sa
+# fare su una scheda PF1e (F4 di ADR-0112). Un conto che manca qui non si fa,
+# e il rapporto lo dice: non si usa la regola 3.5 al suo posto.
+
+fonte = "PRD PF1e (pathfinder-1e-srd): Bestiary «Monster Creation», Core «Getting Started» e «Combat»"
+
+[punti_ferita]
+# Media dei dadi vita come in 3.5 (Bestiary, «Hit Dice»: totale in giù).
+media = "giu"
+# Un PNG con livelli di classe ha il primo dado al massimo; per i dadi dopo
+# il primo le due schede PF1e del repo (Sfregio del Drappo, Sgherro del
+# Giardino) usano la mezza in su. Scelta consigliata nella card F4 2 del
+# 2026-11-08, in attesa della risposta del DM.
+primo_dado_di_classe = "massimo"
+mezzi_dopo_il_primo = "su"
+
+[conti]
+# Uguali in PF1e: CA come somma, Iniziativa Migliorata +4, CD 10 + ½ DV + mod.
+fatti = ["pf", "CA", "prosa", "iniziativa", "CD", "ereditate"]
+
+[conti.mancanti]
+# Card F4 3 (consigliata «lo dice e salta il conto»): finché la regola PF1e
+# non c'è, il conto si salta e il rapporto lo scrive.
+lotta = "PF1e non ha la lotta: usa BMC e DMC, e il conto BMC non c'è ancora"
+scurovisione = "la lista dei tipi con scurovisione è quella dell'SRD 3.5; la lista PF1e non c'è ancora"
+corrompere_acqua = "la CD di corrompere l'acqua è riscontrata sull'SRD 3.5, non ancora sul PRD PF1e"

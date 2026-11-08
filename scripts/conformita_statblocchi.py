@@ -62,6 +62,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import functools
 import math
 import re
 import sys
@@ -80,6 +81,7 @@ from dmcore import lettura_creatura as L  # noqa: E402
 # verificatore usa; il resto si chiama dal modulo, con `P.` e `L.`.
 # ---------------------------------------------------------------------------
 from dmcore import progressione as P  # noqa: E402
+from dmcore import sistemi as S  # noqa: E402
 from dmcore import statblock as SB  # noqa: E402
 from dmcore.lettura_creatura import (  # noqa: E402
     TS_CAMPO, Scheda, dadi_di_pf, leggi, non_morto_pf1e, talenti,
@@ -338,9 +340,32 @@ def giudica(s: Scheda) -> dict:
             "decisione": decisione, "template_dichiarati": template_dichiarati(s.testo)}
 
 
+#: F4 di ADR-0112: le schede di un sistema che non legge le tabelle 3.5 di
+#: questo verificatore si saltano, e si dice perché (`saltate()`).
+STRUMENTO = "conformita_statblocchi"
+_SALTATE: "dict[str, list[str]]" = {}
+
+
+def del_sistema(p: Path) -> bool:
+    """True se le tabelle 3.5 del verificatore valgono per il sistema del file `p`."""
+    sistema = S.sistema_di(p)
+    diverse = S.regole_diverse(sistema, STRUMENTO)
+    if diverse:
+        rel = str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else str(p)
+        _SALTATE[rel] = [sistema] + diverse
+    return not diverse
+
+
+def saltate() -> "dict[str, list[str]]":
+    """{file: [sistema, capacità diverse…]} delle schede saltate fin qui."""
+    return dict(_SALTATE)
+
+
 def tutte() -> "list[dict]":
     fuori = []
     for p in sorted(ROOT.glob("Bestiario/**/*-cr*.md")):
+        if not del_sistema(p):
+            continue
         s = leggi(p)
         if s:
             fuori.append(giudica(s))
@@ -500,6 +525,8 @@ def rigenera_pf_dado(scrivi: bool) -> "list[dict]":
     """
     fatte = []
     for p in sorted(ROOT.glob("Bestiario/**/*-cr*.md")):
+        if not del_sistema(p):
+            continue
         t = p.read_text(encoding="utf-8")
         vecchia = RIGA_MARCA_PF.search(t)
         s = leggi(p) if vecchia else None
@@ -523,6 +550,8 @@ def rigenera_pf_dado(scrivi: bool) -> "list[dict]":
 def correggi_pf_dado(scrivi: bool) -> "list[dict]":
     fatte = rigenera_pf_dado(scrivi)
     for p in sorted(ROOT.glob("Bestiario/**/*-cr*.md")):
+        if not del_sistema(p):
+            continue
         s = leggi(p)
         c = pf_dado_corretto(s) if s else None
         if not c and s and L.pf_dado_sospetto(s.testo, s.gs):
@@ -555,6 +584,8 @@ def controlla_pf_dado() -> "list[str]":
     """Il gate: ogni `pf-dado` riscritto da qui e' ancora quello che la regola da'."""
     problemi = []
     for p in sorted(ROOT.glob("Bestiario/**/*-cr*.md")):
+        if not del_sistema(p):
+            continue
         t = p.read_text(encoding="utf-8", errors="replace")
         if MARCA_PF + "corretto" in t:
             s = leggi(p)
@@ -621,9 +652,29 @@ def _mod_caratteristica(car: str, quale: str) -> "int | None":
     return mod(int(m.group(1))) if m else None
 
 
-def conti_del_master(blocco: dict) -> "list[dict]":
+@functools.cache
+def regole_conformita(sistema: str = "dnd35") -> dict:
+    """I conti che si fanno nel `sistema` e come si arrotondano i pf (`creature.conformita`)."""
+    return S.dati(sistema, "creature.conformita")
+
+
+def fa(sistema: str, conto: str) -> bool:
+    return conto in regole_conformita(sistema).get("conti", {}).get("fatti", ())
+
+
+def conti_saltati(sistema: str) -> "dict[str, str]":
+    """{conto: perché} dei conti che nel `sistema` non hanno ancora la regola."""
+    return dict(regole_conformita(sistema).get("conti", {}).get("mancanti", {}))
+
+
+def _arrotonda(modo: str):
+    return math.ceil if modo == "su" else math.floor
+
+
+def conti_del_master(blocco: dict, sistema: str = "dnd35") -> "list[dict]":
     c = {k: v[1] for k, v in blocco["campi"].items()}
     fuori = []
+    media_pf = _arrotonda(regole_conformita(sistema)["punti_ferita"]["media"])
 
     def scarto(campo, scritto, atteso, nota=""):
         fuori.append({"campo": campo, "riga": blocco["campi"][campo][0],
@@ -631,19 +682,19 @@ def conti_del_master(blocco: dict) -> "list[dict]":
 
     # pf: la media dei dadi, arrotondata in basso sul totale, piu' il bonus
     m = re.match(r"\s*(\d+)\s*\(([^)]*)\)", c.get("PF", ""))
-    if m:
+    if m and fa(sistema, "pf"):
         dentro = m.group(2).split(";")[-1]
         dadi = DADI.findall(dentro)
         bonus = re.search(r"\d+d\d+\s*([+-]\s*\d+)\s*$", dentro.strip())
         if dadi and (bonus or re.fullmatch(r"[\dd+\s]+", dentro.strip())):
-            media = math.floor(sum(int(n) * (int(f) + 1) / 2 for n, f in dadi))
+            media = media_pf(sum(int(n) * (int(f) + 1) / 2 for n, f in dadi))
             atteso = media + (int(bonus.group(1).replace(" ", "")) if bonus else 0)
             if atteso != int(m.group(1)):
                 scarto("PF", int(m.group(1)), atteso, f"media dei dadi {media}")
     # CA: 10 piu' le voci fra parentesi, se la parentesi le elenca
     m = re.match(r"\s*(\d+)\s*\(([^)]*)\)", c.get("CA", ""))
     taglia_ca = 0
-    if m and not re.search(r"forma|con \*", m.group(2)):
+    if m and fa(sistema, "CA") and not re.search(r"forma|con \*", m.group(2)):
         # una voce e' un numero col segno seguito dal suo nome («+6 giaco di
         # maglia +2»: il +2 e' il potenziamento, gia' dentro il +6)
         voci = re.findall(r"([+-]\s*\d+)\s+[^\W\d_]", m.group(2).replace("−", "-"))
@@ -657,7 +708,7 @@ def conti_del_master(blocco: dict) -> "list[dict]":
     # iniziativa: mod Des, +4 con Iniziativa Migliorata (solo se i talenti sono scritti)
     m = re.match(r"\s*([+-]\d+)", c.get("Iniziativa", ""))
     des = _mod_caratteristica(car, "Des")
-    if m and des is not None and "Talenti" in c:
+    if m and des is not None and "Talenti" in c and fa(sistema, "iniziativa"):
         atteso = des + (4 if re.search(r"Iniziativa Migliorata|Improved Initiative", c["Talenti"]) else 0)
         if int(m.group(1)) < atteso:
             scarto("Iniziativa", int(m.group(1)), atteso, "mod Des, +4 con Iniziativa Migliorata")
@@ -665,7 +716,7 @@ def conti_del_master(blocco: dict) -> "list[dict]":
     mb = re.match(r"\s*\+?(\d+)", c.get("Attacco Base", ""))
     ml = re.match(r"\s*([+-]\d+)", c.get("Lotta", ""))
     forza = _mod_caratteristica(car, "For")
-    if mb and ml and forza is not None and taglia_ca in LOTTA_DA_CA:
+    if mb and ml and forza is not None and taglia_ca in LOTTA_DA_CA and fa(sistema, "lotta"):
         atteso = int(mb.group(1)) + forza + LOTTA_DA_CA[taglia_ca]
         if int(ml.group(1)) != atteso:
             scarto("Lotta", int(ml.group(1)), atteso, "BAB + For + taglia")
@@ -761,9 +812,15 @@ def _cd(testo: "str | None") -> "int | None":
     return int(m.group(1)) if m else None
 
 
-def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict]":
-    """I conti di un recinto che una regola SRD fissa (tabella qui sopra)."""
+def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
+                      sistema: str = "dnd35") -> "list[dict]":
+    """I conti di un recinto che una regola del `sistema` fissa (tabella qui sopra).
+
+    Quali conti valgono e come si arrotondano i pf lo dice il plugin
+    (`creature.conformita`): un conto senza regola nel sistema non si fa.
+    """
     sb, prosa, fuori = b["sb"], b["prosa"], []
+    regole_pf = regole_conformita(sistema)["punti_ferita"]
 
     def scarto(campo, scritto, atteso, nota):
         fuori.append({"campo": campo, "riga": b["riga"], "scritto": scritto,
@@ -771,25 +828,31 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
 
     pf = _int(sb.pf)
     m = re.fullmatch(r"\s*(\d+)d(\d+)\s*(?:([+-])\s*(\d+))?\s*", sb.pf_dado or "")
-    if m and pf is not None:
+    if m and pf is not None and fa(sistema, "pf"):
         n, f = int(m.group(1)), int(m.group(2))
         bonus = int(m.group(4) or 0) * (-1 if m.group(3) == "-" else 1)
-        atteso = math.floor(n * (f + 1) / 2) + bonus
-        # PNG con livelli di classe: il primo dado al massimo (DMG 3.5, cap. 4)
+        atteso = _arrotonda(regole_pf["media"])(n * (f + 1) / 2) + bonus
+        # PNG con livelli di classe: il primo dado al massimo (DMG 3.5, cap. 4;
+        # in PF1e i dadi dopo il primo a mezza in su, dati del plugin)
         con_classe = re.search(r"[^\W\d_]+ \d+\b", sb.tipo or "")
-        massimo = f + math.floor((n - 1) * (f + 1) / 2) + bonus
+        massimo = f + _arrotonda(regole_pf["mezzi_dopo_il_primo"])((n - 1) * (f + 1) / 2) + bonus
+        if regole_pf["primo_dado_di_classe"] != "massimo":
+            massimo = atteso
         if atteso != pf and not (con_classe and massimo == pf):
-            scarto("pf", pf, atteso, f"media di {sb.pf_dado}")
+            nota = f"media di {sb.pf_dado}"
+            if con_classe and massimo != atteso:
+                nota += f", oppure {massimo} col primo dado di classe al massimo"
+            scarto("pf", pf, atteso, nota)
     ca = _int(sb.ca)
     par = re.search(r"\(([^)]*)\)", (sb.ca_dettaglio or "").replace("−", "-"))
-    if ca is not None and par and not re.search(r"forma|con \*", par.group(1)):
+    if ca is not None and par and fa(sistema, "CA") and not re.search(r"forma|con \*", par.group(1)):
         voci = re.findall(r"([+-]\s*\d+)\s+[^\W\d_]", par.group(1))
         if voci:
             atteso = 10 + sum(int(v.replace(" ", "")) for v in voci)
             if atteso != ca:
                 scarto("CA", ca, atteso, "10 più le voci di ca-dettaglio")
     difesa = re.search(r"^\*\*Difesa\*\*[^\n]*", prosa, re.M)
-    if difesa:
+    if difesa and fa(sistema, "prosa"):
         d = difesa.group(0)
         mca = re.search(r"\*\*CA (\d+)\*\*", d)
         mpf = re.search(r"\*\*pf (\d+)\*\*", d)
@@ -803,7 +866,7 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
     ereditati = bool(re.search(r"quelli di|come A\.", talenti))
     focus = bool(re.search(r"Capacità Focalizzata \(soffio\)", talenti))
     presenza = None
-    if dv is not None:
+    if dv is not None and fa(sistema, "CD"):
         for nome, mod, gruppo in (("Soffio(?! aderente)", cos, "soffio"),
                                   ("Schiacciare", cos, "schiacciare"),
                                   ("Presenza (?:Terrificante|Minacciosa)", cari, "presenza")):
@@ -825,11 +888,12 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
                     nota += " + 2 Capacità Focalizzata"
                 scarto(f"CD {gruppo}", scritto, sorted(ammessi)[-1], nota)
     mc = re.search(r"corrompere l'acqua\*?[^.·\n]{0,12}?CD (\d+)", prosa)
-    if mc and presenza is not None and int(mc.group(1)) != presenza:
+    if mc and presenza is not None and int(mc.group(1)) != presenza and fa(sistema, "corrompere_acqua"):
         scarto("CD corrompere l'acqua", int(mc.group(1)), presenza,
                "SRD, drago nero: la CD della presenza terrificante")
     # «come A.n»: una voce ereditata che porta una CD del blocco di prima
-    for voce, rif in re.findall(r"\*\*([^*]+)\*\*\s*come (A\.\d+(?:-bis)?)\b", prosa):
+    ereditate = fa(sistema, "ereditate") and fa(sistema, "corrompere_acqua")
+    for voce, rif in re.findall(r"\*\*([^*]+)\*\*\s*come (A\.\d+(?:-bis)?)\b", prosa) if ereditate else ():
         padre = (fratelli or {}).get(rif)
         if not padre or presenza is None:
             continue
@@ -853,7 +917,7 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None) -> "list[dict
     tipo = sb.tipo or ""
     # una forma temporanea («pf: quelli di Hella») tiene i sensi di chi la prende
     forma = _int(sb.pf) is None
-    if not forma and SCUROVISIONE_SRD.search(tipo) and not re.search(r"scurovisione", sensi, re.I):
+    if not forma and fa(sistema, "scurovisione") and SCUROVISIONE_SRD.search(tipo) and not re.search(r"scurovisione", sensi, re.I):
         scarto("sensi", "senza scurovisione", "scurovisione",
                f"il tipo «{SCUROVISIONE_SRD.search(tipo).group(0)}» la ha nell'SRD")
     return fuori
@@ -864,12 +928,12 @@ def _sigla(titolo: str) -> "str | None":
     return m.group(1) if m else None
 
 
-def conti_dei_recinti(testo: str) -> "list[dict]":
+def conti_dei_recinti(testo: str, sistema: str = "dnd35") -> "list[dict]":
     blocchi = list(_recinti_del_master(testo))
     fratelli = {_sigla(b["titolo"]): b for b in blocchi if _sigla(b["titolo"])}
     fuori = []
     for b in blocchi:
-        for x in conti_del_recinto(b, fratelli):
+        for x in conti_del_recinto(b, fratelli, sistema):
             fuori.append({"titolo": b["titolo"], **x})
     return fuori
 
@@ -878,23 +942,50 @@ def rapporto_master(files: "list[Path]") -> "list[dict]":
     esito = []
     for p in files:
         testo = p.read_text(encoding="utf-8", errors="replace")
+        sistema = S.sistema_di(p)
         for b in _blocchi_del_master(testo):
-            for x in conti_del_master(b):
+            for x in conti_del_master(b, sistema):
                 percorso = p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
                 esito.append({"file": str(percorso), "titolo": b["titolo"], **x})
-        for x in conti_dei_recinti(testo):
+        for x in conti_dei_recinti(testo, sistema):
             percorso = p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
             esito.append({"file": str(percorso), **x})
     return esito
 
 
+def saltati_master(files: "list[Path]") -> "list[dict]":
+    """I conti che non si fanno sui file di un sistema che non ha ancora la regola."""
+    fuori = []
+    for p in files:
+        sistema = S.sistema_di(p)
+        percorso = p.relative_to(ROOT) if p.is_relative_to(ROOT) else p
+        for conto, motivo in sorted(conti_saltati(sistema).items()):
+            fuori.append({"file": str(percorso), "sistema": sistema, "conto": conto, "motivo": motivo})
+    return fuori
+
+
 def master_di_default() -> "list[Path]":
+    """I DEF e ARC-08, più le schede ```statblocco``` dei moduli di un altro sistema.
+
+    F4 di ADR-0112: i moduli che `sistemi.toml` [moduli] dà a un sistema
+    diverso dal predefinito (oggi il Drappo e il Giardino PF1e) entrano nel
+    rapporto con le regole del loro sistema.
+    """
     fuori = []
     for p in sorted(ROOT.glob("0[0-9]_*/*.md")):
         if "_ARCHIVIO" in p.parts:
             continue
         if "DEF-" in p.name or p.parent.name.startswith("08_"):
             fuori.append(p)
+    predefinito = S.predefinito()
+    for cartella, sistema in sorted(S.carica()[0].get("moduli", {}).items()):
+        if sistema == predefinito:
+            continue
+        for p in sorted((ROOT / cartella).rglob("*.md")):
+            if "_ARCHIVIO" in p.parts or "homebrew" in p.parts:
+                continue
+            if re.search(r"^```statblocco\s*$", p.read_text(encoding="utf-8", errors="replace"), re.M):
+                fuori.append(p)
     return fuori
 
 
@@ -921,6 +1012,8 @@ def main(argv=None) -> int:
         for x in r:
             print(f"  {x['file']}:{x['riga']} [{x['titolo'][:50]}] {x['campo']} "
                   f"{x['scritto']} ≠ {x['atteso']} ({x['nota']})")
+        for x in saltati_master(files):
+            print(f"  ⏭ {x['file']} ({x['sistema']}): conto «{x['conto']}» saltato, {x['motivo']}")
         print(f"STATBLOCCHI NEI MASTER — {len(files)} file, {len(r)} conti che non tornano "
               "(rapporto, non cancello: D7 di MASTER-DEF)")
         return 0
