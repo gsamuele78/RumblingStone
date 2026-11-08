@@ -102,7 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | #341 |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | in corso |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
