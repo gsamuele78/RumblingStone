@@ -1,6 +1,6 @@
 # PIANO — La piattaforma di sviluppo: una versione stabile, componenti misurati
 
-> **Stato**: 🟡 in corso (2026-10-23), P0 e P9 fatti, D1-D6 decise il giorno stesso · **Classe**: G per la regola, C per i lotti
+> **Stato**: 🟡 in corso (2026-10-23), P0, P3 e P9 fatti, D1-D6 decise il giorno stesso; il 2026-11-08 ruff, uv e `converters/` salgono a stable, xdist resta in testing fino al 2026-11-22 ([misura](esperimenti/promozioni-2026-11-08/MISURE.md)) · **Classe**: G per la regola, C per i lotti
 > **Nasce da**: tre messaggi del DM del 2026-10-23 (citati in
 > [ADR-0099](adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)): una
 > versione sola di Python, stabile e supportata, scelta come Debian sceglie il
@@ -54,10 +54,10 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | unittest (secondo corridore) | stdlib | — | 222 s su 914 per rieseguire gli stessi test | stable, **da togliere** come esecuzione completa (D2) |
 | pip-audit | ≥ 2.10.1 | pavimento | CVE nelle dipendenze | **testing** (non bloccante dal 2026-09-24, non è mai salito) |
 | shellcheck | del runner | no | 4 avvisi in 2 file (audit AMBIENTE) | **testing** (`|| true`); stable con A6 di AMBIENTE |
-| `compileall` | stdlib | — | solo errori di sintassi | **stable**; ruff lo copre e lo supera (§3) |
-| ruff | 0.16.9 | no | 0,08 s; 3 bug veri in `converters/`, 0 in `scripts/` | **testing** da questa PR (D5) |
-| pytest-xdist | — | — | suite 219 s → 67 s su 4 core | unstable → testing se D3 |
-| uv | 0.11.32 | — | installazione 33 s → 4 s a freddo, 21 s → 0,2 s a caldo | unstable → testing se D4 |
+| `compileall` | stdlib | — | solo errori di sintassi | **uscito** dalla CI il 2026-11-08: ruff E9 lo copre (P3) |
+| ruff | 0.16.9 | sì (`requirements-dev.txt`) | 0,08 s; 3 bug veri in `converters/`, 0 in `scripts/`; 81 run su `main`, 0 falsi allarmi | **stable** dal 2026-11-08 (P3) |
+| pytest-xdist | 3.8.0 | sì | suite 219 s → 67 s su 4 core; in CI 205 s → 132 s; stessa suite del job principale solo dal 2026-11-08 | **testing**; stable non prima del 2026-11-22 (P4) |
+| uv | 0.11.32 | sì (in `ci.yml`) | installazione 33 s → 4 s a freddo; in CI 24 s → 6 s, stessi pacchetti di pip 81 run su 81 | **stable** per installare in CI dal 2026-11-08 (P5); il lock di A3 resta da fare |
 | mypy | 2.3.1 | — | 328 rilievi, 0 bug nel campione di 41 | **unstable**, non si adotta |
 | pyright | — | — | non misurato | unstable |
 | pre-commit (framework) | — | — | non misurato; A4 ha già deciso hook senza dipendenze | **non si adotta** |
@@ -148,13 +148,21 @@ test); gli altri tre lasciati, con la ragione, in due righe di `ruff.toml`.
 - La routine settimanale lo esegue sull'ultimo run di `main` e lo confronta
   col precedente: è il «nessuna misura peggiora» del criterio di promozione.
 
-### P3 · ruff da testing a stable ⬜
+### P3 · ruff da testing a stable ✅ 2026-11-08
 `[engine: Haiku 5.5 · effort: basso · qualità: i criteri di ADR-0099 §3 verificati e scritti qui]`
 - Dopo 14 giorni e 10 run su `main` con zero falsi allarmi non spiegati, si
   toglie `continue-on-error` e si toglie il passo `compileall`, che ruff
   copre (E9).
 - Una regola nuova entra solo se, sul repo di quel giorno, i suoi rilievi
   sono difetti veri almeno una volta su due.
+- **Fatto il 2026-11-08** (ok del DM: *«Ok anche per la migrazione a stabile
+  deglinstrumenti eptoseguire ?»*). Contesto: 81 run di `main` dal 23/10, letti
+  dal log perché il passo con `continue-on-error` risulta sempre `success`: 76
+  puliti, 5 rossi il 7/11 per due variabili morte vere, corrette con la #319;
+  nessun falso allarme. Decisione: ruff blocca, `compileall` esce.
+  Conseguenze: un F841 o un NameError nuovo fa rossa la PR; `scripts/Old`
+  (solo shell) non è più compilato. Misura in
+  [promozioni-2026-11-08](esperimenti/promozioni-2026-11-08/MISURE.md).
 
 ### P4 · I test girano una volta, e in parallelo ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: stesso numero di prove eseguite prima e dopo; il test di parità resta e morde]`
@@ -163,6 +171,12 @@ test); gli altri tre lasciati, con la ragione, in due righe di `ruff.toml`.
   che il difetto del 2026-09-21 chiedeva. Guadagno atteso: 222 s su 914.
 - Se D3: pytest-xdist in testing, prima in un job parallelo non bloccante che
   misura tempo e test instabili per 14 giorni.
+- **2026-11-08, resta in testing.** 81 run verdi, nessun fallimento in
+  parallelo, ma per 70 run il job xdist non aveva typst ed eseguiva 9 prove
+  in meno del job principale: la stessa suite c'è solo dalla #342. La misura
+  di chi scrive nel repo, rifatta, ha trovato due moduli nuovi
+  (`test_migliora_prosa.py`, `test_misura_stampa.py`), ora in serie. Si
+  ripropone non prima del 2026-11-22, con 10 run e conteggi uguali.
 
 ### P5 · uv per installare, fare il lock e dare la Python ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: stesso insieme di pacchetti installati, verificato con pip freeze; il lock con hash si installa con pip --require-hashes]`
@@ -173,6 +187,10 @@ test); gli altri tre lasciati, con la ragione, in due righe di `ruff.toml`.
   distrobox su Bazzite, da misurare in A5b.
 - Da misurare prima: se Dependabot aggiorna un lock scritto da `uv pip
   compile` (A3 già lo chiedeva per pip-compile).
+- **2026-11-08, la parte che installa è stable**: `uv pip install --system`
+  nel job principale (81 run, stessi pacchetti di pip 81 volte su 81, 24 s →
+  6 s). Restano il lock con hash di A3, `uv python install` e gli altri job
+  che installano ancora con pip.
 
 ### P6 · Una Python sola, controllata ⬜
 Lo fa **A2 di AMBIENTE** (il test che confronta `ci.yml` col registro), con
@@ -185,7 +203,7 @@ guarda anche `dipendenze.yml`, il Dockerfile e `dependabot.yml`.
   di proporre una libreria o uno strumento, il canale e la misura (ADR-0099).
 - `rumblingstone-edizione` resta il gate della licenza all'ingresso in testing.
 
-### P9 · I convertitori entrano nella piattaforma ✅ in testing
+### P9 · I convertitori entrano nella piattaforma ✅ stable dal 2026-11-08
 `[engine: Opus 5.5 · effort: medio · qualità: ruff a zero su converters/; ogni modulo si importa su 3.13 nel job della CI]`
 D6, DM 2026-10-23: *«D6 b»*. Corretti i tre bug (`Tuple` non importato:
 `fallback_manager` non si importava; `success_count` mai inizializzato;
@@ -196,7 +214,7 @@ README, al posto di 3.9 e 3.12; `magika>=1.0.3` senza il marcatore che lo
 escludeva da 3.13 (la 1.0.3 ha la ruota per 3.13, e l'API usata
 `identify_stream(...).prediction.output.mime_type` risponde
 `application/pdf` su un PDF vero). Dependabot ha una voce `pip` per le due
-cartelle, con gruppi suoi. Job CI `convertitori`, non bloccante.
+cartelle, con gruppi suoi. Job CI `convertitori`, non bloccante fino al 2026-11-08, poi stable (81 run verdi su 81, 52 s in parallelo a «validate»): perde `continue-on-error`. Per bloccare il merge va aggiunto ai check richiesti del ruleset, che è un passo del DM.
 Resta: i test del motore leggono PDF fuori dal repo.
 
 ### P10 · Il rilascio è una PR ✅ in testing

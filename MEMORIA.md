@@ -88,6 +88,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Promozioni da testing a stable (ok del DM): ruff blocca e `compileall` esce (P3… | ✅ P3; P4 e P5 in parte |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F4 strumenti per sistema del file: A5 6 → 0 (`sistema_di` +… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
 | 2026-11-08 | AUDIT-SCRIPTS (da RECUPERO D5) | Ripiego senza PyYAML in `compress_skills.py`: misurato e scartato. Funziona (18… | ✅ chiusa, non si fa |
