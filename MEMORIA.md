@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I3 moduli di codice per plugin: due plugin con lo stesso modulo `metodi`, 4.494… | ✅ proposta per F5: registro `[moduli]` caricato con importlib |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Piano e ADR-0112 proposta: microkernel guidato dai dati, ambito d20, formule co… | 🟡 F0 ✅ |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L8: prova del nove, un sistema d20 finto di soli dati si aggiunge senza toccare… | ✅ 9 test verdi: cancello verde, 13 capacità coperte, PE ed EL del plugin finto arrivano negli strumenti veri; 0 file di codice toccati; limiti dichiarati (METO… |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L7: le sigle del riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sens… | ✅ 19 booklet HTML e .hb.md identici byte per byte; .typ: 98 righe, solo il parametro `etichette:`; PDF non compilato in locale |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L6: build-skills.sh e sync-skills.sh installano solo le skill dei sistemi attiv… | ✅ skill costruite: 18/18 oggi, 17 solo 3.5, 15 solo PF1e; pacchetti CI identici con la configurazione attuale |
 
 ## Le misure che si portano dietro
 
