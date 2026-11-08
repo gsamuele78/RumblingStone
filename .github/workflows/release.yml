@@ -156,8 +156,17 @@ jobs:
         run: |
           echo "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)" >> "$GITHUB_ENV"
           SOURCE_DATE_EPOCH=$(git log -1 --format=%ct) ./scripts/build-skills.sh --no-deploy
+      - name: Cache degli archivi di mise.lock (ADR-0113)
+        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
+        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/rumblingstone-strumenti
+          key: strumenti-${{ hashFiles('mise.lock') }}
+
       - name: Archivio e impronte
         env:
+          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
           TAG: ${{ needs.decide.outputs.tag }}
         run: |
           mkdir -p dist

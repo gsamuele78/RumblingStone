@@ -230,6 +230,26 @@ def _sha(p: Path) -> str | None:
         return None
 
 
+# La cache degli archivi: una cartella (variabile STRUMENTI_CACHE) dove ogni
+# archivio scaricato resta col suo nome. Si usa solo se lo sha256 torna con
+# mise.lock, quindi una cache vecchia o rotta costa un download, mai un binario
+# diverso. In CI è la cartella di actions/cache con chiave hashFiles('mise.lock'):
+# un'interruzione di GitHub Releases non ferma i job che l'hanno già.
+def archivio(v: Voce, scarica_f=scarica) -> bytes:
+    """I byte dell'archivio di `v`, dalla cache se lo sha torna, altrimenti da `scarica_f`."""
+    cache = os.environ.get("STRUMENTI_CACHE")
+    posto = Path(cache).expanduser() / v.url.rsplit("/", 1)[1] if cache and v.url else None
+    if posto and v.sha256 and _sha(posto) == v.sha256:
+        return posto.read_bytes()
+    dati = scarica_f(v.url)
+    if posto and hashlib.sha256(dati).hexdigest() == v.sha256:
+        posto.parent.mkdir(parents=True, exist_ok=True)
+        tmp = posto.with_name(posto.name + ".tmp")
+        tmp.write_bytes(dati)
+        tmp.replace(posto)
+    return dati
+
+
 def installa_voce(v: Voce, dest: Path = DEST, scarica_f=scarica) -> tuple[bool, str]:
     """Installa una voce. `(ok, messaggio)`. Non scarica se è già lì con lo sha giusto."""
     if not v.url or not v.sha256:
@@ -242,7 +262,7 @@ def installa_voce(v: Voce, dest: Path = DEST, scarica_f=scarica) -> tuple[bool, 
     if gia.get("archivio_sha256") == v.sha256 and _sha(finale) == gia.get("sha256"):
         return True, f"{v.nome} {v.versione}: già installato ({finale})"
     try:
-        dati = scarica_f(v.url)
+        dati = archivio(v, scarica_f)
     except OSError as e:
         return False, f"{v.nome} {v.versione}: scaricamento fallito ({e})"
     sha = hashlib.sha256(dati).hexdigest()
@@ -341,7 +361,7 @@ def costruisci_bundle(piatt: str, uscita: Path, scarica_f=scarica,
     for v in vv:
         if not v.url or not v.sha256:
             raise ValueError(f"{v.nome}: mise.lock non ha {piatt}")
-        dati = scarica_f(v.url)
+        dati = archivio(v, scarica_f)
         if hashlib.sha256(dati).hexdigest() != v.sha256:
             raise ValueError(f"{v.nome}: sha256 diverso dal lockfile")
         file[f"archivi/{v.url.rsplit('/', 1)[1]}"] = dati

@@ -408,10 +408,20 @@ jobs:
         run: python scripts/validate_booklets.py --spiega
 
 
+      - name: Cache degli archivi di mise.lock (ADR-0113)
+        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
+        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/rumblingstone-strumenti
+          key: strumenti-${{ hashFiles('mise.lock') }}
+
       - name: Strumenti binari da mise.lock (typst, pdfcpu; ADR-0113)
         # Le versioni stanno solo in mise.toml, URL e sha256 in mise.lock: un
         # archivio con un altro sha256 non si installa. Mai «latest» (ADR-0020
         # §3): si alza con una PR di Renovate o a mano, e si vede.
+        env:
+          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
         run: |
           python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
           python scripts/strumenti.py verifica --bin "$RUNNER_TEMP/strumenti"
@@ -585,7 +595,17 @@ jobs:
           { echo '```toml'; cat mise.lock; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           git diff --exit-code mise.lock
 
+      - name: Cache degli archivi di mise.lock (ADR-0113)
+        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
+        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/rumblingstone-strumenti
+          key: strumenti-${{ hashFiles('mise.lock') }}
+
       - name: Stessi byte di strumenti.py
+        env:
+          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
         run: |
           python scripts/strumenti.py installa --bin "$RUNNER_TEMP/kernel"
           for t in typst pdfcpu; do
@@ -680,7 +700,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
 
+      - name: Cache degli archivi di mise.lock (ADR-0113)
+        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
+        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/rumblingstone-strumenti
+          key: strumenti-${{ hashFiles('mise.lock') }}
+
       - name: Strumenti binari da mise.lock (gli stessi di «validate», ADR-0113)
+        env:
+          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
         run: python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
 
       - name: Nessun booklet sopra i suoi tetti di stampa

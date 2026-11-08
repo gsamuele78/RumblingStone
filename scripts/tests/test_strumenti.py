@@ -170,6 +170,43 @@ class TestRiprova(unittest.TestCase):
         self.assertEqual(len(chiamate), 5)
 
 
+class TestCache(DatiFinti):
+    """STRUMENTI_CACHE: un archivio già scaricato non si riscarica, uno rotto sì."""
+
+    def setUp(self):
+        super().setUp()
+        from unittest import mock
+        self.cache = self.tmp / "cache"
+        p = mock.patch.dict(S.os.environ, {"STRUMENTI_CACHE": str(self.cache)})
+        p.start()
+        self.addCleanup(p.stop)
+
+    @staticmethod
+    def vietato(url):
+        raise OSError("rete giù (504)")
+
+    def test_con_la_cache_si_installa_senza_rete(self):
+        (v,) = self.voci()
+        self.assertTrue(S.installa_voce(v, self.tmp / "a")[0])
+        self.assertTrue((self.cache / "finto-1.2.3.tar.xz").exists())
+        ok, _ = S.installa_voce(v, self.tmp / "b", self.vietato)
+        self.assertTrue(ok)
+        self.assertEqual((self.tmp / "b" / "bin" / "finto").read_bytes(), self.binario)
+
+    def test_una_cache_rotta_si_riscarica(self):
+        (v,) = self.voci()
+        self.cache.mkdir()
+        (self.cache / "finto-1.2.3.tar.xz").write_bytes(b"rotto")
+        self.assertTrue(S.installa_voce(v, self.tmp / "a")[0])
+        self.assertEqual(S._sha(self.cache / "finto-1.2.3.tar.xz"), self.sha)
+
+    def test_un_archivio_con_lo_sha_sbagliato_non_entra_in_cache(self):
+        self.scrivi("0" * 64)
+        (v,) = self.voci()
+        self.assertFalse(S.installa_voce(v, self.tmp / "a")[0])
+        self.assertFalse((self.cache / "finto-1.2.3.tar.xz").exists())
+
+
 class TestBundle(DatiFinti):
     def bundle(self, uscita: Path) -> Path:
         orig = (S.TOML, S.LOCK)
