@@ -1,6 +1,6 @@
 # PIANO — Il motore agnostico: regole, formule e fonti d20 nel plugin
 
-> **Stato**: 🟡 in corso (2026-11-08), F0 e I1 fatte, I2-I4 da fare · **Classe**: G per la regola, C per le fasi
+> **Stato**: 🟡 in corso (2026-11-08), F0, I1 e I2 fatte, I3-I4 da fare · **Classe**: G per la regola, C per le fasi
 > **Nasce da**: i messaggi del DM del 2026-11-08 (citati in [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md)).
 > **Decisione**: [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), proposta. Continua [PIANO-SISTEMI-DI-GIOCO-PLUGIN](PIANO-SISTEMI-DI-GIOCO-PLUGIN.md) (L0-L8 chiusi).
 > **Fuori da questo piano**: l'installazione automatica di typst e pdfcpu (mise, lockfile, Renovate) ha un thread suo.
@@ -33,7 +33,7 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 |---|---|---|
 | **F0** audit come codice ✅ | [`censimento_formule.py`](esperimenti/motore-agnostico-2026-11-08/censimento_formule.py) conta A1-A5 con l'AST (non con le regex), scrive [`CENSIMENTO.json`](esperimenti/motore-agnostico-2026-11-08/CENSIMENTO.json); `--check` è un cricchetto | numeri ripetibili byte per byte (provato: due esecuzioni, file identici); un test lo fissa |
 | **I1** indagine: linguaggio delle formule ✅ [report](esperimenti/motore-agnostico-2026-11-08/i1_formule/REPORT.md): vince **simpleeval ristretto** (7/7 formule, 0/50 ostili, un file MIT senza dipendenze); CEL bocciato su (d) e sulla divisione che tronca (5 casi su 61 sbagliati in silenzio); asteval apre file | candidati CEL (`cel-python`, Apache-2.0), simpleeval (MIT), asteval (MIT), valutatore minimo su `ast` della libreria standard | (a) tutte le formule di A3 danno lo stesso risultato su tutto il dominio (livelli/DV 0-40, punteggi 1-60); (b) 50 espressioni ostili (attributi, import, cicli, numeri enormi) rifiutate; (c) stesso risultato in 100 esecuzioni; (d) funziona in una skill impacchettata senza `pip`; (e) licenza, manutenzione, tempo per formula. Report con tabella |
-| **I2** indagine: schema dei plugin | Pydantic v2 (MIT), `jsonschema` (MIT), validazione a mano di oggi | **punteggio di mutazione**: 200 difetti generati in modo deterministico (seme fisso) nei TOML dei plugin (chiave mancante, tipo sbagliato, capacità sconosciuta, riferimento a file assente, eredità circolare); % presi e qualità del messaggio; export JSON Schema per `taplo` |
+| **I2** indagine: schema dei plugin ✅ [report](esperimenti/motore-agnostico-2026-11-08/i2_schema/REPORT.md): su 503 difetti generati, oggi se ne prendono 123 con 77 crash; **JSON Schema** 492 senza falsi allarmi, validato nella skill da **fastjsonschema** (puro Python, BSD-3) e in CI da `jsonschema`; pydantic 496 ma compilato e lo schema diventa codice, bocciato | Pydantic v2 (MIT), `jsonschema` (MIT), validazione a mano di oggi | **punteggio di mutazione**: 200 difetti generati in modo deterministico (seme fisso) nei TOML dei plugin (chiave mancante, tipo sbagliato, capacità sconosciuta, riferimento a file assente, eredità circolare); % presi e qualità del messaggio; export JSON Schema per `taplo` |
 | **I3** indagine: moduli di codice per plugin | registro per nome in `sistema.toml` caricato con `importlib` da `sistemi/<id>/codice/`, entry point di `importlib.metadata`, `pluggy` (MIT) | righe di codice, test necessari, impossibilità di caricare codice fuori da `sistemi/` (test ostile) |
 | **I4** indagine: PCGen | lettura dei *game mode* e del sistema di formule di PCGen; tabella «concetto loro → nostro» | cosa adottiamo e cosa no, con il motivo |
 | **F1** fonti come dati | `fonti.regole` → `sistemi/<id>/dati/fonti.toml`, letto da `riscontro_srd.py` | A4 1 → 0; impronte 12/12 identiche; `riscontro_srd --check` invariato |
@@ -50,7 +50,7 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 | Banco d'invarianza (`impronte.py --confronta`, ADR-0111) | ogni fase | 12/12 impronte identiche sui moduli 3.5 |
 | Banco delle formule | da F3 | ogni formula dà lo stesso risultato della funzione Python che sostituisce, su tutto il dominio |
 | PDF typst | ogni fase che tocca la stampa | testo (`pdftotext`) e pagine (`pdfinfo`) dei 20 PDF identici |
-| Punteggio di mutazione dello schema | da F3, in CI | non scende sotto il valore misurato in I2 |
+| Punteggio di mutazione dello schema | da F3, in CI | non scende sotto il valore misurato in I2 (492/503), 0 crash |
 | Censimento F0 (`--check`) | ogni fase, in CI | A1-A5 non salgono (cricchetto) |
 | Suite e CI | ogni fase | «Validate skills & scripts» e «Build skill packages» verdi; in questo container 49 test falliscono anche su main, e il numero non deve salire |
 | Lettura del DM | F4 | il DM legge le proposte PF1e cambiate sul Drappo e sul Giardino |
