@@ -569,6 +569,11 @@ jobs:
     name: Strumenti con mise — stessi byte di strumenti.py (testing, non bloccante)
     runs-on: ubuntu-24.04
     continue-on-error: true
+    env:
+      # Il default di mise è 3 tentativi (~20 s): con i 504 di GitHub Releases
+      # del 2026-11-08 non basta. 8 tentativi, attese fino a 15 s (~1,5 min),
+      # come i ~2 minuti di strumenti.py.
+      MISE_HTTP_RETRIES: "8"
     steps:
       - uses: actions/checkout@v7
 
