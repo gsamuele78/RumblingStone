@@ -10,7 +10,9 @@ Questi moduli prendono il marcatore `scrive_nel_repo`, e la CI li esegue in un
 secondo giro, in serie, dopo quello in parallelo. L'elenco viene da una misura,
 non da una ricerca nel codice: un audit hook su `open` in scrittura durante
 l'intera suite, ricetta in
-plans/esperimenti/piattaforma-2026-10-23/MISURE.md.
+plans/esperimenti/piattaforma-2026-10-23/MISURE.md. Rifatta il 2026-11-08 sulla
+suite di quel giorno (2.529 prove, plans/esperimenti/promozioni-2026-11-08/):
+due moduli nuovi scrivono nel repo e sono entrati qui.
 """
 
 SCRIVONO_NEL_REPO = {
@@ -19,6 +21,8 @@ SCRIVONO_NEL_REPO = {
     "test_norme_editoriali.py",         # skills/REGISTRO-NORME-EDITORIALI.md
     "test_orchestrazione_skill.py",     # skills/ORCHESTRAZIONE.md
     "test_validate_docs.py",            # ADR finti in plans/adr/, fixtures/_tmp_*
+    "test_migliora_prosa.py",           # pipeline/cieco/_testi-provvisori.md
+    "test_misura_stampa.py",            # scripts/tests/_tmp_appendice.*, _tmp_misura_stampa/
 }
 
 
