@@ -56,9 +56,10 @@
 > 7. **Grimjaw senza sfidante.** Decisa `[CANONE — DM 2026-11-04, P16]`: come scritto qui. La carta non ha un effetto scritto. Il
 >    master gli dà +1 ad AU e DU nel suo settore finché c'è, e, se nessun
 >    eroe lo sfida entro un round, il Re scende a cercarlo (Scena 4).
-> 8. **La riserva e il morale +3.** La riga «Rinforzi» di `ARC08-02` dà +3:
->    il master lo applica quando la riserva entra nel settore caduto. Con la
->    breccia (−2) fa +1 netto.
+> 8. **La riserva e il morale +2.** La riga «Rinforzi» di `ARC08-02` dà +3,
+>    quella di `ARC08-01` +2: il master applica +2 quando la riserva entra nel
+>    settore caduto `[CANONE — DM 2026-11-08, MASTER-DEF D6, la riserva a +2]`, perché fra le due versioni il DM vuole quella che lascia
+>    più forte l'orda (era +3 dal 2026-11-05). Con la breccia (−2) fa 0 netto.
 > 9. **Le frecce ammazzadraghi di Dara. Decisa** `[CANONE — DM 2026-11-04, P16]`: ci sono. La guida gliene dava due per il
 >    Giorno 3; la sua carta dei poteri non le ha. Il master le fa dare dal Re
 >    all'alba del Giorno 3, dall'armeria: se il DM non le vuole, Dara tira con
@@ -352,7 +353,7 @@ reparti, non ai gesti.
 |---|---|
 | un reparto nanico distrutto | −1 |
 | un settore cede | −2 |
-| la riserva entra nel settore caduto `[CANONE — DM 2026-11-05, P16, la riserva a +3]` | +3 |
+| la riserva entra nel settore caduto `[CANONE — DM 2026-11-08, MASTER-DEF D6, la riserva a +2]` | +2 |
 | un comandante nemico fugge | +2 |
 | un giorno senza brecce | +1, la notte |
 | il sorvolo: un eroe colpisce il drago `[CANONE — DM 2026-11-04, P16, il morale]` | +1 |
@@ -1161,7 +1162,7 @@ il libretto ha già dentro i mazzi.*
 riceve la riserva come terzo reparto: due di balestrieri e uno di veterani
 sono **tre reparti**, e il gruppo ne sceglie uno; gli altri due restano nel
 cortile per il settore dopo (il libretto dice «entra come terzo
-reparto», al singolare). Quando entra, il morale sale di **3** `[CANONE — DM 2026-11-05, P16, la riserva a +3]`.
+reparto», al singolare). Quando entra, il morale sale di **2** `[CANONE — DM 2026-11-08, MASTER-DEF D6, la riserva a +2]`.
 
 > **Read-aloud (Casa di Davide lead) — il cortile esterno, la riserva.** *Il
 > capitano della riserva si alza dalla cassa prima che il corno abbia finito.
