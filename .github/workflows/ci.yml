@@ -408,23 +408,36 @@ jobs:
         run: python scripts/validate_booklets.py --spiega
 
 
-      - name: Cache degli archivi di mise.lock (ADR-0113)
-        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
-        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
-        uses: actions/cache@v6
+      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
+        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
+        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
+        # della cache solo se lo sha256 torna con mise.lock.
+        uses: actions/cache/restore@v6
         with:
-          path: ~/.cache/rumblingstone-strumenti
-          key: strumenti-${{ hashFiles('mise.lock') }}
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-
+          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
 
       - name: Strumenti binari da mise.lock (typst, pdfcpu; ADR-0113)
         # Le versioni stanno solo in mise.toml, URL e sha256 in mise.lock: un
         # archivio con un altro sha256 non si installa. Mai «latest» (ADR-0020
         # §3): si alza con una PR di Renovate o a mano, e si vede.
         env:
-          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
+          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
         run: |
           python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
           python scripts/strumenti.py verifica --bin "$RUNNER_TEMP/strumenti"
+
+      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
+        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
+        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
+        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
+        # parziale non impedisce di salvare quella completa dopo.
+        if: always() && hashFiles('.strumenti-cache/*') != ''
+        uses: actions/cache/save@v6
+        with:
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
 
       - name: Edizione da stampa — i volumi compilano DAVVERO (ADR-0020)
         # Il gate che mancava: senza typst in CI, due booklet della campagna non
@@ -583,7 +596,7 @@ jobs:
 
       - uses: jdx/mise-action@v5
         with:
-          version: 2026.11.4
+          version: v2026.11.4
           sha256: 0296d9cba9324106d4e0962bb94a2072902f3658813aeb3b09504947bb8ddc2b
           install: true
           cache: false
@@ -600,17 +613,19 @@ jobs:
           { echo '```toml'; cat mise.lock; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           git diff --exit-code mise.lock
 
-      - name: Cache degli archivi di mise.lock (ADR-0113)
-        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
-        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
-        uses: actions/cache@v6
+      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
+        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
+        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
+        # della cache solo se lo sha256 torna con mise.lock.
+        uses: actions/cache/restore@v6
         with:
-          path: ~/.cache/rumblingstone-strumenti
-          key: strumenti-${{ hashFiles('mise.lock') }}
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-
+          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
 
       - name: Stessi byte di strumenti.py
         env:
-          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
+          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
         run: |
           python scripts/strumenti.py installa --bin "$RUNNER_TEMP/kernel"
           for t in typst pdfcpu; do
@@ -620,6 +635,17 @@ jobs:
             test "$a" = "$b"
           done
           echo "✓ mise e strumenti.py installano gli stessi binari"
+
+      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
+        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
+        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
+        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
+        # parziale non impedisce di salvare quella completa dopo.
+        if: always() && hashFiles('.strumenti-cache/*') != ''
+        uses: actions/cache/save@v6
+        with:
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
 
       - name: Bundle riproducibile (due build, stessi sha256)
         run: |
@@ -705,18 +731,31 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
 
-      - name: Cache degli archivi di mise.lock (ADR-0113)
-        # Chiave = sha di mise.lock: cambia solo quando cambia una versione.
-        # strumenti.py usa un archivio della cache solo se lo sha256 torna.
-        uses: actions/cache@v6
+      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
+        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
+        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
+        # della cache solo se lo sha256 torna con mise.lock.
+        uses: actions/cache/restore@v6
         with:
-          path: ~/.cache/rumblingstone-strumenti
-          key: strumenti-${{ hashFiles('mise.lock') }}
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-
+          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
 
       - name: Strumenti binari da mise.lock (gli stessi di «validate», ADR-0113)
         env:
-          STRUMENTI_CACHE: ~/.cache/rumblingstone-strumenti
+          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
         run: python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
+
+      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
+        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
+        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
+        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
+        # parziale non impedisce di salvare quella completa dopo.
+        if: always() && hashFiles('.strumenti-cache/*') != ''
+        uses: actions/cache/save@v6
+        with:
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
 
       - name: Nessun booklet sopra i suoi tetti di stampa
         run: |
