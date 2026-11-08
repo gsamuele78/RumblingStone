@@ -18,6 +18,7 @@ skill = ["pathfinder-1e-srd"]
 "termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
 "stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
+"formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
 "lessico.abilita" = { dati = ["sistemi/pf1e/dati/abilita.toml", "scripts/lessico_it_pf1.tsv"], nota = "i nomi dalle righe «abilità» del lessico PF1e" }
 "lessico.entita" = { dati = ["scripts/lessico_it_pf1.tsv"], nota = "righe di tipo classe, classe di prestigio e razza, lette con lessico_regole.tabella_pf1" }
 "lessico.italiano" = { dati = ["scripts/lessico_it_pf1.tsv"] }

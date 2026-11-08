@@ -9,14 +9,7 @@
       "scripts/impronta_creature.py",
       "scripts/validate_bestiario.py"
     ],
-    "A3_formule_in_python": [
-      "scripts/dmcore/caratteristiche.py:da_modificatore",
-      "scripts/dmcore/creature_pf1e.py:_mod",
-      "scripts/dmcore/tabelle.py:cd_incantesimo",
-      "scripts/dmcore/tabelle.py:mod",
-      "scripts/dmcore/tabelle.py:ts_buono",
-      "scripts/dmcore/tabelle.py:ts_cattivo"
-    ],
+    "A3_formule_in_python": [],
     "A4_capacita_in_codice": [],
     "A5_strumenti_senza_sistema_del_file": [
       "scripts/conformita_statblocchi.py",
@@ -27,11 +20,11 @@
       "scripts/validate_bestiario.py"
     ]
   },
-  "file_letti": 157,
+  "file_letti": 160,
   "misure": {
     "A1_caricamenti_all_import": 0,
     "A2_importatori_del_nucleo": 6,
-    "A3_formule_in_python": 6,
+    "A3_formule_in_python": 0,
     "A4_capacita_in_codice": 0,
     "A5_strumenti_senza_sistema_del_file": 6
   }

@@ -1,6 +1,6 @@
 # PIANO — Il motore agnostico: regole, formule e fonti d20 nel plugin
 
-> **Stato**: 🟡 in corso (2026-11-08), F0, indagini I1-I4, F1 e F2 fatte, F3-F6 da fare · **Classe**: G per la regola, C per le fasi
+> **Stato**: 🟡 in corso (2026-11-08), F0, indagini I1-I4, F1, F2 e F3 fatte, F4-F6 da fare · **Classe**: G per la regola, C per le fasi
 > **Nasce da**: i messaggi del DM del 2026-11-08 (citati in [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md)).
 > **Decisione**: [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), accettata il 2026-11-08. Continua [PIANO-SISTEMI-DI-GIOCO-PLUGIN](PIANO-SISTEMI-DI-GIOCO-PLUGIN.md) (L0-L8 chiusi).
 > **Fuori da questo piano**: l'installazione automatica di typst e pdfcpu (mise, lockfile, Renovate) ha un thread suo.
@@ -38,7 +38,7 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 | **I4** indagine: PCGen ✅ [report](esperimenti/motore-agnostico-2026-11-08/i4_pcgen/REPORT.md): PCGen tiene nei dati le stesse formule d20 (`SPELLBASEDC:10+SPELLLEVEL+BASESPELLSTAT`, `STATMOD:floor(SCORE/2)-5`), ma il suo formulario nuovo copre lo 0,39% del Core Rulebook PF1e e lo 0% del RSRD 3.5, quindi due sistemi convivono; adottiamo fonti come dati, formule come testo, ingressi dichiarati; scartiamo il formato LST e lo scope delle variabili | lettura dei *game mode* e del sistema di formule di PCGen; tabella «concetto loro → nostro» | cosa adottiamo e cosa no, con il motivo |
 | **F1** fonti come dati ✅ (2026-11-08): A4 2 → 0, impronte 12/12 identiche, fonti caricate identiche a quelle del codice, `scarica --verifica` 86/86 e 18/18 | `fonti.regole` → `sistemi/<id>/dati/fonti.toml`, letto da `riscontro_srd.py` | A4 1 → 0; impronte 12/12 identiche; `riscontro_srd --check` invariato |
 | **F2** contesto esplicito ✅ (2026-11-08): A1 5 → 0, nessuna lettura di sistema importando tutto `dmcore` (test con spia), impronte 12/12 | `dmcore.sistemi.regole(id)`; nessun modulo carica un sistema all'import; involucri per il predefinito | A1 5 → 0; impronte 12/12; grafo d'import delle creature verde |
-| **F3** formule nei dati | un file `formule.toml` nei dati del plugin d20, valutato con il vincitore di I1; schema di I2 | A3 → 0 nel nucleo; banco delle formule identico su tutto il dominio |
+| **F3** formule nei dati ✅ (2026-11-08): A3 6 → 0, 6 formule in `formule.toml`, stesse cifre su tutto il dominio, 50/50 ostili rifiutate, impronte 12/12; trovata la divergenza 3.5/PF1e del livello d'incantatore di ranger e paladino (al DM) | un file `formule.toml` nei dati del plugin d20, valutato con il vincitore di I1; schema di I2 | A3 → 0 nel nucleo; banco delle formule identico su tutto il dominio |
 | **F4** strumenti per sistema del file | `derive_statblocks`, `conformita_statblocchi`, `genera_attributi` usano `regole(sistema_di(file))` | A5 6 → 0; uscite 3.5 identiche; diff delle uscite PF1e misurato e **letto dal DM** prima del merge |
 | **F5** moduli di plugin | `METODI` di `suggest_encounter` → registro del plugin (I3) | nessun algoritmo di sistema nel nucleo; test ostile verde |
 | **F6** prova del nove 2 | plugin d20 finto con formule diverse (es. TS buono `3 + dv // 2`) e un metodo EL suo | 0 file del nucleo toccati; le uscite cambiano esattamente come le formule dicono |

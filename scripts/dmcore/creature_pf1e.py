@@ -26,6 +26,7 @@ import re
 from dataclasses import replace
 
 from . import sistemi as S
+from .formule import formula
 from . import tabelle as T
 
 #: Tipi 3.5 che in PF1e sono sottotipi di un altro tipo (PRD, Creature Types).
@@ -37,7 +38,8 @@ COS_MAX = 6
 
 
 def _mod(x: int) -> int:
-    return (x - 10) // 2
+    """Il modificatore di caratteristica: formula `modificatore` del plugin (F3 di ADR-0112)."""
+    return formula("modificatore", "pf1e")(punteggio=x)
 
 
 def _attributi(testo: str) -> dict[str, int]:

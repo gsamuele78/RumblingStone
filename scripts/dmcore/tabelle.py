@@ -61,6 +61,7 @@ PROVENIENZA = {
 #: caricano alla prima richiesta (`di`) e si espongono con i nomi e le forme di sempre.
 from functools import cache as _cache  # noqa: E402
 
+from . import formule as _formule  # noqa: E402
 from . import sistemi as _S  # noqa: E402
 
 #: Chi merita la matrice elite: chi ha un nome, chi comanda, chi è un boss. Il
@@ -203,9 +204,12 @@ def __getattr__(nome: str):
 #: tutti è lo stesso numero; per ranger e paladino è `livello − 3`, e chiamare
 #: questa funzione invece di usare il livello di classe è ciò che evita di
 #: stampare «incantatore di livello 12» per un paladino che lancia da 9°.
+#: ⚠️ `livello − 3` è la regola PF1e: nell'SRD 3.5 è metà del livello di classe
+#: dal 4°. La divergenza è scritta in `sistemi/d20/dati/formule.toml` e la
+#: decide il DM; F3 ha spostato la formula senza cambiare le uscite.
 def livello_incantatore(classe: str, livello_classe: int) -> int:
     if classe.lower() in di()["LIVELLO_INCANTATORE_RIDOTTO"]:
-        return max(0, livello_classe - 3)
+        return _formula("livello_incantatore_ridotto")(livello=livello_classe)
     return livello_classe
 
 #: I livelli che il test confronta con le ancore delle skill.
@@ -220,8 +224,10 @@ def livello_massimo(griglia: dict[int, tuple[int, ...]], livello: int) -> int:
 
 
 def cd_incantesimo(livello_incantesimo: int, modificatore: int) -> int:
-    """SRD: CD = 10 + livello dell'incantesimo + modificatore di caratteristica."""
-    return 10 + livello_incantesimo + modificatore
+    """SRD: CD = 10 + livello dell'incantesimo + modificatore di caratteristica.
+
+    La formula sta nei dati del plugin (`formule.regole`, F3 di ADR-0112)."""
+    return _formula("cd_incantesimo")(livello=livello_incantesimo, modificatore=modificatore)
 
 
 # ===========================================================================
@@ -323,16 +329,22 @@ def riga_gs(gs: int) -> tuple[dict[str, int], bool]:
 # I conti che si ripetono
 # ===========================================================================
 
+#: Le formule stanno nei dati del plugin d20 (`sistemi/d20/dati/formule.toml`,
+#: F3 di ADR-0112) e si valutano con `dmcore.formule`; qui restano i nomi.
+def _formula(nome: str):
+    return _formule.formula(nome, "dnd35")
+
+
 def mod(punteggio: int) -> int:
-    return (punteggio - 10) // 2
+    return _formula("modificatore")(punteggio=punteggio)
 
 
 def ts_buono(dv: int) -> int:
-    return 2 + dv // 2
+    return _formula("ts_buono")(dv=dv)
 
 
 def ts_cattivo(dv: int) -> int:
-    return dv // 3
+    return _formula("ts_cattivo")(dv=dv)
 
 
 def media_dado(faccia: int) -> float:

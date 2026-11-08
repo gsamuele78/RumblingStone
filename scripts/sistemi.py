@@ -123,7 +123,8 @@ def main(argv=None) -> int:
     root = a.root.resolve()
     try:
         if a.check:
-            prob = S.problemi(root, strumenti(root))
+            from dmcore import formule as F
+            prob = S.problemi(root, strumenti(root)) + F.problemi(root)
             for p in prob:
                 print("🔴 " + p)
             print(f"{'✗' if prob else '✓'} sistemi: {len(prob)} problemi")
