@@ -63,6 +63,7 @@ from dmcore.statblock import (  # noqa: E402
 )
 
 import binari  # noqa: E402  (accanto a questo file)
+import typst_motore  # noqa: E402  (ADR-0116: PyPI, ripiego la CLI)
 from dmcore import sistemi as _SIS  # noqa: E402
 
 #: Le sigle del riquadro dal plugin del sistema del booklet (ADR-0111, L7);
@@ -1128,22 +1129,18 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     return testo
 
 
-def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
-    """Un `typst compile`, col ripiego sui tag PDF dichiarato dal chiamante.
+def compila(motore: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
+    """Un `typst compile` (ADR-0116), col ripiego sui tag PDF dichiarato dal chiamante.
 
     Typst 0.15.1 ha un bug interno nella costruzione dell'albero dei tag PDF
     («internal error: parent group») su documenti con float dentro strutture
     annidate. I tag sono accessibilità, non impaginazione: se inciampa lì si
-    riprova senza — e lo si DICE, invece di consegnare un PDF diverso da quello
-    che il comando promette.
+    riprova senza, e lo si DICE, invece di consegnare un PDF diverso da quello
+    che il comando promette. `motore` è quello di `typst_motore.esigi()`:
+    lo decide lui, qui serve solo a dire che il controllo è già stato fatto.
     """
-    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT),
-           "--package-path", str(PACCHETTI)]
-    esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
-    if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
-        return subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)],
-                              capture_output=True, text=True), True
-    return esito, False
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI)
+    return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag
 
 
 def per_scheda(man: dict, base: Path, tutti: bool, binario: str, nome: str,
@@ -1218,7 +1215,7 @@ def main() -> int:
 
     # La regola di degradazione pulita sta in `binari.py` (ADR-0027): se manca,
     # dice come installarlo ed esce con 2 — prima di aprire qualunque file.
-    binario = binari.esigi(binari.TYPST)
+    binario = typst_motore.esigi()
 
     typ = base / f"{mp.stem.replace('.manifest', '')}.typ"
     pdf = base / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"

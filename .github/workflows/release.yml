@@ -25,7 +25,7 @@ on:
     tags: ["v*"]
   pull_request:
     paths: [".github/workflows/release.yml", "scripts/release_plan.py",
-            "scripts/release_notes.py", "scripts/strumenti.py", "mise.toml", "mise.lock"]
+            "scripts/release_notes.py", "scripts/bundle_offline.py", "requirements.txt"]
 
 permissions:
   contents: read
@@ -156,45 +156,22 @@ jobs:
         run: |
           echo "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)" >> "$GITHUB_ENV"
           SOURCE_DATE_EPOCH=$(git log -1 --format=%ct) ./scripts/build-skills.sh --no-deploy
-      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
-        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
-        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
-        # della cache solo se lo sha256 torna con mise.lock.
-        uses: actions/cache/restore@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-
-          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
-
       - name: Archivio e impronte
         env:
-          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
           TAG: ${{ needs.decide.outputs.tag }}
         run: |
           mkdir -p dist
           tar --sort=name --owner=0 --group=0 --numeric-owner --mtime="@$SOURCE_DATE_EPOCH" \
               -C build -cf - . | gzip -n -9 > "dist/rumblingstone-skills-$TAG.tar.gz"
-          # ADR-0113, sul modello dei bundle di iemod-fetch: per ogni
-          # piattaforma di mise.toml un zip con tutto ciò che serve per
-          # stampare senza rete (typst, pdfcpu con le loro licenze, le wheel
-          # di requirements.txt, mise.toml/lock e strumenti.py). Gli archivi
-          # dentro hanno lo sha256 di mise.lock; lo zip è riproducibile.
-          python scripts/strumenti.py bundle --con-ruote --uscita dist
-          for z in dist/rumblingstone-strumenti-*.zip; do
+          # Sul modello dei bundle di iemod-fetch: per ogni piattaforma un zip
+          # con le wheel di requirements.txt, che da ADR-0116 portano anche
+          # typst e pdfimpose: si stampa senza rete. BUNDLE.json ha lo sha256
+          # di ogni wheel; lo zip è riproducibile.
+          python scripts/bundle_offline.py costruisci --uscita dist
+          for z in dist/rumblingstone-offline-*.zip; do
             mv "$z" "${z%.zip}-$TAG.zip"
           done
           (cd dist && sha256sum ./* > SHA256SUMS && cat SHA256SUMS)
-
-      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
-        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
-        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
-        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
-        # parziale non impedisce di salvare quella completa dopo.
-        if: always() && hashFiles('.strumenti-cache/*') != ''
-        uses: actions/cache/save@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
 
       - uses: actions/upload-artifact@v7
         with:

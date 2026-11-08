@@ -22,9 +22,10 @@ passare al successivo, così un'installazione interrotta si toglie lo stesso.
   già non diventa mai nostro.
 - **il `.venv`**: `requirements-completo.txt` (bpy, torch per CPU, piq);
   possiede i pacchetti Python che prima non c'erano.
-- **typst** (`--con typst`, solo se manca): la versione di `mise.toml`, con lo
-  sha256 di `mise.lock` verificato prima di scrivere (ADR-0113), in
-  `~/.local/bin`, con lo sha256 del file scritto nel registro.
+- **typst**: dal 2026-11-08 è il modulo PyPI di `requirements.txt` (ADR-0116)
+  e arriva con il `.venv`; `--con typst` resta accettato e controlla solo che
+  il modulo ci sia. Il registro di chi l'aveva installato prima come CLI in
+  `~/.local/bin` sa ancora toglierlo.
 - **ComfyUI** (`--con comfyui`): `scripts/comfyui-local/setup-distrobox.sh`
   nella cartella `COMFYUI_DIR`; il registro sa se il box e la cartella
   esistevano già.
@@ -32,7 +33,7 @@ passare al successivo, così un'installazione interrotta si toglie lo stesso.
 Come toglie. `rimuovi` ripercorre il registro all'indietro e toglie solo ciò
 che è suo:
 - il box e la cartella di ComfyUI, se li ha creati lui;
-- typst, se il file è ancora quello installato;
+- la CLI typst delle installazioni di prima, se il file è ancora quello;
 - i pacchetti Python posseduti, oppure con `--venv` tutto il `.venv`;
 - i pacchetti di sistema posseduti, dopo averti mostrato la simulazione di
   `apt-get -s remove`.
@@ -66,13 +67,12 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
-import strumenti  # noqa: E402  (ADR-0113: le versioni dei binari stanno in mise.toml)
 COMPLETO = REPO / "requirements-completo.txt"
 COMFYUI = REPO / "scripts" / "comfyui-local"
 
 #: I pacchetti di sistema del profilo completo, su Debian 13 e Ubuntu 24.04.
 #: Sono i binari di `binari.py` che il gestore di pacchetti fornisce; typst e
-#: pdfcpu non ci sono e hanno la loro strada.
+#: l'imposizione arrivano da PyPI con il `.venv` (ADR-0116).
 APT_BASE = ("chromium", "pandoc", "texlive-xetex", "maven", "default-jre",
             "webp", "inkscape", "shellcheck")
 APT_CON = {"blender": ("blender",), "comfyui": ("distrobox", "podman")}
@@ -171,8 +171,21 @@ def pacchetti_apt(con: set[str]) -> list[str]:
 
 
 def versione_typst() -> str:
-    """La versione fissata in mise.toml (ADR-0113), la stessa che installa la CI."""
-    return strumenti.versione("typst")
+    """La versione fissata in requirements.txt (ADR-0116), la stessa della CI."""
+    testo = (REPO / "requirements.txt").read_text(encoding="utf-8")
+    m = re.search(r"^typst==(\S+)", testo, re.M)
+    if m is None:
+        raise RuntimeError("requirements.txt non fissa typst (ADR-0116)")
+    return m.group(1)
+
+
+def typst_nel_venv() -> bool:
+    """Il modulo PyPI, non la cartella scripts/typst/ del tema."""
+    import importlib  # noqa: PLC0415
+    import importlib.util  # noqa: PLC0415
+    importlib.invalidate_caches()  # se installa_pip l'ha appena messo nel .venv
+    spec = importlib.util.find_spec("typst")
+    return spec is not None and spec.origin not in (None, "namespace")
 
 
 def in_venv() -> bool:
@@ -187,7 +200,7 @@ def piano(sis: Sistema, con: set[str]) -> dict:
         "apt_mancanti": [p for p in apt if p not in installati],
         "apt_presenti": [p for p in apt if p in installati],
         "venv": in_venv(),
-        "typst": shutil.which("typst"),
+        "typst": typst_nel_venv(),
         "comfyui_dir": os.environ.get("COMFYUI_DIR"),
     }
 
@@ -227,28 +240,12 @@ def installa_pip(sis: Sistema, stato_p: Path) -> int:
 
 
 def installa_typst(sis: Sistema, stato_p: Path) -> int:
-    if shutil.which("typst"):
-        print(f"✓ typst: già presente in {shutil.which('typst')}, non diventa nostro")
+    """Niente da scaricare: typst arriva con requirements.txt (ADR-0116)."""
+    if typst_nel_venv():
+        print(f"✓ typst: il modulo PyPI c'è (requirements.txt fissa {versione_typst()})")
         return 0
-    voce = next(x for x in strumenti.voci() if x.nome == "typst")
-    v = voce.versione
-    if not voce.url or not voce.sha256:
-        print(f"✗ typst {v}: mise.lock non ha questa piattaforma ({strumenti.piattaforma()})")
-        return 1
-    print(f"==> typst {v} (mise.toml, sha256 di mise.lock) in ~/.local/bin")
-    archivio = sis.scarica(voce.url)
-    if hashlib.sha256(archivio).hexdigest() != voce.sha256:
-        print(f"✗ typst {v}: lo sha256 dell'archivio non è quello di mise.lock — niente installato")
-        return 1
-    dati = strumenti.estrattore(voce.url)(archivio, "typst")
-    dest = Path.home() / ".local" / "bin" / "typst"
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(dati)
-    dest.chmod(0o755)
-    sha = hashlib.sha256(dati).hexdigest()
-    aggiungi(stato_p, {"tipo": "typst", "file": str(dest), "sha256": sha, "versione": v})
-    print(f"✓ typst {v}: {dest} (sha256 {sha[:16]}…)")
-    return 0
+    print("✗ typst: il modulo PyPI manca — pip install -r requirements.txt")
+    return 1
 
 
 def installa_comfyui(sis: Sistema, stato_p: Path, si: bool) -> int:
@@ -405,7 +402,7 @@ def main(argv=None, sis: Sistema | None = None, stato_p: Path | None = None) -> 
         print(f"pacchetti di sistema da installare: {' '.join(pi['apt_mancanti']) or 'nessuno'}")
         print(f"già presenti, non diventano nostri: {' '.join(pi['apt_presenti']) or 'nessuno'}")
         print(f".venv attivo: {'sì' if pi['venv'] else 'NO: attivalo prima di installa'}")
-        print(f"typst: {pi['typst'] or ('si installa' if 'typst' in con else 'manca, --con typst')}")
+        print(f"typst: {'modulo PyPI presente' if pi['typst'] else 'arriva con requirements.txt nel .venv'}")
         if "comfyui" in con:
             print(f"ComfyUI in: {pi['comfyui_dir'] or 'COMFYUI_DIR non impostata'}")
         print(f"registro: {stato_p}")

@@ -102,7 +102,9 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 (accettata): typst da PyPI (`typst==0.15.2` in requirements.txt) diven… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2, aggiunta su domanda del DM: pydantic generato dagli schemi del plugin (data… | ✅ scelta confermata |
@@ -112,8 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Piano e ADR-0112 proposta: microkernel guidato dai dati, ambito d20, formule co… | 🟡 F0 ✅ |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Scelte del DM sui 34 talenti sconosciuti: 13 nomi italiani sbagliati sostituiti… | ✅ talenti sconosciuti 34 → 0, cricchetto CI a 0 |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Indice dei talenti 3.5 da dndtools.net (solo nomi e manuale): +371 nomi; i 27 d… | ✅ indice 3.846 → 4.217 nomi; talenti sconosciuti 35 → 34, cricchetto CI a 34 |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Sethrax: Inner Strength (Psionics Handbook 3.0) diventa Psionic Talent (XPH, No… | ✅ talenti sconosciuti 37 → 35, cricchetto CI a 35 |
 
 ## Le misure che si portano dietro
 

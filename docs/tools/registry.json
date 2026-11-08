@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 136,
+  "tool_count": 137,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -8022,6 +8022,107 @@
       ]
     },
     {
+      "id": "bundle_offline",
+      "path": "scripts/bundle_offline.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/bundle_offline.py costruisci --uscita dist",
+      "summary": "Il bundle offline del rilascio (ADR-0116, sul modello di iemod-fetch): per ogni piattaforma pip download delle wheel di requirements.txt, che portano anche typst e pdfimpose, in un zip riproducibile con BUNDLE.json (sha256 di ogni file). installa verifica ogni wheel contro BUNDLE.json e fa pip install --no-index: si stampa senza rete. Sostituisce strumenti.py e mise.",
+      "use_case": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "costruisci",
+            "installa",
+            "elenco"
+          ],
+          "repeatable": false,
+          "desc": "costruisci · installa · elenco"
+        },
+        {
+          "name": "--piattaforma",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "linux-arm64",
+            "linux-x64",
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "repeatable": true,
+          "desc": "costruisci: ripetibile; default tutte."
+        },
+        {
+          "name": "--uscita",
+          "type": "path",
+          "required": false,
+          "default": "dist",
+          "choices": null,
+          "repeatable": false,
+          "desc": "costruisci: dove scrivere i zip."
+        },
+        {
+          "name": "bundle",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "installa: il rumblingstone-offline-<piattaforma>-<tag>.zip."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "requirements.txt",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "dist/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "una wheel con lo sha256 sbagliato, o pip fallito"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "con SOURCE_DATE_EPOCH e le stesse wheel, lo stesso zip byte per byte"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "costruisci scarica da PyPI; installa non usa la rete"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/bundle_offline.py elenco",
+      "tests": [
+        "scripts/tests/test_bundle_offline.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0116-typst-si-installa-da-pypi.md"
+      ]
+    },
+    {
       "id": "check_plans_discipline",
       "path": "scripts/check_plans_discipline.py",
       "category": "G-orchestration-governance",
@@ -11399,136 +11500,6 @@
       ]
     },
     {
-      "id": "strumenti",
-      "path": "scripts/strumenti.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/strumenti.py installa",
-      "summary": "Installa i binari del repo (typst, pdfcpu) da mise.toml e mise.lock (ADR-0113): kernel stdlib che scarica, verifica lo sha256 del lockfile, estrae il solo eseguibile e lo registra in .strumenti/; non conosce i singoli strumenti. verifica controlla sha e versione detta dal binario; bundle costruisce per piattaforma uno zip riproducibile con archivi originali, wheel di requirements.txt e dati (rilascio); installa --bundle installa senza rete.",
-      "use_case": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»",
-      "stability": "beta",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "azione",
-          "type": "choice",
-          "required": true,
-          "default": null,
-          "choices": [
-            "elenco",
-            "installa",
-            "verifica",
-            "versione",
-            "bundle"
-          ],
-          "repeatable": false,
-          "desc": "elenco · installa · verifica · versione · bundle"
-        },
-        {
-          "name": "--bin",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Cartella di destinazione (default .strumenti/)."
-        },
-        {
-          "name": "--bundle",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "installa: da un rumblingstone-strumenti-<piattaforma>.zip, senza rete."
-        },
-        {
-          "name": "--con-ruote",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "installa --bundle: anche le wheel; bundle: le mette nel zip."
-        },
-        {
-          "name": "--github-path",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "installa: aggiunge la cartella a $GITHUB_PATH."
-        },
-        {
-          "name": "--piattaforma",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": true,
-          "desc": "elenco, bundle: una piattaforma di mise (linux-x64…)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "mise.toml",
-          "kind": "text",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "mise.lock",
-          "kind": "text",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": ".strumenti/installati.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "dist/",
-          "kind": "directory",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "fatto",
-        "1": "uno strumento fallito: checksum, rete o archivio",
-        "2": "dati mancanti: mise.lock o piattaforma"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "stessi mise.toml e mise.lock, stessi byte; il bundle con SOURCE_DATE_EPOCH è riproducibile (le wheel seguono requirements.txt)"
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": true,
-        "notes": "scarica da GitHub Releases; con --bundle nessuna rete"
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/strumenti.py elenco",
-      "tests": [
-        "scripts/tests/test_strumenti.py"
-      ],
-      "docs": [
-        "plans/adr/ADR-0113-gli-strumenti-binari-si-installano-da-un-lockfile.md"
-      ]
-    },
-    {
       "id": "tools_manifest",
       "path": "scripts/tools_manifest.py",
       "category": "G-orchestration-governance",
@@ -12693,7 +12664,7 @@
       "category": "lib",
       "language": "python",
       "invocation": "python3 scripts/binari.py",
-      "summary": "Le dipendenze binarie accettate con un ADR (typst — ADR-0020; pdfcpu — ADR-0027) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
+      "summary": "Le dipendenze binarie accettate con un ADR (la CLI typst come ripiego — ADR-0020; typst e pdfimpose arrivano da PyPI — ADR-0116) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
       "use_case": "«Cosa devo avere installato perché stasera parta la catena che mi serve, e cosa succede se manca?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -12855,6 +12826,46 @@
         "docs/guides/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
+    },
+    {
+      "id": "typst_motore",
+      "path": "scripts/typst_motore.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/typst_motore.py",
+      "summary": "Un solo modo di compilare e interrogare un .typ (ADR-0116): il pacchetto PyPI «typst» di requirements.txt è lo standard, una CLI typst nel PATH il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione.",
+      "use_case": "«Con cosa compila typst su questa macchina, e perché proprio quello?»",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "motore trovato e stampato",
+        "2": "MANCA: né il pacchetto PyPI né la CLI"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende da cosa è installato e da RUMBLINGSTONE_TYPST"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
     }
   ]
 }
