@@ -120,6 +120,25 @@ def sistema_di(percorso: "str | Path", root: "Path | None" = None) -> str:
     return migliore or predefinito(r)
 
 
+def ambientazione_di(percorso: "str | Path", root: "Path | None" = None) -> str:
+    """L'ambientazione di un file (ADR-0111, D4): il percorso più lungo di
+    [ambientazioni.moduli] che lo contiene, altrimenti il predefinito."""
+    r = (root or ROOT).resolve()
+    amb = carica(r)[0].get("ambientazioni", {})
+    p = Path(percorso)
+    if p.is_absolute():
+        try:
+            p = p.resolve().relative_to(r)
+        except ValueError:
+            pass
+    migliore, lung = None, -1
+    for chiave, a in amb.get("moduli", {}).items():
+        pezzi = Path(chiave).parts
+        if p.parts[:len(pezzi)] == pezzi and len(pezzi) > lung:
+            migliore, lung = a, len(pezzi)
+    return migliore or amb.get("predefinito", "nessuna")
+
+
 def capacita(id_: str, nome: str, root: "Path | None" = None) -> Copertura:
     """Come `id_` copre `nome`, seguendo `eredita`. Un ciclo è un errore."""
     _, _, plug = carica(root)
@@ -314,6 +333,19 @@ def problemi(root: "Path | None" = None, strumenti: "dict[str, list[str]] | None
             fuori.append(f"{CONFIG} [moduli]: la cartella «{chiave}» non esiste")
         if sis not in att:
             fuori.append(f"{CONFIG} [moduli]: «{chiave}» usa «{sis}», che non è attivo")
+    amb = cfg.get("ambientazioni", {})
+    elenco = amb.get("elenco", {})
+    if amb and amb.get("predefinito") not in elenco:
+        fuori.append(f"{CONFIG} [ambientazioni]: il predefinito «{amb.get('predefinito')}» non è nell'elenco")
+    for chiave, a in amb.get("moduli", {}).items():
+        if not (r / chiave).exists():
+            fuori.append(f"{CONFIG} [ambientazioni.moduli]: la cartella «{chiave}» non esiste")
+        if a not in elenco:
+            fuori.append(f"{CONFIG} [ambientazioni.moduli]: «{chiave}» usa «{a}», che non è nell'elenco")
+    for a, voce in elenco.items():
+        for s in voce.get("skill", []):
+            if not (r / "skills" / s / "SKILL.md").is_file():
+                fuori.append(f"{CONFIG} [ambientazioni.elenco]: la skill «{s}» di «{a}» non esiste in skills/")
     for i, p in sorted(plug.items()):
         dove = f"{CARTELLA}/{p['_cartella']}/sistema.toml"
         for campo in CAMPI_PLUGIN:

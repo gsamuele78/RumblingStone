@@ -61,7 +61,8 @@ class ProvaDelNove(unittest.TestCase):
         # il plugin finto: solo dati
         shutil.copytree(FINTO, r / "sistemi" / "prova-d20")
         cfg = (REPO / "sistemi.toml").read_text(encoding="utf-8")
-        for cartella in tomllib.loads(cfg).get("moduli", {}):
+        letto = tomllib.loads(cfg)
+        for cartella in {**letto.get("moduli", {}), **letto.get("ambientazioni", {}).get("moduli", {})}:
             (r / cartella).mkdir(parents=True)
         (r / "moduli-di-prova").mkdir()
         cfg = cfg.replace('attivi = ["dnd35", "pf1e"]', 'attivi = ["dnd35", "pf1e", "prova-d20"]')

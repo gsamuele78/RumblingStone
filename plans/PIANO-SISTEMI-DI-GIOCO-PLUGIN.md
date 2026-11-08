@@ -1,8 +1,8 @@
 # PIANO — I sistemi di gioco come plugin attivabili
 
-> **Stato**: 🟡 in corso (2026-11-07), L0 e L1 fatti, D1-D5 al DM (L1 segue le consigliate) · **Classe**: G per la regola, C per i lotti
+> **Stato**: ✅ chiuso (2026-11-08), L0-L8 fatti, D1-D5 decise, ADR-0111 accettata; continua in [PIANO-MOTORE-AGNOSTICO-D20](PIANO-MOTORE-AGNOSTICO-D20.md) · **Classe**: G per la regola, C per i lotti
 > **Nasce da**: il messaggio del DM del 2026-11-07 (citato in [ADR-0111](adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md)): plugin per tutto il giro di strumenti, skill e agent, un set di regole diverso senza rifare tutto, in modo misurabile e deterministico, con un file di configurazione generale che attiva e disattiva i sistemi e mostra quelli supportati.
-> **Decisione**: [ADR-0111](adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md), proposta.
+> **Decisione**: [ADR-0111](adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md), accettata il 2026-11-08 con D1-D5 decise (D4: `[ambientazioni]` in `sistemi.toml`).
 > **Dipende da**: ADR-0110 (termini ufficiali, ramo `regole-ufficiali`): `lessico_it.yaml`, `lessico_it_pf1.tsv`, `lessico_regole.py` sono il primo contenuto dei plugin, e restano loro.
 > **Misure**: [plans/esperimenti/sistemi-plugin-2026-11-07/](esperimenti/sistemi-plugin-2026-11-07/) (`censimento.py`, `CENSIMENTO.json`, `impronte.py`, `IMPRONTE.json`).
 >
@@ -245,7 +245,7 @@ validate_modules     termini.vietati           ✅      ↪ eredita d20
 ## §5 · Checklist
 
 - [x] L0 · censimento, banco d'invarianza, ADR-0111 proposta, piano (2026-11-07)
-- [ ] D1-D5 decise
+- [x] D1-D5 decise (2026-11-08: le consigliate; D4 applicata con `[ambientazioni]` e `ambientazione_di()`)
 - [x] L1 · fondazione (2026-11-07): la matrice dice per ogni sistema come copre ogni capacità; finché L3-L5 non migrano gli strumenti, una riga dice dove sta la regola del sistema, non che quello strumento la legga già da lì (es. `validate_prosa` usa ancora le abilità 3.5 anche su un modulo PF1e)
 - [x] L1-bis · PF1e nei 5 casi non supportati (2026-11-07): PE, incontri, tesoro, classi e razze, costruzione delle creature
 - [x] L2 · un rilevamento solo (2026-11-07): catalogo, censimento, domande del developer, `e_pf1`, cancello della riga «Sistema»; M1 5 → 1
