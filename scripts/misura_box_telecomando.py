@@ -43,15 +43,18 @@ VERBI = re.compile(
     r"vi rendete conto|vi accorgete|vi sentite)\b(?!\s+voi\b(?!\s+che))", re.I)
 #: I colpi letti e lasciati come sono (2026-11-03): (file, parole del box).
 #: Il primo è un ricordo vero dei PG (la fortezza la conoscono davvero), il
-#: secondo un prompt d'immagine, non un box da leggere al tavolo.
+#: secondo l'estratto dello stesso box copiato nel file dei prompt d'immagine.
+#: Fino al 2026-11-08 il secondo era «Vi sentite allungare», un estratto di
+#: P5 (ora in `_ARCHIVIO/`) che la rigenerazione di `extract_scene_prompts`
+#: ha tolto dal file dei prompt.
 ACCETTATI = (
     ("ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md", "una fortezza che conoscete"),
-    ("PROMPT-IMMAGINI-07ILP.md", "Vi sentite allungare"),
+    ("PROMPT-IMMAGINI-07ILP.md", "una fortezza che conoscete"),
 )
 
 
 def accettato(p: Path, estratto: str) -> bool:
-    """>>> accettato(Path("x/PROMPT-IMMAGINI-07ILP.md"), "… Vi sentite allungare, strappare …")
+    """>>> accettato(Path("x/PROMPT-IMMAGINI-07ILP.md"), "… una fortezza che conoscete, più basse …")
     True
     """
     return any(p.name == f and pezzo in estratto for f, pezzo in ACCETTATI)
