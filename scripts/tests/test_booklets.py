@@ -437,8 +437,8 @@ class TestCapolettera(unittest.TestCase):
 class TestFormato(unittest.TestCase):
     """A5 è il libretto: una colonna, corpo 9.6 pt.
 
-    Sta accanto all'imposizione (ADR-0027), non al posto suo: `pdfcpu booklet`
-    su un volume A4 mette due pagine per foglio e scala tutto al 71%, cioè
+    Sta accanto all'imposizione (ADR-0027), non al posto suo: imporre
+    un volume A4 mette due pagine per foglio e scala tutto al 71%, cioè
     10.2 pt diventano ~7.2. Comporre in A5 e poi imporre tiene il corpo dove si
     legge.
     """

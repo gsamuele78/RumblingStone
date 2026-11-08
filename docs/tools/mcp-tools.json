@@ -3150,6 +3150,56 @@
       "deterministic": false
     },
     {
+      "name": "bundle_offline",
+      "description": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»\n\nIl bundle offline del rilascio (ADR-0116, sul modello di iemod-fetch): per ogni piattaforma pip download delle wheel di requirements.txt, che portano anche typst e pdfimpose, in un zip riproducibile con BUNDLE.json (sha256 di ogni file). installa verifica ogni wheel contro BUNDLE.json e fa pip install --no-index: si stampa senza rete. Sostituisce strumenti.py e mise.",
+      "use_case": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»",
+      "invocation": "python3 scripts/bundle_offline.py costruisci --uscita dist",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "costruisci · installa · elenco",
+            "enum": [
+              "costruisci",
+              "installa",
+              "elenco"
+            ]
+          },
+          "piattaforma": {
+            "type": "string",
+            "description": "costruisci: ripetibile; default tutte.",
+            "enum": [
+              "linux-arm64",
+              "linux-x64",
+              "macos-arm64",
+              "windows-x64"
+            ]
+          },
+          "uscita": {
+            "type": "string",
+            "description": "costruisci: dove scrivere i zip."
+          },
+          "bundle": {
+            "type": "string",
+            "description": "installa: il rumblingstone-offline-<piattaforma>-<tag>.zip."
+          }
+        },
+        "required": [
+          "azione"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "dist/"
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "una wheel con lo sha256 sbagliato, o pip fallito"
+      },
+      "deterministic": true
+    },
+    {
       "name": "check_plans_discipline",
       "description": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»\n\nGate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. Passa se i commit strutturali sono tutti di Dependabot (PI-3b).",
       "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
@@ -4498,62 +4548,6 @@
         "0": "ok",
         "1": "--check: problemi nella configurazione, nei plugin o nel manifest",
         "2": "configurazione illeggibile"
-      },
-      "deterministic": true
-    },
-    {
-      "name": "strumenti",
-      "description": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»\n\nInstalla i binari del repo (typst, pdfcpu) da mise.toml e mise.lock (ADR-0113): kernel stdlib che scarica, verifica lo sha256 del lockfile, estrae il solo eseguibile e lo registra in .strumenti/; non conosce i singoli strumenti. verifica controlla sha e versione detta dal binario; bundle costruisce per piattaforma uno zip riproducibile con archivi originali, wheel di requirements.txt e dati (rilascio); installa --bundle installa senza rete.",
-      "use_case": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»",
-      "invocation": "python3 scripts/strumenti.py installa",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "azione": {
-            "type": "string",
-            "description": "elenco · installa · verifica · versione · bundle",
-            "enum": [
-              "elenco",
-              "installa",
-              "verifica",
-              "versione",
-              "bundle"
-            ]
-          },
-          "bin": {
-            "type": "string",
-            "description": "Cartella di destinazione (default .strumenti/)."
-          },
-          "bundle": {
-            "type": "string",
-            "description": "installa: da un rumblingstone-strumenti-<piattaforma>.zip, senza rete."
-          },
-          "con-ruote": {
-            "type": "boolean",
-            "description": "installa --bundle: anche le wheel; bundle: le mette nel zip."
-          },
-          "github-path": {
-            "type": "boolean",
-            "description": "installa: aggiunge la cartella a $GITHUB_PATH."
-          },
-          "piattaforma": {
-            "type": "string",
-            "description": "elenco, bundle: una piattaforma di mise (linux-x64…)."
-          }
-        },
-        "required": [
-          "azione"
-        ],
-        "additionalProperties": false
-      },
-      "outputs": [
-        ".strumenti/installati.json",
-        "dist/"
-      ],
-      "exit_codes": {
-        "0": "fatto",
-        "1": "uno strumento fallito: checksum, rete o archivio",
-        "2": "dati mancanti: mise.lock o piattaforma"
       },
       "deterministic": true
     },

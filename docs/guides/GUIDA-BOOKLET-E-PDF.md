@@ -48,7 +48,7 @@ I passi **non hanno lo stesso peso**, ed è deliberato: `prosa` e `lingua`
 **misurano e non bloccano**; `manifest` e `schermo` sono **guasti duri** e fermano
 la catena (compilare da un manifest non valido produce un artefatto sbagliato con
 l'aria di essere andato bene); `stampa` e `imposizione` **degradano pulito** se
-`typst` o `pdfcpu` mancano. `--solo <passo>` e `--salta <passo>` per rifarne uno.
+il modulo `typst` o `pdfimpose` mancano. `--solo <passo>` e `--salta <passo>` per rifarne uno.
 
 ⚠️ In coda, **comunque sia andata**, il comando ti ricorda il cancello d'uscita
 §7 di [`GUIDA-CONDIVISIONE-IP.md`](GUIDA-CONDIVISIONE-IP.md). Non è
@@ -114,8 +114,10 @@ Legge **lo stesso manifest** e produce **un volume unico** `-STAMPA.pdf` con
 tipografia OFL embedded (EB Garamond + Cinzel), due colonne, fregi di capitolo,
 tabelle larghe che scavalcano le colonne e **segnalibri PDF veri**. Serve typst
 (Apache 2.0): lo standard è il pacchetto PyPI di `requirements.txt`
-(`pip install -r requirements.txt`), il ripiego la CLI di `mise.lock`
-(`python3 scripts/strumenti.py installa`), [ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md).
+(`pip install -r requirements.txt`), il ripiego una CLI `typst` nel PATH,
+[ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md). Senza rete:
+il rilascio ha un `rumblingstone-offline-<piattaforma>-<tag>.zip` con tutte le
+wheel, e `python3 scripts/bundle_offline.py installa <zip>` le installa.
 `python3 scripts/typst_motore.py` dice quale dei due compila. Se mancano tutti e
 due, lo script dice come installarlo ed esce pulito: **questa catena qui sotto
 continua a funzionare da sola**.
@@ -473,10 +475,12 @@ generato — quello si rifà a ogni compilazione.
   `capolettera-versale`, che è il ripiego e resta disponibile apposta.
   Si spegne per capitolo con `"capolettera": false` nel manifest.
 - **Indice analitico**: `"indice_analitico": true` (vedi §3).
-- **Imposizione in libretto**: `dm.py volume --imposto`, oppure `pdfcpu` a mano.
-  ⚠️ Il PDF imposto **non si versiona e non si confronta a byte**: l'output di
-  `pdfcpu` non è byte-identico fra due esecuzioni — è l'array `/ID`, non il
-  contenuto ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
+- **Imposizione in libretto**: `dm.py volume --imposto`, oppure a mano
+  `python3 -m pdfimpose saddle --signature 2x1 --output LIBRETTO.pdf VOLUME-STAMPA.pdf`
+  (pdfimpose da `requirements.txt`, [ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md)).
+  Non usare `--format A4`: ingrandisce di poco le pagine. ⚠️ Il PDF imposto
+  **non si versiona e non si confronta a byte**: due esecuzioni non danno lo
+  stesso file, anche se le pagine sono le stesse ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
 - **Formato A5** (`--formato a5`, o `"formato": "a5"` nel manifest): compone il
   volume a **una colonna** con corpo 9.6 pt. Va **insieme** all'imposizione, non
   al posto suo: imporre un volume A4 mette due pagine per foglio e le scala al

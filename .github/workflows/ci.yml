@@ -14,7 +14,7 @@ permissions:
 jobs:
   validate:
     name: Validate skills & scripts
-    # Fissato, come typst in mise.toml: dal 19 ottobre 2026 `ubuntu-latest`
+    # Fissato, come typst in requirements.txt: dal 19 ottobre 2026 `ubuntu-latest`
     # diventa Ubuntu 26 (avviso di GitHub). Si passa a 26.04 con una PR che
     # la prova, non perche' e' cambiata l'etichetta (PRATICHE PI-3).
     runs-on: ubuntu-24.04
@@ -408,39 +408,13 @@ jobs:
         run: python scripts/validate_booklets.py --spiega
 
 
-      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
-        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
-        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
-        # della cache solo se lo sha256 torna con mise.lock.
-        uses: actions/cache/restore@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-
-          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
-
-      - name: Strumenti binari da mise.lock (pdfcpu; ADR-0113)
-        # Le versioni stanno solo in mise.toml, URL e sha256 in mise.lock: un
-        # archivio con un altro sha256 non si installa. Mai «latest» (ADR-0020
-        # §3): si alza con una PR di Renovate o a mano, e si vede. typst NON si
-        # scarica qui: è il pacchetto PyPI di requirements.txt (ADR-0116), la CLI
-        # resta il ripiego e la confronta il job «typst-pip».
-        env:
-          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
+      - name: typst e pdfimpose arrivano da requirements.txt (ADR-0116)
+        # Niente binari scaricati da GitHub Releases: il compilatore typst è il
+        # modulo PyPI, l'imposizione è pdfimpose. Qui si controlla solo che la
+        # catena usi il modulo e non una CLI trovata per caso nel PATH.
         run: |
-          python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path pdfcpu
-          python scripts/strumenti.py verifica --bin "$RUNNER_TEMP/strumenti" pdfcpu
           python -c "import sys; sys.path.insert(0, 'scripts'); import typst_motore as t; print('typst:', t.versione()); assert t.motore() == 'pypi'"
-
-      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
-        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
-        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
-        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
-        # parziale non impedisce di salvare quella completa dopo.
-        if: always() && hashFiles('.strumenti-cache/*') != ''
-        uses: actions/cache/save@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
+          python -m pdfimpose --version
 
       - name: Edizione da stampa — i volumi compilano DAVVERO (ADR-0020)
         # Il gate che mancava: senza typst in CI, due booklet della campagna non
@@ -576,89 +550,6 @@ jobs:
           python -m pytest scripts/tests -q -n auto -m "not scrive_nel_repo"
           python -m pytest scripts/tests -q -m scrive_nel_repo
 
-  # ADR-0113, canale TESTING (ADR-0099): mise, lo standard di fatto per fissare
-  # gli strumenti per progetto, legge gli stessi mise.toml e mise.lock di
-  # scripts/strumenti.py. Qui si prova che (1) mise.lock è quello che `mise lock`
-  # scriverebbe, (2) `mise install --locked` installa, (3) i binari di mise e di
-  # strumenti.py sono gli stessi byte. Sale a stable dopo 14 giorni e 10 run.
-  strumenti:
-    name: Strumenti con mise — stessi byte di strumenti.py (testing, non bloccante)
-    runs-on: ubuntu-24.04
-    continue-on-error: true
-    env:
-      # Il default di mise è 3 tentativi (~20 s): con i 504 di GitHub Releases
-      # del 2026-11-08 non basta. 8 tentativi, attese fino a 15 s (~1,5 min),
-      # come i ~2 minuti di strumenti.py.
-      MISE_HTTP_RETRIES: "8"
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.13"
-
-      - uses: jdx/mise-action@v5
-        with:
-          version: v2026.11.4
-          sha256: 0296d9cba9324106d4e0962bb94a2072902f3658813aeb3b09504947bb8ddc2b
-          install: true
-          cache: false
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-
-      - name: mise.lock è quello che scriverebbe `mise lock`
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          cp mise.lock "$RUNNER_TEMP/mise.lock.prima"
-          mise lock
-          { echo "## mise lock"; echo; echo '```diff'; diff -u "$RUNNER_TEMP/mise.lock.prima" mise.lock || true; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
-          { echo '```toml'; cat mise.lock; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
-          git diff --exit-code mise.lock
-
-      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
-        # Prefisso = sha di mise.lock, poi il contenuto: si riprende l'ultima
-        # cache di queste versioni, anche parziale. strumenti.py usa un archivio
-        # della cache solo se lo sha256 torna con mise.lock.
-        uses: actions/cache/restore@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-
-          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
-
-      - name: Stessi byte di strumenti.py
-        env:
-          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
-        run: |
-          python scripts/strumenti.py installa --bin "$RUNNER_TEMP/kernel"
-          for t in typst pdfcpu; do
-            a=$(sha256sum "$(mise which "$t")" | cut -d' ' -f1)
-            b=$(sha256sum "$RUNNER_TEMP/kernel/bin/$t" | cut -d' ' -f1)
-            echo "$t mise=$a strumenti.py=$b"
-            test "$a" = "$b"
-          done
-          echo "✓ mise e strumenti.py installano gli stessi binari"
-
-      - name: Cache degli archivi di mise.lock — salvataggio, anche se un download è fallito
-        # actions/cache salva solo a job verde: con i 504 di GitHub Releases
-        # (2026-11-08) la cache restava vuota. Qui si salva sempre ciò che è
-        # arrivato e verificato; la chiave cambia col contenuto, quindi una cache
-        # parziale non impedisce di salvare quella completa dopo.
-        if: always() && hashFiles('.strumenti-cache/*') != ''
-        uses: actions/cache/save@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-${{ hashFiles('.strumenti-cache/*') }}
-
-      - name: Bundle riproducibile (due build, stessi sha256)
-        run: |
-          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)
-          python scripts/strumenti.py bundle --uscita "$RUNNER_TEMP/b1"
-          python scripts/strumenti.py bundle --uscita "$RUNNER_TEMP/b2"
-          (cd "$RUNNER_TEMP/b1" && sha256sum ./*) > "$RUNNER_TEMP/s1"
-          (cd "$RUNNER_TEMP/b2" && sha256sum ./*) > "$RUNNER_TEMP/s2"
-          diff "$RUNNER_TEMP/s1" "$RUNNER_TEMP/s2" && cat "$RUNNER_TEMP/s1"
-
   # D6 di PIANO-PIATTAFORMA (DM, 2026-10-23: «D6 b»): i convertitori entrano
   # nella piattaforma, in canale TESTING. ruff li guarda gia' nel job
   # principale; qui si installano le loro dipendenze vere (torch per CPU, come
@@ -741,45 +632,6 @@ jobs:
           { echo "## Misure di stampa dei booklet"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           python scripts/misura_stampa.py --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-
-  # ADR-0116: typst è il pacchetto PyPI (requirements.txt); questo job tiene
-  # d'occhio il ripiego. Compila ogni booklet con la CLI di mise.lock e con il
-  # pacchetto, sugli stessi .typ, ed è rosso se cambiano pagine, testo o pixel.
-  # Quando Dependabot alza typst, è qui che si vede se il PDF resta lo stesso.
-  # Misura di partenza: plans/esperimenti/typst-pip-2026-11-08/MISURE.md.
-  typst-pip:
-    name: Typst da PyPI contro la CLI di mise.lock (non bloccante)
-    runs-on: ubuntu-24.04
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.13"
-
-      - name: Install dependencies
-        run: pip install -r requirements-dev.txt
-
-      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
-        uses: actions/cache/restore@v6
-        with:
-          path: .strumenti-cache
-          key: strumenti-${{ hashFiles('mise.lock') }}-
-          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
-
-      - name: La CLI di confronto, da mise.lock
-        env:
-          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
-        run: python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
-
-      - name: Stessi PDF da PyPI e dalla CLI
-        run: |
-          set -o pipefail
-          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)
-          { echo "## Typst da PyPI contro la CLI"; echo; } >> "$GITHUB_STEP_SUMMARY"
-          python plans/esperimenti/typst-pip-2026-11-08/misura_typst_pip.py \
-            --json "$RUNNER_TEMP/typst-pip.json" | tee -a "$GITHUB_STEP_SUMMARY"
 
   # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
   # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit

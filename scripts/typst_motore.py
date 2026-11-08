@@ -6,9 +6,11 @@ passa da GitHub Releases, lo aggiorna Dependabot e va nel bundle insieme alle
 altre wheel. Misura: `plans/esperimenti/typst-pip-2026-11-08/MISURE.md`, cioè
 19 booklet e 856 pagine con testo e pixel identici alla CLI.
 
-La CLI di `mise.lock` (ADR-0113) resta il **ripiego**: si usa se il modulo
-manca, oppure se `RUMBLINGSTONE_TYPST=cli` lo chiede (il job di confronto in
-CI). `RUMBLINGSTONE_TYPST=pypi` vieta il ripiego.
+Una CLI `typst` nel PATH resta il **ripiego**: si usa se il modulo manca,
+oppure se `RUMBLINGSTONE_TYPST=cli` lo chiede. `RUMBLINGSTONE_TYPST=pypi`
+vieta il ripiego. La CLI non e' piu' fissata da nessuna parte (mise e
+`strumenti.py` sono usciti con ADR-0116): se la sua versione non e' quella di
+`requirements.txt`, i PDF non sono quelli della CI.
 
 Ogni chiamante passa di qui: `export_booklet_typst`, `misura_stampa`,
 `varianti_stampa`, `validate_booklets`, `validate_corredo`. Se lo facesse
@@ -68,7 +70,7 @@ MESSAGGIO = """\
 ✗ typst non c'è: serve per l'edizione da stampa (ADR-0020, ADR-0116).
 
   Standard       pip install -r requirements.txt     (il pacchetto «typst» di PyPI)
-  Ripiego        python3 scripts/strumenti.py installa   (la CLI di mise.lock)
+  Ripiego        una CLI typst nel PATH (github.com/typst/typst/releases)
 
 Niente panico se non lo installi: `export_booklet_pdf.py` continua a produrre i
 PDF per capitolo con Chromium. Questo esportatore serve al volume da stampa.

@@ -266,5 +266,11 @@ per intero.
 
 **Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0116](ADR-0116-typst-si-installa-da-pypi.md).
 
-Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Senza il modulo, `typst_motore.py` usa la CLI di `mise.lock`; senza nemmeno quella, i PDF per capitolo restano a Chromium. Il binario `typst` resta in `external_bins` come ripiego. Il rischio delle 20:45 non cresce: prima serviva un binario installato una volta, ora una wheel installata una volta, e il bundle del rilascio le porta tutte e due.
+Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Senza il modulo, `typst_motore.py` usa una CLI `typst` nel PATH; senza nemmeno quella, i PDF per capitolo restano a Chromium. Il binario `typst` resta in `external_bins` come ripiego. Il rischio delle 20:45 non cresce: prima serviva un binario installato una volta, ora una wheel installata una volta, e il bundle del rilascio le porta tutte e due.
 
+
+## Emendamento del 2026-11-08 — pdfimpose, la quinta
+
+**Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0116](ADR-0116-typst-si-installa-da-pypi.md).
+
+`pdfimpose` sostituisce il binario pdfcpu per `dm.py volume --imposto` ed è la quinta libreria di `requirements.txt`, ancora della famiglia di Pillow: opzionale, e senza il volume resta stampabile pagina per pagina. Porta con sé PyMuPDF, che finora era solo in `requirements-dev.txt`: chi installa `requirements.txt` ora ha anche PyMuPDF 2.x e onnxruntime. È il prezzo di togliere mise, scritto qui perché è un peso vero.

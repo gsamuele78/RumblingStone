@@ -1,10 +1,11 @@
 """binari.py — le dipendenze binarie del repo, e la regola di degradazione.
 
-Il repo ha deciso due volte di accettare un eseguibile esterno invece di un
+Il repo aveva deciso due volte di accettare un eseguibile esterno invece di un
 toolchain: `typst` per l'edizione da stampa ([ADR-0020]) e `pdfcpu` per
-l'imposizione ([ADR-0027]). Sono decisioni buone — un singolo binario statico,
-licenza aperta, nessuna installazione di sistema — a **una** condizione, che è
-poi la parte che si dimentica di scrivere:
+l'imposizione ([ADR-0027]). Dal 2026-11-08 tutti e due arrivano da PyPI
+([ADR-0116]: il modulo `typst` e `pdfimpose`), e qui resta la CLI di typst come
+ripiego. La regola vale per ogni dipendenza, binaria o no, a **una** condizione,
+che è poi la parte che si dimentica di scrivere:
 
     se il binario manca, lo script dice come installarlo ed ESCE.
     Non fallisce a meta'.
@@ -74,36 +75,24 @@ class Binario(NamedTuple):
 
 TYPST = Binario(
     nome="typst",
-    a_cosa_serve="l'edizione da stampa: un volume unico con segnalibri veri",
+    a_cosa_serve="il ripiego dell'edizione da stampa, se manca il modulo PyPI «typst»",
     licenza="Apache-2.0",
     adr="ADR-0020",
     installa="""\
-  Ogni sistema   python3 scripts/strumenti.py installa
-                 (la versione di mise.toml, sha256 di mise.lock, in .strumenti/;
-                 senza rete: --bundle rumblingstone-strumenti-<os>-<arch>.zip)
-  Con mise       mise install          (stessi file, ADR-0113)
-  Una versione diversa da mise.toml compila, ma i PDF non sono quelli della CI.""",
-    ripiego="`export_booklet_pdf.py` continua a produrre i PDF per capitolo con "
+  Standard       pip install -r requirements.txt
+                 (il modulo PyPI «typst», versione fissata: ADR-0116)
+  Ripiego        una CLI typst nel PATH, dal gestore di pacchetti o da
+                 github.com/typst/typst/releases: compila, ma se la versione
+                 non e' quella di requirements.txt i PDF non sono quelli della CI.""",
+    ripiego="basta il modulo PyPI «typst» (lo standard, ADR-0116); senza tutti e due "
+            "`export_booklet_pdf.py` continua a produrre i PDF per capitolo con "
             "Chromium. Questo esportatore serve al volume da stampa.",
 )
 
-PDFCPU = Binario(
-    nome="pdfcpu",
-    a_cosa_serve="l'imposizione: un libretto da piegare, invece di una risma",
-    licenza="Apache-2.0",
-    adr="ADR-0027",
-    installa="""\
-  Ogni sistema   python3 scripts/strumenti.py installa
-                 (la versione di mise.toml, sha256 di mise.lock, in .strumenti/;
-                 senza rete: --bundle rumblingstone-strumenti-<os>-<arch>.zip)
-  Con mise       mise install          (stessi file, ADR-0113)""",
-    ripiego="il PDF da stampa resta valido e stampabile pagina per pagina: "
-            "l'imposizione e' un di piu' per chi rilega, non un passaggio "
-            "obbligato della catena.",
-)
-
 #: I binari che uno script **pretende** con `esigi()`, ciascuno con il suo ADR.
-TUTTI = (TYPST, PDFCPU)
+#: Dal 2026-11-08 (ADR-0116) typst e l'imposizione arrivano da PyPI: resta solo
+#: la CLI di typst, come ripiego di `typst_motore`.
+TUTTI = (TYPST,)
 
 
 def _opz(nome: str, a_cosa_serve: str, installa: str, ripiego: str) -> Binario:
@@ -323,6 +312,29 @@ LIBRERIE = (
                 "dice; `misura_distanza_pagine.py` esce con 2 e dice come installarla. Il booklet "
                 "si stampa uguale.",
     ),
+    # ADR-0116: il compilatore typst dentro un modulo Python (typst-py), al
+    # posto della CLI scaricata da GitHub Releases.
+    Libreria(
+        nome="typst-py", modulo="typst",
+        a_cosa_serve="l'edizione da stampa: un volume unico con segnalibri veri "
+                     "(`export_booklet_typst.py`, via `typst_motore`)",
+        installa="  pip install -r requirements.txt",
+        obbligatoria=False,
+        ripiego="`typst_motore` usa la CLI `typst` se c'e' nel PATH; senza tutte e due "
+                "`export_booklet_pdf.py` continua a fare i PDF per capitolo con Chromium.",
+    ),
+    # ADR-0116, al posto di pdfcpu (ADR-0027): stesso accoppiamento delle pagine
+    # su 19 booklet A5. AGPL come pymupdf, che porta con se': strumento, non opera.
+    Libreria(
+        nome="pdfimpose", modulo="pdfimpose",
+        a_cosa_serve="l'imposizione: un libretto da piegare, invece di una risma "
+                     "(`dm.py volume --imposto`)",
+        installa="  pip install -r requirements.txt",
+        obbligatoria=False,
+        ripiego="il PDF da stampa resta valido e stampabile pagina per pagina: "
+                "l'imposizione e' un di piu' per chi rilega, non un passaggio "
+                "obbligato della catena.",
+    ),
     # Le immagini ripetute fra i box, frase per frase (RICERCA-GUARDRAIL §8).
     # Porta torch: resta fuori dai requisiti del repo (canale unstable, ADR-0099).
     Libreria(
@@ -361,8 +373,8 @@ CATENE = {
     "sessione (prep, recap, state)": (),
     "booklet HTML": (),
     "booklet PDF": ("chromium",),
-    "edizione da stampa": ("typst",),
-    "libretto imposto": ("typst", "pdfcpu"),
+    "edizione da stampa": ("typst-py",),
+    "libretto imposto": ("typst-py", "pdfimpose"),
     "mappe SVG": (),
     "mappe PNG": ("chromium",),
     "collaudo mappe": ("tcod", "scipy"),
@@ -392,7 +404,10 @@ def python_ok() -> bool:
 def libreria_presente(lib: Libreria) -> bool:
     """Se il modulo si importa. Nessun effetto collaterale oltre l'import."""
     import importlib.util
-    return importlib.util.find_spec(lib.modulo) is not None
+    spec = importlib.util.find_spec(lib.modulo)
+    # Un namespace package non e' la libreria: con scripts/ nel sys.path,
+    # `typst` troverebbe la cartella scripts/typst/ del tema (ADR-0116).
+    return spec is not None and spec.origin not in (None, "namespace")
 
 
 def disponibile(nome: str) -> bool:
@@ -427,15 +442,9 @@ def messaggio(b: Binario) -> str:
     )
 
 
-#: Dove `scripts/strumenti.py installa` mette i binari fissati da mise.toml
-#: (ADR-0113). Si guarda **prima** del PATH: un typst di sistema di un'altra
-#: versione non deve vincere su quello fissato.
-STRUMENTI_BIN = Path(__file__).resolve().parents[1] / ".strumenti" / "bin"
-
-
 def trova(b: Binario) -> str | None:
     """Il percorso dell'eseguibile, o `None`. Nessun effetto collaterale."""
-    return shutil.which(b.nome, path=str(STRUMENTI_BIN)) or shutil.which(b.nome)
+    return shutil.which(b.nome)
 
 
 def esigi(b: Binario) -> str:

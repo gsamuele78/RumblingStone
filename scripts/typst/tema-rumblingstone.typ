@@ -696,7 +696,7 @@
   // sarebbero da 5 cm e nessuno impagina un manuale così.
   //
   // Sta accanto all'imposizione (ADR-0027), non al posto suo, e la differenza è
-  // il corpo del testo: `pdfcpu booklet` prende il volume A4 e ne mette due per
+  // il corpo del testo: imporre il volume A4 (pdfcpu allora, pdfimpose ora) ne mette due per
   // foglio, cioè **scala tutto al 71%** — 10.2 pt diventano ~7.2, che si
   // stampano ma non si leggono al tavolo. Comporre in A5 e poi imporre due
   // pagine per foglio A4 tiene il corpo a 9.6 pt, che è la misura di un manuale

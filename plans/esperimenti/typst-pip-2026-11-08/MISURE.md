@@ -39,3 +39,26 @@ Letta la misura, il DM ha scelto «applicalo se funziona come standard»: [ADR-0
 - **Il bundle.** Senza binario typst, il bundle del rilascio porterebbe la wheel al posto dell'archivio. Va rifatto e rimisurato.
 - **pdfcpu.** Non è su PyPI, quindi resta comunque a mise e GitHub Releases.
 - **Il rischio.** typst-py è di un manutentore singolo, molto usato, ma non dell'organizzazione typst. Se smette di seguire i rilasci, si torna alla CLI, che resta in `mise.lock`.
+
+## Seguito (2026-11-08): l'imposizione con pdfimpose, e mise esce
+
+Scelta del DM sulla card «Misura pdfimpose, poi decidi». Su tutti i 19 booklet
+A5 del repo (1.590 pagine), `pdfcpu booklet` v0.11.0 contro `pdfimpose saddle`
+2.10.0, con [`confronta_imposizione.py`](confronta_imposizione.py); righe in
+[`esito-imposizione.txt`](esito-imposizione.txt):
+
+- **stesse coppie di pagine** su ogni mezza facciata in 19 booklet su 19,
+  Jaccard minimo 0,99;
+- stesso foglio fisico A4: pdfcpu lo scrive verticale (595 × 842 pt, pagine una
+  sopra l'altra), pdfimpose con `--signature 2x1` orizzontale (839,1 × 595,3 pt,
+  pagine affiancate), A5 a grandezza vera;
+- con `--format A4` (la prima prova, quella del file di esito) pdfimpose
+  ingrandisce le pagine dell'1,4% (851 × 599,7 pt): `dm.py` usa `--signature 2x1`;
+- due esecuzioni di pdfimpose non danno gli stessi byte, come pdfcpu.
+
+Il bundle offline (`scripts/bundle_offline.py`) è stato costruito per
+linux-x64 (28 wheel, ~150 MB: PyMuPDF 2.x porta onnxruntime) e installato in un
+`.venv` vuoto senza proxy: `import typst, pdfimpose` riuscito. Le note qui sopra
+su `typst-pip`, sul bundle e su pdfcpu valgono per la prima parte: dopo
+ADR-0116 seconda parte il job `typst-pip` non c'è più, perché la CLI non è più
+fissata da nessuna parte.
