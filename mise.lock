@@ -2,23 +2,23 @@
 
 lockfile_version = 3
 
-[[tools."aqua:pdfcpu/pdfcpu"]]
+[[tools."github:pdfcpu/pdfcpu"]]
 version = "0.11.0"
-backend = "aqua:pdfcpu/pdfcpu"
+backend = "github:pdfcpu/pdfcpu"
 
-[tools."aqua:pdfcpu/pdfcpu"."platforms.linux-arm64"]
+[tools."github:pdfcpu/pdfcpu"."platforms.linux-arm64"]
 checksum = "sha256:e9bcfa892a9d30272a7d3c42445871290e4f26f9541b6bd272d8ca8d4e558c66"
 url = "https://github.com/pdfcpu/pdfcpu/releases/download/v0.11.0/pdfcpu_0.11.0_Linux_arm64.tar.xz"
 
-[tools."aqua:pdfcpu/pdfcpu"."platforms.linux-x64"]
+[tools."github:pdfcpu/pdfcpu"."platforms.linux-x64"]
 checksum = "sha256:e14d9e8b72eb24f48748bae4bf39c1209b81e80bb9f16c9829a9f14d96f0bbac"
 url = "https://github.com/pdfcpu/pdfcpu/releases/download/v0.11.0/pdfcpu_0.11.0_Linux_x86_64.tar.xz"
 
-[tools."aqua:pdfcpu/pdfcpu"."platforms.macos-arm64"]
+[tools."github:pdfcpu/pdfcpu"."platforms.macos-arm64"]
 checksum = "sha256:6640cffa4ecea81cb85c447b12c304f64b356d81210c64fe17939ebe0f5223f3"
 url = "https://github.com/pdfcpu/pdfcpu/releases/download/v0.11.0/pdfcpu_0.11.0_Darwin_arm64.tar.xz"
 
-[tools."aqua:pdfcpu/pdfcpu"."platforms.windows-x64"]
+[tools."github:pdfcpu/pdfcpu"."platforms.windows-x64"]
 checksum = "sha256:ad1e4df27a790fb7687d60d06f38492c5d8f6de06e0c99b57eb4af2ff377ad10"
 url = "https://github.com/pdfcpu/pdfcpu/releases/download/v0.11.0/pdfcpu_0.11.0_Windows_x86_64.zip"
 

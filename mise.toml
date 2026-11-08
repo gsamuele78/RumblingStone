@@ -23,4 +23,5 @@ lockfile_platforms = ["linux-x64", "linux-arm64", "macos-arm64", "windows-x64"]
 # L'edizione da stampa (ADR-0020). Apache-2.0.
 "aqua:typst/typst" = "0.15.1"
 # L'imposizione in libretto (ADR-0027, misurata su questa versione). Apache-2.0.
-"aqua:pdfcpu/pdfcpu" = "0.11.0"
+# Backend github: pdfcpu non è nel registro aqua (misurato nel job «strumenti», 2026-11-08).
+"github:pdfcpu/pdfcpu" = "0.11.0"
