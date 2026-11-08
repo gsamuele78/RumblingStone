@@ -318,6 +318,10 @@ non hanno alcun meccanismo di scoperta. È questa sezione a instradarli.
    di PNG o poteri di artefatti. Se manca la fonte, marca INFERRED con
    domanda e base: la grammatica sta in `docs/guides/GUIDA-MARCATURE.md`
    (ADR-0109).
+6. Per una scelta di metodo, in ogni parte del progetto, parti dallo
+   **standard di fatto della comunità**: una soluzione nostra entra solo se
+   la misura lo boccia, con il motivo nell'ADR. Le schede di skill, brief e
+   prove sono in `docs/guides/GUIDA-SCHEDE-PROMPT.md` (ADR-0114).
 
 ---
 
