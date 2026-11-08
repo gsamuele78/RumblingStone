@@ -221,6 +221,51 @@ class ConFastjsonschema:
             return "presa", f"{'/'.join(map(str, e.path[1:])) or '(radice)'}: {e.message}"[:200]
 
 
+class ConPydanticDaSchema:
+    """Pydantic guidato dai dati del plugin: i modelli si GENERANO dagli stessi JSON Schema con
+    datamodel-code-generator (MIT, lo standard di fatto per JSON Schema → pydantic), senza scriverli a mano.
+    Misura se il nucleo compilato di pydantic, nutrito con i dati del plugin, prende più difetti."""
+    nome = "pydantic generato dagli schemi (datamodel-code-generator)"
+
+    def __init__(self):
+        import importlib.util
+        import inspect
+        import tempfile
+        import warnings
+        from datamodel_code_generator import DataModelType, InputFileType, generate
+        from pydantic import BaseModel, ValidationError
+        self.Errore = ValidationError
+        self.modelli = {}
+        self._tmp = tempfile.TemporaryDirectory()
+        for p in sorted((QUI / "schemi").glob("*.schema.json")):
+            nome = p.name.split(".")[0]
+            out = Path(self._tmp.name) / f"m_{nome}.py"
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                generate(p.read_text(encoding="utf-8"), input_file_type=InputFileType.JsonSchema,
+                         output=out, output_model_type=DataModelType.PydanticV2BaseModel,
+                         strict_types=["str", "int", "bool"], use_annotated=True, disable_timestamp=True)
+            spec = importlib.util.spec_from_file_location(f"generato_{nome}", out)
+            mod = importlib.util.module_from_spec(spec)
+            sys.modules[spec.name] = mod
+            spec.loader.exec_module(mod)
+            classi = [c for c in vars(mod).values()  # vars() tiene l'ordine del file
+                      if inspect.isclass(c) and issubclass(c, BaseModel) and c.__module__ == mod.__name__]
+            radice = classi[-1]  # l'ultima del file è la radice
+            radice.model_rebuild(_types_namespace=vars(mod))
+            self.modelli[nome] = radice
+        self.righe_generate = sum(len((Path(self._tmp.name) / f).read_text().splitlines())
+                                  for f in sorted(x.name for x in Path(self._tmp.name).glob("*.py")))
+
+    def prova(self, rel, tipo_file, dati):
+        try:
+            self.modelli[tipo_file].model_validate(dati)
+            return "sfuggita", ""
+        except self.Errore as e:
+            p = e.errors()[0]
+            return "presa", f"{'/'.join(map(str, p['loc'])) or '(radice)'}: {p['msg']}"[:200]
+
+
 class ConPydantic:
     nome = "pydantic v2 (modelli + validatori)"
 
@@ -365,7 +410,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--json")
     a = ap.parse_args(argv)
-    validatori = [Attuale(), ConJsonschema(), ConFastjsonschema(), ConPydantic()]
+    validatori = [Attuale(), ConJsonschema(), ConFastjsonschema(), ConPydanticDaSchema(), ConPydantic()]
     # i file veri devono passare tutti
     falsi_allarmi = {v.nome: [] for v in validatori}
     casi = []
