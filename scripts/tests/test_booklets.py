@@ -14,7 +14,6 @@ Solo `unittest`: la CI non installa pytest.
 from __future__ import annotations
 
 import json
-import subprocess
 import sys
 import tempfile
 import unittest
@@ -368,14 +367,11 @@ class TestTabelleLargheCompilate(unittest.TestCase):
                 '#import "/scripts/typst/tema-rumblingstone.typ": *\n'
                 f'#set page(paper: "a4", columns: {colonne})\n'
                 + segno.format("prima") + corpo + segno.format("dopo"), encoding="utf-8")
-            esito = subprocess.run(
-                ["typst", "eval", "query(<dopo>).first().value - query(<prima>).first().value",
-                 "--in", str(typ),
-                 "--root", str(REPO), "--font-path", str(REPO / "scripts" / "fonts"),
-                 "--package-path", str(REPO / "scripts" / "typst" / "packages")],
-                capture_output=True, text=True)
-            self.assertEqual(esito.returncode, 0, esito.stderr)
-            return 1 if float(esito.stdout.strip()) < 0.5 else 0
+            salto = typst_motore.valuta(
+                typ, "query(<dopo>).first().value - query(<prima>).first().value",
+                root=REPO, font=REPO / "scripts" / "fonts",
+                pacchetti=REPO / "scripts" / "typst" / "packages")
+            return 1 if float(salto) < 0.5 else 0
 
     def _tab(self, testo: str, **kw) -> str:
         extra = "".join(f"{k}: {v}, " for k, v in kw.items())
@@ -417,14 +413,10 @@ class TestFiguraSuPaginaCompilata(unittest.TestCase):
                 '#context [#metadata(here().position().y.cm()) <sotto>]\n',
                 encoding="utf-8")
             def y(etichetta: str) -> float:
-                esito = subprocess.run(
-                    ["typst", "query", "--root", str(REPO),
-                     "--font-path", str(REPO / "scripts" / "fonts"),
-                     "--package-path", str(REPO / "scripts" / "typst" / "packages"),
-                     str(cartella / "p.typ"), f"<{etichetta}>", "--field", "value", "--one"],
-                    capture_output=True, text=True)
-                self.assertEqual(esito.returncode, 0, esito.stderr)
-                return float(esito.stdout)
+                return float(typst_motore.valuta(
+                    cartella / "p.typ", f"query(<{etichetta}>).first().value",
+                    root=REPO, font=REPO / "scripts" / "fonts",
+                    pacchetti=REPO / "scripts" / "typst" / "packages"))
             salto = y("sotto") - y("sopra")
         # 17 cm di mappa (larga quanto la pagina) più i margini della figura.
         self.assertLess(salto, 19.0, f"la figura occupa {salto:.1f} cm: la cornice è ancora fissa")
