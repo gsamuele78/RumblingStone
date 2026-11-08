@@ -25,7 +25,7 @@ on:
     tags: ["v*"]
   pull_request:
     paths: [".github/workflows/release.yml", "scripts/release_plan.py",
-            "scripts/release_notes.py"]
+            "scripts/release_notes.py", "scripts/bundle_offline.py", "requirements.txt"]
 
 permissions:
   contents: read
@@ -163,7 +163,16 @@ jobs:
           mkdir -p dist
           tar --sort=name --owner=0 --group=0 --numeric-owner --mtime="@$SOURCE_DATE_EPOCH" \
               -C build -cf - . | gzip -n -9 > "dist/rumblingstone-skills-$TAG.tar.gz"
+          # Sul modello dei bundle di iemod-fetch: per ogni piattaforma un zip
+          # con le wheel di requirements.txt, che da ADR-0116 portano anche
+          # typst e pdfimpose: si stampa senza rete. BUNDLE.json ha lo sha256
+          # di ogni wheel; lo zip è riproducibile.
+          python scripts/bundle_offline.py costruisci --uscita dist
+          for z in dist/rumblingstone-offline-*.zip; do
+            mv "$z" "${z%.zip}-$TAG.zip"
+          done
           (cd dist && sha256sum ./* > SHA256SUMS && cat SHA256SUMS)
+
       - uses: actions/upload-artifact@v7
         with:
           name: dist
@@ -189,7 +198,9 @@ jobs:
         with: { name: dist, path: dist }
       - uses: actions/attest-build-provenance@v4
         with:
-          subject-path: "dist/*.tar.gz"
+          subject-path: |
+            dist/*.tar.gz
+            dist/*.zip
 
   publish:
     name: Tag e rilascio GitHub

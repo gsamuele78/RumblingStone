@@ -47,8 +47,8 @@ teneva una lista sua e le due divergevano.
 | **bash** | i cinque script shell. Su Windows: Git Bash o WSL | quasi: gli equivalenti Python coprono il flusso principale |
 | **pyyaml** (`pip install pyyaml`) | il frontmatter delle skill. È l'unica libreria che un gate della CI pretende, e ADR-0037 la dichiara come debito | ✅ per le skill |
 | **Chromium / Chrome** | PDF dei booklet, PNG delle mappe | solo per quegli export |
-| **Typst** | l'edizione da stampa ([ADR-0020](../../plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md)) | solo per il volume da stampa |
-| **pdfcpu** | l'imposizione del libretto ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)) | solo per il libretto piegato |
+| **typst** (`pip install -r requirements.txt`) | l'edizione da stampa ([ADR-0020](../../plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md), [ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md)): il modulo PyPI, una CLI nel PATH è il ripiego | solo per il volume da stampa |
+| **pdfimpose** (`pip install -r requirements.txt`) | l'imposizione del libretto ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md), [ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md)) | solo per il libretto piegato |
 | **Inkscape** | PNG delle mappe con resa SVG fedele (`--renderer inkscape`, default se installato) | opzionale: in sua assenza il PNG esce da Chromium |
 | **Pillow** (`pip install pillow`) | ricomprimere immagini grandi nell'HTML dei booklet e generare i derivati | opzionale, e degrada da sola |
 | **pandoc + xelatex** | `dm.py recap --pdf` (il recap in PDF «sobrio») | opzionale |
@@ -172,9 +172,9 @@ la CI installa solo `requirements-dev.txt`. Chi sviluppa li installa tutti con
 
 ```bash
 source .venv/bin/activate
-python scripts/ambiente.py piano --con blender,comfyui,typst     # cosa farebbe, senza toccare niente
+python scripts/ambiente.py piano --con blender,comfyui           # cosa farebbe, senza toccare niente
 export COMFYUI_DIR=/srv/comfyui                                  # solo se vuoi ComfyUI
-python scripts/ambiente.py installa --con blender,comfyui,typst  # chiede conferma a ogni gruppo
+python scripts/ambiente.py installa --con blender,comfyui        # chiede conferma a ogni gruppo
 python scripts/ambiente.py stato                                 # cosa c'è nel registro
 python scripts/dm.py doctor
 ```
@@ -184,7 +184,7 @@ python scripts/dm.py doctor
 | sempre | pacchetti di sistema che mancano: chromium, pandoc, texlive-xetex, maven, default-jre, webp, inkscape, shellcheck; nel `.venv` `requirements-completo.txt` (bpy, torch per CPU, piq) | ~1 GB |
 | `blender` | il programma Blender da apt; con `bpy` serve solo al PNG di `render_map_blender.py` | ~400 MB |
 | `comfyui` | distrobox e podman, poi `scripts/comfyui-local/setup-distrobox.sh` in `COMFYUI_DIR` e, se dici sì, il checkpoint SDXL | ~15 GB |
-| `typst` | la versione fissata dalla CI in `~/.local/bin`, solo se typst manca | 40 MB |
+| `typst` | niente da scaricare: dal 2026-11-08 typst e pdfimpose arrivano nel `.venv` con `requirements.txt` ([ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md)); il modulo controlla solo che ci siano | — |
 
 **Il registro** sta in `~/.local/state/rumblingstone/<id del clone>/stato.json`.
 Possiede solo ciò che prima mancava: per i pacchetti di sistema fotografa
@@ -202,8 +202,8 @@ python scripts/ambiente.py rimuovi --venv    # in più cancella tutto il .venv d
 usa mai `autoremove` né `purge`, che toglierebbero anche ciò che non è suo.
 Se da un pacchetto suo ora dipende un pacchetto installato da te, quel
 pacchetto resta, e `rimuovi` dice perché. Toglie il box e la cartella di
-ComfyUI solo se li aveva creati lui, e typst solo se il file è ancora quello
-che aveva installato.
+ComfyUI solo se li aveva creati lui, e la CLI typst delle installazioni di
+prima solo se il file è ancora quello che aveva installato.
 
 **Quello che hai installato a mano prima** non è nel registro. Per affidarglielo
 c'è `adotta`: legge `/var/log/apt/history.log` e prende le transazioni dalla

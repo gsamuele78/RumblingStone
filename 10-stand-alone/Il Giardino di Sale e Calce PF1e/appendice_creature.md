@@ -26,7 +26,7 @@ attacchi:
 
 **Attacco** spazio 6 m, portata 6 m · BAB +12 · BMC +25 · DMC 36 (non può essere sbilanciato) · *punire il bene* 1/giorno (+5 al colpire, +16 ai danni)
 
-**Statistiche** **Talenti** Arma Focalizzata (tentacolo), Arma Naturale Migliorata (tentacolo), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi Fulminei, Robustezza, Volontà di Ferro · **Abilità** Conoscenze (arcane, storia) +22, Intimidire +24, Nuotare +36, Percezione +23, Raggirare +24, Sapienza Magica +22 · **Linguaggi** Aboleth, Abissale, Aklo, Aquan, Sottocomune; telepatia 30 m (**originale del modulo**)
+**Statistiche** **Talenti** Arma Focalizzata (tentacolo), Attacco Naturale Migliorato (tentacolo), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi Fulminei, Robustezza, Volontà di Ferro · **Abilità** Conoscenze (arcane, storia) +22, Intimidire +24, Nuotare +36, Percezione +23, Raggirare +24, Sapienza Magica +22 · **Linguaggi** Aboleth, Abissale, Aklo, Aquan, Sottocomune; telepatia 30 m (**originale del modulo**)
 
 **Capacità speciali**
 - **Muco** (Str): chi è colpito da un tentacolo fa Tempra CD 28 o in 1d4 round la pelle diventa una membrana molle (−4 Cos finché dura); fuori dall'acqua prende 1d12 danni ogni 10 minuti. *Rimuovi malattia* la cura.
@@ -90,7 +90,7 @@ attacchi:
 ```
 **Attacco** BAB +9 · BMC +10 · DMC 21 · *incanalare energia negativa* 2/giorno (7d6, CD 15) · *colpo distruttivo* 9/giorno (+6 ai danni) · *aura distruttiva* 13 round al giorno · *ghiacciolo* 9/giorno (1d6+6 freddo, contatto a distanza 9 m)
 
-**Statistiche** **Talenti** Incanalare Selettivo, Incantesimi Estesi, Incantesimi in Combattimento, Incantesimi Inarrestabili, Incantesimi Inarrestabili Superiore, Incantesimi Rapidi, Iniziativa Migliorata, Robustezza · **Abilità** Conoscenze (ingegneria) +17, Conoscenze (religioni) +9, Percezione +10, Sapienza Magica +17 · **Equipaggiamento** armatura completa +2, scudo pesante di metallo +1, tridente +1, *amuleto della Saggezza +4*, *mantello della resistenza +2*, *anello di protezione +1*, chiavi della Torre e dello studio
+**Statistiche** **Talenti** Incanalare Selettivo, Incantesimi Estesi, Incantare in Combattimento, Incantesimi Inarrestabili, Incantesimi Inarrestabili Superiore, Incantesimi Rapidi, Iniziativa Migliorata, Robustezza · **Abilità** Conoscenze (ingegneria) +17, Conoscenze (religioni) +9, Percezione +10, Sapienza Magica +17 · **Equipaggiamento** armatura completa +2, scudo pesante di metallo +1, tridente +1, *amuleto della Saggezza +4*, *mantello della resistenza +2*, *anello di protezione +1*, chiavi della Torre e dello studio
 
 **Capacità speciali**
 - **Domini** Acqua (resistenza al freddo 20) e Distruzione, di Hasharr, dio del modulo la cui voce è quella di Karkator. **Originale del modulo.**
@@ -126,7 +126,7 @@ attacchi:
 
 **Attacco** BAB +10 · BMC +15 (+17 spingere) · DMC 27 · addestramento nelle armi (lance) +1
 
-**Statistiche** **Talenti** Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi in Combattimento, Robustezza, Specializzazione in un'Arma (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** corazza di mithral +1, scudo pesante di metallo +1, tridente +1 · **Linguaggi** Aboleth, Sottocomune · **QS** anfibio
+**Statistiche** **Talenti** Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi in Combattimento, Robustezza, Arma Specializzata (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** corazza di mithral +1, scudo pesante di metallo +1, tridente +1 · **Linguaggi** Aboleth, Sottocomune · **QS** anfibio
 
 **Tattiche** Accanto a Tariq, spingono i PG verso la tromba della scala. Combattono fino alla morte se Karkator li guarda; altrimenti si arrendono sotto i 20 pf.
 

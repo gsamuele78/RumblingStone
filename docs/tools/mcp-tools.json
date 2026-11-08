@@ -1897,6 +1897,142 @@
       "deterministic": true
     },
     {
+      "name": "misura_box_telecomando",
+      "description": "«C'è un box che dice ai giocatori cosa pensano?»\n\nI box read-aloud che decidono per il gruppo cosa capisce, sa o prova (seconda persona plurale, fuori dalle battute). Il 2026-11-03 i 2 veri corretti nel testo (4 → 2 colpi, i 2 rimasti accettati); --check è il cancello, in CI da test_misure_rigorose. Deterministico.",
+      "use_case": "«C'è un box che dice ai giocatori cosa pensano?»",
+      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...] [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "file markdown (default: i file vivi)"
+          },
+          "check": {
+            "type": "boolean",
+            "description": "cancello: esce con 1 se c'è un colpo fuori da ACCETTATI"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun colpo nuovo (o senza --check: elenco stampato)",
+        "1": "con --check: un box nuovo dice al gruppo cosa capisce o sa"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_distanza_pagine",
+      "description": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»\n\nLegge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
+      "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pdf": {
+            "type": "string",
+            "description": "uno o più PDF da confrontare"
+          },
+          "nomi": {
+            "type": "string",
+            "description": "nomi separati da virgola (default: chi ha un riquadro nel repo)"
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          }
+        },
+        "required": [
+          "pdf"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "la misura è stampata: è un indicatore",
+        "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_fedelta_nli",
+      "description": "«La riscrittura ha cambiato un fatto che i numeri non vedono, tipo nord diventato sud?»\n\nIl riscritto contraddice l'originale? Coppie (riga tolta, riga messa) del diff, modello NLI mDeBERTa multilingue (MIT), massimo dei due sensi sopra 0,5. Sulle 26 coppie del DM alla cieca F1 0,83 contro 0,62 dei soli numeri. Con --ripara (e dentro ciclo_prosa revisione/misura) le righe che contraddicono tornano all'originale in automatico. Canale unstable (ADR-0099).",
+      "use_case": "«La riscrittura ha cambiato un fatto che i numeri non vedono, tipo nord diventato sud?»",
+      "invocation": "python3 scripts/misura_fedelta_nli.py ORIGINALE RISCRITTO | --rif REV FILE... [--ripara] [--soglia 0.5] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "ORIGINALE RISCRITTO, oppure con --rif i file da confrontare"
+          },
+          "rif": {
+            "type": "string",
+            "description": "il commit o il ramo di prima"
+          },
+          "soglia": {
+            "type": "number",
+            "description": "probabilità di contraddizione oltre cui segnalare"
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          },
+          "ripara": {
+            "type": "boolean",
+            "description": "riscrive il file: le righe che contraddicono tornano all'originale"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "**/*.md"
+      ],
+      "exit_codes": {
+        "0": "nessuna contraddizione, o con --ripara le righe sono state rimesse",
+        "1": "righe che contraddicono l'originale (senza --ripara)",
+        "2": "mancano transformers/torch o il modello"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_ripetizioni_frasi",
+      "description": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»\n\nLe immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Il 2026-11-03 le 2 vere nei master corrette (21 → 19 coppie), le altre lette e scritte in plans/scrittura/ripetizioni-accettate.json; --check è il cancello locale. Canale unstable (ADR-0099).",
+      "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",
+      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json] [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "soglia": {
+            "type": "number",
+            "description": "coseno minimo"
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "cancello: esce con 1 se c'è una coppia fuori da ripetizioni-accettate.json"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessuna coppia nuova (o senza --check: elenco stampato)",
+        "1": "con --check: una ripetizione nuova fra box",
+        "2": "manca sentence-transformers"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_stampa",
       "description": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»\n\nCompila ogni booklet e ne misura il PDF come un controllo di prestampa: font non incorporati, testo sotto 7 pt, testo oltre la gabbia dei margini speculari, immagini sotto 300 dpi, riquadri di creatura spezzati fra due pagine (dai segnaposti <sb-inizio>/<sb-fine> del tema, letti con typst eval), più corpo mediano e quota di pagine illustrate. --check confronta con i tetti di docs/audit/stampa-booklet.json, che --aggiorna fa solo scendere. Serve PyMuPDF (requirements-dev.txt, come validate_corredo --stampa).",
       "use_case": "«Questo booklet si stampa bene? Cosa è peggiorato o migliorato rispetto all'ultima volta?»",
@@ -1940,6 +2076,44 @@
         "0": "ok",
         "1": "un booklet sopra un suo tetto o non registrato (--check)",
         "2": "manca PyMuPDF"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_standard_tavolo",
+      "description": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»\n\nPer ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo vicino a dove serve. Con --prova misura il capitolo arricchito da dmcore.chi_si_incontra. Indicatore, non cancello.",
+      "use_case": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»",
+      "invocation": "python3 scripts/misura_standard_tavolo.py --dettaglio",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Elenca ogni coppia capitolo × persona con quello che manca, e i capitoli con uno scontro senza mappa."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          },
+          "manifest": {
+            "type": "string",
+            "description": "un booklet solo"
+          },
+          "soglia": {
+            "type": "integer",
+            "description": "citazioni minime per dire che una persona compare"
+          },
+          "prova": {
+            "type": "boolean",
+            "description": "Misura ogni booklet come se il manifest avesse «schede»: «entrambe» e «chi_si_incontra»: true (ADR-0107), cioè il capitolo come lo stamperebbe l'esportatore con le persone e le mappe portate dal master."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è un indicatore"
       },
       "deterministic": true
     },
@@ -2642,6 +2816,59 @@
       "deterministic": true
     },
     {
+      "name": "prove_skill",
+      "description": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»\n\nLe prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval.",
+      "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
+      "invocation": "python3 scripts/prove_skill.py controlla",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "comando": {
+            "type": "string",
+            "description": "controlla · prepara · esito"
+          },
+          "minimo": {
+            "type": "integer",
+            "description": "Casi minimi per skill (controlla)."
+          },
+          "uscita": {
+            "type": "string",
+            "description": "Cartella del piano A/B (prepara)."
+          },
+          "skill": {
+            "type": "string",
+            "description": "Solo questa skill (prepara), ripetibile."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Seme delle lettere alla cieca (prepara)."
+          },
+          "piano": {
+            "type": "string",
+            "description": "Cartella del piano con chiave.json e giudizi.json (esito)."
+          },
+          "giudizi": {
+            "type": "string",
+            "description": "File dei giudizi dentro --piano (esito)."
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita>/piano.json",
+        "<piano>/ESITO.md"
+      ],
+      "exit_codes": {
+        "0": "casi in forma, o la nuova non peggiora",
+        "1": "un caso malformato, o la nuova peggiora gli inventati senza marca",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "skill_scanner",
       "description": "«Una skill di questo repo contiene qualcosa che un agente non dovrebbe eseguire?»\n\nScanner statico di sicurezza delle skill (script scaricati e dati alla shell, rete non dichiarata, credenziali, codice offuscato), copiato identico da awesome-llm-apps (Apache 2.0, ADR-0076). Esce 1 se trova un CRITICO.",
       "use_case": "«Una skill di questo repo contiene qualcosa che un agente non dovrebbe eseguire?»",
@@ -2923,6 +3150,56 @@
       "deterministic": false
     },
     {
+      "name": "bundle_offline",
+      "description": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»\n\nIl bundle offline del rilascio (ADR-0116, sul modello di iemod-fetch): per ogni piattaforma pip download delle wheel di requirements.txt, che portano anche typst e pdfimpose, in un zip riproducibile con BUNDLE.json (sha256 di ogni file). installa verifica ogni wheel contro BUNDLE.json e fa pip install --no-index: si stampa senza rete. Sostituisce strumenti.py e mise.",
+      "use_case": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»",
+      "invocation": "python3 scripts/bundle_offline.py costruisci --uscita dist",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "costruisci · installa · elenco",
+            "enum": [
+              "costruisci",
+              "installa",
+              "elenco"
+            ]
+          },
+          "piattaforma": {
+            "type": "string",
+            "description": "costruisci: ripetibile; default tutte.",
+            "enum": [
+              "linux-arm64",
+              "linux-x64",
+              "macos-arm64",
+              "windows-x64"
+            ]
+          },
+          "uscita": {
+            "type": "string",
+            "description": "costruisci: dove scrivere i zip."
+          },
+          "bundle": {
+            "type": "string",
+            "description": "installa: il rumblingstone-offline-<piattaforma>-<tag>.zip."
+          }
+        },
+        "required": [
+          "azione"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "dist/"
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "una wheel con lo sha256 sbagliato, o pip fallito"
+      },
+      "deterministic": true
+    },
+    {
       "name": "check_plans_discipline",
       "description": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»\n\nGate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. Passa se i commit strutturali sono tutti di Dependabot (PI-3b).",
       "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
@@ -3192,6 +3469,36 @@
         "0": "ogni file mai arrivato ha un posto (o nessun ramo da misurare)",
         "1": "righe senza posto (solo con --check), un ramo con righe mai arrivate (solo con --righe) o registro malformato",
         "2": "uso errato"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "controlla_marche",
+      "description": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»\n\nI due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Canale testing: in CI avvisa e non blocca.",
+      "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
+      "invocation": "python3 scripts/controlla_marche.py --base origin/main",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "base": {
+            "type": "string",
+            "description": "Ref di confronto, es. origin/main."
+          },
+          "rigido": {
+            "type": "boolean",
+            "description": "Exit 1 se c'è almeno un avviso."
+          }
+        },
+        "required": [
+          "base"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun avviso, o avvisi senza --rigido",
+        "1": "avvisi con --rigido",
+        "2": "errore d'uso"
       },
       "deterministic": true
     },
@@ -3556,7 +3863,7 @@
     },
     {
       "name": "inventory_inferred",
-      "description": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»\n\nInventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/ (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI.",
+      "description": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»\n\nInventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/, skill, modelli, README e fixture (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI. Ogni marcatore ha anche la forma (con domanda e base, vecchia, nuda) secondo GUIDA-MARCATURE (ADR-0109).",
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "invocation": "python3 scripts/inventory_inferred.py",
       "inputSchema": {
@@ -3593,6 +3900,54 @@
       "exit_codes": {
         "0": "ok",
         "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "lessico_regole",
+      "description": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»\n\nI termini ufficiali di D&D 3.5 e PF1e e chi li usa male (ADR-0110). Genera dall'SRD 3.5 e dal PRD PF1e in cache l'indice dei termini; legge le tabelle italiano → SRD 3.5 (scripts/lessico_it.yaml, scripts/lessico_it_35.tsv) e italiano → PRD PF1e (scripts/lessico_it_pf1.tsv, per i moduli PF1e senza passare dalla 3.5); controlla le righe dei talenti delle schede e, con --campi, incantesimi, abilità e oggetti, segnalando varianti non ufficiali, nomi 3.5 nei moduli PF1e e termini sconosciuti non marcati.",
+      "use_case": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»",
+      "invocation": "python3 scripts/lessico_regole.py [--offline] {indice|cerca NOME|verifica-tabella|casi FILE|controlla PERCORSI [--tutto] [--campi] [--check]}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cache": {
+            "type": "string",
+            "description": "Cartella della cache delle fonti (come riscontro_srd.py)."
+          },
+          "offline": {
+            "type": "boolean",
+            "description": "Non scarica: solo la cache."
+          },
+          "comando": {
+            "type": "string",
+            "description": "indice | cerca | verifica-tabella | casi | controlla.",
+            "enum": [
+              "indice",
+              "cerca",
+              "verifica-tabella",
+              "casi",
+              "controlla"
+            ]
+          },
+          "campi": {
+            "type": "boolean",
+            "description": "Con controlla: anche incantesimi, abilità e oggetti magici dei campi dello statblocco."
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout",
+        "<cache>/lessico-indice.json"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto",
+        "1": "con --check: termini sbagliati o sconosciuti oltre il massimo; verifica-tabella con nomi fuori fonte; casi sbagliati",
         "2": "errore d'uso"
       },
       "deterministic": true
@@ -4155,6 +4510,44 @@
         "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
         "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
         "130": "interruzione utente"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "sistemi",
+      "description": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»\n\nI sistemi di gioco come plugin di dati (ADR-0111): legge sistemi.toml, i plugin in sistemi/<id>/sistema.toml e il campo sistema.capacita del manifest, e stampa i sistemi supportati (attivi, spenti, di rinforzo), la matrice strumenti × sistemi (dati, ancora nel codice con il lotto, ereditata, non supportata, mancante) e le skill da installare. Con --di dice il sistema di un file (il percorso più lungo di [moduli], altrimenti il predefinito); con --check fa da cancello.",
+      "use_case": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»",
+      "invocation": "python3 scripts/sistemi.py [--di FILE | --skill | --json | --check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "di": {
+            "type": "string",
+            "description": "Stampa il sistema del file."
+          },
+          "skill": {
+            "type": "boolean",
+            "description": "Le skill da installare: sistemi attivi e di rinforzo, con la loro famiglia."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto il rapporto in JSON."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Cancello: esce 1 se configurazione, plugin o manifest non tornano."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: problemi nella configurazione, nei plugin o nel manifest",
+        "2": "configurazione illeggibile"
       },
       "deterministic": true
     },

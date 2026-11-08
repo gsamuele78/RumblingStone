@@ -1,4 +1,4 @@
-# emissario-red-hand-cr12 — diplomatico-sacerdote hobgoblin (Chierico 12 di Tiamat) [ACCEPTED — DM-canon 2026-05-05]
+# emissario-red-hand-cr12 — diplomatico-sacerdote hobgoblin (Chierico 12 di Tiamat) [CANONE — DM 2026-05-05]
 
 **Faction**: red-hand | **Role**: elite-envoy-caster | **Environment**: thornwaste,ruins | **CR**: 12
 

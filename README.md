@@ -69,18 +69,18 @@ corregge solo il master, e PDF, mappe, recap e pacchetti si rigenerano.
 | 👹 | Bestiario: mostri, PNG, villain con statblocco e dossier a sezioni fisse | [`Bestiario/`](Bestiario/) |
 | 🧝 | Schede dei quattro PG | [`PG/`](PG/) |
 | 🗺️ | Mappe a scala reale: griglia, JSON, SVG pergamena, PNG, UVTT per Foundry e Roll20 | [GUIDA-MAPPE](docs/guides/GUIDA-MAPPE.md) |
-| 📕 | Booklet e volumi di stampa: HTML, Homebrewery, PDF con typst | [GUIDA-BOOKLET-E-PDF](docs/guides/GUIDA-BOOKLET-E-PDF.md) |
+| 📕 | Booklet e volumi di stampa: HTML, Homebrewery, PDF con typst; in ogni capitolo chi si incontra, con scheda, ritratto, riquadro e mappa | [GUIDA-BOOKLET-E-PDF](docs/guides/GUIDA-BOOKLET-E-PDF.md) |
 | 🎲 | Stato della campagna, sessioni, recap per PG, ledger dei PE | [`campaign/`](campaign/) |
-| 🧠 | 18 skill per agenti: regole 3.5 e PF1e, lore 1372 DR, stile, mappe, editoria | [`skills/`](skills/) |
+| 🧠 | 18 skill per agenti: regole 3.5 e PF1e, lore 1372 DR, stile, mappe, editoria; ognuna dichiara i suoi cancelli deterministici | [`skills/`](skills/) |
 | 🛠️ | `dm.py` e gli script, ognuno con il suo contratto nel manifest | [`scripts/`](scripts/), [registro](docs/tools/README.md) |
-| 🧭 | Piani, 97 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
+| 🧭 | Piani, 114 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
 | ✍️ | Misure della prosa e voto al cieco del DM | ADR-0093 |
 
 ## Come funziona
 
-Il disegno completo, con ventiquattro diagrammi (infrastruttura, integrazione fra
+Il disegno completo, con ventisei diagrammi (infrastruttura, integrazione fra
 strumenti e fonti, casi d'uso, la catena della prosa, la serata, il giro
-delle letture, i rilasci),
+delle letture, le mappe e i booklet in stampa, i rilasci),
 sta in **[docs/ARCHITETTURA.md](docs/ARCHITETTURA.md)**. In breve:
 
 ```mermaid
@@ -243,6 +243,10 @@ aprirla:
   [CHANGELOG.md](CHANGELOG.md);
 - una scelta strutturale diventa un ADR, con il numero prenotato in
   `plans/adr-prenotati.json`;
+- una skill nuova chiude con la sezione «Cancelli deterministici», i comandi
+  che la verificano ([ADR-0108](plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md));
+  una tecnica nuova diventa standard solo se una prova ne misura il guadagno
+  sul repo;
 - i documenti seguono [rumblingstone-prosa-documenti](skills/rumblingstone-prosa-documenti/SKILL.md),
   la prosa di gioco [rumblingstone-narrative-style](skills/rumblingstone-narrative-style/SKILL.md).
 

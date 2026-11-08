@@ -1,4 +1,4 @@
-# ghost-lion-spettrale-cr8 [ACCEPTED — DM-canon 2026-05-05]
+# ghost-lion-spettrale-cr8 [CANONE — DM 2026-05-05]
 
 **Faction**: ghostlord-undead | **Role**: guardian-incorporeal | **Environment**: thornwaste,ruins | **CR**: 8
 

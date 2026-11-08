@@ -1,4 +1,4 @@
-# Chierico di Gruumsh (Orco, Chierico 11) [ACCEPTED — DM-canon]
+# Chierico di Gruumsh (Orco, Chierico 11) [CANONE — DM 2026-10-06]
 **Faction**: mano-rossa | **Role**: caster-divino/supporto-terreno | **Environment**: underground/hills | **CR**: 11 | **Source**: SRD *Orc* + Chierico 11 (SRD PHB), dominî **Guerra** e **Forza** (SRD); Gruumsh e i suoi dominî da `skills/forgotten-realms-lore/references/fr-deities-complete.md` | **Status**: accepted
 
 
@@ -23,7 +23,7 @@ Medium humanoid (orc), CE. **DV 11d8**. **hp 74**. **CA 21** (+9 corazza di pias
 **Mischia** picca lunga +1 +13/+8 (1d8+5/×3, portata **3 m**).
 **Car** For 16, Des 12, Cos 14, Int 8, Sag 19, Car 6.
 **Qualità speciali** Scurovisione 18 m, **sensibilità alla luce** (abbagliato in piena luce solare), scacciare non-morti come **comandare** 1/giorno (Car 6).
-**Talenti** Robustezza, Incantare in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimi Focalizzati Superiori (Invocazione). *Da dominio Guerra*: Arma Focalizzata (picca lunga) + Competenza nelle Armi da Guerra.
+**Talenti** Robustezza, Incantare in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimi Focalizzati Superiore (Invocazione). *Da dominio Guerra*: Arma Focalizzata (picca lunga) + Competenza nelle Armi da Guerra.
 **Dominî** **Guerra** (Arma Focalizzata gratuita) · **Forza** (1/giorno **+11 di potenziamento a Forza per 1 round**).
 **Equipaggiamento** corazza di piastre +1, picca lunga +1, anello di protezione +1, mantello di resistenza +2, pendente della saggezza +2, 2 pozioni di *cura ferite gravi*.
 

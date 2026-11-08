@@ -4,7 +4,7 @@
 > derivazioni delle unità (file in `Bestiario/`)
 > e tutti i puntatori NPC a `PNG/`. I conteggi §2.x e §2.6 sono canone
 > di campagna; le unità sono valide per encounter/mass-combat
-> immediato. Flag globale: `[ACCEPTED — DM-canon 2026-05-05]`.
+> immediato. Flag globale: `[CANONE — DM 2026-05-05]`.
 
 > **Versione**: v2 (rescaled ~10.000 baseline, dual-clock, AP-canon 5 dragons).
 > **Supersede**: v1 (6.161 baseline, AP-original scaling). Storia in git.
@@ -30,7 +30,7 @@
    draconic spawn = Razorfiend (colori di Tiamat).
 5. **No invent rule**: nessuna statistica nuova; tutto punta a MM/SRD o
    a file esistenti. Contingenti nuovi ("Compagnia del Teschio Nero")
-   sono concettuali, stat blocks restano a cura del DM o [ACCEPTED].
+   sono concettuali, stat blocks restano a cura del DM o [CANONE — DM data].
 
 ---
 
@@ -139,7 +139,7 @@ Approssimato a **~10.000** come target narrativo.
 > sommare due volte). Questa tabella ne esplicita il *conteggio* e il
 > *deployment* per la fase endgame, quando i PG sono livello 13-15.
 > Cross-ref: `Armate-COMPOSIZIONE-DETTAGLIATA.md` §16a-d. Tutti
-> `[ACCEPTED — DM-canon 2026-05-05]` salvo nominati AP.
+> `[CANONE — DM 2026-05-05]` salvo nominati AP.
 
 | Unità | CR | Numero | Fonte file | Deployment (arc/fase) |
 |---|---|---|---|---|

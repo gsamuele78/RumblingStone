@@ -401,3 +401,8 @@ scripts/llm-locale/dati/
 
 # Generato a richiesta da scripts/inventory_inferred.py (non si committa)
 docs/audit/INFERRED-INVENTARIO.md
+
+# Le cartelle delle installazioni di strumenti.py (ADR-0113, superato da
+# ADR-0116): restano ignorate per chi le ha ancora, si possono cancellare.
+.strumenti/
+.strumenti-cache/

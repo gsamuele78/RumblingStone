@@ -623,7 +623,9 @@ def cmd_regola(args, cache: Path) -> int:
     if args.fonte in (None, "srd35"):
         base = assicura(SRD35, cache, rete=not args.offline)
         titolo = re.compile(
-            rf"^(?:#{{1,6}}\s*{re.escape(nome)}\s*$|\*\*{re.escape(nome)}:?\*\*:?)",
+            # Nell'SRD i titoli dei talenti portano il tipo: «Improved Trip <small>[General]</small>».
+            rf"^(?:#{{1,6}}\s*{re.escape(nome)}\s*(?:<small>[^<]*</small>|\[[^\]]*\])?\s*$|"
+            rf"\*\*{re.escape(nome)}:?\*\*:?)",
             re.IGNORECASE | re.MULTILINE)
         for rel in sorted(SRD35.file):
             testo = (base / rel).read_text(encoding="utf-8")

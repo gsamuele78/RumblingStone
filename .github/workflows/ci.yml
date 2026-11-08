@@ -14,7 +14,7 @@ permissions:
 jobs:
   validate:
     name: Validate skills & scripts
-    # Fissato, come typst piu' sotto: dal 19 ottobre 2026 `ubuntu-latest`
+    # Fissato, come typst in requirements.txt: dal 19 ottobre 2026 `ubuntu-latest`
     # diventa Ubuntu 26 (avviso di GitHub). Si passa a 26.04 con una PR che
     # la prova, non perche' e' cambiata l'etichetta (PRATICHE PI-3).
     runs-on: ubuntu-24.04
@@ -71,6 +71,10 @@ jobs:
 
       - name: Validate skill trees (frontmatter, links, data YAML)
         run: python scripts/validate_skills.py
+
+      # ADR-0114: le prove con trappola delle skill nella forma di `claude plugin eval`.
+      - name: Prove delle skill in forma (ADR-0114)
+        run: python scripts/prove_skill.py controlla
 
       # Lo scanner di sicurezza delle skill, copiato da awesome-llm-apps
       # (Apache 2.0, ADR-0076): esce 1 su un CRITICO, come `curl ... | sh`.
@@ -147,6 +151,14 @@ jobs:
         continue-on-error: true
         run: python scripts/inventory_inferred.py --check
 
+      # ADR-0109, scheda 4: sulle righe cambiate, marca senza domanda e base, e
+      # INFERRED tolto senza CANONE, GENERATO o storico. Canale testing: avvisa e
+      # non blocca; dopo due settimane l'audit settimanale propone se renderlo bloccante.
+      - name: Marche sulle righe cambiate — non bloccante (ADR-0109, testing)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: python scripts/controlla_marche.py --base "origin/${{ github.base_ref }}" --rigido
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: |
           python scripts/validate_maps.py
@@ -210,6 +222,13 @@ jobs:
       # sono difetti stanno in plans/domande-developer.json con la ragione.
       - name: Domande del developer — si gioca?
         run: python scripts/domande_developer.py --check
+
+      # ADR-0111: i sistemi di gioco come plugin. sistemi.toml, i plugin in
+      # sistemi/<id>/ e le capacità chieste dal manifest dei tool tornano:
+      # nessuna capacità chiesta e non dichiarata, nessuna tabella puntata
+      # che nel codice non c'è più, nessuna eredità senza motivo.
+      - name: Sistemi di gioco — plugin e capacità
+        run: python scripts/sistemi.py --check
 
       # Lotto 7c di AVVENTURE-COMMUNITY: lo stesso PNG o mostro con GS, pf, CA,
       # CD o classi diversi in due scene. Solo ARC-07 e ARC-08, dove la
@@ -389,17 +408,13 @@ jobs:
         run: python scripts/validate_booklets.py --spiega
 
 
-      - name: Install typst (versione FISSATA, mai «latest»)
-        # Un compilatore che si aggiorna da solo è una CI che diventa rossa di
-        # notte per una riga che nessuno ha scritto. La versione si alza a mano,
-        # in un commit che si vede. ADR-0020 §3.
-        env:
-          TYPST_VERSION: "0.15.1"
+      - name: typst e pdfimpose arrivano da requirements.txt (ADR-0116)
+        # Niente binari scaricati da GitHub Releases: il compilatore typst è il
+        # modulo PyPI, l'imposizione è pdfimpose. Qui si controlla solo che la
+        # catena usi il modulo e non una CLI trovata per caso nel PATH.
         run: |
-          curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" -o /tmp/typst.tar.xz
-          tar -xJf /tmp/typst.tar.xz -C /tmp
-          sudo install /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
-          typst --version
+          python -c "import sys; sys.path.insert(0, 'scripts'); import typst_motore as t; print('typst:', t.versione()); assert t.motore() == 'pypi'"
+          python -m pdfimpose --version
 
       - name: Edizione da stampa — i volumi compilano DAVVERO (ADR-0020)
         # Il gate che mancava: senza typst in CI, due booklet della campagna non
@@ -608,15 +623,8 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
+        # typst arriva da qui (requirements.txt, ADR-0116): niente GitHub Releases.
         run: pip install -r requirements-dev.txt
-
-      - name: Install typst (la stessa versione fissata di «validate»)
-        env:
-          TYPST_VERSION: "0.15.1"
-        run: |
-          curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" -o /tmp/typst.tar.xz
-          tar -xJf /tmp/typst.tar.xz -C /tmp
-          sudo install /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
 
       - name: Nessun booklet sopra i suoi tetti di stampa
         run: |
@@ -655,6 +663,37 @@ jobs:
             plans/esperimenti/ricerca-rete-2026-10-23/riscontri-arc08.yaml \
             --md "$RUNNER_TEMP/riscontro.md"
           { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
+
+  # ADR-0110, canale STABLE (bloccante da subito, su richiesta del DM dopo la
+  # misura 13/40 → 40/40): i nomi dei talenti nelle schede sono quelli della
+  # tabella o delle fonti, o portano una marca. Varianti e nomi 3.5 nei moduli
+  # PF1e bloccano; gli sconosciuti hanno un ratchet che può solo scendere.
+  lessico-regole:
+    name: Termini ufficiali 3.5 e PF1e (ADR-0110)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Scarica le fonti a commit fissato e genera l'elenco dei termini
+        run: |
+          python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" scarica
+          python scripts/lessico_regole.py --cache "$RUNNER_TEMP/srd" indice
+
+      - name: Tabella, casi veri e schede
+        run: |
+          set -o pipefail
+          L="python scripts/lessico_regole.py --cache $RUNNER_TEMP/srd --offline"
+          $L verifica-tabella
+          $L casi plans/esperimenti/regole-ufficiali-2026-11-07/casi.json --check
+          { echo "## Termini ufficiali (ADR-0110)"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          $L controlla --tutto --volumi --check --massimo-sconosciuti 0 | tee -a "$GITHUB_STEP_SUMMARY"
+          # Incantesimi, abilità e oggetti delle schede: per ora solo il conto, non blocca (ADR-0110, lotto 2).
+          $L controlla --tutto --volumi --campi | grep '^lessico campi' | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
 
   build:
     name: Build skill packages

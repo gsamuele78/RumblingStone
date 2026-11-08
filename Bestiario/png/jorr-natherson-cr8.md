@@ -1,5 +1,6 @@
 # Jorr Natherson, guida delle paludi [TRANSCRIBED — PCGen, L1 2026-07-08]
 **Faction**: alleati-del-vale | **Role**: ranged | **Environment**: forest | **CR**: 8 | **Source**: PCGen export `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Jorr Natherson 8liv.htm` (stadio 2, adottato come scheda); stadio 1: `Jorr Natherson.htm` | **Status**: transcribed-pcgen
+> ⚰️ **Morto nella valle** (arco 00), prima della discesa nell'Underdark `[CANONE — DM 2026-11-05]`. La scheda resta per i flashback e per i gruppi futuri.
 > 🔁 **Consolidata il 2026-09-17.** Era una fazione da un membro solo, e
 > descriveva uno **scopo**, non uno schieramento: quello sta già in `Role`.
 > `alleati-del-vale` raccoglie gli alleati dei PG che non appartengono a un

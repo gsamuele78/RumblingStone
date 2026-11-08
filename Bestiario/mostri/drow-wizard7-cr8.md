@@ -1,4 +1,4 @@
-# Drow Wizard 7 (Arcanist) [ACCEPTED — DM-canon 2026-05-05]
+# Drow Wizard 7 (Arcanist) [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: arcane-blaster | **Environment**: underdark | **CR**: 8 | **Source**: FRCS drow + PHB Wizard 7 | **Status**: inferred
 
 ```statblocco

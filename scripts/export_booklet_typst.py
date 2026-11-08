@@ -52,7 +52,10 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, slug, togli_storico  # noqa: E402
+from dmcore import chi_si_incontra  # noqa: E402
+from dmcore.testo import (  # noqa: E402
+    capitoli_del_volume, leggi_per_la_stampa, piega_ascii, slug, togli_storico, traduci_rimandi,
+)
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
     StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, leggi as leggi_statblocco,
@@ -60,6 +63,17 @@ from dmcore.statblock import (  # noqa: E402
 )
 
 import binari  # noqa: E402  (accanto a questo file)
+import typst_motore  # noqa: E402  (ADR-0116: PyPI, ripiego la CLI)
+from dmcore import sistemi as _SIS  # noqa: E402
+
+#: Le sigle del riquadro dal plugin del sistema del booklet (ADR-0111, L7);
+#: `main()` le rilegge per il manifest, qui vale il predefinito.
+ET: dict[str, str] = _SIS.etichette()
+
+
+def _etichette_per(manifest_path: Path) -> None:
+    global ET
+    ET = _SIS.etichette(_SIS.sistema_di(manifest_path.resolve()))
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
@@ -676,7 +690,7 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
     nome = sb.nome or titolo_corrente
     voci = [f"nome: {json.dumps(nome, ensure_ascii=False)}"]
     for chiave, valore in (
-        ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs)), ("iniziativa", sb.iniziativa),
+        ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs, ET["gs"])), ("iniziativa", sb.iniziativa),
         ("sensi", sb.sensi), ("pf", (sb.pf + (f" ({sb.pf_dado})" if sb.pf_dado else "")).strip()),
         ("velocita", sb.velocita), ("tattica", sb.tattica), ("fonte", sb.fonte),
     ):
@@ -713,6 +727,9 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
             f"{json.dumps(s.etichetta, ensure_ascii=False)}: "
             f"[{_sezione_typ(s, len(caratteristiche(sb.attributi)) == 6)}], "
             for s in sezioni) + ")")
+    voci.append("etichette: (" + ", ".join(
+        f"{k}: {json.dumps(ET[k], ensure_ascii=False)}"
+        for k in ("ca", "pf", "ts", "vel", "iniziativa", "sensi")) + ")")
     return "#statblocco(\n  " + ",\n  ".join(voci) + ",\n)"
 
 
@@ -723,7 +740,7 @@ def _sezione_typ(s, con_griglia: bool) -> str:
         testo = senza_caratteristiche(testo)
     pezzi = [inline(testo)] if testo else []
     if s.etichetta == "Iniziativa" and pezzi:
-        pezzi[0] = "*Iniziativa* " + pezzi[0]    # la riga sotto il nome, senza fascia
+        pezzi[0] = f"*{ET['iniziativa']}* " + pezzi[0]    # la riga sotto il nome, senza fascia
     pezzi += ["- " + inline(v) for v in s.voci]
     return "\n".join(pezzi)
 
@@ -883,7 +900,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
-    "schede",
+    "schede", "chi_si_incontra",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -1059,9 +1076,15 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # Dove sta il riquadro intero delle creature (ADR-0105 punto 7): in
     # appendice, con la riga e la tattica nell'incontro; «qui» per i volumi che
     # le schede le vogliono dove sono scritte.
-    appendice = man.get("schede", "appendice") == "appendice"
+    modo = man.get("schede", "appendice")
+    appendice = modo in ("appendice", "entrambe")
     if appendice:
-        parti.append('#modo-schede.update("appendice")')
+        parti.append(f'#modo-schede.update("{modo}")')
+    # `"chi_si_incontra": true` (ADR-0107): chi si incontra sta nel capitolo,
+    # con scheda, ritratto, riquadro e mappa, portati dal master che li ha.
+    # Si accompagna a «entrambe», così l'appendice resta.
+    indice = chi_si_incontra.indice_del_repo() if man.get("chi_si_incontra") else None
+    pg = {piega_ascii(p.stem).lower() for p in (ROOT / "PG" / "schede").glob("*.yaml")} if indice else set()
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
@@ -1072,7 +1095,15 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
         parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
-        corpo = md_to_typ(leggi_per_la_stampa(f, nel_volume), f.parent,
+        md = leggi_per_la_stampa(f, nel_volume)
+        # la regia e la cassetta nominano tutti, ma lì non si incontra nessuno
+        if indice is not None and not chi_si_incontra.CONSULTAZIONE.search(titolo):
+            md, fatto = chi_si_incontra.arricchisci(md, f, indice, pg)
+            # quel che arriva da un altro master parla ancora di «DEF-4»
+            md = traduci_rimandi(md, f, nel_volume)
+            for riga in fatto:
+                print(f"  · {titolo[:40]}: {riga}", file=sys.stderr)
+        corpo = md_to_typ(md, f.parent,
                           capolettera=bool(cap.get("capolettera", predefinito)))
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)
@@ -1098,22 +1129,18 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     return testo
 
 
-def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
-    """Un `typst compile`, col ripiego sui tag PDF dichiarato dal chiamante.
+def compila(motore: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
+    """Un `typst compile` (ADR-0116), col ripiego sui tag PDF dichiarato dal chiamante.
 
     Typst 0.15.1 ha un bug interno nella costruzione dell'albero dei tag PDF
     («internal error: parent group») su documenti con float dentro strutture
     annidate. I tag sono accessibilità, non impaginazione: se inciampa lì si
-    riprova senza — e lo si DICE, invece di consegnare un PDF diverso da quello
-    che il comando promette.
+    riprova senza, e lo si DICE, invece di consegnare un PDF diverso da quello
+    che il comando promette. `motore` è quello di `typst_motore.esigi()`:
+    lo decide lui, qui serve solo a dire che il controllo è già stato fatto.
     """
-    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT),
-           "--package-path", str(PACCHETTI)]
-    esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
-    if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
-        return subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)],
-                              capture_output=True, text=True), True
-    return esito, False
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI)
+    return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag
 
 
 def per_scheda(man: dict, base: Path, tutti: bool, binario: str, nome: str,
@@ -1178,6 +1205,7 @@ def main() -> int:
         return 2
     man = json.loads(mp.read_text(encoding="utf-8"))
     base = mp.parent
+    _etichette_per(mp)
 
     if args.list:
         for cap, t, f in capitoli(man, base, True):
@@ -1187,7 +1215,7 @@ def main() -> int:
 
     # La regola di degradazione pulita sta in `binari.py` (ADR-0027): se manca,
     # dice come installarlo ed esce con 2 — prima di aprire qualunque file.
-    binario = binari.esigi(binari.TYPST)
+    binario = typst_motore.esigi()
 
     typ = base / f"{mp.stem.replace('.manifest', '')}.typ"
     pdf = base / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"

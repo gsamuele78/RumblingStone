@@ -40,49 +40,49 @@ archi:
   tempo: giocato
   stato: completato
   march_clock: Day 0
-  pg_livello: '5'
+  pg_livello: '8'
   note: null
 - arco: 01 Miniera
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '6'
+  pg_livello: '10-11'
   note: null
 - arco: 02 Scaladossa-abbattor-funghi
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '7'
+  pg_livello: '11'
   note: null
 - arco: 03 La Cittadella
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '8'
+  pg_livello: '11'
   note: null
 - arco: 04 Tomba di Belkram
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '9'
+  pg_livello: '12'
   note: null
 - arco: 05 Stanza Runica
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '10'
+  pg_livello: '12'
   note: null
 - arco: 06 Corona di Adamantio
   tempo: giocato
   stato: completato
   march_clock: null
-  pg_livello: '11'
+  pg_livello: '13'
   note: null
 - arco: 07 Portale della Forgia Eterna
   tempo: in_corso
   stato: '**in corso**'
   march_clock: null
-  pg_livello: 13 (D8)
+  pg_livello: 13 (14 dai PX, al primo riposo dopo Hammerfist)
   note: 'Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito); **in corso: Piano della Terra (P4)**'
 - arco: 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni
   tempo: preparato

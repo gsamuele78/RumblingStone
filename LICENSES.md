@@ -87,10 +87,22 @@ cui possiamo tenerli:
 **MIT su `scripts/` non si applica a `scripts/typst/packages/`**: quella cartella
 è codice di terzi, e le sue licenze sono quelle della tabella.
 
-Dipendenze **non** vendorizzate, cioè eseguibili che ognuno installa da sé e che
-non stanno nel repo: `typst` (Apache-2.0, [ADR-0020](plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md))
-e `pdfcpu` (Apache-2.0, [ADR-0027](plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
-L'elenco vivo sta in [`scripts/binari.py`](scripts/binari.py).
+Dipendenze **non** vendorizzate, che si installano da PyPI con
+`pip install -r requirements.txt` e non stanno nel repo:
+- `typst` (typst-py, Apache-2.0), il compilatore dell'edizione da stampa
+  ([ADR-0020](plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md),
+  [ADR-0116](plans/adr/ADR-0116-typst-si-installa-da-pypi.md));
+- `pdfimpose` (AGPL-3.0-or-later) per l'imposizione del libretto, con le sue
+  dipendenze `pymupdf` (AGPL-3.0), `papersize` (GPL-3.0+), `argdispatch`
+  (GPL-3.0+) e `pyxdg` (LGPL-2.0) ([ADR-0027](plans/adr/ADR-0027-imposizione-con-pdfcpu.md),
+  [ADR-0116](plans/adr/ADR-0116-typst-si-installa-da-pypi.md)). Sono strumenti
+  che girano sulla macchina di chi stampa: non si distribuiscono col repo e non
+  finiscono dentro i PDF, quindi le loro licenze non toccano né il codice MIT né
+  i volumi. Il bundle offline del rilascio le ridistribuisce come wheel
+  invariate, con le loro licenze dentro.
+
+Fino al 2026-11-08 typst e `pdfcpu` (Apache-2.0) erano eseguibili scaricati da
+GitHub Releases. L'elenco vivo sta in [`scripts/binari.py`](scripts/binari.py).
 
 ## Se vuoi usare qualcosa
 

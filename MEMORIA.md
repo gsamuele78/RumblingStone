@@ -53,17 +53,20 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P02 · AVVENTURE-COMMUNITY 7c**: D4-D6 decise dal DM il 2026-10-23 e applicate (ARC-08 allineato al Bestiario nella #286, possessivo vietato solo sul corpo, fronti e orologi canone da ARC-08). Resta il primo… | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) §Decisioni | il thread di ARC-08, col prossimo master |
 | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
-| **P05 · La #99 e lo schedario dei PG**: #99 chiusa il 2026-10-24 (ADR-0088 accettata, scelta A); 4g-1 su `main` con la #278; i tre pezzi rimasti ripresi (§4.14); 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 §4.13-§4.14 | 4g-2: i valori delle caratteristiche dalle schede del DM, con un modulo |
+| **P16 · Le marcature rimaste nel contenuto**: rimisurate il 2026-11-04 con `inventory_inferred.py` corretto (righe di regola in «meta», note che vanno a capo contate): **240 aperte su `main`**, non 44 (il `grep` vedeva… | … | le card di ARC-08, poi un lotto per arco: ARC-07, ARC-09, il resto |
 
-## 🙋 Aspetta il DM: 10
+## 🙋 Aspetta il DM: 13
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
+| **P05 · Lo schedario dei PG, la seconda parte della 4g-2**: la #99 è chiusa (2026-10-24, ADR-0088 accettata, scelta A); 4g-1 su `main` con la #278; i tre pezzi rimasti ripresi con la #289; la prima parte della 4g-2 su… | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 §4.13 «4g-2, prima parte» | i nove valori dal DM |
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11 (ADR… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/sessione-2026-10-15/` · `/mnt/project-files/giro-arc07-2026-10-18/PATCH-STATE-MD.md` | `git am` o a mano sul ramo `campaign-group-rumblingstone` |
+| **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5 e D6, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
+| **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/guides/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
 | **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: i pf di Terros (345 o 348 con Robustezza); *Virata* da riscontrare su d20srd; la portata del sussurro della Catena… | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
 | **P10 · Mappe, le scelte del DM**: texture e tessere nella pagina di scelta (R8, livello B), la prima immagine di ComfyUI (R4-quinquies), il giro di prova sui modelli 3D CC0 e lo zip Standard di Quaternius (R4-ter), il… | [RESA-ASSET](plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md) §8 · [COLLAUDO-MAPPE](plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) | DM; poi l'agente mette le tessere nel tema e rimisura |
 | **P11 · I collaudi che solo il DM può fare**: l'import `.uvtt` in Foundry (INTEGRAZIONE, ~92%), il gate κ ≥ 0,6 (MISURA-EDITORIALE, ~90%), la prova del blocco dei segreti (PRATICHE PI-3), il collaudo del Drappo L9 al ta… | i piani | DM |
@@ -72,15 +75,12 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P14 · Le promozioni a stable** (ADR-0099): ruff e uv proponibili dal 2026-11-06, pytest-xdist dopo 14 giorni dal 2026-10-23 | [PIATTAFORMA](plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md) | la card nel thread padre |
 | **P29 · Le chat di Claude.ai, la parte che solo il DM può fare**: archiviare a mano le 24 chat del triage (nessuno strumento qui le raggiunge, né i loro allegati) e ripetere la ricerca dentro gli altri progetti di Claud… | triage chat 2026-10-23, «Note oneste» | archiviare; dire se esistono altri progetti RumblingStone |
 
-## ⬜ Da fare, nell'ordine dei piani: 13
+## ⬜ Da fare, nell'ordine dei piani: 9
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
-| **P16 · Le marcature rimaste nel contenuto**: 44 `[INFERRED]` e `[PROPOSTA]` (erano 568 il 2026-09-25; il Bestiario è a 0): ARC-08 3, ARC-09 9, `campaign/` 26 (20 nel `state-changelog`), PG 2, ARC-07 1 fuori archivio | `grep -rc "\[INFERRED\]\\|\[PROPOSTA\]"` | un lotto per arco: prima ARC-08, poi ARC-09 |
-| **P17 · Skullcrusher Vecchio nei file di ARC-08**: l'ERRATA §2.3 e `ARC08-11-PONTE-ARRIVO` vanno allineati al duello deciso (il Vecchio con 2 wyvern, EL 17) | memoria del 2026-10-19 · `08_…/ERRATA-*.md` | da riverificare prima di toccare |
-| **P18 · Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` non hanno ancora la loro riga in `dnd-35-srd/references/resources.md` | §8.3 | una riga e la voce nel registro delle norme |
 | **P19 · Il rilevatore dei box e le battute etichettate** (`> **2 di 3 — …**`): da riverificare se `misura_craft.box_read_aloud` le apre; se no, allargare l'apertura e rimisurare i residui | `scripts/misura_craft.py` | prima la prova su `DEF-4` (Balvar) |
 | **P20 · Residui di stampa**: «Naviga i capitoli qui sopra» ancora stampato nel Palio (`PALIO-BOOKLET-INTRO.md`); l'ultima riga dell'indice dell'Abbazia sola a pagina 35; i residui d'apparato del Palio e del Drappo (… | §11.3 · CICLO-SESSIONE 2g | una PR di classe M |
 | **P21 · RECUPERO L2 e L4**: R-3 e il suo test; i piani fermi, quando il DM risponde a D5 | [RECUPERO](plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) | L2 subito, L4 dopo D5 |
@@ -88,7 +88,6 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P23 · PRATICHE**: PI-6, PI-2, PI-5, PI-4 (dopo CICLO D6); PI-1 4i-3 aspetta la prima PR che resta indietro rispetto a `main` | [PRATICHE](plans/PIANO-PRATICHE-DI-INGEGNERIA.md) §5 e §8 | una PR ciascuno, in quest'ordine |
 | **P24 · CICLO-DI-SESSIONE, la Fase 0** (D1-D6 decise il 2026-09-30) | [CICLO-SESSIONE](plans/PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | la Fase 0 |
 | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | [DRAPPO](plans/PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
-| **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | `ruff.toml` | dopo il merge della #264 |
 | **P27 · I nomi dell'Elsir Vale rimasti nel testo di gioco**: il triage delle chat dice «sostituiti da Cannath», ma «Elsir» compare ancora in ~30 file di contenuto. Molte righe sono note d'adattamento e vanno tenute (REA… | triage chat 2026-10-23, chat 15 | censire le righe, separare note d'adattamento e finzione, correggere solo la finzione |
 | **P30 · Gli altri archi senza testo, e cosa si è perso nell'import**: 06, 07, 10 senza perdite. D7-D12 decise dal DM il 2026-10-23 e la cronaca corretta (P30-b: partenza all'8° livello, appunti d'apertura giocati, chier… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §5 | P30-a, le schede che mancano nel Bestiario |
 
@@ -104,18 +103,18 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-02 | STANDALONE-GIARDINO-SALE-CALCE | card D-a e gruppo PF1e | ✅ il DM sceglie le due consigliate: Karkator al LI 16 col Cuore come chiave, PF1e per un gruppo libero di 13°; già applicate, nessun cambio di testo nei moduli |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 playtester, C1, C5 | ✅ 44 rilievi, corretti i 3 🔴 (prove contro Sal con la scelta 17, come si arriva all'isolotto, TS di chi tocca il Cuore una volta al minuto) e quattro regole fu… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B2-B4 PF1e | ✅ modulo PF1e in Qasr al-Milah: master, sei mappe QM-1…QM-6, appendice PF1e (Karkator GS 16 col Cuore, Tariq chierico 13 di Hasharr), guida al tavolo e manifes… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C4 prima parte: lettore a freddo | 🟡 39 rilievi (3 🔴, 11 🟠, 25 🟡): corretti i tre 🔴 (tattiche di Torre e Santuario nel modulo invece che solo sulla mappa, numeri della gravità invertita, soglia… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C2 box misurati | ✅ 15 box contro Abbazia e DEF-4: nessun P1, metratura, parentesi o box oltre 12 righe; un «sembra» e un calco corretti; domande del developer a 0 col TS su Rif… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C3 simulazione degli scontri | ✅ Ragni delle Catene e Tariq prove giuste; Karkator com'era scritto faceva un TPK (blasfemia al LI 24 uccide senza TS i PG di 13°, RI 34 annulla la magia di He… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B5 e B7 (3.5) | ✅ «Le leve dei PG» nel master (12 leve con dove, prova e conseguenza, una tabella per PG); guida_al_tavolo.md come capitolo 3 del booklet: avvio rapido, regia… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 chiuso | ✅ GS-R in render_schemi.py: i tre ingressi sulla pianta canonica di Rethmar; quote allineate al canone (Cannath a +13, foro 8 m sopra il fiume), sorgente del S… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 seconda parte: schemi e piante allineate | 🟡 GS-0 collegamenti, GS-S1 sezione della cisterna, GS-S2 Ragni delle Catene in render_schemi.py; GS-3/GS-4/GS-5 allineate (Torre 18 × 19,5 m, ponte maestro 39… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C1 | 🟡 il box del Cuore non presuppone più che il PG lo guardi; attesa di §6.2 (2C) aggiornata a 20 box su 581 in STATO-E-ORDINE-DEI-PIANI |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | C1, C5 (prima misura) | 🟡 il booklet 3.5 compila e converge (25 pagine, 7 schede, 0 spezzate): elenco degli incantesimi di Tariq fuori dal riquadro, che spezzandosi non convergeva; mi… |
-| 2026-11-01 | STANDALONE-GIARDINO-SALE-CALCE | B6 | 🟡 cartella delle mappe rinominata in Mappe/ come nel resto del repo, così il catalogo dei mostri non scambia i titoli delle mappe per creature; catalogo rigene… |
+| 2026-11-08 | SISTEMI-DI-GIOCO-PLUGIN | Correzione dopo il lotto 2 delle schede: `pathfinder-1e-srd` diceva che nei con… | ✅ |
+| 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 2: le 18 skill nella scheda (descrizioni in italiano, termini di gioco or… | ✅ lotto 2 fatto; resta il cancello bloccante dopo due settimane |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 (accettata): typst da PyPI (`typst==0.15.2` in requirements.txt) diven… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
+| 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2, aggiunta su domanda del DM: pydantic generato dagli schemi del plugin (data… | ✅ scelta confermata |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I4 PCGen (commit d96d4da3): le formule d20 stanno nei dati come testo, ma il fo… | ✅ indagini chiuse, si passa a F1 |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I3 moduli di codice per plugin: due plugin con lo stesso modulo `metodi`, 4.494… | ✅ proposta per F5: registro `[moduli]` caricato con importlib |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
 
 ## Le misure che si portano dietro
 

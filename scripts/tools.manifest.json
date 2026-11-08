@@ -8,7 +8,7 @@
       "category": "lib",
       "language": "python",
       "invocation": "python3 scripts/binari.py",
-      "summary": "Le dipendenze binarie accettate con un ADR (typst — ADR-0020; pdfcpu — ADR-0027) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
+      "summary": "Le dipendenze binarie accettate con un ADR (la CLI typst come ripiego — ADR-0020; typst e pdfimpose arrivano da PyPI — ADR-0116) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
       "use_case": "«Cosa devo avere installato perché stasera parta la catena che mi serve, e cosa succede se manca?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -32,6 +32,46 @@
         "deterministic": true,
         "seed_flag": null,
         "notes": "dipende solo dal PATH"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "typst_motore",
+      "path": "scripts/typst_motore.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/typst_motore.py",
+      "summary": "Un solo modo di compilare e interrogare un .typ (ADR-0116): il pacchetto PyPI «typst» di requirements.txt è lo standard, una CLI typst nel PATH il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione.",
+      "use_case": "«Con cosa compila typst su questa macchina, e perché proprio quello?»",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "motore trovato e stampato",
+        "2": "MANCA: né il pacchetto PyPI né la CLI"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende da cosa è installato e da RUMBLINGSTONE_TYPST"
       },
       "side_effects": {
         "writes_canon": false,
@@ -384,7 +424,12 @@
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "stampa.etichette"
+        ]
+      }
     },
     {
       "id": "build_chapter_marks",
@@ -1323,6 +1368,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/build_monster_catalog.py --help",
@@ -2249,7 +2299,13 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.statistiche_per_gs"
+        ]
+      }
     },
     {
       "id": "dm",
@@ -2700,7 +2756,12 @@
         "docs/guides/GUIDA-FLUSSO-LOCALE.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "stampa.etichette"
+        ]
+      }
     },
     {
       "id": "export_map_png",
@@ -3101,6 +3162,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": "scripts/schemas/statblock.schema.json",
       "produces_schema": "scripts/schemas/statblock.schema.json",
       "ci_smoke": "python scripts/extract_statblocks.py --help",
@@ -3355,7 +3421,15 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.incantesimi",
+          "creature.statistiche_per_gs",
+          "statblocco.campi"
+        ]
+      }
     },
     {
       "id": "hype_homebrew",
@@ -5677,6 +5751,12 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "incontri.livello",
+          "creature.costruzione"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/suggest_encounter.py --help",
@@ -5800,6 +5880,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "tesoro.per_livello"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/suggest_loot.py --help",
@@ -6104,6 +6189,11 @@
         "network": true
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "fonti.regole"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/riscontro_srd.py --help",
@@ -6276,6 +6366,11 @@
         "notes": "xp-ledger e' un file derivato, non canone editato a mano."
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "pe.soglie"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/update_xp.py --check",
@@ -6359,6 +6454,12 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.statistiche_per_gs",
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/validate_bestiario.py --help",
@@ -7069,6 +7170,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "termini.vietati"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/validate_modules.py",
@@ -7313,7 +7419,12 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.abilita"
+        ]
+      }
     },
     {
       "id": "validate_skills",
@@ -7449,7 +7560,12 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "termini.vietati"
+        ]
+      }
     },
     {
       "id": "validate_state",
@@ -7697,6 +7813,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/genera_attributi.py --help",
@@ -7818,6 +7939,13 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.costruzione",
+          "creature.regole_di_tipo",
+          "statblocco.campi"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/conformita_statblocchi.py --help",
@@ -8462,6 +8590,11 @@
         "network": false
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.abilita"
+        ]
+      },
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/domande_developer.py --check",
@@ -8471,6 +8604,118 @@
       "docs": [
         "skills/rumblingstone-module-standard/references/sviluppo-degli-incontri.md",
         "plans/esperimenti/domande-developer-def4/CALIBRAZIONE.md"
+      ]
+    },
+    {
+      "id": "sistemi",
+      "path": "scripts/sistemi.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/sistemi.py [--di FILE | --skill | --json | --check]",
+      "summary": "I sistemi di gioco come plugin di dati (ADR-0111): legge sistemi.toml, i plugin in sistemi/<id>/sistema.toml e il campo sistema.capacita del manifest, e stampa i sistemi supportati (attivi, spenti, di rinforzo), la matrice strumenti × sistemi (dati, ancora nel codice con il lotto, ereditata, non supportata, mancante) e le skill da installare. Con --di dice il sistema di un file (il percorso più lungo di [moduli], altrimenti il predefinito); con --check fa da cancello.",
+      "use_case": "«Quali sistemi di gioco supporta il repo, quali sono accesi, e questo strumento funziona su un modulo PF1e?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "--di",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa il sistema del file."
+        },
+        {
+          "name": "--skill",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le skill da installare: sistemi attivi e di rinforzo, con la loro famiglia."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto il rapporto in JSON."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cancello: esce 1 se configurazione, plugin o manifest non tornano."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "sistemi.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "sistemi/*/sistema.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "sistemi/catalogo.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/tools.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: problemi nella configurazione, nei plugin o nel manifest",
+        "2": "configurazione illeggibile"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Solo tomllib e ordinamenti fissi."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/sistemi.py --check",
+      "tests": [
+        "scripts/tests/test_sistemi.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md",
+        "plans/PIANO-SISTEMI-DI-GIOCO-PLUGIN.md"
       ]
     },
     {
@@ -10431,6 +10676,188 @@
       ]
     },
     {
+      "id": "misura_standard_tavolo",
+      "path": "scripts/misura_standard_tavolo.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_standard_tavolo.py --dettaglio",
+      "summary": "Per ogni booklet del DM e ogni capitolo, le persone con un nome che ci compaiono e se nello stesso capitolo ci sono numeri, aspetto, ritratto, chi è, cosa vuole e tattica (lo standard minimo del DM del 2026-11-02, ADR-0107); per ogni capitolo con uno scontro, se la mappa è nel capitolo vicino a dove serve. Con --prova misura il capitolo arricchito da dmcore.chi_si_incontra. Indicatore, non cancello.",
+      "use_case": "«Al tavolo trovo chi ho davanti, la sua faccia e la mappa nel capitolo che sto giocando?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca ogni coppia capitolo × persona con quello che manca, e i capitoli con uno scontro senza mappa."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        },
+        {
+          "name": "--manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "un booklet solo"
+        },
+        {
+          "name": "--soglia",
+          "type": "int",
+          "required": false,
+          "default": 3,
+          "choices": null,
+          "repeatable": false,
+          "desc": "citazioni minime per dire che una persona compare"
+        },
+        {
+          "name": "--prova",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura ogni booklet come se il manifest avesse «schede»: «entrambe» e «chi_si_incontra»: true (ADR-0107), cioè il capitolo come lo stamperebbe l'esportatore con le persone e le mappe portate dal master."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è un indicatore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge solo i master e i manifest"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misura_standard_tavolo.py",
+        "scripts/tests/test_chi_si_incontra.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md",
+        "plans/RICERCA-USABILITA-AL-TAVOLO-2026-11.md"
+      ]
+    },
+    {
+      "id": "misura_distanza_pagine",
+      "path": "scripts/misura_distanza_pagine.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
+      "summary": "Legge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "pymupdf"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "pdf",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "uno o più PDF da confrontare"
+        },
+        {
+          "name": "--nomi",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "nomi separati da virgola (default: chi ha un riquadro nel repo)"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "build/**/*.pdf",
+          "kind": "pdf",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "la misura è stampata: è un indicatore",
+        "2": "manca PyMuPDF"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge il testo delle pagine, nessun modello"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misura_distanza_pagine.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
       "id": "misura_stampa",
       "path": "scripts/misura_stampa.py",
       "category": "D-materials",
@@ -10875,6 +11302,107 @@
       ]
     },
     {
+      "id": "bundle_offline",
+      "path": "scripts/bundle_offline.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/bundle_offline.py costruisci --uscita dist",
+      "summary": "Il bundle offline del rilascio (ADR-0116, sul modello di iemod-fetch): per ogni piattaforma pip download delle wheel di requirements.txt, che portano anche typst e pdfimpose, in un zip riproducibile con BUNDLE.json (sha256 di ogni file). installa verifica ogni wheel contro BUNDLE.json e fa pip install --no-index: si stampa senza rete. Sostituisce strumenti.py e mise.",
+      "use_case": "«Devo stampare su una macchina senza rete: cosa scarico dal rilascio e come lo installo?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "costruisci",
+            "installa",
+            "elenco"
+          ],
+          "repeatable": false,
+          "desc": "costruisci · installa · elenco"
+        },
+        {
+          "name": "--piattaforma",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "linux-arm64",
+            "linux-x64",
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "repeatable": true,
+          "desc": "costruisci: ripetibile; default tutte."
+        },
+        {
+          "name": "--uscita",
+          "type": "path",
+          "required": false,
+          "default": "dist",
+          "choices": null,
+          "repeatable": false,
+          "desc": "costruisci: dove scrivere i zip."
+        },
+        {
+          "name": "bundle",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "installa: il rumblingstone-offline-<piattaforma>-<tag>.zip."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "requirements.txt",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "dist/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "una wheel con lo sha256 sbagliato, o pip fallito"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "con SOURCE_DATE_EPOCH e le stesse wheel, lo stesso zip byte per byte"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "costruisci scarica da PyPI; installa non usa la rete"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/bundle_offline.py elenco",
+      "tests": [
+        "scripts/tests/test_bundle_offline.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0116-typst-si-installa-da-pypi.md"
+      ]
+    },
+    {
       "category": "G-orchestration-governance",
       "language": "python",
       "stability": "beta",
@@ -11242,6 +11770,11 @@
         "notes": "Scrive solo con `tutto`, nella cartella --out."
       },
       "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.entita"
+        ]
+      },
       "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
       "produces_schema": null,
       "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
@@ -11551,7 +12084,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/inventory_inferred.py",
-      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/ (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI.",
+      "summary": "Inventario e ratchet dei marcatori INFERRED: separa i marcatori dei documenti vivi (debito aperto, sorvegliato) da quelli di plans/ e dei changelog (storici) e di docs/audit/, skill, modelli, README e fixture (meta), perché contati insieme darebbero un numero che non può scendere. Ripreso dalla PR #99 (lotto G4, ADR-0088); canale testing (ADR-0099), --check non bloccante in CI. Ogni marcatore ha anche la forma (con domanda e base, vecchia, nuda) secondo GUIDA-MARCATURE (ADR-0109).",
       "stability": "beta",
       "stdlib_only": true,
       "external_bins": [],
@@ -11661,12 +12194,83 @@
         "scripts/tests/test_inventory_inferred.py"
       ],
       "docs": [
-        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md"
+        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
+        "docs/guides/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
         "pyyaml"
       ]
+    },
+    {
+      "id": "controlla_marche",
+      "path": "scripts/controlla_marche.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/controlla_marche.py --base origin/main",
+      "summary": "I due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Canale testing: in CI avvisa e non blocca.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "--base",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ref di confronto, es. origin/main."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'è almeno un avviso."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun avviso, o avvisi senza --rigido",
+        "1": "avvisi con --rigido",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende dal diff fra --base e HEAD"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/controlla_marche.py --help",
+      "tests": [
+        "scripts/tests/test_controlla_marche.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MARCATURE.md",
+        "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
+      ],
+      "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
+      "optional_deps": []
     },
     {
       "id": "misura_derivazione",
@@ -11744,6 +12348,522 @@
         "plans/esperimenti/drappo-palio-2026-11-01/RAPPORTO.md",
         "plans/PIANO-TRAVASO-DRAPPO-CAMPAGNA.md"
       ]
+    },
+    {
+      "id": "misura_ripetizioni_frasi",
+      "path": "scripts/misura_ripetizioni_frasi.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_ripetizioni_frasi.py [--soglia 0.80] [--json] [--check]",
+      "summary": "Le immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Il 2026-11-03 le 2 vere nei master corrette (21 → 19 coppie), le altre lette e scritte in plans/scrittura/ripetizioni-accettate.json; --check è il cancello locale. Canale unstable (ADR-0099).",
+      "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",
+      "stability": "local-only",
+      "stdlib_only": false,
+      "external_deps": [
+        "sentence-transformers"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--soglia",
+          "type": "float",
+          "required": false,
+          "default": 0.8,
+          "choices": null,
+          "repeatable": false,
+          "desc": "coseno minimo"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "cancello: esce con 1 se c'è una coppia fuori da ripetizioni-accettate.json"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/scrittura/ripetizioni-accettate.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessuna coppia nuova (o senza --check: elenco stampato)",
+        "1": "con --check: una ripetizione nuova fra box",
+        "2": "manca sentence-transformers"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "modello fisso, inferenza senza campionamento"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misure_rigorose.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
+      "id": "misura_fedelta_nli",
+      "path": "scripts/misura_fedelta_nli.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_fedelta_nli.py ORIGINALE RISCRITTO | --rif REV FILE... [--ripara] [--soglia 0.5] [--json]",
+      "summary": "Il riscritto contraddice l'originale? Coppie (riga tolta, riga messa) del diff, modello NLI mDeBERTa multilingue (MIT), massimo dei due sensi sopra 0,5. Sulle 26 coppie del DM alla cieca F1 0,83 contro 0,62 dei soli numeri. Con --ripara (e dentro ciclo_prosa revisione/misura) le righe che contraddicono tornano all'originale in automatico. Canale unstable (ADR-0099).",
+      "use_case": "«La riscrittura ha cambiato un fatto che i numeri non vedono, tipo nord diventato sud?»",
+      "stability": "local-only",
+      "stdlib_only": false,
+      "external_deps": [
+        "transformers",
+        "torch"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "ORIGINALE RISCRITTO, oppure con --rif i file da confrontare"
+        },
+        {
+          "name": "--rif",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "il commit o il ramo di prima"
+        },
+        {
+          "name": "--soglia",
+          "type": "float",
+          "required": false,
+          "default": 0.5,
+          "choices": null,
+          "repeatable": false,
+          "desc": "probabilità di contraddizione oltre cui segnalare"
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        },
+        {
+          "name": "--ripara",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "riscrive il file: le righe che contraddicono tornano all'originale"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "nessuna contraddizione, o con --ripara le righe sono state rimesse",
+        "1": "righe che contraddicono l'originale (senza --ripara)",
+        "2": "mancano transformers/torch o il modello"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "modello fisso, inferenza senza campionamento"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_fedelta_nli.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
+      "id": "misura_box_telecomando",
+      "path": "scripts/misura_box_telecomando.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_box_telecomando.py [FILE.md ...] [--check]",
+      "summary": "I box read-aloud che decidono per il gruppo cosa capisce, sa o prova (seconda persona plurale, fuori dalle battute). Il 2026-11-03 i 2 veri corretti nel testo (4 → 2 colpi, i 2 rimasti accettati); --check è il cancello, in CI da test_misure_rigorose. Deterministico.",
+      "use_case": "«C'è un box che dice ai giocatori cosa pensano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "file markdown (default: i file vivi)"
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "cancello: esce con 1 se c'è un colpo fuori da ACCETTATI"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "nessun colpo nuovo (o senza --check: elenco stampato)",
+        "1": "con --check: un box nuovo dice al gruppo cosa capisce o sa"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "espressione regolare"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misure_rigorose.py"
+      ],
+      "docs": [
+        "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
+      "id": "lessico_regole",
+      "path": "scripts/lessico_regole.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/lessico_regole.py [--offline] {indice|cerca NOME|verifica-tabella|casi FILE|controlla PERCORSI [--tutto] [--campi] [--check]}",
+      "summary": "I termini ufficiali di D&D 3.5 e PF1e e chi li usa male (ADR-0110). Genera dall'SRD 3.5 e dal PRD PF1e in cache l'indice dei termini; legge le tabelle italiano → SRD 3.5 (scripts/lessico_it.yaml, scripts/lessico_it_35.tsv) e italiano → PRD PF1e (scripts/lessico_it_pf1.tsv, per i moduli PF1e senza passare dalla 3.5); controlla le righe dei talenti delle schede e, con --campi, incantesimi, abilità e oggetti, segnalando varianti non ufficiali, nomi 3.5 nei moduli PF1e e termini sconosciuti non marcati.",
+      "use_case": "«Questo talento, incantesimo o oggetto della scheda si chiama così nel manuale italiano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "optional_deps": [],
+      "args": [
+        {
+          "name": "--cache",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella della cache delle fonti (come riscontro_srd.py)."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: solo la cache."
+        },
+        {
+          "name": "comando",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "indice",
+            "cerca",
+            "verifica-tabella",
+            "casi",
+            "controlla"
+          ],
+          "repeatable": false,
+          "desc": "indice | cerca | verifica-tabella | casi | controlla."
+        },
+        {
+          "name": "--campi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con controlla: anche incantesimi, abilità e oggetti magici dei campi dello statblocco."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/lessico_it.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_35.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/lessico_it_pf1.tsv",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/lessico-indice.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto",
+        "1": "con --check: termini sbagliati o sconosciuti oltre il massimo; verifica-tabella con nomi fuori fonte; casi sbagliati",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Fonti fissate per commit; tabelle nel repo; output nell'ordine dei file."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "lessico.italiano",
+          "fonti.regole"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/lessico_regole.py --help",
+      "tests": [
+        "scripts/tests/test_lessico_regole.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md"
+      ]
+    },
+    {
+      "id": "prove_skill",
+      "path": "scripts/prove_skill.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/prove_skill.py controlla",
+      "summary": "Le prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval.",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "comando",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "controlla · prepara · esito"
+        },
+        {
+          "name": "--minimo",
+          "type": "int",
+          "required": false,
+          "default": 3,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Casi minimi per skill (controlla)."
+        },
+        {
+          "name": "--uscita",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del piano A/B (prepara)."
+        },
+        {
+          "name": "--skill",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Solo questa skill (prepara), ripetibile."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": 7,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seme delle lettere alla cieca (prepara)."
+        },
+        {
+          "name": "--piano",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del piano con chiave.json e giudizi.json (esito)."
+        },
+        {
+          "name": "--giudizi",
+          "type": "str",
+          "required": false,
+          "default": "giudizi.json",
+          "choices": null,
+          "repeatable": false,
+          "desc": "File dei giudizi dentro --piano (esito)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/*/evals/*/",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<uscita>/piano.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<piano>/ESITO.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "casi in forma, o la nuova non peggiora",
+        "1": "un caso malformato, o la nuova peggiora gli inventati senza marca",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "le lettere alla cieca dipendono dal seme"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/prove_skill.py controlla",
+      "tests": [
+        "scripts/tests/test_prove_skill.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-SCHEDE-PROMPT.md",
+        "plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md"
+      ],
+      "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
+      "optional_deps": []
     }
   ]
 }

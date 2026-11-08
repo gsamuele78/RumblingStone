@@ -48,7 +48,7 @@ I passi **non hanno lo stesso peso**, ed è deliberato: `prosa` e `lingua`
 **misurano e non bloccano**; `manifest` e `schermo` sono **guasti duri** e fermano
 la catena (compilare da un manifest non valido produce un artefatto sbagliato con
 l'aria di essere andato bene); `stampa` e `imposizione` **degradano pulito** se
-`typst` o `pdfcpu` mancano. `--solo <passo>` e `--salta <passo>` per rifarne uno.
+il modulo `typst` o `pdfimpose` mancano. `--solo <passo>` e `--salta <passo>` per rifarne uno.
 
 ⚠️ In coda, **comunque sia andata**, il comando ti ricorda il cancello d'uscita
 §7 di [`GUIDA-CONDIVISIONE-IP.md`](GUIDA-CONDIVISIONE-IP.md). Non è
@@ -112,9 +112,15 @@ python3 scripts/export_booklet_typst.py MANIFEST.json --all
 
 Legge **lo stesso manifest** e produce **un volume unico** `-STAMPA.pdf` con
 tipografia OFL embedded (EB Garamond + Cinzel), due colonne, fregi di capitolo,
-tabelle larghe che scavalcano le colonne e **segnalibri PDF veri**. Serve il
-binario `typst` (Apache 2.0): se manca, lo script dice come installarlo ed esce
-pulito — **questa catena qui sotto continua a funzionare da sola**.
+tabelle larghe che scavalcano le colonne e **segnalibri PDF veri**. Serve typst
+(Apache 2.0): lo standard è il pacchetto PyPI di `requirements.txt`
+(`pip install -r requirements.txt`), il ripiego una CLI `typst` nel PATH,
+[ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md). Senza rete:
+il rilascio ha un `rumblingstone-offline-<piattaforma>-<tag>.zip` con tutte le
+wheel, e `python3 scripts/bundle_offline.py installa <zip>` le installa.
+`python3 scripts/typst_motore.py` dice quale dei due compila. Se mancano tutti e
+due, lo script dice come installarlo ed esce pulito: **questa catena qui sotto
+continua a funzionare da sola**.
 
 Come le due catene si incastrano con tutto il resto:
 [GUIDA-FLUSSO-LOCALE](GUIDA-FLUSSO-LOCALE.md).
@@ -199,6 +205,10 @@ qualcuno non allunga un equipaggiamento.
 | i **parametri** che l'esportatore passa al template `.typ` | `test_schede.py::TestSorgenteTypst` |
 | la **compilazione vera** di tutti i volumi, segnalibri compresi | `validate_booklets.py --stampa`, in CI con `typst` **a versione fissata** |
 | le sei **schede singole** | `--per-scheda` in CI (conta che siano sei) |
+| le **creature** fuori dal riquadro unico, per booklet | `misura_statblocchi_booklet.py --check`, in CI, tetto che scende soltanto |
+| la **prestampa**: corpo sotto 7 pt, testo oltre la gabbia, immagini sotto 300 dpi, riquadri spezzati | `misura_stampa.py --tutti --check`, job CI `stampa-misurata` |
+| **chi si incontra** nel capitolo (numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa) e le **note di lavoro** in stampa | `misura_standard_tavolo.py`: indicatore, con cricchetto nei test sulle note |
+| quante **pagine** separano la scena dai numeri di chi c'è | `misura_distanza_pagine.py <PDF>`: indicatore, a mano |
 | il **giudizio estetico** | ⚠️ nessuno, e nessuno potrà: si guarda a occhio, in locale |
 
 > 📌 **Dal 2026-08-22 in CI c'è `typst`.** Prima non c'era, e la conseguenza è
@@ -312,6 +322,8 @@ capitoli**. Tutti i percorsi sono relativi alla cartella del manifest.
 | `out` | nome del file HTML (i `.hb.md` e i PDF derivano da questo) |
 | `colophon` | **la pagina dei crediti**, sul verso del frontespizio ([ADR-0023](../../plans/adr/ADR-0023-colophon-di-edizione.md)): chi ha fatto il volume, che versione è, su cosa si basa e cosa se ne può fare. Senza questa chiave **il volume esce anonimo**. ⚠️ La `data` si **scrive**, non si deduce dall'orologio: un PDF che prende la data dall'ora corrente cambia a ogni compilazione e smette di essere byte-identico. E `autori` **non si inventa mai** |
 | `indice_analitico` | aggiunge l'**INDICE ANALITICO** in coda al volume da stampa. Le voci **non si annotano a mano**: le marca l'esportatore prendendo i nomi canonici dal glossario, alla prima occorrenza per volume. Se in quel volume non compare nessun nome del glossario — il caso dei moduli autoconclusivi, che hanno un'ambientazione loro — la pagina **non si aggiunge**: un indice vuoto è peggio di niente. Solo catena di stampa: una pagina web ha la ricerca |
+| `schede` | dove esce il riquadro intero delle creature ([ADR-0105](../../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md)): `"appendice"` (predefinito) mette nell'incontro una riga con nome, GS, CA, pf, rimando e tattica e il riquadro in fondo al volume; `"qui"` lo lascia dove è scritto (volumi per i giocatori); `"entrambe"` lo lascia dove è scritto e aggiunge l'appendice, solo nel PDF |
+| `chi_si_incontra` | `true` porta in ogni capitolo, prima di stampare, le persone che vi si incontrano (scheda d'entrata con la riga **Chi è**, ritratto, riquadro con la tattica) e le piante delle mappe che nomina, prese dal master che le ha ([ADR-0107](../../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md), `dmcore/chi_si_incontra.py`). Va con `"schede": "entrambe"`. Il master non cambia. Solo catena di stampa |
 | `chapters[]` | `title` = etichetta del tab · `file` = markdown · `tag` = `dm` (⚠ SOLO DM) / `player` (✉ HANDOUT) / assente |
 
 ---
@@ -463,10 +475,12 @@ generato — quello si rifà a ogni compilazione.
   `capolettera-versale`, che è il ripiego e resta disponibile apposta.
   Si spegne per capitolo con `"capolettera": false` nel manifest.
 - **Indice analitico**: `"indice_analitico": true` (vedi §3).
-- **Imposizione in libretto**: `dm.py volume --imposto`, oppure `pdfcpu` a mano.
-  ⚠️ Il PDF imposto **non si versiona e non si confronta a byte**: l'output di
-  `pdfcpu` non è byte-identico fra due esecuzioni — è l'array `/ID`, non il
-  contenuto ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
+- **Imposizione in libretto**: `dm.py volume --imposto`, oppure a mano
+  `python3 -m pdfimpose saddle --signature 2x1 --output LIBRETTO.pdf VOLUME-STAMPA.pdf`
+  (pdfimpose da `requirements.txt`, [ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md)).
+  Non usare `--format A4`: ingrandisce di poco le pagine. ⚠️ Il PDF imposto
+  **non si versiona e non si confronta a byte**: due esecuzioni non danno lo
+  stesso file, anche se le pagine sono le stesse ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
 - **Formato A5** (`--formato a5`, o `"formato": "a5"` nel manifest): compone il
   volume a **una colonna** con corpo 9.6 pt. Va **insieme** all'imposizione, non
   al posto suo: imporre un volume A4 mette due pagine per foglio e le scala al
@@ -489,6 +503,8 @@ generato — quello si rifà a ogni compilazione.
 - [ ] `python3 scripts/dm.py booklet <gruppo> --pdf` → **un** file per la chat di gruppo
 - [ ] `python3 scripts/dm.py booklet <booklet DM> --format both --pdf-all` → hint `pg-` (uno a testa, in privato) + schede `dm-` per te
 - [ ] `python3 scripts/validate_modules.py` verde se hai toccato un master
+- [ ] `python3 scripts/misura_standard_tavolo.py --manifest <booklet DM>`: chi si incontra ha scheda, riquadro e mappa nel capitolo
+- [ ] Letto il booklet da DM, scena per scena: i validatori verdi non bastano (serata del 2026-11-02)
 
 ---
 

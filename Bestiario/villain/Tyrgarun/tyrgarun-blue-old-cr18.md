@@ -1,4 +1,4 @@
-# Tyrgarun — Blue Old Dragon (Sky-Terror of Rethmar) [ACCEPTED — DM-canon 2026-07-02, D11 v2]
+# Tyrgarun — Blue Old Dragon (Sky-Terror of Rethmar) [CANONE — DM 2026-07-02, D11 v2]
 **Faction**: red-hand | **Role**: aerial-hazard / grounded-boss | **Environment**: aerial | **CR**: 18 (aerial hazard) → **16–17** (grounded, Fase 4) | **Source**: MM p.71 Blue Dragon Old (SRD 3.5) | **Status**: accepted
 
 

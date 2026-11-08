@@ -678,7 +678,7 @@ IL CUORE DELLA MONTAGNA - CAVERNA SACRA (100m x 80m)
 **NEMICI IN ARRIVO:**
 - **Ondata 1:** 30 Orchi Berserker (Round 3-4)
 - **Ondata 2:** 20 Hobgoblin + Sergente (Round 5-6)  
-- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)
+- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`); 5 di loro risalgono il condotto della sorgente e sbucano dietro l'altare (L3, MAPPA 5) `[CANONE — DM 2026-11-04, P16, condotto della sorgente]` <!-- storico -->Fino al 2026-11-04 i 15 bugbear aggiravano solo dai fianchi e il condotto era una via di fuga in attesa del DM; le marcature di questo file sono state chiuse da P16 (plans/esperimenti/p16-inferred-2026-11-04/ARC08-DECISIONI.md).<!-- /storico -->
 - **Ondata Finale:** Grimjaw + 10 Guardie Nere, se vivo: corno al round 11, ingresso al round 12, quando i PG sono già in campo `[CANONE — DM 2026-10-19, D11]`
 
 ### **ROUND PER ROUND - LA RESISTENZA DISPERATA:**
@@ -870,7 +870,7 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 **AZIONI INIZIALI RUMBLING STONES** *(proposte: decide il giocatore, e valgono i numeri della sua scheda)*:
 
 **THORIK (guerriero 13, Corona di Adamantio, Aegis Fang):**
-- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è `[INFERRED — needs DM confirmation]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
+- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è: conta il tempo di Thorik, per cui sono passati pochi giorni, non i mille anni del mondo `[CANONE — DM 2026-11-04, P16]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
 - **Aegis Fang** (+2 Ritornante *Dragondoom*, 1d10): un bersaglio per attacco. Lanciata vale come arma da lancio improvvisata (−4, incremento 3 m, gittata massima 15 m: SRD) e torna in mano.
 - **Movimento:** si mette davanti a Re Thorek.
 
@@ -1104,7 +1104,7 @@ BATTAGLIA AEREA (Altitudine 30-60m)
 - **Monaco:** Readied action per colpire drago se scende troppo
 - **Artemis:** Deflagrazione occulta 6d6 sul cavaliere, gittata 18 m `[Private source — Complete Arcane]`
 
-**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[INFERRED — needs DM confirmation]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
+**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
 
 > **Read-aloud (Casa di Davide lead) — l'inviata.** *Un gufo più piccolo degli altri si stacca dalla formazione e si posa sul bastione, a tre passi da Hella. La cavaliera è un'elfa con una treccia fradicia sulla spalla e l'arco in pugno, senza freccia: guarda Hella a lungo, come si guarda un volto che qualcuno ti ha descritto, e dice soltanto «Sei tu». Che fate?*
 
@@ -1121,14 +1121,19 @@ SE IL CAVALIERE CADE (dal round 3)
     30m    
     
     15m    💥 CAVALIERE CADE 💥
-           (CHI LO AFFERRA: RIFLESSI CD 20)
+           (NESSUNO LO AFFERRA: 15d6 A TERRA)
     
      0m  [PG] POSSONO INTERCETTARE
          ===============TERRENO===============
 ```
 
 **OPZIONI PER I PG:**
-- **Thorik:** afferrarlo al volo, Riflessi CD 20 `[INFERRED — needs DM confirmation: l'SRD non ha una regola per afferrare chi cade; una CD sola, quella dello schema]`
+- **Thorik:** non può afferrarlo: un corpo in armatura che cade da 45 m non si prende al volo. Può aspettarlo dove atterra (Aegis Fang pronta) `[CANONE — DM 2026-11-07, P16, la caduta del cavaliere]`
+
+<!-- storico -->
+*Dal 2026-11-05 al 2026-11-07: afferrarlo al volo con Riflessi CD 20, danni della caduta divisi a metà (regola della casa). Prima: Riflessi CD 20 senza danni.*
+<!-- /storico -->
+
 - **Tordek:** Deviare Frecce non devia una caduta; può aspettarlo dove atterra e lottarci
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito
@@ -1219,7 +1224,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 
 **BONUS DELLA CARICA** *(regole SRD e regolamento di massa, `ARC08-02` §4)*:
 - **Morale: vale solo il più alto** (SRD: due bonus dello stesso tipo non si sommano). Candidati: *Aura della Forgia Eterna* di Thorik +4, se questa settimana non è già spesa; il discorso di Re Thorek +4; il canto delle Cantitrici; la melodia di Tempestas +2. Nel regolamento di massa il morale di un'unità va da −5 a +5.
-- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto») `[INFERRED — needs DM confirmation]`.
+- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto»): senza l'incantesimo il +4 non c'è (SRD, i bonus vengono da una fonte).
 - **Carica:** +2 al tiro per colpire (SRD); nessun bonus ai danni.
 - **Terreno in discesa:** +1 al tiro per colpire dall'altura (SRD).
 
@@ -1396,7 +1401,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 - **Fama:** La storia si diffonde in tutto Faerûn
 - **Alleanze:** Clan nanici ora alleati permanenti  
 - **Base Operativa:** Fortezza personale nei rifugi
-- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[INFERRED — needs DM confirmation]`
+- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`
 
 #### **SEMI PER FUTURE AVVENTURE:**
 - **La Minaccia Rimasta:** Fauci di Palude vivo = vendetta futura

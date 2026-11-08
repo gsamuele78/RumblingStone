@@ -296,7 +296,11 @@
   // della serata del −1000, p. 65 e p. 72, 2026-09-26). Il flusso a due colonne
   // di Typst 0.15 sbaglia di quel tanto l'altezza lasciata al float: è una
   // mitigazione misurata, non la cura. `validate_booklets --stampa` la tiene.
-  let scavalca = place(auto, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
+  // La tabella della persona portata da ADR-0107 («Chi si incontra in questo
+  // capitolo») sta sempre in cima: in fondo alla pagina Typst 0.15 la mette
+  // sopra il riquadro della colonna accanto (Notte e Alba, p. 24, 2026-11-03).
+  let dove = if sezione == "Chi si incontra in questo capitolo" { top } else { auto }
+  let scavalca = place(dove, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
     #if sezione != none [
       #text(font: TITOLI, size: 7.5pt, fill: seppia, tracking: 0.3pt)[#upper(sezione)]
       #v(-4pt)
@@ -324,7 +328,9 @@
 // CA e pf e il rimando alla pagina, più la tattica di quell'incontro; il
 // riquadro intero va nell'appendice in fondo (`appendice-creature`), una volta
 // sola per creatura. «qui»: il riquadro intero esce dove è scritto, come nei
-// fascicoli di schede da dare in mano. L'esportatore sceglie dal manifest.
+// fascicoli di schede da dare in mano. «entrambe»: il riquadro intero dove è
+// scritto e, in più, l'appendice in fondo (richiesta del DM, 2026-11-03, per i
+// booklet della serata). L'esportatore sceglie dal manifest.
 #let modo-schede = state("modo-schede", "qui")
 
 // Blocco statistiche: il riquadro del mostro/PNG, coi numeri dove il DM li
@@ -343,6 +349,9 @@
   attributi: (), attacchi: (), voci: (), tattica: "", fonte: "",
   sezioni: (:),
   larga: false,
+  // Le sigle del riquadro vengono dal plugin del sistema (stampa.etichette,
+  // ADR-0111, L7): export_booklet_typst.py le passa a ogni chiamata.
+  etichette: (ca: "CA", pf: "pf", ts: "TS", vel: "Vel", iniziativa: "Iniziativa", sensi: "Sensi"),
 ) = {
   let fascia(titolo, corpo) = if corpo != none [
     #v(3.5pt)
@@ -357,9 +366,9 @@
     let piene = coppie.filter(c => c.at(1) != "" and c.at(1) != [])
     if piene.len() == 0 { none } else { piene.map(c => [*#c.at(0)* #c.at(1)]).join([ · ]) }
   }
-  let difesa = sezioni.at("Difesa", default: in-riga((("CA", ca), ("pf", pf), ("TS", ts))))
+  let difesa = sezioni.at("Difesa", default: in-riga(((etichette.ca, ca), (etichette.pf, pf), (etichette.ts, ts))))
   let attacco = sezioni.at("Attacco", default: in-riga(
-    (("Vel", velocita),) + attacchi.map(a => (a.at(0), a.at(1)))))
+    ((etichette.vel, velocita),) + attacchi.map(a => (a.at(0), a.at(1)))))
   // La griglia delle caratteristiche solo quando ci sono tutte e sei: con
   // tre colonne su sei il riquadro sembra rotto. Altrimenti stanno in riga.
   let griglia-car = attributi.len() == 6
@@ -382,8 +391,8 @@
   let tattiche = sezioni.at("Tattiche", default: if tattica == "" { none } else [#tattica])
   let apertura = sezioni.at("Iniziativa", default: {
     let pezzi = ()
-    if iniziativa != "" { pezzi.push([*Iniziativa* #iniziativa]) }
-    if sensi != "" { pezzi.push([*Sensi* #sensi]) }
+    if iniziativa != "" { pezzi.push([*#etichette.iniziativa* #iniziativa]) }
+    if sensi != "" { pezzi.push([*#etichette.sensi* #sensi]) }
     if pezzi.len() == 0 { none } else { pezzi.join([ · ]) }
   })
 
@@ -468,9 +477,61 @@
   // stessi numeri. La tattica non conta, perché cambia da un incontro all'altro.
   let chiave = to-string(nome) + "|" + repr(intero(none))
   context {
+    // Con «entrambe» la stessa scheda esce in due capitoli, e i rimandi
+    // riscritti per capitolo cambiano il testo: lì la stessa creatura è
+    // stesso nome, GS, CA e pf, non lo stesso testo.
+    let chiave = if modo-schede.get() == "entrambe" {
+      to-string(nome) + "|" + repr(gs) + "|" + repr(ca) + "|" + repr(pf)
+    } else { chiave }
     if modo-schede.get() != "appendice" {
-      let corpo = intero(tattiche)
-      if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
+      // «entrambe»: il riquadro intero qui, e una copia anche nell'appendice.
+      if modo-schede.get() == "entrambe" {
+        [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
+                    lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
+      }
+      // Con «entrambe» il riquadro nel capitolo non si spezza a pagina
+      // girata: passa intero alla colonna o alla pagina dopo, come in appendice.
+      // Un riquadro più alto di una colonna si spezza lo stesso.
+      // Se non entra nello spazio che resta nella colonna, va a capo colonna
+      // da sé: sotto un float Typst 0.15 sbaglia lo spazio che resta, e un
+      // blocco che non si spezza finirebbe sopra il piede.
+      if modo-schede.get() != "entrambe" or larga {
+        let corpo = intero(tattiche, spezzabile: true)
+        if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
+        return
+      }
+      let a5 = page.width < 16cm
+      let larghezza = if page.columns > 1 { TABELLA-COLONNA } else { page.width - if a5 { 2.6cm } else { 3.5cm } }
+      let colonna = page.height - if a5 { 2.9cm } else { 4.1cm }
+      let fondo-col = page.height - if a5 { 1.4cm } else { 2.0cm }
+      let alto = measure(intero(tattiche, spezzabile: false), width: larghezza).height
+      let resta = fondo-col - here().position().y - 12pt
+      // Se non entra nello spazio che resta ma entra in una colonna, va a
+      // capo colonna. Lì si misura di nuovo: la colonna dopo può essere
+      // accorciata da un float a tutta pagina (la scheda d'entrata, una
+      // tabella larga), e un blocco che non si spezza finirebbe sopra il
+      // piede. Intero solo se entra davvero dove cade; se no si spezza.
+      if alto >= resta and alto < colonna * 0.92 and resta < colonna * 0.8 { colbreak() }
+      context {
+        let qui = fondo-col - here().position().y - 4pt
+        // in cima a una colonna quasi intera si fa come prima della prova
+        // (#305): intero se sta in una colonna; Typst lo porta avanti da sé
+        if alto < qui or (qui > colonna * 0.8 and alto < colonna * 0.92) {
+          intero(tattiche, spezzabile: false)
+        }
+        // in fondo a una colonna resterebbe il solo titolo: si va a capo, e
+        // lì si spezza solo se la colonna è accorciata da un float
+        else if alto < colonna * 0.92 and qui < colonna * 0.5 {
+          colbreak()
+          intero(tattiche, spezzabile: true)
+        } else {
+          // un riquadro più alto di una colonna si spezza. Nella colonna di
+          // sinistra continua accanto, sulla stessa pagina; in fondo a quella
+          // di destra lascerebbe il titolo da solo a pagina girata, e va a capo
+          if qui < colonna * 0.33 and here().position().x > page.width / 2 { colbreak() }
+          intero(tattiche, spezzabile: true)
+        }
+      }
       return
     }
     [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
@@ -635,7 +696,7 @@
   // sarebbero da 5 cm e nessuno impagina un manuale così.
   //
   // Sta accanto all'imposizione (ADR-0027), non al posto suo, e la differenza è
-  // il corpo del testo: `pdfcpu booklet` prende il volume A4 e ne mette due per
+  // il corpo del testo: imporre il volume A4 (pdfcpu allora, pdfimpose ora) ne mette due per
   // foglio, cioè **scala tutto al 71%** — 10.2 pt diventano ~7.2, che si
   // stampano ma non si leggono al tavolo. Comporre in A5 e poi imporre due
   // pagine per foglio A4 tiene il corpo a 9.6 pt, che è la misura di un manuale

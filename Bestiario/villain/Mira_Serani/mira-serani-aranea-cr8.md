@@ -19,7 +19,7 @@ attacchi:
   - Mischia morso +8 (Arma Accurata) (1d6 + veleno)
 voci:
   - Abilità: For 11, Des 15, Cos 14, Int 14, Sag 13, Car 16
-  - Talenti: Arma Accurata, Ferrea Volontà, Iniziativa Migliorata, Incantare
+  - Talenti: Arma Accurata, Volontà di Ferro, Iniziativa Migliorata, Incantare in Combattimento
 ```
 
 > correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +8 → **+9**: aranea 3 DV (+1) + Stregone 6 (+5) + Sag 13 (+1) + **Ferrea Volontà** (+2). La scheda nominava il talento accanto al numero che non lo contava.
@@ -58,8 +58,8 @@ Rifl +7, Vol +9** (Ferrea Volontà).
 
 **Statistiche** Abilità: For 11, Des 15, Cos 14, Int 14, Sag 13, Car 16.
 BAB +6/+1; Lotta +6.
-Talenti: Arma Accurata, Ferrea Volontà, Iniziativa Migliorata, Incantare
-sulla Difensiva. SQ: **mutare forma** (umanoide Piccolo–Medio), veleno, ragnatela.
+Talenti: Arma Accurata, Volontà di Ferro, Iniziativa Migliorata, Incantare
+in Combattimento. SQ: **mutare forma** (umanoide Piccolo–Medio), veleno, ragnatela.
 
 **Capacità speciali**
 - **Veleno** (Str): Tempra **CD 15**, 1d6 For / 1d6 For.

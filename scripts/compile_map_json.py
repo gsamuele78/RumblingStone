@@ -656,7 +656,7 @@ def emit_master(spec: dict, grid: list[list[str]]) -> str:
         for h in hz:
             where = _placement_coords(h)
             label = h.get("label") or SYMBOLS.get(h["type"], {}).get("it", h["type"])
-            effect = h.get("effect", "[INFERRED — needs DM confirmation]")
+            effect = h.get("effect", "[INFERRED — Che effetto meccanico ha?; base: nessuna, manca nel JSON]")
             out.append(f"| {h['type']} {label} | {where} | {effect} |")
     else:
         out.append("| Luce | … | [luce/oscurità, scurovisione a X m] |")

@@ -48,7 +48,7 @@ Elfa dei Boschi sui 220 anni (giovane-matura per la sua specie), 1m70, magrissim
 - **Pugnale rituale di selce nera** (cerimoniale, non usato in battaglia).
 - **Ghirlanda di ghianda viva** alla cinta — ne ha sempre **5–7** appese, ognuna è un *seme attivo* del Cerchio Sacro.
 
-**Compagno animale:** **Inathiel "Ala-d'-Ombra"**, gufo gigante celestiale (CR 5, mount). Si conoscono da 18 anni. Comunicano per piccoli movimenti di sopracciglia.
+**Compagno animale:** **Inathiel "Ala-d'-Ombra"**, gufo gigante celestiale con la scheda di Signore Ventolesto (GS 8, cavalcatura) `[CANONE — DM 2026-11-05, P16, Bestiario]`. Si conoscono da 18 anni. Comunicano per piccoli movimenti di sopracciglia.
 
 **Postura:** quieta. Parla poco. Quando parla, è precisa. Ride raramente, ma quando lo fa è sincero. Con altri elfi alterna comune e élfico in la stessa frase. Con i nani è cortese ma si vede che fa **uno sforzo** di adattamento culturale.
 
@@ -166,7 +166,12 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - **Cammino Senza Tracce** (Ex) — non è un privilegio del ranger SRD, è del druido: la scheda glielo dà per gli anni nel Cerchio
 - **Stile di Combattimento (Tiro)**, poi **Stile Migliorato**: Tiro Rapido e Tiro Multiplo come talenti bonus
 - **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Confermati dal DM il 2026-10-18: il testo del 2026-05-04 («sa lanciare 0 incantesimi») è superato
-- **Inathiel** — Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1)), la sua cavalcatura
+- **Inathiel** — Gufo Gigante Celestiale con la scheda di Signore Ventolesto (`08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md`): PF 105 (10d10+50), CA 20, Volo 24 m, 2 artigli +15 (1d8+6) e morso +10 (1d8+3), RD 5/magia, RI 15; la sua cavalcatura `[CANONE — DM 2026-11-05, P16, Bestiario]`
+
+<!-- storico -->
+*Prima del 2026-11-05: PF 35, CA 17, artigli +8/+8 (1d6+3), morso +6 (1d8+1), GS 5.*
+<!-- /storico -->
+
 
 > ⚠ Prerequisito: il gufo gigante è una **bestia magica**, non un animale, e non è nella lista dei compagni animali dell'SRD; in più è celestiale. Come compagno animale del ranger non si può prendere. La scheda lo tiene così com'è: va letto come una cavalcatura legata, come i gufi del Signore Ventolesto, non come un privilegio di classe PF1e: il compagno animale del ranger PF1e non ammette bestie magiche nemmeno lì; il talento *Leadership* lo prenderebbe come gregario, ma stravolge (il gufo diventerebbe un PNG che sale di livello).
 

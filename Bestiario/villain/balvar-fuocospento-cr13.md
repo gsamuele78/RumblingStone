@@ -4,7 +4,7 @@
 
 ```statblocco
 gs: 13
-tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
+tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -17,7 +17,7 @@ sensi: scurovisione 18 m; Ascoltare +5, Osservare +5
 attacchi:
   - Mischia martello da guerra runico +1 +11/+6 (1d8+2)
 voci:
-  - Talenti: Incidere Rune, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
+  - Talenti: Incidere Rune (Inscribe Rune), Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
   - Abilità: Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19
 ```
 
@@ -35,7 +35,7 @@ voci:
 > ✅ `attributi` **allineati al testo della scheda** su decisione del DM (2026-09-24): la riga generata da `scripts/genera_attributi.py` diceva Int 9, Sag 18, Car 10, e contraddiceva il profilo sotto (Int 16, Sag 20, Car 14) e i TS di Volontà.
 > <!-- /storico -->
 
-Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE.
+Umanoide Medio (nano), **Chierico 9 di Abbathor / Runecaster 4**, NE.
 
 **Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
 

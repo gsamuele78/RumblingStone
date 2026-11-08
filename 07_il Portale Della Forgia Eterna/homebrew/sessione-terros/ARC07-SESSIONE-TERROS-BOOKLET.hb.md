@@ -1137,9 +1137,9 @@ il Tempio. Nessuna prova di Sopravvivenza necessaria.
 
 #### ZONA 1 — Le Piattaforme di Cristallo (0–300 m)
 > **Read-aloud (Salvatore lead) — le piattaforme.** *Il primo passo fuori dal
-> portale è come camminare sul dorso di una bestia addormentata. Le
-> piattaforme di cristallo grigio-verde si susseguono nel buio, unite da ponti
-> di pietra che galleggiano senza fune né pilastro. Sotto, sopra, intorno:
+> portale è come camminare sul dorso di una bestia addormentata. Da vicino il
+> cristallo è grigio-verde e venato come un'unghia, e il primo ponte non ha né
+> fune né pilastro: sta su e basta. Sotto, sopra, intorno:
 > nulla, solo cristalli lontani che brillano come stelle affogate. Ogni ponte
 > oscilla appena sotto il peso raddoppiato, e il cristallo, sotto gli stivali,
 > risponde: un suono basso, breve, come una campana che prova la voce.*
@@ -1279,7 +1279,7 @@ a parlare, gli Xorn emergono a metà e parla Fauci di Diamante (via C).
   l'angolo di rottura; se la Conoscenze è fallita, la direzione si tira col d8,
   e i PG sulla traiettoria tirano i Riflessi anche loro
 . L'area è una striscia larga 3 m e lunga
-  30 m dalla base G08 `[INFERRED — needs DM confirmation]`.
+  30 m dalla base G08.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
   (Intimidire o Diplomazia **CD 18**, come la via C) per accerchiarli in
@@ -3636,7 +3636,7 @@ Vel 9 m; Earth Glide 9 m (attraverso pietra). Non vola: in zero-G si spinge dall
 
 **STATISTICHE**
 ___
-For 34 (+12), Des 8 (−1), Cos 25 (+7), Int 10, Sag 15 (+2), Car 11 · BAB +22; Lotta +42 · **Talenti** Attacco Poderoso, Incalzare, Fendente Poderoso, Spinta Migliorata, Critico Migliorato (schianto), Spaccare Migliorato, Volontà di Ferro, Colpo Terrificante, Allerta, Robustezza, Arma Focalizzata (schianto) · **Abilità** Ascoltare +20, Osservare +20, Intimidire +15  
+For 34 (+12), Des 8 (−1), Cos 25 (+7), Int 10, Sag 15 (+2), Car 11 · BAB +22; Lotta +42 · **Talenti** Attacco Poderoso, Incalzare, Incalzare Potenziato, Spingere Migliorato, Critico Migliorato (schianto), Spezzare Migliorato, Volontà di Ferro, Colpo Terrificante, Allerta, Robustezza, Arma Focalizzata (schianto) · **Abilità** Ascoltare +20, Osservare +20, Intimidire +15  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -3683,7 +3683,7 @@ Vel 6 m, Scavare 6 m (non lascia tunnel), Earth Glide · **Mischia** morso +29 (
 
 **STATISTICHE**
 ___
-For 27, Des 10, Cos 19, Int 10, Sag 11, Car 10 (+2 alla FOR dai DV 16 e 20) · BAB +21; Lotta +33 (21, FOR +8, taglia +4) · **Talenti** (8 per 21 DV, più Incalzare bonus come nell'SRD) Attacco Poderoso, Incalzare (bonus), Spinta Migliorata, Colpo Possente, Multiattacco, Robustezza, Spaccare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · **Abilità** Ascoltare +24, Osservare +24, Cercare +24  
+For 27, Des 10, Cos 19, Int 10, Sag 11, Car 10 (+2 alla FOR dai DV 16 e 20) · BAB +21; Lotta +33 (21, FOR +8, taglia +4) · **Talenti** (8 per 21 DV, più Incalzare bonus come nell'SRD) Attacco Poderoso, Incalzare (bonus), Spingere Migliorato, Colpo Terrificante, Multiattacco, Robustezza, Spezzare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · **Abilità** Ascoltare +24, Osservare +24, Cercare +24  
 
 **CAPACITÀ SPECIALI**
 ___

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import misura_stampa as ms  # noqa: E402
+import typst_motore  # noqa: E402
 
 try:
     import pymupdf
@@ -115,7 +116,7 @@ class TestPdf(unittest.TestCase):
         self.assertGreater(dispari.x1, pari.x1)
 
 
-@unittest.skipIf(pymupdf is None or not shutil.which("typst"), "serve typst")
+@unittest.skipIf(pymupdf is None or not typst_motore.disponibile(), "serve typst")
 class TestSegnapostiNelTema(unittest.TestCase):
     """Il riquadro vero del tema lascia i due segnaposti e la misura li legge."""
 

@@ -891,7 +891,7 @@ DIMENSIONI TOTALI MAPPA: 40 colonne × 40 righe = 60 m × 60 m, la stessa radura
 @north N
 @tipo tattica esterno
 @luogo Witchwood, Cerchio Sacro della Foresta
-@quota 300 m ; s.l.m., fondovalle della Witchwood [INFERRED — needs DM confirmation]
+@quota 300 m ; s.l.m., fondovalle della Witchwood [CANONE — DM 2026-11-05, P16, quota]
 @dislivello 0 m ; la radura è in piano con il bosco intorno
 @deroga m1/copertura ; radura del rituale bruciata dai drow: i ripari sono i sei menhir e i quattro alberelli, e difendere un altare scoperto è la scena
 @deroga m2/vuoto ; l'anello di cenere è campo aperto per costruzione: i drow lo attraversano sotto il tiro dei PG, ed è voluto

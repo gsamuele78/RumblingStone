@@ -1,4 +1,4 @@
-# githyanki-knight-elite-cr10 [ACCEPTED — DM-canon 2026-05-05]
+# githyanki-knight-elite-cr10 [CANONE — DM 2026-05-05]
 
 **Faction**: githyanki-vaereth | **Role**: elite-psi-warrior | **Environment**: urban,plains | **CR**: 10
 

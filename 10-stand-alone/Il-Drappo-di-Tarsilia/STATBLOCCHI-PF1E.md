@@ -41,7 +41,7 @@ attacchi:
 
 **Attacco** **Mischia** bastone +4 (1d6) · **BAB** +4 · **CMB** +4 · **CMD** 15
 
-**Statistiche** For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Percepire Intenzioni **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6
+**Statistiche** For 10, Des 12, Cos 12, Int 15, Sag 16, Car 14 · **Abilità** Intuizione **+14**, Percezione +11, Diplomazia +11, Valutare +11, Conoscenze (locali) +11, Professione (amministratrice) +12, Linguistica +6
 
 *Forestiera residente da trentotto anni. Terzo mandato. Non si compra e — cosa più
 scomoda — non si convince.*
@@ -62,7 +62,7 @@ decidono che non si può.
 
 | Capitano | Contrada | Classe | GS | pf | CA | Il numero che conta |
 |---|---|---|---|---|---|---|
-| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Percepire Intenzioni +11, Diplomazia +10 |
+| **Ottavia Vesca** | Bruco | esperta 5 | 3 | 27 | 12 | Intuizione +11, Diplomazia +10 |
 | **Gerlando Attu** | Oca | esperto 5 | 3 | 25 | 13 | Valutare +13, Raggirare +11 |
 | **Zoe Barbanera** | Onda | guerriera 4 | 3 | 38 | 17 | Professione (pilota) +9, Intimidire +8 |
 | **Ubalda Trenchi** | Torre | guerriera 6 | 5 | 55 | 20 | attacco +11 (1d8+5), e **dodici miliziani** |
@@ -102,7 +102,7 @@ attacchi:
 
 **Attacco** **Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 18
 
-**Statistiche** For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Finezza nell'Arma · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*
+**Statistiche** For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Arma Accurata · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*
 
 **Tattiche** **Non ingaggia mai volontariamente.** Il suo mestiere è entrare, fare, uscire. Se lo scoprono usa l'olio e il fumo, poi le finestre alte. **Fugge a 8 pf, sempre**, anche a lavoro mezzo fatto, anche se sta vincendo. Catturato vivo: **non parla**. Non per lealtà — perché il mediatore paga i silenzi e non paga più i morti.
 
@@ -143,7 +143,7 @@ gs: 1/2
 tipo: Umano guerriero 1
 ca: 16
 ca-dettaglio: +4 camicia di maglia, +2 scudo
-pf: 13
+pf: 16
 ts: Tem +4, Rif +1, Vol +0
 attributi: For 15 Des 12 Cos 14 Int 9 Sag 10 Car 8
 iniziativa: +1
@@ -153,11 +153,11 @@ attacchi:
 ```
 **Iniziativa** +1
 
-**Difesa** **CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 13 · TS Tem +4, Rif +1, Vol +0
+**Difesa** **CA** 16 (+4 camicia di maglia, +2 scudo) · **pf** 16 · TS Tem +4, Rif +1, Vol +0
 
 **Attacco** **Mischia** mazza pesante +4 (1d8+2) · coltello +4 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14
 
-**Statistiche** For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Vigore Sovrannaturale
+**Statistiche** For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Robustezza
 
 **Tattiche** Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 14 fatto da chi ne ha appena messo giù uno. Nessuno di loro morirà per Sfregio.
 

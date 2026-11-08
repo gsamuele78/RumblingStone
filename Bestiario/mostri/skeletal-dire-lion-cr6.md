@@ -1,4 +1,4 @@
-# Skeletal Dire Lion (Ghostlord Pride) [ACCEPTED — DM-canon 2026-05-05]
+# Skeletal Dire Lion (Ghostlord Pride) [CANONE — DM 2026-05-05]
 **Faction**: ghostlord-undead | **Role**: melee-shock | **Environment**: any | **CR**: 6 | **Source**: MM Dire Lion + Skeleton template | **Status**: inferred
 
 

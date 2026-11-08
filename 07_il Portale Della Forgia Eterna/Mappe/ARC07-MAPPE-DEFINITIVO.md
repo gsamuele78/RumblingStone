@@ -16,7 +16,7 @@
 > (`00_Red Hand Of Doom/Immagini/Area Map/…/MappeIncontri/*.webp`: griglia +
 > add-on DM per posizioni, ambiente e tattiche di PNG/villain/mostri).
 >
-> **ASCII = fonte canonica** (decisione DM 2026-07-23): l'ASCII ultra-clear porta
+> **ASCII = fonte canonica** [CANONE — DM 2026-07-23]: l'ASCII ultra-clear porta
 > **tutti** i dettagli senza perdite. Le **6 mappe a griglia rettangolare**
 > (T-2, T-3, T-6, S-2, M7-B, CM-1, più la carta CM-2) sono **rese a pergamena SVG** in
 > `Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map*.svg` col renderer a fedeltà piena
@@ -607,8 +607,8 @@ croce. Therysol veglia ai margini (testimone, non officiante).
  tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
-confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
+▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [CANONE — DM 2026-11-04,
+P16, le mura del 372] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
 del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
 della banda (copertura) · ▪▪ le lance hobgoblin, quattro tende attorno al
 fuoco, ad anello attorno al capo · ━ le vie battute · ▪GP posti di guardia · ╔╗
@@ -633,9 +633,10 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   la torre nord con la porta che entra nella montagna a **+120 m**. Le tende
   stanno fra 500 m e 1 km dalle mura, e dalla spianata alla piana si scende
   per una strada a tornanti. Il profilo sotto la pianta le mette in fila. La
-  quota sul mare il DM non l'ha data: le direttive di M7-B e M7-C mettono la
-  piana a 870 m, come le mappe del 1372 di ARC-08 (cortile del duello a 970 m, che nel 1372 è il cortile interno) `[INFERRED — needs DM confirmation]`.
-- **La rampa della porta** `[INFERRED — needs DM confirmation]`. Gli arieti
+  quota sul mare l'ha data il DM il 2026-11-04: la piana sta a 520 m, nella
+  fascia delle colline della carta della valle e sopra la piana di Dauth (490 m),
+  come nel 1372 di ARC-08 (cortile del duello a 620 m, che nel 1372 è il cortile interno) `[CANONE — DM 2026-11-04]`.
+- **La rampa della porta** `[CANONE — DM 2026-11-04, P16, le mura del 372]`. Gli arieti
   stanno sulla spianata, a +80, e la porta è a +100: dall'una all'altra sale una rampa
   di terra battuta e pietra, larga quanto un ariete e lunga circa 150 m,
   addossata al gradone sotto il muro sud. Gli arieti si montano sulla spianata
@@ -644,7 +645,7 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   stanno sul ciglio, 24,5 m sopra la spianata: salgono sul tratto est, dove il
   fianco della montagna arriva al piede delle mura. È il camminamento est di
   Hrodgar (DEF-4 Scena 10).
-- **La torre nord** `[INFERRED — needs DM confirmation]`. Sta sul gradone di
+- **La torre nord** `[CANONE — DM 2026-11-04, P16, già risolta, quote del 2026-10-22]`. Sta sul gradone di
   +120, sopra il muro nord del cortile: su M7-B la riga 04 è il piede della
   roccia, S04 la base della torre e della sua scala, che sale di 20 m dentro
   la pietra. La porta di O-P04 entra nella montagna al livello del cortile,
@@ -719,7 +720,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
 @luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
-@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
+@quota 620 m ; s.l.m. [CANONE — DM 2026-11-04: piana a 520 m, come nel 1372 di ARC-08]
 @dislivello +100 m ; sulla piana dell'orda, a sud
 ```
 - **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 14** (capostipite
@@ -832,7 +833,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
 @tipo strategica caverna
 @luogo Hammerfist, il Cuore della Montagna (sotto la fucina grande, livello −3)
-@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
+@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [CANONE — DM 2026-11-04, P16, poteri e luoghi]
 @dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
 

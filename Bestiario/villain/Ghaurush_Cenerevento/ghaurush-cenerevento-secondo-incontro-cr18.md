@@ -1,4 +1,4 @@
-# Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto» [ACCEPTED — DM-canon]
+# Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto» [CANONE — DM 2026-08-05]
 **Faction**: mano-rossa | **Role**: boss-caster/negazione-del-contatto | **Environment**: any (quota, rovine, assedio) | **CR**: 18 | **Source**: SRD *Ogre Mage* (base GS 8) + **Stregone 10** (SRD PHB), classe associata GS +1/liv | **Status**: accepted
 
 
@@ -45,7 +45,7 @@ Large giant (ogre magi), LE.
 | 5 | 3+1 | **muro di forza** |
 
 
-**Statistiche** For 21, Des 10, Cos 23, Int 14, Sag 14, Car 24 (20 base + *mantello del carisma +4*) · **BAB/Lotta** +8/**+17** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantesimi in Combattimento, Incantesimo Esteso, Incantesimi Focalizzati (Invocazione), **Incantesimi Focalizzati Superiori (Invocazione)** · **Qualità speciali** tratti dei giganti
+**Statistiche** For 21, Des 10, Cos 23, Int 14, Sag 14, Car 24 (20 base + *mantello del carisma +4*) · **BAB/Lotta** +8/**+17** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantare in Combattimento, Incantesimi Estesi, Incantesimi Focalizzati (Invocazione), **Incantesimi Focalizzati Superiore (Invocazione)** · **Qualità speciali** tratti dei giganti
 
 **Equipaggiamento** (tabella PNG livello 18): *amuleto di salute +6*, *mantello del carisma +4*, giaco di maglia +3 (Large), *anello di protezione +3*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di *teletrasporto*, spadone Large perfetto (tiene il +13 della scheda, che con BAB +8 e For 21 tornerebbe +12). Il **registro rilegato in pelle di worg** è ancora addosso a lui, e vale più del resto (vedi dossier).
 

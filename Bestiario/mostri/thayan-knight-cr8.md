@@ -1,4 +1,4 @@
-# Thayan Knight (PrC Complete Warrior) [ACCEPTED — DM-canon 2026-05-05]
+# Thayan Knight (PrC Complete Warrior) [CANONE — DM 2026-05-05]
 **Faction**: teschio-nero-thay | **Role**: mounted-elite | **Environment**: any | **CR**: 8 | **Source**: Complete Warrior p.54 Thayan Knight PrC | **Status**: inferred
 
 

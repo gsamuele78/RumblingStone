@@ -58,6 +58,7 @@ import re
 import sys
 import unicodedata
 from collections import OrderedDict
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -318,22 +319,14 @@ NON_ENTITA = re.compile(
     r"analisi|sidebar|come |cosa |chi |se |quando |perch|il giro|le cd|i nemici|"
     r"supporto|armi|regola|riepilogo|struttura|rapporto|composizione|interazione|"
     r"effetti|eventi|opzioni|azioni|errata|a\.|b\.|c\.)")
-CLASSI = {
-    "guerriero", "guerriera", "chierico", "chierica", "mago", "maga", "stregone", "strega",
-    "ladro", "ladra", "ranger", "druido", "druida", "bardo", "barda", "monaco", "monaca",
-    "paladino", "barbaro", "warlock", "nobile", "nera", "guerra", "divina", "divino",
-    "tempeste", "nanico", "picchi", "rune", "maestra", "maestro", "illusionista", "ombre",
-    "esperto", "popolano", "combattente", "adepto", "aristocratico", "warpriest",
-    "fighter", "cleric", "wizard", "sorcerer", "rogue", "monk", "druid", "bard",
-    "barbarian", "paladin", "blackguard", "assassino", "assassin", "psion", "gish",
-    "esploratore", "esploratrice", "difensore", "campione", "sacerdote", "spia",
-    "danzatrice", "teurgo", "arcano", "runaio", "fabbro", "berserker", "templare",
-}
+from dmcore import sistemi as _S  # noqa: E402
+
+_ENTITA_35 = _S.dati(_S.predefinito(), "lessico.entita")
+CLASSI = set(_ENTITA_35["classi"])
 """L'ultima parola di una classe o di una classe di prestigio, come la scrivono
-gli archi: senza questo filtro «APL 13» e «CA 28» diventavano classi."""
-RAZZE = {"nano", "nana", "umano", "umana", "elfo", "elfa", "mezzelfo", "mezzelfa",
-         "mezzorco", "orog", "drow", "gnomo", "halfling", "hobgoblin", "goblin",
-         "orco", "dwarf", "human", "dream", "mezzo-ogre", "ogre", "dello", "scudo"}
+gli archi: senza questo filtro «APL 13» e «CA 28» diventavano classi. Dal
+plugin del sistema predefinito (sistemi/dnd35/dati/entita.toml, ADR-0111 L3)."""
+RAZZE = set(_ENTITA_35["razze"])
 
 STORICO_RIGA = re.compile(
     r"→|->|~~|prima della correzione|diceva|superat|storico|errata|boost log|"
@@ -418,15 +411,50 @@ def chiave_entita(nome: str) -> tuple[str | None, str | None]:
     return s, titolo
 
 
-def classi_da_paren(paren: str) -> str | None:
+@lru_cache(maxsize=None)
+def entita_di(sistema: str = "dnd35") -> "tuple[frozenset, frozenset]":
+    """(classi, razze) che chiudono un nome nel sistema (capacità lessico.entita).
+
+    Il 3.5 è CLASSI/RAZZE, lette dal suo plugin (ADR-0111, L3). Un altro sistema
+    in modo «dati» aggiunge l'ultima parola di ogni sua classe, classe di prestigio e
+    razza dal lessico italiano (italiano, inglese, tipo): un modulo PF1e scrive
+    «Inquisitore 9» o «Fattucchiere 12», che il 3.5 non conosce."""
+    if sistema == "dnd35":
+        return frozenset(CLASSI), frozenset(RAZZE)
+    from dmcore import sistemi as S
+    c = S.capacita(sistema, "lessico.entita")
+    if c.modo != "dati":
+        return frozenset(CLASSI), frozenset(RAZZE)
+    from lessico_regole import tabella_pf1
+
+    def ultime(tipo: str) -> set:
+        fuori = set()
+        for v in (x for x in c.voci if x.endswith(".tsv")):
+            for voce in tabella_pf1(ROOT / v, tipo).values():
+                parole = re.findall(r"[A-Za-zÀ-ÿ]+", voce["it"].lower())
+                if parole:
+                    fuori.add(parole[-1])
+        return fuori
+    return (frozenset(CLASSI | ultime("classe") | ultime("classe di prestigio")),
+            frozenset(RAZZE | ultime("razza")))
+
+
+@lru_cache(maxsize=None)
+def _sistema_del_file(rel: str) -> str:
+    from dmcore import sistemi as S
+    return S.sistema_di(rel)
+
+
+def classi_da_paren(paren: str, rel: str = "") -> str | None:
     """«Nano Guerriero 15°/Nobile 2°, GS 16» → «guerriero 15/nobile 2».
 
     Conta solo le parole che chiudono il nome di una classe (CLASSI): «APL 13»,
     «CA 28» e «Aegis Fang +21» non sono classi."""
     parti = set()
+    classi = entita_di(_sistema_del_file(rel))[0] if rel else CLASSI
     for mm in re.finditer(r"([A-Za-zÀ-ÿ]+)\s+(\d{1,2})°?(?![\d+])(?!/[+-])", _pulisci(paren)):
         parola = mm.group(1).lower()
-        if parola in CLASSI:
+        if parola in classi:
             parti.add(f"{parola} {int(mm.group(2))}")
     return "/".join(sorted(parti)) if parti else None
 
@@ -562,7 +590,7 @@ def estrai_file(path: Path, rac: Raccolta, entita_note: dict) -> None:
                     if len(gs) == 1:
                         rac.add(ent, "GS", gs[0], rel, n, sez, r)
                         visti_blocco.add("GS")
-                    rac.add(ent, "classi", classi_da_paren(paren.group(1)), rel, n, sez, r)
+                    rac.add(ent, "classi", classi_da_paren(paren.group(1), rel), rel, n, sez, r)
                 if tit:
                     rac.add(ent, "titolo", tit, rel, n, sez, r)
             continue
@@ -619,7 +647,7 @@ def estrai_file(path: Path, rac: Raccolta, entita_note: dict) -> None:
             gs = F_GS.findall(mm.group(2))
             if len(gs) == 1:
                 rac.add(ent, "GS", gs[0], rel, n, sez, r)
-            rac.add(ent, "classi", classi_da_paren(mm.group(2)), rel, n, sez, r)
+            rac.add(ent, "classi", classi_da_paren(mm.group(2), rel), rel, n, sez, r)
 
 
 def _frasi(riga: str) -> list[str]:
@@ -691,7 +719,7 @@ def estrai_prosa(path: Path, rac: Raccolta, nomi: dict[str, str],
                 gs = F_GS.findall(mm.group(1))
                 if len(gs) == 1:
                     rac.add(k, "GS", gs[0], rel, n, sez, r)
-                rac.add(k, "classi", classi_da_paren(mm.group(1)), rel, n, sez, r)
+                rac.add(k, "classi", classi_da_paren(mm.group(1), rel), rel, n, sez, r)
             for fr in _frasi(bassa):
                 if not re.search(r"\b" + nome + r"\b", fr):
                     continue

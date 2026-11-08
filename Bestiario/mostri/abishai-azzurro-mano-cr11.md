@@ -1,4 +1,4 @@
-# Abishai azzurro della Mano — il cane da guardia di Tiamat (esterno, baatezu) [ACCEPTED — DM-canon 2026-10-18]
+# Abishai azzurro della Mano — il cane da guardia di Tiamat (esterno, baatezu) [CANONE — DM 2026-10-18]
 **Faction**: red-hand | **Role**: elite-skirmisher | **Environment**: any | **CR**: 11 | **Source**: ricostruito su SRD 3.5 (tipo esterno, capacità dei diavoli); idea da `[Private — Red Hand of Doom WE, pp. 29, 33]` | **Status**: ACCEPTED — DM-canon 2026-10-18 (PR #247, poi canone su richiesta del DM)
 
 ```statblocco

@@ -1,0 +1,31 @@
+# sistemi/dnd35/sistema.toml — Dungeons & Dragons 3.5 (ADR-0111)
+#
+# Il sistema base della campagna. Le capacità «codice» sono le tabelle che
+# il censimento del 2026-11-07 ha trovato cablate negli script: il lotto
+# dice quando diventano dati di questa cartella.
+
+id = "dnd35"
+nome = "Dungeons & Dragons 3.5 (SRD)"
+tipo = "sistema"
+famiglia = "d20"
+licenza = "OGL 1.0a"
+fonti = ["SRD 3.5 in cache (riscontro_srd.py, chiave srd35)"]
+# Come si scrive il sistema nella riga «**Sistema:**» di un modulo (regex).
+riconosci = ["3\\.5", "D&D", "Dungeons & Dragons"]
+skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
+
+[capacita]
+"termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
+"stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
+"statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
+"lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
+"lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }
+"lessico.italiano" = { dati = ["scripts/lessico_it_35.tsv"] }
+"fonti.regole" = { codice = ["scripts/riscontro_srd.py:FONTI"], lotto = "L8", nota = "URL e sha256 fissati delle fonti scaricate: si spostano solo se la prova del nove (L8) ne ha bisogno, e restano rivisti nel diff" }
+"pe.soglie" = { dati = ["sistemi/dnd35/dati/pe.toml"] }
+"tesoro.per_livello" = { dati = ["scripts/loot_tables.yaml", "scripts/magic_items_srd.yaml"] }
+"incontri.livello" = { dati = ["sistemi/dnd35/dati/incontri.toml"], nota = "metodo e parametro nei dati, la formula in suggest_encounter.combine_el" }
+"creature.costruzione" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5a: tipi, classi, BAB, taglie, armature, scudi, matrici; L5b: griglie degli incantatori, classi incantatrici, prestigio, profili, taglie e razze" }
+"creature.statistiche_per_gs" = { eredita = "pf1e", motivo = "l'SRD 3.5 non ha bersagli per GS: si usa la Tab. 1-1 PF1e come guardia, non come fonte (dmcore/tabelle.py)" }
+"creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml"], nota = "L5c: liste per classe × funzione, nomi canonici, ripieghi; le funzioni tattiche restano in dmcore/incantesimi.py" }
+"creature.regole_di_tipo" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5d: [tipi] e [alias_tipo]; normalizza_tipo in dmcore/tabelle.py" }

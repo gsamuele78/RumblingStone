@@ -1,4 +1,4 @@
-# Armate — Unità Nuove [ACCEPTED — DM-canon 2026-05-05]
+# Armate — Unità Nuove [CANONE — DM 2026-05-05]
 
 > 📸 **INDICE STORICO (ristrutturazione Bestiario, 2026-07-08)**: questo era
 > il README di `00_Red Hand Of Doom/Armate-UNITA-NUOVE/`. Le 58 schede sono
@@ -8,7 +8,7 @@
 > l'indice per-file NON viene più aggiornato — fonte viva:
 > `Bestiario/README.md` + `scripts/monster_catalog.yaml`.
 
-> Tutti i file in questa cartella sono **`[ACCEPTED — DM-canon 2026-05-05]`**
+> Tutti i file in questa cartella sono **`[CANONE — DM 2026-05-05]`**
 > (cfr. `AGENTS.md` "Never invent").
 > Ogni statblock è una derivazione da MM / FRCS / MM II / MM III /
 > Draconomicon / Complete Warrior / Complete Divine / Monsters of Faerûn /

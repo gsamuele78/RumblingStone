@@ -28,7 +28,7 @@ Chi cerca **perché** una cosa è fatta così trova la decisione negli ADR
 15. [Le decisioni del DM](#15-le-decisioni-del-dm)
 16. [La piattaforma e i suoi tre canali](#16-la-piattaforma-e-i-suoi-tre-canali)
 17. [Il rilascio](#17-il-rilascio)
-18. [Il flusso della qualità: mappe, moduli, regole](#18-il-flusso-della-qualità-mappe-moduli-regole)
+18. [Il flusso della qualità: mappe, moduli, regole, stampa](#18-il-flusso-della-qualità-mappe-moduli-regole-stampa)
 19. [Dove sta cosa](#19-dove-sta-cosa)
 
 ---
@@ -284,8 +284,8 @@ Tre regole tengono in ordine questo traffico:
   entrano solo le misure e il markdown che il progetto ha scritto
   ([GUIDA-CONDIVISIONE-IP](guides/GUIDA-CONDIVISIONE-IP.md)).
 - **Ogni dato di regole porta la sua fonte.** Uno statblocco dice da dove
-  viene il numero (SRD, PF1e, `[GENERATO]` da uno script, `[INFERRED]` in
-  attesa del DM); il gioco preferisce la versione più forte e segna dove
+  viene il numero (SRD, PF1e, `[GENERATO]` da uno script, una marca INFERRED con
+  domanda e base in attesa del DM, [GUIDA-MARCATURE](guides/GUIDA-MARCATURE.md)); il gioco preferisce la versione più forte e segna dove
   diverge dall'SRD.
 - **Un componente nuovo passa dai canali.** Un modello di Hugging Face, una
   libreria di sintassi o un generatore nuovo entrano in unstable e salgono
@@ -592,7 +592,7 @@ l'originale e la coppia non va al cieco.
 | Azione | Script | Canale (§16) | In CI |
 |---|---|---|---|
 | `misura` | `misura_craft` | stable | cancelli e tetti dei box |
-| `ciclo` | `ciclo_prosa` | stable | `box_impoveriti`, verdetto misurato |
+| `ciclo` | `ciclo_prosa` | stable | `box_impoveriti`, verdetto misurato; in locale la riga che contraddice l'originale (NLI, `misura_fedelta_nli`) torna com'era |
 | `mqm` | `punteggio_mqm` | stable | contro la baseline |
 | `sintassi` | `misura_sintassi` | unstable, spaCy facoltativo | no |
 | `coerenza` | `coerenza_campagna` | testing | `fatti --check plans/coerenza-residui.json` |
@@ -740,45 +740,98 @@ master e lo schema dei fronti (`scripts/schemas/fronti_orologi.schema.json`).
 
 ## 11. La catena delle mappe
 
+Una mappa nasce come griglia o contratto JSON e se ne ricavano tutte le
+versioni. Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
+la pianta di stampa, con le scritte a 7,4 pt e senza filtri
+([ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md)).
+
 ```mermaid
 flowchart LR
     W["Watabou e generatori<br/>import_watabou"] --> J
     U["Ultra-Clear<br/>import_ultraclear"] --> J
     H["A mano: griglia emoji<br/>o contratto JSON"] --> J
     J["Contratto JSON<br/>schema, legenda unica"] -->|"compile_map_json"| MD["Master con griglia"]
-    MD -->|"render_map_svg"| SVG["SVG pergamena"]
-    SVG -->|"export_map_png"| PNG["PNG da stampare"]
+    MD -->|"render_map_svg"| SVG["rendered/<br/>SVG pergamena e texture"]
+    SVG -->|"export_map_png"| PNG["PNG per lo schermo"]
+    MD -->|"--tema pianta"| PIA["rendered-pianta/<br/>render_map_pianta"]
+    MD -->|"--tema pianta --stampa"| STP["rendered-stampa-pianta/<br/>mappa e _legenda, 7,4 pt"]
+    SCH["Disegni a caratteri<br/>che il renderer non legge"] -->|"render_schemi"| SCS["Schemi nello stile<br/>della pianta"]
+    STP --> BK["Booklet<br/>(catena 12)"]
+    SCS --> BK
     MD -->|"export_uvtt"| VTT["UVTT con muri e luci<br/>Foundry, Roll20"]
     MD -->|"render_map_blender"| B3D["volume 3D, profondità<br/>per ControlNet"]
-    MD --> QM{"validate_maps<br/>qualita_mappe 0-100"}
-    QM -->|"sotto soglia"| J
+    MD --> QM{"validate_maps<br/>gemelli allineati,<br/>qualita_mappe 0-100"}
+    QM -->|"sotto soglia<br/>o gemello vecchio"| J
+    PC["scripts/piante/<br/>Rethmar, Dauth, Channathgate"] -->|"genera_pianta_citta --check"| CIT["Piante delle città<br/>byte per byte"]
 ```
 
+`validate_maps` pretende accanto a ogni `rendered/` il gemello in
+`rendered-stampa-pianta/` allineato al master; `validate_booklets` ferma un
+booklet che stampa la pergamena o un disegno a caratteri al posto dello
+schema; `render_schemi.py --check` e `genera_pianta_citta.py --tutte --check`
+girano in CI.
+
 Riferimenti: [ADR-0048](../plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md) (legenda funzionale, fonte unica), [ADR-0098](../plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md) (standard di
-qualità delle mappe), [GUIDA-MAPPE](guides/GUIDA-MAPPE.md).
+qualità delle mappe), [ADR-0102](../plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md) (tema pianta e generatori delle città),
+[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (ogni mappa si stampa in pianta), [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) §5.4-5.5.
 
 ## 12. La catena dei booklet
 
 Due binari che leggono lo stesso manifest
 ([ADR-0020](../plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md)).
+Prima di comporre, il binario di stampa porta in ogni capitolo chi ci si
+incontra, e alla fine il volume si misura come un controllo di prestampa.
 
 ```mermaid
 flowchart LR
-    MASTERS["Master markdown"] --> MANI["Manifest JSON<br/>capitoli, colophon"]
+    MASTERS["Master markdown"] --> MANI["Manifest JSON<br/>capitoli, colophon,<br/>schede, chi_si_incontra"]
     MANI --> HTML["build_booklet_html<br/>HTML e Homebrewery"]
     HTML -->|"export_booklet_pdf, Chromium"| PDFS["PDF per capitolo<br/>schermo"]
-    MANI --> TYP["export_booklet_typst"]
+    MANI --> CSI["dmcore.chi_si_incontra<br/>scheda d'entrata, riquadro,<br/>mappe nominate"]
+    MASTERS -. "persone e mappe<br/>di altri master" .-> CSI
+    CSI --> TYP["export_booklet_typst<br/>riquadro #statblocco,<br/>appendice-creature"]
     TYP -->|"typst, EB Garamond e Cinzel"| VOL["Volume -STAMPA.pdf<br/>segnalibri, indice"]
     CJ["serata.corredo.json"] -->|"dm.py corredo"| ALL["Il corredo della serata<br/>ogni volume, PDF misurati"]
     ALL --> TYP
     VOL --> VB{"validate_booklets --stampa"}
+    VOL --> MS{"misura_stampa<br/>tetti per booklet"}
+    VOL --> MD["misura_distanza_pagine<br/>scena → numeri, indicatore"]
+    TYP --> MSB{"misura_statblocchi_booklet<br/>misura_standard_tavolo"}
 ```
+
+Il manifest decide dove esce il riquadro intero di ogni creatura (chiave
+`schede`): `"appendice"` mette nell'incontro una riga con nome, GS, CA, pf,
+rimando e tattica, e il riquadro in fondo al volume; `"qui"` lo lascia dove il
+master lo scrive; `"entrambe"` fa tutte e due le cose. Con
+`"chi_si_incontra": true` (di solito insieme a `"entrambe"`) il capitolo
+riceve, per ogni persona con un nome che vi si incontra, la scheda d'entrata
+con il ritratto e il riquadro con la tattica, e per ogni mappa che nomina la
+pianta di stampa. Il master non cambia: cambia solo quello che va in stampa,
+e la misura legge lo stesso testo. Al 2026-11-03 il modo è adottato in sei
+booklet; Terros resta fuori perché la misura peggiorava.
+
+| Misura | Cosa guarda | In CI |
+|---|---|---|
+| `validate_booklets --stampa` | ogni volume compila; niente pergamena né disegni a caratteri in stampa | bloccante |
+| `misura_statblocchi_booklet --check` | le schede che non escono nel riquadro, per booklet | bloccante, tetto che scende |
+| `misura_stampa --tutti --check` | corpo sotto 7 pt, testo oltre la gabbia, immagini sotto 300 dpi, riquadri spezzati, font | job `stampa-misurata`, tetti in `docs/audit/stampa-booklet.json` |
+| `misura_standard_tavolo` | per capitolo e persona: numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa; note di lavoro in stampa | cricchetto nei test sulle note di lavoro |
+| `misura_distanza_pagine` | sul PDF, le pagine fra dove una persona agisce e la pagina con CA e pf | indicatore, a mano |
+
+Riferimenti: [ADR-0105](../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (un riquadro per tutte le creature),
+[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (mappe in pianta),
+[ADR-0107](../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md) (chi si incontra sta nel capitolo),
+[ADR-0108](../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md) (cricchetti e distanza in pagine),
+[GUIDA-BOOKLET-E-PDF](guides/GUIDA-BOOKLET-E-PDF.md).
 
 ## 13. La catena delle skill
 
 Le skill sono la conoscenza che gli agenti caricano: regole 3.5, canone,
 stile, mestieri. Si scrivono una volta in `skills/` e si impacchettano per
-ogni agente.
+ogni agente. Ogni `SKILL.md` chiude con la sezione «Cancelli
+deterministici»: i comandi che verificano il lavoro fatto con quella skill
+senza giudizio umano
+([ADR-0108](../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md)).
 
 ```mermaid
 flowchart LR
@@ -788,7 +841,13 @@ flowchart LR
     PKG -->|"sync-skills, dm.py skills sync"| DEP[".claude/skills e cartelle utente"]
     PKG -->|"release.yml"| ARCH["rumblingstone-skills-vX.Y.Z.tar.gz<br/>riproducibile con SOURCE_DATE_EPOCH"]
     RAW --> VS{"validate_skills<br/>frontmatter, link, YAML"}
+    RAW --> TC{"test_cancelli_delle_skill<br/>sezione presente, ogni comando<br/>in tools.manifest.json"}
 ```
+
+Una skill nuova senza la sezione, o con un comando che il manifest dei tool
+non dichiara, rompe i test. Il giudice della prosa resta il cieco del DM
+([ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md)):
+le skill di stile hanno cancelli che contano, non che giudicano.
 
 ## 14. Il giro di una modifica: dal thread al merge
 
@@ -862,11 +921,12 @@ stateDiagram-v2
     oldstable --> [*]: dopo tre mesi
 ```
 
-| Componente | Canale al 2026-10-23 |
+| Componente | Canale al 2026-11-03 |
 |---|---|
 | Python 3.13 (Debian 13), pytest, pip-audit, typst, Dependabot | stable |
-| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0103) | testing |
-| spaCy, Stanza, LLM locale, mypy | unstable |
+| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0103), shapely e i generatori delle città (ADR-0102) | testing |
+| spaCy, Stanza, LLM locale, mypy, sentence-transformers (`misura_ripetizioni_frasi`), transformers con un NLI multilingue (`misura_fedelta_nli`), tutti solo in locale | unstable |
+| NLI per le contraddizioni fra file, varianti dei nomi, numeri incrociati (provati due volte per ADR-0108) | non adottati: nessun guadagno misurato |
 
 ## 17. Il rilascio
 
@@ -900,14 +960,15 @@ sequenceDiagram
     note over REL,GHR: a ogni push che tocca il CHANGELOG<br/>le note pubblicate si riallineano
 ```
 
-## 18. Il flusso della qualità: mappe, moduli, regole
+## 18. Il flusso della qualità: mappe, moduli, regole, stampa
 
 Gli strumenti che misurano la qualità sono nati uno per volta, ognuno con il
 suo ADR. Qui stanno in un flusso solo, descritto come si descrive un servizio
 di revisione del codice (Sourcery e simili): prima chi lo usa e per che cosa,
 poi i componenti, poi i dati che passano fra loro. Tutti rispondono alla
 stessa domanda, «questo master si può giocare così com'è scritto?», guardando
-tre cose diverse: la mappa, il testo, la regola.
+quattro cose diverse: la mappa, il testo, la regola e la pagina stampata che
+il DM ha davanti al tavolo.
 
 ### Casi d'uso
 
@@ -923,6 +984,14 @@ tre cose diverse: la mappa, il testo, la regola.
 | agenti del giro (ADR-0095) | una lettura a freddo, una scena alla volta | `python3 scripts/lettura_a_scene.py servi …` | rapporti di lettore, playtester, developer, DM | a mano, agenti |
 | CI, a ogni PR | nessuna lettura scaduta, nessun 🔴 senza stato | `python3 scripts/registro_letture.py --check` | registro delle letture | bloccante (avviso finché vuoto) |
 | chi fa il triage | una regola «a memoria» del giro è davvero nell'SRD | `python3 scripts/riscontro_srd.py riscontra FILE.yaml` | concorda, discorda, non trovata, con la citazione | testing (job `riscontro-srd`) |
+| CI, a ogni PR | i conti degli statblocchi, anche dei boss recintati di ADR-0091 | `python3 scripts/conformita_statblocchi.py --master` | pf, CA, CD, scurovisione che non tornano | cricchetto nei test (ADR-0108) |
+| chi prepara la serata | al tavolo chi si incontra ha tutto nel capitolo | `python3 scripts/misura_standard_tavolo.py` | sei elementi per capitolo e persona, mappe, note di lavoro in stampa | indicatore; cricchetto sulle note |
+| chi prepara la serata | quante pagine sfoglia il DM per i numeri | `python3 scripts/misura_distanza_pagine.py PDF` | mediana delle distanze per persona | indicatore, a mano |
+| CI, a ogni PR | il volume regge la prestampa | `python3 scripts/misura_stampa.py --tutti --check` | corpo, gabbia, dpi, riquadri spezzati | job `stampa-misurata`, tetti |
+| CI, a ogni PR | un box non dice al gruppo cosa capisce o sa («capite che…») | `python3 scripts/misura_box_telecomando.py --check` | colpi fuori da `ACCETTATI` | cancello nei test (`test_misure_rigorose`) |
+| chi riscrive la prosa | un'immagine già usata in un altro box, anche con altre parole | `python3 scripts/misura_ripetizioni_frasi.py --check` | coppie sopra 0,80 (embedding MiniLM) fuori da `plans/scrittura/ripetizioni-accettate.json` | cancello locale |
+| chi riscrive la prosa | il riscritto non contraddice l'originale | `python3 scripts/misura_fedelta_nli.py --ripara ORIGINALE RISCRITTO`, e da sé in `ciclo_prosa revisione` e `misura` | la riga che contraddice torna com'era | correzione automatica, solo in locale |
+| chi scrive con una skill | il lavoro passa i cancelli che la skill dichiara | sezione «Cancelli deterministici» del `SKILL.md` | i comandi da far girare | `test_cancelli_delle_skill` |
 | il DM | decidere le discordanze e i rilievi aperti | tabella `decisioni-dm` del piano | `[CANONE — DM data]` nel master | decisione umana |
 
 ### Il flusso
@@ -941,20 +1010,33 @@ flowchart LR
     end
     subgraph MODULI["Moduli (ADR-0095)"]
         MC["misura_craft"] --> CP["ciclo_prosa"]
+        BT["misura_box_telecomando<br/>misura_ripetizioni_frasi"] --> CP
+        FN["misura_fedelta_nli<br/>ripara"] --> CP
         DD["domande_developer"]
         GF["giro a freddo<br/>lettura_a_scene"] --> RL["registro_letture"]
     end
-    subgraph REGOLE["Regole (ADR-0103)"]
+    subgraph REGOLE["Regole (ADR-0103, ADR-0108)"]
         RS["riscontro_srd"]
+        CS["conformita_statblocchi<br/>--master"]
+    end
+    subgraph STAMPA["Stampa (ADR-0105…0108)"]
+        ST["misura_standard_tavolo"]
+        DP["misura_distanza_pagine"]
+        MP["misura_stampa"]
     end
     MAP --> VM
     TXT --> MC
+    TXT --> BT
     TXT --> DD
     TXT --> GF
     TXT --> RS
+    TXT --> CS
+    TXT -->|"booklet"| ST
+    TXT -->|"PDF"| DP
+    TXT -->|"PDF"| MP
     FONTI --> RS
     GF -->|"rilievi «a memoria»"| RS
-    CM & QP & CP & DD & RL & RS --> TRI{"Triage"}
+    CM & QP & CP & DD & RL & RS & CS & ST & DP & MP --> TRI{"Triage"}
     TRI -->|"il testo lo risolve"| FIX["correzione<br/>nel master"]
     TRI -->|"è una scelta"| DM(["👤 DM decide"])
     DM --> FIX
@@ -965,6 +1047,23 @@ Il giro a freddo trova i rilievi; la misura dice se sono veri; il triage li
 smista. La freccia dal giro al riscontro è il passo nuovo: un rilievo che un
 lettore ha controllato a memoria diventa una voce del file dei riscontri e
 arriva al triage con la citazione dell'SRD, non con un ricordo.
+
+La stampa è il ramo più recente. Nasce dalla serata del 2026-11-02, quando i
+validatori erano verdi e il DM ha dovuto cercare Zog'tar in tre punti del
+booklet. Le sue misure leggono quello che va davvero in stampa, e le
+correzioni che trovano nei master vanno al DM come proposte: i tetti scendono
+a mano quando lui le applica, perché sono canone. Con la PR #308 il DM le ha
+applicate ad ARC-07 e il cricchetto dei conti è a zero.
+
+Tre controlli della prosa sono stati scartati alla prima prova e sono entrati
+dopo una configurazione più rigorosa (ricerca sui guardrail, §8 e §9; PR #308
+e #309). `misura_box_telecomando --check` è un cancello che gira nei test.
+`misura_ripetizioni_frasi --check` è un cancello locale, con l'elenco delle
+ripetizioni volute. `misura_fedelta_nli` corregge da sé: dentro `ciclo_prosa`
+la riga del riscritto che contraddice l'originale torna com'era (F1 0,83 sulle
+26 coppie etichettate dal DM, contro 0,62 dei soli numeri). Gli ultimi due
+vogliono `sentence-transformers` e `transformers`, quindi girano solo in
+locale. Il giudice della prosa resta il cieco del DM.
 
 ### Componenti e dati
 
@@ -1014,6 +1113,10 @@ ARC-08, è in
 | una creatura | `Bestiario/`, catalogo `scripts/monster_catalog.yaml` |
 | come si usa uno script | [`docs/tools/README.md`](tools/README.md), `python3 scripts/<script>.py --help` |
 | se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0103) |
+| la mappa che va in un booklet | `rendered-stampa-pianta/` accanto al master (ADR-0106) |
+| perché un capitolo stampato ha schede che il master non ha lì | `scripts/dmcore/chi_si_incontra.py`, chiave `chi_si_incontra` del manifest (ADR-0107) |
+| i comandi che verificano una skill | la sezione «Cancelli deterministici» del suo `SKILL.md` (ADR-0108) |
+| i tetti delle misure di stampa | `docs/audit/stampa-booklet.json`, `docs/audit/statblocchi-booklet.json` |
 | perché una cosa è fatta così | [`plans/adr/`](../plans/adr/), indice in [`docs/INDEX.md`](INDEX.md) §4 |
 | cosa resta da fare | [`plans/INDEX.md`](../plans/INDEX.md), [`plans/STATO-E-ORDINE-DEI-PIANI.md`](../plans/STATO-E-ORDINE-DEI-PIANI.md) |
 | cosa è cambiato fra due versioni | [`CHANGELOG.md`](../CHANGELOG.md) |

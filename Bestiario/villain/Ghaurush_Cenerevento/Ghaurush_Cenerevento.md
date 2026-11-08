@@ -1,6 +1,6 @@
 # Ghaurush «Cenerevento» — il generale che voleva una valle [RIMANDO]
 
-> **[ACCEPTED — DM-canon]** Approvato dal DM il **2026-08-05**.
+> **[CANONE — DM 2026-08-05]** Approvato dal DM il **2026-08-05**.
 > Statblock: `ghaurush-cenerevento-cr16.md` (GS 16, variante *Advanced* GS 17) e
 > `ghaurush-cenerevento-secondo-incontro-cr18.md` (GS 18, secondo incontro).
 > Righe di canone applicate in `campaign/state.md` §3 (clock 0/6) e §4.

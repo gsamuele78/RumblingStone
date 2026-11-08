@@ -1,4 +1,4 @@
-# Bone Naga (Ghostlord servant) [ACCEPTED — DM-canon 2026-05-05]
+# Bone Naga (Ghostlord servant) [CANONE — DM 2026-05-05]
 **Faction**: ghostlord-undead | **Role**: caster-melee | **Environment**: any | **CR**: 10 | **Source**: MM II p.146 Bone Naga | **Status**: inferred
 
 

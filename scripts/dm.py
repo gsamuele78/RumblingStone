@@ -457,25 +457,54 @@ def cmd_corredo(args: argparse.Namespace, extra: list[str]) -> int:
     return 0
 
 
+#: A5 in punti tipografici: il formato della pagina del libretto.
+A5_PT = (419.53, 595.28)
+
+
+def _in_a5(pdf: Path, dest: Path) -> Path:
+    """Il PDF con le pagine A5. Un volume A4 si riduce al 71%, come faceva pdfcpu.
+
+    pdfimpose mette le pagine affiancate senza scalarle: un A4 darebbe un foglio
+    A3. Il volume A5 (`--formato a5`) passa com'è, ed è quello da preferire,
+    perché tiene il corpo del testo a 9,6 pt (tema-rumblingstone.typ).
+    """
+    import pymupdf  # arriva con pdfimpose
+    doc = pymupdf.open(pdf)
+    r = doc[0].rect
+    if r.width <= A5_PT[0] * 1.02 and r.height <= A5_PT[1] * 1.02:
+        return pdf
+    ridotto = pymupdf.open()
+    for i in range(len(doc)):
+        pg = ridotto.new_page(width=A5_PT[0], height=A5_PT[1])
+        pg.show_pdf_page(pg.rect, doc, i)
+    ridotto.save(dest, garbage=3, deflate=True)
+    return dest
+
+
 def _imponi(mp: Path) -> tuple[str, str, str]:
-    """Il libretto da piegare (ADR-0027). Degrada pulito: dichiara e non fallisce."""
+    """Il libretto da piegare (ADR-0027, motore pdfimpose da ADR-0116). Degrada pulito."""
     sys.path.insert(0, str(SCRIPTS))
     import binari
-    percorso = binari.trova(binari.PDFCPU)
+    lib = binari.per_nome("pdfimpose")
     pdf = mp.parent / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"
-    if percorso is None:
-        return ("imposizione", "\u25cb", "pdfcpu assente: " + binari.PDFCPU.ripiego)
+    if not binari.disponibile("pdfimpose"):
+        return ("imposizione", "\u25cb", "pdfimpose assente: " + lib.ripiego)
     if not pdf.is_file():
         return ("imposizione", "\u25cb", "nessun PDF da imporre (serve il passo «stampa»)")
     fuori = pdf.with_name(pdf.stem + "-LIBRETTO.pdf")
-    esito = subprocess.run(
-        [percorso, "booklet", "-c", "disable", "-o", "-q", "--",
-         "formsize:A4, border:off, margin:0", str(fuori), "2", str(pdf)],
-        capture_output=True, text=True)
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        sorgente = _in_a5(pdf, Path(tmp) / "a5.pdf")
+        # Segnatura 2x1: due pagine A5 affiancate su un foglio A4 orizzontale.
+        # Con --format A4 pdfimpose ingrandirebbe di poco le pagine (ADR-0116).
+        esito = subprocess.run(
+            [sys.executable, "-m", "pdfimpose", "saddle", "--signature", "2x1",
+             "--output", str(fuori), str(sorgente)],
+            capture_output=True, text=True)
     if esito.returncode != 0:
-        return ("imposizione", "\u2717", (esito.stderr or "pdfcpu fallito").strip()[:120])
+        return ("imposizione", "\u2717", (esito.stderr or "pdfimpose fallito").strip()[-120:])
     return ("imposizione", "\u2713",
-            f"{fuori.name} \u2014 da piegare. Non si versiona: l'output di pdfcpu "
+            f"{fuori.name} \u2014 da piegare. Non si versiona: l'output di pdfimpose "
             f"non e' byte-identico (ADR-0027)")
 
 
@@ -834,7 +863,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--stampa", action="store_true",
                    help="fai anche l'edizione da stampa (Typst, un volume con segnalibri)")
     p.add_argument("--imposto", action="store_true",
-                   help="e imponilo in libretto da piegare (pdfcpu, ADR-0027)")
+                   help="e imponilo in libretto da piegare (pdfimpose, ADR-0027 e ADR-0116)")
     p.add_argument("--solo", action="append", choices=PASSI_VOLUME,
                    help="esegui solo questi passi (ripetibile)")
     p.add_argument("--salta", action="append", choices=PASSI_VOLUME,

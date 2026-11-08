@@ -1,4 +1,4 @@
-# Cerchio Sacro Druid 7 (Hella ally) [ACCEPTED — DM-canon 2026-05-05]
+# Cerchio Sacro Druid 7 (Hella ally) [CANONE — DM 2026-05-05]
 **Faction**: cerchio-druid | **Role**: divine-caster | **Environment**: forest | **CR**: 7 | **Source**: PHB Druid 7 | **Status**: inferred
 
 

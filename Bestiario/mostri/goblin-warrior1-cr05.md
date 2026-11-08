@@ -1,4 +1,4 @@
-# Goblin Warrior 1 [ACCEPTED — DM-canon 2026-05-05]
+# Goblin Warrior 1 [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: fodder-ranged | **Environment**: any | **CR**: 1/2 | **Source**: MM p.133 Goblin | **Status**: inferred
 
 

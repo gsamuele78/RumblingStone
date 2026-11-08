@@ -5,8 +5,8 @@
 > Questo file **indicizza** tutti gli strumenti già pronti: workflow,
 > script, atlas unità, scheduling, scenari, checklist.
 
-**Stato canonizzato 2026-05-05**: tutte le unità `[INFERRED]` sono
-`[ACCEPTED — DM-canon]`. March Clock = Day 19. Ritual Clock = 9/18.
+**Stato canonizzato 2026-05-05**: tutte le unità prima marcate INFERRED sono
+`[CANONE — DM 2026-05-05]`. March Clock = Day 19. Ritual Clock = 9/18.
 APL = 13.
 
 > **↩ Carry-over dall'ARC-07 — echi del rituale P3B di Hella (T9)**: prima di
@@ -63,7 +63,7 @@ Drow Sonjak, Gnoll, Loxo/Centauri, Githyanki, Teschio Nero, Rakshasa,
 Aberrazioni, Alleati Difensori, **§16 Boss Epici CR 10-18**).
 
 **Cartella statblock derivati** (accettati): `Bestiario/`
-(54 file, tutti `[ACCEPTED — DM-canon 2026-05-05]`).
+(54 file, tutti `[CANONE — DM 2026-05-05]`).
 
 **Cartelle NPC canonici**: `Bestiario/villain/` e `Bestiario/png/` (Azarr Kul, Ghostlord, Lorana, Lythiel,
 Maewen, Salvatore, Sethrax, Sonjak, Tempestas, Therysol, Valerius,
@@ -189,7 +189,7 @@ Se un player/agent fa una domanda, usa lo skill giusto:
 - **Meta-router legacy** → `skills/dnd-35-rules/`
 
 Regola AGENTS.md: **mai inventare statblocchi**. Se manca una stat,
-flaggala `[ACCEPTED — DM-canon]` e cita fonte (MM/FRCS/AP).
+flaggala `[CANONE — DM data]` e cita fonte (MM/FRCS/AP).
 
 ---
 

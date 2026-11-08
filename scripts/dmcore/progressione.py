@@ -46,7 +46,9 @@ ABBREVIAZIONI = {"ftr": "fighter", "wiz": "wizard", "clr": "cleric", "rog": "rog
 
 #: Le due classi di prestigio SRD che compaiono nel Bestiario e non stanno in
 #: `dmcore.tabelle`: (dado dei DV, TS buoni, BAB per livello).
-PRESTIGIO = {"blackguard": (10, ("temp",), 1.0), "assassin": (6, ("rifl",), 0.75)}
+#: Stanno in `[prestigio]` del plugin dnd35 (ADR-0111, L5b).
+PRESTIGIO = {k: (v["dv"], tuple(v["ts_buoni"]), v["bab"])
+             for k, v in T._DATI["prestigio"].items()}
 
 #: Il dado dei DV per ogni nome con cui una scheda scrive una classe.
 DADO_DI_CLASSE = {**{n: d for n, (d, _) in T.CLASSI.items()},

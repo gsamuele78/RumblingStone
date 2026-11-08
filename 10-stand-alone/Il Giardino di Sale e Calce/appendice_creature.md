@@ -26,7 +26,7 @@ attacchi:
 
 **Attacco** spazio 6 m, portata 4,5 m · BAB +18, lotta +44
 
-**Statistiche** **Talenti** Allerta, Arma Naturale Migliorata (tentacolo), Attacco Poderoso, Abilità Focalizzata (*asservire*), Incantesimi in Combattimento, Iniziativa Migliorata, Riflessi Fulminei, Riflessi in Combattimento, Volontà di Ferro
+**Statistiche** **Talenti** Allerta, Attacco Naturale Migliorato (tentacolo), Attacco Poderoso, Abilità Focalizzata (*asservire*), Incantare in Combattimento, Iniziativa Migliorata, Riflessi Fulminei, Riflessi in Combattimento, Volontà di Ferro
 
 **Capacità speciali**
 - **Asservire** (Sop, 3/giorno, 9 m): Volontà CD 29. L'asservito obbedisce ai comandi telepatici finché non lo libera *rimuovi maledizione*; un nuovo TS ogni 24 ore, e il legame si rompe se Karkator muore o si allontana più di 1,5 km (SRD).
@@ -88,7 +88,7 @@ attacchi:
 ```
 **Attacco** BAB +9, lotta +10 · *punire* 1/giorno (+4 al colpire, +13 danni)
 
-**Statistiche** **Talenti** Estendere Incantesimi, Incantesimi in Combattimento, Incantesimi Inarrestabili, Incantesimi Inarrestabili Superiore, Incantesimi Rapidi, Iniziativa Migliorata · **Equipaggiamento** armatura completa +2, scudo pesante di metallo +1, tridente +1, *periapto della Saggezza +4*, *mantello della resistenza +2*, *anello di protezione +1*, simbolo sacro (conchiglia nera), chiavi della Torre e dello studio
+**Statistiche** **Talenti** Incantesimi Estesi, Incantare in Combattimento, Incantesimi Inarrestabili, Incantesimi Inarrestabili Superiore, Incantesimi Rapidi, Iniziativa Migliorata · **Equipaggiamento** armatura completa +2, scudo pesante di metallo +1, tridente +1, *periapto della Saggezza +4*, *mantello della resistenza +2*, *anello di protezione +1*, simbolo sacro (conchiglia nera), chiavi della Torre e dello studio
 
 **Capacità speciali**
 - **Domini** Acqua (intimorire le creature dell'acqua, 2/giorno) e Distruzione.
@@ -122,7 +122,7 @@ attacchi:
 ```
 **Attacco** BAB +9, lotta +14 · sott'acqua due rastrellate +9 (1d6+2)
 
-**Statistiche** **Talenti** Allerta, Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Riflessi in Combattimento, Specializzazione in un'Arma (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** armatura completa +1, scudo leggero +1, tridente +1
+**Statistiche** **Talenti** Allerta, Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Riflessi in Combattimento, Arma Specializzata (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** armatura completa +1, scudo leggero +1, tridente +1
 
 **Capacità speciali**
 - **Anfibio** e **Spingere Migliorato**: spingono senza attacco d'opportunità, d20 + 9.
@@ -151,7 +151,7 @@ attacchi:
 
 **Attacco** spazio 4,5 m, portata 3 m · BAB +12, lotta +30
 
-**Statistiche** **Talenti** Allerta, Arma Naturale Migliorata (chela), Attacco Poderoso, Combattere alla Cieca, Iniziativa Migliorata, Riflessi in Combattimento
+**Statistiche** **Talenti** Allerta, Attacco Naturale Migliorato (chela), Attacco Poderoso, Combattere alla Cieca, Iniziativa Migliorata, Riflessi in Combattimento
 
 **Capacità speciali**
 - **Presa migliorata** con le chele; **stritolare** 4d6+10 con una prova di lotta riuscita.

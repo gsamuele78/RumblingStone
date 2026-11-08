@@ -1,4 +1,4 @@
-# Drow Assassina di Lolth (Ladro 4 / Assassino 5) [ACCEPTED — DM-canon]
+# Drow Assassina di Lolth (Ladro 4 / Assassino 5) [CANONE — DM 2026-09-23]
 **Faction**: drow-sonjak | **Role**: caster-subdolo/infiltratrice | **Environment**: underdark/urban | **CR**: 10 | **Source**: SRD drow + Ladro 4 + CdP **Assassino** (SRD) | **Status**: accepted
 
 
@@ -29,7 +29,7 @@ Medium humanoid (elf), NE. **DV 9d6**. **hp 40**. **CA 20** (+5 Des, +4 giaco di
 **Car** For 12, Des 20, Cos 10, Int 18, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, uso dei veleni (mai auto-avvelenamento), schivare prodigioso, individuazione delle trappole.
 **Capacità magiche** (1/giorno, CL 9): *luci danzanti*, *oscurità*, *fuoco fatuo*.
-**Talenti** Iniziativa Migliorata, Furtivo, Mira Precisa, Attacco in Movimento, Arma Accurata (spada corta).
+**Talenti** Iniziativa Migliorata, Furtivo, Tiro Preciso, Attacco Rapido, Arma Accurata (spada corta).
 **Veleni** veleno drow (Tempra CD 13, incosciente), 3 dosi di *sangue nero di Lolth* (**Tempra CD 17, 1d6 Cos / 1d6 Cos** — veleno di ragno gigante concentrato).
 
 **Incantesimi da Assassino (CL 5; CD 10 + livello + 4)**

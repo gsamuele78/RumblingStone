@@ -399,7 +399,7 @@ ___
 
 **DIFESA**
 ___
-**CA 24** · **pf 90** · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio**  
+**CA 24** · **pf 95** · TS Tempra +12, Riflessi +3, Volontà +8 · **RD 10/adamantio**  
 
 **ATTACCO**
 ___

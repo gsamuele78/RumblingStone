@@ -227,6 +227,19 @@ SIMBOLI TATTICI:
 - **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[CANONE — DM 2026-10-20]` (la distanza la regola PF1e non la dice).
 - **Da dove.** In mischia senza penalità se il bersaglio è adiacente, −2 altrimenti; a distanza le penalità di gittata raddoppiano, minimo −2 oltre i 9 m. Dal collo del drago l'occhio è a portata: meglio Aegis Fang in mano che lanciata, perché un attacco a distanza fatto nello spazio di chi minaccia provoca un attacco di opportunità (SRD).
 
+**Tordek ingrandito contro Fauci** `[CANONE — DM 2026-11-07, P16, Tordek contro Fauci]`. Tutto da regole SRD 3.5, nessuna regola nuova. Tordek (guerriero 4 / monaco 9) diventa Grande con i Bracieri («Diventare una Collina», come *ingrandire persona*): portata 3 m, FOR 22. I Bracieri si accendono da soli la prima volta che uno scontro con una creatura Enorme lo porta sotto metà pf.
+
+| | Tordek ingrandito | Fauci |
+|---|---|---|
+| Lotta | **+24** (attacco base +10, FOR +6, taglia +4, Lottare Migliorato +4) | **+43** (attacco base +25, FOR +10, taglia +8) |
+| Sbilanciare | **+14** (FOR +6, taglia +4, Sbilanciare Migliorato +4) | **+22** per resistere (FOR +10, taglia +8, più di due zampe +4) |
+| CA di contatto | — | 8 |
+
+- **La lotta non riesce.** Attacco di contatto contro CA 8, poi prova contrapposta +24 contro +43; a parità vince chi ha il modificatore più alto. Tordek dovrebbe superarlo di 20 col dado: non succede mai (0 su 400; 3 su 400 con l'aiuto di un compagno, +2). La scheda PCGen del 12° livello scrive Lotta +15 e sembra non contare il +4 di Lottare Migliorato, che pure elenca.
+- **Sbilanciare, solo quando Fauci è a terra.** Si sbilancia chi è al massimo una taglia più grande: Grande contro Enorme va bene (SRD, *Trip*). In volo, a 30-45 m, Tordek non lo raggiunge. Attacco di contatto senz'armi contro CA 8; con **Sbilanciare Migliorato** non provoca attacchi di opportunità. Poi FOR +14 contro +22: Tordek vince **circa 1 volta su 6** (66 su 400). Se perde, Fauci può provare subito a sbilanciare lui.
+- **Se Fauci cade prono.** Sbilanciare Migliorato dà a Tordek **un attacco in mischia subito**, come se non avesse usato l'attacco per sbilanciare. Prono, Fauci ha −4 ai suoi attacchi in mischia e chi lo colpisce in mischia ha +4. **Rialzarsi** è un'azione di movimento che **provoca attacchi di opportunità** da tutti quelli che lo minacciano: è il momento in cui il gruppo lo colpisce in più. Finché non si rialza non decolla.
+- PF1e, solo come riscontro: lì *Improved Trip* dà +2 alla manovra e *Greater Trip* fa provocare un attacco di opportunità a chi viene sbilanciato; Tordek non ha *Greater Trip*, quindi al tavolo vale la versione 3.5 qui sopra.
+
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
 > di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
 > portato a 25 DV. ⚠️ L'SRD fa avanzare l'adulto maturo a 23-24 DV, e 25 DV
@@ -277,11 +290,11 @@ SIMBOLI TATTICI:
 *   **Comando Tattico (Str):** Fornisce +2 morale agli attacchi degli alleati hobgoblin entro 9m.
 
 **Qualità Speciali:** Aura del male, Individuazione del bene, Uso dei veleni, Benedizione oscura (il Car ai TS, già contato).
-**Incantesimi da Guardia Nera (LI 4°; 2 di 1° al giorno, CD 12):** *Incutere Paura*, *Infliggi Ferite Leggere*.
+**Incantesimi da Guardia Nera (LI 4°; 2 di 1° al giorno, CD 12):** *Incuti Paura*, *Infliggi Ferite Leggere*.
 
 **Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) (la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera).
 
-**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* (è la fonte di Cos 18 e dei 95 pf).
+**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero di Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* (è la fonte di Cos 18 e dei 95 pf).
 
 > **Verifica 3.5 (versione più forte)**: Guerriero 6/Guardia Nera 4 rende
 > legali l'Aura di Disperazione della prima stesura (arriva al 3° livello di
@@ -292,7 +305,7 @@ SIMBOLI TATTICI:
 > livello di Guardia Nera. BAB, TS, CA e attacchi sono ricontati sull'SRD
 > (la Benedizione oscura somma il Car ai TS).
 
-**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine. Che cosa sa, se lo prendono vivo, e il blocco «Se lo divinano»: `ARC08-10-ESITI-E-CONTINGENZE.md` §4.2 `[CANONE — DM 2026-10-19, D15]`.
+**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incuti Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine. Che cosa sa, se lo prendono vivo, e il blocco «Se lo divinano»: `ARC08-10-ESITI-E-CONTINGENZE.md` §4.2 `[CANONE — DM 2026-10-19, D15]`.
 
 <div style="page-break-before:always"></div>
 
@@ -448,12 +461,12 @@ SIMBOLI TATTICI:
         *   5° (CD 21): *Colpo Infuocato* (x2, uno D), *Cura Ferite Leggere di Massa* (x2), *Potere della Giustizia*, *Muro di Pietra*
         *   4° (CD 20): *Cura Ferite Critiche* (x2), *Potere Divino* (D), *Libertà di Movimento*, *Immunità agli Incantesimi*, *Interdizione alla Morte*
         *   3° (CD 19): *Cura Ferite Gravi* (x3), *Dissolvi Magie* (x2), *Preghiera*, *Veste Magica* (D)
-        *   2° (CD 18): *Cura Ferite Moderate* (x4), *Forza del Toro* (x2), *Resistenza all'Energia*, *Arma Spirituale* (D)
+        *   2° (CD 18): *Cura Ferite Moderate* (x4), *Forza del Toro* (x2), *Resistere all'Energia*, *Arma Spirituale* (D)
         *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
         *   0°: *Cura Ferite Minori* (x3), *Luce*, *Purificare Cibo e Bevande*, *Resistenza*
 
 **Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
-**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2*.
+**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti del Potere Orchesco +2* e *Mantello del Carisma +2*.
 
 **Capacità Speciali:**
 - **Scacciare Non Morti:** 11/giorno (+6 bonus)
@@ -495,7 +508,7 @@ SIMBOLI TATTICI:
 **Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 8/giorno), Scacciare Non Morti 7/giorno (+6).
 **Incantesimi da Bardo (CL 4°; 3/4/2 per giorno):**
 *   2° (CD 16): *Frantumare*, *Suggestione*
-*   1° (CD 15): *Charme su Persone*, *Cura Ferite Leggere*, *Rimuovere Paura*
+*   1° (CD 15): *Charme su Persone*, *Cura Ferite Leggere*, *Rimuovi Paura*
 *   0°: *Individuazione del Magico*, *Luce*, *Mano Magica*, *Suono Fantasma*, *Messaggio*, *Resistenza*
 **Incantesimi da Chierico (LI 8°; 6/5+1/5+1/4+1/3+1 al giorno; D = dominio; Domini: Guarigione, Nani):**
 *   4° (CD 18): *Potere Divino*, *Cura Ferite Critiche* (D), *Libertà di Movimento*, *Interdizione alla Morte*
@@ -594,8 +607,8 @@ SIMBOLI TATTICI:
 **Capacità Speciali:** Stile di Combattimento (Tiro Rapido, Tiro Multiplo), Nemico Prescelto (Giganti +4, Draghi +2), Compagno Animale (Gufo Gigante), Passare Senza Tracce.
 **Incantesimi da Ranger (CL 4°; 2/1 per giorno):**
 *   2° (CD 14): *Pelle Coriacea*
-*   1° (CD 13): *Passo Veloce*, *Resistenza all'Energia*
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare, Mobilità (la CA conta il bonus di schivare).
+*   1° (CD 13): *Passo Veloce*, *Resistere all'Energia*
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Movimento, Tiro Rapido, Tiro Multiplo, Schivare, Mobilità (la CA conta il bonus di schivare).
 **Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
 
 > **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m.
@@ -754,8 +767,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco Completo:** *Arco Lungo Composito +3* +19/+14/+9 a distanza (1d8+6/x3), o *Asce Gemelle +2* +16/+11 (1d6+5) con una, +14/+9 (1d6+5) e +14 (1d6+3) con due
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 (Cos 18 per i pf)
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
-**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[INFERRED — da confermare sulla classe]`.
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Movimento, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
+**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`.
 **Lingue:** Comune, Nanico, Gigante.
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*, cannocchiale (senza, le CD per contare l'orda dal crinale salgono di 10).
 
@@ -857,7 +870,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
 **Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 (Cos 18 per i pf)
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
-**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[INFERRED — da verificare sul manuale]`.
+**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`.
 **Lingue:** Comune, Nanico, Orchesco, Goblin: capisce gli ordini dell'orda entro 9 m con Ascoltare CD 15.
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*.
 
@@ -1118,7 +1131,7 @@ PF 40 (5 DV);
 Att Lancia lunga +5 (1d8+1); 
 Incantesimi (Chierico CL 5°, Dominio Drago). 
 Poteri speciali: 1/giorno Scaglie del Drago (+2 CA naturale, resistenza 10 fuoco). 
-Incantesimi chiave: Veste Magica, Resistenza all'Energia.
+Incantesimi chiave: Veste Magica, Resistere all'Energia.
 ```
 ---
 
@@ -1314,7 +1327,7 @@ I 90 nani superstiti si barricano nella Caverna Sacra. I PG devono affrontare on
 > *"I nani superstiti formano un cerchio disperato attorno all'altare dove Re Thorek è stato deposto. Madre Superiora Dana e i chierici superstiti sussurrano preghiere frenetiche mentre le loro mani brillano di luce divina, tentando disperatamente di curare le ferite che l'acido draconico ha inflitto. 'Moradin, Forgiatore di Anime,' prega Dana con voce spezzata, 'non lasciarci ora nell'ora più buia!' Ma le ferite sono troppo gravi, l'acido troppo corrosivo. Il respiro del Re si fa sempre più debole."*
 
 **Prove Mediche/Divine:**
-- **Guarigione CD 25, a ogni round** `[CANONE — DM 2026-10-19, D12]`: pronto soccorso, azione standard (SRD). Si tira a ogni round finché nessuno cura il Re per magia. **Al terzo fallimento, anche non consecutivo, Re Thorek muore**, e la battaglia passa alla vittoria costosa (`ARC08-10-ESITI-E-CONTINGENZE.md` §2). Un round in cui nessuno tenta la prova conta come fallito, e il conto parte dal primo round giocato nel Cuore della Montagna: il round 1 coi pregen, o il round 11 se il flashback non è stato giocato (`ARC08-10` §5.5) `[INFERRED — needs DM confirmation: queste due letture]`
+- **Guarigione CD 25, a ogni round** `[CANONE — DM 2026-10-19, D12]`: pronto soccorso, azione standard (SRD). Si tira a ogni round finché nessuno cura il Re per magia. **Al terzo fallimento, anche non consecutivo, Re Thorek muore**, e la battaglia passa alla vittoria costosa (`ARC08-10-ESITI-E-CONTINGENZE.md` §2). Un round in cui nessuno tenta la prova conta come fallito, e il conto parte dal primo round giocato nel Cuore della Montagna: il round 1 coi pregen, o il round 11 se il flashback non è stato giocato (`ARC08-10` §5.5) `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]`
 - **La cura, per l'SRD** `[CANONE — DM 2026-10-19, D12]`: *neutralizzare veleno* (Drd 3, Chr 4, Brd 4, Rgr 3) o *guarigione* fanno finire l'avvelenamento, e da quel momento le prove si fermano; *guarigione* rende anche 10 pf per livello. Le *cure ferite* restituiscono pf ma non fermano le prove. Fra i pregen ce l'ha Thorin Runaforte (*guarigione*, `ARC08-02` §3): se la lancia al round 1, il Re è salvo e la tensione passa alle ondate. Fra i PG, Hella. Dana non può: ha speso quasi tutto sulle mura (sotto, «Madre Superiora Dana»)
 
 #### **INCONTRO 3B: L'Assalto Finale**
@@ -1380,7 +1393,7 @@ IL CUORE DELLA MONTAGNA - CAVERNA SACRA (100m x 80m)
 **NEMICI IN ARRIVO:**
 - **Ondata 1:** 30 Orchi Berserker (Round 3-4)
 - **Ondata 2:** 20 Hobgoblin + Sergente (Round 5-6)  
-- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)
+- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`); 5 di loro risalgono il condotto della sorgente e sbucano dietro l'altare (L3, MAPPA 5) `[CANONE — DM 2026-11-04, P16, condotto della sorgente]`
 - **Ondata Finale:** Grimjaw + 10 Guardie Nere, se vivo: corno al round 11, ingresso al round 12, quando i PG sono già in campo `[CANONE — DM 2026-10-19, D11]`
 
 ### **ROUND PER ROUND - LA RESISTENZA DISPERATA:**
@@ -1696,7 +1709,7 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 **AZIONI INIZIALI RUMBLING STONES** *(proposte: decide il giocatore, e valgono i numeri della sua scheda)*:
 
 **THORIK (guerriero 13, Corona di Adamantio, Aegis Fang):**
-- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è `[INFERRED — needs DM confirmation]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
+- **Aura della Forgia Eterna** (Corona, Rituale 4): 1/settimana, +4 di morale ai nani entro 30 m. Se l'ha già spesa nella battaglia antica, dove la prima volta dura fino all'alba, questa settimana non c'è: conta il tempo di Thorik, per cui sono passati pochi giorni, non i mille anni del mondo `[CANONE — DM 2026-11-04, P16]`. La «Presenza Regale +6 a 18 m» della prima stesura non è un potere della Corona.
 - **Aegis Fang** (+2 Ritornante *Dragondoom*, 1d10): un bersaglio per attacco. Lanciata vale come arma da lancio improvvisata (−4, incremento 3 m, gittata massima 15 m: SRD) e torna in mano.
 - **Movimento:** si mette davanti a Re Thorek.
 
@@ -1817,9 +1830,9 @@ RESA DEI CONTI FINALE (Round 12-15)
 > | Fanteria orchesca | ~200 | Atlante, MAPPA 4X («200 Fanteria orchesca»). ⚠ Le strafing più sotto dicono 300, e il Registro ne schiera 15 unità da 8 PFU (120) all'inizio della battaglia: i tre numeri non tornano, vale l'Atlante |
 > | Giganti delle colline | 8 | Registro (8 unità) e strafing («8 rimanenti») |
 > | Ettin | 2, più Gorthak | Registro (2 unità); Gorthak in `ARC08-02` §1 |
-> | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[INFERRED — needs DM confirmation]` |
-> | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[INFERRED — needs DM confirmation]` |
-> | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[INFERRED — needs DM confirmation: i 5]` |
+> | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
+> | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
+> | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
 > | Grimjaw e le guardie orog | 0, o quelli usciti vivi dal 3B | Grimjaw è in campo solo se nel 3B ha suonato la ritirata (scheda in `ARC08-02` §1, *Morale*), con le guardie rimaste |
 > | Fauci di Palude e il cavaliere | 1 + 1 | `ARC08-02` §1; pf di partenza qui sotto, «FAUCI DI PALUDE» |
 >
@@ -1972,7 +1985,7 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 **FASE 1 - Apertura (Round 1-2):**
 > *"Il primo scontro è spettacolare. Fauci di Palude sprigiona il suo soffio acido, ma i gufi celestiali lo evitano con grazia soprannaturale, e il veleno scivola sulle loro piume come pioggia su una tegola. Signore Ventolesto affonda gli artigli nel fianco sinistro del drago, strappando scaglie grandi come scudi, mentre i suoi compagni attaccano le ali per limitarne la manovrabilità."*
 
-**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[INFERRED — needs DM confirmation]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
+**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
 
 > **Read-aloud (Casa di Davide lead) — l'inviata.** *Un gufo più piccolo degli altri si stacca dalla formazione e si posa sul bastione, a tre passi da Hella. La cavaliera è un'elfa con una treccia fradicia sulla spalla e l'arco in pugno, senza freccia: guarda Hella a lungo, come si guarda un volto che qualcuno ti ha descritto, e dice soltanto «Sei tu». Che fate?*
 
@@ -2025,14 +2038,19 @@ SE IL CAVALIERE CADE (dal round 3)
     30m    
     
     15m    💥 CAVALIERE CADE 💥
-           (CHI LO AFFERRA: RIFLESSI CD 20)
+           (NESSUNO LO AFFERRA: 15d6 A TERRA)
     
      0m  [PG] POSSONO INTERCETTARE
          ===============TERRENO===============
 ```
 
 **OPZIONI PER I PG:**
-- **Thorik:** afferrarlo al volo, Riflessi CD 20 `[INFERRED — needs DM confirmation: l'SRD non ha una regola per afferrare chi cade; una CD sola, quella dello schema]`
+- **Thorik:** non può afferrarlo: un corpo in armatura che cade da 45 m non si prende al volo. Può aspettarlo dove atterra (Aegis Fang pronta) `[CANONE — DM 2026-11-07, P16, la caduta del cavaliere]`
+
+<!-- storico -->
+*Dal 2026-11-05 al 2026-11-07: afferrarlo al volo con Riflessi CD 20, danni della caduta divisi a metà (regola della casa). Prima: Riflessi CD 20 senza danni.*
+<!-- /storico -->
+
 - **Tordek:** Deviare Frecce non devia una caduta; può aspettarlo dove atterra e lottarci
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito
@@ -2220,7 +2238,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 
 **BONUS DELLA CARICA** *(regole SRD e regolamento di massa, `ARC08-02` §4)*:
 - **Morale: vale solo il più alto** (SRD: due bonus dello stesso tipo non si sommano). Candidati: *Aura della Forgia Eterna* di Thorik +4, se questa settimana non è già spesa; il discorso di Re Thorek +4; il canto delle Cantitrici; la melodia di Tempestas +2. Nel regolamento di massa il morale di un'unità va da −5 a +5.
-- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto») `[INFERRED — needs DM confirmation]`.
+- **Benedizione di Moradin:** +4 sacro, solo se un incantesimo la dà davvero (`ARC08-02` §4, «Incantesimi di supporto»): senza l'incantesimo il +4 non c'è (SRD, i bonus vengono da una fonte).
 - **Carica:** +2 al tiro per colpire (SRD); nessun bonus ai danni.
 - **Terreno in discesa:** +1 al tiro per colpire dall'altura (SRD).
 
@@ -2250,7 +2268,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 1. **Grimjaw vs I PG** (se sopravvissuto)
 2. **Gorthak vs Formazione Nanica** (se sopravvissuto)
 3. **Cavaliere del Drago vs Capitano Lunapiena** (duello aereo: solo se il cavaliere è ancora in sella e Fauci non è fuggito)
-4. **Ultimi 50 Hobgoblin Élite** vs Nani in carica (come unità di massa usa la «HOBGOBLIN GUERRIERI (Warrior 3)» di `ARC08-02` §5, cinque unità, perché un'unità d'élite di hobgoblin lì non c'è `[INFERRED — needs DM confirmation]`; uno contro uno, `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md`: GS 5, CA 19, pf 43, spada lunga +10/+5, 1d8+2 `[INFERRED — needs DM confirmation]`)
+4. **Ultimi 50 Hobgoblin Élite** vs Nani in carica (come unità di massa usa la «HOBGOBLIN GUERRIERI (Warrior 3)» di `ARC08-02` §5, cinque unità, perché un'unità d'élite di hobgoblin lì non c'è `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`; uno contro uno, `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md`: GS 5, CA 19, pf 43, spada lunga +10/+5, 1d8+2 `[CANONE — DM 2026-11-04, P16, le forze e i pregen]`)
 
 **ULTIMI SCONTRI ÉLITE:**
 
@@ -2387,7 +2405,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 - **Fama Leggendaria:** La storia si diffonde in tutto Faerûn
 - **Alleanze Politiche:** I clan nanici sono ora alleati permanenti
 - **Base Operativa:** Una fortezza personale nei rifugi
-- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[INFERRED — needs DM confirmation]`
+- **Seguaci:** giovani nani vogliono servire gli eroi; quanti e con che statistiche lo decide il DM (il *Comando* della DMG, non SRD) `[CANONE — DM 2026-11-04, P16, dopo la battaglia]`
 
 ### 📚 **EPILOGO: L'EREDITÀ DELLA BATTAGLIA**
 

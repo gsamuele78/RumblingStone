@@ -46,7 +46,71 @@ class TestClassificazione(unittest.TestCase):
         self.assertEqual(inv.classe("docs/guides/GUIDA-IMMAGINI.md"), "aperti")
 
 
+class TestRigheDiRegola(unittest.TestCase):
+    """ADR-0109, scheda 6 = A: skill, modelli, README, fixture e GUIDA-MARCATURE sono meta."""
+
+    def test_regole_e_modelli_sono_meta(self):
+        for rel in ("skills/dnd-35-srd/references/resources.md",
+                    "campaign/templates/png-dossier-template.md",
+                    "Bestiario/README.md",
+                    "scripts/tests/fixtures/ultraclear/golden.md",
+                    "docs/guides/GUIDA-MARCATURE.md",
+                    "AGENTS.md"):
+            self.assertEqual(inv.classe(rel), "meta", rel)
+
+    def test_forma_della_marca(self):
+        self.assertEqual(inv.forma("Quanti PF ha?; base: MM 3.5"), "nuova")
+        self.assertEqual(inv.forma("needs DM confirmation"), "vecchia")
+        self.assertEqual(inv.forma("Quanti PF ha; base: MM"), "vecchia")  # manca la domanda
+        self.assertEqual(inv.forma(""), "nuda")
+
+    def test_lo_schema_da_copiare_e_meta(self):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "x.md").write_text("marca `[INFERRED — <domanda>; base: <…>]`;\n"
+                                          "fatto [INFERRED — Quanti PF?; base: MM]\n", encoding="utf-8")
+            voci = inv.scansiona(Path(d))
+        self.assertEqual([v["classe"] for v in voci], ["meta", "aperti"])
+        self.assertEqual(voci[1]["forma"], "nuova")
+
+
+class TestConvenzione(unittest.TestCase):
+    """P16, 2026-11-04: una regola che dice come si marca non è un debito."""
+
+    def test_le_righe_di_regola_sono_meta(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "x.md"
+            f.write_text("> **Regola**: oggetti fuori SRD marcati `[INFERRED]`.\n"
+                         "# `null` = [INFERRED]: il repo non conosce il valore\n"
+                         "SRD only; nulla di inventato senza flag [INFERRED].\n"
+                         "canonizzati dal DM — non più `[INFERRED]`.\n",
+                         encoding="utf-8")
+            voci = inv.scansiona(Path(d))
+            self.assertEqual([v["classe"] for v in voci], ["meta"] * 4)
+
+    def test_un_numero_marcato_resta_aperto(self):
+        """Il marcatore dopo un fatto è debito, anche se la riga dice «marcato» altrove."""
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "x.md"
+            f.write_text("la piana a 870 m `[INFERRED]`, marcata male\n"
+                         "Morale +2 se Borin resta in piedi `[INFERRED]`.\n",
+                         encoding="utf-8")
+            voci = inv.scansiona(Path(d))
+            self.assertEqual([v["classe"] for v in voci], ["aperti"] * 2)
+
+
 class TestScansione(unittest.TestCase):
+    def test_la_nota_che_va_a_capo_si_conta(self):
+        """P16: per riga, `[INFERRED — ...` spezzato su due righe spariva."""
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "x.md"
+            f.write_text("dimezza `[INFERRED — la frana non ha numeri:\n"
+                         "sono quelli di una trappola]`. Una volta sola.\n",
+                         encoding="utf-8")
+            voci = inv.scansiona(Path(d))
+            self.assertEqual(len(voci), 1)
+            self.assertEqual(voci[0]["line"], 1)
+            self.assertIn("trappola", voci[0]["nota"])
+
     def test_riconosce_nudi_e_parlanti(self):
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / "x.md"

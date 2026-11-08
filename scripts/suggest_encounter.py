@@ -274,7 +274,7 @@ def _parse_list(lines, i, indent):
 
 
 # ───────────────────────── EL / CR math ─────────────────────────
-def combine_el(crs: list[float]) -> float:
+def combine_el(crs: list[float], raddoppio: float = 2.0) -> float:
     """Combine CRs into an Encounter Level per D&D 3.5 DMG.
 
     In 3.5 doubling the number of equal-CR creatures raises EL by +2
@@ -284,9 +284,71 @@ def combine_el(crs: list[float]) -> float:
         EL = 2 · log2( Σ 2^(CR/2) )
 
     Example: two CR 10 creatures → 2·log2(2·2^5) = 2·log2(64) = 12 ✓
+
+    `raddoppio` è il parametro r di EL = r·log2(Σ 2^(GS/r)): di quanto sale
+    l'EL raddoppiando le creature (3.5: 2, da sistemi/dnd35/dati/incontri.toml).
     """
     if not crs: return 0.0
-    return 2.0 * math.log2(sum(2 ** (c / 2.0) for c in crs))
+    r = float(raddoppio)
+    return r * math.log2(sum(2 ** (c / r) for c in crs))
+
+def _px_pf1e(cr: float, tab: dict[str, int]) -> int:
+    """PE di una creatura PF1e per GS (PRD, Experience Point Awards).
+    Sopra il GS 25 la tabella si raddoppia ogni 2 GS, come fa fino al 25."""
+    if cr < 1:
+        chiave = f"1/{round(1 / cr)}" if cr > 0 else "1/8"
+        return tab.get(chiave, tab["1/8"])
+    c = int(round(cr))
+    if str(c) in tab:
+        return tab[str(c)]
+    alto = max(int(k) for k in tab if "/" not in k)
+    return tab[str(alto - (c - alto) % 2)] * 2 ** ((c - alto + 1) // 2) if c > alto else tab["1"]
+
+
+def combina_gs_pf1e(crs: list[float], tab: dict[str, int] | None = None) -> float:
+    """GS di un incontro PF1e: la somma dei PE delle creature, poi il GS più
+    alto il cui valore in PE non supera la somma (PRD, Designing Encounters).
+    Due GS 10 → 19.200 PE → GS 12, come nel 3.5; tre GS 10 → 28.800 → GS 13."""
+    if not crs:
+        return 0.0
+    if tab is None:
+        from dmcore import sistemi as S
+        tab = S.dati("pf1e", "incontri.livello")["px_per_gs"]
+    tot = sum(_px_pf1e(c, tab) for c in crs)
+    gs = 0.0
+    for chiave, px in tab.items():
+        a, _, b = chiave.partition("/")
+        v = int(a) / int(b) if b else float(a)
+        if px <= tot and v > gs:
+            gs = v
+    alto = max(int(k) for k in tab if "/" not in k)
+    while gs >= alto and _px_pf1e(gs + 1, tab) <= tot:
+        gs += 1
+    return gs
+
+
+#: I metodi per combinare i GS che un plugin può nominare in `incontri.livello`
+#: (campo `metodo`). Un sistema nuovo che usa uno di questi non tocca il codice.
+METODI = {
+    "potenze": lambda dati: (lambda crs: combine_el(crs, dati.get("raddoppio", 2))),
+    "somma_px": lambda dati: (lambda crs: combina_gs_pf1e(crs, dati["px_per_gs"])),
+}
+
+
+def combinatore(sistema: "str | None" = None, root=None):
+    """La funzione GS → EL del sistema, dal metodo dichiarato nel suo plugin."""
+    from dmcore import sistemi as S
+    dati = S.dati(sistema or S.predefinito(), "incontri.livello", root)
+    metodo = dati.get("metodo")
+    if metodo not in METODI:
+        raise SystemExit(f"[suggest_encounter] {sistema}: metodo «{metodo}» sconosciuto "
+                         f"(noti: {', '.join(METODI)})")
+    return METODI[metodo](dati)
+
+
+# Il modo di combinare i GS: 3.5 (combine_el) salvo `--sistema` (ADR-0111).
+COMBINA = combine_el
+
 
 def _cr_num(v):
     if v is None: return None
@@ -506,7 +568,7 @@ def build_encounter(pool, target_el, size, rng, forced: list[dict] | None = None
             crs.extend([pick["cr"]] * count)
             remaining_slots -= count
         if not ok or not mix: continue
-        el = combine_el(crs)
+        el = COMBINA(crs)
         score = -abs(el - target_el)
         if best is None or score > best["score"]:  # type: ignore[index]
             best = {"mix": mix, "el": el, "score": score}
@@ -597,9 +659,23 @@ def main():
     ap.add_argument("--list-environments", action="store_true")
     ap.add_argument("--list-npcs", action="store_true",
                     help="List all injectable NPCs (canonical Bestiario dossiers + named catalog entries).")
+    ap.add_argument("--sistema", default=None,
+                    help="sistema di gioco con cui combinare i GS (sistemi.toml; predefinito dnd35)")
     ap.add_argument("--list-all", action="store_true",
                     help="Dump factions + alliances + environments + NPCs + wild envs.")
     args = ap.parse_args()
+
+    global COMBINA
+    from dmcore import sistemi as S
+    sistema = args.sistema or S.predefinito()
+    if sistema not in S.attivi():
+        print(f"[suggest_encounter] sistema «{sistema}» non attivo in sistemi.toml", file=sys.stderr)
+        return 2
+    COMBINA = combinatore(sistema)
+    if sistema != S.predefinito():
+        print(f"[suggest_encounter] sistema {sistema}: GS dell'incontro col metodo "
+              f"«{S.dati(sistema, 'incontri.livello')['metodo']}» del plugin; "
+              "le creature vengono ancora dal catalogo 3.5", file=sys.stderr)
 
     cat = load_catalog()
     all_data = load_alliances()

@@ -40,7 +40,7 @@ spazio di manovra, mai la porta o il muro. Le decisioni del DM sono in
 | Fossato | largo 6 m, profondo 3 m, al piede del muro | W-CV, righe 74-77 | L-AW, righe 03-04 |
 | Ponte levatoio | 6 × 7,5 m, 80 pf: scavalca il fossato e poggia 1,5 m sulla riva | BG-BJ, righe 74-78 | AD-AE, righe 03-04 |
 | Porta Interna (il muro del 372, con la targa) | muro spesso 3 m, porta larga 6 m, 90 pf; sta in cima alla scarpa di 20 m, soglia a +100 m | muro AE-CL righe 41-42, porta BG-BJ | — |
-| Scarpa e scale | scarpa di 20 m fra cortile esterno (+80) e cortile interno (+100); due scale di 30 m larghe 3 m che salgono al pianerottolo davanti alla porta `[INFERRED]` | scarpa AN-CC riga 45; scale AM-BF e BK-CD, righe 43-44; pianerottolo BG-BJ 43-44 | — |
+| Scarpa e scale | scarpa di 20 m fra cortile esterno (+80) e cortile interno (+100); due scale di 30 m larghe 3 m che salgono al pianerottolo davanti alla porta (30 m = i 20 quadretti AM-BF) | scarpa AN-CC riga 45; scale AM-BF e BK-CD, righe 43-44; pianerottolo BG-BJ 43-44 | — |
 | Cortile interno | 90 × 30 m | AE-CL, righe 21-40 | — |
 | Cortile esterno | 90 × 40,5 m | AE-CL, righe 43-69 | — |
 | Statua del Re Antenato | alta 4 m, base 3 × 3 m, a 1,5 m dalla roccia | BA-BB, righe 22-23 | — |
@@ -48,7 +48,7 @@ spazio di manovra, mai la porta o il muro. Le decisioni del DM sono in
 | Atrio della cittadella | portale largo 6 m nella roccia; cade il Giorno 3 | BG-BJ riga 20 | — |
 | Breccia del Muro Est (Giorno 2) | 7,5 m | CM-CP, righe 59-63 | — |
 | Cuore della Montagna | 1,5 m per quadretto, altare a +3 m | L3, MAPPA 5 | — |
-| Strada a tornanti | larga 6 m, al 15%, circa 530 m dal ponte alla piana `[INFERRED]` | BG-BJ righe 79-80 (l'attacco) | MAPPA 1, dal ponte AD05 alla riga 100 |
+| Strada a tornanti | larga 6 m, al 15%, circa 530 m dal ponte alla piana (80 m di quota al 15%: 533 m) | BG-BJ righe 79-80 (l'attacco) | MAPPA 1, dal ponte AD05 alla riga 100 |
 
 La «Porta Ovest» di `ARC08-DEF-5` è la Torre Ovest con il Bastione G1. La
 porta è una sola, a sud.
@@ -60,15 +60,15 @@ trova il successivo 20 m più in alto.
 
 | Ripiano | Sulla piana | s.l.m. | Cosa c'è |
 |---|---|---|---|
-| Piana e accampamenti | 0 m | 870 m `[INFERRED]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
-| Fronte sud e cortile esterno | +80 m | 950 m `[INFERRED]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
-| Cortile interno | +100 m | 970 m `[INFERRED]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
-| Torri nord e cittadella | +120 m | 990 m `[INFERRED]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella `[INFERRED]` |
+| Piana e accampamenti | 0 m | 520 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
+| Fronte sud e cortile esterno | +80 m | 600 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
+| Cortile interno | +100 m | 620 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
+| Torri nord e cittadella | +120 m | 640 m `[CANONE — DM 2026-11-04, P16, quota sul mare]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella (da +100 a +120) |
 
 Dal ponte una **strada a tornanti** larga 6 m scende alla piana al 15%:
 circa 530 m di strada per 80 m di quota, con cinque gomiti (MAPPA 1). Il
 pendio fra le mura e il piede del colle è di circa 300 m in pianta, una
-pendenza media del 27% `[INFERRED]`: prato e sterpaglia, massi, qualche pino.
+pendenza media del 27% (80 m su 300 m): prato e sterpaglia, massi, qualche pino.
 Chi sale fuori strada va a metà velocità.
 
 Le **gittate** misurano la scelta. L'arco lungo composito arriva a ~330 m
@@ -188,7 +188,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo strategica esterno
 @luogo Hammerfist, porta principale
-@quota 950 m ; s.l.m., la soglia del cancello principale
+@quota 600 m ; s.l.m., la soglia del cancello principale
 @dislivello +80 m ; sulla piana, in fondo alla strada a tornanti
 @deroga oggetti/porta-enorme ; il cancello, la Porta Interna e la porta dell'atrio hanno la luce di 6 m della tabella MISURE: sono portoni da fortezza, non porte
 @mark 1 ; BH34 ; Re Thorek XIII (Ftr/Nobile GS 16)
@@ -215,7 +215,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone CM21-CT28 ; Bastione Nord B2: 12 × 12 m, terrazza a +120 m (la torre nord del 372), 30 nani + 1 balista
 @zone AW66-BF73 ; Bastione Sud G1 (Porta Ovest): 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste
 @zone BK66-BT73 ; Bastione Sud G2: 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste
-@zone BG73-BJ73 ; CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (950 m s.l.m.)
+@zone BG73-BJ73 ; CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (600 m s.l.m.)
 @zone BG74-BJ78 ; Ponte levatoio: 6 × 7,5 m, scavalca il fossato di 6 m, 80 pf
 @zone AA68-AF73 ; Torre Ovest (Porta Ovest): 9 × 9 m, +20 m, 2 baliste, 10 balestrieri
 @zone CK68-CP73 ; Torre Est: 9 × 9 m, +20 m, 2 baliste, 10 balestrieri
@@ -255,7 +255,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | **Bastione G1** (con la Torre Ovest è la «Porta Ovest» di DEF-5) | AW-BF | 66-73 | 15 m × 12 m | 15 m sul cortile esterno, 40 nani + 2 baliste |
 | **Bastione G2** | BK-BT | 66-73 | 15 m × 12 m | 15 m sul cortile esterno, 40 nani + 2 baliste |
 | **Cinta** | AA-AD, CM-CP; sud AA-CP | 21-73; 70-73 | spessa 6 m, alta 12 m | camminamento 4,5 m dietro la merlatura |
-| **Cancello Principale** | BG-BJ | 73 (androne 70-72) | luce 6 m, alto 8 m | **200 pf**, soglia a 950 m s.l.m. (+80 sulla piana) |
+| **Cancello Principale** | BG-BJ | 73 (androne 70-72) | luce 6 m, alto 8 m | **200 pf**, soglia a 600 m s.l.m. (+80 sulla piana) |
 | **Ponte Levatoio** | BG-BJ | 74-78 | 6 m × 7,5 m | 80 pf, abbassato |
 | **Fossato** | W-CV | 74-77 | 114 m × 6 m | profondo 3 m, Nuotare CD 15 |
 
@@ -274,7 +274,7 @@ NORD ←────────────────────────
   ║     │  🎯🎯 TOP  │  2 Baliste ciascuna + 10 balestrieri
   ║     │  🔵🔵      │  Dara AD69 +20m
   ║     └────────────┘
-(quote sulla piana; la soglia del cancello è a 950 m s.l.m.)
+(quote sulla piana; la soglia del cancello è a 600 m s.l.m.)
 
 +120m ══🔵══  BASTIONI NORD B1-B2 (righe 21-28) e cittadella, contro la roccia
   ║    │ scala interna di 20 m dietro l'atrio
@@ -468,8 +468,8 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
 ### VISTA 1: GRIGLIA DI REGIA CON COORDINATE (60×108, 1 quadretto = 3 m)
 
 > ✅ Sono disegnate tutte le 108 righe, larghe 60 (ricontato il 2026-10-22).
-> Il pendio scende di 80 m dalle mura (righe 01-02, 950 m s.l.m.) alla piana,
-> che comincia alla riga 101 (870 m s.l.m.) `[INFERRED]`. La strada a tornanti
+> Il pendio scende di 80 m dalle mura (righe 01-02, 600 m s.l.m.) alla piana,
+> che comincia alla riga 101 (520 m s.l.m.) `[CANONE — DM 2026-11-04, P16, quota sul mare]`. La strada a tornanti
 > 🟫, larga 6 m, parte dal ponte (AD05) e piega in AW16, M35, AW54, M73 e AD90.
 >
 > ✅ Le altre due mappe di questo master **non hanno difetti**: la 2A è davvero
@@ -611,10 +611,10 @@ DIMENSIONI: 60 colonne × 108 righe · 3 m/quadretto
 @zone N1-AU2 ; Fronte sud della fortezza, 102 m: mura 12 m, torri 20 m, bastioni G1-G2 ai lati del cancello (griglia di precisione: MAPPA 2A REVISED)
 @tipo strategica esterno
 @luogo Hammerfist, porta principale
-@quota 950 m ; s.l.m., la soglia del cancello
+@quota 600 m ; s.l.m., la soglia del cancello
 @dislivello +80 m ; sulla piana, che comincia alla riga 101
 @path Giganti su per la strada fino al gomito M35 (100 m dalle mura) ; W72 M73 AW54 M35 ; #8c2fb8
-@zone A101-BH108 ; La piana a 870 m s.l.m.: gli accampamenti dell'orda stanno 500 m-1 km a sud delle mura, fuori mappa
+@zone A101-BH108 ; La piana a 520 m s.l.m.: gli accampamenti dell'orda stanno 500 m-1 km a sud delle mura, fuori mappa
 @zone AW16 ; Primo gomito della strada, 50 m dalle mura
 @zone M35 ; Secondo gomito, 100 m dalle mura: da qui i giganti tirano
 ```
@@ -638,7 +638,7 @@ Le tre rotte tratteggiate sulla griglia sopra SONO la MAPPA 3 della guida. Fasi 
 - 150 orchi caricano 80→0 m (2 round) con scale improvvisate — carne da cannone
 - 500 hobgoblin seguono in formazione; ariete di Gorthak sul Cancello: **3d10+20/round**
 - Worg Riders (rotte viola): aggirano i fianchi cercando sortite/brecce — se trovano un varco, disastro nel cortile
-- Fauci di Palude: sorvoli a 45 m (fuori gittata baliste), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 30 m, 14d4)
+- Fauci di Palude: sorvoli a 45 m (le baliste tirano a −2, *Guida del DM* 3.5: DM 2026-11-04), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 30 m, 14d4)
 - **Risultato atteso:** Cancello a 120 PF a fine Giorno 1 (−80 in tutto), 20% breccia Muro Est, 30-40 nani KO, 50+ orchi e 30+ hobgoblin KO
 
 **FASE 3 — PRESSIONE CONTINUA (round 11-15 + notte):**
@@ -741,7 +741,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo tattica esterno
 @luogo Hammerfist, bastioni sud
-@quota 965 m ; s.l.m., la piattaforma sopra il cancello
+@quota 615 m ; s.l.m., la piattaforma sopra il cancello
 @dislivello +15 m ; sul cortile esterno (+95 m sulla piana)
 @taglia T24 ; Enorme
 @mark 1 ; T24 ; Fauci di Palude, Enorme 3 × 3, 15 m sopra il camminamento (Drago Nero Adulto Avanzato)
@@ -770,7 +770,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Effetti collaterali:** armature 1d4 danni permanenti CA; armi metalliche 25% corrose; quadretti colpiti = terreno difficile (acido residuo, 10 min)
 
 ### 📍 OPZIONI DIFENSIVE PNG (dalla guida, con coordinate):
-- **BORIN (S19, nel cono)** — A: si interpone (subisce lui il soffio, Riflessi CD 29; il Re prende solo splash; +4 TS per l'atto eroico) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
+- **BORIN (S19, nel cono)** — A: al round 5 si mette davanti alla lancia (il soffio non si para col corpo: DM 2026-11-04, DEF-2 Scena 6) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
 - **DARA (Torre Ovest, ~45 m FUORI MAPPA a ovest)** — il Tiro Impossibile: round 2 mira (+1), round 3 tiro in picchiata CD 25; freccia *Slaying Dragons*: Tempra CD 20 o morte, altrimenti 6d6+1
 - **THORIN (AC16, sul Bastione G2, fuori dal cono)** — *Heal* preparato su Thorek · *Spell Immunity: Acido* round 1 · *Mass Cure Critical* round 4 · Invocazione a Moradin (Car CD 22: +4 sacro ai TS di tutti / fallita: −2)
 - **NALA (D16, ai piedi della scala ovest)** — round 1 *Immagine Silenziosa* (drago illusorio sul fianco: Volontà CD 17 o −2 att) · round 2 *Frantumare* sulla sella del cavaliere · round 3 Ispirare Coraggio +2
@@ -779,7 +779,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Elemento | Dove | Effetto |
 |---|---|---|
 | Bastioni G1, G2, 15 m sul cortile esterno | I-R e W-AF, righe 14-21 (15 × 12 m ciascuno) | caduta 15 m = 5d6 (SRD, 1d6 ogni 3 m); nessun riparo dal soffio dall'alto |
-| Piattaforma sopra il cancello, 15 m sul cortile esterno (965 m s.l.m.) | S-V, righe 18-20 | il cancello è sotto, già sfondato; qui stanno il Re e la guardia: il Re ci è salito al corno del drago per tenere i nani ai posti (MAPPA 2A, posizioni del Giorno 3) |
+| Piattaforma sopra il cancello, 15 m sul cortile esterno (615 m s.l.m.) | S-V, righe 18-20 | il cancello è sotto, già sfondato; qui stanno il Re e la guardia: il Re ci è salito al corno del drago per tenere i nani ai posti (MAPPA 2A, posizioni del Giorno 3) |
 | Camminamento della cinta +12 m | A-H e AG-AN, righe 18-20 (largo 4,5 m) | collega i bastioni alle torri, fuori mappa |
 | Merlature 🧱 | riga 21 | copertura 3/4 SOLO vs attacchi dal basso — inutili contro il cono |
 | Cono del soffio 🟥 | N-AA, righe 17-21 | vedi meccanica sopra |

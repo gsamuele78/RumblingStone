@@ -1,4 +1,4 @@
-# Loxo Warrior 3 [ACCEPTED — DM-canon 2026-05-05]
+# Loxo Warrior 3 [CANONE — DM 2026-05-05]
 **Faction**: loxo-centaur-corrupted | **Role**: melee-heavy | **Environment**: plain | **CR**: 4 | **Source**: MM II p.152 Loxo + Warrior 3 | **Status**: inferred
 
 
