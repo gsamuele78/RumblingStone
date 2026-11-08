@@ -35,7 +35,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore import sistemi as S  # noqa: E402
 
-MANIFEST = "scripts/tools.manifest.json"
+MANIFEST = S.MANIFEST
 SIMBOLO = {"dati": "✅", "codice": "🔧", "non_supportato": "⬜", "mancante": "❌"}
 
 

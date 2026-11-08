@@ -2381,6 +2381,10 @@
           "check": {
             "type": "boolean",
             "description": "Gate: ogni `pf-dado` registra i dadi vita e ogni correzione è riproducibile."
+          },
+          "cancello-moduli": {
+            "type": "boolean",
+            "description": "Cancello (in CI): le schede dei moduli di un altro sistema (Drappo e Giardino PF1e) tornano con le regole del loro sistema; i conti senza regola si saltano e si dicono."
           }
         },
         "required": [],

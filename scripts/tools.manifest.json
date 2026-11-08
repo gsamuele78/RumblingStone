@@ -7886,6 +7886,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Gate: ogni `pf-dado` registra i dadi vita e ogni correzione è riproducibile."
+        },
+        {
+          "name": "--cancello-moduli",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cancello (in CI): le schede dei moduli di un altro sistema (Drappo e Giardino PF1e) tornano con le regole del loro sistema; i conti senza regola si saltano e si dicono."
         }
       ],
       "inputs": [
@@ -7943,7 +7952,8 @@
         "capacita": [
           "creature.costruzione",
           "creature.regole_di_tipo",
-          "statblocco.campi"
+          "statblocco.campi",
+          "creature.conformita"
         ]
       },
       "consumes_schema": null,
@@ -8041,7 +8051,12 @@
       ],
       "docs": [
         "plans/PIANO-QUALITA-DEL-CODICE.md"
-      ]
+      ],
+      "sistema": {
+        "capacita": [
+          "creature.costruzione"
+        ]
+      }
     },
     {
       "id": "contenuti_nei_rami",
