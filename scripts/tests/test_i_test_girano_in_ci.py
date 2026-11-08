@@ -103,7 +103,7 @@ class TestOgniProvaGiraDavvero(unittest.TestCase):
         self.assertTrue(runtime.exists(), "manca requirements.txt (ADR-0037)")
         self.assertTrue(dev.exists(), "manca requirements-dev.txt (ADR-0037)")
         t = runtime.read_text(encoding="utf-8").lower()
-        for pacchetto in ("pyyaml", "pillow", "tiktoken"):
+        for pacchetto in ("pyyaml", "pillow", "tiktoken", "typst"):
             self.assertIn(pacchetto, t,
                           f"{pacchetto} e' importato da scripts/ e non e' dichiarato")
         self.assertIn("pytest", dev.read_text(encoding="utf-8").lower())

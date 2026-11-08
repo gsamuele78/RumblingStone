@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 136,
+  "tool_count": 137,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -12855,6 +12855,46 @@
         "docs/guides/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
+    },
+    {
+      "id": "typst_motore",
+      "path": "scripts/typst_motore.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/typst_motore.py",
+      "summary": "Un solo modo di compilare e interrogare un .typ (ADR-0115): il pacchetto PyPI «typst» di requirements.txt è lo standard, la CLI di mise.lock il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione.",
+      "use_case": "«Con cosa compila typst su questa macchina, e perché proprio quello?»",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "motore trovato e stampato",
+        "2": "MANCA: né il pacchetto PyPI né la CLI"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende da cosa è installato e da RUMBLINGSTONE_TYPST"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
     }
   ]
 }

@@ -14,7 +14,6 @@ Solo `unittest`: la CI non installa pytest.
 from __future__ import annotations
 
 import json
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -32,6 +31,7 @@ from export_booklet_typst import (  # noqa: E402
 )
 from build_booklet_html import VOCI_COLOPHON as VOCI_HTML  # noqa: E402
 from validate_booklets import carica_schema, controlla_manifest, manifest_del_repo  # noqa: E402
+import typst_motore  # noqa: E402
 
 
 class TestAttributiDelloStatblocco(unittest.TestCase):
@@ -350,7 +350,7 @@ class TestTabelleLarghe(unittest.TestCase):
         self.assertIn('sezione: "Le prove di gruppo"', typ)
 
 
-@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+@unittest.skipIf(not typst_motore.disponibile(), "typst non installato")
 class TestTabelleLargheCompilate(unittest.TestCase):
     """Compilate. Un float non si interroga (`place` non è localizzabile), quindi
     si misura la sua conseguenza: se la tabella scavalca, il testo che la segue
@@ -397,7 +397,7 @@ class TestTabelleLargheCompilate(unittest.TestCase):
         self.assertEqual(self._float(self._tab("x", larga="true")), 1)
 
 
-@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+@unittest.skipIf(not typst_motore.disponibile(), "typst non installato")
 class TestFiguraSuPaginaCompilata(unittest.TestCase):
     """Compilata davvero: il testo dopo una mappa quadrata comincia sotto la
     mappa, non 21 cm più in basso."""

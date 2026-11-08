@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """typst da PyPI (typst-py) contro la CLI di mise.lock, sugli stessi sorgenti.
 
-Prova della scelta del DM del 2026-11-08 («Prova pip in testing, poi decidi»):
-se typst si installa da PyPI, i 504 di GitHub Releases non lo toccano più.
-Si cambia solo se i PDF non cambiano.
+Nata come prova della scelta del DM del 2026-11-08 («Prova pip in testing,
+poi decidi»), poi «applicalo se funziona, come standard» (ADR-0115): PyPI è lo
+standard e questa misura tiene d'occhio che il ripiego (la CLI) dia gli stessi
+PDF, anche dopo ogni aggiornamento di typst.
 
 Per ogni manifest dei booklet: `export_booklet_typst.py --all --keep-typ`
-compila con la CLI (quella di mise.lock) e lascia il `.typ`; lo stesso `.typ`
+con `RUMBLINGSTONE_TYPST=cli` compila con la CLI (quella di mise.lock) e lascia il `.typ`; lo stesso `.typ`
 si compila con `typst.compile()` del pacchetto PyPI, con gli stessi font,
 radice, pacchetti e data. Poi si confrontano:
 
@@ -75,7 +76,8 @@ def main() -> int:
     a = ap.parse_args()
     ts = int(os.environ.get("SOURCE_DATE_EPOCH") or subprocess.run(
         ["git", "log", "-1", "--format=%ct"], cwd=REPO, capture_output=True, text=True).stdout)
-    env = dict(os.environ, SOURCE_DATE_EPOCH=str(ts))
+    # La CLI per l'export: dal 2026-11-08 la catena usa PyPI (ADR-0115).
+    env = dict(os.environ, SOURCE_DATE_EPOCH=str(ts), RUMBLINGSTONE_TYPST="cli")
     righe, rossi = [], 0
     with tempfile.TemporaryDirectory() as tmp:
         for man in manifest_booklet():

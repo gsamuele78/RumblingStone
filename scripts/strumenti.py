@@ -465,6 +465,7 @@ def main(argv=None) -> int:
     b.add_argument("--con-ruote", action="store_true",
                    help="mette nel bundle anche le wheel di requirements.txt (pip download)")
     vf = sub.add_parser("verifica", help="ogni strumento c'è, è quello del lockfile e risponde")
+    vf.add_argument("nomi", nargs="*", help="solo questi (default: tutti)")
     vf.add_argument("--bin", type=Path)
     vs = sub.add_parser("versione", help="la versione fissata di uno strumento")
     vs.add_argument("nome")

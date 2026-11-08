@@ -112,9 +112,13 @@ python3 scripts/export_booklet_typst.py MANIFEST.json --all
 
 Legge **lo stesso manifest** e produce **un volume unico** `-STAMPA.pdf` con
 tipografia OFL embedded (EB Garamond + Cinzel), due colonne, fregi di capitolo,
-tabelle larghe che scavalcano le colonne e **segnalibri PDF veri**. Serve il
-binario `typst` (Apache 2.0): se manca, lo script dice come installarlo ed esce
-pulito — **questa catena qui sotto continua a funzionare da sola**.
+tabelle larghe che scavalcano le colonne e **segnalibri PDF veri**. Serve typst
+(Apache 2.0): lo standard è il pacchetto PyPI di `requirements.txt`
+(`pip install -r requirements.txt`), il ripiego la CLI di `mise.lock`
+(`python3 scripts/strumenti.py installa`), [ADR-0115](../../plans/adr/ADR-0115-typst-si-installa-da-pypi.md).
+`python3 scripts/typst_motore.py` dice quale dei due compila. Se mancano tutti e
+due, lo script dice come installarlo ed esce pulito: **questa catena qui sotto
+continua a funzionare da sola**.
 
 Come le due catene si incastrano con tutto il resto:
 [GUIDA-FLUSSO-LOCALE](GUIDA-FLUSSO-LOCALE.md).

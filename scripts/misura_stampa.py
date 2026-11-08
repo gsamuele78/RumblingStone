@@ -70,6 +70,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import export_booklet_typst as ex  # noqa: E402
+import typst_motore  # noqa: E402
 
 CARTELLA = ROOT / "build" / "misura-stampa"
 REGISTRO = ROOT / "docs" / "audit" / "stampa-booklet.json"
@@ -121,25 +122,17 @@ SOLO_FONT_DEL_REPO = ["--ignore-system-fonts", "--font-path", str(ex.FONTS)]
 
 
 def compila_senza_font_di_sistema(typ: Path, pdf: Path) -> subprocess.CompletedProcess:
-    cmd = ["typst", "compile", *SOLO_FONT_DEL_REPO, "--root", str(ROOT),
-           "--package-path", str(ex.PACCHETTI)]
-    esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
-    if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
-        # lo stesso ripiego di export_booklet_typst.compila (bug dei tag di typst 0.15.1)
-        esito = subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)], capture_output=True, text=True)
-    return esito
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=ex.FONTS, pacchetti=ex.PACCHETTI,
+                             solo_font_del_repo=True)
+    return subprocess.CompletedProcess(["typst", "compile", str(typ)], 0 if e.ok else 1, "", e.errore)
 
 
 def interroga_schede(typ: Path) -> list[dict]:
     """Inizio e fine di ogni riquadro, dai segnaposti del tema."""
     espressione = ("query(selector(<sb-inizio>).or(<sb-fine>))"
                    ".map(m => (str(m.label), m.value, m.location().page()))")
-    cmd = ["typst", "eval", "--in", str(typ), *SOLO_FONT_DEL_REPO, "--root", str(ROOT),
-           "--package-path", str(ex.PACCHETTI), espressione]
-    esito = subprocess.run(cmd, capture_output=True, text=True)
-    if esito.returncode != 0:
-        raise RuntimeError(f"typst eval: {esito.stderr[-1000:]}")
-    return accoppia_segnaposti(json.loads(esito.stdout or "[]"))
+    return accoppia_segnaposti(typst_motore.valuta(
+        typ, espressione, root=ROOT, font=ex.FONTS, pacchetti=ex.PACCHETTI, solo_font_del_repo=True))
 
 
 def accoppia_segnaposti(segnaposti: list) -> list[dict]:

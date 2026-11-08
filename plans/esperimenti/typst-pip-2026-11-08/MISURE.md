@@ -28,11 +28,14 @@
 
 Rapporto completo: [`esito-container.json`](esito-container.json).
 
+## Decisione
+
+Letta la misura, il DM ha scelto «applicalo se funziona come standard»: [ADR-0115](../../adr/ADR-0115-typst-si-installa-da-pypi.md). Il punto «il codice» qui sotto è fatto (`scripts/typst_motore.py`), e senza la CLI passano in locale tutti i cancelli di stampa della CI.
+
 ## Cosa NON dice ancora
 
-- **La CI.** Il job `typst-pip` deve ripetere la misura sui runner. La regola di ADR-0099 chiede 14 giorni e 10 run prima di promuovere.
+- **La CI.** Il job `typst-pip` ripete la misura sui runner a ogni PR: è il controllo che resta acceso dopo la scelta.
 - **macOS e Windows.** Sono misurati solo su linux-x64. Esistono wheel per macOS e Windows, ma non sono provate.
 - **Il bundle.** Senza binario typst, il bundle del rilascio porterebbe la wheel al posto dell'archivio. Va rifatto e rimisurato.
-- **Il codice.** `export_booklet_typst`, `misura_stampa` e `validate_booklets` chiamano il comando `typst`. Passare a pip vuol dire chiamare `typst.compile()` / `typst.eval()` (oppure uno shim `python -m`). Le API usate esistono tutte: `compile(pdf_tags=…)`, `eval`, `query`, `font_paths`, `ignore_system_fonts`, `package_path`, `timestamp`.
 - **pdfcpu.** Non è su PyPI, quindi resta comunque a mise e GitHub Releases.
 - **Il rischio.** typst-py è di un manutentore singolo, molto usato, ma non dell'organizzazione typst. Se smette di seguire i rilasci, si torna alla CLI, che resta in `mise.lock`.

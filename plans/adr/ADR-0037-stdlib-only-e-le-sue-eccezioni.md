@@ -260,3 +260,11 @@ standard, e `python -m unittest discover -s scripts/tests` resta un comando
 valido sul portatile del DM senza pytest. Cambia solo che la CI non lo esegue
 per intero.
 
+---
+
+## Emendamento del 2026-11-08 — typst entra come quarta libreria
+
+**Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0115](ADR-0115-typst-si-installa-da-pypi.md).
+
+Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Senza il modulo, `typst_motore.py` usa la CLI di `mise.lock`; senza nemmeno quella, i PDF per capitolo restano a Chromium. Il binario `typst` resta in `external_bins` come ripiego. Il rischio delle 20:45 non cresce: prima serviva un binario installato una volta, ora una wheel installata una volta, e il bundle del rilascio le porta tutte e due.
+

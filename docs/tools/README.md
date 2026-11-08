@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**136 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**137 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 **Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 128: le cartelle di `converters/` non sono programmi e non compaiono.
 
@@ -189,6 +189,7 @@
 | `dmcore` | «Questa logica la sta già facendo qualcun altro nel repo, o la sto riscrivendo?»<br>Libreria condivisa ADR-0007: regions (marker auto:), gitio (guardia branch/commit), config (group.yaml), visibility (policy per-PG). Non e' un CLI. | — | ✔ | — | — | — |
 | `qualita_mappe_profonde.py` | «Questa mappa e' piu' profonda o piu' aperta di quella? La nuova versione ha cambiato la configurazione?»<br>Le metriche di configurazione di una mappa tattica, senza soglia, che qualita_mappe.py --profonde scrive solo nel JSON (ADR-0098): space syntax sul grafo di visibilita' e su quello di movimento (profondita' media, integrazione HH, intelligibilita'), correlazione fra integrazione alla vista e a piedi, simmetria sulle classi di cella, diversita' dei pattern 2x2 (Lucas e Volz). Vista con lo shadowcasting simmetrico di Albert Ford e cammini minimi a bit, in libreria standard. Da plans/esperimenti/mappe-strumenti-2026-10-22/metriche_nuove.py. Non ha una riga di comando sua. | — | ✔ | — | — | — |
 | `render_map_pianta.py` | «Come vedo la Fucina grande nello stesso stile delle piante di Rethmar e Dauth?»<br>Il tema «pianta» di render_map_svg (ADR-0102): le griglie emoji nello stile delle piante delle città, con roccia tratteggiata dai contorni frastagliati, lastricato a corsi, pannello «Luoghi» e legenda sotto la mappa, in rendered-pianta/. Stessi simboli e stessa griglia del tema pergamena. Non è un CLI. | — | ✔ | — | — | — |
+| `typst_motore.py` | «Con cosa compila typst su questa macchina, e perché proprio quello?»<br>Un solo modo di compilare e interrogare un .typ (ADR-0115): il pacchetto PyPI «typst» di requirements.txt è lo standard, la CLI di mise.lock il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione. | — | ✔ | — | — | `0` · `2` |
 
 ---
 

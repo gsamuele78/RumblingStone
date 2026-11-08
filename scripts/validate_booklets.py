@@ -45,7 +45,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -53,6 +52,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA = ROOT / "scripts" / "schemas" / "booklet_manifest.schema.json"
 ESPORTATORE = ROOT / "scripts" / "export_booklet_typst.py"
+
+sys.path.insert(0, str(ROOT / "scripts"))
+import typst_motore  # noqa: E402  (ADR-0115)
 
 # Chi consuma cosa. La fonte di verità è lo schema (campo `description`), qui
 # c'è la lettura operativa: se una chiave non compare in nessuna delle due, è
@@ -335,9 +337,8 @@ def main() -> int:
     saltati_corredo = 0
     saltata = ""
     if args.stampa:
-        binario = shutil.which("typst")
-        if not binario:
-            saltata = ("il binario «typst» non è nel PATH: controllo di stampa SALTATO "
+        if not typst_motore.disponibile():
+            saltata = ("typst non c'è (né il pacchetto PyPI né la CLI): controllo di stampa SALTATO "
                        "(vedi docs/guides/GUIDA-BOOKLET-E-PDF.md §4)")
         elif not errori:
             try:
