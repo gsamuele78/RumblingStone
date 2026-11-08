@@ -2,7 +2,7 @@
 """typst da PyPI (typst-py) contro la CLI di mise.lock, sugli stessi sorgenti.
 
 Nata come prova della scelta del DM del 2026-11-08 («Prova pip in testing,
-poi decidi»), poi «applicalo se funziona, come standard» (ADR-0115): PyPI è lo
+poi decidi»), poi «applicalo se funziona, come standard» (ADR-0116): PyPI è lo
 standard e questa misura tiene d'occhio che il ripiego (la CLI) dia gli stessi
 PDF, anche dopo ogni aggiornamento di typst.
 
@@ -76,7 +76,7 @@ def main() -> int:
     a = ap.parse_args()
     ts = int(os.environ.get("SOURCE_DATE_EPOCH") or subprocess.run(
         ["git", "log", "-1", "--format=%ct"], cwd=REPO, capture_output=True, text=True).stdout)
-    # La CLI per l'export: dal 2026-11-08 la catena usa PyPI (ADR-0115).
+    # La CLI per l'export: dal 2026-11-08 la catena usa PyPI (ADR-0116).
     env = dict(os.environ, SOURCE_DATE_EPOCH=str(ts), RUMBLINGSTONE_TYPST="cli")
     righe, rossi = [], 0
     with tempfile.TemporaryDirectory() as tmp:

@@ -40,7 +40,7 @@ Pillow>=13.0.0
 tiktoken>=0.14.0
 
 # export_booklet_typst.py, misura_stampa.py, varianti_stampa.py e i validatori
-# con --stampa, tutti attraverso typst_motore.py (ADR-0115, quarta eccezione di
+# con --stampa, tutti attraverso typst_motore.py (ADR-0116, quarta eccezione di
 # ADR-0037). È il compilatore ufficiale di typst dentro un modulo (typst-py,
 # Apache-2.0): non passa da GitHub Releases, lo aggiorna Dependabot e va nel
 # bundle insieme alle altre wheel. Senza, si ripiega sulla CLI di mise.lock

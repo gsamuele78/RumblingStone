@@ -30,7 +30,7 @@ Rapporto completo: [`esito-container.json`](esito-container.json).
 
 ## Decisione
 
-Letta la misura, il DM ha scelto «applicalo se funziona come standard»: [ADR-0115](../../adr/ADR-0115-typst-si-installa-da-pypi.md). Il punto «il codice» qui sotto è fatto (`scripts/typst_motore.py`), e senza la CLI passano in locale tutti i cancelli di stampa della CI.
+Letta la misura, il DM ha scelto «applicalo se funziona come standard»: [ADR-0116](../../adr/ADR-0116-typst-si-installa-da-pypi.md). Il punto «il codice» qui sotto è fatto (`scripts/typst_motore.py`), e senza la CLI passano in locale tutti i cancelli di stampa della CI.
 
 ## Cosa NON dice ancora
 

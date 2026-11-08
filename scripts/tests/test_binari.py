@@ -76,7 +76,7 @@ class TestUsoNegliScript(unittest.TestCase):
         # Con due copie della regola diventano due regole, e una delle due
         # invecchia in silenzio.
         src = (REPO / "scripts" / "export_booklet_typst.py").read_text(encoding="utf-8")
-        self.assertIn("typst_motore.esigi()", src)  # ADR-0115: PyPI, ripiego la CLI
+        self.assertIn("typst_motore.esigi()", src)  # ADR-0116: PyPI, ripiego la CLI
         self.assertNotRegex(src, r'shutil\.which\(\s*"typst"',
                             "l'exporter ha di nuovo una sua copia della ricerca del binario")
 

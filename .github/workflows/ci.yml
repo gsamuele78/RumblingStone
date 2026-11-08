@@ -422,7 +422,7 @@ jobs:
         # Le versioni stanno solo in mise.toml, URL e sha256 in mise.lock: un
         # archivio con un altro sha256 non si installa. Mai «latest» (ADR-0020
         # §3): si alza con una PR di Renovate o a mano, e si vede. typst NON si
-        # scarica qui: è il pacchetto PyPI di requirements.txt (ADR-0115), la CLI
+        # scarica qui: è il pacchetto PyPI di requirements.txt (ADR-0116), la CLI
         # resta il ripiego e la confronta il job «typst-pip».
         env:
           STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
@@ -732,7 +732,7 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        # typst arriva da qui (requirements.txt, ADR-0115): niente GitHub Releases.
+        # typst arriva da qui (requirements.txt, ADR-0116): niente GitHub Releases.
         run: pip install -r requirements-dev.txt
 
       - name: Nessun booklet sopra i suoi tetti di stampa
@@ -742,7 +742,7 @@ jobs:
           python scripts/misura_stampa.py --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
-  # ADR-0115: typst è il pacchetto PyPI (requirements.txt); questo job tiene
+  # ADR-0116: typst è il pacchetto PyPI (requirements.txt); questo job tiene
   # d'occhio il ripiego. Compila ogni booklet con la CLI di mise.lock e con il
   # pacchetto, sugli stessi .typ, ed è rosso se cambiano pagine, testo o pixel.
   # Quando Dependabot alza typst, è qui che si vede se il PDF resta lo stesso.

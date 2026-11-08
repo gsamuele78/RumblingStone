@@ -1,4 +1,4 @@
-# ADR-0115 — typst si installa da PyPI, la CLI di mise.lock resta il ripiego
+# ADR-0116 — typst si installa da PyPI, la CLI di mise.lock resta il ripiego
 
 **Stato**: accettata (2026-11-08)
 **Data**: 2026-11-08

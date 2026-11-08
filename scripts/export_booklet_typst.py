@@ -63,7 +63,7 @@ from dmcore.statblock import (  # noqa: E402
 )
 
 import binari  # noqa: E402  (accanto a questo file)
-import typst_motore  # noqa: E402  (ADR-0115: PyPI, ripiego la CLI)
+import typst_motore  # noqa: E402  (ADR-0116: PyPI, ripiego la CLI)
 from dmcore import sistemi as _SIS  # noqa: E402
 
 #: Le sigle del riquadro dal plugin del sistema del booklet (ADR-0111, L7);
@@ -1130,7 +1130,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
 
 
 def compila(motore: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
-    """Un `typst compile` (ADR-0115), col ripiego sui tag PDF dichiarato dal chiamante.
+    """Un `typst compile` (ADR-0116), col ripiego sui tag PDF dichiarato dal chiamante.
 
     Typst 0.15.1 ha un bug interno nella costruzione dell'albero dei tag PDF
     («internal error: parent group») su documenti con float dentro strutture

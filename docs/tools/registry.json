@@ -12862,7 +12862,7 @@
       "category": "lib",
       "language": "python",
       "invocation": "python3 scripts/typst_motore.py",
-      "summary": "Un solo modo di compilare e interrogare un .typ (ADR-0115): il pacchetto PyPI «typst» di requirements.txt è lo standard, la CLI di mise.lock il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione.",
+      "summary": "Un solo modo di compilare e interrogare un .typ (ADR-0116): il pacchetto PyPI «typst» di requirements.txt è lo standard, la CLI di mise.lock il ripiego (RUMBLINGSTONE_TYPST=cli la chiede, =pypi vieta il ripiego). Porta il ripiego senza tag PDF per il bug di typst 0.15.1. Lo usano export_booklet_typst, misura_stampa, varianti_stampa, validate_booklets e validate_corredo. Eseguito da solo, dice chi compila e quale versione.",
       "use_case": "«Con cosa compila typst su questa macchina, e perché proprio quello?»",
       "stability": "stable",
       "stdlib_only": true,

@@ -1,4 +1,4 @@
-"""typst_motore.py — un solo modo di compilare e interrogare un `.typ` (ADR-0115).
+"""typst_motore.py — un solo modo di compilare e interrogare un `.typ` (ADR-0116).
 
 Lo standard è il pacchetto PyPI `typst` (typst-py, Apache-2.0), fissato in
 `requirements.txt`. È il compilatore ufficiale dentro un modulo Python: non
@@ -60,7 +60,7 @@ def disponibile() -> bool:
 
 
 MESSAGGIO = """\
-✗ typst non c'è: serve per l'edizione da stampa (ADR-0020, ADR-0115).
+✗ typst non c'è: serve per l'edizione da stampa (ADR-0020, ADR-0116).
 
   Standard       pip install -r requirements.txt     (il pacchetto «typst» di PyPI)
   Ripiego        python3 scripts/strumenti.py installa   (la CLI di mise.lock)

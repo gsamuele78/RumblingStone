@@ -1,4 +1,4 @@
-"""typst_motore: il pacchetto PyPI è lo standard, la CLI il ripiego (ADR-0115)."""
+"""typst_motore: il pacchetto PyPI è lo standard, la CLI il ripiego (ADR-0116)."""
 from __future__ import annotations
 
 import os
@@ -96,7 +96,7 @@ class TestRequisito(unittest.TestCase):
     def test_typst_e_fissato_in_requirements(self):
         righe = (REPO / "requirements.txt").read_text(encoding="utf-8").splitlines()
         self.assertTrue(any(r.startswith("typst==") for r in righe),
-                        "ADR-0020 §3 e ADR-0115: typst a versione fissata in requirements.txt")
+                        "ADR-0020 §3 e ADR-0116: typst a versione fissata in requirements.txt")
 
 
 if __name__ == "__main__":

@@ -20,7 +20,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
-import typst_motore  # noqa: E402  (ADR-0115)
+import typst_motore  # noqa: E402  (ADR-0116)
 PACCHETTI = REPO / "scripts" / "typst" / "packages"
 
 # Quelli che la catena importa davvero. La lista sta qui e non si deduce dal
@@ -72,7 +72,7 @@ class TestCatena(unittest.TestCase):
         # Senza questo, `typst` va in rete e il vendoring è decorazione.
         src = (REPO / "scripts" / "export_booklet_typst.py").read_text(encoding="utf-8")
         self.assertIn("pacchetti=PACCHETTI", src)
-        # ADR-0115: il motore lo passa a entrambe le vie, il modulo e la CLI.
+        # ADR-0116: il motore lo passa a entrambe le vie, il modulo e la CLI.
         motore = (REPO / "scripts" / "typst_motore.py").read_text(encoding="utf-8")
         self.assertIn("--package-path", motore)
         self.assertIn("package_path=", motore)
@@ -94,7 +94,7 @@ class TestCompilazione(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             typ, pdf = Path(d) / "p.typ", Path(d) / "p.pdf"
             typ.write_text(doc, encoding="utf-8")
-            # Con il motore della catena (ADR-0115), in un processo senza proxy
+            # Con il motore della catena (ADR-0116), in un processo senza proxy
             # e senza rete: se typst prova a scaricare un pacchetto, fallisce.
             codice = ("import sys; sys.path.insert(0, sys.argv[1]); import typst_motore as t; "
                       "from pathlib import Path as P; "

@@ -54,7 +54,7 @@ SCHEMA = ROOT / "scripts" / "schemas" / "booklet_manifest.schema.json"
 ESPORTATORE = ROOT / "scripts" / "export_booklet_typst.py"
 
 sys.path.insert(0, str(ROOT / "scripts"))
-import typst_motore  # noqa: E402  (ADR-0115)
+import typst_motore  # noqa: E402  (ADR-0116)
 
 # Chi consuma cosa. La fonte di verità è lo schema (campo `description`), qui
 # c'è la lettura operativa: se una chiave non compare in nessuna delle due, è

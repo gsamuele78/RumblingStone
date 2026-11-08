@@ -61,7 +61,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import misura_craft as mc  # noqa: E402
-import typst_motore  # noqa: E402  (ADR-0115)
+import typst_motore  # noqa: E402  (ADR-0116)
 import validate_booklets as vb  # noqa: E402
 from dmcore.testo import togli_storico  # noqa: E402
 
