@@ -764,6 +764,48 @@ jobs:
           python scripts/misura_stampa.py --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
+  # ADR-0113, canale TESTING (scelta del DM del 2026-11-08, «Prova pip in
+  # testing, poi decidi»): typst da PyPI (typst-py, binding del compilatore
+  # ufficiale) contro la CLI di mise.lock, sugli stessi .typ di ogni booklet.
+  # PyPI non passa da GitHub Releases, quindi i 504 del 2026-11-08 non lo
+  # toccano. Rosso se un booklet cambia in pagine, testo o pixel. Misura nel
+  # container: plans/esperimenti/typst-pip-2026-11-08/MISURE.md.
+  typst-pip:
+    name: Typst da PyPI contro la CLI (testing, non bloccante)
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        # Versione fissata qui finché è una prova: entra in requirements.txt
+        # (e quindi sotto Dependabot) solo se il DM sceglie di passare.
+        run: pip install -r requirements-dev.txt "typst==0.15.2"
+
+      - name: Cache degli archivi di mise.lock — ripristino (ADR-0113)
+        uses: actions/cache/restore@v6
+        with:
+          path: .strumenti-cache
+          key: strumenti-${{ hashFiles('mise.lock') }}-
+          restore-keys: strumenti-${{ hashFiles('mise.lock') }}-
+
+      - name: La CLI di confronto, da mise.lock
+        env:
+          STRUMENTI_CACHE: ${{ github.workspace }}/.strumenti-cache
+        run: python scripts/strumenti.py installa --bin "$RUNNER_TEMP/strumenti" --github-path
+
+      - name: Stessi PDF da PyPI e dalla CLI
+        run: |
+          set -o pipefail
+          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)
+          { echo "## Typst da PyPI contro la CLI"; echo; } >> "$GITHUB_STEP_SUMMARY"
+          python plans/esperimenti/typst-pip-2026-11-08/misura_typst_pip.py \
+            --json "$RUNNER_TEMP/typst-pip.json" | tee -a "$GITHUB_STEP_SUMMARY"
+
   # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
   # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
   # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:

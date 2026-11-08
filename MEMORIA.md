@@ -102,7 +102,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113: typst da PyPI (typst-py 0.15.2) contro la CLI 0.15.1 di `mise.lock`,… | in corso |
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Sethrax: Inner Strength (Psionics Handbook 3.0) diventa Psionic Talent (XPH, No… | ✅ talenti sconosciuti 37 → 35, cricchetto CI a 35 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Capitano githyanki gish: «Spell Sword synergy» (non è un talento) diventa l'ele… | ✅ scelta del DM («quello che ha più senso») |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
-| 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
 
 ## Le misure che si portano dietro
 

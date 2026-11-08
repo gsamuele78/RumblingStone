@@ -50,6 +50,8 @@ Il giorno stesso della #338 GitHub Releases ha risposto 504 per ore, a typst, a 
 - **Anche mise sotto Renovate.** La versione di mise nel job `strumenti` (`version: vX.Y.Z`, la forma del tag, che `mise-action` accetta togliendo la v) e il suo sha256 li aggiorna un `customManager` regex con il datasource `github-release-attachments`: trova lo sha corrente nel `SHASUMS256.txt` del tag, lo rimappa sul tag nuovo e riscrive entrambi. Un secondo `customManager` aggiorna `constraints.mise`. Tutto nello stesso gruppo «strumenti binari», con `minimumReleaseAge` di 3 giorni (un rilascio ritirato entro tre giorni non arriva).
 - **Sessioni cloud (D3).** Al posto dell'hook in `.claude/` (bloccato come auto-modifica) lo script di avvio dell'ambiente cloud esegue `strumenti.py installa --silenzioso` se il repo c'è; non blocca l'avvio se la rete manca.
 
+- **typst da PyPI, in prova (scelta del DM, 2026-11-08).** Il binding `typst` di PyPI (0.15.2, compilatore 0.15.1 dentro) non passa da GitHub Releases. Sui 19 booklet (856 pagine) dà testo e pixel identici alla CLI ([misura](../esperimenti/typst-pip-2026-11-08/MISURE.md)). Il job `typst-pip` (testing) ripete la misura in CI. Si decide se passare dopo 14 giorni e 10 run, con un ADR nuovo, perché cambia come si chiama typst e cosa va nel bundle.
+
 **Da rivedere se**: il job `strumenti` trova byte diversi fra mise e strumenti.py; oppure dopo 14 giorni e 10 run verdi (si promuove mise nei job bloccanti, D1); oppure Renovate in 4 settimane non apre PR con il lockfile aggiornato (si passa a un Renovate in GitHub Actions con `allowedUnsafeExecutions`, D2); oppure mise cambia licenza (oggi MIT).
 
 ### Decisioni aperte al DM
