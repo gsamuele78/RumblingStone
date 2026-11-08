@@ -4502,6 +4502,62 @@
       "deterministic": true
     },
     {
+      "name": "strumenti",
+      "description": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»\n\nInstalla i binari del repo (typst, pdfcpu) da mise.toml e mise.lock (ADR-0113): kernel stdlib che scarica, verifica lo sha256 del lockfile, estrae il solo eseguibile e lo registra in .strumenti/; non conosce i singoli strumenti. verifica controlla sha e versione detta dal binario; bundle costruisce per piattaforma uno zip riproducibile con archivi originali, wheel di requirements.txt e dati (rilascio); installa --bundle installa senza rete.",
+      "use_case": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»",
+      "invocation": "python3 scripts/strumenti.py installa",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "elenco · installa · verifica · versione · bundle",
+            "enum": [
+              "elenco",
+              "installa",
+              "verifica",
+              "versione",
+              "bundle"
+            ]
+          },
+          "bin": {
+            "type": "string",
+            "description": "Cartella di destinazione (default .strumenti/)."
+          },
+          "bundle": {
+            "type": "string",
+            "description": "installa: da un rumblingstone-strumenti-<piattaforma>.zip, senza rete."
+          },
+          "con-ruote": {
+            "type": "boolean",
+            "description": "installa --bundle: anche le wheel; bundle: le mette nel zip."
+          },
+          "github-path": {
+            "type": "boolean",
+            "description": "installa: aggiunge la cartella a $GITHUB_PATH."
+          },
+          "piattaforma": {
+            "type": "string",
+            "description": "elenco, bundle: una piattaforma di mise (linux-x64…)."
+          }
+        },
+        "required": [
+          "azione"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        ".strumenti/installati.json",
+        "dist/"
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "uno strumento fallito: checksum, rete o archivio",
+        "2": "dati mancanti: mise.lock o piattaforma"
+      },
+      "deterministic": true
+    },
+    {
       "name": "tools_manifest",
       "description": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»\n\nFonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json.",
       "use_case": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»",

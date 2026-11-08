@@ -44,6 +44,7 @@ from __future__ import annotations
 
 import shutil
 import sys
+from pathlib import Path
 from typing import NamedTuple
 
 MANCA = 2  # exit code: dipendenza assente. Distinto da 1 = fallimento vero.
@@ -77,12 +78,11 @@ TYPST = Binario(
     licenza="Apache-2.0",
     adr="ADR-0020",
     installa="""\
-  Linux/macOS   curl -sSL https://github.com/typst/typst/releases/latest/download/\\
-                  typst-x86_64-unknown-linux-musl.tar.xz | tar xJ
-                  sudo install typst-*/typst /usr/local/bin/
-  Fedora/Bazzite  brew install typst        (oppure il tarball qui sopra)
-  Arch            pacman -S typst
-  Windows         winget install --id Typst.Typst""",
+  Ogni sistema   python3 scripts/strumenti.py installa
+                 (la versione di mise.toml, sha256 di mise.lock, in .strumenti/;
+                 senza rete: --bundle rumblingstone-strumenti-<os>-<arch>.zip)
+  Con mise       mise install          (stessi file, ADR-0113)
+  Una versione diversa da mise.toml compila, ma i PDF non sono quelli della CI.""",
     ripiego="`export_booklet_pdf.py` continua a produrre i PDF per capitolo con "
             "Chromium. Questo esportatore serve al volume da stampa.",
 )
@@ -93,11 +93,10 @@ PDFCPU = Binario(
     licenza="Apache-2.0",
     adr="ADR-0027",
     installa="""\
-  Con Go (qualsiasi sistema)   go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@v0.11.0
-  Linux/macOS   scarica il binario da https://github.com/pdfcpu/pdfcpu/releases
-                e mettilo nel PATH — e' un eseguibile statico, niente altro
-  Arch          pacman -S pdfcpu
-  Windows       winget install pdfcpu""",
+  Ogni sistema   python3 scripts/strumenti.py installa
+                 (la versione di mise.toml, sha256 di mise.lock, in .strumenti/;
+                 senza rete: --bundle rumblingstone-strumenti-<os>-<arch>.zip)
+  Con mise       mise install          (stessi file, ADR-0113)""",
     ripiego="il PDF da stampa resta valido e stampabile pagina per pagina: "
             "l'imposizione e' un di piu' per chi rilega, non un passaggio "
             "obbligato della catena.",
@@ -428,9 +427,15 @@ def messaggio(b: Binario) -> str:
     )
 
 
+#: Dove `scripts/strumenti.py installa` mette i binari fissati da mise.toml
+#: (ADR-0113). Si guarda **prima** del PATH: un typst di sistema di un'altra
+#: versione non deve vincere su quello fissato.
+STRUMENTI_BIN = Path(__file__).resolve().parents[1] / ".strumenti" / "bin"
+
+
 def trova(b: Binario) -> str | None:
     """Il percorso dell'eseguibile, o `None`. Nessun effetto collaterale."""
-    return shutil.which(b.nome)
+    return shutil.which(b.nome, path=str(STRUMENTI_BIN)) or shutil.which(b.nome)
 
 
 def esigi(b: Binario) -> str:
