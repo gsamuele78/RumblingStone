@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F4 strumenti per sistema del file: A5 6 → 0 (`sistema_di` +… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F1 fonti come dati: `fonti.regole` da `riscontro_srd.py` a… | ✅ |
 | 2026-11-08 | SISTEMI-DI-GIOCO-PLUGIN | Correzione dopo il lotto 2 delle schede: `pathfinder-1e-srd` diceva che nei con… | ✅ |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 2: le 18 skill nella scheda (descrizioni in italiano, termini di gioco or… | ✅ lotto 2 fatto; resta il cancello bloccante dopo due settimane |
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
 
 ## Le misure che si portano dietro
 
