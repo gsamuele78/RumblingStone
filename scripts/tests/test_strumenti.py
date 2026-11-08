@@ -164,10 +164,10 @@ class TestRiprova(unittest.TestCase):
 
     def test_dopo_l_ultimo_tentativo_l_errore_passa(self):
         import urllib.error
-        patch, chiamate = self._finto([503] * 5)
+        patch, chiamate = self._finto([503] * (len(S.ATTESE) + 1))
         with patch, self.assertRaises(urllib.error.HTTPError):
             S.scarica("https://x/y", dormi=lambda s: None)
-        self.assertEqual(len(chiamate), 5)
+        self.assertEqual(len(chiamate), len(S.ATTESE) + 1)
 
 
 class TestCache(DatiFinti):

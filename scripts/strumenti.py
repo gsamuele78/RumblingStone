@@ -193,7 +193,10 @@ def estrattore(url: str) -> Callable[[bytes, str], bytes]:
 #: Attese fra i tentativi, in secondi. Un 5xx o una connessione caduta di
 #: GitHub Releases capitano (504 misurato in CI il 2026-11-08, PR #340): si
 #: riprova; un 4xx no, perché un URL sbagliato non guarisce aspettando.
-ATTESE = (2, 4, 8, 16)
+#: Il 2026-11-08 dalle 08:44 UTC i 504 sono durati più di 30 s di fila (6 su 10
+#: richieste fallite in CI, 2 su 8 dal container alle 09:20): sette tentativi
+#: in circa due minuti, come il backoff di pip e di actions/toolkit.
+ATTESE = (2, 4, 8, 16, 30, 60)
 
 
 def scarica(url: str, attese=ATTESE, dormi=None) -> bytes:
