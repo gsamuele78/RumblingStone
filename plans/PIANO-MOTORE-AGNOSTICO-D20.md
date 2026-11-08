@@ -1,6 +1,6 @@
 # PIANO — Il motore agnostico: regole, formule e fonti d20 nel plugin
 
-> **Stato**: 🟡 in corso (2026-11-08), F0, indagini I1-I4, F1, F2, F3 e F4 fatte, F5-F6 da fare · **Classe**: G per la regola, C per le fasi
+> **Stato**: 🟡 in corso (2026-11-08), F0, indagini I1-I4, F1-F5 fatte, F6 da fare · **Classe**: G per la regola, C per le fasi
 > **Nasce da**: i messaggi del DM del 2026-11-08 (citati in [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md)).
 > **Decisione**: [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), accettata il 2026-11-08. Continua [PIANO-SISTEMI-DI-GIOCO-PLUGIN](PIANO-SISTEMI-DI-GIOCO-PLUGIN.md) (L0-L8 chiusi).
 > **Fuori da questo piano**: l'installazione automatica di typst e pdfcpu (mise, lockfile, Renovate) ha un thread suo.
@@ -40,7 +40,7 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 | **F2** contesto esplicito ✅ (2026-11-08): A1 5 → 0, nessuna lettura di sistema importando tutto `dmcore` (test con spia), impronte 12/12 | `dmcore.sistemi.regole(id)`; nessun modulo carica un sistema all'import; involucri per il predefinito | A1 5 → 0; impronte 12/12; grafo d'import delle creature verde |
 | **F3** formule nei dati ✅ (2026-11-08): A3 6 → 0, 6 formule in `formule.toml`, stesse cifre su tutto il dominio, 50/50 ostili rifiutate, impronte 12/12; trovata la divergenza 3.5/PF1e del livello d'incantatore di ranger e paladino (al DM) | un file `formule.toml` nei dati del plugin d20, valutato con il vincitore di I1; schema di I2 | A3 → 0 nel nucleo; banco delle formule identico su tutto il dominio |
 | **F4** strumenti per sistema del file ✅ (2026-11-08, card F4 1-3 decise dal DM: cancello CI sulle schede PF1e, mezze in su, conti senza regola saltati e detti): A5 6 → 0, uscite 3.5 identiche (impronte 12/12, `impronta_creature` identica), capacità `creature.conformita`; sulle 14 schede PF1e 2 scarti tolti e 1 nuovo (Asservito armato, corretto a 35 pf), 3 conti saltati e dichiarati ([diff](esperimenti/motore-agnostico-2026-11-08/F4-DIFF-PF1E.md)) | `derive_statblocks`, `conformita_statblocchi`, `genera_attributi` usano `regole(sistema_di(file))` | A5 6 → 0; uscite 3.5 identiche; diff delle uscite PF1e misurato e **letto dal DM** prima del merge |
-| **F5** moduli di plugin | `METODI` di `suggest_encounter` → registro del plugin (I3) | nessun algoritmo di sistema nel nucleo; test ostile verde |
+| **F5** moduli di plugin ✅ (2026-11-08): `[moduli]` nel `sistema.toml`, caricatore importlib in `dmcore.sistemi.modulo` (plugin, poi famiglia); «potenze» in `sistemi/d20/codice/`, «somma_px» in `sistemi/pf1e/codice/`; EL identici su 4.494 liste, 12/12 ostili, uscite di `suggest_encounter` identiche, impronte 12/12 | `METODI` di `suggest_encounter` → registro del plugin (I3) | nessun algoritmo di sistema nel nucleo; test ostile verde |
 | **F6** prova del nove 2 | plugin d20 finto con formule diverse (es. TS buono `3 + dv // 2`) e un metodo EL suo | 0 file del nucleo toccati; le uscite cambiano esattamente come le formule dicono |
 
 ## §3 · Validazione
