@@ -25,7 +25,7 @@ on:
     tags: ["v*"]
   pull_request:
     paths: [".github/workflows/release.yml", "scripts/release_plan.py",
-            "scripts/release_notes.py"]
+            "scripts/release_notes.py", "scripts/strumenti.py", "mise.toml", "mise.lock"]
 
 permissions:
   contents: read
@@ -163,6 +163,15 @@ jobs:
           mkdir -p dist
           tar --sort=name --owner=0 --group=0 --numeric-owner --mtime="@$SOURCE_DATE_EPOCH" \
               -C build -cf - . | gzip -n -9 > "dist/rumblingstone-skills-$TAG.tar.gz"
+          # ADR-0113, sul modello dei bundle di iemod-fetch: per ogni
+          # piattaforma di mise.toml un zip con tutto ciò che serve per
+          # stampare senza rete (typst, pdfcpu con le loro licenze, le wheel
+          # di requirements.txt, mise.toml/lock e strumenti.py). Gli archivi
+          # dentro hanno lo sha256 di mise.lock; lo zip è riproducibile.
+          python scripts/strumenti.py bundle --con-ruote --uscita dist
+          for z in dist/rumblingstone-strumenti-*.zip; do
+            mv "$z" "${z%.zip}-$TAG.zip"
+          done
           (cd dist && sha256sum ./* > SHA256SUMS && cat SHA256SUMS)
       - uses: actions/upload-artifact@v7
         with:
@@ -189,7 +198,9 @@ jobs:
         with: { name: dist, path: dist }
       - uses: actions/attest-build-provenance@v4
         with:
-          subject-path: "dist/*.tar.gz"
+          subject-path: |
+            dist/*.tar.gz
+            dist/*.zip
 
   publish:
     name: Tag e rilascio GitHub

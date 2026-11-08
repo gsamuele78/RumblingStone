@@ -102,6 +102,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Scelte del DM sui 34 talenti sconosciuti: 13 nomi italiani sbagliati sostituiti… | ✅ talenti sconosciuti 34 → 0, cricchetto CI a 0 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Indice dei talenti 3.5 da dndtools.net (solo nomi e manuale): +371 nomi; i 27 d… | ✅ indice 3.846 → 4.217 nomi; talenti sconosciuti 35 → 34, cricchetto CI a 34 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Sethrax: Inner Strength (Psionics Handbook 3.0) diventa Psionic Talent (XPH, No… | ✅ talenti sconosciuti 37 → 35, cricchetto CI a 35 |
@@ -113,7 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L6: build-skills.sh e sync-skills.sh installano solo le skill dei sistemi attiv… | ✅ skill costruite: 18/18 oggi, 17 solo 3.5, 15 solo PF1e; pacchetti CI identici con la configurazione attuale |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5d: regole di tipo (dnd35, pf1e) e campi dello statblocco (d20) dai plugin; L5… | ✅ 5 impronte identiche; capacità nel codice: resta solo `fonti.regole` (L8); impronte dei generatori 12/12; M3 72 → 68 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5c: liste di incantesimi 3.5 dal plugin dnd35, aggiunte APG dal plugin pf1e | ✅ 5 costanti spostate con impronte identiche; `creature.incantesimi` in dati per dnd35 e pf1e; incantesimi.py 711 → 236 righe; impronte dei generatori 12/12; M… |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5b: incantatori, classi di prestigio, profili di ruolo, taglie e razze 3.5 dal… | ✅ 19 costanti spostate con impronte identiche; impronte dei generatori 12/12; M3 76 → 73; resta `incantesimi.LISTE` (L5c) |
 
 ## Le misure che si portano dietro
 

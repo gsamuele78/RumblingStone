@@ -1,0 +1,48 @@
+# ADR-0113 — Gli strumenti binari si installano da un lockfile, con lo sha256, anche in bundle
+
+**Stato**: proposta (2026-11-08), D1-D3 al DM
+**Data**: 2026-11-08
+**Decisione-fonte**: il DM (Jfs), 2026-11-08, nel thread «Rendere i regolamenti plugin attivabili»: *«scarica typst 0.15.1 ma bisogna fare un automatismo che permette l'installazione in automatico al variare dei pacchetti […] usa l'architettura a microkernel e design guidato dai dati […] la migliore, la più std in assoluto e la più verificabile ed automatizzabile»*; *«tutto quello che serve deve essere scaricato come bundle con tutti i requisiti, vedi ad esempio come è fatto e l'idea di gsamuele78/iemod-fetch»*; *«se ci sono delle scelte di sviluppo […] usa sempre la versione migliore adottata dalla comunità degli sviluppatori e standard de facto»*.
+**Rapporti**: attua il §3 di [ADR-0020](ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) (versione fissata, mai «latest») e la versione citata di [ADR-0027](ADR-0027-imposizione-con-pdfcpu.md) (pdfcpu v0.11.0); segue [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md) (mise entra in testing) e [ADR-0100](ADR-0100-il-rilascio-e-una-pr.md) (i bundle vanno nel rilascio con SHA256SUMS e Sigstore); [ADR-0037](ADR-0037-stdlib-only-e-le-sue-eccezioni.md) (l'installatore è solo libreria standard).
+
+## Contesto
+
+La versione di typst era scritta **due volte** in `.github/workflows/ci.yml` (`TYPST_VERSION`, due job), `scripts/ambiente.py` la leggeva dal YAML con una regex e `scripts/binari.py` consigliava `releases/latest`, cioè il contrario di ADR-0020 §3. L'archivio si scaricava con `curl` **senza controllare lo sha256**. pdfcpu non si installava da nessuna parte: in CI l'imposizione non è mai stata provata. Nei container delle sessioni cloud ogni binario si scaricava a mano, ogni volta. Nessun bot poteva proporre l'aggiornamento: Dependabot non legge né un `env:` di un workflow né mise.
+
+## Alternative considerate
+
+| Opzione | A favore | Contro |
+|---|---|---|
+| **`mise.toml` + `mise.lock` come dati, due lettori: mise (standard di fatto) e `scripts/strumenti.py` (kernel stdlib); bundle per piattaforma nel rilascio; Renovate per gli aggiornamenti** (scelta) | i file sono il formato standard di mise, che Renovate sa aggiornare (lockfile compreso); il kernel non ha bisogno di un binario in più dove mise non c'è (sessioni cloud, chi non lo usa); due implementazioni indipendenti si controllano a vicenda sui byte; il bundle installa senza rete, come in iemod-fetch | il formato di `mise.lock` è di mise: se cambia (`lockfile_version`), il kernel va adeguato (il test lo dice); Renovate è un'app da installare (passo del DM) |
+| Solo mise (`jdx/mise-action` in CI, `mise install` ovunque) | una sola implementazione, la più diffusa | nel container cloud mise è un binario da scaricare e da far girare prima di tutto il resto, e lì l'esecuzione di binari scaricati è bloccata se il DM non la chiede ogni volta (misurato il 2026-11-08); niente bundle offline senza scrivere comunque del codice |
+| asdf + `.tool-versions` | storico, molti plugin | nessun lockfile con checksum: i plugin sono script shell che scaricano quello che vogliono; mise è il suo successore compatibile |
+| aqua (`aqua.yaml` + `aqua-checksums.json`) | checksum e registro firmato, Renovate lo supporta | meno diffuso di mise fuori dal mondo Go; un binario in più ovunque, stesso problema del container |
+| Nix / devbox | riproducibilità totale | richiede Nix installato (non su Bazzite senza layering, non nel container), curva ripida; sproporzionato per due binari statici |
+| Script nostro con versioni e sha256 in un JSON nostro | nessuna dipendenza | formato inventato: nessun bot lo aggiorna, nessuno strumento esterno lo legge; è il «reinventare la ruota» che il DM esclude |
+| Dependabot | già in uso | non supporta né mise né versioni in `env:` di un workflow |
+
+## Decisione
+
+**Le versioni dei binari esterni stanno solo in `mise.toml`; URL e sha256 per piattaforma stanno in `mise.lock`, generato da `mise lock`. Chi installa legge quei due file e rifiuta un archivio con un altro sha256.**
+
+1. **Dati.** `mise.toml` in radice: `[tools]` con chiavi esplicite di backend (`"aqua:typst/typst" = "0.15.1"`, `"aqua:pdfcpu/pdfcpu" = "0.11.0"`), versioni esatte, `[settings] lockfile = true, locked = true` e `lockfile_platforms` (linux-x64, linux-arm64, macos-arm64, windows-x64). `mise.lock` (`lockfile_version = 3`) con `url` e `checksum = "sha256:…"` per ogni piattaforma. Uno strumento nuovo è una riga e un `mise lock`, nessuna riga di codice.
+2. **Kernel.** `scripts/strumenti.py` (solo stdlib, `tomllib`) sa fare cinque cose generiche: leggere i dati, scaricare, verificare lo sha256, estrarre **un** file (quello col nome dello strumento; gli estrattori per formato sono la sola parte a plugin), registrarlo in `.strumenti/installati.json`. Non conosce typst né pdfcpu. È idempotente: se lo sha registrato torna, non scarica. `binari.trova()` guarda `.strumenti/bin` **prima** del PATH; `ambiente.py` e `binari.py` leggono versione e istruzioni da qui.
+3. **CI.** I job bloccanti installano con `strumenti.py installa --github-path` e `verifica` (la versione detta dal binario deve essere quella fissata). Il job `strumenti` (canale **testing**, ADR-0099) usa `jdx/mise-action` con mise fissato per versione e sha256, controlla che `mise.lock` sia quello che `mise lock` scriverebbe, e che **mise e strumenti.py installino gli stessi byte**.
+4. **Bundle.** Il workflow Release costruisce per ogni piattaforma `rumblingstone-strumenti-<os>-<arch>-<tag>.zip`, sul modello di iemod-fetch: gli archivi originali di upstream (con le loro licenze, stesso sha256 del lockfile), le wheel di `requirements.txt` per Python 3.13 su quella piattaforma, `mise.toml`, `mise.lock`, `strumenti.py` e `BUNDLE.json` con lo sha256 di ogni file. Lo zip è riproducibile (nomi ordinati, `SOURCE_DATE_EPOCH`, permessi fissi), va in `SHA256SUMS` ed è attestato con Sigstore come l'archivio delle skill. Senza rete: `strumenti.py installa --bundle <zip> [--con-ruote]`.
+5. **Aggiornamenti.** `renovate.json` abilita **solo** il manager `mise` (pip, Actions e Docker restano a Dependabot) con una PR di gruppo il lunedì. La PR passa dal job `strumenti`, che boccia un lockfile non rigenerato.
+6. **Sessioni cloud.** L'hook SessionStart esegue `strumenti.py installa --silenzioso` (solo con `CLAUDE_CODE_REMOTE=true`) e una regola `permissions.allow` per `python3 scripts/strumenti.py`. La modifica di `.claude/` è un passo del DM (D3).
+
+## Conseguenze
+
+- Una versione si cambia in un posto, e la CI la verifica: un URL di un'altra versione, uno sha256 sbagliato, un lockfile non rigenerato sono rossi.
+- L'installazione in CI diventa **più severa** di prima (prima `curl` senza checksum), a parità di byte: il typst installato ha lo stesso sha256 di quello che usciva dal `curl` di prima.
+- pdfcpu entra in CI per la prima volta, alla versione misurata da ADR-0027; il salto a 0.16.x lo propone Renovate, con la sua misura.
+- **Quello che non diventa gratis.** Il formato di `mise.lock` può cambiare con mise: il test `test_strumenti` e il job `strumenti` lo dicono, il kernel va adeguato a mano. Il bundle con le wheel è riproducibile **sullo stesso giorno**, non per sempre: `requirements.txt` dice `>=`, quindi le wheel scelte cambiano quando escono versioni nuove (lo dice `BUNDLE.json`). Fissarle richiede un lock delle dipendenze Python, che è un'altra decisione. Su Renovate ospitato, l'aggiornamento di `mise.lock` dipende dall'esecuzione di `mise lock` lato Renovate («unsafe execution»): se non la fa, la PR resta rossa finché qualcuno non esegue `mise lock`.
+
+**Da rivedere se**: il job `strumenti` trova byte diversi fra mise e strumenti.py; oppure dopo 14 giorni e 10 run verdi (si promuove mise nei job bloccanti, D1); oppure Renovate in 4 settimane non apre PR con il lockfile aggiornato (si passa a un Renovate in GitHub Actions con `allowedUnsafeExecutions`, D2); oppure mise cambia licenza (oggi MIT).
+
+### Decisioni aperte al DM
+
+- **D1.** mise nei job bloccanti: (a) dopo 14 giorni e 10 run in testing, come vuole ADR-0099 *(consigliata)*; (b) subito.
+- **D2.** Chi aggiorna: (a) l'app Renovate ospitata, che installi tu su gsamuele78/RumblingStone *(consigliata)*; (b) Renovate in un workflow nostro con un token tuo come segreto.
+- **D3.** L'hook delle sessioni cloud e la regola dei permessi in `.claude/`: me li hanno bloccati come auto-modifica, quindi o li approvi tu nel thread o li applichi tu dal patch.

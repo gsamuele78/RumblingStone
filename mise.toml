@@ -1,0 +1,26 @@
+# Gli strumenti binari del repo, a versione esatta (ADR-0113).
+#
+# È l'unico posto dove si scrive una versione di typst o di pdfcpu. Lo leggono:
+# - `scripts/strumenti.py` (CI, hook delle sessioni cloud, chi non ha mise);
+# - `mise install` (chi ha mise, e il job `strumenti` della CI, canale testing);
+# - Renovate, che propone l'aggiornamento come PR (manager `mise`);
+# - `scripts/binari.py` e `scripts/ambiente.py`, per i messaggi e il registro.
+#
+# Dopo aver cambiato una versione: `mise lock`, che riscrive mise.lock con l'URL
+# e lo sha256 di ogni piattaforma. La CI rifiuta un mise.lock non allineato.
+# Mai «latest»: un compilatore che si aggiorna da solo è una CI rossa di notte
+# per una riga che nessuno ha scritto (ADR-0020 §3).
+
+# 2026.3.16: `install --locked` non chiama più l'API di GitHub (mise #8753).
+min_version = "2026.3.16"
+
+[settings]
+lockfile = true
+locked = true
+lockfile_platforms = ["linux-x64", "linux-arm64", "macos-arm64", "windows-x64"]
+
+[tools]
+# L'edizione da stampa (ADR-0020). Apache-2.0.
+"aqua:typst/typst" = "0.15.1"
+# L'imposizione in libretto (ADR-0027, misurata su questa versione). Apache-2.0.
+"aqua:pdfcpu/pdfcpu" = "0.11.0"

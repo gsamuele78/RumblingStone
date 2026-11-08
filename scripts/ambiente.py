@@ -22,7 +22,8 @@ passare al successivo, così un'installazione interrotta si toglie lo stesso.
   già non diventa mai nostro.
 - **il `.venv`**: `requirements-completo.txt` (bpy, torch per CPU, piq);
   possiede i pacchetti Python che prima non c'erano.
-- **typst** (`--con typst`, solo se manca): la versione fissata dalla CI, in
+- **typst** (`--con typst`, solo se manca): la versione di `mise.toml`, con lo
+  sha256 di `mise.lock` verificato prima di scrivere (ADR-0113), in
   `~/.local/bin`, con lo sha256 del file scritto nel registro.
 - **ComfyUI** (`--con comfyui`): `scripts/comfyui-local/setup-distrobox.sh`
   nella cartella `COMFYUI_DIR`; il registro sa se il box e la cartella
@@ -52,21 +53,20 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import io
 import json
 import os
 import re
 import shutil
 import subprocess
 import sys
-import tarfile
 import tempfile
 import time
 import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-CI = REPO / ".github" / "workflows" / "ci.yml"
+sys.path.insert(0, str(REPO / "scripts"))
+import strumenti  # noqa: E402  (ADR-0113: le versioni dei binari stanno in mise.toml)
 COMPLETO = REPO / "requirements-completo.txt"
 COMFYUI = REPO / "scripts" / "comfyui-local"
 
@@ -171,10 +171,8 @@ def pacchetti_apt(con: set[str]) -> list[str]:
 
 
 def versione_typst() -> str:
-    m = re.search(r'TYPST_VERSION:\s*"([^"]+)"', CI.read_text(encoding="utf-8"))
-    if not m:
-        raise ValueError("TYPST_VERSION non trovata in ci.yml")
-    return m.group(1)
+    """La versione fissata in mise.toml (ADR-0113), la stessa che installa la CI."""
+    return strumenti.versione("typst")
 
 
 def in_venv() -> bool:
@@ -232,12 +230,17 @@ def installa_typst(sis: Sistema, stato_p: Path) -> int:
     if shutil.which("typst"):
         print(f"✓ typst: già presente in {shutil.which('typst')}, non diventa nostro")
         return 0
-    v = versione_typst()
-    url = f"https://github.com/typst/typst/releases/download/v{v}/typst-x86_64-unknown-linux-musl.tar.xz"
-    print(f"==> typst {v} (la versione della CI) in ~/.local/bin")
-    with tarfile.open(fileobj=io.BytesIO(sis.scarica(url)), mode="r:xz") as tar:
-        membro = next(m for m in tar.getmembers() if m.name.endswith("/typst") and m.isfile())
-        dati = tar.extractfile(membro).read()
+    voce = next(x for x in strumenti.voci() if x.nome == "typst")
+    v = voce.versione
+    if not voce.url or not voce.sha256:
+        print(f"✗ typst {v}: mise.lock non ha questa piattaforma ({strumenti.piattaforma()})")
+        return 1
+    print(f"==> typst {v} (mise.toml, sha256 di mise.lock) in ~/.local/bin")
+    archivio = sis.scarica(voce.url)
+    if hashlib.sha256(archivio).hexdigest() != voce.sha256:
+        print(f"✗ typst {v}: lo sha256 dell'archivio non è quello di mise.lock — niente installato")
+        return 1
+    dati = strumenti.estrattore(voce.url)(archivio, "typst")
     dest = Path.home() / ".local" / "bin" / "typst"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(dati)
