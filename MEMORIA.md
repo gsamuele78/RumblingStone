@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
 | 2026-11-08 | AUDIT-SCRIPTS (da RECUPERO D5) | Ripiego senza PyYAML in `compress_skills.py`: misurato e scartato. Funziona (18… | ✅ chiusa, non si fa |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F2 contesto esplicito: `dmcore.sistemi.regole(id)`/`regole_di(file)`; i 7 modul… | ✅ |
 | 2026-11-08 | MASTER-DEF | D6 rivista dal DM: per ogni voce del censimento la versione più forte, e sulle… | ✅ |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 (accettata): typst da PyPI (`typst==0.15.2` in requirements.txt) diven… | in corso |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0113 dopo i 504 di GitHub Releases su typst (main rosso su c40bb03): cache… | ✅ unita il 2026-11-08 (c83b95a) |
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
 
 ## Le misure che si portano dietro
 

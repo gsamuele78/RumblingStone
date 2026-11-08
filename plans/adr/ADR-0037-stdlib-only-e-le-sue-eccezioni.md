@@ -274,3 +274,10 @@ Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della fam
 **Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0116](ADR-0116-typst-si-installa-da-pypi.md).
 
 `pdfimpose` sostituisce il binario pdfcpu per `dm.py volume --imposto` ed è la quinta libreria di `requirements.txt`, ancora della famiglia di Pillow: opzionale, e senza il volume resta stampabile pagina per pagina. Porta con sé PyMuPDF, che finora era solo in `requirements-dev.txt`: chi installa `requirements.txt` ora ha anche PyMuPDF 2.x e onnxruntime. È il prezzo di togliere mise, scritto qui perché è un peso vero.
+
+
+## Emendamento del 2026-11-08 — simpleeval, portata dentro e non installata
+
+**Stato**: accettato dal DM il 2026-11-08 (D1 di ADR-0112) · **Dettaglio**: [ADR-0112](ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), F3.
+
+simpleeval 1.0.8 (MIT, un file, nessuna dipendenza) valuta le formule d20 scritte nei dati dei plugin. Non sta in `requirements.txt`: è copiato intero in `scripts/dmcore/_vendor/simpleeval.py`, con la licenza accanto e versione e sha256 in `_vendor/LIBRERIE.toml` (lo ricontrolla `test_formule.py`). Quindi la catena della sessione resta su Python nudo e il rischio delle 20:45 non cresce. È entrata perché è lo standard di fatto per questo problema e la misura I1 l'ha promossa: 7/7 formule su 598 casi, 50/50 espressioni ostili rifiutate. Aggiornarla vuol dire riscaricare la wheel, ricopiare il file, riscrivere lo sha256 e rifare il banco.

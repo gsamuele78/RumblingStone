@@ -25,6 +25,7 @@ import re
 from pathlib import Path
 
 from dmcore import lettura_creatura as _LC
+from dmcore.formule import formula
 from dmcore import tabelle as T
 from dmcore.lettura_creatura import (
     BAB_SCRITTO, BONUS_DADO, INIZIATIVA_MIGLIORATA, INIZIATIVA_SCRITTA,
@@ -51,8 +52,10 @@ mod = T.mod
 
 
 def da_modificatore(m: int) -> int:
-    """Il punteggio piu' basso che da' quel modificatore: 10 + 2m."""
-    return max(1, 10 + 2 * m)
+    """Il punteggio piu' basso che da' quel modificatore: 10 + 2m, mai sotto 1.
+
+    La formula sta nei dati del plugin (`punteggio_minimo`, F3 di ADR-0112)."""
+    return formula("punteggio_minimo", "dnd35")(modificatore=m)
 
 
 def des_vincolata(testo: str, gs: float = 30.0) -> "tuple[int, str] | None":
