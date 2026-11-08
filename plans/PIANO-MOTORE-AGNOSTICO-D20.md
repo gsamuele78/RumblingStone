@@ -1,6 +1,6 @@
 # PIANO — Il motore agnostico: regole, formule e fonti d20 nel plugin
 
-> **Stato**: 🟡 in corso (2026-11-08), F0, indagini I1-I4, F1-F5 fatte, F6 da fare · **Classe**: G per la regola, C per le fasi
+> **Stato**: ✅ chiuso (2026-11-08), F0, indagini I1-I4 e F1-F6 fatte · **Classe**: G per la regola, C per le fasi
 > **Nasce da**: i messaggi del DM del 2026-11-08 (citati in [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md)).
 > **Decisione**: [ADR-0112](adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), accettata il 2026-11-08. Continua [PIANO-SISTEMI-DI-GIOCO-PLUGIN](PIANO-SISTEMI-DI-GIOCO-PLUGIN.md) (L0-L8 chiusi).
 > **Fuori da questo piano**: l'installazione automatica di typst e pdfcpu (mise, lockfile, Renovate) ha un thread suo.
@@ -41,7 +41,7 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 | **F3** formule nei dati ✅ (2026-11-08): A3 6 → 0, 6 formule in `formule.toml`, stesse cifre su tutto il dominio, 50/50 ostili rifiutate, impronte 12/12; trovata la divergenza 3.5/PF1e del livello d'incantatore di ranger e paladino (al DM) | un file `formule.toml` nei dati del plugin d20, valutato con il vincitore di I1; schema di I2 | A3 → 0 nel nucleo; banco delle formule identico su tutto il dominio |
 | **F4** strumenti per sistema del file ✅ (2026-11-08, card F4 1-3 decise dal DM: cancello CI sulle schede PF1e, mezze in su, conti senza regola saltati e detti): A5 6 → 0, uscite 3.5 identiche (impronte 12/12, `impronta_creature` identica), capacità `creature.conformita`; sulle 14 schede PF1e 2 scarti tolti e 1 nuovo (Asservito armato, corretto a 35 pf), 3 conti saltati e dichiarati ([diff](esperimenti/motore-agnostico-2026-11-08/F4-DIFF-PF1E.md)) | `derive_statblocks`, `conformita_statblocchi`, `genera_attributi` usano `regole(sistema_di(file))` | A5 6 → 0; uscite 3.5 identiche; diff delle uscite PF1e misurato e **letto dal DM** prima del merge |
 | **F5** moduli di plugin ✅ (2026-11-08): `[moduli]` nel `sistema.toml`, caricatore importlib in `dmcore.sistemi.modulo` (plugin, poi famiglia); «potenze» in `sistemi/d20/codice/`, «somma_px» in `sistemi/pf1e/codice/`; EL identici su 4.494 liste, 12/12 ostili, uscite di `suggest_encounter` identiche, impronte 12/12 | `METODI` di `suggest_encounter` → registro del plugin (I3) | nessun algoritmo di sistema nel nucleo; test ostile verde |
-| **F6** prova del nove 2 | plugin d20 finto con formule diverse (es. TS buono `3 + dv // 2`) e un metodo EL suo | 0 file del nucleo toccati; le uscite cambiano esattamente come le formule dicono |
+| **F6** prova del nove 2 ✅ (2026-11-08): plugin finto `scripts/tests/dati/prova-d20-due/` (TS buono `3 + dv // 2` nei dati, metodo «piu_forte» nel suo `codice/`), `test_prova_del_nove_2.py`: cancello verde, TS buono +1 esatto su DV 0-40, EL = GS più alto + creature − 1 su 2.023 liste, 3.5 invariato, 0 file del nucleo toccati | plugin d20 finto con formule diverse (es. TS buono `3 + dv // 2`) e un metodo EL suo | 0 file del nucleo toccati; le uscite cambiano esattamente come le formule dicono |
 
 ## §3 · Validazione
 
@@ -67,6 +67,8 @@ Ogni fase è una PR, misurata prima e dopo con gli stessi comandi.
 Già deciso dal DM il 2026-11-08: microkernel guidato dai dati; ambito d20; librerie standard di fatto scelte con indagini misurate; moduli di codice per plugin; diff PF1e letto prima del merge; typst nel thread suo.
 
 ## §5 · Note oneste
+
+- Chiusura (2026-11-08): `derive_statblocks` e `genera_attributi` sulle schede PF1e **non** usano tabelle PF1e, perché il plugin PF1e non ha ancora le tabelle di costruzione delle classi: saltano il file e dicono quali regole mancano (F4). La conseguenza scritta in ADR-0112 («useranno le tabelle PF1e») vale solo per `conformita_statblocchi --master` e il suo cancello. Quando `creature.costruzione` PF1e avrà le classi, gli strumenti la prenderanno senza codice nuovo.
 
 - Il linguaggio delle formule è il rischio maggiore: PCGen l'ha rifatto una volta, e I4 misura che il nuovo copre lo 0,39% dei dati PF1e. Per questo F3 migra ogni formula con il suo test e non lascia due strade nel nucleo. Se I1 non trova un candidato che passi tutti i criteri, le formule restano funzioni Python, ma dentro i moduli di plugin (F5) e non nel nucleo.
 - F4 **cambia** uscite di proposta sui moduli PF1e. È voluto, ma è l'unica fase che non è invarianza pura.
