@@ -360,6 +360,46 @@ def check_regole_doro(root: Path) -> list[str]:
     return errors
 
 
+# ADR-0114: la scheda della skill. Le sezioni nell'ordine di
+# docs/guides/GUIDA-SCHEDE-PROMPT.md; «Vincoli sui fatti» solo nelle skill di
+# contenuto (la presidia test_vincoli_delle_skill.py). Canale testing: qui
+# sono AVVISI, non errori, finché l'audit settimanale non propone di renderli
+# bloccanti (come i cancelli di ADR-0109).
+SEZIONI_SCHEDA = (
+    "Quando no", "Fonti", "Procedura", "Formato d'uscita",
+    "Prima di consegnare", "Cancelli deterministici",
+)
+DATA_RE = re.compile(r"\b20\d\d-\d\d-\d\d\b")
+
+
+def check_schede(root: Path) -> list[str]:
+    """Avvisi della scheda skill (ADR-0114): sezioni, date nel corpo, prove."""
+    avvisi: list[str] = []
+    for f in sorted((root / "skills").glob("*/SKILL.md")):
+        nome = f.parent.name
+        testo = f.read_text(encoding="utf-8")
+        m = re.match(r"---\n.*?\n---\n", testo, re.S)
+        corpo = testo[m.end():] if m else testo
+        titoli = [t.strip() for t in re.findall(r"^## (.+)$", corpo, re.M)]
+        mancano = [s for s in SEZIONI_SCHEDA
+                   if not any(t.startswith(s) for t in titoli)]
+        if mancano:
+            avvisi.append(f"skills/{nome}: scheda senza {', '.join(mancano)} (ADR-0114)")
+        presenti = [s for s in SEZIONI_SCHEDA
+                    if any(t.startswith(s) for t in titoli)]
+        ordine = [next(i for i, t in enumerate(titoli) if t.startswith(s)) for s in presenti]
+        if ordine != sorted(ordine):
+            avvisi.append(f"skills/{nome}: sezioni della scheda fuori ordine (ADR-0114)")
+        date = len(DATA_RE.findall(corpo))
+        if date:
+            avvisi.append(f"skills/{nome}: {date} date nel corpo; la storia va nell'ADR (ADR-0114)")
+        ev = f.parent / "evals"
+        n = len([d for d in ev.iterdir() if d.is_dir()]) if ev.is_dir() else 0
+        if n < 3:
+            avvisi.append(f"skills/{nome}: {n} casi di prova in evals/, ne servono 3 (ADR-0114)")
+    return avvisi
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -373,6 +413,7 @@ def main() -> int:
     root = args.repo_root.resolve()
 
     skill_errors, warnings = check_skills(root)
+    warnings = warnings + check_schede(root)
     link_errors = check_links(root)
     yaml_errors = check_yaml_data(root)
     routing_errors = check_agents_routing(root)

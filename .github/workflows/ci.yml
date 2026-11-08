@@ -72,6 +72,10 @@ jobs:
       - name: Validate skill trees (frontmatter, links, data YAML)
         run: python scripts/validate_skills.py
 
+      # ADR-0114: le prove con trappola delle skill nella forma di `claude plugin eval`.
+      - name: Prove delle skill in forma (ADR-0114)
+        run: python scripts/prove_skill.py controlla
+
       # Lo scanner di sicurezza delle skill, copiato da awesome-llm-apps
       # (Apache 2.0, ADR-0076): esce 1 su un CRITICO, come `curl ... | sh`.
       - name: Skill security scan (scripts/terzi/skill_scanner.py)
