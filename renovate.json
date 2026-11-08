@@ -1,19 +1,35 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "ADR-0113: Renovate guarda SOLO mise.toml (typst, pdfcpu). pip, GitHub Actions e Docker restano a Dependabot (.github/dependabot.yml), che mise non lo sa leggere.",
-  "extends": ["config:recommended", ":disableDependencyDashboard"],
-  "enabledManagers": ["mise"],
+  "description": "ADR-0113: Renovate guarda SOLO mise.toml (typst, pdfcpu). pip, GitHub Actions e Docker restano a Dependabot (.github/dependabot.yml), che mise non lo sa leggere. constraints.mise = lo stesso mise della CI (jdx/mise-action): da 2026.7.12 Renovate esegue `mise lock` in safe mode e aggiorna mise.lock senza allowedUnsafeExecutions. minimumReleaseAge: una versione nuova si propone dopo 3 giorni, se non è stata ritirata.",
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard"
+  ],
+  "enabledManagers": [
+    "mise"
+  ],
   "timezone": "Europe/Rome",
-  "schedule": ["before 7am on monday"],
+  "schedule": [
+    "before 7am on monday"
+  ],
   "prConcurrentLimit": 2,
-  "labels": ["dipendenze", "strumenti"],
+  "labels": [
+    "dipendenze",
+    "strumenti"
+  ],
+  "constraints": {
+    "mise": "2026.11.4"
+  },
+  "minimumReleaseAge": "3 days",
   "mise": {
     "updatePinnedDependencies": true
   },
   "packageRules": [
     {
       "description": "Una PR sola per gli strumenti binari, come i gruppi settimanali di Dependabot (DM, 2026-10-07: «non spalmate»).",
-      "matchManagers": ["mise"],
+      "matchManagers": [
+        "mise"
+      ],
       "groupName": "strumenti binari (mise)"
     }
   ]

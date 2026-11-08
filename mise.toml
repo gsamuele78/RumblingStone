@@ -12,7 +12,9 @@
 # per una riga che nessuno ha scritto (ADR-0020 §3).
 
 # 2026.3.16: `install --locked` non chiama più l'API di GitHub (mise #8753).
-min_version = "2026.3.16"
+# 2026.7.12: safe mode (MISE_SAFE=1), con cui Renovate esegue `mise lock`
+# e aggiorna mise.lock senza permessi di esecuzione in più (mise #11146).
+min_version = "2026.7.12"
 
 [settings]
 lockfile = true
