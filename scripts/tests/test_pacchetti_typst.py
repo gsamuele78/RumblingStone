@@ -88,7 +88,10 @@ class TestCompilazione(unittest.TestCase):
             typ, pdf = Path(d) / "p.typ", Path(d) / "p.pdf"
             typ.write_text(doc, encoding="utf-8")
             esito = subprocess.run(
-                ["typst", "compile", "--package-path", str(PACCHETTI), str(typ), str(pdf)],
+                # Il percorso assoluto: con ADR-0113 typst sta dove l'ha messo
+                # strumenti.py (in CI $RUNNER_TEMP/strumenti/bin), non per forza
+                # in una cartella del PATH ridotto qui sotto.
+                [shutil.which("typst"), "compile", "--package-path", str(PACCHETTI), str(typ), str(pdf)],
                 capture_output=True, text=True,
                 # Nessun proxy, nessuna rete: se prova a scaricare, fallisce.
                 env={"PATH": "/usr/bin:/bin:/usr/local/bin:/root/.local/bin", "HOME": d},

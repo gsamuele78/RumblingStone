@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "ADR-0113: Renovate guarda SOLO mise.toml (typst, pdfcpu). pip, GitHub Actions e Docker restano a Dependabot (.github/dependabot.yml), che mise non lo sa leggere.",
+  "extends": ["config:recommended", ":disableDependencyDashboard"],
+  "enabledManagers": ["mise"],
+  "timezone": "Europe/Rome",
+  "schedule": ["before 7am on monday"],
+  "prConcurrentLimit": 2,
+  "labels": ["dipendenze", "strumenti"],
+  "mise": {
+    "updatePinnedDependencies": true
+  },
+  "packageRules": [
+    {
+      "description": "Una PR sola per gli strumenti binari, come i gruppi settimanali di Dependabot (DM, 2026-10-07: «non spalmate»).",
+      "matchManagers": ["mise"],
+      "groupName": "strumenti binari (mise)"
+    }
+  ]
+}

@@ -11262,6 +11262,136 @@
       ]
     },
     {
+      "id": "strumenti",
+      "path": "scripts/strumenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/strumenti.py installa",
+      "summary": "Installa i binari del repo (typst, pdfcpu) da mise.toml e mise.lock (ADR-0113): kernel stdlib che scarica, verifica lo sha256 del lockfile, estrae il solo eseguibile e lo registra in .strumenti/; non conosce i singoli strumenti. verifica controlla sha e versione detta dal binario; bundle costruisce per piattaforma uno zip riproducibile con archivi originali, wheel di requirements.txt e dati (rilascio); installa --bundle installa senza rete.",
+      "use_case": "«Ho typst e pdfcpu alla versione giusta, e se non ho rete?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "elenco",
+            "installa",
+            "verifica",
+            "versione",
+            "bundle"
+          ],
+          "repeatable": false,
+          "desc": "elenco · installa · verifica · versione · bundle"
+        },
+        {
+          "name": "--bin",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella di destinazione (default .strumenti/)."
+        },
+        {
+          "name": "--bundle",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "installa: da un rumblingstone-strumenti-<piattaforma>.zip, senza rete."
+        },
+        {
+          "name": "--con-ruote",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "installa --bundle: anche le wheel; bundle: le mette nel zip."
+        },
+        {
+          "name": "--github-path",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "installa: aggiunge la cartella a $GITHUB_PATH."
+        },
+        {
+          "name": "--piattaforma",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "elenco, bundle: una piattaforma di mise (linux-x64…)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "mise.toml",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "mise.lock",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": ".strumenti/installati.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "dist/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "uno strumento fallito: checksum, rete o archivio",
+        "2": "dati mancanti: mise.lock o piattaforma"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "stessi mise.toml e mise.lock, stessi byte; il bundle con SOURCE_DATE_EPOCH è riproducibile (le wheel seguono requirements.txt)"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "scarica da GitHub Releases; con --bundle nessuna rete"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/strumenti.py elenco",
+      "tests": [
+        "scripts/tests/test_strumenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0113-gli-strumenti-binari-si-installano-da-un-lockfile.md"
+      ]
+    },
+    {
       "category": "G-orchestration-governance",
       "language": "python",
       "stability": "beta",
