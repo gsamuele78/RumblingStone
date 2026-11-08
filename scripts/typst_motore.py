@@ -30,6 +30,11 @@ try:  # opzionale, con ripiego dichiarato (ADR-0037)
     import typst as _typst
 except ImportError:  # pragma: no cover - dipende dall'ambiente
     _typst = None
+# Con scripts/ nel sys.path, senza il pacchetto PyPI `import typst` trova la
+# cartella scripts/typst/ (tema e pacchetti vendorizzati) come namespace
+# package: non è il compilatore, quindi si ripiega.
+if _typst is not None and not hasattr(_typst, "compile"):
+    _typst = None
 
 VARIABILE = "RUMBLINGSTONE_TYPST"
 
