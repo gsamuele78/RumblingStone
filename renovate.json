@@ -1,12 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "ADR-0113: Renovate guarda SOLO mise.toml (typst, pdfcpu). pip, GitHub Actions e Docker restano a Dependabot (.github/dependabot.yml), che mise non lo sa leggere. constraints.mise = lo stesso mise della CI (jdx/mise-action): da 2026.7.12 Renovate esegue `mise lock` in safe mode e aggiorna mise.lock senza allowedUnsafeExecutions. minimumReleaseAge: una versione nuova si propone dopo 3 giorni, se non è stata ritirata.",
+  "description": "ADR-0113: Renovate guarda SOLO gli strumenti binari: mise.toml (typst, pdfcpu) e la versione di mise stessa (ci.yml con lo sha256, e constraints qui sotto). pip, GitHub Actions e Docker restano a Dependabot (.github/dependabot.yml), che mise non lo sa leggere. constraints.mise = lo stesso mise della CI (jdx/mise-action): da 2026.7.12 Renovate esegue `mise lock` in safe mode e aggiorna mise.lock senza allowedUnsafeExecutions. minimumReleaseAge: una versione nuova si propone dopo 3 giorni, se non è stata ritirata.",
   "extends": [
     "config:recommended",
     ":disableDependencyDashboard"
   ],
   "enabledManagers": [
-    "mise"
+    "mise",
+    "custom.regex"
   ],
   "timezone": "Europe/Rome",
   "schedule": [
@@ -28,9 +29,39 @@
     {
       "description": "Una PR sola per gli strumenti binari, come i gruppi settimanali di Dependabot (DM, 2026-10-07: «non spalmate»).",
       "matchManagers": [
-        "mise"
+        "mise",
+        "custom.regex"
       ],
       "groupName": "strumenti binari (mise)"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "mise di jdx/mise-action in ci.yml (versione = tag del rilascio, mise-action toglie la v) con lo sha256 del binario linux-x64: github-release-attachments lo ritrova in SHASUMS256.txt del tag nuovo.",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/ci\\.yml$/"
+      ],
+      "matchStrings": [
+        "uses: jdx/mise-action@v\\d+\\s+with:\\s+version: (?<currentValue>v\\d+\\.\\d+\\.\\d+)\\s+sha256: (?<currentDigest>[0-9a-f]{64})"
+      ],
+      "depNameTemplate": "jdx/mise",
+      "datasourceTemplate": "github-release-attachments",
+      "versioningTemplate": "semver-coerced"
+    },
+    {
+      "customType": "regex",
+      "description": "constraints.mise di questo file: il mise con cui Renovate esegue `mise lock` resta quello della CI.",
+      "managerFilePatterns": [
+        "/^renovate\\.json$/"
+      ],
+      "matchStrings": [
+        "\"constraints\":\\s*\\{\\s*\"mise\":\\s*\"(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+      ],
+      "depNameTemplate": "jdx/mise",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.+)$",
+      "versioningTemplate": "semver-coerced"
     }
   ]
 }

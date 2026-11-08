@@ -596,7 +596,7 @@ jobs:
 
       - uses: jdx/mise-action@v5
         with:
-          version: 2026.11.4
+          version: v2026.11.4
           sha256: 0296d9cba9324106d4e0962bb94a2072902f3658813aeb3b09504947bb8ddc2b
           install: true
           cache: false
