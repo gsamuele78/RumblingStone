@@ -1,6 +1,6 @@
 # ADR-0113 — Gli strumenti binari si installano da un lockfile, con lo sha256, anche in bundle
 
-**Stato**: proposta (2026-11-08), D1-D3 al DM
+**Stato**: proposta (2026-11-08); D1 decisa dal DM il 2026-11-08 («Dopo 14 giorni e 10 run»), D2-D3 al DM
 **Data**: 2026-11-08
 **Decisione-fonte**: il DM (Jfs), 2026-11-08, nel thread «Rendere i regolamenti plugin attivabili»: *«scarica typst 0.15.1 ma bisogna fare un automatismo che permette l'installazione in automatico al variare dei pacchetti […] usa l'architettura a microkernel e design guidato dai dati […] la migliore, la più std in assoluto e la più verificabile ed automatizzabile»*; *«tutto quello che serve deve essere scaricato come bundle con tutti i requisiti, vedi ad esempio come è fatto e l'idea di gsamuele78/iemod-fetch»*; *«se ci sono delle scelte di sviluppo […] usa sempre la versione migliore adottata dalla comunità degli sviluppatori e standard de facto»*.
 **Rapporti**: attua il §3 di [ADR-0020](ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) (versione fissata, mai «latest») e la versione citata di [ADR-0027](ADR-0027-imposizione-con-pdfcpu.md) (pdfcpu v0.11.0); segue [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md) (mise entra in testing) e [ADR-0100](ADR-0100-il-rilascio-e-una-pr.md) (i bundle vanno nel rilascio con SHA256SUMS e Sigstore); [ADR-0037](ADR-0037-stdlib-only-e-le-sue-eccezioni.md) (l'installatore è solo libreria standard).
@@ -43,6 +43,6 @@ La versione di typst era scritta **due volte** in `.github/workflows/ci.yml` (`T
 
 ### Decisioni aperte al DM
 
-- **D1.** mise nei job bloccanti: (a) dopo 14 giorni e 10 run in testing, come vuole ADR-0099 *(consigliata)*; (b) subito.
+- **D1.** ✅ **Decisa (DM, 2026-11-08): (a)**. mise sale nei job bloccanti dopo 14 giorni e 10 run in testing senza differenze di byte, come vuole ADR-0099. Le alternative erano (a) e (b) subito.
 - **D2.** Chi aggiorna: (a) l'app Renovate ospitata, che installi tu su gsamuele78/RumblingStone *(consigliata)*; (b) Renovate in un workflow nostro con un token tuo come segreto.
 - **D3.** L'hook delle sessioni cloud e la regola dei permessi in `.claude/`: me li hanno bloccati come auto-modifica, quindi o li approvi tu nel thread o li applichi tu dal patch.
