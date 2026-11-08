@@ -98,6 +98,7 @@
 - ✅ _(2026-11-01, C1-C2: il Drappo deriva dal Palio; 0 frasi in comune, 62% dell'impianto condiviso, misura in `esperimenti/drappo-palio-2026-11-01/`. D1 decisa: rimandi nei due sensi, tenuti da un test)_
 
 ### PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE
+- 🟡 _(2026-11-08, D5: il ripiego PyYAML di AUDIT-SCRIPTS misurato e scartato, il DM ha delegato la scelta alla misura; restano le voci in attesa con la loro condizione)_
 - 🟡 _(2026-10-10, L7: D7 decisa dal DM, le tre pratiche adottate: numeri ADR prenotati in `plans/adr-prenotati.json` e controllati da `validate_docs`, il modello di ADR con alternative e «Da rivedere se», il modello di PR)_
 - 🟡 _(2026-10-10, dopo il merge di #229, #230 e #232: la #216 portata sul `main` nuovo con l'ADR a 0087, le dieci voci della #72 tornate nel registro e la regola che non le pota più senza `--fetch`, le PR aperte rimisurate (§2.6), le pratiche di Infra-Iam-PKI e AiAgentInfrastructure confrontate (§7, D7))_
 - ⬜ _(2026-10-10, aperto: D1-D6 al DM; L2 il registro dei rami e L3 le righe ferme si possono fare subito)_
