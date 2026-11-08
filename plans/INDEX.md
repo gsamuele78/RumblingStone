@@ -103,6 +103,7 @@
 - ⬜ _(2026-10-10, aperto: D1-D6 al DM; L2 il registro dei rami e L3 le righe ferme si possono fare subito)_
 
 ### PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE
+- 🟡 _(2026-11-08, D6 rivista: le voci del censimento nella versione più forte, sulle voci dei nani vale l'orda; morale della riserva a +2 in `ARC08-DEF-2`, cancello a 200 pf, carica da ricalcolare nel finale)_
 - 🟡 _(2026-11-08, D6 barrata: era decisa il 2026-10-21, tutte come le consigliate tranne il cancello a 200 pf, già canone in `ARC08-DEF-2` e `ARC08-19`. Dall'INVENTARIO Gemini arrivano qui D1 (`battle_stats_maps` tutto in ARC-08, convertito) e D3 (Manuale da campo dentro S1, voce per voce))_
 - 🟡 _(2026-10-22, giro sulla Sessione 2 coi pregen: quattro letture a freddo su `ARC08-DEF-2`, 177 rilievi in 41 voci, correzioni nel master, VERIFICA senza 🔴 e seconda passata; domande 1 e 3 a canone, 13-18 nuove al DM; `misura_craft --p1` a 566 box)_
 - 🟡 _(2026-10-22, S1b scritto, giro da fare: la Sessione 2 coi pregen diventa `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`, nove scene, i tre giorni col libretto e i duelli coi comandanti, il soffio sul Re, la ritirata e l'incrocio; dodici `[INFERRED]` aperte al DM nel blocco d'apparato; la Sessione 2 di `ARC08-01` rimanda al master)_
