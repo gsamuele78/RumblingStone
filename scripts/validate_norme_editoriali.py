@@ -215,7 +215,7 @@ NORME_SCOPERTE = (
         "norma": "npc-villain-boosting — EL <= APL+4, e oltre il tetto un `Boost log:`",
         "prerequisito": "gli incontri dichiarano il loro EL nella forma prescritta",
         "forma": r"\*\*EL\*\*:\s*\[?\d",
-        "dove": "AGENTS.md riga 352 prescrive `**EL**: [N]`",
+        "dove": "AGENTS.md (formato degli incontri) prescrive `**EL**: [N]`",
         "rilevatore_pronto": "validate_modules.py --tetto-el",
         "sblocca": "PIANO-MARCATURA-DEGLI-INCONTRI M1-M3",
     },
