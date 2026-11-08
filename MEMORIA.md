@@ -103,6 +103,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Strumenti binari da un lockfile (ADR-0113): versioni solo in `mise.toml`, URL e… | 🟡 typst 0.15.1 stesso sha256 di prima, pdfcpu 0.11.0 entra in CI; D1-D3 al DM |
+| 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 1 dello standard a schede dei prompt: guida, 54 prove con trappola nelle… | 🟡 lotto 1 fatto; 18 skill e AGENTS.md (lotto 2) con A/B da fare |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | Piano e ADR-0112 proposta: microkernel guidato dai dati, ambito d20, formule co… | 🟡 F0 ✅ |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Scelte del DM sui 34 talenti sconosciuti: 13 nomi italiani sbagliati sostituiti… | ✅ talenti sconosciuti 34 → 0, cricchetto CI a 0 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Indice dei talenti 3.5 da dndtools.net (solo nomi e manuale): +371 nomi; i 27 d… | ✅ indice 3.846 → 4.217 nomi; talenti sconosciuti 35 → 34, cricchetto CI a 34 |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Sethrax: Inner Strength (Psionics Handbook 3.0) diventa Psionic Talent (XPH, No… | ✅ talenti sconosciuti 37 → 35, cricchetto CI a 35 |
@@ -110,10 +114,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Controllo dei talenti: prosa, titoli e «Talenti e capacità» non sono elenchi; s… | ✅ talenti sconosciuti 86 → 37, cricchetto CI a 37; restano nomi italiani da scegliere sulle schede e 3 talenti senza manuale |
 | 2026-11-07 | RICERCA-MARCATURE-INFERRED | Drappo: «Vigore Sovrannaturale» (non esiste in PF1e) diventa Robustezza (Toughn… | ✅ talenti sconosciuti 91 → 86, cricchetto CI a 86 |
 | 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L8: prova del nove, un sistema d20 finto di soli dati si aggiunge senza toccare… | ✅ 9 test verdi: cancello verde, 13 capacità coperte, PE ed EL del plugin finto arrivano negli strumenti veri; 0 file di codice toccati; limiti dichiarati (METO… |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L7: le sigle del riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sens… | ✅ 19 booklet HTML e .hb.md identici byte per byte; .typ: 98 righe, solo il parametro `etichette:`; PDF non compilato in locale |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L6: build-skills.sh e sync-skills.sh installano solo le skill dei sistemi attiv… | ✅ skill costruite: 18/18 oggi, 17 solo 3.5, 15 solo PF1e; pacchetti CI identici con la configurazione attuale |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5d: regole di tipo (dnd35, pf1e) e campi dello statblocco (d20) dai plugin; L5… | ✅ 5 impronte identiche; capacità nel codice: resta solo `fonti.regole` (L8); impronte dei generatori 12/12; M3 72 → 68 |
-| 2026-11-07 | SISTEMI-DI-GIOCO-PLUGIN | L5c: liste di incantesimi 3.5 dal plugin dnd35, aggiunte APG dal plugin pf1e | ✅ 5 costanti spostate con impronte identiche; `creature.incantesimi` in dati per dnd35 e pf1e; incantesimi.py 711 → 236 righe; impronte dei generatori 12/12; M… |
 
 ## Le misure che si portano dietro
 

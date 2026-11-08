@@ -2816,6 +2816,59 @@
       "deterministic": true
     },
     {
+      "name": "prove_skill",
+      "description": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»\n\nLe prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval.",
+      "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
+      "invocation": "python3 scripts/prove_skill.py controlla",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "comando": {
+            "type": "string",
+            "description": "controlla · prepara · esito"
+          },
+          "minimo": {
+            "type": "integer",
+            "description": "Casi minimi per skill (controlla)."
+          },
+          "uscita": {
+            "type": "string",
+            "description": "Cartella del piano A/B (prepara)."
+          },
+          "skill": {
+            "type": "string",
+            "description": "Solo questa skill (prepara), ripetibile."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Seme delle lettere alla cieca (prepara)."
+          },
+          "piano": {
+            "type": "string",
+            "description": "Cartella del piano con chiave.json e giudizi.json (esito)."
+          },
+          "giudizi": {
+            "type": "string",
+            "description": "File dei giudizi dentro --piano (esito)."
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita>/piano.json",
+        "<piano>/ESITO.md"
+      ],
+      "exit_codes": {
+        "0": "casi in forma, o la nuova non peggiora",
+        "1": "un caso malformato, o la nuova peggiora gli inventati senza marca",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "skill_scanner",
       "description": "«Una skill di questo repo contiene qualcosa che un agente non dovrebbe eseguire?»\n\nScanner statico di sicurezza delle skill (script scaricati e dati alla shell, rete non dichiarata, credenziali, codice offuscato), copiato identico da awesome-llm-apps (Apache 2.0, ADR-0076). Esce 1 se trova un CRITICO.",
       "use_case": "«Una skill di questo repo contiene qualcosa che un agente non dovrebbe eseguire?»",

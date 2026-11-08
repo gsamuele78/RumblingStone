@@ -5,9 +5,9 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**135 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**136 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
-**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 127: le cartelle di `converters/` non sono programmi e non compaiono.
+**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 128: le cartelle di `converters/` non sono programmi e non compaiono.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -109,6 +109,7 @@
 | `compress_skills.py` | «Questa skill è lunga e mangia contesto: quanto si stringe senza perdere quello che dice?»<br>Comprime le skill per gli agenti (riduzione token), producendo compact.md/structured.yaml/machine.json. | **--input/-i** · **--output/-o** · --measure/-m | ✔ | — | — | `0` · `1` |
 | `index_skills.py` | «L'agente deve pescare solo il pezzo di skill che gli serve: come glielo indicizzo?»<br>Genera index.json per una skill compressa (per retrieval selettivo). | **--input/-i** · **--build/-b** · **--output/-o** | ✔ | — | — | `0` · `2` |
 | `measure_tokens.py` | «Quanto contesto costano le skill oggi, in numeri e non a occhio?»<br>Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4), contando per ogni domanda anche il preload obbligatorio dichiarato nel «load order» del SKILL.md (lotto 4j-3). | --tokenizer · --json | ✔ | — | — | `0` |
+| `prove_skill.py` | «Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»<br>Le prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval. | **comando** · --minimo · --uscita · --skill · --seme · --piano · --giudizi | ✔ | — | — | `0` · `1` · `2` |
 | `skill_scanner.py` | «Una skill di questo repo contiene qualcosa che un agente non dovrebbe eseguire?»<br>Scanner statico di sicurezza delle skill (script scaricati e dati alla shell, rete non dichiarata, credenziali, codice offuscato), copiato identico da awesome-llm-apps (Apache 2.0, ADR-0076). Esce 1 se trova un CRITICO. | **path** · --json · --include-fixtures | ✔ | — | — | `0` · `1` · `2` |
 | `sync-skills.sh` | «Ho modificato una skill: come la vedono Claude e Cursor dentro questo repo, subito?»<br>Build + popola i mirror in-repo delle skill (.claude/, .cursor/, ...), tutti gitignorati. | --dry-run · --no-build | ✔ | — | — | `0` · `1` |
 | `validate_skills.py` | «Le skill sono ben formate, o ho rotto un frontmatter o un link mentre le scrivevo?»<br>Gate CI skill: SKILL.md valido (frontmatter), link e dati YAML coerenti. | --repo-root · --json | ✔ | — | — | `0` · `1` · `2` |
