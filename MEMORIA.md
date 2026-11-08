@@ -55,13 +55,12 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
 | **P16 · Le marcature rimaste nel contenuto**: rimisurate il 2026-11-04 con `inventory_inferred.py` corretto (righe di regola in «meta», note che vanno a capo contate): **240 aperte su `main`**, non 44 (il `grep` vedeva… | … | le card di ARC-08, poi un lotto per arco: ARC-07, ARC-09, il resto |
 
-## 🙋 Aspetta il DM: 11
+## 🙋 Aspetta il DM: 10
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
-| **P05 · Lo schedario dei PG, la seconda parte della 4g-2**: la #99 è chiusa (2026-10-24, ADR-0088 accettata, scelta A); 4g-1 su `main` con la #278; i tre pezzi rimasti ripresi con la #289; la prima parte della 4g-2 su… | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 §4.13 «4g-2, prima parte» | i nove valori dal DM |
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11 (ADR… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/guides/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
@@ -101,6 +100,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-08 | STATO-E-ORDINE-DEI-PIANI | P05 chiusa come già fatta: i 9 valori dei PG sono su main dal 2026-11-05 (P16 l… | ✅ |
+| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F1 fonti come dati: `fonti.regole` da `riscontro_srd.py` a… | ✅ |
 | 2026-11-08 | SISTEMI-DI-GIOCO-PLUGIN | Correzione dopo il lotto 2 delle schede: `pathfinder-1e-srd` diceva che nei con… | ✅ |
 | 2026-11-08 | RICERCA-SCHEDE-PROMPT | Lotto 2: le 18 skill nella scheda (descrizioni in italiano, termini di gioco or… | ✅ lotto 2 fatto; resta il cancello bloccante dopo due settimane |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | ADR-0116 seconda parte (scelta del DM «Misura pdfimpose, poi decidi»): pdfimpos… | in corso |
@@ -111,8 +112,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2, aggiunta su domanda del DM: pydantic generato dagli schemi del plugin (data… | ✅ scelta confermata |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I4 PCGen (commit d96d4da3): le formule d20 stanno nei dati come testo, ma il fo… | ✅ indagini chiuse, si passa a F1 |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | I3 moduli di codice per plugin: due plugin con lo stesso modulo `metodi`, 4.494… | ✅ proposta per F5: registro `[moduli]` caricato con importlib |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I2 schema dei plugin: 503 difetti generati in modo deterministico su 9 file (7… | ✅ proposta per F3: JSON Schema, fastjsonschema dentro il pacchetto |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | I1 linguaggio delle formule: banco su 7 formule (598 casi), 50 ostili in proces… | ✅ proposta per F3: simpleeval ristretto dentro il pacchetto |
 
 ## Le misure che si portano dietro
 
