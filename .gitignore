@@ -402,3 +402,4 @@ scripts/llm-locale/dati/
 # Generato a richiesta da scripts/inventory_inferred.py (non si committa)
 docs/audit/INFERRED-INVENTARIO.md
 .strumenti/
+.strumenti-cache/
