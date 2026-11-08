@@ -31,7 +31,12 @@ jobs:
         # ADR-0037, emendamento 2026-09-21: due piani. requirements.txt e' cio'
         # che il DM esegue (stdlib + tre eccezioni dichiarate); il file -dev
         # aggiunge pytest, che gira solo qui e in locale.
-        run: pip install -r requirements-dev.txt
+        # uv e' STABLE dal 2026-11-08 (ADR-0099, P5 di PIANO-PIATTAFORMA): in 81
+        # run di main dal 23/10 ha installato gli stessi pacchetti di pip, nomi
+        # e versioni, 81 volte su 81, in 6 s contro 24 s. Versione fissata.
+        run: |
+          pip install "uv==0.11.32"
+          uv pip install --system -r requirements-dev.txt
 
       # PRATICHE PI-3 (D2): le vulnerabilita' note nelle dipendenze dichiarate.
       # `-r requirements-dev.txt` include requirements.txt, quindi guarda sia
@@ -43,15 +48,12 @@ jobs:
         continue-on-error: true
         run: pip-audit -r requirements-dev.txt
 
-      - name: Python scripts compile
-        run: python -m compileall -q scripts converters
-
-      # ADR-0099: ruff e' in TESTING, quindi non blocca. Sale a stable (e il
-      # passo compileall sopra esce, perche' ruff copre E9) dopo 14 giorni e
-      # 10 run su main senza falsi allarmi (P3 di PIANO-PIATTAFORMA). Le regole
-      # sono in ruff.toml: solo quelle che cercano bug, non lo stile.
-      - name: ruff — nomi non definiti, codice morto, usi deprecati (testing, non bloccante)
-        continue-on-error: true
+      # ADR-0099: ruff e' STABLE dal 2026-11-08 (P3 di PIANO-PIATTAFORMA) e
+      # blocca. 81 run di main dal 23/10: 76 puliti, 5 rossi il 7/11 per due
+      # variabili morte vere (F841, corrette con la #319), nessun falso allarme.
+      # Il passo `compileall` e' uscito: gli errori di sintassi li vede E9. Le
+      # regole sono in ruff.toml: solo quelle che cercano bug, non lo stile.
+      - name: ruff — sintassi, nomi non definiti, codice morto, usi deprecati
         run: ruff check --output-format github
 
       # ADR-0102, canale TESTING: shapely ridisegna le piante di Rethmar, Dauth e
@@ -511,15 +513,17 @@ jobs:
           print(f"server MCP OK — {n} tool, annotazioni presenti, S-5 attiva")
           EOF
 
-  # ADR-0099, canale TESTING (D3 e D4 di PIANO-PIATTAFORMA, DM 2026-10-23):
-  # la stessa suite installata con uv ed eseguita in parallelo con
-  # pytest-xdist. Non blocca la PR. Sale a stable, e sostituisce il passo
-  # pytest e `pip install` del job principale, dopo 14 giorni e 10 run su main
-  # con le stesse prove passate e nessun test instabile in parallelo. I tempi
-  # da confrontare sono quelli dei passi «Installa con uv» e «pytest -n auto»
-  # contro «Install dependencies» e «Unit tests» del job principale.
+  # ADR-0099, canale TESTING (D3 di PIANO-PIATTAFORMA, DM 2026-10-23): la
+  # stessa suite eseguita in parallelo con pytest-xdist. Non blocca la PR.
+  # uv qui e' gia' stable (2026-11-08); xdist no. Fino alla #342 (2026-11-08)
+  # questo job non aveva typst e saltava 9 prove che il job principale
+  # esegue: la suite e' la stessa solo da allora, e i 14 giorni contano da li'
+  # (non prima del 2026-11-22). Sale a stable, e sostituisce il passo pytest
+  # del job principale, dopo 14 giorni e 10 run su main con le stesse prove
+  # passate e nessun test instabile in parallelo. I tempi da confrontare sono
+  # «pytest -n auto» contro «Unit tests» del job principale.
   testing:
-    name: Piattaforma in prova (uv, pytest-xdist) — non bloccante
+    name: pytest-xdist in prova — non bloccante
     runs-on: ubuntu-24.04
     continue-on-error: true
     steps:
@@ -531,23 +535,10 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Installa uv (versione fissata)
-        run: pip install "uv==0.11.32"
-
-      - name: Installa con uv
-        run: uv pip install --system -r requirements-dev.txt
-
-      - name: Stessi pacchetti di pip (nomi e versioni)
+      - name: Installa con uv (stable, come nel job principale)
         run: |
-          # Il confronto che dice se uv installa cio' che installerebbe pip.
-          # I nomi si normalizzano come PEP 503 (pip scrive «PyYAML», uv
-          # «pyyaml»); uv, pip e setuptools sono gli strumenti, non il contenuto.
-          norm() { sed -E 's/[-_.]+/-/g' | tr 'A-Z' 'a-z' | grep -v -E '^(uv|pip|setuptools|wheel)==' | sort; }
-          uv pip freeze --system | norm > "$RUNNER_TEMP/uv.txt"
-          python -m venv "$RUNNER_TEMP/pipvenv"
-          "$RUNNER_TEMP/pipvenv/bin/pip" install -q -r requirements-dev.txt
-          "$RUNNER_TEMP/pipvenv/bin/pip" freeze | norm > "$RUNNER_TEMP/pip.txt"
-          diff "$RUNNER_TEMP/pip.txt" "$RUNNER_TEMP/uv.txt" && echo "✓ stessi pacchetti"
+          pip install "uv==0.11.32"
+          uv pip install --system -r requirements-dev.txt
 
       # Due giri: in parallelo tutto tranne i test che scrivono per un momento
       # nel repo vero, poi quelli in serie (scripts/tests/conftest.py). Insieme
@@ -558,16 +549,16 @@ jobs:
           python -m pytest scripts/tests -q -m scrive_nel_repo
 
   # D6 di PIANO-PIATTAFORMA (DM, 2026-10-23: «D6 b»): i convertitori entrano
-  # nella piattaforma, in canale TESTING. ruff li guarda gia' nel job
+  # nella piattaforma. STABLE dal 2026-11-08 (P9): 81 run di main dal 23/10
+  # tutti verdi, in media 52 s, in parallelo a «validate». ruff li guarda gia' nel job
   # principale; qui si installano le loro dipendenze vere (torch per CPU, come
   # in requirements-completo.txt) e si prova che ogni modulo si importi su
   # Python 3.13. La misura del 2026-10-23: 12 moduli su 20 senza torch, uno
   # (fallback_manager) rotto da un NameError all'import, ora corretto. I test
   # del motore leggono PDF che non stanno nel repo e qui non girano.
   convertitori:
-    name: Convertitori in prova (import su 3.13) — non bloccante
+    name: Convertitori (import su 3.13)
     runs-on: ubuntu-24.04
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v7
 
