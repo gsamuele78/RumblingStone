@@ -12597,6 +12597,132 @@
       "docs": [
         "plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md"
       ]
+    },
+    {
+      "id": "prove_skill",
+      "path": "scripts/prove_skill.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/prove_skill.py controlla",
+      "summary": "Le prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval.",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "comando",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "controlla · prepara · esito"
+        },
+        {
+          "name": "--minimo",
+          "type": "int",
+          "required": false,
+          "default": 3,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Casi minimi per skill (controlla)."
+        },
+        {
+          "name": "--uscita",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del piano A/B (prepara)."
+        },
+        {
+          "name": "--skill",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Solo questa skill (prepara), ripetibile."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": 7,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seme delle lettere alla cieca (prepara)."
+        },
+        {
+          "name": "--piano",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del piano con chiave.json e giudizi.json (esito)."
+        },
+        {
+          "name": "--giudizi",
+          "type": "str",
+          "required": false,
+          "default": "giudizi.json",
+          "choices": null,
+          "repeatable": false,
+          "desc": "File dei giudizi dentro --piano (esito)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/*/evals/*/",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<uscita>/piano.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<piano>/ESITO.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "casi in forma, o la nuova non peggiora",
+        "1": "un caso malformato, o la nuova peggiora gli inventati senza marca",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "le lettere alla cieca dipendono dal seme"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/prove_skill.py controlla",
+      "tests": [
+        "scripts/tests/test_prove_skill.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-SCHEDE-PROMPT.md",
+        "plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md"
+      ],
+      "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
+      "optional_deps": []
     }
   ]
 }
