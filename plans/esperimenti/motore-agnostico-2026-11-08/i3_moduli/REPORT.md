@@ -48,6 +48,6 @@ Ogni caricatore viene misurato su cinque criteri:
 
 1. `sistema.toml` ha una sezione `[moduli]` nome → `"modulo:funzione"`. La capacità `incontri.livello` nomina il metodo e il nucleo lo cerca nel registro del plugin, risalendo l'eredità. Non lo cerca più in `METODI`.
 2. Il caricatore è quello di importlib di questo banco, in `dmcore/sistemi.py`. Il test ostile del banco diventa un test della suite.
-3. `potenze` va in `sistemi/d20/codice/` oppure in `sistemi/dnd35/codice/`, e `somma_px` in `sistemi/pf1e/codice/`. Criterio di uscita: nessun algoritmo di sistema nel nucleo e EL identici su tutte le 4.494 liste.
+3. `potenze` va nella cartella `codice/` del plugin d20 (o di dnd35), `somma_px` in quella del plugin pf1e; F5 crea le cartelle. Criterio di uscita: nessun algoritmo di sistema nel nucleo e EL identici su tutte le 4.494 liste.
 
 **Da rivedere se** più plugin devono rispondere allo stesso punto: per esempio un plugin di ambientazione che aggiunge regole sopra quelle del sistema. È il caso per cui pluggy esiste, e lì va rimisurato.
