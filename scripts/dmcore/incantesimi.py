@@ -78,43 +78,60 @@ FUNZIONE_DA_RUOLO = {
 #: I nomi di classe come li scrive il DM → la chiave delle liste. `T.CLASSI`
 #: accetta italiano e inglese; qui la forma canonica è una sola, o si finisce con
 #: «wizard» che non trova la lista di «mago».
+from functools import cache as _cache  # noqa: E402
+
 from . import sistemi as _S  # noqa: E402
 
 #: Le liste 3.5 stanno nel plugin (ADR-0111, L5c): `sistemi/dnd35/dati/incantesimi.toml`.
-_DATI = _S.dati("dnd35", "creature.incantesimi")
-CANONICA = dict(_DATI["canonica"])
+#: Si leggono alla prima richiesta, non all'import (F2 di ADR-0112): `liste(id)`
+#: dà il contesto esplicito, e i nomi di sempre (`CANONICA`, `LISTE`,
+#: `FUNZIONE_DI_RIPIEGO`, `SENZA_LISTA`, `PF1E_SOLO`) restano per chi li importa.
+_NOMI_LISTE = ("CANONICA", "LISTE", "FUNZIONE_DI_RIPIEGO", "SENZA_LISTA")
 
-# ===========================================================================
-# Le liste, per lista di classe × funzione
-# ===========================================================================
-# Ogni voce è presa dall'ancora in `dnd-35-srd/references/spells.md`, per quella
-# classe e quel livello. Poche voci per livello, ed è voluto: sono gli
-# incantesimi che quella funzione lancerebbe davvero, non tutto il SRD.
 
-#: classe → funzione → livello → incantesimi. Mago e stregone puntano allo
-#: **stesso oggetto** (`[regole] alias` nei dati), e deve restare così: nel SRD
-#: hanno la stessa lista, e due copie divergerebbero al primo ritocco.
-LISTE: dict[str, dict[str, dict[int, list[str]]]] = {
-    classe: {f: {int(liv): list(v) for liv, v in per.items()} for f, per in ff.items()}
-    for classe, ff in _DATI["liste"].items()}
-for _alias, _di in _DATI["regole"]["alias"].items():
-    LISTE[_alias] = LISTE[_di]
-#: L'ordine delle classi resta quello di prima (mago, stregone, chierico, …).
-LISTE = {c: LISTE[c] for c in ["mago", "stregone"] + [c for c in LISTE if c not in ("mago", "stregone")]}
+def liste(id_: str = "dnd35") -> dict:
+    """Le liste di classe × funzione del sistema `id_` (capacità `creature.incantesimi`)."""
+    return _liste(id_)
 
-#: Quando la cella (classe × funzione) non esiste, si ripiega su un'altra
-#: funzione **della stessa classe** — mai sulla lista di un'altra classe, che è
-#: esattamente il difetto da cui nasce questo file. Un mago «supporto» non c'è
-#: nel gioco; diventa un mago «utilità», e il conto lo dice.
-FUNZIONE_DI_RIPIEGO = dict(_DATI["ripiego"])
 
-#: Le classi incantatrici per cui una lista **non** è stata scritta. Per queste
-#: il generatore preferisce non scegliere invece di scegliere male: un blocco
-#: senza incantesimi si riempie in due minuti, un adepto con la lista del mago
-#: arriva al tavolo e ci resta.
-#: ⚠️ L'adepto è fuori dalla matrice approvata dal DM (le 21 celle sono le sei
-#: classi con lista piena). È l'unico residuo dichiarato del lotto I.
-SENZA_LISTA = frozenset(_DATI["regole"]["senza_lista"])
+@_cache
+def _liste(id_: str) -> dict:
+    _DATI = _S.regole(id_).dati("creature.incantesimi")
+    CANONICA = dict(_DATI["canonica"])
+
+    # ===========================================================================
+    # Le liste, per lista di classe × funzione
+    # ===========================================================================
+    # Ogni voce è presa dall'ancora in `dnd-35-srd/references/spells.md`, per quella
+    # classe e quel livello. Poche voci per livello, ed è voluto: sono gli
+    # incantesimi che quella funzione lancerebbe davvero, non tutto il SRD.
+
+    #: classe → funzione → livello → incantesimi. Mago e stregone puntano allo
+    #: **stesso oggetto** (`[regole] alias` nei dati), e deve restare così: nel SRD
+    #: hanno la stessa lista, e due copie divergerebbero al primo ritocco.
+    LISTE: dict[str, dict[str, dict[int, list[str]]]] = {
+        classe: {f: {int(liv): list(v) for liv, v in per.items()} for f, per in ff.items()}
+        for classe, ff in _DATI["liste"].items()}
+    for _alias, _di in _DATI["regole"]["alias"].items():
+        LISTE[_alias] = LISTE[_di]
+    #: L'ordine delle classi resta quello di prima (mago, stregone, chierico, …).
+    LISTE = {c: LISTE[c] for c in ["mago", "stregone"] + [c for c in LISTE if c not in ("mago", "stregone")]}
+
+    #: Quando la cella (classe × funzione) non esiste, si ripiega su un'altra
+    #: funzione **della stessa classe** — mai sulla lista di un'altra classe, che è
+    #: esattamente il difetto da cui nasce questo file. Un mago «supporto» non c'è
+    #: nel gioco; diventa un mago «utilità», e il conto lo dice.
+    FUNZIONE_DI_RIPIEGO = dict(_DATI["ripiego"])
+
+    #: Le classi incantatrici per cui una lista **non** è stata scritta. Per queste
+    #: il generatore preferisce non scegliere invece di scegliere male: un blocco
+    #: senza incantesimi si riempie in due minuti, un adepto con la lista del mago
+    #: arriva al tavolo e ci resta.
+    #: ⚠️ L'adepto è fuori dalla matrice approvata dal DM (le 21 celle sono le sei
+    #: classi con lista piena). È l'unico residuo dichiarato del lotto I.
+    SENZA_LISTA = frozenset(_DATI["regole"]["senza_lista"])
+    return {"CANONICA": CANONICA, "LISTE": LISTE, "FUNZIONE_DI_RIPIEGO": FUNZIONE_DI_RIPIEGO,
+            "SENZA_LISTA": SENZA_LISTA}
 
 # ===========================================================================
 # La variante PF1e — la richiesta del DM, tarata su cosa PF1e dà davvero
@@ -172,12 +189,28 @@ SENZA_LISTA = frozenset(_DATI["regole"]["senza_lista"])
 #: non è affidato alla memoria di nessuno.
 #: Stanno nel plugin pf1e (ADR-0111, L5c): `[solo]` di
 #: `sistemi/pf1e/dati/incantesimi.toml`; lo stregone è un alias del mago.
-_SOLO = _S.dati("pf1e", "creature.incantesimi")
-PF1E_SOLO: dict[str, dict[int, list[tuple[str, str]]]] = {
-    classe: {int(liv): [tuple(v) for v in voci] for liv, voci in per.items()}
-    for classe, per in _SOLO["solo"].items()}
-for _alias, _di in _SOLO["solo_alias"].items():
-    PF1E_SOLO[_alias] = PF1E_SOLO[_di]
+def solo_pf1e(id_: str = "pf1e") -> "dict[str, dict[int, list[tuple[str, str]]]]":
+    """Gli incantesimi PF1e senza equivalente 3.5 (`[solo]` dei dati di `id_`)."""
+    return _solo_pf1e(id_)
+
+
+@_cache
+def _solo_pf1e(id_: str) -> "dict[str, dict[int, list[tuple[str, str]]]]":
+    _SOLO = _S.regole(id_).dati("creature.incantesimi")
+    PF1E_SOLO: dict[str, dict[int, list[tuple[str, str]]]] = {
+        classe: {int(liv): [tuple(v) for v in voci] for liv, voci in per.items()}
+        for classe, per in _SOLO["solo"].items()}
+    for _alias, _di in _SOLO["solo_alias"].items():
+        PF1E_SOLO[_alias] = PF1E_SOLO[_di]
+    return PF1E_SOLO
+
+
+def __getattr__(nome: str):
+    if nome in _NOMI_LISTE:
+        return liste()[nome]
+    if nome == "PF1E_SOLO":
+        return solo_pf1e()
+    raise AttributeError(f"module {__name__!r} has no attribute {nome!r}")
 
 
 # ===========================================================================
@@ -201,10 +234,10 @@ def cella(classe: str, funzione: str) -> tuple[dict[int, list[str]], str]:
     funzione della stessa classe, e chi chiama deve poterlo scrivere nel conto
     invece di far sparire la differenza.
     """
-    per_classe = LISTE[CANONICA.get(classe.lower(), classe.lower())]
+    per_classe = liste()["LISTE"][liste()["CANONICA"].get(classe.lower(), classe.lower())]
     if funzione in per_classe:
         return per_classe[funzione], funzione
-    ripiego = FUNZIONE_DI_RIPIEGO[CANONICA.get(classe.lower(), classe.lower())]
+    ripiego = liste()["FUNZIONE_DI_RIPIEGO"][liste()["CANONICA"].get(classe.lower(), classe.lower())]
     return per_classe[ripiego], ripiego
 
 
@@ -215,8 +248,8 @@ def scegli(classe: str, funzione: str, slot: tuple[int, ...],
     Torna (le righe da stampare, le note sui rincari PF1e). Gli incantesimi di
     livello 0 non si scelgono: sono a volontà e non descrivono la creatura.
     """
-    canonica = CANONICA.get(classe.lower(), classe.lower())
-    if canonica in SENZA_LISTA:
+    canonica = liste()["CANONICA"].get(classe.lower(), classe.lower())
+    if canonica in liste()["SENZA_LISTA"]:
         return [], []
     lista, _ = cella(canonica, funzione)
     righe, note = [], []
@@ -225,7 +258,7 @@ def scegli(classe: str, funzione: str, slot: tuple[int, ...],
             continue
         scelti = rng.sample(lista[livello], min(quanti, len(lista[livello])))
         if pf1e:
-            aggiunte = PF1E_SOLO.get(canonica, {}).get(livello)
+            aggiunte = solo_pf1e().get(canonica, {}).get(livello)
             if aggiunte:
                 it, prd = rng.choice(aggiunte)
                 # Uno solo per livello, e **sostituisce** invece di aggiungere:

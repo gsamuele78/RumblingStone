@@ -50,12 +50,30 @@ CHIUSURA = "```"
 # di questi il riquadro sarebbe una cornice con dentro dei buchi.
 #: I campi stanno nel plugin della famiglia d20 (ADR-0111, L5d):
 #: `sistemi/d20/dati/statblocco.toml`, capacità `statblocco.campi`.
+#: Si leggono alla prima richiesta, non all'import (F2 di ADR-0112): i nomi
+#: `OBBLIGATORI`, `AMMESSI` e `LISTE` restano quelli di sempre per chi li importa.
+from functools import cache as _cache  # noqa: E402
+
 from . import sistemi as _S  # noqa: E402
 
-_CAMPI = _S.dati("d20", "statblocco.campi")
-OBBLIGATORI = tuple(_CAMPI["obbligatori"])
-AMMESSI = tuple(_CAMPI["ammessi"])
-LISTE = tuple(_CAMPI["liste"])
+_NOMI_CAMPI = {"OBBLIGATORI": "obbligatori", "AMMESSI": "ammessi", "LISTE": "liste"}
+
+
+def campi(id_: str = "d20") -> "dict[str, tuple[str, ...]]":
+    """I campi del blocco per il sistema `id_` (capacità `statblocco.campi`)."""
+    return _campi(id_)
+
+
+@_cache
+def _campi(id_: str) -> "dict[str, tuple[str, ...]]":
+    d = _S.regole(id_).dati("statblocco.campi")
+    return {nome: tuple(d[chiave]) for nome, chiave in _NOMI_CAMPI.items()}
+
+
+def __getattr__(nome: str):
+    if nome in _NOMI_CAMPI:
+        return campi()[nome]
+    raise AttributeError(f"module {__name__!r} has no attribute {nome!r}")
 
 
 class StatblockError(ValueError):
@@ -83,10 +101,10 @@ class Statblocco:
 
     @property
     def completo(self) -> bool:
-        return all(getattr(self, c.replace("-", "_")) for c in OBBLIGATORI)
+        return all(getattr(self, c.replace("-", "_")) for c in campi()["OBBLIGATORI"])
 
     def mancanti(self) -> list[str]:
-        return [c for c in OBBLIGATORI if not getattr(self, c.replace("-", "_"))]
+        return [c for c in campi()["OBBLIGATORI"] if not getattr(self, c.replace("-", "_"))]
 
 
 def _campo(chiave: str) -> str:
@@ -124,10 +142,10 @@ def leggi(testo: str) -> Statblocco | None:
             raise StatblockError(f"riga senza «chiave: valore»: {r.strip()!r}")
         chiave, _, valore = r.partition(":")
         chiave = chiave.strip()
-        if chiave not in AMMESSI:
+        if chiave not in campi()["AMMESSI"]:
             raise StatblockError(f"campo sconosciuto «{chiave}» "
-                                 f"(ammessi: {', '.join(AMMESSI)})")
-        if chiave in LISTE:
+                                 f"(ammessi: {', '.join(campi()['AMMESSI'])})")
+        if chiave in campi()["LISTE"]:
             chiave_lista = _campo(chiave)
             if valore.strip():
                 getattr(sb, chiave_lista).append(valore.strip())
@@ -142,11 +160,11 @@ def leggi(testo: str) -> Statblocco | None:
 def rendi(sb: Statblocco) -> str:
     """Il blocco in forma canonica: stesso ordine, sempre, così i diff si leggono."""
     fuori = [APERTURA]
-    for chiave in AMMESSI:
+    for chiave in campi()["AMMESSI"]:
         valore = getattr(sb, _campo(chiave))
         if not valore:
             continue
-        if chiave in LISTE:
+        if chiave in campi()["LISTE"]:
             fuori.append(f"{chiave}:")
             fuori += [f"  - {v}" for v in valore]
         else:

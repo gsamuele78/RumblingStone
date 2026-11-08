@@ -22,10 +22,12 @@ from __future__ import annotations
 import html
 import re
 from dataclasses import dataclass, field
+from functools import cache as _cache
 from pathlib import Path
 
 from dmcore import tabelle as T
-from dmcore.progressione import CLASSE_LIVELLO, DADO_DI_CLASSE, TS, Gruppo, ts_base
+from dmcore import progressione as _P
+from dmcore.progressione import TS, Gruppo, ts_base
 from dmcore.progressione import classe as _classe
 
 __all__ = [
@@ -47,14 +49,34 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 ORDINE = ("For", "Des", "Cos", "Int", "Sag", "Car")
-#: I modificatori di taglia alla CA, per ricavare la Destrezza dalla CA di contatto.
-TAGLIA = {nome: ca for nome, (_, ca) in T.TAGLIE.items()}
 BLOCCO = re.compile(r"```statblocco\n(.*?)```", re.S)
-#: Se il `tipo` nomina una classe, lo statblocco e' un PNG e gli array del
-#: Manuale del DM sono lo strumento giusto. Se no, e' una creatura.
-CLASSE_NEL_TIPO = re.compile(
-    r"\b(" + "|".join(sorted(map(re.escape, DADO_DI_CLASSE), key=len, reverse=True))
-    + r")\w*\s*\d+", re.I)
+
+
+_PIGRE = ("TAGLIA", "CLASSE_NEL_TIPO")
+
+
+@_cache
+def _derivate() -> dict:
+    """Le costanti che vengono dai dati di un sistema, lette alla prima richiesta
+    e non all'import (F2 di ADR-0112)."""
+    #: I modificatori di taglia alla CA, per ricavare la Destrezza dalla CA di contatto.
+    TAGLIA = {nome: ca for nome, (_, ca) in T.TAGLIE.items()}
+    #: Se il `tipo` nomina una classe, lo statblocco e' un PNG e gli array del
+    #: Manuale del DM sono lo strumento giusto. Se no, e' una creatura.
+    CLASSE_NEL_TIPO = re.compile(
+        r"\b(" + "|".join(sorted(map(re.escape, _P.DADO_DI_CLASSE), key=len, reverse=True))
+        + r")\w*\s*\d+", re.I)
+    luogo = locals()
+    return {n: luogo[n] for n in _PIGRE}
+
+
+def __getattr__(nome: str):
+    if nome in _PIGRE:
+        return _derivate()[nome]
+    if nome == "NON_MORTO_PF1E":
+        return non_morto()
+    raise AttributeError(f"module {__name__!r} has no attribute {nome!r}")
+
 
 
 def taglia_di(testo: str) -> int:
@@ -70,7 +92,7 @@ def taglia_di(testo: str) -> int:
         m = re.search(r"^ca-dettaglio:.*?([+-]\d)\s*(?:size|taglia)\b", testo, re.M | re.I)
         return int(m.group(1)) if m else 0
     basso = tipo.group(1).lower()
-    for nome, val in TAGLIA.items():
+    for nome, val in _derivate()["TAGLIA"].items():
         if re.search(rf"\b{nome}\b", basso):
             return val
     return 0
@@ -179,7 +201,7 @@ def pf_dado_sospetto(testo: str, gs: "float | None" = None) -> "str | None":
     # 2 · l'umanoide senza DV razziali tira solo il dado delle sue classi (SRD)
     tipo = re.search(r"^tipo:\s*(.+)$", testo, re.M)
     if tipo and re.search(r"\bhumanoid|umanoide", tipo.group(1), re.I):
-        attesi = {DADO_DI_CLASSE[c.lower()] for c in CLASSE_NEL_TIPO.findall(tipo.group(1))}
+        attesi = {_P.DADO_DI_CLASSE[c.lower()] for c in _derivate()["CLASSE_NEL_TIPO"].findall(tipo.group(1))}
         facce = {int(b) for _, b in pezzi}
         if attesi and not (facce & attesi):
             return (f"pf-dado «{md.group(1).strip()}» in d{'/d'.join(map(str, sorted(facce)))}, "
@@ -494,7 +516,7 @@ def composizione(testo: str, tipo: str) -> "tuple[list[Gruppo], bool]":
     # le classi stanno nel `tipo`; se il `tipo` non ne nomina, nel titolo
     # («Gnoll Warrior 2»). Mai in entrambi: il titolo ripete spesso il tipo.
     for sorgente in (tipo, titolo.group(1) if titolo else ""):
-        for nome, liv in CLASSE_LIVELLO.findall(sorgente):
+        for nome, liv in _P.CLASSE_LIVELLO.findall(sorgente):
             c = _classe(nome)
             if c:
                 gruppi.append(Gruppo(nome, int(liv), c[0], c[1], c[2]))
@@ -503,14 +525,14 @@ def composizione(testo: str, tipo: str) -> "tuple[list[Gruppo], bool]":
     livelli = sum(g.n for g in gruppi)
     totale = dv_totali(testo)
     ignoti = [n for n, _ in LIVELLO_IGNOTO.findall(tipo)
-              if not CLASSE_LIVELLO.match(f"{n} 1") and T.normalizza_tipo(n) is None
+              if not _P.CLASSE_LIVELLO.match(f"{n} 1") and T.normalizza_tipo(n) is None
               and n.lower() not in ("hd", "dv")]
     if ignoti:
         return gruppi, False
     chiave = T.normalizza_tipo(tipo) if tipo else None
     if chiave not in T.TIPI:
         return gruppi, bool(gruppi) and (totale is None or totale == livelli)
-    dado, bab, buoni = NON_MORTO_PF1E if non_morto_pf1e(tipo) else T.TIPI[chiave]
+    dado, bab, buoni = non_morto() if non_morto_pf1e(tipo) else T.TIPI[chiave]
     scritti = dadi_di_pf(testo)
     if chiave == "humanoid" and not gruppi and (totale or 0) <= 1:
         # un umanoide da 1 DV ha un livello di classe al posto del DV razziale
@@ -567,10 +589,21 @@ def leggi(p: Path) -> "Scheda | None":
 #: dichiara nel `tipo` («… PF1e»): il leone spettrale (D5, 2026-09-23) e' un
 #: fantasma PF1e perche' il DM ha scelto la versione piu' forte fra le due.
 #: Viene dal tipo `undead` del plugin pf1e (ADR-0111, L5d), non da una copia qui.
+#: Si legge alla prima richiesta, non all'import (F2 di ADR-0112).
 from dmcore import sistemi as _S  # noqa: E402
 
-_NM = _S.dati("pf1e", "creature.regole_di_tipo")["tipi"]["undead"]
-NON_MORTO_PF1E = (_NM["dv"], _NM["bab"], tuple(_NM["ts_buoni"]))
+
+def non_morto(id_: str = "pf1e") -> "tuple[int, float, tuple[str, ...]]":
+    """(dado dei DV, BAB per DV, TS buoni) del tipo non morto nel sistema `id_`."""
+    return _non_morto(id_)
+
+
+@_cache
+def _non_morto(id_: str) -> "tuple[int, float, tuple[str, ...]]":
+    nm = _S.regole(id_).dati("creature.regole_di_tipo")["tipi"]["undead"]
+    return (nm["dv"], nm["bab"], tuple(nm["ts_buoni"]))
+
+
 PF1E = re.compile(r"\bPF1e\b", re.I)
 
 
