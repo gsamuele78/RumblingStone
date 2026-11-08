@@ -126,6 +126,50 @@ class TestInstalla(DatiFinti):
         self.assertEqual((dest / "bin" / "finto").read_bytes(), self.binario)
 
 
+class TestRiprova(unittest.TestCase):
+    """Un 5xx si riprova con attese crescenti; un 404 no."""
+
+    def _finto(self, errori):
+        import urllib.error
+        from unittest import mock
+        chiamate = []
+
+        class Risposta(io.BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        def apri(req, timeout):
+            chiamate.append(1)
+            if errori:
+                raise urllib.error.HTTPError(req.full_url, errori.pop(0), "x", {}, None)
+            return Risposta(b"ok")
+        return mock.patch.object(S.urllib.request, "urlopen", apri), chiamate
+
+    def test_un_504_si_riprova(self):
+        attese = []
+        patch, chiamate = self._finto([504, 502])
+        with patch:
+            self.assertEqual(S.scarica("https://x/y", dormi=attese.append), b"ok")
+        self.assertEqual((len(chiamate), attese), (3, [2, 4]))
+
+    def test_un_404_non_si_riprova(self):
+        import urllib.error
+        patch, chiamate = self._finto([404])
+        with patch, self.assertRaises(urllib.error.HTTPError):
+            S.scarica("https://x/y", dormi=lambda s: None)
+        self.assertEqual(len(chiamate), 1)
+
+    def test_dopo_l_ultimo_tentativo_l_errore_passa(self):
+        import urllib.error
+        patch, chiamate = self._finto([503] * 5)
+        with patch, self.assertRaises(urllib.error.HTTPError):
+            S.scarica("https://x/y", dormi=lambda s: None)
+        self.assertEqual(len(chiamate), 5)
+
+
 class TestBundle(DatiFinti):
     def bundle(self, uscita: Path) -> Path:
         orig = (S.TOML, S.LOCK)

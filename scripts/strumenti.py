@@ -190,10 +190,29 @@ def estrattore(url: str) -> Callable[[bytes, str], bytes]:
 
 # ── scarica, verifica, installa ──────────────────────────────────────────────
 
-def scarica(url: str) -> bytes:
+#: Attese fra i tentativi, in secondi. Un 5xx o una connessione caduta di
+#: GitHub Releases capitano (504 misurato in CI il 2026-11-08, PR #340): si
+#: riprova; un 4xx no, perché un URL sbagliato non guarisce aspettando.
+ATTESE = (2, 4, 8, 16)
+
+
+def scarica(url: str, attese=ATTESE, dormi=None) -> bytes:
+    import time
+    import urllib.error
+    dormi = dormi or time.sleep
     req = urllib.request.Request(url, headers={"User-Agent": "RumblingStone strumenti.py"})
-    with urllib.request.urlopen(req, timeout=300) as r:
-        return r.read()
+    for i in range(len(attese) + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or i == len(attese):
+                raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if i == len(attese):
+                raise
+        dormi(attese[i])
+    raise AssertionError("non raggiunto")
 
 
 def _registro(dest: Path) -> dict:
