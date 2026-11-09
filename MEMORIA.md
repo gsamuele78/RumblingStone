@@ -87,6 +87,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 |---|---|---|---|
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Regole PF1e del cancello delle schede dal PRD (ADR-0119):… | ✅ prova: 27 mutazioni bocciate, promozione proposta 2026-11-23 |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
+| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | Card del DM: D2 Krusk, Vreek e Ur-Vrax confermati come consigliati (titolo CANO… | ✅ applicate in ARC08-01/02/03, DEF-2, Guida agli scontri, Bestiario |
+| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D4 confronto degli statblocchi alternativi della chat «Organizing D&D Campaign… | ✅ confronto fatto, ★ al DM |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): fallback PyYAML di AUDIT-SCRIPTS chiuso come superato su card del D… | 🟡 D5 aperta per le voci non chiuse |
@@ -95,8 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Promozioni da testing a stable (ok del DM): ruff blocca e `compileall` esce (P3… | ✅ P3; P4 e P5 in parte |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F4 strumenti per sistema del file: A5 6 → 0 (`sistema_di` +… | ✅ |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
-| 2026-11-08 | AUDIT-SCRIPTS (da RECUPERO D5) | Ripiego senza PyYAML in `compress_skills.py`: misurato e scartato. Funziona (18… | ✅ chiusa, non si fa |
 
 ## Le misure che si portano dietro
 
