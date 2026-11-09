@@ -1119,10 +1119,10 @@ FUORI_DAI_NUMERI = ("_ARCHIVIO", "plans/", "docs/", ".github/", "skills/", "eval
                     "CHANGELOG.md")
 #: L'AU di un'unità e il rimando alla sua scheda uno contro uno.
 AU_UNITA = re.compile(r"^\*\*AU(?:\s*\(([^)]*)\))?:\*\*\s*\+?(-?\d+)", re.M)
-UNO_CONTRO_UNO = re.compile(r"[Uu]no contro uno:?\**\s*`(Bestiario/[^`]+\.md)`")
+UNO_CONTRO_UNO = re.compile(r"[Uu]no contro uno:?\**\s*`([^`]+\.md)`(?:\s*§\s*«([^»]+)»)?")
 TITOLO_UNITA = re.compile(r"^#{2,4}\s+\**(.+?)\**\s*$", re.M)
 #: Il +2 «media» della regola delle unità.
-AU_MEDIA = 2
+AU_MEDIA = 0
 
 
 def _attacco_di_scheda(s: Scheda) -> str:
@@ -1218,7 +1218,70 @@ def _unita(testo: str):
         titolo = next((t for s, t in titoli if s == inizio), "")
         rim = UNO_CONTRO_UNO.search(testo[inizio:fine])
         yield (re.sub(r"[*#]", "", titolo).strip(), testo.count("\n", 0, m.start()) + 1,
-               m.group(1) or "", int(m.group(2)), rim.group(1) if rim else None)
+               m.group(1) or "", int(m.group(2)),
+               (rim.group(1) + ("§" + rim.group(2) if rim.group(2) else "")) if rim else None)
+
+
+#: Il blocco «STATISTICHE CREATURA SINGOLA» di una guida: la scheda uno contro
+#: uno in forma compatta, dentro lo stesso recinto dell'unità.
+SINGOLA = re.compile(r"^```\n((?:(?!^```).*\n)*?)STATISTICHE CREATURA SINGOLA[^\n]*\n((?:(?!^```).*\n)*?)^```", re.M)
+AU_DEL_RECINTO = re.compile(r"Attacco Unità:\s*\+?(-?\d+)(?:\s*\(([^)]*)\))?")
+ATT_SINGOLA = re.compile(r"^Att(?:acco)?(?: a distanza)? (?!Base|Completo|Unità)(.+)$", re.M)
+TAGLIA_SINGOLA = {"minuscol[oaie]": 2, "piccol[oaie]": 1, "grand[ei]": -1, "enorm[ei]": -2, "mastodontic[oaih]+": -4}
+
+
+def _singole(testo: str):
+    """(titolo, riga, AU o None, etichetta, corpo) dei blocchi «creatura singola»."""
+    titoli = [(m.start(), m.group(1).strip()) for m in TITOLO_UNITA.finditer(testo)]
+    for m in SINGOLA.finditer(testo):
+        titolo = max(((s, t_) for s, t_ in titoli if s < m.start()), default=(0, ""))[1]
+        au = AU_DEL_RECINTO.search(m.group(1))
+        yield (re.sub(r"[*#]", "", titolo).strip(), testo.count("\n", 0, m.start()) + 1,
+               int(au.group(1)) if au else None, (au.group(2) or "") if au else "", m.group(2))
+
+
+def _attacco_della_singola(corpo: str, etichetta: str = "") -> "tuple | None":
+    """(scritto, atteso o None, come) dell'attacco di un blocco «creatura singola».
+
+    Con un'etichetta («Lancio Massi») sceglie l'attacco che la nomina; se no il primo.
+    """
+    voci = [v for r in ATT_SINGOLA.findall(corpo) for v in re.split(r"\s+(?:e|o)\s+(?=[A-Z])|;", r) if v.strip()]
+    voci = [v for v in voci if PRIMO_ATTACCO.search(v)]
+    if not voci:
+        return None
+    parole = [w.lower()[:-1] for w in re.findall(r"\w{4,}", etichetta)]
+    riga = next((v for v in voci if any(w in v.lower() for w in parole)), voci[0])
+    scritto = int(PRIMO_ATTACCO.search(riga).group(1))
+    bab = re.search(r"Attacco Base\s*\+?(-?\d+)", corpo)
+    car = re.search(r"^For \d+.*$", corpo, re.M)
+    if not bab or not car:
+        return scritto, None, "il blocco non scrive «Attacco Base» o le caratteristiche"
+    basso = corpo.lower()
+    # la taglia è quella della riga del tipo («CM Gigante Grande;»), non di un'arma «grande»
+    tipo = next((r for r in basso.split("\n") if re.search(r"\b(umanoide|gigante|bestia|drago|non morto)\b", r)), "")
+    taglia = next((v for k, v in TAGLIA_SINGOLA.items() if re.search(rf"\b{k}\b", tipo)), 0)
+    a = attacco_atteso(riga, int(bab.group(1)), car.group(0), corpo, taglia)
+    return a if a else (scritto, None, "l'attacco non si legge")
+
+
+def numeri_delle_singole(p: Path, testo: str) -> "list[dict]":
+    fuori = []
+    for titolo, _, au, etichetta, corpo in _singole(testo):
+        a = _attacco_della_singola(corpo)
+        if a is None:
+            continue
+        if a[1] is None or a[0] != a[1]:
+            fuori.append(_scarto(_rel(p), titolo, "attacco", a[0], a[1], a[2]))
+        if au is not None:
+            b = _attacco_della_singola(corpo, etichetta) or a
+            if au != b[0] + AU_MEDIA:
+                fuori.append(_scarto(_rel(p), titolo, "AU", au, b[0] + AU_MEDIA,
+                                     f"attacco {b[0]:+d} della creatura singola" + _come_media()))
+    return fuori
+
+
+def _come_media() -> str:
+    return f" + {AU_MEDIA}" if AU_MEDIA else " (ARC08-02 §4: l'AU è l'attacco medio dell'unità)"
 
 
 def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
@@ -1226,11 +1289,17 @@ def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
     for titolo, riga, arma, au, rimando in _unita(testo):
         if not rimando:
             fuori.append(_scarto(_rel(p), titolo, "AU", au, None,
-                                 "manca la scheda uno contro uno («Uno contro uno: `Bestiario/…`»)"))
+                                 "manca la scheda uno contro uno («Uno contro uno: `…`»)"))
             continue
-        f = ROOT / rimando
-        s = leggi(f) if f.exists() else None
-        a = attacco_esatto(s) if s else None
+        file_, _, sezione = rimando.partition("§")
+        f = ROOT / file_
+        if sezione:
+            corpo = next((c for t_, _, _, _, c in _singole(f.read_text(encoding="utf-8")) if t_.startswith(sezione)),
+                         None) if f.exists() else None
+            a = _attacco_della_singola(corpo, arma) if corpo else None
+        else:
+            s = leggi(f) if f.exists() else None
+            a = attacco_esatto(s) if s else None
         if not a:
             fuori.append(_scarto(_rel(p), titolo, "AU", au, None,
                                  f"la scheda {rimando} non ha un attacco che si legge"))
@@ -1238,7 +1307,7 @@ def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
         atteso = a[0] + AU_MEDIA
         if au != atteso:
             fuori.append(_scarto(_rel(p), titolo, "AU", au, atteso,
-                                 f"attacco {a[0]:+d} di {rimando} + {AU_MEDIA} (media delle unità)"))
+                                 f"attacco {a[0]:+d} di {rimando}" + _come_media()))
     return fuori
 
 
@@ -1264,8 +1333,10 @@ def numeri_dei_file() -> "tuple[list[dict], list[str]]":
         if recinti:
             scarti_.extend(numeri_dei_recinti(p, testo, sistema))
         unita = list(_unita(testo))
-        letti += len(unita)
+        singole = list(_singole(testo))
+        letti += len(unita) + len(singole)
         scarti_.extend(numeri_delle_unita(p, testo))
+        scarti_.extend(numeri_delle_singole(p, testo))
         if not letti:
             scoperti.append(r)
     return scarti_, scoperti
