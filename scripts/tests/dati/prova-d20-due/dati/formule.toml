@@ -36,8 +36,8 @@ fonte = "inversa di `modificatore`: il punteggio più basso che dà quel modific
 espressione = "max(0, livello - 3)"
 ingressi = ["livello"]
 fonte = "PRD PF1e, ranger e paladino: livello dell'incantatore = livello di classe − 3"
-# ⚠️ Divergenza aperta (trovata con F3, 2026-11-08): nell'SRD 3.5 il livello
-# dell'incantatore di ranger e paladino è «one-half his ranger level» dal 4°
-# (character-classes-ii.md, righe 57 e 179 della fonte in cache), non − 3.
-# F3 sposta la formula com'era nel codice, senza cambiare le uscite; quale
-# versione vale per i moduli 3.5 lo decide il DM.
+# Scelta del DM (card del 2026-11-09, «Tenere livello meno 3»): vale anche
+# nei moduli 3.5. È la regola PF1e, più forte di quella SRD 3.5 dal 7° livello
+# (al 14°: 11 contro 7), secondo la regola del DM «la versione più potente,
+# con la fonte segnata». ⚠ Non SRD 3.5: l'SRD dice «one-half his ranger
+# level» dal 4° (character-classes-ii.md, righe 57 e 179 della fonte in cache).
