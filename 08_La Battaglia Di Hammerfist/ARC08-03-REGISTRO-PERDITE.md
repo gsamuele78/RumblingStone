@@ -44,7 +44,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 ## **ESERCITO DELLA MANO ROSSA (ATTACCANTI)**
 
 ### **Fanteria Hobgoblin (Standard)**
-**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+8** | DU: **18** | Morale Base: **+2**
+**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+10** | DU: **18** | Morale Base: **+2**
 **Abilità Speciali:** Formazione Tattica (+1 DU se adiacente ad alleati), Disciplina Ferrea (+3 TS Paura)
 
 | # | Punti Ferita Unità (PFU) | Note / Status Attuale | # | Punti Ferita Unità (PFU) | Note / Status Attuale |
@@ -140,7 +140,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 | **1** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 | **2** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 
-**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+12** | DU: **19** | PFU: 13 | Morale: +3
+**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+15** | DU: **19** | PFU: 13 | Morale: +3
 *Abilità: Guardia del Corpo (intercetta danni per Grimjaw), Attacco Poderoso, Lealtà Incrollabile*
 | # | PFU |
 | :- | :--- |

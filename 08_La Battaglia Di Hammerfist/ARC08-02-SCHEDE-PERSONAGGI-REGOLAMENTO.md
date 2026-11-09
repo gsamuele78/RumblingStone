@@ -72,7 +72,7 @@
 > (valori **approvati dal DM 2026-07-03**). Se il gruppo NON ha giocato il P5,
 > usa lo statblock qui sotto invariato.
 **NM Drago Enorme (Acqua)**
-**Iniziativa:** +4; **Sensi:** Percezione cieca 18 m (SRD: chi Fauci non vede resta occultato del tutto, anche se ne sa il quadretto), Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
+**Iniziativa:** +4; **Sensi:** Percezione cieca 18 m (SRD: chi Fauci non vede resta occultato del tutto, anche se ne sa il quadretto), Scurovisione 36m, Visione Crepuscolare; Ascoltare +27, Osservare +27
 
 **CA:** 29 (-2 taglia, +21 naturale), contatto 8, colto alla sprovvista 29 (37 con *Armatura Magica* e *Scudo*)
 **PF:** 337 (25d12+175)
@@ -81,8 +81,8 @@
 
 **Velocità:** 18m, Nuotare 18m, Volare 45m (scarsa)
 **Attacco Base:** +25; **Lotta:** +43
-**Attacco:** Morso +33 in mischia (2d8+10/19-20)
-**Attacco Completo:** Morso +33 (2d8+10/19-20), 2 artigli +31 (2d6+5), 2 ali +31 (1d8+5), colpo di coda +31 (2d6+15)
+**Attacco:** Morso +34 in mischia (2d8+10/19-20)
+**Attacco Completo:** Morso +34 (2d8+10/19-20), 2 artigli +31 (2d6+5), 2 ali +31 (1d8+5), colpo di coda +31 (2d6+15)
 **Spazio/Portata:** 4,5m/3m (4,5m con morso)
 
 **Caratteristiche:** For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16
@@ -100,7 +100,7 @@
     *   *1° (CD 14):* *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
     *   *0° (CD 13):* *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
 
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Fluttuare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
+**Talenti:** Arma Focalizzata (morso), Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Fluttuare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18). Arma Focalizzata (morso) ha preso il posto di Allerta, la scelta più forte tra le due versioni confrontate: morso +34, Ascoltare e Osservare +27 `[CANONE — DM 2026-11-09, INVENTARIO D4]`.
 
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
 > di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
@@ -109,8 +109,8 @@
 > 16d4): qui si tengono i dadi del Vecchio con le capacità dell'adulto maturo,
 > ed è un potenziamento dichiarato. L'armatura naturale +21, la linea del soffio
 > di 30 m (taglia Enorme), RI 21 e RD 10/magia sono quelli dell'adulto maturo
-> SRD. Gli attacchi tornano col BAB: +25, For +10, taglia −2 fanno morso +33 e
-> secondari +31 con Multiattacco (la prima stesura diceva +35/+33). I draghi
+> SRD. Gli attacchi tornano col BAB: +25, For +10, taglia −2 fanno morso +33 (+34 con Arma
+> Focalizzata, dal 2026-11-09) e secondari +31 con Multiattacco (la prima stesura diceva +35/+33). I draghi
 > hanno **percezione cieca**, non vista cieca. Presenza terrificante a 90 m e
 > *corrompere acqua* a volontà sono potenziamenti, segnati sulla riga. I pf tornano coi dadi:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
@@ -126,7 +126,7 @@
 
 **La presa di Thorik** `[CANONE — DM 2026-10-19]`. È la firma di Fauci: la usa solo su Thorik, per odio, e solo da quando ha riconosciuto l'ascia. Non ghermisce nessun altro. Una volta per incontro `[CANONE — DM 2026-10-20]`. Se Aegis Fang non ha mai cantato né colpito, la presa non c'è.
 
-- **Il morso (round 18).** *Attacco in Volo* (SRD): scende in picchiata con un'azione di movimento e morde a metà discesa con l'azione standard, morso +37 (+33, più l'Odio della stirpe), 2d8+14, critico 19-20. Dopo il morso finisce il movimento risalendo, con la manovrabilità scarsa: 45° e metà velocità in salita (SRD). Una carica in volo darebbe +39, ma chiude il movimento accanto a Thorik.
+- **Il morso (round 18).** *Attacco in Volo* (SRD): scende in picchiata con un'azione di movimento e morde a metà discesa con l'azione standard, morso +38 (+34, più l'Odio della stirpe), 2d8+14, critico 19-20. Dopo il morso finisce il movimento risalendo, con la manovrabilità scarsa: 45° e metà velocità in salita (SRD). Una carica in volo darebbe +40, ma chiude il movimento accanto a Thorik.
 - **La presa.** Se il morso colpisce, *Ghermire* (SRD, *Snatch*) apre la lotta come la presa migliorata: azione gratuita, nessun attacco di opportunità, prova di lotta contrapposta. Fauci lo tiene con la sola bocca, a Lotta +27 (+43 −20, più l'Odio della stirpe): così non è in lotta, continua a volare, minaccia e usa gli altri attacchi su chi gli sta intorno (SRD, *Improved Grab*). Contro la Lotta di Thorik, +18 con BAB +13 e FOR 20 (i numeri che il repo usa: la scheda di Thorik non c'è), la presa riesce 86 volte su 100 (a parità vince Fauci, che ha il modificatore più alto). Thorik è Medio, due taglie sotto un Enorme: la stretta automatica di *Ghermire* vale solo da tre taglie in giù, e qui non c'è. Ogni prova di lotta che Fauci vince nei round dopo fa il danno del morso, 2d8+14 (presa migliorata, SRD).
 - **La salita (round 19).** *Fluttuare* (SRD, *Hover*): con un'azione di movimento si ferma e sale dritto a metà velocità, 22,5 m, fino a 30-35 m; con l'azione standard fa una prova di lotta, che morde se la vince. Che fermarsi e salire stiano nella stessa azione di movimento è una lettura del testo SRD («può poi volare in qualunque direzione a metà velocità»).
 - **Il soffio con lui in bocca (round 20).** Comincia il turno fermo in aria, e ha il round intero (SRD, *Hover*). Soffia sulla linea dei compagni che gli corrono sotto: chi è in bocca non ha il TS sui Riflessi (SRD, *Snatch*), e Thorik prende i 14d4 pieni.
@@ -829,7 +829,7 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 *Fanteria Leggera, 1ª Linea d'Assalto (30 Unità)*
 
 **PFU:** 10/10 | **DU:** 18 | **Morale Iniziale:** +2
-**AU (Spada Lunga):** +8 | **Danno:** 1d10+3
+**AU (Spada Lunga):** +10 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09, INVENTARIO D4: +10 della versione più forte, prima +8]`
 **Movimento:** 6m
 
 **Capacità Speciali:**
@@ -930,7 +930,7 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 > Uno contro uno: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (Guerriero 6, GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10). ⚠ **Non SRD**: l'orog è `[Private source — Monsters of Faerûn / Races of Faerûn]` `[CANONE — DM 2026-10-19, D10]`.
 
 **PFU:** 13/13 | **DU:** 19 | **Morale Iniziale:** +3
-**AU (Ascia Bipenne+1):** +12 | **Danno:** 1d12+7
+**AU (Ascia Bipenne+1):** +15 | **Danno:** 1d12+7 `[CANONE — DM 2026-11-09, INVENTARIO D4: +15 = ascia +13 della scheda uno contro uno più il +2 «media» della regola delle unità, prima +12]`
 **Movimento:** 6m
 
 **Capacità Speciali:**

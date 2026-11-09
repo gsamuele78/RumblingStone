@@ -65,7 +65,7 @@ celle:
 
 | PNG | Cella | Verdetto | Motivo |
 |---|---|---|---|
-| Fauci di Palude | morso +35 contro +33 | ★ **da decidere** | Nella chat Fauci è Grande (−1 di taglia) e ha Arma Focalizzata (morso). Il canone è Enorme (−2) e non ha il talento. Portato nel canone vale +34: Arma Focalizzata (morso) al posto di Allerta, che costa −2 ad Ascoltare e Osservare (Fauci ha comunque la percezione cieca). I talenti confermati dal DM il 2026-10-18 (Fluttuare, Ghermire, Riflessi Fulminei) non si toccano. |
+| Fauci di Palude | morso +35 contro +33 | ★ **sì** (DM 2026-11-09) | Nella chat Fauci è Grande (−1 di taglia) e ha Arma Focalizzata (morso). Il canone è Enorme (−2) e non ha il talento. Portato nel canone vale +34: Arma Focalizzata (morso) al posto di Allerta, che costa −2 ad Ascoltare e Osservare (Fauci ha comunque la percezione cieca). I talenti confermati dal DM il 2026-10-18 (Fluttuare, Ghermire, Riflessi Fulminei) non si toccano. |
 | Le Cantatrici della Pietra | iniziativa +1 contro +0 | scartata | Viene da Des 12 al posto di 10, pagata con Cos 16 e Car 16 al posto di 18 e 18. Nel canone sono GS 12 con TS e CD più alti (22 contro 20). |
 | Signore Ventolesto | Volontà +9 contro +8 | scartata | Il canone l'ha già misurata: con Sag 16 e Volontà di Ferro il +9 non si raggiunge (nota della scheda canone); l'Aura Celestiale dà +2 contro i malvagi. |
 | Orion Pelleorsa | attacco +12 contro +10 | scartata | Nella chat è il bastone in forma umana. Orion combatte in forma di orso crudele, dove il canone fa +19 contro +18 della chat. |
@@ -78,20 +78,22 @@ alti in ogni campo misurato.
 
 | Unità della chat | Unità canone | Cella | Verdetto | Motivo |
 |---|---|---|---|---|
-| Hobgoblin Fanti | Fanteria Hobgoblin | AU +10 contro +8 | ★ **da decidere** | Nemico. La card D6 di MASTER-DEF (PR #347) ha già scelto l'orda più forte. |
-| Guardie d'élite Orog | Orog Guardie Nere | AU +14 contro +12 | ★ **da decidere** | Nemico. La regola del canone (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2») sulla scheda uno contro uno (`Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`, ascia +13) darebbe **+15**, più della chat e del canone. |
+| Hobgoblin Fanti | Fanteria Hobgoblin | AU +10 contro +8 | ★ **sì** (DM 2026-11-09) | Nemico. La card D6 di MASTER-DEF (PR #347) ha già scelto l'orda più forte. |
+| Guardie d'élite Orog | Orog Guardie Nere | AU +14 contro +12 | ★ **sì** (DM 2026-11-09) | Nemico. La regola del canone (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2») sulla scheda uno contro uno (`Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`, ascia +13) darebbe **+15**, più della chat e del canone. |
 | Guardie d'élite Orog | Orog Guardie Nere | DU 22 contro 19 | scartata | La DU del canone è la CA media delle creature, e la guardia ha CA 19. Il 22 della chat non ha una scheda dietro. |
 | Orchi Berserker | Fanteria Orchesca | AU +8 contro +6, DU 16 contro 13 | scartata | È un'altra truppa (barbari). La fanteria orchesca del canone è l'orco guerriero dell'SRD (falcione +4, quindi AU +6) e ha già AU +8 in carica e sotto i 4 PFU. |
-| Guerrieri Nanici Veterani | Guerrieri Nanici Veterani | AU +11 contro +9 | ★ **da decidere** | Alleato. Rinforzarlo senza rinforzare i nemici rende la battaglia più facile. |
-| Balestrieri Nanici | Balestrieri Nanici | AU +12 contro +8 | ★ **da decidere** | Alleato, come sopra. |
+| Guerrieri Nanici Veterani | Guerrieri Nanici Veterani | AU +11 contro +9 | ★ **no** (DM 2026-11-09) | Alleato. Rinforzarlo senza rinforzare i nemici rende la battaglia più facile. |
+| Balestrieri Nanici | Balestrieri Nanici | AU +12 contro +8 | ★ **no** (DM 2026-11-09) | Alleato, come sopra. |
 
 Le unità della chat senza un'unità canone (Arcimaghi Draconici, Bugbear
 Infiltratori, Ranger Elfici sui Gufi, Cavalieri dei Gufi Celesti, e i Ranger
 Elfici come PNG) non hanno niente con cui confrontarsi: restano fuori da D4.
 Se servono, sono una voce nuova.
 
-## 4 · Le ★ da decidere
+## 4 · Le ★ decise dal DM il 2026-11-09
 
-1. **Fauci**: Arma Focalizzata (morso) al posto di Allerta, morso +34. Consigliata: sì.
-2. **Nemici**: Fanteria Hobgoblin AU +10; Orog Guardie Nere AU +15 (la regola del canone sulla loro scheda). Consigliata: sì, per D6 di MASTER-DEF.
-3. **Alleati**: Guerrieri Nanici Veterani AU +11, Balestrieri Nanici AU +12. Consigliata: no, perché la D6 ha rinforzato l'orda e non i difensori.
+Risposta del DM alle card: «Le ★ per Fauci e per l'orda nemica ok a tutte. Le ★ per gli alleati nani: no». Applicate in `ARC08-02`, `ARC08-01`, `ARC08-03`, `ARC08-DEF-2`, nella Guida agli scontri e nel Bestiario `[CANONE — DM 2026-11-09, INVENTARIO D4]`.
+
+1. **Fauci**: Arma Focalizzata (morso) al posto di Allerta, morso +34 (picchiata con l'Odio +38, carica +40), Ascoltare e Osservare da +29 a +27. **Sì.**
+2. **Nemici**: Fanteria Hobgoblin AU +10; Orog Guardie Nere AU +15 (la regola del canone sulla loro scheda). **Sì.**
+3. **Alleati**: Guerrieri Nanici Veterani AU +11, Balestrieri Nanici AU +12. **No**, come la consigliata: la D6 ha rinforzato l'orda e non i difensori.

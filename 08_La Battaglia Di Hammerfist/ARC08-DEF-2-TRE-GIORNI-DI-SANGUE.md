@@ -308,7 +308,7 @@ sono quelle del manuale o delle schede.
 | troll dell'ariete (10 DV) | 2 | 16 | 105 | 2 artigli +13 (1d6+7), morso +8 (1d6+3), sbranare 2d6+10; rigenerazione 5 | quando Gorthak fugge, lo seguono |
 | **Grimjaw** | 1 | 26 | 178 | *spada bastarda* +22/+17/+12 (1d10+9, 17-20) | sotto **89** fugge (libretto); la scheda: pozione sotto 60 |
 | orog della guardia nera | 4 | 19 | 63 | ascia bipenne +13/+8 (1d12+10) | mai, finché Grimjaw è vivo |
-| **Fauci di Palude** | 1 | 29 (37 con *armatura magica* e *scudo*) | 337 | soffio 14d4, Riflessi CD 29; a terra morso +33 (2d8+10), artigli, ali e coda +31 | il Giorno 1 dopo un passaggio; il Giorno 3 sotto ~**230** sale in quota |
+| **Fauci di Palude** | 1 | 29 (37 con *armatura magica* e *scudo*) | 337 | soffio 14d4, Riflessi CD 29; a terra morso +34 (2d8+10), artigli, ali e coda +31 | il Giorno 1 dopo un passaggio; il Giorno 3 sotto ~**230** sale in quota |
 | il cavaliere | 1 | 23 | 95 | *lancia da cavaliere* +16 (1d8+7, triplo in carica) | resta in sella finché Fauci vola |
 | bugbear assassino | 8 | 20 | 58 | morning star +11 (1d8+3), furtivo +4d6, attacco mortale | quando ne cadono più di 4, o se scoperti prima del colpo |
 | hobgoblin della diversione | 7 | 19 | 43 | spada lunga +10/+5 (1d8+2) | mai |
@@ -911,7 +911,7 @@ duelli sono tutta la battaglia dei pregen.
 **Fauci il Giorno 3** (Scena 6): la sequenza è nella tabella della scena.
 Dopo il soffio, se non atterra, risale e non torna: la sua giornata è il Re.
 Se atterra su un bastione: attacco completo su chi lo ha ferito di più (morso
-+33, 2d8+10; due artigli +31, 2d6+5; due ali +31, 1d8+5), il colpo di coda
++34, 2d8+10; due artigli +31, 2d6+5; due ali +31, 1d8+5), il colpo di coda
 (+31, 2d6+15) sulle guardie, e risale al primo round sotto ~230 (Appendice
 A.5).
 
@@ -1946,7 +1946,7 @@ si tira stasera, in forma compatta. Se cambiano, cambiano lì.
 
 **A.4 · Orog della guardia nera** (×4) · `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`, ⚠️ non SRD (orog) · GS 7 · Guerriero 6, Medio, LM · Iniz +4 · scurovisione 18 m · CA **19**, contatto 10, colto alla sprovvista 19 · pf **63** · Temp +10, Rifl +2, Vol +4 · velocità 6 m · *ascia bipenne +1* +13/+8 (1d12+10, ×3); con Attacco Poderoso a −3: +10/+5, 1d12+16 · Incalzare, Incalzare Potenziato · **guardia del corpo**: chi attacca Grimjaw in mischia deve prima superarne uno; immune alla paura finché Grimjaw è vivo. Grimjaw con quattro guardie: **EL** circa 15.
 
-**A.5 · Fauci di Palude** · `ARC08-02` §1; `Bestiario/villain/Fauci_di_Palude.md` · drago nero adulto maturo a 25 DV (potenziamento dichiarato) · GS 15 · Enorme · CA **29** (**37** con *armatura magica*, che lancia all'alba e dura tutto il giorno, e *scudo*, che dura 7 minuti e rilancia a ogni passaggio) · pf **337** · Temp +21, Rifl +16, Vol +19 · RD 10/magia, RI **21**, immune all'acido · volare 45 m (scarsa), Fluttuare, Attacco in Volo · **soffio** in linea di 30 m, 14d4 acido, Riflessi **CD 29**, ogni 1d4 round · a terra: **morso** +33 (2d8+10, 19-20), **2 artigli** +31 (2d6+5), **2 ali** +31 (1d8+5), **colpo di coda** +31 (2d6+15); Spazio 4,5 m, Portata 3 m · **soffio a cono** di 18 m, 1/giorno, con un round completo per prepararlo (⚠️ house-rule della scheda: l'SRD dà ai draghi neri solo la linea) · **Presenza terrificante** 90 m, Volontà **CD 25** (⚠️ potenziamento: 63 m nell'SRD per l'adulto maturo) · *dissolvi magie*, *nube maleodorante*, *immagine speculare* da stregone di 7° · il Giorno 3 sale in quota sotto ~**230** pf; atterra su un bastione se ha preso più di 50 danni nella scena.
+**A.5 · Fauci di Palude** · `ARC08-02` §1; `Bestiario/villain/Fauci_di_Palude.md` · drago nero adulto maturo a 25 DV (potenziamento dichiarato) · GS 15 · Enorme · CA **29** (**37** con *armatura magica*, che lancia all'alba e dura tutto il giorno, e *scudo*, che dura 7 minuti e rilancia a ogni passaggio) · pf **337** · Temp +21, Rifl +16, Vol +19 · RD 10/magia, RI **21**, immune all'acido · volare 45 m (scarsa), Fluttuare, Attacco in Volo · **soffio** in linea di 30 m, 14d4 acido, Riflessi **CD 29**, ogni 1d4 round · a terra: **morso** +34 (2d8+10, 19-20), **2 artigli** +31 (2d6+5), **2 ali** +31 (1d8+5), **colpo di coda** +31 (2d6+15); Spazio 4,5 m, Portata 3 m · **soffio a cono** di 18 m, 1/giorno, con un round completo per prepararlo (⚠️ house-rule della scheda: l'SRD dà ai draghi neri solo la linea) · **Presenza terrificante** 90 m, Volontà **CD 25** (⚠️ potenziamento: 63 m nell'SRD per l'adulto maturo) · *dissolvi magie*, *nube maleodorante*, *immagine speculare* da stregone di 7° · il Giorno 3 sale in quota sotto ~**230** pf; atterra su un bastione se ha preso più di 50 danni nella scena.
 
 **A.6 · Il cavaliere di Fauci** · `ARC08-02` §1 · hobgoblin Guerriero 6 / Guardia Nera 4 · GS 10 · CA **23**, pf **95** · Temp +15, Rifl +6, Vol +6 · *lancia da cavaliere +1* +16/+11 (1d8+7, ×3; in carica in sella danni tripli con Carica Devastante) · **Aura di disperazione**: −2 ai TS dei nemici entro 3 m · Punire il Bene 1/giorno (+2 a colpire, +4 danni) · Comando Tattico: +2 morale agli hobgoblin entro 9 m · resta in sella finché Fauci vola.
 
