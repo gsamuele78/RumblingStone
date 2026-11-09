@@ -13,7 +13,7 @@
 **Firma**: la presa di Thorik `[CANONE — DM 2026-10-19]`. *Ghermire* lo usa solo su Thorik, una volta, da quando ha riconosciuto Aegis Fang: lo morde in picchiata, sale con lui in bocca, soffia sui compagni e lo lascia cadere (`ARC08-02` §1, «La presa di Thorik»). Skullcrusher, nel ≈372, non ghermisce: combatte in passata e dice i nomi (`07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Appendice A.1). Nessun numero nuovo, quindi nessun boost log.
 
 Boost log: correzione dei conti sull'SRD (drago nero adulto maturo avanzato a 25 DV) — GS 15 → 15 — armatura naturale +21, Multiattacco, linea di 30 m, Odio della stirpe contro Thorik, sempre attivo (non SRD), tre talenti mancanti; i pf salgono a 337.
-Benchmark: PF T1-1 riga 15: CA 29 vs 30 (1 sotto; 37 con *Armatura Magica* e *Scudo*) / pf 337 vs 220 (sopra) / atk +33 vs +24 (sopra) / CD soffio 29 vs 23 (sopra) / TS buono +21 vs +18 (sopra).
+Benchmark: PF T1-1 riga 15: CA 29 vs 30 (1 sotto; 37 con *Armatura Magica* e *Scudo*) / pf 337 vs 220 (sopra) / atk +34 vs +24 (sopra) / CD soffio 29 vs 23 (sopra) / TS buono +21 vs +18 (sopra).
 <!-- storico -->
 Prima della correzione (2026-10-16): CA 28 (+20 naturale), PF 312 (25d12+175), Riflessi +15, artigli/ali/coda +30, soffio in linea di 24 m. La seconda copia (CORREZIONE-Boss-Fauci, ARC-07) e il carry-over B4 portavano gli stessi 312 pf.
 <!-- /storico -->

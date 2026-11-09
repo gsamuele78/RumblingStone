@@ -1,4 +1,4 @@
-# Ur-Vrax, Voce del Drago — il predicatore di Tiamat fra gli orchi (orco avanzato, chierico 9) [INFERRED — Tieni questa build (orco con archetipo Avanzato PF1e, GS 10, domini Distruzione e Male) come canone di Ur-Vrax?; base: card INVENTARIO D2 del 2026-11-08 e chat Gemini «Branch of Sistema Combattimento Massa D&D 3.5», corretta sulle regole 3.5]
+# Ur-Vrax, Voce del Drago — il predicatore di Tiamat fra gli orchi (orco avanzato, chierico 9) [CANONE — DM 2026-11-09, INVENTARIO D2]
 **Faction**: red-hand | **Role**: caster-divine | **Environment**: any | **CR**: 10 | **Source**: razza Orco, classe Chierico, domini Distruzione e Male e incantesimi SRD 3.5; Tiamat e i suoi domini da `skills/forgotten-realms-lore/references/fr-deities-complete.md`; archetipo Avanzato PF1e (`skills/pathfinder-1e-srd/references/monster-advancement.md`); idea, nome e ruolo dalla chat Gemini su Drive (`plans/INVENTARIO-GEMINI-AISTUDIO-2026-10.md` §3) | **Status**: inferred
 
 ```statblocco

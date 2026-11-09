@@ -140,7 +140,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 | **1** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 | **2** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 
-**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+12** | DU: **19** | PFU: 13 | Morale: +3
+**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+15** | DU: **19** | PFU: 13 | Morale: +3
 *Abilità: Guardia del Corpo (intercetta danni per Grimjaw), Attacco Poderoso, Lealtà Incrollabile*
 | # | PFU |
 | :- | :--- |
