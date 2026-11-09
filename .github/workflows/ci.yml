@@ -548,6 +548,34 @@ jobs:
           python -m pytest scripts/tests -q -n auto -m "not scrive_nel_repo"
           python -m pytest scripts/tests -q -m scrive_nel_repo
 
+  # P8 di PIANO-PIATTAFORMA, anticipata dal DM il 2026-11-09 («Accendilo
+  # ora»): la stessa suite del job principale su Python 3.14, non bloccante.
+  # Il resto della CI resta su 3.13 e il salto vero aspetta Debian 14 (ADR-0099
+  # §6); il criterio è un mese di verde su main prima del salto. Blender resta
+  # fuori: bpy vuole 3.13 esatto e sta solo in requirements-completo.txt, quindi
+  # qui test_blender_vero salta come nel job principale. Prima misura in locale
+  # (3.14.6): ogni dipendenza ha la ruota, stesse prove passate e saltate di 3.13.
+  python-314:
+    name: Python 3.14 in prova — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0   # come nel job principale: test_fase1 legge i rami
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+
+      - name: Installa con uv (come nel job principale)
+        run: |
+          pip install "uv==0.11.32"
+          uv pip install --system -r requirements-dev.txt
+
+      - name: Unit tests — pytest su 3.14
+        run: python -m pytest scripts/tests -q
+
   # D6 di PIANO-PIATTAFORMA (DM, 2026-10-23: «D6 b»): i convertitori entrano
   # nella piattaforma. STABLE dal 2026-11-08 (P9): 81 run di main dal 23/10
   # tutti verdi, in media 52 s, in parallelo a «validate». ruff li guarda gia' nel job
