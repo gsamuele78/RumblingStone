@@ -163,12 +163,17 @@ def leggi_scheda(f: Path) -> Lettura:
         if re.search(rf"\b{taglia}\b", basso):
             L.taglia = taglia
             break
-    for nome, val in ARMATURE.items():
-        if nome in basso:
+    # Il nome più lungo per primo: «corazza di piastre» (corazza, +5) contiene
+    # «piastre» (armatura completa, +8), «cotta di maglia» contiene «maglia»
+    # (audit plugin del 2026-11-09).
+    # Parola intera: «shield» stava dentro «Oakenshield» e «torre» nella Torre
+    # del conclave, e davano uno scudo a chi non l'ha.
+    for nome, val in sorted(ARMATURE.items(), key=lambda kv: -len(kv[0])):
+        if re.search(rf"\b{re.escape(nome)}\b", basso):
             L.armatura = val
             break
-    for nome, val in SCUDI.items():
-        if nome in basso:
+    for nome, val in sorted(SCUDI.items(), key=lambda kv: -len(kv[0])):
+        if re.search(rf"\b{re.escape(nome)}\b", basso):
             L.scudo = val
             break
     return L

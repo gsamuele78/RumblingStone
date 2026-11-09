@@ -98,12 +98,27 @@
 "cuoio" = { ca = 2, des_max = 6 }
 "padded" = { ca = 1, des_max = 8 }
 "imbottita" = { ca = 1, des_max = 8 }
+# Audit del 2026-11-09 (misura_plugin_regole.py): le tre armature SRD che
+# mancavano, e i nomi italiani ufficiali (lessico_it_35.tsv) delle armature
+# che c'erano già. Chi legge le armature cerca prima il nome più lungo
+# (derive_statblocks), così «corazza di piastre» non diventa «piastre».
+"hide" = { ca = 3, des_max = 4 }
+"armatura di pelle" = { ca = 3, des_max = 4 }
+"banded mail" = { ca = 6, des_max = 1 }
+"corazza di bande" = { ca = 6, des_max = 1 }
+"armatura a bande" = { ca = 6, des_max = 1 }
+"splint mail" = { ca = 6, des_max = 0 }
+"corazza a strisce" = { ca = 6, des_max = 0 }
+"armatura completa" = { ca = 8, des_max = 1 }
+"corazza di piastre" = { ca = 5, des_max = 3 }
+"giaco di maglia" = { ca = 4, des_max = 4 }
 
 [scudi]  # bonus di CA
 "heavy shield" = 2
 "scudo pesante" = 2
-"tower" = 4
-"torre" = 4
+"tower shield" = 4
+"scudo torre" = 4
+"scudo a torre" = 4
 "light shield" = 1
 "scudo leggero" = 1
 "buckler" = 1
@@ -216,17 +231,17 @@ standard = [13, 12, 11, 10, 9, 8]
 "7" = [3, 3, 2]
 "8" = [3, 3, 2, 0]
 "9" = [3, 3, 2, 1]
-"10" = [3, 3, 3, 1]
+"10" = [3, 3, 2, 1]
 "11" = [3, 3, 3, 2]
 "12" = [3, 3, 3, 2, 0]
 "13" = [3, 3, 3, 2, 1]
-"14" = [3, 3, 3, 3, 1]
+"14" = [3, 3, 3, 2, 1]
 "15" = [3, 3, 3, 3, 2]
 "16" = [3, 3, 3, 3, 2, 0]
 "17" = [3, 3, 3, 3, 2, 1]
-"18" = [3, 3, 3, 3, 3, 1]
+"18" = [3, 3, 3, 3, 2, 1]
 "19" = [3, 3, 3, 3, 3, 2]
-"20" = [3, 3, 3, 3, 3, 3]
+"20" = [3, 3, 3, 3, 3, 2]
 
 [griglie.bardo]
 "1" = [2]
@@ -321,8 +336,39 @@ senza_ancora = ["adept", "adepto"]
 # --- L5b: classi di prestigio SRD del Bestiario fuori da [classi] ---
 # classe = { dv, ts_buoni, bab = per livello }
 [prestigio]
-"blackguard" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+# Audit del 2026-11-09: tutte le classi di prestigio dell'SRD 3.5 in cache
+# (prestige-classes.md, «Table: The …»: DV, BAB al livello più alto, TS buoni al 1°),
+# con il nome italiano del lessico (lessico_it_35.tsv). Il Maestro del Sapere
+# (Loremaster) manca: nella fonte in cache la sua tabella non c'è.
+"arcane archer" = { dv = 8, ts_buoni = ["temp", "rifl"], bab = 1.0 }
+"arciere arcano" = { dv = 8, ts_buoni = ["temp", "rifl"], bab = 1.0 }
+"arcane trickster" = { dv = 4, ts_buoni = ["rifl", "vol"], bab = 0.5 }
+"mistificatore arcano" = { dv = 4, ts_buoni = ["rifl", "vol"], bab = 0.5 }
+"archmage" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"arcimago" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
 "assassin" = { dv = 6, ts_buoni = ["rifl"], bab = 0.75 }
+"assassino" = { dv = 6, ts_buoni = ["rifl"], bab = 0.75 }
+"blackguard" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"guardia nera" = { dv = 10, ts_buoni = ["temp"], bab = 1.0 }
+"dragon disciple" = { dv = 12, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"discepolo dei draghi" = { dv = 12, ts_buoni = ["temp", "vol"], bab = 0.75 }
+"duelist" = { dv = 10, ts_buoni = ["rifl"], bab = 1.0 }
+"duellante" = { dv = 10, ts_buoni = ["rifl"], bab = 1.0 }
+"dwarven defender" = { dv = 12, ts_buoni = ["temp", "vol"], bab = 1.0 }
+"difensore nanico" = { dv = 12, ts_buoni = ["temp", "vol"], bab = 1.0 }
+"eldritch knight" = { dv = 6, ts_buoni = ["temp"], bab = 1.0 }
+"cavaliere mistico" = { dv = 6, ts_buoni = ["temp"], bab = 1.0 }
+"hierophant" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.5 }
+"gerofante" = { dv = 8, ts_buoni = ["temp", "vol"], bab = 0.5 }
+"horizon walker" = { dv = 8, ts_buoni = ["temp"], bab = 1.0 }
+"viandante dell'orizzonte" = { dv = 8, ts_buoni = ["temp"], bab = 1.0 }
+"mystic theurge" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"teurgo mistico" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"shadowdancer" = { dv = 8, ts_buoni = ["rifl"], bab = 0.75 }
+"ombra danzante" = { dv = 8, ts_buoni = ["rifl"], bab = 0.75 }
+"thaumaturgist" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"taumaturgo" = { dv = 4, ts_buoni = ["vol"], bab = 0.5 }
+"danzatrice delle ombre" = { dv = 8, ts_buoni = ["rifl"], bab = 0.75 }  # la forma del Bestiario
 
 # --- L5b: profili di ruolo (ordine delle sei caratteristiche) ---
 # Si prende la prima parola chiave che compare nel ruolo, in quest'ordine.
