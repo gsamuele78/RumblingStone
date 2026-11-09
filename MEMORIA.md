@@ -86,17 +86,17 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Regole PF1e del cancello delle schede dal PRD (ADR-0119):… | ✅ prova: 27 mutazioni bocciate, promozione proposta 2026-11-23 |
+| 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | Card del DM: D2 Krusk, Vreek e Ur-Vrax confermati come consigliati (titolo CANO… | ✅ applicate in ARC08-01/02/03, DEF-2, Guida agli scontri, Bestiario |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D4 confronto degli statblocchi alternativi della chat «Organizing D&D Campaign… | ✅ confronto fatto, ★ al DM |
+| 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): fallback PyYAML di AUDIT-SCRIPTS chiuso come superato su card del D… | 🟡 D5 aperta per le voci non chiuse |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Promozioni da testing a stable (ok del DM): ruff blocca e `compileall` esce (P3… | ✅ P3; P4 e P5 in parte |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F4 strumenti per sistema del file: A5 6 → 0 (`sistema_di` +… | ✅ |
 
 ## Le misure che si portano dietro
 

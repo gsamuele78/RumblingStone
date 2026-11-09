@@ -477,6 +477,14 @@
       "items": {
         "type": "string"
       }
+    },
+    "simboli_locali": {
+      "type": "object",
+      "description": "Simboli fuori dalla legenda universale che la mappa usa e spiega nella sua legenda (la riga «LEGENDA · 🧲 pareti magnetiche · …» dentro la griglia, letta da render_map_svg). Chiave: l'emoji; valore: la descrizione. Un simbolo locale si usa in structures, hazards e regions come uno universale.",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   }
 }
