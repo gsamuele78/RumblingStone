@@ -243,13 +243,23 @@ bloccante; il flusso di tutti gli strumenti di qualità in
 [RISCONTRO-ARC08](esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md), 53
 regole, 3 discordanze lasciate al DM. Sale a stable non prima del 2026-11-06.
 
-### P8 · La prova generale della prossima migrazione ⬜
+### P8 · La prova generale della prossima migrazione 🟡 job acceso il 2026-11-09
 `[engine: Sonnet 5.5 · effort: medio · qualità: un job non bloccante su Python 3.14 verde per un mese prima del salto]`
 - Parte quando Debian 14 entra nel congelamento (atteso nel 2027): un job CI
   non bloccante su 3.14 con gli stessi test. Dopo il salto, 3.13 resta
   oldstable per tre mesi.
 - Prima, se una libreria stable annuncia l'abbandono di 3.13: decisione del
   DM fra fermarla e anticipare (ADR-0099 §6).
+- **Anticipata il 2026-11-09** su scelta del DM (card del 9/11, «Accendilo
+  ora»): contesto, il job costa poco e dice prima quali librerie o test
+  cadranno al salto. Decisione: job CI «Python 3.14 in prova — non
+  bloccante» con la stessa suite pytest del job principale; ogni altro
+  `python-version` resta 3.13 e il salto resta legato a Debian 14. Blender e
+  `bpy` fuori (3.13 esatto, solo in `requirements-completo.txt`).
+  Conseguenze: il criterio resta **un mese di verde su `main` prima del
+  salto**, contato da qui; un rosso del job non blocca nessuna PR ma va letto
+  nell'audit del lunedì. Prima misura in
+  [python-314-2026-11-09](esperimenti/python-314-2026-11-09/MISURE.md).
 
 ## §4 · Validazione
 
