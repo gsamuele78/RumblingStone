@@ -149,6 +149,19 @@ colonne → 🟪, acqua → 🟦, note numerate → ⭐ (elencate sotto la grigl
 Serve quando le posizioni sono tante o le decide un LLM. **L'LLM emette solo
 JSON**; a dipingere la griglia ci pensa lo script, in modo deterministico.
 
+> **Regola dal 2026-11-09 ([ADR-0117](../../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md)):
+> ogni griglia di campagna ha il suo contratto JSON**, anche quando è nata a
+> mano. Ricompilato, il JSON deve ridare la griglia del master identica cella
+> per cella; lo controlla `scripts/tests/test_contratti_mappe.py`, che lancia
+> anche `render_map_svg.py --strict` (le dimensioni dell'intestazione devono
+> essere quelle disegnate). Se ritocchi una griglia, ritocca il JSON e
+> rigenera; se aggiungi una mappa, parti dal JSON. Restano fuori solo le
+> cartelle `_ARCHIVIO/`.
+>
+> Un simbolo che non è nella legenda universale va in `simboli_locali`
+> (`{"🪨": "macerie del crollo"}`): il compilatore lo scrive nella riga
+> `LEGENDA` della griglia.
+
 ```bash
 # 1) scrivi/genera lo spec JSON secondo scripts/schemas/tactical_map.schema.json
 # 2) valida senza scrivere nulla
@@ -191,6 +204,19 @@ python3 scripts/import_ultraclear.py "<master-ultra-clear>.md" \
 
 Produce una bozza di spec JSON **e** l'elenco dei conflitti con severità e
 suggerimento: risolvi solo i punti segnalati, poi procedi come al §3.
+
+Per una griglia che deve restare identica (una mappa già giocata o stampata)
+usa `--map N` per sceglierla nel file, poi controlla l'identità:
+
+```bash
+python3 scripts/import_ultraclear.py "<master>.md" --map 2 -o "<arco>/Mappe/contratti-json/NOME.json"
+python3 -m pytest -q scripts/tests/test_contratti_mappe.py
+```
+
+L'importer scompone le formazioni non rettangolari (una scacchiera di nani,
+un fronte a cuneo) in rettangoli pieni, e porta in `simboli_locali` i simboli
+spiegati nella legenda del master. Un simbolo che il master non spiega è un
+ERROR (R3): va spiegato nel master prima di migrare.
 
 ---
 

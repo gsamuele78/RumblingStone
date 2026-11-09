@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Promozioni da testing a stable (ok del DM): ruff blocca e `compileall` esce (P3… | ✅ P3; P4 e P5 in parte |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F4 strumenti per sistema del file: A5 6 → 0 (`sistema_di` +… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
-| 2026-11-08 | AUDIT-SCRIPTS (da RECUPERO D5) | Ripiego senza PyYAML in `compress_skills.py`: misurato e scartato. Funziona (18… | ✅ chiusa, non si fa |
 
 ## Le misure che si portano dietro
 
