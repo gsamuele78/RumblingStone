@@ -88,6 +88,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
+| 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): fallback PyYAML di AUDIT-SCRIPTS chiuso come superato su card del D… | 🟡 D5 aperta per le voci non chiuse |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
