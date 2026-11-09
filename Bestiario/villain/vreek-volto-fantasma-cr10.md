@@ -1,4 +1,4 @@
-# Vreek del Volto Fantasma — capo degli Assassini Spettrali (orco avanzato, ladro 7, assassino 2) [INFERRED — Tieni questa build (orco con archetipo Avanzato PF1e, GS 10) come canone di Vreek?; base: card INVENTARIO D2 del 2026-11-08 e chat Gemini «Branch of Sistema Combattimento Massa D&D 3.5», corretta sulle regole 3.5]
+# Vreek del Volto Fantasma — capo degli Assassini Spettrali (orco avanzato, ladro 7, assassino 2) [CANONE — DM 2026-11-09, INVENTARIO D2]
 **Faction**: red-hand | **Role**: skirmisher | **Environment**: underground | **CR**: 10 | **Source**: razza Orco, classi Ladro e Assassino, veleno di viverna SRD 3.5; archetipo Avanzato PF1e (`skills/pathfinder-1e-srd/references/monster-advancement.md`); idea, nome e ruolo dalla chat Gemini su Drive (`plans/INVENTARIO-GEMINI-AISTUDIO-2026-10.md` §3) | **Status**: inferred
 
 ```statblocco
