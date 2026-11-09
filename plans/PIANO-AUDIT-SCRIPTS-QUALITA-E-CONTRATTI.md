@@ -36,15 +36,20 @@
 
 ## Gate / follow-up (al tavolo / opzionali)
 
-- shellcheck: oggi **non bloccante** (non verificabile nell'ambiente di sviluppo);
+- ⬜ shellcheck: oggi **non bloccante** (non verificabile nell'ambiente di sviluppo);
   promuovere a bloccante dopo una passata pulita su `converters/Image-to-webp`.
-- opzionale: portare i convertitori (`converters/`) allo standard pieno
+  *Condizione*: la passata pulita (RECUPERO D5).
+- ⬜ opzionale: portare i convertitori (`converters/`) allo standard pieno
   (argparse/test) — oggi marcati `external-toolchain` nel manifest.
+  *Condizione*: nessuna scritta; resta aperta al DM in RECUPERO D5.
 - ~~opzionale: fallback pyyaml in `compress_skills.py` (oggi `external_deps`).~~
-  ✅ **Chiusa il 2026-11-08: non si fa, misurato.** Il ripiego funziona (18 skill
-  su 18 uguali), ma serve solo a chi salta `pip install -r requirements.txt`, e lì
-  falliscono altri 17 script. PyYAML ha le wheel cp313 per tutte le piattaforme del
-  bundle. Misura e motivo in
+  ✅ **Chiusa come superata il 2026-11-09** (card del DM, «Chiudi, superato»).
+  *Prova*: PyYAML è una dipendenza dichiarata (`requirements.txt:28`,
+  `pyyaml>=6.0.3`) e `compress_skills.py` gira solo in fase di build
+  (`scripts/build-skills.sh`, chiamato dal job CI e dal rilascio), dove le
+  dipendenze sono installate. La misura del 2026-11-08 lo conferma: il ripiego
+  darebbe lo stesso risultato (18 skill su 18), ma servirebbe solo a chi salta
+  `pip install -r requirements.txt`, e lì falliscono altri 17 script. Misura in
   [`esperimenti/ripiego-pyyaml-2026-11-08/ESITO.md`](esperimenti/ripiego-pyyaml-2026-11-08/ESITO.md).
 
 ## Invarianti rispettate
