@@ -350,8 +350,223 @@ def conformita_prd(base: Path) -> str:
     return "\n".join(out) + "\n"
 
 
-FILE = {"pe.toml": pe, "incontri.toml": incontri, "tesoro.toml": tesoro, "creature.toml": creature,
-        "conformita_prd.toml": conformita_prd}
+# ---------------------------------------------------------------------------
+# classi.toml: dado vita, BAB, TS, gradi e griglie degli incantesimi di ogni
+# classe del PRD (ADR-0119, lotto 2). Le progressioni di BAB e TS sono le
+# stesse di `_classi`: una lettura sola delle tabelle.
+# ---------------------------------------------------------------------------
+COL_LIVELLO = {"0": 0, "1st": 1, "2nd": 2, "3rd": 3, "4th": 4, "5th": 5,
+               "6th": 6, "7th": 7, "8th": 8, "9th": 9}
+GRUPPO = {"core": "base", "base": "base", "hybrid": "ibrida", "npc": "png", "prestige": "prestigio"}
+#: L'antipaladino (book-apg 2726) è «npc» nel PRD ma è una classe alternativa
+#: di venti livelli, e il suo dado vita sta nel testo e non in class_details.
+GRUPPO_DI = {"antipaladin": "alternativa"}
+TS_SIGLA = ("temp", "rifl", "vol")
+
+
+def _righe(corpo: str) -> "list[list[str]]":
+    p = _Righe()
+    p.feed(html.unescape(corpo or ""))
+    return [r for r in p.righe if r]
+
+
+def _slot(cella: str) -> "tuple[int | None, bool]":
+    """«3» → (3, False); «1+1» → (1, True), il +1 è lo slot di dominio; «—» → (None, False)."""
+    m = re.match(r"^(\d+)(\+1)?$", cella.strip())
+    return (int(m.group(1)), bool(m.group(2))) if m else (None, False)
+
+
+def _griglia(righe: "list[list[str]]", livelli: "list[int]") -> "tuple[dict, bool]":
+    """{livello di classe: [slot per livello d'incantesimo da 0]}: le ultime
+    len(livelli) celle di ogni riga. Dove la classe non ha il livello 0 la prima
+    cifra è uno 0 che tiene l'indice allineato (come nel plugin 3.5)."""
+    out, dominio = {}, False
+    for r in righe:
+        n = _ordinale(r[0])
+        if not n or len(r) < len(livelli) + 1:
+            continue
+        celle = [_slot(c) for c in r[-len(livelli):]]
+        dominio = dominio or any(d for _, d in celle)
+        riga = [0] * (max(livelli) + 1)
+        ultimo = -1
+        for lv, (v, _) in zip(livelli, celle):
+            if v is not None:
+                riga[lv], ultimo = v, lv
+        if ultimo >= 0:
+            out[n] = riga[:ultimo + 1]
+    return out, dominio
+
+
+def _tabelle_di_classe(c, lft: int, rgt: int):
+    return c.execute("select section_id, name, body from sections where type = 'table' "
+                     "and lft > ? and rgt < ? order by lft", (lft, rgt)).fetchall()
+
+
+def _dati_di_classe(base: Path):
+    """Per ogni classe di `_classi`: dado vita, gradi, griglie. Chi non ha un
+    dato dichiarato nel PRD esce in `scartate`, non con un numero inventato."""
+    prog, scartate = _classi(base)
+    out = []
+    for nome, bab, ts, tipo, libro, tid in prog:
+        c = sqlite3.connect(base / f"book-{libro}.db")
+        sid, lft, rgt, dv = c.execute(
+            "select s.section_id, s.lft, s.rgt, cd.hit_die from sections s join class_details cd "
+            "on cd.section_id = s.section_id where lower(s.name) = ? order by s.section_id", (nome,)).fetchone()
+        if not dv:
+            r = c.execute("select body from sections where lft > ? and rgt < ? and name = 'Hit Die' "
+                          "order by lft", (lft, rgt)).fetchone()
+            m = r and re.search(r"\bd(\d+)\b", re.sub("<[^>]+>", "", r[0]))
+            dv = m and "d" + m.group(1)
+        g = c.execute("select body from sections where lft > ? and rgt < ? and name like 'Skill Ranks%' "
+                      "order by lft", (lft, rgt)).fetchone()
+        m = g and re.match(r"\s*(\d+) \+ Int", re.sub("<[^>]+>", "", g[0]))
+        if not dv or not m:
+            scartate.append(f"{nome} (book-{libro} {sid}: dado vita o gradi non dichiarati)")
+            continue
+        righe = _righe(c.execute("select body from sections where section_id = ?", (tid,)).fetchone()[0])
+        testa = next(r for r in righe if r[0] == "Level")
+        sotto = righe[righe.index(testa) + 1]
+        voce = {"nome": nome, "dv": int(dv[1:]), "bab": bab, "gradi": int(m.group(1)),
+                "ts_buoni": [k for k, x in zip(TS_SIGLA, ts) if x.startswith("buono")],
+                "gruppo": GRUPPO_DI.get(nome, GRUPPO[tipo]), "libro": libro, "tabella": tid,
+                "livelli": max(_ordinale(r[0]) or 0 for r in righe)}
+        ultima = testa[-1]
+        if all(x in COL_LIVELLO for x in sotto) and ultima.endswith(("Spells per Day", "Extracts per Day")):
+            griglia, dominio = _griglia(righe, [COL_LIVELLO[x] for x in sotto])
+            voce.update(griglia=griglia, slot_di_dominio=dominio, estratti=ultima.startswith("Extracts"),
+                        livello_zero=COL_LIVELLO[sotto[0]] == 0)
+        elif ultima.endswith(("Spells per Day", "Extracts per Day")):
+            # classi di prestigio: «+1 level of existing class» ai livelli che avanzano
+            voce["avanza_incantatore"] = sorted(
+                _ordinale(r[0]) for r in righe if _ordinale(r[0]) and r[-1].startswith("+1 level"))
+        for xid, xnome, corpo in _tabelle_di_classe(c, lft, rgt):
+            chiave = ("conosciuti" if (xnome or "").endswith("Spells Known") else
+                      "preparati" if (xnome or "").endswith("Spells Prepared") else None)
+            if not chiave:
+                continue
+            r2 = _righe(corpo)
+            t2 = r2[1] if r2[0] == ["Level", "Spells Known"] else r2[0][1:]
+            voce[chiave], _ = _griglia(r2, [COL_LIVELLO[x] for x in t2])
+            voce[chiave + "_tabella"] = xid
+            # il bardo e l'arcanista hanno il livello 0 solo in questa tabella
+            voce["livello_zero"] = voce.get("livello_zero", False) or t2[0] == "0"
+        out.append(voce)
+    return out, scartate
+
+
+def _toml_lista(xs) -> str:
+    return "[" + ", ".join(f'"{x}"' if isinstance(x, str) else str(x) for x in xs) + "]"
+
+
+def classi(base: Path) -> str:
+    dati, scartate = _dati_di_classe(base)
+    it = {k.lower(): v for k, v in _lessico("classe", "classe di prestigio").items()}
+    out = ["# sistemi/pf1e/dati/classi.toml — le classi PF1e (generato da estrai_prd_pf1e.py, non si scrive a mano).",
+           f'fonte = "PRD PF1e, devonjones/PSRD-Data@{COMMIT[:8]}: la tabella di ogni classe, '
+           '«Hit Die» e «Skill Ranks per Level»"', "",
+           "# classe = { dv = faccia del dado vita, bab = per livello, ts_buoni, gradi = per livello + Int,",
+           "#   gruppo = base | ibrida | png | prestigio | alternativa, livelli, libro e tabella del PRD }",
+           "# BAB e TS buoni sono verificati livello per livello contro la formula (vedi conformita_prd.toml).",
+           "[classi]"]
+    for v in dati:
+        out.append(f'"{v["nome"]}" = {{ dv = {v["dv"]}, bab = {v["bab"]}, ts_buoni = {_toml_lista(v["ts_buoni"])}, '
+                   f'gradi = {v["gradi"]}, gruppo = "{v["gruppo"]}", livelli = {v["livelli"]}, '
+                   f'libro = "{v["libro"]}", tabella = {v["tabella"]} }}')
+    out += ["", "# classe = { griglia, conosciuti e preparati = chiavi delle tabelle sotto;",
+            "#   livello_zero = la classe ha trucchetti o orazioni (in PF1e sono A VOLONTÀ: la cifra d'indice 0",
+            "#     della griglia è quanti se ne preparano o se ne conoscono, non slot che si consumano);",
+            "#   slot_di_dominio = +1 slot per livello d'incantesimo dal 1° (il «+1» della tabella, non contato nella griglia);",
+            "#   estratti = la tabella è «Extracts per Day» (alchimista, investigatore) }",
+            "# La caratteristica di lancio sta in conformita.toml [incantesimi.caratteristica], scelta a mano.",
+            "[incantatori]"]
+    for v in dati:
+        if "griglia" not in v:
+            continue
+        campi = [f'griglia = "{v["nome"]}"']
+        campi += [f'{k} = "{v["nome"]}"' for k in ("conosciuti", "preparati") if k in v]
+        campi += [f'livello_zero = {str(v["livello_zero"]).lower()}',
+                  f'slot_di_dominio = {str(v["slot_di_dominio"]).lower()}',
+                  f'estratti = {str(v["estratti"]).lower()}']
+        out.append(f'"{v["nome"]}" = {{ {", ".join(campi)} }}')
+    out += ["", "# classi di prestigio: i livelli in cui la tabella dice «+1 level of existing class»",
+            "[avanza_incantatore]"]
+    out += [f'"{v["nome"]}" = {_toml_lista(v["avanza_incantatore"])}' for v in dati if v.get("avanza_incantatore")]
+    for chiave, titolo in (("griglia", "incantesimi (o estratti) al giorno"),
+                           ("conosciuti", "incantesimi conosciuti"), ("preparati", "incantesimi preparati")):
+        tab = {"griglia": "griglie"}.get(chiave, chiave)
+        out += ["", f"# --- {titolo}: livello di classe = [per livello d'incantesimo, da 0]",
+                "# Dove la classe non ha il livello 0 la prima cifra è uno 0 d'allineamento."]
+        for v in dati:
+            if chiave not in v:
+                continue
+            sorgente = v["tabella"] if chiave == "griglia" else v[chiave + "_tabella"]
+            out += ["", f'[{tab}."{v["nome"]}"]  # book-{v["libro"]} {sorgente}']
+            out += [f'"{n}" = {_toml_lista(r)}' for n, r in sorted(v[chiave].items())]
+    out += ["", "# nome italiano (lessico_it_pf1.tsv, classi PNG da lessico_it_35.tsv) = classe del PRD",
+            "[alias]"]
+    alias = {it[v["nome"]].lower(): v["nome"] for v in dati if v["nome"] in it}
+    out += [f'"{k}" = "{v}"' for k, v in sorted(alias.items())]
+    senza = sorted(v["nome"] for v in dati if v["nome"] not in it)
+    if senza:
+        out += ["", "# senza nome italiano nel lessico: " + ", ".join(senza)]
+    if scartate:
+        out += ["", "# fuori: " + " · ".join(scartate)]
+    g = {v["nome"]: v for v in dati}
+    # àncore: righe note del Core Rulebook, perché un cambio di lettura si veda qui
+    assert g["wizard"]["griglia"][1] == [3, 1] and g["wizard"]["griglia"][20] == [4] * 10
+    assert g["cleric"]["griglia"][1] == [3, 1] and g["cleric"]["slot_di_dominio"]
+    assert g["paladin"]["griglia"][4] == [0, 0] and g["paladin"]["griglia"][20] == [0, 4, 4, 3, 3]
+    assert g["bard"]["conosciuti"][1] == [4, 2] and g["sorcerer"]["conosciuti"][20] == [9, 5, 5, 4, 4, 4, 3, 3, 3, 3]
+    assert g["fighter"]["dv"] == 10 and g["rogue"]["gradi"] == 8 and len(dati) >= 50
+    return "\n".join(out) + "\n"
+
+
+def _armature(base: Path):
+    nome = "Table: Armor and Shields"
+    it = {k.lower(): v.lower() for k, v in _lessico("equipaggiamento").items()}
+    arm, scu, gruppo = [], [], None
+    for r in tabella(base, "cr", 2955, nome):
+        if len(r) == 1 and r[0] in ("Light armor", "Medium armor", "Heavy armor", "Shields", "Extras"):
+            gruppo = r[0]
+            continue
+        if gruppo in (None, "Extras") or len(r) < 9:
+            continue
+        en = r[0].lower()
+        # «+43» sullo scudo torre: il 3 è il richiamo della nota 3 della tabella
+        ca = int(re.match(r"\+(\d)", r[2]).group(1))
+        prova = int(r[4].replace("–", "-").replace("−", "-"))
+        fallimento = int(r[5].rstrip("%"))
+        if gruppo == "Shields":
+            scu.append((en, ca, None if r[3] == "—" else int(r[3]), prova, fallimento, it.get(en)))
+        else:
+            arm.append((en, ca, int(r[3]), prova, fallimento,
+                        {"Light armor": "leggera", "Medium armor": "media", "Heavy armor": "pesante"}[gruppo],
+                        it.get(en)))
+    assert len(arm) == 12 and len(scu) == 6 and ("full plate", 9, 1, -6, 35, "pesante") == arm[-1][:6]
+    return arm, scu
+
+
+def creature_e_armature(base: Path) -> str:
+    arm, scu = _armature(base)
+    out = [creature(base).rstrip("\n"), "",
+           "# --- armature e scudi: book-cr.db sezione 2955 «Table: Armor and Shields»",
+           "# armatura = { ca, des_max, prova = penalità di armatura alla prova, fallimento = % arcano, categoria, it }",
+           "# `it` è il nome italiano del lessico PF1e, quando c'è.",
+           "[armature]"]
+    for en, ca, des, prova, fall, cat, ita in arm:
+        coda = f', it = "{ita}"' if ita else ""
+        out.append(f'"{en}" = {{ ca = {ca}, des_max = {des}, prova = {prova}, fallimento = {fall}, '
+                   f'categoria = "{cat}"{coda} }}')
+    out += ["", "# scudo = { ca, des_max (solo lo scudo torre), prova, fallimento, it }", "[scudi]"]
+    for en, ca, des, prova, fall, ita in scu:
+        mezzo = f", des_max = {des}" if des is not None else ""
+        coda = f', it = "{ita}"' if ita else ""
+        out.append(f'"{en}" = {{ ca = {ca}{mezzo}, prova = {prova}, fallimento = {fall}{coda} }}')
+    return "\n".join(out) + "\n"
+
+
+FILE = {"pe.toml": pe, "incontri.toml": incontri, "tesoro.toml": tesoro, "creature.toml": creature_e_armature,
+        "conformita_prd.toml": conformita_prd, "classi.toml": classi}
 
 
 def main(argv=None) -> int:

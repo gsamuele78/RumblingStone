@@ -29,3 +29,29 @@ fonte_taglie = "book-b1.db sezione 160 «Table: Size Bonuses and Penalties»"
 "huge" = { ca_attacco = -2, bmc_dmc = 2 }
 "gargantuan" = { ca_attacco = -4, bmc_dmc = 4 }
 "colossal" = { ca_attacco = -8, bmc_dmc = 8 }
+
+# --- armature e scudi: book-cr.db sezione 2955 «Table: Armor and Shields»
+# armatura = { ca, des_max, prova = penalità di armatura alla prova, fallimento = % arcano, categoria, it }
+# `it` è il nome italiano del lessico PF1e, quando c'è.
+[armature]
+"padded" = { ca = 1, des_max = 8, prova = 0, fallimento = 5, categoria = "leggera", it = "imbottita" }
+"leather" = { ca = 2, des_max = 6, prova = 0, fallimento = 10, categoria = "leggera", it = "cuoio" }
+"studded leather" = { ca = 3, des_max = 5, prova = -1, fallimento = 15, categoria = "leggera", it = "cuoio borchiato" }
+"chain shirt" = { ca = 4, des_max = 4, prova = -2, fallimento = 20, categoria = "leggera", it = "giaco di maglia" }
+"hide" = { ca = 4, des_max = 4, prova = -3, fallimento = 20, categoria = "media", it = "pelle" }
+"scale mail" = { ca = 5, des_max = 3, prova = -4, fallimento = 25, categoria = "media", it = "corazza a scaglie" }
+"chainmail" = { ca = 6, des_max = 2, prova = -5, fallimento = 30, categoria = "media", it = "cotta di maglia" }
+"breastplate" = { ca = 6, des_max = 3, prova = -4, fallimento = 25, categoria = "media", it = "corazza di piastre" }
+"splint mail" = { ca = 7, des_max = 0, prova = -7, fallimento = 40, categoria = "pesante", it = "corazza a strisce" }
+"banded mail" = { ca = 7, des_max = 1, prova = -6, fallimento = 35, categoria = "pesante", it = "corazza di bande" }
+"half-plate" = { ca = 8, des_max = 0, prova = -7, fallimento = 40, categoria = "pesante", it = "mezza armatura" }
+"full plate" = { ca = 9, des_max = 1, prova = -6, fallimento = 35, categoria = "pesante", it = "armatura completa" }
+
+# scudo = { ca, des_max (solo lo scudo torre), prova, fallimento, it }
+[scudi]
+"buckler" = { ca = 1, prova = -1, fallimento = 5, it = "buckler" }
+"shield, light wooden" = { ca = 1, prova = -1, fallimento = 5, it = "scudo leggero di legno" }
+"shield, light steel" = { ca = 1, prova = -1, fallimento = 5, it = "scudo leggero di acciaio" }
+"shield, heavy wooden" = { ca = 2, prova = -2, fallimento = 15, it = "scudo pesante di legno" }
+"shield, heavy steel" = { ca = 2, prova = -2, fallimento = 15, it = "scudo pesante di acciaio" }
+"shield, tower" = { ca = 4, des_max = 2, prova = -10, fallimento = 50, it = "scudo torre" }

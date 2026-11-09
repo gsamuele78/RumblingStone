@@ -66,6 +66,30 @@ Restano fuori, e lo si dice:
 - **Prova del contrario** (`scripts/tests/test_conformita_pf1e.py`): quattro schede giuste passano. 27 mutazioni di un solo numero vengono bocciate tutte sul conto giusto. Un numero sbagliato nel Drappo o nel Giardino veri fa uscire il cancello con 0 in prova e con 1 da severo, o da promosso.
 - **3.5:** il rapporto `--master` dei 34 file 3.5 è identico a quello di main, e `--riepilogo` e `--check` pure.
 
+## Lotto 2 (2026-11-09): classi, griglie e armature del plugin
+
+L'audit dei plugin (ADR-0121, PR #365) ha misurato il plugin PF1e contro il PRD: 39 righe coperte su 108, il 36%. Mancavano le classi (dado vita, gradi, griglie), le classi di prestigio, le armature. Il DM ha chiesto a questo thread di scrivere i dati e al thread dell'audit di verificarli.
+
+Stessa decisione di sopra, estesa: i dati li genera `estrai_prd_pf1e.py`, con una lettura sola delle tabelle di classe (`_classi`).
+
+- **`sistemi/pf1e/dati/classi.toml`** (nuovo, generato):
+  - `[classi]`: 55 classi (21 base, 10 ibride, 5 PNG, 18 di prestigio, l'antipaladino) con dado vita, BAB, TS buoni, gradi per livello, libro e tabella del PRD;
+  - `[incantatori]` e `[griglie]`: incantesimi (o estratti) al giorno di 22 classi;
+  - `[conosciuti]` di 8 classi spontanee e `[preparati]` dell'arcanista, in tabelle a parte;
+  - `[avanza_incantatore]`: i livelli delle classi di prestigio che danno «+1 livello di classe esistente»;
+  - `[alias]`: il nome italiano di tutte e 55.
+- **`sistemi/pf1e/dati/creature.toml`** prende `[armature]` (12) e `[scudi]` (6) da «Table: Armor and Shields», con penalità alla prova, fallimento arcano e nome italiano.
+
+Tre regole PF1e sono scritte nel file e non lasciate a chi legge:
+
+- trucchetti e orazioni sono a volontà: la cifra di livello 0 è quanti se ne preparano o conoscono, non slot (`livello_zero`);
+- il «+1» del chierico è lo slot di dominio e non sta nella griglia (`slot_di_dominio`);
+- lo «0» di ranger e paladino al 4° livello vuol dire «solo gli incantesimi bonus». Dove la classe non ha il livello 0, la prima cifra della riga è uno 0 d'allineamento, come nel plugin 3.5.
+
+**Misura.** Riletto con il lettore indipendente dell'audit (`misura_plugin_regole.prd_pf1e`): le 26 classi base e PNG che misura coincidono su dado vita, BAB, TS, gradi e griglie; le 12 armature e i 6 scudi coincidono. Sulle 18 classi di prestigio quel lettore dà TS buoni vuoti, perché cerca un +2 al 1° livello e in PF1e il TS buono di prestigio parte da +1: lì vale la verifica livello per livello di `_classi`. `scripts/tests/test_classi_pf1e.py` tiene 60 righe note scritte a mano.
+
+**Cosa non fa questo lotto.** I dati non sono ancora letti da nessuno strumento: il costruttore PF1e, `derive_statblocks` e `genera_creatura` li collega il thread dell'audit, che aggiorna anche la sua misura. Fino ad allora una scheda PF1e con livelli di classe è trattata come prima. Restano fuori le classi occulte e gli altri volumi che il PRD in cache non ha.
+
 ## Conseguenze
 
 - Nessun conto PF1e si salta più per regola mancante. Le parti ancora fuori (sopra) non dipendono da una regola che manca nei dati.
