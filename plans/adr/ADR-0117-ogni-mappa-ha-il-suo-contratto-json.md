@@ -28,7 +28,7 @@ L'intestazione di `_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md` dichiarava 120 colon
 3. Il contratto accetta `simboli_locali` (simbolo → descrizione) per i simboli che non sono nella legenda universale. `emit_master` li scrive nella riga `LEGENDA` della griglia.
 4. `import_ultraclear.py` scompone le formazioni non rettangolari in rettangoli pieni e porta i simboli locali. Un simbolo senza una spiegazione nel master è un ERROR (R3).
 5. `scripts/tests/test_contratti_mappe.py` è il cancello. Pretende il contratto per ogni griglia e `render_map_svg.py --strict --tutti-i-master` a codice 0.
-6. Fuori dal cancello restano le fixture dei test, gli esperimenti, gli esempi della guida e le cartelle `_ARCHIVIO/`. Per l'archivio decide il DM (card del 2026-11-09).
+6. Fuori dal cancello restano le fixture dei test, gli esperimenti, gli esempi della guida e le cartelle `_ARCHIVIO/`. Per l'archivio ha deciso il DM sulla card del 2026-11-09 («Fuori, sono archivio»): sono schizzi deprecati, assorbiti da L2-REVISED e HF-2A, che hanno già il loro JSON.
 
 ## Misura
 

@@ -34,7 +34,7 @@ import render_map_svg as R  # noqa: E402
 ESCLUSI = ("scripts/tests/", "plans/esperimenti/", "docs/guides/")
 # Le mappe d'archivio sono schizzi con righe di lunghezza diversa: un contratto
 # dipinge sempre un rettangolo, quindi non può ridarle uguali senza toccare la
-# storia. Decisione aperta al DM (card del 2026-11-09).
+# storia. Il DM li ha lasciati fuori (card del 2026-11-09, «Fuori, sono archivio»).
 ARCHIVIO = "/_ARCHIVIO/"
 
 

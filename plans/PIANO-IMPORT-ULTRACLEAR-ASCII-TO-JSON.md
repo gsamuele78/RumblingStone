@@ -329,4 +329,4 @@ spiegazione). 25 griglie senza contratto (14 ARC-07, 6 fortezza di Hammerfist,
 5 ARC-09) hanno ora il loro JSON, che ricompilato le ridà identiche cella per
 cella; `scripts/tests/test_contratti_mappe.py` lo pretende per ogni griglia
 tracciata. Fuori: le cartelle `_ARCHIVIO/` (4 schizzi su 8 hanno righe di
-lunghezza diversa), decisione del DM sulla card del 2026-11-09.
+lunghezza diversa), lasciate fuori dal DM sulla card del 2026-11-09.
