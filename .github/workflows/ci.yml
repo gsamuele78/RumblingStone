@@ -198,11 +198,11 @@ jobs:
       - name: Le schede dei moduli PF1e tornano con le regole PF1e
         run: python scripts/conformita_statblocchi.py --cancello-moduli
 
-      # ADR-0117, scelta del DM del 2026-11-09: un numero entra solo se la regola
+      # ADR-0118, scelta del DM del 2026-11-09: un numero entra solo se la regola
       # lo calcola. Cricchetto su docs/audit/numeri-baseline.json: uno scarto nuovo
       # o un file nuovo con numeri che nessun conto legge fa fallire; il risolto
       # si toglie con --aggiorna-numeri. Canale testing fino al 2026-11-23.
-      - name: Cancello dei numeri — non bloccante fino al 2026-11-23 (ADR-0117, testing)
+      - name: Cancello dei numeri — non bloccante fino al 2026-11-23 (ADR-0118, testing)
         continue-on-error: true
         run: python scripts/conformita_statblocchi.py --cancello-numeri
 

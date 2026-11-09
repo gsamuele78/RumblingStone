@@ -1,5 +1,5 @@
 {
- "_cos_e": "Il cricchetto del cancello dei numeri (ADR-0117): gli scarti di oggi fra un numero scritto e la regola che lo calcola, e i file con numeri che nessun conto legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. Lo legge scripts/conformita_statblocchi.py --cancello-numeri.",
+ "_cos_e": "Il cricchetto del cancello dei numeri (ADR-0118): gli scarti di oggi fra un numero scritto e la regola che lo calcola, e i file con numeri che nessun conto legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. Lo legge scripts/conformita_statblocchi.py --cancello-numeri.",
  "scarti": [
   "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md | A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8) | attacco | 29",
   "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/02-CHI-CE-STANOTTE.md | All'alba: Skullcrusher il Nero e le wyvern | sensi | senza scurovisione",

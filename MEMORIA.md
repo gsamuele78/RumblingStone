@@ -85,7 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | ADR-0117 (scelta del DM «ADR più cancello in CI»): un numero entra solo se la r… | ✅ cancello in CI non bloccante fino al 2026-11-23 |
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | ADR-0118 (scelta del DM «ADR più cancello in CI»): un numero entra solo se la r… | ✅ cancello in CI non bloccante fino al 2026-11-23 |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |

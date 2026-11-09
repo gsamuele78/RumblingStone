@@ -761,7 +761,7 @@ def conti_del_master(blocco: dict, sistema: str = "dnd35") -> "list[dict]":
         atteso = int(mb.group(1)) + forza + LOTTA_DA_CA[taglia_ca]
         if int(ml.group(1)) != atteso:
             scarto("Lotta", int(ml.group(1)), atteso, "BAB + For + taglia")
-    # attacco (ADR-0117): BAB + For o Des + taglia + arma + talenti, esatto
+    # attacco (ADR-0118): BAB + For o Des + taglia + arma + talenti, esatto
     riga_att = "Attacco" if "Attacco" in c else "Attacco Completo" if "Attacco Completo" in c else None
     if riga_att and mb and fa(sistema, "attacco"):
         conto = attacco_atteso(c[riga_att], int(mb.group(1)), car, c.get("Talenti", ""), taglia_ca)
@@ -1037,7 +1037,7 @@ def master_di_default() -> "list[Path]":
 
 
 # ---------------------------------------------------------------------------
-# Il cancello dei numeri (ADR-0117, scelta del DM del 2026-11-09)
+# Il cancello dei numeri (ADR-0118, scelta del DM del 2026-11-09)
 # ---------------------------------------------------------------------------
 #: «Valori sempre i più forti, ma calcolati e non inventati; se la versione
 #: PF1e è più forte usa PF1e, ma deve essere compliant con le regole» (DM).
@@ -1271,7 +1271,7 @@ def cancello_numeri(aggiorna: bool = False) -> int:
 
 
 def _scrivi_baseline(base: dict) -> None:
-    out = {"_cos_e": ("Il cricchetto del cancello dei numeri (ADR-0117): gli scarti di oggi fra un "
+    out = {"_cos_e": ("Il cricchetto del cancello dei numeri (ADR-0118): gli scarti di oggi fra un "
                       "numero scritto e la regola che lo calcola, e i file con numeri che nessun conto "
                       "legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. "
                       "Lo legge scripts/conformita_statblocchi.py --cancello-numeri."),
@@ -1296,7 +1296,7 @@ def main(argv=None) -> int:
                     help="cancello (in CI): ogni conto delle schede dei moduli di un sistema "
                          "diverso dal predefinito (oggi il Drappo e il Giardino PF1e) torna")
     ap.add_argument("--cancello-numeri", action="store_true",
-                    help="cancello (ADR-0117): ogni numero calcolabile di Bestiario, master, moduli e "
+                    help="cancello (ADR-0118): ogni numero calcolabile di Bestiario, master, moduli e "
                          "unità torna con la regola, salvo gli scarti della baseline")
     ap.add_argument("--aggiorna-numeri", action="store_true",
                     help="toglie dalla baseline dei numeri gli scarti risolti (non ne aggiunge)")

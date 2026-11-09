@@ -5964,7 +5964,7 @@
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Cancello (ADR-0117): ogni numero che la regola sa calcolare (pf, TS, lotta, attacco, AU delle unità = attacco uno contro uno + 2) torna esatto su Bestiario, master, recinti e stand alone; cricchetto su docs/audit/numeri-baseline.json, anche per i file con numeri che nessun conto legge."
+          "desc": "Cancello (ADR-0118): ogni numero che la regola sa calcolare (pf, TS, lotta, attacco, AU delle unità = attacco uno contro uno + 2) torna esatto su Bestiario, master, recinti e stand alone; cricchetto su docs/audit/numeri-baseline.json, anche per i file con numeri che nessun conto legge."
         },
         {
           "name": "--aggiorna-numeri",

@@ -400,7 +400,7 @@ class TestRecintiNeiMaster(unittest.TestCase):
     # PNG con classi. 2026-11-08, F4 di ADR-0112: le schede PF1e entrano nel
     # rapporto; l'Asservito armato è passato a 35 pf con la scelta del DM
     # (mezze in su dopo il primo dado di classe).
-    # 2026-11-09, ADR-0117: il rapporto conta anche l'attacco. Gorthak (+21 contro
+    # 2026-11-09, ADR-0118: il rapporto conta anche l'attacco. Gorthak (+21 contro
     # +20) e Madre Dana (+18 contro +17) non tornano, nelle due copie della
     # scheda: sono nella baseline del cancello dei numeri, e li decide il DM.
     RESIDUI: dict = {"ARC08-01-GUIDA-DM.md": 2, "ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md": 2}
@@ -425,7 +425,7 @@ class TestRecintiNeiMaster(unittest.TestCase):
 
 
 class TestCancelloDeiNumeri(unittest.TestCase):
-    """ADR-0117: un numero entra solo se la regola lo ricostruisce, esatto."""
+    """ADR-0118: un numero entra solo se la regola lo ricostruisce, esatto."""
 
     CAR = "For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16"
 

@@ -1,4 +1,4 @@
-# ADR-0117 — Un numero entra solo se la regola lo calcola
+# ADR-0118 — Un numero entra solo se la regola lo calcola
 
 **Stato**: accettata (2026-11-09)
 **Data**: 2026-11-09
