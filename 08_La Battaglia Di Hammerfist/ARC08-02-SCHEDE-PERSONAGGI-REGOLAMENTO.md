@@ -829,7 +829,7 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 *Fanteria Leggera, 1ª Linea d'Assalto (30 Unità)*
 
 **PFU:** 10/10 | **DU:** 18 | **Morale Iniziale:** +2
-**AU (Spada Lunga):** +10 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09, INVENTARIO D4: +10 della versione più forte, prima +8]`
+**AU (Spada Lunga):** +8 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09, INVENTARIO D4: +8 = spada lunga +6 del regolare hobgoblin (Bestiario, guerriero 3) più il +2 «media» della regola delle unità; il +10 della chat non esce da nessuna scheda 3.5 o PF1e]`
 **Movimento:** 6m
 
 **Capacità Speciali:**

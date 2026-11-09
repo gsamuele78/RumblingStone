@@ -78,7 +78,7 @@ alti in ogni campo misurato.
 
 | Unità della chat | Unità canone | Cella | Verdetto | Motivo |
 |---|---|---|---|---|
-| Hobgoblin Fanti | Fanteria Hobgoblin | AU +10 contro +8 | ★ **sì** (DM 2026-11-09) | Nemico. La card D6 di MASTER-DEF (PR #347) ha già scelto l'orda più forte. |
+| Hobgoblin Fanti | Fanteria Hobgoblin | AU +10 contro +8 | ★ **scartata** (non calcolabile, DM 2026-11-09) | Nemico. La card D6 di MASTER-DEF (PR #347) ha già scelto l'orda più forte. |
 | Guardie d'élite Orog | Orog Guardie Nere | AU +14 contro +12 | ★ **sì** (DM 2026-11-09) | Nemico. La regola del canone (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2») sulla scheda uno contro uno (`Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`, ascia +13) darebbe **+15**, più della chat e del canone. |
 | Guardie d'élite Orog | Orog Guardie Nere | DU 22 contro 19 | scartata | La DU del canone è la CA media delle creature, e la guardia ha CA 19. Il 22 della chat non ha una scheda dietro. |
 | Orchi Berserker | Fanteria Orchesca | AU +8 contro +6, DU 16 contro 13 | scartata | È un'altra truppa (barbari). La fanteria orchesca del canone è l'orco guerriero dell'SRD (falcione +4, quindi AU +6) e ha già AU +8 in carica e sotto i 4 PFU. |
@@ -92,8 +92,8 @@ Se servono, sono una voce nuova.
 
 ## 4 · Le ★ decise dal DM il 2026-11-09
 
-Risposta del DM alle card: «Le ★ per Fauci e per l'orda nemica ok a tutte. Le ★ per gli alleati nani: no». Applicate in `ARC08-02`, `ARC08-01`, `ARC08-03`, `ARC08-DEF-2`, nella Guida agli scontri e nel Bestiario `[CANONE — DM 2026-11-09, INVENTARIO D4]`.
+Risposta del DM alle card: «Le ★ per Fauci e per l'orda nemica ok a tutte. Le ★ per gli alleati nani: no». Poi, lo stesso giorno: «valori sempre i più forti ma calcolati e non inventati; se la versione PF1e è più forte usa PF1e, ma deve essere compliant con le regole». Applicate in `ARC08-02`, `ARC08-01`, `ARC08-03`, `ARC08-DEF-2`, nella Guida agli scontri e nel Bestiario `[CANONE — DM 2026-11-09, INVENTARIO D4]`.
 
 1. **Fauci**: Arma Focalizzata (morso) al posto di Allerta, morso +34 (picchiata con l'Odio +38, carica +40), Ascoltare e Osservare da +29 a +27. **Sì.**
-2. **Nemici**: Fanteria Hobgoblin AU +10; Orog Guardie Nere AU +15 (la regola del canone sulla loro scheda). **Sì.**
+2. **Nemici**: Orog Guardie Nere AU +15 (la regola del canone sulla loro scheda: ascia +13, più 2). **Sì.** Fanteria Hobgoblin: **resta +8**. La regola delle unità sulla scheda del regolare (guerriero 3, spada lunga +6) dà +8; il regolare di 4° (spada +7) darebbe +9, ma è un'altra truppa; l'hobgoblin PF1e (guerriero 1, spada lunga +2) è più debole. Il +10 della chat non esce da nessuna scheda, quindi non entra.
 3. **Alleati**: Guerrieri Nanici Veterani AU +11, Balestrieri Nanici AU +12. **No**, come la consigliata: la D6 ha rinforzato l'orda e non i difensori.

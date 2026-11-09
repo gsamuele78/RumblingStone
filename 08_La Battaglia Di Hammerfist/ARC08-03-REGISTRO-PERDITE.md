@@ -44,7 +44,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 ## **ESERCITO DELLA MANO ROSSA (ATTACCANTI)**
 
 ### **Fanteria Hobgoblin (Standard)**
-**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+10** | DU: **18** | Morale Base: **+2**
+**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+8** | DU: **18** | Morale Base: **+2**
 **Abilità Speciali:** Formazione Tattica (+1 DU se adiacente ad alleati), Disciplina Ferrea (+3 TS Paura)
 
 | # | Punti Ferita Unità (PFU) | Note / Status Attuale | # | Punti Ferita Unità (PFU) | Note / Status Attuale |

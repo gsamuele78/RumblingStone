@@ -957,7 +957,7 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 ```
 STATISTICHE UNITÀ: 10 Hobgoblin per unità
 - PF Unità: 10/10 | CA Unità: 18 | Morale: +2
-- Attacco Unità: +10 | Danni Unità: 1d10+3 (Spada Lunga)
+- Attacco Unità: +8 | Danni Unità: 1d10+3 (Spada Lunga)
 - Capacità: Disciplina Ferrea (+3 ai TS sulla volontà contro la paura), Formazione Tattica (+2 CA quando adiacenti ad almeno 2 alleati).
 ---
 STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 1° liv.):
