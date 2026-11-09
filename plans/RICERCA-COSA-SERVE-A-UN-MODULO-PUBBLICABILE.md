@@ -127,6 +127,12 @@ Un audit onesto dice anche cosa lasciar stare:
 
 Chiuso nel **Lotto 5** del `PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md` (2026-08-15):
 A1-A5, B1-B2, B4, C1-C2, D1-D4, E (UVTT + template prop).
-Restano ⬜: **B3** (carte da tavolo), **C3** (recap automatico fra le serate),
-**D5** (budget PF1e come script) — tutti e tre gated su una sessione vera, perché
-senza tempi reali si ottimizzerebbe alla cieca.
+Restano ⬜: **B3** (carte da tavolo) e **C3** (recap automatico fra le serate),
+gated su una sessione vera, perché senza tempi reali si ottimizzerebbe alla
+cieca.
+
+**D5** ✅ **superata il 2026-11-09, già fatta** da un altro piano: il budget
+PF1e è nel plugin del sistema (`sistemi/pf1e/dati/incontri.toml`, PE per GS e
+difficoltà dal PRD; metodo «somma_px» in `sistemi/pf1e/codice/incontri.py`), e
+`suggest_encounter.py --sistema pf1e` combina i GS con quello (SISTEMI-DI-GIOCO
+L4, 2026-11-07; MOTORE-AGNOSTICO F5, 2026-11-08).
