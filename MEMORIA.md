@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
+| 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F2 contesto esplicito: `dmcore.sistemi.regole(id)`/`regole_di(file)`; i 7 modul… | ✅ |
 | 2026-11-08 | MASTER-DEF | D6 rivista dal DM: per ogni voce del censimento la versione più forte, e sulle… | ✅ |
 | 2026-11-08 | RECUPERO-DECISIONI (card sulle decision… | 15 decisioni del DM nei piani: INVENTARIO D1-D6, BOX-LUOGO D2-D6, CODA D2-D3, R… | ✅ decisioni scritte; da fare i lotti che ne nascono (mini-boss, confronto statblocchi, etichette dei box, template d'area, *d* eufonica, pulizia del Bestiario) |
-| 2026-11-08 | STATO-E-ORDINE-DEI-PIANI | P05 chiusa come già fatta: i 9 valori dei PG sono su main dal 2026-11-05 (P16 l… | ✅ |
 
 ## Le misure che si portano dietro
 
