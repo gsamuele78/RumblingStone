@@ -13,7 +13,7 @@ ts: Temp +13, Rifl +4, Vol +12
 attributi: For 21 Des 10 Cos 23 Int 14 Sag 14 Car 24
 velocita: 12 m (9 m in armatura), volo 12 m (buono, Sop, a volontà)
 attacchi:
-  - Mischia spadone Large +13/+8 (3d6+7)
+  - Mischia spadone Large perfetto +13/+8 (3d6+7)
 ```
 
 

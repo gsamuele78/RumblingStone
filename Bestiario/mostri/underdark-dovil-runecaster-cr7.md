@@ -18,7 +18,7 @@ attributi: For 12 Des 14 Cos 15 Int 16 Sag 10 Car 6
 velocita: 6 m
 iniziativa: +6
 attacchi:
-  - Mischia spadone +1 a due mani +5 (2d6+2/19-20)
+  - Mischia spadone +1 a due mani +6 (2d6+2/19-20)
 voci:
   - Talenti: Incantare in Combattimento, Iniziativa Migliorata, Incidere Rune (Inscribe Rune), Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone)
 ```
@@ -28,5 +28,7 @@ voci:
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
 Medium humanoid (dwarf, hill), Diviner 5 / Deep Diviner 1 / Fighter 1, N. **hp 37** (7 HD); **AC 20**, touch 12, flat-footed 19 (piastre complete). Init +6; Vel 6 m. TS Temp +5, Rifl +3, Vol +6. BAB +3; Lotta +4.
-**Mischia** spadone +1 a due mani +5 (2d6+2/19-20). Incantesimi da Diviner 5 (scuola Divinazione; +2 Sapienza Magica sulle divinazioni); **Node Spellcasting**, Locate Node, famiglio. SLA da oggetto: *repair minor damage, comprehend languages*. Scurovisione 18 m, tratti nanici. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Incidere Rune (Inscribe Rune), Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone).
+**Mischia** spadone +1 a due mani +6 (2d6+2/19-20). Incantesimi da Diviner 5 (scuola Divinazione; +2 Sapienza Magica sulle divinazioni); **Node Spellcasting**, Locate Node, famiglio. SLA da oggetto: *repair minor damage, comprehend languages*. Scurovisione 18 m, tratti nanici. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Incidere Rune (Inscribe Rune), Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone).
 Notes: runecaster nanico legato ai nodi terrestri dell'Underdark.
+
+> `[CANONE — regola, ADR-0118]` Spadone +1 a **+6**, non +5 come nell'export: BAB +3, For +1, +1 di potenziamento, +1 Arma Focalizzata (spadone).

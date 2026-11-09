@@ -37,7 +37,7 @@ Misura dello stesso giorno, su `main`:
    - recinti ```statblocco```: anche l'attacco;
    - unità di massa: **AU = attacco della scheda uno contro uno + 2** (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2»). L'unità deve rimandare alla sua scheda con una riga `Uno contro uno: \`Bestiario/…\``.
 
-   L'attacco è BAB + For in mischia (Des a distanza o con Arma Accurata) + taglia + potenziamento dell'arma (+1 se perfetta) + Arma Focalizzata (+1) + Arma Focalizzata Superiore (+1). La formula è la stessa in 3.5 e PF1e: il conto `attacco` sta in `sistemi/*/dati/conformita.toml`.
+   L'attacco è BAB + For in mischia (Des a distanza o con Arma Accurata) + taglia + potenziamento dell'arma (+1 se perfetta) + Arma Focalizzata (+1) + Arma Focalizzata Superiore (+1). Arma Focalizzata vale per l'arma che nomina; «in Ira» accanto all'attacco usa la Forza che la scheda dichiara in Ira; l'addestramento nelle armi del guerriero PF1e vale solo se la scheda lo scrive (aggiunte del 2026-11-09, con la prima correzione degli scarti). La formula è la stessa in 3.5 e PF1e: il conto `attacco` sta in `sistemi/*/dati/conformita.toml`.
 3. **Il cancello.** `python3 scripts/conformita_statblocchi.py --cancello-numeri` è un cricchetto. `docs/audit/numeri-baseline.json` tiene gli scarti di oggi e i file che nessun conto legge ancora:
    - uno scarto nuovo, o un file nuovo con numeri che nessuno legge, fa fallire;
    - uno risolto si toglie con `--aggiorna-numeri`, che non aggiunge niente.
@@ -63,3 +63,12 @@ Il 2026-11-09, sul repo:
 
 - Il cancello blocca un numero giusto per una regola che lo script non conosce: si aggiunge la regola con la sua prova, non si allarga la tolleranza.
 - I lotti di copertura non scendono per un mese: il DM decide se portare quei file nella forma di ADR-0091 o se archiviarli.
+
+## Aggiornamento 2026-11-09: la prima correzione degli scarti
+
+Il DM: «Ovviamente correggi i problemi che ci sono». Da 37 scarti a 13.
+
+- **Lacune del verificatore (6 scarti erano falsi):** il potenziamento in mezzo al nome («grande ascia +1 a due mani», «martello +1 gelido»), l'attacco «in Ira» di Zog'tar, l'addestramento nelle armi PF1e dello skum, Arma Focalizzata contata su un'arma che non è la sua (Karkator), «Sensi come A.1» in un booklet che include la scheda a pezzi.
+- **Numeri corretti col conto:** megera verde 49 pf e annis 52 pf (Abbazia); dovil runecaster +6; gnoll in sella +3, +5 solo in carica; monaco, raffica +7/+7; coltello del bravaccio +3 e spada corta del miliziano +4 (Drappo PF1e); sgherro di Hamid +12/+7; asservito PF1e danno 1d6+4.
+- **Numeri tenuti con un mezzo legale scritto in scheda** (ADR-0091 §4-bis.2): Gorthak, Arma Focalizzata nel sesto talento libero; Madre Dana, Arma Focalizzata dal dominio della Guerra; duergar, Competenza nelle Armi Esotiche al posto di Schivare (+6); monaco, Arma Focalizzata (catena chiodata) al posto di Schivare (+10); drow, stocco perfetto; Uomo di Sal, sgherro, asservito, bravaccio e miliziano, i talenti del guerriero che il danno già implicava; Ghaurush, «perfetto» anche nel recinto.
+- **Restano 13 scarti**, tutti AU di unità di Hammerfist senza scheda uno contro uno leggibile. La Fanteria Hobgoblin ora ha il rimando e torna (+8 = +6 + 2). Le altre chiedono una scheda nel Bestiario e, dove il conto abbassa l'AU, una scelta del DM sull'equilibrio della battaglia.

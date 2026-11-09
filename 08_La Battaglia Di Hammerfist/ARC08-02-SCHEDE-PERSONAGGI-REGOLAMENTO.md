@@ -300,7 +300,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
     *   **Testa Centrale (Strategica):** Una volta per scontro, può rinunciare a un attacco per fornire a un'unità alleata un bonus di +2 al morale per 1 round.
     *   **Testa Destra (Vigile):** Fornisce il talento Iniziativa Migliorata (+4 Iniziativa totale).
 
-**Talenti:** Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro.
+**Talenti:** Allerta, Arma Focalizzata (randello enorme), Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro; Iniziativa Migliorata dalla testa destra. `[CANONE — regola, ADR-0118]: 15 DV danno sei talenti e Iniziativa Migliorata la dà la testa destra, quindi il sesto è libero; con Arma Focalizzata il randello torna a +21 (BAB +11, For +9, −1 taglia, +1 arma, +1)`
 **Equipaggiamento:** *Corazza di Piastre Grande +1*, 3 *Randelli Enormi +1* (due in pugno, uno di riserva), 6 Giavellotti Grandi.
 
 > **Verifica 3.5 (versione più forte)**: ettin dell'SRD avanzato a 15 DV
@@ -379,7 +379,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Incantesimi:** Lancia come un Chierico di 15° livello. **Domini:** Guerra, Terra.
     *   **Incantesimi Preparati (LI 15°):** *Aura Sacra*, *Parola del Potere Stordire* (D), *Terremoto* (D), *Guarigione* (x2), *Lama di Barriera* (D), *Colpo Infuocato* (D), *Potere Divino* (D), *Muro di Pietra*, *Preghiera*, ecc. (elenco completo nella Guida DM).
 
-**Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
+**Talenti:** Scacciare Extra, Arma Focalizzata (martello da guerra) dal dominio della Guerra (gli altri talenti non sono scritti). `[CANONE — regola, ADR-0118]: il dominio della Guerra dà Arma Focalizzata nell'arma preferita di Moradin (SRD), e il martello torna a +18 (BAB +11, For +4, +2 arma, +1)`
 **Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti del Potere Orchesco +2* e *Mantello del Carisma +2*.
 
 **Tattiche:** *Prima del combattimento*: al mattino prepara *Banchetto degli Eroi* per gli ufficiali e consacra le armi (Benedizione della Forgia); prima di un assalto lancia *Aura Sacra* su sé e sulle Cantitrici vicine, e *Libertà di Movimento* su Re Thorek. *Durante il combattimento*: round 1 Canto di Battaglia (+2 a tutti gli alleati entro 18 m per 10 round); poi tiene in piedi i comandanti, con *Guarigione* sul re e *Cura Ferite Leggere di Massa* dopo ogni soffio; *Muro di Pietra* chiude una breccia, *Terremoto* lontano dalle mura spezza una carica. Scaccia i non morti se ne compaiono. Combatte col martello solo se un nemico le arriva addosso, e allora prima *Potere della Giustizia* e *Potere Divino*. *Morale*: non abbandona il re né il tempio; sotto i 40 pf si ritira dietro le Cantitrici, si cura e torna.
@@ -827,6 +827,8 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 ---
 ### **FANTERIA HOBGOBLIN (Standard)**
 *Fanteria Leggera, 1ª Linea d'Assalto (30 Unità)*
+
+> Uno contro uno: `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (Combattente 3, GS 2, spada lunga perfetta +6).
 
 **PFU:** 10/10 | **DU:** 18 | **Morale Iniziale:** +2
 **AU (Spada Lunga):** +8 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09, INVENTARIO D4: +8 = spada lunga +6 del regolare hobgoblin (Bestiario, guerriero 3) più il +2 «media» della regola delle unità; il +10 della chat non esce da nessuna scheda 3.5 o PF1e]`

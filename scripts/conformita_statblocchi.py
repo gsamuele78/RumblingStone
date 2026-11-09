@@ -653,7 +653,8 @@ def _blocchi_del_master(testo: str):
 PRIMO_ATTACCO = re.compile(
     r"([+-]\d+)(?:/[+-]\d+)*\s*(?:in mischia|a distanza|di contatto|contatto)?\s*\(")
 DISTANZA = re.compile(r"a distanza|\b(?:arco|balestra|giavellott|fionda|dardi?)\b", re.I)
-FOCALIZZATA_SUP = re.compile(r"\b(?:Greater Weapon Focus|Arma Focalizzata Superiore)\b", re.I)
+FOCALIZZATA_SUP = re.compile(
+    r"\b(?:Greater Weapon Focus|Arma Focalizzata Superiore)\b(?:\s*[(:]\s*([^),;·\n]+))?", re.I)
 
 
 def attacco_atteso(riga: str, bab: int, car: str, talenti_: str,
@@ -670,22 +671,70 @@ def attacco_atteso(riga: str, bab: int, car: str, talenti_: str,
     if not m:
         return None
     prima = riga[:m.start()].strip().strip("*").strip()
-    pot = re.search(r"\+(\d)$", prima)
+    arma = _nome_dell_arma(prima)
+    pot = re.search(r"\+(\d)\b(?!\s*/)", arma)
     pot = int(pot.group(1)) if pot else 0
     a_distanza = bool(DISTANZA.search(riga[:m.end()]))
-    f, d = _mod_caratteristica(car, "For"), _mod_caratteristica(car, "Des")
+    in_ira = bool(IN_IRA.search(arma) or IN_IRA.match(riga[m.end():].split(";")[0].rsplit(")", 1)[-1]))
+    car_ = car
+    if in_ira:
+        ira = FOR_IN_IRA.search(car + " " + talenti_)
+        if ira:
+            car_ = f"For {ira.group(1)} " + re.sub(r"For\s+\d+", "", car)
+    f, d = _mod_caratteristica(car_, "For"), _mod_caratteristica(car_, "Des")
     if a_distanza or (ACCURATA.search(talenti_) and d is not None and f is not None and d > f):
         quale, mc = "Des", d
     else:
         quale, mc = "For", f
     if mc is None:
         return None
-    perfetta = 1 if not pot and (PERFETTA.search(prima) or re.search(r"\bda maestro\b", prima, re.I)) else 0
-    foc = (1 if FOCALIZZATA.search(talenti_) else 0) + (1 if FOCALIZZATA_SUP.search(talenti_) else 0)
-    atteso = bab + mc + taglia + pot + perfetta + foc
-    come = (f"BAB {bab:+d}, {quale} {mc:+d}, taglia {taglia:+d}, arma {pot + perfetta:+d}, "
-            f"talenti {foc:+d}")
+    perfetta = 1 if not pot and (PERFETTA.search(arma) or re.search(r"\bda maestro\b", arma, re.I)) else 0
+    foc = (1 if _focalizzata_su(FOCALIZZATA_BASE, arma, talenti_) else 0) \
+        + (1 if _focalizzata_su(FOCALIZZATA_SUP, arma, talenti_) else 0)
+    adde = ADDESTRAMENTO.search(talenti_)
+    adde = int(adde.group(1)) if adde else 0
+    atteso = bab + mc + taglia + pot + perfetta + foc + adde
+    come = (f"BAB {bab:+d}, {quale} {mc:+d}{' in Ira' if in_ira and car_ != car else ''}, "
+            f"taglia {taglia:+d}, arma {pot + perfetta:+d}, talenti {foc:+d}"
+            + (f", addestramento nelle armi {adde:+d}" if adde else ""))
     return int(m.group(1)), atteso, come
+
+
+#: «in Ira» accanto al primo attacco, e la Forza che la scheda dichiara in Ira.
+IN_IRA = re.compile(r"\s*\**\s*in Ira\b", re.I)
+FOR_IN_IRA = re.compile(r"For\s+\d+\s*\((\d+) in Ira\)", re.I)
+#: PF1e, *weapon training* del guerriero: vale solo se la scheda lo scrive.
+ADDESTRAMENTO = re.compile(r"addestramento nelle armi[^·\n+]*\+(\d)", re.I)
+#: Arma Focalizzata senza la Superiore, col nome dell'arma fra parentesi o dopo i due punti.
+FOCALIZZATA_BASE = re.compile(
+    r"\b(?<!Greater )(?:Weapon Focus|Arma Focalizzata)\b(?! Superiore)(?:\s*[(:]\s*([^),;·\n]+))?", re.I)
+
+
+def _nome_dell_arma(prima: str) -> str:
+    """L'ultimo nome d'arma davanti al bonus: quello che sta dopo l'ultimo separatore."""
+    senza = re.sub(r"\([^)]*\)", "", prima)
+    return re.split(r";|·|\*\*|\boppure\b|\be\b(?=\s+\w+\s+[+-]?\d)|:", senza)[-1].strip()
+
+
+def _focalizzata_su(talento: "re.Pattern", arma: str, testo: str) -> bool:
+    """Il talento conta per quest'arma. Se nomina un'altra arma che la scheda usa, no."""
+    trovati = list(talento.finditer(testo))
+    if not trovati:
+        return False
+    for t in trovati:
+        nome = (t.group(1) or "").strip().lower() if talento.groups else ""
+        if not nome:
+            return True
+        radice = re.split(r"\s+", nome)[0][:-1] or nome
+        if radice in arma.lower():
+            return True
+        righe = [r for r in testo.split("\n") if PRIMO_ATTACCO.search(r)]
+        # le voci «  - …» del recinto sono nella lingua della riga che si giudica
+        righe = [r for r in righe if r.lstrip().startswith("- ")] or righe
+        attacchi = " ".join(re.sub(r"\([^)]*\)", "", r.lower()) for r in righe)
+        if radice not in attacchi:
+            return True          # l'arma del talento non è fra gli attacchi: nome tradotto, vale
+    return False
 
 
 def _mod_caratteristica(car: str, quale: str) -> "int | None":
@@ -957,10 +1006,12 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
                    "corrompere l'acqua segue la presenza")
     # scurovisione: il tipo la ha nell'SRD, i sensi la scrivono
     sensi = " ".join([sb.sensi or "", _voce_bold(prosa, "Sensi") or ""])
-    if re.search(r"come A\.", sensi) and fratelli:
+    if re.search(r"come A\.", sensi):
         rif = re.search(r"come (A\.\d+(?:-bis)?)", sensi).group(1)
         if rif in fratelli:
             sensi += " " + (fratelli[rif]["sb"].sensi or "")
+        else:
+            sensi += " scurovisione"   # la scheda madre sta in un altro file (un booklet la include a pezzi)
     tipo = sb.tipo or ""
     # una forma temporanea («pf: quelli di Hella») tiene i sensi di chi la prende
     forma = _int(sb.pf) is None

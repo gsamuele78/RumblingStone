@@ -3525,7 +3525,7 @@
      ],
      "attacco": [
       5,
-      4,
+      5,
       0
      ],
      "lotta": [
@@ -3622,7 +3622,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 3392,
+    "senza_note": 3414,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -3717,7 +3717,7 @@
     ],
     "gs": 11.0,
     "lotta": 4,
-    "mischia": "stocco +5 (1d6)",
+    "mischia": "stocco perfetto +5 (1d6−1)",
     "pf": 38,
     "provenienza": "copiate",
     "tipo": "Medium humanoid (elf), NE",
@@ -4418,9 +4418,7 @@
     ]
    ],
    "giudica": {
-    "come_la_fonte": [
-     "attacco"
-    ],
+    "come_la_fonte": [],
     "decisione": null,
     "esito": {
      "BAB": [
@@ -4444,9 +4442,9 @@
       0
      ],
      "attacco": [
-      3,
       6,
-      -3
+      6,
+      0
      ],
      "iniziativa": [
       5,
@@ -4467,13 +4465,7 @@
     },
     "file": "Bestiario/mostri/duergar-guerriero2-cr3.md",
     "provenienza": "trascritte",
-    "scarti": {
-     "attacco": [
-      3,
-      6,
-      -3
-     ]
-    },
+    "scarti": {},
     "template": null,
     "template_dichiarati": [],
     "verificabile": true
@@ -4534,7 +4526,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1195,
+    "senza_note": 1274,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_guerriero_2liv_3cr.html",
@@ -4628,7 +4620,7 @@
     ],
     "gs": 3.0,
     "lotta": 5,
-    "mischia": "spada bastarda perfetta +3 (1d10+3)",
+    "mischia": "spada bastarda perfetta +6 (1d10+3)",
     "pf": 20,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (dwarf, duergar), Fighter 2, LE",
@@ -7103,7 +7095,7 @@
       0
      ],
      "attacco": [
-      5,
+      3,
       3,
       0
      ],
@@ -7165,7 +7157,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 1090,
+    "senza_note": 1101,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -7240,7 +7232,7 @@
     ],
     "gs": 4.0,
     "lotta": null,
-    "mischia": "lancia da carica +5 (1d8+3; ×2 in carica)",
+    "mischia": "lancia da carica +3 (1d8+3; in carica +5 e danno ×2)",
     "pf": 11,
     "provenienza": "a mano",
     "tipo": "Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12",
@@ -11357,7 +11349,7 @@
      ],
      "attacco": [
       10,
-      9,
+      10,
       0
      ],
      "iniziativa": [
@@ -11435,7 +11427,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1395,
+    "senza_note": 1614,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/monaco pugno del destino cr7.htm",
@@ -11509,7 +11501,7 @@
     ],
     "gs": 7.0,
     "lotta": 9,
-    "mischia": "catena chiodata perfetta a due mani +10/+10 (2d4+4); raffica di colpi +9/+9/+9 (1d8+3, ki = magico)",
+    "mischia": "catena chiodata perfetta a due mani +10 (2d4+4); raffica di colpi +7/+7 (1d8+3, ki = magico)",
     "pf": 52,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE",
@@ -17236,7 +17228,7 @@
     "decisione": null,
     "esito": {
      "attacco": [
-      5,
+      6,
       5,
       0
      ],
@@ -17301,7 +17293,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1620,
+    "senza_note": 1621,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Underdark dovil runecaster deep diviner cr7.htm",
@@ -17365,7 +17357,7 @@
     ],
     "gs": 7.0,
     "lotta": 4,
-    "mischia": "spadone +1 a due mani +5 (2d6+2/19-20)",
+    "mischia": "spadone +1 a due mani +6 (2d6+2/19-20)",
     "pf": 37,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (dwarf, hill), Diviner 5 / Deep Diviner 1 / Fighter 1, N",
@@ -21743,7 +21735,7 @@
     "esito": {
      "attacco": [
       13,
-      12,
+      13,
       0
      ],
      "lotta": [
@@ -21829,7 +21821,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 8525,
+    "senza_note": 8534,
     "sestine_citate": [],
     "taglia": -1,
     "talenti": {
@@ -21901,7 +21893,7 @@
     ],
     "gs": 18.0,
     "lotta": 17,
-    "mischia": "spadone Large +13/+8 (3d6+7)",
+    "mischia": "spadone Large perfetto +13/+8 (3d6+7)",
     "pf": 137,
     "provenienza": "copiate",
     "tipo": "Large giant (ogre magi), LE",
@@ -41099,13 +41091,13 @@
   "conformita_controlla_pf_dado": [],
   "conformita_proponi_pf_dado": [],
   "conformita_riepilogo": {
-   "come_la_fonte": 4,
+   "come_la_fonte": 3,
    "da_correggere": 0,
    "decisioni_aperte": 0,
    "del_generatore": 0,
    "spiegati_da_template": 0,
    "statblocchi": 119,
-   "tornano": 114,
+   "tornano": 115,
    "verificabili": 118
   },
   "genera_attributi_controlla": [],

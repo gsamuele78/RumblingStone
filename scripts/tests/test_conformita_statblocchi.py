@@ -403,7 +403,7 @@ class TestRecintiNeiMaster(unittest.TestCase):
     # 2026-11-09, ADR-0118: il rapporto conta anche l'attacco. Gorthak (+21 contro
     # +20) e Madre Dana (+18 contro +17) non tornano, nelle due copie della
     # scheda: sono nella baseline del cancello dei numeri, e li decide il DM.
-    RESIDUI: dict = {"ARC08-01-GUIDA-DM.md": 2, "ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md": 2}
+    RESIDUI: dict = {}
 
     def test_png_con_classi_primo_dado_al_massimo(self):
         # Balvar: 13d8+39, primo dado 8 e gli altri alla media = 101 (DMG 3.5, cap. 4)
@@ -451,6 +451,39 @@ class TestCancelloDeiNumeri(unittest.TestCase):
         r = C.attacco_atteso("*Arco Lungo Composito Potente (+3) +3* +19 a distanza (1d8+6/x3)", 11,
                              "For 16, Des 18", "Arma Focalizzata (arco lungo)", 0)
         self.assertEqual(r[:2], (19, 19))
+
+    def test_il_potenziamento_in_mezzo_al_nome(self):
+        # Karkilan: «grande ascia +1 a due mani»: BAB +7, For +6, Grande −1, +1
+        r = C.attacco_atteso("grande ascia +1 a due mani +13/+8 (3d6+10/x3)", 7, "For 23", "Attacco Poderoso", -1)
+        self.assertEqual(r[:2], (13, 13))
+        # Rurik: «martello da guerra +1 gelido»
+        r = C.attacco_atteso("martello da guerra +1 gelido +14/+9 (1d8+3)", 10, "For 14",
+                             "Arma Focalizzata (martello da guerra)", 0)
+        self.assertEqual(r[:2], (14, 14))
+
+    def test_arma_focalizzata_vale_per_la_sua_arma(self):
+        # Karkator: il talento è sul tentacolo, il morso non lo prende
+        testo = "  - Morso +17 (2d8+9)\n  - 4 tentacoli +16 (2d6+4)\nTalenti Arma Focalizzata (tentacolo)"
+        self.assertEqual(C.attacco_atteso("Morso +17 (2d8+9)", 12, "For 29", testo, -4)[:2], (17, 17))
+        # il nome inglese del talento su una riga italiana vale: non c'è un'altra arma che lo porti
+        testo = "  - Mischia spada lunga perfetta +9 (1d8+4)\nFeats: Weapon Focus (longsword)"
+        self.assertEqual(C.attacco_atteso("spada lunga perfetta +9 (1d8+4)", 5, "For 14", testo, 0)[:2], (9, 9))
+
+    def test_in_ira_conta_la_forza_dell_ira(self):
+        # Zog'tar: BAB +15, For 36 in Ira (+13), Grande −1, ascia +1, Arma Focalizzata: +29
+        testo = "For 30 (36 in Ira), Des 20 · Talenti Arma Focalizzata (ascia)"
+        riga = "ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira"
+        self.assertEqual(C.attacco_atteso(riga, 15, "For 30 Des 20", testo, -1)[:2], (29, 29))
+        self.assertEqual(C.attacco_atteso("ascia a due mani +1 +26 (3d6+16)", 15, "For 30 Des 20", testo, -1)[:2],
+                         (26, 26))
+
+    def test_addestramento_nelle_armi_pf1e_solo_se_scritto(self):
+        # Skum guerriero 8: BAB +10, For +5, tridente +1, Focalizzata e Superiore, addestramento +1
+        testo = ("addestramento nelle armi (lance) +1 · Talenti Arma Focalizzata (tridente), "
+                 "Arma Focalizzata Superiore (tridente)")
+        self.assertEqual(C.attacco_atteso("Tridente +1 +19/+14 (1d8+9)", 10, "For 21", testo, 0)[:2], (19, 19))
+        senza = testo.replace("addestramento nelle armi (lance) +1 · ", "")
+        self.assertEqual(C.attacco_atteso("Tridente +1 +19/+14 (1d8+9)", 10, "For 21", senza, 0)[:2], (19, 18))
 
     def test_perfetta_da_maestro_pf1e(self):
         r = C.attacco_atteso("pugnale da maestro +5 (1d4+1)", 3, "For 12, Des 10", "", 0)
