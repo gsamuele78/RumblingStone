@@ -1,4 +1,4 @@
-# Krusk lo Sfonda-Cancelli — il rivale di Gorthak (mezzorco gigante, barbaro 5, guerriero 1, berserker furioso 7) [INFERRED — Tieni questa build (mezzorco con archetipo Gigante PF1e, GS 14) come canone di Krusk?; base: card INVENTARIO D2 del 2026-11-08 e chat Gemini «Branch of Sistema Combattimento Massa D&D 3.5», corretta sulle regole 3.5]
+# Krusk lo Sfonda-Cancelli — il rivale di Gorthak (mezzorco gigante, barbaro 5, guerriero 1, berserker furioso 7) [CANONE — DM 2026-11-09, INVENTARIO D2]
 **Faction**: red-hand | **Role**: brute | **Environment**: any | **CR**: 14 | **Source**: classi Barbaro e Guerriero SRD 3.5; Berserker Furioso `[Private source — Complete Warrior, p. 34]`; Ira Distruttiva e Ira Intimidatoria `[Private source — Complete Warrior, p. 97 e p. 102]`; archetipo Gigante PF1e (`skills/pathfinder-1e-srd/references/monster-advancement.md`); idea, nome e ruolo dalla chat Gemini su Drive (`plans/INVENTARIO-GEMINI-AISTUDIO-2026-10.md` §3) | **Status**: inferred
 
 ```statblocco
