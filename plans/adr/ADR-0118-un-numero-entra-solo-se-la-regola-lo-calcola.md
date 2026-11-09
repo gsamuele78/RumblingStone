@@ -35,7 +35,7 @@ Misura dello stesso giorno, su `main`:
    - Bestiario: ogni scarto di `giudica`, più l'attacco esatto;
    - master in forma `**Campo:**`: anche l'attacco;
    - recinti ```statblocco```: anche l'attacco;
-   - unità di massa: **AU = attacco della scheda uno contro uno + 2** (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2»). L'unità deve rimandare alla sua scheda con una riga `Uno contro uno: \`Bestiario/…\``.
+   - unità di massa: **AU = attacco della creatura singola** (`ARC08-02` §4: «AU e DU sono i valori medi di attacco e CA dell'unità»). L'unità rimanda alla sua scheda con una riga `Uno contro uno: \`Bestiario/…\``, oppure al blocco «STATISTICHE CREATURA SINGOLA» di una guida con `Uno contro uno: \`file.md\` § «TITOLO»`. Quel blocco scrive «Attacco Base» e le caratteristiche, e il suo attacco si rifà come gli altri. *(Corretto il 2026-11-09: la prima stesura diceva «+ 2», vedi in fondo.)*
 
    L'attacco è BAB + For in mischia (Des a distanza o con Arma Accurata) + taglia + potenziamento dell'arma (+1 se perfetta) + Arma Focalizzata (+1) + Arma Focalizzata Superiore (+1). Arma Focalizzata vale per l'arma che nomina; «in Ira» accanto all'attacco usa la Forza che la scheda dichiara in Ira; l'addestramento nelle armi del guerriero PF1e vale solo se la scheda lo scrive (aggiunte del 2026-11-09, con la prima correzione degli scarti). La formula è la stessa in 3.5 e PF1e: il conto `attacco` sta in `sistemi/*/dati/conformita.toml`.
 3. **Il cancello.** `python3 scripts/conformita_statblocchi.py --cancello-numeri` è un cricchetto. `docs/audit/numeri-baseline.json` tiene gli scarti di oggi e i file che nessun conto legge ancora:
@@ -71,4 +71,29 @@ Il DM: «Ovviamente correggi i problemi che ci sono». Da 37 scarti a 13.
 - **Lacune del verificatore (6 scarti erano falsi):** il potenziamento in mezzo al nome («grande ascia +1 a due mani», «martello +1 gelido»), l'attacco «in Ira» di Zog'tar, l'addestramento nelle armi PF1e dello skum, Arma Focalizzata contata su un'arma che non è la sua (Karkator), «Sensi come A.1» in un booklet che include la scheda a pezzi.
 - **Numeri corretti col conto:** megera verde 49 pf e annis 52 pf (Abbazia); dovil runecaster +6; gnoll in sella +3, +5 solo in carica; monaco, raffica +7/+7; coltello del bravaccio +3 e spada corta del miliziano +4 (Drappo PF1e); sgherro di Hamid +12/+7; asservito PF1e danno 1d6+4.
 - **Numeri tenuti con un mezzo legale scritto in scheda** (ADR-0091 §4-bis.2): Gorthak, Arma Focalizzata nel sesto talento libero; Madre Dana, Arma Focalizzata dal dominio della Guerra; duergar, Competenza nelle Armi Esotiche al posto di Schivare (+6); monaco, Arma Focalizzata (catena chiodata) al posto di Schivare (+10); drow, stocco perfetto; Uomo di Sal, sgherro, asservito, bravaccio e miliziano, i talenti del guerriero che il danno già implicava; Ghaurush, «perfetto» anche nel recinto.
-- **Restano 13 scarti**, tutti AU di unità di Hammerfist senza scheda uno contro uno leggibile. La Fanteria Hobgoblin ora ha il rimando e torna (+8 = +6 + 2). Le altre chiedono una scheda nel Bestiario e, dove il conto abbassa l'AU, una scelta del DM sull'equilibrio della battaglia.
+- **Restavano 13 scarti**, tutti AU di unità di Hammerfist senza scheda uno contro uno leggibile (chiusi qui sotto). Le altre chiedono una scheda nel Bestiario e, dove il conto abbassa l'AU, una scelta del DM sull'equilibrio della battaglia.
+
+## Correzione 2026-11-09: l'AU non ha il «+2»
+
+**L'errore.** La prima stesura di questo ADR, e la PR #360 prima di lui, prendevano la regola delle unità dalla riga «Bonus Attacco: Media +2 (effetto massa)» di `mass_combat_guide_Dm.md`. Quella riga sta nella sezione della **variante 2d6**. Il sistema canonico a d20 (`ARC08-02` §4, quello che ARC-09 eredita) dice che AU e DU sono i valori medi di attacco e CA, senza +2, e la guida stessa dice di non mischiare i due motori. In `ARC08-01` undici unità su tredici avevano già l'AU uguale all'attacco della creatura singola.
+
+**La scelta del DM** (card del 2026-11-09): «AU = attacco della creatura».
+
+**Che cosa cambia.**
+
+| Unità | AU prima | AU dopo | Perché |
+|---|---|---|---|
+| Fanteria Hobgoblin | +8 | **+6** | spada lunga perfetta del regolare (Bestiario, combattente 3); il +8 della #360 era «6 + 2» |
+| Orog Guardie Nere | +15 | **+13** | ascia +13 della scheda; era +12, la #360 l'aveva portato a +15 col «+2» |
+| Fanteria Orchesca | +6 | **+5** | barbaro 1, For 17, Arma Focalizzata; furia e carica da +8 a +7 |
+| Giganti delle Colline, randello | +14 | **+16** | BAB +9 con 12 DV (era +8), For 27, Grande |
+| Giganti delle Colline, massi | +14 | **+8** | il masso dell'SRD: BAB +9, Des −1, taglia −1, +1 razziale. Il +14 di `ARC08-02` era il randello |
+| Ettin | +11 | **+12** | For 23 dell'SRD (il blocco dava 19) |
+| War Adepts, raggio rovente | +7 | **+5** | contatto a distanza: BAB +3, Des +2 |
+
+Le altre otto (guerrieri hobgoblin, worg riders, Doom Hand, sciamani, veterani, balestrieri, élite, ingegneri) restano come sono: il loro blocco ora scrive «Attacco Base» e le caratteristiche, e il conto torna.
+
+**Che cosa non cambia.** Il libretto della battaglia (`ARC08-18`), le DEF e `ARC08-19` usano numeri loro, col morale dentro e tarati con le simulazioni: non si toccano. Due di quei numeri citano però `ARC08-02`: la carta dei massi dei giganti (AU 14) e le baliste (AU +10). La carta resta a 14 finché il DM non decide; `ARC08-19` §8 lo dice.
+
+**Resta 1 scarto**: le baliste pesanti a AU +10 (`ARC08-03`), che nessuna scheda ricostruisce.
+

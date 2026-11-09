@@ -493,17 +493,35 @@ class TestCancelloDeiNumeri(unittest.TestCase):
              "**AU (Ascia Bipenne+1):** +{au} | **Danno:** 1d12+7\n\n---\n"
              "### **FANTERIA SENZA SCHEDA**\n\n**AU (Spada):** +10 | **Danno:** 1d8\n")
 
-    def test_l_au_e_l_attacco_della_scheda_piu_due(self):
-        # orog: ascia +13 nella scheda uno contro uno, quindi AU +15
-        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
+    def test_l_au_e_l_attacco_della_creatura_singola(self):
+        # orog: ascia +13 nella scheda uno contro uno, quindi AU +13 (ARC08-02 §4).
+        # Il «+2 effetto massa» è della variante 2d6: +15 non torna.
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=13))
         self.assertEqual([x["titolo"] for x in r], ["FANTERIA SENZA SCHEDA"])
-        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=16))
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
         orog = [x for x in r if x["titolo"] == "OROG GUARDIE NERE"]
-        self.assertEqual((orog[0]["scritto"], orog[0]["atteso"]), (16, 15))
+        self.assertEqual((orog[0]["scritto"], orog[0]["atteso"]), (15, 13))
 
     def test_l_unita_senza_scheda_non_ha_conto(self):
-        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=13))
         self.assertIsNone(r[0]["atteso"])
+
+    SINGOLA = ("#### **GIGANTI DELLE COLLINE (8 creature)**\n```\nSTATISTICHE UNITÀ (1 Gigante per unità):\n"
+               "- Attacco Unità: +{au} (Randello, 2d8+12)\n---\nSTATISTICHE CREATURA SINGOLA (Gigante delle Colline):\n"
+               "CM Gigante Grande; \nAttacco Base +{bab}, \nAtt Randello enorme +{att} (2d8+12); \n"
+               "Att a distanza Lancio massi +8 (2d6+8); \nFor 27, Des 8, Cos 19, Int 6, Sag 10, Car 7.\n```\n")
+
+    def test_la_creatura_singola_di_una_guida(self):
+        # gigante delle colline: BAB +9, For 27 (+8), Grande −1: randello +16, e l'AU è +16
+        f = C.numeri_delle_singole
+        self.assertEqual(f(ROOT / "prova.md", self.SINGOLA.format(au=16, bab=9, att=16)), [])
+        r = f(ROOT / "prova.md", self.SINGOLA.format(au=14, bab=8, att=14))
+        self.assertEqual([(x["campo"], x["scritto"], x["atteso"]) for x in r], [("attacco", 14, 15)])
+        r = f(ROOT / "prova.md", self.SINGOLA.format(au=18, bab=9, att=16))
+        self.assertEqual([(x["campo"], x["scritto"], x["atteso"]) for x in r], [("AU", 18, 16)])
+        # l'etichetta sceglie l'attacco: i massi sono +8
+        self.assertEqual(C._attacco_della_singola(next(C._singole(self.SINGOLA.format(au=16, bab=9, att=16)))[4],
+                                                  "Lancio Massi")[:2], (8, 8))
 
     def test_il_cancello_sul_repo_e_verde(self):
         self.assertEqual(C.cancello_numeri(), 0)

@@ -20,8 +20,8 @@ spiegare la regola.
 
 | Reparto | Capacità | Effetto nel libretto | Fonte |
 |---|---|---|---|
-| **Orchi** | **Carica selvaggia** | nel round in cui arrivano sul fronte: **+1** AU e **−2** DU | `ARC08-02`, unità orchi (AU +8 e DU 12 al primo round) |
-| **Orchi** | **Furia** | a 4 PFU o meno: **+1** AU | `ARC08-02`, unità orchi (AU +8 a ≤4 PFU) |
+| **Orchi** | **Carica selvaggia** | nel round in cui arrivano sul fronte: **+1** AU e **−2** DU | `ARC08-02`, unità orchi (AU +7 e DU 12 al primo round) |
+| **Orchi** | **Furia** | a 4 PFU o meno: **+1** AU | `ARC08-02`, unità orchi (AU +7 a ≤4 PFU) |
 | **Hobgoblin** | **Formazione tattica** | se sul fronte ci sono due o più reparti di hobgoblin (i guerrieri non contano: non marciano al tamburo), ognuno ha **+1** DU | `ARC08-02` e `ARC08-01`, unità hobgoblin |
 | **Lupi e goblin** | **Sbilanciare** | il reparto nanico che hanno davanti ha **−2** al bianco, una volta sola anche con due reparti di lupi davanti | `ARC08-02`, unità worg (−2 DU al bersaglio) |
 | **Giganti** | **Bombardamento** | un macigno per settore; ignora le merlature delle Mura | `ARC08-02`, giganti |
@@ -161,7 +161,7 @@ giro.
 
 | Cosa | Le versioni | Scelta del libretto |
 |---|---|---|
-| Massi dei giganti | AU +14 (`ARC08-02`), 3d8 dal gomito della strada a ~100 m, incremento 36 m (`Mappe` L2), 2d8+12 (scontri) | la carta usa **AU +14**, la scheda dell'unità |
+| Massi dei giganti | AU +14 (`ARC08-02` fino al 2026-11-09; ora la scheda dà +8 ai massi e +16 al randello, ADR-0118), 3d8 dal gomito della strada a ~100 m, incremento 36 m (`Mappe` L2), 2d8+12 (scontri) | la carta usa **AU +14**, il numero con cui il libretto è stato provato. ⚠ Dal 2026-11-09 non è più quello della scheda (+8): da decidere se la carta scende |
 | Riserva | 30 nani senza postazione nel cortile esterno, che il DM manda alla breccia (DM, 2026-10-22; `Mappe` L2, MAPPA 2) | nel libretto (§1) entra nel settore che cede come terzo reparto della schiera, e non torna indietro `[CANONE — DM 2026-11-04, P16, la ritirata e i tunnel]` |
 | Baliste | 6 con AU +10 (`ARC08-02`), 10 a +18 (`Mappe` L2), 12 (archivio) | una per torre, **d20 + 10**, perché nel libretto le altre stanno sui settori senza giocatore |
 | Carica | +2 att/−1 CA, +2 att/+2 danni/+1 morale (due righe di `mass_combat_guide_Dm.md`) | l'ordine **Caricare**: +2 al rosso, −2 al bianco |

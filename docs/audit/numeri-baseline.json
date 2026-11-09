@@ -1,18 +1,6 @@
 {
  "_cos_e": "Il cricchetto del cancello dei numeri (ADR-0118): gli scarti di oggi fra un numero scritto e la regola che lo calcola, e i file con numeri che nessun conto legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. Lo legge scripts/conformita_statblocchi.py --cancello-numeri.",
  "scarti": [
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | BALESTRIERI NANICI | AU | 8",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | DOOM HAND WARPRIESTS (1.5 Unità, 15 chierici) | AU | 8",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | ETTIN STANDARD | AU | 11",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | FANTERIA ORCHESCA | AU | 6",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | GIGANTI DELLE COLLINE | AU | 14",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | GOBLIN WORG RIDERS | AU | 5",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | GUERRIERI NANICI VETERANI | AU | 9",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | HOBGOBLIN GUERRIERI (Warrior 3) | AU | 5",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | HOBGOBLIN WAR ADEPTS (2 Unità, 20 stregoni) | AU | 7",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | INGEGNERI DA GUERRA | AU | 4",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | NANI D'ÉLITE (GUARDIA DEL CANCELLO) | AU | 9",
-  "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md | SHAMANI DRACONICI (1 Unità, 10 chierici) | AU | 5",
   "08_La Battaglia Di Hammerfist/ARC08-03-REGISTRO-PERDITE.md | Supporto Tecnico | AU | 10"
  ],
  "non_coperti": [

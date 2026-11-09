@@ -44,7 +44,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 ## **ESERCITO DELLA MANO ROSSA (ATTACCANTI)**
 
 ### **Fanteria Hobgoblin (Standard)**
-**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+8** | DU: **18** | Morale Base: **+2**
+**Quantità Totale:** 30 Unità | **Statistiche Chiave:** AU: **+6** | DU: **18** | Morale Base: **+2**
 **Abilità Speciali:** Formazione Tattica (+1 DU se adiacente ad alleati), Disciplina Ferrea (+3 TS Paura)
 
 | # | Punti Ferita Unità (PFU) | Note / Status Attuale | # | Punti Ferita Unità (PFU) | Note / Status Attuale |
@@ -67,8 +67,8 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 
 ---
 ### **Fanteria Orchesca**
-**Quantità Totale:** 15 Unità | **Statistiche Chiave:** AU: **+6** | DU: **13** | Morale Base: **+1**
-**Abilità Speciali:** Furia Orchesca (AU +8 se PFU ≤ 4), Carica Selvaggia (1° round: AU +8, DU 12)
+**Quantità Totale:** 15 Unità | **Statistiche Chiave:** AU: **+5** | DU: **13** | Morale Base: **+1**
+**Abilità Speciali:** Furia Orchesca (AU +7 se PFU ≤ 4), Carica Selvaggia (1° round: AU +7, DU 12)
 
 | # | Punti Ferita Unità (PFU) | Note / Status Attuale |
 | :- | :--- | :--- |
@@ -124,7 +124,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 ---
 ### **Artiglieria e Unità Pesanti**
 
-**Giganti delle Colline (8 Unità)** | AU: **+14** | DU: **20** | PFU: 15 | Morale: +1
+**Giganti delle Colline (8 Unità)** | AU: **+16 randello, +8 massi** | DU: **20** | PFU: 15 | Morale: +1
 *Abilità: Bombardamento (ignora copertura), Bersaglio Grande (+2 a essere colpiti a distanza)*
 | # | PFU | # | PFU |
 | :- | :--- | :- | :--- |
@@ -133,14 +133,14 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 | **3** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` | **7** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 | **4** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` | **8** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 
-**Ettin Standard (2 Unità)** | AU: **+11 (x2)** | DU: **18** | PFU: 13 | Morale: 0
+**Ettin Standard (2 Unità)** | AU: **+12 (x2)** | DU: **18** | PFU: 13 | Morale: 0
 *Abilità: Doppio Attacco, Visione Superiore (no fiancheggiamento)*
 | # | PFU |
 | :- | :--- |
 | **1** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 | **2** | `[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]` |
 
-**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+15** | DU: **19** | PFU: 13 | Morale: +3
+**Orog Guardie Nere (1 Unità d'Élite)** | AU: **+13** | DU: **19** | PFU: 13 | Morale: +3
 *Abilità: Guardia del Corpo (intercetta danni per Grimjaw), Attacco Poderoso, Lealtà Incrollabile*
 | # | PFU |
 | :- | :--- |

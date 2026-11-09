@@ -1099,8 +1099,11 @@ def master_di_default() -> "list[Path]":
 #: * le schede del Bestiario (ogni scarto di `giudica`, più l'attacco esatto);
 #: * gli statblocchi dei master nella forma `**Campo:**`, attacco compreso;
 #: * i recinti ```statblocco``` dei master e dei moduli, attacco compreso;
-#: * le unità di massa: AU = attacco della scheda uno contro uno + 2
-#:   (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2»).
+#: * le unità di massa: AU = attacco della creatura singola (`ARC08-02` §4:
+#:   «AU e DU sono i valori medi di attacco e CA dell'unità»). Il «+2 effetto
+#:   massa» di `mass_combat_guide_Dm.md` è della variante 2d6, non del d20;
+#: * i blocchi «STATISTICHE CREATURA SINGOLA» delle guide: l'attacco, da
+#:   «Attacco Base» e dalle caratteristiche che il blocco scrive.
 #:
 #: E conta i file con numeri di combattimento che nessun conto legge ancora
 #: (`non_coperti`). E' un **cricchetto**: gli scarti e i file scoperti di oggi
@@ -1121,8 +1124,6 @@ FUORI_DAI_NUMERI = ("_ARCHIVIO", "plans/", "docs/", ".github/", "skills/", "eval
 AU_UNITA = re.compile(r"^\*\*AU(?:\s*\(([^)]*)\))?:\*\*\s*\+?(-?\d+)", re.M)
 UNO_CONTRO_UNO = re.compile(r"[Uu]no contro uno:?\**\s*`([^`]+\.md)`(?:\s*§\s*«([^»]+)»)?")
 TITOLO_UNITA = re.compile(r"^#{2,4}\s+\**(.+?)\**\s*$", re.M)
-#: Il +2 «media» della regola delle unità.
-AU_MEDIA = 0
 
 
 def _attacco_di_scheda(s: Scheda) -> str:
@@ -1226,7 +1227,7 @@ def _unita(testo: str):
 #: uno in forma compatta, dentro lo stesso recinto dell'unità.
 SINGOLA = re.compile(r"^```\n((?:(?!^```).*\n)*?)STATISTICHE CREATURA SINGOLA[^\n]*\n((?:(?!^```).*\n)*?)^```", re.M)
 AU_DEL_RECINTO = re.compile(r"Attacco Unità:\s*\+?(-?\d+)(?:\s*\(([^)]*)\))?")
-ATT_SINGOLA = re.compile(r"^Att(?:acco)?(?: a distanza)? (?!Base|Completo|Unità)(.+)$", re.M)
+ATT_SINGOLA = re.compile(r"^Att(?:acco)? (?!Base|Completo|Unità)(.+)$", re.M)
 TAGLIA_SINGOLA = {"minuscol[oaie]": 2, "piccol[oaie]": 1, "grand[ei]": -1, "enorm[ei]": -2, "mastodontic[oaih]+": -4}
 
 
@@ -1261,6 +1262,9 @@ def _attacco_della_singola(corpo: str, etichetta: str = "") -> "tuple | None":
     tipo = next((r for r in basso.split("\n") if re.search(r"\b(umanoide|gigante|bestia|drago|non morto)\b", r)), "")
     taglia = next((v for k, v in TAGLIA_SINGOLA.items() if re.search(rf"\b{k}\b", tipo)), 0)
     a = attacco_atteso(riga, int(bab.group(1)), car.group(0), corpo, taglia)
+    if a and "gigante" in tipo and re.search(r"\bmass[oi]\b", riga, re.I):
+        # SRD 3.5, Giant, Rock Throwing: +1 razziale ai tiri per colpire con i massi
+        a = (a[0], a[1] + 1, a[2] + ", +1 razziale ai massi")
     return a if a else (scritto, None, "l'attacco non si legge")
 
 
@@ -1274,14 +1278,14 @@ def numeri_delle_singole(p: Path, testo: str) -> "list[dict]":
             fuori.append(_scarto(_rel(p), titolo, "attacco", a[0], a[1], a[2]))
         if au is not None:
             b = _attacco_della_singola(corpo, etichetta) or a
-            if au != b[0] + AU_MEDIA:
-                fuori.append(_scarto(_rel(p), titolo, "AU", au, b[0] + AU_MEDIA,
+            if au != b[0]:
+                fuori.append(_scarto(_rel(p), titolo, "AU", au, b[0],
                                      f"attacco {b[0]:+d} della creatura singola" + _come_media()))
     return fuori
 
 
 def _come_media() -> str:
-    return f" + {AU_MEDIA}" if AU_MEDIA else " (ARC08-02 §4: l'AU è l'attacco medio dell'unità)"
+    return " (ARC08-02 §4: l'AU è l'attacco medio dell'unità)"
 
 
 def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
@@ -1304,7 +1308,7 @@ def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
             fuori.append(_scarto(_rel(p), titolo, "AU", au, None,
                                  f"la scheda {rimando} non ha un attacco che si legge"))
             continue
-        atteso = a[0] + AU_MEDIA
+        atteso = a[0]
         if au != atteso:
             fuori.append(_scarto(_rel(p), titolo, "AU", au, atteso,
                                  f"attacco {a[0]:+d} di {rimando}" + _come_media()))

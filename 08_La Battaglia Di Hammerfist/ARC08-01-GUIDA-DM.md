@@ -957,25 +957,28 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 ```
 STATISTICHE UNITÀ: 10 Hobgoblin per unità
 - PF Unità: 10/10 | CA Unità: 18 | Morale: +2
-- Attacco Unità: +8 | Danni Unità: 1d10+3 (Spada Lunga)
+- Attacco Unità: +6 | Danni Unità: 1d10+3 (Spada Lunga)
 - Capacità: Disciplina Ferrea (+3 ai TS sulla volontà contro la paura), Formazione Tattica (+2 CA quando adiacenti ad almeno 2 alleati).
 ---
-STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 1° liv.):
-GS 1/2; 
+STATISTICHE CREATURA SINGOLA (Hobgoblin regolare, Combattente di 3° liv.):
+GS 2; 
 LM Umanoide Medio; 
 Iniz +1; 
-CA 18 (corazza a strisce, scudo pesante, Des); 
-PF 8 (1d8+4); 
-Att Spada Lunga +3 (1d8+2/19-20); 
-For 15, Des 13, Cos 12, Int 10, Sag 10, Car 9.
+CA 19 (corazza a strisce, scudo pesante, Des); 
+PF 23 (3d8+6); 
+Attacco Base +3; 
+Att Spada Lunga perfetta +6 (1d8+1/19-20); 
+Arma Focalizzata (spada lunga), Allerta. 
+For 13, Des 13, Cos 14, Int 10, Sag 9, Car 8.
 ```
+Scheda intera: `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md`. `[CANONE — regola, ADR-0118: l'AU è l'attacco della creatura singola (ARC08-02 §4), +6; prima +8 con un hobgoblin di 1° livello a +3]`
 
 #### **FANTERIA ORCHESCA (15 Unità, 150 creature)**
 *Fanteria d'Assalto, 1ª Linea*
 ```
 STATISTICHE UNITÀ: 10 Orchi per unità
 - PF Unità: 8/10 | CA Unità: 13 | Morale: +1
-- Attacco Unità: +6 | Danni Unità: 1d8+2 (Ascia Grande)
+- Attacco Unità: +5 | Danni Unità: 1d8+2 (Ascia Grande)
 - Capacità: Furia Orchesca (+2 att/danni se sotto 50% PF), Carica Selvaggia (+2 danni, -1 CA nel primo round di carica).
 ---
 STATISTICHE CREATURA SINGOLA (Orco Barbaro di 1° liv.):
@@ -984,8 +987,9 @@ CM Umanoide Medio;
 Iniz +0; 
 CA 13 (pelle, Des); 
 PF 12 (1d12+2); 
-Att Ascia Grande +5 (1d12+4/x3); 
-Furia 1/giorno; 
+Attacco Base +1; 
+Att Ascia Grande +5 (1d12+4/x3); in furia +7 (1d12+7/x3); 
+Arma Focalizzata (ascia grande); Furia 1/giorno; 
 For 17, Des 11, Cos 14, Int 8, Sag 8, Car 6.
 ```
 <div style="page-break-before:always"></div>
@@ -1002,6 +1006,7 @@ GS 2; LM Umanoide Medio;
 Iniz +1; 
 CA 17 (cotta di maglia, scudo leggero, Des); 
 PF 20 (3d8+6); 
+Attacco Base +3; 
 Att Lancia +5 (1d8+2/x3); 
 For 15, Des 12, Cos 14, Int 10, Sag 11, Car 9.
 ```
@@ -1013,7 +1018,10 @@ STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 5° liv., GS 5):
 LM Umanoide Medio; 
 Iniz +1; 
 CA 21 (armatura completa +8, scudo pesante +2, Des +1); PF 37 (5d10+10); 
+Attacco Base +5; 
 Att Spada lunga perfetta +9 (1d8+4/19-20) o arco lungo +6 (1d8/x3); 
+Arma Focalizzata e Arma Specializzata (spada lunga). 
+For 14, Des 12, Cos 14, Int 10, Sag 10, Car 8. 
 Capacità: comando del sergente (+1 morale agli hobgoblin adiacenti, entro 3 m).
 ```
 Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026-10-23: si allinea al Bestiario]`.
@@ -1024,13 +1032,15 @@ STATISTICHE UNITÀ: 10 coppie per unità
 - PF Unità: 10/10 | CA Unità: 17 | Morale: 0
 - Attacco Unità: +5 (Lancia) e +7 (Morso Worg)
 ---
-STATISTICHE CREATURA SINGOLA (Goblin su Worg):
+STATISTICHE CREATURA SINGOLA (Goblin Combattente di 3° liv. su Worg):
 GS 3 (combinato); 
 NM Umanoide Piccolo & NM Bestia Magica Media;
 Iniz +2; 
 CA 17 (goblin), 14 (worg); 
 PF 18 (goblin), 26 (worg); 
-Att Lancia +5 (1d6/x3) e Morso +7 (1d6+3 più sbilanciare);
+Attacco Base +3 (goblin); 
+Att Lancia perfetta +5 (1d6/x3) e Morso +7 (1d6+3 più sbilanciare, il worg dell'SRD);
+For 11, Des 15, Cos 12, Int 10, Sag 9, Car 6 (goblin). 
 Velocità 15m (worg).
 ```
 <div style="page-break-before:always"></div>
@@ -1040,7 +1050,7 @@ Velocità 15m (worg).
 ```
 STATISTICHE UNITÀ (1 Gigante per unità):
 - PF Unità: 15/15 | CA Unità: 20 | Morale: +1
-- Attacco Unità: +14 (Randello, 2d8+12) o Lancio Massi (2d6+8, gittata 36m)
+- Attacco Unità: +16 (Randello, 2d8+12) o Lancio Massi +8 (2d6+8, gittata 36m)
 ---
 STATISTICHE CREATURA SINGOLA (Gigante delle Colline):
 GS 7; 
@@ -1048,11 +1058,11 @@ CM Gigante Grande;
 Iniz -1; 
 CA 20 (-1 taglia, -1 Des, +12 naturale); 
 PF 102 (12d8+48); 
-Attacco Base +8, 
-Lotta +24; 
-Att Randello enorme +14 (2d8+12); 
-Attacco Completo Randello enorme +14/+9 (2d8+12); 
-Attacchi Speciali: Lancio di Rocce (incremento di gittata 36m, 2d6+8 danni). 
+Attacco Base +9, 
+Lotta +21; 
+Att Randello enorme +16 (2d8+12); 
+Attacco Completo Randello enorme +16/+11 (2d8+12); 
+Att a distanza Lancio massi +8 (2d6+8), incremento di gittata 36m: BAB +9, Des −1, taglia −1, +1 razziale ai massi (SRD). 
 For 27, Des 8, Cos 19, Int 6, Sag 10, Car 7.
 ```
 
@@ -1061,7 +1071,7 @@ For 27, Des 8, Cos 19, Int 6, Sag 10, Car 7.
 ```
 STATISTICHE UNITÀ (1 Ettin per unità):
 - PF Unità: 13/13 | CA Unità: 18 | Morale: +0
-- Attacco Unità: +11 (due mazzafrusti)
+- Attacco Unità: +12 (due mazzafrusti)
 ---
 STATISTICHE CREATURA SINGOLA (Ettin):
 GS 6; 
@@ -1070,11 +1080,11 @@ Iniz +3;
 CA 18 (-1 taglia, -1 Des, +10 naturale); 
 PF 85 (10d8+40); 
 Attacco Base +7, 
-Lotta +19; 
-Att Mazzafrusto pesante +11 (2d8+4); 
-Attacco Completo 2 Mazzafrusti pesanti +11/+6 (2d8+4); 
+Lotta +17; 
+Att Mazzafrusto pesante +12 (2d8+6); 
+Attacco Completo 2 Mazzafrusti pesanti +12/+7 (2d8+6); 
 Qualità Speciali: Visione Superiore, Combattere con Due Armi Superiore. 
-For 19, Des 8, Cos 19, Int 6, Sag 10, Car 11.
+For 23, Des 8, Cos 19, Int 6, Sag 10, Car 11.
 ```
 <div style="page-break-before:always"></div>
 
@@ -1086,6 +1096,7 @@ LM Umanoide Mostruoso Medio;
 Iniz +4; 
 CA 19 (armatura completa +1); 
 PF 63 (6d10+30); 
+Attacco Base +6; 
 Att Ascia bipenne +1 +13/+8 (1d12+10/x3); 
 Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata e Arma Specializzata (ascia bipenne), Iniziativa Migliorata, Volontà di Ferro. 
 For 20, Des 10, Cos 20, Int 12, Sag 11, Car 8.
@@ -1100,7 +1111,10 @@ LM Umanoide Medio;
 Iniz +2; 
 CA 16 (con Armatura Magica); 
 PF 32 (6 DV); 
+Attacco Base +3; 
 Att Balestra leggera +5 (1d8/19-20); 
+Att a distanza Raggio rovente +5 di contatto (4d6 fuoco); 
+For 10, Des 14, Cos 14, Int 10, Sag 10, Car 16. 
 Incantesimi (Stregone CL 6°). 
 Incantesimi chiave: Palla di Fuoco (CD 16), Raggio Rovente, Dardo Incantato, Scudo.
 ```
@@ -1114,7 +1128,9 @@ LM Umanoide Medio;
 Iniz +0; 
 CA 19 (armatura completa, scudo pesante); 
 PF 52 (8 DV); 
+Attacco Base +6 (Chierico 7 +5, Warpriest 1 +1); 
 Att Martello da guerra pesante +8 (1d8+2); 
+For 14, Des 10, Cos 14, Int 10, Sag 16, Car 12; 
 Incantesimi (Chierico CL 8°), 
 Furia 1/giorno. 
 Incantesimi chiave: Preghiera, Dissolvi Magie, Forza del Toro, Arma Spirituale, Favore Divino.
@@ -1128,7 +1144,9 @@ LM Umanoide Medio;
 Iniz +0; 
 CA 17 (pelle di drago); 
 PF 40 (5 DV); 
-Att Lancia lunga +5 (1d8+1); 
+Attacco Base +3; 
+Att Lancia lunga perfetta +5 (1d8+1); 
+For 12, Des 10, Cos 14, Int 10, Sag 16, Car 12; 
 Incantesimi (Chierico CL 5°, Dominio Drago). 
 Poteri speciali: 1/giorno Scaglie del Drago (+2 CA naturale, resistenza 10 fuoco). 
 Incantesimi chiave: Veste Magica, Resistere all'Energia.
@@ -1156,7 +1174,9 @@ LB Umanoide Medio;
 Iniz +1; 
 CA 20 (armatura completa, scudo pesante, Des); 
 PF 48 (5d10+20); 
-Att Ascia da Guerra Nanica +9 (1d10+4/x3); 
+Attacco Base +5; 
+Att Ascia da Guerra Nanica +9 (1d10+5/x3); 
+Arma Focalizzata e Arma Specializzata (ascia da guerra nanica). 
 For 16, Des 13, Cos 18, Int 10, Sag 12, Car 8.
 ```
 
@@ -1174,7 +1194,9 @@ LB Umanoide Medio;
 Iniz +3; 
 CA 17 (cuoio borchiato, Des, schivare); 
 PF 24 (3d8+9); 
+Attacco Base +3; 
 Att Balestra Pesante +1 +8 (1d10+1/19-20); 
+Arma Focalizzata (balestra pesante), Schivare. 
 For 14, Des 16, Cos 17, Int 10, Sag 14, Car 6.
 ```
 
@@ -1194,7 +1216,10 @@ LB Umanoide Medio;
 Iniz +1; 
 CA 20; 
 PF 42 (4d10+20); 
-Att Ascia da Battaglia +9 (1d8+4/x3).
+Attacco Base +4; 
+Att Ascia da Battaglia +9 (1d8+6/x3); 
+Arma Focalizzata e Arma Specializzata (ascia da battaglia). 
+For 18, Des 12, Cos 20, Int 10, Sag 12, Car 10.
 ```
 
 #### **INGEGNERI DA GUERRA (4 Unità, 40 creature)**
@@ -1211,7 +1236,9 @@ LB Umanoide Medio;
 Iniz +2; 
 CA 16 (cotta di maglia, Des); 
 PF 22 (4d6+8); 
+Attacco Base +3; 
 Att Martello da guerra +4 (1d8+1); 
+For 12, Des 14, Cos 14, Int 14, Sag 12, Car 8; 
 Abilità chiave: Artigianato (ingegneria) +12, Disattivare Congegni +10.
 ```
 ---
@@ -1671,7 +1698,7 @@ I giocatori prendono controllo dei loro veri PG (Rumbling Stones) e ribaltano im
 > - **La serata** `[CANONE — DM 2026-10-19, D18]`: Incontro 3B e Sessione 4 insieme, fino al campo della vittoria. La Cerimonia delle 100 Asce (`Cerimonia-delle-100-Asce.md`) è la serata dopo.
 > - **In un'ora si legge**: il ponte d'arrivo (`ARC08-11-PONTE-ARRIVO.md`), `ARC08-10-ESITI-E-CONTINGENZE.md` §4-§5, la MAPPA 5 e la MAPPA 4 di `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`, le schede di `ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §1. Da questo file, i box.
 > - **Se il flashback coi pregen e il P5 non sono stati giocati**: `ARC08-10-ESITI-E-CONTINGENZE.md` §5.5.
-> - **I numeri dei nemici, uno contro uno**: orchi berserker = `Bestiario/mostri/orco-berserk-barbaro2-cr2.md` (GS 2, CA 13, pf 27, grande ascia +9, 1d12+9; in ira For e Cos +4, CA −2); hobgoblin = `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (GS 2, CA 19, pf 23, spada lunga +6, 1d8+1); il loro sergente = `Bestiario/mostri/hobgoblin-sergente-cr5.md` (GS 5, CA 21, pf 37, spada lunga +9, 1d8+4). Le guardie orog di Grimjaw = `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10; immuni alla paura finché Grimjaw vive) e, come unità di massa, `ARC08-02` §5, «OROG GUARDIE NERE» (PFU 13, DU 19, AU +15, 1d12+7). I bugbear = `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` (GS 9, CA 20, pf 58, morning star +11, 1d8+3, furtivo +4d6). I gufi dei ranger, nella Sessione 4 = `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` (GS 6, CA 16, pf 52, 2 artigli +11, 1d6+4) `[CANONE — DM 2026-10-19, D10]`.
+> - **I numeri dei nemici, uno contro uno**: orchi berserker = `Bestiario/mostri/orco-berserk-barbaro2-cr2.md` (GS 2, CA 13, pf 27, grande ascia +9, 1d12+9; in ira For e Cos +4, CA −2); hobgoblin = `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (GS 2, CA 19, pf 23, spada lunga +6, 1d8+1); il loro sergente = `Bestiario/mostri/hobgoblin-sergente-cr5.md` (GS 5, CA 21, pf 37, spada lunga +9, 1d8+4). Le guardie orog di Grimjaw = `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10; immuni alla paura finché Grimjaw vive) e, come unità di massa, `ARC08-02` §5, «OROG GUARDIE NERE» (PFU 13, DU 19, AU +13, 1d12+7). I bugbear = `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` (GS 9, CA 20, pf 58, morning star +11, 1d8+3, furtivo +4d6). I gufi dei ranger, nella Sessione 4 = `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` (GS 6, CA 16, pf 52, 2 artigli +11, 1d6+4) `[CANONE — DM 2026-10-19, D10]`.
 
 ### **MAPPA: LA TRASFORMAZIONE**
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 5 REVISED, stato F (controffensiva)
