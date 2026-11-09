@@ -32,5 +32,16 @@ verde regge, il passo successivo è far girare su 3.14 anche `gate_locale.py`.
 
 ## Primo run in CI
 
-Da compilare con il run della PR: tempo del job, prove passate e saltate,
-eventuali differenze da 3.13.
+PR #359, commit c201d26, 2026-11-09. setup-python ha dato **3.14.10** (in
+locale era 3.14.6).
+
+| | Job 3.14 | «Validate» su 3.13 |
+|---|---|---|
+| Prove | 2.562 passate, 16 saltate, 5.376 sottoprove | le stesse |
+| pytest | 303 s | 273 s |
+| Installazione con uv | 5 s | — |
+| Job intero | 5 min 31 s, in parallelo a «validate» | 9 min 24 s |
+
+Nessun fallimento, nessun avviso Python nel log. pytest su 3.14 è più lento
+dell'11% su questo run: un run solo non basta a dire se è l'interprete o il
+runner, quindi si guarda di nuovo dopo dieci run.
