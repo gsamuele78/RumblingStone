@@ -613,7 +613,8 @@ def controlla_pf_dado() -> "list[str]":
 #: Bestiario, quindi qui si leggono solo i quattro conti che non chiedono la
 #: composizione delle classi. E' un **rapporto**: segnala, non blocca la CI,
 #: perche' i master hanno proprietari diversi (ARC-07 e' di un altro thread).
-CAMPO_MASTER = re.compile(r"^\*\*(Caratteristiche|Iniziativa|CA|PF|Attacco Base|Lotta|Talenti):\*\*\s*(.*)$")
+CAMPO_MASTER = re.compile(
+    r"^\*\*(Caratteristiche|Iniziativa|CA|PF|Attacco Base|Lotta|Talenti|Attacco|Attacco Completo):\*\*\s*(.*)$")
 TITOLO = re.compile(r"^#{2,6}\s+(.+?)\s*$")
 DADI = re.compile(r"(\d+)d(\d+)")
 #: Il modificatore speciale di taglia per la lotta (SRD, Combat II), letto dal
@@ -645,6 +646,46 @@ def _blocchi_del_master(testo: str):
         blocco["ultima"] = n
     if blocco and "PF" in blocco["campi"]:
         yield blocco
+
+
+#: Il primo attacco di una riga «Attacco»: il bonus, e quello che gli sta
+#: davanti (il nome dell'arma, che puo' portare il potenziamento «+1»).
+PRIMO_ATTACCO = re.compile(
+    r"([+-]\d+)(?:/[+-]\d+)*\s*(?:in mischia|a distanza|di contatto|contatto)?\s*\(")
+DISTANZA = re.compile(r"a distanza|\b(?:arco|balestra|giavellott|fionda|dardi?)\b", re.I)
+FOCALIZZATA_SUP = re.compile(r"\b(?:Greater Weapon Focus|Arma Focalizzata Superiore)\b", re.I)
+
+
+def attacco_atteso(riga: str, bab: int, car: str, talenti_: str,
+                   taglia: int) -> "tuple[int, int, str] | None":
+    """(scritto, atteso, come) del primo attacco della riga, o None se non si legge.
+
+    SRD 3.5, *Attack Bonus*: BAB + mod For in mischia (Des a distanza o con
+    Arma Accurata) + modificatore di taglia + potenziamento dell'arma (+1 se
+    perfetta e senza potenziamento) + 1 con Arma Focalizzata, + 1 ancora con
+    Arma Focalizzata Superiore. Gli altri bonus (morale, oggetti, incantesimi)
+    la scheda li deve scrivere: un numero che la regola non spiega e' uno scarto.
+    """
+    m = PRIMO_ATTACCO.search(riga)
+    if not m:
+        return None
+    prima = riga[:m.start()].strip().strip("*").strip()
+    pot = re.search(r"\+(\d)$", prima)
+    pot = int(pot.group(1)) if pot else 0
+    a_distanza = bool(DISTANZA.search(riga[:m.end()]))
+    f, d = _mod_caratteristica(car, "For"), _mod_caratteristica(car, "Des")
+    if a_distanza or (ACCURATA.search(talenti_) and d is not None and f is not None and d > f):
+        quale, mc = "Des", d
+    else:
+        quale, mc = "For", f
+    if mc is None:
+        return None
+    perfetta = 1 if not pot and (PERFETTA.search(prima) or re.search(r"\bda maestro\b", prima, re.I)) else 0
+    foc = (1 if FOCALIZZATA.search(talenti_) else 0) + (1 if FOCALIZZATA_SUP.search(talenti_) else 0)
+    atteso = bab + mc + taglia + pot + perfetta + foc
+    come = (f"BAB {bab:+d}, {quale} {mc:+d}, taglia {taglia:+d}, arma {pot + perfetta:+d}, "
+            f"talenti {foc:+d}")
+    return int(m.group(1)), atteso, come
 
 
 def _mod_caratteristica(car: str, quale: str) -> "int | None":
@@ -720,6 +761,12 @@ def conti_del_master(blocco: dict, sistema: str = "dnd35") -> "list[dict]":
         atteso = int(mb.group(1)) + forza + LOTTA_DA_CA[taglia_ca]
         if int(ml.group(1)) != atteso:
             scarto("Lotta", int(ml.group(1)), atteso, "BAB + For + taglia")
+    # attacco (ADR-0117): BAB + For o Des + taglia + arma + talenti, esatto
+    riga_att = "Attacco" if "Attacco" in c else "Attacco Completo" if "Attacco Completo" in c else None
+    if riga_att and mb and fa(sistema, "attacco"):
+        conto = attacco_atteso(c[riga_att], int(mb.group(1)), car, c.get("Talenti", ""), taglia_ca)
+        if conto and conto[0] != conto[1]:
+            scarto(riga_att, conto[0], conto[1], conto[2])
     return fuori
 
 
@@ -989,6 +1036,249 @@ def master_di_default() -> "list[Path]":
     return fuori
 
 
+# ---------------------------------------------------------------------------
+# Il cancello dei numeri (ADR-0117, scelta del DM del 2026-11-09)
+# ---------------------------------------------------------------------------
+#: «Valori sempre i più forti, ma calcolati e non inventati; se la versione
+#: PF1e è più forte usa PF1e, ma deve essere compliant con le regole» (DM).
+#: Un numero di una scheda entra solo se la regola del suo sistema lo
+#: ricostruisce. Il cancello mette insieme tutti i conti che questo script sa
+#: fare, **esatti** (senza la fascia di tolleranza del rapporto), su:
+#:
+#: * le schede del Bestiario (ogni scarto di `giudica`, più l'attacco esatto);
+#: * gli statblocchi dei master nella forma `**Campo:**`, attacco compreso;
+#: * i recinti ```statblocco``` dei master e dei moduli, attacco compreso;
+#: * le unità di massa: AU = attacco della scheda uno contro uno + 2
+#:   (`mass_combat_guide_Dm.md`, «Bonus Attacco: Media +2»).
+#:
+#: E conta i file con numeri di combattimento che nessun conto legge ancora
+#: (`non_coperti`). E' un **cricchetto**: gli scarti e i file scoperti di oggi
+#: stanno in `docs/audit/numeri-baseline.json`; uno nuovo fa fallire, uno
+#: risolto va tolto con `--aggiorna-numeri`, che non aggiunge mai niente.
+BASELINE_NUMERI = ROOT / "docs" / "audit" / "numeri-baseline.json"
+#: Le righe che dicono «qui ci sono numeri di combattimento».
+NUMERI_DI_COMBATTIMENTO = re.compile(
+    r"\bAttacco Base\b|\bBAB\b|\bBase Attack\b|\bAttacco Completo\b|\bFull Attack\b"
+    r"|\*\*AU\b|\bAttacco Unità\b|^```statblocco", re.I | re.M)
+#: Dove non si cercano: archivi, piani, documenti, skill, prove, codice.
+#: I testi d'altri (`_testi-altrui/`, P28) non sono nostri, e un booklet `.hb.md` si
+#: genera dai master: lo copre il conto sul master.
+FUORI_DAI_NUMERI = ("_ARCHIVIO", "plans/", "docs/", ".github/", "skills/", "evals/",
+                    "scripts/", "node_modules/", "sistemi/", "_testi-altrui/", ".hb.md",
+                    "CHANGELOG.md")
+#: L'AU di un'unità e il rimando alla sua scheda uno contro uno.
+AU_UNITA = re.compile(r"^\*\*AU(?:\s*\(([^)]*)\))?:\*\*\s*\+?(-?\d+)", re.M)
+UNO_CONTRO_UNO = re.compile(r"[Uu]no contro uno:?\**\s*`(Bestiario/[^`]+\.md)`")
+TITOLO_UNITA = re.compile(r"^#{2,4}\s+\**(.+?)\**\s*$", re.M)
+#: Il +2 «media» della regola delle unità.
+AU_MEDIA = 2
+
+
+def _attacco_di_scheda(s: Scheda) -> str:
+    """La riga del primo attacco in mischia, o del primo attacco qualunque."""
+    if s.mischia:
+        return s.mischia
+    blocco = L.BLOCCO.search(s.testo)
+    voci = re.findall(r"^\s*-\s*(.+)$", blocco.group(1), re.M) if blocco else []
+    for v in voci:
+        if not re.match(r"(?:Distanza|Ranged)\b", v, re.I) and PRIMO_ATTACCO.search(v):
+            return v
+    return ""
+
+
+def attacco_esatto(s: Scheda) -> "tuple[int, int, str] | None":
+    """(scritto, atteso, come) dell'attacco di una scheda, senza tolleranza."""
+    riga = _attacco_di_scheda(s)
+    babs = set()
+    if s.composizione_nota and s.gruppi:
+        babs.add(bab_atteso(s))
+    if s.bab is not None:
+        babs.add(s.bab)
+    if not riga or not babs:
+        return None
+    car = " ".join(f"{k} {v}" for k, v in s.attributi.items() if isinstance(v, int))
+    taglia = L.taglia_di(s.testo) or L.taglia_di(f"tipo: {s.tipo}") or 0
+    incorporeo = re.search(r"\bincorpore", s.tipo or "", re.I)
+    conti = []
+    for b in sorted(babs):
+        c = attacco_atteso(riga, b, car, s.testo if not incorporeo else "Arma Accurata " + s.testo, taglia)
+        if c:
+            conti.append(c)
+    if not conti:
+        return None
+    return min(conti, key=lambda c: abs(c[0] - c[1]))
+
+
+def _scarto(file, titolo, campo, scritto, atteso, come) -> dict:
+    return {"file": file, "titolo": titolo, "campo": campo,
+            "scritto": scritto, "atteso": atteso, "come": come}
+
+
+def _rel(p: Path) -> str:
+    return str(p.relative_to(ROOT)) if p.is_relative_to(ROOT) else str(p)
+
+
+def numeri_del_bestiario() -> "list[dict]":
+    fuori = []
+    for p in sorted(ROOT.glob("Bestiario/**/*-cr*.md")):
+        s = leggi(p)
+        if not s:
+            continue
+        sistema = S.sistema_di(p)
+        titolo = p.stem
+        if sistema == S.predefinito():
+            g = giudica(s)
+            spiegato = g["template"] or g["decisione"] or (
+                g["come_la_fonte"] and set(g["come_la_fonte"]) == set(g["scarti"]))
+            if not spiegato and g["provenienza"] != "generate":
+                for k, v in g["scarti"].items():
+                    if k != "attacco":
+                        fuori.append(_scarto(_rel(p), titolo, k, v[0], v[1], "conto di giudica"))
+        if not fa(sistema, "attacco"):
+            continue
+        a = attacco_esatto(s)
+        if a and a[0] != a[1]:
+            fuori.append(_scarto(_rel(p), titolo, "attacco", a[0], a[1], a[2]))
+    return fuori
+
+
+def numeri_dei_recinti(p: Path, testo: str, sistema: str) -> "list[dict]":
+    fuori = [_scarto(_rel(p), x["titolo"], x["campo"], x["scritto"], x["atteso"], x.get("nota", ""))
+             for x in conti_dei_recinti(testo, sistema)]
+    if not fa(sistema, "attacco"):
+        return fuori
+    righe = testo.split("\n")
+    for b in _recinti_del_master(testo):
+        i = b["riga"] - 1
+        fine = next(j for j in range(i + 1, len(righe)) if righe[j].strip() == "```")
+        s = L.leggi_testo("\n".join(righe[i:fine + 1]) + "\n" + b["prosa"], p)
+        a = attacco_esatto(s) if s else None
+        if a and a[0] != a[1]:
+            fuori.append(_scarto(_rel(p), b["titolo"], "attacco", a[0], a[1], a[2]))
+    return fuori
+
+
+def _unita(testo: str):
+    """(titolo, riga, arma, AU, rimando o None) per ogni unità con una riga **AU**."""
+    titoli = [(m.start(), m.group(1).strip()) for m in TITOLO_UNITA.finditer(testo)]
+    for m in AU_UNITA.finditer(testo):
+        inizio = max((s for s, _ in titoli if s < m.start()), default=0)
+        fine = min((s for s, _ in titoli if s > m.start()), default=len(testo))
+        titolo = next((t for s, t in titoli if s == inizio), "")
+        rim = UNO_CONTRO_UNO.search(testo[inizio:fine])
+        yield (re.sub(r"[*#]", "", titolo).strip(), testo.count("\n", 0, m.start()) + 1,
+               m.group(1) or "", int(m.group(2)), rim.group(1) if rim else None)
+
+
+def numeri_delle_unita(p: Path, testo: str) -> "list[dict]":
+    fuori = []
+    for titolo, riga, arma, au, rimando in _unita(testo):
+        if not rimando:
+            fuori.append(_scarto(_rel(p), titolo, "AU", au, None,
+                                 "manca la scheda uno contro uno («Uno contro uno: `Bestiario/…`»)"))
+            continue
+        f = ROOT / rimando
+        s = leggi(f) if f.exists() else None
+        a = attacco_esatto(s) if s else None
+        if not a:
+            fuori.append(_scarto(_rel(p), titolo, "AU", au, None,
+                                 f"la scheda {rimando} non ha un attacco che si legge"))
+            continue
+        atteso = a[0] + AU_MEDIA
+        if au != atteso:
+            fuori.append(_scarto(_rel(p), titolo, "AU", au, atteso,
+                                 f"attacco {a[0]:+d} di {rimando} + {AU_MEDIA} (media delle unità)"))
+    return fuori
+
+
+def numeri_dei_file() -> "tuple[list[dict], list[str]]":
+    """Gli scarti di master, moduli e unità, e i file con numeri che nessuno legge."""
+    scarti_, scoperti = [], []
+    for p in sorted(ROOT.rglob("*.md")):
+        r = _rel(p)
+        if r.startswith(FUORI_DAI_NUMERI) or any(x in r for x in FUORI_DAI_NUMERI) \
+                or r.startswith("Bestiario/"):
+            continue
+        testo = p.read_text(encoding="utf-8", errors="replace")
+        if not NUMERI_DI_COMBATTIMENTO.search(testo):
+            continue
+        sistema = S.sistema_di(p)
+        letti = 0
+        for b in _blocchi_del_master(testo):
+            letti += 1
+            for x in conti_del_master(b, sistema):
+                scarti_.append(_scarto(r, b["titolo"], x["campo"], x["scritto"], x["atteso"], x["nota"]))
+        recinti = list(_recinti_del_master(testo))
+        letti += len(recinti)
+        if recinti:
+            scarti_.extend(numeri_dei_recinti(p, testo, sistema))
+        unita = list(_unita(testo))
+        letti += len(unita)
+        scarti_.extend(numeri_delle_unita(p, testo))
+        if not letti:
+            scoperti.append(r)
+    return scarti_, scoperti
+
+
+def _chiave(x: dict) -> str:
+    return f"{x['file']} | {x['titolo']} | {x['campo']} | {x['scritto']}"
+
+
+def stato_dei_numeri() -> dict:
+    scarti_, scoperti = numeri_dei_file()
+    scarti_ = numeri_del_bestiario() + scarti_
+    return {"scarti": scarti_, "non_coperti": scoperti}
+
+
+def cancello_numeri(aggiorna: bool = False) -> int:
+    stato = stato_dei_numeri()
+    chiavi = sorted({_chiave(x) for x in stato["scarti"]})
+    scoperti = sorted(set(stato["non_coperti"]))
+    base = json.loads(BASELINE_NUMERI.read_text(encoding="utf-8")) if BASELINE_NUMERI.exists() else None
+    if base is None and aggiorna != "inizio":
+        print(f"✗ manca {BASELINE_NUMERI.relative_to(ROOT)}")
+        return 1
+    if aggiorna == "inizio":
+        base = {"scarti": chiavi, "non_coperti": scoperti}
+        _scrivi_baseline(base)
+        print(f"✓ baseline dei numeri scritta: {len(chiavi)} scarti, {len(scoperti)} file non coperti")
+        return 0
+    nuovi = [x for x in stato["scarti"] if _chiave(x) not in set(base["scarti"])]
+    nuovi_scoperti = [f for f in scoperti if f not in set(base["non_coperti"])]
+    risolti = [k for k in base["scarti"] if k not in set(chiavi)]
+    coperti = [f for f in base["non_coperti"] if f not in set(scoperti)]
+    for x in nuovi:
+        atteso = "senza conto" if x["atteso"] is None else f"atteso {x['atteso']:+d}"
+        print(f"✗ {x['file']} [{x['titolo'][:50]}] {x['campo']} {x['scritto']:+d}, {atteso} ({x['come']})")
+    for f in nuovi_scoperti:
+        print(f"✗ {f}: numeri di combattimento che nessun conto legge (forma `**Campo:**`, "
+              "recinto ```statblocco``` o riga **AU** con la scheda uno contro uno)")
+    if aggiorna:
+        if nuovi or nuovi_scoperti:
+            print("✗ --aggiorna-numeri toglie solo quello che è risolto: prima correggi i nuovi")
+            return 1
+        _scrivi_baseline({"scarti": chiavi, "non_coperti": scoperti})
+        print(f"✓ baseline aggiornata: {len(risolti)} scarti risolti, {len(coperti)} file coperti")
+        return 0
+    if risolti or coperti:
+        print(f"✗ {len(risolti)} scarti e {len(coperti)} file della baseline sono risolti: "
+              "python3 scripts/conformita_statblocchi.py --aggiorna-numeri")
+    if nuovi or nuovi_scoperti or risolti or coperti:
+        return 1
+    print(f"✓ cancello dei numeri: nessuno scarto nuovo ({len(chiavi)} in baseline, "
+          f"{len(scoperti)} file non ancora coperti)")
+    return 0
+
+
+def _scrivi_baseline(base: dict) -> None:
+    out = {"_cos_e": ("Il cricchetto del cancello dei numeri (ADR-0117): gli scarti di oggi fra un "
+                      "numero scritto e la regola che lo calcola, e i file con numeri che nessun conto "
+                      "legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. "
+                      "Lo legge scripts/conformita_statblocchi.py --cancello-numeri."),
+           "scarti": base["scarti"], "non_coperti": base["non_coperti"]}
+    BASELINE_NUMERI.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--riepilogo", action="store_true")
@@ -1005,7 +1295,17 @@ def main(argv=None) -> int:
     ap.add_argument("--cancello-moduli", action="store_true",
                     help="cancello (in CI): ogni conto delle schede dei moduli di un sistema "
                          "diverso dal predefinito (oggi il Drappo e il Giardino PF1e) torna")
+    ap.add_argument("--cancello-numeri", action="store_true",
+                    help="cancello (ADR-0117): ogni numero calcolabile di Bestiario, master, moduli e "
+                         "unità torna con la regola, salvo gli scarti della baseline")
+    ap.add_argument("--aggiorna-numeri", action="store_true",
+                    help="toglie dalla baseline dei numeri gli scarti risolti (non ne aggiunge)")
+    ap.add_argument("--baseline-numeri-iniziale", action="store_true", help=argparse.SUPPRESS)
     args = ap.parse_args(argv)
+    if args.baseline_numeri_iniziale:
+        return cancello_numeri("inizio")
+    if args.cancello_numeri or args.aggiorna_numeri:
+        return cancello_numeri(aggiorna=args.aggiorna_numeri)
     if args.cancello_moduli:
         files = [p for p in master_di_default() if S.sistema_di(p) != S.predefinito()]
         r = rapporto_master(files)

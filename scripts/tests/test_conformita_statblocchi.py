@@ -400,7 +400,10 @@ class TestRecintiNeiMaster(unittest.TestCase):
     # PNG con classi. 2026-11-08, F4 di ADR-0112: le schede PF1e entrano nel
     # rapporto; l'Asservito armato è passato a 35 pf con la scelta del DM
     # (mezze in su dopo il primo dado di classe).
-    RESIDUI: dict = {}
+    # 2026-11-09, ADR-0117: il rapporto conta anche l'attacco. Gorthak (+21 contro
+    # +20) e Madre Dana (+18 contro +17) non tornano, nelle due copie della
+    # scheda: sono nella baseline del cancello dei numeri, e li decide il DM.
+    RESIDUI: dict = {"ARC08-01-GUIDA-DM.md": 2, "ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md": 2}
 
     def test_png_con_classi_primo_dado_al_massimo(self):
         # Balvar: 13d8+39, primo dado 8 e gli altri alla media = 101 (DMG 3.5, cap. 4)
@@ -419,3 +422,55 @@ class TestRecintiNeiMaster(unittest.TestCase):
         for nome, n in per_file.items():
             self.assertLessEqual(n, self.RESIDUI.get(nome, 0),
                                  f"{nome}: {n} conti che non tornano, il tetto è {self.RESIDUI.get(nome, 0)}")
+
+
+class TestCancelloDeiNumeri(unittest.TestCase):
+    """ADR-0117: un numero entra solo se la regola lo ricostruisce, esatto."""
+
+    CAR = "For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16"
+
+    def test_il_morso_di_fauci(self):
+        # BAB +25, For +10, Enorme −2: +33; con Arma Focalizzata (morso) +34
+        self.assertEqual(C.attacco_atteso("Morso +33 in mischia (2d8+10/19-20)", 25, self.CAR, "Allerta", -2)[:2],
+                         (33, 33))
+        self.assertEqual(C.attacco_atteso("Morso +34 in mischia (2d8+10)", 25, self.CAR,
+                                          "Arma Focalizzata (morso)", -2)[:2], (34, 34))
+
+    def test_il_numero_gonfiato_non_torna(self):
+        scritto, atteso, _ = C.attacco_atteso("Morso +37 in mischia (2d8+10)", 25, self.CAR, "Allerta", -2)
+        self.assertNotEqual(scritto, atteso)
+
+    def test_arma_magica_e_focalizzata_superiore(self):
+        # Grimjaw: BAB +13, For 22 (+6), spada +1, Arma Focalizzata e Superiore: +22
+        r = C.attacco_atteso("*Spada Bastarda Demoniaca +1* +22 in mischia (1d10+9)", 13, "For 22, Des 13",
+                             "Arma Focalizzata (Spada Bastarda), Arma Focalizzata Superiore (Spada Bastarda)", 0)
+        self.assertEqual(r[:2], (22, 22))
+
+    def test_a_distanza_conta_la_destrezza(self):
+        # Dara: BAB +11 (8+3), Des 18 (+4), arco +3, Arma Focalizzata: +19
+        r = C.attacco_atteso("*Arco Lungo Composito Potente (+3) +3* +19 a distanza (1d8+6/x3)", 11,
+                             "For 16, Des 18", "Arma Focalizzata (arco lungo)", 0)
+        self.assertEqual(r[:2], (19, 19))
+
+    def test_perfetta_da_maestro_pf1e(self):
+        r = C.attacco_atteso("pugnale da maestro +5 (1d4+1)", 3, "For 12, Des 10", "", 0)
+        self.assertEqual(r[:2], (5, 5))
+
+    UNITA = ("### **OROG GUARDIE NERE**\n\n> Uno contro uno: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`\n\n"
+             "**AU (Ascia Bipenne+1):** +{au} | **Danno:** 1d12+7\n\n---\n"
+             "### **FANTERIA SENZA SCHEDA**\n\n**AU (Spada):** +10 | **Danno:** 1d8\n")
+
+    def test_l_au_e_l_attacco_della_scheda_piu_due(self):
+        # orog: ascia +13 nella scheda uno contro uno, quindi AU +15
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
+        self.assertEqual([x["titolo"] for x in r], ["FANTERIA SENZA SCHEDA"])
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=16))
+        orog = [x for x in r if x["titolo"] == "OROG GUARDIE NERE"]
+        self.assertEqual((orog[0]["scritto"], orog[0]["atteso"]), (16, 15))
+
+    def test_l_unita_senza_scheda_non_ha_conto(self):
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
+        self.assertIsNone(r[0]["atteso"])
+
+    def test_il_cancello_sul_repo_e_verde(self):
+        self.assertEqual(C.cancello_numeri(), 0)
