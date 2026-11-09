@@ -36,9 +36,9 @@ proprio queste due cose.
 | classi di prestigio | 14 | **2** / 0 | **14** / 0 |
 | armature | 12 | **9** / 0 | **12** / 0 |
 | scudi | 4 | 4 / 0 | 4 / 0 |
-| griglie incantesimi al giorno (classi) | 8 | 8 / **3** (ranger, paladino, adepto) | 8 / **2** (ranger, paladino: card) |
+| griglie incantesimi al giorno (classi) | 8 | 8 / **3** (ranger, paladino, adepto) | 8 / **0** (ranger, paladino e bardo misurati contro il PRD PF1e: card) |
 | conosciuti dello stregone | 20 livelli | 20 / 0 | 20 / 0 |
-| conosciuti del bardo | 20 livelli | 20 / **19** | 20 / **19** (card) |
+| conosciuti del bardo | 20 livelli | 20 / **19** | 20 / **0** (contro il PRD PF1e: card) |
 | abilità | 36 | **29** / 2 voci in più | **36** / 2 voci in più |
 | liste d'incantesimi (classe × funzione) | 626 voci | 626 / **8** a livello sbagliato · 185 non verificabili | 626 / **0** · 185 non verificabili |
 | soglie PE | 20 | 20 / 0 | 20 / 0 |
@@ -119,12 +119,16 @@ validate_docs che fallisce solo in parallelo, già noto).
 
 ## Rilievi che chiedono una scelta del DM (card)
 
+Il **livello d'incantatore** «livello − 3» di ranger e paladino è una scelta del
+DM (card del 2026-11-09, #361) e non è un rilievo. I rilievi qui sotto
+riguardano le **griglie degli slot**, che sono un'altra tabella.
+
 7. **Ranger e paladino: la griglia degli incantesimi non è quella 3.5.** Il
    plugin dice «SRD 3.5», ma i numeri sono quasi tutti quelli della tabella PF1e
    del ranger. Esempio: ranger di 5° con 1 incantesimo di 1° (SRD: 0) e di 10°
    con 2/1/0 (SRD: 1/1). Al 20° non tornano con nessuna delle due fonti (plugin
-   4/3/3/3, SRD 3/3/3/3, PF1e 4/4/3/3). Inoltre in PF1e il paladino ha una
-   griglia sua, diversa da quella del ranger. L'àncora della skill dnd-35-srd
+   4/3/3/3, SRD 3/3/3/3, PF1e 4/4/3/3). In PF1e paladino e ranger hanno la
+   stessa griglia, come nel 3.5. L'àncora della skill dnd-35-srd
    («Verified anchor rows») riporta gli stessi numeri del plugin, quindi il
    test era verde ma confrontava due copie dello stesso errore.
 8. **Bardo: gli incantesimi conosciuti sono quelli PF1e, quelli al giorno sono
@@ -138,6 +142,25 @@ dall'SRD. Il motivo è la stessa regola che ha deciso il livello d'incantatore
 del ranger «−3» (card del 2026-11-09): la versione più forte, purché
 ricostruibile da una scheda legale. L'alternativa è tornare alle tabelle SRD
 3.5, più deboli ma coerenti con il nome del plugin.
+
+**Esito della card (Jfs, 2026-11-09): «Tabelle PF1e intere, segnate».** Nel
+plugin 3.5 ora:
+
+- ranger e paladino hanno la griglia PF1e intera (20°: 4/4/3/3), con il
+  livello d'incantatore −3 che resta e la caratteristica che resta Saggezza;
+- il bardo ha la griglia PF1e al giorno, con i trucchetti a volontà (lo 0 non
+  è uno slot, `genera_creatura` scrive «trucchetti a volontà»), e i conosciuti
+  PF1e.
+
+Ogni griglia ha nel file la fonte e «⚠ Non SRD 3.5», e le classi sono elencate
+in `incantatori_regole.griglia_pf1e`. Il conto di `genera_creatura` dice
+«tabella PF1e (scelta del DM, non SRD 3.5)». La misura confronta queste tre
+classi con il PRD, non con l'SRD, e lo scrive nel nome della tabella: 8/8
+griglie e 20/20 conosciuti giusti. Le àncore di `dnd-35-srd/references/classes.md`
+sono riscritte con i numeri PF1e e l'etichetta «not SRD 3.5».
+
+Dopo la card il 3.5 è a 605 righe giuste su 606 verificabili. L'unica che
+resta è il TS dell'umanoide, una scelta ancora da scrivere.
 
 ## Rilievi aperti, lavoro successivo (non in questa PR)
 

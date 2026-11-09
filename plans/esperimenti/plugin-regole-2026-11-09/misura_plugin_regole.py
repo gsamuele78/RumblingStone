@@ -275,7 +275,11 @@ def _norm(nome: str) -> str:
 
 
 def classe_conosciuti(righe: list) -> dict:
-    testa = next(r for r in righe if r and r[0] in ("Level", "NPC Level"))
+    i = next(i for i, r in enumerate(righe) if r and r[0] in ("Level", "NPC Level"))
+    testa = list(righe[i])
+    # PRD: la seconda riga d'intestazione ha solo i livelli d'incantesimo
+    if i + 1 < len(righe) and all(c in COL_INC for c in righe[i + 1]):
+        testa = [testa[0]] + list(righe[i + 1])
     out = {}
     for r in righe:
         m = ORDINALI.match(r[0]) if r else None
@@ -435,9 +439,13 @@ def misura(base: Path) -> dict:
         g = c35["griglie"].get(nome)
         if g:
             g35[en] = {"griglia": {int(k): v for k, v in g.items()}}
+    # divergenza voluta (card del DM del 2026-11-09, «Tabelle PF1e intere,
+    # segnate»): le classi in incantatori_regole.griglia_pf1e si misurano
+    # contro il PRD PF1e, non contro l'SRD, e il rapporto lo dice
+    pf1e_voluta = {EN.get(k, k) for k in c35["incantatori_regole"].get("griglia_pf1e", ())}
     gf = {}
     for en in ("wizard", "sorcerer", "cleric", "druid", "bard", "ranger", "paladin", "adept"):
-        src = s35["classi"].get(en, {}).get("griglia")
+        src = (p1 if en in pf1e_voluta else s35)["classi"].get(en, {}).get("griglia")
         if src:
             gf[en] = {"griglia": {n: griglia_lista(x) for n, x in src.items()}}
     plugin_g = {}
@@ -459,6 +467,8 @@ def misura(base: Path) -> dict:
                 sb.append({"riga": f"{en} {n}°", "campo": "slot", "plugin": a, "fonte": b})
     ris["sbagliate"] = sb
     ris["giuste"] = sum(1 for en in set(gf) & set(plugin_g)) - len({s["riga"].split()[0] for s in sb})
+    if pf1e_voluta:
+        ris["tabella"] += f" — {', '.join(sorted(pf1e_voluta))} contro il PRD PF1e (scelta del DM)"
     out["dnd35"].append(ris)
     out["pf1e"].append({"tabella": "incantesimi al giorno (griglie)", "fonte": sum(
         1 for v in p1["classi"].values() if v.get("griglia")), "coperte": 0, "giuste": 0,
@@ -467,11 +477,13 @@ def misura(base: Path) -> dict:
 
     # --- conosciuti
     for en, chiave in (("sorcerer", "stregone_conosciuti"), ("bard", "bardo_conosciuti")):
-        src = s35["classi"][en].get("conosciuti", {})
+        voluta = en in pf1e_voluta
+        src = (p1 if voluta else s35)["classi"][en].get("conosciuti", {})
         g = {int(k): v for k, v in c35["griglie"][chiave].items()}
         sb = [{"riga": f"{en} {n}°", "campo": "conosciuti", "plugin": g.get(n), "fonte": griglia_lista(src[n])}
               for n in sorted(src) if g.get(n) != griglia_lista(src[n])]
-        out["dnd35"].append({"tabella": f"incantesimi conosciuti ({en})", "fonte": len(src),
+        out["dnd35"].append({"tabella": f"incantesimi conosciuti ({en})"
+                             + (" contro il PRD PF1e (scelta del DM)" if voluta else ""), "fonte": len(src),
                              "coperte": len(set(src) & set(g)), "giuste": len(src) - len(sb),
                              "mancanti": [], "sbagliate": sb, "campi_assenti": []})
 

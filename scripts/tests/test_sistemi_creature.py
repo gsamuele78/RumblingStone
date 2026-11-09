@@ -31,7 +31,10 @@ from dmcore import tabelle as T  # noqa: E402
 #: «torre»), T.ADEPTO (4 righe come la Tabella dell'Adepto), T.INCANTATORI (la
 #: griglia dell'adepto), P.PRESTIGIO e P.DADO_DI_CLASSE (le 14 classi di
 #: prestigio SRD), LISTE (8 incantesimi al livello giusto della classe) e
-#: NOMI_DI_CLASSE. Le altre impronte sono quelle di prima.
+#: NOMI_DI_CLASSE. Per la card del DM dello stesso giorno («Tabelle PF1e intere,
+#: segnate») anche T.BARDO, T.BARDO_CONOSCIUTI, T.RANGER/T.PALADINO e
+#: T.INCANTATORI: griglie del PRD PF1e, non SRD 3.5. Le altre impronte sono
+#: quelle di prima.
 IMPRONTE_PRIMA = {
     "TIPI": "f314442313fc6eb1",
     "CLASSI": "ba993374d9283a09",
@@ -55,12 +58,12 @@ IMPRONTE_L5B = {
     "T.CHIERICO": "b830bf626b47fd2e",
     "T.DRUIDO": "b830bf626b47fd2e",
     "T.ADEPTO": "d3240dcbd4580db9",
-    "T.BARDO": "143fc66e36c447c4",
-    "T.BARDO_CONOSCIUTI": "0eba013d243c5289",
-    "T.RANGER": "b69e66ddc56f3a4d",
-    "T.PALADINO": "b69e66ddc56f3a4d",
+    "T.BARDO": "e8ac03012a9cddab",
+    "T.BARDO_CONOSCIUTI": "2e4799f2efaa6cc6",
+    "T.RANGER": "b53e50d7899bb2c0",
+    "T.PALADINO": "b53e50d7899bb2c0",
     "T.LIVELLO_INCANTATORE_RIDOTTO": "6a9633f885386bc7",
-    "T.INCANTATORI": "a468cb702cc5529a",
+    "T.INCANTATORI": "b315c798399e47cf",
     "T.INCANTATORI_SENZA_ANCORA": "cbad0fe52ade2682",
     "P.PRESTIGIO": "2cb916e16f7f2afa",
     "P.DADO_DI_CLASSE": "d682e8a39b2f25b8",

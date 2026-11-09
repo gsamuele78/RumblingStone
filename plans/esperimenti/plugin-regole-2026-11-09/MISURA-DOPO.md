@@ -1,4 +1,4 @@
-## dnd35: 791/791 righe coperte (100%), 584/606 giuste tra le verificabili (96%)
+## dnd35: 791/791 righe coperte (100%), 605/606 giuste tra le verificabili (100%)
 
 | Tabella | Fonte | Coperte | Giuste | Sbagliate | Non verificabili | Campi assenti |
 |---|---:|---:|---:|---:|---:|---|
@@ -7,68 +7,15 @@
 | classi di prestigio | 14 | 14 | 14 | 0 | 0 | — |
 | armature | 12 | 12 | 12 | 0 | 0 | — |
 | scudi | 4 | 4 | 4 | 0 | 0 | — |
-| incantesimi al giorno (griglie) | 8 | 8 | 6 | 30 | 0 | — |
+| incantesimi al giorno (griglie) — bard, paladin, ranger contro il PRD PF1e (scelta del DM) | 8 | 8 | 8 | 0 | 0 | — |
 | incantesimi conosciuti (sorcerer) | 20 | 20 | 20 | 0 | 0 | — |
-| incantesimi conosciuti (bard) | 20 | 20 | 1 | 19 | 0 | — |
+| incantesimi conosciuti (bard) contro il PRD PF1e (scelta del DM) | 20 | 20 | 20 | 0 | 0 | — |
 | abilità (nomi) | 36 | 36 | 36 | 2 | 0 | — |
 | liste d'incantesimi (classe × funzione) | 626 | 626 | 441 | 0 | 185 | — |
 | soglie PE (PHB Tab. 3-2) | 20 | 20 | 20 | 0 | 0 | — |
 
 **tipi (Creature Improvement by Type)**, voci che non tornano:
 - humanoid · ts_buoni: plugin ['temp'] ≠ fonte [] (Varies (any one))
-
-**incantesimi al giorno (griglie)**, voci che non tornano:
-- paladin 5° · slot: plugin [1] ≠ fonte [0]
-- paladin 7° · slot: plugin [1, 0] ≠ fonte [1]
-- paladin 8° · slot: plugin [1, 1] ≠ fonte [1, 0]
-- paladin 9° · slot: plugin [2, 1] ≠ fonte [1, 0]
-- paladin 10° · slot: plugin [2, 1, 0] ≠ fonte [1, 1]
-- paladin 11° · slot: plugin [2, 1, 1] ≠ fonte [1, 1, 0]
-- paladin 12° · slot: plugin [2, 2, 1] ≠ fonte [1, 1, 1]
-- paladin 13° · slot: plugin [3, 2, 1, 0] ≠ fonte [1, 1, 1]
-- paladin 14° · slot: plugin [3, 2, 1, 1] ≠ fonte [2, 1, 1, 0]
-- paladin 15° · slot: plugin [3, 2, 2, 1] ≠ fonte [2, 1, 1, 1]
-- paladin 16° · slot: plugin [3, 3, 2, 1] ≠ fonte [2, 2, 1, 1]
-- paladin 17° · slot: plugin [4, 3, 2, 1] ≠ fonte [2, 2, 2, 1]
-- paladin 18° · slot: plugin [4, 3, 2, 2] ≠ fonte [3, 2, 2, 1]
-- paladin 19° · slot: plugin [4, 3, 3, 2] ≠ fonte [3, 3, 3, 2]
-- paladin 20° · slot: plugin [4, 3, 3, 3] ≠ fonte [3, 3, 3, 3]
-- ranger 5° · slot: plugin [1] ≠ fonte [0]
-- ranger 7° · slot: plugin [1, 0] ≠ fonte [1]
-- ranger 8° · slot: plugin [1, 1] ≠ fonte [1, 0]
-- ranger 9° · slot: plugin [2, 1] ≠ fonte [1, 0]
-- ranger 10° · slot: plugin [2, 1, 0] ≠ fonte [1, 1]
-- ranger 11° · slot: plugin [2, 1, 1] ≠ fonte [1, 1, 0]
-- ranger 12° · slot: plugin [2, 2, 1] ≠ fonte [1, 1, 1]
-- ranger 13° · slot: plugin [3, 2, 1, 0] ≠ fonte [1, 1, 1]
-- ranger 14° · slot: plugin [3, 2, 1, 1] ≠ fonte [2, 1, 1, 0]
-- ranger 15° · slot: plugin [3, 2, 2, 1] ≠ fonte [2, 1, 1, 1]
-- ranger 16° · slot: plugin [3, 3, 2, 1] ≠ fonte [2, 2, 1, 1]
-- ranger 17° · slot: plugin [4, 3, 2, 1] ≠ fonte [2, 2, 2, 1]
-- ranger 18° · slot: plugin [4, 3, 2, 2] ≠ fonte [3, 2, 2, 1]
-- ranger 19° · slot: plugin [4, 3, 3, 2] ≠ fonte [3, 3, 3, 2]
-- ranger 20° · slot: plugin [4, 3, 3, 3] ≠ fonte [3, 3, 3, 3]
-
-**incantesimi conosciuti (bard)**, voci che non tornano:
-- bard 1° · conosciuti: plugin [4, 2] ≠ fonte [4]
-- bard 2° · conosciuti: plugin [5, 3] ≠ fonte [5, 2]
-- bard 3° · conosciuti: plugin [6, 4] ≠ fonte [6, 3]
-- bard 4° · conosciuti: plugin [6, 4, 2] ≠ fonte [6, 3, 2]
-- bard 6° · conosciuti: plugin [6, 4, 4] ≠ fonte [6, 4, 3]
-- bard 7° · conosciuti: plugin [6, 5, 4, 2] ≠ fonte [6, 4, 4, 2]
-- bard 8° · conosciuti: plugin [6, 5, 4, 3] ≠ fonte [6, 4, 4, 3]
-- bard 9° · conosciuti: plugin [6, 5, 4, 4] ≠ fonte [6, 4, 4, 3]
-- bard 10° · conosciuti: plugin [6, 5, 5, 4, 2] ≠ fonte [6, 4, 4, 4, 2]
-- bard 11° · conosciuti: plugin [6, 6, 5, 4, 3] ≠ fonte [6, 4, 4, 4, 3]
-- bard 12° · conosciuti: plugin [6, 6, 5, 4, 4] ≠ fonte [6, 4, 4, 4, 3]
-- bard 13° · conosciuti: plugin [6, 6, 5, 5, 4, 2] ≠ fonte [6, 4, 4, 4, 4, 2]
-- bard 14° · conosciuti: plugin [6, 6, 6, 5, 4, 3] ≠ fonte [6, 4, 4, 4, 4, 3]
-- bard 15° · conosciuti: plugin [6, 6, 6, 5, 4, 4] ≠ fonte [6, 4, 4, 4, 4, 3]
-- bard 16° · conosciuti: plugin [6, 6, 6, 5, 5, 4, 2] ≠ fonte [6, 5, 4, 4, 4, 4, 2]
-- bard 17° · conosciuti: plugin [6, 6, 6, 6, 5, 4, 3] ≠ fonte [6, 5, 5, 4, 4, 4, 3]
-- bard 18° · conosciuti: plugin [6, 6, 6, 6, 5, 4, 4] ≠ fonte [6, 5, 5, 5, 4, 4, 3]
-- bard 19° · conosciuti: plugin [6, 6, 6, 6, 5, 5, 4] ≠ fonte [6, 5, 5, 5, 5, 4, 4]
-- bard 20° · conosciuti: plugin [6, 6, 6, 6, 6, 5, 4] ≠ fonte [6, 5, 5, 5, 5, 5, 4]
 
 **abilità (nomi)**, voci che non tornano:
 - seguire tracce · nome: plugin seguire tracce ≠ fonte non è un'abilità SRD 3.5 nel lessico
