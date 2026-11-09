@@ -154,10 +154,16 @@ realizzata di fatto.
       (`squares` default). *(Idea originaria FreeCAD valutata e scartata: CAD 3D
       senza semantica di gioco, dominato dall'input-metri nativo — vedi CHANGELOG.)*
 - [x] Gate locali verdi: `compileall`, `validate_maps.py`, `validate_skills.py`, `unittest`
-- [ ] **Collaudo al tavolo (DM, gated)**: (a) generare una mappa Mod. 3 reale
-      da JSON per un incontro di ARC-08/09 e renderla; (b) importare un `.uvtt`
-      in Foundry e verificare muri/luci; (c) collaudo container ComfyUI su
-      Bazzite con GPU (setup-distrobox → hero map su una mappa chiave).
+- [ ] **Collaudo al tavolo (DM, gated)**: (b) importare un `.uvtt` in Foundry
+      e verificare muri/luci; (c) la hero map su una mappa chiave.
+  - ✅ (a) **superata il 2026-11-09, già fatta**: le sei carte dell'assedio di
+    Dauth (ARC-09, `09_…/Mappe/dauth-assedio/DAUTH-A…E.json`, commit
+    `b8423c1c` del 2026-10-09) e le sei della fortezza di ARC-08
+    (`08_…/Mappe/fortezza-json/HF-*.json`) sono mappe del contratto JSON rese
+    in pergamena, texture e pianta di stampa.
+  - ✅ (c, prima metà) **superata il 2026-11-09, già fatta**: ComfyUI gira in
+    distrobox con la GPU sulla macchina del DM, che è Debian e non Bazzite
+    (RESA-ASSET R4-quinquies, D25, `scripts/comfyui-local/`). Resta la hero map.
 
 ## 5. Rischi / attenzioni
 

@@ -38,7 +38,9 @@
 
 - ⬜ shellcheck: oggi **non bloccante** (non verificabile nell'ambiente di sviluppo);
   promuovere a bloccante dopo una passata pulita su `converters/Image-to-webp`.
-  *Condizione*: la passata pulita (RECUPERO D5).
+  *Condizione*: la passata pulita. 🔀 **Spostata il 2026-11-09 in
+  [AMBIENTE A6](PIANO-AMBIENTE-RIPRODUCIBILE.md)**, che ha la stessa voce
+  («shellcheck … bloccante in CI»): resta aperta là, non chiusa.
 - ⬜ opzionale: portare i convertitori (`converters/`) allo standard pieno
   (argparse/test) — oggi marcati `external-toolchain` nel manifest.
   *Condizione*: nessuna scritta; resta aperta al DM in RECUPERO D5.

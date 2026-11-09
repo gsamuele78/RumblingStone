@@ -126,5 +126,12 @@ nucleo F1→F5 in un passaggio; ambito effettivo per fase:
 | **F5 passata ARC-07** | ✅ 6 griglie rettangolari dell'Atlante (T-2, T-3, T-6, S-2, M7-B, CM-1) portate al contratto (header corretti 18×10/20×8, T-6 ripristinata 24×16, `@north S` su S-2, alcove→statue) e **rese** in `07_.../Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map01…06.svg`; verifica visiva PNG su CM-1 e S-2 |
 | **F6 CI** | ✅ coperto da `validate_maps` esistente (ri-rende i master col parser nuovo e pretende byte-identità → il contratto è enforced su ogni SVG committato); `--strict` disponibile per il check dims in locale |
 
-**Residuo aperto (non bloccante)**: callout grafici ancorati (F3 pieno) e
-un'eventuale promozione di `--strict` a default. Da valutare solo se servirà.
+**Residuo aperto (non bloccante)**: callout grafici ancorati (F3 pieno).
+
+`--strict` in CI: ✅ **fatto il 2026-11-09** ([ADR-0117](adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md)).
+`scripts/tests/test_contratti_mappe.py` lancia `render_map_svg.py --strict
+--tutti-i-master` e pretende codice 0. L'unico master che lo bocciava era
+`_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md` (intestazione 120 colonne, disegnate 34):
+l'intestazione ora dice 34 × 80 e la riga Dimensioni spiega che lo schizzo è
+fuori scala in larghezza. Il default della CLI resta non rigido per chi
+lavora in locale su una bozza.
