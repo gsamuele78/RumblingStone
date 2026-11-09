@@ -97,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F3 formule nei dati: 6 formule in `sistemi/d20/dati/formule.toml` (capacità… | ✅ |
 | 2026-11-08 | AUDIT-SCRIPTS (da RECUPERO D5) | Ripiego senza PyYAML in `compress_skills.py`: misurato e scartato. Funziona (18… | ✅ chiusa, non si fa |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | F2 contesto esplicito: `dmcore.sistemi.regole(id)`/`regole_di(file)`; i 7 modul… | ✅ |
-| 2026-11-08 | MASTER-DEF | D6 rivista dal DM: per ogni voce del censimento la versione più forte, e sulle… | ✅ |
 
 ## Le misure che si portano dietro
 
