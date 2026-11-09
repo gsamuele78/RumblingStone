@@ -17,6 +17,10 @@ Tabelle (Open Game Content, OGL 1.0a; il testo della licenza è in OGL.txt):
     book-cr 3661  Treasure Values per Encounter                      → tesoro.toml
     book-b1 116   Creature Statistics by Type                        → creature.toml
     book-b1 160   Size Bonuses and Penalties                         → creature.toml
+    book-cr/apg/acg/uc/um  le tabelle delle classi (BAB e TS)       → conformita_prd.toml
+    book-b1 361-385, 405-423  sensi dei tipi e dei sottotipi        → conformita_prd.toml
+    book-b1…b4  i sensi degli umanoidi del Bestiario                → conformita_prd.toml
+    book-b1 1112  Corrupt Water (drago nero)                        → conformita_prd.toml
 """
 from __future__ import annotations
 
@@ -185,7 +189,169 @@ def creature(base: Path) -> str:
     return "\n".join(out) + "\n"
 
 
-FILE = {"pe.toml": pe, "incontri.toml": incontri, "tesoro.toml": tesoro, "creature.toml": creature}
+# ---------------------------------------------------------------------------
+# conformita_prd.toml: le regole PF1e che conformita_statblocchi controlla
+# sulle schede (BAB e TS per classe, sensi per tipo, sottotipo e razza).
+# ---------------------------------------------------------------------------
+LIBRI_CLASSI = ("cr", "apg", "acg", "uc", "um")
+#: Le progressioni PF1e: si verifica livello per livello che la tabella del PRD
+#: sia una di queste, altrimenti la classe non entra (e il generatore lo dice).
+BAB = {1.0: lambda L: L, 0.75: lambda L: 3 * L // 4, 0.5: lambda L: L // 2}
+TS = {"buono": lambda L: 2 + L // 2, "scarso": lambda L: L // 3,
+      "buono_prestigio": lambda L: (L + 1) // 2, "scarso_prestigio": lambda L: (L + 1) // 3}
+#: piedi → metri, alla scala del progetto (1,5 m per 5 piedi)
+METRI = {30: 9, 60: 18, 90: 27, 120: 36}
+
+
+def _ordinale(s: str) -> "int | None":
+    m = re.match(r"(\d+)(st|nd|rd|th)$", s)
+    return int(m.group(1)) if m else None
+
+
+def _lessico(*categorie: str) -> "dict[str, str]":
+    """{inglese: italiano} dal lessico PF1e del repo (prima voce vince)."""
+    import csv
+    out: "dict[str, str]" = {}
+    for f in ("lessico_it_pf1.tsv", "lessico_it_35.tsv"):
+        with open(ROOT / "scripts" / f, encoding="utf-8") as fh:
+            for r in csv.reader(fh, delimiter="\t"):
+                if len(r) >= 3 and r[2] in categorie:
+                    out.setdefault(r[1], r[0])
+    return out
+
+
+def _classi(base: Path):
+    fuori, scartate = [], []
+    for libro in LIBRI_CLASSI:
+        c = sqlite3.connect(base / f"book-{libro}.db")
+        q = ("select s.section_id, s.name, s.subtype, s.lft, s.rgt from sections s "
+             "join class_details cd on cd.section_id = s.section_id order by s.section_id")
+        for sid, nome, tipo, lft, rgt in c.execute(q).fetchall():
+            # la prima tabella della classe con «Level» in testa; lo Swashbuckler
+            # (book-acg 1145) ha le teste «Bonus, Save, Save, Save»: l'ordine è
+            # quello di tutte le altre (BAB, Tempra, Riflessi, Volontà)
+            t, col = None, None
+            for tid, corpo in c.execute("select section_id, body from sections where type = 'table' "
+                                        "and lft > ? and rgt < ? order by lft", (lft, rgt)).fetchall():
+                p = _Righe()
+                p.feed(html.unescape(corpo or ""))
+                testa = next((r for r in p.righe if r and r[0] == "Level"), None)
+                if not testa:
+                    continue
+                if any(h.startswith("Base Attack") for h in testa):
+                    col = [next(i for i, h in enumerate(testa) if h.startswith(k))
+                           for k in ("Base Attack", "Fort", "Ref", "Will")]
+                elif testa[1:5] == ["Bonus", "Save", "Save", "Save"]:
+                    col = [1, 2, 3, 4]
+                else:
+                    continue
+                t = (tid, corpo)
+                break
+            if not t:
+                scartate.append(f"{nome} (book-{libro} {sid}: nessuna tabella)")
+                continue
+            righe = set()
+            for r in p.righe:
+                if r and _ordinale(r[0]) and len(r) > max(col):
+                    try:
+                        righe.add((_ordinale(r[0]),) + tuple(int(r[i].split("/")[0]) for i in col))
+                    except ValueError:
+                        pass
+            righe = sorted(righe)
+            bab = next((k for k, f in BAB.items() if all(x[1] == f(x[0]) for x in righe)), None)
+            ts = [next((k for k, f in TS.items() if all(x[i] == f(x[0]) for x in righe)), None)
+                  for i in (2, 3, 4)]
+            if bab is None or None in ts or len(righe) not in (10, 20):
+                scartate.append(f"{nome} (book-{libro} {t[0]}: progressione fuori formula)")
+                continue
+            fuori.append((nome.lower(), bab, ts, tipo, libro, t[0]))
+    return fuori, scartate
+
+
+def _sensi_di(testo: str) -> "tuple[int, bool]":
+    dv = re.search(r"[Dd]arkvision (\d+) feet", testo)
+    return (METRI[int(dv.group(1))] if dv else 0), bool(re.search(r"[Ll]ow-light vision", testo))
+
+
+def _sensi_regole(base: Path, primo: int, ultimo: int):
+    c = sqlite3.connect(base / "book-b1.db")
+    fuori = []
+    for sid, nome in c.execute("select section_id, name from sections where section_id between ? and ? "
+                               "and type = 'section' and url like 'pfsrd://Bestiary/Rules/Creature Types/%' "
+                               "order by section_id", (primo, ultimo)).fetchall():
+        corpi = [c.execute("select body from sections where section_id = ?", (sid,)).fetchone()[0] or ""]
+        corpi += [b or "" for (b,) in c.execute("select body from sections where parent_id = ?", (sid,))]
+        testo = re.sub(r"<[^>]+>", " ", " ".join(corpi))
+        dv, ll = _sensi_di(testo)
+        if dv or ll:
+            fuori.append((nome.replace(" Subtype", "").lower(), dv, ll, sid))
+    return fuori
+
+
+def _sensi_razze(base: Path):
+    it = _lessico("mostro", "razza")
+    fuori = {}
+    for libro in ("b1", "b2", "b3", "b4"):
+        c = sqlite3.connect(base / f"book-{libro}.db")
+        q = ("select s.section_id, s.name, cd.senses from sections s join creature_details cd "
+             "on cd.section_id = s.section_id where cd.creature_type = 'Humanoid' order by s.section_id")
+        for sid, nome, sensi in c.execute(q):
+            dv = re.search(r"darkvision (\d+) ft", sensi or "")
+            ll = "low-light vision" in (sensi or "")
+            ita = it.get(nome)
+            if not (dv or ll) or not ita or "(" in nome or ita.startswith("Archetipo") or ita in fuori:
+                continue
+            fuori[ita] = (nome, METRI[int(dv.group(1))] if dv else 0, ll, libro, sid)
+    return fuori
+
+
+def conformita_prd(base: Path) -> str:
+    classi, scartate = _classi(base)
+    it = {k.lower(): v for k, v in _lessico("classe", "classe di prestigio").items()}
+    out = ["# sistemi/pf1e/dati/conformita_prd.toml — le regole PF1e che conformita_statblocchi",
+           "# controlla sulle schede (generato da estrai_prd_pf1e.py, non si scrive a mano).",
+           f'fonte = "PRD PF1e, devonjones/PSRD-Data@{COMMIT[:8]}: tabelle delle classi, '
+           'Bestiary «Creature Types», creature del Bestiario 1-4"', "",
+           "# classe = { bab per livello, ts = [Tempra, Riflessi, Volontà], tabella del PRD }",
+           "# buono = 2 + L/2, scarso = L/3; *_prestigio = (L+1)/2 e (L+1)/3 (classi di prestigio)",
+           "[classi]"]
+    for nome, bab, ts, tipo, libro, tid in classi:
+        lista = ", ".join(f'"{x}"' for x in ts)
+        out.append(f'"{nome}" = {{ bab = {bab}, ts = [{lista}], tipo = "{tipo}", tabella = "book-{libro} {tid}" }}')
+    out += ["", "# nome italiano (lessico_it_pf1.tsv, classi PNG da lessico_it_35.tsv) = classe del PRD",
+            "[alias_classi]"]
+    alias = {}
+    for nome, *_ in classi:
+        if nome in it:
+            alias[it[nome].lower()] = nome
+    out += [f'"{k}" = "{v}"' for k, v in sorted(alias.items())]
+    if scartate:
+        out += ["", "# fuori: " + " · ".join(scartate)]
+    out += ["", "# scurovisione in metri (0 = no), visione crepuscolare; book-b1 «Creature Types»",
+            "[sensi.tipi]"]
+    for nome, dv, ll, sid in _sensi_regole(base, 361, 386):
+        out.append(f'"{nome}" = {{ scurovisione = {dv}, crepuscolare = {str(ll).lower()}, sezione = {sid} }}')
+    out += ["", "[sensi.sottotipi]"]
+    for nome, dv, ll, sid in _sensi_regole(base, 388, 433):
+        out.append(f'"{nome}" = {{ scurovisione = {dv}, crepuscolare = {str(ll).lower()}, sezione = {sid} }}')
+    out += ["", "# umanoidi del Bestiario 1-4 con sensi propri, per nome italiano (lessico_it_pf1.tsv)",
+            "[sensi.razze]"]
+    for ita, (nome, dv, ll, libro, sid) in sorted(_sensi_razze(base).items()):
+        out.append(f'"{ita.lower()}" = {{ scurovisione = {dv}, crepuscolare = {str(ll).lower()}, '
+                   f'prd = "{nome}", fonte = "book-{libro} {sid}" }}')
+    c = sqlite3.connect(base / "book-b1.db")
+    testo = c.execute("select body from sections where section_id = 1112").fetchone()[0]
+    assert "DC equal to the dragon's frightful presence" in testo, "Corrupt Water cambiato"
+    out += ["", "[corrompere_acqua]",
+            '# «Liquid-based magic items … must succeed on a Will save (DC equal to the dragon\'s',
+            "# frightful presence) or become ruined» — la stessa regola dell'SRD 3.5",
+            'cd = "presenza_terrificante"', 'fonte = "book-b1 1112 «Corrupt Water»"']
+    assert len(classi) >= 40 and "fighter" in alias.values()
+    return "\n".join(out) + "\n"
+
+
+FILE = {"pe.toml": pe, "incontri.toml": incontri, "tesoro.toml": tesoro, "creature.toml": creature,
+        "conformita_prd.toml": conformita_prd}
 
 
 def main(argv=None) -> int:

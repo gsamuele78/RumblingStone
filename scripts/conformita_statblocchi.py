@@ -662,6 +662,15 @@ def fa(sistema: str, conto: str) -> bool:
     return conto in regole_conformita(sistema).get("conti", {}).get("fatti", ())
 
 
+def in_prova(sistema: str, conto: str) -> bool:
+    """ADR-0119: un conto nuovo si fa, ma il cancello lo stampa come avviso finché è in prova."""
+    return conto in regole_conformita(sistema).get("conti", {}).get("in_prova", ())
+
+
+def controlla(sistema: str, conto: str) -> bool:
+    return fa(sistema, conto) or in_prova(sistema, conto)
+
+
 def conti_saltati(sistema: str) -> "dict[str, str]":
     """{conto: perché} dei conti che nel `sistema` non hanno ancora la regola."""
     return dict(regole_conformita(sistema).get("conti", {}).get("mancanti", {}))
@@ -822,9 +831,11 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
     sb, prosa, fuori = b["sb"], b["prosa"], []
     regole_pf = regole_conformita(sistema)["punti_ferita"]
 
-    def scarto(campo, scritto, atteso, nota):
-        fuori.append({"campo": campo, "riga": b["riga"], "scritto": scritto,
-                      "atteso": atteso, "nota": nota})
+    def scarto(campo, scritto, atteso, nota, conto=None):
+        x = {"campo": campo, "riga": b["riga"], "scritto": scritto, "atteso": atteso, "nota": nota}
+        if conto and not fa(sistema, conto):
+            x["prova"] = conto
+        fuori.append(x)
 
     pf = _int(sb.pf)
     m = re.fullmatch(r"\s*(\d+)d(\d+)\s*(?:([+-])\s*(\d+))?\s*", sb.pf_dado or "")
@@ -888,11 +899,12 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
                     nota += " + 2 Capacità Focalizzata"
                 scarto(f"CD {gruppo}", scritto, sorted(ammessi)[-1], nota)
     mc = re.search(r"corrompere l'acqua\*?[^.·\n]{0,12}?CD (\d+)", prosa)
-    if mc and presenza is not None and int(mc.group(1)) != presenza and fa(sistema, "corrompere_acqua"):
+    if mc and presenza is not None and int(mc.group(1)) != presenza and controlla(sistema, "corrompere_acqua"):
         scarto("CD corrompere l'acqua", int(mc.group(1)), presenza,
-               "SRD, drago nero: la CD della presenza terrificante")
+               (regole_conformita(sistema).get("corrompere_acqua", {}).get("fonte")
+                or "SRD, drago nero") + ": la CD della presenza terrificante", "corrompere_acqua")
     # «come A.n»: una voce ereditata che porta una CD del blocco di prima
-    ereditate = fa(sistema, "ereditate") and fa(sistema, "corrompere_acqua")
+    ereditate = fa(sistema, "ereditate") and controlla(sistema, "corrompere_acqua")
     for voce, rif in re.findall(r"\*\*([^*]+)\*\*\s*come (A\.\d+(?:-bis)?)\b", prosa) if ereditate else ():
         padre = (fratelli or {}).get(rif)
         if not padre or presenza is None:
@@ -907,7 +919,7 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
                 and "corrompere l'acqua" in (sua or ""):
             scarto(f"CD in «{voce.strip()} come {rif}»", cd_padre, presenza,
                    f"ereditata da {rif}, dove la presenza è CD {pres_padre}: "
-                   "corrompere l'acqua segue la presenza")
+                   "corrompere l'acqua segue la presenza", "corrompere_acqua")
     # scurovisione: il tipo la ha nell'SRD, i sensi la scrivono
     sensi = " ".join([sb.sensi or "", _voce_bold(prosa, "Sensi") or ""])
     if re.search(r"come A\.", sensi) and fratelli:
@@ -917,9 +929,336 @@ def conti_del_recinto(b: dict, fratelli: "dict[str, dict]" = None,
     tipo = sb.tipo or ""
     # una forma temporanea («pf: quelli di Hella») tiene i sensi di chi la prende
     forma = _int(sb.pf) is None
-    if not forma and fa(sistema, "scurovisione") and SCUROVISIONE_SRD.search(tipo) and not re.search(r"scurovisione", sensi, re.I):
+    sensi_dati = "sensi" in regole_conformita(sistema)
+    if not forma and not sensi_dati and fa(sistema, "scurovisione") and SCUROVISIONE_SRD.search(tipo) \
+            and not re.search(r"scurovisione", sensi, re.I):
         scarto("sensi", "senza scurovisione", "scurovisione",
                f"il tipo «{SCUROVISIONE_SRD.search(tipo).group(0)}» la ha nell'SRD")
+    if not forma and sensi_dati:
+        for x in conti_dei_sensi(b, sensi, sistema):
+            scarto(*x)
+    if not forma:
+        for x in conti_di_classe(b, sistema):
+            scarto(*x)
+    return fuori
+
+
+# ---------------------------------------------------------------------------
+# Le regole di classe e di tipo PF1e (ADR-0119), 2026-11-09
+# ---------------------------------------------------------------------------
+#: Il cancello dei moduli saltava lotta (BMC/DMC), scurovisione e corrompere
+#: l'acqua perché la regola PF1e non era nei dati del plugin; e sulle schede
+#: recintate non contava BAB, TS, contatto e colto alla sprovvista, iniziativa,
+#: Schivare, visione crepuscolare, incanalare energia. Le regole vengono dal
+#: PRD (conformita_prd.toml, generato) e dalle scelte in conformita.toml:
+#:
+#: | conto | la regola (PRD PF1e) |
+#: |---|---|
+#: | BAB | somma, classe per classe, di L × progressione (+ i DV razziali del tipo) |
+#: | TS | base di classi e DV razziali + caratteristica + Tempra Possente / Riflessi Fulminei / Volontà di Ferro + mantello della resistenza |
+#: | BMC | BAB + For (Des se Minuscola o più piccola, o con Manovre Agili) + taglia |
+#: | DMC | 10 + BAB + For + Des + taglia + i bonus di deviazione, schivare, sacro… della CA |
+#: | contatto_sprovvista | CA − armatura − scudo − naturale; CA − Des − schivare |
+#: | iniziativa_recinto | mod Des, +4 con Iniziativa Migliorata |
+#: | schivare | il talento Schivare è +1 di schivare nella CA |
+#: | scurovisione, visione_crepuscolare | dal tipo, dal sottotipo o dalla razza del Bestiario |
+#: | incanalare | (L+1)/2 d6, CD 10 + ½ L + Car, 3 + Car al giorno |
+TS_NOMI = (("temp", r"Tem(?:pra)?\.?"), ("rifl", r"Rif(?:lessi)?\.?"), ("vol", r"Vol(?:ontà)?\.?"))
+TS_FORMULA = {"buono": lambda L: 2 + L // 2, "scarso": lambda L: L // 3,
+              "buono_prestigio": lambda L: (L + 1) // 2, "scarso_prestigio": lambda L: (L + 1) // 3}
+
+
+def _numero_bold(prosa: str, etichette: str) -> "int | None":
+    """Il numero dopo `**BAB**`, `BMC`, `CMD`… nella prosa (bold o no)."""
+    m = re.search(r"(?<![\w])(?:" + etichette + r")\b\**\s*([+\-−]?\d+)", prosa)
+    return int(m.group(1).replace("−", "-")) if m else None
+
+
+def _talenti_scritti(prosa: str) -> "list[str] | None":
+    """I talenti della riga **Talenti**, uno per voce (None se la riga non c'è)."""
+    m = re.search(r"\*\*Talenti\*\*(.*?)(?=\*\*|\n|$)", prosa)
+    if not m:
+        return None
+    testo = re.sub(r"\*\([^)]*\)\*|\([^)]*\)", "", m.group(1))
+    return [v.strip(" *·,.") for v in re.split(r"[·,]", testo) if v.strip(" *·,.")]
+
+
+def _cerca_nel_tipo(testo: str, alias: dict) -> "list[tuple[str, str]]":
+    """[(chiave italiana, valore)] degli alias che compaiono nel testo, i più lunghi prima, senza sovrapposizioni."""
+    fuori, preso = [], [False] * len(testo)
+    for k in sorted(alias, key=len, reverse=True):
+        for m in re.finditer(r"(?<![\w])" + re.escape(k) + r"(?![\w])", testo, re.I):
+            if not any(preso[m.start():m.end()]):
+                fuori.append((k, alias[k], m.start(), m.end()))
+                for i in range(m.start(), m.end()):
+                    preso[i] = True
+    return [(k, v) for k, v, *_ in sorted(fuori, key=lambda x: x[2])]
+
+
+def _livelli_di_classe(testo: str, regole: dict) -> "list[tuple[str, int]]":
+    """[(classe PRD, livello)] da «Umano ladro 4», «Umana esperta 6», «Skum guerriero 8»."""
+    alias = dict(regole.get("alias_classi", {}))
+    for k, v in list(alias.items()):  # il femminile: esperta, chierica, guerriera
+        if k.endswith("o"):
+            alias.setdefault(k[:-1] + "a", v)
+    fuori, preso = [], [False] * len(testo)
+    for k in sorted(alias, key=len, reverse=True):
+        for m in re.finditer(r"(?<![\w])" + re.escape(k) + r"\s+(\d+)\b", testo, re.I):
+            if not any(preso[m.start():m.end()]):
+                fuori.append((m.start(), alias[k], int(m.group(1))))
+                for i in range(m.start(), m.end()):
+                    preso[i] = True
+    return [(c, n) for _, c, n in sorted(fuori)]
+
+
+def _tipo_e_razza(sb, regole: dict):
+    """(tipo PRD, sottotipi PRD, razza italiana del Bestiario) dalla riga `tipo`."""
+    tipo_txt = (sb.tipo or "").split("·")[0]
+    tipi = _cerca_nel_tipo(tipo_txt, regole.get("alias_tipo", {}))
+    razze_core = _cerca_nel_tipo(tipo_txt, regole.get("alias_razze", {}))
+    bestiario = _cerca_nel_tipo(" ".join([tipo_txt, sb.nome or ""]), regole.get("sensi", {}).get("razze", {}))
+    tipo = tipi[0][1] if tipi else ("humanoid" if razze_core or bestiario else None)
+    return tipo, [v for _, v in razze_core], (bestiario[0][0] if bestiario else None)
+
+
+def _taglia(sb, regole: dict, sistema: str) -> "tuple[str, dict] | None":
+    taglie = S.dati(sistema, "creature.costruzione").get("taglie", {})
+    for _, t in _cerca_nel_tipo((sb.tipo or "").split("·")[0], regole.get("alias_taglie", {})):
+        return t, taglie.get(t, {})
+    m = re.search(r"([+-]\d+)\s*taglia", (sb.ca_dettaglio or "").replace("−", "-"))
+    if m:
+        for t, v in taglie.items():
+            if v.get("ca_attacco") == int(m.group(1)):
+                return t, v
+    return "medium", taglie.get("medium", {})
+
+
+def _voci_ca(sb) -> "list[tuple[int, str]]":
+    """Le voci (valore, nome) della parentesi di `ca-dettaglio`, prima del «;»."""
+    testo = (sb.ca_dettaglio or "").split(";")[0].replace("−", "-")
+    par = re.search(r"\(([^)]*)\)", testo)
+    if not par:
+        return [(int(v.replace(" ", "")), n.strip().lower()) for v, n in
+                re.findall(r"([+-]\s*\d+)\s+([^\W\d_][^,;+()-]*)", testo)]
+    return [(int(v.replace(" ", "")), n.strip().lower()) for v, n in
+            re.findall(r"([+-]\s*\d+)\s+([^\W\d_][^,;+]*)", par.group(1))]
+
+
+def _classe_della_voce(nome: str, regole_ca: dict) -> "str | None":
+    if re.match(r"des\b", nome):
+        return "des"
+    if "taglia" in nome:
+        return "taglia"
+    for chiave in ("schivare", "deviazione", "naturale", "scudo", "armatura"):
+        if any(re.search(r"\b" + re.escape(p), nome) for p in regole_ca.get(chiave, ())):
+            return chiave
+    return nome.split()[0] if nome else None
+
+
+def conti_dei_sensi(b: dict, sensi: str, sistema: str) -> "list[tuple]":
+    """Scurovisione e visione crepuscolare dal tipo, dai sottotipi e dalla razza (PRD)."""
+    regole = regole_conformita(sistema)
+    dati = regole.get("sensi", {})
+    tipo, sottotipi, razza = _tipo_e_razza(b["sb"], regole)
+    voci = []
+    if razza:
+        voci.append((f"la razza «{razza}» ({dati['razze'][razza].get('fonte', 'Bestiario')})", dati["razze"][razza]))
+    for st in sottotipi:
+        if st in dati.get("sottotipi", {}):
+            voci.append((f"il sottotipo «{st}» (Bestiary, sezione {dati['sottotipi'][st]['sezione']})",
+                         dati["sottotipi"][st]))
+    if tipo in dati.get("tipi", {}):
+        voci.append((f"il tipo «{tipo}» (Bestiary, sezione {dati['tipi'][tipo]['sezione']})", dati["tipi"][tipo]))
+    fuori = []
+    dv = max(((v.get("scurovisione", 0), perche) for perche, v in voci), default=(0, ""))
+    if dv[0] and controlla(sistema, "scurovisione"):
+        m = re.search(r"scurovisione\s+(\d+)\s*m", sensi, re.I)
+        if not re.search(r"scurovisione", sensi, re.I):
+            fuori.append(("sensi", "senza scurovisione", f"scurovisione {dv[0]} m",
+                          f"{dv[1]} la dà nel PRD", "scurovisione"))
+        elif m and int(m.group(1)) < dv[0]:
+            fuori.append(("sensi", f"scurovisione {m.group(1)} m", f"scurovisione {dv[0]} m",
+                          f"{dv[1]} la dà nel PRD", "scurovisione"))
+    ll = next((perche for perche, v in voci if v.get("crepuscolare")), None)
+    if ll and controlla(sistema, "visione_crepuscolare") and not re.search(r"crepuscolare", sensi, re.I):
+        fuori.append(("sensi", "senza visione crepuscolare", "visione crepuscolare",
+                      f"{ll} la dà nel PRD", "visione_crepuscolare"))
+    return fuori
+
+
+def conti_di_classe(b: dict, sistema: str) -> "list[tuple]":
+    """BAB, TS, BMC, DMC, contatto e sprovvista, iniziativa, Schivare, incanalare (ADR-0119)."""
+    regole = regole_conformita(sistema)
+    if "classi" not in regole:
+        return []
+    sb, prosa, fuori = b["sb"], b["prosa"], []
+    car = sb.attributi or ""
+    m_ = {k: _mod_caratteristica(car, k) for k in ("For", "Des", "Cos", "Int", "Sag", "Car")}
+    talenti_ = _talenti_scritti(prosa)
+    tal = set(talenti_ or ())
+    tipo, _, _ = _tipo_e_razza(sb, regole)
+    tipi = S.dati(sistema, "creature.costruzione").get("tipi", {})
+    classi = _livelli_di_classe(" ".join([(sb.tipo or "").split("·")[0], sb.nome or ""]), regole)
+    dv = sum(int(n) for n, _ in DADI.findall(sb.pf_dado or ""))
+    razziali = dv - sum(n for _, n in classi) if dv else None
+    if razziali is None and classi and _tipo_e_razza(sb, regole)[1]:
+        razziali = 0  # le razze del Core non hanno DV razziali (Core, «Races»)
+    noto = bool(classi) or (razziali and tipo in tipi)
+    # BAB e TS: le classi del PRD più i DV razziali del tipo
+    bab_atteso = ts_base = None
+    if noto and razziali is not None and razziali >= 0 and (razziali == 0 or tipo in tipi):
+        bab_atteso = sum(math.floor(regole["classi"][c]["bab"] * n) for c, n in classi)
+        base = {"temp": 0, "rifl": 0, "vol": 0}
+        for c, n in classi:
+            for chiave, prog in zip(("temp", "rifl", "vol"), regole["classi"][c]["ts"]):
+                base[chiave] += TS_FORMULA[prog](n)
+        scelte = [()]
+        if razziali:
+            t = tipi[tipo]
+            bab_atteso += math.floor(t["bab"] * razziali)
+            for chiave in ("temp", "rifl", "vol"):
+                base[chiave] += TS_FORMULA["buono" if chiave in t["ts_buoni"] else "scarso"](razziali)
+            if t.get("ts_a_scelta"):
+                import itertools
+                scelte = list(itertools.combinations(("temp", "rifl", "vol"), t["ts_a_scelta"]))
+        ts_base = [{k: v + ((TS_FORMULA["buono"](razziali) - TS_FORMULA["scarso"](razziali))
+                            if k in sc else 0) for k, v in base.items()} for sc in scelte]
+    bab_scritto = _numero_bold(prosa, r"BAB|Attacco Base")
+    if bab_atteso is not None and bab_scritto is not None and bab_scritto != bab_atteso \
+            and controlla(sistema, "BAB"):
+        desc = " + ".join([f"{c} {n}" for c, n in classi] + ([f"{razziali} DV {tipo}"] if razziali else []))
+        fuori.append(("BAB", bab_scritto, bab_atteso, f"PRD, tabelle delle classi e dei tipi: {desc}", "BAB"))
+    bab = bab_scritto if bab_scritto is not None else bab_atteso
+    # TS
+    ts_scritti = {k: _int(re.search(rx + r"\s*([+\-−]\d+)", sb.ts or "").group(1).replace("−", "-"))
+                  for k, rx in TS_NOMI if re.search(rx + r"\s*([+\-−]\d+)", sb.ts or "")}
+    if ts_base and len(ts_scritti) == 3 and None not in (m_["Des"], m_["Sag"]) \
+            and controlla(sistema, "TS"):
+        r_ts = regole.get("ts", {})
+        car_ts = {"temp": m_["Car"] if tipo == "undead" else (m_["Cos"] or 0),
+                  "rifl": m_["Des"], "vol": m_["Sag"]}
+        extra = {k: 2 * any(n in tal and v == k for n, v in r_ts.get("talenti", {}).items())
+                 for k in car_ts}
+        res = re.search(re.escape(r_ts.get("resistenza", "mantello della resistenza")) + r"\s*\+(\d+)",
+                        prosa, re.I)
+        res = int(res.group(1)) if res else 0
+        attesi = [{k: tb[k] + car_ts[k] + extra[k] + res for k in tb} for tb in ts_base]
+        # senza la riga **Talenti** un talento può solo aggiungere: si controlla il minimo
+        sotto = talenti_ is None and any(all(ts_scritti[k] >= a[k] for k in a) for a in attesi)
+        if ts_scritti not in attesi and not sotto:
+            att = attesi[0]
+            for k in ("temp", "rifl", "vol"):
+                if all((a[k] > ts_scritti[k]) if talenti_ is None else (a[k] != ts_scritti[k]) for a in attesi):
+                    nota = (f"base {ts_base[0][k]} + {'Car' if k == 'temp' and tipo == 'undead' else {'temp': 'Cos', 'rifl': 'Des', 'vol': 'Sag'}[k]}"
+                            f" {car_ts[k]:+d}" + (f" + talento {extra[k]:+d}" if extra[k] else "")
+                            + (f" + resistenza +{res}" if res else ""))
+                    fuori.append((f"TS {k}", ts_scritti[k], att[k], nota, "TS"))
+    # CA: Schivare, contatto, sprovvista
+    ca = _int(sb.ca)
+    voci = _voci_ca(sb)
+    regole_ca = regole.get("ca", {})
+    per_classe: "dict[str, int]" = {}
+    for v, n in voci:
+        k = _classe_della_voce(n, regole_ca)
+        per_classe[k] = per_classe.get(k, 0) + v
+    if ca is not None and talenti_ is not None and regole_ca.get("talento_schivare") in tal \
+            and "schivare" not in per_classe and controlla(sistema, "schivare"):
+        fuori.append(("CA", ca, ca + 1, "talento Schivare: +1 di schivare alla CA, che ca-dettaglio non scrive",
+                      "schivare"))
+    mc = re.search(r"contatto\s+(\d+)", sb.ca_dettaglio or "")
+    ms = re.search(r"sprovvista\s+(\d+)", sb.ca_dettaglio or "")
+    if ca is not None and voci and controlla(sistema, "contatto_sprovvista"):
+        if mc:
+            atteso = ca - sum(per_classe.get(k, 0) for k in ("armatura", "scudo", "naturale"))
+            if int(mc.group(1)) != atteso:
+                fuori.append(("CA contatto", int(mc.group(1)), atteso, "CA − armatura − scudo − naturale",
+                              "contatto_sprovvista"))
+        if ms:
+            atteso = ca - max(per_classe.get("des", 0), 0) - per_classe.get("schivare", 0)
+            if int(ms.group(1)) != atteso:
+                fuori.append(("CA colto alla sprovvista", int(ms.group(1)), atteso, "CA − Des − schivare",
+                              "contatto_sprovvista"))
+    # BMC e DMC
+    nome_taglia, taglia = _taglia(sb, regole, sistema)
+    r_bmc = regole.get("bmc", {})
+    it_taglie = {v: k for k, v in regole.get("alias_taglie", {}).items()}
+    piccola = it_taglie.get(nome_taglia, nome_taglia) in r_bmc.get("piu_piccole_con_des", ())
+    if bab is not None and m_["For"] is not None and m_["Des"] is not None and "bmc_dmc" in taglia:
+        agile = piccola or bool(tal & set(r_bmc.get("des_al_posto_della_for", ())))
+        bmc_atteso = bab + (m_["Des"] if agile else m_["For"]) + taglia["bmc_dmc"]
+        bmc = _numero_bold(prosa, r"BMC|CMB")
+        if bmc is not None and bmc != bmc_atteso and controlla(sistema, "BMC"):
+            fuori.append(("BMC", bmc, bmc_atteso,
+                          f"BAB {bab:+d} + {'Des' if agile else 'For'} + taglia {nome_taglia} {taglia['bmc_dmc']:+d}",
+                          "BMC"))
+        dmc = _numero_bold(prosa, r"DMC|CMD")
+        extra_ca = sum(v for k, v in per_classe.items() if k in r_bmc.get("bonus_ca_in_dmc", ()))
+        dmc_atteso = 10 + bab + m_["For"] + m_["Des"] + taglia["bmc_dmc"] + extra_ca
+        if dmc is not None and dmc != dmc_atteso and controlla(sistema, "DMC"):
+            fuori.append(("DMC", dmc, dmc_atteso,
+                          f"10 + BAB {bab:+d} + For {m_['For']:+d} + Des {m_['Des']:+d} + taglia "
+                          f"{taglia['bmc_dmc']:+d}" + (f" + deviazione/schivare/… {extra_ca:+d}" if extra_ca else ""),
+                          "DMC"))
+    # iniziativa nel recinto
+    ini = _int(sb.iniziativa)
+    if ini is not None and m_["Des"] is not None and controlla(sistema, "iniziativa_recinto"):
+        atteso = m_["Des"] + (4 if "Iniziativa Migliorata" in tal else 0)
+        if (ini != atteso) if talenti_ is not None else (ini < atteso):
+            fuori.append(("iniziativa", ini, atteso, "mod Des, +4 con Iniziativa Migliorata", "iniziativa_recinto"))
+    # pf: il bonus di pf-dado e le schede con dadi di più tipi
+    m_pf = re.fullmatch(r"\s*((?:\d+d\d+\s*\+\s*)*\d+d\d+)\s*(?:([+-])\s*(\d+))?\s*", sb.pf_dado or "")
+    if m_pf and dv:
+        bonus = int(m_pf.group(3) or 0) * (-1 if m_pf.group(2) == "-" else 1)
+        r_pf = regole.get("pf_bonus", {})
+        car_pf = m_["Car"] if tipo == "undead" else m_["Cos"]
+        if car_pf is not None and tipo != "construct" and talenti_ is not None and controlla(sistema, "pf_bonus"):
+            robustezza = max(r_pf.get("robustezza_minimo", 3), dv) if r_pf.get("talento_robustezza") in tal else 0
+            minimo = dv * car_pf + robustezza
+            # classe preferita: +1 pf per livello, a scelta (Core, «Favored Class»)
+            massimo = minimo + sum(n for _, n in classi)
+            if not minimo <= bonus <= massimo:
+                nota = f"DV {dv} × {'Car' if tipo == 'undead' else 'Cos'} {car_pf:+d}"
+                if robustezza:
+                    nota += f" + Robustezza {robustezza}"
+                if massimo > minimo:
+                    nota += f" (+ fino a {massimo - minimo} di classe preferita)"
+                fuori.append(("pf-dado bonus", bonus, minimo if bonus < minimo else massimo, nota, "pf_bonus"))
+        dadi = DADI.findall(sb.pf_dado or "")
+        pf = _int(sb.pf)
+        if len(dadi) > 1 and pf is not None and controlla(sistema, "pf_misti"):
+            regole_pf = regole["punti_ferita"]
+            media = _arrotonda(regole_pf["media"])(sum(int(n) * (int(f) + 1) / 2 for n, f in dadi))
+            ammessi = {media + bonus}
+            if classi and not razziali:  # il primo dado è di classe: al massimo
+                n0, f0 = int(dadi[0][0]), int(dadi[0][1])
+                resto = (n0 - 1) * (f0 + 1) / 2 + sum(int(n) * (int(f) + 1) / 2 for n, f in dadi[1:])
+                ammessi.add(f0 + _arrotonda(regole_pf["mezzi_dopo_il_primo"])(resto) + bonus)
+            if pf not in ammessi:
+                fuori.append(("pf", pf, min(ammessi), f"media di {sb.pf_dado}", "pf_misti"))
+    # CD degli incantesimi: «(LI 13°, CD 16 + livello)» = 10 + mod della caratteristica della classe
+    r_inc = regole.get("incantesimi", {}).get("caratteristica", {})
+    mli = re.search(r"\(LI\s+(\d+)°?,\s*CD\s+(\d+)\s*\+\s*livello\)", prosa)
+    incantatori = [(c, n) for c, n in classi if c in r_inc]
+    if mli and incantatori and controlla(sistema, "cd_incantesimi"):
+        c, n = max(incantatori, key=lambda x: x[1])
+        mod_c = m_.get(r_inc[c])
+        if mod_c is not None and int(mli.group(2)) != 10 + mod_c:
+            fuori.append(("CD incantesimi", int(mli.group(2)), 10 + mod_c,
+                          f"10 + {r_inc[c]} {mod_c:+d} + livello dell'incantesimo ({c})", "cd_incantesimi"))
+        if int(mli.group(1)) != n:
+            fuori.append(("LI", int(mli.group(1)), n, f"livello dell'incantatore = livello di {c}",
+                          "cd_incantesimi"))
+    # incanalare energia
+    livello = sum(n for c, n in classi if c in regole.get("incanalare", {}).get("classi", ()))
+    mi = re.search(r"incanalare energia[^(\n]*?(\d+)/giorno\*?\s*\((\d+)d6,\s*CD\s+(\d+)\)", prosa, re.I)
+    if livello and mi and m_["Car"] is not None and controlla(sistema, "incanalare"):
+        usi, dadi, cd = (int(x) for x in mi.groups())
+        for campo, scritto, atteso, nota in (
+                ("incanalare usi", usi, 3 + m_["Car"], "3 + Car"),
+                ("incanalare dadi", dadi, (livello + 1) // 2, "(livello + 1) / 2 d6"),
+                ("incanalare CD", cd, 10 + livello // 2 + m_["Car"], f"10 + ½ livello ({livello // 2}) + Car")):
+            if scritto != atteso:
+                fuori.append((campo, scritto, atteso, nota, "incanalare"))
     return fuori
 
 
@@ -1005,18 +1344,26 @@ def main(argv=None) -> int:
     ap.add_argument("--cancello-moduli", action="store_true",
                     help="cancello (in CI): ogni conto delle schede dei moduli di un sistema "
                          "diverso dal predefinito (oggi il Drappo e il Giardino PF1e) torna")
+    ap.add_argument("--severo", action="store_true",
+                    help="con --cancello-moduli: anche i conti `in_prova` bloccano (ADR-0119, "
+                         "la prova della promozione)")
     args = ap.parse_args(argv)
     if args.cancello_moduli:
         files = [p for p in master_di_default() if S.sistema_di(p) != S.predefinito()]
         r = rapporto_master(files)
+        bloccano = [x for x in r if args.severo or "prova" not in x]
         for x in r:
-            print(f"✗ {x['file']}:{x['riga']} [{x['titolo'][:50]}] {x['campo']} "
-                  f"{x['scritto']} ≠ {x['atteso']} ({x['nota']})")
+            segno = "✗" if x in bloccano else "⚠"
+            prova = f" [in prova: {x['prova']}]" if "prova" in x else ""
+            print(f"{segno} {x['file']}:{x['riga']} [{x['titolo'][:50]}] {x['campo']} "
+                  f"{x['scritto']} ≠ {x['atteso']} ({x['nota']}){prova}")
         saltati = sorted({x["conto"] for x in saltati_master(files)})
-        if r:
+        if bloccano:
             return 1
+        avvisi = len(r) - len(bloccano)
         print(f"✓ conformita_statblocchi: {len(files)} moduli di un altro sistema, ogni conto torna"
-              + (f" (saltati perché manca la regola: {', '.join(saltati)})" if saltati else ""))
+              + (f" (saltati perché manca la regola: {', '.join(saltati)})" if saltati else "")
+              + (f"; {avvisi} avvisi dai conti in prova (ADR-0119)" if avvisi else ""))
         return 0
     if args.master is not None:
         files = [Path(f).resolve() for f in args.master] or master_di_default()
@@ -1025,8 +1372,9 @@ def main(argv=None) -> int:
             print(json.dumps(r, ensure_ascii=False, indent=1))
             return 0
         for x in r:
+            prova = f" [in prova: {x['prova']}]" if "prova" in x else ""
             print(f"  {x['file']}:{x['riga']} [{x['titolo'][:50]}] {x['campo']} "
-                  f"{x['scritto']} ≠ {x['atteso']} ({x['nota']})")
+                  f"{x['scritto']} ≠ {x['atteso']} ({x['nota']}){prova}")
         for x in saltati_master(files):
             print(f"  ⏭ {x['file']} ({x['sistema']}): conto «{x['conto']}» saltato, {x['motivo']}")
         print(f"STATBLOCCHI NEI MASTER — {len(files)} file, {len(r)} conti che non tornano "

@@ -289,7 +289,7 @@ Capita, se il gruppo arriva da un'altra avventura. Tre correzioni e basta:
 | Scontro | pf da togliere | **Round previsti** | Chi rischia |
 |---|---|---|---|
 | **La rissa alla fontana** (5 tintori, pf 6, CA 12) | 30, e sono CA 12: si colpisce quasi sempre | **2 round** | nessuno: è **danno non letale**, e si fermano appena vedono una lama vera |
-| **L'assalto alle stalle** (Sfregio 26 pf CA 18 + 4 bravacci 16 pf CA 16) | 90 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
+| **L'assalto alle stalle** (Sfregio 26 pf CA 19 + 4 bravacci 16 pf CA 16) | 90 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
 | **La curva nord** | — | non è un incontro: è un **hazard a costo di azioni** (§7.4) | chi resta sul transennato |
 
 ### ⚠️ Le tre cose che l'aritmetica dice e la lettura no

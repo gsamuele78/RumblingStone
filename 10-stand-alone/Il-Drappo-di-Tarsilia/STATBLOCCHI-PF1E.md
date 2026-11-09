@@ -27,7 +27,7 @@ ca: 13
 ca-dettaglio: +2 armatura, +1 Des
 pf: 33
 pf-dado: 6d8+6
-ts: Tem +3, Rif +3, Vol +6
+ts: Tem +3, Rif +3, Vol +8
 attributi: For 10 Des 12 Cos 12 Int 15 Sag 16 Car 14
 velocita: 9 m
 iniziativa: +1
@@ -37,7 +37,7 @@ attacchi:
 ```
 **Iniziativa** +1 · **Percezione** +11 · **Velocità** 9 m
 
-**Difesa** **CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +6
+**Difesa** **CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +8
 
 **Attacco** **Mischia** bastone +4 (1d6) · **BAB** +4 · **CMB** +4 · **CMD** 15
 
@@ -83,8 +83,8 @@ decidono che non si può.
 nome: Sfregio
 gs: 3
 tipo: Umano ladro 4 · NM · maschio, età incerta
-ca: 18
-ca-dettaglio: contatto 15, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 anello)
+ca: 19
+ca-dettaglio: contatto 16, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 schivare, +1 anello)
 pf: 26
 pf-dado: 4d8+4
 ts: Tempra +2, Riflessi +8, Volontà +2
@@ -98,9 +98,9 @@ attacchi:
 ```
 **Iniziativa** +4 · **Percezione** +8 · **Velocità** 9 m
 
-**Difesa** **CA** 18, contatto 15, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 anello) · **pf** 26 (4d8+4) · **TS** Tempra **+2**, Riflessi **+8**, Volontà **+2** · **Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in movimento +1**
+**Difesa** **CA** 19, contatto 16, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 schivare, +1 anello) · **pf** 26 (4d8+4) · **TS** Tempra **+2**, Riflessi **+8**, Volontà **+2** · **Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in movimento +1**
 
-**Attacco** **Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 18
+**Attacco** **Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 20
 
 **Statistiche** For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Arma Accurata · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*
 
@@ -220,6 +220,7 @@ nome: Cavallo (profilo base)
 gs: 1
 tipo: Animale Grande · Bestiario Core
 ca: 11
+sensi: visione crepuscolare, fiuto
 pf: 15
 pf-dado: 2d8+6
 ts: Tempra +6, Riflessi +5, Volontà +1
@@ -231,7 +232,7 @@ attacchi:
 ```
 **Difesa** **CA** 11 · **pf** 15 (2d8+6) · TS Tempra +6, Riflessi +5, Volontà +1
 
-**Attacco** Vel 15 m · morso +3 (1d4+3), due zoccoli −2 (1d6+1) · **CMD** 18
+**Attacco** Vel 15 m · morso +3 (1d4+3), due zoccoli −2 (1d6+1) · **CMD** 17 (21 contro sbilanciare)
 
 **Statistiche** For 16, Des 14, Cos 17, Int 2, Sag 13, Car 6
 
