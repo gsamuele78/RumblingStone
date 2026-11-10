@@ -150,6 +150,17 @@ class Armature(unittest.TestCase):
                           a["scale mail"]["ca"], a["splint mail"]["ca"], a["banded mail"]["ca"],
                           a["half-plate"]["ca"], a["breastplate"]["ca"]), (9, 6, 4, 5, 7, 7, 8, 6))
 
+    def test_pf_bonus_dei_costrutti_dalle_schede_del_bestiary(self):
+        # la tabella nel PRD non c'è: i numeri vengono dalle schede (golem di ferro
+        # Large 18d10+30, oggetto animato Small 2d10+10, homunculus Tiny 2d10)
+        p = self.c["pf_bonus_costrutti"]
+        self.assertEqual(p, {"tiny": 0, "small": 10, "medium": 20, "large": 30,
+                             "huge": 40, "gargantuan": 60, "colossal": 80})
+        # le taglie senza schede non si inventano, e le chiavi sono quelle di [taglie]
+        self.assertNotIn("fine", p)
+        self.assertNotIn("diminutive", p)
+        self.assertLessEqual(set(p), set(self.c["taglie"]))
+
     def test_scudi(self):
         s = self.c["scudi"]
         self.assertEqual({k: v["ca"] for k, v in s.items()},

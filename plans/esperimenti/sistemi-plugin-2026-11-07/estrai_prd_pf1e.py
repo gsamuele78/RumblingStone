@@ -546,9 +546,64 @@ def _armature(base: Path):
     return arm, scu
 
 
+#: Le taglie del PRD con la chiave che hanno in `[taglie]` (inglese minuscolo).
+TAGLIE_COSTRUTTI = tuple((t, t.lower()) for t in (
+    "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"))
+
+
+def _pf_bonus_costrutti(base: Path) -> tuple[dict, list]:
+    """I pf bonus dei costrutti per taglia, ricavati dalle schede dei Bestiary 1-4.
+
+    La tabella del tipo costrutto (book-b1 sezione 366, «as shown on the
+    following table») nel PRD non c'è. Il numero è il «+X» di `hp N (NdF+X)`
+    delle schede di tipo construct senza Robustezza, senza Costituzione e non
+    mitiche: lì il bonus di taglia è l'unico addendo. Una taglia entra solo se
+    tutte le sue schede dicono lo stesso numero; le altre restano fuori."""
+    per_taglia: dict[str, dict[int, list[str]]] = {}
+    escluse = []
+    for libro in ("b1", "b2", "b3", "b4"):
+        c = sqlite3.connect(base / f"book-{libro}.db")
+        for sid, nome, taglia, pf, tal, cos, mr in c.execute(
+                "select s.section_id, s.name, d.size, d.hp, d.feats, d.constitution, d.mr "
+                "from sections s join creature_details d on d.section_id = s.section_id "
+                "where lower(d.creature_type) like '%construct%' order by s.section_id"):
+            m = re.search(r"\((\d+)d(\d+)([+-]\d+)?\)", pf or "")
+            motivo = ("pf illeggibili" if not m else
+                      "mitica" if mr else
+                      "Robustezza" if "toughness" in (tal or "").lower() else
+                      "ha la Costituzione" if (cos or "").strip() not in ("", "-", "—", "–") else "")
+            if motivo:
+                escluse.append((libro, sid, nome, motivo))
+                continue
+            per_taglia.setdefault(taglia, {}).setdefault(int(m.group(3) or 0), []).append(
+                f"{nome} {m.group(0)[1:-1]} (book-{libro} {sid})")
+    return per_taglia, escluse
+
+
 def creature_e_armature(base: Path) -> str:
     arm, scu = _armature(base)
+    per_taglia, escluse = _pf_bonus_costrutti(base)
     out = [creature(base).rstrip("\n"), "",
+           "# --- pf bonus dei costrutti per taglia. La tabella del tipo costrutto (book-b1",
+           "# sezione 366, «as shown on the following table») nel PRD non c'è: il numero è",
+           "# ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)` nei costrutti",
+           "# senza Robustezza, senza Costituzione e non mitici. Una taglia senza schede, o con",
+           "# schede discordi, non ha la voce: non si inventa.",
+           "[pf_bonus_costrutti]"]
+    for en, it in TAGLIE_COSTRUTTI:
+        voci = per_taglia.get(en, {})
+        if len(voci) == 1:
+            (bonus, schede), = voci.items()
+            quante = "1 scheda sola" if len(schede) == 1 else f"{len(schede)} schede concordi"
+            out.append(f"{it} = {bonus}  # {quante}; prova: {schede[0]}")
+        elif voci:
+            out.append(f"# {it}: schede discordi, " + "; ".join(
+                f"+{k} {v[0]}" for k, v in sorted(voci.items())))
+        else:
+            out.append(f"# {it}: nessuna scheda di costrutto nel PRD")
+    out.append(f"# schede escluse dal conto: {len(escluse)} ("
+               + "; ".join(f"{n} {m}" for _l, _s, n, m in escluse) + ")")
+    out += ["",
            "# --- armature e scudi: book-cr.db sezione 2955 «Table: Armor and Shields»",
            "# armatura = { ca, des_max, prova = penalità di armatura alla prova, fallimento = % arcano, categoria, it }",
            "# `it` è il nome italiano del lessico PF1e, quando c'è.",

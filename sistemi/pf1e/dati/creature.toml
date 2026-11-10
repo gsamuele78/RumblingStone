@@ -30,6 +30,23 @@ fonte_taglie = "book-b1.db sezione 160 «Table: Size Bonuses and Penalties»"
 "gargantuan" = { ca_attacco = -4, bmc_dmc = 4 }
 "colossal" = { ca_attacco = -8, bmc_dmc = 8 }
 
+# --- pf bonus dei costrutti per taglia. La tabella del tipo costrutto (book-b1
+# sezione 366, «as shown on the following table») nel PRD non c'è: il numero è
+# ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)` nei costrutti
+# senza Robustezza, senza Costituzione e non mitici. Una taglia senza schede, o con
+# schede discordi, non ha la voce: non si inventa.
+[pf_bonus_costrutti]
+# fine: nessuna scheda di costrutto nel PRD
+# diminutive: nessuna scheda di costrutto nel PRD
+tiny = 0  # 2 schede concordi; prova: Homunculus 2d10 (book-b1 1838)
+small = 10  # 3 schede concordi; prova: Iron Cobra 1d10+10 (book-b1 1891)
+medium = 20  # 13 schede concordi; prova: Animated Object 3d10+20 (book-b1 517)
+large = 30  # 15 schede concordi; prova: Golem, Clay 13d10+30 (book-b1 1670)
+huge = 40  # 7 schede concordi; prova: Golem, Adamantine 30d10+40 (book-b2 956)
+gargantuan = 60  # 2 schede concordi; prova: Clockwork Goliath 28d10+60 (book-b3 386)
+colossal = 80  # 1 scheda sola; prova: Wickerman 14d10+80 (book-b4 2079)
+# schede escluse dal conto: 7 (Retriever Robustezza; Soulbound Doll Robustezza; Flesh Colossus mitica; Iron Colossus mitica; Stone Colossus mitica; Soulbound Mannequin Robustezza; Soulbound Shell Robustezza)
+
 # --- armature e scudi: book-cr.db sezione 2955 «Table: Armor and Shields»
 # armatura = { ca, des_max, prova = penalità di armatura alla prova, fallimento = % arcano, categoria, it }
 # `it` è il nome italiano del lessico PF1e, quando c'è.
