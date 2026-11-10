@@ -294,14 +294,14 @@ nome: Còlpa, megera verde
 gs: 5
 tipo: NM Medio mostruoso
 ca: 22
-pf: 45
+pf: 49
 pf-dado: 9d8+9
 ts: Temp +4, Rifl +6, Vol +7
 velocita: 9 m, nuotare 9 m
 attacchi:
   - 2 artigli +11 (1d4+4)
 ```
-**Difesa** **CA 22** · **pf 45** (9d8+9) · TS Tempra +4, Riflessi +6, Volontà +7 · RI 18, RD 5/freddo ferro
+**Difesa** **CA 22** · **pf 49** (9d8+9) · TS Tempra +4, Riflessi +6, Volontà +7 · RI 18, RD 5/freddo ferro
 
 **Attacco** Vel 9 m, nuotare 9 m · **Mischia** 2 artigli +11 (1d4+4)
 
@@ -315,14 +315,14 @@ nome: Marèa, annis
 gs: 6
 tipo: CM Grande mostruoso
 ca: 20
-pf: 51
+pf: 52
 pf-dado: 7d8+21
 ts: Temp +5, Rifl +5, Vol +6
 velocita: 12 m
 attacchi:
   - 2 artigli +11 (1d6+7) e morso +9 (1d6+3)
 ```
-**Difesa** **CA 20** · **pf 51** (7d8+21) · TS Tempra +5, Riflessi +5, Volontà +6 · RD 2/—, RI 19
+**Difesa** **CA 20** · **pf 52** (7d8+21) · TS Tempra +5, Riflessi +5, Volontà +6 · RD 2/—, RI 19
 
 **Attacco** Vel 12 m · **Mischia** 2 artigli +11 (1d6+7) e morso +9 (1d6+3)
 

@@ -85,6 +85,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Carta dei giganti del libretto (richiesta del DM dal thread dell'audit: «soluzi… | ✅ simulazione: nessuna breccia 50% → 54%, posizioni tenute 74% → 73%; scelta dal DM con la card del 2026-11-10 |
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Chiusura dell'ultimo scarto (DM: «cerca un valore plausibile per le baliste», c… | ✅ scarti 1 → 0; restano i 75 file in prosa non coperti |
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | **Corregge la #360 e la prima stesura di ADR-0118**: il «+2 effetto massa» dell… | ✅ scarti 13 → 1 (baliste AU +10, senza scheda). Libretto `ARC08-18`, DEF e `ARC08-19` non toccati: la carta dei massi resta a 14, da decidere |
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Prima correzione degli scarti del cancello dei numeri (DM: «correggi i problemi… | ✅ restano 13 AU di unità senza scheda uno contro uno |
+| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | ADR-0118 (scelta del DM «ADR più cancello in CI»): un numero entra solo se la r… | ✅ cancello in CI non bloccante fino al 2026-11-23 |
 | 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | Card del DM: D2 Krusk, Vreek e Ur-Vrax confermati come consigliati (titolo CANO… | ✅ applicate in ARC08-01/02/03, DEF-2, Guida agli scontri, Bestiario |
@@ -92,11 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
-| 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): fallback PyYAML di AUDIT-SCRIPTS chiuso come superato su card del D… | 🟡 D5 aperta per le voci non chiuse |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F5 moduli di plugin:… | ✅ |
-| 2026-11-08 | PIATTAFORMA-DI-SVILUPPO | Promozioni da testing a stable (ok del DM): ruff blocca e `compileall` esce (P3… | ✅ P3; P4 e P5 in parte |
 
 ## Le misure che si portano dietro
 

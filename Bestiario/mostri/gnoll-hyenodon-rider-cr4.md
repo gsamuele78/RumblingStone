@@ -14,7 +14,7 @@ velocita: 9 m (a piedi) / 15 m in sella
 iniziativa: +0
 attributi: For 15 Des 10 Cos 13 Int 8 Sag 11 Car 8
 attacchi:
-  - Mischia lancia da carica +5 (1d8+3; ×2 in carica)
+  - Mischia lancia da carica +3 (1d8+3; in carica +5 e danno ×2)
 voci:
   - Talenti: Combattere in Sella, Attacco in Sella, Carica Poderosa (Powerful Charge)
   - **Cavalcatura — ienodonte**: 5d8+12, 34 pf, CA 14, morso +9 (1d8+7) e far inciampare; TS Temp +6, Rifl +6, Vol +2

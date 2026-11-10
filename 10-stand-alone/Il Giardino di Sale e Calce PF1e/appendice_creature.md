@@ -172,12 +172,12 @@ velocita: 9 m
 iniziativa: +2
 sensi: Percezione +7
 attacchi:
-  - Scimitarra perfetta +11/+6 (1d6+6/18–20)
+  - Scimitarra perfetta +12/+7 (1d6+6/18–20)
   - Arco corto composito +8/+3 (1d6+3/×3)
 ```
-**Attacco** BAB +6 · BMC +9 · DMC 21
+**Attacco** BAB +6 · BMC +9 · DMC 21 · addestramento nelle armi (lame pesanti) +1
 
-**Statistiche** **Equipaggiamento** giaco di maglia sotto la veste da acquaiolo, scimitarra perfetta, arco corto composito (For +3), 2 pozioni di *cura ferite moderate*, 30 mo
+**Statistiche** **Talenti** Arma Focalizzata (scimitarra), Arma Specializzata (scimitarra) · **Equipaggiamento** giaco di maglia sotto la veste da acquaiolo, scimitarra perfetta, arco corto composito (For +3), 2 pozioni di *cura ferite moderate*, 30 mo
 
 **Tattiche** Non attaccano per primi. Seguono, contano, riferiscono a Tariq; tagliano la fune della gabbia se i PG scendono senza averli tolti di mezzo (P2).
 
@@ -197,9 +197,11 @@ velocita: 9 m
 iniziativa: +1
 sensi: Percezione +1
 attacchi:
-  - Lancia corta +7 (1d6+3)
+  - Lancia corta +7 (1d6+4)
 ```
 **Attacco** BAB +4 · BMC +6 · DMC 17
+
+**Statistiche** **Talenti** Arma Focalizzata (lancia corta), Arma Specializzata (lancia corta)
 
 **Tattiche** Si mettono fra i PG e Karkator. Non parlano. Se Karkator sviene o muore cadono in ginocchio, e il giorno dopo sono di nuovo padroni di sé.
 

@@ -3525,7 +3525,7 @@
      ],
      "attacco": [
       5,
-      4,
+      5,
       0
      ],
      "lotta": [
@@ -3622,7 +3622,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 3392,
+    "senza_note": 3414,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -3717,7 +3717,7 @@
     ],
     "gs": 11.0,
     "lotta": 4,
-    "mischia": "stocco +5 (1d6)",
+    "mischia": "stocco perfetto +5 (1d6−1)",
     "pf": 38,
     "provenienza": "copiate",
     "tipo": "Medium humanoid (elf), NE",
@@ -4418,9 +4418,7 @@
     ]
    ],
    "giudica": {
-    "come_la_fonte": [
-     "attacco"
-    ],
+    "come_la_fonte": [],
     "decisione": null,
     "esito": {
      "BAB": [
@@ -4444,9 +4442,9 @@
       0
      ],
      "attacco": [
-      3,
       6,
-      -3
+      6,
+      0
      ],
      "iniziativa": [
       5,
@@ -4467,13 +4465,7 @@
     },
     "file": "Bestiario/mostri/duergar-guerriero2-cr3.md",
     "provenienza": "trascritte",
-    "scarti": {
-     "attacco": [
-      3,
-      6,
-      -3
-     ]
-    },
+    "scarti": {},
     "template": null,
     "template_dichiarati": [],
     "verificabile": true
@@ -4534,7 +4526,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1195,
+    "senza_note": 1274,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_guerriero_2liv_3cr.html",
@@ -4628,7 +4620,7 @@
     ],
     "gs": 3.0,
     "lotta": 5,
-    "mischia": "spada bastarda perfetta +3 (1d10+3)",
+    "mischia": "spada bastarda perfetta +6 (1d10+3)",
     "pf": 20,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (dwarf, duergar), Fighter 2, LE",
@@ -7103,7 +7095,7 @@
       0
      ],
      "attacco": [
-      5,
+      3,
       3,
       0
      ],
@@ -7165,7 +7157,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 1090,
+    "senza_note": 1101,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -7240,7 +7232,7 @@
     ],
     "gs": 4.0,
     "lotta": null,
-    "mischia": "lancia da carica +5 (1d8+3; ×2 in carica)",
+    "mischia": "lancia da carica +3 (1d8+3; in carica +5 e danno ×2)",
     "pf": 11,
     "provenienza": "a mano",
     "tipo": "Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12",
@@ -11357,7 +11349,7 @@
      ],
      "attacco": [
       10,
-      9,
+      10,
       0
      ],
      "iniziativa": [
@@ -11435,7 +11427,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1395,
+    "senza_note": 1614,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/monaco pugno del destino cr7.htm",
@@ -11509,7 +11501,7 @@
     ],
     "gs": 7.0,
     "lotta": 9,
-    "mischia": "catena chiodata perfetta a due mani +10/+10 (2d4+4); raffica di colpi +9/+9/+9 (1d8+3, ki = magico)",
+    "mischia": "catena chiodata perfetta a due mani +10 (2d4+4); raffica di colpi +7/+7 (1d8+3, ki = magico)",
     "pf": 52,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE",
@@ -12701,6 +12693,232 @@
     "ts": [
      8,
      1,
+     2
+    ]
+   }
+  },
+  "Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 6,
+     "Cos": 16,
+     "Des": 17,
+     "For": 13,
+     "Int": 12,
+     "Sag": 10
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 6,
+     "Cos": 16,
+     "Des": 16,
+     "For": 12,
+     "Int": 10,
+     "Sag": 9
+    },
+    [
+     "array standard del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Int +1, Sag −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 8 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: nano Cos +2 Car -2",
+     "Des 16 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 16 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 16 **ricavata da pf 68 su 8 DV** — il vincolo batte l'array",
+     "For 12 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      8,
+      8,
+      0
+     ],
+     "Rifl": [
+      5,
+      5,
+      0
+     ],
+     "Temp": [
+      9,
+      9,
+      0
+     ],
+     "Vol": [
+      2,
+      2,
+      0
+     ],
+     "attacco": [
+      10,
+      11,
+      0
+     ],
+     "iniziativa": [
+      3,
+      3,
+      0
+     ],
+     "lotta": [
+      9,
+      9,
+      0
+     ],
+     "pf": [
+      68,
+      "32-104",
+      0
+     ],
+     "pf_media": 68
+    },
+    "file": "Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 10,
+       "n": 8,
+       "nome": "Guerriero"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      8,
+      10
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       8,
+       10
+      ]
+     ],
+     24,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 6,
+      "Cos": 16,
+      "Des": 17,
+      "For": 13,
+      "Int": 12,
+      "Sag": 10
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 8,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 1491,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {},
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      3,
+      "ricavata da Temp +9 (base +6)"
+     ],
+     "Des": [
+      3,
+      "ricavata da Rifl +5 (base +2)"
+     ],
+     "Sag": [
+      0,
+      "ricavata da Vol +2 (base +2)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      16,
+      "ricavata da pf 68 su 8 DV"
+     ],
+     "des_da_iniziativa": [
+      16,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      16,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      12,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 16",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     32,
+     104
+    ],
+    "file": "Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md",
+    "legale": true,
+    "media": 68,
+    "motivo": null,
+    "nuovo": "8d10+24",
+    "pf": 68,
+    "vecchio": "8d10+24"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 6,
+     "Cos": 16,
+     "Des": 17,
+     "For": 13,
+     "Int": 12,
+     "Sag": 10
+    },
+    "bab": 8,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 10,
+      "n": 8,
+      "nome": "Guerriero"
+     }
+    ],
+    "gs": 8.0,
+    "lotta": 9,
+    "mischia": "ascia da battaglia perfetta +10/+5 (1d8+1/x3)",
+    "pf": 68,
+    "provenienza": "a mano",
+    "tipo": "Umanoide Medio (nano), Guerriero 8, LB",
+    "ts": [
+     9,
+     5,
      2
     ]
    }
@@ -17236,7 +17454,7 @@
     "decisione": null,
     "esito": {
      "attacco": [
-      5,
+      6,
       5,
       0
      ],
@@ -17301,7 +17519,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1620,
+    "senza_note": 1621,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Underdark dovil runecaster deep diviner cr7.htm",
@@ -17365,7 +17583,7 @@
     ],
     "gs": 7.0,
     "lotta": 4,
-    "mischia": "spadone +1 a due mani +5 (2d6+2/19-20)",
+    "mischia": "spadone +1 a due mani +6 (2d6+2/19-20)",
     "pf": 37,
     "provenienza": "trascritte",
     "tipo": "Medium humanoid (dwarf, hill), Diviner 5 / Deep Diviner 1 / Fighter 1, N",
@@ -21743,7 +21961,7 @@
     "esito": {
      "attacco": [
       13,
-      12,
+      13,
       0
      ],
      "lotta": [
@@ -21829,7 +22047,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 8525,
+    "senza_note": 8534,
     "sestine_citate": [],
     "taglia": -1,
     "talenti": {
@@ -21901,7 +22119,7 @@
     ],
     "gs": 18.0,
     "lotta": 17,
-    "mischia": "spadone Large +13/+8 (3d6+7)",
+    "mischia": "spadone Large perfetto +13/+8 (3d6+7)",
     "pf": 137,
     "provenienza": "copiate",
     "tipo": "Large giant (ogre magi), LE",
@@ -41099,14 +41317,14 @@
   "conformita_controlla_pf_dado": [],
   "conformita_proponi_pf_dado": [],
   "conformita_riepilogo": {
-   "come_la_fonte": 4,
+   "come_la_fonte": 3,
    "da_correggere": 0,
    "decisioni_aperte": 0,
    "del_generatore": 0,
    "spiegati_da_template": 0,
-   "statblocchi": 119,
-   "tornano": 114,
-   "verificabili": 118
+   "statblocchi": 120,
+   "tornano": 116,
+   "verificabili": 119
   },
   "genera_attributi_controlla": [],
   "genera_attributi_proponi": [

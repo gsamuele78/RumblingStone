@@ -400,6 +400,9 @@ class TestRecintiNeiMaster(unittest.TestCase):
     # PNG con classi. 2026-11-08, F4 di ADR-0112: le schede PF1e entrano nel
     # rapporto; l'Asservito armato è passato a 35 pf con la scelta del DM
     # (mezze in su dopo il primo dado di classe).
+    # 2026-11-09, ADR-0118: il rapporto conta anche l'attacco. Gorthak (+21 contro
+    # +20) e Madre Dana (+18 contro +17) non tornano, nelle due copie della
+    # scheda: sono nella baseline del cancello dei numeri, e li decide il DM.
     RESIDUI: dict = {}
 
     def test_png_con_classi_primo_dado_al_massimo(self):
@@ -419,3 +422,116 @@ class TestRecintiNeiMaster(unittest.TestCase):
         for nome, n in per_file.items():
             self.assertLessEqual(n, self.RESIDUI.get(nome, 0),
                                  f"{nome}: {n} conti che non tornano, il tetto è {self.RESIDUI.get(nome, 0)}")
+
+
+class TestCancelloDeiNumeri(unittest.TestCase):
+    """ADR-0118: un numero entra solo se la regola lo ricostruisce, esatto."""
+
+    CAR = "For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16"
+
+    def test_il_morso_di_fauci(self):
+        # BAB +25, For +10, Enorme −2: +33; con Arma Focalizzata (morso) +34
+        self.assertEqual(C.attacco_atteso("Morso +33 in mischia (2d8+10/19-20)", 25, self.CAR, "Allerta", -2)[:2],
+                         (33, 33))
+        self.assertEqual(C.attacco_atteso("Morso +34 in mischia (2d8+10)", 25, self.CAR,
+                                          "Arma Focalizzata (morso)", -2)[:2], (34, 34))
+
+    def test_il_numero_gonfiato_non_torna(self):
+        scritto, atteso, _ = C.attacco_atteso("Morso +37 in mischia (2d8+10)", 25, self.CAR, "Allerta", -2)
+        self.assertNotEqual(scritto, atteso)
+
+    def test_arma_magica_e_focalizzata_superiore(self):
+        # Grimjaw: BAB +13, For 22 (+6), spada +1, Arma Focalizzata e Superiore: +22
+        r = C.attacco_atteso("*Spada Bastarda Demoniaca +1* +22 in mischia (1d10+9)", 13, "For 22, Des 13",
+                             "Arma Focalizzata (Spada Bastarda), Arma Focalizzata Superiore (Spada Bastarda)", 0)
+        self.assertEqual(r[:2], (22, 22))
+
+    def test_a_distanza_conta_la_destrezza(self):
+        # Dara: BAB +11 (8+3), Des 18 (+4), arco +3, Arma Focalizzata: +19
+        r = C.attacco_atteso("*Arco Lungo Composito Potente (+3) +3* +19 a distanza (1d8+6/x3)", 11,
+                             "For 16, Des 18", "Arma Focalizzata (arco lungo)", 0)
+        self.assertEqual(r[:2], (19, 19))
+
+    def test_il_potenziamento_in_mezzo_al_nome(self):
+        # Karkilan: «grande ascia +1 a due mani»: BAB +7, For +6, Grande −1, +1
+        r = C.attacco_atteso("grande ascia +1 a due mani +13/+8 (3d6+10/x3)", 7, "For 23", "Attacco Poderoso", -1)
+        self.assertEqual(r[:2], (13, 13))
+        # Rurik: «martello da guerra +1 gelido»
+        r = C.attacco_atteso("martello da guerra +1 gelido +14/+9 (1d8+3)", 10, "For 14",
+                             "Arma Focalizzata (martello da guerra)", 0)
+        self.assertEqual(r[:2], (14, 14))
+
+    def test_arma_focalizzata_vale_per_la_sua_arma(self):
+        # Karkator: il talento è sul tentacolo, il morso non lo prende
+        testo = "  - Morso +17 (2d8+9)\n  - 4 tentacoli +16 (2d6+4)\nTalenti Arma Focalizzata (tentacolo)"
+        self.assertEqual(C.attacco_atteso("Morso +17 (2d8+9)", 12, "For 29", testo, -4)[:2], (17, 17))
+        # il nome inglese del talento su una riga italiana vale: non c'è un'altra arma che lo porti
+        testo = "  - Mischia spada lunga perfetta +9 (1d8+4)\nFeats: Weapon Focus (longsword)"
+        self.assertEqual(C.attacco_atteso("spada lunga perfetta +9 (1d8+4)", 5, "For 14", testo, 0)[:2], (9, 9))
+
+    def test_in_ira_conta_la_forza_dell_ira(self):
+        # Zog'tar: BAB +15, For 36 in Ira (+13), Grande −1, ascia +1, Arma Focalizzata: +29
+        testo = "For 30 (36 in Ira), Des 20 · Talenti Arma Focalizzata (ascia)"
+        riga = "ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira"
+        self.assertEqual(C.attacco_atteso(riga, 15, "For 30 Des 20", testo, -1)[:2], (29, 29))
+        self.assertEqual(C.attacco_atteso("ascia a due mani +1 +26 (3d6+16)", 15, "For 30 Des 20", testo, -1)[:2],
+                         (26, 26))
+
+    def test_addestramento_nelle_armi_pf1e_solo_se_scritto(self):
+        # Skum guerriero 8: BAB +10, For +5, tridente +1, Focalizzata e Superiore, addestramento +1
+        testo = ("addestramento nelle armi (lance) +1 · Talenti Arma Focalizzata (tridente), "
+                 "Arma Focalizzata Superiore (tridente)")
+        self.assertEqual(C.attacco_atteso("Tridente +1 +19/+14 (1d8+9)", 10, "For 21", testo, 0)[:2], (19, 19))
+        senza = testo.replace("addestramento nelle armi (lance) +1 · ", "")
+        self.assertEqual(C.attacco_atteso("Tridente +1 +19/+14 (1d8+9)", 10, "For 21", senza, 0)[:2], (19, 18))
+
+    def test_perfetta_da_maestro_pf1e(self):
+        r = C.attacco_atteso("pugnale da maestro +5 (1d4+1)", 3, "For 12, Des 10", "", 0)
+        self.assertEqual(r[:2], (5, 5))
+
+    UNITA = ("### **OROG GUARDIE NERE**\n\n> Uno contro uno: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`\n\n"
+             "**AU (Ascia Bipenne+1):** +{au} | **Danno:** 1d12+7\n\n---\n"
+             "### **FANTERIA SENZA SCHEDA**\n\n**AU (Spada):** +10 | **Danno:** 1d8\n")
+
+    def test_l_au_e_l_attacco_della_creatura_singola(self):
+        # orog: ascia +13 nella scheda uno contro uno, quindi AU +13 (ARC08-02 §4).
+        # Il «+2 effetto massa» è della variante 2d6: +15 non torna.
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=13))
+        self.assertEqual([x["titolo"] for x in r], ["FANTERIA SENZA SCHEDA"])
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=15))
+        orog = [x for x in r if x["titolo"] == "OROG GUARDIE NERE"]
+        self.assertEqual((orog[0]["scritto"], orog[0]["atteso"]), (15, 13))
+
+    def test_l_unita_senza_scheda_non_ha_conto(self):
+        r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=13))
+        self.assertIsNone(r[0]["atteso"])
+
+    def test_la_balista_toglie_quattro_a_chi_e_medio(self):
+        # SRD 3.5, Siege Engines: -4 a una creatura Media, -6 a una Piccola, niente a una Grande
+        f = C.attacco_atteso
+        riga, tal = "Distanza balista pesante perfetta +10 (3d8+2/19-20)", "Arma Focalizzata (balista), Arma Focalizzata Superiore (balista)"
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, 0)[:2], (10, 10))
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, 1)[1], 9)      # Piccola: +1 di taglia, -6
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, -1)[1], 13)    # Grande: -1 di taglia, niente penalità
+        # l'ingegnere Esperto 4 che la punta da solo arriva a +3, non a +10
+        self.assertEqual(f("Distanza balista pesante perfetta +10 (3d8)", 3, "For 12 Des 14", "Arma Focalizzata (balista)", 0)[1], 3)
+
+    SINGOLA = ("#### **GIGANTI DELLE COLLINE (8 creature)**\n```\nSTATISTICHE UNITÀ (1 Gigante per unità):\n"
+               "- Attacco Unità: +{au} (Randello, 2d8+12)\n---\nSTATISTICHE CREATURA SINGOLA (Gigante delle Colline):\n"
+               "CM Gigante Grande; \nAttacco Base +{bab}, \nAtt Randello enorme +{att} (2d8+12); \n"
+               "Att a distanza Lancio massi +8 (2d6+8); \nFor 27, Des 8, Cos 19, Int 6, Sag 10, Car 7.\n```\n")
+
+    def test_la_creatura_singola_di_una_guida(self):
+        # gigante delle colline: BAB +9, For 27 (+8), Grande −1: randello +16, e l'AU è +16
+        f = C.numeri_delle_singole
+        self.assertEqual(f(ROOT / "prova.md", self.SINGOLA.format(au=16, bab=9, att=16)), [])
+        r = f(ROOT / "prova.md", self.SINGOLA.format(au=14, bab=8, att=14))
+        self.assertEqual([(x["campo"], x["scritto"], x["atteso"]) for x in r], [("attacco", 14, 15)])
+        r = f(ROOT / "prova.md", self.SINGOLA.format(au=18, bab=9, att=16))
+        self.assertEqual([(x["campo"], x["scritto"], x["atteso"]) for x in r], [("AU", 18, 16)])
+        # l'etichetta sceglie l'attacco: i massi sono +8
+        self.assertEqual(C._attacco_della_singola(next(C._singole(self.SINGOLA.format(au=16, bab=9, att=16)))[4],
+                                                  "Lancio Massi")[:2], (8, 8))
+
+    def test_il_cancello_sul_repo_e_verde(self):
+        self.assertEqual(C.cancello_numeri(), 0)

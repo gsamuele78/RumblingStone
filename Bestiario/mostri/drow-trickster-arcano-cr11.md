@@ -13,17 +13,17 @@ ts: Temp +5, Rifl +11, Vol +8
 attributi: For 8 Des 18 Cos 12 Int 20 Sag 12 Car 14
 velocita: 9 m
 attacchi:
-  - Mischia stocco +5 (1d6)
+  - Mischia stocco perfetto +5 (1d6−1)
 ```
 
 
-> [CANONE — DM 2026-09-23, D4] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Stocco +5 e balestra a mano +9 tornano già con +5.
+> [CANONE — DM 2026-09-23, D4] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Balestra a mano +9 torna già con +5. Lo stocco con For 8 dà +4: il +5 della scheda è di uno **stocco perfetto** (BAB +5, For −1, +1 perfetto), e il danno è 1d6−1 `[CANONE — regola, ADR-0118]`.
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *armatura magica*, +1 anello), contatto 15, colto alla sprovvista 15. Iniziativa +4. Vel 9 m.
 **TS** Temp +5, Rifl +11, Vol +8 (+2 razziale vs incantesimi, +2 vs ammaliamenti). **BAB/Lotta** +5/+4. **RI 21**.
-**Mischia** stocco +5 (1d6). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
+**Mischia** stocco perfetto +5 (1d6−1). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
 **Attacco furtivo** +3d6.
 **Car** For 8, Des 18, Cos 12, Int 20, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **individuazione delle trappole**, schivare prodigioso, **prestidigitazione a distanza**.
