@@ -1247,7 +1247,7 @@ sono rimaste identiche byte per byte.
 | Strumenti per sistema del file | `regole_diverse`, capacità `creature.conformita` | fatto (F4) |
 | Funzioni registrate nel plugin | `[moduli]`, `sistemi/<id>/codice/` | fatto (F5): «potenze» e «somma_px» |
 | Schema JSON per ogni file di dati (ADR-0112 §3) | — | **non ancora nel codice**: `sistemi.py --check` controlla la struttura del plugin, non i campi dei file di dati |
-| Regole complete delle creature (lotti 1-5, #369-#375) | capacità `creature.talenti` (`sistemi/<id>/dati/talenti.toml`, regola in `dmcore/talenti.py`); in `creature.toml` le tabelle `[tratti_tipo]` (costrutti e non morti senza Costituzione, melme e parassiti senza Intelligenza) e `[pf_bonus_costrutti]` (pf bonus per taglia) | fatto: tratti dei tipi 45/45 in 3.5 e PF1e, bonus dei costrutti 9/9; li usa `genera_creatura` (e `creature_pf1e` per PF1e) |
+| Regole complete delle creature (lotti 1-5, #369-#375) | capacità `creature.talenti` (`sistemi/<id>/dati/talenti.toml`, regola in `dmcore/talenti.py`; in PF1e anche i requisiti di 18 classi di prestigio in `[requisiti]`); in `creature.toml` le tabelle `[tratti_tipo]` (costrutti e non morti senza Costituzione, melme e parassiti senza Intelligenza) e `[pf_bonus_costrutti]` (pf bonus per taglia) | fatto: tratti dei tipi 45/45 in 3.5 e PF1e, bonus dei costrutti 9/9; li usa `genera_creatura` (e `creature_pf1e` per PF1e) |
 | Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
 
 Riferimenti: [ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
