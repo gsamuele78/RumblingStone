@@ -103,3 +103,4 @@ Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
 
 - `python3 scripts/riscontro_srd.py`: il riscontro sull'SRD PF1e in cache, dove la regola lo dichiara.
 - `python3 scripts/conformita_statblocchi.py --master`: i template Advanced e Giant entrano nel conto.
+- `python3 scripts/conformita_statblocchi.py --cancello-moduli --severo`: le schede ```statblocco``` di un modulo PF1e contro le regole del PRD (BAB, TS, BMC, DMC, contatto e sprovvista, sensi, pf, incantesimi, incanalare; ADR-0119).

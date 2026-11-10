@@ -78,8 +78,8 @@ gs: 12
 tipo: Umano chierico 13 di Hasharr · CM Medio
 ca: 25
 ca-dettaglio: contatto 11, colto alla sprovvista 25 (+11 armatura, +3 scudo, +1 deviazione); 31 con veste magica ×2
-pf: 88
-pf-dado: 13d8+26
+pf: 101
+pf-dado: 13d8+39
 ts: Tem +12, Rif +6, Vol +16
 attributi: For 12 Des 10 Cos 14 Int 13 Sag 22 Car 8
 velocita: 6 m
@@ -112,7 +112,7 @@ ca: 24
 ca-dettaglio: contatto 12, colto alla sprovvista 22 (+7 armatura, +3 scudo, +2 Des, +2 naturale)
 pf: 115
 pf-dado: 2d10+8d10+60
-ts: Tem +11, Rif +7, Vol +6 (+2 contro la paura)
+ts: Tem +11, Rif +7, Vol +8 (+2 contro la paura)
 attributi: For 21 Des 15 Cos 21 Int 10 Sag 12 Car 4
 velocita: 6 m, nuotare 12 m
 iniziativa: +6
