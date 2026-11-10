@@ -163,6 +163,7 @@ def liste_35_in_pf1e() -> dict:
     lxp = {k: v for k, v in M.lessico("scripts/lessico_it_pf1.tsv", "pf1").get("incantesimo", {}).items()}
     prd = _liste_prd()
     inc = M.toml("sistemi/dnd35/dati/incantesimi.toml")["liste"]
+    sposta = M.toml("sistemi/pf1e/dati/incantesimi.toml").get("livello_pf1e", {})
     voci, sb, nv, assenti = 0, [], [], 0
     for cl, funzioni in inc.items():
         lista = prd.get(CLASSE_EN.get(cl, "").lower(), {})
@@ -175,11 +176,14 @@ def liste_35_in_pf1e() -> dict:
                         nv.append(f"{cl}.{fn}.{lv}: {n}")
                         continue
                     dove = sorted(l for l, xs in lista.items() if en in xs)
-                    if int(lv) not in dove:
+                    lv_pf1e = sposta.get(cl, {}).get(n, int(lv))   # il plugin pf1e lo sposta o lo toglie
+                    if lv_pf1e == -1 and not dove:
+                        continue
+                    if lv_pf1e not in dove:
                         if not dove:
                             assenti += 1
                         sb.append({"riga": f"{cl}.{fn} {lv}°", "campo": n,
-                                   "plugin": f"{en} al {lv}°",
+                                   "plugin": f"{en} al {lv_pf1e}°",
                                    "fonte": f"PF1e al {dove[0]}°" if dove else "non nella lista PF1e della classe"})
     return _riga("liste d'incantesimi 3.5 riusate dal plugin pf1e (livello PF1e)", voci, voci,
                  voci - len(sb) - len(nv), sb, nv=nv,

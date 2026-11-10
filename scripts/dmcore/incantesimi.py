@@ -205,6 +205,19 @@ def _solo_pf1e(id_: str) -> "dict[str, dict[int, list[tuple[str, str]]]]":
     return PF1E_SOLO
 
 
+def _livelli_pf1e(classe: str, lista: "dict[int, list[str]]", livello: int) -> "list[str]":
+    """Le voci della cella 3.5 al livello PF1e: tolte quelle che il PRD sposta o non ha.
+
+    `[livello_pf1e]` dei dati pf1e (lotto 2 delle regole complete): *metamorfosi*
+    è 4° per il mago 3.5 e 5° in PF1e; *cura ferite minori* in PF1e non c'è.
+    """
+    d = _S.regole("pf1e").dati("creature.incantesimi").get("livello_pf1e", {})
+    sposta = d.get(liste()["CANONICA"].get(classe, classe), d.get("mago", {}) if classe == "stregone" else {})
+    fuori = [v for v in lista.get(livello, []) if v not in sposta]
+    dentro = [v for lv, voci in lista.items() for v in voci if sposta.get(v) == livello and v not in fuori]
+    return fuori + dentro
+
+
 def __getattr__(nome: str):
     if nome in _NOMI_LISTE:
         return liste()[nome]
@@ -256,7 +269,12 @@ def scegli(classe: str, funzione: str, slot: tuple[int, ...],
     for livello, quanti in enumerate(slot):
         if not quanti or livello == 0 or livello not in lista:
             continue
-        scelti = rng.sample(lista[livello], min(quanti, len(lista[livello])))
+        voci = lista[livello]
+        if pf1e:
+            voci = _livelli_pf1e(canonica, lista, livello)
+            if not voci:
+                continue
+        scelti = rng.sample(voci, min(quanti, len(voci)))
         if pf1e:
             aggiunte = solo_pf1e().get(canonica, {}).get(livello)
             if aggiunte:
