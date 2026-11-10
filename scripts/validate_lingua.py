@@ -156,14 +156,17 @@ def righe_da_controllare(testo: str):
         yield n, INLINE.sub(lambda m: MASCHERA * len(m.group(0)), riga)
 
 
-def controlla(f: Path) -> tuple[list[str], list[str]]:
+def controlla(f: Path, d_eufonica_blocca: bool = False) -> tuple[list[str], list[str]]:
+    """`d_eufonica_blocca`: la *d* eufonica è nel canale testing fino al 2026-11-24
+    (ADR-0120, ADR-0099), quindi di suo è un avviso; con True è un errore."""
     errori: list[str] = []
     avvisi: list[str] = []
     testo = f.read_text(encoding="utf-8", errors="ignore")
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
     righe = list(righe_da_controllare(testo))
     for n, forma in d_eufonica_righe(righe):
-        errori.append(f"{rel}:{n}: d eufonica fuori norma (ad/ed solo davanti alla stessa vocale) — {forma}")
+        (errori if d_eufonica_blocca else avvisi).append(
+            f"{rel}:{n}: d eufonica fuori norma (ad/ed solo davanti alla stessa vocale) — {forma}")
     for n, riga in righe:
         for pattern, perche in ERRORI:
             if re.search(pattern, riga, re.I):
@@ -190,6 +193,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("files", nargs="*", help="file da controllare (default: tutto il contenuto)")
     ap.add_argument("--strict", action="store_true", help="gli avvisi diventano errori")
+    ap.add_argument("--d-eufonica", action="store_true",
+                    help="la d eufonica fuori norma è un errore (canale testing fino al "
+                         "2026-11-24, ADR-0120: senza, è un avviso)")
     ap.add_argument("--avvisi", action="store_true",
                     help="elenca gli avvisi; senza, se ne stampa solo il conto per tipo")
     args = ap.parse_args(argv)
@@ -200,7 +206,7 @@ def main(argv=None) -> int:
     for f in bersagli:
         if not f.is_file():
             continue
-        e, a = controlla(f)
+        e, a = controlla(f, d_eufonica_blocca=args.d_eufonica)
         errori += e
         avvisi += a
 
@@ -218,6 +224,7 @@ def main(argv=None) -> int:
         per_tipo: dict[str, int] = {}
         for a in avvisi:
             tipo = re.sub(r"^.*?:\d+: ", "", a)   # «file:riga: perché»
+            tipo = tipo.split(" — «")[0]           # senza la forma trovata
             per_tipo[tipo] = per_tipo.get(tipo, 0) + 1
         print("  ⚠ avvisi (--avvisi per l'elenco): " + " · ".join(
             f"{n} {tipo}" for tipo, n in sorted(per_tipo.items(), key=lambda kv: -kv[1])))

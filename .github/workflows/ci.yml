@@ -273,6 +273,16 @@ jobs:
       - name: Lingua italiana — refusi meccanici
         run: python scripts/validate_lingua.py
 
+      # ADR-0120: la d eufonica (ad/ed solo davanti alla stessa vocale) si misura
+      # con una regex tarata su LanguageTool. Controllo nuovo, quindi canale
+      # testing di ADR-0099: qui è un errore ma il passo non blocca; nel passo
+      # sopra è un avviso. Promozione dal 2026-11-24 (14 giorni, 10 corse su
+      # main, nessun falso allarme non spiegato): si toglie continue-on-error
+      # e --d-eufonica diventa il comportamento di sempre.
+      - name: D eufonica — non bloccante fino al 2026-11-24 (ADR-0120, testing)
+        continue-on-error: true
+        run: python scripts/validate_lingua.py --d-eufonica
+
       # Il passo non bloccante `validate_prosa.py` (calchi, tic a densita') e'
       # uscito il 2026-10-22, lotto 7e di AVVENTURE-COMMUNITY: le stesse regole le
       # ricalcola e le pesa MQM (punteggio_mqm, piu' sotto), che chiama

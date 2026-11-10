@@ -25,7 +25,9 @@ def _testo(s: str) -> tuple[list[str], list[str]]:
     with tempfile.TemporaryDirectory() as d:
         f = Path(d) / "prova.md"
         f.write_text(s, encoding="utf-8")
-        return controlla(f)
+        # La d eufonica è in testing (ADR-0120): qui si prova il controllo, quindi
+        # la si legge come errore, come fa il passo di CI con --d-eufonica.
+        return controlla(f, d_eufonica_blocca=True)
 
 
 class TestRefusiVeri(unittest.TestCase):
@@ -80,6 +82,17 @@ class TestRefusiVeri(unittest.TestCase):
     def test_doppio_spazio_fra_parole(self):
         errori, _ = _testo("Due  spazi fra le parole.")
         self.assertTrue(errori)
+
+
+class TestCanaleTesting(unittest.TestCase):
+
+    def test_la_d_eufonica_di_suo_e_un_avviso(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "prova.md"
+            f.write_text("Canta ad ogni notte.", encoding="utf-8")
+            errori, avvisi = controlla(f)
+        self.assertEqual(errori, [])
+        self.assertTrue(any("d eufonica" in a for a in avvisi))
 
 
 class TestFalsiPositivi(unittest.TestCase):

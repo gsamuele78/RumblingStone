@@ -91,7 +91,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
-| 2026-11-09 | CODA-DEL-SECONDO-LETTORE | Punto 4: la *d* eufonica (D3) | ✅ norma in `editorial-standards.md` §4 e nel REGISTRO; `validate_lingua.py` la blocca (tarata su LanguageTool ST_03_001: 53 concordi, residui solo *o o…* ed et… |
+| 2026-11-09 | CODA-DEL-SECONDO-LETTORE | Punto 4: la *d* eufonica (D3) | ✅ norma in `editorial-standards.md` §4 e nel REGISTRO; `validate_lingua.py --d-eufonica` la segnala in canale testing, non bloccante fino al 2026-11-24 (tarata… |
 | 2026-11-09 | BOX-DI-LUOGO-E-AREA-CHIAVE | B1 template dell'area chiave in `campaign/templates/`, 3.5 e PF1e (D6), con ese… | ✅ fatto |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Classi, griglie e armature del plugin PF1e (ADR-0119 lotto 2, richiesta del DM… | ✅ dati scritti e riletti col lettore dell'audit; il collegamento agli strumenti e la misura sono del thread della #365 |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Regole PF1e del cancello delle schede dal PRD (ADR-0119):… | ✅ prova: 27 mutazioni bocciate, promozione proposta 2026-11-23 |
