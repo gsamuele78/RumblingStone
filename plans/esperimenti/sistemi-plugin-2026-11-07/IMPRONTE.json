@@ -15,13 +15,13 @@
   "uscita": 0
  },
  "genera_creatura_gs14": {
-  "byte": 1133,
-  "sha256": "dfbbab1f2e8ee05c8626bac8841a5d67d0cf669af9d9c10753413be4dca53b9e",
+  "byte": 1773,
+  "sha256": "bb9870848629ff256aaab1bc9c8f5df38e11917ae3d91f0273dd4ee9e9512bd9",
   "uscita": 0
  },
  "genera_creatura_gs7": {
-  "byte": 1126,
-  "sha256": "4e89a23502e3414fb80cd425e5b0773725cb045fba0fcb7143fb4abfb223fd13",
+  "byte": 1459,
+  "sha256": "117efe55adad879552d2cd8036344192ff513fddc61774044c10d57cc503adca",
   "uscita": 0
  },
  "suggest_encounter": {
