@@ -300,7 +300,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
     *   **Testa Centrale (Strategica):** Una volta per scontro, può rinunciare a un attacco per fornire a un'unità alleata un bonus di +2 al morale per 1 round.
     *   **Testa Destra (Vigile):** Fornisce il talento Iniziativa Migliorata (+4 Iniziativa totale).
 
-**Talenti:** Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro.
+**Talenti:** Allerta, Arma Focalizzata (randello enorme), Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro; Iniziativa Migliorata dalla testa destra. `[CANONE — regola, ADR-0118]: 15 DV danno sei talenti e Iniziativa Migliorata la dà la testa destra, quindi il sesto è libero; con Arma Focalizzata il randello torna a +21 (BAB +11, For +9, −1 taglia, +1 arma, +1)`
 **Equipaggiamento:** *Corazza di Piastre Grande +1*, 3 *Randelli Enormi +1* (due in pugno, uno di riserva), 6 Giavellotti Grandi.
 
 > **Verifica 3.5 (versione più forte)**: ettin dell'SRD avanzato a 15 DV
@@ -379,7 +379,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Incantesimi:** Lancia come un Chierico di 15° livello. **Domini:** Guerra, Terra.
     *   **Incantesimi Preparati (LI 15°):** *Aura Sacra*, *Parola del Potere Stordire* (D), *Terremoto* (D), *Guarigione* (x2), *Lama di Barriera* (D), *Colpo Infuocato* (D), *Potere Divino* (D), *Muro di Pietra*, *Preghiera*, ecc. (elenco completo nella Guida DM).
 
-**Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
+**Talenti:** Scacciare Extra, Arma Focalizzata (martello da guerra) dal dominio della Guerra (gli altri talenti non sono scritti). `[CANONE — regola, ADR-0118]: il dominio della Guerra dà Arma Focalizzata nell'arma preferita di Moradin (SRD), e il martello torna a +18 (BAB +11, For +4, +2 arma, +1)`
 **Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti del Potere Orchesco +2* e *Mantello del Carisma +2*.
 
 **Tattiche:** *Prima del combattimento*: al mattino prepara *Banchetto degli Eroi* per gli ufficiali e consacra le armi (Benedizione della Forgia); prima di un assalto lancia *Aura Sacra* su sé e sulle Cantitrici vicine, e *Libertà di Movimento* su Re Thorek. *Durante il combattimento*: round 1 Canto di Battaglia (+2 a tutti gli alleati entro 18 m per 10 round); poi tiene in piedi i comandanti, con *Guarigione* sul re e *Cura Ferite Leggere di Massa* dopo ogni soffio; *Muro di Pietra* chiude una breccia, *Terremoto* lontano dalle mura spezza una carica. Scaccia i non morti se ne compaiono. Combatte col martello solo se un nemico le arriva addosso, e allora prima *Potere della Giustizia* e *Potere Divino*. *Morale*: non abbandona il re né il tempio; sotto i 40 pf si ritira dietro le Cantitrici, si cura e torna.
@@ -828,8 +828,10 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 ### **FANTERIA HOBGOBLIN (Standard)**
 *Fanteria Leggera, 1ª Linea d'Assalto (30 Unità)*
 
+> Uno contro uno: `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (Combattente 3, GS 2, spada lunga perfetta +6).
+
 **PFU:** 10/10 | **DU:** 18 | **Morale Iniziale:** +2
-**AU (Spada Lunga):** +8 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09, INVENTARIO D4: +8 = spada lunga +6 del regolare hobgoblin (Bestiario, guerriero 3) più il +2 «media» della regola delle unità; il +10 della chat non esce da nessuna scheda 3.5 o PF1e]`
+**AU (Spada Lunga):** +6 | **Danno:** 1d10+3 `[CANONE — DM 2026-11-09: l'AU è l'attacco della creatura singola (§4), senza il +2 della variante 2d6: +6 è la spada lunga perfetta del regolare hobgoblin (Bestiario, combattente 3). Prima +8; il +10 della chat non esce da nessuna scheda 3.5 o PF1e]`
 **Movimento:** 6m
 
 **Capacità Speciali:**
@@ -840,19 +842,23 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 ### **FANTERIA ORCHESCA**
 *Carne da Cannone, 1ª Linea d'Assalto (15 Unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «FANTERIA ORCHESCA» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 8/10 | **DU:** 13 | **Morale Iniziale:** +1
-**AU (Ascia Grande):** +6 | **Danno:** 1d8+2
+**AU (Ascia Grande):** +5 | **Danno:** 1d8+2 `[CANONE — DM 2026-11-09: l'AU è l'attacco della creatura singola (§4), senza il +2 della variante 2d6, prima +6]`
 **Movimento:** 9m
 
 **Capacità Speciali:**
-*   **Furia Orchesca:** Se l'unità ha 4 PFU o meno, il suo AU aumenta a +8.
-*   **Carica Selvaggia:** Nel primo round di carica, il loro AU è +8 ma la loro DU scende a 12.
+*   **Furia Orchesca:** Se l'unità ha 4 PFU o meno, il suo AU aumenta a +7.
+*   **Carica Selvaggia:** Nel primo round di carica, il loro AU è +7 ma la loro DU scende a 12.
 
 ---
 <div style="page-break-before:always"></div>
 
 ### **HOBGOBLIN GUERRIERI (Warrior 3)**
 *Fanteria Pesante, 2ª Linea d'Assalto (20 Unità)*
+
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «HOBGOBLIN WARRIOR 3» (la creatura singola, nello stesso riquadro dell'unità).
 
 **PFU:** 11/11 | **DU:** 17 | **Morale Iniziale:** +1
 **AU (Lancia):** +5 | **Danno:** 1d8+2
@@ -889,6 +895,8 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **GOBLIN WORG RIDERS**
 *Cavalleria Leggera, Fiancheggiatori (5 Unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «GOBLIN WORG RIDERS» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 10/10 | **DU:** 17 | **Morale Iniziale:** 0
 **AU (Lancia + Morso):** +5 / +7 | **Danno:** 1d6 / 1d6+3
 **Movimento:** 15m
@@ -901,8 +909,11 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **GIGANTI DELLE COLLINE**
 *Artiglieria Pesante, 3ª Linea (8 Unità, 1 gigante per unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «GIGANTI DELLE COLLINE» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 15/15 | **DU:** 20 | **Morale Iniziale:** +1
-**AU (Lancio Massi):** +14 | **Danno:** 2d6+8 (Gittata 36m)
+**AU (Randello):** +16 | **Danno:** 2d8+12 `[CANONE — DM 2026-11-09: l'AU è l'attacco della creatura singola (§4), senza il +2 della variante 2d6: BAB +9, For 27, Grande; prima +14]`
+**AU (Lancio Massi):** +8 | **Danno:** 2d6+8 (Gittata 36m) `[CANONE — regola, ADR-0118: il masso del gigante delle colline è +8 nell'SRD (BAB +9, Des −1, taglia −1, +1 razziale); il +14 era il randello]`
 **Movimento:** 12m
 
 **Capacità Speciali:**
@@ -915,8 +926,10 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **ETTIN STANDARD**
 *Supporto Pesante, 3ª Linea (2 Unità, 1 Ettin per unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «ETTIN STANDARD» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 13/13 | **DU:** 18 | **Morale Iniziale:** +0
-**AU (Mazzafrusto Pesante):** +11 (doppio attacco) | **Danno:** 2d8+4
+**AU (Mazzafrusto Pesante):** +12 (doppio attacco) | **Danno:** 2d8+6 `[CANONE — regola, ADR-0118: ettin dell'SRD, For 23; prima +11 con For 19]`
 **Movimento:** 12m
 
 **Capacità Speciali:**
@@ -930,7 +943,7 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 > Uno contro uno: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (Guerriero 6, GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10). ⚠ **Non SRD**: l'orog è `[Private source — Monsters of Faerûn / Races of Faerûn]` `[CANONE — DM 2026-10-19, D10]`.
 
 **PFU:** 13/13 | **DU:** 19 | **Morale Iniziale:** +3
-**AU (Ascia Bipenne+1):** +15 | **Danno:** 1d12+7 `[CANONE — DM 2026-11-09, INVENTARIO D4: +15 = ascia +13 della scheda uno contro uno più il +2 «media» della regola delle unità, prima +12]`
+**AU (Ascia Bipenne+1):** +13 | **Danno:** 1d12+7 `[CANONE — DM 2026-11-09: l'AU è l'attacco della creatura singola (§4), senza il +2 della variante 2d6: +13 è l'ascia della scheda uno contro uno. Era +12, poi +15 per errore]`
 **Movimento:** 6m
 
 **Capacità Speciali:**
@@ -945,16 +958,22 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 *Unità di Incantatori, 3ª Linea*
 
 #### **HOBGOBLIN WAR ADEPTS (2 Unità, 20 stregoni)**
+
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «HOBGOBLIN WAR ADEPTS» (la creatura singola, nello stesso riquadro dell'unità).
 **PFU:** 8/8 | **DU:** 16 | **Morale:** +1
-**AU (Raggio Rovente):** +7 | **Danno:** 4d6 fuoco
+**AU (Raggio Rovente):** +5 | **Danno:** 4d6 fuoco `[CANONE — regola, ADR-0118: contatto a distanza, BAB +3 e Des +2; prima +7]`
 **Capacità:** **Palla di Fuoco (2/battaglia):** Infligge 1d4+1 PFU a un'unità bersaglio (TS Rifl CD 16 dimezza).
 
 #### **DOOM HAND WARPRIESTS (1.5 Unità, 15 chierici)**
+
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «DOOM HAND WARPRIESTS» (la creatura singola, nello stesso riquadro dell'unità).
 **PFU:** 13/13 | **DU:** 19 | **Morale:** +2
 **AU (Martello da Guerra):** +8 | **Danno:** 1d8+2
 **Capacità:** **Preghiera (3/battaglia):** Fornisce +1 ad AU/DU a 3 unità alleate e -1 alle unità nemiche per 5 round. **Dissolvi Magie (2/battaglia).**
 
 #### **SHAMANI DRACONICI (1 Unità, 10 chierici)**
+
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «SHAMANI DRACONICI» (la creatura singola, nello stesso riquadro dell'unità).
 **PFU:** 10/10 | **DU:** 17 | **Morale:** +1
 **AU (Lancia Lunga):** +5 | **Danno:** 1d8+1
 **Capacità:** **Scaglie del Drago (1/battaglia):** Fornisce a un'unità alleata Resistenza al Fuoco 10 e +2 alla DU.
@@ -968,6 +987,8 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **GUERRIERI NANICI VETERANI**
 *Difensori delle Mura, Fanteria Pesante (15 Unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «GUERRIERI NANICI VETERANI» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 11/11 | **DU:** 20 | **Morale Iniziale:** +1
 **AU (Ascia da Guerra):** +9 | **Danno:** 1d10+4
 **Movimento:** 6m
@@ -980,6 +1001,8 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ---
 ### **BALESTRIERI NANICI**
 *Difensori delle Torri, Fanteria a Distanza (8 Unità)*
+
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «BALESTRIERI NANICI» (la creatura singola, nello stesso riquadro dell'unità).
 
 **PFU:** 9/9 | **DU:** 17 | **Morale Iniziale:** 0
 **AU (Balestra Pesante):** +8 | **Danno:** 1d10+3 (Gittata 36m)
@@ -996,6 +1019,8 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **NANI D'ÉLITE (GUARDIA DEL CANCELLO)**
 *Fanteria Pesante d'Élite (5 Unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «NANI D'ÉLITE» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 12/12 | **DU:** 20 | **Morale Iniziale:** +2
 **AU (Ascia da Battaglia):** +9 | **Danno:** 1d8+4
 **Movimento:** 6m
@@ -1009,12 +1034,14 @@ Scheda intera: `Bestiario/mostri/hobgoblin-sergente-cr5.md` `[CANONE — DM 2026
 ### **INGEGNERI DA GUERRA**
 *Supporto Tecnico e Macchine d'Assedio (4 Unità)*
 
+> Uno contro uno: `08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md` § «INGEGNERI DA GUERRA» (la creatura singola, nello stesso riquadro dell'unità).
+
 **PFU:** 8/8 | **DU:** 16 | **Morale Iniziale:** -1
 **AU (Martello da Guerra):** +4 | **Danno:** 1d8+1
 **Movimento:** 6m
 
 **Capacità Speciali:**
 *   **Operare Baliste Pesanti (6 totali):**
-    *   **Balista Pesante Nanica:** AU +10, Danno 3d8, incremento di gittata 36 m (SRD). Richiede un round per ricaricare.
+    *   **Balista Pesante Nanica:** AU +10, Danno 3d8+2, incremento di gittata 36 m (SRD). Gli ingegneri caricano, un mastro artigliere punta [CANONE — regola, ADR-0118: SRD 3.5, la balista dà −4 a una creatura Media; la punta un mastro artigliere, `Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md`]. Richiede un round per ricaricare.
 *   **Riparazione Rapida (3/giorno):** Ripristina 1d4 danni strutturali a una sezione di mura o a un cancello.
 *   **Trappole (1/battaglia):** La prima unità nemica che attraversa un'area di 6m subisce 2d6 danni.

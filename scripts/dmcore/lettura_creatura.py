@@ -553,7 +553,11 @@ def composizione(testo: str, tipo: str) -> "tuple[list[Gruppo], bool]":
 
 
 def leggi(p: Path) -> "Scheda | None":
-    t = p.read_text(encoding="utf-8", errors="replace")
+    return leggi_testo(p.read_text(encoding="utf-8", errors="replace"), p)
+
+
+def leggi_testo(t: str, p: Path) -> "Scheda | None":
+    """Come `leggi`, su un testo gia' letto: un recinto di un master con la sua prosa."""
     if "[POINTER" in t or "[RIMANDO]" in t:
         return None
     m = BLOCCO.search(t)

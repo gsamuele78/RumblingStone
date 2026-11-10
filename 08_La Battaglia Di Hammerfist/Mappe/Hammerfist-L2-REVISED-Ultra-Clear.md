@@ -648,7 +648,7 @@ Le tre rotte tratteggiate sulla griglia sopra SONO la MAPPA 3 della guida. Fasi 
 
 ### 🌍 AMBIENTE / ⚔️ TATTICHE / 🔄 EVOLUZIONE (MAPPA 1+3)
 - **Ambiente:** pendio ~27% dalle mura alla piana (righe 05-100; fuori strada metà velocità, Equilibrio CD 12 di corsa), la strada a tornanti larga 6 m è l'unico tratto a velocità piena; fossato 6 m (Nuotare CD 15, 2 round per attraversarlo); sul pendio solo sterpi, massi e qualche pino — poca copertura per gli attaccanti fino alle mura.
-- **Tattiche:** le 3 fasi sopra; priorità di tiro nanica: capi visibili > giganti sulla strada > ondate (baliste +18, 3d8+10, incremento di gittata 36 m, ricarica 2 round).
+- **Tattiche:** le 3 fasi sopra; priorità di tiro nanica: capi visibili > giganti sulla strada > ondate (baliste +10, 3d8+2, incremento di gittata 36 m, ricarica 2 round `[CANONE — regola, ADR-0118: il +18 non si ricostruiva; +10 è il mastro artigliere, Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md]`).
 - **Evoluzione:** | A — schieramento (com'è disegnata) | B — round 6+: fanteria a contatto, ariete al cancello | C — notte 1: ritirata agli accampamenti (500 m-1 km) + rampa macerie | D — Giorno 2: assalto alla breccia (stati B/C/D di MAPPA 2A REVISED) |
 
 ---

@@ -14,4 +14,4 @@ mezzi_dopo_il_primo = "giu"
 
 [conti]
 # Ogni conto qui ha la sua regola SRD 3.5 (tabella in conformita_statblocchi.py).
-fatti = ["pf", "CA", "prosa", "iniziativa", "lotta", "CD", "corrompere_acqua", "ereditate", "scurovisione"]
+fatti = ["pf", "CA", "prosa", "iniziativa", "attacco", "lotta", "CD", "corrompere_acqua", "ereditate", "scurovisione"]
