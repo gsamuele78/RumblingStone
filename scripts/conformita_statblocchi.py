@@ -1098,7 +1098,11 @@ def conti_di_classe(b: dict, sistema: str) -> "list[tuple]":
     tal = set(talenti_ or ())
     tipo, _, _ = _tipo_e_razza(sb, regole)
     tipi = S.dati(sistema, "creature.costruzione").get("tipi", {})
-    classi = _livelli_di_classe(" ".join([(sb.tipo or "").split("·")[0], sb.nome or ""]), regole)
+    # Le classi stanno nella riga `tipo`; solo se lì non ce n'è si guarda il nome.
+    # Mai tutti e due: «mago 5» scritto in entrambi contava dieci livelli, i DV
+    # razziali uscivano negativi e BAB e TS non partivano.
+    classi = (_livelli_di_classe((sb.tipo or "").split("·")[0], regole)
+              or _livelli_di_classe(sb.nome or "", regole))
     dv = sum(int(n) for n, _ in DADI.findall(sb.pf_dado or ""))
     razziali = dv - sum(n for _, n in classi) if dv else None
     if razziali is None and classi and _tipo_e_razza(sb, regole)[1]:

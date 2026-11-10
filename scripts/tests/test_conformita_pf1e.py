@@ -152,6 +152,19 @@ class LeSchedeGiustePassano(unittest.TestCase):
     def test_ladro_con_schivare(self):
         self.assertEqual(campi(LADRO), [])
 
+    def test_la_classe_scritta_anche_nel_nome_non_conta_due_volte(self):
+        # «ladro 4» nel nome e nel tipo: prima erano otto livelli, DV razziali
+        # negativi, e BAB e TS non partivano (un numero sbagliato passava)
+        doppio = LADRO.replace("nome: Ladro con Schivare", "nome: Umano ladro 4")
+        self.assertEqual(campi(doppio), [])
+        self.assertIn("BAB", [c for c, _ in campi(doppio.replace("**BAB** +3", "**BAB** +4"))])
+        self.assertIn("TS vol", [c for c, _ in campi(doppio.replace("Volontà +2", "Volontà +5"))])
+
+    def test_la_classe_solo_nel_nome_si_legge_ancora(self):
+        nel_nome = LADRO.replace("nome: Ladro con Schivare", "nome: Ladro 4 con Schivare").replace(
+            "tipo: Umano ladro 4", "tipo: Umano")
+        self.assertIn("BAB", [c for c, _ in campi(nel_nome.replace("**BAB** +3", "**BAB** +4"))])
+
     def test_skum_con_livelli_di_classe(self):
         self.assertEqual(campi(SKUM), [])
 
