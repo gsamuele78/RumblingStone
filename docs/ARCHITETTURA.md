@@ -1165,12 +1165,12 @@ microkernel guidato dai dati.
 flowchart LR
     subgraph CFG["Configurazione"]
         STOML["sistemi.toml<br/>predefinito, attivi, rinforzo,<br/>[moduli] cartella → sistema,<br/>[ambientazioni], [opzioni.pf1e]"]
-        CAT["sistemi/catalogo.toml<br/>16 capacità"]
+        CAT["sistemi/catalogo.toml<br/>17 capacità"]
     end
     subgraph PLUG["Plugin in sistemi/"]
         D20["d20 · famiglia<br/>formule, statblocco, stampa,<br/>termini vietati; codice: potenze"]
-        D35["dnd35 · sistema<br/>creature, PE, incontri,<br/>incantesimi, fonti SRD"]
-        PF["pf1e · sistema<br/>classi, creature, PE, tesoro,<br/>conformità PRD; codice: somma_px"]
+        D35["dnd35 · sistema<br/>creature, talenti, PE, incontri,<br/>incantesimi, fonti SRD"]
+        PF["pf1e · sistema<br/>classi, creature, talenti, PE, tesoro,<br/>conformità PRD; codice: somma_px"]
         D35 -->|"eredita, con motivo"| D20
         PF -->|"eredita, con motivo"| D20
     end
@@ -1247,6 +1247,7 @@ sono rimaste identiche byte per byte.
 | Strumenti per sistema del file | `regole_diverse`, capacità `creature.conformita` | fatto (F4) |
 | Funzioni registrate nel plugin | `[moduli]`, `sistemi/<id>/codice/` | fatto (F5): «potenze» e «somma_px» |
 | Schema JSON per ogni file di dati (ADR-0112 §3) | — | **non ancora nel codice**: `sistemi.py --check` controlla la struttura del plugin, non i campi dei file di dati |
+| Regole complete delle creature (lotti 1-5, #369-#375) | capacità `creature.talenti` (`sistemi/<id>/dati/talenti.toml`, regola in `dmcore/talenti.py`); in `creature.toml` le tabelle `[tratti_tipo]` (costrutti e non morti senza Costituzione, melme e parassiti senza Intelligenza) e `[pf_bonus_costrutti]` (pf bonus per taglia) | fatto: tratti dei tipi 45/45 in 3.5 e PF1e, bonus dei costrutti 9/9; li usa `genera_creatura` (e `creature_pf1e` per PF1e) |
 | Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
 
 Riferimenti: [ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
@@ -1312,8 +1313,8 @@ flowchart TB
   Le schede PF1e si contano con le regole che `estrai_prd_pf1e.py` genera dal
   PRD; i 14 conti nuovi partono `in_prova`.
 - **Tabelle.** Le tabelle dei plugin si misurano contro la fonte e non contro
-  la loro dichiarazione: al 2026-11-09 dnd35 ha 605 righe giuste su 606
-  verificabili e pf1e 217 su 217. Una divergenza voluta dal DM (il livello
+  la loro dichiarazione: al 2026-11-10, dopo i lotti delle regole complete, dnd35
+  ha 790 righe giuste su 791 verificabili e pf1e 217 su 217. Una divergenza voluta dal DM (il livello
   d'incantatore −3 di ranger e paladino anche in 3.5) sta nei dati con la
   fonte.
 
