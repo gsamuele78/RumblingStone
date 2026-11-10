@@ -724,3 +724,26 @@ def traduci_rimandi(md: str, sorgente: Path, capitoli: "dict[Path, str]") -> str
         if k % 2 == 0:
             pezzi[k] = _RIF_NUDO.sub(nudo, _RIF_PARENTESI.sub(in_parentesi, pezzo))
     return "".join(pezzi)
+
+
+_SIGLA_APPENDICE_A = re.compile(r"\b[Aa]ppendice\s+A(?:\.\d+(?:-(?:bis|ter))?)?(?![\w-])(?!\.\d)")
+_SIGLA_APPENDICE_D = re.compile(r"\b[Aa]ppendice\s+D(?![\w-])(?!\.\d)")
+
+
+def sigle_d_appendice(md: str) -> str:
+    """Nel booklet di serata (manifest «prima-volta», ADR-0122) le appendici
+    del master non si stampano con le loro sigle: «Appendice A.2» è
+    l'appendice delle creature del volume, «Appendice D» quella delle mappe.
+    Un capitolo che stampa lui la sua «APPENDICE A» resta com'è.
+
+    >>> sigle_d_appendice("(Appendice A.2; EL 16) e la mappa M7-C (Appendice D).")
+    '(appendice delle creature, in fondo; EL 16) e la mappa M7-C (appendice delle mappe, in fondo).'
+    >>> sigle_d_appendice("Numeri in Appendice A.4. Poi")
+    'Numeri in appendice delle creature, in fondo. Poi'
+    >>> sigle_d_appendice("## APPENDICE A — STATISTICHE\\n\\nvedi Appendice A.2").endswith("vedi Appendice A.2")
+    True
+    """
+    if re.search(r"^#{1,4}\s+APPENDICE [AD]\b", md, re.M):
+        return md
+    md = _SIGLA_APPENDICE_A.sub("appendice delle creature, in fondo", md)
+    return _SIGLA_APPENDICE_D.sub("appendice delle mappe, in fondo", md)

@@ -3085,7 +3085,7 @@ per mappa. Companion di raccordo:*
 ## Drow Assassino (2)
 *Drow Ladro 5 / Assassino 4* · GS 9
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -3171,7 +3171,7 @@ ___
 ## Servitore della Spora (1-2)
 *Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)* · GS 3
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___

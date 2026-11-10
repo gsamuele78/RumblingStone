@@ -3655,7 +3655,7 @@ ___
 ## Xorn standard (2)
 *Esterno (Terra) Medio* · GS 6
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Sensi** percezione tremorica 18 m, onnidirezionale
 
 **DIFESA**

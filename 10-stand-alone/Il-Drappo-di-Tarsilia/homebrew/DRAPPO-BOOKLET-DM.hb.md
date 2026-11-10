@@ -4281,7 +4281,7 @@ Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 
 ## Miliziano della Torre
 *Umano guerriero 2* · GS 1
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto; 3 m con la lancia lunga, e allora non i quadretti adiacenti)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto); 3 m (2 quadretti) con la lancia lunga, e allora non i quadretti adiacenti
 
 **DIFESA**
 ___

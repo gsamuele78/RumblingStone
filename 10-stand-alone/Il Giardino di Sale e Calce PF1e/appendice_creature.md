@@ -10,7 +10,7 @@ gs: 16
 tipo: Aberrazione Mastodontica (acquatica, esterno nativo per l'archetipo) · LM
 taglia: Mastodontica
 spazio: 6 m
-portata: 4,5 m
+portata: 6 m
 ca: 22
 ca-dettaglio: contatto 7, colto alla sprovvista 21 (+1 Des, +15 naturale, −4 taglia); 30 con aura sacrilega e il Cuore (contatto 11, colto alla sprovvista 29)
 pf: 248

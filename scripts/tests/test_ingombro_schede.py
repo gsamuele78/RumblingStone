@@ -48,7 +48,7 @@ class TestIngombro(unittest.TestCase):
     def test_la_riga_del_riquadro_conta_i_quadretti(self):
         sb = S.Statblocco(taglia="Enorme", spazio="4,5 m", portata="3 m (4,5 m con il morso)")
         self.assertEqual(S.ingombro(sb), "**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · "
-                                         "**Portata** 3 m (2 quadretti; 4,5 m con il morso)")
+                                         "**Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso")
 
 
 if __name__ == "__main__":

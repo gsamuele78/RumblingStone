@@ -4,7 +4,7 @@
 gs: 4
 taglia: Media
 spazio: 1,5 m
-portata: 1,5 m
+portata: 1,5 m (4,5 m con la frusta, anche i quadretti adiacenti, senza minacciare)
 ca: 16
 ca-dettaglio: (tatto 13)
 pf: 33

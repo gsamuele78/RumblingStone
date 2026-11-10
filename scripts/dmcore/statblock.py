@@ -171,19 +171,28 @@ def ingombro(sb: "Statblocco") -> str:
     >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="3 m"))
     '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)'
     >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="1,5 m (3 m con il morso)"))
-    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto; 3 m con il morso)'
+    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto); 3 m (2 quadretti) con il morso'
+    >>> ingombro(Statblocco(nome="Guardia (4)", taglia="Media", spazio="1,5 m", portata="1,5 m"))
+    '**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)'
     >>> ingombro(Statblocco())
     ''
     """
     if not sb.taglia:
         return ""
     pezzi = [f"**Taglia** {sb.taglia}"]
+    # una scheda per un gruppo, «Guardia (4)»: lo spazio è di ciascuno
+    gruppo = " ciascuno" if re.search(r"\(\d+(?:-\d+)?\)", sb.nome or "") else ""
     if (s := _metri(sb.spazio)) is not None:
-        pezzi.append(f"**Spazio** {_m(s)} ({quadretti_spazio(s)})")
+        pezzi.append(f"**Spazio** {_m(s)} ({quadretti_spazio(s)}){gruppo}")
     if (p := _metri(sb.portata)) is not None:
-        nota = re.search(r"\(([^)]*)\)", sb.portata)
-        dentro = quadretti_portata(p) + (f"; {nota.group(1)}" if nota else "")
-        pezzi.append(f"**Portata** {_m(p)} ({dentro})")
+        testo = f"**Portata** {_m(p)} ({quadretti_portata(p)})"
+        if nota := re.search(r"\(([^)]*)\)", sb.portata):
+            # l'eccezione in quadretti come il resto (giro del 2026-11-10)
+            e = nota.group(1)
+            if (pe := _metri(e)) is not None:
+                e = re.sub(r"^\s*\d+(?:[.,]\d+)?\s*m\b", f"{_m(pe)} ({quadretti_portata(pe)})", e)
+            testo += f"; {e}"
+        pezzi.append(testo)
     return " · ".join(pezzi)
 
 

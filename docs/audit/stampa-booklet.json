@@ -66,12 +66,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 116,
+        "pagine": 117,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 24,
         "pagine_con_immagine": 0.026,
-        "pagine_con_immagine_decimo": 0.086
+        "pagine_con_immagine_decimo": 0.085
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -156,7 +156,7 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 65,
+        "pagine": 66,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 4,

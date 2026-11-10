@@ -6,7 +6,7 @@
 gs: 8
 taglia: Media
 spazio: 1,5 m
-portata: 1,5 m
+portata: 1,5 m (3 m con la lancia da cavaliere, e allora non i quadretti adiacenti)
 ca: 22
 ca-dettaglio: (+10 +2 full plate, +2 large shield)
 pf: 60

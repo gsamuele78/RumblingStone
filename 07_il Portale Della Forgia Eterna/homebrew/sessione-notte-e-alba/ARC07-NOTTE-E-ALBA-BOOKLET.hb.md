@@ -554,7 +554,7 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 ## Guardia di Zog'tar (4)
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
@@ -690,8 +690,8 @@ sensi, velocità, capacità magiche, talenti e abilità.
 ## Skullcrusher Vecchio
 *Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
 ___
-**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti; 4,5 m con il morso)
-**Iniziativa** +6 · **Sensi** come A.1
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso
+**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare e Osservare come l'Adulto (A.1)
 
 **DIFESA**
 ___
@@ -699,11 +699,11 @@ ___
 
 **ATTACCO**
 ___
-come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
+Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
 
 **STATISTICHE**
 ___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1  
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -721,8 +721,8 @@ Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
-**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto)
-**Sensi** scurovisione 18 m, visione crepuscolare, fiuto
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) ciascuno · **Portata** 1,5 m (1 quadretto)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
 ___
@@ -732,8 +732,12 @@ ___
 
 **ATTACCO**
 ___
-**Velocità** volare 18 m  
+**Velocità** 6 m, volare 18 m (scarsa)  
 **Mischia** pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)  
+
+**STATISTICHE**
+___
+Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco; Lotta +15  
 
 **TATTICHE**
 ___
@@ -6124,7 +6128,7 @@ naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14.
 ## Skullcrusher il Nero, il Primo Nero
 *Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude* · GS 14
 ___
-**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti; 4,5 m con il morso)
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso
 **Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29
 
 **DIFESA**
@@ -6202,8 +6206,8 @@ gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 ## Skullcrusher Vecchio
 *Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
 ___
-**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti; 4,5 m con il morso)
-**Iniziativa** +6 · **Sensi** come A.1
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso
+**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare e Osservare come l'Adulto (A.1)
 
 **DIFESA**
 ___
@@ -6211,11 +6215,11 @@ ___
 
 **ATTACCO**
 ___
-come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
+Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
 
 **STATISTICHE**
 ___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1  
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -6282,7 +6286,7 @@ La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta n
 ## Guardia di Zog'tar (4)
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
@@ -6469,7 +6473,7 @@ Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestia
 ## Hobgoblin della pattuglia (8)
 *Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
 ___
-**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
 
 **DIFESA**
@@ -6520,8 +6524,8 @@ Dura 1 ora.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
-**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto)
-**Sensi** scurovisione 18 m, visione crepuscolare, fiuto
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) ciascuno · **Portata** 1,5 m (1 quadretto)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
 ___
@@ -6531,8 +6535,12 @@ ___
 
 **ATTACCO**
 ___
-**Velocità** volare 18 m  
+**Velocità** 6 m, volare 18 m (scarsa)  
 **Mischia** pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)  
+
+**STATISTICHE**
+___
+Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco; Lotta +15  
 
 **TATTICHE**
 ___

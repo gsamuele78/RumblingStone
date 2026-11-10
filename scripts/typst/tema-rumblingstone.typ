@@ -504,6 +504,17 @@
         }
         #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
         #if ingombro != "" and ingombro != [] [ \ #text(size: 8.8pt)[#ingombro] ]
+        // Giro del 2026-11-10 (lettura del DM): con CA e pf soltanto si
+        // sfoglia a ogni attacco del nemico. La riga porta anche iniziativa,
+        // velocità, TS e gli attacchi, come il blocco breve degli AP.
+        #{
+          let mossa = ()
+          if iniziativa != "" and iniziativa != [] { mossa.push([*#etichette.iniziativa* #iniziativa]) }
+          if velocita != "" and velocita != [] { mossa.push([*#etichette.vel* #velocita]) }
+          if ts != "" and ts != [] { mossa.push([*#etichette.ts* #ts]) }
+          if mossa.len() > 0 [ \ #text(size: 8.8pt)[#mossa.join([ · ])] ]
+          if attacchi.len() > 0 [ \ #text(size: 8.8pt)[#attacchi.map(a => [*#a.at(0)* #a.at(1)]).join([ · ])] ]
+        }
         #if tattiche != none [
           #v(2pt)
           #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]
@@ -642,7 +653,7 @@
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, below: 1em, v.accanto)
       col = 1
-      y = cima-destra + alto - resta + 30pt + spazio
+      y = cima-destra + alto - resta + 12pt + spazio
     } else if alto < colonna * 0.92 {
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, breakable: false, below: 1em, v.intero)
