@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-09 | BOX-DI-LUOGO-E-AREA-CHIAVE | B1 template dell'area chiave in `campaign/templates/`, 3.5 e PF1e (D6), con ese… | ✅ fatto |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Carta dei giganti del libretto (richiesta del DM dal thread dell'audit: «soluzi… | ✅ simulazione: nessuna breccia 50% → 54%, posizioni tenute 74% → 73%; scelta dal DM con la card del 2026-11-10 |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Chiusura dell'ultimo scarto (DM: «cerca un valore plausibile per le baliste», c… | ✅ scarti 1 → 0; restano i 75 file in prosa non coperti |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | **Corregge la #360 e la prima stesura di ADR-0118**: il «+2 effetto massa» dell… | ✅ scarti 13 → 1 (baliste AU +10, senza scheda). Libretto `ARC08-18`, DEF e `ARC08-19` non toccati: la carta dei massi resta a 14, da decidere |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D4 confronto degli statblocchi alternativi della chat «Organizing D&D Campaign… | ✅ confronto fatto, ★ al DM |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
-| 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
 
 ## Le misure che si portano dietro
 

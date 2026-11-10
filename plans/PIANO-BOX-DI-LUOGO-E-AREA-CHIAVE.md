@@ -148,7 +148,7 @@ creatura dal Bestiario PF1e: *Shadow*, GS 3, pf 19, Bestiary p. 245.
 | | Lotto | Dipende da | Cosa produce |
 |---|---|---|---|
 | ✅ | **B0** · la misura e le norme | — | F2.10 di PIANO-MISURA (PR #188) |
-| ⬜ | **B1** · il template in `campaign/templates/` | D6 | `area-chiave-template.md` (3.5) e la variante PF1e, dal §3.3; riga nell'indice dei template, se ce n'è uno |
+| ✅ | **B1** · il template in `campaign/templates/` (fatto il 2026-11-09: `area-chiave-template.md` e `area-chiave-template-pf1e.md`; l'ordine delle voci segue `module-standard` §7, read-aloud prima dei Dati per il DM, e non il §3.3 qui sopra; la grata PF1e verificata sul Core Rulebook, *Doors*: stessi valori dell'SRD) | D6 | `area-chiave-template.md` (3.5) e la variante PF1e, dal §3.3; riga nell'indice dei template, se ce n'è uno |
 | ⬜ | **B2** · il tipo del box | D3 | la convenzione `**Read-aloud (tipo · pilastro).**` in `editorial-standards.md`, e `componenti.py --check` che la legge sui master che dichiarano il contratto; sblocca la norma 🔴 «niente creature» (`superficie_norme.py`) |
 | ⬜ | **B3** · la soglia pesata | D1, B2 | `≤ 4 frasi` per il box di luogo entra in `punteggio_mqm`, con la riga del registro da 🟡 a 🟢 |
 | ⬜ | **B4** · la riga degli oggetti | — | una forma fissa che `componenti.py` riconosce nei Dati per il DM (spessore; Durezza; pf; CD), misurata sui master nuovi |

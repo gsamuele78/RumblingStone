@@ -278,7 +278,9 @@ incontri e prove, misteri).
    **Creature** → **Tattiche** → **Trappole** → **Tesoro** → **Sviluppo** (chi
    sente lo scontro e in quanti round arriva, quando i nemici si arrendono o
    fuggono, cosa cambia se i PG ripassano) → **PX ad hoc** se il terreno dà un
-   vantaggio a una parte. Fonte: `RICERCA-STANDARD-PROSA-WOTC-PAIZO` §1.4. Vale
+   vantaggio a una parte. Fonte: `RICERCA-STANDARD-PROSA-WOTC-PAIZO` §1.4.
+   Template: `campaign/templates/area-chiave-template.md` (3.5) e
+   `area-chiave-template-pf1e.md` (PF1e). Vale
    per i master nuovi e per quelli che un lotto riscrive; i cinque master di
    ARC-07 già giocati non si rifanno per questo.
 8. **Boss**: **come ci si entra** (porta/soglia/varco: chi la apre, dove
