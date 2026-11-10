@@ -551,6 +551,16 @@ TAGLIE_COSTRUTTI = tuple((t, t.lower()) for t in (
     "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"))
 
 
+#: La tabella «Construct Size / Bonus Hit Points» del tipo costrutto, come la
+#: pubblica il PRD di Paizo (legacy.aonprd.com/bestiary/creatureTypes.html,
+#: Construct, letta il 2026-11-10): «—» per Fine, Diminutive e Tiny. Nel PSRD-Data
+#: in cache manca (book-b1 sezione 366 la annuncia senza riportarla). Serve per le
+#: taglie che nessuna scheda prova; per le altre deve concordare con le schede.
+TABELLA_COSTRUTTI_PRD = {"fine": 0, "diminutive": 0, "tiny": 0, "small": 10, "medium": 20,
+                         "large": 30, "huge": 40, "gargantuan": 60, "colossal": 80}
+FONTE_TABELLA_COSTRUTTI = "legacy.aonprd.com/bestiary/creatureTypes.html, Construct"
+
+
 def _pf_bonus_costrutti(base: Path) -> tuple[dict, list]:
     """I pf bonus dei costrutti per taglia, ricavati dalle schede dei Bestiary 1-4.
 
@@ -585,22 +595,26 @@ def creature_e_armature(base: Path) -> str:
     per_taglia, escluse = _pf_bonus_costrutti(base)
     out = [creature(base).rstrip("\n"), "",
            "# --- pf bonus dei costrutti per taglia. La tabella del tipo costrutto (book-b1",
-           "# sezione 366, «as shown on the following table») nel PRD non c'è: il numero è",
-           "# ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)` nei costrutti",
-           "# senza Robustezza, senza Costituzione e non mitici. Una taglia senza schede, o con",
-           "# schede discordi, non ha la voce: non si inventa.",
+           "# sezione 366, «as shown on the following table») nel PSRD-Data in cache non c'è:",
+           "# il numero è ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)`",
+           "# nei costrutti senza Robustezza, senza Costituzione e non mitici, e deve concordare",
+           f"# con la tabella del PRD pubblicato ({FONTE_TABELLA_COSTRUTTI}). Le taglie che",
+           "# nessuna scheda prova prendono il valore della tabella («—» = 0).",
            "[pf_bonus_costrutti]"]
     for en, it in TAGLIE_COSTRUTTI:
         voci = per_taglia.get(en, {})
+        tabella = TABELLA_COSTRUTTI_PRD[it]
         if len(voci) == 1:
             (bonus, schede), = voci.items()
+            if bonus != tabella:
+                raise SystemExit(f"costrutto {it}: le schede dicono +{bonus}, la tabella del PRD +{tabella}")
             quante = "1 scheda sola" if len(schede) == 1 else f"{len(schede)} schede concordi"
-            out.append(f"{it} = {bonus}  # {quante}; prova: {schede[0]}")
+            out.append(f"{it} = {bonus}  # {quante}, come la tabella del PRD; prova: {schede[0]}")
         elif voci:
-            out.append(f"# {it}: schede discordi, " + "; ".join(
+            raise SystemExit(f"costrutto {it}: schede discordi " + "; ".join(
                 f"+{k} {v[0]}" for k, v in sorted(voci.items())))
         else:
-            out.append(f"# {it}: nessuna scheda di costrutto nel PRD")
+            out.append(f"{it} = {tabella}  # tabella del PRD («—»); nessuna scheda di costrutto nel PSRD-Data")
     out.append(f"# schede escluse dal conto: {len(escluse)} ("
                + "; ".join(f"{n} {m}" for _l, _s, n, m in escluse) + ")")
     out += ["",

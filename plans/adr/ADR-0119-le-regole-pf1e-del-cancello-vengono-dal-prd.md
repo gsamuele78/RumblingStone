@@ -107,7 +107,7 @@ Cosa resta fuori, scritto anche in testa al file:
 ## Lotto 4 (2026-11-10): due aggiunte chieste dall'audit dei plugin
 
 - **Classi contate due volte.** `_livelli_di_classe` leggeva tipo + nome: «ladro 4» scritto in tutti e due dava otto livelli, e BAB e TS non partivano. Ora si legge il tipo, e il nome solo se nel tipo non c'è classe.
-- **Pf bonus dei costrutti per taglia** (`[pf_bonus_costrutti]` in `creature.toml`). La tabella nel PRD manca (book-b1 sezione 366 la annuncia e non la riporta). I numeri sono ricavati dalle schede dei Bestiary 1-4: il «+X» dei costrutti senza Robustezza, senza Costituzione e non mitici. Tiny 0 (2 schede), Small 10 (3), Medium 20 (13), Large 30 (15), Huge 40 (7), Gargantuan 60 (2), Colossal 80 (1 sola: il Wickerman). Fine e Diminutive non hanno schede e restano senza voce. Limite: il Colossal poggia su una scheda sola, e il Soulbound Shell (escluso perché ha Robustezza) darebbe +35 da Medium, cioè non torna con la regola.
+- **Pf bonus dei costrutti per taglia** (`[pf_bonus_costrutti]` in `creature.toml`). La tabella nel PRD manca (book-b1 sezione 366 la annuncia e non la riporta). I numeri sono ricavati dalle schede dei Bestiary 1-4: il «+X» dei costrutti senza Robustezza, senza Costituzione e non mitici. Tiny 0 (2 schede), Small 10 (3), Medium 20 (13), Large 30 (15), Huge 40 (7), Gargantuan 60 (2), Colossal 80 (1 sola: il Wickerman). Fine e Diminutive non hanno schede e restano senza voce (aggiornato il 2026-11-10: prendono 0, «—», dalla tabella del PRD pubblicato su legacy.aonprd.com, che per le altre sette taglie concorda con le schede). Limite: il Colossal poggia su una scheda sola, e il Soulbound Shell (escluso perché ha Robustezza) darebbe +35 da Medium, cioè non torna con la regola.
 
 ## Conseguenze
 

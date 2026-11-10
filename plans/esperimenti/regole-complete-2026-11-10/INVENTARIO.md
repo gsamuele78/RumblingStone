@@ -93,6 +93,11 @@ detto: immunità, RD e scurovisione dei tipi non si aggiungono al blocco (sono
 capacità speciali, il generatore non ne scrive), e un costrutto con mente
 («most constructs are mindless», non tutti) il generatore non lo fa.
 
+Nello stesso lotto: pf bonus dei costrutti PF1e Fine e Diminutive, che il
+rapporto di ADR-0121 dava come limite (nessuna scheda nel PRD). Ora vengono
+dalla tabella «Construct Size» del PRD pubblicato (legacy.aonprd.com,
+bestiary/creatureTypes.html): «—», cioè 0.
+
 ## 3-ter. Licenze
 
 I dati del plugin PF1e prendono classi, talenti, razze e creature da 14 libri Paizo

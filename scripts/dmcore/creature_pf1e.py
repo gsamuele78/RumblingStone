@@ -102,8 +102,9 @@ def converti(sb, tipo: str, taglia: str, root=None, pf_bersaglio: "int | None" =
     if tipo_pf == "construct":
         m_pf, chiave_pf = 0, None
         attributi = re.sub(r"Cos\s+\d+", "Cos —", attributi)
-        # PRD, Construct Traits: pf bonus per taglia. La tabella manca nel PRD in
-        # cache: i valori vengono dalle schede dei costrutti del Bestiary
+        # PRD, Construct Traits: pf bonus per taglia. La tabella manca nel PSRD-Data
+        # in cache: i valori vengono dalle schede dei costrutti del Bestiary,
+        # controllati sulla tabella del PRD pubblicato (Fine e Diminutive da lì)
         # ([pf_bonus_costrutti] di creature.toml, generato con le schede che li provano)
         bonus_costrutto = dati.get("pf_bonus_costrutti", {}).get(tg, {})
         bonus_costrutto = bonus_costrutto.get("bonus", 0) if isinstance(bonus_costrutto, dict) else bonus_costrutto

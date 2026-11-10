@@ -107,7 +107,12 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   DV fino a 2×GS, e quello che manca al bersaglio si scrive nel conto. Il PF1e
   porta i pf del non morto sul bersaglio col Carisma. Misura sui mostri generati
   (15 tipi × GS 3/7/12, più il costrutto alle 9 taglie): 3.5 da 33/45 e 0/9 a
-  45/45 e 9/9, PF1e da 36/45 e 0/9 a 45/45 e 9/9.
+  45/45 e 9/9, PF1e da 36/45 e 0/9 a 45/45 e 9/9. Nello stesso lotto il terzo
+  limite PF1e dichiarato nel rapporto (costrutti Fine e Diminutive senza pf
+  bonus) è chiuso con la tabella «Construct Size» del PRD pubblicato
+  (legacy.aonprd.com): «—», cioè 0; l'estrattore esige che concordi con le
+  schede per le altre sette taglie. Dei tre limiti del rapporto non ne resta
+  nessuno.
 
 ## Conseguenze
 
