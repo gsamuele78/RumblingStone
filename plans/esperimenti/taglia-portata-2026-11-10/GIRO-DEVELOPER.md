@@ -70,3 +70,7 @@ Schede Medie e Piccole (146 + 4): nessuna taglia sospetta. Le 9 «senza indizi»
 
 - **Verificate: 205 schede su 205** lette (59 non Medie una per una, di cui 36 con creatura base confermata su fonte online, le altre a memoria o homebrew; 146 Medie su tipo, razza e attacchi).
 - **Giuste: 198.** Da correggere 4 (Karkator PF1e, gnoll hyenodon rider, Thayan Knight, nota frusta di Lirien); da far decidere al DM 3 (hobgoblin captain, drow priestess, golem di mithral). In più una prosa da allineare al blocco (beholder death tyrant) e la prosa «10 ft / 3 m» della frusta di Lirien.
+
+## Decisione del DM (2026-11-10)
+
+Jfs sceglie «SRD sui tre testi, il resto tuo». Beholder tiranno della morte: la prosa segue il blocco e la fonte (portata 1,5 m). Capitano hobgoblin: 3 m con la lancia da cavaliere. Sacerdotessa drow: la frusta è una frusta dell'SRD (4,5 m, non minaccia). Il golem Sentinella resta Grande e i cavalieri in sella tengono lo spazio scritto dal DM.
