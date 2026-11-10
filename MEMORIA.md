@@ -96,7 +96,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | **Corregge la #360 e la prima stesura di ADR-0118**: il «+2 effetto massa» dell… | ✅ scarti 13 → 1 (baliste AU +10, senza scheda). Libretto `ARC08-18`, DEF e `ARC08-19` non toccati: la carta dei massi resta a 14, da decidere |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Prima correzione degli scarti del cancello dei numeri (DM: «correggi i problemi… | ✅ restano 13 AU di unità senza scheda uno contro uno |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | ADR-0118 (scelta del DM «ADR più cancello in CI»): un numero entra solo se la r… | ✅ cancello in CI non bloccante fino al 2026-11-23 |
-| 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
+| 2026-11-09 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Audit dei plugin di regole 3.5 e PF1e contro SRD/PRD (ADR-0121) | ✅ `misura_plugin_regole.py`: dnd35 da 97% a 100% coperto (adepto, 8 incantesimi, 3 armature, 12 prestigio, 7 abilità; `derive_statblocks` a parola intera: 11 s… |
 
 ## Le misure che si portano dietro
 

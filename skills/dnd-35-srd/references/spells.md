@@ -240,11 +240,11 @@ una scelta, e il generatore non la fa al posto del DM.
 - **1**: benedizione, scudo della fede, santuario, cura ferite leggere, comando, protezione dal male, arma magica, favore divino, rimuovi paura, scudo entropico, infliggere ferite leggere
 - **2**: arma spirituale, aiuto, resistere all'energia, silenzio, blocca persone, cura ferite moderate, forza del toro, saggezza del gufo, oscurità, zona di verità, ristorare inferiore, calmare emozioni, consacrare
 - **3**: preghiera, dissolvi magie, luce bruciante, cecità/sordità, paramento magico, glifo di interdizione, protezione dall'energia, infliggere maledizione, elusione dell'invisibilità, muro di vento, cura ferite gravi, animare morti
-- **4**: potere divino, libertà di movimento, immunità agli incantesimi, cura ferite gravi, congedo, ristorare, divinazione, ancora dimensionale, veleno, camminare nell'aria, protezione dalla morte, arma magica superiore
+- **4**: potere divino, libertà di movimento, immunità agli incantesimi, cura ferite critiche, congedo, ristorare, divinazione, ancora dimensionale, veleno, camminare nell'aria, protezione dalla morte, arma magica superiore
 - **5**: colonna di fuoco, cura ferite leggere di massa, scacciare il male, potenza virtuosa, uccidere i viventi, visione del vero, muro di pietra, resistenza agli incantesimi, comando superiore, rianimare morti, spezzare incantesimo, piaga d'insetti
 - **6**: danno, guarigione, scudo di legge, barriera di lame, dissolvi magie superiore, cura ferite moderate di massa, esilio, parola del richiamo, animare oggetti, camminare nel vento, trovare il sentiero
 - **7**: parola sacra, rigenerazione, distruzione, ristorare superiore, cura ferite gravi di massa, controllare il clima, repulsione, resurrezione, bestemmia, dettame, parola del caos
-- **8**: terremoto, tempesta di fuoco, aura sacra, campo antimagia, cura ferite critiche di massa, immunità agli incantesimi superiore, manto del caos, simbolo di morte, blocco dimensionale
+- **8**: terremoto, tempesta di fuoco, aura sacra, campo antimagia, cura ferite critiche di massa, immunità agli incantesimi superiore, mantello del caos, simbolo di morte, blocco dimensionale
 - **9**: miracolo, guarigione di massa, implosione, tempesta di vendetta, porta, prosciugamento di energia, risurrezione pura, legare l'anima
 
 ### Druido
@@ -254,14 +254,14 @@ che sta qui compare nella lista arcana con lo stesso livello, e *benedizione*,
 
 - **0**: individuazione del magico, luce, guida, resistenza, riparare, bagliore, creare acqua, cura ferite minime
 - **1**: intralciare, fuoco fatuo, nebbia oscurante, produrre fiamma, zanna magica, randello incantato, passo senza tracce, cura ferite leggere, bacca curativa, sopportare gli elementi, evoca alleato naturale I
-- **2**: corteccia, lama di fuoco, sfera infuocata, raffica di vento, arroventare il metallo, blocca animali, resistere all'energia, saggezza del gufo, forza del toro, scalare come un ragno, resistenza dell'orso, evoca alleato naturale II
+- **2**: corteccia, lama infuocata, sfera infuocata, raffica di vento, arroventare il metallo, blocca animali, resistere all'energia, saggezza del gufo, forza del toro, scalare come un ragno, resistenza dell'orso, evoca alleato naturale II
 - **3**: chiamare il fulmine, crescita vegetale, crescita di spine, tempesta di nevischio, muro di vento, dominare animali, protezione dall'energia, veleno, modellare la pietra, luce del giorno, zanna magica superiore, evoca alleato naturale III
-- **4**: dissolvi magie, colonna di fuoco, libertà di movimento, tempesta di ghiaccio, controllare piante, spine di pietra, avvizzimento, camminare nell'aria, controllare l'acqua, rimuovi malattia, evoca alleato naturale IV
+- **4**: dissolvi magie, colonna di fuoco, libertà di movimento, tempesta di ghiaccio, controllare piante, spine di pietra, avvizzimento, camminare nell'aria, controllare l'acqua, cura ferite gravi, evoca alleato naturale IV
 - **5**: muro di spine, muro di fuoco, tempesta di fulmini, pelle di pietra, piaga d'insetti, metamorfosi funesta, controllare i venti, viaggio arboreo, trasmutare roccia in fango, crescita animale, evoca alleato naturale V
 - **6**: muro di pietra, semi di fuoco, dissolvi magie superiore, guscio antivita, respingere il legno, spostare la terra, trasporto vegetale, resistenza dell'orso di massa, legno di ferro, evoca alleato naturale VI
 - **7**: tempesta di fuoco, controllare il clima, fato strisciante, animare piante, guarigione, raggio di sole, camminare nel vento, visione del vero, evoca alleato naturale VII
 - **8**: terremoto, esplosione solare, forma animale di massa, turbine, inversione della gravità, dito della morte, controllare le piante, respingere metallo o pietra, evoca alleato naturale VIII
-- **9**: tempesta di vendetta, sciame elementale, mutare forma, preveggenza, rigenerazione, antipatia, guarigione di massa, evoca alleato naturale IX
+- **9**: tempesta di vendetta, sciame elementale, mutare forma, preveggenza, rigenerazione, antipatia, cura ferite critiche di massa, evoca alleato naturale IX
 
 ### Bardo
 SRD «Bard Spells». Ibrida, e **non** è né la lista arcana né quella divina: si
@@ -269,8 +269,8 @@ ferma al 6° livello, e ci sono dentro cose che il mago non ha (*suggestione* al
 2°) e manca tutto il ramo del danno d'area.
 
 - **0**: luci danzanti, suono fantasma, individuazione del magico, luce, mano magica, messaggio, prestidigitazione, lettura del magico, resistenza
-- **1**: charme su persone, cura ferite leggere, immagine silenziosa, sonno, ipnotismo, confusione minore, grasso, caduta morbida, ventriloquio, rimuovi paura, ritirata veloce
-- **2**: risata incontenibile di Tasha, suggestione, blocca persone, invisibilità, calmare emozioni, sfocatura, polvere scintillante, immagine speculare, silenzio, eroismo, schema ipnotico, frantumare, cura ferite moderate
+- **1**: charme su persone, cura ferite leggere, immagine silenziosa, sonno, ipnotismo, confusione minore, grasso, caduta morbida, ventriloquio, rimuovi paura, ritirata veloce, risata incontenibile di Tasha
+- **2**: suggestione, blocca persone, invisibilità, calmare emozioni, sfocatura, polvere scintillante, immagine speculare, silenzio, eroismo, schema ipnotico, frantumare, cura ferite moderate
 - **3**: dissolvi magie, spavento, confusione, disperazione opprimente, velocità, lentezza, immagine maggiore, charme su mostri, buona speranza, spostamento, sonno profondo, cura ferite gravi
 - **4**: dominare persone, invisibilità superiore, libertà di movimento, blocca mostri, porta dimensionale, urlo, schema arcobaleno, modificare memoria, spezzare incantesimo, evocazione ombrosa, cura ferite critiche
 - **5**: suggestione di massa, eroismo superiore, dissolvi magie superiore, canto della discordia, nebbia mentale, traviare, cura ferite leggere di massa, immagine persistente, camminare nell'ombra, incubo

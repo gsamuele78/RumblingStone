@@ -25,14 +25,24 @@ from dmcore import incantesimi as INC  # noqa: E402
 from dmcore import progressione as P  # noqa: E402
 from dmcore import tabelle as T  # noqa: E402
 
+#: Cambiate di proposito il 2026-11-09 (audit dei plugin contro l'SRD in cache,
+#: plans/esperimenti/plugin-regole-2026-11-09/): ARMATURE (+ pelle, bande,
+#: strisce e i nomi italiani del lessico), SCUDI (scudo torre al posto di
+#: «torre»), T.ADEPTO (4 righe come la Tabella dell'Adepto), T.INCANTATORI (la
+#: griglia dell'adepto), P.PRESTIGIO e P.DADO_DI_CLASSE (le 14 classi di
+#: prestigio SRD), LISTE (8 incantesimi al livello giusto della classe) e
+#: NOMI_DI_CLASSE. Per la card del DM dello stesso giorno («Tabelle PF1e intere,
+#: segnate») anche T.BARDO, T.BARDO_CONOSCIUTI, T.RANGER/T.PALADINO e
+#: T.INCANTATORI: griglie del PRD PF1e, non SRD 3.5. Le altre impronte sono
+#: quelle di prima.
 IMPRONTE_PRIMA = {
     "TIPI": "f314442313fc6eb1",
     "CLASSI": "ba993374d9283a09",
     "CLASSI_PNG": "b9acd679e2fa5931",
     "BAB_CLASSE": "e806f841362f1085",
     "TAGLIE": "e0f832356e31615e",
-    "ARMATURE": "8caf8f137870a208",
-    "SCUDI": "9cfe333a9826ed8f",
+    "ARMATURE": "10757daf547da893",
+    "SCUDI": "bdd26a829de31a9a",
     "ELITE": "f3bbb911592fbc0a",
     "BASIC": "09397ca2fbf7a68e",
 }
@@ -47,16 +57,16 @@ IMPRONTE_L5B = {
     "T.STREGONE_CONOSCIUTI": "288be00dadabf4f1",
     "T.CHIERICO": "b830bf626b47fd2e",
     "T.DRUIDO": "b830bf626b47fd2e",
-    "T.ADEPTO": "043b934095eaabbf",
-    "T.BARDO": "143fc66e36c447c4",
-    "T.BARDO_CONOSCIUTI": "0eba013d243c5289",
-    "T.RANGER": "b69e66ddc56f3a4d",
-    "T.PALADINO": "b69e66ddc56f3a4d",
+    "T.ADEPTO": "d3240dcbd4580db9",
+    "T.BARDO": "e8ac03012a9cddab",
+    "T.BARDO_CONOSCIUTI": "2e4799f2efaa6cc6",
+    "T.RANGER": "b53e50d7899bb2c0",
+    "T.PALADINO": "b53e50d7899bb2c0",
     "T.LIVELLO_INCANTATORE_RIDOTTO": "6a9633f885386bc7",
-    "T.INCANTATORI": "5dafa79241e64173",
+    "T.INCANTATORI": "b315c798399e47cf",
     "T.INCANTATORI_SENZA_ANCORA": "cbad0fe52ade2682",
-    "P.PRESTIGIO": "bb65fa3b3e39222b",
-    "P.DADO_DI_CLASSE": "7fbf113d03329d21",
+    "P.PRESTIGIO": "2cb916e16f7f2afa",
+    "P.DADO_DI_CLASSE": "d682e8a39b2f25b8",
     "C.PROFILI": "2abef478722f8731",
     "C.PROFILO_DI_RIPIEGO": "6f6caace7ceb23dc",
     "C.PER_TAGLIA": "08bcc3ca27cf6cb0",
@@ -66,7 +76,7 @@ IMPRONTE_L5B = {
 #: L5c (2026-11-07): impronte delle liste di incantesimi di main prima dello
 #: spostamento in `sistemi/{dnd35,pf1e}/dati/incantesimi.toml`.
 IMPRONTE_L5C = {
-    "LISTE": "4c8e220c48c68ff5",
+    "LISTE": "5c66496fb67f721f",
     "CANONICA": "2074748d8ae338a2",
     "FUNZIONE_DI_RIPIEGO": "ce42176472ca1491",
     "SENZA_LISTA": "cbad0fe52ade2682",
@@ -110,7 +120,7 @@ class IncantatoriEProfiliDalPlugin(unittest.TestCase):
             self.assertEqual(impronta(getattr(self.MODULI[modulo], nome)), attesa, chiave)
 
     def test_nomi_di_classe_stesso_insieme(self):
-        self.assertEqual(impronta(frozenset(P.NOMI_DI_CLASSE)), "e5a2db6f0d38a085")
+        self.assertEqual(impronta(frozenset(P.NOMI_DI_CLASSE)), "692243b47b976b91")
 
     def test_alias_restano_la_stessa_griglia(self):
         self.assertIs(T.DRUIDO, T.CHIERICO)

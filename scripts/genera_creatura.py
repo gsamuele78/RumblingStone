@@ -775,11 +775,15 @@ def _voci_incantatore(nome_classe: str, livello: int, m: dict[str, int],
     # Ranger e paladino non hanno incantesimi di livello 0, e la loro griglia
     # porta uno zero finto in prima posizione per tenere l'indice allineato: va
     # tolto dalla riga stampata, o il blocco annuncia orisons che non esistono.
-    senza_zero = nome_classe.lower() in T.LIVELLO_INCANTATORE_RIDOTTO
+    # Il bardo con la tabella PF1e (card del DM del 2026-11-09) ha lo stesso zero
+    # finto, perché i suoi trucchetti sono a volontà.
+    a_volonta = nome_classe.lower() in T.INCANTATORI_ZERO_A_VOLONTA
+    senza_zero = nome_classe.lower() in T.LIVELLO_INCANTATORE_RIDOTTO or a_volonta
     mostrati = slot[1:] if senza_zero else slot
     fuori.append(("Incantesimi al giorno (dal 1° livello): " if senza_zero
                   else "Incantesimi al giorno: ")
-                 + "/".join(str(n) for n in mostrati))
+                 + "/".join(str(n) for n in mostrati)
+                 + (" · trucchetti a volontà" if a_volonta else ""))
     if nome_classe in ("cleric", "chierico"):
         fuori.append("+1 slot per livello dai due domini, una volta scelti")
     if spontaneo:
@@ -799,7 +803,9 @@ def _voci_incantatore(nome_classe: str, livello: int, m: dict[str, int],
         fuori.append("⚠ incantatore spontaneo: prende ogni livello d'incantesimo "
                      "due livelli dopo un preparato — per stare sulla stessa CD "
                      "servono ~2 livelli in più")
-    conto(f"incantesimi: tabella SRD di {nome_classe}, livello di classe "
+    fonte_griglia = ("tabella PF1e (scelta del DM, non SRD 3.5)"
+                     if nome_classe.lower() in T.INCANTATORI_GRIGLIA_PF1E else "tabella SRD")
+    conto(f"incantesimi: {fonte_griglia} di {nome_classe}, livello di classe "
           f"{livello} → incantatore di {cl}°, "
           f"{'/'.join(str(n) for n in mostrati)}; CD massima {cd_max}")
     if nome_classe in T.INCANTATORI_SENZA_ANCORA:
