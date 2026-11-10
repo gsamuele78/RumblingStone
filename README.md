@@ -73,7 +73,7 @@ corregge solo il master, e PDF, mappe, recap e pacchetti si rigenerano.
 | 🎲 | Stato della campagna, sessioni, recap per PG, ledger dei PE | [`campaign/`](campaign/) |
 | 🧠 | 18 skill per agenti: regole 3.5 e PF1e, lore 1372 DR, stile, mappe, editoria; ognuna dichiara i suoi cancelli deterministici | [`skills/`](skills/) |
 | 🛠️ | `dm.py` e gli script, ognuno con il suo contratto nel manifest | [`scripts/`](scripts/), [registro](docs/tools/README.md) |
-| 🧭 | Piani, 116 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
+| 🧭 | Piani, 117 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
 | ✍️ | Misure della prosa e voto al cieco del DM | ADR-0093 |
 
 ## Come funziona

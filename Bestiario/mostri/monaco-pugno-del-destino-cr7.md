@@ -6,20 +6,22 @@
 gs: 7
 tipo: Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE
 ca: 19
-ca-dettaglio: touch 17, flat-footed 16 (Schivare)
+ca-dettaglio: touch 17, flat-footed 16
 pf: 52
 ts: Temp +7, Rifl +8, Vol +7
 attributi: For 16 Des 14 Cos 15 Int 10 Sag 14 Car 8
 velocita: 24 m
 iniziativa: +2
 attacchi:
-  - Mischia catena chiodata perfetta a due mani +10/+10 (2d4+4); raffica di colpi +9/+9/+9 (1d8+3, ki = magico)
+  - Mischia catena chiodata perfetta a due mani +10 (2d4+4); raffica di colpi +7/+7 (1d8+3, ki = magico)
 voci:
-  - Talenti: Riflessi in Combattimento, Schivare, Sbilanciare Migliorato
+  - Talenti: Riflessi in Combattimento, Arma Focalizzata (catena chiodata), Competenza nelle Armi Esotiche (catena chiodata), Pugno Stordente, Lottare Migliorato, Sbilanciare Migliorato
 ```
 
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
-Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE. **hp 52** (7 HD); **AC 19**, touch 17, flat-footed 16 (Schivare). Init +2; Vel 24 m. TS Temp +7, Rifl +8, Vol +7. BAB +5; Lotta +9 (Lottare Migliorato).
-**Mischia** catena chiodata perfetta a due mani +10/+10 (2d4+4); **raffica di colpi** +9/+9/+9 (1d8+3, ki = magico). **Pugno Stordente** (CD 15). Eludere, Mente Lucida, Purezza del Corpo, Caduta Lenta, Integrità Fisica. Scurovisione 18 m. Talenti: Riflessi in Combattimento, Schivare, Sbilanciare Migliorato.
+Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE. **hp 52** (7 HD); **AC 19**, touch 17, flat-footed 16. Init +2; Vel 24 m. TS Temp +7, Rifl +8, Vol +7. BAB +5; Lotta +9 (Lottare Migliorato).
+**Mischia** catena chiodata perfetta a due mani +10 (2d4+4); **raffica di colpi** +7/+7 (1d8+3, ki = magico), colpo senz'armi singolo +8. **Pugno Stordente** (CD 15). Eludere, Mente Lucida, Purezza del Corpo, Caduta Lenta, Integrità Fisica. Scurovisione 18 m. Talenti: Riflessi in Combattimento, Arma Focalizzata (catena chiodata), Competenza nelle Armi Esotiche (catena chiodata), Pugno Stordente, Lottare Migliorato, Sbilanciare Migliorato.
 Notes: campioni monastici hobgoblin del culto; ottimi inseguitori (vel 24 m).
+
+> `[CANONE — regola, ADR-0118]` L'export PCGen scriveva catena +10/+10 e raffica +9/+9/+9: con BAB +5 un Monaco 7 ha un attacco solo con la catena, e la raffica è di due colpi senz'armi a −1 (SRD, tabella del monaco: +4/+4, più For +3 = **+7/+7**). La catena perfetta dà +9 (BAB +5, For +3, +1). Versione più forte e legale: **Arma Focalizzata (catena chiodata)** al posto di Schivare tiene il **+10** della scheda. I talenti ora sono scritti tutti: tre di livello (Arma Focalizzata, Competenza nelle Armi Esotiche, Pugno Stordente) e i bonus del monaco (Lottare Migliorato, Riflessi in Combattimento, Sbilanciare Migliorato).

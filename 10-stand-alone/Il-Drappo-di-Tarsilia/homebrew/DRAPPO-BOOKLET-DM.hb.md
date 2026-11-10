@@ -4258,11 +4258,11 @@ ___
 
 **ATTACCO**
 ___
-**Mischia** mazza pesante +4 (1d8+2) · coltello +4 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14  
+**Mischia** mazza pesante +4 (1d8+2) · coltello +3 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14  
 
 **STATISTICHE**
 ___
-For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Attacco Poderoso, Robustezza  
+For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Arma Focalizzata (mazza pesante), Attacco Poderoso, Robustezza  
 
 **TATTICHE**
 ___
@@ -4284,11 +4284,11 @@ ___
 
 **ATTACCO**
 ___
-**Mischia** lancia lunga +5 (1d8+3) · spada corta +5 (1d6+2/19–20)  
+**Mischia** lancia lunga +5 (1d8+3) · spada corta +4 (1d6+2/19–20) · **BAB** +2  
 
 **STATISTICHE**
 ___
-For 15, Des 12, Cos 14, Int 10, Sag 11, Car 10  
+For 15, Des 12, Cos 14, Int 10, Sag 11, Car 10 · **Talenti** Arma Focalizzata (lancia lunga)  
 
 **TATTICHE**
 ___

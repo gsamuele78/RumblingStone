@@ -638,7 +638,7 @@ un settore regge da solo: sono le carte e i duelli a decidere la giornata.
 | Round | Le carte del DM | Cosa si racconta |
 |---|---|---|
 | **1** | nessuna. Valgono le leve del round 1 (Borin, le rune, il presagio di Dara) | gli orchi alle scale, gli hobgoblin dietro; il primo bianco col +1 delle mura intatte |
-| **2** | **I giganti**: un macigno per settore, d20 + 14 contro la DU di un reparto (col +1 del primo giorno e il morale; le merlature delle Mura non contano). Non si gioca se la ricognizione è stata «pulita» | il box dei giganti, qui sotto |
+| **2** | **I giganti**: due macigni per settore, ognuno d20 + 9 contro la DU di un reparto del settore, anche lo stesso (col +1 del primo giorno e il morale; le merlature delle Mura non contano) `[CANONE — DM 2026-11-10, ADR-0118: otto giganti su quattro settori; +8 del masso nell'SRD, +1 di morale]`. Non si gioca se la ricognizione è stata «pulita» | il box dei giganti, qui sotto |
 | **3** | **Gorthak al cancello**: il fronte del Cancello sale a 4, e il Cancello può **Sfidare** | il box di Gorthak; il cancello comincia a perdere pf |
 | **4** | **La palla di fuoco** sul settore che ha più reparti in piedi: 1d4+1 PFU a un reparto, il giocatore tira d20 + 5 contro 16 (d20 + 7 se Thorin ha avuto il presagio) per dimezzare. E **il sorvolo** (qui sotto) | gli adepti dalla strada, e il drago |
 | **5** | nessuna | l'orda si ritira al tramonto, se nessun settore ha ceduto; se uno ha ceduto, l'orda resta in quella breccia fino a buio e se ne va con la notte |
@@ -657,7 +657,7 @@ solo se lei ci prova. Dal round 2 può tirare il suo gesto Combattere contro un
 gigante al gomito invece che contro un reparto: +23, con −2 a −6 per la
 distanza (50-100 m, l'arco ha incrementi di 33 m), contro **CA 20** (gigante
 delle colline, SRD: 102 pf, e un colpo non lo abbatte). Non toglie PFU all'orda, quindi non salva il suo settore dalla tacca, ma
-se colpisce **il macigno di quel round, nel settore che sceglie, non parte**
+se colpisce **i macigni di quel round, nel settore che sceglie, non partono**
 `[CANONE — DM 2026-11-04, P16, il drago e il cavaliere]`. Lo stesso
 vale per la balista di una torre, d20 + 10. I giganti sono otto, sulla
 strada fra il primo e il secondo gomito, a 50-100 m dalle mura
@@ -1032,7 +1032,7 @@ una cosa in più da perdere, e il tavolo deve saperla.
 |---|---|---|
 | **sempre** | **La breccia del cancello**: dall'alba il fronte del Cancello è 4, e 5 con Gorthak | l'ariete ha piegato il ferro: i battenti non chiudono più del tutto |
 | **1** | **Grimjaw e la guardia nera**, nel settore che ha preso più tacche ieri; a pari, in quello con meno reparti; a pari ancora, la Torre Est, sotto la rampa | il box di Grimjaw, qui sotto |
-| **2** | **I giganti**: un macigno per settore, come ieri, senza il +1 delle mura intatte | |
+| **2** | **I giganti**: due macigni per settore, come ieri, senza il +1 delle mura intatte | |
 | **3** | **Gorthak al cancello**, se ha più di 101 pf: mai sfidato, o fuggito il Giorno 1 e risalito sopra metà con la notte (+15). Se no, **la palla di fuoco** | |
 | **4** | **la palla di fuoco** sulle Mura, sotto le Cantitrici | se il reparto non la dimezza, una Cantitrice è ferita e il canto trema: è lei la prima a cadere, se le Mura cedono |
 | **5** | nessuna | |

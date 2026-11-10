@@ -97,3 +97,5 @@ Risposta del DM alle card: «Le ★ per Fauci e per l'orda nemica ok a tutte. Le
 1. **Fauci**: Arma Focalizzata (morso) al posto di Allerta, morso +34 (picchiata con l'Odio +38, carica +40), Ascoltare e Osservare da +29 a +27. **Sì.**
 2. **Nemici**: Orog Guardie Nere AU +15 (la regola del canone sulla loro scheda: ascia +13, più 2). **Sì.** Fanteria Hobgoblin: **resta +8**. La regola delle unità sulla scheda del regolare (guerriero 3, spada lunga +6) dà +8; il regolare di 4° (spada +7) darebbe +9, ma è un'altra truppa; l'hobgoblin PF1e (guerriero 1, spada lunga +2) è più debole. Il +10 della chat non esce da nessuna scheda, quindi non entra.
 3. **Alleati**: Guerrieri Nanici Veterani AU +11, Balestrieri Nanici AU +12. **No**, come la consigliata: la D6 ha rinforzato l'orda e non i difensori.
+
+> **Correzione del 2026-11-09 (PR dell'ADR-0118).** Il «+2» delle unità usato qui sopra per Orog (+15) e Fanteria Hobgoblin (+8) viene dalla variante 2d6 di `mass_combat_guide_Dm.md`, non dal sistema canonico a d20. Il DM ha scelto la regola canonica, AU = attacco della creatura singola: Orog **+13**, Fanteria Hobgoblin **+6**. Il +14 e il +10 della chat restano scartati.

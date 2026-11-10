@@ -19,7 +19,7 @@ mezzi_dopo_il_primo = "su"
 [conti]
 # Bloccanti nel cancello dei moduli. Uguali in PF1e: CA come somma,
 # Iniziativa Migliorata +4, CD 10 + ½ DV + mod.
-fatti = ["pf", "CA", "prosa", "iniziativa", "CD", "ereditate"]
+fatti = ["pf", "CA", "prosa", "iniziativa", "attacco", "CD", "ereditate"]
 # ADR-0119: i conti nuovi entrano qui, il cancello li stampa come avviso
 # (⚠) e non blocca; passano in `fatti` con la promozione (testing → stable).
 in_prova = ["BMC", "DMC", "BAB", "TS", "contatto_sprovvista", "iniziativa_recinto",

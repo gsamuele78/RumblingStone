@@ -177,10 +177,10 @@ attributi: For 16 Des 14 Cos 14 Int 10 Sag 10 Car 8
 velocita: 9 m
 iniziativa: +2
 attacchi:
-  - Spada corta +11/+6 (1d6+5, 19-20)
+  - Spada corta perfetta +11/+6 (1d6+5, 19-20)
   - Balestra leggera +8 (1d8, 19-20)
 ```
-**Statistiche** **Equipaggiamento** giaco di maglia sotto il grembiule da facchino, spada corta perfetta, balestra leggera, 2 pozioni di *cura ferite moderate*, 30 mo
+**Statistiche** BAB +6 · **Talenti** Arma Focalizzata (spada corta), Arma Specializzata (spada corta) · **Equipaggiamento** giaco di maglia sotto il grembiule da facchino, spada corta perfetta, balestra leggera, 2 pozioni di *cura ferite moderate*, 30 mo
 
 **Tattiche** Non attaccano per primi. Seguono, contano, riferiscono; tagliano la fune della gabbia se i PG scendono senza averli tolti di mezzo, di giorno o di notte (C2).
 

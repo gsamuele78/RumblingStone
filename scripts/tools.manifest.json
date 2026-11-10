@@ -7895,6 +7895,24 @@
           "choices": null,
           "repeatable": false,
           "desc": "Cancello (in CI): le schede dei moduli di un altro sistema (Drappo e Giardino PF1e) tornano con le regole del loro sistema; i conti senza regola si saltano e si dicono."
+        },
+        {
+          "name": "--cancello-numeri",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cancello (ADR-0118): ogni numero che la regola sa calcolare (pf, TS, lotta, attacco, AU delle unità = attacco uno contro uno + 2) torna esatto su Bestiario, master, recinti e stand alone; cricchetto su docs/audit/numeri-baseline.json, anche per i file con numeri che nessun conto legge."
+        },
+        {
+          "name": "--aggiorna-numeri",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Toglie dalla baseline dei numeri gli scarti risolti e i file ora coperti; non aggiunge niente e fallisce se c'è uno scarto nuovo."
         }
       ],
       "inputs": [
