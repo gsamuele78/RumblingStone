@@ -1,0 +1,265 @@
+"""dmcore/talenti.py — quanti talenti ha un PNG o un mostro, e quali può prendere.
+
+Lotto 3 delle regole complete (richiesta del DM del 2026-11-10). Prima il
+generatore dava un solo «talento firma», senza contarli e senza prerequisiti.
+Qui la regola del manuale, con i dati della capacità `creature.talenti`
+(`sistemi/<sistema>/dati/talenti.toml`, generato da SRD e PRD):
+
+- **quanti**: 3.5 1 + 1 ogni 3 livelli del personaggio (SRD «Experience and
+  Level-Dependent Benefits»); PF1e uno a ogni livello dispari (PRD «Character
+  Advancement»). I DV razziali contano come livelli. In più i talenti bonus delle
+  classi (colonna «Special») e quelli che la tabella concede per nome.
+- **quali**: solo talenti di cui il PNG ha tutti i prerequisiti (caratteristiche,
+  BAB, livello d'incantatore, livelli di classe, capacità di classe, altri talenti
+  presi prima). Un talento con prerequisiti che la regola non sa leggere (`altro`)
+  o che chiede gradi in un'abilità non si sceglie.
+- **in che ordine**: prima i concessi, poi i bonus (dalla lista della classe), poi
+  i generali; dentro ogni gruppo la preferenza del ruolo (scelta di design,
+  dichiarata in `PREFERENZE`), poi i talenti senza prerequisiti, poi il resto.
+
+Gli effetti sui numeri che un blocco scrive (iniziativa, pf, TS, attacco, CA)
+li calcola `effetti`, e sono gli stessi che il cancello delle schede riconosce.
+"""
+from __future__ import annotations
+
+import random
+import re
+from dataclasses import dataclass, field
+from functools import lru_cache
+
+from . import sistemi as _S
+
+#: Preferenze per ruolo, in inglese (nomi della fonte). Non sono regole: dicono
+#: quale talento lecito il generatore prova per primo. I talenti che un sistema
+#: non ha si saltano.
+PREFERENZE: "dict[str, list[str]]" = {
+    "bruto": ["Power Attack", "Cleave", "Improved Bull Rush", "Weapon Focus", "Toughness",
+              "Great Cleave", "Improved Overrun", "Great Fortitude", "Improved Initiative", "Iron Will",
+              "Weapon Specialization", "Improved Critical", "Diehard", "Endurance"],
+    "schermagliatore": ["Dodge", "Mobility", "Improved Initiative", "Weapon Finesse", "Spring Attack",
+                        "Combat Reflexes", "Lightning Reflexes", "Weapon Focus", "Two-Weapon Fighting",
+                        "Improved Feint", "Combat Expertise", "Iron Will", "Toughness"],
+    "tiratore": ["Point-Blank Shot", "Point Blank Shot", "Precise Shot", "Rapid Shot", "Deadly Aim",
+                 "Far Shot", "Weapon Focus", "Manyshot", "Improved Initiative", "Dodge",
+                 "Lightning Reflexes", "Shot on the Run", "Iron Will", "Toughness"],
+    "comandante": ["Improved Initiative", "Iron Will", "Weapon Focus", "Power Attack", "Combat Reflexes",
+                   "Toughness", "Leadership", "Persuasive", "Great Fortitude", "Lightning Reflexes"],
+    "controllore": ["Spell Focus", "Combat Casting", "Improved Initiative", "Greater Spell Focus",
+                    "Spell Penetration", "Extend Spell", "Silent Spell", "Still Spell", "Toughness",
+                    "Iron Will", "Lightning Reflexes", "Dodge"],
+    "blaster": ["Spell Focus", "Improved Initiative", "Combat Casting", "Empower Spell", "Spell Penetration",
+                "Point-Blank Shot", "Point Blank Shot", "Precise Shot", "Maximize Spell", "Toughness",
+                "Iron Will", "Lightning Reflexes"],
+    "supporto": ["Combat Casting", "Improved Initiative", "Extend Spell", "Toughness", "Iron Will",
+                 "Great Fortitude", "Spell Focus", "Selective Channeling", "Extra Channel", "Dodge"],
+}
+
+#: talenti che servono a tutti: il ripiego quando la preferenza del ruolo è finita
+RIPIEGO = ["Improved Initiative", "Toughness", "Iron Will", "Great Fortitude", "Lightning Reflexes",
+           "Dodge", "Combat Reflexes", "Alertness", "Endurance", "Diehard", "Blind-Fight"]
+
+
+def _k(nome: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", nome.lower().replace("’", "'").replace("'", "")).strip()
+
+
+@lru_cache(maxsize=None)
+def dati(sistema: str) -> dict:
+    return _S.regole(sistema).dati("creature.talenti")
+
+
+def _per_chiave(sistema: str) -> "dict[str, str]":
+    d = dati(sistema)["talenti"]
+    out = {_k(n): n for n in d}
+    out.update({_k(v["it"]): n for n, v in d.items() if v.get("it")})
+    return out
+
+
+def nome_inglese(sistema: str, nome: str) -> "str | None":
+    """Il nome della fonte di un talento, dal nome inglese o italiano."""
+    return _per_chiave(sistema).get(_k(re.sub(r"\s*\(.*\)$", "", nome)))
+
+
+def italiano(sistema: str, en: str) -> str:
+    return dati(sistema)["talenti"].get(en, {}).get("it") or en
+
+
+# ------------------------------------------------------------------ quanti
+
+def generali(sistema: str, livello_personaggio: int) -> int:
+    n = max(1, livello_personaggio)
+    return 1 + n // 3 if sistema == "dnd35" else (n + 1) // 2
+
+
+def bonus_di_classe(sistema: str, livelli: "dict[str, int]") -> "list[tuple[str, int]]":
+    """[(classe, livello di classe)] di ogni talento bonus, in ordine."""
+    b = dati(sistema)["bonus"]
+    return [(cl, lv) for cl, n in livelli.items() for lv in b.get(cl, {}).get("livelli", []) if lv <= n]
+
+
+def concessi(sistema: str, livelli: "dict[str, int]") -> "list[tuple[str, str]]":
+    b = dati(sistema)["bonus"]
+    return [(cl, t) for cl, n in livelli.items()
+            for lv, nomi in sorted(b.get(cl, {}).get("concessi", {}).items(), key=lambda kv: int(kv[0]))
+            if int(lv) <= n for t in nomi]
+
+
+def quanti(sistema: str, livelli: "dict[str, int]", dv_razziali: int = 0) -> int:
+    """Tutti i talenti di un PNG: generali + bonus + concessi (la misura del lotto 3)."""
+    tot = sum(livelli.values()) + dv_razziali
+    return generali(sistema, tot) + len(bonus_di_classe(sistema, livelli)) + len(concessi(sistema, livelli))
+
+
+# ------------------------------------------------------------------ prerequisiti
+
+@dataclass
+class Stato:
+    """Quello che serve per i prerequisiti: caratteristiche (For, Des, Cos, Int, Sag, Car)."""
+    car: "dict[str, int]"
+    bab: int
+    livelli: "dict[str, int]" = field(default_factory=dict)
+    lic: int = 0
+    talenti: "list[str]" = field(default_factory=list)
+
+
+def manca(sistema: str, en: str, s: Stato) -> "list[str]":
+    """I prerequisiti che il PNG non ha (vuota = può prenderlo)."""
+    t = dati(sistema)["talenti"].get(en)
+    if t is None:
+        return ["non è un talento della fonte"]
+    out = []
+    for c, v in t.get("car", {}).items():
+        if s.car.get(c, 10) < v:
+            out.append(f"{c} {v} (ha {s.car.get(c, 10)})")
+    if s.bab < t.get("bab", 0):
+        out.append(f"BAB +{t['bab']} (ha {s.bab:+d})")
+    if s.lic < t.get("lic", 0):
+        out.append(f"livello d'incantatore {t['lic']} (ha {s.lic})")
+    for cl, v in t.get("classe", {}).items():
+        if s.livelli.get(cl, 0) < v:
+            out.append(f"{cl} {v}° livello")
+    for p in t.get("talenti", []):
+        if p not in s.talenti:
+            out.append(p)
+    caps = dati(sistema).get("capacita", {})
+    for cap in t.get("capacita", []):
+        if not any(s.livelli.get(cl, 0) >= lv for cl, lv in caps.get(cap, {}).items()):
+            out.append(cap)
+    if t.get("gradi"):
+        out.append("gradi in " + ", ".join(t["gradi"]))
+    if t.get("altro"):
+        out += t["altro"]
+    return out
+
+
+def _lista_bonus(sistema: str, classe: str, livello: int, stile: "str | None") -> "tuple[set | None, bool]":
+    """(talenti ammessi o None = qualsiasi del tipo, senza_prerequisiti) per un bonus."""
+    b = dati(sistema)["bonus"][classe]
+    t = dati(sistema)["talenti"]
+    if str(livello) in b.get("scelte", {}):          # «chooses either Precise Shot or Outflank»
+        return set(b["scelte"][str(livello)]), b.get("senza_prerequisiti", False)
+    if str(livello) in b.get("tipi_livello", {}):    # «receives a teamwork feat as a bonus feat»
+        tipi = set(b["tipi_livello"][str(livello)])
+        return {n for n, v in t.items() if tipi & set(v.get("tipi", []))}, False
+    nomi_per_lv = b.get("stili", {}).get(stile, {}) if stile else b.get("nomi", {})
+    if not nomi_per_lv and b.get("stili"):
+        nomi_per_lv = next(iter(b["stili"].values()))
+    ammessi = set()
+    for lv, nomi in nomi_per_lv.items():
+        if int(lv) <= livello and (b.get("cumulativa", True) or int(lv) == livello):
+            ammessi |= set(nomi)
+    for n, v in t.items():
+        if set(v.get("tipi", [])) & set(b.get("tipi", [])):
+            ammessi.add(n)
+    if not ammessi:
+        return None, False
+    return ammessi, b.get("senza_prerequisiti", False)
+
+
+def _ordine(sistema: str, ruolo: str, rng: random.Random) -> "list[str]":
+    d = dati(sistema)["talenti"]
+    chiavi = _per_chiave(sistema)
+    pref = [chiavi[_k(n)] for n in PREFERENZE.get(ruolo, []) + RIPIEGO if _k(n) in chiavi]
+    base = [n for n in sorted(d) if d[n]["libro"] in ("cr", "srd")]
+    rng.shuffle(base)
+    visti, out = set(), []
+    for n in pref + base:
+        if n not in visti:
+            visti.add(n)
+            out.append(n)
+    return out
+
+
+@dataclass
+class Scelta:
+    talenti: "list[tuple[str, str]]"   # (nome inglese, origine: concesso / bonus classe / generale)
+    note: "list[str]"
+
+
+def scegli(sistema: str, ruolo: str, s: Stato, *, dv_razziali: int = 0, firma: "str | None" = None,
+           stile: "str | None" = None, rng: "random.Random | None" = None) -> Scelta:
+    rng = rng or random.Random(0)
+    presi: "list[tuple[str, str]]" = []
+    note: "list[str]" = []
+    s.talenti = list(s.talenti)
+
+    def prendi(en: str, origine: str) -> None:
+        presi.append((en, origine))
+        s.talenti.append(en)
+
+    for cl, en in concessi(sistema, s.livelli):
+        prendi(en, f"concesso da {cl}")
+    ordine = _ordine(sistema, ruolo, rng)
+    if firma:
+        en = nome_inglese(sistema, firma)
+        if en is None:
+            note.append(f"«{firma}» non è un talento: resta nel carattere, non tra i talenti")
+        else:
+            m = manca(sistema, en, Stato(s.car, s.bab, s.livelli, s.lic, s.talenti))
+            if m:
+                note.append(f"«{italiano(sistema, en)}» non preso: mancano {', '.join(m)}")
+            ordine = [en] + [n for n in ordine if n != en]
+    for cl, lv in bonus_di_classe(sistema, s.livelli):
+        ammessi, senza = _lista_bonus(sistema, cl, lv, stile)
+        if ammessi is None:
+            note.append(f"talento bonus di {cl} al {lv}°: la lista non è nei dati, preso tra i generali")
+            ammessi, senza = set(dati(sistema)["talenti"]), False
+        for en in ordine + sorted(ammessi):
+            if en in ammessi and en not in s.talenti and (senza or not manca(sistema, en, s)):
+                prendi(en, f"bonus {cl} {lv}°")
+                break
+        else:
+            note.append(f"talento bonus di {cl} al {lv}°: nessun talento lecito nella lista")
+    for _ in range(generali(sistema, sum(s.livelli.values()) + dv_razziali)):
+        for en in ordine:
+            if en not in s.talenti and not manca(sistema, en, s):
+                prendi(en, "generale")
+                break
+        else:
+            note.append("talento generale: nessuno lecito")
+    return Scelta(presi, note)
+
+
+# ------------------------------------------------------------------ effetti
+
+def effetti(sistema: str, talenti: "list[str]", dv: int) -> "dict[str, int]":
+    """Gli effetti fissi sui numeri del blocco: iniziativa, pf, temp/rifl/vol, attacco, ca."""
+    t = set(talenti)
+    e = {"iniziativa": 0, "pf": 0, "temp": 0, "rifl": 0, "vol": 0, "attacco": 0, "ca": 0}
+    if "Improved Initiative" in t:
+        e["iniziativa"] += 4
+    if "Toughness" in t:
+        e["pf"] += 3 if sistema == "dnd35" else max(3, dv)
+    if "Improved Toughness" in t:
+        e["pf"] += dv
+    if "Great Fortitude" in t:
+        e["temp"] += 2
+    if "Lightning Reflexes" in t:
+        e["rifl"] += 2
+    if "Iron Will" in t:
+        e["vol"] += 2
+    if "Weapon Focus" in t:
+        e["attacco"] += 1
+    if "Dodge" in t and sistema == "pf1e":
+        e["ca"] += 1   # PF1e: +1 schivare alla CA; nel 3.5 è contro un solo avversario
+    return e

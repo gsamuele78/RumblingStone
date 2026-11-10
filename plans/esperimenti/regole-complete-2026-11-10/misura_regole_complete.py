@@ -13,8 +13,8 @@ Questa misura aggiunge, con lo stesso formato e la stessa cache:
   caratteristica (formula d20), liste d'incantesimi 3.5 usate dai moduli PF1e
   (`creature.incantesimi` del plugin pf1e), incantesimi «solo PF1e».
 - 3.5: tesoro per livello d'incontro (SRD «Treasure Values per Encounter»).
-- Tutti e due: talenti dei PNG generati (numero per livello, dalla regola del
-  manuale), e nomi italiani nel lessico per talenti, incantesimi e condizioni.
+- Tutti e due: talenti dei PNG generati (numero per ogni classe al 7°, contato
+  a mano sul manuale, e prerequisiti dei talenti generali), e nomi italiani nel lessico per talenti, incantesimi e condizioni.
 
     python3 plans/esperimenti/regole-complete-2026-11-10/misura_regole_complete.py
     … --json FILE   … --md FILE
@@ -232,54 +232,109 @@ def tesoro_35_letto(base) -> dict:
 
 # ------------------------------------------------------------------ talenti dei PNG generati
 
-def talenti_attesi(sistema: str, livelli: dict, razza_umana: bool = False) -> int:
-    """Talenti di un PNG con i livelli dati: la regola del manuale (SRD 3.5 / PRD PF1e)."""
-    tot = sum(livelli.values())
-    n = 1 + tot // 3 if sistema == "dnd35" else (tot + 1) // 2
-    guer = livelli.get("guerriero", 0) or livelli.get("fighter", 0)
-    if guer:
-        n += 1 + guer // 2 if sistema == "dnd35" else 1 + guer // 2
-    return n + (1 if razza_umana else 0)
+#: Talenti di un PNG al 7° livello di una sola classe, contati a mano sul manuale
+#: (non dai dati del plugin, che sono ciò che si misura). Generali: 3.5 1 + 7//3 = 3,
+#: PF1e (7+1)//2 = 4. Poi i bonus e i concessi della tabella e del testo della classe.
+#: Senza il talento umano: il generatore non sceglie la razza.
+ATTESI_7 = {
+    "dnd35": {
+        "guerriero": (7, "3 + bonus al 1°, 2°, 4°, 6°"),
+        "mago": (5, "3 + Scrivere Pergamene + bonus al 5°"),
+        "chierico": (3, "3"), "ladro": (3, "3"), "paladino": (3, "3"), "barbaro": (3, "3"),
+        "bardo": (3, "3"), "druido": (3, "3"), "stregone": (3, "3"),
+        "ranger": (7, "3 + Seguire Tracce + Resistenza Fisica + stile al 2° e al 6°"),
+        "monaco": (7, "3 + Colpo Senz'Armi Migliorato + bonus al 1°, 2°, 6°"),
+    },
+    "pf1e": {
+        "fighter": (8, "4 + bonus al 1°, 2°, 4°, 6°"),
+        "wizard": (6, "4 + Scribe Scroll + bonus al 5°"),
+        "cleric": (4, "4"), "rogue": (4, "4"), "paladin": (4, "4"), "barbarian": (4, "4"), "bard": (4, "4"),
+        "druid": (4, "4"), "oracle": (4, "4"), "summoner": (4, "4"), "witch": (4, "4"), "antipaladin": (4, "4"),
+        "ninja": (4, "4"), "slayer": (4, "4"), "investigator": (4, "4"), "shaman": (4, "4"), "arcanist": (4, "4"),
+        "ranger": (7, "4 + Endurance + combat style al 2° e al 6°"),
+        "monk": (9, "4 + Improved Unarmed Strike + Stunning Fist + bonus al 1°, 2°, 6°"),
+        "sorcerer": (6, "4 + Eschew Materials + talento di stirpe al 7°"),
+        "alchemist": (6, "4 + Brew Potion + Throw Anything"),
+        "cavalier": (6, "4 + teamwork del Tactician al 1° + bonus al 6°"),
+        "gunslinger": (6, "4 + Gunsmithing + bonus al 4°"),
+        "inquisitor": (6, "4 + teamwork al 3° e al 6°"),
+        "magus": (5, "4 + bonus al 5°"), "samurai": (5, "4 + bonus al 6°"), "swashbuckler": (5, "4 + bonus al 4°"),
+        "skald": (5, "4 + Scribe Scroll"),
+        "brawler": (7, "4 + Improved Unarmed Strike + combat al 2° e al 5°"),
+        "hunter": (7, "4 + Precise Companion al 2° + teamwork al 3° e al 6°"),
+        "warpriest": (7, "4 + Weapon Focus + bonus al 3° e al 6°"),
+        "bloodrager": (6, "4 + Eschew Materials al 4° + talento di stirpe al 6°"),
+    },
+}
 
 
-def _conta_talenti(blocco: str) -> int:
+def _png(sistema: str, cl: str):
+    """(statblocco, conto) di un PNG di 7° livello, come lo fa genera_creatura.main."""
+    import genera_creatura as G  # noqa: E402
+    from dmcore import sistemi as S
+    from dmcore import creature_pf1e as CP
+    rng = random.Random(1)
+    if sistema == "pf1e":
+        classi = CP.leggi_classi(f"{cl}:7", S.dati("pf1e", "creature.costruzione"))
+        return G.genera_png_pf1e(7, classi=classi, rng=rng)
+    try:
+        return G.genera(7, classe=G._classe(f"{cl}:7"), rng=rng, talenti="dnd35")
+    except TypeError:   # generatore di prima del lotto 3, per la misura «prima»
+        return G.genera(7, classe=G._classe(f"{cl}:7"), rng=random.Random(1))
+
+
+def _elenco(blocco: str) -> "list[str]":
     m = re.search(r"Talenti:\s*([^\n|]+)", blocco)
-    if not m:
-        return 0
-    return len([t for t in re.split(r",\s*(?![^()]*\))", m.group(1)) if t.strip()])
+    return [re.sub(r"\s*\(.*\)$", "", t).strip() for t in re.split(r",\s*(?![^()]*\))", m.group(1))
+            if t.strip()] if m else []
 
 
 def talenti_generati() -> list:
+    """Quanti talenti ha il PNG (contro il manuale) e se ogni talento generale è lecito."""
     import genera_creatura as G  # noqa: E402
-    import io
-    from contextlib import redirect_stdout
+    from dmcore import talenti as TL
 
     out = []
-    for sistema, classi in (("dnd35", ["guerriero", "mago", "chierico", "ladro", "ranger"]),
-                            ("pf1e", ["fighter", "wizard", "cleric", "rogue", "ranger"])):
-        sb, cop = [], 0
-        for cl in classi:
-            buf = io.StringIO()
-            args = ["--sistema", sistema, "--classe", f"{cl}:7",
-                    "--gs", "7", "--seed", "1"]
+    for sistema, attesi in ATTESI_7.items():
+        sb, cop, illeciti, nv, nv_pre, controllati = [], 0, [], [], [], 0
+        for cl, (atteso, perche) in attesi.items():
             try:
-                with redirect_stdout(buf):
-                    G.main(args)
-            except SystemExit:
-                pass
+                blocco, conto = _png(sistema, cl)
             except Exception as e:  # pragma: no cover — la misura dice dove si rompe
+                cop += 1
                 sb.append({"riga": cl, "campo": "talenti", "plugin": f"errore {type(e).__name__}", "fonte": "—"})
                 continue
-            testo = buf.getvalue()
-            got = _conta_talenti(testo)
-            atteso = talenti_attesi(sistema, {cl: 7})
+            nomi = _elenco(G.rendi(blocco))
             cop += 1
-            if got != atteso:
-                sb.append({"riga": f"{cl} 7°", "campo": "talenti", "plugin": got, "fonte": atteso})
-        out.append((sistema, _riga("uso: numero di talenti dei PNG generati (7° livello)", len(classi), cop,
-                                   cop - len(sb), sb,
-                                   nota="regola: 3.5 1 + 1 ogni 3 livelli, PF1e 1 ogni livello dispari; "
-                                        "guerriero +1 al 1° e ogni livello pari")))
+            if len(nomi) != atteso:
+                sb.append({"riga": f"{cl} 7°", "campo": "talenti", "plugin": len(nomi), "fonte": f"{atteso} ({perche})"})
+            st = getattr(conto, "talenti", None)
+            if not st:   # generatore di prima del lotto 3: non tiene BAB e livelli per i talenti
+                nv_pre.append(f"{cl}: il generatore non dà BAB e livelli, prerequisiti non ricontrollabili")
+                continue
+            controllati += 1
+            car = {k: int(v) for k, v in re.findall(r"\b(For|Des|Cos|Int|Sag|Car)\s+(\d+)", blocco.attributi)}
+            origini = dict(re.findall(r"([^;—]+?) \[([^\]]+)\]", next((r for r in conto.righe
+                                                                       if r.startswith("talenti:") and "[" in r), "")))
+            presi: "list[str]" = []
+            for it in nomi:
+                en = TL.nome_inglese(sistema, it)
+                if en is None:
+                    nv.append(f"{cl}: «{it}» non è nei dati dei talenti")
+                    continue
+                if origini.get(it.strip()) == "generale":
+                    m = TL.manca(sistema, en, TL.Stato(car, st.get("bab", 0), st.get("livelli", {}),
+                                                       st.get("lic", 0), list(presi)))
+                    if m:
+                        illeciti.append({"riga": f"{cl} 7°", "campo": it, "plugin": "preso", "fonte": "manca " + ", ".join(m)})
+                presi.append(en)
+        out.append((sistema, _riga("uso: numero di talenti dei PNG generati (7° livello, ogni classe)", len(attesi), cop,
+                                   cop - len(sb), sb, nv=nv,
+                                   nota="atteso contato a mano sul manuale (ATTESI_7), non dai dati del plugin")))
+        out.append((sistema, _riga("uso: prerequisiti dei talenti generali dei PNG generati", len(attesi), cop,
+                                   controllati - len({x["riga"] for x in illeciti}), illeciti, nv=nv_pre,
+                                   nota="ogni talento generale ricontrollato coi prerequisiti della fonte, "
+                                        "nell'ordine in cui è stato preso")))
     return out
 
 

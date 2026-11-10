@@ -72,6 +72,16 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   corretto), «scaglie» letta come armatura (ora «corazza a scaglie»), e i talenti dei
   PNG generati: 1 «talento firma» senza prerequisiti contro i 3-8 della regola (0/10,
   lotto 3).
+- Lotto 3 delle regole complete (talenti dei PNG): `estrai_talenti.py` scrive
+  `sistemi/{pf1e,dnd35}/dati/talenti.toml` dal PRD (1.227 talenti, 9 libri) e
+  dall'SRD (110), con prerequisiti, tipi, talenti bonus di classe (dalla tabella e
+  dal testo delle capacità) e concessi; la capacità nuova `creature.talenti` la usa
+  `dmcore/talenti.py`. Misura con la stessa forma, atteso contato a mano sul
+  manuale al 7° livello per ogni classe: numero 3.5 0/11 → 11/11, PF1e 0/32 →
+  32/32; prerequisiti dei talenti generali ricontrollati 11/11 e 32/32 (prima non
+  ricontrollabili: il generatore non teneva BAB e livelli). Restano: talento
+  umano (il generatore non sceglie la razza), prerequisiti di gradi (talento
+  saltato, non inventato).
 
 ## Conseguenze
 

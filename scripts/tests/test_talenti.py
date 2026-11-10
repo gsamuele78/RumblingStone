@@ -1,0 +1,117 @@
+"""I talenti dei PNG generati: quanti, quali, e con i prerequisiti (lotto 3 delle regole complete).
+
+I difetti che questi test esistono per impedire:
+
+- un PNG con un solo «talento firma» dove la regola gliene dà sette (il guerriero 7
+  del 3.5 prima del 2026-11-10);
+- un talento preso senza i prerequisiti (Sbilanciare Migliorato con Int 8);
+- i talenti bonus di classe dimenticati quando la tabella non li chiama «bonus feat»
+  (il Colpo Senz'Armi Migliorato del monaco, il talento di squadra del tattico del
+  cavaliere, lo stile del ranger 3.5);
+- un talento mitico dato a un PNG che non ha gradi mitici;
+- i dati dei talenti scritti a mano invece che dal PRD/SRD (il --check, quando le
+  fonti sono in cache).
+
+Solo `unittest`.
+"""
+from __future__ import annotations
+
+import os
+import random
+import re
+import subprocess
+import sys
+import unittest
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "scripts"))
+
+from dmcore import talenti as TL  # noqa: E402
+import genera_creatura as G  # noqa: E402
+
+ESTRATTORE = REPO / "plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py"
+CACHE = Path(os.environ.get("RUMBLINGSTONE_SRD_CACHE", Path.home() / ".cache/rumblingstone/srd"))
+
+
+def _talenti(blocco) -> "list[str]":
+    riga = next(v for v in blocco.voci if v.startswith("Talenti:"))
+    return [t.strip() for t in re.split(r",\s*(?![^()]*\))", riga.split(":", 1)[1]) if t.strip()]
+
+
+class Dati(unittest.TestCase):
+    @unittest.skipUnless((CACHE / "PSRD-Data-76ea47846041").is_dir()
+                         and (CACHE / "srd-v3.5-md-c7f30a0ce11a").is_dir(),
+                         "PRD o SRD non in cache (riscontro_srd.py scarica)")
+    def test_i_dati_sono_quelli_delle_fonti(self):
+        r = subprocess.run([sys.executable, str(ESTRATTORE), "--check"], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_numero_generale_dei_due_manuali(self):
+        # 3.5: 1 + 1 ogni 3 livelli; PF1e: 1 ogni livello dispari
+        self.assertEqual([TL.generali("dnd35", n) for n in (1, 3, 6, 7, 20)], [1, 2, 3, 3, 7])
+        self.assertEqual([TL.generali("pf1e", n) for n in (1, 2, 3, 7, 20)], [1, 1, 2, 4, 10])
+
+    def test_prerequisiti_letti_dalla_fonte(self):
+        for sistema in ("dnd35", "pf1e"):
+            s = TL.Stato(car={"Int": 8, "For": 16}, bab=7, livelli={})
+            m = TL.manca(sistema, "Improved Trip", s)
+            self.assertTrue(any(x.startswith("Int 13") for x in m), m)
+            self.assertIn("Combat Expertise", m)
+            s = TL.Stato(car={"Int": 13}, bab=7, livelli={}, talenti=["Combat Expertise"])
+            self.assertEqual(TL.manca(sistema, "Improved Trip", s), [])
+
+    def test_talento_mitico_mai_lecito(self):
+        s = TL.Stato(car={"For": 20}, bab=20, livelli={"fighter": 20}, talenti=["Power Attack"])
+        self.assertTrue(TL.manca("pf1e", "Power Attack, Mythic", s))
+
+    def test_bonus_dal_testo_delle_capacita(self):
+        d = TL.dati("pf1e")["bonus"]
+        self.assertIn("Improved Unarmed Strike", d["monk"]["concessi"]["1"])
+        self.assertIn("Improved Unarmed Strike", d["brawler"]["concessi"]["1"])
+        self.assertEqual(d["cavalier"]["tipi_livello"]["1"], ["Teamwork"])
+        self.assertEqual(sorted(d["hunter"]["scelte"]["2"]), ["Outflank", "Precise Shot"])
+        self.assertTrue(d["monk"]["senza_prerequisiti"])
+        self.assertNotIn("shaman", d)   # la Mobilità è dell'animale di uno spirito, non dello sciamano
+        d3 = TL.dati("dnd35")["bonus"]
+        self.assertIn("Improved Unarmed Strike", d3["monaco"]["concessi"]["1"])
+        self.assertEqual(d3["ranger"]["stili"]["Archery"]["2"], ["Rapid Shot"])
+
+
+class Generatore(unittest.TestCase):
+    def test_guerriero_7_del_35_ha_sette_talenti_leciti(self):
+        sb, conto = G.genera(7, classe=G._classe("guerriero:7"), rng=random.Random(1), talenti="dnd35")
+        nomi = _talenti(sb)
+        self.assertEqual(len(nomi), 7, nomi)
+        self.assertEqual(TL.quanti("dnd35", {"guerriero": 7}), 7)
+        self.assertNotIn("Sbilanciare migliorato", nomi)   # Int 8 nel profilo del bruto
+
+    def test_fighter_7_pf1e_e_monaco(self):
+        from dmcore import sistemi as S
+        from dmcore import creature_pf1e as CP
+        for cl, n in (("fighter", 8), ("monk", 9), ("cavalier", 6), ("wizard", 6), ("cleric", 4)):
+            classi = CP.leggi_classi(f"{cl}:7", S.dati("pf1e", "creature.costruzione"))
+            sb, _ = G.genera_png_pf1e(7, classi=classi, rng=random.Random(1))
+            self.assertEqual(len(_talenti(sb)), n, (cl, _talenti(sb)))
+
+    def test_ogni_talento_generale_ha_i_prerequisiti(self):
+        rng = random.Random(3)
+        for ruolo in ("bruto", "tiratore", "controllore", "comandante"):
+            st = TL.Stato(car={"For": 14, "Des": 15, "Cos": 12, "Int": 10, "Sag": 10, "Car": 8},
+                          bab=5, livelli={"fighter": 5})
+            scelta = TL.scegli("pf1e", ruolo, st, rng=rng)
+            presi: "list[str]" = []
+            for en, origine in scelta.talenti:
+                if origine == "generale":
+                    s = TL.Stato(st.car, st.bab, st.livelli, st.lic, list(presi))
+                    self.assertEqual(TL.manca("pf1e", en, s), [], (ruolo, en))
+                presi.append(en)
+
+    def test_effetti_sui_numeri(self):
+        e = TL.effetti("pf1e", ["Improved Initiative", "Toughness", "Iron Will"], dv=7)
+        self.assertEqual((e["iniziativa"], e["pf"], e["vol"]), (4, 7, 2))
+        self.assertEqual(TL.effetti("dnd35", ["Toughness"], dv=7)["pf"], 3)
+
+
+if __name__ == "__main__":
+    unittest.main()
