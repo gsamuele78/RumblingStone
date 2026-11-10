@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
+| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Lotto PF1e dell'audit dei plugin (ADR-0121, richiesta del DM «completa i limiti… | ✅ misura PF1e da 59 coperte/46 giuste su 217 (main 421dbd0) a 217/217; uso: 55/55 classi generate e 20/20 tipi convertiti passano il cancello PF1e (prima 0 e 7… |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Carta dei giganti del libretto (richiesta del DM dal thread dell'audit: «soluzi… | ✅ simulazione: nessuna breccia 50% → 54%, posizioni tenute 74% → 73%; scelta dal DM con la card del 2026-11-10 |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Chiusura dell'ultimo scarto (DM: «cerca un valore plausibile per le baliste», c… | ✅ scarti 1 → 0; restano i 75 file in prosa non coperti |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | **Corregge la #360 e la prima stesura di ADR-0118**: il «+2 effetto massa» dell… | ✅ scarti 13 → 1 (baliste AU +10, senza scheda). Libretto `ARC08-18`, DEF e `ARC08-19` non toccati: la carta dei massi resta a 14, da decidere |
-| 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Prima correzione degli scarti del cancello dei numeri (DM: «correggi i problemi… | ✅ restano 13 AU di unità senza scheda uno contro uno |
 
 ## Le misure che si portano dietro
 

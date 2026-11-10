@@ -54,9 +54,13 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   resta è il TS dell'umanoide, una scelta da scrivere. 185
   voci delle liste non si possono verificare perché il loro nome italiano non
   è quello del lessico.
-- pf1e: 36% coperto. Mancano classi, armature e griglie. #363 porta BAB e TS
-  di 55 classi per il cancello di conformità, ma non DV, gradi, armature e
-  griglie, né i costruttori di creature.
+- pf1e, prima: 36% coperto (39/108 righe). Mancavano classi, armature e
+  griglie, e `genera_creatura --sistema pf1e` rifiutava i livelli di classe.
+- pf1e, dopo il lotto PF1e: **217/217 righe coperte e giuste**, con la misura
+  estesa all'uso. Su main 421dbd0 la stessa misura dà 59 righe coperte e 46
+  giuste. Il dettaglio è nel rapporto, § Lotto PF1e:
+  - 55 classi su 55 generate, che passano il cancello PF1e;
+  - 20 tipi su 20 portati in PF1e che lo passano, contro 7 prima.
 - `derive_statblocks` leggeva armature e scudi per pezzi di parola: 11 scudi
   e 2 armature inventati, 1 armatura vera non letta. Ora legge a parola intera
   e parte dal nome più lungo.

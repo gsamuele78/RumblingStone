@@ -124,9 +124,15 @@ def classe_da_tabella(righe: list) -> dict:
     if i_testa is None:
         return {}
     testa = list(righe[i_testa])
+    # Swashbuckler (ACG): la riga sopra con «Base Attack», «Fort», «Ref», «Will»
+    # manca nel PRD, restano «Bonus», «Save», «Save», «Save»
+    if testa[1:5] == ["Bonus", "Save", "Save", "Save"]:
+        testa[1:5] = ["Base Attack Bonus", "Fort Save", "Ref Save", "Will Save"]
     # PRD: intestazione su due righe (rowspan), la seconda ha solo i livelli d'incantesimo
     dopo = righe[i_testa + 1] if i_testa + 1 < len(righe) else []
-    if dopo and all(c in COL_INC or c.startswith("Spells") for c in dopo):
+    # alchimista e investigatore: «Extracts per Day» al posto di «Spells per Day»
+    testa = [c.replace("Extracts per Day", "Spells per Day") for c in testa]
+    if dopo and all(c in COL_INC or c.startswith(("Spells", "Extracts")) for c in dopo):
         sotto = iter(c for c in dopo if c in COL_INC)
         testa = [next(sotto, c) if c.startswith("Spells per Day") else c for c in testa]
     i_bab = next(i for i, c in enumerate(testa) if c.startswith("Base Attack"))
@@ -146,6 +152,12 @@ def classe_da_tabella(righe: list) -> dict:
         n = int(m.group(1))
         if len(r) <= max(i_ts.values()):
             continue
+        # PRD: una riga senza capacità speciali a volte omette la cella «Special»
+        # (Hunter 16°), e le colonne degli incantesimi scivolano di uno
+        i_sp = next((i for i, c in enumerate(testa) if c == "Special"), None)
+        if (i_sp is not None and len(r) == len(testa) - 1 and i_sp < len(r)
+                and re.fullmatch(r"\d+|—", r[i_sp].strip())):
+            r = r[:i_sp] + [""] + r[i_sp:]
         bab = num(r[i_bab])
         ts = {k: num(r[i]) for k, i in i_ts.items()}
         griglia = {}
@@ -160,7 +172,11 @@ def classe_da_tabella(righe: list) -> dict:
     top = max(liv)
     bab = liv[top]["bab"] / top
     bab = 1.0 if bab >= 0.95 else 0.75 if bab >= 0.7 else 0.5
-    buoni = sorted(k for k, v in liv[1]["ts"].items() if v is not None and v >= 2)
+    # TS buono = progressione che all'ultimo livello supera quella scarsa (liv // 3)
+    # (base 20°: +12 contro +6; prestigio 10°: +7 nel 3.5, +5 nel PF1e, contro +3). Il vecchio criterio
+    # «≥ +2 al 1°» sbagliava le prestigio PF1e, che partono da +1 (segnalato dal
+    # thread della #363).
+    buoni = sorted(k for k, v in liv[top]["ts"].items() if v is not None and v > top // 3)
     return {"livelli": top, "bab": bab, "ts_buoni": buoni,
             "griglia": {n: liv[n]["griglia"] for n in sorted(liv) if liv[n]["griglia"]}}
 
@@ -308,14 +324,30 @@ def prd_pf1e(base: Path) -> dict:
                 continue
             dv = c.execute("select hit_die from class_details where section_id=?", (sid,)).fetchone()
             corpo = c.execute("select body from sections where lft between ? and ? and type='table' "
-                              "and name like 'Table: %' and body like '%Base Attack%'", (lft, rgt)).fetchone()
-            pa = c.execute("select body from sections where lft between ? and ? and name='Skill Ranks per Level'",
+                              "and (name like 'Table: %' or name = ? or name = '') and body like '%Base Attack%'",
+                              (lft, rgt, nome)).fetchone()
+            if not corpo:  # Swashbuckler: l'intestazione PRD non dice «Base Attack»
+                corpo = c.execute("select body from sections where lft between ? and ? and type='table' "
+                                  "and name = ?", (lft, rgt, nome)).fetchone()
+            if not dv or not dv[0]:
+                # antipaladino: class_details.hit_die è vuoto, il PRD lo scrive
+                # nella sezione figlia «Hit Die» (book-apg 2731, «d10.»)
+                hd = c.execute("select body from sections where lft between ? and ? and name='Hit Die'",
+                               (lft, rgt)).fetchone()
+                m_hd = re.search(r"d(\d+)", re.sub("<[^>]+>", "", hd[0])) if hd and hd[0] else None
+                dv = (f"d{m_hd.group(1)}",) if m_hd else dv
+            pa = c.execute("select body from sections where lft between ? and ? and name in "
+                           "('Skill Ranks per Level', 'Skill Ranks at Each Level')",
                            (lft, rgt)).fetchone()
             if not dv or not dv[0] or not corpo:
                 continue
             riga = classe_da_tabella(next(iter(tabelle(corpo[0]).values())))
             if not riga:
                 continue
+            sk = c.execute("select body from sections where lft between ? and ? and type='table' "
+                           "and name like '%Spells Known%'", (lft, rgt)).fetchone()
+            if sk:
+                riga["conosciuti"] = classe_conosciuti(next(iter(tabelle(sk[0]).values())))
             riga.update(dv=int(dv[0].strip().lstrip("d")), gradi=num(re.sub("<[^>]+>", "", pa[0])) if pa else None,
                         gruppo={"core": "base", "base": "base", "hybrid": "base", "npc": "png"}.get(sub, "prestigio"),
                         libro=libro)
@@ -390,6 +422,87 @@ def confronta(nome: str, fonte: dict, plugin: dict, campi: list, mancanti_campi=
             "campi_assenti": list(mancanti_campi)}
 
 
+def uso_pf1e(p1: dict) -> dict:
+    """Le classi del PRD che `genera_creatura --sistema pf1e` costruisce (5° livello;
+    le prestigio sopra un mago, un chierico o un guerriero di 5°) e se il blocco
+    passa i conti PF1e del cancello dei moduli."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import random
+    try:
+        import genera_creatura as G
+        from dmcore import sistemi as S
+        import conformita_statblocchi as CS
+        S.dati("pf1e", "creature.costruzione")  # il plugin si carica: se manca, lo dice
+    except Exception as e:  # noqa: BLE001 — la misura dice cosa manca, non cade
+        return {"tabella": "uso: classi generate da genera_creatura", "fonte": 0, "coperte": 0,
+                "giuste": 0, "mancanti": [], "sbagliate": [], "campi_assenti": [f"non si importa: {e}"]}
+    if not hasattr(G, "genera_png_pf1e"):
+        tutte = sorted(p1["classi"]) + sorted(p1["prestigio"])
+        return {"tabella": "uso: classi generate da genera_creatura", "fonte": len(tutte), "coperte": 0,
+                "giuste": 0, "mancanti": tutte, "sbagliate": [],
+                "campi_assenti": ["genera_creatura --sistema pf1e rifiuta i livelli di classe"]}
+    sb_err, coperte, mancanti = [], [], []
+    for en in sorted(p1["classi"]) + sorted(p1["prestigio"]):
+        if en in p1["prestigio"]:
+            base = {"arcane": "wizard", "divine": "cleric"}.get(
+                "arcane" if en in ("arcane archer", "arcane trickster", "dragon disciple", "eldritch knight",
+                                   "loremaster", "master chymist") else
+                "divine" if en in ("holy vindicator", "nature warden", "rage prophet", "mystic theurge") else "",
+                "fighter")
+            classi = [(base, 5), (en, 3)] if en != "mystic theurge" else [("cleric", 3), ("wizard", 3), (en, 3)]
+        else:
+            classi = [(en, 5)]
+        try:
+            sb, _ = G.genera_png_pf1e(5, classi=classi, rng=random.Random(1))
+        except Exception as e:  # noqa: BLE001
+            mancanti.append(en)
+            sb_err.append({"riga": en, "campo": "genera", "plugin": None, "fonte": str(e)[:80]})
+            continue
+        coperte.append(en)
+        scarti = CS.conti_del_recinto({"sb": sb, "prosa": "", "riga": 1}, sistema="pf1e")
+        for s in scarti:
+            sb_err.append({"riga": en, "campo": s["campo"], "plugin": s["scritto"], "fonte": s["atteso"]})
+        if not sb.completo:
+            sb_err.append({"riga": en, "campo": "completo", "plugin": sb.mancanti(), "fonte": []})
+        for v in sb.voci:
+            if v.startswith("Incantatore") and not any(x.startswith(("Preparati", "Conosciuti")) for x in sb.voci):
+                sb_err.append({"riga": en, "campo": "incantesimi scelti", "plugin": "nessuno",
+                               "fonte": "lista PF1e della classe"})
+                break
+    return {"tabella": "uso: classi generate da genera_creatura (5°, cancello PF1e, incantesimi scelti)",
+            "fonte": len(coperte) + len(mancanti), "coperte": len(coperte),
+            "giuste": len(coperte) - len({s["riga"] for s in sb_err if s["riga"] in coperte}),
+            "mancanti": mancanti, "sbagliate": sb_err, "campi_assenti": []}
+
+
+def uso_tipi_pf1e() -> dict:
+    """Ogni tipo di creatura portato in PF1e da `genera_creatura --sistema pf1e`
+    (GS 9, taglia media e, per i costrutti, tutte le taglie con pf bonus)
+    passa i conti PF1e del cancello dei moduli?"""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import random
+    import genera_creatura as G
+    from dmcore import creature_pf1e as CP
+    import conformita_statblocchi as CS
+    casi = [(t, "medium") for t in G.T.TIPI if t not in ("humanoid",)]
+    casi += [("construct", tg) for tg in ("tiny", "small", "large", "huge", "gargantuan", "colossal")]
+    sb_err, righe = [], []
+    for tipo, taglia in casi:
+        riga = f"{tipo} {taglia}"
+        righe.append(riga)
+        try:
+            sb, _ = G.genera(9, tipo=tipo, taglia=taglia, rng=random.Random(1))
+            pf, _ = CP.converti(sb, tipo, taglia)
+        except Exception as e:  # noqa: BLE001
+            sb_err.append({"riga": riga, "campo": "converti", "plugin": None, "fonte": str(e)[:80]})
+            continue
+        for s in CS.conti_del_recinto({"sb": pf, "prosa": "", "riga": 1}, sistema="pf1e"):
+            sb_err.append({"riga": riga, "campo": s["campo"], "plugin": s["scritto"], "fonte": s["atteso"]})
+    return {"tabella": "uso: tipi di creatura portati in PF1e (GS 9, cancello PF1e)", "fonte": len(righe),
+            "coperte": len(righe), "giuste": len(righe) - len({s["riga"] for s in sb_err}),
+            "mancanti": [], "sbagliate": sb_err, "campi_assenti": []}
+
+
 def misura(base: Path) -> dict:
     s35, p1 = srd35(base), prd_pf1e(base)
     c35 = toml("sistemi/dnd35/dati/creature.toml")
@@ -415,9 +528,15 @@ def misura(base: Path) -> dict:
                                   ["gradi (punti abilità per livello)"]))
     out["dnd35"].append(confronta("classi di prestigio", s35["prestigio"], c35.get("prestigio", {}),
                                   ["dv", "bab", "ts_buoni"]))
-    out["pf1e"].append(confronta("classi base, ibride e PNG", p1["classi"], {}, ["dv", "bab", "ts_buoni"],
-                                 ["il plugin PF1e non ha la tabella: le schede con livelli di classe sono rifiutate"]))
-    out["pf1e"].append(confronta("classi di prestigio", p1["prestigio"], {}, ["dv", "bab", "ts_buoni"]))
+    k1 = toml("sistemi/pf1e/dati/classi.toml") if (ROOT / "sistemi/pf1e/dati/classi.toml").exists() else {}
+    kc = k1.get("classi", {})
+    cl1 = {k: v for k, v in kc.items() if v["gruppo"] != "prestigio"}
+    pr1 = {k: v for k, v in kc.items() if v["gruppo"] == "prestigio"}
+    out["pf1e"].append(confronta("classi base, ibride e PNG", p1["classi"], cl1,
+                                 ["dv", "bab", "ts_buoni", "gradi"],
+                                 [] if cl1 else ["il plugin PF1e non ha la tabella"]))
+    out["pf1e"].append(confronta("classi di prestigio", p1["prestigio"], pr1,
+                                 ["dv", "bab", "ts_buoni", "gradi"]))
 
     # --- armature e scudi
     a35 = {k: v for k, v in c35["armature"].items()}
@@ -430,8 +549,11 @@ def misura(base: Path) -> dict:
                   "shield, tower": "tower shield"}.get(k, k)
         sc_fonte[chiave] = {"ca": v}
     out["dnd35"].append(confronta("scudi", sc_fonte, sc35, ["ca"]))
-    out["pf1e"].append(confronta("armature", p1["armature"], {}, ["ca", "des_max"],
-                                 ["il plugin PF1e non ha la tabella"]))
+    a1 = cp1.get("armature", {})
+    out["pf1e"].append(confronta("armature", p1["armature"], a1, ["ca", "des_max"],
+                                 [] if a1 else ["il plugin PF1e non ha la tabella"]))
+    out["pf1e"].append(confronta("scudi", {k: {"ca": v} for k, v in p1["scudi"].items()},
+                                 cp1.get("scudi", {}), ["ca"]))
 
     # --- griglie degli incantesimi (3.5)
     g35 = {}
@@ -470,10 +592,26 @@ def misura(base: Path) -> dict:
     if pf1e_voluta:
         ris["tabella"] += f" — {', '.join(sorted(pf1e_voluta))} contro il PRD PF1e (scelta del DM)"
     out["dnd35"].append(ris)
-    out["pf1e"].append({"tabella": "incantesimi al giorno (griglie)", "fonte": sum(
-        1 for v in p1["classi"].values() if v.get("griglia")), "coperte": 0, "giuste": 0,
-        "mancanti": sorted(k for k, v in p1["classi"].items() if v.get("griglia")), "sbagliate": [],
-        "campi_assenti": ["il plugin PF1e non ha griglie: chi genera usa quelle 3.5"]})
+    for chiave, campo, nome in (("griglie", "griglia", "incantesimi al giorno (griglie)"),
+                                ("conosciuti", "conosciuti", "incantesimi conosciuti")):
+        fonte = {k: v[campo] for k, v in (p1["classi"] | p1["prestigio"]).items() if v.get(campo)}
+        plug = {k: {int(n): list(x) for n, x in g.items()} for k, g in k1.get(chiave, {}).items()}
+        sb = []
+        for k in sorted(set(fonte) & set(plug)):
+            for n in sorted(fonte[k]):
+                a, b = plug[k].get(n), griglia_lista(fonte[k][n])
+                if not b and not a:  # livello senza incantesimi (bloodrager 1°-3°)
+                    continue
+                # lo 0 d'allineamento (classi senza livello 0) non è nella fonte
+                if a and b and len(a) == len(b) + 1 and a[0] == 0:
+                    b = [0] + b
+                if a != b and not (a and b and a[1:] == b[1:] and b[0] == 0):
+                    sb.append({"riga": f"{k} {n}°", "campo": campo, "plugin": a, "fonte": b})
+        cop = sorted(set(fonte) & set(plug))
+        out["pf1e"].append({"tabella": nome, "fonte": len(fonte), "coperte": len(cop),
+                            "giuste": len(cop) - len({s["riga"].rsplit(" ", 1)[0] for s in sb}),
+                            "mancanti": sorted(set(fonte) - set(plug)), "sbagliate": sb,
+                            "campi_assenti": [] if plug else ["il plugin PF1e non ha la tabella"]})
 
     # --- conosciuti
     for en, chiave in (("sorcerer", "stregone_conosciuti"), ("bard", "bardo_conosciuti")):
@@ -486,6 +624,10 @@ def misura(base: Path) -> dict:
                              + (" contro il PRD PF1e (scelta del DM)" if voluta else ""), "fonte": len(src),
                              "coperte": len(set(src) & set(g)), "giuste": len(src) - len(sb),
                              "mancanti": [], "sbagliate": sb, "campi_assenti": []})
+
+    # --- uso: ogni classe PF1e del PRD si genera e passa il cancello PF1e?
+    out["pf1e"].append(uso_pf1e(p1))
+    out["pf1e"].append(uso_tipi_pf1e())
 
     # --- abilità
     lx35 = lessico("scripts/lessico_it_35.tsv", "srd35").get("abilità", {})
