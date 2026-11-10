@@ -30,7 +30,7 @@ Fonti: SRD 3.5 `olimot/srd-v3.5-md@c7f30a0c`, PRD `PSRD-Data@76ea4784` (cache di
 | Tesoro per incontro | ✓ (`loot_tables.yaml`) | ✓ (3 velocità) | — | nessuna | **nuova, tutti e due** |
 | Statistiche dei mostri per GS (Bestiary 1–1) | — | ✓ | — | nessuna | **nuova** |
 | Formule (modificatore, TS, CD) | — | — | ✓ | nessuna | **modificatore nuova**; TS già dentro le classi |
-| Talenti dei PNG generati | 1 «talento firma» | 1 «talento firma» | — | nessuna | **nuova (uso)** |
+| Talenti dei PNG generati | ✓ dal lotto 3 (`talenti.toml`, SRD) | ✓ dal lotto 3 (`talenti.toml`, PRD) | — | nessuna | **nuova (uso)**: numero per classe al 7° e prerequisiti |
 | Nomi italiani di condizioni, talenti, incantesimi | lessico | lessico | — | ADR-0110 (termini) | **nuova: copertura contro la fonte** |
 | Conformità delle schede | ✓ | ✓ (ADR-0119) | — | cancello | invariata |
 
@@ -39,8 +39,8 @@ Fonti: SRD 3.5 `olimot/srd-v3.5-md@c7f30a0c`, PRD `PSRD-Data@76ea4784` (cache di
 | Sistema | Tabella | Esito | Che cosa vuol dire |
 |---|---|---|---|
 | 3.5 | tesoro per livello d'incontro | 19/20 | EL 19 era 60.000 mo, l'SRD dice 61.000. **Corretto in questo lotto.** |
-| 3.5 | talenti dei PNG generati | 0/5 | Un guerriero 7 ne ha 1, la regola gliene dà 7; un mago 7 1 su 3. Lotto 3. |
-| PF1e | talenti dei PNG generati | 0/5 | Un fighter 7 1 su 8, gli altri 1 su 4. Lotto 3. |
+| 3.5 | talenti dei PNG generati | 0/5 (lotto 1); **11/11 dopo il lotto 3** | Un guerriero 7 ne aveva 1, la regola gliene dà 7. Ora tutte le 11 classi al 7° tornano col conto fatto a mano sul manuale. |
+| PF1e | talenti dei PNG generati | 0/5 (lotto 1); **32/32 dopo il lotto 3** | Un fighter 7 ne aveva 1 su 8. Ora le 32 classi base, ibride e alternative al 7° tornano, e ogni talento generale ha i prerequisiti (32/32). |
 | PF1e | liste 3.5 riusate dal pf1e | 445 giuste, 0 sbagliate, 181 non verificabili | I 181 sono gli stessi nomi italiani fuori dal lessico già visti nel 3.5. Lotto 2. |
 | PF1e | «solo PF1e» | 54/55, 1 non verificabile | *Tamburi tonanti* (Thunderous Drums) non è nel PRD in cache: non si può dire se è giusto. |
 | PF1e | PE, PE per GS, tesoro, statistiche per GS, modificatore | tutte giuste | 215 righe nuove misurate, nessun errore. |
@@ -51,6 +51,46 @@ Fonti: SRD 3.5 `olimot/srd-v3.5-md@c7f30a0c`, PRD `PSRD-Data@76ea4784` (cache di
 Il guerriero 7 generato ha «Sbilanciare Migliorato» con Int 8. Il talento chiede Int 13
 e Maestria in Combattimento (PRD, Improved Trip; SRD uguale). Il generatore sceglie il
 talento dal ruolo e non controlla i prerequisiti. Va nel lotto 3 insieme al numero.
+
+**Chiuso dal lotto 3.** Il talento firma del carattere resta il primo da provare, ma
+solo se il PNG lo può prendere; se non può, il generatore sceglie un altro carattere
+dello stesso ruolo e lo scrive nel conto. Il numero viene dalla regola (generali per
+livello, bonus e concessi di classe), i prerequisiti dal PRD e dall'SRD.
+
+Che cosa il lotto 3 ha dovuto leggere oltre la tabella della classe: molti talenti
+bonus il manuale li dà nel testo della capacità, non nella colonna «Special». Il
+monaco riceve Colpo Senz'Armi Migliorato da «Unarmed Strike», il cavaliere un talento
+di squadra da «Tactician», il cacciatore sceglie tra Tiro Preciso e Aggirare con
+«Precise Companion», il ranger 3.5 è «trattato come se avesse» Tiro Rapido o
+Combattere con Due Armi. Si leggono solo le capacità che ogni membro della classe
+ha: i domini, i misteri, gli spiriti dello sciamano, i trucchi del ninja e i talenti
+del ladro sono scelte, e restano fuori. I talenti mitici (Mythic Adventures) sono nei
+dati ma il generatore non li prende mai: chiedono un grado mitico.
+
+Che cosa resta, detto: il talento in più dell'umano (il generatore non sceglie la
+razza); i talenti con prerequisiti di gradi d'abilità (saltati, non inventati: il
+generatore non tiene i gradi); 4 talenti del Core PF1e e 1 SRD con prerequisiti che
+la regola non sa leggere (Critical Mastery, Improved Familiar, Improvised Weapon
+Mastery, Master Craftsman; restano fuori dalla scelta); battle herald e dragon
+disciple hanno talenti bonus da una lista che il PRD non dà in forma leggibile
+(ripiego sui generali, scritto nel conto).
+
+## 3-bis. Trovato durante il lotto 3: i tratti dei tipi di creatura
+
+Il generatore dà a ogni mostro i punteggi mentali del suo ruolo. Così una melma, un
+parassita o un costrutto senza mente hanno Int 8 e quattro talenti, dove l'SRD e il
+PRD dicono «nessun punteggio di Intelligenza» e quindi nessun talento. Nel 3.5 un
+non morto e un costrutto escono con il bonus di Costituzione ai pf (10d12+40), che non
+hanno: il non morto 3.5 non ha Costituzione, il costrutto prende il bonus fisso per
+taglia. Il cancello `conformita_statblocchi` oggi non lo vede. Non è un difetto dei
+talenti, è un tratto di tipo mancante: **lotto 5**, con la sua misura.
+
+## 3-ter. Licenze
+
+I dati del plugin PF1e prendono classi, talenti, razze e creature da 14 libri Paizo
+(non solo Core, Bestiary e APG) e 5 creature del Tome of Horrors. `OGL.txt` dichiarava
+6 voci: ora ne ha 25, col testo copiato dalla Sezione 15 del PRD. `LICENSES.md` §1 dice
+le stesse fonti.
 
 ## 4. Residui già noti
 
@@ -79,7 +119,11 @@ talento dal ruolo e non controlla i prerequisiti. Va nel lotto 3 insieme al nume
    «corazza a scaglie».
 2. **Nomi d'incantesimo 3.5**: allineare i 181 nomi di `incantesimi.toml` al lessico
    ufficiale (ADR-0110), misura: non verificabili da 181 a 0.
-3. **Talenti dei PNG**: numero per livello, classe e razza (regola del manuale), scelti
-   tra quelli di cui il PNG ha i prerequisiti (PRD e SRD); misura: 0/10 → 10/10.
+3. **Talenti dei PNG** (fatto): numero per livello e classe (regola del manuale), scelti
+   tra quelli di cui il PNG ha i prerequisiti (PRD e SRD); misura: 3.5 0/11 → 11/11,
+   PF1e 0/32 → 32/32 (`MISURA-LOTTO3-PRIMA.md`, `MISURA-LOTTO3-DOPO.md`).
 4. **Prestigio e sciamano**: prerequisiti delle classi di prestigio nel generatore
    PF1e; livello 0 dello sciamano se il PRD lo ha.
+5. **Tratti dei tipi di creatura**: niente Int e niente talenti per i tipi senza mente,
+   niente Costituzione per non morti e costrutti 3.5 (pf dal bonus del tipo); misura
+   per tipo contro SRD e PRD, e il cancello che lo controlla.

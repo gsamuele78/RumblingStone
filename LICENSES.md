@@ -47,11 +47,13 @@ Le fonti OGC sono **due**, e per un po' questo file ne dichiarava una sola:
 | Fonte | Cosa ne viene | Dove sta |
 |---|---|---|
 | **SRD 3.5** (d20 System Reference Document) | regole, incantesimi, classi, mostri, oggetti — il sistema su cui la campagna gira | ovunque |
-| **Pathfinder 1e** (PRD, OGL) | i bersagli per GS e i template semplici (Bestiary Table 1-1), la ricchezza per livello del PNG (Core Rulebook), le liste di incantesimi APG | `skills/pathfinder-1e-srd/`, `scripts/dmcore/tabelle.py`, `scripts/dmcore/incantesimi.py` |
+| **Pathfinder 1e** (PRD, OGL) | i bersagli per GS e i template semplici (Bestiary Table 1-1), la ricchezza per livello del PNG (Core Rulebook), le liste di incantesimi APG; i dati del plugin PF1e: classi, talenti, razze, creature (Core, APG, ACG, ARG, UM, UC, UCampaign, UE, Mythic Adventures, Bestiary 1-4, GMG, NPC e Monster Codex, Technology Guide) | `skills/pathfinder-1e-srd/`, `scripts/dmcore/tabelle.py`, `scripts/dmcore/incantesimi.py`, `sistemi/pf1e/dati/` |
 
 > **La catena della Sezione 15 sta in [`OGL.txt`](OGL.txt)**, insieme al testo
-> integrale della licenza. Sono **sei voci**: quelle del materiale da cui il repo
-> deriva davvero. La catena del PRD di Pathfinder ne ha 93, perché raccoglie
+> integrale della licenza. Sono le voci del materiale da cui il repo deriva
+> davvero: sei fino al 2026-11-10, poi 25 quando i dati del plugin PF1e sono stati
+> confrontati coi libri da cui vengono (14 libri Paizo e 5 creature del Tome of
+> Horrors). La catena del PRD di Pathfinder ne ha 93, perché raccoglie
 > l'intera linea Paizo più il Tome of Horrors — copiarle tutte dichiarerebbe un
 > uso che qui non c'è, ed è il modo più rapido di rendere inutile una catena di
 > copyright.

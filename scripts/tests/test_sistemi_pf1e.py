@@ -241,7 +241,9 @@ class CreatureConClassi(unittest.TestCase):
     def test_pf_col_primo_dado_al_massimo(self):
         sb, _ = self.blocco("guerriero:9", gs=8, seed=1)
         cos = int(sb.attributi.split("Cos ")[1].split()[0])
-        self.assertEqual(int(sb.pf), 10 + 44 + 9 * ((cos - 10) // 2))  # 10 + ⌈8 × 5,5⌉ + Cos
+        # Robustezza PF1e: +3, o +1 per DV se sono più di 3 (lotto 3 delle regole complete)
+        robustezza = 9 if any("Robustezza" in v for v in sb.voci if v.startswith("Talenti:")) else 0
+        self.assertEqual(int(sb.pf), 10 + 44 + 9 * ((cos - 10) // 2) + robustezza)  # 10 + ⌈8 × 5,5⌉ + Cos
 
     def test_griglie_pf1e(self):
         sb, _ = self.blocco("mago:5")

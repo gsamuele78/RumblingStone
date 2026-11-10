@@ -1,0 +1,710 @@
+# sistemi/dnd35/dati/talenti.toml — talenti SRD 3.5 e talenti bonus delle classi.
+# Generato da plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py (non a mano).
+# Fonte: olimot/srd-v3.5-md@c7f30a0c, feats.md e character-classes-i/ii.md. OGL 1.0a.
+
+# [capacita]: classi che hanno la capacità chiesta da un talento, e da quale livello
+# (colonna «Special» delle tabelle; per «cast … spells» la prima riga della griglia).
+[capacita]
+"cast arcane spells" = { "bardo" = 1, "mago" = 1, "stregone" = 1 }
+"cast divine spells" = { "chierico" = 1, "druido" = 1, "paladino" = 5, "ranger" = 5 }
+"cast spells" = { "bardo" = 1, "chierico" = 1, "druido" = 1, "mago" = 1, "paladino" = 5, "ranger" = 5, "stregone" = 1 }
+"lay on hands" = { "paladino" = 2 }
+"rage" = { "barbaro" = 1 }
+"turn or rebuke creatures" = { "chierico" = 1, "paladino" = 4 }
+"wild shape" = { "druido" = 5 }
+
+# [talenti."Nome inglese"]: it, tipi, prerequisiti (car, bab, lic, talenti, classe, gradi).
+# `altro` = prerequisiti che il testo dice e la regola non sa leggere: il generatore salta il talento.
+# [bonus."classe"]: livelli dei talenti bonus, lista (tipi e nomi; nomi per livello d'ingresso),
+# senza_prerequisiti se la classe li ignora, concessi = talenti dati per nome dalla tabella o dal
+# testo delle capacità; tipi_livello e scelte = la lista di quel solo livello (tattico del cavaliere,
+# compagno preciso del cacciatore); stili = liste per stile di combattimento o stirpe.
+
+[bonus."guerriero"]
+livelli = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+tipi = ["Fighter"]
+nomi = {  }
+senza_prerequisiti = false
+cumulativa = true
+concessi = {  }
+fonte = "SRD 3.5 character-classes-i.md, tabella e testo «fighter»"
+
+[bonus."mago"]
+livelli = [5, 10, 15, 20]
+tipi = ["Item Creation", "Metamagic"]
+nomi = { "1" = ["Spell Mastery"] }
+senza_prerequisiti = false
+cumulativa = true
+concessi = { "1" = ["Scribe Scroll"] }
+fonte = "SRD 3.5 character-classes-ii.md, tabella e testo «wizard»"
+
+[bonus."monaco"]
+livelli = [1, 2, 6]
+tipi = []
+nomi = { "1" = ["Improved Grapple", "Stunning Fist"], "2" = ["Combat Reflexes", "Deflect Arrows"], "6" = ["Improved Disarm", "Improved Trip"] }
+senza_prerequisiti = true
+cumulativa = false
+concessi = { "1" = ["Improved Unarmed Strike"] }
+fonte = "SRD 3.5 character-classes-i.md, tabella e testo «monk»"
+
+[bonus."ranger"]
+livelli = [2, 6, 11]
+tipi = []
+nomi = {  }
+senza_prerequisiti = true
+cumulativa = false
+concessi = { "1" = ["Track"], "3" = ["Endurance"] }
+stili."Archery" = { "2" = ["Rapid Shot"], "6" = ["Manyshot"], "11" = ["Improved Precise Shot"] }
+stili."Two-Weapon" = { "2" = ["Two-Weapon Fighting"], "6" = ["Improved Two-Weapon Fighting"], "11" = ["Greater Two-Weapon Fighting"] }
+fonte = "SRD 3.5 character-classes-ii.md, tabella e testo «ranger»"
+
+[talenti."Acrobatic"]
+it = "Acrobatico"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Agile"]
+it = "Agile"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Alertness"]
+it = "Allerta"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Animal Affinity"]
+it = "Affinità animale"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Armor Proficiency (Heavy)"]
+it = "Competenza nelle Armature (Pesanti)"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Armor Proficiency (Light)", "Armor Proficiency (Medium)"]
+
+[talenti."Armor Proficiency (Light)"]
+it = "Competenza nelle armature (leggere)"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Armor Proficiency (Medium)"]
+it = "Competenza nelle Armature (Medie)"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Armor Proficiency (Light)"]
+
+[talenti."Athletic"]
+it = "Atletico"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Augment Summoning"]
+it = "Aumentare evocazione"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Spell Focus"]
+
+[talenti."Blind-Fight"]
+it = "Combattere alla cieca"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Brew Potion"]
+it = "Mescere pozioni"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 3
+
+[talenti."Cleave"]
+it = "Incalzare"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+talenti = ["Power Attack"]
+
+[talenti."Combat Casting"]
+it = "Incantare in combattimento"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Combat Expertise"]
+it = "Maestria in combattimento"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Int" = 13 }
+
+[talenti."Combat Reflexes"]
+it = "Riflessi in combattimento"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Craft Magic Arms and Armor"]
+it = "Creare armi e armature magiche"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 5
+
+[talenti."Craft Rod"]
+it = "Creare verghe"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 9
+
+[talenti."Craft Staff"]
+it = "Creare bastoni"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 12
+
+[talenti."Craft Wand"]
+it = "Creare bacchette"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 5
+
+[talenti."Craft Wondrous Item"]
+it = "Creare oggetti meravigliosi"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 3
+
+[talenti."Deceitful"]
+it = "Ingannevole"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Deflect Arrows"]
+it = "Deviare frecce"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+talenti = ["Improved Unarmed Strike"]
+
+[talenti."Deft Hands"]
+it = "Manolesta"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Diehard"]
+it = "Duro a morire"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Endurance"]
+
+[talenti."Diligent"]
+it = "Diligente"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Dodge"]
+it = "Schivare"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+
+[talenti."Empower Spell"]
+it = "Incantesimi potenziati"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Endurance"]
+it = "Resistenza fisica"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Enlarge Spell"]
+it = "Incantesimi ingranditi"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Eschew Materials"]
+it = "Escludere materiali"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Exotic Weapon Proficiency"]
+it = "Competenza nelle armi esotiche"
+tipi = ["Fighter", "General"]
+libro = "srd"
+bab = 1
+
+[talenti."Extend Spell"]
+it = "Incantesimi estesi"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Extra Turning"]
+it = "Scacciare extra"
+tipi = ["General"]
+libro = "srd"
+capacita = ["turn or rebuke creatures"]
+
+[talenti."Far Shot"]
+it = "Tiro lontano"
+tipi = ["Fighter", "General"]
+libro = "srd"
+talenti = ["Point Blank Shot"]
+
+[talenti."Forge Ring"]
+it = "Forgiare anelli"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 12
+
+[talenti."Great Cleave"]
+it = "Incalzare potenziato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+bab = 4
+talenti = ["Cleave", "Power Attack"]
+
+[talenti."Great Fortitude"]
+it = "Tempra possente"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Greater Spell Focus"]
+it = "Incantesimi focalizzati superiore"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Greater Spell Penetration"]
+it = "Incantesimi inarrestabili superiore"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Spell Penetration"]
+
+[talenti."Greater Two-Weapon Fighting"]
+it = "Combattere con due armi superiore"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 19 }
+bab = 11
+talenti = ["Improved Two-Weapon Fighting", "Two-Weapon Fighting"]
+
+[talenti."Greater Weapon Focus"]
+it = "Arma focalizzata superiore"
+tipi = ["Fighter", "General"]
+libro = "srd"
+classe = { "fighter" = 8 }
+talenti = ["Weapon Focus"]
+
+[talenti."Greater Weapon Specialization"]
+it = "Arma specializzata superiore"
+tipi = ["Fighter", "General"]
+libro = "srd"
+classe = { "fighter" = 12 }
+talenti = ["Greater Weapon Focus", "Weapon Focus", "Weapon Specialization"]
+
+[talenti."Heighten Spell"]
+it = "Incantesimi intensificati"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Improved Bull Rush"]
+it = "Spingere migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+talenti = ["Power Attack"]
+
+[talenti."Improved Counterspell"]
+it = "Controincantesimo migliorato"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Improved Critical"]
+it = "Critico migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+bab = 8
+
+[talenti."Improved Disarm"]
+it = "Disarmare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Int" = 13 }
+talenti = ["Combat Expertise"]
+
+[talenti."Improved Familiar"]
+it = "Famiglio Migliorato"
+tipi = ["General"]
+libro = "srd"
+altro = ["Ability to acquire a new familiar", "compatible alignment", "sufficiently high level (see below)"]
+
+[talenti."Improved Feint"]
+it = "Fintare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Int" = 13 }
+talenti = ["Combat Expertise"]
+
+[talenti."Improved Grapple"]
+it = "Lottare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+talenti = ["Improved Unarmed Strike"]
+
+[talenti."Improved Initiative"]
+it = "Iniziativa migliorata"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Improved Overrun"]
+it = "Oltrepassare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+talenti = ["Power Attack"]
+
+[talenti."Improved Precise Shot"]
+it = "Tiro preciso migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 19 }
+bab = 11
+talenti = ["Point Blank Shot", "Precise Shot"]
+
+[talenti."Improved Shield Bash"]
+it = "Attacco con lo scudo migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+talenti = ["Shield Proficiency"]
+
+[talenti."Improved Sunder"]
+it = "Spezzare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+talenti = ["Power Attack"]
+
+[talenti."Improved Trip"]
+it = "Sbilanciare migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Int" = 13 }
+talenti = ["Combat Expertise"]
+
+[talenti."Improved Turning"]
+it = "Scacciare migliorato"
+tipi = ["General"]
+libro = "srd"
+capacita = ["turn or rebuke creatures"]
+
+[talenti."Improved Two-Weapon Fighting"]
+it = "Combattere con due armi migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 17 }
+bab = 6
+talenti = ["Two-Weapon Fighting"]
+
+[talenti."Improved Unarmed Strike"]
+it = "Colpo senz'armi migliorato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Investigator"]
+it = "Indagatore"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Iron Will"]
+it = "Volontà di ferro"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Leadership"]
+it = "Autorità"
+tipi = ["General"]
+libro = "srd"
+classe = { "character" = 6 }
+
+[talenti."Lightning Reflexes"]
+it = "Riflessi fulminei"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Magical Aptitude"]
+it = "Vocazione magica"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Manyshot"]
+it = "Tiro multiplo"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 17 }
+bab = 6
+talenti = ["Point Blank Shot", "Rapid Shot"]
+
+[talenti."Martial Weapon Proficiency"]
+it = "Competenza nelle armi da guerra"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Maximize Spell"]
+it = "Incantesimi massimizzati"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Mobility"]
+it = "Mobilità"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+talenti = ["Dodge"]
+
+[talenti."Mounted Archery"]
+it = "Tirare in sella"
+tipi = ["Fighter", "General"]
+libro = "srd"
+gradi = { "ride" = 1 }
+talenti = ["Mounted Combat"]
+
+[talenti."Mounted Combat"]
+it = "Combattere in sella"
+tipi = ["Fighter", "General"]
+libro = "srd"
+gradi = { "ride" = 1 }
+
+[talenti."Natural Spell"]
+it = "Incantesimi naturali"
+tipi = ["General"]
+libro = "srd"
+car = { "Sag" = 13 }
+capacita = ["wild shape"]
+
+[talenti."Negotiator"]
+it = "Negoziatore"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Nimble Fingers"]
+it = "Dita sottili"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Persuasive"]
+it = "Persuasivo"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Point Blank Shot"]
+it = "Tiro ravvicinato"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Power Attack"]
+it = "Attacco poderoso"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "For" = 13 }
+
+[talenti."Precise Shot"]
+it = "Tiro preciso"
+tipi = ["Fighter", "General"]
+libro = "srd"
+talenti = ["Point Blank Shot"]
+
+[talenti."Quick Draw"]
+it = "Estrazione rapida"
+tipi = ["Fighter", "General"]
+libro = "srd"
+bab = 1
+
+[talenti."Quicken Spell"]
+it = "Incantesimi rapidi"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Rapid Reload"]
+it = "Ricarica rapida"
+tipi = ["Fighter", "General"]
+libro = "srd"
+
+[talenti."Rapid Shot"]
+it = "Tiro rapido"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+talenti = ["Point Blank Shot"]
+
+[talenti."Ride-by Attack"]
+it = "Attacco in sella"
+tipi = ["Fighter", "General"]
+libro = "srd"
+gradi = { "ride" = 1 }
+talenti = ["Mounted Combat"]
+
+[talenti."Run"]
+it = "Correre"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Scribe Scroll"]
+it = "Scrivere pergamene"
+tipi = ["Item Creation"]
+libro = "srd"
+lic = 1
+
+[talenti."Self-Sufficient"]
+it = "Autosufficiente"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Shield Proficiency"]
+it = "Competenza negli scudi"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Shot on the Run"]
+it = "Tiro in movimento"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+bab = 4
+talenti = ["Dodge", "Mobility", "Point Blank Shot"]
+
+[talenti."Silent Spell"]
+it = "Incantesimi silenziosi"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Simple Weapon Proficiency"]
+it = "Competenza nelle armi semplici"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Skill Focus"]
+it = "Abilità Focalizzata"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Snatch Arrows"]
+it = "Afferrare frecce"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 15 }
+talenti = ["Deflect Arrows", "Improved Unarmed Strike"]
+
+[talenti."Spell Focus"]
+it = "Incantesimi focalizzati (bene, caos, legge o male)"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Spell Mastery"]
+it = "Padronanza degli incantesimi"
+tipi = ["Special"]
+libro = "srd"
+classe = { "wizard" = 1 }
+
+[talenti."Spell Penetration"]
+it = "Incantesimi inarrestabili"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Spirited Charge"]
+it = "Carica devastante"
+tipi = ["Fighter", "General"]
+libro = "srd"
+gradi = { "ride" = 1 }
+talenti = ["Mounted Combat", "Ride-by Attack"]
+
+[talenti."Spring Attack"]
+it = "Attacco rapido"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13 }
+bab = 4
+talenti = ["Dodge", "Mobility"]
+
+[talenti."Stealthy"]
+it = "Furtivo"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Still Spell"]
+it = "Incantesimi immobili"
+tipi = ["Metamagic"]
+libro = "srd"
+
+[talenti."Stunning Fist"]
+it = "Pugno stordente"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13, "Sag" = 13 }
+bab = 8
+talenti = ["Improved Unarmed Strike"]
+
+[talenti."Toughness"]
+it = "Robustezza"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Tower Shield Proficiency"]
+it = "Competenza negli scudi torre"
+tipi = ["General"]
+libro = "srd"
+talenti = ["Shield Proficiency"]
+
+[talenti."Track"]
+it = "Seguire tracce"
+tipi = ["General"]
+libro = "srd"
+
+[talenti."Trample"]
+it = "Travolgere"
+tipi = ["Fighter", "General"]
+libro = "srd"
+gradi = { "ride" = 1 }
+talenti = ["Mounted Combat"]
+
+[talenti."Two-Weapon Defense"]
+it = "Difendere con due armi"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 15 }
+talenti = ["Two-Weapon Fighting"]
+
+[talenti."Two-Weapon Fighting"]
+it = "Combattere con due armi"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 15 }
+
+[talenti."Weapon Finesse"]
+it = "Arma accurata"
+tipi = ["Fighter", "General"]
+libro = "srd"
+bab = 1
+
+[talenti."Weapon Focus"]
+it = "Arma focalizzata"
+tipi = ["Fighter", "General"]
+libro = "srd"
+bab = 1
+
+[talenti."Weapon Specialization"]
+it = "Arma specializzata"
+tipi = ["Fighter", "General"]
+libro = "srd"
+classe = { "fighter" = 4 }
+talenti = ["Weapon Focus"]
+
+[talenti."Whirlwind Attack"]
+it = "Attacco turbinante"
+tipi = ["Fighter", "General"]
+libro = "srd"
+car = { "Des" = 13, "Int" = 13 }
+bab = 4
+talenti = ["Combat Expertise", "Dodge", "Mobility", "Spring Attack"]
+
+[talenti."Widen Spell"]
+it = "Incantesimi ampliati"
+tipi = ["Metamagic"]
+libro = "srd"
