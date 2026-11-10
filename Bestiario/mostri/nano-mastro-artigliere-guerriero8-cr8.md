@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Umanoide Medio (nano), Guerriero 8, LB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: contatto 13, colto alla sprovvista 14 (+4 giaco di maglia, +3 Des)
 pf: 68

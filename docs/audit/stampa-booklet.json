@@ -30,12 +30,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 129,
+        "pagine": 158,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
-        "schede": 12,
-        "pagine_con_immagine": 0.031,
-        "pagine_con_immagine_decimo": 0.101
+        "schede": 32,
+        "pagine_con_immagine": 0.044,
+        "pagine_con_immagine_decimo": 0.12
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -54,6 +54,24 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      }
+    },
+    "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-SERATA.manifest.json": {
+      "tetti": {
+        "testi_sotto_minimo": 0,
+        "fuori_margine": 0,
+        "immagini_sotto_300dpi": 25,
+        "schede_spezzate": 0,
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
+      },
+      "misura": {
+        "pagine": 116,
+        "corpo_mediano_pt": 10.0,
+        "corpo_minimo_pt": 7.0,
+        "schede": 24,
+        "pagine_con_immagine": 0.026,
+        "pagine_con_immagine_decimo": 0.086
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -84,12 +102,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 157,
+        "pagine": 173,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
-        "schede": 15,
-        "pagine_con_immagine": 0.025,
-        "pagine_con_immagine_decimo": 0.083
+        "schede": 30,
+        "pagine_con_immagine": 0.035,
+        "pagine_con_immagine_decimo": 0.081
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -102,7 +120,7 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 28,
+        "pagine": 29,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 0,
@@ -174,12 +192,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 92,
+        "pagine": 105,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
-        "schede": 13,
-        "pagine_con_immagine": 0.033,
-        "pagine_con_immagine_decimo": 0.109
+        "schede": 26,
+        "pagine_con_immagine": 0.048,
+        "pagine_con_immagine_decimo": 0.105
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
@@ -264,12 +282,12 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 86,
+        "pagine": 88,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 6.1,
-        "schede": 7,
-        "pagine_con_immagine": 0.116,
-        "pagine_con_immagine_decimo": 0.209
+        "schede": 14,
+        "pagine_con_immagine": 0.114,
+        "pagine_con_immagine_decimo": 0.205
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-GIOCATORI.manifest.json": {
@@ -354,10 +372,10 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 41,
+        "pagine": 45,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 2.5,
-        "schede": 19,
+        "schede": 38,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
       }

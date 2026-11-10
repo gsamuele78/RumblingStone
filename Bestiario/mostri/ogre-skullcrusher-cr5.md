@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Large giant, NE, 8d8+24
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 20
 ca-dettaglio: (-1 taglia, +2 naturale, +7 mezza piastra chiodata, +2 scudo pesante chiodato), touch 9, flat-footed 20
 pf: 60

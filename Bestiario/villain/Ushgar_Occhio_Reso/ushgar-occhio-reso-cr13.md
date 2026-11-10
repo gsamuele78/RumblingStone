@@ -5,6 +5,9 @@
 ```statblocco
 gs: 13
 tipo: Medium humanoid (orc), CE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 21
 ca-dettaglio: (+7 cotta di maglia +2, +2 Des, +1 anello, +1 armatura naturale), contatto 13, colto alla sprovvista 19
 pf: 140

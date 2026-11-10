@@ -4,6 +4,9 @@
 ```statblocco
 gs: 11
 tipo: Medium outsider (baatezu, evil, extraplanar, lawful), 14 DV, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 25
 ca-dettaglio: (+4 Des, +11 naturale)
 pf: 147

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: contatto 12, colto alla sprovvista 17 (+3 naturale, +2 Des, +4 armatura magica)
 pf: 70

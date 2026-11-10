@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (dwarf), Blackguard 10, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 26
 ca-dettaglio: contatto 11, colto alla sprovvista 25 (armatura completa +2, scudo pesante d'acciaio +2, +1 Des, +1 naturale)
 pf: 98

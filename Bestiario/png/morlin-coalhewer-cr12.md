@@ -5,6 +5,9 @@
 ```statblocco
 gs: 12
 tipo: Medium humanoid (dwarf, Shield Dwarf), Cleric 12, LG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: touch 10, flat-footed 23 (armatura completa +1, Ottimizzazione delle Armature Pesanti +1, scudo pesante +1, anello di protezione +1, −1 Des)
 pf: 93

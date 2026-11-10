@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 7
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 17
 ca-dettaglio: (-1 size, +7 natural, +1 Dex)
 pf: 64

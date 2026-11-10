@@ -396,6 +396,7 @@ non si fonde nel corpo nuovo.
 ## Treant di Adamantio (evocato)
 *Vegetale Grande*
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 
 **DIFESA**
 ___

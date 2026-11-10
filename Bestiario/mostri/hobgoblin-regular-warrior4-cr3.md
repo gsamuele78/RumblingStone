@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid (goblinoid), Warrior 4, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 pf: 26
 ts: Temp +7, Rifl +2, Vol +0

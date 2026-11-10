@@ -8,6 +8,9 @@
 ```statblocco
 gs: 18
 tipo: Medium outsider (native, evil, lawful), rakshasa / Stregone 11 (18 DV), LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 25
 ca-dettaglio: (+2 Des, +9 naturale, +4 *armatura magica* sempre attiva), contatto 12, colto alla sprovvista 23
 pf: 113

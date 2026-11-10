@@ -345,6 +345,9 @@
 // cambia solo quanto è piena. Una fascia senza niente dentro non si stampa.
 #let statblocco(
   nome: "", tipo: "", gs: "", iniziativa: "", sensi: "",
+  // ADR-0123: «Taglia · Spazio (quadretti) · Portata (quadretti)», già composta
+  // da dmcore.statblock.ingombro; vuota finché la scheda non dichiara la taglia.
+  ingombro: "",
   ca: "", pf: "", ts: "", velocita: "",
   attributi: (), attacchi: (), voci: (), tattica: "", fonte: "",
   sezioni: (:),
@@ -403,6 +406,7 @@
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
     #set text(size: 8.8pt)
     #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false)
+    #if ingombro != "" and ingombro != [] { v(2pt); ingombro }
     #if apertura != none { v(2pt); apertura }
     #fascia("Difesa", difesa)
     #fascia("Attacco", attacco)
@@ -499,6 +503,7 @@
           h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
         }
         #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
+        #if ingombro != "" and ingombro != [] [ \ #text(size: 8.8pt)[#ingombro] ]
         #if tattiche != none [
           #v(2pt)
           #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]

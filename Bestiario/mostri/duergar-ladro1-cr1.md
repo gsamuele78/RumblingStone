@@ -5,6 +5,9 @@
 ```statblocco
 gs: 1
 tipo: Medium humanoid (dwarf, duergar), Rogue 1, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: touch 12, flat-footed 13
 pf: 8

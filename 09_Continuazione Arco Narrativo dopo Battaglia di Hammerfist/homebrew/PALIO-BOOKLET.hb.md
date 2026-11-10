@@ -3085,6 +3085,7 @@ per mappa. Companion di raccordo:*
 ## Drow Assassino (2)
 *Drow Ladro 5 / Assassino 4* · GS 9
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -3107,6 +3108,7 @@ ___
 ## Drow Chierica di Lolth
 *Drow Chierico 9* · GS 10
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -3124,6 +3126,7 @@ ___
 ## Fantino Cavaliere
 *Umano Guerriero 6 / Cavaliere-ish · corsa pulita* · GS 8
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -3145,6 +3148,7 @@ ___
 ## Fantino Ladro
 *Mezzelfo Ladro 8 · corsa assassina* · GS 8
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -3167,6 +3171,7 @@ ___
 ## Servitore della Spora (1-2)
 *Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)* · GS 3
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___

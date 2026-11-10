@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium humanoid (elf/human), Bard 8, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: touch 12, flat-footed 15 (camicia di mithral, +1 Des, anello di protezione +1)
 pf: 36

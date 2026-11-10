@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium outsider (native), hobgoblin mezzo-immondo, Dragon Shaman 6, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: contatto 13, colto alla sprovvista 19 (giaco di maglia +1, scudo pesante +1, +3 Des, +1 naturale)
 pf: 56

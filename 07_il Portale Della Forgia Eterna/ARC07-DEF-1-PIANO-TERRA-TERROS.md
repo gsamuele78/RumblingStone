@@ -757,6 +757,9 @@ il rifugio è sempre un geode.
 nome: Xorn «Fauci di Diamante» (élite)
 gs: 12
 tipo: Esterno (Terra, Extraplanare) Grande · Xorn Anziano dell'SRD avanzato da 15 a 21 DV
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 28
 ca-dettaglio: contatto 9, colto 28 (−1 taglia, +19 naturale)
 pf: 181
@@ -796,6 +799,9 @@ L'incontro, con i due Xorn comuni (GS 6), è **EL 13**: sotto il tetto di APL + 
 nome: Xorn standard (2)
 gs: 6
 tipo: Esterno (Terra) Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 10 (+14 naturale)
 pf: 52
@@ -1558,6 +1564,9 @@ muove, ed è fuori dallo scontro, costretto a guardare.
 nome: Sentinella Silenziosa (Golem di Mithral)
 gs: —
 tipo: Costrutto Grande
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 30
 ca-dettaglio: contatto 11, colto 28 (−1 taglia, +2 DES, +19 naturale)
 pf: 160
@@ -1867,6 +1876,9 @@ veloce, non rende sonici i pugni di Tordek, e la regola è in 8c-1.
 nome: Terros l'Antico, l'Incudine del Mondo
 gs: 15
 tipo: Elementale (Terra, Extraplanare) Enorme, neutrale · Elementale della Terra Anziano avanzato (30 DV)
+taglia: Enorme
+spazio: 4,5 m
+portata: 4,5 m
 ca: 26
 ca-dettaglio: contatto 7, colto 26 (−2 taglia, −1 DES, +19 naturale)
 pf: 345

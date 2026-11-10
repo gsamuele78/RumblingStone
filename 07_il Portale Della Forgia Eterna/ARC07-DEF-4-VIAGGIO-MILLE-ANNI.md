@@ -4021,6 +4021,9 @@ naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14 `[CANON
 nome: Skullcrusher il Nero, il Primo Nero
 gs: 14
 tipo: Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 33
 ca-dettaglio: contatto 10, impreparato 31 (−2 taglia, +2 DES, +23 naturale); 37 con armatura magica
 pf: 297
@@ -4103,6 +4106,9 @@ gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 nome: Skullcrusher Vecchio
 gs: 17 (Vecchio GS 16, +1 Avanzato)
 tipo: Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 36
 ca-dettaglio: contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica
 pf: 337
@@ -4151,6 +4157,9 @@ si sommano a parte (§8 A).
 nome: Zog'tar Deatheye, generale dell'orda antica
 gs: 15 (Avanzato)
 tipo: Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 26
 ca-dettaglio: contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira
 pf: 283
@@ -4185,6 +4194,9 @@ attacchi:
 nome: Guardia di Zog'tar (4)
 gs: 8
 tipo: Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo
 pf: 60
@@ -4214,6 +4226,9 @@ adepto 7 dell'SRD sulle caratteristiche dell'hobgoblin, schieramento d'élite]`
 nome: Sacerdote dell'orda
 gs: 6
 tipo: Hobgoblin Medio · Adepto 7
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 12
 ca-dettaglio: +2 DES
 pf: 38
@@ -4243,6 +4258,9 @@ attacchi:
 nome: Durin Rocciadura
 gs: 6
 tipo: Nano Medio · Guerriero 6
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: arm. completa +1, scudo pesante +1
 pf: 52
@@ -4269,6 +4287,9 @@ attacchi:
 nome: Balvar Fuocospento, il Consigliere dell'Orda
 gs: 13
 tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -4344,6 +4365,9 @@ questa tabella.
 nome: Worg dei cavalieri dei lupi
 gs: 2
 tipo: Bestia magica Media · worg SRD
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 pf: 30
 ts: Temp +5, Rifl +6, Vol +3
@@ -4357,6 +4381,9 @@ fonte: worg dell'SRD; i tiri salvezza sono quelli della sua scheda SRD
 nome: Orco della ronda
 gs: ½
 tipo: Orco Medio · guerriero 1 SRD
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 13
 ca-dettaglio: contatto 10
 pf: 5
@@ -4372,6 +4399,9 @@ tattica: Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 d
 nome: Hobgoblin della pattuglia (8)
 gs: 4
 tipo: Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 pf: 30
 ts: Temp +6, Rifl +2, Vol +0
@@ -4387,6 +4417,9 @@ fonte: in otto fanno EL 10; i numeri sono calcolati sull'SRD `[CANONE — DM 202
 nome: Treant di Adamantio
 gs: ~10
 tipo: Vegetale Grande, evocato dalla Collana di Hella
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 24
 ca-dettaglio: RD 10/adamantio, vulnerabile al fuoco
 pf: 95
@@ -4405,6 +4438,9 @@ fonte: la scheda intera è nell'appendice delle statistiche della Resurrezione d
 nome: Wyvern (2)
 gs: 6
 tipo: Drago Grande · wyvern SRD
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 18
 pf: 59
 ts: Temp +7, Rifl +6, Vol +6

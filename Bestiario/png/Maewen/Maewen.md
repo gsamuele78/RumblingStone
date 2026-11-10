@@ -4,6 +4,9 @@
 ```statblocco
 gs: 11
 tipo: Medium humanoid (elf), Monaco 9 / Chierico 2, LB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: contatto 19, colta alla sprovvista 16 (+3 Des, +3 Sag, +1 monaco, +2 deviazione)
 pf: 71

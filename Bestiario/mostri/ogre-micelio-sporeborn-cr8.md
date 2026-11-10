@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Large giant (fungal graft), CE
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 18
 ca-dettaglio: (−1 taglia, +7 naturale [+5 base, +2 corteccia fungina], +3 pelle, −1 Des), contatto 8, colto alla sprovvista 18
 pf: 68

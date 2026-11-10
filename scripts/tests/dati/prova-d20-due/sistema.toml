@@ -20,6 +20,7 @@ skill = []
 [capacita]
 "termini.vietati" = { eredita = "d20", motivo = "famiglia" }
 "statblocco.campi" = { eredita = "d20", motivo = "famiglia" }
+"statblocco.taglie" = { eredita = "d20", motivo = "famiglia" }
 "formule.regole" = { dati = ["sistemi/prova-d20-due/dati/formule.toml"], nota = "TS buono 3 + DV/2" }
 "stampa.etichette" = { eredita = "d20", motivo = "famiglia" }
 "lessico.abilita" = { eredita = "dnd35", motivo = "stesse abilità" }

@@ -141,6 +141,9 @@ Il commercio con l'abbazia è l'unica linea che rende abbastanza da tenere la *Z
 nome: Ghebro Malaluna, capitano
 gs: 8
 tipo: Umano guerriero 6/ladro 2 · NM · 46 anni
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 pf: 58
 ts: Temp +8, Rifl +8, Vol +3
@@ -165,6 +168,9 @@ attacchi:
 nome: Sedda Corvara, quartiermastro e navigatrice
 gs: 6
 tipo: Umana ladro 6 · NN · 34 anni
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 18
 pf: 31
 ts: —
@@ -188,6 +194,9 @@ attacchi:
 nome: Ostro il Muto, nostromo
 gs: 5
 tipo: Umano barbaro 5 · CM · muto per una ferita alla gola, non per nascita
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 pf: 52
 ts: Temp +8, Rifl +2, Vol +2

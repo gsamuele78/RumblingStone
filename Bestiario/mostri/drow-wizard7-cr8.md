@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 8
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 18
 ca-dettaglio: (+3 Dex, +5 mage armor, +0 armor)
 pf: 24

@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 2
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 18
 ca-dettaglio: (+5 breastplate, +2 large shield, +1 Dex)
 pf: 17

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 13
 ca-dettaglio: touch 13, flat-footed 11 (+1 vs trappole)
 pf: 37

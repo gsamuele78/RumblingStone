@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Medium humanoid (orc), CE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m (3 m con la picca lunga, e allora non i quadretti adiacenti)
 ca: 21
 ca-dettaglio: (+9 corazza di piastre +1, +1 Des, +1 anello), contatto 12, colto alla sprovvista 20
 pf: 74

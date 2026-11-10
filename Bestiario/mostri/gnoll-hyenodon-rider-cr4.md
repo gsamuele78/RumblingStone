@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: (+3 cuoio borchiato, +2 scudo, +1 Des)
 pf: 11

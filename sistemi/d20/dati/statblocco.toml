@@ -4,6 +4,6 @@
 # Spostati senza cambiarli da scripts/dmcore/statblock.py (2026-11-07).
 
 obbligatori = ["gs", "ca", "pf", "ts"]
-ammessi = ["nome", "gs", "tipo", "ca", "ca-dettaglio", "pf", "pf-dado", "ts", "velocita", "iniziativa", "sensi", "attributi", "attacchi", "voci", "tattica", "fonte"]
+ammessi = ["nome", "gs", "tipo", "taglia", "spazio", "portata", "ca", "ca-dettaglio", "pf", "pf-dado", "ts", "velocita", "iniziativa", "sensi", "attributi", "attacchi", "voci", "tattica", "fonte"]
 # campi che si ripetono e fanno una lista
 liste = ["attacchi", "voci"]

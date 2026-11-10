@@ -5,6 +5,9 @@
 ```statblocco
 gs: 2
 tipo: Medium humanoid (gnoll) HD 2d8+2d8+8 (26 HP)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: (+3 studded, +1 light shield, +2 natural)
 pf: 26

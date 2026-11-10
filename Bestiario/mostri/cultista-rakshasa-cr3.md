@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid HD 3d6+6 (17 HP)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (+3 Dex, +2 leather)
 pf: 17

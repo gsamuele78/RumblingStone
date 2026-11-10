@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 1
+taglia: Piccola
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (+1 size, +2 Dex, +2 leather)
 pf: 5

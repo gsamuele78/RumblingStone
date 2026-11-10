@@ -70,6 +70,9 @@ non si fonde nel corpo nuovo.
 nome: Treant di Adamantio (evocato)
 gs: —
 tipo: Vegetale Grande
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 24
 pf: 95
 ts: Temp +12, Rifl +3, Vol +8

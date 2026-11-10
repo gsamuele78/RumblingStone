@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Small humanoid (goblinoid), Fighter 5, LE
+taglia: Piccola
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: touch 15, flat-footed 15
 pf: 42

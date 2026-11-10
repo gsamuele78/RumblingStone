@@ -18,6 +18,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
 "stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
+"statblocco.taglie" = { eredita = "d20", motivo = "la tabella di spazio e portata per taglia è la stessa in 3.5 e PF1e" }
 "formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
 "lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
 "lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }

@@ -59,7 +59,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, riscala_link, togli_storico  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
-    FASCE, StatblockError, accosta_parte_leggibile, caratteristiche, etichetta_gs, leggi as leggi_statblocco,
+    FASCE, StatblockError, accosta_parte_leggibile, caratteristiche, etichetta_gs, ingombro, leggi as leggi_statblocco,
     sezioni_leggibili, senza_caratteristiche,
 )
 
@@ -465,6 +465,8 @@ def _statblocco_intero(corpo: str, titolo: str, sezioni, con_tattica: bool = Tru
              + (f'<span class="sb-gs">{html.escape(etichetta_gs(sb.gs, ET["gs"]))}</span>' if etichetta_gs(sb.gs, ET["gs"]) else "") + "</div>"]
     if sb.tipo:
         parti.append(f'<div class="sb-tipo">{inline_md(sb.tipo)}</div>')
+    if ingombro(sb):
+        parti.append(f'<p class="sb-ingombro">{inline_md(ingombro(sb))}</p>')
     if "Iniziativa" in per:
         parti.append(f"<p><b>{ET['iniziativa']}</b> {inline_md(per['Iniziativa'].testo)}</p>")
     else:
@@ -523,6 +525,8 @@ def statblocchi_homebrewery(md: str) -> str:
                                 if r.startswith("#")), "")
         hb = ["{{monster,frame", f"## {nome}",
               f"*{sb.tipo}*" + (f" · {etichetta_gs(sb.gs, ET['gs'])}" if etichetta_gs(sb.gs, ET["gs"]) else ""), "___"]
+        if ingombro(sb):
+            hb.append(ingombro(sb))
         if "Iniziativa" in per:
             hb.append(f"**{ET['iniziativa']}** {per['Iniziativa'].testo}")
         elif sb.iniziativa or sb.sensi:

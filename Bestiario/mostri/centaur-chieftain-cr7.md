@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 7
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (-1 size, +2 Dex, +3 natural, +6 MW breastplate)
 pf: 80

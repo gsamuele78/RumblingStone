@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (dwarf, duergar), Cleric 3 (Abbathor; domini Inganno/Male), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: touch 10, flat-footed 20 (piastre complete)
 pf: 24

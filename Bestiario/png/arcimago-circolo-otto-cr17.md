@@ -5,6 +5,9 @@
 ```statblocco
 gs: 17
 tipo: Medium humanoid, Mago 17 (evocatore), 17d4+34
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+4 bracciali dell'armatura, +3 Des, +2 deflessione); contatto 15, colto alla sprovvista 16; 23 con scudo
 pf: 76

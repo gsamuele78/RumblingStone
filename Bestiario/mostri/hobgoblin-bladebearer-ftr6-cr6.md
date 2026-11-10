@@ -5,6 +5,9 @@
 ```statblocco
 gs: 6
 tipo: Medium humanoid (goblinoid), Fighter 6, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: touch 13, ff 16 (+3 Des, +5 corazza di piastre +1)
 pf: 50

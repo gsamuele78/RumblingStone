@@ -515,6 +515,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 ## Zog'tar Deatheye, generale dell'orda antica
 *Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1* · GS 15 (Avanzato)
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 **Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **DIFESA**
@@ -553,6 +554,7 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 ## Guardia di Zog'tar (4)
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
@@ -582,6 +584,7 @@ giavellotto, al round 3 (capitolo III, §8). Ritratto: nessuno.
 ## Sacerdote dell'orda
 *Hobgoblin Medio · Adepto 7* · GS 6
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
 
 **DIFESA**
@@ -634,6 +637,7 @@ entro **1d4 round** dal boato, se è vivo (capitolo III, §8).
 ## Balvar Fuocospento, il Consigliere dell'Orda
 *Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
 
 **DIFESA**
@@ -686,6 +690,7 @@ sensi, velocità, capacità magiche, talenti e abilità.
 ## Skullcrusher Vecchio
 *Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
 ___
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti; 4,5 m con il morso)
 **Iniziativa** +6 · **Sensi** come A.1
 
 **DIFESA**
@@ -716,6 +721,7 @@ Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto)
 **Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
@@ -4480,6 +4486,7 @@ naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14.
 ## Skullcrusher il Nero, il Primo Nero
 *Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude* · GS 14
 ___
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti; 4,5 m con il morso)
 **Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29
 
 **DIFESA**
@@ -4567,6 +4574,7 @@ questa tabella.
 ## Worg dei cavalieri dei lupi
 *Bestia magica Media · worg SRD* · GS 2
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** olfatto 9 m; Ascoltare +6, Osservare +6
 
 **DIFESA**
@@ -4586,6 +4594,7 @@ ___
 ## Orco della ronda
 *Orco Medio · guerriero 1 SRD* · GS ½
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** scurovisione 18 m
 
 **DIFESA**
@@ -4608,6 +4617,7 @@ Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestia
 ## Hobgoblin della pattuglia (8)
 *Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
 
 **DIFESA**
@@ -4628,6 +4638,7 @@ ___
 ## Treant di Adamantio
 *Vegetale Grande, evocato dalla Collana di Hella* · GS ~10
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 
 **DIFESA**
 ___
@@ -4657,6 +4668,7 @@ Dura 1 ora.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto)
 **Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**

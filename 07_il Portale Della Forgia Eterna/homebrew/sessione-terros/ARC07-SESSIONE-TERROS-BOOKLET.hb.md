@@ -3600,6 +3600,7 @@ di chi prepara la casa prima che l'ospite arrivi.*
 ## Sentinella Silenziosa (Golem di Mithral)
 *Costrutto Grande*
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 **Iniziativa** +2
 
 **DIFESA**
@@ -3624,6 +3625,7 @@ ___
 ## Terros l'Antico, l'Incudine del Mondo
 *Elementale (Terra, Extraplanare) Enorme, neutrale · Elementale della Terra Anziano avanzato (30 DV)* · GS 15
 ___
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 4,5 m (3 quadretti)
 **Iniziativa** −1 (DES 8) · **Sensi** scurovisione 18 m, percezione tremorica 18 m; Ascoltare +20, Osservare +20
 
 **DIFESA**
@@ -3653,6 +3655,7 @@ ___
 ## Xorn standard (2)
 *Esterno (Terra) Medio* · GS 6
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** percezione tremorica 18 m, onnidirezionale
 
 **DIFESA**
@@ -3671,6 +3674,7 @@ For 17, Des 10, Cos 17
 ## Xorn «Fauci di Diamante» (élite)
 *Esterno (Terra, Extraplanare) Grande · Xorn Anziano dell'SRD avanzato da 15 a 21 DV* · GS 12
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 **Iniziativa** +0 · **Sensi** scurovisione 18 m, percezione tremorica 18 m, visione a 360° (niente fiancheggiamento); Ascoltare +24, Osservare +24
 
 **DIFESA**

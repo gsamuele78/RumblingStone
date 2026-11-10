@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (extraplanar) HD 3d10+3 (19 HP)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+8 +1 full plate, +1 Dex, +1 light shield)
 pf: 19

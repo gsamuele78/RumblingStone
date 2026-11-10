@@ -4,6 +4,9 @@
 ```statblocco
 gs: 14
 tipo: Medium humanoid (elf), Bardo 12 / Cantore delle tempeste 2, NB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: contatto 14, colto alla sprovvista 17 (+6 giaco di maglia +2, +3 Des, +1 deviazione)
 pf: 91

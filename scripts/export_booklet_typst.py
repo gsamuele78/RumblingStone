@@ -59,7 +59,7 @@ from dmcore.testo import (  # noqa: E402
 )
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
-    StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, leggi as leggi_statblocco,
+    StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, ingombro, leggi as leggi_statblocco,
     sezioni_leggibili, senza_caratteristiche,
 )
 
@@ -694,6 +694,7 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
         ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs, ET["gs"])), ("iniziativa", sb.iniziativa),
         ("sensi", sb.sensi), ("pf", (sb.pf + (f" ({sb.pf_dado})" if sb.pf_dado else "")).strip()),
         ("velocita", sb.velocita), ("tattica", sb.tattica), ("fonte", sb.fonte),
+        ("ingombro", ingombro(sb)),
     ):
         if valore:
             voci.append(f"{chiave}: [{inline(valore)}]")

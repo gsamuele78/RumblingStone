@@ -5,6 +5,9 @@
 ```statblocco
 gs: 14
 tipo: Large undead (augmented aberration), death tyrant mezzo-illithid, 16d12
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: (-1 taglia, +13 naturale), contatto 9, colto alla sprovvista 22
 pf: 104

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 17
 tipo: Medium dragon (augmented humanoid, goblinoid), Chierico 12 / Guerriero 4, LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 31
 ca-dettaglio: (+10 armatura completa +2, +4 scudo pesante animato +2, +1 Des, +4 naturale, +2 deflessione); contatto 13, colto alla sprovvista 30
 pf: 156

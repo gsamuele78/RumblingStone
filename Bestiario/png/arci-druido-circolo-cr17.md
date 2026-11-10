@@ -5,6 +5,9 @@
 ```statblocco
 gs: 17
 tipo: Medium humanoid, Druido 17, 17d8+34
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+6 armatura di pelle +3, +2 deflessione, +1 Des); contatto 13, colto alla sprovvista 18; 24 con corteccia
 pf: 110

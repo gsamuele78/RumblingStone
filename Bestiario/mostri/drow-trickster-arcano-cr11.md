@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Medium humanoid (elf), NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+4 Des, +4 *armatura magica*, +1 anello), contatto 15, colto alla sprovvista 15
 pf: 38

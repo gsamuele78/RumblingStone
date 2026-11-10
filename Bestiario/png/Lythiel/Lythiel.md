@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium humanoid (elf), Ranger 8, CB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: contatto 14, colto alla sprovvista 15 (+5 cuoio borchiato +2, +4 Des); 21 con pelle coriacea
 pf: 60

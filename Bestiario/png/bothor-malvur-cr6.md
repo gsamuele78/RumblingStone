@@ -10,6 +10,9 @@
 ```statblocco
 gs: 6
 tipo: Medium humanoid (dwarf), Fighter 6, allineamento non salvato (NONE)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: touch 11, flat-footed 23 (armatura completa +1, Ottimizzazione delle Armature Pesanti +1, scudo pesante +2, Specializzazione nello Scudo +1, +1 Des)
 pf: 54

@@ -38,6 +38,7 @@ skill = []
 "creature.regole_di_tipo" = { non_supportato = "niente tipi di creatura d20" }
 "creature.conformita" = { non_supportato = "il controllo delle schede sa fare solo conti d20" }
 "statblocco.campi" = { non_supportato = "la scheda ha attributi, abilità e salute, non i campi d20" }
+"statblocco.taglie" = { non_supportato = "nessuna griglia a quadretti: il sistema non ha taglie con spazio e portata" }
 "stampa.etichette" = { non_supportato = "il riquadro della creatura stampato è d20" }
 
 [moduli]

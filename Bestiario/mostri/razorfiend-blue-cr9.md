@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 9
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 24
 pf: 115
 pf-dado: 10d12+50

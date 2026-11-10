@@ -4,6 +4,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (orc), orco avanzato, Ladro 7 / Assassino 2, CE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: (+5 giaco di maglia in mithral +1, +6 Des, +2 naturale), contatto 16, colto alla sprovvista 17 (conserva la Des: schivare prodigioso migliorato)
 pf: 70

@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 7
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+7 MW half-plate, +1 Dex, +2 natural)
 pf: 52

@@ -13,6 +13,9 @@
 nome: Fantino Cavaliere
 gs: 8
 tipo: Umano Guerriero 6 / Cavaliere-ish · corsa pulita
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 18
 ca-dettaglio: armatura leggera da corsa
 pf: 55
@@ -37,6 +40,9 @@ attacchi:
 nome: Fantino Ladro
 gs: 8
 tipo: Mezzelfo Ladro 8 · corsa assassina
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 pf: 44
 ts: Temp +4, Rifl +10, Vol +3
@@ -105,6 +111,9 @@ Statistiche-corsa astratte (mod. applicato ai tiri di Zona del fantino):
 nome: Drow Assassino (2)
 gs: 9
 tipo: Drow Ladro 5 / Assassino 4
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 21
 pf: 58
 ts: Rifl +12
@@ -130,6 +139,9 @@ attacchi:
 nome: Drow Chierica di Lolth
 gs: 10
 tipo: Drow Chierico 9
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 pf: 63
 ts: —
@@ -150,6 +162,9 @@ attributi: Sag 18
 nome: Servitore della Spora (1-2)
 gs: 3
 tipo: Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: —
 pf: 32
 ts: —

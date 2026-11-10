@@ -10,6 +10,9 @@
 ```statblocco
 gs: 5
 tipo: Medium humanoid (dwarf, hill), Cleric 5, LN
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: touch 9, flat-footed 20 (piastre complete)
 pf: 41

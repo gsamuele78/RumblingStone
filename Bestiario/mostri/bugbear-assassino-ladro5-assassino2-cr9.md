@@ -4,6 +4,9 @@
 ```statblocco
 gs: 9
 tipo: Medium humanoid (goblinoid), Ladro 5 / Assassino 2, NM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+3 Des, +3 naturale, +4 cuoio borchiato +1), contatto 13, colto alla sprovvista 20
 pf: 58

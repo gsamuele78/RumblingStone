@@ -23,6 +23,9 @@ voci originali (pasta corrosiva, Ritmo dei cavalli) sono marcate come tali.
 nome: Vidalia Roncetti, Sovrintendente al Drappo
 gs: 4
 tipo: Umana esperta 6 · LN · femmina, 61 anni
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 13
 ca-dettaglio: +2 armatura, +1 Des
 pf: 33
@@ -83,6 +86,9 @@ decidono che non si può.
 nome: Sfregio
 gs: 3
 tipo: Umano ladro 4 · NM · maschio, età incerta
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: contatto 16, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 schivare, +1 anello)
 pf: 26
@@ -119,6 +125,9 @@ non l'ha mai vista. Lavora per un mediatore, e il mediatore ha tre clienti.*
 nome: Tintore mezzo ubriaco
 gs: 1/3
 tipo: Umano esperto 1
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 12
 pf: 6
 ts: Tem +1, Rif +0, Vol +2
@@ -141,6 +150,9 @@ attacchi:
 nome: Bravaccio del canale
 gs: 1/2
 tipo: Umano guerriero 1
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: +4 camicia di maglia, +2 scudo
 pf: 16
@@ -169,6 +181,9 @@ attacchi:
 nome: Miliziano della Torre
 gs: 1
 tipo: Umano guerriero 2
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m (3 m con la lancia lunga, e allora non i quadretti adiacenti)
 ca: 18
 ca-dettaglio: +5 corazza a scaglie, +2 scudo, +1 Des
 pf: 20
@@ -192,6 +207,9 @@ attacchi:
 nome: Cerbo, guardiano del magazzino
 gs: 1/2
 tipo: Umano popolano 2
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 11
 pf: 9
 ts: Tem +3, Rif +0, Vol +0
@@ -219,6 +237,9 @@ Profilo base: **cavallo** del Bestiario Core.
 nome: Cavallo (profilo base)
 gs: 1
 tipo: Animale Grande · Bestiario Core
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 11
 sensi: visione crepuscolare, fiuto
 pf: 15

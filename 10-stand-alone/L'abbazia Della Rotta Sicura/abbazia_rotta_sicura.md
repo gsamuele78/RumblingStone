@@ -48,12 +48,17 @@ Tre settimane fa **Madre Ilaria Sonda**, la vecchia responsabile delle Ancelle, 
 
 ![Tavola IV — La grotta si apre sul mare aperto (29). L'altare (27) è sommerso al colmo della marea: è il fatto tattico più importante dell'avventura.](tavole/abbazia-rotta-sicura-tavola-4.svg)
 
+<!-- nuova-pagina -->
+
 ## Il cast
 
 ```statblocco
 nome: Padre Anselmo Grifo, Abate
 gs: 9
 tipo: Umano vampiro, chierico 7 · MN Medio (non-morto, aumentato)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: contatto 12, colto alla sprovvista 21
 pf: 45
@@ -92,6 +97,9 @@ attacchi:
 nome: Madre Ilaria Sonda, fantasma (alleata)
 gs: 7
 tipo: Umana fantasma, chierica 5 · NB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: contatto 15
 pf: 27
@@ -111,6 +119,9 @@ ts: —
 nome: Tiberio Sarda, fantasma di corsaro (ostile-utile)
 gs: 6
 tipo: Umano fantasma, ladro 4 · NM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: contatto 16
 pf: 22
@@ -124,6 +135,9 @@ ts: —
 nome: Ghebro Malaluna, capitano della Zanna di Bruma
 gs: 8
 tipo: Umano guerriero 6/ladro 2 · NM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 pf: 58
 ts: Temp +8, Rifl +8, Vol +3

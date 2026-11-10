@@ -8,6 +8,9 @@
 nome: Karkator, aboleth mezzo-immondo avanzato
 gs: 16
 tipo: Aberrazione Mastodontica (acquatica, esterno nativo per l'archetipo) · LM
+taglia: Mastodontica
+spazio: 6 m
+portata: 4,5 m
 ca: 20
 ca-dettaglio: contatto 8, colto alla sprovvista 18; 28 con aura sacrilega e il Cuore (contatto 12, colto alla sprovvista 26)
 pf: 324
@@ -44,6 +47,9 @@ attacchi:
 nome: Ragno delle Catene (ragno fase avanzato)
 gs: 10
 tipo: Bestia magica Enorme · N
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m
 ca: 16
 ca-dettaglio: contatto 10, colto alla sprovvista 14
 pf: 147
@@ -75,6 +81,9 @@ attacchi:
 nome: Mastro Tariq, ingegnere delle acque
 gs: 13
 tipo: Umano chierico 13 di Umberlee · CM Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 11, colto alla sprovvista 24; 27 con veste magica ×2
 pf: 84
@@ -107,6 +116,9 @@ attacchi:
 nome: Skum guerriero 8
 gs: 10
 tipo: Aberrazione Media (acquatica) · LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 11, colto alla sprovvista 23
 pf: 63
@@ -135,6 +147,9 @@ attacchi:
 nome: Chuul avanzato a 17 DV
 gs: 9
 tipo: Aberrazione Enorme (acquatica) · CM
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m
 ca: 23
 ca-dettaglio: contatto 10, colto alla sprovvista 21
 pf: 178
@@ -168,6 +183,9 @@ attacchi:
 nome: Uomo di Sal, facchino della gilda
 gs: 6
 tipo: Umano guerriero 6 · NM Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: contatto 12, colto alla sprovvista 15
 pf: 45
@@ -190,6 +208,9 @@ attacchi:
 nome: Asservito armato
 gs: 3
 tipo: Umano combattente 4 asservito · N Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m (3 m con la lancia lunga, e allora non i quadretti adiacenti)
 ca: 15
 ca-dettaglio: contatto 11, colto alla sprovvista 14
 pf: 26

@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 4
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+5 MW chain shirt, +3 Dex, +1 light shield)
 pf: 22

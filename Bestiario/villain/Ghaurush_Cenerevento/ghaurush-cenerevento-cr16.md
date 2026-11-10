@@ -5,6 +5,9 @@
 ```statblocco
 gs: 16
 tipo: Large giant (ogre magi), LE
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 22
 ca-dettaglio: (−1 taglia, +5 naturale, +6 giaco di maglia +2 Large, +2 deflessione), contatto 11, colto alla sprovvista 22 — 26 con *scudo* attivo
 pf: 107

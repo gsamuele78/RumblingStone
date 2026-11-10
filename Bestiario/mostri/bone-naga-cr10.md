@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Large aberration (undead) HD 13d12 (84 HP)
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 18
 ca-dettaglio: (-1 size, +3 Dex, +6 natural)
 pf: 84

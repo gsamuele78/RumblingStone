@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 13
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 23
 ca-dettaglio: (-1 size, +8 natural, +6 +1 breastplate)
 pf: 181

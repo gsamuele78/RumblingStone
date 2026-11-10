@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (goblinoid, dragonblood), Sorcerer 7, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: touch 14, flat-footed 13
 pf: 33

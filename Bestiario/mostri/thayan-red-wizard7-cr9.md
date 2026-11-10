@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 9
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 ca-dettaglio: (+3 Dex, +1 natural)
 pf: 32

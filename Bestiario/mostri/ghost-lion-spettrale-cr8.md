@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Large undead (incorporeal), fantasma PF1e su leone crudele, 9d8
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (−1 taglia, +4 Des, +7 deflessione dal Carisma), contatto 20, colto alla sprovvista 16
 pf: 103

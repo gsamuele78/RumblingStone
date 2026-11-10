@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 11
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: (+8 +1 full plate, +3 Dex, +1 light shield)
 pf: 49

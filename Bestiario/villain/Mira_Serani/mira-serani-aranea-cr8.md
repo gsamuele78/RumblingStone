@@ -8,6 +8,9 @@
 ```statblocco
 gs: 8
 tipo: Medium magical beast (shapechanger), 9 DV (3 aranea + 6 Stregone), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 13
 ca-dettaglio: (10 +1 naturale +2 Des)
 pf: 49

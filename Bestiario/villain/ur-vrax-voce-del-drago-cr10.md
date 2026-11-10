@@ -4,6 +4,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (orc), orco avanzato, Chierico 9 di Tiamat, CE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: (+7 cotta di maglia +2, +2 Des, +2 naturale, +2 deflessione), contatto 14, colto alla sprovvista 21
 pf: 83

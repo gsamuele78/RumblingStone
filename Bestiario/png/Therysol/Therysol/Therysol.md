@@ -4,6 +4,9 @@
 ```statblocco
 gs: 9
 tipo: Medium dragon (augmented outsider, native), Esperto 2 / Acolita 6, CB
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: contatto 15, colta alla sprovvista 16 (+4 Des, +4 naturale, +1 amuleto, +1 deviazione)
 pf: 44

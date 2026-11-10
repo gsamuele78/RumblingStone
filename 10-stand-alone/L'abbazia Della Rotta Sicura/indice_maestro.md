@@ -204,6 +204,9 @@ MEDIO **D11 · Fra' Timoteo non ha statistiche**
 nome: Fra' Timoteo
 gs: —
 tipo: Umano chierico 2
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 13
 pf: 11
 ts: Temp +4, Rifl +0, Vol +6

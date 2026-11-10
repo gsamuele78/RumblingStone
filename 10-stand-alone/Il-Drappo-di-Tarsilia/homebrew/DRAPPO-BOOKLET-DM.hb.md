@@ -4139,6 +4139,7 @@ voci originali (pasta corrosiva, Ritmo dei cavalli) sono marcate come tali.
 ## Vidalia Roncetti, Sovrintendente al Drappo
 *Umana esperta 6 · LN · femmina, 61 anni* · GS 4
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Percezione** +11 · **Velocità** 9 m
 
 **DIFESA**
@@ -4194,6 +4195,7 @@ decidono che non si può.
 ## Sfregio
 *Umano ladro 4 · NM · maschio, età incerta* · GS 3
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +4 · **Percezione** +8 · **Velocità** 9 m
 
 **DIFESA**
@@ -4226,6 +4228,7 @@ non l'ha mai vista. Lavora per un mediatore, e il mediatore ha tre clienti.*
 ## Tintore mezzo ubriaco
 *Umano esperto 1* · GS 1/3
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 
 **DIFESA**
 ___
@@ -4250,6 +4253,7 @@ Male, e in gruppo. Si ferma se vede una lama vera, se vede sangue, o se qualcuno
 ## Bravaccio del canale
 *Umano guerriero 1* · GS 1/2
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1
 
 **DIFESA**
@@ -4277,6 +4281,7 @@ Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 
 ## Miliziano della Torre
 *Umano guerriero 2* · GS 1
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto; 3 m con la lancia lunga, e allora non i quadretti adiacenti)
 
 **DIFESA**
 ___
@@ -4301,6 +4306,7 @@ In formazione, con le lance, e mai da soli. Trenchi ne ha **dodici** e li usa tu
 ## Cerbo, guardiano del magazzino
 *Umano popolano 2* · GS 1/2
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** Percezione +2
 
 **DIFESA**
@@ -4332,6 +4338,7 @@ Profilo base: **cavallo** del Bestiario Core.
 ## Cavallo (profilo base)
 *Animale Grande · Bestiario Core* · GS 1
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto)
 **Sensi** visione crepuscolare, fiuto
 
 **DIFESA**

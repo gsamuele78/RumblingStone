@@ -5,6 +5,9 @@
 ```statblocco
 gs: 9
 tipo: Medium humanoid (elf/human), Druid 9, NG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: touch 12, flat-footed 17 (pelle +1, scudo pesante di legnoscuro +1, +2 Des)
 pf: 57

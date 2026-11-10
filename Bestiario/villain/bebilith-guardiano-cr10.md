@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Huge outsider (chaotic, evil, extraplanar), 12d8+96
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m
 ca: 22
 ca-dettaglio: contatto 9, colto alla sprovvista 21 (-2 taglia, +1 Des, +13 naturale)
 pf: 150

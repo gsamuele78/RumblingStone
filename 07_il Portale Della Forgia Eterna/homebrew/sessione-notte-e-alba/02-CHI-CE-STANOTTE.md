@@ -26,6 +26,9 @@
 nome: Zog'tar Deatheye, generale dell'orda antica
 gs: 15 (Avanzato)
 tipo: Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 26
 ca-dettaglio: contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira
 pf: 283
@@ -67,6 +70,9 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 nome: Guardia di Zog'tar (4)
 gs: 8
 tipo: Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo
 pf: 60
@@ -93,6 +99,9 @@ giavellotto, al round 3 (capitolo III, §8). Ritratto: nessuno.
 nome: Sacerdote dell'orda
 gs: 6
 tipo: Hobgoblin Medio · Adepto 7
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 12
 ca-dettaglio: +2 DES
 pf: 38
@@ -148,6 +157,9 @@ entro **1d4 round** dal boato, se è vivo (capitolo III, §8).
 nome: Balvar Fuocospento, il Consigliere dell'Orda
 gs: 13
 tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -205,6 +217,9 @@ sensi, velocità, capacità magiche, talenti e abilità.
 nome: Skullcrusher Vecchio
 gs: 17 (Vecchio GS 16, +1 Avanzato)
 tipo: Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 36
 ca-dettaglio: contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica
 pf: 337
@@ -236,6 +251,9 @@ attacchi:
 nome: Wyvern (2)
 gs: 6
 tipo: Drago Grande · wyvern SRD
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 18
 pf: 59
 ts: Temp +7, Rifl +6, Vol +6

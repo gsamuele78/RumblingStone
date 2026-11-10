@@ -5,6 +5,9 @@
 ```statblocco
 gs: 14
 tipo: Huge dragon (air), 22 HD, LE
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 31
 ca-dettaglio: contatto 8, colto alla sprovvista 31 (-2 taglia, +19 naturale, +1 Armatura Naturale Migliorata, +3 bracciali)
 pf: 275
