@@ -10813,7 +10813,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
-      "summary": "Legge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "summary": "Legge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello. Con --volume misura lo standard del volume (ADR-0122): introduzione di capitolo, chiavi d'area fra testo e mappa, mappa entro una pagina, appendice di regione e PNG, ritratto dei PNG principali, contro le soglie di Burnt Offerings e Red Hand of Doom.",
       "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
       "stability": "beta",
       "stdlib_only": false,
@@ -10825,11 +10825,11 @@
         {
           "name": "pdf",
           "type": "path",
-          "required": true,
+          "required": false,
           "default": null,
           "choices": null,
           "repeatable": true,
-          "desc": "uno o più PDF da confrontare"
+          "desc": "uno o più PDF da confrontare (con --volume, oppure --tutti o --manifest)"
         },
         {
           "name": "--nomi",
@@ -10848,6 +10848,51 @@
           "choices": null,
           "repeatable": false,
           "desc": "Tutto in JSON."
+        },
+        {
+          "name": "--volume",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "lo standard del volume, S1-S5 (ADR-0122)"
+        },
+        {
+          "name": "--riferimento",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "annotazione di un PDF di riferimento (mappe raster, appendici)"
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "con --volume: ogni booklet del DM"
+        },
+        {
+          "name": "--manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "con --volume: il booklet di questo manifest (compilato come misura_stampa)"
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "con --volume: esce 1 se un booklet è sotto soglia"
         }
       ],
       "inputs": [
@@ -10862,12 +10907,19 @@
           "kind": "markdown",
           "required": true,
           "schema": null
+        },
+        {
+          "path": "docs/audit/volume-booklet.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
         }
       ],
       "outputs": [],
       "exit_codes": {
         "0": "la misura è stampata: è un indicatore",
-        "2": "manca PyMuPDF"
+        "2": "manca PyMuPDF",
+        "1": "con --volume --check: almeno una misura sotto le soglie dei riferimenti"
       },
       "determinism": {
         "deterministic": true,
@@ -10887,7 +10939,8 @@
       ],
       "docs": [
         "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
-        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+        "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md",
+        "plans/adr/ADR-0122-il-volume-segue-lo-schema-degli-adventure-path.md"
       ]
     },
     {

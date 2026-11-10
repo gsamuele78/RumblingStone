@@ -297,7 +297,7 @@ def cmd_booklet(args: argparse.Namespace, extra: list[str]) -> int:
 #: ne salta uno se ne accorge in copisteria.
 #:
 #: `stampa` assorbe il `dm.py stampa` promesso dall'audit di agosto e mai fatto.
-PASSI_VOLUME = ("prosa", "lingua", "manifest", "colophon", "schermo", "stampa", "imposizione")
+PASSI_VOLUME = ("prosa", "lingua", "manifest", "colophon", "schermo", "stampa", "struttura", "imposizione")
 
 
 def _colophon_del_manifest(mp: Path) -> tuple[bool, str]:
@@ -336,7 +336,7 @@ def cmd_volume(args: argparse.Namespace, extra: list[str]) -> int:
     passi = [x for x in PASSI_VOLUME
              if (not solo or x in solo) and x not in salta]
     if not args.stampa and not solo:
-        passi = [x for x in passi if x not in ("stampa", "imposizione")]
+        passi = [x for x in passi if x not in ("stampa", "struttura", "imposizione")]
     if args.imposto and "imposizione" not in passi and not salta:
         passi.append("imposizione")
 
@@ -398,6 +398,14 @@ def cmd_volume(args: argparse.Namespace, extra: list[str]) -> int:
                           "compilazione Typst fallita" if rc else "PDF con segnalibri"))
             if rc:
                 break
+        elif passo == "struttura":
+            # Lo standard del volume (ADR-0122): S1-S5 contro le soglie dei
+            # riferimenti. Canale testing: avvisa, non ferma il volume.
+            rc = run("misura_distanza_pagine.py", "--volume", "--check",
+                     "--manifest", str(mp), check=False)
+            esiti.append((passo, "\u26a0" if rc else "\u2713",
+                          "sotto le soglie degli AP di riferimento: guardale" if rc
+                          else "introduzioni, chiavi, mappe, appendice e PNG come gli AP"))
         elif passo == "imposizione":
             esiti.append(_imponi(mp))
 

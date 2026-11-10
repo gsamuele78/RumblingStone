@@ -1925,7 +1925,7 @@
     },
     {
       "name": "misura_distanza_pagine",
-      "description": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»\n\nLegge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello.",
+      "description": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»\n\nLegge il PDF stampato con PyMuPDF e, per ogni persona che ha un riquadro nel repo, misura quante pagine separano le pagine dove agisce (nominata almeno 3 volte) dalla pagina con la sua CA e i suoi pf. È la misura della lettura a mano della prova ADR-0107 resa ripetibile. Indicatore, non cancello. Con --volume misura lo standard del volume (ADR-0122): introduzione di capitolo, chiavi d'area fra testo e mappa, mappa entro una pagina, appendice di regione e PNG, ritratto dei PNG principali, contro le soglie di Burnt Offerings e Red Hand of Doom.",
       "use_case": "«Quante pagine sfoglia il DM, nel volume stampato, per trovare i numeri di chi ha davanti?»",
       "invocation": "python3 scripts/misura_distanza_pagine.py VOLUME.pdf",
       "inputSchema": {
@@ -1933,7 +1933,7 @@
         "properties": {
           "pdf": {
             "type": "string",
-            "description": "uno o più PDF da confrontare"
+            "description": "uno o più PDF da confrontare (con --volume, oppure --tutti o --manifest)"
           },
           "nomi": {
             "type": "string",
@@ -1942,17 +1942,36 @@
           "json": {
             "type": "boolean",
             "description": "Tutto in JSON."
+          },
+          "volume": {
+            "type": "boolean",
+            "description": "lo standard del volume, S1-S5 (ADR-0122)"
+          },
+          "riferimento": {
+            "type": "string",
+            "description": "annotazione di un PDF di riferimento (mappe raster, appendici)"
+          },
+          "tutti": {
+            "type": "boolean",
+            "description": "con --volume: ogni booklet del DM"
+          },
+          "manifest": {
+            "type": "string",
+            "description": "con --volume: il booklet di questo manifest (compilato come misura_stampa)"
+          },
+          "check": {
+            "type": "boolean",
+            "description": "con --volume: esce 1 se un booklet è sotto soglia"
           }
         },
-        "required": [
-          "pdf"
-        ],
+        "required": [],
         "additionalProperties": false
       },
       "outputs": [],
       "exit_codes": {
         "0": "la misura è stampata: è un indicatore",
-        "2": "manca PyMuPDF"
+        "2": "manca PyMuPDF",
+        "1": "con --volume --check: almeno una misura sotto le soglie dei riferimenti"
       },
       "deterministic": true
     },

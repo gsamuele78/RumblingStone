@@ -677,6 +677,20 @@ jobs:
           python scripts/misura_stampa.py --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
+      # ADR-0122, canale TESTING (ADR-0099): lo standard del volume (S1-S5:
+      # introduzione di capitolo, chiavi d'area fra testo e mappa, mappa entro
+      # una pagina, appendice regione e PNG, ritratto dei PNG principali) contro
+      # le soglie misurate su Burnt Offerings e Red Hand of Doom. Legge i PDF che
+      # il passo sopra ha appena compilato. Oggi nessun booklet le passa tutte:
+      # il passo avvisa e non blocca finché il DM non sceglie la nuova struttura.
+      - name: Standard del volume — non bloccante (ADR-0122, testing)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          { echo "## Standard del volume (ADR-0122, testing)"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          python scripts/misura_distanza_pagine.py --volume --tutti --check | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
   # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
   # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
   # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:

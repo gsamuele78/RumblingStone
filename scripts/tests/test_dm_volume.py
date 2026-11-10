@@ -37,9 +37,16 @@ def _lancia(*args: str) -> subprocess.CompletedProcess:
 class TestOrdine(unittest.TestCase):
     def test_i_mestieri_sono_in_ordine_e_dichiarati(self):
         # L'ordine è il contenuto di questo comando: se cambia, è una decisione.
+        # «struttura» (ADR-0122) misura il volume appena stampato, prima di imporlo.
         self.assertEqual(dm.PASSI_VOLUME,
                          ("prosa", "lingua", "manifest", "colophon",
-                          "schermo", "stampa", "imposizione"))
+                          "schermo", "stampa", "struttura", "imposizione"))
+
+    def test_senza_stampa_non_si_misura_la_struttura(self):
+        r = _lancia(str(REPO / "10-stand-alone" / "L'abbazia Della Rotta Sicura" /
+                        "homebrew" / "abbazia-rotta-sicura.manifest.json"))
+        riga = next(l for l in r.stdout.splitlines() if l.startswith("[dm] passi:"))
+        self.assertNotIn("struttura", riga)
 
     def test_senza_stampa_la_catena_si_ferma_allo_schermo(self):
         r = _lancia(str(REPO / "10-stand-alone" / "L'abbazia Della Rotta Sicura" /
