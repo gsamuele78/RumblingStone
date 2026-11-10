@@ -15,6 +15,8 @@ Questa misura aggiunge, con lo stesso formato e la stessa cache:
 - 3.5: tesoro per livello d'incontro (SRD «Treasure Values per Encounter»).
 - Tutti e due: talenti dei PNG generati (numero per ogni classe al 7°, contato
   a mano sul manuale, e prerequisiti dei talenti generali), e nomi italiani nel lessico per talenti, incantesimi e condizioni.
+- Tutti e due (lotto 5): tratti dei tipi nei mostri generati (Cos e Int «—», niente
+  talenti ai senza mente, pf e Tempra senza Costituzione, pf bonus del costrutto per taglia).
 
     python3 plans/esperimenti/regole-complete-2026-11-10/misura_regole_complete.py
     … --json FILE   … --md FILE
@@ -447,6 +449,119 @@ def nomi_nel_lessico(base) -> list:
     return out
 
 
+# ------------------------------------------------------------------ lotto 5: tratti dei tipi
+
+#: SRD 3.5 e PRD, «Types»: chi non ha Costituzione e chi non ha Intelligenza.
+#: Il costrutto è «di norma senza mente» (le due fonti: «most constructs are
+#: mindless»), melma e parassita lo sono per tratto.
+SENZA_COS = {"construct", "undead"}
+SENZA_INT = {"construct", "ooze", "vermin"}
+
+
+def _bonus_costrutto_srd(base) -> dict:
+    """SRD 3.5, Construct Traits: la tabella dei pf bonus per taglia, letta dalla cache."""
+    testo = (base / M.SRD / "basic-rules-and-legal/types-subtypes-and-special-abilities.md").read_text(encoding="utf-8")
+    riga = next(r for r in testo.splitlines() if "Construct Size" in r and "<table" in r)
+    celle = [re.sub(r"<[^>]+>", "", c).strip() for c in re.findall(r"<td>(.*?)</td>", riga)]
+    coppie = dict(zip(celle[0::2], celle[1::2]))
+    return {k.lower(): (0 if v in ("—", "-") else int(v)) for k, v in coppie.items() if k}
+
+
+BONUS_COSTRUTTO: dict = {}
+TIPI_MISURATI = ("aberration", "animal", "construct", "dragon", "elemental", "fey", "giant",
+                 "humanoid", "magical beast", "monstrous humanoid", "ooze", "outsider", "plant",
+                 "undead", "vermin")
+
+
+def _mostro(sistema: str, tipo: str, gs: int, taglia: str = "medium"):
+    """Il mostro come lo fa genera_creatura.main (ruolo bruto, seme 1)."""
+    import genera_creatura as G  # noqa: E402
+    from dmcore import sistemi as S
+    from dmcore import creature_pf1e as CP
+    rng = random.Random(1)
+    try:
+        sb, conto = G.genera(gs, tipo=tipo, taglia=taglia, ruolo="bruto", rng=rng,
+                             talenti=None if sistema == "pf1e" else "dnd35")
+    except TypeError:
+        sb, conto = G.genera(gs, tipo=tipo, taglia=taglia, ruolo="bruto", rng=rng)
+    if sistema == "pf1e":
+        try:
+            sb, righe = CP.converti(sb, tipo, taglia, pf_bersaglio=G.bersaglio_di(gs, "bruto", False)[0]["pf"])
+        except TypeError:   # converti di prima del lotto 5
+            sb, righe = CP.converti(sb, tipo, taglia)
+        voce = S.dati("pf1e", "creature.costruzione")["tipi"].get(tipo, {})
+        if getattr(conto, "talenti", None) and voce:
+            conto.talenti["bab"] = int(voce["bab"] * conto.talenti["dv"])
+        if hasattr(G, "applica_talenti"):
+            G.applica_talenti(sb, conto, "pf1e", "bruto", rng)
+    return sb
+
+
+def _difetti_tipo(sistema: str, tipo: str, sb, taglia: str = "medium") -> "list[str]":
+    from dmcore import tabelle as T
+    car = dict(re.findall(r"(For|Des|Cos|Int|Sag|Car)\s+(\S+)", sb.attributi))
+    dv, dado = (int(x) for x in re.match(r"(\d+)d(\d+)", sb.pf_dado).groups())
+    out = []
+    if (car.get("Cos") == "—") != (tipo in SENZA_COS):
+        out.append(f"Cos {car.get('Cos')}")
+    if (car.get("Int") == "—") != (tipo in SENZA_INT):
+        out.append(f"Int {car.get('Int')}")
+    talenti = next((v.split(":", 1)[1].strip() for v in sb.voci if v.startswith("Talenti:")), "")
+    if tipo in SENZA_INT and talenti not in ("", "—"):
+        out.append(f"talenti a un senza mente: {talenti}")
+    if tipo in SENZA_COS:
+        mod = 0
+        if sistema == "pf1e" and tipo == "undead":
+            mod = (int(car["Car"]) - 10) // 2
+        atteso = int(dv * (dado / 2 + 0.5) + mod * dv) + (BONUS_COSTRUTTO[taglia] if tipo == "construct" else 0)
+        # Robustezza resta lecita: la si toglie prima del confronto
+        robusto = 0
+        if "Robustezza" in talenti:
+            robusto = max(3, dv) if sistema == "pf1e" else 3
+        if int(sb.pf) - robusto != atteso:
+            out.append(f"pf {sb.pf} (la regola dà {atteso})")
+        temp = int(re.search(r"Temp ([+-]\d+)", sb.ts).group(1))
+        t_atteso = dv // 3 + mod
+        if "tempra possente" in talenti.lower():
+            t_atteso += 2
+        if temp != t_atteso:
+            out.append(f"Temp {temp:+d} (la regola dà {t_atteso:+d})")
+    return out
+
+
+def tratti_tipo(base) -> list:
+    """Cos, Int, talenti, pf e Tempra dei mostri generati contro i tratti del tipo."""
+    BONUS_COSTRUTTO.update(_bonus_costrutto_srd(base))
+    out = []
+    for sistema in ("dnd35", "pf1e"):
+        sb_tot, cop = [], 0
+        for tipo in TIPI_MISURATI:
+            for gs in (3, 7, 12):
+                cop += 1
+                try:
+                    d = _difetti_tipo(sistema, tipo, _mostro(sistema, tipo, gs))
+                except Exception as e:  # noqa: BLE001 — un errore è un difetto
+                    d = [f"errore {type(e).__name__}: {e}"]
+                if d:
+                    sb_tot.append({"riga": f"{tipo} GS {gs}", "campo": "tratti", "plugin": "; ".join(d),
+                                   "fonte": "tratti del tipo"})
+        out.append((sistema, _riga("tratti dei tipi nei mostri generati (Cos, Int, talenti, pf, Tempra)",
+                                   cop, cop, cop - len(sb_tot), sb_tot)))
+        sb_tot, cop = [], 0
+        for taglia in BONUS_COSTRUTTO:
+            cop += 1
+            try:
+                d = _difetti_tipo(sistema, "construct", _mostro(sistema, "construct", 7, taglia), taglia)
+            except Exception as e:  # noqa: BLE001
+                d = [f"errore {type(e).__name__}: {e}"]
+            if d:
+                sb_tot.append({"riga": f"costrutto {taglia} GS 7", "campo": "pf", "plugin": "; ".join(d),
+                               "fonte": f"bonus +{BONUS_COSTRUTTO[taglia]}"})
+        out.append((sistema, _riga("pf bonus dei costrutti per taglia (Construct Traits)",
+                                   cop, cop, cop - len(sb_tot), sb_tot)))
+    return out
+
+
 # ------------------------------------------------------------------ insieme
 
 def misura(base: Path) -> dict:
@@ -465,6 +580,8 @@ def misura(base: Path) -> dict:
     for sis, r in talenti_generati():
         out[sis].append(r)
     for sis, r in nomi_nel_lessico(base):
+        out[sis].append(r)
+    for sis, r in tratti_tipo(base):
         out[sis].append(r)
     return {"fonti": {"srd35": M.SRD, "prd": M.PRD}, "sistemi": out}
 

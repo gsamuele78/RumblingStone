@@ -73,8 +73,11 @@ def ts_buoni(tipo35: str, voce: dict) -> tuple[str, ...]:
     return tuple((prima + resto)[:voce["ts_a_scelta"]])
 
 
-def converti(sb, tipo: str, taglia: str, root=None):
-    """(statblocco PF1e, righe del conto). `sb` è il blocco 3.5 di genera()."""
+def converti(sb, tipo: str, taglia: str, root=None, pf_bersaglio: "int | None" = None):
+    """(statblocco PF1e, righe del conto). `sb` è il blocco 3.5 di genera().
+
+    `pf_bersaglio` serve ai non morti: il blocco 3.5 non ha Costituzione e i
+    suoi pf non sono sul bersaglio del GS; il PF1e ce li porta col Carisma."""
     dati = S.dati("pf1e", "creature.costruzione", root)
     tipo_pf = DIVENTA.get(tipo, tipo)
     if tipo_pf not in dati["tipi"]:
@@ -112,6 +115,17 @@ def converti(sb, tipo: str, taglia: str, root=None):
                          "la tabella manca nel PRD in cache e nessuna scheda li prova")
     else:
         chiave_pf = "Car" if tipo_pf == "undead" else "Cos"
+        if tipo_pf == "undead" and re.search(r"Cos\s+—", sb.attributi):
+            # il blocco 3.5 del non morto non ha Costituzione (lotto 5): i suoi pf
+            # sono i soli dadi, sotto il bersaglio. Il PF1e glieli ridà col
+            # Carisma, quindi il Carisma si risolve sul bersaglio del GS
+            # (`pf_bersaglio`, quello di genera_creatura.bersaglio_di), non sul
+            # blocco 3.5.
+            if pf_bersaglio:
+                obiettivo = max(obiettivo, pf_bersaglio)
+            else:
+                conto.append("⚠ non morto senza Costituzione e senza pf_bersaglio: il Carisma "
+                             "si risolve sui pf del blocco 3.5, che sono i soli dadi")
         m_pf = min(COS_MAX, round((obiettivo - media) / dv))
         car[chiave_pf] = 10 + 2 * m_pf
         attributi = re.sub(chiave_pf + r"\s+\d+", f"{chiave_pf} {car[chiave_pf]}", attributi)
@@ -150,7 +164,8 @@ def converti(sb, tipo: str, taglia: str, root=None):
     m_for, m_des = _mod(car.get("For", 10)), _mod(car.get("Des", 10))
     bmc = bab + m_for + mt
     dmc = 10 + bab + m_for + m_des + mt
-    gradi = max(1, voce["gradi"] + _mod(car.get("Int", 10))) * dv
+    # senza Intelligenza: «mindless creatures do not gain feats or skills» (PRD, Creature Types)
+    gradi = 0 if re.search(r"Int\s+—", attributi) else max(1, voce["gradi"] + _mod(car.get("Int", 10))) * dv
     conto.append(f"BMC = {bab} BAB {m_for:+d} For {mt:+d} taglia = {bmc:+d}; "
                  f"DMC = 10 + {bab} {m_for:+d} {m_des:+d} Des {mt:+d} = {dmc}")
     conto.append(f"gradi di abilità = ({voce['gradi']} + Int) × {dv} DV = {gradi}")

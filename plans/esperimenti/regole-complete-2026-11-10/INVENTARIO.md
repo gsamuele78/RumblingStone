@@ -85,6 +85,14 @@ hanno: il non morto 3.5 non ha Costituzione, il costrutto prende il bonus fisso 
 taglia. Il cancello `conformita_statblocchi` oggi non lo vede. Non è un difetto dei
 talenti, è un tratto di tipo mancante: **lotto 5**, con la sua misura.
 
+**Chiuso col lotto 5** (`MISURA-LOTTO5-PRIMA.md` / `-DOPO.md`): Cos «—» a non
+morti e costrutti, Int «—» e niente talenti a melme, parassiti e costrutti,
+pf bonus per taglia del costrutto dalla tabella dell'SRD, Tempra senza
+Costituzione, Advanced che non dà pf a chi non ha Costituzione. Resta fuori,
+detto: immunità, RD e scurovisione dei tipi non si aggiungono al blocco (sono
+capacità speciali, il generatore non ne scrive), e un costrutto con mente
+(«most constructs are mindless», non tutti) il generatore non lo fa.
+
 ## 3-ter. Licenze
 
 I dati del plugin PF1e prendono classi, talenti, razze e creature da 14 libri Paizo

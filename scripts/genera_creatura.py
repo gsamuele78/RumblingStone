@@ -78,6 +78,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from dmcore import caratteristiche as CAR  # noqa: E402
 from dmcore import incantesimi as INC  # noqa: E402
 from dmcore import tabelle as T  # noqa: E402
+from dmcore import sistemi as S  # noqa: E402
 from dmcore.progressione import ts_base_di  # noqa: E402
 from dmcore.statblock import Statblocco, rendi  # noqa: E402
 
@@ -410,6 +411,22 @@ def genera(gs: int, *, tipo: str = "humanoid", taglia: str = "medium",
 
 # ── il mostro: si risolve verso il bersaglio ────────────────────────────────
 
+def tratti_del_tipo(tipo: str, taglia: str = "medium") -> dict:
+    """I tratti del tipo che cambiano il blocco: senza Costituzione, senza mente,
+    pf bonus del costrutto (sistemi/dnd35/dati/creature.toml, [tratti_tipo] e
+    [pf_bonus_costrutti], dall'SRD «Types»)."""
+    dati = S.dati("dnd35", "creature.costruzione")
+    chiave = T.ALIAS_TIPO.get(tipo, tipo)
+    t = dati.get("tratti_tipo", {}).get(chiave, {})
+    tg = taglia.lower()
+    if tg not in dati.get("pf_bonus_costrutti", {}):
+        tg = next((k for k in T.TAGLIE if T.TAGLIE[k] == T.TAGLIE.get(tg)
+                   and k in dati.get("pf_bonus_costrutti", {})), tg)
+    bonus = dati.get("pf_bonus_costrutti", {}).get(tg, 0) if chiave == "construct" else 0
+    return {"senza_cos": bool(t.get("senza_cos")), "senza_int": bool(t.get("senza_int")),
+            "pf_bonus": bonus}
+
+
 def _genera_mostro(gs, tipo, taglia, R, dv, piu_cattivi, conto, rng):
     dado, bab_per_dv, ts_buoni = T.TIPI[tipo]
     dv_tot = dv if dv is not None else dv_di_partenza(gs, tipo)
@@ -438,20 +455,45 @@ def _genera_mostro(gs, tipo, taglia, R, dv, piu_cattivi, conto, rng):
     # quando i DV finiscono si alza la Costituzione.
     COS_MAX = 6          # +6 → Cos 22, il tetto di un mostro non eccezionale
     DV_MAX = max(2 * gs, dv_tot)
-    while True:
-        media = T.media_dado(dado) * dv_tot
-        m_cos = round((bersaglio["pf"] - media) / dv_tot)
-        if m_cos <= COS_MAX or dv_tot >= DV_MAX or dv is not None:
-            break
-        dv_tot += 1
-    cos = _punteggio(m_cos)
-    pf = max(1, int(media + m_cos * dv_tot))
+    tratti = tratti_del_tipo(tipo, taglia)
+    if tratti["senza_cos"]:
+        # SRD 3.5, Construct e Undead: «No Constitution score». I pf sono i soli
+        # dadi (più il bonus di taglia del costrutto): il bersaglio si insegue
+        # con i DV, e quello che i DV non coprono resta scoperto e si dice.
+        m_cos = 0
+        while True:
+            media = T.media_dado(dado) * dv_tot
+            if (media + tratti["pf_bonus"] >= bersaglio["pf"] or dv_tot >= DV_MAX
+                    or dv is not None):
+                break
+            dv_tot += 1
+        cos = "—"
+        pf = max(1, int(media) + tratti["pf_bonus"])
+    else:
+        while True:
+            media = T.media_dado(dado) * dv_tot
+            m_cos = round((bersaglio["pf"] - media) / dv_tot)
+            if m_cos <= COS_MAX or dv_tot >= DV_MAX or dv is not None:
+                break
+            dv_tot += 1
+        cos = _punteggio(m_cos)
+        pf = max(1, int(media + m_cos * dv_tot))
     conto(f"DV {dv_tot}d{dado}" + ("" if dv is not None else
           f" (regola pratica DV≈GS×1,{'1' if dv_iniziali < gs else '3'}, tarata sui "
           f"mostri del SRD"
-          + (f"; saliti da {dv_iniziali} per non sfondare la banda della "
-             "Costituzione" if dv_tot != dv_iniziali else "") + ")"))
-    conto(f"Cos {cos} ({m_cos:+d}) risolta sui pf: {media:.1f} + {m_cos:+d}×{dv_tot} DV = {pf}")
+          + (f"; saliti da {dv_iniziali} per " + ("inseguire i pf senza Costituzione"
+             if tratti["senza_cos"] else "non sfondare la banda della Costituzione")
+             if dv_tot != dv_iniziali else "") + ")"))
+    if tratti["senza_cos"]:
+        conto(f"Cos — ({tipo}: nessun punteggio di Costituzione, SRD «Types»): pf = "
+              f"{media:.1f} dei dadi"
+              + (f" +{tratti['pf_bonus']} bonus del costrutto {taglia} (Construct Traits)"
+                 if tratti["pf_bonus"] else "") + f" = {pf}"
+              + (f"; mancano {bersaglio['pf'] - pf} pf al bersaglio con {dv_tot} DV, "
+                 "il tetto di 2×GS: è il prezzo del tipo, che le immunità ripagano"
+                 if pf < bersaglio["pf"] else ""))
+    else:
+        conto(f"Cos {cos} ({m_cos:+d}) risolta sui pf: {media:.1f} + {m_cos:+d}×{dv_tot} DV = {pf}")
 
     # Armatura naturale: quella che porta la CA sul bersaglio, mai sotto quella
     # della taglia (un mostro enorme ha comunque la sua corazza).
@@ -504,22 +546,31 @@ def _genera_mostro(gs, tipo, taglia, R, dv, piu_cattivi, conto, rng):
         pezzi_ca.append(f"{mod_taglia:+d} taglia")
     conto(f"CA = 10 {' '.join(pezzi_ca)} = {ca}")
 
-    men = MENTALI[R.nome]
+    men = dict(MENTALI[R.nome])
+    if tratti["senza_int"]:
+        men["int"] = "—"
     attr = {"for": forza, "des": des, "cos": cos, **men}
-    m = {k: T.mod(v) for k, v in attr.items()}
+    # una caratteristica che non c'è non dà modificatore (SRD, «Nonabilities»)
+    m = {k: (T.mod(v) if isinstance(v, int) else 0) for k, v in attr.items()}
 
     ts = _tiri_salvezza(dv_tot, ts_buoni, m, conto)
     talento, tattica, debolezza = rng.choice(CARATTERE[R.nome])
     conto.talenti = {"bab": bab, "livelli": {}, "lic": 0, "dv_razziali": dv_tot, "dv": dv_tot}
+    if tratti["senza_int"]:
+        # SRD: «Mindless creatures do not gain feats or skills»
+        conto.talenti = None
+        talento = "—"
+        conto(f"Int — ({tipo} senza mente, SRD «Types»): niente talenti né abilità")
     mod_danno = m["for"]   # arco composito: anche a distanza il danno è suo
 
     return Statblocco(
         nome=f"{R.nome} {tipo} GS {gs}",
         gs=str(gs),
         tipo=f"{taglia.capitalize()} {tipo}, {dv_tot}d{dado}"
-             + (f"+{m_cos * dv_tot}" if m_cos > 0 else ""),
+             + (f"+{m_cos * dv_tot}" if m_cos > 0 else "")
+             + (f"+{tratti['pf_bonus']}" if tratti["pf_bonus"] else ""),
         ca=str(ca), ca_dettaglio="(" + ", ".join(pezzi_ca) + ")",
-        pf=str(pf), pf_dado=f"{dv_tot}d{dado}",
+        pf=str(pf), pf_dado=f"{dv_tot}d{dado}" + (f"+{tratti['pf_bonus']}" if tratti["pf_bonus"] else ""),
         ts=_ts_testo(ts), velocita="9 m", iniziativa=f"{m['des']:+d}",
         attributi=" ".join(f"{k.capitalize()} {v}" for k, v in attr.items()),
         attacchi=[_riga_attacco(R, attacco, mod_danno)],
@@ -710,11 +761,15 @@ def _applica_advanced(sb: Statblocco, conto: Conto) -> None:
         if pezzo.isdigit() and attr:
             ultimo = list(attr)[-1]
             attr[ultimo] = int(pezzo) + ADVANCED["caratteristiche"]
+        elif pezzo == "—" and attr:
+            attr[list(attr)[-1]] = "—"     # chi non ha il punteggio non lo guadagna
         else:
             attr[pezzo] = None
     sb.attributi = " ".join(f"{k} {v}" for k, v in attr.items())
 
-    delta_cos = ADVANCED["caratteristiche"] // 2
+    # senza Costituzione il template non dà pf (il PF1e li ridà al non morto
+    # col Carisma, ma lo fa converti, che li ricalcola)
+    delta_cos = 0 if attr.get("Cos") == "—" else ADVANCED["caratteristiche"] // 2
     dv = int(sb.pf_dado.split("d")[0])
     sb.pf = str(int(sb.pf) + delta_cos * dv)
     sb.ca = str(int(sb.ca) + ADVANCED["naturale"] + ADVANCED["caratteristiche"] // 2)
@@ -1267,7 +1322,8 @@ def main(argv: list[str] | None = None) -> int:
                                              else args.incantesimi == "pf1e"),
                            talenti=None if args.sistema == "pf1e" else "dnd35")
         if args.sistema == "pf1e":
-            sb, righe = CP.converti(sb, args.tipo, args.taglia)
+            sb, righe = CP.converti(sb, args.tipo, args.taglia, pf_bersaglio=bersaglio_di(
+                args.gs, normalizza_ruolo(args.ruolo), piu_cattivi=False)[0]["pf"])
             conto.righe.extend(righe)
             if conto.talenti and not conto.talenti.get("livelli"):
                 # BAB PF1e del tipo, non quello 3.5
