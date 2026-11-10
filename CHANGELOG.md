@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `dm.py sistemi`: i sistemi di gioco dall'ingresso unico (ADR-0111, ADR-0002). Passa i flag a `scripts/sistemi.py`: senza flag i sistemi attivi e la matrice strumenti × sistemi, `--di FILE` il sistema di un file, `--check` il cancello, `--json`, `--skill`. Il manifest dei tool conosce ora anche `asset`, `ambiente`, `booklet`, `prompts` e `gruppo`, che `dm.py` aveva già ma il server MCP non vedeva.
 - Le regole PF1e del cancello delle schede dal PRD (ADR-0119, proposta): `sistemi/pf1e/dati/conformita_prd.toml`, generato da `estrai_prd_pf1e.py` (BAB e TS di 55 classi, scurovisione e visione crepuscolare per tipo, sottotipo e razza del Bestiario 1-4, *corrompere l'acqua*). `conformita_statblocchi --cancello-moduli` non salta più lotta (ora BMC e DMC), scurovisione e *corrompere l'acqua*, e conta anche BAB, TS, contatto e colto alla sprovvista, iniziativa, Schivare, bonus di `pf-dado`, pf a dadi misti, CD e LI degli incantesimi, incanalare energia. I conti nuovi stanno in `[conti] in_prova` di `conformita.toml`: il cancello li stampa come avviso; `--severo` (nuovo) li fa bloccare. Corretti 7 numeri: Vidalia e lo skum Volontà +8, Sfregio CA 19 e DMC 20 (Schivare), il cavallo DMC 17 e visione crepuscolare, Mastro Tariq 101 pf (Robustezza). Uscite 3.5 identiche.
 - Il plugin PF1e ha le sue classi, griglie e armature (ADR-0119, lotto 2): `sistemi/pf1e/dati/classi.toml`, generato dal PRD, con 55 classi (dado vita, BAB, TS buoni, gradi), incantesimi al giorno di 22 classi, conosciuti e preparati; `[armature]` e `[scudi]` in `sistemi/pf1e/dati/creature.toml`. Gli strumenti non li leggono ancora: il collegamento arriva con l'audit dei plugin.
 - Le liste di classe degli incantesimi PF1e (ADR-0119, lotto 3): `sistemi/pf1e/dati/liste_incantesimi.toml`, generato dal PRD, con 22 classi, 1.536 incantesimi con il loro libro e 1.480 nomi italiani.
@@ -118,6 +119,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `validate_booklets` controlla anche che il `.hb.md` committato di un booklet sia quello che il manifest produce oggi (`build_booklet_html.testo_hb`): i `.hb.md` di Notte e Alba, Resurrezione e Mille anni erano rimasti alla versione prima del capitolo del barile e delle mappe nuove.
 - Nei booklet di ARC-07 le griglie ASCII delle mappe tattiche (T-2, T-3, T-6, S-2, M7-B, e CM-1 e CM-2 in DEF-5) lasciano il posto alla pianta in stampa con la legenda; la griglia resta nel master come apparato. `validate_booklets` ferma una griglia disegnabile stampata in un booklet. Le sei schematiche passano anche loro: T-5, R-1 e S-1 ridisegnate in scala in `ARC07-MAPPE-SCHEMATICHE-IN-SCALA.md` (S-1 sulla pianta di PF-2 con gli affreschi di DEF-2), T-1, T-4 e M7-A come schemi senza griglia generati da `scripts/render_schemi.py` (`--check` in CI). In CM-1 e CM-2 (e nella MAPPA 5 di ARC-08) i 90 nani non stanno più ad anello ma schierati verso la porta, centro pesante e due ali piegate (scelta del DM, 2026-10-30); i numeri dello scontro non cambiano. Lo standard vale per tutto il repo: `validate_booklets` ferma ogni disegno a riquadri stampato in un booklet, e le due linee del tempo che restavano (Palio, Drappo) sono diventate tabelle.
 ### Modificato
+- `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 - La CI fa girare la suite dei test anche su Python 3.14, in un job non bloccante (P8 di PIANO-PIATTAFORMA anticipata). La versione supportata resta 3.13.
 - Immagine del container dei booklet su `debian:13-slim` col digest nuovo (Dependabot, #356, sì di Jfs del 2026-11-09): stessa Debian 13, solo correzioni di sicurezza.
 - La CI applica il canale stable di ADR-0099 a tre strumenti: ruff boccia la PR (prima solo avvisava) e sostituisce `compileall`; le dipendenze si installano con uv 0.11.32 invece di pip; il job dei convertitori boccia se un modulo non si importa su Python 3.13. pytest-xdist resta in prova. Misura in `plans/esperimenti/promozioni-2026-11-08/MISURE.md`.
@@ -157,9 +159,6 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Rimosso
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
-
-### Cambiato
-- `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 
 ## [1.0.0] - 2026-10-23
 

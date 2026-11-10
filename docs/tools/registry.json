@@ -9050,7 +9050,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa/sistemi). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -9059,7 +9059,7 @@
       ],
       "args": [
         {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa",
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa|asset|ambiente|booklet|prompts|gruppo|sistemi",
           "type": "subcommand",
           "required": true,
           "default": null,
@@ -9077,10 +9077,16 @@
             "volume",
             "corredo",
             "bestiario",
-            "prosa"
+            "prosa",
+            "asset",
+            "ambiente",
+            "booklet",
+            "prompts",
+            "gruppo",
+            "sistemi"
           ],
           "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto."
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto. «sistemi» passa i flag a scripts/sistemi.py (ADR-0111): i sistemi attivi, il sistema di un file con --di, la matrice strumenti × sistemi, il cancello con --check."
         }
       ],
       "inputs": [
