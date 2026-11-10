@@ -91,7 +91,7 @@
 "camicia di maglia" = { ca = 4, des_max = 4 }
 "maglia" = { ca = 4, des_max = 4 }
 "scale mail" = { ca = 4, des_max = 3 }
-"scaglie" = { ca = 4, des_max = 3 }
+"corazza a scaglie" = { ca = 4, des_max = 3 }
 "studded leather" = { ca = 3, des_max = 5 }
 "cuoio borchiato" = { ca = 3, des_max = 5 }
 "leather" = { ca = 2, des_max = 6 }
