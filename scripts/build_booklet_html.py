@@ -812,7 +812,7 @@ def build(manifest_path: Path, out_override: Path | None = None) -> Path:
     tabs = ['<button role="tab" aria-selected="true" data-pane="c0">Copertina</button>']
     for k, ch in enumerate(mf["chapters"], 1):
         p = base / ch["file"]
-        body = md_to_html(spoglia_homebrewery(leggi_per_la_stampa(p, capitoli)), p.parent)
+        body = md_to_html(spoglia_homebrewery(leggi_per_la_stampa(p, capitoli, ch.get("sezioni"))), p.parent)
         tag = TAGS.get(ch.get("tag", ""), "")
         foot = player_footer if ch.get("tag") == "player" else footer
         tabs.append(f'<button role="tab" aria-selected="false" data-pane="c{k}">'
@@ -940,8 +940,8 @@ def testo_hb(manifest_path: Path, out_override: Path | None = None) -> tuple[Pat
 
     capitoli = capitoli_del_volume(base, mf)
 
-    def _incorpora(sorgente: Path) -> str:
-        return riscala_link(statblocchi_homebrewery(togli_storico(leggi_per_la_stampa(sorgente, capitoli))),
+    def _incorpora(sorgente: Path, sezioni=None) -> str:
+        return riscala_link(statblocchi_homebrewery(togli_storico(leggi_per_la_stampa(sorgente, capitoli, sezioni))),
                             sorgente.resolve().parent, dest)
 
     if mf.get("intro_md"):
@@ -954,7 +954,7 @@ def testo_hb(manifest_path: Path, out_override: Path | None = None) -> tuple[Pat
         tag = HB_TAGS.get(ch.get("tag", ""))
         if tag:
             parts.append(tag + "\n")
-        parts.append(_incorpora(base / ch["file"]))
+        parts.append(_incorpora(base / ch["file"], ch.get("sezioni")))
     if APPENDICE_HB:
         parts += ["\n\\page\n", "# Appendice: le creature\n"]
         parts += [r for _, r in sorted(APPENDICE_HB.values(), key=lambda v: v[0].lower())]

@@ -136,7 +136,10 @@
       ],
       "description": "Dove esce il riquadro intero delle creature (ADR-0105 punto 7). 'appendice' (predefinito): nell'incontro una riga con nome, GS, CA, pf, rimando e tattica, il riquadro in un'appendice in fondo al volume. 'qui': il riquadro dove è scritto, per i volumi da consegnare ai giocatori. 'entrambe': il riquadro dove è scritto e in più l'appendice in fondo, solo nel PDF (l'HTML fa come 'qui'). Catene: entrambe."
     },
-    "chi_si_incontra": {"type": "boolean", "description": "ADR-0107: prima di stampare, ogni capitolo riceve le persone che vi si incontrano (scheda d'entrata con la riga Chi è, ritratto, riquadro con la tattica) e le mappe che nomina, prese dal master che le ha (dmcore.chi_si_incontra). Va con schede: entrambe, così l'appendice resta."},
+    "chi_si_incontra": {
+      "type": "boolean",
+      "description": "ADR-0107: prima di stampare, ogni capitolo riceve le persone che vi si incontrano (scheda d'entrata con la riga Chi è, ritratto, riquadro con la tattica) e le mappe che nomina, prese dal master che le ha (dmcore.chi_si_incontra). Va con schede: entrambe, così l'appendice resta."
+    },
     "chapters": {
       "type": "array",
       "minItems": 1,
@@ -196,6 +199,13 @@
           "capolettera": {
             "type": "boolean",
             "description": "Sovrascrive il valore del volume per questo capitolo."
+          },
+          "sezioni": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Solo queste sezioni del master, nell'ordine dato: ogni voce è l'inizio del testo di un titolo markdown; «testa:X» prende solo il testo fino al primo sottotitolo. Lo stesso master può dare più capitoli. Per il booklet della serata (ADR-0122). Catene: stampa e Homebrewery."
           }
         }
       }

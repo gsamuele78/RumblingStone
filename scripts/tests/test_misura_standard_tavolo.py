@@ -131,6 +131,7 @@ class TestNoteDiLavoro(unittest.TestCase):
 
     TETTI = {
         "ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json": 18,  # 19 prima della #305
+        "ARC07-NOTTE-E-ALBA-SERATA.manifest.json": 1,    # la stessa del volume, Scena 11 (ADR-0122)
         "ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": 19,
         "ARC07-MILLE-ANNI-VOLUME.manifest.json": 18,
         "ARC07-SESSIONE-TERROS-BOOKLET.manifest.json": 3,

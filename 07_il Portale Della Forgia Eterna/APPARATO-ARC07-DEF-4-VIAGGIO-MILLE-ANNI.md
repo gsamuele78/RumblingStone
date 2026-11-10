@@ -31,6 +31,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | **Vatore** | SCENA 9 | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri | il tono del collega, non del nemico. Monosillabi. Terrore reverenziale mal nascosto |
 | Hrodgar, il capitano delle mura | SCENA 10 | — | dà gli ordini con una parola sola |
 | Hald, il nipote di Balvar | SCENA 10 | — | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
+| Zog'tar Deatheye, se è vivo all'alba | SCENA 10 | — | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Skullcrusher il Nero** | SCENA 11 | — | — |
 | Aegis Fang | SCENA 11 | — | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
 

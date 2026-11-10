@@ -376,20 +376,92 @@ _RIF_NUDO = re.compile(r"(?<![\w/.-])" + _RIF + r"(?P<sez>" + _SEZIONE + r")")
 _NUMERO_ROMANO = re.compile(r"^\s*([IVXLC]+)\s*·")
 
 
+class Volume(dict):
+    """File → etichetta del capitolo, e per i master divisi in più capitoli
+    (chiave `sezioni`) quali sezioni stanno in quale capitolo (`parti`)."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.parti: "dict[Path, list[tuple[str, list[str]]]]" = {}
+
+
 def capitoli_del_volume(base: "Path", dato: dict) -> "dict[Path, str]":
     """File del volume → come lo si cita in stampa: «cap. IV», o il titolo.
 
-    `base` è la cartella del manifest, a cui i capitoli sono relativi.
+    `base` è la cartella del manifest, a cui i capitoli sono relativi. Un
+    master che dà più capitoli si cita col primo, salvo che il rimando dica
+    la scena o la sezione: allora con il capitolo che la contiene
+    (`capitolo_della_parte`).
     """
-    fuori: "dict[Path, str]" = {}
+    fuori = Volume()
     for c in dato.get("chapters", []):
         if not isinstance(c, dict) or "file" not in c:
             continue
         titolo = c.get("title", "")
         m = _NUMERO_ROMANO.match(titolo)
-        fuori[(base / c["file"]).resolve()] = (
-            f"cap. {m.group(1)}" if m else f"«{titolo.strip()}»")
+        etichetta = f"cap. {m.group(1)}" if m else f"«{titolo.strip()}»"
+        f = (base / c["file"]).resolve()
+        fuori.setdefault(f, etichetta)
+        if c.get("sezioni"):
+            fuori.parti.setdefault(f, []).append((etichetta, list(c["sezioni"])))
     return fuori
+
+
+_PARTE = re.compile(r"[ \t]*,?[ \t]*(?:(?P<scena>[Ss]cen[ae])[ \t]+(?P<num>\d+(?:[ \t]*(?:e|-|–|,)[ \t]*\d+)*)"
+                    r"|(?P<sez>§[\w.]+(?:-[\w]+)*)|[Aa]ppendice[ \t]+(?P<app>[A-Z](?:\.\d+)?(?:-bis)?))")
+
+#: Il master diviso è citato per una parte che questo volume non stampa.
+FUORI_DAL_VOLUME = "fuori"
+
+
+def capitolo_della_parte(capitoli: "dict[Path, str]", f: "Path", sez: str, dopo: str) -> "str | None":
+    """Il capitolo di un master diviso che contiene la parte citata.
+
+    `sez` è il «§N» già letto dal rimando, `dopo` il testo che lo segue
+    («Scena 11», «Scene 10 e 11», «Appendice A.1»). None se il master non è
+    diviso o la parte non si riconosce: allora vale l'etichetta del primo
+    capitolo. `FUORI_DAL_VOLUME` se la parte si riconosce ma questo volume
+    non la stampa: allora il rimando va al master, cioè al volume d'arco.
+
+    >>> v = Volume(); f = Path("/x/DEF-4.md")
+    >>> v[f] = "cap. V"; v.parti[f] = [("cap. V", ["SCENA 6", "C.2"]), ("cap. IX", ["SCENA 11", "§6 —", "C.3"])]
+    >>> capitolo_della_parte(v, f, "", " Scena 11, la passata"), capitolo_della_parte(v, f, "§6", "")
+    ('cap. IX', 'cap. IX')
+    >>> capitolo_della_parte(v, f, "", " Appendice C.2"), capitolo_della_parte(v, f, "", " Scena 1)")
+    ('cap. V', 'fuori')
+    >>> capitolo_della_parte(v, f, "", " Scene 6 e 11"), capitolo_della_parte(v, f, "", " Scene 6-7")
+    ('capp. V e IX', 'cap. V')
+    """
+    parti = getattr(capitoli, "parti", {}).get(f)
+    if not parti:
+        return None
+    if sez.strip():
+        toks = [sez.strip()]
+    else:
+        m = _PARTE.match(dopo)
+        if not m:
+            return None
+        if m.group("scena"):
+            toks = ["scena " + n for n in re.findall(r"\d+", m.group("num"))]
+        else:
+            toks = [m.group("sez") or m.group("app")]
+
+    def dove(tok: str) -> "str | None":
+        t = _normale(tok)
+        for etichetta, voci in parti:
+            for v in voci:
+                v = _normale(v[len("testa:"):] if v.startswith("testa:") else v)
+                if v.startswith(t) and (len(v) == len(t) or not (v[len(t)].isalnum() or v[len(t)] in "-.")):
+                    return etichetta
+        return None
+
+    trovati = [d for d in map(dove, toks) if d]
+    if not trovati:
+        return FUORI_DAL_VOLUME
+    unici = list(dict.fromkeys(trovati))
+    if len(unici) == 1:
+        return unici[0]
+    return "capp. " + " e ".join(u.removeprefix("cap. ") for u in unici)
 
 
 # Un nome di file fra backtick, anche abbreviato con «...» o «…» davanti
@@ -426,9 +498,144 @@ def _traduci_nomi_di_file(md: str, io: "Path", capitoli: "dict[Path, str]") -> s
     return "".join(pezzi)
 
 
-def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]") -> str:
-    """Il sorgente di un capitolo con i rimandi già tradotti per questo volume."""
-    return traduci_rimandi(f.read_text(encoding="utf-8"), f, capitoli)
+_TITOLO_MD = re.compile(r"^(#{1,6})[ \t]+(.*?)[ \t]*#*[ \t]*$")
+_RECINTO = re.compile(r"^[ \t]*(```|~~~)")
+_MARCHE_DI_BLOCCO = ("storico", "apparato", "consegna")
+
+
+def _normale(t: str) -> str:
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFKC", t)).strip().casefold()
+
+
+def _bilancia_marche(md: str) -> str:
+    """Toglie le marche `<!-- x -->` / `<!-- /x -->` rimaste spaiate da un taglio.
+
+    >>> _bilancia_marche("Testo.\\n<!-- storico -->\\n")
+    'Testo.\\n'
+    >>> _bilancia_marche("<!-- /apparato -->\\nResta.\\n<!-- apparato -->via<!-- /apparato -->")
+    'Resta.\\n<!-- apparato -->via<!-- /apparato -->'
+    """
+    for nome in _MARCHE_DI_BLOCCO:
+        tok = re.compile(r"<!--\s*(/?)" + nome + r"\s*-->\n?")
+        aperte: list = []
+        via: list = []
+        for m in tok.finditer(md):
+            if m.group(1):
+                (aperte.pop() if aperte else via.append(m))
+            else:
+                aperte.append(m)
+        for m in sorted(via + aperte, key=lambda m: m.start(), reverse=True):
+            md = md[:m.start()] + md[m.end():]
+    return md
+
+
+_PAGINA_APRE = re.compile(r"^\s*<!--\s*pagina:[^>]*-->\s*$")
+_PAGINA_CHIUDE = re.compile(r"^\s*<!--\s*/pagina\s*-->\s*$")
+
+
+def _con_la_pagina(righe: "list[str]", inizio: int, fine: int) -> str:
+    """Il pezzo `righe[inizio:fine]` con la sua impaginazione: se cade dentro
+    un `<!-- pagina: … -->` del master lo riapre e lo richiude, e un'apertura
+    rimasta in coda (è della sezione dopo) la toglie.
+
+    >>> r = ["a\\n", "<!-- pagina: una-colonna -->\\n", "## B\\n", "tab\\n", "## C\\n", "<!-- /pagina -->\\n"]
+    >>> _con_la_pagina(r, 0, 2), _con_la_pagina(r, 2, 4)
+    ('a\\n', '<!-- pagina: una-colonna -->\\n## B\\ntab\\n<!-- /pagina -->\\n')
+    """
+    aperta = None
+    for r in righe[:inizio]:
+        if _PAGINA_APRE.match(r):
+            aperta = r
+        elif _PAGINA_CHIUDE.match(r):
+            aperta = None
+    pezzo = list(righe[inizio:fine])
+    if aperta:
+        pezzo.insert(0, aperta)
+    stato, ultima = None, -1
+    tenute = []
+    for r in pezzo:
+        if _PAGINA_APRE.match(r):
+            stato, ultima = r, len(tenute)
+        elif _PAGINA_CHIUDE.match(r):
+            if stato is None:
+                continue                      # chiusura senza apertura: via
+            stato = None
+        tenute.append(r)
+    if stato is not None:
+        coda = "".join(tenute[ultima + 1:]).strip()
+        if not coda or set(coda) <= set("-\n "):
+            del tenute[ultima]                # l'apertura è della sezione dopo
+        else:
+            tenute.append("<!-- /pagina -->\n")
+    return "".join(tenute).rstrip("\n") + "\n"
+
+
+def estrai_sezioni(md: str, voci: "list[str]") -> str:
+    """Solo le sezioni del master che il volume chiede, nell'ordine chiesto.
+
+    Ogni voce è l'inizio del testo di un titolo markdown (senza i `#`, senza
+    distinguere maiuscole); la sezione va dal titolo al titolo seguente di
+    livello uguale o più alto. I `#` dentro i recinti di codice non sono
+    titoli. Una voce che non trova il suo titolo, o ne trova due, ferma la
+    stampa: un capitolo con un pezzo mancante non deve uscire in silenzio.
+    `testa:§2` prende solo il testo del titolo fino al primo sottotitolo.
+
+    >>> md = "# M\\n## §1 — A\\nuno\\n### Dett\\nd\\n## §2 — B\\n```\\n# non è un titolo\\n```\\n## §3 — C\\ntre\\n"
+    >>> print(estrai_sezioni(md, ["§3", "§1"]), end="")
+    ## §3 — C
+    tre
+    <BLANKLINE>
+    ## §1 — A
+    uno
+    ### Dett
+    d
+    >>> print(estrai_sezioni(md, ["testa:§1"]), end="")
+    ## §1 — A
+    uno
+    >>> estrai_sezioni(md, ["§9"])
+    Traceback (most recent call last):
+    ...
+    ValueError: sezione non trovata: '§9'
+    """
+    righe = md.splitlines(keepends=True)
+    titoli: "list[tuple[int, int, str]]" = []   # (riga, livello, testo)
+    nel_recinto = False
+    for i, r in enumerate(righe):
+        if _RECINTO.match(r):
+            nel_recinto = not nel_recinto
+            continue
+        m = None if nel_recinto else _TITOLO_MD.match(r.rstrip("\n"))
+        if m:
+            titoli.append((i, len(m.group(1)), _normale(m.group(2))))
+    pezzi = []
+    for voce in voci:
+        solo_testa = voce.startswith("testa:")
+        v = _normale(voce[len("testa:"):] if solo_testa else voce)
+        trovati = [k for k, t in enumerate(titoli) if t[2].startswith(v)]
+        if not trovati:
+            raise ValueError(f"sezione non trovata: {voce!r}")
+        if len(trovati) > 1:
+            raise ValueError(f"sezione ambigua: {voce!r} ({len(trovati)} titoli)")
+        k = trovati[0]
+        inizio, livello, _ = titoli[k]
+        fine = next((t[0] for t in titoli[k + 1:]
+                     if solo_testa or t[1] <= livello), len(righe))
+        pezzo = _con_la_pagina(righe, inizio, fine)
+        pezzi.append(_bilancia_marche(pezzo))
+    return "\n".join(pezzi)
+
+
+def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]",
+                        sezioni: "list[str] | None" = None) -> str:
+    """Il sorgente di un capitolo con i rimandi già tradotti per questo volume.
+
+    `sezioni` (chiave `sezioni` del capitolo nel manifest): solo quei pezzi
+    del master, per il booklet di serata (ADR-0122).
+    """
+    md = f.read_text(encoding="utf-8")
+    if sezioni:
+        md = estrai_sezioni(md, sezioni)
+    return traduci_rimandi(md, f, capitoli)
 
 
 def _radice_dell_arco(sorgente: Path) -> "Path | None":
@@ -488,7 +695,10 @@ def traduci_rimandi(md: str, sorgente: Path, capitoli: "dict[Path, str]") -> str
             return m.group(0)
         if dove == io:
             return f" ({sez})" if sez else ""
-        etichetta = capitoli.get(dove) or titolo(dove)
+        parte = capitolo_della_parte(capitoli, dove, sez, m.string[m.end():m.end() + 40])
+        if parte == FUORI_DAL_VOLUME:
+            parte = titolo(dove)
+        etichetta = parte or capitoli.get(dove) or titolo(dove)
         if etichetta:
             return f" ({etichetta}{' ' + sez if sez else ''})"
         return ""
@@ -501,7 +711,10 @@ def traduci_rimandi(md: str, sorgente: Path, capitoli: "dict[Path, str]") -> str
             return sez or "questo capitolo"
         # «nel master #1» con un titolo diventerebbe «nel «Il Piano della
         # Terra»»: dentro una frase, fuori dal volume, lo riscrive chi scrive.
-        etichetta = capitoli.get(dove) or (None if m.group("n1") else titolo(dove))
+        parte = capitolo_della_parte(capitoli, dove, sez, m.string[m.end():m.end() + 40])
+        if parte == FUORI_DAL_VOLUME:
+            parte = titolo(dove)
+        etichetta = parte or capitoli.get(dove) or (None if m.group("n1") else titolo(dove))
         if etichetta:
             return etichetta + (" " + sez if sez else "")
         return m.group(0)

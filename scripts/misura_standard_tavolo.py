@@ -347,7 +347,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
         f = (base / cap["file"]).resolve()
         if not f.is_file():
             continue
-        md = leggi_per_la_stampa(f, nel_volume)
+        md = leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))
         if arricchisci and not _CONSULTAZIONE.search(cap.get("title", "")):
             md, _ = chi_si_incontra.arricchisci(md, f, indice, chiavi_dei_pg())
             md = traduci_rimandi(md, f, nel_volume)

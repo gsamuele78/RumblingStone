@@ -1066,7 +1066,9 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # capitolo 12 non è ancora stato convertito.
     RIMANDI.clear()
     for cap, titolo, f in elenco:
-        RIMANDI[f.name] = "cap-" + slug(f.stem, ripiego="capitolo")
+        # un master può dare più capitoli (chiave `sezioni`): l'etichetta è del primo
+        RIMANDI.setdefault(f.name, "cap-" + slug(f.stem, ripiego="capitolo"))
+    etichettati: set[str] = set()
 
     avvisa_chiavi(man)
     # I rimandi a un master («master #3», «DEF-3 §7») diventano il suo capitolo
@@ -1094,8 +1096,10 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         fr = fregio_per(titolo, f, base, man.get("fregio"))
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
-        parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
-        md = leggi_per_la_stampa(f, nel_volume)
+        if f.name not in etichettati:
+            etichettati.add(f.name)
+            parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
+        md = leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))
         # la regia e la cassetta nominano tutti, ma lì non si incontra nessuno
         if indice is not None and not chi_si_incontra.CONSULTAZIONE.search(titolo):
             md, fatto = chi_si_incontra.arricchisci(md, f, indice, pg)

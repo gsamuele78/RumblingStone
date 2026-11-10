@@ -5109,6 +5109,11 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 **In scena** — Dove: la postierla · il campo — Chi: Durin · Grask · i cavalieri dei lupi · la pattuglia di quattro orchi · le vedette goblin · lo squadrone hobgoblin · il corridore
 
+**In tre righe**
+- **Succede**: dalla postierla al centro del campo, di notte, con la prova di gruppo del viaggio; ogni fallimento costa una tacca, e il terzo porta la pattuglia (EL 10).
+- **Chi vuole cosa**: l'orda dorme e non aspetta nessuno; Grask non lascia il corno, il corridore porta le notizie alla tenda.
+- **Come finisce**: davanti alla tenda senza farsi vedere, con una pattuglia alle calcagna o con il campo pre-allertato; dopo la tenda, il ritorno, che cambia se il corno ha suonato.
+
 > **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
 > sempre e che nessun cronista mette per iscritto. Il fiato esce bianco nel
@@ -5552,6 +5557,11 @@ solo i gridi.
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · Balvar · le quattro guardie
 
+**In tre righe**
+- **Succede**: i PG entrano nella tenda di Zog'tar, dove Balvar incide sullo sgabello in fondo; se parlano prima di colpire, Balvar tratta.
+- **Chi vuole cosa**: Zog'tar vuole Hammerfist e racconta come impalerà il re; Balvar vuole che la fortezza cada in fretta, perché ha già visto la fame di un assedio lungo.
+- **Come finisce**: con Balvar che parla o tace, e con Zog'tar che si alza dal seggio: è la Scena 8.
+
 > **Read-aloud (Andor lead) — la tenda.** *Al centro del campo, una tenda più
 > alta delle altre, di pelle nera, con ossa ai tiranti che battono nel vento.
 > Le pattuglie qui non passano. Dentro si ride.*
@@ -5962,6 +5972,11 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · le quattro guardie · Balvar · il sacerdote dell'orda
 
+**In tre righe**
+- **Succede**: lo scontro nella tenda con Zog'tar, le quattro guardie, il sacerdote e Balvar, se non è passato ai PG.
+- **Chi vuole cosa**: Zog'tar vuole uccidere chi è entrato davanti ai suoi, le guardie lo coprono, Grask non lascia il corno.
+- **Come finisce**: Zog'tar ucciso in silenzio, ucciso in modo spettacolare o umiliato e vivo (Via A); l'esito va nell'Echo Ledger (§7) e pesa sulle mura e sul drago.
+
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
 > **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
@@ -6314,6 +6329,11 @@ si gioca su M7-B.
 
 **In scena** — Dove: fra le tende — Chi: Vatore
 
+**In tre righe**
+- **Succede**: al ritorno, fra le tende, i PG incrociano Vatore, il ladro che diventerà Sal; dieci minuti.
+- **Chi vuole cosa**: Vatore vuole potere e che il conto lo paghino altri, e ha paura di quattro persone che non dovrebbero esistere.
+- **Come finisce**: Vatore sopravvive comunque (il Cronolito lo salva a 1 pf); se i PG tornano in volo senza scendere, lo si ritrova sulle mura all'alba.
+
 **Scheda d'entrata — Vatore, il ladro che diventerà Sal**
 
 | | |
@@ -6472,7 +6492,12 @@ L'artefatto che stringe al petto è in **Appendice B**.
 
 ### SCENA 10 — Le mura all'alba
 
-**In scena** — Dove: le mura — Chi: Hrodgar · Re Thorek I
+**In scena** — Dove: le mura — Chi: Hrodgar · Re Thorek I · Zog'tar Deatheye, se è vivo all'alba
+
+**In tre righe**
+- **Succede**: il primo ariete arriva alle mura e il gruppo sceglie una via su tre per una prova collettiva, dopo la tabella «Dalla notte».
+- **Chi vuole cosa**: l'orda vuole la breccia prima che il sole superi il crinale; Re Thorek I e il capitano delle mura vogliono tenere il camminamento est.
+- **Come finisce**: mura tenute saldamente, a stento o breccia ceduta; il dado dei caduti dice quanti difensori con un nome muoiono, poi il drago cala sul cortile.
 
 Si arriva qui **dove le tacche hanno lasciato i PG** (tabella di uscita
 dell'orologio, §4). Se Hella ha vegliato i semi, i **due Treant di Adamantio**
@@ -6502,6 +6527,7 @@ Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 |---|---|---|
 | **Hrodgar, il capitano delle mura** | nano con la barba bruciata da un lato, di un'altra battaglia, e un elmo senza cresta perché la cresta si vede da lontano. Vuole tenere il tratto est fino a che il re non gli dice di lasciarlo, e sa dove la pietra è più giovane: lo stesso punto che Balvar ha segnato sulla mappa di Zog'tar | dà gli ordini con una parola sola |
 | **Hald, il nipote di Balvar** | nano di diciannove anni, di guardia sul camminamento est col gruppo di Hrodgar; la barba ancora corta, l'ascia troppo nuova. Non sa che lo zio esiliato è vivo, né che è nel campo di Zog'tar | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
+| **Zog'tar Deatheye, se è vivo all'alba** | il generale mezzo-ogre, l'ascia in mano e la pietra nera al posto dell'occhio destro, che guida l'orda sotto le mura; con 0-1 successi sale sulla breccia (la tattica sul camminamento è sotto la tabella «Dalla notte», la scheda d'entrata nella Scena 7) | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 
 > **Read-aloud (Salvatore lead) — il camminamento.** *Il camminamento è largo
 > quanto un tavolo da pranzo e lungo quanto la fortezza. Sotto, l'orda non
@@ -6615,6 +6641,11 @@ successo in più o in meno, si applica allo stesso modo.
 ### SCENA 11 — Il duello con Skullcrusher
 
 **In scena** — Dove: il cortile — Chi: Skullcrusher · Re Thorek I · Aegis Fang
+
+**In tre righe**
+- **Succede**: Skullcrusher il Nero cala sul cortile con due wyvern e combatte in passate, gridando i nomi che ha sentito di notte attraverso la Catena.
+- **Chi vuole cosa**: il drago vuole vincere davanti all'orda, perché per lui il potere è quello che gli altri hanno visto; Re Thorek I è nel cortile con i PG.
+- **Come finisce**: drago ucciso, ferito grave, fuggito, o vinto sporco (§6); con l'esito la serata si ferma, prima della Scena 12.
 
 **Dopo il barile**. Attraverso la
 gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno

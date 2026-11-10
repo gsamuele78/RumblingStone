@@ -195,7 +195,7 @@ voci:
 ![Skullcrusher nel cortile](../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
 Stasera il drago è il **Vecchio**. La scheda qui sotto rimanda alla scheda
-dell'Adulto (`DEF-4` Appendice A.1, capitolo VI di questo booklet) per
+dell'Adulto (`DEF-4` Appendice A.1) per
 sensi, velocità, capacità magiche, talenti e abilità.
 
 <!-- nuova-pagina -->
