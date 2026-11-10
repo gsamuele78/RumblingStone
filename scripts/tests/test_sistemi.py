@@ -428,8 +428,11 @@ class TestLessicoDalPlugin(unittest.TestCase):
         if vecchie:
             import re
             m = re.search(r"^ABILITA = \(([^)]*)\)", vecchie, re.M)
-            self.assertEqual(VP.ABILITA, tuple(re.findall(r'"([^"]+)"', m.group(1))))
-        self.assertEqual(len(VP.ABILITA), 31)
+            # le 31 di prima restano, nello stesso ordine; dal 2026-11-09 (audit
+            # dei plugin) seguono le sette abilità SRD 3.5 che mancavano
+            self.assertEqual(VP.ABILITA[:31], tuple(re.findall(r'"([^"]+)"', m.group(1))))
+        self.assertEqual(len(VP.ABILITA), 38)
+        self.assertIn("muoversi silenziosamente", VP.ABILITA)
         self.assertIn("osservare", VP.ABILITA)
         self.assertNotIn("percezione", VP.ABILITA)
 

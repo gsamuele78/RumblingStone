@@ -84,7 +84,8 @@ _NOMI = (
     "ARMATURE", "SCUDI", "ELITE", "BASIC", "_GRIGLIE", "MAGO", "STREGONE",
     "STREGONE_CONOSCIUTI", "CHIERICO", "DRUIDO", "ADEPTO", "BARDO", "BARDO_CONOSCIUTI",
     "RANGER", "PALADINO", "LIVELLO_INCANTATORE_RIDOTTO", "INCANTATORI",
-    "INCANTATORI_SENZA_ANCORA",
+    "INCANTATORI_SENZA_ANCORA", "INCANTATORI_ZERO_A_VOLONTA",
+    "INCANTATORI_GRIGLIA_PF1E",
 )
 
 
@@ -190,6 +191,13 @@ def _di(id_: str) -> dict:
     #: Le griglie che NON hanno una riga d'ancora nel repo. Usarle è lecito; farlo
     #: senza dirlo no.
     INCANTATORI_SENZA_ANCORA = frozenset(_DATI["incantatori_regole"]["senza_ancora"])
+
+    #: Chi lancia i trucchetti a volontà (il bardo con la tabella PF1e, card del
+    #: DM del 2026-11-09): la griglia porta uno 0 finto in prima posizione.
+    INCANTATORI_ZERO_A_VOLONTA = frozenset(_DATI["incantatori_regole"].get("zero_a_volonta", ()))
+
+    #: Le classi la cui griglia viene dal PRD PF1e e non dall'SRD 3.5 (stessa card).
+    INCANTATORI_GRIGLIA_PF1E = frozenset(_DATI["incantatori_regole"].get("griglia_pf1e", ()))
     luogo = locals()
     return {n: luogo[n] for n in _NOMI}
 

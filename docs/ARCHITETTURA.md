@@ -985,6 +985,7 @@ il DM ha davanti al tavolo.
 | CI, a ogni PR | nessuna lettura scaduta, nessun 🔴 senza stato | `python3 scripts/registro_letture.py --check` | registro delle letture | bloccante (avviso finché vuoto) |
 | chi fa il triage | una regola «a memoria» del giro è davvero nell'SRD | `python3 scripts/riscontro_srd.py riscontra FILE.yaml` | concorda, discorda, non trovata, con la citazione | testing (job `riscontro-srd`) |
 | CI, a ogni PR | i conti degli statblocchi, anche dei boss recintati di ADR-0091 | `python3 scripts/conformita_statblocchi.py --master` | pf, CA, CD, scurovisione che non tornano | cricchetto nei test (ADR-0108) |
+| CI, a ogni PR | le schede dei moduli PF1e con le regole del PRD: BAB, TS, BMC, DMC, contatto, sensi, incantesimi, incanalare (ADR-0119) | `python3 scripts/conformita_statblocchi.py --cancello-moduli` | ✗ sui conti `fatti`, ⚠ sui conti `in_prova`; `--severo` fa bloccare anche quelli | bloccante sui `fatti`, testing sugli `in_prova` (promozione dal 2026-11-23) |
 | chi prepara la serata | al tavolo chi si incontra ha tutto nel capitolo | `python3 scripts/misura_standard_tavolo.py` | sei elementi per capitolo e persona, mappe, note di lavoro in stampa | indicatore; cricchetto sulle note |
 | chi prepara la serata | quante pagine sfoglia il DM per i numeri | `python3 scripts/misura_distanza_pagine.py PDF` | mediana delle distanze per persona | indicatore, a mano |
 | CI, a ogni PR | il volume regge la prestampa | `python3 scripts/misura_stampa.py --tutti --check` | corpo, gabbia, dpi, riquadri spezzati | job `stampa-misurata`, tetti |
@@ -1015,9 +1016,11 @@ flowchart LR
         DD["domande_developer"]
         GF["giro a freddo<br/>lettura_a_scene"] --> RL["registro_letture"]
     end
-    subgraph REGOLE["Regole (ADR-0103, ADR-0108)"]
+    subgraph REGOLE["Regole (ADR-0103, ADR-0108, ADR-0119)"]
         RS["riscontro_srd"]
         CS["conformita_statblocchi<br/>--master"]
+        CM2["conformita_statblocchi<br/>--cancello-moduli<br/>regole PF1e dal PRD"]
+        FONTI --> CM2
     end
     subgraph STAMPA["Stampa (ADR-0105…0108)"]
         ST["misura_standard_tavolo"]

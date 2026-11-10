@@ -535,3 +535,12 @@ class TestCancelloDeiNumeri(unittest.TestCase):
 
     def test_il_cancello_sul_repo_e_verde(self):
         self.assertEqual(C.cancello_numeri(), 0)
+
+
+class TestIFileGeneratiRestanoFuori(unittest.TestCase):
+    def test_memoria_non_e_un_file_di_schede(self):
+        # MEMORIA.md ripete le ultime righe di plans/CHANGELOG.md: una riga che nomina
+        # il BAB lo faceva entrare tra i «file con numeri che nessun conto legge»
+        self.assertIn("MEMORIA.md", C.FUORI_DAI_NUMERI)
+        _, scoperti = C.numeri_dei_file()
+        self.assertNotIn("MEMORIA.md", scoperti)
