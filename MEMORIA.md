@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
 | 2026-11-09 | BOX-DI-LUOGO-E-AREA-CHIAVE | B1 template dell'area chiave in `campaign/templates/`, 3.5 e PF1e (D6), con ese… | ✅ fatto |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Carta dei giganti del libretto (richiesta del DM dal thread dell'audit: «soluzi… | ✅ simulazione: nessuna breccia 50% → 54%, posizioni tenute 74% → 73%; scelta dal DM con la card del 2026-11-10 |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Chiusura dell'ultimo scarto (DM: «cerca un valore plausibile per le baliste», c… | ✅ scarti 1 → 0; restano i 75 file in prosa non coperti |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | Card del DM: D2 Krusk, Vreek e Ur-Vrax confermati come consigliati (titolo CANO… | ✅ applicate in ARC08-01/02/03, DEF-2, Guida agli scontri, Bestiario |
 | 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D4 confronto degli statblocchi alternativi della chat «Organizing D&D Campaign… | ✅ confronto fatto, ★ al DM |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
-| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 
 ## Le misure che si portano dietro
 

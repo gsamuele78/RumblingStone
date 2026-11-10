@@ -1,7 +1,7 @@
 {
  "conformita_statblocchi": {
-  "byte": 593,
-  "sha256": "fd67fef3c8dbd96955b72f79eaa3f4e5445c6cf868667e30360ff4327d4a930f",
+  "byte": 503,
+  "sha256": "3cb39da9a2f0fdf47dca21f511c606481a96f9710e5ff6b6c17529bb9fdeb0e2",
   "uscita": 0
  },
  "derive_statblocks": {
@@ -25,8 +25,8 @@
   "uscita": 0
  },
  "suggest_encounter": {
-  "byte": 2120,
-  "sha256": "ca02a1cf652e3919145beb86e60125d5b68ca26d42707d1dd09f112584ef02a2",
+  "byte": 1860,
+  "sha256": "077cc767f4e7decc858a92b38c4baa4b248f5af171dee6f25268c05c3a5d7c3f",
   "uscita": 0
  },
  "suggest_loot_el13": {
@@ -46,7 +46,7 @@
  },
  "validate_bestiario": {
   "byte": 78,
-  "sha256": "1a883160b5c36702c28c66f6239154084a7c76b192d76c1b8f3ef7f8db8344ba",
+  "sha256": "5887bd315c58872fb25d9d6de2e171eadfb21003c4c06c513f1ef0d563467295",
   "uscita": 0
  },
  "validate_modules": {
