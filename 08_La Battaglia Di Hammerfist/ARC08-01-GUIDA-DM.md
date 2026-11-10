@@ -928,11 +928,11 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12).
 *   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5).
-*   **Supporto Magico:** Doom Hand Warpriests (GS 6, **Tattica:** potenziano le prime linee e usano *Dissolvi Magie*), War Adepts (GS 5, **Tattica:** aprono con *Palla di Fuoco* sulle unità compatte), Shamani Draconici (GS 6, **Tattica:** forniscono resistenza al fuoco e buff).
+*   **Supporto Magico:** Doom Hand Warpriests (GS 8, **Tattica:** potenziano le prime linee e usano *Dissolvi Magie*), War Adepts (GS 6, **Tattica:** aprono con *Palla di Fuoco* sulle unità compatte), Shamani Draconici (GS 5, **Tattica:** forniscono resistenza al fuoco e buff).
 *   **Artiglieria:** Giganti delle Colline (GS 7, **Tattica:** bombardano le mura da lontano), Ettin Standard (GS 6).
 *   **Cavalleria:** Goblin Worg Riders (GS 3, **Tattica:** aggirano i fianchi per colpire arcieri e maghi).
 *   **Fanteria Pesante:** Hobgoblin Guerrieri (GS 2, **Tattica:** la spina dorsale dell'esercito, avanzano dopo la prima ondata).
-*   **Fanteria Leggera:** Hobgoblin Standard (GS 1/2), Fanteria Orchesca (GS 1/2, **Tattica:** carne da cannone per assorbire le prime perdite).
+*   **Fanteria Leggera:** Hobgoblin Standard (GS 1/2), Fanteria Orchesca (GS 1, **Tattica:** carne da cannone per assorbire le prime perdite).
 
 <div style="page-break-before:always"></div>
 
@@ -942,7 +942,7 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 
 *   **Comandanti:** Re Thorek Hammerfist (GS 16), Madre Superiora Dana (GS 14).
 *   **Élite:** Nani d'Élite (GS 4, **Tattica:** difendono il cancello e i punti strategici), Cantitrici della Pietra (GS 12, **Tattica:** usano i loro canti di massa nei momenti critici).
-*   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 4, **Tattica:** formano muri di scudi impenetrabili sulle mura).
+*   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 5, **Tattica:** formano muri di scudi impenetrabili sulle mura).
 *   **Fanteria a Distanza:** Balestrieri Nanici (GS 3, **Tattica:** si concentrano sui comandanti e sulle unità speciali nemiche).
 *   **Supporto Tecnico:** Ingegneri da Guerra (GS 3, **Tattica:** operano le baliste e riparano le fortificazioni danneggiate).
 *   **Alleati Esterni:** Signore Ventolesto (GS 8), Ranger Elfici (GS 8), Orion Pelleorsa (GS 14), Maestro Tempestas (GS 14). **Tattica:** Dominio aereo, eliminazione del drago e devastazione delle retrovie nemiche.
@@ -982,7 +982,7 @@ STATISTICHE UNITÀ: 10 Orchi per unità
 - Capacità: Furia Orchesca (+2 att/danni se sotto 50% PF), Carica Selvaggia (+2 danni, -1 CA nel primo round di carica).
 ---
 STATISTICHE CREATURA SINGOLA (Orco Barbaro di 1° liv.):
-GS 1/2; 
+GS 1; 
 CM Umanoide Medio; 
 Iniz +0; 
 CA 13 (pelle, Des); 
@@ -1106,7 +1106,7 @@ Scheda intera: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` `[CANONE �
 #### **HOBGOBLIN WAR ADEPTS (20 Stregoni 6°)**
 *Artiglieria Magica, 3ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (GS 5):
+STATISTICHE CREATURA SINGOLA (GS 6):
 LM Umanoide Medio; 
 Iniz +2; 
 CA 16 (con Armatura Magica); 
@@ -1120,26 +1120,25 @@ Incantesimi chiave: Palla di Fuoco (CD 16), Raggio Rovente, Dardo Incantato, Scu
 ```
 <div style="page-break-before:always"></div>
 
-#### **DOOM HAND WARPRIESTS (15 Chierici 7°/Warpriest 1°)**
+#### **DOOM HAND WARPRIESTS (15 Chierici 8°)**
 *Supporto Divino d'Élite, 3ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (GS 6):
+STATISTICHE CREATURA SINGOLA (GS 8):
 LM Umanoide Medio; 
 Iniz +0; 
 CA 19 (armatura completa, scudo pesante); 
 PF 52 (8 DV); 
-Attacco Base +6 (Chierico 7 +5, Warpriest 1 +1); 
+Attacco Base +6 (Chierico 8); 
 Att Martello da guerra pesante +8 (1d8+2); 
 For 14, Des 10, Cos 14, Int 10, Sag 16, Car 12; 
-Incantesimi (Chierico CL 8°), 
-Furia 1/giorno. 
+Incantesimi (Chierico CL 8°). 
 Incantesimi chiave: Preghiera, Dissolvi Magie, Forza del Toro, Arma Spirituale, Favore Divino.
 ```
 
 #### **SHAMANI DRACONICI (10 Chierici 5°)**
 *Supporto Divino Specializzato, 3ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (GS 6):
+STATISTICHE CREATURA SINGOLA (GS 5):
 LM Umanoide Medio; 
 Iniz +0; 
 CA 17 (pelle di drago); 
@@ -1169,7 +1168,7 @@ STATISTICHE UNITÀ: 10 Nani Guerrieri 5° per unità
 - Capacità: Nemico Prescelto (Orchi, +2 att/danni), Tattica Difensiva (+3 CA in formazione a muro di scudi).
 ---
 STATISTICHE CREATURA SINGOLA (Guerriero Nano di 5° liv.):
-GS 4; 
+GS 5; 
 LB Umanoide Medio; 
 Iniz +1; 
 CA 20 (armatura completa, scudo pesante, Des); 
@@ -1228,7 +1227,7 @@ For 18, Des 12, Cos 20, Int 10, Sag 12, Car 10.
 STATISTICHE UNITÀ: 10 Nani Esperti 4° per unità
 - PF Unità: 8/8 | CA Unità: 16 | Morale: -1
 - Attacco Unità: +4 (Martello da Guerra)
-- Capacità: Operano 6 Baliste Pesanti Naniche (3d8 danni, incremento di gittata 36 m), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
+- Capacità: Caricano 6 Baliste Pesanti Naniche (+10, 3d8+2, incremento di gittata 36 m; ognuna la punta un mastro artigliere, Guerriero 8, scheda nel Bestiario), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
 ---
 STATISTICHE CREATURA SINGOLA (Esperto Nano di 4° liv.):
 GS 3; 
@@ -2463,16 +2462,16 @@ CERIMONIA DELLE ASCE - TRAMONTO
 ### **ESERCITO DELLA MANO ROSSA (900 unità)**
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12)
 *   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5)
-*   **Supporto Magico:** Doom Hand Warpriests (GS 6), War Adepts (GS 5), Shamani Draconici (GS 6)
+*   **Supporto Magico:** Doom Hand Warpriests (GS 8), War Adepts (GS 6), Shamani Draconici (GS 5)
 *   **Artiglieria:** Giganti delle Colline (GS 7), Ettin Standard (GS 6)
 *   **Cavalleria:** Goblin Worg Riders (GS 3)
 *   **Fanteria Pesante:** Hobgoblin Warrior 3 (GS 2)
-*   **Fanteria Leggera:** Hobgoblin Standard (GS 1/2), Fanteria Orchesca (GS 1/2)
+*   **Fanteria Leggera:** Hobgoblin Standard (GS 1/2), Fanteria Orchesca (GS 1)
 
 ### **ESERCITO NANICO DI HAMMERFIST (300 unità)**
 *   **Comandanti:** Re Thorek Hammerfist (GS 16), Madre Superiora Dana (GS 14)
 *   **Élite:** Nani d'Élite (GS 4), Cantitrici della Pietra (GS 12)
-*   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 4)
+*   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 5)
 *   **Fanteria a Distanza:** Balestrieri Nanici (GS 3)
 *   **Supporto Tecnico:** Ingegneri da Guerra (GS 3)
 *   **Alleati Esterni:** Signore Ventolesto (GS 8), Ranger Elfici (GS 8), Orion Pelleorsa (GS 14), Maestro Tempestas (GS 14)

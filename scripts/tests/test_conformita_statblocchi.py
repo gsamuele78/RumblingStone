@@ -506,6 +506,16 @@ class TestCancelloDeiNumeri(unittest.TestCase):
         r = C.numeri_delle_unita(ROOT / "prova.md", self.UNITA.format(au=13))
         self.assertIsNone(r[0]["atteso"])
 
+    def test_la_balista_toglie_quattro_a_chi_e_medio(self):
+        # SRD 3.5, Siege Engines: -4 a una creatura Media, -6 a una Piccola, niente a una Grande
+        f = C.attacco_atteso
+        riga, tal = "Distanza balista pesante perfetta +10 (3d8+2/19-20)", "Arma Focalizzata (balista), Arma Focalizzata Superiore (balista)"
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, 0)[:2], (10, 10))
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, 1)[1], 9)      # Piccola: +1 di taglia, -6
+        self.assertEqual(f(riga, 8, "For 13 Des 17", tal, -1)[1], 13)    # Grande: -1 di taglia, niente penalità
+        # l'ingegnere Esperto 4 che la punta da solo arriva a +3, non a +10
+        self.assertEqual(f("Distanza balista pesante perfetta +10 (3d8)", 3, "For 12 Des 14", "Arma Focalizzata (balista)", 0)[1], 3)
+
     SINGOLA = ("#### **GIGANTI DELLE COLLINE (8 creature)**\n```\nSTATISTICHE UNITÀ (1 Gigante per unità):\n"
                "- Attacco Unità: +{au} (Randello, 2d8+12)\n---\nSTATISTICHE CREATURA SINGOLA (Gigante delle Colline):\n"
                "CM Gigante Grande; \nAttacco Base +{bab}, \nAtt Randello enorme +{att} (2d8+12); \n"

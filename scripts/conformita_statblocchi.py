@@ -652,7 +652,10 @@ def _blocchi_del_master(testo: str):
 #: davanti (il nome dell'arma, che puo' portare il potenziamento «+1»).
 PRIMO_ATTACCO = re.compile(
     r"([+-]\d+)(?:/[+-]\d+)*\s*(?:in mischia|a distanza|di contatto|contatto)?\s*\(")
-DISTANZA = re.compile(r"a distanza|\b(?:arco|balestra|giavellott|fionda|dardi?)\b", re.I)
+DISTANZA = re.compile(r"a distanza|\b(?:arco|balestra|balist[ae]|giavellott|fionda|dardi?)\b", re.I)
+#: SRD 3.5, *Siege Engines*, ballista: «a Medium creature takes a -4 penalty on
+#: attack rolls when using a ballista, and a Small creature takes a -6 penalty».
+BALISTA = re.compile(r"\bbalist[ae]\b", re.I)
 FOCALIZZATA_SUP = re.compile(
     r"\b(?:Greater Weapon Focus|Arma Focalizzata Superiore)\b(?:\s*[(:]\s*([^),;·\n]+))?", re.I)
 
@@ -693,10 +696,14 @@ def attacco_atteso(riga: str, bab: int, car: str, talenti_: str,
         + (1 if _focalizzata_su(FOCALIZZATA_SUP, arma, talenti_) else 0)
     adde = ADDESTRAMENTO.search(talenti_)
     adde = int(adde.group(1)) if adde else 0
-    atteso = bab + mc + taglia + pot + perfetta + foc + adde
+    balista = 0
+    if BALISTA.search(arma):
+        balista = -4 if taglia == 0 else -6 if taglia > 0 else 0
+    atteso = bab + mc + taglia + pot + perfetta + foc + adde + balista
     come = (f"BAB {bab:+d}, {quale} {mc:+d}{' in Ira' if in_ira and car_ != car else ''}, "
             f"taglia {taglia:+d}, arma {pot + perfetta:+d}, talenti {foc:+d}"
-            + (f", addestramento nelle armi {adde:+d}" if adde else ""))
+            + (f", addestramento nelle armi {adde:+d}" if adde else "")
+            + (f", balista puntata da una creatura più piccola di Grande {balista:+d}" if balista else ""))
     return int(m.group(1)), atteso, come
 
 

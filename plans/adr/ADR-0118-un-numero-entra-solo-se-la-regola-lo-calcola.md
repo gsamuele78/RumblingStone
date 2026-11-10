@@ -95,5 +95,11 @@ Le altre otto (guerrieri hobgoblin, worg riders, Doom Hand, sciamani, veterani, 
 
 **Che cosa non cambia.** Il libretto della battaglia (`ARC08-18`), le DEF e `ARC08-19` usano numeri loro, col morale dentro e tarati con le simulazioni: non si toccano. Due di quei numeri citano però `ARC08-02`: la carta dei massi dei giganti (AU 14) e le baliste (AU +10). La carta resta a 14 finché il DM non decide; `ARC08-19` §8 lo dice.
 
-**Resta 1 scarto**: le baliste pesanti a AU +10 (`ARC08-03`), che nessuna scheda ricostruisce.
+**Le baliste** (chiusura del 2026-11-09, richiesta del DM «cerca un valore plausibile»). L'SRD 3.5 dice che una creatura Media che punta una balista ha −4. Un Ingegnere da Guerra (Esperto 4) arriva a +3 anche con Arma Focalizzata e la balista perfetta. Il +10 scritto, che è anche il «d20 + 10» del libretto, torna con un mastro artigliere Guerriero 8 a ogni pezzo: BAB +8, Des +3, due talenti di focalizzazione +2, perfetta +1, −4 (`Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md`). Gli ingegneri caricano. Il cancello conosce il −4 della balista. Il «+18, 3d8+10» di `Mappe` L2 non si ricostruiva ed è sceso a +10.
+
+**I GS dei blocchi «creatura singola»** seguono i livelli di classe (SRD: un PNG con livelli di classe ha GS pari al livello): Doom Hand da 6 a 8 (scelta del DM, card del 2026-11-09: Chierico 8 al posto di Chierico 7/Warpriest 1, numeri invariati; cade la «Furia 1/giorno», che un Chierico 8 non ha), War Adepts (Stregone 6) da 5 a 6, Sciamani (Chierico 5) da 6 a 5, Veterani nanici (Guerriero 5) da 4 a 5, orchi (Barbaro 1) da 1/2 a 1. Il cancello non rifà ancora questo conto.
+
+**La carta dei massi nel libretto.** La carta dei giganti di `ARC08-18` tirava d20 + 14: era l'AU col randello che `ARC08-02` dava per sbaglio ai massi. Il masso dell'SRD è +8, col morale dei giganti +9. Otto giganti su quattro settori fanno **due macigni per settore a d20 + 9**: la simulazione `tre_giorni.py` dà la stessa battaglia della carta vecchia (orda feroce, nessuna breccia 50% → 54%, posizioni tenute 74% → 73%), mentre un macigno solo a +9 la rendeva più facile (61%). Scelta del DM con la card del 2026-11-10: «Due macigni per settore a d20 + 9».
+
+**Scarti rimasti: 0.**
 

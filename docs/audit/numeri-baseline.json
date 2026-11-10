@@ -1,8 +1,6 @@
 {
  "_cos_e": "Il cricchetto del cancello dei numeri (ADR-0118): gli scarti di oggi fra un numero scritto e la regola che lo calcola, e i file con numeri che nessun conto legge. Scende soltanto: --aggiorna-numeri toglie il risolto e non aggiunge. Lo legge scripts/conformita_statblocchi.py --cancello-numeri.",
- "scarti": [
-  "08_La Battaglia Di Hammerfist/ARC08-03-REGISTRO-PERDITE.md | Supporto Tecnico | AU | 10"
- ],
+ "scarti": [],
  "non_coperti": [
   "05_aa-stanza-runica/ARC05-STANZA-RUNICA-TRASCRIZIONE.md",
   "06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/00-La Corona di Adamantio-ogetto&Prove/000_Corona_adamantio_ogetto_PG.md",

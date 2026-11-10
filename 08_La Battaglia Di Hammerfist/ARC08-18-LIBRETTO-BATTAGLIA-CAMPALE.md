@@ -286,11 +286,12 @@ hobgoblin (AU 12, DU 22), uno di guerrieri (AU 8, DU 20) e uno d'orchi (AU
 9, DU 16), arrivati al round prima. Il morale della rocca è +1, il primo
 giorno dà +1 al bianco. Il settore ha una tacca.
 
-1. **L'orda avanza.** Il fronte è pieno. Il DM gioca i giganti: un macigno
-   su un reparto di Borin. Il macigno lo tira il DM, ed è l'unico tiro che
-   non tirate voi: d20 = 17, + AU 14 =
-   **31**, contro DU 22 + 1 + 1 = **24**: supera di 7, il primo reparto perde
-   **2 PFU** (ne restano 10).
+1. **L'orda avanza.** Il fronte è pieno. Il DM gioca i giganti: due macigni
+   sul settore di Borin, e tutti e due cadono sul primo reparto. I macigni li
+   tira il DM, e sono gli unici tiri che non tirate voi. Il primo: d20 = 17,
+   + AU 9 = **26**, contro DU 22 + 1 + 1 = **24**: supera di 2, il reparto
+   perde 1 PFU. Il secondo: d20 = 16, + 9 = **25**: supera di 1, un altro PFU.
+   Il primo reparto ha perso **2 PFU** (ne restano 10).
 2. **Gli ordini.** Il giocatore mette il primo reparto contro gli hobgoblin e
    il secondo contro i guerrieri; l'orco resta senza nessuno davanti. Tutti e
    due **Colpire**; Borin **Combattere** sull'orco.
@@ -328,7 +329,7 @@ il DM racconta il conto.
 | **Guerrieri hobgoblin** | 8 | 20 | 11 | lenti, duri da finire |
 | **Orchi** | 9 | 16 | 8 | caricano a testa bassa: conviene **Caricare** |
 | **Lupi e goblin** | 9 | 19 | 10 | veloci, arrivano dai fianchi |
-| **Giganti** (carta) | 14 | — | — | lanciano macigni dal gomito della strada, a ~100 m; non si attaccano dalle mura |
+| **Giganti** (carta) | 9 | — | — | due per settore: lanciano macigni dal gomito della strada, a ~100 m; non si attaccano dalle mura |
 
 **Gli eroi.** Bonus d'attacco per **Combattere**, dalle schede del Bestiario:
 Borin **+21**, Dara **+19** (+25 contro gli orchi, +23 contro i giganti, +21

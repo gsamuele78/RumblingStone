@@ -233,7 +233,10 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
     *   Unità 4: `[ ]`
 
 **Baliste Pesanti Naniche (6 Macchine)**
-**AU:** +10 | **Danno:** 3d8 (ignora durezza con la regola opzionale)
+
+> Uno contro uno: `Bestiario/mostri/nano-mastro-artigliere-guerriero8-cr8.md`
+
+**AU:** +10 | **Danno:** 3d8+2 (ignora durezza con la regola opzionale)
 *Richiede un'unità di Ingegneri per operare e un round completo per ricaricare.*
 
 | # | Stato | Note (Assegnata a Unità Ingegneri #) |
