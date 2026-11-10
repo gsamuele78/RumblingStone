@@ -22,6 +22,31 @@
 "undead" = { dv = 12, bab = 0.5, ts_buoni = ["vol"] }
 "vermin" = { dv = 8, bab = 0.75, ts_buoni = ["temp"] }
 
+# I tratti del tipo che cambiano il blocco (lotto 5 delle regole complete,
+# 2026-11-10). SRD 3.5, basic-rules-and-legal/types-subtypes-and-special-abilities.md:
+# Construct e Undead «No Constitution score»; Ooze e Vermin «Mindless: No
+# Intelligence score»; Construct «most constructs are mindless» (il caso tipico,
+# che il generatore produce). «Mindless creatures do not gain feats or skills».
+# Il PRD PF1e dice le stesse cose per gli stessi tipi.
+[tratti_tipo]
+"construct" = { senza_cos = true, senza_int = true }
+"undead" = { senza_cos = true }
+"ooze" = { senza_int = true }
+"vermin" = { senza_int = true }
+
+# SRD 3.5, Construct Traits: «bonus hit points based on size» (la tabella
+# accanto al tratto; «—» per Fine, Diminutive e Tiny).
+[pf_bonus_costrutti]
+"fine" = 0
+"diminutive" = 0
+"tiny" = 0
+"small" = 10
+"medium" = 20
+"large" = 30
+"huge" = 40
+"gargantuan" = 60
+"colossal" = 80
+
 # classe = { dv, ts_buoni, bab = per livello, png = classe PNG dell'SRD }
 [classi]
 "barbarian" = { dv = 12, ts_buoni = ["temp"], bab = 1.0 }

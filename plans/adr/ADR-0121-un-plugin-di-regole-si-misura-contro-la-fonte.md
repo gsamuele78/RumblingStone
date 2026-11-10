@@ -98,6 +98,21 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   allineamento e requisiti narrativi il generatore non li tiene: li scrive nel
   conto come «da verificare dal DM». Le 17 orazioni dello sciamano vengono dal
   testo «0-Level Shaman Spells» dell'ACG, che la tabella `spell_lists` non ha.
+- Lotto 5 delle regole complete: i tratti dei tipi di creatura. Il generatore
+  dava Costituzione a non morti e costrutti 3.5, e Int 8 con fino a nove
+  talenti a melme, parassiti e costrutti senza mente. Ora i tratti stanno in
+  `sistemi/dnd35/dati/creature.toml` (`[tratti_tipo]`, `[pf_bonus_costrutti]`
+  letto dalla tabella dell'SRD «Construct Traits»). I pf dei tipi senza
+  Costituzione sono i soli dadi (più il bonus di taglia del costrutto), con più
+  DV fino a 2×GS, e quello che manca al bersaglio si scrive nel conto. Il PF1e
+  porta i pf del non morto sul bersaglio col Carisma. Misura sui mostri generati
+  (15 tipi × GS 3/7/12, più il costrutto alle 9 taglie): 3.5 da 33/45 e 0/9 a
+  45/45 e 9/9, PF1e da 36/45 e 0/9 a 45/45 e 9/9. Nello stesso lotto il terzo
+  limite PF1e dichiarato nel rapporto (costrutti Fine e Diminutive senza pf
+  bonus) è chiuso con la tabella «Construct Size» del PRD pubblicato
+  (legacy.aonprd.com): «—», cioè 0; l'estrattore esige che concordi con le
+  schede per le altre sette taglie. Dei tre limiti del rapporto non ne resta
+  nessuno.
 
 ## Conseguenze
 
@@ -108,6 +123,10 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   misura. Quelle di ranger e bardo ora dicono «PRD PF1e, not SRD 3.5».
 - Un bardo o un ranger 3.5 generato è più forte di quello del manuale, e la
   cosa è voluta: il conto lo dice ogni volta.
+- Un non morto o un costrutto 3.5 generato ha meno pf del bersaglio del suo GS
+  (GS 7: 91-97 contro 102; GS 12: 156 contro 192). È la regola del tipo, e i
+  mostri dell'SRD la pagano allo stesso modo con immunità e RD che il
+  generatore non aggiunge: il DM le mette, o sceglie un altro tipo.
 - **Quello che non è misurato:** CD e capacità speciali delle classi, talenti
   (hanno il loro cancello), oggetti magici, e PE, tesoro e incontri PF1e (già
   generati dal PRD con `--check`).

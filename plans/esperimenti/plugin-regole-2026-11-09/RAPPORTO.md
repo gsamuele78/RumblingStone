@@ -277,11 +277,18 @@ misura nuova). Dopo: [MISURA-DOPO-PF1E.md](MISURA-DOPO-PF1E.md).
   venivano saltati.
 
 **Limiti che restano, dichiarati:**
-- **Costrutti fine e diminutive:** nessuna scheda di costrutto nel PRD, quindi
-  niente pf bonus; il conto lo dice. Il colossal (+80) poggia su una sola
-  scheda (Wickerman).
-- **Requisiti delle classi di prestigio:** non si controllano; il conto lo dice.
-- **Sciamano:** non ha il livello 0 nel PRD in cache.
+- ~~**Costrutti fine e diminutive:** nessuna scheda di costrutto nel PRD, quindi
+  niente pf bonus.~~ **Chiuso il 2026-11-10 (regole complete, lotto 5):** la
+  tabella «Construct Size» del PRD pubblicato (legacy.aonprd.com,
+  bestiary/creatureTypes.html) dà «—» a Fine, Diminutive e Tiny; l'estrattore
+  la usa per le taglie senza schede ed esige che concordi con le schede per le
+  altre (concorda su 7 su 7, compreso il Colossal +80 del Wickerman).
+- ~~**Requisiti delle classi di prestigio:** non si controllano.~~ **Chiuso dal
+  lotto 4 delle regole complete:** requisiti delle 18 classi letti dal PRD
+  (18/18) e controllati dal generatore, vie d'ingresso legali 18/18; gradi,
+  allineamento e requisiti narrativi restano al DM, scritti nel conto.
+- ~~**Sciamano:** non ha il livello 0 nel PRD in cache.~~ **Chiuso dal lotto 4:**
+  le 17 orazioni vengono dal testo «0-Level Shaman Spells» dell'ACG.
 - **Incantesimi:** se la funzione chiesta non ha abbastanza voci, la scelta si
   completa dal resto della lista PF1e della classe; il conto lo dice. I nomi
   senza voce nel lessico italiano PF1e restano inglesi e il conto li conta.

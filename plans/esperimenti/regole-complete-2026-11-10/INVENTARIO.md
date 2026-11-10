@@ -85,6 +85,19 @@ hanno: il non morto 3.5 non ha Costituzione, il costrutto prende il bonus fisso 
 taglia. Il cancello `conformita_statblocchi` oggi non lo vede. Non è un difetto dei
 talenti, è un tratto di tipo mancante: **lotto 5**, con la sua misura.
 
+**Chiuso col lotto 5** (`MISURA-LOTTO5-PRIMA.md` / `-DOPO.md`): Cos «—» a non
+morti e costrutti, Int «—» e niente talenti a melme, parassiti e costrutti,
+pf bonus per taglia del costrutto dalla tabella dell'SRD, Tempra senza
+Costituzione, Advanced che non dà pf a chi non ha Costituzione. Resta fuori,
+detto: immunità, RD e scurovisione dei tipi non si aggiungono al blocco (sono
+capacità speciali, il generatore non ne scrive), e un costrutto con mente
+(«most constructs are mindless», non tutti) il generatore non lo fa.
+
+Nello stesso lotto: pf bonus dei costrutti PF1e Fine e Diminutive, che il
+rapporto di ADR-0121 dava come limite (nessuna scheda nel PRD). Ora vengono
+dalla tabella «Construct Size» del PRD pubblicato (legacy.aonprd.com,
+bestiary/creatureTypes.html): «—», cioè 0.
+
 ## 3-ter. Licenze
 
 I dati del plugin PF1e prendono classi, talenti, razze e creature da 14 libri Paizo
