@@ -85,18 +85,18 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
+| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
+| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
+| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
+| 2026-11-09 | MOTORE-AGNOSTICO-D20 | Classi, griglie e armature del plugin PF1e (ADR-0119 lotto 2, richiesta del DM… | ✅ dati scritti e riletti col lettore dell'audit; il collegamento agli strumenti e la misura sono del thread della #365 |
+| 2026-11-09 | MOTORE-AGNOSTICO-D20 | Regole PF1e del cancello delle schede dal PRD (ADR-0119):… | ✅ prova: 27 mutazioni bocciate, promozione proposta 2026-11-23 |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Carta dei giganti del libretto (richiesta del DM dal thread dell'audit: «soluzi… | ✅ simulazione: nessuna breccia 50% → 54%, posizioni tenute 74% → 73%; scelta dal DM con la card del 2026-11-10 |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Chiusura dell'ultimo scarto (DM: «cerca un valore plausibile per le baliste», c… | ✅ scarti 1 → 0; restano i 75 file in prosa non coperti |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | **Corregge la #360 e la prima stesura di ADR-0118**: il «+2 effetto massa» dell… | ✅ scarti 13 → 1 (baliste AU +10, senza scheda). Libretto `ARC08-18`, DEF e `ARC08-19` non toccati: la carta dei massi resta a 14, da decidere |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | Prima correzione degli scarti del cancello dei numeri (DM: «correggi i problemi… | ✅ restano 13 AU di unità senza scheda uno contro uno |
 | 2026-11-09 | RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI | ADR-0118 (scelta del DM «ADR più cancello in CI»): un numero entra solo se la r… | ✅ cancello in CI non bloccante fino al 2026-11-23 |
 | 2026-11-09 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Audit dei plugin di regole 3.5 e PF1e contro SRD/PRD (ADR-0121) | ✅ `misura_plugin_regole.py`: dnd35 da 97% a 100% coperto (adepto, 8 incantesimi, 3 armature, 12 prestigio, 7 abilità; `derive_statblocks` a parola intera: 11 s… |
-| 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
-| 2026-11-09 | MOTORE-AGNOSTICO-D20 | Card ranger e paladino decisa dal DM: livello d'incantatore = livello − 3 (PF1e… | ✅ |
-| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | Card del DM: D2 Krusk, Vreek e Ur-Vrax confermati come consigliati (titolo CANO… | ✅ applicate in ARC08-01/02/03, DEF-2, Guida agli scontri, Bestiario |
-| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D4 confronto degli statblocchi alternativi della chat «Organizing D&D Campaign… | ✅ confronto fatto, ★ al DM |
-| 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): voci superate da altre decisioni, chiuse con la prova su `main`: MO… | 🟡 D5 aperta per le voci non superate |
-| 2026-11-09 | INVENTARIO-GEMINI-AISTUDIO | D2 mini-boss nel Bestiario: Krusk lo Sfonda-Cancelli (mezzorco gigante, barbaro… | ✅ fatto |
 
 ## Le misure che si portano dietro
 

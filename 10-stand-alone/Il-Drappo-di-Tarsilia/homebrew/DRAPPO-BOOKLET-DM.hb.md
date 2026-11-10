@@ -2739,7 +2739,7 @@ Capita, se il gruppo arriva da un'altra avventura. Tre correzioni e basta:
 | Scontro | pf da togliere | **Round previsti** | Chi rischia |
 |---|---|---|---|
 | **La rissa alla fontana** (5 tintori, pf 6, CA 12) | 30, e sono CA 12: si colpisce quasi sempre | **2 round** | nessuno: è **danno non letale**, e si fermano appena vedono una lama vera |
-| **L'assalto alle stalle** (Sfregio 26 pf CA 18 + 4 bravacci 16 pf CA 16) | 90 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
+| **L'assalto alle stalle** (Sfregio 26 pf CA 19 + 4 bravacci 16 pf CA 16) | 90 | **5-6 round** — è il vero scontro del modulo | vedi sotto ⚠ |
 | **La curva nord** | — | non è un incontro: è un **hazard a costo di azioni** (§7.4) | chi resta sul transennato |
 
 ### ⚠️ Le tre cose che l'aritmetica dice e la lettura no
@@ -4143,7 +4143,7 @@ ___
 
 **DIFESA**
 ___
-**CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +6  
+**CA** 13 (+2 armatura, +1 Des) · **pf** 33 (6d8+6) · **TS** Tem +3, Rif +3, Vol +8  
 
 **ATTACCO**
 ___
@@ -4198,11 +4198,11 @@ ___
 
 **DIFESA**
 ___
-**CA** 18, contatto 15, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 anello) · **pf** 26 (4d8+4) · **TS** Tempra **+2**, Riflessi **+8**, Volontà **+2** · **Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in movimento +1**  
+**CA** 19, contatto 16, colto alla sprovvista 14 (+3 armatura, +4 Des, +1 schivare, +1 anello) · **pf** 26 (4d8+4) · **TS** Tempra **+2**, Riflessi **+8**, Volontà **+2** · **Schivare prodigioso** *(non è mai colto alla sprovvista)* · **schivare in movimento +1**  
 
 **ATTACCO**
 ___
-**Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 18  
+**Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 20  
 
 **STATISTICHE**
 ___
@@ -4332,6 +4332,7 @@ Profilo base: **cavallo** del Bestiario Core.
 ## Cavallo (profilo base)
 *Animale Grande · Bestiario Core* · GS 1
 ___
+**Sensi** visione crepuscolare, fiuto
 
 **DIFESA**
 ___
@@ -4339,7 +4340,7 @@ ___
 
 **ATTACCO**
 ___
-Vel 15 m · morso +3 (1d4+3), due zoccoli −2 (1d6+1) · **CMD** 18  
+Vel 15 m · morso +3 (1d4+3), due zoccoli −2 (1d6+1) · **CMD** 17 (21 contro sbilanciare)  
 
 **STATISTICHE**
 ___

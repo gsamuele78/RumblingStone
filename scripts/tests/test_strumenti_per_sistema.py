@@ -9,7 +9,9 @@ Tre cose da provare:
    PF1e il primo dado di classe al massimo e i dadi dopo a mezza in su (card F4
    2), in 3.5 a mezza in giù;
 3. un conto senza regola nel sistema non si fa, e il rapporto lo dice (card F4
-   3): lotta, scurovisione e corrompere l'acqua in PF1e.
+   3). Con ADR-0119 le tre regole che mancavano in PF1e (lotta → BMC/DMC,
+   scurovisione, corrompere l'acqua) vengono dal PRD: non si salta più niente,
+   e la lotta 3.5 in PF1e «non si applica» (test_conformita_pf1e.py).
 
 Le uscite 3.5 identiche le provano `impronta_creature --confronta` e
 `impronte.py --confronta`, non questo file.
@@ -91,28 +93,29 @@ class IPuntiFeritaDelSistema(unittest.TestCase):
 
 class IContiSenzaRegola(unittest.TestCase):
 
-    def test_la_scurovisione_si_controlla_solo_in_3_5(self):
+    def test_la_scurovisione_pf1e_viene_dal_prd(self):
         (x,) = C.conti_dei_recinti(ORCO, "dnd35")
         self.assertEqual(x["campo"], "sensi")
-        self.assertEqual(C.conti_dei_recinti(ORCO, "pf1e"), [])
+        (y,) = C.conti_dei_recinti(ORCO, "pf1e")
+        self.assertEqual((y["campo"], y["atteso"], y["prova"]), ("sensi", "scurovisione 18 m", "scurovisione"))
 
     def test_la_lotta_si_controlla_solo_in_3_5(self):
         blocchi = list(C._blocchi_del_master(LOTTATORE))
         self.assertEqual([x["campo"] for b in blocchi for x in C.conti_del_master(b, "dnd35")], ["Lotta"])
         self.assertEqual([x for b in blocchi for x in C.conti_del_master(b, "pf1e")], [])
+        self.assertIn("lotta", C.regole_conformita("pf1e")["conti"]["non_applicabili"])
 
     def test_i_saltati_si_dicono(self):
         self.assertEqual(C.conti_saltati("dnd35"), {})
-        self.assertEqual(set(C.conti_saltati("pf1e")), {"lotta", "scurovisione", "corrompere_acqua"})
-        for conto in C.conti_saltati("pf1e"):
-            self.assertNotIn(conto, C.regole_conformita("pf1e")["conti"]["fatti"])
+        # ADR-0119: in PF1e non manca più nessuna regola
+        self.assertEqual(C.conti_saltati("pf1e"), {})
 
     def test_i_moduli_pf1e_entrano_nel_rapporto(self):
         pf1e = [p for p in C.master_di_default() if S.sistema_di(p) == "pf1e"]
         if not pf1e:
             self.skipTest("nessun modulo PF1e con statblocchi")
-        saltati = C.saltati_master(pf1e)
-        self.assertEqual({x["file"] for x in saltati}, {str(p.relative_to(ROOT)) for p in pf1e})
+        self.assertEqual(C.saltati_master(pf1e), [])
+        self.assertGreaterEqual(len(pf1e), 2)
 
     def test_il_cancello_dei_moduli_e_verde(self):
         # card F4 1 del 2026-11-08: «Sì, e blocca la CI»
