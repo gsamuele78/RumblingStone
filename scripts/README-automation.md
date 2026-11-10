@@ -49,6 +49,7 @@ python3 scripts/dm.py doctor                      # environment diagnosis
 | `recap` | `--last-n N` · `--pdf` · `--hype` | `session_recap` (+ `hype_homebrew`) | §4.6 |
 | `handout` | `--tipo T` (obbl.) · `--da <file>` · `--out <file>` | `hype_homebrew --handout` | prep |
 | `bestiario` | `estrai`\|`deriva`\|`attributi`\|`creatura`\|`conformita` + i flag dello script (anche `--help`) | `extract_statblocks` / `derive_statblocks` / `genera_attributi` / `genera_creatura` / `conformita_statblocchi` | prep (creature; il codice d'uscita è quello dello script) |
+| `sistemi` | i flag di `sistemi.py` (anche `--help`): nessuno = sistemi attivi e matrice strumenti × sistemi · `--di FILE` · `--check` · `--json` · `--skill` · `--skill-escluse` | `sistemi` | tutte (ADR-0111; guida in [`GUIDA-SISTEMI-DI-GIOCO`](../docs/guides/GUIDA-SISTEMI-DI-GIOCO.md)) |
 | `hype` | `setup`\|`start`\|`docker`\|`docker-stop` | wrapper `homebrew-local/*.sh` | prep |
 | `dossier` | *(nessuno)* | `dm_dossier` | §4 (solo DM) |
 | `prompts` | `<arco>` (obbl.) · `-o <file>` · `--list` | `extract_scene_prompts` | prep (prompt immagine dell'arco, ADR-0015) |

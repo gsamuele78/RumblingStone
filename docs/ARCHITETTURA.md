@@ -29,15 +29,19 @@ Chi cerca **perché** una cosa è fatta così trova la decisione negli ADR
 16. [La piattaforma e i suoi tre canali](#16-la-piattaforma-e-i-suoi-tre-canali)
 17. [Il rilascio](#17-il-rilascio)
 18. [Il flusso della qualità: mappe, moduli, regole, stampa](#18-il-flusso-della-qualità-mappe-moduli-regole-stampa)
-19. [Dove sta cosa](#19-dove-sta-cosa)
+19. [Il motore delle regole e i sistemi di gioco](#19-il-motore-delle-regole-e-i-sistemi-di-gioco)
+20. [Da dove viene un fatto, un termine, un numero](#20-da-dove-viene-un-fatto-un-termine-un-numero)
+21. [Dove sta cosa](#21-dove-sta-cosa)
 
 ---
 
 ## 1. Il sistema e chi lo usa
 
 Il repo è una campagna di D&D 3.5 (Red Hand of Doom portata nella Valle di
-Cannath, Forgotten Realms 1372 DR) più gli strumenti che la preparano, la
-controllano e la stampano. Ci lavorano il DM, gli agenti AI e la CI di GitHub.
+Cannath, Forgotten Realms 1372 DR), con due moduli autonomi in Pathfinder 1e,
+più gli strumenti che la preparano, la controllano e la stampano. Gli
+strumenti non conoscono nessun gioco: le regole di ogni sistema stanno in un
+plugin di dati (§19). Ci lavorano il DM, gli agenti AI e la CI di GitHub.
 I giocatori ne vedono solo ciò che il DM stampa o manda.
 
 ```mermaid
@@ -101,9 +105,14 @@ flowchart TB
         CONV["converters/<br/>PDF e HTML in markdown"]
     end
 
+    subgraph SYS["Regole dei sistemi di gioco: dati, OGL 1.0a"]
+        STOML["sistemi.toml<br/>attivi, sistema di ogni cartella"]
+        PLUG["sistemi/&lt;id&gt;/<br/>plugin d20, dnd35, pf1e"]
+    end
+
     subgraph GOV["Governo"]
         PLANS["plans/<br/>piani, INDEX, CHANGELOG dei piani"]
-        ADR["plans/adr/<br/>97 decisioni"]
+        ADR["plans/adr/<br/>118 decisioni"]
         CHG["CHANGELOG.md<br/>i rilasci"]
     end
 
@@ -116,6 +125,7 @@ flowchart TB
 
     DMPY --> SCR
     SCR --> CORE
+    CORE -->|"dmcore.sistemi"| SYS
     MAN -->|"tools_manifest.py"| DOCS
     SK -->|"build-skills.sh"| BUILD
     SCR -->|"leggono"| CONT
@@ -135,6 +145,11 @@ della sessione, spesso senza rete: per questo il nucleo è Python 3.13 con la
 sola libreria standard più tre eccezioni dichiarate
 ([ADR-0037](../plans/adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md)), e ogni
 binario esterno è facoltativo con un ripiego scritto in `scripts/binari.py`.
+Dal 2026-11-08 typst e l'imposizione arrivano da PyPI con il resto delle
+dipendenze, e il rilascio porta un archivio di wheel per installare senza
+rete (`scripts/bundle_offline.py`,
+[ADR-0116](../plans/adr/ADR-0116-typst-si-installa-da-pypi.md), che supera
+ADR-0113 e toglie mise).
 
 ```mermaid
 flowchart TB
@@ -145,11 +160,13 @@ flowchart TB
             YAML["pyyaml<br/>obbligatoria"]
             PIL["Pillow<br/>facoltativa: immagini"]
             TIK["tiktoken<br/>facoltativa: conta i token"]
+            TPY["typst e pdfimpose da PyPI<br/>volumi di stampa, libretto"]
+            VEN["dmcore/_vendor/<br/>simpleeval 1.0.8, copiata dentro"]
         end
         subgraph BIN["Binari facoltativi, censiti in binari.py"]
             GIT["git, gh"]
             CHR["Chromium<br/>PDF e PNG"]
-            TYP["typst<br/>volumi di stampa"]
+            TYP["typst CLI<br/>solo ripiego di typst_motore"]
             INK["Inkscape, pandoc, xelatex,<br/>cwebp"]
             BLE["Blender<br/>mappe 3D"]
             JAVA["Java + LanguageTool<br/>secondo lettore della lingua"]
@@ -164,7 +181,7 @@ flowchart TB
     subgraph CLOUD["☁️ GitHub"]
         direction TB
         RUN["Runner ubuntu-24.04<br/>Python 3.13, stesse librerie"]
-        DEV["requirements-dev.txt<br/>pytest, pip-audit, pymupdf, tcod,<br/>numpy, scipy, scikit-image, ruff, xdist"]
+        DEV["requirements-dev.txt con uv<br/>pytest, pip-audit, pymupdf, tcod,<br/>numpy, scipy, scikit-image, ruff, xdist"]
         WF["ci.yml · release.yml · dipendenze.yml"]
         SEC["CodeQL, Dependabot,<br/>attestazioni Sigstore"]
     end
@@ -187,9 +204,10 @@ flowchart TB
 
 | Strato | Cosa contiene | Chi decide la versione |
 |---|---|---|
-| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken | ADR-0037, ADR-0099 (Python sale con Debian) |
+| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken; `typst==0.15.2` e `pdfimpose==2.10.0` in `requirements.txt` | ADR-0037, ADR-0099 (Python sale con Debian), ADR-0116 (typst e imposizione da PyPI, Dependabot) |
+| Librerie copiate dentro | `scripts/dmcore/_vendor/`: simpleeval 1.0.8 (MIT), con versione, sha256 e licenza in `LIBRERIE.toml` | ADR-0112 (D1: standard di fatto e misura che migliora) |
 | Sviluppo e prove | `requirements-dev.txt` | Dependabot propone, la CI misura |
-| Binari | git, gh, Chromium, typst, Blender, Inkscape, pandoc, LanguageTool | `scripts/binari.py`, `dm.py doctor` |
+| Binari | git, gh, Chromium, Blender, Inkscape, pandoc, LanguageTool; la CLI typst solo come ripiego (`RUMBLINGSTONE_TYPST=cli`) | `scripts/binari.py`, `dm.py doctor`, `python3 scripts/typst_motore.py` |
 | Container | ComfyUI (`scripts/comfyui-local/`), Homebrewery (`scripts/homebrew-local/`) | i loro README |
 | Convertitori | `converters/`: motori PDF, OCR, HTML | dipendenze proprie, job `convertitori` in testing |
 | CI | GitHub Actions, azioni fissate a una versione | Dependabot, ADR-0099 |
@@ -741,7 +759,12 @@ master e lo schema dei fronti (`scripts/schemas/fronti_orologi.schema.json`).
 ## 11. La catena delle mappe
 
 Una mappa nasce come griglia o contratto JSON e se ne ricavano tutte le
-versioni. Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
+versioni. Ogni griglia a emoji di campagna ha il suo contratto JSON che,
+ricompilato, la ridà identica cella per cella; i simboli fuori legenda stanno
+in `simboli_locali`, e il cancello è `test_contratti_mappe.py` con
+`render_map_svg --strict`
+([ADR-0117](../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md),
+proposta). Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
 la pianta di stampa, con le scritte a 7,4 pt e senza filtri
 ([ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md)).
 
@@ -750,7 +773,8 @@ flowchart LR
     W["Watabou e generatori<br/>import_watabou"] --> J
     U["Ultra-Clear<br/>import_ultraclear"] --> J
     H["A mano: griglia emoji<br/>o contratto JSON"] --> J
-    J["Contratto JSON<br/>schema, legenda unica"] -->|"compile_map_json"| MD["Master con griglia"]
+    J["Contratto JSON<br/>schema, legenda unica,<br/>simboli_locali"] -->|"compile_map_json"| MD["Master con griglia"]
+    MD -. "test_contratti_mappe:<br/>ricompilato = identico" .-> J
     MD -->|"render_map_svg"| SVG["rendered/<br/>SVG pergamena e texture"]
     SVG -->|"export_map_png"| PNG["PNG per lo schermo"]
     MD -->|"--tema pianta"| PIA["rendered-pianta/<br/>render_map_pianta"]
@@ -773,7 +797,7 @@ girano in CI.
 
 Riferimenti: [ADR-0048](../plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md) (legenda funzionale, fonte unica), [ADR-0098](../plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md) (standard di
 qualità delle mappe), [ADR-0102](../plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md) (tema pianta e generatori delle città),
-[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (ogni mappa si stampa in pianta), [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) §5.4-5.5.
+[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (ogni mappa si stampa in pianta), [ADR-0117](../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md) (contratto JSON di ogni mappa), [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) §5.4-5.5.
 
 ## 12. La catena dei booklet
 
@@ -842,7 +866,22 @@ flowchart LR
     PKG -->|"release.yml"| ARCH["rumblingstone-skills-vX.Y.Z.tar.gz<br/>riproducibile con SOURCE_DATE_EPOCH"]
     RAW --> VS{"validate_skills<br/>frontmatter, link, YAML"}
     RAW --> TC{"test_cancelli_delle_skill<br/>sezione presente, ogni comando<br/>in tools.manifest.json"}
+    RAW --> EV["skills/*/evals/<br/>54 prove con trappola"]
+    EV -->|"prove_skill.py controlla (CI)"| PC{"forma delle prove"}
+    EV -->|"prove_skill.py prepara / esito"| AB["A/B alla cieca<br/>fra due versioni di una skill"]
+    SIS["sistemi.toml<br/>sistemi attivi e di rinforzo"] -->|"sistemi.py --skill-escluse"| PKG
 ```
+
+Dal 2026-11-08 ogni `SKILL.md` segue una scheda fissa (Quando no, Fonti,
+Vincoli sui fatti, Procedura, Formato d'uscita, Prima di consegnare, Cancelli
+deterministici) e ogni skill ha almeno tre prove con trappola nella forma di
+`claude plugin eval`. Una versione nuova di una skill entra solo se la prova
+A/B alla cieca non peggiora gli inventati senza marca: nel lotto 2 sono scesi
+da 32 a 30 su 54 consegne
+([ADR-0114](../plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md),
+guida in [GUIDA-SCHEDE-PROMPT](guides/GUIDA-SCHEDE-PROMPT.md)). Le skill di
+un sistema spento non si impacchettano: `build-skills.sh` e `sync-skills.sh`
+chiedono a `sistemi.py --skill-escluse` quali saltare (ADR-0111).
 
 Una skill nuova senza la sezione, o con un comando che il manifest dei tool
 non dichiara, rompe i test. Il giudice della prosa resta il cieco del DM
@@ -921,10 +960,12 @@ stateDiagram-v2
     oldstable --> [*]: dopo tre mesi
 ```
 
-| Componente | Canale al 2026-11-03 |
+| Componente | Canale al 2026-11-10 |
 |---|---|
-| Python 3.13 (Debian 13), pytest, pip-audit, typst, Dependabot | stable |
-| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0103), shapely e i generatori delle città (ADR-0102) | testing |
+| Python 3.13 (Debian 13), pytest, pip-audit, Dependabot, typst e pdfimpose da PyPI (ADR-0116); ruff, uv e il job dei convertitori dal 2026-11-08 (#353, misure in `plans/esperimenti/promozioni-2026-11-08/`) | stable |
+| pytest-xdist (fino al 2026-11-22), workflow Release, riscontro SRD (ADR-0103), shapely e i generatori delle città (ADR-0102), il job della suite su Python 3.14 (non bloccante) | testing |
+| Cancelli nuovi del motore e dei testi: marche sulle righe cambiate (`controlla_marche.py`, ADR-0109); cancello dei numeri (`--cancello-numeri`, ADR-0118, fino al 2026-11-23); i 14 conti PF1e `in_prova` (ADR-0119, dal 2026-11-23); la *d* eufonica (ADR-0120, fino al 2026-11-24); gli avvisi della scheda in `validate_skills` (ADR-0114) | testing: avvisano in CI, non bloccano |
+| `misura_plugin_regole.py` (ADR-0121), ancora in `plans/esperimenti/plugin-regole-2026-11-09/` | prova, fuori dalla CI |
 | spaCy, Stanza, LLM locale, mypy, sentence-transformers (`misura_ripetizioni_frasi`), transformers con un NLI multilingue (`misura_fedelta_nli`), tutti solo in locale | unstable |
 | NLI per le contraddizioni fra file, varianti dei nomi, numeri incrociati (provati due volte per ADR-0108) | non adottati: nessun guadagno misurato |
 
@@ -1108,7 +1149,181 @@ rete che manca la dice con l'exit 3. Il primo uso, su DEF-1 e DEF-2 di
 ARC-08, è in
 [RISCONTRO-ARC08](../plans/esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md).
 
-## 19. Dove sta cosa
+## 19. Il motore delle regole e i sistemi di gioco
+
+Fino al 2026-11-07 le regole 3.5 erano costanti negli script: 31 script su
+202 dipendevano dal sistema, con tre modi diversi di riconoscerlo. Oggi il
+nucleo non conosce nessun gioco. Tutto quello che è regola sta in
+`sistemi/<id>/` come dato, formula o funzione registrata, e uno strumento lo
+riceve per il sistema del file su cui lavora
+([ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
+[ADR-0112](../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
+tutte e due accettate). Il modello è quello di PCGen e Foundry VTT: un
+microkernel guidato dai dati.
+
+```mermaid
+flowchart LR
+    subgraph CFG["Configurazione"]
+        STOML["sistemi.toml<br/>predefinito, attivi, rinforzo,<br/>[moduli] cartella → sistema,<br/>[ambientazioni], [opzioni.pf1e]"]
+        CAT["sistemi/catalogo.toml<br/>16 capacità"]
+    end
+    subgraph PLUG["Plugin in sistemi/"]
+        D20["d20 · famiglia<br/>formule, statblocco, stampa,<br/>termini vietati; codice: potenze"]
+        D35["dnd35 · sistema<br/>creature, PE, incontri,<br/>incantesimi, fonti SRD"]
+        PF["pf1e · sistema<br/>classi, creature, PE, tesoro,<br/>conformità PRD; codice: somma_px"]
+        D35 -->|"eredita, con motivo"| D20
+        PF -->|"eredita, con motivo"| D20
+    end
+    subgraph CORE["Nucleo: scripts/dmcore/"]
+        SIS["sistemi.py<br/>sistema_di · capacita · dati<br/>regole · modulo · regole_diverse"]
+        FOR["formule.py<br/>simpleeval ristretto<br/>(_vendor/)"]
+    end
+    subgraph TOOLS["Strumenti"]
+        MAN["tools.manifest.json<br/>sistema.capacita di ogni tool"]
+        T["genera_creatura · conformita_statblocchi<br/>suggest_encounter · suggest_loot<br/>update_xp · derive_statblocks · …"]
+    end
+    STOML --> SIS
+    CAT --> SIS
+    PLUG --> SIS
+    SIS --> FOR
+    T -->|"regole(sistema_di(file))"| SIS
+    MAN --> GATE{"sistemi.py --check<br/>in CI"}
+    CFG --> GATE
+    PLUG --> GATE
+    GATE -. "dm.py sistemi" .- DMS(["DM o agente"])
+```
+
+Un plugin dichiara ogni capacità del catalogo in uno di quattro modi: `dati`
+(i file TOML che la coprono), `codice` (ancora cablata, con il lotto che la
+migra), `eredita` (da un altro plugin, con il motivo) o `non_supportato` (con
+il motivo). Non c'è eredità implicita: una capacità che un plugin attivo non
+dichiara è un buco, e il cancello lo dice. Il cancello controlla anche che
+ogni formula usi solo nomi dichiarati, che ogni funzione registrata in
+`[moduli]` si carichi solo da `sistemi/<id>/codice/`, e che la riga
+«**Sistema:**» di un modulo dica lo stesso sistema di `sistemi.toml`.
+
+Cosa succede quando uno strumento lavora su un file di un modulo PF1e:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant T as strumento
+    participant S as dmcore.sistemi
+    participant P as plugin pf1e
+    participant F as famiglia d20
+    T->>S: sistema_di("10-stand-alone/Il-Drappo-di-Tarsilia/…")
+    S-->>T: "pf1e" (il percorso più lungo in [moduli])
+    T->>S: regole_diverse("pf1e", strumento)
+    alt lo strumento è scritto sulle tabelle 3.5 e pf1e legge altri dati
+        S-->>T: le capacità diverse
+        T-->>T: salta il file e dice quali regole mancano
+    else stessi dati o strumento che legge il sistema
+        T->>S: regole("pf1e").dati("creature.conformita")
+        S->>P: [capacita] creature.conformita
+        P-->>S: dati = conformita.toml, conformita_prd.toml
+        T->>S: regole("pf1e").dati("formule.regole")
+        S->>P: [capacita] formule.regole
+        P-->>S: eredita = "d20"
+        S->>F: [capacita] formule.regole
+        F-->>S: dati = formule.toml
+        T->>S: modulo("pf1e", "somma_px")
+        S->>P: [moduli] somma_px = "incontri:somma_px"
+        S-->>T: la funzione, caricata con importlib<br/>solo da sistemi/pf1e/codice/
+    end
+```
+
+Nessun modulo del nucleo legge un sistema all'import: lo sceglie il
+chiamante, dal file. I nomi di sempre (`T.TIPI`, `I.LISTE`, …) restano come
+involucro del sistema predefinito e danno i valori di prima. Ogni lotto della
+migrazione è passato dal banco d'invarianza: le 12 impronte dei moduli 3.5
+sono rimaste identiche byte per byte.
+
+| Pezzo | Dove | Stato su main al 2026-11-10 |
+|---|---|---|
+| Configurazione e caricatore unico | `sistemi.toml`, `scripts/dmcore/sistemi.py` | fatto (L0-L8 di PIANO-SISTEMI-DI-GIOCO-PLUGIN) |
+| Fonti delle regole come dati | `sistemi/<id>/dati/fonti.toml`, letto da `riscontro_srd.py` | fatto (F1) |
+| Contesto esplicito, niente letture all'import | `regole(id)`, `regole_di(file)` | fatto (F2) |
+| Formule come espressioni | `sistemi/d20/dati/formule.toml`, `dmcore/formule.py` | fatto per sei formule (F3); il BAB per frazione resta in Python |
+| Strumenti per sistema del file | `regole_diverse`, capacità `creature.conformita` | fatto (F4) |
+| Funzioni registrate nel plugin | `[moduli]`, `sistemi/<id>/codice/` | fatto (F5): «potenze» e «somma_px» |
+| Schema JSON per ogni file di dati (ADR-0112 §3) | — | **non ancora nel codice**: `sistemi.py --check` controlla la struttura del plugin, non i campi dei file di dati |
+| Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
+
+Riferimenti: [ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
+[ADR-0112](../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
+[GUIDA-SISTEMI-DI-GIOCO](guides/GUIDA-SISTEMI-DI-GIOCO.md) (uso),
+[RIFERIMENTO-PLUGIN-DI-SISTEMA](guides/RIFERIMENTO-PLUGIN-DI-SISTEMA.md) (chi scrive un plugin).
+
+## 20. Da dove viene un fatto, un termine, un numero
+
+Tre cancelli rispondono alla stessa domanda: chi ha deciso questa cosa, e si
+può rifare? Un fatto della storia ha una marca. Un termine di regola ha una
+riga in una tabella con la fonte. Un numero di combattimento si ricostruisce
+dalla scheda con la regola del suo sistema.
+
+```mermaid
+flowchart TB
+    subgraph FATTI["Fatti (ADR-0109)"]
+        INF["[INFERRED — domanda; base: …]<br/>scritto da un agente"]
+        CAN["[CANONE — DM data, codice]<br/>deciso dal DM"]
+        GEN["[GENERATO]<br/>uscito da uno script"]
+        INF -->|"il DM decide"| CAN
+        CM{"controlla_marche.py<br/>righe cambiate della PR"}
+        INF --> CM
+    end
+    subgraph TERMINI["Termini (ADR-0110)"]
+        LT[/"lessico_it_35.tsv · lessico_it_pf1.tsv<br/>italiano → SRD 3.5 / PRD, con fonte"/]
+        LR{"lessico_regole.py controlla<br/>talenti: 0 sconosciuti"}
+        LT --> LR
+    end
+    subgraph NUMERI["Numeri (ADR-0118, ADR-0119)"]
+        SCH["scheda: DV, caratteristiche,<br/>talenti, armi, armatura"]
+        PLG[("plugin del sistema<br/>conformita.toml,<br/>conformita_prd.toml, formule")]
+        CN{"conformita_statblocchi<br/>--cancello-numeri<br/>--cancello-moduli"}
+        BL[/"docs/audit/numeri-baseline.json<br/>cricchetto"/]
+        SCH --> CN
+        PLG --> CN
+        BL --> CN
+    end
+    subgraph TAB["Tabelle dei plugin (ADR-0121)"]
+        MPR{"misura_plugin_regole.py<br/>riga per riga"}
+        SRD[("SRD 3.5 e PRD PF1e<br/>in cache, sha256 fissati")]
+        SRD --> MPR
+        PLG --> MPR
+    end
+    TESTO["master, Bestiario,<br/>stand alone, booklet"] --> CM & LR & CN
+    CM & LR & CN & MPR --> ESITO{"torna?"}
+    ESITO -->|"no, ed è un errore"| FIX["si corregge,<br/>prima e dopo misurati"]
+    ESITO -->|"no, ed è una scelta"| DM(["👤 DM, con una card"])
+    DM --> CAN
+```
+
+- **Fatti.** La grammatica è una sola, in [GUIDA-MARCATURE](guides/GUIDA-MARCATURE.md):
+  un INFERRED porta la domanda e la base, un CANONE la data e il codice della
+  decisione. `controlla_marche.py` guarda solo le righe cambiate da una PR e
+  in CI avvisa senza bloccare.
+- **Termini.** Ogni nome italiano di una regola ha una riga nelle tabelle di
+  `scripts/` con la sua fonte; sui talenti il cancello è a 0 sconosciuti, su
+  incantesimi, abilità e oggetti per ora solo il conto (job `lessico-regole`).
+- **Numeri.** Un numero entra solo se la regola lo ricostruisce, e fra quelli
+  che si ricostruiscono vince il più forte. Il cancello dei numeri rifà pf,
+  CA, TS, BAB, lotta o BMC, attacco, iniziativa, CD e l'AU delle unità sul
+  Bestiario, i master, i recinti e gli stand alone, contro un cricchetto.
+  Le schede PF1e si contano con le regole che `estrai_prd_pf1e.py` genera dal
+  PRD; i 14 conti nuovi partono `in_prova`.
+- **Tabelle.** Le tabelle dei plugin si misurano contro la fonte e non contro
+  la loro dichiarazione: al 2026-11-09 dnd35 ha 605 righe giuste su 606
+  verificabili e pf1e 217 su 217. Una divergenza voluta dal DM (il livello
+  d'incantatore −3 di ranger e paladino anche in 3.5) sta nei dati con la
+  fonte.
+
+Riferimenti: [ADR-0109](../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md),
+[ADR-0110](../plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md),
+[ADR-0118](../plans/adr/ADR-0118-un-numero-entra-solo-se-la-regola-lo-calcola.md),
+[ADR-0119](../plans/adr/ADR-0119-le-regole-pf1e-del-cancello-vengono-dal-prd.md),
+[ADR-0121](../plans/adr/ADR-0121-un-plugin-di-regole-si-misura-contro-la-fonte.md).
+
+## 21. Dove sta cosa
 
 | Cerco… | Dove |
 |---|---|
@@ -1119,6 +1334,11 @@ ARC-08, è in
 | se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0103) |
 | la mappa che va in un booklet | `rendered-stampa-pianta/` accanto al master (ADR-0106) |
 | perché un capitolo stampato ha schede che il master non ha lì | `scripts/dmcore/chi_si_incontra.py`, chiave `chi_si_incontra` del manifest (ADR-0107) |
+| il sistema di gioco di un file, e cosa sa fare ogni strumento con ogni sistema | `python3 scripts/dm.py sistemi --di FILE`, `python3 scripts/dm.py sistemi` (ADR-0111) |
+| le regole di un sistema | `sistemi/<id>/sistema.toml` e `sistemi/<id>/dati/` (ADR-0112) |
+| se un numero di una scheda si ricostruisce | `python3 scripts/conformita_statblocchi.py --cancello-numeri` (ADR-0118) |
+| il nome ufficiale di una regola | `scripts/lessico_it_35.tsv`, `scripts/lessico_it_pf1.tsv`, `python3 scripts/lessico_regole.py` (ADR-0110) |
+| come si marca chi ha deciso un fatto | [`guides/GUIDA-MARCATURE.md`](guides/GUIDA-MARCATURE.md) (ADR-0109) |
 | i comandi che verificano una skill | la sezione «Cancelli deterministici» del suo `SKILL.md` (ADR-0108) |
 | i tetti delle misure di stampa | `docs/audit/stampa-booklet.json`, `docs/audit/statblocchi-booklet.json` |
 | perché una cosa è fatta così | [`plans/adr/`](../plans/adr/), indice in [`docs/INDEX.md`](INDEX.md) §4 |

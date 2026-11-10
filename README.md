@@ -73,14 +73,16 @@ corregge solo il master, e PDF, mappe, recap e pacchetti si rigenerano.
 | 🎲 | Stato della campagna, sessioni, recap per PG, ledger dei PE | [`campaign/`](campaign/) |
 | 🧠 | 18 skill per agenti: regole 3.5 e PF1e, lore 1372 DR, stile, mappe, editoria; ognuna dichiara i suoi cancelli deterministici | [`skills/`](skills/) |
 | 🛠️ | `dm.py` e gli script, ognuno con il suo contratto nel manifest | [`scripts/`](scripts/), [registro](docs/tools/README.md) |
-| 🧭 | Piani, 117 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
+| 🎯 | Regole come plugin di dati: D&D 3.5 per la campagna, Pathfinder 1e per due moduli; `dm.py sistemi` dice quale sistema usa un file | [`sistemi/`](sistemi/), [GUIDA-SISTEMI-DI-GIOCO](docs/guides/GUIDA-SISTEMI-DI-GIOCO.md) |
+| 🧭 | Piani, 118 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
 | ✍️ | Misure della prosa e voto al cieco del DM | ADR-0093 |
 
 ## Come funziona
 
-Il disegno completo, con ventisei diagrammi (infrastruttura, integrazione fra
+Il disegno completo, con ventinove diagrammi (infrastruttura, integrazione fra
 strumenti e fonti, casi d'uso, la catena della prosa, la serata, il giro
-delle letture, le mappe e i booklet in stampa, i rilasci),
+delle letture, le mappe e i booklet in stampa, i rilasci, il motore delle
+regole e i suoi plugin, da dove viene un numero),
 sta in **[docs/ARCHITETTURA.md](docs/ARCHITETTURA.md)**. In breve:
 
 ```mermaid
@@ -102,7 +104,7 @@ facoltativo e `dm.py doctor` dice cosa manca e cosa succede senza.
 ```bash
 git clone https://github.com/gsamuele78/RumblingStone.git
 cd RumblingStone
-pip install -r requirements.txt          # pyyaml, Pillow, tiktoken
+pip install -r requirements.txt          # pyyaml, Pillow, tiktoken, typst, pdfimpose
 python3 scripts/dm.py --version          # la versione del repo
 python3 scripts/dm.py doctor             # cosa c'è sulla macchina
 python3 scripts/dm.py --help             # tutti i comandi
