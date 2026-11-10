@@ -65,6 +65,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import random
 import re
 import sys
@@ -860,6 +861,167 @@ def _fonte(gs, tipo, taglia, ruolo, classe, piu_cattivi, conto: Conto,
 
 # ===========================================================================
 # La riga di comando
+# ── PNG PF1e costruiti dalle tabelle del PRD (audit dei plugin, ADR-0121) ──
+
+def genera_png_pf1e(gs: int, *, tipo: str = "humanoid", taglia: str = "medium", ruolo: str = "bruto",
+               classi: list[tuple[str, int]], elite: bool | None = None, rng=None,
+               funzione: str | None = None, root=None):
+    """(statblocco, Conto) di un PNG PF1e costruito dalle tabelle del PRD.
+
+    Tutte le 55 classi di `sistemi/pf1e/dati/classi.toml`, anche in multiclasse
+    con le classi di prestigio; i dati e le regole stanno in dmcore/creature_pf1e.py
+    (qui, e non lì, per non chiudere un ciclo di import: test_grafo_import_creature)."""
+    from dmcore import creature_pf1e as CP
+    from dmcore import sistemi as S
+
+    rng = rng or random.Random()
+    dati = S.dati("pf1e", "creature.costruzione", root)
+    regole = S.dati("pf1e", "creature.conformita", root)
+    car_inc = regole.get("incantesimi", {}).get("caratteristica", {})
+    R = RUOLI[normalizza_ruolo(ruolo)]
+    conto = Conto()
+    voci_cl = [(en, liv, dati["classi"][en]) for en, liv in classi]
+    totale = sum(liv for _, liv, _ in voci_cl)
+    descr = ", ".join(f"{en} {liv}" for en, liv, _ in voci_cl)
+    conto(f"PF1e · {descr} · {taglia} · ruolo {R.nome} — classi da sistemi/pf1e/dati/classi.toml (PRD)")
+
+    # GS: PRD, Encounters (sezione 3656): classi senza DV razziali → livelli − 1.
+    gs_pf = "1/2" if totale == 1 else str(totale - 1)
+    conto(f"GS {gs_pf} = livelli di classe − 1 (PRD, Encounters)"
+          + (f"; chiesto GS {gs}, non tocco i livelli: decide il DM" if str(gs) != gs_pf else ""))
+    prestigio = [en for en, _, v in voci_cl if v["gruppo"] == "prestigio"]
+    if prestigio:
+        conto(f"⚠ requisiti d'accesso di {', '.join(prestigio)} non verificati: li controlla il DM")
+
+    # caratteristiche: matrice eroica se c'è una classe da PG (PRD, Creating NPCs)
+    if elite is None:
+        elite = any(v["gruppo"] != "png" for _, _, v in voci_cl)
+    incantatrici = [en for en, _, _ in voci_cl if en in dati.get("incantatori", {})]
+    lancia_su = car_inc.get(incantatrici[0], "") if incantatrici else ""
+    attr = {k.lower(): v for k, v in CAR.matrice_png(R.profilo, totale, elite, lancia_su).items()}
+    m = {k: CP._mod(v) for k, v in attr.items()}
+    conto(("matrice eroica " if elite else "matrice di base ") + "→ "
+          + ", ".join(f"{k.upper()} {v}" for k, v in attr.items()))
+
+    # pf: primo dado della prima classe al massimo, gli altri a mezza in su
+    rp = regole["punti_ferita"]
+    arrot = math.ceil if rp["mezzi_dopo_il_primo"] == "su" else math.floor
+    dadi = [(liv, v["dv"]) for _, liv, v in voci_cl]
+    primo = dadi[0][1] if rp["primo_dado_di_classe"] == "massimo" else (dadi[0][1] + 1) / 2
+    resto = arrot(sum((liv - (1 if i == 0 else 0)) * (f + 1) / 2 for i, (liv, f) in enumerate(dadi)))
+    pf = max(1, int(primo + resto + m["cos"] * totale))
+    pf_dado = "+".join(f"{liv}d{f}" for liv, f in dadi) + (f"{m['cos'] * totale:+d}" if m["cos"] else "")
+    conto(f"pf = {pf_dado}: primo dado {primo:g} + {resto} {m['cos']:+d}×{totale} Cos = {pf} — conformita.toml")
+
+    # BAB e TS: somma per classe (PRD, Multiclassing)
+    bab = sum(int(v["bab"] * liv) for _, liv, v in voci_cl)
+    base = {k: 0 for k in CP.ORDINE_TS}
+    for _, liv, v in voci_cl:
+        for k, x in CP.ts_di_classe(liv, v["ts_buoni"], v["gruppo"]).items():
+            base[k] += x
+    ts = {"temp": base["temp"] + m["cos"], "rifl": base["rifl"] + m["des"], "vol": base["vol"] + m["sag"]}
+    ts_testo = ", ".join(f"{CP.NOMI_TS[k]} {ts[k]:+d}" for k in CP.ORDINE_TS)
+    conto(f"BAB +{bab}; TS base {base['temp']}/{base['rifl']}/{base['vol']} + caratteristiche → {ts_testo}")
+
+    # CA: armature e scudi PF1e del plugin
+    tg = CP.taglia_inglese(taglia, dati["taglie"])
+    mod_taglia, mt = dati["taglie"][tg]["ca_attacco"], dati["taglie"][tg]["bmc_dmc"]
+    if R.nome in ("controllore", "blaster"):
+        armatura, max_des = min(8, 1 + totale // 3) + min(5, 1 + totale // 6), 99
+        pezzi = [f"+{armatura} bracciali e anello"]
+    else:
+        nome_arm = CP.ARMATURA_DEL_RUOLO.get(R.nome, ("breastplate" if totale < 6 else "full plate", None))[0]
+        a = dati["armature"][nome_arm]
+        armatura, max_des = a["ca"], a["des_max"]
+        pezzi = [f"+{a['ca']} {a.get('it', nome_arm)}"]
+        if R.nome not in CP.ARMATURA_DEL_RUOLO:
+            s = dati["scudi"][CP.SCUDO_PESANTE]
+            armatura += s["ca"]
+            pezzi.append(f"+{s['ca']} {s.get('it', CP.SCUDO_PESANTE)}")
+    arcane = [en for en in incantatrici if car_inc.get(en) in ("Int", "Car")
+              and en not in ("paladin", "antipaladin", "oracle")]
+    if arcane and R.nome not in ("controllore", "blaster"):
+        fall = sum(dati["armature"].get(n, {}).get("fallimento", 0) for n in
+                   [CP.ARMATURA_DEL_RUOLO.get(R.nome, ("breastplate" if totale < 6 else "full plate", None))[0]])
+        fall += 0 if R.nome in CP.ARMATURA_DEL_RUOLO else dati["scudi"][CP.SCUDO_PESANTE]["fallimento"]
+        conto(f"⚠ {', '.join(arcane)} in armatura del ruolo {R.nome}: fallimento degli incantesimi "
+              f"arcani {fall}% (PRD), salvo le capacità della classe che lo tolgono")
+    m_des = min(m["des"], max_des)
+    ca = 10 + m_des + mod_taglia + armatura
+    pezzi = [f"{m_des:+d} Des"] + pezzi + ([f"{mod_taglia:+d} taglia"] if mod_taglia else [])
+    conto(f"CA = 10 {' '.join(pezzi)} = {ca} — armature del PRD (creature.toml)")
+
+    car_att = "des" if R.distanza else "for"
+    attacco = bab + m[car_att] + mod_taglia
+    bmc = bab + m["for"] + mt
+    dmc = 10 + bab + m["for"] + m["des"] + mt
+    gradi = sum(max(1, v["gradi"] + m["int"]) * liv for _, liv, v in voci_cl)
+    conto(f"attacco = BAB {bab:+d} {m[car_att]:+d} {car_att.capitalize()} = {attacco:+d}; "
+          f"BMC {bmc:+d}, DMC {dmc}; gradi = Σ (gradi + Int) × livelli = {gradi}")
+
+    voci = []
+    piu = CP.avanzamento(classi, dati)
+    for en in incantatrici:
+        liv = dict(classi)[en] + piu.get(en, 0)
+        inc = dati["incantatori"][en]
+        griglia = dati["griglie"][inc["griglia"]].get(str(min(20, liv)))
+        caratt = car_inc.get(en, "Int")
+        mod_c = m[caratt.lower()]
+        li = CP.livello_incantatore_pf1e(en, liv, dati)
+        nome_it = next((k for k, v in dati.get("alias", {}).items() if v == en), en)
+        if not griglia or li < 1 or not any(griglia[1:]):
+            voci.append(f"Nessun incantesimo da {nome_it} a questo livello")
+            continue
+        massimo = max(i for i, n in enumerate(griglia) if n)
+        voci.append(f"Incantatore di livello {li} ({nome_it}, {caratt.upper()} {mod_c:+d})"
+                    + (f" — {piu[en]} livelli dalle classi di prestigio" if piu.get(en) else ""))
+        voci.append(CP._riga_slot(griglia, inc["livello_zero"]).replace("Incantesimi", "Estratti")
+                    if inc.get("estratti") else CP._riga_slot(griglia, inc["livello_zero"]))
+        if inc.get("slot_di_dominio"):
+            voci.append("+1 slot per livello (1° in su) dal dominio, una volta scelto")
+        slot = griglia
+        if inc.get("conosciuti"):
+            cono = dati["conosciuti"][inc["conosciuti"]].get(str(min(20, liv)))
+            if cono:
+                voci.append("Incantesimi conosciuti: " + "/".join(map(str, cono)))
+                slot = cono
+        voci.append(f"CD degli incantesimi: 10 + livello {mod_c:+d} (massimo: {massimo}° livello, "
+                    f"CD {10 + massimo + mod_c})")
+        f = INC.funzione_di(R.nome, funzione)
+        righe, note = CP.scegli_pf1e(en, list(slot), f, rng, dati, root)
+        if righe:
+            voci.append(("Conosciuti — " if inc.get("conosciuti") else "Preparati — ") + " · ".join(righe))
+        for n in note:
+            conto(n)
+        conto(f"incantesimi di {en}: griglia PF1e al {min(20, liv)}° = {'/'.join(map(str, griglia))}, "
+              f"LI {li}, caratteristica {caratt} — PRD")
+    if totale in T.EQUIPAGGIAMENTO_PNG:
+        voci.append(f"Equipaggiamento: {T.EQUIPAGGIAMENTO_PNG[totale]:,} mo "
+                    "(colonna «heroic NPC» PF1e)".replace(",", "."))
+    talento, tattica, debolezza = rng.choice(CARATTERE[R.nome])
+    voci += [f"Manovre: BMC {bmc:+d}, DMC {dmc}", f"Gradi di abilità: {gradi}",
+             f"Talenti: {talento}", f"Debolezza: {debolezza}"]
+    nomi = ", ".join(f"{next((k for k, v in dati.get('alias', {}).items() if v == en), en)} {liv}"
+                     for en, liv, _ in voci_cl)
+    sb = Statblocco(
+        # i livelli stanno nel tipo, non nel nome: il cancello li legge da tutti
+        # e due, e scritti due volte li conterebbe due volte
+        nome=f"{R.nome} {tipo} " + " / ".join(n.rsplit(" ", 1)[0] for n in nomi.split(", ")),
+        gs=gs_pf,
+        # «classe N» nel tipo: così il cancello riconosce il PNG con classi
+        tipo=f"{taglia.capitalize()} {tipo}, {nomi}",
+        ca=str(ca), ca_dettaglio="(" + ", ".join(pezzi) + ")",
+        pf=str(pf), pf_dado=pf_dado,
+        ts=ts_testo, velocita="9 m", iniziativa=f"{m['des']:+d}",
+        attributi=" ".join(f"{k.capitalize()} {v}" for k, v in attr.items()),
+        attacchi=[_riga_attacco(R, attacco, 0 if R.distanza else m["for"])],
+        voci=voci, tattica=tattica,
+        fonte=f"generato-PRD-PF1e gs={gs_pf} tipo={tipo} taglia={taglia} ruolo={R.nome} "
+              f"classi={','.join(f'{en}:{liv}' for en, liv in classi)}",
+    )
+    return sb, conto
+
+
 # ===========================================================================
 
 def _classe(testo: str) -> tuple[str, int]:
@@ -916,8 +1078,9 @@ def costruisci_parser() -> argparse.ArgumentParser:
                         "separa dal template")
     p.add_argument("--dv", type=int, default=None,
                    help="dadi vita; se omesso, DV ≈ GS con lo scarto del tipo")
-    p.add_argument("--classe", type=_classe, default=None,
-                   help="livelli di classe, es. «mago:9» o «guerriero:5»")
+    p.add_argument("--classe", default=None,
+                   help="livelli di classe, es. «mago:9» o «guerriero:5»; con --sistema pf1e "
+                        "tutte le classi del PRD e la multiclasse, es. «mago:5,mistificatore arcano:3»")
     p.add_argument("--elite", action="store_true", default=None,
                    help="forza la matrice élite (15,14,13,12,10,8)")
     p.add_argument("--standard", dest="elite", action="store_false",
@@ -973,10 +1136,24 @@ def main(argv: list[str] | None = None) -> int:
             raise SystemExit(f"genera_creatura: sistema «{args.sistema}» non attivo in sistemi.toml")
         if args.sistema != "pf1e":
             raise SystemExit(f"genera_creatura: nessuna conversione per «{args.sistema}»")
-        if args.classe:
-            raise SystemExit("genera_creatura: --sistema pf1e converte i DV razziali; "
-                             "i livelli di classe PF1e non sono ancora supportati")
         from dmcore import creature_pf1e as CP
+        if args.classe:
+            # PF1e: costruito dalle tabelle del PRD (classi.toml), per tutte le
+            # classi e in multiclasse, non portato dal 3.5
+            try:
+                classi_pf1e = CP.leggi_classi(args.classe, S.dati("pf1e", "creature.costruzione"))
+            except ValueError as e:
+                raise SystemExit(f"genera_creatura: {e}")
+            rng = random.Random(args.seed)
+            fuori = [genera_png_pf1e(args.gs, tipo=args.tipo, taglia=args.taglia, ruolo=args.ruolo,
+                                   classi=classi_pf1e, elite=args.elite, rng=rng,
+                                   funzione=args.funzione) for _ in range(args.quanti)]
+            return _stampa(fuori, args)
+    if args.sistema == "dnd35" and args.classe:
+        try:
+            args.classe = _classe(args.classe)
+        except argparse.ArgumentTypeError as e:
+            raise SystemExit(f"genera_creatura: {e}")
 
     rng = random.Random(args.seed)
     fuori = []
@@ -991,7 +1168,10 @@ def main(argv: list[str] | None = None) -> int:
             sb, righe = CP.converti(sb, args.tipo, args.taglia)
             conto.righe.extend(righe)
         fuori.append((sb, conto))
+    return _stampa(fuori, args)
 
+
+def _stampa(fuori, args) -> int:
     if args.json:
         print(json.dumps([{"blocco": rendi(sb), "conto": c.righe,
                            "rincari": c.rincari} for sb, c in fuori],
