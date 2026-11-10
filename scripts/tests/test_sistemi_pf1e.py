@@ -170,7 +170,7 @@ class Creature(unittest.TestCase):
 
     def test_non_morto_tiene_i_pf_col_carisma(self):
         sb, (pf, conto) = self.blocco("undead")
-        self.assertEqual(pf.pf_dado.split("d")[1], "8")       # 3.5 d12, PF1e d8
+        self.assertEqual(pf.pf_dado.split("d")[1].split("+")[0], "8")       # 3.5 d12, PF1e d8
         self.assertEqual(pf.pf, sb.pf)
         self.assertIn("Car 22", pf.attributi)
         self.assertIn("Cos —", pf.attributi)
@@ -178,7 +178,17 @@ class Creature(unittest.TestCase):
     def test_costrutto_bab_pieno(self):
         sb, (pf, conto) = self.blocco("construct")
         self.assertTrue(any("BAB +9 (3.5: +6)" in r for r in conto), conto)
-        self.assertTrue(any("⚠" in r for r in conto))           # pf bonus per taglia: lo dice
+        # pf bonus per taglia dalle schede del Bestiary (Medium +20, Animated Object 3d10+20)
+        self.assertTrue(any("pf bonus del costrutto medium: +20" in r for r in conto), conto)
+        self.assertTrue(pf.pf_dado.endswith("+20"), pf.pf_dado)
+
+    def test_i_blocchi_convertiti_passano_il_cancello_pf1e(self):
+        import conformita_statblocchi as CS
+        for tipo, taglia, gs in (("construct", "large", 9), ("undead", "medium", 7), ("dragon", "huge", 14),
+                                 ("giant", "large", 9), ("outsider", "medium", 7), ("construct", "small", 3)):
+            with self.subTest(tipo=tipo, taglia=taglia):
+                sb, (pf, _) = self.blocco(tipo, taglia=taglia, gs=gs)
+                self.assertEqual(CS.conti_del_recinto({"sb": pf, "prosa": "", "riga": 1}, sistema="pf1e"), [])
 
     def test_bmc_dmc_con_la_taglia(self):
         sb, (pf, conto) = self.blocco("dragon", taglia="huge", gs=14, seed=7)
@@ -194,10 +204,80 @@ class Creature(unittest.TestCase):
         self.assertEqual(CP.ts_buoni("outsider", S.dati("pf1e", "creature.costruzione")["tipi"]["outsider"]),
                          ("temp", "rifl"))
 
-    def test_classi_rifiutate(self):
+
+
+class CreatureConClassi(unittest.TestCase):
+    """PNG con livelli di classe in PF1e (audit dei plugin, ADR-0121): prima
+    erano rifiutati. Si costruiscono da zero con classi.toml e creature.toml,
+    generati dal PRD e misurati riga per riga da misura_plugin_regole.py."""
+
+    def blocco(self, testo, gs=7, seed=42, ruolo="bruto"):
+        dati = S.dati("pf1e", "creature.costruzione")
+        return G.genera_png_pf1e(gs, ruolo=ruolo, classi=CP.leggi_classi(testo, dati),
+                             rng=random.Random(seed))
+
+    def test_ogni_classe_del_prd_si_genera(self):
+        dati = S.dati("pf1e", "creature.costruzione")
+        for en, v in dati["classi"].items():
+            if v["gruppo"] == "prestigio":
+                continue
+            with self.subTest(classe=en):
+                sb, conto = self.blocco(f"{en}:5")
+                self.assertTrue(sb.completo, sb.mancanti())
+                self.assertEqual(sb.gs, "4")                          # PRD: livelli − 1
+
+    def test_prestigio_in_multiclasse(self):
+        sb, conto = self.blocco("mago:5,mistificatore arcano:3")
+        self.assertIn("Incantatore di livello 8 (mago, INT +3) — 3 livelli dalle classi di prestigio", sb.voci)
+        self.assertTrue(any("requisiti d'accesso" in r for r in conto.righe))
+        self.assertEqual(sb.pf_dado.split("+")[:2], ["5d6", "3d6"])
+
+    def test_teurgo_mistico_avanza_due_classi(self):
+        sb, _ = self.blocco("chierico:3,mago:3,teurgo mistico:4")
+        self.assertIn("Incantatore di livello 7 (chierico, SAG +3) — 4 livelli dalle classi di prestigio",
+                      sb.voci)
+        self.assertTrue(any(v.startswith("Incantatore di livello 7 (mago") for v in sb.voci), sb.voci)
+
+    def test_pf_col_primo_dado_al_massimo(self):
+        sb, _ = self.blocco("guerriero:9", gs=8, seed=1)
+        cos = int(sb.attributi.split("Cos ")[1].split()[0])
+        self.assertEqual(int(sb.pf), 10 + 44 + 9 * ((cos - 10) // 2))  # 10 + ⌈8 × 5,5⌉ + Cos
+
+    def test_griglie_pf1e(self):
+        sb, _ = self.blocco("mago:5")
+        self.assertIn("Incantesimi al giorno (dal 1° livello): 3/2/1 · trucchetti a volontà", sb.voci)
+        sb, _ = self.blocco("ranger:8")
+        self.assertIn("Incantatore di livello 5 (ranger, SAG +3)", sb.voci)    # LI = livello − 3
+        sb, _ = self.blocco("alchimista:6")
+        self.assertIn("Estratti al giorno (dal 1° livello): 4/3", sb.voci)
+
+    def test_conosciuti_dell_oracolo(self):
+        sb, _ = self.blocco("oracolo:7")
+        attesi = "/".join(map(str, S.dati("pf1e", "creature.costruzione")["conosciuti"]["oracle"]["7"]))
+        self.assertIn(f"Incantesimi conosciuti: {attesi}", sb.voci)
+
+    def test_ts_di_prestigio_pf1e(self):
+        self.assertEqual(CP.ts_di_classe(10, ("temp",), "prestigio"), {"temp": 5, "rifl": 3, "vol": 3})
+        self.assertEqual(CP.ts_di_classe(1, ("temp",), "prestigio"), {"temp": 1, "rifl": 0, "vol": 0})
+        self.assertEqual(CP.ts_di_classe(20, ("vol",), "base"), {"temp": 6, "rifl": 6, "vol": 12})
+
+    def test_i_blocchi_passano_il_cancello_pf1e(self):
+        # pf (primo dado al massimo), CA e il resto dei conti PF1e dei moduli
+        import conformita_statblocchi as CS
+        for testo in ("guerriero:9", "bardo:10", "ranger:8", "magus:7", "oracolo:12", "adepto:6",
+                      "combattente:3", "ladro:1", "intrepido:5", "sacerdote guerriero:11"):
+            with self.subTest(classe=testo):
+                sb, _ = self.blocco(testo)
+                self.assertEqual(CS.conti_del_recinto({"sb": sb, "prosa": "", "riga": 1}, sistema="pf1e"), [])
+
+    def test_classe_ignota(self):
         with self.assertRaises(SystemExit) as e:
-            G.main(["--gs", "7", "--sistema", "pf1e", "--classe", "guerriero:3"])
-        self.assertIn("livelli di classe", str(e.exception))
+            G.main(["--gs", "7", "--sistema", "pf1e", "--classe", "pasticciere:3"])
+        self.assertIn("senza riga PF1e", str(e.exception))
+
+    def test_da_riga_di_comando(self):
+        self.assertEqual(G.main(["--gs", "7", "--sistema", "pf1e", "--classe", "magus:3,guerriero:2",
+                                 "--seed", "1", "--json"]), 0)
 
 
 if __name__ == "__main__":

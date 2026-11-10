@@ -212,3 +212,76 @@ di sembrare più verde di quanto è.
     python3 plans/esperimenti/plugin-regole-2026-11-09/misura_plugin_regole.py
     python3 scripts/impronta_creature.py --confronta
     python3 plans/esperimenti/sistemi-plugin-2026-11-07/impronte.py --confronta
+
+## Lotto PF1e (dopo la #365)
+
+Il DM ha chiesto di completare il PF1e e di chiuderne tutti i limiti. Il lavoro
+è diviso in due.
+- **Thread della #363:** i dati, generati dal PRD con `estrai_prd_pf1e.py`:
+  - `sistemi/pf1e/dati/classi.toml`;
+  - `liste_incantesimi.toml`;
+  - `[armature]`, `[scudi]` e `[pf_bonus_costrutti]` in `creature.toml`.
+- **Questo thread:** costruttore, strumenti e misura.
+
+Prima: [MISURA-PRIMA-PF1E.md](MISURA-PRIMA-PF1E.md) (main 421dbd0, con la
+misura nuova). Dopo: [MISURA-DOPO-PF1E.md](MISURA-DOPO-PF1E.md).
+
+| Tabella PF1e | Fonte | Prima: coperte / giuste | Dopo: coperte / giuste |
+|---|---:|---|---|
+| classi base, ibride, PNG, alternativa | 37 | 0 / 0 | 37 / 37 |
+| classi di prestigio | 18 | 0 / 0 | 18 / 18 |
+| armature · scudi | 12 · 6 | 0 · 0 | 12 · 6, tutte giuste |
+| griglie al giorno (anche estratti) | 22 | 0 / 0 | 22 / 22 |
+| conosciuti | 8 | 0 / 0 | 8 / 8 |
+| **uso:** classi generate e passate al cancello PF1e, con gli incantesimi scelti | 55 | 0 (rifiutate) | **55 / 55** |
+| **uso:** tipi di creatura portati in PF1e che passano il cancello | 20 | 20 / **7** | 20 / **20** |
+| abilità · tipi e taglie | 26 · 13 | tutte giuste | tutte giuste |
+| **totale** | 217 | 59 coperte, 46 giuste | **217 / 217** |
+
+**Cosa è cambiato negli strumenti:**
+- **`genera_creatura --sistema pf1e --classe`.** Costruisce da zero dalle
+  tabelle del PRD con `genera_png_pf1e`: tutte le 55 classi e la multiclasse
+  (`mago:5,mistificatore arcano:3`). Le classi di prestigio fanno avanzare la
+  classe incantatrice; il teurgo mistico ne fa avanzare due. Vengono dal PRD o
+  dalle sue tabelle:
+  - pf col primo dado al massimo;
+  - BAB e TS per classe;
+  - BMC/DMC e gradi;
+  - CA dalle armature PF1e;
+  - griglie, estratti e conosciuti, LI = livello − 3 per le classi che
+    cominciano al 4°;
+  - GS = livelli − 1 (PRD, Encounters);
+  - incantesimi scelti dalla lista PF1e della classe, con i nomi italiani del
+    lessico, preferendo quelli che le liste curate mettono nella funzione
+    chiesta.
+
+  Prima rifiutava i livelli di classe.
+- **`creature_pf1e.converti`** (DV razziali):
+  - `pf-dado` porta il bonus, così il cancello lo legge;
+  - i costrutti hanno i pf bonus per taglia, ricostruiti dalle schede del
+    Bestiary perché la tabella manca nel PRD in cache.
+
+  Prima 13 tipi su 20 non passavano il cancello PF1e.
+- **Misura.** Il lettore è esteso alle classi ACG, all'antipaladino (dado vita
+  dalla sezione «Hit Die») e all'investigatore. Corretti cinque difetti del
+  lettore:
+  - TS buono di prestigio;
+  - gradi «at Each Level»;
+  - intestazione dello Swashbuckler;
+  - cella Special omessa all'Hunter 16°;
+  - colonne «Extracts per Day».
+
+  Due righe nuove misurano l'**uso**, non solo i dati.
+- **Difetto del cancello trovato e corretto dal thread della #363.** Le classi
+  scritte sia nel nome sia nel tipo erano contate due volte, e BAB e TS
+  venivano saltati.
+
+**Limiti che restano, dichiarati:**
+- **Costrutti fine e diminutive:** nessuna scheda di costrutto nel PRD, quindi
+  niente pf bonus; il conto lo dice. Il colossal (+80) poggia su una sola
+  scheda (Wickerman).
+- **Requisiti delle classi di prestigio:** non si controllano; il conto lo dice.
+- **Sciamano:** non ha il livello 0 nel PRD in cache.
+- **Incantesimi:** se la funzione chiesta non ha abbastanza voci, la scelta si
+  completa dal resto della lista PF1e della classe; il conto lo dice. I nomi
+  senza voce nel lessico italiano PF1e restano inglesi e il conto li conta.
