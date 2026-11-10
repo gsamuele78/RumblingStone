@@ -163,5 +163,58 @@ class Armature(unittest.TestCase):
         self.assertEqual(len(self.c["taglie"]), 9)
 
 
+
+class ListeDiClasse(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.d = _toml("liste_incantesimi.toml")
+        cls.l = cls.d["liste"]
+
+    def test_ogni_incantatore_ha_la_sua_lista(self):
+        self.assertEqual(sorted(self.l), sorted(_toml("classi.toml")["incantatori"]))
+
+    def test_incantesimi_noti_al_loro_livello(self):
+        attesi = [("wizard", 0, "Detect Magic"), ("wizard", 1, "Magic Missile"), ("wizard", 3, "Fireball"),
+                  ("wizard", 9, "Wish"), ("sorcerer", 3, "Fireball"), ("cleric", 1, "Cure Light Wounds"),
+                  ("cleric", 9, "Miracle"), ("druid", 1, "Entangle"), ("bard", 1, "Cure Light Wounds"),
+                  ("bard", 3, "Haste"), ("paladin", 1, "Bless"), ("ranger", 1, "Entangle"),
+                  ("adept", 3, "Lightning Bolt"), ("witch", 1, "Cure Light Wounds"), ("magus", 1, "Shocking Grasp"),
+                  ("alchemist", 1, "Cure Light Wounds"), ("antipaladin", 1, "Inflict Light Wounds")]
+        for classe, livello, nome in attesi:
+            self.assertIn(nome, self.l[classe][str(livello)], f"{classe} {livello}°")
+
+    def test_il_livello_cambia_con_la_classe(self):
+        # lo stesso incantesimo a livelli diversi: è il motivo per cui la lista è per classe
+        self.assertIn("Haste", self.l["wizard"]["3"])
+        self.assertIn("Haste", self.l["summoner"]["2"])
+        self.assertNotIn("Fireball", self.l["cleric"].get("3", []))
+
+    def test_stregone_e_mago_hanno_la_stessa_lista(self):
+        self.assertEqual(self.l["sorcerer"], self.l["wizard"])
+
+    def test_i_livelli_stanno_nella_griglia_della_classe(self):
+        inc = _toml("classi.toml")
+        for classe, livelli in self.l.items():
+            tetto = max(len(r) for r in inc["griglie"][classe].values()) - 1
+            self.assertLessEqual(max(int(k) for k in livelli), tetto, classe)
+
+    def test_ogni_nome_ha_il_libro_e_nessun_mitico(self):
+        nomi = {n for livelli in self.l.values() for voci in livelli.values() for n in voci}
+        self.assertEqual(nomi, set(self.d["libro"]))
+        self.assertEqual([n for n in nomi if n.startswith("Mythic ")], [])
+        self.assertEqual(sum(1 for v in self.d["libro"].values() if v == "cr"), 623)
+
+    def test_il_warpriest_si_ferma_al_sesto(self):
+        # il PRD gli copia la lista del chierico fino al 9°: i livelli sopra la griglia non entrano
+        self.assertEqual(max(int(k) for k in self.l["warpriest"]), 6)
+        self.assertEqual(self.l["warpriest"]["6"], self.l["cleric"]["6"])
+
+    def test_nomi_italiani(self):
+        it = self.d["nomi_it"]
+        self.assertEqual(it["Fireball"], "Palla di Fuoco")
+        self.assertLessEqual(set(it), set(self.d["libro"]))
+        self.assertGreater(len(it), 1400)
+
+
 if __name__ == "__main__":
     unittest.main()

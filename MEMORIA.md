@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Classi, griglie e armature del plugin PF1e (ADR-0119 lotto 2, richiesta del DM… | ✅ dati scritti e riletti col lettore dell'audit; il collegamento agli strumenti e la misura sono del thread della #365 |
 | 2026-11-09 | MOTORE-AGNOSTICO-D20 | Regole PF1e del cancello delle schede dal PRD (ADR-0119):… | ✅ prova: 27 mutazioni bocciate, promozione proposta 2026-11-23 |
 | 2026-11-09 | IMPORT-ULTRACLEAR, RENDER-MAPPE-FEDELTA | Migrazione mappe e `--strict` (ADR-0117) | ✅ richiesta del DM «per le mappe fai sempre il json»: 25 griglie vive (14 ARC-07, 6 fortezza di Hammerfist, 5 ARC-09) hanno il loro contratto JSON, identico ce… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-09 | PIATTAFORMA-DI-SVILUPPO | P8 anticipata (scelta del DM «Accendilo ora»): job CI «Python 3.14 in prova — n… | 🟡 P8 in prova |
 | 2026-11-09 | RECUPERO-DECISIONI | D5 (parte): fallback PyYAML di AUDIT-SCRIPTS chiuso come superato su card del D… | 🟡 D5 aperta per le voci non chiuse |
 | 2026-11-08 | MOTORE-AGNOSTICO-D20 | Prova non d20 (scelta del DM: Lupi Mannari, solo test): plugin finto… | ✅ |
-| 2026-11-08 | MOTORE-AGNOSTICO-D20 | F6 prova del nove 2: plugin finto `prova-d20-due` (TS buono `3 + dv // 2` nei d… | ✅ chiuso |
 
 ## Le misure che si portano dietro
 

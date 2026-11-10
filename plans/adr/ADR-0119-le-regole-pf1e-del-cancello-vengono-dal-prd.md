@@ -90,6 +90,20 @@ Tre regole PF1e sono scritte nel file e non lasciate a chi legge:
 
 **Cosa non fa questo lotto.** I dati non sono ancora letti da nessuno strumento: il costruttore PF1e, `derive_statblocks` e `genera_creatura` li collega il thread dell'audit, che aggiorna anche la sua misura. Fino ad allora una scheda PF1e con livelli di classe è trattata come prima. Restano fuori le classi occulte e gli altri volumi che il PRD in cache non ha.
 
+## Lotto 3 (2026-11-10): le liste di classe degli incantesimi
+
+Il costruttore PF1e dell'audit sceglie gli incantesimi dalle liste PF1e e non più da quelle 3.5. `estrai_prd_pf1e.py` genera **`sistemi/pf1e/dati/liste_incantesimi.toml`** dalla tabella `spell_lists` di nove libri del PRD:
+
+- `[liste."classe"]`: 22 classi, le stesse di `classi.toml [incantatori]`, livello per livello, con il nome del PRD;
+- `[libro]`: il libro di ciascuno dei 1.536 incantesimi (623 del Core Rulebook), per chi vuole fermarsi al manuale base;
+- `[nomi_it]`: il nome italiano del lessico, dove c'è (1.480).
+
+Cosa resta fuori, scritto anche in testa al file:
+
+- le versioni mitiche (65 righe) e la lista «Elementalist Wizard» (129 righe), che è una variante e non una classe;
+- i livelli dal 7° al 9° che il PRD dà al warpriest copiando la lista del chierico (73 righe): la classe lancia fino al 6°;
+- il livello 0 dello sciamano: il PRD non lo elenca, e il buco non è riempito a mano.
+
 ## Conseguenze
 
 - Nessun conto PF1e si salta più per regola mancante. Le parti ancora fuori (sopra) non dipendono da una regola che manca nei dati.

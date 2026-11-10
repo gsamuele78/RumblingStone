@@ -565,8 +565,93 @@ def creature_e_armature(base: Path) -> str:
     return "\n".join(out) + "\n"
 
 
+# ---------------------------------------------------------------------------
+# liste_incantesimi.toml: la lista di classe di ogni incantatore PF1e, dalla
+# tabella `spell_lists` dei libri del PRD (ADR-0119, lotto 3).
+# ---------------------------------------------------------------------------
+#: I libri del PRD che hanno incantesimi, nell'ordine in cui si leggono.
+LIBRI_INCANTESIMI = ("cr", "apg", "um", "uc", "acg", "arg", "mc", "ma", "tech")
+
+
+def _toml_testo(x: str) -> str:
+    return '"' + x.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def liste_incantesimi(base: Path) -> str:
+    import csv
+    dati = {v["nome"]: v for v in _dati_di_classe(base)[0] if "griglia" in v}
+    classi_inc = set(dati)
+    liste: "dict[str, dict[int, set[str]]]" = {}
+    libro_di: "dict[str, str]" = {}
+    scartate: "dict[str, int]" = {}
+    mitici = 0
+    for libro in LIBRI_INCANTESIMI:
+        c = sqlite3.connect(base / f"book-{libro}.db")
+        q = ("select s.name, s.subtype, sl.level, sl.class from spell_lists sl "
+             "join sections s on s.section_id = sl.section_id order by sl.spell_list_id")
+        for nome, sotto, livello, classe in c.execute(q).fetchall():
+            if sotto == "mythic_spell":
+                mitici += 1
+                continue
+            chiave = classe.lower()
+            if chiave not in classi_inc:
+                scartate[classe] = scartate.get(classe, 0) + 1
+                continue
+            assert libro_di.setdefault(nome, libro) == libro, f"{nome} in due libri"
+            liste.setdefault(chiave, {}).setdefault(livello, set()).add(nome)
+    # Il PRD dà al warpriest la lista del chierico fino al 9°, ma la classe lancia
+    # fino al 6°: i livelli sopra la griglia non sono suoi e non entrano.
+    oltre: "dict[str, int]" = {}
+    for classe, livelli in liste.items():
+        tetto = max(len(r) for r in dati[classe]["griglia"].values()) - 1
+        for livello in [x for x in livelli if x > tetto]:
+            oltre[classe] = oltre.get(classe, 0) + len(livelli.pop(livello))
+    usati_ora = {n for livelli in liste.values() for voci in livelli.values() for n in voci}
+    libro_di = {n: x for n, x in libro_di.items() if n in usati_ora}
+    senza_zero = sorted(k for k in liste if dati[k]["livello_zero"] and 0 not in liste[k])
+    it: "dict[str, str]" = {}
+    with open(ROOT / "scripts" / "lessico_it_pf1.tsv", encoding="utf-8") as fh:
+        for r in csv.reader(fh, delimiter="\t"):
+            if len(r) >= 3 and r[2] == "incantesimo":
+                it.setdefault(r[1].lower(), r[0])
+    out = ["# sistemi/pf1e/dati/liste_incantesimi.toml — le liste di classe degli incantesimi PF1e",
+           "# (generato da estrai_prd_pf1e.py, non si scrive a mano).",
+           f'fonte = "PRD PF1e, devonjones/PSRD-Data@{COMMIT[:8]}: tabella spell_lists di '
+           + ", ".join(f"book-{x}" for x in LIBRI_INCANTESIMI) + '"', "",
+           "# [liste.\"classe\"] \"livello\" = [nomi del PRD, così come li scrive il PRD]",
+           "# Le chiavi di classe sono quelle di classi.toml [incantatori].",
+           "# «Sorcerer» e «Wizard» hanno nel PRD una riga ciascuno: le due liste sono uguali, e stanno tutte e due.",
+           f"# Fuori: le versioni mitiche ({mitici} righe) e le liste che non sono una classe di classi.toml: "
+           + ", ".join(f"{k} ({n} righe)" for k, n in sorted(scartate.items())) + ".",
+           "# Tolti i livelli sopra la griglia della classe (il PRD copia la lista del chierico intera): "
+           + (", ".join(f"{k} ({n} righe)" for k, n in sorted(oltre.items())) or "nessuno") + ".",
+           "# Classi con trucchetti o orazioni di cui il PRD non elenca il livello 0 (buco della fonte, non riempito): "
+           + (", ".join(senza_zero) or "nessuna") + ".",
+           "# Una classe senza righe nel PRD non compare: " +
+           (", ".join(sorted(classi_inc - set(liste))) or "nessuna") + "."]
+    for classe in sorted(liste):
+        out += ["", f'[liste."{classe}"]']
+        for livello in sorted(liste[classe]):
+            nomi = ", ".join(_toml_testo(n) for n in sorted(liste[classe][livello]))
+            out.append(f'"{livello}" = [{nomi}]')
+    usati = sorted(libro_di)
+    out += ["", "# il libro del PRD di ogni incantesimo: chi costruisce può fermarsi al Core Rulebook (cr)", "[libro]"]
+    out += [f"{_toml_testo(n)} = \"{libro_di[n]}\"" for n in usati]
+    out += ["", "# nome italiano dal lessico PF1e (scripts/lessico_it_pf1.tsv, righe «incantesimo»), solo dove c'è;",
+            "# il confronto ignora le maiuscole, perché il PRD scrive «Breath Of Life» e il lessico «Breath of Life»",
+            "[nomi_it]"]
+    out += [f"{_toml_testo(n)} = {_toml_testo(it[n.lower()])}" for n in usati if n.lower() in it]
+    senza = [n for n in usati if n.lower() not in it]
+    out += ["", f"# senza nome italiano nel lessico: {len(senza)} su {len(usati)}"]
+    assert liste["sorcerer"] == liste["wizard"] and len(liste) >= 20
+    assert "Magic Missile" in liste["wizard"][1] and "Cure Light Wounds" in liste["cleric"][1]
+    assert "Fireball" in liste["wizard"][3] and "Bless" in liste["paladin"][1]
+    return "\n".join(out) + "\n"
+
+
 FILE = {"pe.toml": pe, "incontri.toml": incontri, "tesoro.toml": tesoro, "creature.toml": creature_e_armature,
-        "conformita_prd.toml": conformita_prd, "classi.toml": classi}
+        "conformita_prd.toml": conformita_prd, "classi.toml": classi,
+        "liste_incantesimi.toml": liste_incantesimi}
 
 
 def main(argv=None) -> int:
