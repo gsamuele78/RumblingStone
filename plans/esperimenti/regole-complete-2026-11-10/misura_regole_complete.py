@@ -342,6 +342,80 @@ def talenti_generati() -> list:
     return out
 
 
+# ------------------------------------------------------------------ classi di prestigio PF1e
+
+#: Una via d'ingresso legale per ogni classe di prestigio, costruita a mano sul
+#: manuale (BAB, incantesimi e capacità delle classi messe prima), non dai dati.
+INGRESSI_PRESTIGIO = {
+    "arcane archer": "fighter:6,wizard:1,arcane archer:1", "arcane trickster": "rogue:3,wizard:3,arcane trickster:1",
+    "assassin": "rogue:5,assassin:1", "battle herald": "cavalier:4,battle herald:1",
+    "dragon disciple": "sorcerer:5,dragon disciple:1", "duelist": "fighter:6,duelist:1",
+    "eldritch knight": "fighter:1,wizard:5,eldritch knight:1", "holy vindicator": "cleric:7,holy vindicator:1",
+    "horizon walker": "ranger:5,horizon walker:1", "loremaster": "wizard:7,loremaster:1",
+    "master chymist": "alchemist:7,master chymist:1", "master spy": "rogue:5,master spy:1",
+    "mystic theurge": "cleric:3,wizard:3,mystic theurge:1", "nature warden": "druid:6,nature warden:1",
+    "pathfinder chronicler": "bard:5,pathfinder chronicler:1", "rage prophet": "barbarian:4,oracle:2,rage prophet:1",
+    "shadowdancer": "rogue:5,shadowdancer:1", "stalwart defender": "fighter:7,stalwart defender:1",
+}
+
+
+def prestigio_pf1e(base) -> list:
+    """Requisiti letti (BAB e talenti contro una seconda lettura del PRD) e usati dal generatore."""
+    import genera_creatura as G  # noqa: E402
+    from dmcore import sistemi as S
+    from dmcore import creature_pf1e as CP
+    from dmcore import talenti as TL
+    req = M.toml("sistemi/pf1e/dati/talenti.toml").get("requisiti", {})
+    classi = {k: v for k, v in M.toml("sistemi/pf1e/dati/classi.toml")["classi"].items() if v["gruppo"] == "prestigio"}
+    sb, mancanti = [], [k for k in classi if k not in req]
+    for nome, v in classi.items():
+        if nome not in req:
+            continue
+        c = M._db(base, v["libro"])
+        sid = c.execute("select section_id from sections where lower(name)=? and type='class'", (nome,)).fetchone()[0]
+        voci = {n: re.sub(r"<[^>]+>", " ", b or d or "") for n, b, d in c.execute(
+            "select name, body, description from sections where parent_id=(select section_id from sections "
+            "where parent_id=? and name like 'Requirement%')", (sid,))}
+        bab = int(re.search(r"\+(\d+)", voci["Base Attack Bonus"]).group(1)) if "Base Attack Bonus" in voci else 0
+        if bab != req[nome].get("bab", 0):
+            sb.append({"riga": nome, "campo": "BAB", "plugin": req[nome].get("bab", 0), "fonte": bab})
+        nomi = set(req[nome].get("talenti", [])) | {x for o in req[nome].get("oppure", []) for x in o}
+        for n in nomi:
+            if n.lower().replace("-", " ") not in voci.get("Feats", "").lower().replace("-", " "):
+                sb.append({"riga": nome, "campo": "talento", "plugin": n, "fonte": voci.get("Feats", "—")})
+    righe = [_riga("requisiti delle classi di prestigio (BAB e talenti contro il PRD)", len(classi),
+                   len(classi) - len(mancanti), len(classi) - len(mancanti) - len({x["riga"] for x in sb}), sb, mancanti,
+                   nota="gradi, allineamento, imprese e capacità particolari restano «da verificare dal DM»")]
+    sb2, nv = [], []
+    cos = S.dati("pf1e", "creature.costruzione")
+    for nome, via in INGRESSI_PRESTIGIO.items():
+        try:
+            sb_, conto = G.genera_png_pf1e(9, classi=CP.leggi_classi(via, cos), rng=random.Random(1),
+                                           ruolo="tiratore" if nome == "arcane archer" else "bruto")
+        except Exception as e:  # pragma: no cover
+            sb2.append({"riga": nome, "campo": via, "plugin": f"errore {type(e).__name__}", "fonte": "—"})
+            continue
+        testo = "\n".join(conto.righe)
+        if nome not in req:
+            sb2.append({"riga": nome, "campo": via, "plugin": "requisiti non verificati", "fonte": "PRD Requirements"})
+            continue
+        if "✗" in testo:
+            sb2.append({"riga": nome, "campo": via, "plugin": "requisito mancato", "fonte": "via legale"})
+        presi = {TL.nome_inglese("pf1e", t) for t in _elenco(G.rendi(sb_))}
+        r = req.get(nome, {})
+        dovuti = list(r.get("talenti", [])) + [o[0] for o in r.get("oppure", [])]
+        manca = [t for t in dovuti if t not in presi]
+        if manca:
+            sb2.append({"riga": nome, "campo": via, "plugin": "senza " + ", ".join(manca), "fonte": "talenti richiesti"})
+        if r.get("gradi") or r.get("altro"):
+            nv.append(f"{nome}: gradi o requisiti non numerici, da verificare dal DM")
+    righe.append(_riga("uso: PNG con classe di prestigio, via d'ingresso legale (requisiti ✓, talenti presi)",
+                       len(INGRESSI_PRESTIGIO), len(INGRESSI_PRESTIGIO),
+                       len(INGRESSI_PRESTIGIO) - len({x["riga"] for x in sb2}), sb2,
+                       nota=f"{len(nv)} classi hanno anche requisiti che il generatore non verifica (gradi, allineamento…)"))
+    return righe
+
+
 # ------------------------------------------------------------------ nomi italiani nel lessico
 
 def nomi_nel_lessico(base) -> list:
@@ -386,6 +460,8 @@ def misura(base: Path) -> dict:
     out["pf1e"].append(liste_35_in_pf1e())
     out["pf1e"].append(solo_pf1e())
     out["dnd35"].append(tesoro_35_letto(base))
+    for r in prestigio_pf1e(base):
+        out["pf1e"].append(r)
     for sis, r in talenti_generati():
         out[sis].append(r)
     for sis, r in nomi_nel_lessico(base):

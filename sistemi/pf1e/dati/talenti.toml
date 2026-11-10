@@ -248,6 +248,110 @@ cumulativa = true
 concessi = { "1" = ["Scribe Scroll"] }
 fonte = "book-cr 2581 (tabella della classe); testo: Bonus Feats"
 
+# [requisiti."classe di prestigio"]: BAB, talenti (oppure = uno a scelta), gradi, livello
+# d'incantesimo arcano/divino, capacità; `altro` = ciò che decide il DM (allineamento, imprese…).
+
+[requisiti."arcane archer"]
+bab = 6
+talenti = ["Point-Blank Shot", "Precise Shot", "Weapon Focus"]
+incantesimi = { "arcani" = 1 }
+armi = { "Weapon Focus" = "longbow or shortbow" }
+fonte = "book-cr 1648"
+
+[requisiti."arcane trickster"]
+altro = ["alignment: Any nonlawful", "incantesimi: Ability to cast mage hand and at least one arcane spell of 2nd level or higher", "special: Sneak attack +2d6"]
+gradi = { "Disable Device" = 4, "Escape Artist" = 4, "Knowledge (arcana)" = 4 }
+fonte = "book-cr 1666"
+
+[requisiti."assassin"]
+altro = ["alignment: Any evil", "special: The character must kill someone for no other reason than to become an assassin"]
+gradi = { "Disguise" = 2, "Stealth" = 5 }
+fonte = "book-cr 1691"
+
+[requisiti."battle herald"]
+bab = 4
+altro = ["special: Challenge and inspire courage class features"]
+gradi = { "Diplomacy" = 5, "Intimidate" = 5, "Perform (oratory)" = 5, "Profession (soldier)" = 2 }
+fonte = "book-apg 893"
+
+[requisiti."dragon disciple"]
+altro = ["race: Any nondragon", "languages: Draconic", "incantesimi: Ability to cast 1st-level arcane spells without preparation. If the character has sorcerer levels, he must have the draconic bloodline. If the character gains levels of sorcerer after taking this class, he must take the draconic bloodline"]
+gradi = { "Knowledge (arcana)" = 5 }
+incantesimi = { "arcani" = 1 }
+fonte = "book-cr 2001"
+
+[requisiti."duelist"]
+bab = 6
+talenti = ["Dodge", "Mobility", "Weapon Finesse"]
+gradi = { "Acrobatics" = 2, "Perform" = 2 }
+fonte = "book-cr 2111"
+
+[requisiti."eldritch knight"]
+altro = ["weapon proficiency: Must be proficient with all martial weapons"]
+incantesimi = { "arcani" = 3 }
+fonte = "book-cr 2135"
+
+[requisiti."holy vindicator"]
+bab = 5
+capacita = ["channel energy"]
+oppure = [["Alignment Channel", "Elemental Channel"]]
+gradi = { "Knowledge (religion)" = 5 }
+incantesimi = { "divini" = 1 }
+fonte = "book-apg 1005"
+
+[requisiti."horizon walker"]
+talenti = ["Endurance"]
+gradi = { "Knowledge (geography)" = 6 }
+fonte = "book-apg 1030"
+
+[requisiti."loremaster"]
+altro = ["gradi: Knowledge (any two) 7 ranks in each", "talenti: Any three metamagic or item creation feats", "talenti: plus Skill Focus (Knowledge [any individual Knowledge skill])", "incantesimi: Able to cast seven different divination spells, one of which must be 3rd level or higher"]
+fonte = "book-cr 2188"
+
+[requisiti."master chymist"]
+altro = ["incantesimi: Ability to create 3rd-level extracts", "special: Mutagen class feature, feral mutagen or infuse mutagen discovery"]
+fonte = "book-apg 1125"
+
+[requisiti."master spy"]
+talenti = ["Deceitful", "Iron Will"]
+gradi = { "Bluff" = 7, "Disguise" = 7, "Perception" = 5, "Sense Motive" = 5 }
+fonte = "book-apg 1157"
+
+[requisiti."mystic theurge"]
+gradi = { "Knowledge (arcana)" = 3, "Knowledge (religion)" = 3 }
+incantesimi = { "divini" = 2, "arcani" = 2 }
+fonte = "book-cr 2245"
+
+[requisiti."nature warden"]
+bab = 4
+altro = ["special: Animal companion class feature*, favored terrain class feature, wild empathy class feature"]
+gradi = { "Handle Animal" = 5, "Knowledge (geography)" = 5, "Knowledge (nature)" = 5, "Survival" = 5 }
+incantesimi = { "divini" = 2 }
+fonte = "book-apg 1183"
+
+[requisiti."pathfinder chronicler"]
+altro = ["special: Must have authored or scribed something (other than a magical scroll or other device) for which another person (not a PC) paid at least 50 gp"]
+gradi = { "Linguistics" = 3, "Perform (oratory)" = 5, "Profession (scribe)" = 5 }
+fonte = "book-cr 2306"
+
+[requisiti."rage prophet"]
+bab = 5
+altro = ["special: Oracle's curse class feature, moment of clarity rage power"]
+gradi = { "Knowledge (religion)" = 5 }
+incantesimi = { "divini" = 1 }
+fonte = "book-apg 1388"
+
+[requisiti."shadowdancer"]
+talenti = ["Combat Reflexes", "Dodge", "Mobility"]
+gradi = { "Stealth" = 5, "Perform (dance)" = 2 }
+fonte = "book-cr 2414"
+
+[requisiti."stalwart defender"]
+bab = 7
+talenti = ["Dodge", "Endurance", "Toughness"]
+altro = ["special: Proficiency with light and medium armor"]
+fonte = "book-apg 1412"
+
 [talenti."Aberrant Tumor"]
 it = "Tumore Aberrante"
 tipi = ["General"]

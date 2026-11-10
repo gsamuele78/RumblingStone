@@ -99,8 +99,8 @@ le stesse fonti.
 | 181-185 nomi d'incantesimo 3.5 fuori dal lessico | **chiuso dal lotto 2**: 108 nomi (185 voci) portati al lessico; dietro i nomi c'erano 2 livelli sbagliati (*scudo della legge* 8° del chierico, *spaventare* 2° del bardo) | 2 |
 | «scaglie» letta come armatura | **chiuso in questo lotto**: la chiave è «corazza a scaglie» (nome del lessico), test di regressione con un drago | 1 |
 | costrutti minuti e piccolissimi senza pf bonus | nessuna scheda pubblicata li dà: resta dichiarato, non si inventa | — |
-| sciamano senza incantesimi di livello 0 | da riscontrare nel PRD (ACG) | 4 |
-| prerequisiti delle classi di prestigio | non controllati | 4 |
+| sciamano senza incantesimi di livello 0 | **chiuso dal lotto 4**: il PRD le ha nel testo «0-Level Shaman Spells» (ACG), non nella tabella `spell_lists`; `estrai_prd_pf1e.py` ora legge le 17 orazioni da lì | 4 |
+| prerequisiti delle classi di prestigio | **chiuso dal lotto 4**: i requisiti delle 18 classi letti dal PRD (`[requisiti]` in `talenti.toml`); il generatore controlla BAB, livello d'incantesimo arcano e divino e *channel energy* sulle classi messe prima, prende per primi i talenti richiesti e scrive nel conto ✓, ✗ e ciò che decide il DM (gradi, allineamento, imprese) | 4 |
 
 ## 5. Che cosa resta fuori, e perché
 
@@ -123,8 +123,9 @@ le stesse fonti.
 3. **Talenti dei PNG** (fatto): numero per livello e classe (regola del manuale), scelti
    tra quelli di cui il PNG ha i prerequisiti (PRD e SRD); misura: 3.5 0/11 → 11/11,
    PF1e 0/32 → 32/32 (`MISURA-LOTTO3-PRIMA.md`, `MISURA-LOTTO3-DOPO.md`).
-4. **Prestigio e sciamano**: prerequisiti delle classi di prestigio nel generatore
-   PF1e; livello 0 dello sciamano se il PRD lo ha.
+4. **Prestigio e sciamano** (fatto): requisiti d'accesso delle 18 classi di prestigio PF1e
+   (letti 0/18 → 18/18; una via d'ingresso legale per classe, costruita a mano, 0/18 → 18/18);
+   orazioni dello sciamano (`MISURA-LOTTO4-PRIMA.md`, `-DOPO.md`).
 5. **Tratti dei tipi di creatura**: niente Int e niente talenti per i tipi senza mente,
    niente Costituzione per non morti e costrutti 3.5 (pf dal bonus del tipo); misura
    per tipo contro SRD e PRD, e il cancello che lo controlla.

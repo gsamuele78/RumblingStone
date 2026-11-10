@@ -663,6 +663,29 @@ def liste_incantesimi(base: Path) -> str:
             oltre[classe] = oltre.get(classe, 0) + len(livelli.pop(livello))
     usati_ora = {n for livelli in liste.values() for voci in livelli.values() for n in voci}
     libro_di = {n: x for n, x in libro_di.items() if n in usati_ora}
+    # Il livello 0 che `spell_lists` non ha, la pagina della lista lo scrive in chiaro
+    # («0-Level Shaman Spells: arcane mark, bleed, …», ACG): si legge da lì
+    # (lotto 4 delle regole complete, 2026-11-10).
+    dal_testo: "dict[str, int]" = {}
+    for classe in sorted(k for k in liste if dati[k]["livello_zero"] and 0 not in liste[k]):
+        for libro in LIBRI_INCANTESIMI:
+            c = sqlite3.connect(base / f"book-{libro}.db")
+            r = c.execute("select coalesce(body, description) from sections where lower(name)=?",
+                          (f"0-level {classe} spells",)).fetchone()
+            if not r or not r[0]:
+                continue
+            testo = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(r[0])))
+            for pezzo in testo.split(","):
+                nome = pezzo.strip().rstrip(".").strip()
+                for lb in LIBRI_INCANTESIMI:
+                    trovato = sqlite3.connect(base / f"book-{lb}.db").execute(
+                        "select name from sections where type='spell' and lower(name)=?", (nome.lower(),)).fetchone()
+                    if trovato:
+                        liste.setdefault(classe, {}).setdefault(0, set()).add(trovato[0])
+                        libro_di.setdefault(trovato[0], lb)
+                        dal_testo[classe] = dal_testo.get(classe, 0) + 1
+                        break
+            break
     senza_zero = sorted(k for k in liste if dati[k]["livello_zero"] and 0 not in liste[k])
     it: "dict[str, str]" = {}
     with open(ROOT / "scripts" / "lessico_it_pf1.tsv", encoding="utf-8") as fh:
@@ -682,6 +705,8 @@ def liste_incantesimi(base: Path) -> str:
            + (", ".join(f"{k} ({n} righe)" for k, n in sorted(oltre.items())) or "nessuno") + ".",
            "# Classi con trucchetti o orazioni di cui il PRD non elenca il livello 0 (buco della fonte, non riempito): "
            + (", ".join(senza_zero) or "nessuna") + ".",
+           "# Livello 0 letto dal testo della lista di classe (spell_lists non lo ha): "
+           + (", ".join(f"{k} ({n} voci)" for k, n in sorted(dal_testo.items())) or "nessuno") + ".",
            "# Una classe senza righe nel PRD non compare: " +
            (", ".join(sorted(classi_inc - set(liste))) or "nessuna") + "."]
     for classe in sorted(liste):

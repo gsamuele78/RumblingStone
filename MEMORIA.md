@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 3: talenti dei PNG secondo la regola.… | ✅ numero di talenti al 7° per ogni classe, contato a mano sul manuale: 3.5 0/11 → 11/11, PF1e 0/32 → 32/32; prerequisiti dei talenti generali 11/11 e 32/32; im… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 1 (richiesta del DM «verifica che le regole PF1e siano c… | ✅ PF1e 1546/1551 giuste su 1733 righe, nessun errore nei dati; 3.5 da 166 a 167/172: EL 19 del tesoro 60.000 → 61.000 (SRD); «scaglie» non è più un'armatura (c… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
 | 2026-11-09 | CODA-DEL-SECONDO-LETTORE | Punto 4: la *d* eufonica (D3) | ✅ norma in `editorial-standards.md` §4 e nel REGISTRO; `validate_lingua.py --d-eufonica` la segnala in canale testing, non bloccante fino al 2026-11-24 (tarata… |
 | 2026-11-09 | BOX-DI-LUOGO-E-AREA-CHIAVE | B1 template dell'area chiave in `campaign/templates/`, 3.5 e PF1e (D6), con ese… | ✅ fatto |
-| 2026-11-09 | MOTORE-AGNOSTICO-D20 | Classi, griglie e armature del plugin PF1e (ADR-0119 lotto 2, richiesta del DM… | ✅ dati scritti e riletti col lettore dell'audit; il collegamento agli strumenti e la misura sono del thread della #365 |
 
 ## Le misure che si portano dietro
 
