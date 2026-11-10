@@ -64,6 +64,55 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
 - `derive_statblocks` leggeva armature e scudi per pezzi di parola: 11 scudi
   e 2 armature inventati, 1 armatura vera non letta. Ora legge a parola intera
   e parte dal nome più lungo.
+- Regole complete (2026-11-10, richiesta del DM): `plans/esperimenti/regole-complete-2026-11-10/`
+  misura le parti che la misura di sopra non guardava (inventario in `INVENTARIO.md`).
+  Su main f65d78e: PF1e 1546/1551 giuste su 1733 righe (PE, PE per GS, tesoro,
+  statistiche per GS, modificatore, liste 3.5 riusate dal pf1e contro il PRD, nomi
+  italiani), 3.5 166/172. Trovati: EL 19 del tesoro 3.5 (60.000 contro 61.000,
+  corretto), «scaglie» letta come armatura (ora «corazza a scaglie»), e i talenti dei
+  PNG generati: 1 «talento firma» senza prerequisiti contro i 3-8 della regola (0/10,
+  lotto 3).
+- Lotto 3 delle regole complete (talenti dei PNG): `estrai_talenti.py` scrive
+  `sistemi/{pf1e,dnd35}/dati/talenti.toml` dal PRD (1.227 talenti, 9 libri) e
+  dall'SRD (110), con prerequisiti, tipi, talenti bonus di classe (dalla tabella e
+  dal testo delle capacità) e concessi; la capacità nuova `creature.talenti` la usa
+  `dmcore/talenti.py`. Misura con la stessa forma, atteso contato a mano sul
+  manuale al 7° livello per ogni classe: numero 3.5 0/11 → 11/11, PF1e 0/32 →
+  32/32; prerequisiti dei talenti generali ricontrollati 11/11 e 32/32 (prima non
+  ricontrollabili: il generatore non teneva BAB e livelli). Restano: talento
+  umano (il generatore non sceglie la razza), prerequisiti di gradi (talento
+  saltato, non inventato).
+- Lotto 2 delle regole complete (nomi d'incantesimo 3.5): 108 nomi delle liste
+  classe × funzione (185 voci) erano traduzioni libere, fuori dal lessico, e la
+  misura non li poteva verificare. Portati al nome ufficiale, la misura di sopra
+  passa da 441 giuste e 185 non verificabili a 626/626 (3.5 da 605/606 a
+  790/791), e ha visto due livelli sbagliati che il nome nascondeva (*scudo della
+  legge* 8° del chierico, *spaventare* 2° del bardo, corretti). Le liste riusate
+  dal pf1e: 445 + 181 non verificabili → 626/626, con `[livello_pf1e]` per le due
+  voci che il PRD sposta o non ha (*metamorfosi* 5°, *cura ferite minori*).
+- Lotto 4 delle regole complete: i due limiti dichiarati qui sopra per il PF1e
+  (requisiti delle classi di prestigio non controllati, sciamano senza livello 0)
+  sono chiusi. Requisiti delle 18 classi letti dal PRD e confrontati con una
+  seconda lettura (18/18); per ogni classe una via d'ingresso legale costruita a
+  mano dà requisiti ✓ e talenti richiesti presi (0/18 → 18/18). Gradi,
+  allineamento e requisiti narrativi il generatore non li tiene: li scrive nel
+  conto come «da verificare dal DM». Le 17 orazioni dello sciamano vengono dal
+  testo «0-Level Shaman Spells» dell'ACG, che la tabella `spell_lists` non ha.
+- Lotto 5 delle regole complete: i tratti dei tipi di creatura. Il generatore
+  dava Costituzione a non morti e costrutti 3.5, e Int 8 con fino a nove
+  talenti a melme, parassiti e costrutti senza mente. Ora i tratti stanno in
+  `sistemi/dnd35/dati/creature.toml` (`[tratti_tipo]`, `[pf_bonus_costrutti]`
+  letto dalla tabella dell'SRD «Construct Traits»). I pf dei tipi senza
+  Costituzione sono i soli dadi (più il bonus di taglia del costrutto), con più
+  DV fino a 2×GS, e quello che manca al bersaglio si scrive nel conto. Il PF1e
+  porta i pf del non morto sul bersaglio col Carisma. Misura sui mostri generati
+  (15 tipi × GS 3/7/12, più il costrutto alle 9 taglie): 3.5 da 33/45 e 0/9 a
+  45/45 e 9/9, PF1e da 36/45 e 0/9 a 45/45 e 9/9. Nello stesso lotto il terzo
+  limite PF1e dichiarato nel rapporto (costrutti Fine e Diminutive senza pf
+  bonus) è chiuso con la tabella «Construct Size» del PRD pubblicato
+  (legacy.aonprd.com): «—», cioè 0; l'estrattore esige che concordi con le
+  schede per le altre sette taglie. Dei tre limiti del rapporto non ne resta
+  nessuno.
 
 ## Conseguenze
 
@@ -74,6 +123,10 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   misura. Quelle di ranger e bardo ora dicono «PRD PF1e, not SRD 3.5».
 - Un bardo o un ranger 3.5 generato è più forte di quello del manuale, e la
   cosa è voluta: il conto lo dice ogni volta.
+- Un non morto o un costrutto 3.5 generato ha meno pf del bersaglio del suo GS
+  (GS 7: 91-97 contro 102; GS 12: 156 contro 192). È la regola del tipo, e i
+  mostri dell'SRD la pagano allo stesso modo con immunità e RD che il
+  generatore non aggiunge: il DM le mette, o sceglie un altro tipo.
 - **Quello che non è misurato:** CD e capacità speciali delle classi, talenti
   (hanno il loro cancello), oggetti magici, e PE, tesoro e incontri PF1e (già
   generati dal PRD con `--check`).

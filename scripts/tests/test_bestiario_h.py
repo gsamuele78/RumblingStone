@@ -222,6 +222,18 @@ class TestDerivazione(unittest.TestCase):
         self.assertEqual(L.classi, [("warrior", 4)])
         self.assertIsNone(L.dv, "i DV razziali si sommavano ai livelli di classe")
 
+    def test_le_scaglie_di_un_drago_non_sono_un_armatura(self):
+        # «scaglie» da solo stava tra le armature (+4): bastava descrivere la
+        # pelle di un drago per dargli una corazza a scaglie (audit regole del
+        # 2026-11-10). L'armatura è «corazza a scaglie», il nome del lessico.
+        import tempfile
+        d = Path(tempfile.mkdtemp())
+        f = d / "drago-cr9.md"
+        f.write_text("# Drago\n\nLarge dragon, 12d12. Scaglie verdi come il muschio.", encoding="utf-8")
+        self.assertIsNone(D.leggi_scheda(f).armatura)
+        f.write_text("# Sergente\n\nMedium humanoid, Warrior 4. Corazza a scaglie, scudo.", encoding="utf-8")
+        self.assertEqual(D.leggi_scheda(f).armatura, (4, 3))
+
 
 if __name__ == "__main__":
     unittest.main()

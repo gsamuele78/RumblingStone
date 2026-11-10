@@ -31,3 +31,4 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "creature.incantesimi" = { dati = ["sistemi/dnd35/dati/incantesimi.toml"], nota = "L5c: liste per classe × funzione, nomi canonici, ripieghi; le funzioni tattiche restano in dmcore/incantesimi.py" }
 "creature.regole_di_tipo" = { dati = ["sistemi/dnd35/dati/creature.toml"], nota = "L5d: [tipi] e [alias_tipo]; normalizza_tipo in dmcore/tabelle.py" }
 "creature.conformita" = { dati = ["sistemi/dnd35/dati/conformita.toml"], nota = "F4 di ADR-0112: arrotondamento dei pf e conti di conformita_statblocchi" }
+"creature.talenti" = { dati = ["sistemi/dnd35/dati/talenti.toml"], nota = "talenti, prerequisiti, bonus delle classi e capacità, generati dal SRD 3.5 da plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py; regola in dmcore/talenti.py" }
