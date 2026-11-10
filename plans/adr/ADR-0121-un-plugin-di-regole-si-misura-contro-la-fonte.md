@@ -64,6 +64,14 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
 - `derive_statblocks` leggeva armature e scudi per pezzi di parola: 11 scudi
   e 2 armature inventati, 1 armatura vera non letta. Ora legge a parola intera
   e parte dal nome più lungo.
+- Regole complete (2026-11-10, richiesta del DM): `plans/esperimenti/regole-complete-2026-11-10/`
+  misura le parti che la misura di sopra non guardava (inventario in `INVENTARIO.md`).
+  Su main f65d78e: PF1e 1546/1551 giuste su 1733 righe (PE, PE per GS, tesoro,
+  statistiche per GS, modificatore, liste 3.5 riusate dal pf1e contro il PRD, nomi
+  italiani), 3.5 166/172. Trovati: EL 19 del tesoro 3.5 (60.000 contro 61.000,
+  corretto), «scaglie» letta come armatura (ora «corazza a scaglie»), e i talenti dei
+  PNG generati: 1 «talento firma» senza prerequisiti contro i 3-8 della regola (0/10,
+  lotto 3).
 
 ## Conseguenze
 

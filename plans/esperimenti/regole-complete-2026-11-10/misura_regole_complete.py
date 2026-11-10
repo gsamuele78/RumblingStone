@@ -1,0 +1,354 @@
+#!/usr/bin/env python3
+"""misura_regole_complete.py — le parti delle regole che misura_plugin_regole non guarda.
+
+Richiesta del DM del 2026-11-10 («verifica che le regole PF1e siano complete e
+nel caso completale tutte, così come fatto per d20 SRD e 3.5»). La misura di
+ADR-0121 (`plans/esperimenti/plugin-regole-2026-11-09/misura_plugin_regole.py`)
+dà 217/217 per il PF1e e 605/606 per il 3.5, ma solo sulle tabelle che misura:
+classi, armature, griglie, abilità, liste d'incantesimi del 3.5, soglie PE 3.5.
+Questa misura aggiunge, con lo stesso formato e la stessa cache:
+
+- PF1e: soglie PE (tre tracce), PE per GS, tesoro per incontro (tre velocità),
+  statistiche dei mostri per GS (Bestiary Table 1–1), modificatore di
+  caratteristica (formula d20), liste d'incantesimi 3.5 usate dai moduli PF1e
+  (`creature.incantesimi` del plugin pf1e), incantesimi «solo PF1e».
+- 3.5: tesoro per livello d'incontro (SRD «Treasure Values per Encounter»).
+- Tutti e due: talenti dei PNG generati (numero per livello, dalla regola del
+  manuale), e nomi italiani nel lessico per talenti, incantesimi e condizioni.
+
+    python3 plans/esperimenti/regole-complete-2026-11-10/misura_regole_complete.py
+    … --json FILE   … --md FILE
+
+Solo lettura, nessuna rete, esce 0 sempre: è una misura, non un cancello.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import random
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT / "plans/esperimenti/plugin-regole-2026-11-09"))
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import misura_plugin_regole as M  # noqa: E402
+
+
+def _n(s: str) -> "int | None":
+    s = s.replace(",", "").replace("gp", "").strip()
+    return M.num(s)
+
+
+def _tab(base, libro: str, sid: int) -> list:
+    body = M._db(base, libro).execute("select body from sections where section_id=?", (sid,)).fetchone()[0]
+    return next(iter(M.tabelle(body).values()))
+
+
+def _riga(nome, fonte, coperte, giuste, sb, mancanti=(), nota="", campi_assenti=(), nv=()):
+    out = {"tabella": nome, "fonte": fonte, "coperte": coperte, "giuste": giuste, "sbagliate": sb,
+           "mancanti": list(mancanti), "campi_assenti": list(campi_assenti), "non_verificabili": list(nv)}
+    if nota:
+        out["nota"] = nota
+    return out
+
+
+# ------------------------------------------------------------------ PF1e
+
+def tracce_pf1e(base, nome, sid, file, chiave, col0=0) -> dict:
+    righe = _tab(base, "cr", sid)
+    dati = M.toml(file)[chiave]
+    fonte, sb, cop = 0, [], 0
+    for r in righe[2:]:
+        lv = M.num(r[col0])
+        if lv is None:
+            continue
+        for i, traccia in enumerate(("lenta", "media", "veloce")):
+            v = _n(r[col0 + 1 + i])
+            v = 0 if v is None and r[col0 + 1 + i].strip() in ("—", "-") else v
+            fonte += 1
+            p = dati.get(traccia, {}).get(str(lv))
+            if p is None:
+                continue
+            cop += 1
+            if p != v:
+                sb.append({"riga": f"{traccia} {lv}", "campo": chiave, "plugin": p, "fonte": v})
+    return _riga(nome, fonte, cop, cop - len(sb), sb)
+
+
+def px_per_gs(base) -> dict:
+    dati = M.toml("sistemi/pf1e/dati/incontri.toml")["px_per_gs"]
+    sb, mancanti, fonte = [], [], 0
+    for r in _tab(base, "cr", 3655)[2:]:
+        gs, v = r[0].strip(), _n(r[1])
+        if v is None:
+            continue
+        fonte += 1
+        if gs not in dati:
+            mancanti.append(gs)
+        elif dati[gs] != v:
+            sb.append({"riga": gs, "campo": "px", "plugin": dati[gs], "fonte": v})
+    cop = fonte - len(mancanti)
+    return _riga("PE per GS (Experience Point Awards)", fonte, cop, cop - len(sb), sb, mancanti)
+
+
+CAMPI_GS = ["pf", "ca", "attacco_alto", "attacco_basso", "danno_alto", "danno_basso",
+            "cd_primaria", "cd_secondaria", "ts_buono", "ts_cattivo"]
+
+
+def statistiche_per_gs(base) -> dict:
+    from dmcore import tabelle as T
+
+    plugin = {float(k): r for k, r in T.TABELLA_1_1.items()}
+    sb, mancanti, fonte = [], [], 0
+    for r in _tab(base, "b1", 93)[2:]:
+        g = r[0].strip()
+        gs = 0.5 if g == "1/2" else (float(g) if g.replace(".", "").isdigit() else None)
+        if gs is None:
+            continue
+        fonte += 1
+        p = plugin.get(gs)
+        if p is None:
+            mancanti.append(g)
+            continue
+        for campo, cella in zip(CAMPI_GS, r[1:]):
+            v = M.num(cella)
+            if v is not None and p.get(campo) != v:
+                sb.append({"riga": f"GS {g}", "campo": campo, "plugin": p.get(campo), "fonte": v})
+    cop = fonte - len(mancanti)
+    return _riga("statistiche dei mostri per GS (Bestiary Table 1–1)", fonte, cop,
+                 cop - len({s["riga"] for s in sb}), sb, mancanti)
+
+
+def formula_modificatore(base) -> dict:
+    """La formula d20 del modificatore contro la tabella del PRD (Ability Modifiers)."""
+    f = M.toml("sistemi/d20/dati/formule.toml")["formule"]["modificatore"]["espressione"]
+    c = M._db(base, "cr")
+    body = c.execute("select body from sections where type='table' and name like '%Ability Modifiers%'").fetchone()
+    righe = next(iter(M.tabelle(body[0]).values())) if body else []
+    sb, fonte = [], 0
+    for r in righe:
+        m = re.match(r"^(\d+)[–-](\d+)$", r[0].strip()) if r else None
+        if not m:
+            continue
+        for punteggio in (int(m.group(1)), int(m.group(2))):
+            fonte += 1
+            atteso = M.num(r[1])
+            calc = eval(f, {}, {"punteggio": punteggio})  # noqa: S307 — espressione dei dati del repo
+            if calc != atteso:
+                sb.append({"riga": punteggio, "campo": "modificatore", "plugin": calc, "fonte": atteso})
+    return _riga("modificatore di caratteristica (formula d20 contro PRD)", fonte, fonte, fonte - len(sb), sb,
+                 nota="" if fonte else "tabella non trovata nel PRD in cache")
+
+
+CLASSE_EN = {"mago": "Wizard", "chierico": "Cleric", "druido": "Druid", "bardo": "Bard",
+             "ranger": "Ranger", "paladino": "Paladin"}
+
+
+def _k(nome: str) -> str:
+    """Chiave di confronto dei nomi inglesi: apostrofi, trattini e barre non contano."""
+    return re.sub(r"[^a-z0-9]+", " ", nome.lower().replace("’", "'").replace("'", "")).strip()
+
+
+def _liste_prd() -> dict:
+    li = M.toml("sistemi/pf1e/dati/liste_incantesimi.toml")["liste"]
+    return {cl: {int(lv): {_k(n) for n in nomi} for lv, nomi in livelli.items()} for cl, livelli in li.items()}
+
+
+def liste_35_in_pf1e() -> dict:
+    """Le liste classe × funzione del 3.5 che il plugin pf1e riusa: il livello PF1e torna?"""
+    lxi = {k: v for k, v in M.lessico("scripts/lessico_it_35.tsv", "srd35").get("incantesimo", {}).items()}
+    lxp = {k: v for k, v in M.lessico("scripts/lessico_it_pf1.tsv", "pf1").get("incantesimo", {}).items()}
+    prd = _liste_prd()
+    inc = M.toml("sistemi/dnd35/dati/incantesimi.toml")["liste"]
+    voci, sb, nv, assenti = 0, [], [], 0
+    for cl, funzioni in inc.items():
+        lista = prd.get(CLASSE_EN.get(cl, "").lower(), {})
+        for fn, livelli in funzioni.items():
+            for lv, nomi in livelli.items():
+                for n in nomi:
+                    voci += 1
+                    en = _k(lxp.get(n.lower()) or lxi.get(n.lower()) or "")
+                    if not en:
+                        nv.append(f"{cl}.{fn}.{lv}: {n}")
+                        continue
+                    dove = sorted(l for l, xs in lista.items() if en in xs)
+                    if int(lv) not in dove:
+                        if not dove:
+                            assenti += 1
+                        sb.append({"riga": f"{cl}.{fn} {lv}°", "campo": n,
+                                   "plugin": f"{en} al {lv}°",
+                                   "fonte": f"PF1e al {dove[0]}°" if dove else "non nella lista PF1e della classe"})
+    return _riga("liste d'incantesimi 3.5 riusate dal plugin pf1e (livello PF1e)", voci, voci,
+                 voci - len(sb) - len(nv), sb, nv=nv,
+                 nota=f"{assenti} incantesimi non sono nella lista PF1e della classe; gli altri sono a un livello diverso")
+
+
+def solo_pf1e() -> dict:
+    prd = _liste_prd()
+    solo = M.toml("sistemi/pf1e/dati/incantesimi.toml")["solo"]
+    tutti = {n for lista in prd.values() for xs in lista.values() for n in xs}
+    voci, sb, nv = 0, [], []
+    for cl, livelli in solo.items():
+        lista = prd.get(CLASSE_EN.get(cl, "").lower(), {})
+        for lv, coppie in livelli.items():
+            for it, en in coppie:
+                voci += 1
+                if _k(en) not in tutti:
+                    nv.append(f"{cl} {lv}°: {it} ({en}, non nel PRD in cache)")
+                    continue
+                dove = sorted(l for l, xs in lista.items() if _k(en) in xs)
+                if int(lv) not in dove:
+                    sb.append({"riga": f"{cl} {lv}°", "campo": it, "plugin": f"{en} al {lv}°",
+                               "fonte": f"al {dove[0]}°" if dove else "non nella lista della classe"})
+    return _riga("incantesimi «solo PF1e» (APG) per classe e livello", voci, voci, voci - len(sb) - len(nv), sb, nv=nv)
+
+
+# ------------------------------------------------------------------ 3.5
+
+def tesoro_35_letto(base) -> dict:
+    testo = (base / M.SRD / "basic-rules-and-legal/treasure.md").read_text(encoding="utf-8")
+    tab = M.tabelle(testo)["Table: Treasure Values per Encounter"]
+    fonte = {}
+    for r in tab[1:]:
+        for i in (0, 2):
+            if len(r) > i + 1 and M.num(r[i]) is not None:
+                fonte[M.num(r[i])] = _n(r[i + 1])
+    plugin = {}
+    for riga in (ROOT / "scripts/loot_tables.yaml").read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^\s+(\d+):\s*\{\s*gp:\s*(\d+)", riga)
+        if m:
+            plugin[int(m.group(1))] = int(m.group(2))
+    sb = [{"riga": f"EL {k}", "campo": "mo", "plugin": plugin.get(k), "fonte": v}
+          for k, v in sorted(fonte.items()) if k in plugin and plugin[k] != v]
+    mancanti = [k for k in fonte if k not in plugin]
+    cop = len(fonte) - len(mancanti)
+    return _riga("tesoro per livello d'incontro (SRD Treasure Values per Encounter)", len(fonte), cop,
+                 cop - len(sb), sb, mancanti,
+                 nota="le colonne coins_pct/goods_pct/items_pct di loot_tables.yaml non sono nella fonte")
+
+
+# ------------------------------------------------------------------ talenti dei PNG generati
+
+def talenti_attesi(sistema: str, livelli: dict, razza_umana: bool = False) -> int:
+    """Talenti di un PNG con i livelli dati: la regola del manuale (SRD 3.5 / PRD PF1e)."""
+    tot = sum(livelli.values())
+    n = 1 + tot // 3 if sistema == "dnd35" else (tot + 1) // 2
+    guer = livelli.get("guerriero", 0) or livelli.get("fighter", 0)
+    if guer:
+        n += 1 + guer // 2 if sistema == "dnd35" else 1 + guer // 2
+    return n + (1 if razza_umana else 0)
+
+
+def _conta_talenti(blocco: str) -> int:
+    m = re.search(r"Talenti:\s*([^\n|]+)", blocco)
+    if not m:
+        return 0
+    return len([t for t in re.split(r",\s*(?![^()]*\))", m.group(1)) if t.strip()])
+
+
+def talenti_generati() -> list:
+    import genera_creatura as G  # noqa: E402
+    import io
+    from contextlib import redirect_stdout
+
+    out = []
+    for sistema, classi in (("dnd35", ["guerriero", "mago", "chierico", "ladro", "ranger"]),
+                            ("pf1e", ["fighter", "wizard", "cleric", "rogue", "ranger"])):
+        sb, cop = [], 0
+        for cl in classi:
+            buf = io.StringIO()
+            args = ["--sistema", sistema, "--classe", f"{cl}:7",
+                    "--gs", "7", "--seed", "1"]
+            try:
+                with redirect_stdout(buf):
+                    G.main(args)
+            except SystemExit:
+                pass
+            except Exception as e:  # pragma: no cover — la misura dice dove si rompe
+                sb.append({"riga": cl, "campo": "talenti", "plugin": f"errore {type(e).__name__}", "fonte": "—"})
+                continue
+            testo = buf.getvalue()
+            got = _conta_talenti(testo)
+            atteso = talenti_attesi(sistema, {cl: 7})
+            cop += 1
+            if got != atteso:
+                sb.append({"riga": f"{cl} 7°", "campo": "talenti", "plugin": got, "fonte": atteso})
+        out.append((sistema, _riga("uso: numero di talenti dei PNG generati (7° livello)", len(classi), cop,
+                                   cop - len(sb), sb,
+                                   nota="regola: 3.5 1 + 1 ogni 3 livelli, PF1e 1 ogni livello dispari; "
+                                        "guerriero +1 al 1° e ogni livello pari")))
+    return out
+
+
+# ------------------------------------------------------------------ nomi italiani nel lessico
+
+def nomi_nel_lessico(base) -> list:
+    out = []
+    lxp = M.lessico("scripts/lessico_it_pf1.tsv", "pf1")
+    lx3 = M.lessico("scripts/lessico_it_35.tsv", "srd35")
+    en_p = {t: {_k(v) for v in d.values()} for t, d in lxp.items()}
+    en_3 = {t: {_k(v) for v in d.values()} for t, d in lx3.items()}
+    c = M._db(base, "cr")
+    cond = [r[0] for r in c.execute("select name from sections where parent_id=5238")]
+    talenti = [r[0] for r in c.execute("select name from sections where type='feat'")]
+    inc = [r[0] for r in c.execute("select name from sections where type='spell'")]
+    for nome, voci, tipo in (("condizioni (PRD)", cond, "condizione"), ("talenti del Core (PRD)", talenti, "talento"),
+                             ("incantesimi del Core (PRD)", inc, "incantesimo")):
+        manc = sorted(v for v in set(voci) if _k(v) not in en_p.get(tipo, set()))
+        n = len(set(voci))
+        out.append(("pf1e", _riga(f"nomi italiani: {nome}", n, n - len(manc), n - len(manc), [], manc)))
+    srd = base / M.SRD / "basic-rules-and-legal"
+    testo = (srd / "special-abilities-and-conditions.md").read_text(encoding="utf-8")
+    sez = testo.split("## Conditions", 1)[1]
+    cond35 = re.findall(r"^\*\*([A-Z][A-Za-z -]+):\*\*", sez, flags=re.M)
+    feat35 = [re.sub(r"\s*<small>.*", "", h).strip()
+              for h in re.findall(r"^### (.+\[.+)$", (srd / "feats.md").read_text(encoding="utf-8"), flags=re.M)]
+    feat35 = [f for f in feat35 if f != "Feat Name"]
+    for nome, voci, tipo in (("condizioni (SRD)", cond35, "condizione"), ("talenti (SRD feats.md)", feat35, "talento")):
+        manc = sorted(v for v in set(voci) if _k(v) not in en_3.get(tipo, set()))
+        n = len(set(voci))
+        out.append(("dnd35", _riga(f"nomi italiani: {nome}", n, n - len(manc), n - len(manc), [], manc)))
+    return out
+
+
+# ------------------------------------------------------------------ insieme
+
+def misura(base: Path) -> dict:
+    out = {"dnd35": [], "pf1e": []}
+    out["pf1e"].append(tracce_pf1e(base, "soglie PE (tre tracce)", 2743, "sistemi/pf1e/dati/pe.toml", "soglie"))
+    out["pf1e"].append(px_per_gs(base))
+    out["pf1e"].append(tracce_pf1e(base, "tesoro per incontro (tre velocità)", 3661,
+                                   "sistemi/pf1e/dati/tesoro.toml", "mo_per_incontro"))
+    out["pf1e"].append(statistiche_per_gs(base))
+    out["pf1e"].append(formula_modificatore(base))
+    out["pf1e"].append(liste_35_in_pf1e())
+    out["pf1e"].append(solo_pf1e())
+    out["dnd35"].append(tesoro_35_letto(base))
+    for sis, r in talenti_generati():
+        out[sis].append(r)
+    for sis, r in nomi_nel_lessico(base):
+        out[sis].append(r)
+    return {"fonti": {"srd35": M.SRD, "prd": M.PRD}, "sistemi": out}
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--json")
+    ap.add_argument("--md")
+    a = ap.parse_args(argv)
+    random.seed(1)
+    m = misura(M.cache())
+    testo = "\n".join(M.riepilogo(m))
+    print(testo)
+    if a.json:
+        Path(a.json).write_text(json.dumps(m, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    if a.md:
+        Path(a.md).write_text(testo + "\n", encoding="utf-8")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
