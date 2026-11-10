@@ -3427,6 +3427,7 @@
           "creature.costruzione",
           "creature.incantesimi",
           "creature.statistiche_per_gs",
+          "creature.talenti",
           "statblocco.campi"
         ]
       }
