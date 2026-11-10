@@ -903,9 +903,12 @@ def genera_png_pf1e(gs: int, *, tipo: str = "humanoid", taglia: str = "medium", 
     gs_pf = "1/2" if totale == 1 else str(totale - 1)
     conto(f"GS {gs_pf} = livelli di classe − 1 (PRD, Encounters)"
           + (f"; chiesto GS {gs}, non tocco i livelli: decide il DM" if str(gs) != gs_pf else ""))
-    prestigio = [en for en, _, v in voci_cl if v["gruppo"] == "prestigio"]
-    if prestigio:
-        conto(f"⚠ requisiti d'accesso di {', '.join(prestigio)} non verificati: li controlla il DM")
+    # requisiti d'accesso delle classi di prestigio (lotto 4 delle regole complete):
+    # BAB, incantesimi e capacità dalle classi messe prima, talenti presi per primi
+    from dmcore import talenti as TL
+    obbligati, righe_req = TL.prestigio("pf1e", list(classi), dati)
+    for riga in righe_req:
+        conto(riga)
 
     # caratteristiche: matrice eroica se c'è una classe da PG (PRD, Creating NPCs)
     if elite is None:
@@ -1035,7 +1038,8 @@ def genera_png_pf1e(gs: int, *, tipo: str = "humanoid", taglia: str = "medium", 
     )
     lic = max([CP.livello_incantatore_pf1e(en, dict(classi)[en] + piu.get(en, 0), dati)
                for en in incantatrici] or [0])
-    conto.talenti = {"bab": bab, "livelli": dict(classi), "lic": max(0, lic), "dv_razziali": 0, "dv": totale}
+    conto.talenti = {"bab": bab, "livelli": dict(classi), "lic": max(0, lic), "dv_razziali": 0, "dv": totale,
+                     "obbligati": obbligati}
     applica_talenti(sb, conto, "pf1e", R.nome, rng)
     return sb, conto
 
@@ -1171,7 +1175,8 @@ def applica_talenti(sb: Statblocco, conto: Conto, sistema: str, ruolo: str, rng:
             firma, sb.tattica, debolezza = rng.choice(leciti)
             sb.voci = [f"Debolezza: {debolezza}" if v.startswith("Debolezza:") else v for v in sb.voci]
             conto(f"carattere: «{vecchio}» non è lecito per questo PNG, il carattere diventa «{firma}»")
-    scelta = TL.scegli(sistema, ruolo, s, dv_razziali=st["dv_razziali"], firma=firma, stile=stile, rng=rng)
+    scelta = TL.scegli(sistema, ruolo, s, dv_razziali=st["dv_razziali"], firma=firma, stile=stile, rng=rng,
+                       obbligati=st.get("obbligati"))
     en = [n for n, _ in scelta.talenti]
     m = re.match(r"^(?:Mischia|Distanza)\s+(.+?)\s+[+-]\d+", sb.attacchi[0]) if sb.attacchi else None
     arma = m.group(1) if m else ""

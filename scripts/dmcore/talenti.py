@@ -197,7 +197,8 @@ class Scelta:
 
 
 def scegli(sistema: str, ruolo: str, s: Stato, *, dv_razziali: int = 0, firma: "str | None" = None,
-           stile: "str | None" = None, rng: "random.Random | None" = None) -> Scelta:
+           stile: "str | None" = None, rng: "random.Random | None" = None,
+           obbligati: "list[str] | None" = None) -> Scelta:
     rng = rng or random.Random(0)
     presi: "list[tuple[str, str]]" = []
     note: "list[str]" = []
@@ -210,6 +211,8 @@ def scegli(sistema: str, ruolo: str, s: Stato, *, dv_razziali: int = 0, firma: "
     for cl, en in concessi(sistema, s.livelli):
         prendi(en, f"concesso da {cl}")
     ordine = _ordine(sistema, ruolo, rng)
+    if obbligati:   # requisiti di una classe di prestigio: prima di tutto il resto, nell'ordine dato
+        ordine = list(obbligati) + [n for n in ordine if n not in obbligati]
     if firma:
         en = nome_inglese(sistema, firma)
         if en is None:
@@ -218,7 +221,7 @@ def scegli(sistema: str, ruolo: str, s: Stato, *, dv_razziali: int = 0, firma: "
             m = manca(sistema, en, Stato(s.car, s.bab, s.livelli, s.lic, s.talenti))
             if m:
                 note.append(f"«{italiano(sistema, en)}» non preso: mancano {', '.join(m)}")
-            ordine = [en] + [n for n in ordine if n != en]
+            ordine = list(obbligati or []) + [en] + [n for n in ordine if n != en and n not in (obbligati or [])]
     for cl, lv in bonus_di_classe(sistema, s.livelli):
         ammessi, senza = _lista_bonus(sistema, cl, lv, stile)
         if ammessi is None:
@@ -263,3 +266,72 @@ def effetti(sistema: str, talenti: "list[str]", dv: int) -> "dict[str, int]":
     if "Dodge" in t and sistema == "pf1e":
         e["ca"] += 1   # PF1e: +1 schivare alla CA; nel 3.5 è contro un solo avversario
     return e
+
+
+# ------------------------------------------------------------------ requisiti delle classi di prestigio
+
+def _livello_massimo(classe: str, livello: int, costruzione: dict) -> int:
+    """Il livello d'incantesimo più alto che la classe lancia a quel livello (0 = nessuno).
+
+    Dalla griglia del PRD (`classi.toml`): una colonna presente vale anche con 0
+    slot, perché nel PRD lo 0 è «solo con gli incantesimi bonus».
+    """
+    inc = costruzione.get("incantatori", {}).get(classe)
+    if not inc:
+        return 0
+    riga = costruzione.get("griglie", {}).get(inc["griglia"], {}).get(str(min(livello, 20)))
+    if not riga:
+        return 0
+    return len(riga) - 1   # l'indice è il livello d'incantesimo, con o senza trucchetti
+
+
+def prestigio(sistema: str, classi: "list[tuple[str, int]]", costruzione: dict
+              ) -> "tuple[list[str], list[str]]":
+    """(talenti che i requisiti obbligano a prendere, righe del conto) per le classi di prestigio.
+
+    Lo stato è quello delle classi elencate **prima** della classe di prestigio:
+    BAB, livello d'incantesimo arcano e divino, capacità. Gradi e il resto non
+    si possono verificare qui e il conto lo dice.
+    """
+    req = dati(sistema).get("requisiti", {})
+    caps = dati(sistema).get("capacita", {})
+    obbligati: "list[str]" = []
+    righe: "list[str]" = []
+    for i, (cl, _lv) in enumerate(classi):
+        r = req.get(cl)
+        if r is None:
+            continue
+        prima = classi[:i]
+        bab = sum(int(costruzione["classi"][c]["bab"] * n) for c, n in prima)
+        lv_inc = {"arcani": 0, "divini": 0}
+        for c, n in prima:
+            for tipo, chiave in (("arcani", "cast arcane spells"), ("divini", "cast divine spells")):
+                if c in caps.get(chiave, {}):
+                    lv_inc[tipo] = max(lv_inc[tipo], _livello_massimo(c, n, costruzione))
+        ok, no = [], []
+        if r.get("bab"):
+            (ok if bab >= r["bab"] else no).append(f"BAB +{r['bab']} (ha {bab:+d})")
+        for tipo, n in r.get("incantesimi", {}).items():
+            (ok if lv_inc[tipo] >= n else no).append(f"incantesimi {tipo} di {n}° (arriva al {lv_inc[tipo]}°)")
+        for cap in r.get("capacita", []):
+            ha = any(dict(prima).get(c, 0) >= lv for c, lv in caps.get(cap, {}).items())
+            (ok if ha else no).append(cap)
+        for t in r.get("talenti", []):
+            obbligati.append(t)
+        for scelta in r.get("oppure", []):
+            obbligati.append(scelta[0])
+        talenti_txt = [italiano(sistema, t) for t in r.get("talenti", [])] + \
+            [" o ".join(italiano(sistema, x) for x in s) for s in r.get("oppure", [])]
+        pezzi = [f"✓ {x}" for x in ok] + [f"✗ {x}" for x in no]
+        if talenti_txt:
+            pezzi.append(f"talenti richiesti, presi per primi: {', '.join(talenti_txt)}")
+        for t, arma in r.get("armi", {}).items():
+            pezzi.append(f"{italiano(sistema, t)} con {arma}")
+        righe.append(f"requisiti di {cl} (PRD, {r['fonte']}): " + ("; ".join(pezzi) or "nessuno che si conti"))
+        if no:
+            righe.append(f"⚠ {cl}: con le classi messe prima non si entra ({', '.join(no)}); "
+                         "metti prima le classi che danno il requisito")
+        da_dm = [f"{k} {v}" for k, v in r.get("gradi", {}).items()] + r.get("altro", [])
+        if da_dm:
+            righe.append(f"{cl}, da verificare dal DM: " + "; ".join(da_dm))
+    return obbligati, righe

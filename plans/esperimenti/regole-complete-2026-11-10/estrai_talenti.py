@@ -531,6 +531,72 @@ def bonus_35(base: Path, talenti: dict) -> "dict[str, dict]":
     return out
 
 
+# ------------------------------------------------------------------ requisiti delle classi di prestigio
+
+def requisiti_pf1e(base: Path, talenti: dict) -> "dict[str, dict]":
+    """I requisiti d'accesso delle classi di prestigio PF1e, dalla sezione «Requirements» del PRD.
+
+    Letti: BAB, talenti per nome (anche «A or B»), gradi per abilità, livello
+    d'incantesimo arcano o divino, «channel energy». Il resto (allineamento,
+    razza, lingue, imprese, poteri d'ira, «any three metamagic feats»…) va in
+    `altro`: il generatore lo scrive nel conto come cosa che decide il DM.
+    """
+    noti = {_k(n): n for n in talenti}
+    classi = {k: v for k, v in _toml_classi().items() if v.get("gruppo") == "prestigio"}
+    out = {}
+    for nome, v in sorted(classi.items()):
+        c = sqlite3.connect(base / f"book-{v['libro']}.db")
+        sid = c.execute("select section_id from sections where lower(name)=? and type='class'", (nome,)).fetchone()[0]
+        r = c.execute("select section_id from sections where parent_id=? and name like 'Requirement%'",
+                      (sid,)).fetchone()
+        req = {"bab": 0, "talenti": [], "oppure": [], "gradi": {}, "incantesimi": {}, "capacita": [], "altro": [],
+               "armi": {}, "fonte": f"book-{v['libro']} {r[0]}"}
+        for voce, body, desc in c.execute("select name, body, description from sections where parent_id=? "
+                                          "order by lft", (r[0],)):
+            t = re.sub(r"\s+", " ", _testo(body or desc)).strip().rstrip(".")
+            if voce == "Base Attack Bonus":
+                req["bab"] = int(re.search(r"\+(\d+)", t).group(1))
+            elif voce == "Feats":
+                for pezzo in re.split(r",\s*(?![^()]*\))", t):
+                    intero = pezzo.strip()
+                    arma = re.search(r"\((.*)\)$", intero)
+                    pezzo = re.sub(r"\s*\(.*\)$", "", pezzo.strip())
+                    if arma and noti.get(_k(pezzo)):
+                        req["armi"][noti[_k(pezzo)]] = arma.group(1)
+                    alternative = [noti.get(_k(x)) for x in re.split(r"\s+or\s+", pezzo)]
+                    if all(alternative) and len(alternative) > 1:
+                        req["oppure"].append(alternative)
+                    elif all(alternative):
+                        req["talenti"].append(alternative[0])
+                    else:
+                        req["altro"].append(f"talenti: {intero}")
+            elif voce == "Skills":
+                for pezzo in re.split(r",\s*(?![^()]*\))", t):
+                    m = re.match(r"^(.+?) (\d+) ranks?$", pezzo.strip())
+                    if m and "any" not in m.group(1).lower():
+                        req["gradi"][m.group(1)] = int(m.group(2))
+                    else:
+                        req["altro"].append(f"gradi: {pezzo.strip()}")
+            elif voce in ("Spells", "Spellcasting"):
+                trovati = re.findall(r"(\d)(?:st|nd|rd|th)-level (arcane|divine) spells", t)
+                for lv, tipo in trovati:
+                    req["incantesimi"]["arcani" if tipo == "arcane" else "divini"] = int(lv)
+                if not trovati or re.search(r"without preparation|mage hand|divination|draconic", t, re.I):
+                    req["altro"].append(f"incantesimi: {t}")
+            elif voce == "Special" and re.fullmatch(r"channel energy class feature", t, re.I):
+                req["capacita"].append("channel energy")
+            else:
+                req["altro"].append(f"{voce.lower()}: {t}")
+        out[nome] = req
+    return out
+
+
+def _toml_classi() -> dict:
+    import tomllib
+    with open(ROOT / "sistemi/pf1e/dati/classi.toml", "rb") as fh:
+        return tomllib.load(fh)["classi"]
+
+
 # ------------------------------------------------------------------ scrittura
 
 def _q(x: str) -> str:
@@ -545,7 +611,7 @@ def _tabella(d: dict) -> str:
     return "{ " + ", ".join(f"{_q(k)} = {v if isinstance(v, int) else _q(v)}" for k, v in d.items()) + " }"
 
 
-def scrivi(intestazione: str, talenti: dict, bonus: dict, capacita: dict) -> str:
+def scrivi(intestazione: str, talenti: dict, bonus: dict, capacita: dict, requisiti: "dict | None" = None) -> str:
     righe = [intestazione, ""]
     righe.append("# [capacita]: classi che hanno la capacità chiesta da un talento, e da quale livello")
     righe.append("# (colonna «Special» delle tabelle; per «cast … spells» la prima riga della griglia).")
@@ -576,6 +642,25 @@ def scrivi(intestazione: str, talenti: dict, bonus: dict, capacita: dict) -> str
             righe.append(f"stili.{_q(st)} = {{ " + ", ".join(f"{_q(k)} = {_lista(x)}" for k, x in sorted(nomi.items(), key=lambda kv: int(kv[0]))) + " }")
         righe.append(f"fonte = {_q(v['fonte'])}")
         righe.append("")
+    if requisiti:
+        righe.append("# [requisiti.\"classe di prestigio\"]: BAB, talenti (oppure = uno a scelta), gradi, livello")
+        righe.append("# d'incantesimo arcano/divino, capacità; `altro` = ciò che decide il DM (allineamento, imprese…).")
+        righe.append("")
+        for cl in sorted(requisiti):
+            r = requisiti[cl]
+            righe.append(f"[requisiti.{_q(cl)}]")
+            if r["bab"]:
+                righe.append(f"bab = {r['bab']}")
+            for k in ("talenti", "capacita", "altro"):
+                if r[k]:
+                    righe.append(f"{k} = {_lista(r[k])}")
+            if r["oppure"]:
+                righe.append("oppure = [" + ", ".join(_lista(x) for x in r["oppure"]) + "]")
+            for k in ("gradi", "incantesimi", "armi"):
+                if r[k]:
+                    righe.append(f"{k} = {_tabella(r[k])}")
+            righe.append(f"fonte = {_q(r['fonte'])}")
+            righe.append("")
     for nome in sorted(talenti):
         t = talenti[nome]
         righe.append(f"[talenti.{_q(nome)}]")
@@ -607,7 +692,7 @@ def genera() -> "dict[Path, str]":
             "# sistemi/pf1e/dati/talenti.toml — talenti PF1e e talenti bonus delle classi, dal PRD.\n"
             "# Generato da plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py (non a mano).\n"
             "# Fonte: devonjones/PSRD-Data@76ea4784, sezioni di tipo «feat» e tabelle delle classi. OGL 1.0a.",
-            t1, b1, _capacita(speciali_pf1e(prd), incantatori_pf1e(prd))),
+            t1, b1, _capacita(speciali_pf1e(prd), incantatori_pf1e(prd)), requisiti_pf1e(prd, t1)),
         ROOT / "sistemi/dnd35/dati/talenti.toml": scrivi(
             "# sistemi/dnd35/dati/talenti.toml — talenti SRD 3.5 e talenti bonus delle classi.\n"
             "# Generato da plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py (non a mano).\n"

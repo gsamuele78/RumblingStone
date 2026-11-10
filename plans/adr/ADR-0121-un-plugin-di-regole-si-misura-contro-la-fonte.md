@@ -90,6 +90,14 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   legge* 8° del chierico, *spaventare* 2° del bardo, corretti). Le liste riusate
   dal pf1e: 445 + 181 non verificabili → 626/626, con `[livello_pf1e]` per le due
   voci che il PRD sposta o non ha (*metamorfosi* 5°, *cura ferite minori*).
+- Lotto 4 delle regole complete: i due limiti dichiarati qui sopra per il PF1e
+  (requisiti delle classi di prestigio non controllati, sciamano senza livello 0)
+  sono chiusi. Requisiti delle 18 classi letti dal PRD e confrontati con una
+  seconda lettura (18/18); per ogni classe una via d'ingresso legale costruita a
+  mano dà requisiti ✓ e talenti richiesti presi (0/18 → 18/18). Gradi,
+  allineamento e requisiti narrativi il generatore non li tiene: li scrive nel
+  conto come «da verificare dal DM». Le 17 orazioni dello sciamano vengono dal
+  testo «0-Level Shaman Spells» dell'ACG, che la tabella `spell_lists` non ha.
 
 ## Conseguenze
 

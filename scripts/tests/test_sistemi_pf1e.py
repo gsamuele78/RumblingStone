@@ -229,7 +229,10 @@ class CreatureConClassi(unittest.TestCase):
     def test_prestigio_in_multiclasse(self):
         sb, conto = self.blocco("mago:5,mistificatore arcano:3")
         self.assertIn("Incantatore di livello 8 (mago, INT +3) — 3 livelli dalle classi di prestigio", sb.voci)
-        self.assertTrue(any("requisiti d'accesso" in r for r in conto.righe))
+        # dal lotto 4 delle regole complete i requisiti si leggono dal PRD: quelli che
+        # non si contano (gradi, allineamento, attacco furtivo) vanno al DM
+        self.assertTrue(any(r.startswith("requisiti di arcane trickster") for r in conto.righe), conto.righe)
+        self.assertTrue(any("da verificare dal DM" in r for r in conto.righe))
         self.assertEqual(sb.pf_dado.split("+")[:2], ["5d6", "3d6"])
 
     def test_teurgo_mistico_avanza_due_classi(self):

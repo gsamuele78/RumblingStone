@@ -115,3 +115,42 @@ class Generatore(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Prestigio(unittest.TestCase):
+    """Lotto 4: i requisiti d'accesso delle classi di prestigio PF1e."""
+
+    def _png(self, via: str):
+        from dmcore import sistemi as S
+        from dmcore import creature_pf1e as CP
+        return G.genera_png_pf1e(9, classi=CP.leggi_classi(via, S.dati("pf1e", "creature.costruzione")),
+                                 rng=random.Random(1), ruolo="tiratore")
+
+    def test_requisiti_letti_dal_prd(self):
+        r = TL.dati("pf1e")["requisiti"]
+        self.assertEqual(len(r), 18)
+        self.assertEqual(r["arcane archer"]["bab"], 6)
+        self.assertEqual(r["arcane archer"]["incantesimi"], {"arcani": 1})
+        self.assertEqual(r["mystic theurge"]["incantesimi"], {"arcani": 2, "divini": 2})
+        self.assertEqual(r["holy vindicator"]["oppure"], [["Alignment Channel", "Elemental Channel"]])
+
+    def test_via_legale_prende_i_talenti_richiesti(self):
+        sb, conto = self._png("fighter:6,wizard:1,arcane archer:1")
+        testo = "\n".join(conto.righe)
+        self.assertNotIn("✗", testo)
+        nomi = {TL.nome_inglese("pf1e", t) for t in _talenti(sb)}
+        self.assertTrue({"Point-Blank Shot", "Precise Shot", "Weapon Focus"} <= nomi, nomi)
+
+    def test_via_illegale_lo_dice(self):
+        _, conto = self._png("wizard:7,arcane archer:1")
+        testo = "\n".join(conto.righe)
+        self.assertIn("✗ BAB +6 (ha +3)", testo)
+        self.assertIn("non si entra", testo)
+
+    def test_sciamano_ha_le_orazioni(self):
+        # il PRD non le ha in spell_lists: si leggono da «0-Level Shaman Spells» (ACG)
+        import tomllib
+        with open(REPO / "sistemi/pf1e/dati/liste_incantesimi.toml", "rb") as fh:
+            zero = tomllib.load(fh)["liste"]["shaman"]["0"]
+        self.assertEqual(len(zero), 17)
+        self.assertIn("Stabilize", zero)
