@@ -3548,7 +3548,7 @@ quell'altro. Ai giocatori si dà l'handout «Le dieci boccette», che sta nel vo
 | 2 | stesso carro | **brodaglia degli sciamani**, vedi sotto | la riconosce subito e smette di ridere |
 | 3 | i quattro gnoll pompati | *forza del toro*, LI 3: +4 For per 3 minuti | pulita. È il motivo per cui gli gnoll erano pompati, con la *grazia del gatto* trovata insieme |
 | 4 | i minotauri | *cura ferite gravi*, LI 5: 3d8+5 | funziona, **ma c'è dell'altro**. Tappo di **cera nera**. Brynja: Divinazione. Vedi sotto |
-| 5 | stessi minotauri | *eroismo*, LI 5: +2 morale a attacchi, TS e prove di abilità per 50 minuti | pulita |
+| 5 | stessi minotauri | *eroismo*, LI 5: +2 morale ad attacchi, TS e prove di abilità per 50 minuti | pulita |
 | 6 | i nani sulla piattaforma d'osso | *cura ferite moderate*, LI 3: 2d8+3 | pulita. Stessa partita di quelle di Adrick Garthun |
 | 7 | il trono | *resistere all'energia* (fuoco), LI 3: resistenza 10 per 30 minuti | pulita. Vetro verde e spesso, tappo piombato, rune Dethek sul collo. Kettra ci passa il pollice sopra più del necessario: è il segno **della fucina del re**, la sua. Il vetro però non l'ha soffiato lei |
 | 8-9 | la stanza sotto la tomba, la chierica drow | *cura ferite moderate* ×2, LI 3 | pulite. È il kit personale della chierica, dalla sua scheda |

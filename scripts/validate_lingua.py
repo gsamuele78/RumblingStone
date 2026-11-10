@@ -70,6 +70,52 @@ AVVISI: list[tuple[str, str]] = [
      "apostrofo al posto dell'accento («e'» → è, «gia'» → già, «perche'» → perché)"),
 ]
 
+# La *d* eufonica (CODA D3, 2026-11-08; editorial-standards.md): *ad* ed *ed*
+# solo davanti alla stessa vocale. Manca in «a area», «e Elementali»; avanza in
+# «ad ogni», «ed infine», «fino ad ora». Resta solo *ad esempio* (e *ad es.*),
+# come in LanguageTool, che boccia anche *ad eccezione* e *ad oggi*. È la sua
+# regola ST_03_001, misurata
+# contro questa regex in plans/esperimenti/d-eufonica-2026-11-09/.
+# Maiuscole: «A» solo a inizio di frase (non la lettera di «Unità A attacca»),
+# «E» solo fra parole tutte maiuscole («CAOS E EROISMO»), non le lettere
+# («§7.E Echo», «N, E e O»). *O o…* resta fuori: *od* è arcaico e la norma non
+# lo chiede.
+_V_A, _V_E = "aàáAÀÁ", "eèéEÈÉ"
+_V_NON_A, _V_NON_E = "eèéiìíoòóuùúEÈÉIÌÍOÒÓUÙÚ", "aàáiìíoòóuùúAÀÁIÌÍOÒÓUÙÚ"
+_ENF = r"[*_]{0,3}"                 # «e *esplosione*»: il corsivo non conta
+_D_MANCA = re.compile(rf"(?<![\w'’])(?:a (?={_ENF}[{_V_A}])|e (?={_ENF}[{_V_E}])"
+                      r"|(?:(?<=^)|(?<=[.!?:»\"*>-]\s))A (?=[AÀÁ](?:[a-zà-ù]|[A-Z]{2}))"
+                      r"|(?<=[A-ZÀ-Ù]{2}\s)E (?=[EÈÉ][A-ZÀ-Ù]))")
+_D_AVANZA = re.compile(rf"(?<![\w'’])(?:[Aa]d (?={_ENF}[{_V_NON_A}])|[Ee]d (?={_ENF}[{_V_NON_E}]))")
+_D_LOCUZIONI = re.compile(r"[Aa]d (?:esempio|es\.)")
+_D_CODA = re.compile(r"(?<![\w'’])([AaEe]d?)[*_]{0,3}\s*$")     # «…e» a fine riga
+_D_TESTA = re.compile(r"^[\s>*_-]*")
+
+
+def d_eufonica(riga: str) -> list[str]:
+    """Le forme della *d* eufonica fuori norma in una riga, come «a area → ad»."""
+    out = [f"«{m.group(0)}…» → {m.group(0).strip()}{'D' if riga[m.end():m.end() + 2].isupper() else 'd'}"
+           for m in _D_MANCA.finditer(riga)]
+    out += [f"«{m.group(0)}…» → {m.group(0)[0]}" for m in _D_AVANZA.finditer(riga)
+            if not _D_LOCUZIONI.match(riga, m.start())]
+    return out
+
+
+def d_eufonica_righe(righe) -> list[tuple[int, str]]:
+    """(numero, forma) su tutte le righe, anche quando la congiunzione chiude una
+    riga e la parola dopo apre la seguente («Pietra e / evocato»)."""
+    out: list[tuple[int, str]] = []
+    prima: tuple[int, str] | None = None
+    for n, riga in righe:
+        out += [(n, f) for f in d_eufonica(riga)]
+        if prima and riga.strip():
+            unite = prima[1] + " " + riga[_D_TESTA.match(riga).end():]
+            out += [(prima[0], f + " (a capo)") for f in d_eufonica(unite)]
+        m = _D_CODA.search(riga)
+        prima = (n, m.group(1)) if m and riga.strip() else None
+    return out
+
+
 # Né spazio, né lettera, né punteggiatura: il codice mascherato non deve
 # somigliare a niente che le regole qui sopra cerchino.
 MASCHERA = "¤"
@@ -110,12 +156,18 @@ def righe_da_controllare(testo: str):
         yield n, INLINE.sub(lambda m: MASCHERA * len(m.group(0)), riga)
 
 
-def controlla(f: Path) -> tuple[list[str], list[str]]:
+def controlla(f: Path, d_eufonica_blocca: bool = False) -> tuple[list[str], list[str]]:
+    """`d_eufonica_blocca`: la *d* eufonica è nel canale testing fino al 2026-11-24
+    (ADR-0120, ADR-0099), quindi di suo è un avviso; con True è un errore."""
     errori: list[str] = []
     avvisi: list[str] = []
     testo = f.read_text(encoding="utf-8", errors="ignore")
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
-    for n, riga in righe_da_controllare(testo):
+    righe = list(righe_da_controllare(testo))
+    for n, forma in d_eufonica_righe(righe):
+        (errori if d_eufonica_blocca else avvisi).append(
+            f"{rel}:{n}: d eufonica fuori norma (ad/ed solo davanti alla stessa vocale) — {forma}")
+    for n, riga in righe:
         for pattern, perche in ERRORI:
             if re.search(pattern, riga, re.I):
                 errori.append(f"{rel}:{n}: {perche} — «{riga.strip()[:70]}»")
@@ -141,6 +193,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("files", nargs="*", help="file da controllare (default: tutto il contenuto)")
     ap.add_argument("--strict", action="store_true", help="gli avvisi diventano errori")
+    ap.add_argument("--d-eufonica", action="store_true",
+                    help="la d eufonica fuori norma è un errore (canale testing fino al "
+                         "2026-11-24, ADR-0120: senza, è un avviso)")
     ap.add_argument("--avvisi", action="store_true",
                     help="elenca gli avvisi; senza, se ne stampa solo il conto per tipo")
     args = ap.parse_args(argv)
@@ -151,7 +206,7 @@ def main(argv=None) -> int:
     for f in bersagli:
         if not f.is_file():
             continue
-        e, a = controlla(f)
+        e, a = controlla(f, d_eufonica_blocca=args.d_eufonica)
         errori += e
         avvisi += a
 
@@ -169,6 +224,7 @@ def main(argv=None) -> int:
         per_tipo: dict[str, int] = {}
         for a in avvisi:
             tipo = re.sub(r"^.*?:\d+: ", "", a)   # «file:riga: perché»
+            tipo = tipo.split(" — «")[0]           # senza la forma trovata
             per_tipo[tipo] = per_tipo.get(tipo, 0) + 1
         print("  ⚠ avvisi (--avvisi per l'elenco): " + " · ".join(
             f"{n} {tipo}" for tipo, n in sorted(per_tipo.items(), key=lambda kv: -kv[1])))

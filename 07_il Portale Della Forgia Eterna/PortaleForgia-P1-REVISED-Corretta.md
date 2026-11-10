@@ -325,7 +325,7 @@ I PG hanno appena combattuto una battaglia devastante nella **Stanza della Coron
 - **Posizione:** Centro esatto stanza (H9-I10)
 - **Dimensioni:** 3m x 3m base, 1,5m altezza pedana + 2m altezza trono
 - **Materiale:** Adamantio puro (valore stimato 100.000+ mo)
-- **Incisioni:** Rune nanice che raccontano storia dei re nanici dall'Anno -5000 ad oggi
+- **Incisioni:** Rune nanice che raccontano storia dei re nanici dall'Anno -5000 a oggi
 - **Corona:** Posata sulla sommità dello schienale del trono (non sulla seduta)
 
 **PORTA NORD (Ingresso):**

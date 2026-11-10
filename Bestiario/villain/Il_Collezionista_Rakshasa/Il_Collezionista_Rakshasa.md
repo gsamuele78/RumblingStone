@@ -84,7 +84,7 @@ fonte: rakshasa (SRD 3.5) 7 DV + Stregone 11, rifatto a mano: vedi Boost log in 
 ## Nella campagna
 
 * **Il piano di Varis:**
-ha un piano per far si che i PG si uccidano tra di loro. e che poi lui possa depredare i cadaveri dagli artefatti dei PG e venderli al miglior offerente.ha una gilda di ladri ed assassini che lavora per lui (simile al libro di R.A. Salvatore per la parte del capo della gilda di ladri).Ha un clone di se stesso incontrato dai pg all'inizio della campagna nel minotaur lair che poi si rivelerà essere stato inviato per fare affari con i drow e la regina dei funghi.
+ha un piano per far si che i PG si uccidano tra di loro. e che poi lui possa depredare i cadaveri dagli artefatti dei PG e venderli al miglior offerente.ha una gilda di ladri e assassini che lavora per lui (simile al libro di R.A. Salvatore per la parte del capo della gilda di ladri).Ha un clone di se stesso incontrato dai pg all'inizio della campagna nel minotaur lair che poi si rivelerà essere stato inviato per fare affari con i drow e la regina dei funghi.
 
 ## Con i PG
 

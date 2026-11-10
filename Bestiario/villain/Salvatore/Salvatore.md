@@ -180,7 +180,7 @@ L'anello-Cronolito annulla l'aura magica di tutti gli oggetti di Sal entro 1,5 m
 
 #### Mente Schermata
 
-Immune a tutti gli effetti di lettura del pensiero, individuazione dell'allineamento e effetti di charme/dominio che richiedono contatto visivo prolungato (oltre 1 round di concentrazione ininterrotta).
+Immune a tutti gli effetti di lettura del pensiero, individuazione dell'allineamento ed effetti di charme/dominio che richiedono contatto visivo prolungato (oltre 1 round di concentrazione ininterrotta).
 
 #### Nascondersi in Piena Vista (Ex) — Capacità di Classe Spia
 

@@ -25,7 +25,7 @@ esplicita:
 | **Nomi propri di persona e di luogo canonici FR** | come in FR | *Hammerfist*, *Rethmar*, *Dauth*: sono già canone di ambientazione |
 | **Artefatti nominati in Comune** | inglese | *Aegis Fang* è un nome proprio, non una descrizione |
 | **Artefatti nominati in nanico/descrittivi** | italiano | *Corona di Adamantio*, *Bracieri Gemelli di Moradin* |
-| **Soprannomi e epiteti** | **italiano** | *Barbadiferro*, *Fuocospento*, *il Velato*, *Seta-Argento* — sono **parlanti**, e in italiano parlano |
+| **Soprannomi ed epiteti** | **italiano** | *Barbadiferro*, *Fuocospento*, *il Velato*, *Seta-Argento* — sono **parlanti**, e in italiano parlano |
 | **Termini di regolamento** | italiano al tavolo | **CD** non DC, **TS**, **Lotta**, **azione veloce** |
 
 ⚠️ **Non uniformare i nomi esistenti.** Sono già in centinaia di file, nelle

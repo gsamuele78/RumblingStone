@@ -1643,7 +1643,7 @@ Con i PG alla guida, la battaglia cambia completamente natura:
 **FASE 2 - Inseguimento (Round 4-6):**
 - I nani inseguono i nemici attraverso i tunnel
 - Possibilità di eliminare completamente alcune unità nemiche
-- Recupero di armi e equipaggiamento perduto
+- Recupero di armi ed equipaggiamento perduto
 
 **FASE 3 - Riconquista (Round 7-10):**
 - I bastioni intermedi vengono riconquistati
@@ -1880,7 +1880,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 
 #### **INCONTRO 4B: L'Arrivo dei Gufi**
 **Il Momento Cinematico - Leggere con Enfasi:**
-> *"Dalle nubi tempestose emergono sagome magnifiche: dodici gufi giganti dalle piume che brillano di luce celestiale, ognuno con un ranger elfico in sella che tiene pronto l'arco. Ma è il tredicesimo gufo che vi toglie il fiato. È enorme, con un'apertura alare di almeno otto metri, e le sue piume sono tessute di luce stellare. Sul suo dorso, due figure: un druido dalle vesti ornate di fulmini e un bardo mezzelfo che suona una lira che scintilla ad ogni nota."*
+> *"Dalle nubi tempestose emergono sagome magnifiche: dodici gufi giganti dalle piume che brillano di luce celestiale, ognuno con un ranger elfico in sella che tiene pronto l'arco. Ma è il tredicesimo gufo che vi toglie il fiato. È enorme, con un'apertura alare di almeno otto metri, e le sue piume sono tessute di luce stellare. Sul suo dorso, due figure: un druido dalle vesti ornate di fulmini e un bardo mezzelfo che suona una lira che scintilla a ogni nota."*
 
 > *"'VENITE, FRATELLI DEL CIELO!' tuona il druido, la sua voce che compete con il rombo del tuono. 'OGGI INSEGNIAMO A QUESTI VERMI COSA SIGNIFICA SFIDARE LA NATURA STESSA!' Il bardo pizzica le corde della sua lira magica, e ogni nota libera un fulmine che si scaglia con precisione mortale sui ranghi nemici. I gufi emettono richiami acuti che fanno tremare l'aria, e i loro occhi dorati brillano della giustizia celestiale."*
 

@@ -25,7 +25,9 @@ def _testo(s: str) -> tuple[list[str], list[str]]:
     with tempfile.TemporaryDirectory() as d:
         f = Path(d) / "prova.md"
         f.write_text(s, encoding="utf-8")
-        return controlla(f)
+        # La d eufonica è in testing (ADR-0120): qui si prova il controllo, quindi
+        # la si legge come errore, come fa il passo di CI con --d-eufonica.
+        return controlla(f, d_eufonica_blocca=True)
 
 
 class TestRefusiVeri(unittest.TestCase):
@@ -42,6 +44,21 @@ class TestRefusiVeri(unittest.TestCase):
 
     def test_qual_e_con_lapostrofo(self):
         errori, _ = _testo("Non si sa qual'è la porta.")
+        self.assertTrue(errori)
+
+    def test_d_eufonica_che_manca(self):
+        for riga in ("Il tuo spirito, legato a Aegis Fang.", "Armi e equipaggiamento.",
+                     "Usano *fulmine* e *esplosione*.", "Ascoltava tutto e **è sparita**."):
+            errori, _ = _testo(riga)
+            self.assertTrue(errori, riga)
+
+    def test_d_eufonica_che_avanza(self):
+        for riga in ("Canta ad ogni notte.", "Dall'anno -5000 ad oggi.", "Ladri ed assassini."):
+            errori, _ = _testo(riga)
+            self.assertTrue(errori, riga)
+
+    def test_d_eufonica_a_capo(self):
+        errori, _ = _testo("Riforgiato in Guardiano di Pietra e\nevocato dal 3° livello.")
         self.assertTrue(errori)
 
     def test_d_eufonica_davanti_a_consonante(self):
@@ -67,8 +84,25 @@ class TestRefusiVeri(unittest.TestCase):
         self.assertTrue(errori)
 
 
+class TestCanaleTesting(unittest.TestCase):
+
+    def test_la_d_eufonica_di_suo_e_un_avviso(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "prova.md"
+            f.write_text("Canta ad ogni notte.", encoding="utf-8")
+            errori, avvisi = controlla(f)
+        self.assertEqual(errori, [])
+        self.assertTrue(any("d eufonica" in a for a in avvisi))
+
+
 class TestFalsiPositivi(unittest.TestCase):
     """Ogni caso qui sotto è una riga corretta che NON deve produrre un rilievo."""
+
+    def test_d_eufonica_in_norma(self):
+        for riga in ("Legato ad Aegis Fang ed esperto.", "Ad esempio, a ogni round.",
+                     "Quando Unità A attacca Unità B.", "Pietra o osso.", "Ad es. un nano."):
+            errori, _ = _testo(riga)
+            self.assertEqual(errori, [], riga)
 
     def test_una_riga_pulita(self):
         errori, avvisi = _testo("Perché la porta è chiusa, né si apre.")

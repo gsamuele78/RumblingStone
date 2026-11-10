@@ -75,7 +75,7 @@ Se il gruppo è meno ottimizzato, puoi ridurre leggermente pf o abbassare di 1�
 Setup iniziale:
 
 - Saarvith in copertura sul piano alto, già in **allerta** se i PG hanno fatto casino prima.  
-- Regiarix sotto la superficie vicino all’edificio, pronto ad emergere a comando.
+- Regiarix sotto la superficie vicino all’edificio, pronto a emergere a comando.
 
 ---
 

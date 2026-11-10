@@ -82,4 +82,4 @@
 
 ---
 
-> **Nota:** Tutti i prompt sono vincolati al lore della campagna come documentato nei file di sessione, NPC, e encounters del repository RumblingStone. Nessun elemento è inventato: ogni scena, personaggio e ambiente è tracciabile ai file sorgente.
+> **Nota:** Tutti i prompt sono vincolati al lore della campagna come documentato nei file di sessione, NPC, ed encounters del repository RumblingStone. Nessun elemento è inventato: ogni scena, personaggio e ambiente è tracciabile ai file sorgente.

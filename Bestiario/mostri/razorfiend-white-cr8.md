@@ -20,4 +20,4 @@ iniziativa: +4
 **Full**: Bite +13 (2d6+5 + 1d6 cold), 2 claws +8, tail +8
 **Breath weapon**: 30 ft cone cold, 5d8, Ref CD 18 half
 **Immune**: cold, paralysis, sleep | **Vulnerable**: fire
-**Notes**: 1 assegnato a Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti.
+**Notes**: 1 assegnato ad Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti.

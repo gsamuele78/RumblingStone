@@ -512,7 +512,7 @@ Il mondo si congela. Moradin parla alla mente del Portatore.
 
 "Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle
 
-mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato a Aegis
+mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato ad Aegis
 
 Fang e ora a questa corona, può ancora colpire. Hai dieci rintocchi di martello (10
 
@@ -978,7 +978,7 @@ conoscenza e scopo.
 
 "Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle
 
-mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato a Aegis
+mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato ad Aegis
 
 Fang e ora a questa corona, può ancora colpire. Hai dieci rintocchi di martello (10
 

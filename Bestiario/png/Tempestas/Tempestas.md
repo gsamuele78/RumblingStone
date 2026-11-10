@@ -183,7 +183,7 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 
 **Tattiche (quando è lui il bersaglio)**
 - *Prima del combattimento*: non entra mai in uno scontro che può evitare. Se sa che lo cercano, viaggia con *invisibilità superiore* pronta e tiene un *passo nelle ombre* libero per andarsene. Se ha un round di preavviso lancia *velocità* su sé stesso e sugli alleati toccati, e comincia a suonare.
-- *Durante il combattimento*: round 1, la **Cantata della Tempesta Tonante**, perché colpisce tutti gli ostili entro 18 m e dà agli alleati +2 a colpire, danni e TS; se i nemici sono uno o due, *dominare persone* sul più forte (CD 20) o *urlo* (CD 20) se sono in fila. Round 2, *confusione* (CD 19) sul gruppo o *polvere luccicante* (CD 18) se c'è un invisibile; contro un incantatore tiene pronto il **controincantesimo**. Round 3 e oltre, *fulmine* e *esplosione sonora* finché la Cantata dura, e *porta dimensionale* appena qualcuno gli arriva in mischia: con CA 20 e 91 pf non regge un guerriero. La spada corta la sguaina solo se non ha più incantesimi.
+- *Durante il combattimento*: round 1, la **Cantata della Tempesta Tonante**, perché colpisce tutti gli ostili entro 18 m e dà agli alleati +2 a colpire, danni e TS; se i nemici sono uno o due, *dominare persone* sul più forte (CD 20) o *urlo* (CD 20) se sono in fila. Round 2, *confusione* (CD 19) sul gruppo o *polvere luccicante* (CD 18) se c'è un invisibile; contro un incantatore tiene pronto il **controincantesimo**. Round 3 e oltre, *fulmine* ed *esplosione sonora* finché la Cantata dura, e *porta dimensionale* appena qualcuno gli arriva in mischia: con CA 20 e 91 pf non regge un guerriero. La spada corta la sguaina solo se non ha più incantesimi.
 - *Morale*: sotto 45 pf, o quando l'*invisibilità superiore* viene dissolta, se ne va con *passo nelle ombre* o *porta dimensionale*, portando con sé chi tocca. Non combatte fino alla morte per nessuno; per i PG resta un round in più, ma solo per il debito della città di Lorana.
 
 
@@ -286,7 +286,7 @@ Benchmark: PF T1-1 riga 14: CA 20 vs 29 (9 sotto) / pf 91 vs 200 (molto sotto) /
 > - Quando consegna le 4 lettere: *"Ho fatto strada per portarvi quattro voci diverse. Ognuna è di un mondo diverso. Tutti vogliono che voi viviate. Trovate il modo di non deluderli tutti."*
 > - A Tordek (consegnando il sigillo Dauth): *"Maestro monaco — il Sovrintendente del Torneo dice che le sue Otto Porte hanno una Voce che non è loro. Pensa siate voi a poterla ascoltare."*
 > - A Hella (mostrando la cenere): *"Ho visto il Cerchio. Era ancora caldo. Non sapevo cosa fare. Ho fatto la sola cosa che so fare bene: trasportare. Tu, ci puoi parlare."*
-> - A Artemis (sussurrato): *"Il Mind Flayer non è solo. La torre lo sa. La torre vi ascolta. Andate cauti."*
+> - Ad Artemis (sussurrato): *"Il Mind Flayer non è solo. La torre lo sa. La torre vi ascolta. Andate cauti."*
 > - A Thorik (tono militare): *"Brenna manda voi a quattro lettere. Voi una sola: 'siamo lì in 28 giorni'. Ce la fate."*
 <!-- /storico -->
 
