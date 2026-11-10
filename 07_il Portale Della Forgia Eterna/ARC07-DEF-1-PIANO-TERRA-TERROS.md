@@ -210,7 +210,7 @@ modulo, non giocate.
 `Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
 0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
-3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
+3 attacchi/CA 23; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
 pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 
 ### Il giro di Terros, in breve (3.5: UNA azione per round)
@@ -1557,18 +1557,18 @@ muove, ed è fuori dallo scontro, costretto a guardare.
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| la Sentinella | un golem di mithral, Grande, veloce e fluido, non goffo. Occhi senza volto che si girano verso l'unico in piedi | non parla. Ogni pugno che riceve risuona come una campana; il mithral non si ammacca, vibra |
+| la Sentinella | un golem di mithral, Enorme, veloce e fluido, non goffo. Occhi senza volto che si girano verso l'unico in piedi | non parla. Ogni pugno che riceve risuona come una campana; il mithral non si ammacca, vibra |
 | i Bracieri | i guanti di Tordek, con una coscienza da vecchio fabbro | in nanico, dentro la mente di Tordek, per frasi corte. Parlano al completamento, e poi di rado |
 
 ```statblocco
 nome: Sentinella Silenziosa (Golem di Mithral)
 gs: —
-tipo: Costrutto Grande
-taglia: Grande
-spazio: 3 m
-portata: 3 m
-ca: 30
-ca-dettaglio: contatto 11, colto 28 (−1 taglia, +2 DES, +19 naturale)
+tipo: Costrutto Enorme
+taglia: Enorme
+spazio: 4,5 m
+portata: 4,5 m
+ca: 29
+ca-dettaglio: contatto 10, colto 27 (−2 taglia, +2 DES, +19 naturale)
 pf: 160
 pf-dado: 18 DV
 ts: Temp +6, Rifl +8, Vol +6
@@ -1576,24 +1576,24 @@ attributi: For 27 Des 14 Cos — Int — Sag 11 Car 1
 velocita: 9 m
 iniziativa: +2
 attacchi:
-  - 2 schianti +20 (2d10+8 +1d6 elettrico)
+  - 2 schianti +19 (2d10+8 +1d6 elettrico)
 ```
-**Difesa** **CA 30** (−1 taglia, +2 DES, +19 nat), contatto 11, colto 28 · **pf 160** (DV 18; con 18d10 e i +30 di un costrutto Grande la media SRD sarebbe 129, i 160 sono del modulo) · TS Tempra +6, Riflessi +8, Volontà +6 (costrutto: BAB ai tre quarti dei DV, tre TS scarsi, SRD *Costrutto*) · **RD 15/adamantio e contundente** (solo i pugni di Tordek coi Bracieri passano pieni) · immunità da costrutto · **immunità alla magia** (non al Diapason, qui sotto)
+**Difesa** **CA 29** (−2 taglia, +2 DES, +19 nat), contatto 10, colto 27 · **pf 160** (DV 18; con 18d10 e i +40 di un costrutto Enorme la media SRD sarebbe 139, i 160 sono del modulo) · TS Tempra +6, Riflessi +8, Volontà +6 (costrutto: BAB ai tre quarti dei DV, tre TS scarsi, SRD *Costrutto*) · **RD 15/adamantio e contundente** (solo i pugni di Tordek coi Bracieri passano pieni) · immunità da costrutto · **immunità alla magia** (non al Diapason, qui sotto)
 
-**Attacco** Vel 9 m · **Mischia** 2 schianti +20 (2d10+8 **+1d6 elettrico**) · BAB +13; Lotta +25
+**Attacco** Vel 9 m · **Mischia** 2 schianti +19 (2d10+8 **+1d6 elettrico**) · BAB +13; Lotta +29
 
 **Statistiche** For 27, Des 14, Cos —, Int —, Sag 11, Car 1
 
 **Capacità speciali**
 - **Pugno Voltaico**: se colpisce, Tempra **CD 22** o **barcollante** 1 round.
 - **Attrazione Fatale** (azione veloce): strappa un oggetto metallico non-artefatto entro 9 m, Riflessi **CD 22** nega.
-- **Vulnerabilità alla Risonanza degli artefatti**: i Bracieri **ignorano la RD** e infliggono pieno, e i loro colpi sono **attacchi di contatto** (la Risonanza: CA di contatto 11). Il primo che va a segno in un round crea una **crepa**, al massimo una a round. **3 crepe → guscio infranto, ed è la vittoria** `[CANONE — DM 2026-10-14, D86]`.
+- **Vulnerabilità alla Risonanza degli artefatti**: i Bracieri **ignorano la RD** e infliggono pieno, e i loro colpi sono **attacchi di contatto** (la Risonanza: CA di contatto 10). Il primo che va a segno in un round crea una **crepa**, al massimo una a round. **3 crepe → guscio infranto, ed è la vittoria** `[CANONE — DM 2026-10-14, D86]`.
 
 **Scontro in 3 fasi.** (1) *Il guscio* — la Sentinella è veloce, fluida, non
 goffa: Tordek usa mobilità/CA per sopravvivere e colpire **duro** (ogni pugno
 risuona come una campana; il mithral non si ammacca, **vibra**). (2) *La
 Risonanza* — alla prima crepa il guscio si apre in luce verde `[CANONE — DM 2026-10-14, D86]`;
-il Golem entra in *Overdrive* (**3 attacchi/round, CA scende a 24**), voce di
+il Golem entra in *Overdrive* (**3 attacchi/round, CA scende a 23**), voce di
 Moradin: *«Il metallo cede al calore e alla pressione insieme: usa entrambi!»* (attiva
 i Colpi del Fuoco). (3) *Il colpo finale* — alla terza crepa (o a 0 pf) il petto si apre; un colpo
 senz'armi automatico estrae il **Geode di Smeraldo** prima che si rigeneri.

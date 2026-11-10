@@ -6,7 +6,7 @@
 gs: 4
 tipo: Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12
 taglia: Media
-spazio: 1,5 m
+spazio: 1,5 m (in sella 3 m, quello della cavalcatura Grande)
 portata: 1,5 m (3 m con la lancia da cavaliere, e allora non i quadretti adiacenti)
 ca: 16
 ca-dettaglio: (+3 cuoio borchiato, +2 scudo, +1 Des)

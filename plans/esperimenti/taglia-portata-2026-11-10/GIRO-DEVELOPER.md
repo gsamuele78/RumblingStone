@@ -74,3 +74,5 @@ Schede Medie e Piccole (146 + 4): nessuna taglia sospetta. Le 9 «senza indizi»
 ## Decisione del DM (2026-11-10)
 
 Jfs sceglie «SRD sui tre testi, il resto tuo». Beholder tiranno della morte: la prosa segue il blocco e la fonte (portata 1,5 m). Capitano hobgoblin: 3 m con la lancia da cavaliere. Sacerdotessa drow: la frusta è una frusta dell'SRD (4,5 m, non minaccia). Il golem Sentinella resta Grande e i cavalieri in sella tengono lo spazio scritto dal DM.
+
+Stessa sera Jfs corregge: «metti tutte standard SRD». La frusta non minaccia; il cavaliere senza lancia minaccia a 1,5 m. Quindi anche: Sentinella Silenziosa Enorme (4,5 m, 3×3 quadretti, portata 4,5 m), con i numeri che la taglia trascina: CA 29 (contatto 10, colto 27), schianti +19, Lotta +29, Overdrive CA 23, +40 pf da costrutto Enorme (i 160 pf restano del modulo). Cavalieri (gnoll sull'ienodonte, cavaliere di Thay): in sella occupano i 3 m della cavalcatura Grande. Non verificato: la taglia dell'ienodonte (non SRD; Grande in PF1e).
