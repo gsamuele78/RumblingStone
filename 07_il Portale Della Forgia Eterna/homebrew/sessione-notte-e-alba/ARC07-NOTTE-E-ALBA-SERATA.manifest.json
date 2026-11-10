@@ -64,7 +64,6 @@
       "sezioni": [
         "testa:§4",
         "⏳",
-        "A.3",
         "SCENA 6",
         "SCENA 7",
         "SCENA 8",
@@ -130,6 +129,6 @@
     }
   ],
   "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg",
-  "schede": "entrambe",
+  "schede": "prima-volta",
   "chi_si_incontra": true
 }

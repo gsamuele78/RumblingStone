@@ -4258,6 +4258,8 @@ attacchi:
 
 **Statistiche** For 18, Cos 16, Sag 14 · BAB +6; Lotta +10
 
+**Tattiche** Non vuole lo scontro con i PG e sa di non reggerlo: alla prima ferita grave getta l'ascia e grida *«Se siete dei nostri, dimostratelo!»* (§6, «Attaccano la pattuglia di Durin»). Nella Scena 6 li accompagna fino alla postierla e lì resta (la tiene aperta per il ritorno, Scena 8).
+
 **Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
 
 ### A.4 · Balvar Fuocospento (Scena 7)

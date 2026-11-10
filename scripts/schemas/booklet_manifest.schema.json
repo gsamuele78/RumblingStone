@@ -132,9 +132,10 @@
       "enum": [
         "appendice",
         "qui",
-        "entrambe"
+        "entrambe",
+        "prima-volta"
       ],
-      "description": "Dove esce il riquadro intero delle creature (ADR-0105 punto 7). 'appendice' (predefinito): nell'incontro una riga con nome, GS, CA, pf, rimando e tattica, il riquadro in un'appendice in fondo al volume. 'qui': il riquadro dove è scritto, per i volumi da consegnare ai giocatori. 'entrambe': il riquadro dove è scritto e in più l'appendice in fondo, solo nel PDF (l'HTML fa come 'qui'). Catene: entrambe."
+      "description": "Dove esce il riquadro intero delle creature (ADR-0105 punto 7). 'appendice' (predefinito): nell'incontro una riga con nome, GS, CA, pf, rimando e tattica, il riquadro in un'appendice in fondo al volume. 'qui': il riquadro dove è scritto, per i volumi da consegnare ai giocatori. 'entrambe': il riquadro dove è scritto e in più l'appendice in fondo, solo nel PDF (l'HTML fa come 'qui'). Catene: entrambe. 'prima-volta' (ADR-0122): come gli AP Paizo, il riquadro intero nel corpo solo alla prima comparsa, poi la riga con la pagina della scheda e la tattica dell'incontro; in fondo l'appendice con tutte. Solo nel PDF (l'HTML fa come 'qui')."
     },
     "chi_si_incontra": {
       "type": "boolean",

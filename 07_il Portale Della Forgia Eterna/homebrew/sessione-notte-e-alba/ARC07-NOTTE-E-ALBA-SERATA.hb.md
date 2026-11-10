@@ -2051,32 +2051,6 @@ Balvar prima di colpire, cercare Zeth e fare il banchetto costano **3 tacche** i
 tre pezzi migliori della notte, e sommati sono anche il rischio più grosso. È
 il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 
-<!-- pagina: una-colonna -->
-### A.3 · Durin Rocciadura (Scena 2)
-
-{{monster,frame
-## Durin Rocciadura
-*Nano Medio · Guerriero 6* · GS 6
-___
-**Sensi** scurovisione 18 m
-
-**DIFESA**
-___
-**CA 22** (arm. completa +1, scudo pesante +1) · **pf 52** · TS Temp +8, Rifl +2, Vol +4  
-
-**ATTACCO**
-___
-**Mischia** ascia da guerra nanica +1 +11 (1d10+5, ×3), a una mano  
-
-**STATISTICHE**
-___
-For 18, Cos 16, Sag 14 · BAB +6; Lotta +10  
-}}
-
-**Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
-
-<!-- /pagina -->
-
 ### SCENA 6 — Il mare di tende
 
 **In scena** — Dove: la postierla · il campo — Chi: Durin · Grask · i cavalieri dei lupi · la pattuglia di quattro orchi · le vedette goblin · lo squadrone hobgoblin · il corridore

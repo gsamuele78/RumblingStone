@@ -480,12 +480,55 @@
     // Con «entrambe» la stessa scheda esce in due capitoli, e i rimandi
     // riscritti per capitolo cambiano il testo: lì la stessa creatura è
     // stesso nome, GS, CA e pf, non lo stesso testo.
-    let chiave = if modo-schede.get() == "entrambe" {
+    let modo = modo-schede.get()
+    let chiave = if modo == "entrambe" or modo == "prima-volta" {
       to-string(nome) + "|" + repr(gs) + "|" + repr(ca) + "|" + repr(pf)
     } else { chiave }
+    // La riga dell'incontro (ADR-0105 §7): CA, pf, la pagina della scheda e
+    // la tattica di QUESTO incontro. `dove`: «scheda a pagina N».
+    let riga(pagina) = {
+      let pezzi = ()
+      if ca != "" and ca != [] { pezzi.push([*CA* #ca]) }
+      if pf != "" and pf != [] { pezzi.push([*pf* #pf]) }
+      block(width: 100%, breakable: true, above: 0.9em, below: 0.6em,
+        stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
+        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
+        #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
+        #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
+        #if pagina != none {
+          h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
+        }
+        #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
+        #if tattiche != none [
+          #v(2pt)
+          #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]
+          #v(1pt)
+          #text(size: 8.6pt)[#tattiche]
+        ]
+      ]
+    }
+    // «prima-volta» (ADR-0122, scelta del DM del 2026-11-10): come negli AP
+    // Paizo, la scheda intera esce nel corpo solo la prima volta; dopo, la
+    // riga con la pagina della scheda e la tattica di questo incontro. In
+    // appendice ci sono tutte, come con «entrambe».
+    if modo == "prima-volta" {
+      let gia = query(selector(<sb-corpo>).before(here())).filter(m => m.value == chiave)
+      if gia.len() > 0 {
+        [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
+                    lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
+        // la pagina dove la scheda comincia davvero: il segnaposto sta prima
+        // del riquadro, che può passare intero alla colonna o alla pagina dopo
+        let dentro = query(selector(<sb-inizio>).after(gia.first().location()))
+          .filter(m => m.value == to-string(nome))
+        let dove = if dentro.len() > 0 { dentro.first().location() } else { gia.first().location() }
+        riga(counter(page).at(dove).first())
+        return
+      }
+      [#metadata(chiave) <sb-corpo>]
+    }
     if modo-schede.get() != "appendice" {
       // «entrambe»: il riquadro intero qui, e una copia anche nell'appendice.
-      if modo-schede.get() == "entrambe" {
+      if modo == "entrambe" or modo == "prima-volta" {
         [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
                     lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
       }
@@ -495,7 +538,7 @@
       // Se non entra nello spazio che resta nella colonna, va a capo colonna
       // da sé: sotto un float Typst 0.15 sbaglia lo spazio che resta, e un
       // blocco che non si spezza finirebbe sopra il piede.
-      if modo-schede.get() != "entrambe" or larga {
+      if (modo != "entrambe" and modo != "prima-volta") or larga {
         let corpo = intero(tattiche, spezzabile: true)
         if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
         return
@@ -537,33 +580,12 @@
     [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
                 lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
     // La riga dell'incontro: quanto serve per tenere il conto al tavolo, e la
-    // pagina dove sta il resto. I campi brevi, non le fasce: CA e pf.
+    // pagina dove sta il resto, in appendice.
     let pagina = {
       let qui = query(<sb-app>).filter(m => m.value == chiave)
       if qui.len() > 0 { counter(page).at(qui.first().location()).first() } else { none }
     }
-    let pezzi = ()
-    if ca != "" and ca != [] { pezzi.push([*CA* #ca]) }
-    if pf != "" and pf != [] { pezzi.push([*pf* #pf]) }
-    // Spezzabile: sotto un float a tutta pagina Typst 0.15 sbaglia lo spazio
-    // che resta in colonna, e un blocco che non si spezza finiva sopra il piede
-    // (Abbazia, p. 26, 2026-10-29). Il nome resta attaccato alla prima riga.
-    block(width: 100%, breakable: true, above: 0.9em, below: 0.6em,
-      stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
-      #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
-      #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
-      #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
-      #if pagina != none {
-        h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
-      }
-      #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
-      #if tattiche != none [
-        #v(2pt)
-        #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]
-        #v(1pt)
-        #text(size: 8.6pt)[#tattiche]
-      ]
-    ]
+    riga(pagina)
   }
 }
 

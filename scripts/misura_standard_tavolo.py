@@ -340,6 +340,14 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
     if arricchisci and indice is None:
         indice = chi_si_incontra.indice_del_repo()
     nel_volume = capitoli_del_volume(base, man)
+    volume = {"capitolo": "", "persone": {}, "mappe": {}, "native": {}} if modo == "prima-volta" else None
+    if volume is not None:
+        for cap in man.get("chapters", []):
+            f = (base / cap["file"]).resolve()
+            if f.is_file() and cap.get("tag") == "dm":
+                m_ = re.match(r"^\s*([IVXLC]+)\s*·", cap.get("title", ""))
+                for c in chi_si_incontra.mappe_stampate(leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))):
+                    volume["native"].setdefault(c, f"capitolo {m_.group(1)}" if m_ else "capitolo")
     capitoli, note = [], []
     for cap in man.get("chapters", []):
         if cap.get("tag") != "dm" or cap.get("layout") == "schede":
@@ -349,7 +357,10 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
             continue
         md = leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))
         if arricchisci and not _CONSULTAZIONE.search(cap.get("title", "")):
-            md, _ = chi_si_incontra.arricchisci(md, f, indice, chiavi_dei_pg())
+            if volume is not None:
+                m_ = re.match(r"^\s*([IVXLC]+)\s*·", cap.get("title", ""))
+                volume["capitolo"] = f"capitolo {m_.group(1)}" if m_ else "capitolo"
+            md, _ = chi_si_incontra.arricchisci(md, f, indice, chiavi_dei_pg(), volume=volume)
             md = traduci_rimandi(md, f, nel_volume)
         note += [{"capitolo": cap.get("title", f.stem), "testo": m.group(0)}
                  for m in NOTA_DI_LAVORO.finditer(re.sub(r"<!--.*?-->", "", md, flags=re.S))]
@@ -377,6 +388,7 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
         nel_booklet.pop(k, None)
 
     righe, mappe = [], []
+    gia_stampati: set[str] = set()   # «prima-volta»: la scheda intera esce una volta sola
     for titolo, md in capitoli:
         mp_ = piega(md)
         bl = blocchi(md)
@@ -395,8 +407,11 @@ def misura_booklet(mp: Path, nomi: set[str], soglia: int = 3, prova: bool = Fals
             if n < soglia:
                 continue
             ha_blocco = any(chiave(b) == k for b, _ in bl)
+            dopo = modo == "prima-volta" and k in gia_stampati
+            if ha_blocco:
+                gia_stampati.add(k)
             v = {
-                "num": ("rimando" if appendice else "qui") if ha_blocco else "manca",
+                "num": ("rimando" if appendice or dopo else "qui") if ha_blocco else "manca",
                 "asp": campo_dopo_nome(md, k, _ASPETTO),
                 "img": ha_immagine(md, k),
                 "chi": campo_dopo_nome(md, k, _CHI),
