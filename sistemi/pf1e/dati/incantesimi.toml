@@ -58,3 +58,16 @@ solo_alias = { stregone = "mago" }
 "2" = [["vigore virtuoso", "righteous vigor"], ["fuoco che avvince", "fire of entanglement"]]
 "3" = [["fuoco del giudizio", "fire of judgment"], ["santificare l'armatura", "sanctify armor"]]
 "4" = [["fuoco della vendetta", "fire of vengeance"], ["colpo risonante", "resounding blow"]]
+
+# Dove il livello PF1e di un incantesimo delle liste 3.5 riusate non è quello 3.5
+# (misura_regole_complete.py, «liste 3.5 riusate dal pf1e», contro il PRD).
+# -1 = non è nella lista PF1e della classe: in PF1e non si sceglie.
+# Il livello 0 il generatore non lo sceglie, ma il dato resta giusto.
+[livello_pf1e.mago]
+"metamorfosi" = 5            # Polymorph: Sor/Wiz 5 nel PRD (4 nell'SRD 3.5)
+
+[livello_pf1e.chierico]
+"cura ferite minori" = -1    # Cure Minor Wounds non esiste in PF1e (c'è Stabilize)
+
+[livello_pf1e.druido]
+"cura ferite minori" = -1

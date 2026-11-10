@@ -551,6 +551,16 @@ TAGLIE_COSTRUTTI = tuple((t, t.lower()) for t in (
     "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"))
 
 
+#: La tabella «Construct Size / Bonus Hit Points» del tipo costrutto, come la
+#: pubblica il PRD di Paizo (legacy.aonprd.com/bestiary/creatureTypes.html,
+#: Construct, letta il 2026-11-10): «—» per Fine, Diminutive e Tiny. Nel PSRD-Data
+#: in cache manca (book-b1 sezione 366 la annuncia senza riportarla). Serve per le
+#: taglie che nessuna scheda prova; per le altre deve concordare con le schede.
+TABELLA_COSTRUTTI_PRD = {"fine": 0, "diminutive": 0, "tiny": 0, "small": 10, "medium": 20,
+                         "large": 30, "huge": 40, "gargantuan": 60, "colossal": 80}
+FONTE_TABELLA_COSTRUTTI = "legacy.aonprd.com/bestiary/creatureTypes.html, Construct"
+
+
 def _pf_bonus_costrutti(base: Path) -> tuple[dict, list]:
     """I pf bonus dei costrutti per taglia, ricavati dalle schede dei Bestiary 1-4.
 
@@ -585,22 +595,26 @@ def creature_e_armature(base: Path) -> str:
     per_taglia, escluse = _pf_bonus_costrutti(base)
     out = [creature(base).rstrip("\n"), "",
            "# --- pf bonus dei costrutti per taglia. La tabella del tipo costrutto (book-b1",
-           "# sezione 366, «as shown on the following table») nel PRD non c'è: il numero è",
-           "# ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)` nei costrutti",
-           "# senza Robustezza, senza Costituzione e non mitici. Una taglia senza schede, o con",
-           "# schede discordi, non ha la voce: non si inventa.",
+           "# sezione 366, «as shown on the following table») nel PSRD-Data in cache non c'è:",
+           "# il numero è ricavato dalle schede dei Bestiary 1-4, come «+X» di `hp N (NdF+X)`",
+           "# nei costrutti senza Robustezza, senza Costituzione e non mitici, e deve concordare",
+           f"# con la tabella del PRD pubblicato ({FONTE_TABELLA_COSTRUTTI}). Le taglie che",
+           "# nessuna scheda prova prendono il valore della tabella («—» = 0).",
            "[pf_bonus_costrutti]"]
     for en, it in TAGLIE_COSTRUTTI:
         voci = per_taglia.get(en, {})
+        tabella = TABELLA_COSTRUTTI_PRD[it]
         if len(voci) == 1:
             (bonus, schede), = voci.items()
+            if bonus != tabella:
+                raise SystemExit(f"costrutto {it}: le schede dicono +{bonus}, la tabella del PRD +{tabella}")
             quante = "1 scheda sola" if len(schede) == 1 else f"{len(schede)} schede concordi"
-            out.append(f"{it} = {bonus}  # {quante}; prova: {schede[0]}")
+            out.append(f"{it} = {bonus}  # {quante}, come la tabella del PRD; prova: {schede[0]}")
         elif voci:
-            out.append(f"# {it}: schede discordi, " + "; ".join(
+            raise SystemExit(f"costrutto {it}: schede discordi " + "; ".join(
                 f"+{k} {v[0]}" for k, v in sorted(voci.items())))
         else:
-            out.append(f"# {it}: nessuna scheda di costrutto nel PRD")
+            out.append(f"{it} = {tabella}  # tabella del PRD («—»); nessuna scheda di costrutto nel PSRD-Data")
     out.append(f"# schede escluse dal conto: {len(escluse)} ("
                + "; ".join(f"{n} {m}" for _l, _s, n, m in escluse) + ")")
     out += ["",
@@ -663,6 +677,29 @@ def liste_incantesimi(base: Path) -> str:
             oltre[classe] = oltre.get(classe, 0) + len(livelli.pop(livello))
     usati_ora = {n for livelli in liste.values() for voci in livelli.values() for n in voci}
     libro_di = {n: x for n, x in libro_di.items() if n in usati_ora}
+    # Il livello 0 che `spell_lists` non ha, la pagina della lista lo scrive in chiaro
+    # («0-Level Shaman Spells: arcane mark, bleed, …», ACG): si legge da lì
+    # (lotto 4 delle regole complete, 2026-11-10).
+    dal_testo: "dict[str, int]" = {}
+    for classe in sorted(k for k in liste if dati[k]["livello_zero"] and 0 not in liste[k]):
+        for libro in LIBRI_INCANTESIMI:
+            c = sqlite3.connect(base / f"book-{libro}.db")
+            r = c.execute("select coalesce(body, description) from sections where lower(name)=?",
+                          (f"0-level {classe} spells",)).fetchone()
+            if not r or not r[0]:
+                continue
+            testo = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(r[0])))
+            for pezzo in testo.split(","):
+                nome = pezzo.strip().rstrip(".").strip()
+                for lb in LIBRI_INCANTESIMI:
+                    trovato = sqlite3.connect(base / f"book-{lb}.db").execute(
+                        "select name from sections where type='spell' and lower(name)=?", (nome.lower(),)).fetchone()
+                    if trovato:
+                        liste.setdefault(classe, {}).setdefault(0, set()).add(trovato[0])
+                        libro_di.setdefault(trovato[0], lb)
+                        dal_testo[classe] = dal_testo.get(classe, 0) + 1
+                        break
+            break
     senza_zero = sorted(k for k in liste if dati[k]["livello_zero"] and 0 not in liste[k])
     it: "dict[str, str]" = {}
     with open(ROOT / "scripts" / "lessico_it_pf1.tsv", encoding="utf-8") as fh:
@@ -682,6 +719,8 @@ def liste_incantesimi(base: Path) -> str:
            + (", ".join(f"{k} ({n} righe)" for k, n in sorted(oltre.items())) or "nessuno") + ".",
            "# Classi con trucchetti o orazioni di cui il PRD non elenca il livello 0 (buco della fonte, non riempito): "
            + (", ".join(senza_zero) or "nessuna") + ".",
+           "# Livello 0 letto dal testo della lista di classe (spell_lists non lo ha): "
+           + (", ".join(f"{k} ({n} voci)" for k, n in sorted(dal_testo.items())) or "nessuno") + ".",
            "# Una classe senza righe nel PRD non compare: " +
            (", ".join(sorted(classi_inc - set(liste))) or "nessuna") + "."]
     for classe in sorted(liste):

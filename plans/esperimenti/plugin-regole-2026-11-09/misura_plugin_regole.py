@@ -492,7 +492,10 @@ def uso_tipi_pf1e() -> dict:
         righe.append(riga)
         try:
             sb, _ = G.genera(9, tipo=tipo, taglia=taglia, rng=random.Random(1))
-            pf, _ = CP.converti(sb, tipo, taglia)
+            try:
+                pf, _ = CP.converti(sb, tipo, taglia, pf_bersaglio=G.bersaglio_di(9, "bruto", False)[0]["pf"])
+            except TypeError:   # converti di prima del lotto 5 delle regole complete
+                pf, _ = CP.converti(sb, tipo, taglia)
         except Exception as e:  # noqa: BLE001
             sb_err.append({"riga": riga, "campo": "converti", "plugin": None, "fonte": str(e)[:80]})
             continue

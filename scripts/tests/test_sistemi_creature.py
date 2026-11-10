@@ -34,14 +34,16 @@ from dmcore import tabelle as T  # noqa: E402
 #: NOMI_DI_CLASSE. Per la card del DM dello stesso giorno («Tabelle PF1e intere,
 #: segnate») anche T.BARDO, T.BARDO_CONOSCIUTI, T.RANGER/T.PALADINO e
 #: T.INCANTATORI: griglie del PRD PF1e, non SRD 3.5. Le altre impronte sono
-#: quelle di prima.
+#: quelle di prima. Il 2026-11-10 (regole complete, lotto 1) ARMATURE ancora:
+#: «scaglie» diventa «corazza a scaglie», perché le scaglie di un drago non
+#: sono un'armatura.
 IMPRONTE_PRIMA = {
     "TIPI": "f314442313fc6eb1",
     "CLASSI": "ba993374d9283a09",
     "CLASSI_PNG": "b9acd679e2fa5931",
     "BAB_CLASSE": "e806f841362f1085",
     "TAGLIE": "e0f832356e31615e",
-    "ARMATURE": "10757daf547da893",
+    "ARMATURE": "458da9837e40b7e0",
     "SCUDI": "bdd26a829de31a9a",
     "ELITE": "f3bbb911592fbc0a",
     "BASIC": "09397ca2fbf7a68e",
@@ -76,7 +78,9 @@ IMPRONTE_L5B = {
 #: L5c (2026-11-07): impronte delle liste di incantesimi di main prima dello
 #: spostamento in `sistemi/{dnd35,pf1e}/dati/incantesimi.toml`.
 IMPRONTE_L5C = {
-    "LISTE": "5c66496fb67f721f",
+    # LISTE riscritta di proposito il 2026-11-10 (lotto 2 delle regole complete): 108 nomi
+    # portati al lessico ufficiale, scudo della legge al 8° del chierico, spaventare al 2° del bardo
+    "LISTE": "1307c7c7b1998f0a",
     "CANONICA": "2074748d8ae338a2",
     "FUNZIONE_DI_RIPIEGO": "ce42176472ca1491",
     "SENZA_LISTA": "cbad0fe52ade2682",

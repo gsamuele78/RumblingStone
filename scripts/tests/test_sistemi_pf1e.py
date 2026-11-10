@@ -166,18 +166,24 @@ class ClassiERazze(unittest.TestCase):
 class Creature(unittest.TestCase):
     def blocco(self, tipo, taglia="medium", gs=7, seed=42):
         sb, _ = G.genera(gs, tipo=tipo, taglia=taglia, rng=random.Random(seed))
-        return sb, CP.converti(sb, tipo, taglia)
+        return sb, CP.converti(sb, tipo, taglia,
+                               pf_bersaglio=G.bersaglio_di(gs, "bruto", piu_cattivi=False)[0]["pf"])
 
     def test_non_morto_tiene_i_pf_col_carisma(self):
         sb, (pf, conto) = self.blocco("undead")
         self.assertEqual(pf.pf_dado.split("d")[1].split("+")[0], "8")       # 3.5 d12, PF1e d8
-        self.assertEqual(pf.pf, sb.pf)
-        self.assertIn("Car 22", pf.attributi)
+        # lotto 5: il 3.5 non ha Costituzione (pf = soli dadi, sotto il bersaglio);
+        # il PF1e porta i pf sul bersaglio del GS col Carisma
+        self.assertIn("Cos —", sb.attributi)
+        bersaglio = G.bersaglio_di(7, "bruto", piu_cattivi=False)[0]["pf"]
+        self.assertLess(int(sb.pf), bersaglio)
+        self.assertLessEqual(abs(int(pf.pf) - bersaglio), 14 // 2 + 1)
+        self.assertIn("Car 16", pf.attributi)
         self.assertIn("Cos —", pf.attributi)
 
     def test_costrutto_bab_pieno(self):
         sb, (pf, conto) = self.blocco("construct")
-        self.assertTrue(any("BAB +9 (3.5: +6)" in r for r in conto), conto)
+        self.assertTrue(any("BAB +14 (3.5: +10)" in r for r in conto), conto)
         # pf bonus per taglia dalle schede del Bestiary (Medium +20, Animated Object 3d10+20)
         self.assertTrue(any("pf bonus del costrutto medium: +20" in r for r in conto), conto)
         self.assertTrue(pf.pf_dado.endswith("+20"), pf.pf_dado)
@@ -229,7 +235,10 @@ class CreatureConClassi(unittest.TestCase):
     def test_prestigio_in_multiclasse(self):
         sb, conto = self.blocco("mago:5,mistificatore arcano:3")
         self.assertIn("Incantatore di livello 8 (mago, INT +3) — 3 livelli dalle classi di prestigio", sb.voci)
-        self.assertTrue(any("requisiti d'accesso" in r for r in conto.righe))
+        # dal lotto 4 delle regole complete i requisiti si leggono dal PRD: quelli che
+        # non si contano (gradi, allineamento, attacco furtivo) vanno al DM
+        self.assertTrue(any(r.startswith("requisiti di arcane trickster") for r in conto.righe), conto.righe)
+        self.assertTrue(any("da verificare dal DM" in r for r in conto.righe))
         self.assertEqual(sb.pf_dado.split("+")[:2], ["5d6", "3d6"])
 
     def test_teurgo_mistico_avanza_due_classi(self):
@@ -241,7 +250,9 @@ class CreatureConClassi(unittest.TestCase):
     def test_pf_col_primo_dado_al_massimo(self):
         sb, _ = self.blocco("guerriero:9", gs=8, seed=1)
         cos = int(sb.attributi.split("Cos ")[1].split()[0])
-        self.assertEqual(int(sb.pf), 10 + 44 + 9 * ((cos - 10) // 2))  # 10 + ⌈8 × 5,5⌉ + Cos
+        # Robustezza PF1e: +3, o +1 per DV se sono più di 3 (lotto 3 delle regole complete)
+        robustezza = 9 if any("Robustezza" in v for v in sb.voci if v.startswith("Talenti:")) else 0
+        self.assertEqual(int(sb.pf), 10 + 44 + 9 * ((cos - 10) // 2) + robustezza)  # 10 + ⌈8 × 5,5⌉ + Cos
 
     def test_griglie_pf1e(self):
         sb, _ = self.blocco("mago:5")
