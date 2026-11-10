@@ -764,7 +764,7 @@ ricompilato, la ridà identica cella per cella; i simboli fuori legenda stanno
 in `simboli_locali`, e il cancello è `test_contratti_mappe.py` con
 `render_map_svg --strict`
 ([ADR-0117](../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md),
-proposta). Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
+accettata il 2026-11-10). Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
 la pianta di stampa, con le scritte a 7,4 pt e senza filtri
 ([ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md)).
 
