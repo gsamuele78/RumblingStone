@@ -1876,7 +1876,7 @@ monsters:
     role: guard-melee
     environment: cold
     source_file: "Bestiario/mostri/razorfiend-white-cr8.md"
-    notes: "1 assegnato a Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti."
+    notes: "1 assegnato ad Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti."
   - id: hobgoblin-captain-cr8-026188
     name: "hobgoblin-captain-cr8"
     cr: 8.0

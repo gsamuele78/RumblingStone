@@ -196,7 +196,7 @@ flaggala `[CANONE — DM data]` e cita fonte (MM/FRCS/AP).
 ## §8.5 — Risorse di resurrezione nel Vale (protocollo morte PG — C3)
 
 > **Lotto C3 (2026-07-02).** Nota unica citata da tutte le sidebar "SE FALLISCONO"
-> (P1C, P2A-PARTE4, P2B-PARTE3, RHEST-FASE4, Ghostlord). A APL 13-14 la morte di
+> (P1C, P2A-PARTE4, P2B-PARTE3, RHEST-FASE4, Ghostlord). Ad APL 13-14 la morte di
 > un PG **non deve** chiudere la campagna: deve **costare**.
 
 **Precedente in-fiction (vincolante)**: Hella è **già** stata resuscitata con il

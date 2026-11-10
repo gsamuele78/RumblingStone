@@ -82,6 +82,11 @@ token): l'agente non la ri-verifica a mano.
   MAI inventato in silenzio.
 - Tono floor (coherence §4): adulto, slow-build, niente slang moderno,
   niente strizzate d'occhio alla quarta parete, nessuna vittoria senza costo.
+- **La *d* eufonica** (CODA D3, 2026-11-08; ADR-0120): *ad* ed *ed* solo davanti
+  alla **stessa** vocale (*legato ad Aegis Fang*, *armi ed equipaggiamento*); davanti
+  alle altre vocali *a* ed *e* (*a ogni*, *a oggi*, *a un*, *e indifesa*). Resta solo
+  *ad esempio* (*ad es.*). Mai *od*. Lo misura `validate_lingua.py` (cancello a zero),
+  tarato su LanguageTool ST_03_001.
 - File name: `PortaleForgia-*`/`ARC*-DEF-*`: niente spazi anomali, casing
   coerente; i file superati prendono il banner e poi `_ARCHIVIO/`.
 

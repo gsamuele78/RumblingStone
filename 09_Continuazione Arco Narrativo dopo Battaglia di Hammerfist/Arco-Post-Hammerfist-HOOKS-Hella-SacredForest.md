@@ -116,7 +116,7 @@ Lythiel resta a Hammerfist 24 ore. Dorme con Inathiel sui bastioni. La mattina d
 
 #### Via B — Rifiuta lo Shadow Walk; va a piedi/cavallo
 - 3 giorni di viaggio. Arriva al Sacred Forest il Giorno 25.
-- **Costo narrativo:** durante il viaggio, **Hella sente nel sogno** la voce di Saraah che canta una vecchia canzone ad ogni notte. Quando arriva, scopre che 4 nodi periferici del Cerchio **sono caduti** (incendi terminati) — riducendo i bonus della Ghianda di –1 alla Cos rigenerata.
+- **Costo narrativo:** durante il viaggio, **Hella sente nel sogno** la voce di Saraah che canta una vecchia canzone a ogni notte. Quando arriva, scopre che 4 nodi periferici del Cerchio **sono caduti** (incendi terminati) — riducendo i bonus della Ghianda di –1 alla Cos rigenerata.
 - **Beneficio:** Tempestas è disponibile per altre scene; nessuna erosione.
 
 #### Via C — Rifiuta l'urgenza, rimane a Hammerfist con il party

@@ -17,7 +17,7 @@ Arco-Post-Hammerfist-HOOKS-Artemis-TorreInvisibile.md
 > **Cambio di design (rispetto alla v1):** il hook **NON arriva da Tempestas** (che non avrebbe modo realistico di sapere di Zalkatar). Il hook è **interno al PG**: l'**Anello di Chaotic Illumination Reforged** stesso vibra durante la **Cerimonia delle 100 Asce** a Hammerfist, perché percepisce il proprio **precedente padrone** (Zalkatar) preparare lo spostamento mensile della Torre Invisibile (Clock 6/8 sta riempiendosi).
 >
 > **Perché questo design è migliore:**
-> - **Organico:** l'Anello è bonded a Artemis ed è **risonante con Zalkatar** (canon: vedi `PG/Artefatti/Artefatti-Pg/ringOfChaoticIllumination/`). Logico che reagisca alla sua presenza/attività.
+> - **Organico:** l'Anello è bonded ad Artemis ed è **risonante con Zalkatar** (canon: vedi `PG/Artefatti/Artefatti-Pg/ringOfChaoticIllumination/`). Logico che reagisca alla sua presenza/attività.
 > - **No NPC contrived:** niente messaggero che casualmente intercetta una conversazione drow su Artemis.
 > - **Atmosfera mythic:** l'Anello "sente" il suo passato durante un rito di morti onorati. Risonanza tematica.
 > - **Rispetta il pattern di Artemis** come Warlock con artefatto-patrono ambiguo.
@@ -50,7 +50,7 @@ Durante la **Cerimonia delle 100 Asce** (Giorno 21, vedi `08_La Battaglia Di Ham
 >
 > *Re Thorek non si è accorto di nulla — sta porgendoti la runa. Aspetta una tua reazione.*
 
-### 2.2 Prove e effetti
+### 2.2 Prove ed effetti
 
 - **Test immediato:** Concentrazione CD 18 (Artemis Warlock — DC ragionevole) per **non disperdersi** nell'accettare la runa.
   - Successo: scena pulita. Re Thorek consegna la runa. Atto 3 procede normalmente.

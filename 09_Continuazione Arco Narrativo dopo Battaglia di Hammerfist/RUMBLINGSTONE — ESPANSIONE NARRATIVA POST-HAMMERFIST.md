@@ -570,7 +570,7 @@ La terza opzione richiede 6 ore di Tordek (che ha altre priorità) e produce un 
 
 **Connessione alla Notte dei Drow**: Therysol sa che sua madre è nel Prisma di Dorak Ferropietra (l'ha visto in un frammento di sogno condiviso che attribuisce alla cristallizzazione nel suo braccio). Questo spiega perché è nel tempio quando il party arriva — non per combattere i drow, ma per liberare sua madre.
 
-**Differenza dalle aspettative**: Non è un'alleata di combattimento affidabile in questo arco — è ferita e emotivamente instabile. È un'alleata di **informazione** e di **peso narrativo**. Il suo punto di forza è che ha fatto sacrifici enormi e che il party lo sa.
+**Differenza dalle aspettative**: Non è un'alleata di combattimento affidabile in questo arco — è ferita ed emotivamente instabile. È un'alleata di **informazione** e di **peso narrativo**. Il suo punto di forza è che ha fatto sacrifici enormi e che il party lo sa.
 
 ---
 

@@ -26,7 +26,7 @@ Quando il personaggio nano (che chiameremo "il Portatore") indossa la *Corona di
 La presenza di Moradin avvolge la mente del Portatore. Non è un dialogo, ma una trasmissione di conoscenza e scopo.
 
 **(Leggi o parafrasa al giocatore):**
-> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato a Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
+> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato ad Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
 
 Subito dopo, la scena attorno al giocatore si dissolve in un turbine di luce e ombra, per poi ricomporsi sulle mura assediate della fortezza nanica di Hammerfist.
 

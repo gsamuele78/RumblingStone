@@ -50,7 +50,7 @@ Elfa dei Boschi sui 220 anni (giovane-matura per la sua specie), 1m70, magrissim
 
 **Compagno animale:** **Inathiel "Ala-d'-Ombra"**, gufo gigante celestiale con la scheda di Signore Ventolesto (GS 8, cavalcatura) `[CANONE — DM 2026-11-05, P16, Bestiario]`. Si conoscono da 18 anni. Comunicano per piccoli movimenti di sopracciglia.
 
-**Postura:** quieta. Parla poco. Quando parla, è precisa. Ride raramente, ma quando lo fa è sincero. Con altri elfi alterna comune e élfico in la stessa frase. Con i nani è cortese ma si vede che fa **uno sforzo** di adattamento culturale.
+**Postura:** quieta. Parla poco. Quando parla, è precisa. Ride raramente, ma quando lo fa è sincero. Con altri elfi alterna comune ed élfico in la stessa frase. Con i nani è cortese ma si vede che fa **uno sforzo** di adattamento culturale.
 
 ## Cosa vuole
 

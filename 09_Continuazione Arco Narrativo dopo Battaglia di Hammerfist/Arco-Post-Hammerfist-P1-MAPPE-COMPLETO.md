@@ -311,4 +311,4 @@ Esempio Guerriero 6 (CR 6):
 
 ---
 
-Tutti i blocchi sono pensati come base 3.5 “pulita” su cui puoi rifinire dettagli di flavour, incantesimi precisi e equipaggiamento caso per caso.
+Tutti i blocchi sono pensati come base 3.5 “pulita” su cui puoi rifinire dettagli di flavour, incantesimi precisi ed equipaggiamento caso per caso.

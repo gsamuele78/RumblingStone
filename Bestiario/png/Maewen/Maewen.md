@@ -177,7 +177,7 @@ Maewen è una **messaggera, non un'avventuriera**. Combatte solo se attaccata o 
 
 #### Monk 9
 - Raffica di Colpi, Colpo Senz'Armi Migliorato, Pugno Stordente (CD 18, 9/giorno: 10 + metà del livello del personaggio + Sag)
-- Eludere e Eludere Migliorato, Mente Lucida (+2 contro ammaliamento, già contato)
+- Eludere ed Eludere Migliorato, Mente Lucida (+2 contro ammaliamento, già contato)
 - Colpo Ki (magico), Caduta Lenta 12 m, Purezza del Corpo (immune alle malattie)
 - **Integrità del Corpo** (1/giorno: cura 18 PF a sé stessa)
 - Sbilanciare Migliorato, Riflessi in Combattimento (talenti bonus monaco)
@@ -199,7 +199,7 @@ Benchmark: PF T1-1 riga 11: CA 19 vs 25 (6 sotto) / pf 71 vs 145 (molto sotto) /
 
 ## Esiti possibili
 
-### VULNERABILITÀ E ECHI
+### VULNERABILITÀ ED ECHI
 
 - Maewen è **CR 11**. È una messaggera. **Non sopravvive** a un'imboscata di alto livello senza supporto del party. Il DM dovrebbe **non bersagliarla** se non per scene drammatiche.
 - Se i PG la **proteggono** durante un encounter di passaggio: Maewen ricorda. **Eco**: il Sovrintendente Tordek di Dauth riceve il rapporto e considera il party **alleato della Confraternita** — al Torneo, Tordek (PG) ottiene **+2 alla Diplomazia con la Confraternita** + un **kit di guarigione monastica** in dono (+2 al primo TS Tempra del torneo).

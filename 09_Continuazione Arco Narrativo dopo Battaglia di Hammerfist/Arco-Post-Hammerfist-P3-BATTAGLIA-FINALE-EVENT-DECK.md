@@ -40,7 +40,7 @@ battaglia come **carte-crisi che SCELGONO loro**:
 Ogni carta dichiara in testa la propria sorgente. **Se una carta [S3] duplica
 qualcosa di esistente, è un errore da correggere.**
 
-- **[S1 — RHoD upscalato]**: eventi della Battle of Brindol originale, **espansi a
+- **[S1 — RHoD upscalato]**: eventi della Battle of Brindol originale, **espansi ad
   APL 14 e riallineati all'esercito RumblingStone v2** (orda ~10k, 5 draghi, drow
   di Sonjak, Githyanki, Teschio Nero). Mai riprodurre testo RHoD.
 - **[S2 — echi di campagna]**: eventi in cui i PG interagiscono con ciò che l'arco
