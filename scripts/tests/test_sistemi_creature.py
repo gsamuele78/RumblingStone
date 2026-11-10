@@ -78,7 +78,9 @@ IMPRONTE_L5B = {
 #: L5c (2026-11-07): impronte delle liste di incantesimi di main prima dello
 #: spostamento in `sistemi/{dnd35,pf1e}/dati/incantesimi.toml`.
 IMPRONTE_L5C = {
-    "LISTE": "5c66496fb67f721f",
+    # LISTE riscritta di proposito il 2026-11-10 (lotto 2 delle regole complete): 108 nomi
+    # portati al lessico ufficiale, scudo della legge al 8° del chierico, spaventare al 2° del bardo
+    "LISTE": "1307c7c7b1998f0a",
     "CANONICA": "2074748d8ae338a2",
     "FUNZIONE_DI_RIPIEGO": "ce42176472ca1491",
     "SENZA_LISTA": "cbad0fe52ade2682",

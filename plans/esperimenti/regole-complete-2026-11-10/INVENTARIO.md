@@ -41,7 +41,7 @@ Fonti: SRD 3.5 `olimot/srd-v3.5-md@c7f30a0c`, PRD `PSRD-Data@76ea4784` (cache di
 | 3.5 | tesoro per livello d'incontro | 19/20 | EL 19 era 60.000 mo, l'SRD dice 61.000. **Corretto in questo lotto.** |
 | 3.5 | talenti dei PNG generati | 0/5 (lotto 1); **11/11 dopo il lotto 3** | Un guerriero 7 ne aveva 1, la regola gliene dà 7. Ora tutte le 11 classi al 7° tornano col conto fatto a mano sul manuale. |
 | PF1e | talenti dei PNG generati | 0/5 (lotto 1); **32/32 dopo il lotto 3** | Un fighter 7 ne aveva 1 su 8. Ora le 32 classi base, ibride e alternative al 7° tornano, e ogni talento generale ha i prerequisiti (32/32). |
-| PF1e | liste 3.5 riusate dal pf1e | 445 giuste, 0 sbagliate, 181 non verificabili | I 181 sono gli stessi nomi italiani fuori dal lessico già visti nel 3.5. Lotto 2. |
+| PF1e | liste 3.5 riusate dal pf1e | 445 giuste, 0 sbagliate, 181 non verificabili; **626/626 dopo il lotto 2** | I 181 erano nomi italiani fuori dal lessico. Portati al lessico, la misura ha visto *metamorfosi* (4° in 3.5, 5° in PF1e) e *cura ferite minori* (non esiste in PF1e): ora `[livello_pf1e]` nel plugin pf1e. |
 | PF1e | «solo PF1e» | 54/55, 1 non verificabile | *Tamburi tonanti* (Thunderous Drums) non è nel PRD in cache: non si può dire se è giusto. |
 | PF1e | PE, PE per GS, tesoro, statistiche per GS, modificatore | tutte giuste | 215 righe nuove misurate, nessun errore. |
 | tutti | nomi italiani | 100% | Condizioni, talenti e incantesimi del Core hanno tutti un nome nel lessico. |
@@ -96,7 +96,7 @@ le stesse fonti.
 
 | Residuo | Stato | Lotto |
 |---|---|---|
-| 181-185 nomi d'incantesimo 3.5 fuori dal lessico | aperto | 2 |
+| 181-185 nomi d'incantesimo 3.5 fuori dal lessico | **chiuso dal lotto 2**: 108 nomi (185 voci) portati al lessico; dietro i nomi c'erano 2 livelli sbagliati (*scudo della legge* 8° del chierico, *spaventare* 2° del bardo) | 2 |
 | «scaglie» letta come armatura | **chiuso in questo lotto**: la chiave è «corazza a scaglie» (nome del lessico), test di regressione con un drago | 1 |
 | costrutti minuti e piccolissimi senza pf bonus | nessuna scheda pubblicata li dà: resta dichiarato, non si inventa | — |
 | sciamano senza incantesimi di livello 0 | da riscontrare nel PRD (ACG) | 4 |
@@ -117,8 +117,9 @@ le stesse fonti.
 
 1. **Misura estesa e correzioni piccole** (questa PR): `misura_regole_complete.py`, EL 19,
    «corazza a scaglie».
-2. **Nomi d'incantesimo 3.5**: allineare i 181 nomi di `incantesimi.toml` al lessico
-   ufficiale (ADR-0110), misura: non verificabili da 181 a 0.
+2. **Nomi d'incantesimo 3.5** (fatto): 108 nomi di `incantesimi.toml` e dell'ancora
+   `spells.md` portati al lessico ufficiale (ADR-0110); non verificabili da 181 a 0, 3.5
+   da 605/606 a 790/791 nella misura di ADR-0121 (`MISURA-LOTTO2-PRIMA.md`, `-DOPO.md`).
 3. **Talenti dei PNG** (fatto): numero per livello e classe (regola del manuale), scelti
    tra quelli di cui il PNG ha i prerequisiti (PRD e SRD); misura: 3.5 0/11 → 11/11,
    PF1e 0/32 → 32/32 (`MISURA-LOTTO3-PRIMA.md`, `MISURA-LOTTO3-DOPO.md`).

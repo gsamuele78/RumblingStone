@@ -82,6 +82,14 @@ In tutti e due i casi il test era verde perché confrontava due copie dello stes
   ricontrollabili: il generatore non teneva BAB e livelli). Restano: talento
   umano (il generatore non sceglie la razza), prerequisiti di gradi (talento
   saltato, non inventato).
+- Lotto 2 delle regole complete (nomi d'incantesimo 3.5): 108 nomi delle liste
+  classe × funzione (185 voci) erano traduzioni libere, fuori dal lessico, e la
+  misura non li poteva verificare. Portati al nome ufficiale, la misura di sopra
+  passa da 441 giuste e 185 non verificabili a 626/626 (3.5 da 605/606 a
+  790/791), e ha visto due livelli sbagliati che il nome nascondeva (*scudo della
+  legge* 8° del chierico, *spaventare* 2° del bardo, corretti). Le liste riusate
+  dal pf1e: 445 + 181 non verificabili → 626/626, con `[livello_pf1e]` per le due
+  voci che il PRD sposta o non ha (*metamorfosi* 5°, *cura ferite minori*).
 
 ## Conseguenze
 
