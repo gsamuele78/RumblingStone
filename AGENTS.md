@@ -202,12 +202,12 @@ queste skill da solo: è questa sezione a instradarli.
 4. Cita le fonti: sezione SRD, FRCS p.X, oppure `[Private — Red Hand of Doom, p.X]`.
 5. **Non inventare mai** blocchi statistiche, effetti di incantesimi, statistiche
    di PNG o poteri di artefatti. Se manca la fonte, marca INFERRED con
-   domanda e base: la grammatica sta in `docs/guides/GUIDA-MARCATURE.md`
+   domanda e base: la grammatica sta in `docs/reference/GUIDA-MARCATURE.md`
    (ADR-0109).
 6. Per una scelta di metodo, in ogni parte del progetto, parti dallo
    **standard di fatto della comunità**: una soluzione nostra entra solo se
    la misura lo boccia, con il motivo nell'ADR. Le schede di skill, brief e
-   prove sono in `docs/guides/GUIDA-SCHEDE-PROMPT.md` (ADR-0114).
+   prove sono in `docs/reference/GUIDA-SCHEDE-PROMPT.md` (ADR-0114).
 
 ---
 

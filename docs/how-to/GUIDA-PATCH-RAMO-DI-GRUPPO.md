@@ -1,5 +1,7 @@
 # Guida: applicare una patch al ramo di gruppo
 
+> Forma: **guida pratica** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 > **A chi serve.** Al DM che deve portare sul ramo della partita
 > (`campaign-group-rumblingstone`) le correzioni di canone preparate nei thread.
 > Il ramo di gruppo lo tocca solo il DM, a mano: è il triplo vincolo di

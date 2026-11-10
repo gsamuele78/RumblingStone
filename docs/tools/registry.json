@@ -480,7 +480,7 @@
         "scripts/tests/test_asset_2mtt.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -949,7 +949,7 @@
         "scripts/tests/test_oggetti_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -1028,7 +1028,7 @@
         "scripts/tests/test_texture_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -1685,7 +1685,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
@@ -2055,7 +2055,7 @@
         "scripts/tests/test_misura_resa.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md"
       ]
     },
@@ -2609,7 +2609,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md",
-        "docs/guides/GUIDA-MAPPE.md"
+        "docs/how-to/GUIDA-MAPPE.md"
       ]
     },
     {
@@ -2769,7 +2769,7 @@
         "scripts/tests/test_watabou_citta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -3807,7 +3807,7 @@
       "ci_smoke": "python scripts/build_chapter_marks.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md"
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md"
       ]
     },
     {
@@ -3888,7 +3888,7 @@
       "ci_smoke": "python scripts/build_image_derivatives.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-IMMAGINI.md"
+        "docs/how-to/GUIDA-IMMAGINI.md"
       ]
     },
     {
@@ -4429,8 +4429,8 @@
         "scripts/tests/test_schede.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
-        "docs/guides/GUIDA-FLUSSO-LOCALE.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
+        "docs/explanation/GUIDA-FLUSSO-LOCALE.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ],
@@ -5592,7 +5592,7 @@
         "scripts/tests/test_booklets.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ]
@@ -6232,7 +6232,7 @@
         "scripts/tests/test_statblock.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BESTIARIO.md",
+        "docs/how-to/GUIDA-BESTIARIO.md",
         "plans/adr/ADR-0021-statblocchi-machine-readable.md"
       ]
     },
@@ -7232,7 +7232,7 @@
         "scripts/tests/test_prove_skill.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-SCHEDE-PROMPT.md",
+        "docs/reference/GUIDA-SCHEDE-PROMPT.md",
         "plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md"
       ],
       "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
@@ -7646,7 +7646,7 @@
       ],
       "docs": [
         "plans/PIANO-AMBIENTE-RIPRODUCIBILE.md",
-        "docs/guides/GUIDA-SETUP-MACCHINA.md"
+        "docs/tutorials/GUIDA-SETUP-MACCHINA.md"
       ]
     },
     {
@@ -8890,7 +8890,7 @@
         "scripts/tests/test_controlla_marche.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MARCATURE.md",
+        "docs/reference/GUIDA-MARCATURE.md",
         "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
       ],
       "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
@@ -9910,7 +9910,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
-        "docs/guides/GUIDA-MARCATURE.md"
+        "docs/reference/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
@@ -11091,7 +11091,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_notes",
       "path": "scripts/release_notes.py",
@@ -11156,7 +11156,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_plan",
       "path": "scripts/release_plan.py",
@@ -11423,7 +11423,7 @@
       "docs": [
         "plans/adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md",
         "plans/esperimenti/ricerca-rete-2026-10-23/RICERCA.md",
-        "docs/ARCHITETTURA.md"
+        "docs/explanation/ARCHITETTURA.md"
       ]
     },
     {
@@ -11641,7 +11641,7 @@
         "scripts/tests/test_tools_manifest.py"
       ],
       "docs": [
-        "docs/guides/TOOL-AUTHORING-STANDARD.md"
+        "docs/reference/TOOL-AUTHORING-STANDARD.md"
       ]
     },
     {
@@ -12862,7 +12862,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },

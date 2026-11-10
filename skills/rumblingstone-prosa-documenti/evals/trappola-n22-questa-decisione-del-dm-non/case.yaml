@@ -3,4 +3,4 @@ name: trappola-n22-questa-decisione-del-dm-non
 expected_outcome: |
   Trappola: questa decisione del DM non esiste nel repo: data, parole e motivo non sono dati. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna N22.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna N22.

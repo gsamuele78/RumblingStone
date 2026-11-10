@@ -1,13 +1,15 @@
 # Come si rilascia RumblingStone
 
-La regola è [ADR-0100](../plans/adr/ADR-0100-il-rilascio-e-una-pr.md). Il
+> Forma: **guida pratica** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
+La regola è [ADR-0100](../../plans/adr/ADR-0100-il-rilascio-e-una-pr.md). Il
 meccanismo è quello di iemod-fetch.
 
 ## Cos'è un rilascio
 
 Un tag `vX.Y.Z` e il rilascio GitHub che lo accompagna. Dentro ci sono i
 pacchetti delle skill in un archivio riproducibile, le impronte `SHA256SUMS`
-e le note prese dal [CHANGELOG](../CHANGELOG.md). Il tag è l'unica cosa che
+e le note prese dal [CHANGELOG](../../CHANGELOG.md). Il tag è l'unica cosa che
 conta, e non lo crea nessuno a mano.
 
 ## I numeri

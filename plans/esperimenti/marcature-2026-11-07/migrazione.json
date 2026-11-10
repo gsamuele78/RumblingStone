@@ -969,14 +969,14 @@
    "dopo": "flaggala `[CANONE — DM data]` e cita fonte (MM/FRCS/AP)."
   },
   {
-   "file": "docs/guides/GUIDA-BESTIARIO.md",
+   "file": "docs/how-to/GUIDA-BESTIARIO.md",
    "riga": 68,
    "data_da": "scritta",
    "prima": "# Nome Creatura (contesto) [ACCEPTED — DM-canon 2026-05-05]",
    "dopo": "# Nome Creatura (contesto) [CANONE — DM 2026-05-05]"
   },
   {
-   "file": "docs/guides/GUIDA-MARCATURE.md",
+   "file": "docs/reference/GUIDA-MARCATURE.md",
    "riga": 29,
    "data_da": "file",
    "prima": "1. **Una parola per concetto.** Niente `[ACCEPTED]`, «(decisione DM …)»,",

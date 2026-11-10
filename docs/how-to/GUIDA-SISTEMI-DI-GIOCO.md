@@ -2,8 +2,8 @@
 
 > Forma: **guida pratica** (Diátaxis). Risolve compiti a chi sa già cos'è un
 > modulo e cos'è `dm.py`. Il formato dei file e l'elenco completo delle
-> capacità stanno nel [riferimento dei plugin](RIFERIMENTO-PLUGIN-DI-SISTEMA.md);
-> il perché nell'[architettura §19](../ARCHITETTURA.md#19-il-motore-delle-regole-e-i-sistemi-di-gioco)
+> capacità stanno nel [riferimento dei plugin](../reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md);
+> il perché nell'[architettura §19](../explanation/ARCHITETTURA.md#19-il-motore-delle-regole-e-i-sistemi-di-gioco)
 > e negli ADR [0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md)
 > e [0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md).
 

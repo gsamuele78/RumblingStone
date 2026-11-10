@@ -420,7 +420,7 @@ def cmd_volume(args: argparse.Namespace, extra: list[str]) -> int:
     # e' esattamente il punto in cui il lotto E aveva trovato il buco — una
     # regola scritta che nessuno carica non e' una regola.
     print("\n  \u26a0 Prima che questo volume esca dal repo: il cancello \u00a77 di "
-          "docs/guides/GUIDA-CONDIVISIONE-IP.md.\n"
+          "docs/how-to/GUIDA-CONDIVISIONE-IP.md.\n"
           "    Uso privato al tavolo: nessun cancello. Fuori di li', quelle cinque "
           "domande vengono prima — e se c'\u00e8 di mezzo del denaro, ci si ferma "
           "(ADR-0005).")

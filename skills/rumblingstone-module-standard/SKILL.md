@@ -55,7 +55,7 @@ approvata dal DM (PR #61). Esemplare di riferimento:
 
 ## Vincoli sui fatti
 
-Grammatica delle marche in `docs/guides/GUIDA-MARCATURE.md` (ADR-0109).
+Grammatica delle marche in `docs/reference/GUIDA-MARCATURE.md` (ADR-0109).
 
 1. Se un fatto non è nelle fonti, puoi dire che non lo sai: è meglio di
    un'invenzione. Lo scrivi solo se serve, marcato INFERRED con domanda e

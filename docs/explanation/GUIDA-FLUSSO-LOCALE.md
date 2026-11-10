@@ -1,5 +1,7 @@
 # Guida al flusso locale — far lavorare insieme tutti i tool del DM
 
+> Forma: **spiegazione** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 > **A chi serve.** A chi si siede davanti al repo sulla propria macchina e vuole
 > sapere **cosa c'è, cosa fa, e in che ordine si usa**. Le altre guide spiegano
 > un mestiere alla volta (mappe, immagini, booklet, bestiario); questa spiega
@@ -146,7 +148,7 @@ la pianta della locanda sono la stessa stanza — in mezzo si infila
 diventa l'input di ControlNet depth, così l'illustrazione eredita la pianta vera.
 Blender qui fa il geometra, non l'illustratore.
 
-Il dettaglio operativo sta in [`GUIDA-IMMAGINI.md`](GUIDA-IMMAGINI.md).
+Il dettaglio operativo sta in [`GUIDA-IMMAGINI.md`](../how-to/GUIDA-IMMAGINI.md).
 
 ---
 
@@ -185,10 +187,10 @@ le loro skill.
 
 | Guida | Copre |
 |---|---|
-| [GUIDA-SETUP-MACCHINA](GUIDA-SETUP-MACCHINA.md) | da zero a repo funzionante |
-| [GUIDA-MAPPE](GUIDA-MAPPE.md) | le tre modalità, il contratto JSON, l'export VTT |
-| [GUIDA-IMMAGINI](GUIDA-IMMAGINI.md) | generatori, prompt, licenze dei pesi |
-| [GUIDA-BOOKLET-E-PDF](GUIDA-BOOKLET-E-PDF.md) | manifest campo per campo, le due catene |
-| [GUIDA-BESTIARIO](GUIDA-BESTIARIO.md) | statblocchi e catalogo |
-| [GUIDA-CONDIVISIONE-IP](GUIDA-CONDIVISIONE-IP.md) | cosa si può mostrare, e a chi |
-| [TOOL-AUTHORING-STANDARD](TOOL-AUTHORING-STANDARD.md) | come si scrive un tool nuovo (ADR-0012) |
+| [GUIDA-SETUP-MACCHINA](../tutorials/GUIDA-SETUP-MACCHINA.md) | da zero a repo funzionante |
+| [GUIDA-MAPPE](../how-to/GUIDA-MAPPE.md) | le tre modalità, il contratto JSON, l'export VTT |
+| [GUIDA-IMMAGINI](../how-to/GUIDA-IMMAGINI.md) | generatori, prompt, licenze dei pesi |
+| [GUIDA-BOOKLET-E-PDF](../how-to/GUIDA-BOOKLET-E-PDF.md) | manifest campo per campo, le due catene |
+| [GUIDA-BESTIARIO](../how-to/GUIDA-BESTIARIO.md) | statblocchi e catalogo |
+| [GUIDA-CONDIVISIONE-IP](../how-to/GUIDA-CONDIVISIONE-IP.md) | cosa si può mostrare, e a chi |
+| [TOOL-AUTHORING-STANDARD](../reference/TOOL-AUTHORING-STANDARD.md) | come si scrive un tool nuovo (ADR-0012) |

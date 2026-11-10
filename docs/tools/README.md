@@ -193,4 +193,4 @@
 
 ---
 
-Aggiungere un tool? Vedi [`../guides/TOOL-AUTHORING-STANDARD.md`](../guides/TOOL-AUTHORING-STANDARD.md).
+Aggiungere un tool? Vedi [`../reference/TOOL-AUTHORING-STANDARD.md`](../reference/TOOL-AUTHORING-STANDARD.md).

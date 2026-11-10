@@ -3,7 +3,7 @@
 > Forma: **riferimento** (Diátaxis). Descrive com'è fatto un plugin e cosa
 > controlla il cancello, verificato sul codice di main al 2026-11-10. I
 > compiti (mettere un modulo in PF1e, aggiungere un sistema) sono nella
-> [guida ai sistemi di gioco](GUIDA-SISTEMI-DI-GIOCO.md); il perché in
+> [guida ai sistemi di gioco](../how-to/GUIDA-SISTEMI-DI-GIOCO.md); il perché in
 > [ADR-0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md)
 > e [ADR-0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md).
 > Fonte di verità del comportamento: `scripts/dmcore/sistemi.py` e

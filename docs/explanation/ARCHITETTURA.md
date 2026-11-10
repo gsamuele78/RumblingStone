@@ -1,13 +1,15 @@
 # Architettura di RumblingStone
 
+> Forma: **spiegazione** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 Come è fatto il repo e come girano le sue catene, con un diagramma per
 ognuna. I diagrammi sono in Mermaid: GitHub li disegna da solo, e in locale
 li mostra qualunque editor con l'anteprima Markdown.
 
 Chi cerca **perché** una cosa è fatta così trova la decisione negli ADR
-([`plans/adr/`](../plans/adr/)), citati sotto ogni diagramma. Chi cerca
+([`plans/adr/`](../../plans/adr/)), citati sotto ogni diagramma. Chi cerca
 **come si usa** uno strumento parte dal
-[registro dei tool](tools/README.md), che è generato dal manifest.
+[registro dei tool](../tools/README.md), che è generato dal manifest.
 
 ## Indice
 
@@ -74,9 +76,9 @@ flowchart LR
     BOT --> REPO
 ```
 
-Riferimenti: [ADR-0002](../plans/adr/ADR-0002-cli-unica-dm-orchestratore.md) (un solo punto d'ingresso, `dm.py`),
-[ADR-0081](../plans/adr/ADR-0081-il-contratto-d-ambiente.md) (la CI è lo
-standard), [ADR-0099](../plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md).
+Riferimenti: [ADR-0002](../../plans/adr/ADR-0002-cli-unica-dm-orchestratore.md) (un solo punto d'ingresso, `dm.py`),
+[ADR-0081](../../plans/adr/ADR-0081-il-contratto-d-ambiente.md) (la CI è lo
+standard), [ADR-0099](../../plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md).
 
 ## 2. Le parti del repo
 
@@ -112,7 +114,7 @@ flowchart TB
 
     subgraph GOV["Governo"]
         PLANS["plans/<br/>piani, INDEX, CHANGELOG dei piani"]
-        ADR["plans/adr/<br/>118 decisioni"]
+        ADR["plans/adr/<br/>119 decisioni"]
         CHG["CHANGELOG.md<br/>i rilasci"]
     end
 
@@ -134,21 +136,21 @@ flowchart TB
     ADR --> PLANS
 ```
 
-Il taglio delle licenze è in [`LICENSES.md`](../LICENSES.md): se lo legge un
+Il taglio delle licenze è in [`LICENSES.md`](../../LICENSES.md): se lo legge un
 essere umano al tavolo è testo, se lo esegue una macchina è strumento
-([ADR-0029](../plans/adr/ADR-0029-licenza-doppia-testo-e-script.md)).
+([ADR-0029](../../plans/adr/ADR-0029-licenza-doppia-testo-e-script.md)).
 
 ## 3. L'infrastruttura software
 
 Dove gira cosa. Gli strumenti devono partire sul portatile del DM la sera
 della sessione, spesso senza rete: per questo il nucleo è Python 3.13 con la
 sola libreria standard più tre eccezioni dichiarate
-([ADR-0037](../plans/adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md)), e ogni
+([ADR-0037](../../plans/adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md)), e ogni
 binario esterno è facoltativo con un ripiego scritto in `scripts/binari.py`.
 Dal 2026-11-08 typst e l'imposizione arrivano da PyPI con il resto delle
 dipendenze, e il rilascio porta un archivio di wheel per installare senza
 rete (`scripts/bundle_offline.py`,
-[ADR-0116](../plans/adr/ADR-0116-typst-si-installa-da-pypi.md), che supera
+[ADR-0116](../../plans/adr/ADR-0116-typst-si-installa-da-pypi.md), che supera
 ADR-0113 e toglie mise).
 
 ```mermaid
@@ -219,7 +221,7 @@ città, corpus di prosa, modelli) e lo fa passare sempre dalla stessa porta:
 diventa markdown o JSON nel repo, passa i cancelli, e solo allora produce
 qualcosa. Le fonti di regole entrano nelle skill con la loro licenza (OGL
 1.0a) e la loro provenienza
-([ADR-0005](../plans/adr/ADR-0005-confini-ip-uso-non-commerciale.md)).
+([ADR-0005](../../plans/adr/ADR-0005-confini-ip-uso-non-commerciale.md)).
 
 ```mermaid
 flowchart LR
@@ -300,10 +302,10 @@ Tre regole tengono in ordine questo traffico:
 - **Il materiale con diritti resta fuori dal repo.** I PDF dei moduli, i
   corpus di prosa e i pesi dei modelli vivono in cartelle esterne; nel repo
   entrano solo le misure e il markdown che il progetto ha scritto
-  ([GUIDA-CONDIVISIONE-IP](guides/GUIDA-CONDIVISIONE-IP.md)).
+  ([GUIDA-CONDIVISIONE-IP](../how-to/GUIDA-CONDIVISIONE-IP.md)).
 - **Ogni dato di regole porta la sua fonte.** Uno statblocco dice da dove
   viene il numero (SRD, PF1e, `[GENERATO]` da uno script, una marca INFERRED con
-  domanda e base in attesa del DM, [GUIDA-MARCATURE](guides/GUIDA-MARCATURE.md)); il gioco preferisce la versione più forte e segna dove
+  domanda e base in attesa del DM, [GUIDA-MARCATURE](../reference/GUIDA-MARCATURE.md)); il gioco preferisce la versione più forte e segna dove
   diverge dall'SRD.
 - **Un componente nuovo passa dai canali.** Un modello di Hugging Face, una
   libreria di sintassi o un generatore nuovo entrano in unstable e salgono
@@ -312,7 +314,7 @@ Tre regole tengono in ordine questo traffico:
 ## 5. La regola che tiene insieme tutto
 
 **Il markdown è la verità, tutto il resto si rigenera**
-([ADR-0003](../plans/adr/ADR-0003-markdown-master-layout-generati.md)). Non si corregge un PDF, un SVG o un `.typ`: si
+([ADR-0003](../../plans/adr/ADR-0003-markdown-master-layout-generati.md)). Non si corregge un PDF, un SVG o un `.typ`: si
 corregge il master e si rifà.
 
 ```mermaid
@@ -417,19 +419,19 @@ flowchart LR
 
 | Caso d'uso | Chi | Come | Dove si legge |
 |---|---|---|---|
-| Preparare la serata | DM | `dm.py prep`, `dm.py corredo` | [Playbook](../campaign/DM-CAMPAIGN-PLAYBOOK.md) §2 |
-| Chiudere la sessione | DM | `dm.py session end` sul ramo di gruppo | [ADR-0007](../plans/adr/ADR-0007-scritture-canone-triplo-vincolo.md) |
+| Preparare la serata | DM | `dm.py prep`, `dm.py corredo` | [Playbook](../../campaign/DM-CAMPAIGN-PLAYBOOK.md) §2 |
+| Chiudere la sessione | DM | `dm.py session end` sul ramo di gruppo | [ADR-0007](../../plans/adr/ADR-0007-scritture-canone-triplo-vincolo.md) |
 | Scrivere un master DEF | agente | ciclo in sette passi, §9 | skill `rumblingstone-module-standard` |
-| Il giro delle letture | agente, DM | otto passi, §9 | [ADR-0095](../plans/adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md) |
-| Misurare la prosa | agente, DM | `dm.py prosa misura`, `ciclo`, `mqm`, voto al cieco | [ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) |
-| Riscrivere un box | agente, DM | `dm.py prosa coerenza` → `sintassi` → `migliora` → `cieco` | §10.2, [ADR-0101](../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md) |
-| Provare un modello locale | DM | `dm.py prosa banco`, poi `voto` | §10.4, [ADR-0089](../plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) |
-| Fare una mappa | agente | `compile_map_json` → `render_map_svg` | [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) |
-| Stampare | agente, DM | `dm.py volume`, `dm.py corredo` | [GUIDA-BOOKLET-E-PDF](guides/GUIDA-BOOKLET-E-PDF.md) |
-| Una creatura | agente | `dm.py bestiario`, skill `npc-villain-boosting` | [GUIDA-BESTIARIO](guides/GUIDA-BESTIARIO.md) |
+| Il giro delle letture | agente, DM | otto passi, §9 | [ADR-0095](../../plans/adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md) |
+| Misurare la prosa | agente, DM | `dm.py prosa misura`, `ciclo`, `mqm`, voto al cieco | [ADR-0093](../../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) |
+| Riscrivere un box | agente, DM | `dm.py prosa coerenza` → `sintassi` → `migliora` → `cieco` | §10.2, [ADR-0101](../../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md) |
+| Provare un modello locale | DM | `dm.py prosa banco`, poi `voto` | §10.4, [ADR-0089](../../plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) |
+| Fare una mappa | agente | `compile_map_json` → `render_map_svg` | [GUIDA-MAPPE](../how-to/GUIDA-MAPPE.md) |
+| Stampare | agente, DM | `dm.py volume`, `dm.py corredo` | [GUIDA-BOOKLET-E-PDF](../how-to/GUIDA-BOOKLET-E-PDF.md) |
+| Una creatura | agente | `dm.py bestiario`, skill `npc-villain-boosting` | [GUIDA-BESTIARIO](../how-to/GUIDA-BESTIARIO.md) |
 | Decidere | DM | tabelle `decisioni-dm` nei piani, ADR | §15 |
 | Controllare una PR | CI | `ci.yml` | §14 |
-| Rilasciare | CI | `release.yml` al merge | §17, [RILASCIO](RILASCIO.md) |
+| Rilasciare | CI | `release.yml` al merge | §17, [RILASCIO](../how-to/RILASCIO.md) |
 | La piattaforma | agente, DM | canali di ADR-0099 | §16 |
 | Un gruppo nuovo | DM | `dm.py gruppo nuovo` | Playbook §7 |
 
@@ -461,8 +463,8 @@ gitGraph
 
 Il canone giocato non torna mai su `main` da solo: le patch del ramo di gruppo
 le applica il DM. Riferimenti:
-[ADR-0007](../plans/adr/ADR-0007-scritture-canone-triplo-vincolo.md),
-[ADR-0090](../plans/adr/ADR-0090-la-partita-riparte-su-un-ramo-di-gruppo-nuovo.md) (il ramo di gruppo del primo tavolo).
+[ADR-0007](../../plans/adr/ADR-0007-scritture-canone-triplo-vincolo.md),
+[ADR-0090](../../plans/adr/ADR-0090-la-partita-riparte-su-un-ramo-di-gruppo-nuovo.md) (il ramo di gruppo del primo tavolo).
 
 ## 8. La serata: prima, al tavolo, dopo
 
@@ -512,10 +514,10 @@ sequenceDiagram
 ## 9. Il ciclo del master e il giro delle letture
 
 Un master diventa **DEF** quando ha fatto sette passi
-([ADR-0075](../plans/adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md), skill `rumblingstone-module-standard`). I passi 1-5
+([ADR-0075](../../plans/adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md), skill `rumblingstone-module-standard`). I passi 1-5
 sono cancelli che la CI misura; il 6 e il 7 li fanno agenti. Il passo 6 è **il
 giro**, che dal 2026-10-18 ha otto passi
-([ADR-0095](../plans/adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md)).
+([ADR-0095](../../plans/adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md)).
 
 ```mermaid
 flowchart TB
@@ -559,10 +561,10 @@ cancelli impediscono che torni.
 ## 10. La prosa si misura, poi decide il DM
 
 La prosa nuova entra solo se non peggiora la misura e, nei casi indecisi, se il
-DM la sceglie al cieco ([ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md), [ADR-0097](../plans/adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md) per l'eccezione
+DM la sceglie al cieco ([ADR-0093](../../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md), [ADR-0097](../../plans/adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md) per l'eccezione
 della scrittura italiana). Gli strumenti stanno in una catena sola, con un
 ingresso solo, `dm.py prosa <azione>`
-([ADR-0101](../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md)).
+([ADR-0101](../../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md)).
 
 ### 10.1 La catena
 
@@ -763,10 +765,10 @@ versioni. Ogni griglia a emoji di campagna ha il suo contratto JSON che,
 ricompilato, la ridà identica cella per cella; i simboli fuori legenda stanno
 in `simboli_locali`, e il cancello è `test_contratti_mappe.py` con
 `render_map_svg --strict`
-([ADR-0117](../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md),
+([ADR-0117](../../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md),
 accettata il 2026-11-10). Lo schermo e i VTT usano pergamena e texture; un booklet stampa solo
 la pianta di stampa, con le scritte a 7,4 pt e senza filtri
-([ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md)).
+([ADR-0106](../../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md)).
 
 ```mermaid
 flowchart LR
@@ -795,14 +797,14 @@ booklet che stampa la pergamena o un disegno a caratteri al posto dello
 schema; `render_schemi.py --check` e `genera_pianta_citta.py --tutte --check`
 girano in CI.
 
-Riferimenti: [ADR-0048](../plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md) (legenda funzionale, fonte unica), [ADR-0098](../plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md) (standard di
-qualità delle mappe), [ADR-0102](../plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md) (tema pianta e generatori delle città),
-[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (ogni mappa si stampa in pianta), [ADR-0117](../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md) (contratto JSON di ogni mappa), [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) §5.4-5.5.
+Riferimenti: [ADR-0048](../../plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md) (legenda funzionale, fonte unica), [ADR-0098](../../plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md) (standard di
+qualità delle mappe), [ADR-0102](../../plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md) (tema pianta e generatori delle città),
+[ADR-0106](../../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (ogni mappa si stampa in pianta), [ADR-0117](../../plans/adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md) (contratto JSON di ogni mappa), [GUIDA-MAPPE](../how-to/GUIDA-MAPPE.md) §5.4-5.5.
 
 ## 12. La catena dei booklet
 
 Due binari che leggono lo stesso manifest
-([ADR-0020](../plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md)).
+([ADR-0020](../../plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md)).
 Prima di comporre, il binario di stampa porta in ogni capitolo chi ci si
 incontra, e alla fine il volume si misura come un controllo di prestampa.
 
@@ -842,11 +844,11 @@ booklet; Terros resta fuori perché la misura peggiorava.
 | `misura_standard_tavolo` | per capitolo e persona: numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa; note di lavoro in stampa | cricchetto nei test sulle note di lavoro |
 | `misura_distanza_pagine` | sul PDF, le pagine fra dove una persona agisce e la pagina con CA e pf | indicatore, a mano |
 
-Riferimenti: [ADR-0105](../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (un riquadro per tutte le creature),
-[ADR-0106](../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (mappe in pianta),
-[ADR-0107](../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md) (chi si incontra sta nel capitolo),
-[ADR-0108](../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md) (cricchetti e distanza in pagine),
-[GUIDA-BOOKLET-E-PDF](guides/GUIDA-BOOKLET-E-PDF.md).
+Riferimenti: [ADR-0105](../../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (un riquadro per tutte le creature),
+[ADR-0106](../../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (mappe in pianta),
+[ADR-0107](../../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md) (chi si incontra sta nel capitolo),
+[ADR-0108](../../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md) (cricchetti e distanza in pagine),
+[GUIDA-BOOKLET-E-PDF](../how-to/GUIDA-BOOKLET-E-PDF.md).
 
 ## 13. La catena delle skill
 
@@ -855,7 +857,7 @@ stile, mestieri. Si scrivono una volta in `skills/` e si impacchettano per
 ogni agente. Ogni `SKILL.md` chiude con la sezione «Cancelli
 deterministici»: i comandi che verificano il lavoro fatto con quella skill
 senza giudizio umano
-([ADR-0108](../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md)).
+([ADR-0108](../../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md)).
 
 ```mermaid
 flowchart LR
@@ -878,14 +880,14 @@ deterministici) e ogni skill ha almeno tre prove con trappola nella forma di
 `claude plugin eval`. Una versione nuova di una skill entra solo se la prova
 A/B alla cieca non peggiora gli inventati senza marca: nel lotto 2 sono scesi
 da 32 a 30 su 54 consegne
-([ADR-0114](../plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md),
-guida in [GUIDA-SCHEDE-PROMPT](guides/GUIDA-SCHEDE-PROMPT.md)). Le skill di
+([ADR-0114](../../plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md),
+guida in [GUIDA-SCHEDE-PROMPT](../reference/GUIDA-SCHEDE-PROMPT.md)). Le skill di
 un sistema spento non si impacchettano: `build-skills.sh` e `sync-skills.sh`
 chiedono a `sistemi.py --skill-escluse` quali saltare (ADR-0111).
 
 Una skill nuova senza la sezione, o con un comando che il manifest dei tool
 non dichiara, rompe i test. Il giudice della prosa resta il cieco del DM
-([ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md)):
+([ADR-0093](../../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md)):
 le skill di stile hanno cancelli che contano, non che giudicano.
 
 ## 14. Il giro di una modifica: dal thread al merge
@@ -947,7 +949,7 @@ prenotano in `plans/adr-prenotati.json`.
 
 Ogni componente di terzi (Python, librerie, binari, strumenti, azioni CI) sta
 in un canale, come i pacchetti in Debian
-([ADR-0099](../plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)).
+([ADR-0099](../../plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)).
 
 ```mermaid
 stateDiagram-v2
@@ -972,8 +974,8 @@ stateDiagram-v2
 ## 17. Il rilascio
 
 Rilasciare è unire una PR
-([ADR-0100](../plans/adr/ADR-0100-il-rilascio-e-una-pr.md), guida in
-[RILASCIO](RILASCIO.md)).
+([ADR-0100](../../plans/adr/ADR-0100-il-rilascio-e-una-pr.md), guida in
+[RILASCIO](../how-to/RILASCIO.md)).
 
 ```mermaid
 sequenceDiagram
@@ -1147,7 +1149,7 @@ Il riscontro è l'unico di questi strumenti che legge un testo esterno al
 repo. Lo legge da una cache con commit e sha256 fissati nel codice, e la
 rete che manca la dice con l'exit 3. Il primo uso, su DEF-1 e DEF-2 di
 ARC-08, è in
-[RISCONTRO-ARC08](../plans/esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md).
+[RISCONTRO-ARC08](../../plans/esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md).
 
 ## 19. Il motore delle regole e i sistemi di gioco
 
@@ -1156,8 +1158,8 @@ Fino al 2026-11-07 le regole 3.5 erano costanti negli script: 31 script su
 nucleo non conosce nessun gioco. Tutto quello che è regola sta in
 `sistemi/<id>/` come dato, formula o funzione registrata, e uno strumento lo
 riceve per il sistema del file su cui lavora
-([ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
-[ADR-0112](../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
+([ADR-0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
+[ADR-0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
 tutte e due accettate). Il modello è quello di PCGen e Foundry VTT: un
 microkernel guidato dai dati.
 
@@ -1250,10 +1252,10 @@ sono rimaste identiche byte per byte.
 | Regole complete delle creature (lotti 1-5, #369-#375) | capacità `creature.talenti` (`sistemi/<id>/dati/talenti.toml`, regola in `dmcore/talenti.py`; in PF1e anche i requisiti di 18 classi di prestigio in `[requisiti]`); in `creature.toml` le tabelle `[tratti_tipo]` (costrutti e non morti senza Costituzione, melme e parassiti senza Intelligenza) e `[pf_bonus_costrutti]` (pf bonus per taglia) | fatto: tratti dei tipi 45/45 in 3.5 e PF1e, bonus dei costrutti 9/9; li usa `genera_creatura` (e `creature_pf1e` per PF1e) |
 | Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
 
-Riferimenti: [ADR-0111](../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
-[ADR-0112](../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
-[GUIDA-SISTEMI-DI-GIOCO](guides/GUIDA-SISTEMI-DI-GIOCO.md) (uso),
-[RIFERIMENTO-PLUGIN-DI-SISTEMA](guides/RIFERIMENTO-PLUGIN-DI-SISTEMA.md) (chi scrive un plugin).
+Riferimenti: [ADR-0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
+[ADR-0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
+[GUIDA-SISTEMI-DI-GIOCO](../how-to/GUIDA-SISTEMI-DI-GIOCO.md) (uso),
+[RIFERIMENTO-PLUGIN-DI-SISTEMA](../reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md) (chi scrive un plugin).
 
 ## 20. Da dove viene un fatto, un termine, un numero
 
@@ -1299,7 +1301,7 @@ flowchart TB
     DM --> CAN
 ```
 
-- **Fatti.** La grammatica è una sola, in [GUIDA-MARCATURE](guides/GUIDA-MARCATURE.md):
+- **Fatti.** La grammatica è una sola, in [GUIDA-MARCATURE](../reference/GUIDA-MARCATURE.md):
   un INFERRED porta la domanda e la base, un CANONE la data e il codice della
   decisione. `controlla_marche.py` guarda solo le righe cambiate da una PR e
   in CI avvisa senza bloccare.
@@ -1318,11 +1320,11 @@ flowchart TB
   d'incantatore −3 di ranger e paladino anche in 3.5) sta nei dati con la
   fonte.
 
-Riferimenti: [ADR-0109](../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md),
-[ADR-0110](../plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md),
-[ADR-0118](../plans/adr/ADR-0118-un-numero-entra-solo-se-la-regola-lo-calcola.md),
-[ADR-0119](../plans/adr/ADR-0119-le-regole-pf1e-del-cancello-vengono-dal-prd.md),
-[ADR-0121](../plans/adr/ADR-0121-un-plugin-di-regole-si-misura-contro-la-fonte.md).
+Riferimenti: [ADR-0109](../../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md),
+[ADR-0110](../../plans/adr/ADR-0110-i-termini-ufficiali-hanno-una-tabella-e-un-cancello.md),
+[ADR-0118](../../plans/adr/ADR-0118-un-numero-entra-solo-se-la-regola-lo-calcola.md),
+[ADR-0119](../../plans/adr/ADR-0119-le-regole-pf1e-del-cancello-vengono-dal-prd.md),
+[ADR-0121](../../plans/adr/ADR-0121-un-plugin-di-regole-si-misura-contro-la-fonte.md).
 
 ## 21. Dove sta cosa
 
@@ -1331,7 +1333,7 @@ Riferimenti: [ADR-0109](../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-
 | lo stato della campagna giocata | `campaign/state.md` sul ramo di gruppo |
 | un master di un arco | `0N_…/ARC0N-DEF-*.md` |
 | una creatura | `Bestiario/`, catalogo `scripts/monster_catalog.yaml` |
-| come si usa uno script | [`docs/tools/README.md`](tools/README.md), `python3 scripts/<script>.py --help` |
+| come si usa uno script | [`docs/tools/README.md`](../tools/README.md), `python3 scripts/<script>.py --help` |
 | se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0103) |
 | la mappa che va in un booklet | `rendered-stampa-pianta/` accanto al master (ADR-0106) |
 | perché un capitolo stampato ha schede che il master non ha lì | `scripts/dmcore/chi_si_incontra.py`, chiave `chi_si_incontra` del manifest (ADR-0107) |
@@ -1339,11 +1341,12 @@ Riferimenti: [ADR-0109](../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-
 | le regole di un sistema | `sistemi/<id>/sistema.toml` e `sistemi/<id>/dati/` (ADR-0112) |
 | se un numero di una scheda si ricostruisce | `python3 scripts/conformita_statblocchi.py --cancello-numeri` (ADR-0118) |
 | il nome ufficiale di una regola | `scripts/lessico_it_35.tsv`, `scripts/lessico_it_pf1.tsv`, `python3 scripts/lessico_regole.py` (ADR-0110) |
-| come si marca chi ha deciso un fatto | [`guides/GUIDA-MARCATURE.md`](guides/GUIDA-MARCATURE.md) (ADR-0109) |
+| come si marca chi ha deciso un fatto | [`reference/GUIDA-MARCATURE.md`](../reference/GUIDA-MARCATURE.md) (ADR-0109) |
 | i comandi che verificano una skill | la sezione «Cancelli deterministici» del suo `SKILL.md` (ADR-0108) |
 | i tetti delle misure di stampa | `docs/audit/stampa-booklet.json`, `docs/audit/statblocchi-booklet.json` |
-| perché una cosa è fatta così | [`plans/adr/`](../plans/adr/), indice in [`docs/INDEX.md`](INDEX.md) §4 |
-| cosa resta da fare | [`plans/INDEX.md`](../plans/INDEX.md), [`plans/STATO-E-ORDINE-DEI-PIANI.md`](../plans/STATO-E-ORDINE-DEI-PIANI.md) |
-| cosa è cambiato fra due versioni | [`CHANGELOG.md`](../CHANGELOG.md) |
-| come si prepara una macchina | [`guides/GUIDA-SETUP-MACCHINA.md`](guides/GUIDA-SETUP-MACCHINA.md) |
-| le regole per gli agenti | [`AGENTS.md`](../AGENTS.md), [`skills/ORCHESTRAZIONE.md`](../skills/ORCHESTRAZIONE.md) |
+| perché una cosa è fatta così | [`plans/adr/`](../../plans/adr/), indice in [`docs/INDEX.md`](../INDEX.md) §4 |
+| cosa resta da fare | [`plans/INDEX.md`](../../plans/INDEX.md), [`plans/STATO-E-ORDINE-DEI-PIANI.md`](../../plans/STATO-E-ORDINE-DEI-PIANI.md) |
+| cosa è cambiato fra due versioni | [`CHANGELOG.md`](../../CHANGELOG.md) |
+| una guida, un riferimento, una spiegazione | `docs/how-to/`, `docs/reference/`, `docs/explanation/`, `docs/tutorials/`, indice in [`docs/INDEX.md`](../INDEX.md) §3 (Diátaxis, ADR-0123) |
+| come si prepara una macchina | [`tutorials/GUIDA-SETUP-MACCHINA.md`](../tutorials/GUIDA-SETUP-MACCHINA.md) |
+| le regole per gli agenti | [`AGENTS.md`](../../AGENTS.md), [`skills/ORCHESTRAZIONE.md`](../../skills/ORCHESTRAZIONE.md) |

@@ -43,7 +43,7 @@ class TestClassificazione(unittest.TestCase):
 
     def test_la_documentazione_normale_non_e_meta(self):
         """Solo `docs/audit/`: una guida che marca un'inferenza ha un debito vero."""
-        self.assertEqual(inv.classe("docs/guides/GUIDA-IMMAGINI.md"), "aperti")
+        self.assertEqual(inv.classe("docs/how-to/GUIDA-IMMAGINI.md"), "aperti")
 
 
 class TestRigheDiRegola(unittest.TestCase):
@@ -54,7 +54,7 @@ class TestRigheDiRegola(unittest.TestCase):
                     "campaign/templates/png-dossier-template.md",
                     "Bestiario/README.md",
                     "scripts/tests/fixtures/ultraclear/golden.md",
-                    "docs/guides/GUIDA-MARCATURE.md",
+                    "docs/reference/GUIDA-MARCATURE.md",
                     "AGENTS.md"):
             self.assertEqual(inv.classe(rel), "meta", rel)
 

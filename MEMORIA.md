@@ -48,7 +48,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 |---|---|---|
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11 (ADR… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
-| **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/guides/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
+| **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/how-to/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
 | **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: i pf di Terros (345 o 348 con Robustezza); *Virata* da riscontrare su d20srd; la portata del sussurro della Catena… | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
 | **P10 · Mappe, le scelte del DM**: texture e tessere nella pagina di scelta (R8, livello B), la prima immagine di ComfyUI (R4-quinquies), il giro di prova sui modelli 3D CC0 e lo zip Standard di Quaternius (R4-ter), il… | [RESA-ASSET](plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md) §8 · [COLLAUDO-MAPPE](plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) | DM; poi l'agente mette le tessere nel tema e rimisura |
 | **P11 · I collaudi che solo il DM può fare**: l'import `.uvtt` in Foundry (INTEGRAZIONE, ~92%), il gate κ ≥ 0,6 (MISURA-EDITORIALE, ~90%), la prova del blocco dei segreti (PRATICHE PI-3), il collaudo del Drappo L9 al ta… | i piani | DM |
@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-10 | ADR-0123 | `docs/` riorganizzata in Diátaxis (card del DM: «Riorganizzare docs/ subito»):… | ✅ fatto; `docs/tools/` e `docs/audit/` restano dove sono (superficie pubblica e registri della CI) |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Passo della documentazione della milestone v1.1.0 (regola del DM del 2026-11-09… | ✅ fatto; trovato e scritto: lo schema per capacità di ADR-0112 §3 non è nel codice; la catena OGL incompleta segnalata al thread delle regole, chiusa dai loro… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
 
 ## Le misure che si portano dietro
 

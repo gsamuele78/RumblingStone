@@ -34,7 +34,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 QUI = Path(__file__).resolve().parent
 
-SALTA = ("plans/", "scripts/", ".github/", "docs/audit/", "docs/guides/GUIDA-MARCATURE.md")
+SALTA = ("plans/", "scripts/", ".github/", "docs/audit/", "docs/reference/GUIDA-MARCATURE.md")
 SALTA_PARTI = {"_ARCHIVIO", "Old", "_testi-altrui"}
 
 DATATA = re.compile(r"\[ACCEPTED\s*[—-]\s*DM-canon\s+(\d{4}-\d{2}-\d{2})([^\]\n]*)\]")

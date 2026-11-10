@@ -26,7 +26,7 @@ delle marche senza la domanda da fare al DM. Il ratchet di
 ## Decisione
 
 **Ogni fatto di gioco porta una sola marca della grammatica di
-[GUIDA-MARCATURE](../../docs/guides/GUIDA-MARCATURE.md), e solo il DM fa
+[GUIDA-MARCATURE](../../docs/reference/GUIDA-MARCATURE.md), e solo il DM fa
 passare un INFERRED a CANONE.**
 
 1. **Grammatica** (scheda 1 = A, 8 = A): `[INFERRED — <domanda>; base: <…>]`,

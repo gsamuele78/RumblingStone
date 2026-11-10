@@ -225,7 +225,7 @@ di progetto alla radice (Keep a Changelog, italiano), `__version__` in
 `scripts/dmcore/__init__.py` letto da `dm.py --version`, workflow
 `release.yml` con `scripts/release_plan.py` e `scripts/release_notes.py`
 ripresi da iemod-fetch (MIT, stesso autore), guida in
-[docs/RILASCIO.md](../docs/RILASCIO.md). Il primo rilascio è 1.0.0 (D7). Il
+[docs/how-to/RILASCIO.md](../docs/how-to/RILASCIO.md). Il primo rilascio è 1.0.0 (D7). Il
 workflow sale a stable dopo tre rilasci senza interventi a mano.
 
 ### P11 · Il riscontro delle regole sull'SRD ✅ in testing
@@ -239,7 +239,7 @@ SQLite a commit fissato, con lo sha256 di ogni file, in
 `~/.cache/rumblingstone/srd/`, e riscontra un file di regole (concorda,
 discorda, non trovata, con la citazione). Job CI `riscontro-srd` non
 bloccante; il flusso di tutti gli strumenti di qualità in
-[ARCHITETTURA](../docs/ARCHITETTURA.md) §18. Primo uso su DEF-1 e DEF-2:
+[ARCHITETTURA](../docs/explanation/ARCHITETTURA.md) §18. Primo uso su DEF-1 e DEF-2:
 [RISCONTRO-ARC08](esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md), 53
 regole, 3 discordanze lasciate al DM. Sale a stable non prima del 2026-11-06.
 
