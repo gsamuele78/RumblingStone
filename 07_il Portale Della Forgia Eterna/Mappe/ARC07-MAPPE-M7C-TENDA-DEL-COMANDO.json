@@ -508,7 +508,8 @@
         ]
       },
       "cr": "GS 15",
-      "note": "Grande: il master compilato porta «@taglia P14 ; Grande»"
+      "note": "Grande: il master compilato porta «@taglia P14 ; Grande»",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Zog'tar Deatheye, generale dell'orda antica"
     },
     {
       "faction": "Orda",
@@ -518,7 +519,8 @@
         17,
         13
       ],
-      "cr": "GS 13"
+      "cr": "GS 13",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Balvar Fuocospento, il Consigliere dell'Orda"
     },
     {
       "faction": "Orda",
@@ -528,7 +530,8 @@
         12,
         12
       ],
-      "cr": "Guerriero 8"
+      "cr": "Guerriero 8",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Guardia di Zog'tar (4)"
     },
     {
       "faction": "Orda",
@@ -538,7 +541,8 @@
         13,
         12
       ],
-      "cr": "Guerriero 8"
+      "cr": "Guerriero 8",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Guardia di Zog'tar (4)"
     },
     {
       "faction": "Orda",
@@ -548,7 +552,8 @@
         16,
         13
       ],
-      "cr": "Guerriero 8"
+      "cr": "Guerriero 8",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Guardia di Zog'tar (4)"
     },
     {
       "faction": "Orda",
@@ -558,7 +563,8 @@
         12,
         13
       ],
-      "cr": "Guerriero 8"
+      "cr": "Guerriero 8",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Guardia di Zog'tar (4)"
     },
     {
       "faction": "Orda",
@@ -578,7 +584,8 @@
         13,
         13
       ],
-      "cr": "GS 6, adepto 7"
+      "cr": "GS 6, adepto 7",
+      "scheda": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Sacerdote dell'orda"
     }
   ],
   "movements": [

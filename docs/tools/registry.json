@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 137,
+  "tool_count": 138,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -5009,6 +5009,122 @@
       "docs": [
         "plans/RICERCA-GUARDRAIL-E-TECNICHE-2026-11.md",
         "plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md"
+      ]
+    },
+    {
+      "id": "misura_mappe_schede",
+      "path": "scripts/misura_mappe_schede.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/misura_mappe_schede.py --dettaglio",
+      "summary": "Le pedine delle mappe JSON contro le schede: quante unità nemiche con un nome dichiarano `scheda`, i collegamenti rotti, le taglie della pianta che non sono quelle della scheda, le mappe senza scala. Con --booklet, per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet. In prova (ADR-0123): avvisa, non ferma.",
+      "use_case": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_deps": [],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--dettaglio",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca collegamenti rotti e taglie discordi, mappa per mappa."
+        },
+        {
+          "name": "--proponi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I collegamenti certi (id del Bestiario fra parentesi, o nome intero di una scheda dello stesso modulo), senza scrivere."
+        },
+        {
+          "name": "--scrivi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive i collegamenti certi nei JSON e porta `taglie` alla taglia della scheda."
+        },
+        {
+          "name": "--booklet",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Avvisa se una misura peggiora rispetto al registro; esce 0."
+        },
+        {
+          "name": "--aggiorna",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive docs/audit/mappe-schede.json."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/Mappe/**/*.json",
+          "kind": "json",
+          "required": true,
+          "schema": "scripts/schemas/tactical_map.schema.json"
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è una misura in prova"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "legge le mappe JSON e i recinti statblocco seguiti da git"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "tests": [
+        "scripts/tests/test_misure_in_prova.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md",
+        "plans/RICERCA-USABILITA-AL-TAVOLO-2026-11.md"
       ]
     },
     {

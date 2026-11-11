@@ -36,6 +36,11 @@
         "schede": 32,
         "pagine_con_immagine": 0.044,
         "pagine_con_immagine_decimo": 0.12
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -54,6 +59,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-SERATA.manifest.json": {
@@ -72,6 +82,11 @@
         "schede": 24,
         "pagine_con_immagine": 0.026,
         "pagine_con_immagine_decimo": 0.085
+      },
+      "in_prova": {
+        "sigle_morte": 6,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -90,6 +105,11 @@
         "schede": 1,
         "pagine_con_immagine": 0.263,
         "pagine_con_immagine_decimo": 0.263
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": {
@@ -108,6 +128,11 @@
         "schede": 30,
         "pagine_con_immagine": 0.035,
         "pagine_con_immagine_decimo": 0.081
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -126,6 +151,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 1,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-GRUPPO-CAMMINO.manifest.json": {
@@ -144,6 +174,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-SESSIONE-TERROS-BOOKLET.manifest.json": {
@@ -162,6 +197,11 @@
         "schede": 4,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 2,
+        "righe_brevi_incomplete": 2,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-TEASER-GIOCATORI.manifest.json": {
@@ -180,6 +220,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json": {
@@ -198,6 +243,11 @@
         "schede": 26,
         "pagine_con_immagine": 0.048,
         "pagine_con_immagine_decimo": 0.105
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
@@ -216,6 +266,11 @@
         "schede": 5,
         "pagine_con_immagine": 0.031,
         "pagine_con_immagine_decimo": 0.031
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 5,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il Giardino di Sale e Calce PF1e/homebrew/giardino-sale-calce-pf1e.manifest.json": {
@@ -234,6 +289,11 @@
         "schede": 7,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 1,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il Giardino di Sale e Calce/homebrew/giardino-sale-calce.manifest.json": {
@@ -243,7 +303,7 @@
         "immagini_sotto_300dpi": 0,
         "schede_spezzate": 0,
         "font_non_incorporati": 0,
-        "rimandi_sbagliati": 1
+        "rimandi_sbagliati": 0
       },
       "misura": {
         "pagine": 40,
@@ -252,6 +312,11 @@
         "schede": 7,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BENVENUTO-TAVOLO.manifest.json": {
@@ -270,6 +335,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-DM.manifest.json": {
@@ -288,6 +358,11 @@
         "schede": 14,
         "pagine_con_immagine": 0.114,
         "pagine_con_immagine_decimo": 0.205
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-GIOCATORI.manifest.json": {
@@ -306,6 +381,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.625
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-FASCICOLO-SCHEDE.manifest.json": {
@@ -324,6 +404,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.091,
         "pagine_con_immagine_decimo": 0.455
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-PROP.manifest.json": {
@@ -342,6 +427,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.167
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-SCHEDE-PG.manifest.json": {
@@ -360,6 +450,11 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     },
     "10-stand-alone/L'abbazia Della Rotta Sicura/homebrew/abbazia-rotta-sicura.manifest.json": {
@@ -378,6 +473,11 @@
         "schede": 38,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0
       }
     }
   }

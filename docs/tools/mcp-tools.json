@@ -2020,6 +2020,52 @@
       "deterministic": true
     },
     {
+      "name": "misura_mappe_schede",
+      "description": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»\n\nLe pedine delle mappe JSON contro le schede: quante unità nemiche con un nome dichiarano `scheda`, i collegamenti rotti, le taglie della pianta che non sono quelle della scheda, le mappe senza scala. Con --booklet, per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet. In prova (ADR-0123): avvisa, non ferma.",
+      "use_case": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»",
+      "invocation": "python3 scripts/misura_mappe_schede.py --dettaglio",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dettaglio": {
+            "type": "boolean",
+            "description": "Elenca collegamenti rotti e taglie discordi, mappa per mappa."
+          },
+          "proponi": {
+            "type": "boolean",
+            "description": "I collegamenti certi (id del Bestiario fra parentesi, o nome intero di una scheda dello stesso modulo), senza scrivere."
+          },
+          "scrivi": {
+            "type": "boolean",
+            "description": "Scrive i collegamenti certi nei JSON e porta `taglie` alla taglia della scheda."
+          },
+          "booklet": {
+            "type": "boolean",
+            "description": "Per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Avvisa se una misura peggiora rispetto al registro; esce 0."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive docs/audit/mappe-schede.json."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Tutto in JSON."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "sempre: è una misura in prova"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_ripetizioni_frasi",
       "description": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»\n\nLe immagini ripetute fra i box read-aloud, frase per frase, con embedding multilingue (MiniLM, Apache 2.0). Il 2026-11-03 le 2 vere nei master corrette (21 → 19 coppie), le altre lette e scritte in plans/scrittura/ripetizioni-accettate.json; --check è il cancello locale. Canale unstable (ADR-0099).",
       "use_case": "«Quali immagini ho già usato in un altro box, anche con parole diverse?»",

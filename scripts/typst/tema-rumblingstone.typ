@@ -58,6 +58,9 @@
   else if c.has("children") { c.children.map(to-string).join("") }
   else if c.has("body") { to-string(c.body) }
   else if c == [ ] { " " }
+  // l'apostrofo del markdown è un `smartquote`: senza questa riga i titoli
+  // ricomposti uscivano «LALBA» per «L'ALBA» (misura titoli_rovinati)
+  else if c.func() == smartquote { if c.at("double", default: true) { "\u{201D}" } else { "\u{2019}" } }
   else { "" }
 }
 
