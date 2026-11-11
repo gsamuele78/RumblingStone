@@ -1,0 +1,103 @@
+# Verificatore logico (Prolog) per le regole: esito della misura
+
+Data: 2026-11-11. Richiesta del DM: valutare lo stack «grafo di eventi + regole
+in Prolog + la regola violata o il controesempio restituiti all'LLM perché si
+corregga», chiamato attraverso il server MCP, e misurare se entra nel repo.
+Decisione in [ADR-0124](../../adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md).
+
+## 1. Cosa c'era già (audit)
+
+| Pezzo dello stack proposto | Nel repo oggi |
+|---|---|
+| Server MCP che chiama le regole | c'è: `scripts/mcp_server.py` (rumblingstone-tools, ADR-0030), 137 tool dal manifest, allowlist, sola lettura per difetto |
+| L'LLM come client, verificatori deterministici | è la regola di ADR-0067: gli script non chiamano modelli, l'LLM chiama i tool e ciò che produce passa dai cancelli |
+| «Grafo di eventi» con rifiuto dell'azione insicura | `campaign/state.yaml` + `dmcore/delta_sessione.py`: un delta si applica tutto o niente, e un `da` diverso dallo stato di oggi lo rifiuta (è l'esempio del rollback, in versione nostra); `validate_state.py` R1-R12 |
+| Regole come dati | sì: `sistemi/<id>/dati/*.toml` + formule simpleeval (ADR-0111/0112) |
+| La regola esatta che fallisce | in parte: `talenti.manca` dà «Des 13 (ha 11)», i validatori danno R1…R12, F1…O3; molti altri danno testo libero |
+
+**Il buco vero trovato**: nessun cancello controlla i **prerequisiti dei talenti
+sulle schede che esistono**. `talenti.manca` lo usa solo il generatore. Per
+questo il caso di prova è questo.
+
+## 2. Banco di prova
+
+- `estrai.py` legge le 243 schede del Bestiario con `dmcore.lettura_creatura`
+  (126 leggibili, **74 con una riga Talenti/Feats**), 263 talenti riconosciuti,
+  74 nomi non riconosciuti (22%, quasi tutti talenti fuori SRD o nomi italiani
+  non nel lessico: «Incantesimi Focalizzati», «Multiattacco», «Attacco in Volo»).
+- Gli **stessi fatti** vanno a tre motori: Python (`talenti.manca`, il codice che
+  c'è), SWI-Prolog 9.0.4 (`regole.pl`, processo esterno), clingo 5.8.3 (ASP,
+  ruota PyPI, dentro Python).
+- `muta.py` inietta 141 difetti nelle schede pulite (caratteristica, BAB,
+  talento prerequisito, livello di classe a soglia − 1).
+
+## 3. Misure
+
+| Misura | Python (esistente) | SWI-Prolog | clingo |
+|---|---|---|---|
+| Violazioni sulle 74 schede vere | 30 | 30 (stesse) | 30 (stesse) |
+| Difetti iniettati trovati | **141/141** | 141/141 | 141/141 |
+| Difetti in più trovati dalla chiusura transitiva | — | **0** | — |
+| Tempo, 141 mutanti | **0,8 ms** | 56,5 ms (processo) | 30,5 ms |
+| Righe di regola | 27 | 32 + 70 di traduzione fatti | 14 + la stessa traduzione |
+| Come entra nel pacchetto | già dentro | binario di sistema (apt), **non** si porta nel bundle; janus (ponte Python) solo da 9.1, Ubuntu 24.04 ha 9.0.4 | ruota PyPI MIT, si porta nel bundle |
+| Errori introdotti dalla traduzione | — | 0 (dopo la codifica UTF-8) | **3 falsi positivi** al primo giro (costante `character` contro stringa `"character"`) |
+
+**La chiusura transitiva non aggiunge niente nella verifica.** Nei dati 3.5 i
+prerequisiti indiretti sono già ripetuti su ogni talento (0 su 110); nel PF1e
+no (89 su 1.227), ma una scheda che ha il talento intermedio viene già
+controllata su quello, e una che non lo ha viene già segnalata per la sua
+mancanza. La ricorsione serve a **pianificare** («che cosa devo prendere per
+arrivare a Turbine di Colpi»), non a verificare.
+
+## 4. Cosa ha trovato davvero il lavoro (indipendente dal motore)
+
+1. **30 violazioni in 19 schede** del Bestiario. Campione letto a mano su 8
+   schede: 6 hanno difetti veri (es. drow assassina: Tiro Preciso senza Tiro
+   Ravvicinato, «Attacco Rapido» = Spring Attack senza Schivare/Mobilità;
+   ogre frantumapietra: Incalzare Potenziato senza Incalzare; Krusk: Duro a
+   Morire senza Resistenza Fisica; guardia nobile drow: Combattere con Due
+   Armi Migliorato con BAB +3; Skullcrusher: Combattere con Due Armi con Des 11),
+   2 sono errori di **lettura** (la classe non sta nella riga `tipo:`, quindi
+   chierica e maga risultano senza livello d'incantatore). Il monaco dà 5 falsi
+   positivi perché i talenti bonus del monaco ignorano i prerequisiti e nessuno
+   dei tre motori lo modella ancora. Nessuna correzione fatta: sono schede di
+   canone, decide il DM.
+2. **D1, difetto nei dati 3.5**: in `sistemi/dnd35/dati/talenti.toml` la tabella
+   `[capacita]` usa le classi in italiano (`chierico`), i prerequisiti `classe`
+   in inglese (`fighter`), e `genera_creatura.py` passa l'italiano. Verificato:
+   `manca('dnd35', 'Weapon Specialization', guerriero 4)` → «fighter 4° livello»,
+   quindi un guerriero 3.5 generato non prende mai Specializzazione in
+   un'Arma.
+3. **D2**: `Leadership` chiede `classe.character`, che nessuno scrive in
+   `Stato.livelli`: il generatore la considera sempre non presa.
+
+Formalizzare le regole in un'altra lingua ha fatto emergere D1 e D2, perché
+obbliga a dare una sola identità a ogni classe. Lo stesso risultato lo dà un
+test Python sulle chiavi; non serve un motore logico per tenerlo.
+
+## 5. Cosa non è stato misurato
+
+- **Il giro di autocorrezione dell'LLM** (messaggio libero contro «regola +
+  atteso + ha»): nel container non c'è una chiave per un modello, e ADR-0067
+  vieta agli script di chiamarne uno. Protocollo proposto: 40 dei 141 mutanti,
+  l'agente li corregge via MCP una volta con il messaggio di oggi e una volta
+  con l'uscita strutturata, alla cieca; si conta chi arriva a 0 violazioni in
+  un giro senza introdurre difetti nuovi.
+- **Il grafo di eventi del canone** (chi sa cosa, chi porta cosa nel tempo):
+  qui la parte difficile è estrarre i fatti dalla prosa, non ragionarci sopra.
+  `coerenza_campagna.py fatti` lo fa con prudenza a regex; un motore logico non
+  cambia quel collo di bottiglia.
+
+## Riprodurre
+
+```bash
+sudo apt install swi-prolog-nox            # solo per il confronto
+pip install clingo==5.8.3                  # solo per il confronto
+cd plans/esperimenti/prolog-verificatore-2026-11-11
+python3 estrai.py > fatti-bestiario.json
+python3 verifica_python.py fatti-bestiario.json
+python3 verifica_prolog.py fatti-bestiario.json
+python3 verifica_clingo.py fatti-bestiario.json
+python3 muta.py fatti-bestiario.json       # scrive misure-mutanti.json
+```
