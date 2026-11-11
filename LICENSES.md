@@ -101,7 +101,12 @@ Dipendenze **non** vendorizzate, che si installano da PyPI con
   che girano sulla macchina di chi stampa: non si distribuiscono col repo e non
   finiscono dentro i PDF, quindi le loro licenze non toccano né il codice MIT né
   i volumi. Il bundle offline del rilascio le ridistribuisce come wheel
-  invariate, con le loro licenze dentro.
+  invariate, con le loro licenze dentro;
+- `markdown-it-py` 4.2.0 o successiva (MIT) con la sua dipendenza `mdurl` (MIT),
+  il parser CommonMark che dice a `validate_lingua.py` quali righe sono codice
+  ([ADR-0120](plans/adr/ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md),
+  emendamento del 2026-11-11). Entra nel bundle offline come le altre wheel di
+  `requirements.txt`.
 
 Fino al 2026-11-08 typst e `pdfcpu` (Apache-2.0) erano eseguibili scaricati da
 GitHub Releases. L'elenco vivo sta in [`scripts/binari.py`](scripts/binari.py).
