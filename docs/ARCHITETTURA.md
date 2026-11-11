@@ -187,7 +187,7 @@ flowchart TB
 
 | Strato | Cosa contiene | Chi decide la versione |
 |---|---|---|
-| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken | ADR-0037, ADR-0099 (Python sale con Debian) |
+| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken, markdown-it-py | ADR-0037, ADR-0099 (Python sale con Debian) |
 | Sviluppo e prove | `requirements-dev.txt` | Dependabot propone, la CI misura |
 | Binari | git, gh, Chromium, typst, Blender, Inkscape, pandoc, LanguageTool | `scripts/binari.py`, `dm.py doctor` |
 | Container | ComfyUI (`scripts/comfyui-local/`), Homebrewery (`scripts/homebrew-local/`) | i loro README |

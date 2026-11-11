@@ -102,7 +102,7 @@ facoltativo e `dm.py doctor` dice cosa manca e cosa succede senza.
 ```bash
 git clone https://github.com/gsamuele78/RumblingStone.git
 cd RumblingStone
-pip install -r requirements.txt          # pyyaml, Pillow, tiktoken
+pip install -r requirements.txt          # pyyaml, Pillow, tiktoken, markdown-it-py
 python3 scripts/dm.py --version          # la versione del repo
 python3 scripts/dm.py doctor             # cosa c'è sulla macchina
 python3 scripts/dm.py --help             # tutti i comandi

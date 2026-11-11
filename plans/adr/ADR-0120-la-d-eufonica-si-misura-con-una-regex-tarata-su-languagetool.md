@@ -66,10 +66,85 @@ citazione con *ad ogni* verrebbe segnalata, e nel corpus non ce n'è nessuna.
 - Il conto è a zero: fino alla promozione una forma nuova fuori norma si vede nel
   passo in testing e nel conto degli avvisi, ma **non ferma una PR**.
 - 58 righe corrette in 42 file, archivi compresi.
-- Le righe rientrate come codice non si controllano: lo stesso limite degli
-  altri controlli di `validate_lingua`.
+- ~~Le righe rientrate come codice non si controllano.~~ Superato con
+  l'emendamento del 2026-11-11, qui sotto.
 
 **Da rivedere se**: LanguageTool trova sul repo una classe di forme che la regex
 non vede (si rifà `misura.py` dopo un lotto grande di prosa nuova); il DM decide
 di accettare *od*; la CI accetta un servizio Java, e allora il cancello passa a
 LanguageTool.
+
+---
+
+## Emendamento del 2026-11-11 — i limiti si misurano seminando, e due si chiudono
+
+**Stato**: proposta · **Chiesto dal DM** il 2026-11-11: «c'è un modo deterministico e affidabile, misurando il miglioramento?»
+
+### Contesto
+
+Col corpus a zero il conto dei rilievi non dice più niente: 0 vuol dire «pulito»
+o «cieco». I limiti dichiarati erano tre: le righe rientrate saltate come codice,
+le citazioni senza filtro, la *a* minuscola usata come etichetta.
+
+### Alternative considerate
+
+1. **Contare i rilievi sul corpus vero**. Scartata: prima e dopo fa 0.
+2. **Un banco di semina** (scelta): errori noti messi in modo deterministico in
+   una copia in memoria di ogni file, e si conta quanti ne trova il rilevatore,
+   posto per posto. È il test di mutazione applicato alla prosa.
+3. Per distinguere il codice dalla prosa rientrata: **il parser CommonMark di
+   riferimento, markdown-it-py** (scelta, lo standard di fatto), oppure una
+   regola del repo solo stdlib (resta come ripiego).
+4. Per le citazioni: **un marchio esplicito sulla riga** (scelta), oppure
+   indovinare la citazione dalle virgolette. Scartata la seconda: nei testi di
+   gioco le virgolette aprono quasi sempre un dialogo scritto da noi, che la
+   norma la deve rispettare.
+
+### Decisione
+
+- `plans/esperimenti/d-eufonica-limiti-2026-11-11/semina.py` è la misura del
+  rilevatore. Si rifà a ogni modifica della regex o di `righe_da_controllare`.
+- `validate_lingua.righe_di_codice` chiede a markdown-it-py quali righe sono
+  codice. Una riga rientrata che è il seguito di un elenco o di un paragrafo è
+  prosa e si legge, per **tutti** i controlli del validatore. markdown-it-py
+  (MIT, puro Python) entra in `requirements.txt` come libreria opzionale con
+  ripiego dichiarato (famiglia di Pillow in ADR-0037): senza, vale la regola
+  stdlib `_codice_senza_parser`, e il validatore lo stampa.
+- `<!-- sic -->` su una riga dice che è una citazione alla lettera: lì la *d*
+  eufonica non si segnala, gli altri refusi sì. Il conto delle righe marcate si
+  stampa a ogni giro. Vale anche per una *a* minuscola usata come etichetta.
+
+### Misura (692 file, 3.944 righe di prosa seminate, 106 nel codice)
+
+| Rilevatore | Richiamo sulla prosa | Righe rientrate di prosa | Rilievi nel codice | Rilievi su righe non seminate |
+|---|---:|---:|---:|---:|
+| Regex, prima | 3.880 (98,38%) | 0 su 64 | 1 su 106 | 0 |
+| Regex, regola stdlib | 3.944 (100%) | 64 su 64 | 1 su 106 | 0 |
+| **Regex, markdown-it-py** | **3.944 (100%)** | **64 su 64** | **0 su 106** | **0** |
+| LanguageTool ST_03_001 | 3.323 (84,25%) | 64 su 64 | 1 su 106 | 23 |
+
+Le righe lette dal validatore passano da 116.470 a 117.589: 1.309 righe rientrate
+di prosa che prima nessun controllo leggeva. Sul corpus vero: 0 errori prima e
+dopo, 48 avvisi di virgolette dritte in più. LanguageTool perde le 619 righe di
+tabella, che svuota prima di leggere; i suoi 23 rilievi su righe non seminate
+sono le classi già note (*o o…*, lettere-etichetta).
+
+La regola stdlib e markdown-it-py classificano in altro modo 184 righe, quasi
+tutte in `ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md`, che ha i recinti
+rotti (la chiusura in coda a una riga di testo): CommonMark li legge come
+codice fino in fondo, la regola stdlib no.
+
+### Conseguenze e limiti onesti
+
+- I semi nascono da quattro schemi vicini a quelli della regex: il banco misura
+  **dove** il rilevatore legge, e lo fa bene; non dimostra che gli schemi siano
+  tutta la lingua. Lì il riscontro indipendente resta LanguageTool, che sui semi
+  in riga normale ne conferma 2.502 su 2.503.
+- I semi sono solo minuscoli e sulla stessa riga: maiuscole, corsivo in mezzo e
+  congiunzione a fine riga restano coperti dai test, non dal banco.
+- Il marchio `sic` è a mano: una citazione non marcata viene segnalata. Oggi nel
+  corpus non ce n'è nessuna.
+- Il canale non cambia: testing fino al 2026-11-24.
+
+**Da rivedere se**: il banco scende sotto il 100% dopo una modifica; markdown-it-py
+cambia la lettura dei blocchi rientrati in una versione nuova (si vede dal banco).

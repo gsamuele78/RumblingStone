@@ -1,5 +1,15 @@
 # Editorial Standards — convenzioni redazionali (best practice editoriali)
 
+<!-- indice: generato da scripts/indice_references.py, non scriverlo a mano -->
+**In questo file**
+
+- 1. Terminologia canonica (mai deviazioni)
+- 2. Read-aloud / boxed text (la resa che i giocatori sentono)
+- 3. Gerarchia e struttura della pagina
+- 4. Igiene editoriale
+- 5. Chi fa cosa (per non sprecare token)
+<!-- /indice -->
+
 Copy-editing e tipografia per TUTTO il contenuto generato del repo. Le
 regole di *voce* stanno in `style-pillars.md`; qui sta la **resa sulla
 pagina**: come si scrive, si formatta e si nomina. La parte meccanica di
@@ -86,7 +96,8 @@ token): l'agente non la ri-verifica a mano.
   alla **stessa** vocale (*legato ad Aegis Fang*, *armi ed equipaggiamento*); davanti
   alle altre vocali *a* ed *e* (*a ogni*, *a oggi*, *a un*, *e indifesa*). Resta solo
   *ad esempio* (*ad es.*). Mai *od*. Lo misura `validate_lingua.py` (cancello a zero),
-  tarato su LanguageTool ST_03_001.
+  tarato su LanguageTool ST_03_001. Una citazione alla lettera che ha un'altra
+  forma si marca sulla sua riga con `<!-- sic -->`.
 - File name: `PortaleForgia-*`/`ARC*-DEF-*`: niente spazi anomali, casing
   coerente; i file superati prendono il banner e poi `_ARCHIVIO/`.
 
