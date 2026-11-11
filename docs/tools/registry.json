@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 137,
+  "tool_count": 138,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -12268,6 +12268,106 @@
       ],
       "docs": [
         "plans/adr/ADR-0056-una-norma-senza-misura-non-esiste.md"
+      ]
+    },
+    {
+      "id": "verifica_talenti",
+      "path": "scripts/verifica_talenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_talenti.py [SCHEDA|CARTELLA ...] [--json] [--check]",
+      "summary": "ADR-0124. I prerequisiti dei talenti delle schede che esistono (difetto: Bestiario/), con la stessa regola del generatore (dmcore.talenti.violazioni). Per ogni violazione dice file:riga, talento, regola (car.X, bab, lic, classe.X, talento, capacita), valore atteso e valore che la scheda ha: con --json e' l'uscita che un agente legge per correggere la scheda e richiamare. Esclude i talenti bonus senza prerequisiti (monaco, ranger) e le competenze date dalla classe; senza classi dichiarate, lic/capacita/classe vanno fra i non verificabili. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Questa scheda puo' avere Incalzare Potenziato? Quale prerequisito manca, e quanto vale quello che ha?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": false,
+          "default": "Bestiario",
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere (difetto: Bestiario/)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con regola, atteso, ha, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
       ]
     },
     {

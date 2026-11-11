@@ -1,6 +1,6 @@
 # ADR-0124 — Le regole si verificano in Python, e l'LLM riceve la regola violata e il controesempio via MCP
 
-**Stato**: proposta (2026-11-11)
+**Stato**: proposta (2026-11-11); punti 3-5 scelti dal DM il 2026-11-11 («Strumento talenti in Python via MCP»)
 **Data**: 2026-11-11
 **Decisione-fonte**: il DM (Jfs), 2026-11-11: valutare lo stack «grafo di eventi + regole in Prolog + regola che fallisce o controesempio restituiti all'LLM perché si corregga», chiamato via server MCP, e misurare se l'adozione nel repo è possibile.
 **Rapporti**: applica [ADR-0067](ADR-0067-il-confine-dichiarato-fra-codice-e-llm.md) (l'LLM è client, i verificatori sono deterministici) e [ADR-0030](ADR-0030-server-mcp-sui-tool.md) (server MCP); segue la regola dello standard di fatto del 2026-11-08. Misure in [plans/esperimenti/prolog-verificatore-2026-11-11/ESITO.md](../esperimenti/prolog-verificatore-2026-11-11/ESITO.md).
@@ -34,14 +34,22 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
 2. **Si adotta il pattern, non il motore**: ogni verificatore di regole che
    l'LLM chiama via MCP restituisce per ogni violazione `regola`, `atteso`,
    `ha` e `file:riga`, in JSON, oltre al testo per il DM.
-3. Il primo verificatore così è quello dei **prerequisiti dei talenti sulle
-   schede esistenti**, che oggi nessun cancello controlla (30 violazioni in 19
-   schede, campione: 6 su 8 difetti veri). Entra come tool del manifest in
-   sola lettura, in canale testing (ADR-0099), dopo le scelte del DM sulle
-   schede segnalate.
-4. Prima di quel tool si correggono D1 (classi in italiano in `[capacita]` di
-   `sistemi/dnd35/dati/talenti.toml` contro l'inglese dei prerequisiti) e D2
-   (`character` mai scritto per Leadership), con test sulle chiavi.
+3. Il primo verificatore così è `scripts/verifica_talenti.py`: i
+   **prerequisiti dei talenti sulle schede esistenti**, che prima nessun
+   cancello controllava. È nel manifest, quindi nel server MCP, in sola
+   lettura, e in canale testing (ADR-0099): misura, non cancello. La regola è
+   `dmcore.talenti.violazioni`, la stessa di `manca` e del generatore. Esclude
+   i talenti bonus senza prerequisiti (monaco, stili del ranger) e le
+   competenze della classe; senza classi dichiarate, livello d'incantatore e
+   classe vanno fra i non verificabili. Sul Bestiario: da 30 violazioni in 19
+   schede (banco) a **21 in 11** (tolti 9 falsi positivi). Le 21 vanno al DM.
+4. D1 e D2 sono corretti in `talenti.manca`: una classe 3.5 vale col nome
+   inglese e italiano, e `character` sono i dadi vita totali (`Stato.dv`).
+   Nell'impronta delle creature cambiano solo i talenti che la correzione
+   vuole: Autorità ai comandanti, Arma Specializzata e Arma Focalizzata
+   Superiore ai guerrieri, Padronanza degli Incantesimi al mago.
+5. Il giro di correzione ha un test (`test_verifica_talenti.py`): scheda
+   segnalata, corretta come dice la violazione, `--check` passa da 1 a 0.
 
 ## Conseguenze
 

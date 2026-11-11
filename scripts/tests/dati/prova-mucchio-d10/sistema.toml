@@ -37,6 +37,7 @@ skill = []
 "creature.incantesimi" = { non_supportato = "niente liste di incantesimi per classe" }
 "creature.regole_di_tipo" = { non_supportato = "niente tipi di creatura d20" }
 "creature.conformita" = { non_supportato = "il controllo delle schede sa fare solo conti d20" }
+"creature.talenti" = { non_supportato = "niente talenti d20: i tratti si comprano con l'esperienza" }
 "statblocco.campi" = { non_supportato = "la scheda ha attributi, abilità e salute, non i campi d20" }
 "stampa.etichette" = { non_supportato = "il riquadro della creatura stampato è d20" }
 

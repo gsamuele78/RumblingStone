@@ -101,3 +101,17 @@ python3 verifica_prolog.py fatti-bestiario.json
 python3 verifica_clingo.py fatti-bestiario.json
 python3 muta.py fatti-bestiario.json       # scrive misure-mutanti.json
 ```
+
+## 6. Dopo la scelta del DM (2026-11-11, «Strumento talenti in Python via MCP»)
+
+- `scripts/verifica_talenti.py`, nel manifest e nel server MCP in sola lettura.
+  Prova end-to-end: `tools/call verifica_talenti` su Krusk restituisce
+  `{"regola": "talento", "atteso": "Endurance", "riga": 20}`.
+- Falsi positivi tolti dal banco: 5 del monaco (talenti bonus senza
+  prerequisiti), 1 di Jorr (Tiro Rapido dello stile del ranger), 1 di Khorn (Competenza negli Scudi data dalla classe), 2 di
+  schede senza classi dichiarate (passano fra i non verificabili). Da 30
+  violazioni in 19 schede a **21 in 11**.
+- D1 e D2 corretti in `talenti.manca`; nell'impronta delle creature generate
+  cambiano solo i talenti che la correzione vuole (40 voci 3.5: Autorità ai
+  comandanti, Arma Specializzata e Arma Focalizzata Superiore ai guerrieri,
+  Padronanza degli Incantesimi al mago).

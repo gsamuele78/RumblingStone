@@ -120,36 +120,97 @@ class Stato:
     livelli: "dict[str, int]" = field(default_factory=dict)
     lic: int = 0
     talenti: "list[str]" = field(default_factory=list)
+    #: dadi vita totali (classi + razziali): il «livello del personaggio» dei
+    #: prerequisiti `character` (Leadership). 0 = la somma dei livelli di classe.
+    dv: int = 0
+
+
+#: Le classi base 3.5 in inglese e in italiano. I dati 3.5 usano l'italiano per
+#: `[capacita]` e `[bonus]` e l'inglese per i prerequisiti `classe` (fighter 4
+#: di Weapon Specialization): un nome vale per l'altro (ADR-0124, D1).
+CLASSI_EN_IT = {"barbarian": "barbaro", "bard": "bardo", "cleric": "chierico", "druid": "druido",
+                "fighter": "guerriero", "monk": "monaco", "paladin": "paladino", "ranger": "ranger",
+                "rogue": "ladro", "sorcerer": "stregone", "wizard": "mago"}
+_ALIAS = {**CLASSI_EN_IT, **{it: en for en, it in CLASSI_EN_IT.items()}}
+
+
+def livelli_di(s: Stato) -> "dict[str, int]":
+    """I livelli di classe sotto tutti e due i nomi, più `character` (ADR-0124, D1 e D2)."""
+    out: dict[str, int] = {}
+    for cl, n in s.livelli.items():
+        for nome in {cl, _ALIAS.get(cl, cl)}:
+            out[nome] = max(out.get(nome, 0), n)
+    out["character"] = max(s.dv, sum(s.livelli.values()), s.livelli.get("character", 0))
+    return out
+
+
+def violazioni(sistema: str, en: str, s: Stato) -> "list[dict]":
+    """I prerequisiti che il PNG non ha, uno per voce: `regola`, `atteso`, `ha`, `testo`.
+
+    È la stessa regola di `manca`, in forma strutturata: la usa
+    `verifica_talenti.py`, che la restituisce all'agente via MCP (ADR-0124).
+    `regola` è una di car, bab, lic, classe, talento, capacita, gradi, altro,
+    fonte; `gradi` e `altro` sono prerequisiti che i dati non sanno leggere.
+    """
+    t = dati(sistema)["talenti"].get(en)
+    if t is None:
+        return [{"regola": "fonte", "atteso": en, "ha": None, "testo": "non è un talento della fonte"}]
+    liv = livelli_di(s)
+    out: list[dict] = []
+
+    def v(regola: str, atteso, ha, testo: str) -> None:
+        out.append({"regola": regola, "atteso": atteso, "ha": ha, "testo": testo})
+
+    for c, soglia in t.get("car", {}).items():
+        if s.car.get(c, 10) < soglia:
+            v(f"car.{c}", soglia, s.car.get(c, 10), f"{c} {soglia} (ha {s.car.get(c, 10)})")
+    if s.bab < t.get("bab", 0):
+        v("bab", t["bab"], s.bab, f"BAB +{t['bab']} (ha {s.bab:+d})")
+    if s.lic < t.get("lic", 0):
+        v("lic", t["lic"], s.lic, f"livello d'incantatore {t['lic']} (ha {s.lic})")
+    for cl, soglia in t.get("classe", {}).items():
+        if liv.get(cl, 0) < soglia:
+            v(f"classe.{cl}", soglia, liv.get(cl, 0), f"{cl} {soglia}° livello")
+    for p in t.get("talenti", []):
+        if p not in s.talenti:
+            v("talento", p, None, p)
+    caps = dati(sistema).get("capacita", {})
+    for cap in t.get("capacita", []):
+        if not any(liv.get(cl, 0) >= lv for cl, lv in caps.get(cap, {}).items()):
+            v("capacita", cap, None, cap)
+    if t.get("gradi"):
+        v("gradi", t["gradi"], None, "gradi in " + ", ".join(t["gradi"]))
+    for a in t.get("altro", []):
+        v("altro", a, None, a)
+    return out
 
 
 def manca(sistema: str, en: str, s: Stato) -> "list[str]":
     """I prerequisiti che il PNG non ha (vuota = può prenderlo)."""
-    t = dati(sistema)["talenti"].get(en)
-    if t is None:
-        return ["non è un talento della fonte"]
-    out = []
-    for c, v in t.get("car", {}).items():
-        if s.car.get(c, 10) < v:
-            out.append(f"{c} {v} (ha {s.car.get(c, 10)})")
-    if s.bab < t.get("bab", 0):
-        out.append(f"BAB +{t['bab']} (ha {s.bab:+d})")
-    if s.lic < t.get("lic", 0):
-        out.append(f"livello d'incantatore {t['lic']} (ha {s.lic})")
-    for cl, v in t.get("classe", {}).items():
-        if s.livelli.get(cl, 0) < v:
-            out.append(f"{cl} {v}° livello")
-    for p in t.get("talenti", []):
-        if p not in s.talenti:
-            out.append(p)
-    caps = dati(sistema).get("capacita", {})
-    for cap in t.get("capacita", []):
-        if not any(s.livelli.get(cl, 0) >= lv for cl, lv in caps.get(cap, {}).items()):
-            out.append(cap)
-    if t.get("gradi"):
-        out.append("gradi in " + ", ".join(t["gradi"]))
-    if t.get("altro"):
-        out += t["altro"]
-    return out
+    return [x["testo"] for x in violazioni(sistema, en, s)]
+
+
+def bonus_senza_prerequisiti(sistema: str, en: str, livelli: "dict[str, int]") -> "str | None":
+    """La classe che concede `en` come talento bonus **senza prerequisiti**, o None.
+
+    Il monaco (Lotta Migliorata al 1°, Sbilanciare Migliorato al 6°) e il ranger
+    (stile di combattimento) prendono i loro talenti bonus anche senza i
+    prerequisiti: una scheda che li elenca non è illegale.
+    """
+    b = dati(sistema)["bonus"]
+    for cl, n in livelli.items():
+        voce = b.get(cl) or b.get(_ALIAS.get(cl, cl))
+        if not voce or not voce.get("senza_prerequisiti"):
+            continue
+        liste = [nomi for lv, nomi in voce.get("nomi", {}).items() if int(lv) <= n]
+        for stile in voce.get("stili", {}).values():
+            if isinstance(stile, dict):
+                liste += [nomi for lv, nomi in stile.items() if str(lv).isdigit() and int(lv) <= n]
+            elif isinstance(stile, list):
+                liste.append(stile)
+        if any(en in nomi for nomi in liste):
+            return cl
+    return None
 
 
 def _lista_bonus(sistema: str, classe: str, livello: int, stile: "str | None") -> "tuple[set | None, bool]":

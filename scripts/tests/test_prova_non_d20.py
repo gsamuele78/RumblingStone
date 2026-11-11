@@ -51,7 +51,7 @@ CENSIMENTO = {
     "tutte": {"domande_developer", "validate_modules", "validate_prosa", "validate_standalone"},
     "in_parte": {"suggest_encounter"},  # la minaccia sì, le schede del Bestiario no
 }
-CENSIMENTO_NESSUNA = 15
+CENSIMENTO_NESSUNA = 16  # +verifica_talenti (ADR-0124): i talenti sono d20
 
 
 def _file_dei_plugin() -> "set[str]":
