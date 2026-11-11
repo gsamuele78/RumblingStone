@@ -45,7 +45,7 @@ LONTANO = 200
 
 # I capitoli di consultazione (regia, cassetta, cast, appendici): nominano
 # tutto, ma non è lì che si incontra qualcuno o si combatte.
-CONSULTAZIONE = re.compile(r"regia|cassetta|\bcast\b|introduzione|dove siamo|indice|glossario|appendice|ponte",
+CONSULTAZIONE = re.compile(r"regia|foglio della serata|cassetta|\bcast\b|introduzione|dove siamo|indice|glossario|appendice|ponte",
                            re.I)
 
 _TITOLI = {

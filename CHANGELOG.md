@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Booklet di serata: «Il foglio della serata», una pagina sola con inizio, scene possibili, segreti e indizi, luoghi, chi c'è e tesoro (pagina unica di sessione, standard di fatto dal «Lazy DM»); primo booklet: Notte e Alba, serata.
 - Misure in prova dal giro di lettura del 2026-11-10: `misura_stampa.py` registra `sigle_morte`, `righe_brevi_incomplete` e `titoli_rovinati` (campo `in_prova` del registro, `--check` avvisa senza fermare); `misura_mappe_schede.py` e il campo `scheda` delle unità nel contratto delle mappe (`tactical_map.schema.json`) collegano le pedine alle schede e controllano la taglia sulla pianta (`docs/audit/mappe-schede.json`).
 - Taglia, spazio e portata in ogni scheda (ADR-0123, proposta): campi `taglia`, `spazio`, `portata` nel blocco `statblocco`; tabella SRD in `sistemi/d20/dati/taglie.toml` (capacità `statblocco.taglie`); il riquadro e la riga dell'incontro stampano «Taglia · Spazio (quadretti) · Portata (quadretti)» in Typst, HTML e Homebrewery. `scripts/tests/test_ingombro_schede.py` ferma la CI se una scheda non li dichiara o non tornano con la tabella.
 - Booklet di serata (ADR-0122): chiave `sezioni` nei capitoli del manifest (stampa solo alcune sezioni di un master, `testa:` per il solo testo di testa) e modo `"schede": "prima-volta"` (scheda intera alla prima comparsa, poi riga con pagina, ingombro, attacchi e tattica di quell'incontro; appendice delle mappe in fondo).

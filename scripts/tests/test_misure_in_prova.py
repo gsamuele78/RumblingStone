@@ -63,5 +63,22 @@ class TestMappeESchede(unittest.TestCase):
         self.assertTrue(p is None or "PF1e" not in p, p)
 
 
+class TestFoglioDellaSerata(unittest.TestCase):
+    """La pagina unica di sessione (le otto voci del «Lazy DM» di M. Shea,
+    meno i personaggi, che sono nelle schede dei PG): sta in una pagina solo
+    se resta corta, e serve solo se le voci ci sono tutte."""
+    VOCI = ("Si comincia così", "Le scene possibili", "Segreti e indizi", "I luoghi", "Chi c'è", "Il tesoro")
+
+    def test_le_voci_ci_sono_e_la_pagina_resta_una(self):
+        fogli = sorted(ROOT.glob("**/homebrew/**/00-FOGLIO-DELLA-SERATA.md"))
+        self.assertTrue(fogli)
+        for f in fogli:
+            testo = f.read_text(encoding="utf-8")
+            for voce in self.VOCI:
+                self.assertIn(f"**{voce}", testo, f"{f.name}: manca «{voce}»")
+            # 520 parole: quante ne stanno in una pagina a due colonne col titolo
+            self.assertLessEqual(len(testo.split()), 520, f.name)
+
+
 if __name__ == "__main__":
     unittest.main()
