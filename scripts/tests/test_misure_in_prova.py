@@ -2,6 +2,7 @@
 sigle d'appendice morte, righe d'incontro incomplete, titoli che hanno perso
 l'apostrofo, e le pedine delle mappe collegate alle schede."""
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -78,6 +79,31 @@ class TestFoglioDellaSerata(unittest.TestCase):
                 self.assertIn(f"**{voce}", testo, f"{f.name}: manca «{voce}»")
             # 520 parole: quante ne stanno in una pagina a due colonne col titolo
             self.assertLessEqual(len(testo.split()), 520, f.name)
+
+
+class TestSchedaDaTavolo(unittest.TestCase):
+    """La scheda che apre una scena (prova del 2026-11-12, scelta del DM): le
+    voci fisse dei blocchi d'incontro degli AP (creature, sviluppo, tesoro) più
+    il rimando al testo intero. Sta nella pagina del titolo solo se resta
+    corta, ed esce solo nel booklet di serata."""
+    VOCI = ("Chi c'è", "Sviluppo", "Tesoro", "Dove guardare")
+    BLOCCO = re.compile(r"<!-- scheda-da-tavolo -->(.*?)<!-- /scheda-da-tavolo -->", re.S)
+
+    def test_le_voci_ci_sono_e_la_scheda_resta_corta(self):
+        master = ROOT / "07_il Portale Della Forgia Eterna" / "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md"
+        schede = self.BLOCCO.findall(master.read_text(encoding="utf-8"))
+        self.assertEqual(len(schede), 6, "una scheda per ognuna delle Scene 6-11")
+        for s in schede:
+            for voce in self.VOCI:
+                self.assertIn(f"| **{voce}** |", s)
+            # 500 parole: la più lunga che sta nella pagina del titolo (Scena 11)
+            self.assertLessEqual(len(s.split()), 500, s[:60])
+
+    def test_nel_volume_intero_non_esce(self):
+        from dmcore.testo import leggi_per_la_stampa
+        master = ROOT / "07_il Portale Della Forgia Eterna" / "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md"
+        self.assertNotIn("La scheda da tavolo**:", leggi_per_la_stampa(master, {}))
+        self.assertIn("La scheda da tavolo**:", leggi_per_la_stampa(master, {}, ["SCENA 8"]))
 
 
 if __name__ == "__main__":

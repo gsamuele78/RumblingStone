@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; `ARC07-NOTTE-E-ALBA-SERATA` 118 → 120 pagine, 6 schede su 6 intere, 5 su 6 nella pagina… |
 | 2026-11-11 | STANDARD-STAMPA | Misure in prova dal giro di lettura e pedine delle mappe collegate alle schede… | ✅ `misura_stampa`: sigle morte 9, righe brevi incomplete 8, titoli rovinati 4→0 (apostrofo perso nel tema); `misura_mappe_schede`: unità nemiche collegate 0→41… |
 | 2026-11-10 | STANDARD-STAMPA | Booklet di serata come gli AP e taglia, spazio, portata in ogni scheda (ADR-012… | ✅ manifest `sezioni` e `"schede": "prima-volta"` (scheda intera una volta nel corpo, poi riga con pagina, ingombro, attacchi e tattica dell'incontro; «Appendic… |
 | 2026-11-10 | STANDARD-STAMPA | Standard del volume, VOL-1 e VOL-2 (blocco 1-bis della roadmap, ADR-0122) | ✅ `misura_distanza_pagine.py --volume`: S1-S5 sul PDF; riferimenti *Burnt Offerings* (S1 4/4 da 574 caratteri, S2 96,7%, S3 54,5% entro una pagina, S4 regione… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Lotto PF1e dell'audit dei plugin (ADR-0121, richiesta del DM «completa i limiti… | ✅ misura PF1e da 59 coperte/46 giuste su 217 (main 421dbd0) a 217/217; uso: 55/55 classi generate e 20/20 tipi convertiti passano il cancello PF1e (prima 0 e 7… |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
 
 ## Le misure che si portano dietro
 

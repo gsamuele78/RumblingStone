@@ -2115,6 +2115,21 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 - **Chi vuole cosa**: l'orda dorme e non aspetta nessuno; Grask non lascia il corno, il corridore porta le notizie alla tenda.
 - **Come finisce**: davanti alla tenda senza farsi vedere, con una pattuglia alle calcagna o con il campo pre-allertato; dopo la tenda, il ritorno, che cambia se il corno ha suonato.
 
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 6 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | L'orda che dorme, e chi la sorveglia: cavalieri dei lupi fuori, ronde di orchi, squadroni hobgoblin e vedette goblin dentro. Grask col corno davanti alla tenda. La **pattuglia** di 8 hobgoblin Guerriero 4 (EL 10) entra solo al terzo fallimento |
+| **Si tira** | Cinque blocchi, prova di gruppo: il blocco riesce se riesce almeno metà del gruppo. Invisibili: Muoversi Silenziosamente **CD 20**. Senza: Nascondersi **CD 22**. A ogni blocco 1d6 di complicazione: 3 la ronda di orchi a 6 m (Nascondersi CD 18 per chi non è invisibile), 4 le vedette goblin (se il blocco fallisce, il prossimo a CD +2), 5 il falò (Nascondersi CD +4), 6 lo squadrone (se il blocco fallisce parte il corridore) |
+| **Se va male** | Un blocco fallito si ritenta e costa **una tacca**. Al terzo fallimento arriva la pattuglia: a ogni round 1d6, e con 1 un corridore parte per la tenda; lo scontro costa un'altra tacca. Il corridore si ferma con la Via B: Destrezza CD 14, Raggirare CD 16 o Forza CD 16 |
+| **Dall'alto** | In volo sopra i 20 m nessuno li vede e non si tira: costa una tacca. Alla tenda valgono le rune di Balvar: la soglia toglie l'invisibilità entro 19,5 m; il telo sopra il seggio e la custodia del corno scoppiano (sonoro, 5d8, Riflessi CD 18 dimezza), e il boato è l'allarme |
+| **Sviluppo** | All'allarme Grask suona il corno entro 1d4 round, e il drago arriva dalle colline in circa 7 minuti (70 round). Corridore arrivato o allarme: il campo è pre-allertato, e alla Scena 8 non c'è sorpresa. Se il corno suona di notte, il ritorno si tira a Nascondersi CD 26 |
+| **Tesoro** | Il corno di ferro nero di Grask (300 mo), incatenato al suo polso e chiuso dal glifo: si prende solo qui |
+| **Dove guardare** | La variante del barile; le mappe M7-H (il campo) e M7-C (lo spiazzo e la tenda); le schede della pattuglia e della ronda |
+
+<!-- /scheda-da-tavolo -->
+
 > **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
 > sempre e che nessun cronista mette per iscritto. Il fiato esce bianco nel
@@ -2563,6 +2578,22 @@ solo i gridi.
 - **Chi vuole cosa**: Zog'tar vuole Hammerfist e racconta come impalerà il re; Balvar vuole che la fortezza cada in fretta, perché ha già visto la fame di un assedio lungo.
 - **Come finisce**: con Balvar che parla o tace, e con Zog'tar che si alza dal seggio: è la Scena 8.
 
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 7 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | Zog'tar sul seggio, le quattro guardie, Balvar che incide sullo sgabello in fondo. Lo scontro, se parte, è la Scena 8: **EL 17** con Balvar contro, 16 senza |
+| **Come si entra** | Dalla soglia con un nano: visibili, e alla Scena 8 nessuna sorpresa. Dal telo che indica Balvar. Tagliando altrove: Ascoltare delle guardie contro Muoversi Silenziosamente |
+| **Balvar** | Vede i PG comunque e non dà l'allarme: tratta, e il suo patto è *«dite che c'ero»*. Sa che i quattro non sono di questo secolo. Il nipote Hald è sulle mura: il nome è sulla lastra (Osservare **CD 20**), o lo dice a un PG nano che gli chiede chi ha lasciato a Hammerfist (Diplomazia CD 18, se non l'hanno minacciato). Balvar non lo nomina per primo |
+| **Le tre posizioni** | **Recuperato** (il nipote, o il patto accettato): non combatte, e al primo round dice dov'è la runa della Catena e come si spezza. **Trattativa aperta**: il primo round guarda, dal secondo sta con chi sta vincendo. **Minacciato**: combatte con Zog'tar |
+| **La Catena** | La runa del contratto sulla scaglia del drago: qui si legge la gemella sul corno, che dice dove sta l'altra: Sapienza Magica **CD 24** o Conoscenze (storia) **CD 22**. La runa vera si vede all'alba, nel duello, e colpirla la spezza |
+| **Sviluppo** | Se Balvar muore prima dell'alba, il drago combatte a **−2** e fugge a metà dei pf. Quello che si dice vicino al corno il drago lo sente: sono i nomi che griderà nel cortile |
+| **Tesoro** | Nessuno, finché Zog'tar è in piedi: il bottino della tenda è nella Scena 8 |
+| **Dove guardare** | La scheda d'entrata di Zog'tar e quella di Balvar; «Che cosa muove Skullcrusher»; la mappa M7-C |
+
+<!-- /scheda-da-tavolo -->
+
 > **Read-aloud (Andor lead) — la tenda.** *Al centro del campo, una tenda più
 > alta delle altre, di pelle nera, con ossa ai tiranti che battono nel vento.
 > Le pattuglie qui non passano. Dentro si ride.*
@@ -2978,6 +3009,22 @@ Balvar è morto da mille anni comunque vada. Ma:
 - **Chi vuole cosa**: Zog'tar vuole uccidere chi è entrato davanti ai suoi, le guardie lo coprono, Grask non lascia il corno.
 - **Come finisce**: Zog'tar ucciso in silenzio, ucciso in modo spettacolare o umiliato e vivo (Via A); l'esito va nell'Echo Ledger (§7) e pesa sulle mura e sul drago.
 
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 8 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | Zog'tar Deatheye (283 pf fuori dall'Ira), le quattro guardie, il sacerdote dell'orda, che dorme dietro il seggio; Balvar, se non è passato ai PG. **EL 17** con Balvar, 16 senza. Grask è fuori col corno |
+| **Si comincia** | Round di sorpresa per i PG se nessuno li ha visti. Campo pre-allertato o ingresso dalla soglia: niente sorpresa |
+| **Tattiche** | **Round 1**: Ira, e l'Occhio di Ossidiana su Thorik. Due guardie lo coprono con Aiutare (+2 alla CA), due vanno sugli incantatori. **Round 2-3**: carica, Attacco Poderoso −5/+10, Colpo Terrificante. **Sotto il 30% dei pf**: −15/+30, e cerca di portarsi via qualcuno. Il sacerdote: *comando* (Volontà CD 13), *benedizione*, *oscurità* |
+| **Da ricordare** | 50 danni o più da un colpo solo: Tempra **CD 15** o morte (danno massiccio). Se qualcuno grida: le ronde di orchi arrivano in 1d4+2 round, gli squadroni in 2d4+2, e poi continuano ad arrivare |
+| **Via A** | Intimidire **CD 22** con la Corona o la Luce in vista (Sapienza Magica CD 20 per capire che si può): Zog'tar è umiliato davanti ai suoi e resta vivo |
+| **Sviluppo** | Ucciso in silenzio, ucciso in modo spettacolare, umiliato o catturato: ogni esito cambia la tabella «Dalla notte» delle mura (Scena 10) e l'arrivo del drago (Scena 11). Ritorno a piedi: cinque blocchi a Nascondersi CD 22, +4 se il corno ha suonato. Se va male, Zog'tar li vuole vivi: incatenati fino all'alba, scompaiono dal palco e ricompaiono nel cortile quando il drago cala, feriti come sono |
+| **Tesoro** | Zog'tar: armatura completa di mithral +2 Grande (16.000 mo) e ascia a due mani +1 Grande (2.340). Balvar, se è morto: armatura di mithral +2 (14.500), anello di protezione +2 (8.000), martello runico +1 (2.312), polvere di diamante (400). Con l'allarme si prende solo quello che si stacca con un'azione; senza, spogliare la tenda costa una tacca |
+| **Dove guardare** | Le schede di Zog'tar, delle guardie, del sacerdote e di Balvar; la mappa M7-C; «Il bottino della tenda e il tempo» |
+
+<!-- /scheda-da-tavolo -->
+
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
 > **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
@@ -3335,6 +3382,23 @@ si gioca su M7-B.
 - **Chi vuole cosa**: Vatore vuole potere e che il conto lo paghino altri, e ha paura di quattro persone che non dovrebbero esistere.
 - **Come finisce**: Vatore sopravvive comunque (il Cronolito lo salva a 1 pf); se i PG tornano in volo senza scendere, lo si ritrova sulle mura all'alba.
 
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 9 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | Vatore, da solo, con un fagotto stretto al petto. **Non ha statistiche**, ed è voluto: qualunque cosa facciano, sopravvive. L'Anello di Artemis diventa gelido |
+| **Lo lasciano andare** | Svanisce col Sigillo. Nel 1372 Sal è intatto: nessun vantaggio, nessun sospetto |
+| **Gli parlano** | Percepire Intenzioni o Diplomazia **CD 18**: lascia sfuggire *«Voi non morite. L'ho letto»* e fugge. Se la prova fallisce, se ne va e basta |
+| **Lo derubano** | Rapidità di Mano **CD 22**, solo con i gradi: gli sfilano il Sigillo di Ossidiana. Se fallisce se ne accorge, e il Cronolito lo porta via col Sigillo |
+| **Lo feriscono, o provano a ucciderlo** | Urla, attiva il Cronolito e sparisce; il Cronolito lo salva a 1 pf. Nel 1372 Sal sanguina nello stesso punto, o porta una cicatrice antica e un odio personale |
+| **Casi** | Invisibili: non li vede, li sente solo se falliscono Muoversi Silenziosamente CD 20. Dopo il barile: è fermo fra due tende a guardare il fuoco, e il ritorno a piedi si tira a CD +2. In volo senza scendere: lo si ritrova sulle mura all'alba, e lì il suo urlo non costa successi. Lo si riconosce dalla cera nera sulle dita: Osservare CD 15 |
+| **Sviluppo** | Quello che gli fanno torna su Sal nel 1372: si scrive nel registro di fine serata |
+| **Tesoro** | Il Sigillo di Ossidiana, solo se lo derubano: artefatto minore di Shar, che contrasta l'Anello di Artemis |
+| **Dove guardare** | La scheda d'entrata e la tabella delle risposte, qui sotto; «Se lo divinano» |
+
+<!-- /scheda-da-tavolo -->
+
 **Scheda d'entrata — Vatore, il ladro che diventerà Sal**
 
 | | |
@@ -3526,6 +3590,22 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 - **Chi vuole cosa**: l'orda vuole la breccia prima che il sole superi il crinale; Re Thorek I e il capitano delle mura vogliono tenere il camminamento est.
 - **Come finisce**: mura tenute saldamente, a stento o breccia ceduta; il dado dei caduti dice quanti difensori con un nome muoiono, poi il drago cala sul cortile.
 
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 10 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | Hrodgar, il capitano delle mura; Hald, il nipote di Balvar; Re Thorek I. Zog'tar e le sue guardie, se è vivo all'alba e i successi sono 0 o 1. Non è uno scontro: è una prova collettiva |
+| **Prima di tirare** | Leggi la tabella «Dalla notte». **Un successo in meno** per: campo pre-allertato; Zog'tar vivo all'alba; il boato del barile. **Un successo in più** per: Zog'tar catturato e portato alle mura; i due Treant sul fianco dell'orda. Zog'tar umiliato annulla il successo in meno dell'allarme. Cure comprate alla cappella: il dado dei caduti, 1d4 per ogni tipo di cura |
+| **Le tre vie** | Il gruppo ne sceglie **una**, e tutti tirano quella. **Tenere la breccia**: Forza **CD 18** o un attacco contro **CA 28**; costa −2 alla prima iniziativa del duello. **Rincuorare i difensori**: Diplomazia o Guarire **CD 18**; un nano con un nome muore. **Sabotare gli arieti**: Disattivare o Artigianato **CD 20**; il duello comincia fuori dalle mura, con i PG separati di 18 m |
+| **Successi su 4** | **4**: le mura reggono, e il re è in piedi dietro i PG. **2-3**: reggono a stento, duello normale. **1**: il camminamento est è perso, e il re è a 8 pf. **0**: la breccia cede; il re a 8 pf, sei quadretti di terreno difficile e due nani a terra su M7-B |
+| **Se Zog'tar sale sulla breccia** | Sul camminamento si stringe: −4 al colpire e −4 alla CA. Round 1 Ira e l'Occhio su chi porta la Corona; poi il Colpo Terrificante. Se il drago cala, scende dalla scala. I PE sono quelli della Scena 8 e non si sommano |
+| **Sviluppo** | Il fallimento è un costo, mai uno stop: comunque vada, il drago cala sul cortile (Scena 11). I nomi dei caduti vanno nel registro |
+| **Tesoro** | Armi orchesche di poco valore, se sabotano gli arieti |
+| **Dove guardare** | «Dove sale l'assalto»; la riga di scala per tre o cinque PG; la scheda di Zog'tar |
+
+<!-- /scheda-da-tavolo -->
+
 Si arriva qui **dove le tacche hanno lasciato i PG** (tabella di uscita
 dell'orologio, §4). Se Hella ha vegliato i semi, i **due Treant di Adamantio**
 caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
@@ -3703,6 +3783,24 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 - **Succede**: Skullcrusher il Nero cala sul cortile con due wyvern e combatte in passate, gridando i nomi che ha sentito di notte attraverso la Catena.
 - **Chi vuole cosa**: il drago vuole vincere davanti all'orda, perché per lui il potere è quello che gli altri hanno visto; Re Thorek I è nel cortile con i PG.
 - **Come finisce**: drago ucciso, ferito grave, fuggito, o vinto sporco (§6); con l'esito la serata si ferma, prima della Scena 12.
+
+<!-- scheda-da-tavolo -->
+<!-- tabella: larga -->
+
+| Scena 11 | **La scheda da tavolo**: quello che serve per condurla; il testo intero segue |
+|---|---|
+| **Chi c'è** | Skullcrusher il **Vecchio** (GS 17): 337 pf, CA 36 (40 con *armatura magica*), morso +34, soffio 16d4 Riflessi **CD 31**, Presenza Volontà **CD 26**. Dal round 2 due wyvern (59 pf, CA 18, pungiglione +10 con veleno Tempra CD 17) su chi tiene la corda e su chi vola. **EL 17**. Re Thorek è nel cortile, alle spalle dei PG |
+| **Round 1** | Cala dall'alto: Presenza (Thorik non tira), poi il soffio aderente sul gruppo più fitto. Non atterra. In picchiata con un round di sorpresa se Zog'tar è morto in modo spettacolare: Ascoltare CD 20 per agire, e le campane glielo tolgono |
+| **Dal round 2** | Una passata a round, a circa 15 m fra un turno e l'altro. A metà del movimento fa una cosa sola: **grida un nome** (*colpo accurato*), **morde** chi ha nominato il turno prima (+54), oppure **soffia**, se il soffio è tornato. Colpisce solo chi ha nominato |
+| **Chi sceglie** | Nell'ordine: chi ha detto la Catena ad alta voce; chi tiene la corda dell'ala; chi lo ha ferito di più. Se in un round nessuno lo chiama, va sul re: due colpi lo mettono a terra, uno solo se è a 8 pf. Il re non muore |
+| **Il cortile** | Le corde delle gru: Forza **CD 25**, +2 per chi aiuta, al massimo tre per corda; inchiodato, scende per l'attacco completo, ed è il round delle azioni preparate. La Catena: leggerla è un'azione di movimento entro 9 m, colpirla è **CA 44**, e il primo colpo a segno la spezza: il drago se ne va. La fucina: 4d6 e niente olfatto per 1d4 round |
+| **Artefatti** | *Dragondoom* di Aegis Fang funziona, tre volte al giorno. Il Bane contro Fauci qui non vale. La Cintura di Tordek rifiuta di attivarsi |
+| **La soglia** | A un terzo dei pf (circa 112) si ferma in aria, una volta sola. Al suo turno fugge nell'oscurità, a meno che nel round prima abbia preso almeno due colpi: allora resta un round, e lì si può uccidere. Se Balvar è morto combatte a −2 e fugge a metà dei pf |
+| **Sviluppo** | **Conta i colpi a segno** (ferite ancestrali, al massimo 3) e segna se Aegis Fang ha colpito in volo. Esito: ucciso, ferito grave, fuggito, o vinto sporco se due PG cadono nello stesso round o il gruppo si ritira. Il colpo finale lo racconta il giocatore. Poi la serata si ferma |
+| **Tesoro** | La scaglia del Primo Nero (circa 1.500 mo), solo se il drago è ucciso |
+| **Dove guardare** | Le schede di Skullcrusher e delle wyvern; la mappa M7-B; «Chi non vola»; «La Forgia ricorda le ferite» |
+
+<!-- /scheda-da-tavolo -->
 
 **Dopo il barile**. Attraverso la
 gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno

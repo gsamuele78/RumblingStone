@@ -76,16 +76,16 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 118,
+        "pagine": 120,
         "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 24,
         "pagine_con_immagine": 0.025,
-        "pagine_con_immagine_decimo": 0.085
+        "pagine_con_immagine_decimo": 0.083
       },
       "in_prova": {
         "sigle_morte": 6,
-        "righe_brevi_incomplete": 0,
+        "righe_brevi_incomplete": 1,
         "titoli_rovinati": 0
       }
     },

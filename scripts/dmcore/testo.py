@@ -635,7 +635,25 @@ def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]",
     md = f.read_text(encoding="utf-8")
     if sezioni:
         md = estrai_sezioni(md, sezioni)
+    else:
+        md = togli_schede_da_tavolo(md)
     return traduci_rimandi(md, f, capitoli)
+
+
+# La scheda da tavolo che apre una scena (prova del 2026-11-12, ADR-0122): una
+# tabella larga con quello che serve per condurla. Si stampa nel booklet di
+# serata, cioè nei capitoli presi per `sezioni`; nei volumi che stampano il
+# master intero resta fuori finché il giro dei lettori non la promuove.
+_SCHEDA_DA_TAVOLO = re.compile(r"\n<!--\s*scheda-da-tavolo\s*-->.*?<!--\s*/scheda-da-tavolo\s*-->\n", re.S)
+
+
+def togli_schede_da_tavolo(md: str) -> str:
+    """Il master senza le schede da tavolo delle scene.
+
+    >>> togli_schede_da_tavolo("a\\n\\n<!-- scheda-da-tavolo -->\\n| x |\\n<!-- /scheda-da-tavolo -->\\nb")
+    'a\\nb'
+    """
+    return _SCHEDA_DA_TAVOLO.sub("", md)
 
 
 def _radice_dell_arco(sorgente: Path) -> "Path | None":
