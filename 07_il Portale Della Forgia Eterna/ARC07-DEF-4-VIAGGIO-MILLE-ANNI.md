@@ -2536,7 +2536,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Sviluppo** | Due domande. Qualcuno esce a gridare, o Grask suona? Se no, è **in silenzio**. Se sì, è un **allarme**: un successo in meno sulle mura. Chi è uscito ha visto un colpo che si fa vedere? Allora è anche **spettacolare**, e all'alba il drago arriva in picchiata |
 | **Il ritorno** | A piedi: cinque blocchi a Nascondersi CD 22, e CD 26 se il corno ha suonato |
 | **Tesoro** | Zog'tar: armatura completa di mithral +2 Grande (16.000 mo), ascia a due mani +1 Grande (2.340). Balvar, se è morto: armatura di mithral +2 (14.500), anello di protezione +2 (8.000), martello runico +1 (2.312), polvere di diamante (400). Con l'allarme si prende solo quello che si stacca con un'azione; senza, spogliare la tenda costa una tacca. L'Occhio resta nell'orbita |
-| **Dove guardare** | Le schede di Zog'tar, delle guardie, del sacerdote e di Balvar; «Tattiche di Zog'tar — round per round»; la mappa M7-C |
+| **Dove guardare** | Le schede di Zog'tar, delle guardie, del sacerdote e di Balvar; «Tattiche di Zog'tar — round per round»; «Il bottino della tenda e il tempo»; la mappa M7-C |
 
 <!-- /scheda-da-tavolo -->
 

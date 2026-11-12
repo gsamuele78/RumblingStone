@@ -3037,7 +3037,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Sviluppo** | Due domande. Qualcuno esce a gridare, o Grask suona? Se no, è **in silenzio**. Se sì, è un **allarme**: un successo in meno sulle mura. Chi è uscito ha visto un colpo che si fa vedere? Allora è anche **spettacolare**, e all'alba il drago arriva in picchiata |
 | **Il ritorno** | A piedi: cinque blocchi a Nascondersi CD 22, e CD 26 se il corno ha suonato |
 | **Tesoro** | Zog'tar: armatura completa di mithral +2 Grande (16.000 mo), ascia a due mani +1 Grande (2.340). Balvar, se è morto: armatura di mithral +2 (14.500), anello di protezione +2 (8.000), martello runico +1 (2.312), polvere di diamante (400). Con l'allarme si prende solo quello che si stacca con un'azione; senza, spogliare la tenda costa una tacca. L'Occhio resta nell'orbita |
-| **Dove guardare** | Le schede di Zog'tar, delle guardie, del sacerdote e di Balvar; «Tattiche di Zog'tar — round per round»; la mappa M7-C |
+| **Dove guardare** | Le schede di Zog'tar, delle guardie, del sacerdote e di Balvar; «Tattiche di Zog'tar — round per round»; «Il bottino della tenda e il tempo»; la mappa M7-C |
 
 <!-- /scheda-da-tavolo -->
 
@@ -4647,6 +4647,55 @@ molto sotto l'APL, come le guardie e il sacerdote, sono stimati, quindi i
 numeri portano «≈». Le scene senza scontro restano
 premi di storia, come sempre.
 
+### B. Tesoro PREGENERATO (i doni di Re Thorek I + il bottino del passato)
+| Dove | Oggetto (pregenerato) | Valore |
+|---|---|---|
+| Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **pozioni di *cura ferite gravi*** dell'antica fucina, all'11° livello dell'incantatore (curano 3d8+11). Al tavolo le ha consegnate **il sergente** per ordine del re, e i giocatori le chiamano «di CFC»: curano quanto una CFC al minimo livello | 6.600 mo (3 × 11 × 50 l'una) |
+| Scena 4 (il consiglio, se fiducia piena) | **La dotazione per il campo**, scelta dal tavolo: 4 pozioni d'*invisibilità* all'incantatore di 12° (dal basso) **oppure** 5 pozioni di *volare* al 5° (dall'alto). Dimezzata se il consiglio fallisce | 4.800 mo (4 × 2 × 12 × 50) · 3.750 mo (5 × 750) |
+| Scena 12, Momento 5 (dono del re, di persona) | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
+| Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
+| Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore). Il **corno da guerra di ferro nero** che chiama il drago è incatenato al polso di Grask, alla tenda: si prende solo lì (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
+| Scena 8 (la tenda, con Zog'tar e i suoi a terra) | **Zog'tar**: armatura completa di mithral +2 Grande (16.000: 1.500 × 2 per la taglia, 9.000 di mithral, 4.000 di +2; si vende, non si indossa) · ascia a due mani +1 Grande (2.340). **Balvar**, se è morto: armatura completa di mithral +2 Media, che a un nano va bene (14.500) · anello di protezione +2 (8.000) · martello da guerra runico +1 (2.312) · la polvere di diamante dei glifi di una sera (400). **Le quattro guardie**: armatura completa, spadone e giavellotti (≈ 1.550 l'una). L'Occhio di Ossidiana resta nell'orbita: è maledetto e non si vende | ≈ 49.750 mo di listino, ≈ 24.500 senza Balvar; alla vendita la metà (SRD). Quanto se ne porta via dipende dal campo: qui sotto |
+| Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
+
+**Il bottino della tenda e il tempo**. Il
+campo nemico non dà tempo infinito, e il conto lo fa l'allarme. Stanotte non
+lo compra nessuno: Gunnvor non prende niente d'orchi, e il forziere del re ha
+già speso quello che aveva. Si vende nel 1372, a metà, al banco di ARC-08.
+L'armatura di Zog'tar è preda presa ai nani: Re Thorek la riconosce, e se i PG
+gliela portano la riprende in cambio della sua parola, non di monete.
+
+- **Se qualcuno ha gridato o il corno ha suonato**, le ronde arrivano in
+  **1d4+2 round**, gli squadroni in **2d4+2** e il drago in 70 (Scena 8). In
+  quei round si prende solo quello che si stacca con un'azione: le armi,
+  l'anello, la borsa della polvere. Le armature restano addosso ai morti,
+  perché una completa si toglie in **1d4+1 minuti** (SRD), la metà con
+  qualcuno che aiuta, e in un minuto il campo è già nella tenda.
+- **Se nessuno ha dato l'allarme** (Zog'tar ucciso in silenzio, D51), c'è il
+  tempo di spogliare la tenda, e costa **una tacca** (§4). Il peso viaggia con
+  chi lo porta: l'armatura di Zog'tar sono 25 kg di mithral, quella di Balvar
+  12,5, ogni completa delle guardie 25. Chi esce carico di ferro torna con le
+  regole del carico dell'SRD **e** con la penalità del ferro che sbatte:
+  **−2** a Muoversi Silenziosamente e a
+  Nascondersi per ogni armatura portata e non indossata, sul blocco del
+  ritorno.
+- **Il buco portatile**, se il gruppo ne ha uno. Limite di peso non ne ha, ma ha
+  un fondo: 1,8 m di diametro e 3 m di profondità (SRD), circa **7,5 m³**.
+  Quello che ci sta dentro non sbatte e non pesa. A occhio, impacchettati: una
+  completa Media circa 0,15 m³, una Grande circa 0,5, uno scudo o un'arma a
+  due mani circa 0,05. La tenda intera fa circa 1,5 m³. Se il
+  buco è già pieno di quello che il gruppo ha raccolto nelle avventure di
+  prima, il DM fa il conto prima di dire sì, e se sfora **lo dice ai PG**:
+  quello che non entra si porta a mano, con la penalità qui sopra. E un telo nero steso sul pavimento della
+  tenda di un generale si vede.
+
+> ⚠️ **Cosa torna nel 1372**: ciò che i PG **portano
+> addosso** quando il Rubino si accende, doni del re compresi, più il Sigillo
+> rubato (§6). Quello che hanno **consumato** qui resta qui. Quello che hanno
+> **venduto** alla fucina (Scena 5) resta qui, e ritorna come reliquia (§7).
+
+---
+
 <!-- pagina: una-colonna -->
 ### A.1 · Skullcrusher il Nero (Scena 11)
 
@@ -4869,6 +4918,56 @@ Vanno su chi tiene la corda dell'ala e su chi vola.
 *wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD*
 }}
 <!-- /blocco -->
+
+<!-- nuova-pagina -->
+
+<!-- /pagina -->
+
+<!-- pagina: una-colonna -->
+## APPENDICE B — IL SIGILLO DI OSSIDIANA
+
+> **Cos'è.** Un sigillo/anello-sigillo di **ossidiana nera**, gelido al tatto,
+> che «beve» la luce intorno; inciso con la runa-vuoto di **Shar** (Signora della
+> Notte, dea di perdita, oscurità e segreti). È ciò che Vatore ha appena rubato,
+> e ciò con cui diventerà **Sal**. Shar è più pertinente di Mask perché il
+> **prezzo è la perdita di anime**, non solo il furto.
+
+| Potere | Effetto |
+|---|---|
+| **1 · Manto di Notte Assoluta** (passivo, gratis) | Entro **9 m** dal portatore gli incantesimi di **luce** di livello ≤2 sono **soppressi**; *daylight* e superiori richiedono **prova di livello incantatore CD 20** o falliscono. La luce non-magica è solo attenuata (penombra). |
+| **2 · Furto della Notte** (1/giorno, azione) | Il portatore compie **un'azione furtiva** (furto, colpo, passaggio) come se fosse **invisibile e silenzioso** per **1 round**. NON attivabile in piena luce naturale. |
+
+> **⚖️ IL PREZZO — «consuma anime» (il cuore oscuro dell'oggetto).** Ogni uso del
+> **Potere 2** — e ogni giorno in cui il **Potere 1** resta attivo oltre la prima
+> ora — **divora un'anima**: infliggi **1 livello negativo** a una creatura
+> senziente **toccata nelle ultime 24 h** (il Sigillo «raccoglie» il pegno), o
+> consuma un'**anima intrappolata** (gemma-spirito, non-morto legato). **Se
+> nessuna anima è disponibile, consuma il PORTATORE**: 1 livello negativo a sé,
+> che diventa **permanente** dopo 24 h se non redento (*restoration*). È il
+> meccanismo che trasforma **Vatore in Sal**: lo usa sugli altri, poi su sé
+> stesso, e la **sete di potere lo acceca** al conto che sta accumulando.
+
+**Se lo rubano stanotte, è sempre acceso**.
+Un'ora dopo che è in mano a un PG, il DM sceglie chi paga: la creatura toccata
+per ultima, compagni e Durik compresi. Il Sigillo non si spegne: anche nel buco
+portatile conta come portatore chi ce l'ha messo. Resta soppresso solo in mano
+ad Artemis, come dice l'aggancio qui sotto.
+
+> **⚔️ AGGANCIO — l'Anello di Artemis (Lathander vs Shar).** L'Anello Riforgiato
+> di Artemis porta una **scintilla di Lathander** (dio dell'**Alba**, nemesi
+> cosmica di Shar). Se **Artemis** impugna il Sigillo, i due artefatti si
+> **annullano a vicenda**: (a) il Manto di Notte **non può sopprimere** la luce
+> d'Alba dell'Anello; (b) i **poteri di luce/alba dell'Anello diventano
+> instabili o non disponibili** finché porta il Sigillo — e viceversa il Sigillo
+> è **soppresso** in sua mano. Artemis deve **scegliere quale servire**: Notte o
+> Alba. È il suo **bivio d'artefatto per l'ARC-09** (se lo prende lui, il DM lo
+> gioca come una lotta interna tra i due patroni; se lo prende un altro PG, il
+> prezzo delle anime è pieno).
+
+> **Gancio ARC-09.** Se i PG lo **rubano a Vatore** e lo riportano nel presente
+> (paradosso auto-consistente del Cronolito), Sal si presenta **senza il suo
+> asso** e la **sincronizzazione** con lui si complica (vedi la tabella della Scena 9). Il
+> filo è «[SIGILLO DI OSSIDIANA]», nel registro di fine serata.
 
 <!-- nuova-pagina -->
 
