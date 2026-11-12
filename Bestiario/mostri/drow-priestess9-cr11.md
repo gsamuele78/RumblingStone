@@ -3,8 +3,8 @@
 
 ```statblocco
 gs: 11
-ca: 22
-ca-dettaglio: (+8 +1 full plate, +3 Dex, +1 light shield)
+ca: 23
+ca-dettaglio: (+9 +1 mithral full plate, +3 Dex, +1 light shield)
 pf: 49
 pf-dado: 9d8+9
 ts: Temp +7, Rifl +7, Vol +11
@@ -16,7 +16,7 @@ iniziativa: +3
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 **Size/Type**: Medium humanoid (elf) | **HD**: 9d8+9 (49 HP)
-**AC**: 22 (+8 +1 full plate, +3 Dex, +1 light shield) | **Init**: +3 | **Speed**: 20 ft
+**AC**: 23 (+9 +1 mithral full plate, +3 Dex, +1 light shield) | **Init**: +3 | **Speed**: 20 ft
 **Saves**: Fort +7, Ref +7, Will +11 (mantello della resistenza +1 incluso) | **BAB/Grapple**: +6/+7
 **Attacks**: +1 snake-headed whip/scourge +8/+3 (1d4+2 + 1d6 poison on bite)
 **Abilities**: Str 12, Dex 16, Con 12, Int 14, Wis 19, Cha 16
@@ -28,3 +28,5 @@ iniziativa: +3
 **Notes**: Usata per Notte dei Drow Fase 0 + rituale Spider-Kiss. Matrona Sajak simile ma CR 13-14.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Volontà +11 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Riflessi +6 → **+7**. Prezzo da ricontrollare col lotto della ricchezza per livello.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): un'armatura completa +1 dà +9 (8 +1, SRD), non +8; e con Des +3 l'armatura deve essere di mithral (Des massima +3 invece di +1). CA 22 → **23**.

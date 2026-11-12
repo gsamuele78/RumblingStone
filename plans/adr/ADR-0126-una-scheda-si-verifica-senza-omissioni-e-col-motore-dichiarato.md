@@ -109,6 +109,67 @@ Restano fuori dal lotto 1, detti: la CA del 3.5, i bonus all'attacco diversi
 da potenziamento, perfetta, Arma Focalizzata e prisma; gli oggetti col prezzo;
 BAB e lotta delle schede senza composizione leggibile.
 
+### Lotto 1-bis — CA del 3.5, sensi e CD (2026-11-12)
+
+`verifica_scheda` sul 3.5 non guardava la classe armatura: il cancello dei
+moduli la controlla solo per il PF1e. Ora `dmcore.classe_armatura` legge la
+parentesi di `ca-dettaglio` e ricostruisce la CA dalle sue voci:
+
+- armature e scudi dalla tabella della capacità `creature.costruzione` (bonus
+  base più potenziamento, Destrezza massima, mithral +2 alla Destrezza massima);
+- gli altri bonus per tipo, con la stessa regola del cumulo del lotto 1
+  (deviazione, naturale, potenziamento dell'armatura naturale, cognitivo, sacro,
+  profano, fortuna, morale: vale il più alto; schivare e senza tipo si sommano);
+- contatto (senza armatura, scudo e naturale) e sprovvista (senza Destrezza e
+  schivare; con schivare prodigioso la Destrezza resta);
+- una clausola a condizione («+1 contro i giganti») non entra nel numero.
+
+Nella stessa passata entrano i conti che il cancello dei moduli faceva solo
+sui recinti dei master: i sensi dati dalla razza e la CD delle capacità
+speciali (10 + metà DV + caratteristica).
+
+| | Prima (main) | Lotto 1-bis |
+|---|---|---|
+| Errori di CA messi apposta, visti da `verifica_scheda` | 0 su 379 | 377 su 379 |
+| Scurovisione tolta a chi la ha, vista | 0 su 25 | 10 su 25 |
+| Scarti veri trovati nel Bestiario | non misurati | 21 di CA in 18 schede, 10 di sensi, 0 di CD |
+| Scarti rimasti dopo le correzioni | | 0 |
+
+Banco: `plans/esperimenti/regole-senza-omissioni-2026-11-12/muta_ca.py`
+(CA +1, CA −2, voce +1 con la somma che torna, contatto +1, sprovvista +1,
+scurovisione tolta), misure in `misure-ca.json` accanto.
+
+Cosa è stato corretto, con la regola del DM «il numero più forte, se si
+ricostruisce da una scheda legale» (ADR-0118):
+
+- 18 schede: la CA scritta non era la somma delle voci, oppure una voce non
+  era quella della tabella. Dove due letture erano legali è rimasta la più
+  alta: in 8 schede la CA sale di 1 (tra queste difensore nanico di Dauth,
+  sacerdotessa drow, capitano githyanki, comandante del Teschio Nero), nelle
+  altre cambia solo il dettaglio. Ogni scheda porta la nota in fondo;
+- 10 schede: duergar, nani, gnoll, flind e orchi senza la scurovisione della
+  razza nella riga `sensi:`;
+- 1 difetto del verificatore: i dadi vita di più classi («12d8+4d10») si
+  contavano solo dal primo gruppo, e la CD del soffio di Azarr Kul risultava
+  sbagliata. Ora si sommano.
+
+Limiti, detti:
+
+- 28 schede su 145 restano **non verificabili** per la CA: 23 non elencano le
+  voci, 4 nominano gli oggetti senza i bonus, 1 ha una voce che il lettore non
+  riconosce. Stanno in `non_verificabili`, non fra le violazioni; il generatore
+  dovrà scrivere le voci (lotti 2-5);
+- 2 errori di sprovvista su 60 non si vedono (bruto deforme, alleato orso del
+  druido): la Destrezza è negativa o la scheda non la scrive fra le voci;
+- la scurovisione si vede solo per le razze che la tabella conosce (10 su 25):
+  i mostri che la hanno per tipo arrivano col lotto dei tipi di creatura;
+- gli **oggetti dell'SRD col prezzo** erano previsti qui e non ci sono: vanno
+  nel lotto 8 insieme alla ricchezza per livello, perché senza quel tetto il
+  prezzo da solo non giudica niente. Le armature salite a +1 e i mantelli del
+  lotto 1 vanno ricontati lì;
+- il PF1e non cambia: contatto, sprovvista e DMC stanno già nel cancello dei
+  moduli.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore

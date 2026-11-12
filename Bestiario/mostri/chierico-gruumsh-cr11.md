@@ -6,7 +6,7 @@
 gs: 11
 tipo: Medium humanoid (orc), CE
 ca: 21
-ca-dettaglio: (+9 corazza di piastre +1, +1 Des, +1 anello), contatto 12, colto alla sprovvista 20
+ca-dettaglio: (+9 armatura completa +1, +1 Des, +1 anello), contatto 12, colto alla sprovvista 20
 pf: 74
 pf-dado: 11d8
 ts: Temp +11, Rifl +6, Vol +13
@@ -18,7 +18,7 @@ attacchi:
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-Medium humanoid (orc), CE. **DV 11d8**. **hp 74**. **CA 21** (+9 corazza di piastre +1, +1 Des, +1 anello), contatto 12, colto alla sprovvista 20. Iniziativa +1. Vel 6 m (corazza).
+Medium humanoid (orc), CE. **DV 11d8**. **hp 74**. **CA 21** (+9 armatura completa +1, +1 Des, +1 anello), contatto 12, colto alla sprovvista 20. Iniziativa +1. Vel 6 m (corazza).
 **TS** Temp +11, Rifl +6, Vol +13 (mantello di resistenza +2 incluso). **BAB/Lotta** +8/+11.
 **Mischia** picca lunga +1 +13/+8 (1d8+5/×3, portata **3 m**).
 **Car** For 16, Des 12, Cos 14, Int 8, Sag 19, Car 6.
@@ -54,3 +54,5 @@ Medium humanoid (orc), CE. **DV 11d8**. **hp 74**. **CA 21** (+9 corazza di pias
 **Benchmark PF T1-1 (GS 11: CA 25, 145 pf, att. +19, danno 50, CD 20)**: questa scheda sta **sotto su CA (21), pf (74) e attacco (+13)** e **sopra su CD (21-22)**. È il difetto strutturale dei chierici PNG 3.5, non della build: gli slot di un Chierico 11 sono quelli. Vale GS 11 **come pacchetto di incantesimi**, non come bersaglio: se lo si raggiunge, muore in un round. Va schierato **con almeno due corpi davanti** (`bruto-deforme-sottosuolo-cr11.md`, `ogre-frantumapietra-barbaro6-cr9.md`), mai da solo.
 
 Notes: sacerdozio di Gruumsh fra gli **ausiliari orcheschi** della Mano Rossa (1.800 unità, `campaign/state.md` §2.2, riga «Ausiliari Goblin/Orchi/Worg Riders»). Non adora Tiamat e non lo nasconde: è la faglia che `Bestiario/villain/Ushgar_Occhio_Reso/` rende giocabile. Ho usato solo i dominî di Gruumsh **presenti nell'SRD** (Guerra, Forza; disponibili anche Caos e Male): **Caverna** e **Orco** sono dominî di fonte privata e sono stati deliberatamente lasciati fuori. 2 esemplari = EL 13; con Ushgar = EL 14,2.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): «corazza di piastre» è il nome italiano della breastplate (+5): il +9 scritto è quello di un'armatura completa +1 (8 +1), e il nome è corretto. La CA non cambia.
