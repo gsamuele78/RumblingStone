@@ -5,6 +5,7 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (dwarf, duergar), Wizard 3 (necromanzia; abiurazione proibita), LE
+sensi: scurovisione 36 m
 ca: 13
 ca-dettaglio: touch 12, flat-footed 11
 pf: 16
@@ -26,3 +27,5 @@ Medium humanoid (dwarf, duergar), Wizard 3 (necromanzia; abiurazione proibita), 
 Notes: mago da supporto del ponte; coppia con il chierico Justin.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Volontà +4 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Tempra +3 → **+4**, Riflessi +3 → **+4**. Prezzo da ricontrollare col lotto della ricchezza per livello.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.
