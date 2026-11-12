@@ -1,5 +1,5 @@
 """Ogni scheda del repo dichiara taglia, spazio e portata, e i tre tornano con
-la tabella dell'SRD (ADR-0127). Cricchetto a zero: una scheda nuova senza i
+la tabella dell'SRD (ADR-0128). Cricchetto a zero: una scheda nuova senza i
 tre campi, o con uno spazio che non è quello della sua taglia, ferma la CI."""
 import doctest
 import subprocess

@@ -2021,7 +2021,7 @@
     },
     {
       "name": "misura_mappe_schede",
-      "description": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»\n\nLe pedine delle mappe JSON contro le schede: quante unità nemiche con un nome dichiarano `scheda`, i collegamenti rotti, le taglie della pianta che non sono quelle della scheda, le mappe senza scala. Con --booklet, per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet. In prova (ADR-0127): avvisa, non ferma.",
+      "description": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»\n\nLe pedine delle mappe JSON contro le schede: quante unità nemiche con un nome dichiarano `scheda`, i collegamenti rotti, le taglie della pianta che non sono quelle della scheda, le mappe senza scala. Con --booklet, per ogni booklet, le unità delle mappe stampate la cui scheda non è nel booklet. In prova (ADR-0128): avvisa, non ferma.",
       "use_case": "«Sulla pianta la creatura Grande occupa i suoi quadretti, e nello scontro esce la sua scheda?»",
       "invocation": "python3 scripts/misura_mappe_schede.py --dettaglio",
       "inputSchema": {

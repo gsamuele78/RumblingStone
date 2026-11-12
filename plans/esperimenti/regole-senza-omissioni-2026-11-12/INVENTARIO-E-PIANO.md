@@ -340,7 +340,7 @@ composizione leggibile, e i TS dei dadi razziali dell'umanoide, che la regola
 lascia variabili.
 
 Dal thread dello standard del volume (PR #370, 9 commit locali, copia in
-`/mnt/project-files/taglia-portata/taglia-portata.bundle`): ADR-0127 è suo
+`/mnt/project-files/taglia-portata/taglia-portata.bundle`): ADR-0128 è suo
 (campi `taglia`, `spazio`, `portata` in ogni recinto, 205 schede; tabella in
 `taglie.toml` della famiglia d20, che arriva con la #370, capacità `statblocco.taglie`). Quindi il primo
 ADR libero per questo programma è 0126. Quando la #370 è su main i lotti

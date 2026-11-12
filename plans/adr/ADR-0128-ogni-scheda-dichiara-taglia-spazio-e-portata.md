@@ -1,4 +1,4 @@
-# ADR-0127 — Ogni scheda dichiara taglia, spazio e portata
+# ADR-0128 — Ogni scheda dichiara taglia, spazio e portata
 
 **Stato**: proposta (2026-11-10)
 **Data**: 2026-11-10
