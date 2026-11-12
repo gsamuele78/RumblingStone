@@ -97,12 +97,12 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
-| 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 punti 3-5 (scelta del DM): `scripts/verifica_talenti.py` nel manifest… | ✅ Bestiario da 30 violazioni in 19 schede a 21 in 11; giro di correzione con test (--check 1 → 0); le 21 al DM |
+| 2026-11-11 | CODA-DEL-SECONDO-LETTORE | Punto 4, seguito: i limiti della *d* eufonica | ✅ banco di semina (3.944 errori seminati in 692 file): richiamo della regex dal 98,38% al 100%, 0 rilievi nel codice, 0 falsi; LanguageTool 84,25%.… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 72 voci, l'ultima MS-0072 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 73 voci, l'ultima MS-0073 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

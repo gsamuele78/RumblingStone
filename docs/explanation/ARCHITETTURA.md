@@ -206,7 +206,7 @@ flowchart TB
 
 | Strato | Cosa contiene | Chi decide la versione |
 |---|---|---|
-| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken; `typst==0.15.2` e `pdfimpose==2.10.0` in `requirements.txt` | ADR-0037, ADR-0099 (Python sale con Debian), ADR-0116 (typst e imposizione da PyPI, Dependabot) |
+| Nucleo | Python 3.13, pyyaml, Pillow, tiktoken, markdown-it-py; `typst==0.15.2` e `pdfimpose==2.10.0` in `requirements.txt` | ADR-0037, ADR-0099 (Python sale con Debian), ADR-0116 (typst e imposizione da PyPI, Dependabot) |
 | Librerie copiate dentro | `scripts/dmcore/_vendor/`: simpleeval 1.0.8 (MIT), con versione, sha256 e licenza in `LIBRERIE.toml` | ADR-0112 (D1: standard di fatto e misura che migliora) |
 | Sviluppo e prove | `requirements-dev.txt` | Dependabot propone, la CI misura |
 | Binari | git, gh, Chromium, Blender, Inkscape, pandoc, LanguageTool; la CLI typst solo come ripiego (`RUMBLINGSTONE_TYPST=cli`) | `scripts/binari.py`, `dm.py doctor`, `python3 scripts/typst_motore.py` |
