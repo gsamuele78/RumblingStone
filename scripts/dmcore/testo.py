@@ -635,6 +635,9 @@ def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]",
     md = f.read_text(encoding="utf-8")
     if sezioni:
         md = estrai_sezioni(md, sezioni)
+        # non in testa al capitolo, che comincia già a pagina nuova
+        md = _SCENA_CON_SCHEDA.sub(
+            lambda m: m.group(1) if not md[:m.start()].strip() else "<!-- nuova-pagina -->\n\n" + m.group(1), md)
     else:
         md = togli_schede_da_tavolo(md)
     return traduci_rimandi(md, f, capitoli)
@@ -645,6 +648,12 @@ def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]",
 # serata, cioè nei capitoli presi per `sezioni`; nei volumi che stampano il
 # master intero resta fuori finché il giro dei lettori non la promuove.
 _SCHEDA_DA_TAVOLO = re.compile(r"\n<!--\s*scheda-da-tavolo\s*-->.*?<!--\s*/scheda-da-tavolo\s*-->\n", re.S)
+
+
+# La scena che ha la scheda comincia a pagina nuova: titolo e scheda stanno
+# nella stessa pagina (giro del 2026-11-12: il float finiva una o due pagine
+# dopo il titolo, o sopra la coda della scena prima).
+_SCENA_CON_SCHEDA = re.compile(r"^(#{2,4} [^\n]+\n(?:(?!#{1,4} )[^\n]*\n){0,12}?<!--\s*scheda-da-tavolo\s*-->)", re.M)
 
 
 def togli_schede_da_tavolo(md: str) -> str:

@@ -86,7 +86,7 @@ class TestSchedaDaTavolo(unittest.TestCase):
     voci fisse dei blocchi d'incontro degli AP (creature, sviluppo, tesoro) più
     il rimando al testo intero. Sta nella pagina del titolo solo se resta
     corta, ed esce solo nel booklet di serata."""
-    VOCI = ("Chi c'è", "Sviluppo", "Tesoro", "Dove guardare")
+    VOCI = ("Chi c'è", "Si comincia", "Sviluppo", "Dove guardare")  # «Tesoro» solo dove c'è
     BLOCCO = re.compile(r"<!-- scheda-da-tavolo -->(.*?)<!-- /scheda-da-tavolo -->", re.S)
 
     def test_le_voci_ci_sono_e_la_scheda_resta_corta(self):
@@ -96,8 +96,22 @@ class TestSchedaDaTavolo(unittest.TestCase):
         for s in schede:
             for voce in self.VOCI:
                 self.assertIn(f"| **{voce}** |", s)
-            # 500 parole: la più lunga che sta nella pagina del titolo (Scena 11)
-            self.assertLessEqual(len(s.split()), 500, s[:60])
+            # 620 parole: la più lunga (Scena 11, 600) occupa due terzi di pagina
+            self.assertLessEqual(len(s.split()), 620, s[:60])
+
+    def test_il_punto_e_virgola_dopo_il_grassetto_si_stampa(self):
+        # giro del 2026-11-12: `#strong[CA 28];` in Typst chiude l'espressione
+        # e il «;» sparisce («CA 28 costa −2» al posto di «CA 28; costa −2»)
+        import export_booklet_typst as e
+        typ = e.md_to_typ("contro **CA 28**; costa, `x`; e *y*; fine")
+        self.assertEqual(typ.count("\\;"), 3, typ)
+
+    def test_la_scena_con_la_scheda_comincia_a_pagina_nuova(self):
+        from dmcore.testo import leggi_per_la_stampa
+        master = ROOT / "07_il Portale Della Forgia Eterna" / "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md"
+        md = leggi_per_la_stampa(master, {}, ["SCENA 7", "SCENA 8"])
+        # non la prima del capitolo, che è già a pagina nuova
+        self.assertEqual(md.count("<!-- nuova-pagina -->\n\n### SCENA"), 1)
 
     def test_nel_volume_intero_non_esce(self):
         from dmcore.testo import leggi_per_la_stampa

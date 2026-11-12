@@ -244,6 +244,11 @@ def _inline(s: str) -> str:
                 testo = s[i + 1:j].replace("\\", "\\\\").replace('"', '\\"')
                 fuori.append(f'#raw("{testo}")')
                 i = j + 1
+                # `#raw(...);`: il punto e virgola chiude l'espressione e non
+                # si stampa (giro del 2026-11-12, Scena 10: «CA 28 costa −2»)
+                if i < len(s) and s[i] == ";":
+                    fuori.append("\\;")
+                    i += 1
                 continue
         if c == "*":
             n = 0
@@ -260,6 +265,10 @@ def _inline(s: str) -> str:
             else:
                 fuori.append(_esc("*" * n))
             i += n
+            # `#strong[...];`: lo stesso punto e virgola mangiato
+            if fuori[-1].endswith("]") and i < len(s) and s[i] == ";":
+                fuori.append("\\;")
+                i += 1
             continue
         fuori.append(_esc(c))
         i += 1

@@ -67,12 +67,14 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | le gravi e a | 27 |
 | SCENA 6 | Muoversi Silenziosamente | 20 |
 | SCENA 6 | Nascondersi | 22 |
-| SCENA 6 | di orchi a 6 m (Nascondersi | 18 |
+| SCENA 6 | chi non è invisibile tira Nascondersi | 18 |
+| SCENA 6 | sonoro, 5d8, Riflessi | 18 |
 | SCENA 6 | Destrezza | 14 |
 | SCENA 6 | Raggirare | 16 |
 | SCENA 6 | Forza | 16 |
-| SCENA 6 | del corno scoppiano (sonoro, 5d8, Riflessi | 18 |
-| SCENA 6 | il ritorno si tira a Nascondersi | 26 |
+| SCENA 6 | lo ferma un colpo o Forza | 16 |
+| SCENA 6 | notte, il ritorno è a Nascondersi | 26 |
+| SCENA 6 | nanico antico o Sapienza Magica | 22 |
 | SCENA 6 | blocco lo tira già a Nascondersi | 22 |
 | SCENA 6 | è qui che si tira l'Osservare | 18 |
 | SCENA 6 | del primo blocco resta Muoversi Silenziosamente | 20 |
@@ -89,14 +91,12 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | toglierli con Disattivare Congegni | 28 |
 | SCENA 6 | dissolvi magie contro il 13° livello | 24 |
 | SCENA 6 | piedi della Scena 8 a Nascondersi | 26 |
-| SCENA 6 | nanico antico o Sapienza Magica | 22 |
-| SCENA 7 | il nome è sulla lastra (Osservare | 20 |
-| SCENA 7 | chi ha lasciato a Hammerfist (Diplomazia | 18 |
+| SCENA 7 | Osservare | 20 |
+| SCENA 7 | Diplomazia | 18 |
 | SCENA 7 | Sapienza Magica | 24 |
 | SCENA 7 | Conoscenze (storia) | 22 |
 | SCENA 7 | ai nani, 5d8 sonori con Riflessi | 18 |
 | SCENA 7 | cosa sta incidendo sull'ardesia (Osservare | 20 |
-| SCENA 7 | Diplomazia | 18 |
 | SCENA 7 | Conoscenze storia | 22 |
 | SCENA 7 | 13d6, Riflessi | 21 |
 | SCENA 7 | round 1 e slay living (Tempra | 20 |
@@ -106,6 +106,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | Intimidire | 22 |
 | SCENA 8 | la Luce in vista (Sapienza Magica | 20 |
 | SCENA 8 | cinque blocchi a Nascondersi | 22 |
+| SCENA 8 | e | 26 |
 | SCENA 8 | Forza | 20 |
 | SCENA 8 | terra, intralciato, finché non supera Riflessi | 15 |
 | SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |
@@ -116,10 +117,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | dovrà superare Volontà | 18 |
 | SCENA 8 | è finita, quindi si tira Nascondersi | 22 |
 | SCENA 8 | un PG garantisce per lui, Diplomazia | 20 |
+| SCENA 9 | Osservare | 15 |
+| SCENA 9 | sente solo se falliscono Muoversi Silenziosamente | 20 |
 | SCENA 9 | Percepire Intenzioni o Diplomazia | 18 |
 | SCENA 9 | Rapidità di Mano | 22 |
-| SCENA 9 | sente solo se falliscono Muoversi Silenziosamente | 20 |
-| SCENA 9 | Osservare | 15 |
 | SCENA 9 | stessa cera nera sulle dita, Osservare | 15 |
 | SCENA 9 | prova di Destrezza e non supera | 10 |
 | SCENA 9 | la riga «Gli parlano» riesce con | 14 |
@@ -127,9 +128,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 10 | Forza | 18 |
 | SCENA 10 | Diplomazia o Guarire | 18 |
 | SCENA 10 | Disattivare o Artigianato | 20 |
-| SCENA 11 | magica), morso +34, soffio 16d4 Riflessi | 31 |
-| SCENA 11 | Presenza Volontà | 26 |
-| SCENA 11 | 18, pungiglione +10 con veleno Tempra | 17 |
+| SCENA 11 | Presenza, Volontà | 26 |
+| SCENA 11 | sul gruppo più fitto, 16d4, Riflessi | 31 |
 | SCENA 11 | Ascoltare | 20 |
 | SCENA 11 | Forza | 25 |
 | SCENA 11 | danno massiccio, Tempra | 15 |
