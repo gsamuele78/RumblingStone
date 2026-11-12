@@ -118,10 +118,10 @@ def ancore_da_state(path: Path) -> dict:
             an["portatori"][str(a.get("artefatto", "")).split(" (")[0]] = pg
     for p in d.get("party") or []:
         mods = {}
-        for seg, val, stat in re.findall(r"([+−-])\s*(\d)\s*(FOR|DES|COS|INT|SAG|CAR)\b[^.]{0,40}?",
-                                         str(p.get("hp", ""))):
-            pass
-        m = re.search(r"((?:[+−-]\s*\d\s*(?:FOR|DES|COS|INT|SAG|CAR)\s*/?\s*)+)\**\s*permanent",
+        # separatore «/» obbligatorio fra le voci: nessuna ambiguità, nessun backtracking
+        # esponenziale (CodeQL py/redos sulla forma con «\s*/?\s*» ripetuta)
+        voce = r"[+−-] ?\d ?(?:FOR|DES|COS|INT|SAG|CAR)"
+        m = re.search(r"(" + voce + r"(?: ?/ ?" + voce + r")*)\**\s*permanent",
                       str(p.get("hp", "")))
         if m:
             for seg, val, stat in re.findall(r"([+−-])\s*(\d)\s*(FOR|DES|COS|INT|SAG|CAR)", m.group(1)):
