@@ -200,7 +200,7 @@
       },
       "in_prova": {
         "sigle_morte": 2,
-        "righe_brevi_incomplete": 2,
+        "righe_brevi_incomplete": 1,
         "titoli_rovinati": 0
       }
     },
@@ -292,7 +292,7 @@
       },
       "in_prova": {
         "sigle_morte": 0,
-        "righe_brevi_incomplete": 1,
+        "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0
       }
     },

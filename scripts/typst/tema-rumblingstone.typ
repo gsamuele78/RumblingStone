@@ -501,7 +501,9 @@
       let pezzi = ()
       if ca != "" and ca != [] { pezzi.push([*CA* #ca]) }
       if pf != "" and pf != [] { pezzi.push([*pf* #pf]) }
-      block(width: 100%, breakable: true, above: 0.9em, below: 0.6em,
+      // intera: spezzata fra due colonne la riga breve perde iniziativa, TS e
+      // attacco per chi la legge (serata, p. 58, 2026-11-12)
+      block(width: 100%, breakable: false, above: 0.9em, below: 0.6em,
         stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
         #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
         #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]

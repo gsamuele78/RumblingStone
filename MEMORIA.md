@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.279 contando le voci nuove («Succede», «Chi vuole cosa… |
 | 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
 | 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
@@ -97,7 +98,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
 
 ## Le misure che si portano dietro
 

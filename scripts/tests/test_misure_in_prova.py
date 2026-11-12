@@ -86,7 +86,7 @@ class TestSchedaDaTavolo(unittest.TestCase):
     voci fisse dei blocchi d'incontro degli AP (creature, sviluppo, tesoro) più
     il rimando al testo intero. Sta nella pagina del titolo solo se resta
     corta, ed esce solo nel booklet di serata."""
-    VOCI = ("Chi c'è", "Si comincia", "Sviluppo", "Dove guardare")  # «Tesoro» solo dove c'è
+    VOCI = ("Succede", "Chi c'è", "Chi vuole cosa", "Si comincia", "Sviluppo", "Come finisce", "Dove guardare")  # «Tesoro» solo dove c'è
     BLOCCO = re.compile(r"<!-- scheda-da-tavolo -->(.*?)<!-- /scheda-da-tavolo -->", re.S)
 
     def test_le_voci_ci_sono_e_la_scheda_resta_corta(self):
@@ -96,8 +96,8 @@ class TestSchedaDaTavolo(unittest.TestCase):
         for s in schede:
             for voce in self.VOCI:
                 self.assertIn(f"| **{voce}** |", s)
-            # 620 parole: la più lunga (Scena 11, 600) occupa due terzi di pagina
-            self.assertLessEqual(len(s.split()), 620, s[:60])
+            # 720 parole: la più lunga (Scena 11) occupa due terzi di pagina
+            self.assertLessEqual(len(s.split()), 720, s[:60])
 
     def test_il_punto_e_virgola_dopo_il_grassetto_si_stampa(self):
         # giro del 2026-11-12: `#strong[CA 28];` in Typst chiude l'espressione
@@ -118,6 +118,20 @@ class TestSchedaDaTavolo(unittest.TestCase):
         master = ROOT / "07_il Portale Della Forgia Eterna" / "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md"
         self.assertNotIn("La scheda da tavolo**:", leggi_per_la_stampa(master, {}))
         self.assertIn("La scheda da tavolo**:", leggi_per_la_stampa(master, {}, ["SCENA 8"]))
+
+    def test_dove_la_scheda_si_stampa_gli_altri_due_strati_non_escono(self):
+        # fusione dei tre strati (Jfs 2026-11-12): nel booklet di serata la
+        # scena apre con un blocco solo; nel volume intero resta com'era
+        from dmcore.testo import fondi_contratto_e_scheda, leggi_per_la_stampa
+        master = ROOT / "07_il Portale Della Forgia Eterna" / "ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md"
+        serata = fondi_contratto_e_scheda(leggi_per_la_stampa(master, {}, ["SCENA 7", "SCENA 8"]))
+        self.assertNotIn("**In tre righe**", serata)
+        self.assertNotIn("**In scena**", serata)
+        self.assertNotIn("senza-scheda", serata)
+        self.assertEqual(serata.count("| **Dove** | La tenda |"), 2)
+        intero = leggi_per_la_stampa(master, {})
+        self.assertEqual(intero.count("**In tre righe**"), 6)
+        self.assertNotIn("senza-scheda", intero)
 
 
 if __name__ == "__main__":

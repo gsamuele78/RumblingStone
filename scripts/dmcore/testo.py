@@ -635,11 +635,12 @@ def leggi_per_la_stampa(f: "Path", capitoli: "dict[Path, str]",
     md = f.read_text(encoding="utf-8")
     if sezioni:
         md = estrai_sezioni(md, sezioni)
+        md = _SENZA_SCHEDA.sub("", md)
         # non in testa al capitolo, che comincia già a pagina nuova
         md = _SCENA_CON_SCHEDA.sub(
             lambda m: m.group(1) if not md[:m.start()].strip() else "<!-- nuova-pagina -->\n\n" + m.group(1), md)
     else:
-        md = togli_schede_da_tavolo(md)
+        md = togli_schede_da_tavolo(_SEGNO_SENZA_SCHEDA.sub("", md))
     return traduci_rimandi(md, f, capitoli)
 
 
@@ -654,6 +655,74 @@ _SCHEDA_DA_TAVOLO = re.compile(r"\n<!--\s*scheda-da-tavolo\s*-->.*?<!--\s*/sched
 # nella stessa pagina (giro del 2026-11-12: il float finiva una o due pagine
 # dopo il titolo, o sopra la coda della scena prima).
 _SCENA_CON_SCHEDA = re.compile(r"^(#{2,4} [^\n]+\n(?:(?!#{1,4} )[^\n]*\n){0,12}?<!--\s*scheda-da-tavolo\s*-->)", re.M)
+
+
+# Quel che la scheda da tavolo sostituisce (il riassunto «In tre righe») sta
+# nel master fra `<!-- senza-scheda -->` e `<!-- /senza-scheda -->`: si stampa
+# nei volumi che la scheda non la stampano, e sparisce dove la scheda c'è
+# (fusione dei tre strati, Jfs 2026-11-12).
+_SENZA_SCHEDA = re.compile(r"<!--\s*senza-scheda\s*-->\n.*?<!--\s*/senza-scheda\s*-->\n\n?", re.S)
+_SEGNO_SENZA_SCHEDA = re.compile(r"<!--\s*/?senza-scheda\s*-->\n")
+_CONTRATTO_IN_SCENA = re.compile(r"^\*\*In scena\*\*\s*—\s*Dove:\s*(?P<dove>.*?)\s*—\s*Chi:.*$")
+_APRE_SCHEDA = re.compile(r"^<!--\s*scheda-da-tavolo\s*-->$")
+
+
+def fondi_contratto_e_scheda(md: str) -> str:
+    """La riga «In scena» di una scena con la scheda da tavolo entra nella
+    scheda: il «Dove» diventa la sua prima riga, il «Chi» lo dice già «Chi c'è».
+    Si chiama dopo `chi_si_incontra.arricchisci`, che quella riga la legge.
+
+    >>> print(fondi_contratto_e_scheda("### S\\n\\n**In scena** — Dove: la tenda — Chi: Zog'tar\\n\\n"
+    ...     "<!-- scheda-da-tavolo -->\\n| Scena | x |\\n|---|---|\\n| **Chi c'è** | Zog'tar |\\n"))
+    ### S
+    <BLANKLINE>
+    <!-- scheda-da-tavolo -->
+    | Scena | x |
+    |---|---|
+    | **Dove** | La tenda |
+    | **Chi c'è** | Zog'tar |
+    <BLANKLINE>
+
+    Senza scheda prima del titolo dopo, la riga resta:
+
+    >>> fondi_contratto_e_scheda("**In scena** — Dove: a — Chi: b\\n\\n### T\\n")
+    '**In scena** — Dove: a — Chi: b\\n\\n### T\\n'
+    """
+    righe = md.split("\n")
+    fuori: list[str] = []
+    i = 0
+    while i < len(righe):
+        m = _CONTRATTO_IN_SCENA.match(righe[i])
+        if m:
+            j = i + 1
+            while j < len(righe) and not re.match(r"#{1,4} ", righe[j]) and not _APRE_SCHEDA.match(righe[j]):
+                j += 1
+            k = next((n for n in range(j, min(j + 6, len(righe))) if re.match(r"\|\s*-{3,}", righe[n])), None) \
+                if j < len(righe) and _APRE_SCHEDA.match(righe[j]) else None
+            if k is not None:
+                dove = m.group("dove")
+                fine = next((n for n in range(k, len(righe))
+                             if re.match(r"<!--\s*/scheda-da-tavolo\s*-->$", righe[n])), len(righe) - 1)
+                # «Succede» apre la scheda, «Dove» la segue
+                if k + 1 < len(righe) and righe[k + 1].startswith("| **Succede**"):
+                    k += 1
+                # la scheda subito sotto il titolo: quel che `arricchisci` ha
+                # portato fra la riga «In scena» e la scheda viene dopo
+                fuori += righe[j:k + 1]
+                fuori.append(f"| **Dove** | {dove[:1].upper()}{dove[1:]} |")
+                fuori += righe[k + 1:fine + 1]
+                in_mezzo = righe[i + 1:j]
+                while in_mezzo and in_mezzo[0] == "":
+                    in_mezzo.pop(0)
+                while in_mezzo and in_mezzo[-1] == "":
+                    in_mezzo.pop()
+                if in_mezzo:
+                    fuori += [""] + in_mezzo
+                i = fine + 1
+                continue
+        fuori.append(righe[i])
+        i += 1
+    return "\n".join(fuori)
 
 
 def togli_schede_da_tavolo(md: str) -> str:
