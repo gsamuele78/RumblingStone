@@ -18,6 +18,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
 
+import validate_lingua  # noqa: E402
 from validate_lingua import controlla  # noqa: E402
 
 
@@ -93,6 +94,61 @@ class TestCanaleTesting(unittest.TestCase):
             errori, avvisi = controlla(f)
         self.assertEqual(errori, [])
         self.assertTrue(any("d eufonica" in a for a in avvisi))
+
+
+class TestProsaRientrata(unittest.TestCase):
+    """Una riga rientrata è codice solo se CommonMark la legge così (ADR-0120,
+    emendamento 2026-11-11). Ogni caso gira col parser e con la regola di ripiego."""
+
+    PROSA = ("- Tattiche: usano la carica\n    ed intercettano il colpo.",
+             "Un paragrafo che va a capo\n    ad ogni riga rientrata.",
+             "1. Primo passo.\n\n    Il seguito della voce, ad ogni modo, è prosa.")
+    CODICE = ("Testo.\n\n    x = leggi ad ogni giro\n\nAltro.",
+              "Testo.\n\n```\npasso ad ogni giro\n```\n")
+
+    def _con_e_senza_parser(self):
+        yield "ripiego", None
+        if validate_lingua._MD is not None:
+            yield "markdown-it-py", validate_lingua._MD
+
+    def test_il_seguito_di_un_elenco_o_di_un_paragrafo_si_legge(self):
+        vero = validate_lingua._MD
+        try:
+            for nome, parser in self._con_e_senza_parser():
+                validate_lingua._MD = parser
+                for testo in self.PROSA:
+                    with self.subTest(parser=nome, testo=testo):
+                        errori, _ = _testo(testo)
+                        self.assertTrue(errori)
+        finally:
+            validate_lingua._MD = vero
+
+    def test_il_codice_rientrato_e_il_recinto_si_saltano(self):
+        vero = validate_lingua._MD
+        try:
+            for nome, parser in self._con_e_senza_parser():
+                validate_lingua._MD = parser
+                for testo in self.CODICE:
+                    with self.subTest(parser=nome, testo=testo):
+                        errori, _ = _testo(testo)
+                        self.assertEqual(errori, [])
+        finally:
+            validate_lingua._MD = vero
+
+
+class TestSic(unittest.TestCase):
+
+    def test_una_citazione_marcata_non_si_segnala(self):
+        errori, _ = _testo("> «Canta ad ogni notte», scrive il cronista. <!-- sic -->")
+        self.assertEqual(errori, [])
+
+    def test_il_marchio_vale_solo_per_la_sua_riga(self):
+        errori, _ = _testo("> «Canta ad ogni notte». <!-- sic -->\n\nE poi canta ad ogni alba.")
+        self.assertEqual(len(errori), 1)
+
+    def test_il_marchio_non_copre_gli_altri_refusi(self):
+        errori, _ = _testo("> Non si sa perchè, ad ogni modo. <!-- sic -->")
+        self.assertEqual(len(errori), 1)
 
 
 class TestFalsiPositivi(unittest.TestCase):

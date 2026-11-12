@@ -88,6 +88,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 |---|---|---|---|
 | 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
 | 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 2: capacità `creature.armi` (`sistemi/dnd35/dati/armi.toml`, 72… | ✅ Errori di danno messi apposta visti 0/364 → 336/364 (92%); 13 scarti veri chiusi nel Bestiario (12 critici non scritti, 1 bonus). 🟡 4 scarti di ARC-07 (giave… |
 | 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
 | 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 73 voci, l'ultima MS-0073 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 75 voci, l'ultima MS-0075 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

@@ -16,8 +16,8 @@ ts: Temp +6, Rifl +12, Vol +9
 attributi: For 8 Des 18 Cos 12 Int 22 Sag 12 Car 16
 velocita: 9 m
 attacchi:
-  - Mischia pugnale +3 +7 (1d4+2)
-  - Distanza balestra a mano +1 +10 (1d4+1 + veleno drow)
+  - Mischia pugnale +3 +7 (1d4+2/19-20)
+  - Distanza balestra a mano +1 +10 (1d4+1/19-20 + veleno drow)
 ```
 
 
@@ -29,7 +29,7 @@ Medium humanoid (elf), femmina, NE.
 
 **Difesa** **CA 20** (+4 Des, +4 *armatura magica*, +1 anello, +1 amuleto), contatto 15, colto alla sprovvista 20 (**schivare prodigioso**) · **hp 44** (**DV 9d4 + 2d8**) · **TS** Temp +6, Rifl +12, Vol +9 (+2 razziale vs incantesimi, +2 vs ammaliamenti; *mantello della resistenza +2* incluso) · **RI 22**
 
-**Attacco** Vel 9 m · **Mischia** pugnale +3 +7 (1d4+2). **Distanza** balestra a mano +1 +10 (1d4+1 + veleno drow, Tempra CD 13). Le due armi erano +1 e perfetta: con BAB +5, For 8 e Des 18 (il pugnale tira sulla Forza: fra i talenti non c'è quello che lo fa tirare sulla Destrezza) davano +5 e +9, e si sono alzate per tenere i bonus della scheda.
+**Attacco** Vel 9 m · **Mischia** pugnale +3 +7 (1d4+2/19-20). **Distanza** balestra a mano +1 +10 (1d4+1 + veleno drow, Tempra CD 13). Le due armi erano +1 e perfetta: con BAB +5, For 8 e Des 18 (il pugnale tira sulla Forza: fra i talenti non c'è quello che lo fa tirare sulla Destrezza) davano +5 e +9, e si sono alzate per tenere i bonus della scheda.
 
 **Specializzazione** Illusionista — **scuole proibite: Invocazione e Necromanzia**.
 
@@ -91,3 +91,5 @@ Boost log: correzione dei conti 3.5 (Mago Illusionista 9 / Danzatrice delle Ombr
 - era: *oscurità profonda* fra gli incantesimi di 3° (è un incantesimo da chierico, e d'invocazione, scuola proibita)
 - era: benchmark letto sulla vecchia tabella (pf 145, att +19 alla riga 12)
 <!-- /storico -->
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Mischia pugnale +3» scritto (19-20, tabella delle armi dell'SRD); critico di «Distanza balestra a mano +1» scritto (19-20, tabella delle armi dell'SRD).

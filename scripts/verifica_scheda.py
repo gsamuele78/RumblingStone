@@ -518,6 +518,38 @@ def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+def danno(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Dado, bonus e critico delle armi della tabella (ADR-0126, lotto 2)."""
+    import conformita_statblocchi as C
+    from dmcore import danno as D
+    testo = p.read_text(encoding="utf-8")
+    sis = VT.sistema_di(p, testo)
+    if sis != "dnd35":
+        return [], []          # le armi del PF1e fuori dal manuale base arrivano col lotto 10
+    viol, nv = [], []
+    with contextlib.redirect_stderr(io.StringIO()):
+        blocchi = list(C._recinti_del_master(testo))
+    righe = testo.split("\n")
+    for i, b in enumerate(blocchi):
+        sb = b["sb"]
+        # i talenti stanno nel recinto o nella prosa che lo segue: fino al recinto dopo
+        fine = blocchi[i + 1]["riga"] - 1 if i + 1 < len(blocchi) else len(righe)
+        intorno = testo if len(blocchi) == 1 else "\n".join(righe[b["riga"] - 1:fine])
+        scudo = bool(re.search(r"scudo|shield|buckler|brocchiere", sb.ca_dettaglio or "", re.I))
+        mod_for = C._mod_caratteristica(sb.attributi or "", "For")
+        for att in sb.attacchi:
+            riga = next((n + 1 for n in range(b["riga"] - 1, min(len(righe), b["riga"] + 60))
+                         if att.strip()[:40] in righe[n]), b["riga"])
+            base = {"file": VT_rel(p), "riga": riga, "verifica": "numeri", "fonte": "srd"}
+            scarti, non = D.giudica(att, mod_for, sb.tipo or "", intorno, scudo, sb.ca_dettaglio or "", sis)
+            for x in scarti:
+                viol.append(dict(base, regola=f"numero.{x['campo']}", atteso=x["atteso"], ha=x["scritto"],
+                                 testo=f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']})"))
+            for x in non:
+                nv.append(dict(base, regola="numero.danno", testo=x["nota"]))
+    return viol, nv
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -541,9 +573,10 @@ def main(argv: "list[str] | None" = None) -> int:
         av, an = abilita(p)
         iv, inn = incantesimi(p)
         cv, cn = classe_armatura(p)
-        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or L.leggi(p))
-        viol += tv + nvv + cv + av + iv
-        nv += tn + ti + nn + cn + an + inn
+        dv, dn = danno(p)
+        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or L.leggi(p))
+        viol += tv + nvv + cv + dv + av + iv
+        nv += tn + ti + nn + cn + dn + an + inn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

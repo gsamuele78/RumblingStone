@@ -16,7 +16,7 @@ ts: Temp +5, Rifl +11, Vol +8
 attributi: For 8 Des 18 Cos 12 Int 20 Sag 12 Car 14
 velocita: 9 m
 attacchi:
-  - Mischia stocco perfetto +5 (1d6−1)
+  - Mischia stocco perfetto +5 (1d6−1/18-20)
 ```
 
 
@@ -26,7 +26,7 @@ attacchi:
 
 Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *armatura magica*, +1 anello), contatto 15, colto alla sprovvista 15. Iniziativa +4. Vel 9 m.
 **TS** Temp +5, Rifl +11, Vol +8 (+2 razziale vs incantesimi, +2 vs ammaliamenti). **BAB/Lotta** +5/+4. **RI 21**.
-**Mischia** stocco perfetto +5 (1d6−1). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
+**Mischia** stocco perfetto +5 (1d6−1/18-20). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
 **Attacco furtivo** +3d6.
 **Car** For 8, Des 18, Cos 12, Int 20, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **individuazione delle trappole**, schivare prodigioso, **prestidigitazione a distanza**.
@@ -56,3 +56,5 @@ Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *a
 Notes: unità di infiltrazione della compagnia di **Sonjak**, non un ammazza-PG. Il suo valore è **portare via qualcosa** e sparire. Da schierare 1 per incontro (2 al massimo, in un colpo di mano), tipicamente in copertura dietro `drow-warrior-cr1.md`/`drow-fighter3-cr4.md` o insieme a `drow-assassina-lolth-cr10.md`. Da solo è un EL 11: contro il party è un incontro **facile in combattimento e duro in conseguenze**.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): aggiunto **Tiro Ravvicinato**, prerequisito di Tiro Preciso; la scheda aveva 5 talenti su 6 (4 da 10 DV + 2 da mago), quindi nessun talento è stato tolto.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Mischia stocco perfetto» scritto (18-20, tabella delle armi dell'SRD).

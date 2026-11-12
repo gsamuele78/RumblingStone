@@ -16,7 +16,7 @@ ts: Temp +13, Rifl +4, Vol +12
 attributi: For 21 Des 10 Cos 23 Int 14 Sag 14 Car 24
 velocita: 12 m (9 m in armatura), volo 12 m (buono, Sop, a volontà)
 attacchi:
-  - Mischia spadone Large perfetto +13/+8 (3d6+7)
+  - Mischia spadone Large perfetto +13/+8 (3d6+7/19-20)
 ```
 
 
@@ -35,7 +35,7 @@ Large giant (ogre magi), LE.
 
 **Difesa** **CA 24** (−1 taglia, +5 naturale, +7 giaco di maglia +3 Large, +3 deflessione), contatto 12, colto alla sprovvista 24 — **28 con *scudo* attivo** · **hp 137** (**DV 5d8 + 10d4**, Stregone 10; Cos 23 con *amuleto di salute +6*) · **TS** Temp +13, Rifl +4, Vol +12 · **RI 19**, **Rigenerazione 5** (fuoco e acido infliggono danni normali)
 
-**Attacco** Vel 12 m (9 m in armatura), **volo 12 m (buono, Sop, a volontà)** · **Mischia** spadone Large perfetto +13/+8 (3d6+7).
+**Attacco** Vel 12 m (9 m in armatura), **volo 12 m (buono, Sop, a volontà)** · **Mischia** spadone Large perfetto +13/+8 (3d6+7/19-20).
 
 **Incantesimi da Stregone 10** (CL 10; **CD 17 + livello**, **+2 per le invocazioni**)
 | Liv | Al giorno | Conosciuti (SRD) |
@@ -150,3 +150,5 @@ Boost log: correzione dei conti (armatura naturale +5 e scurovisione 27 m dell'o
 - era: spadone Large +13/+8 senza qualità perfetta (con BAB +8, For 21 e taglia Large torna +12)
 - era: benchmark «estrapolato dalla riga 16»: CA 33, 280 pf, att +26, CD 26
 <!-- /storico -->
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Mischia spadone Large perfetto» scritto (19-20, tabella delle armi dell'SRD).

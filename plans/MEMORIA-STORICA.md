@@ -861,7 +861,30 @@ repo scritto con altre parole.
 - **Testo:** PR #371, passo della documentazione della milestone v1.1.0 chiesto dal DM il 2026-11-09: `dm.py sistemi`, ARCHITETTURA §19 (motore e plugin) e §20 (da dove viene un fatto), guida pratica dei sistemi di gioco e riferimento dei plugin (20 capacità al 2026-11-12). Card del DM del 2026-11-10: Diátaxis scelta «Riorganizzare docs/ subito» (alternativa B, contro la consigliata «regola per le nuove più etichette»), ADR-0117 accettata. `docs/` in `tutorials/`, `how-to/`, `reference/`, `explanation/`; le sezioni spostate tengono il numero e lasciano un rimando, così «GUIDA-MAPPE §5.1.2» negli ADR vecchi resta vero; `docs/tools/` e `docs/audit/` restano dove sono (superficie pubblica e registri della CI). Misura: file in una forma sola 5/14 → 15/21; link e percorsi rotti 0 → 0; ancore verso file del repo 0 rotte su 20. Restano misti 6 file, elencati in `plans/esperimenti/documentazione-2026-11-10/MISURA-DIATAXIS.md`. ADR-0123 era conteso col thread del volume dei booklet: il coordinatore l'ha lasciato alla #371 (precedente del 10/11), il volume rinumera. Sourcery e Codex non hanno revisionato la PR (budget esaurito). La #381, su cui la #371 si è riallineata, è entrata con il merge ba8b8edf (base 66ce69b6), che MS-0068 non riporta.
 - **Trovato nel repo:** `ADR-0123` → `plans/adr/ADR-0123-la-documentazione-segue-diataxis.md` · misura → `plans/esperimenti/documentazione-2026-11-10/MISURA-DIATAXIS.md` · traslochi → `docs/guides/README.md`
 - **Solo qui:** la contesa del numero 0123 e come si è chiusa; lo SHA del merge della #381 (ba8b8edf); l'assenza di revisione dei bot sulla #371
-### MS-0073 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
+
+### MS-0073 · 2026-11-12 · I limiti della d eufonica misurati seminando
+
+- **Data:** 2026-11-12
+- **PR:** #377
+- **ADR:** ADR-0120 ADR-0037
+- **Temi:** lingua prosa cancelli piattaforma
+- **Origine:** addendum della riga del 2026-11-11 «Punto 4, seguito: i limiti della *d* eufonica» in `plans/CHANGELOG.md`
+- **Testo:** PR #377, chiesta dal DM l'11/11 nel thread delle scelte dell'8/11: «si può vedere come superare i limiti, c'è un modo deterministico affidabile misurando il miglioramento?». Col corpus a zero contare i rilievi non distingue un rilevatore che legge da uno cieco, quindi la misura è un banco di semina: errori noti messi in una copia in memoria di ogni file di contenuto, e si conta quanti ne trova il rilevatore, posto per posto. Richiamo della regex 98,38% → 100% su 3.944 semi (692 file), rilievi nel codice 1 → 0, falsi 0; LanguageTool 84,25% perché svuota le tabelle. I 64 semi persi stavano in righe rientrate che per CommonMark sono prosa: `validate_lingua.py` ora legge 1.309 righe in più con tutti i suoi controlli. Card del DM del 12/11: «Parser CommonMark (markdown-it-py)» contro «Regola del repo, solo stdlib», scelta la prima (la consigliata); la regola stdlib resta come ripiego dichiarato. `<!-- sic -->` marca una citazione alla lettera. Il canale della d eufonica non cambia: testing fino al 2026-11-24. Sourcery e Codex non hanno revisionato la PR oltre la guida automatica (budget esaurito).
+- **Trovato nel repo:** `ADR-0120` → `plans/adr/ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md` (emendamento del 2026-11-11) · misura → `plans/esperimenti/d-eufonica-limiti-2026-11-11/RISULTATO.md` · libreria → `requirements.txt`, `LICENSES.md`
+- **Solo qui:** il testo della domanda del DM e della card; il metodo riusabile (quando un cancello è a zero il miglioramento si misura seminando errori noti); le 184 righe che la regola stdlib classifica in altro modo stanno quasi tutte in un file d'archivio di ARC-08 coi recinti di codice rotti, non corretto
+
+### MS-0074 · 2026-11-12 · ADR-0126 lotto 2: armi e danno
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 2» in `plans/CHANGELOG.md`
+- **Testo:** Lotto 2 del programma «regole senza omissioni». Capacità `creature.armi` (72 armi dell'SRD da «Table: Weapons», nomi italiani dal lessico, scala del dado per taglia) e `dmcore.danno`; `verifica_scheda` giudica dado, bonus e critico delle armi della tabella. Misura: errori messi apposta visti 0/364 → 336/364. Corrette 11 schede del Bestiario: 12 critici non scritti = numero della tabella; githyanki d'élite 1d10+3 → 1d10+4 (il più forte ricostruibile, ADR-0118). Non corretti e lasciati al DM 4 scarti di ARC-07: giavellotti di Zog'tar 1d8+13 (è il danno in Ira Superiore, Forza 36, e la riga non lo dice; fuori dall'Ira sarebbe +10), spadone delle guardie senza 19-20, martello runico di Balvar senza x3 nel master e nel Bestiario. Provato e tolto: correggere il master di ARC-07 e riallineare le copie con `componenti.py --includi` rompe le impronte dei manifest dei booklet (`ARC07-SERATA-RESURREZIONE-BOOKLET`, `ARC07-MILLE-ANNI-VOLUME`), `test_corredo` e `test_copertura_scene` (la copia di Balvar): chi lo farà deve rigenerare quelli nella stessa PR. Il PF1e eredita la capacità: le 72 armi del manuale base coincidono 72 su 72 (PSRD-Data). «Specialista del martello» (livello di sostituzione del chierico nano, Races of Stone) è una sorgente di +2 ai danni col martello da guerra, riscontrata nei dati PCGen: spiega Morlin e Ainin. Questioni aperte: attacchi naturali (lotto 5), armi dei manuali, danno aggiuntivo. Avviso mandato al thread della #370 per hobgoblin-captain-cr8 (critico aggiunto alla spada lunga).
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il riscontro PCGen su «specialista del martello»; quali test si rompono toccando il master di ARC-07
+
+### MS-0075 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
 
 - **Data:** 2026-11-12
 - **PR:** #370
