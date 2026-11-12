@@ -24,8 +24,9 @@ Traduzione dei campi PCGen nello schema di `sistemi/dnd35/dati/talenti.toml`:
 fra i non verificabili, non lo giudica.
 
 Uso
-  python3 estrai_pcgen.py PERCORSO_CLONE_PCGEN          # scrive il TOML
-  python3 estrai_pcgen.py PERCORSO_CLONE_PCGEN --check  # confronta
+  python3 estrai_dndtools.py scarica PAGINE             # le pagine dei manuali
+  python3 estrai_pcgen.py CLONE_PCGEN --dndtools PAGINE          # scrive il TOML
+  python3 estrai_pcgen.py CLONE_PCGEN --dndtools PAGINE --check  # confronta
 
 Clone (solo i file dei talenti WotC 3.5):
   git clone --depth 1 --filter=blob:none --sparse https://github.com/BahamutDragon/pcgen
@@ -40,6 +41,8 @@ import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(ROOT / "plans" / "esperimenti" / "regole-complete-2026-11-10"))
 OUT = ROOT / "sistemi" / "dnd35" / "dati" / "talenti_manuali.toml"
 SRD = ROOT / "sistemi" / "dnd35" / "dati" / "talenti.toml"
 CAR = {"STR": "For", "DEX": "Des", "CON": "Cos", "INT": "Int", "WIS": "Sag", "CHA": "Car"}
@@ -191,11 +194,60 @@ def leggi(clone: Path) -> "dict[str, dict]":
     return out
 
 
+CHIAVI = ("car", "bab", "lic", "classe", "gradi", "talenti", "capacita")
+
+
+def fondi(pcgen: "dict[str, dict]", cartella: Path) -> "tuple[dict[str, dict], str]":
+    """Le tabelle di srd.dndtools.org sopra i dati PCGen. Dove un talento sta in
+    tutte e due le fonti vince la tabella del manuale (è il testo del libro; i
+    campi PCGen sono codice di un programma e a volte saltano un requisito, per
+    esempio il BAB +6 di Two-Weapon Pounce), ma un prerequisito **leggibile**
+    che solo PCGen ha si aggiunge. Restituisce anche il conto del confronto."""
+    import estrai_dndtools as D
+    import estrai_talenti as E
+    srd = tomllib.loads(SRD.read_text(encoding="utf-8"))["talenti"]
+    noti = {E._k(n): n for n in list(srd) + list(pcgen)}
+    tab = D.leggi(cartella, noti)
+    out, uguali, diversi, solo_tab = dict(pcgen), 0, 0, 0
+    chiavi_srd = {E._k(n) for n in srd}
+    per_chiave = {E._k(n): n for n in pcgen}
+    for nome, t in tab.items():
+        if E._k(nome) in chiavi_srd:
+            continue
+        t = {**t, "dati": "dndtools"}
+        nome = per_chiave.get(E._k(nome), nome)
+        p = pcgen.get(nome)
+        if p is None:
+            solo_tab += 1
+            out[nome] = t
+            continue
+        stesso = all(sorted(p.get(k) or []) == sorted(t.get(k) or []) if k in ("talenti", "capacita")
+                     else (p.get(k) or 0) == (t.get(k) or 0) for k in CHIAVI)
+        uguali += stesso
+        diversi += not stesso
+        t["manuale"], t["tipi"], t["dati"] = p["manuale"], p.get("tipi"), "dndtools+pcgen"
+        for k in ("car", "classe", "gradi"):
+            if p.get(k):
+                t[k] = {**p[k], **t.get(k, {})}
+        for k in ("bab", "lic"):
+            if p.get(k) or t.get(k):
+                t[k] = max(p.get(k, 0), t.get(k, 0))
+        for k in ("talenti", "capacita"):
+            if p.get(k) or t.get(k):
+                t[k] = list(dict.fromkeys((t.get(k) or []) + (p.get(k) or [])))
+        out[nome] = t
+    conto = (f"tabelle srd.dndtools.org: {len(tab)} talenti; in comune con PCGen {uguali + diversi} "
+             f"({uguali} con gli stessi prerequisiti leggibili, {diversi} diversi); solo nelle tabelle {solo_tab}")
+    return out, conto
+
+
 def scrivi(d: "dict[str, dict]", commit: str) -> str:
     righe = [
         "# Talenti 3.5 dei manuali Wizards of the Coast fuori dall'SRD: nome, manuale, prerequisiti.",
         "# Generato da plans/esperimenti/talenti-manuali-35-2026-11-12/estrai_pcgen.py dai dati PCGen",
-        f"# di BahamutDragon/pcgen@{commit[:12]} (data/35e/wizards_of_the_coast/**/*feat*.lst).",
+        f"# di BahamutDragon/pcgen@{commit[:12]} (data/35e/wizards_of_the_coast/**/*feat*.lst) e dalle",
+        "# tabelle Feat/Prerequisite dei manuali su srd.dndtools.org (estrai_dndtools.py). `dati` dice",
+        "# da quale fonte viene la voce; dove ci sono tutte e due vince la tabella del manuale.",
         "# Solo i prerequisiti, che sono regole di gioco: niente testo dei manuali.",
         "# `altro` = prerequisito che la regola non sa leggere (non verificabile).",
         "# Si fonde in dmcore/talenti.py sotto i talenti dell'SRD: un nome dell'SRD vince sempre.",
@@ -205,6 +257,7 @@ def scrivi(d: "dict[str, dict]", commit: str) -> str:
         p = d[nome]
         righe.append(f"[talenti_manuali.{_q(nome)}]")
         righe.append(f"libro = {_q('3.5 ' + p['manuale'])}")
+        righe.append(f"dati = {_q(p.get('dati', 'pcgen'))}")
         if p.get("tipi"):
             righe.append("tipi = [" + ", ".join(_q(t) for t in p["tipi"]) + "]")
         for k in ("car", "classe", "gradi"):
@@ -228,7 +281,13 @@ def main(argv: "list[str]") -> int:
     clone = Path(argv[0])
     commit = subprocess.run(["git", "-C", str(clone), "rev-parse", "HEAD"], capture_output=True,
                             text=True, check=True).stdout.strip()
-    testo = scrivi(leggi(clone), commit)
+    d = leggi(clone)
+    for v in d.values():
+        v["dati"] = "pcgen"
+    if "--dndtools" in argv:
+        d, conto = fondi(d, Path(argv[argv.index("--dndtools") + 1]))
+        print(conto)
+    testo = scrivi(d, commit)
     if "--check" in argv:
         ok = OUT.is_file() and OUT.read_text(encoding="utf-8") == testo
         print("✓ talenti_manuali.toml aggiornato" if ok else "✗ talenti_manuali.toml da rigenerare")

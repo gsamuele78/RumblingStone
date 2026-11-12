@@ -124,14 +124,19 @@ che i prerequisiti mancanti si cerchino nel repo e in rete (PCGen compreso).
 - **SRD 3.5 completo**: i dati avevano solo `feats.md` (110 talenti).
   `estrai_talenti.py` ora legge anche i talenti dei mostri, epici, psionici e
   divini dell'SRD: **363**. L'impronta delle creature generate non cambia.
-- **Manuali 3.5 fuori SRD**: dndtools.net non risponde. I prerequisiti vengono
-  dai dati PCGen di BahamutDragon/pcgen (campi `PRExxx`), tradotti da
-  `plans/esperimenti/talenti-manuali-35-2026-11-12/estrai_pcgen.py` in
-  `sistemi/dnd35/dati/talenti_manuali.toml`: **2.037 talenti**, di cui 926 con
-  almeno un prerequisito che la regola non sa leggere (`altro`: taglia, razza,
-  tiro salvezza base, divinità). Si prendono solo nome, manuale e
-  prerequisiti, niente testo. Dei 3.998 nomi di `talenti_manuali_35.tsv`,
-  **1.846 restano senza prerequisiti** (manuali che PCGen non copre).
+- **Manuali 3.5 fuori SRD**: dndtools.net non risponde. Due fonti, fuse in
+  `sistemi/dnd35/dati/talenti_manuali.toml` (**2.193 talenti**) dagli script di
+  `plans/esperimenti/talenti-manuali-35-2026-11-12/`:
+  1. i dati PCGen di BahamutDragon/pcgen (campi `PRExxx`, 2.037 talenti);
+  2. le tabelle Feat/Prerequisite delle 138 pagine dei manuali di
+     srd.dndtools.org (1.553 talenti), lette con lo stesso lettore dell'SRD.
+  In comune 1.156: **803 con gli stessi prerequisiti leggibili, 353 diversi**.
+  Dove ci sono tutte e due vince la tabella del manuale e si aggiunge ciò che
+  solo PCGen legge (esempio: a Two-Weapon Pounce PCGen non mette il BAB +6).
+  1.126 talenti hanno almeno un prerequisito che la regola non sa leggere
+  (`altro`: taglia, razza, tiro salvezza base, divinità). Si prendono solo
+  nome, manuale e prerequisiti. Dei 3.998 nomi di `talenti_manuali_35.tsv`,
+  **1.715 restano senza prerequisiti** (riviste Dragon, web, parte di Eberron).
 - **PF1e** è l'ultima fonte: un nome che nessun libro 3.5 ha si verifica col PRD.
   Sul Bestiario di oggi non serve mai (0 casi), ma la prova c'è nel test.
 - Ogni voce porta `fonte` (`srd`, `srd-mostri`, `3.5 Complete Warrior`, `pf1e apg`).
@@ -144,15 +149,17 @@ che i prerequisiti mancanti si cerchino nel repo e in rete (PCGen compreso).
   e livelli di classe passano fra i non verificabili, con la nota che dice
   quali classi. Il mago specialista (Diviner 5) conta come mago.
 
-Bestiario dopo il giro: 73 schede con talenti, **22 violazioni in 11 schede**
-(21 da `srd`, 1 da `srd-mostri`: Colpo Terrificante senza Spingere
-Migliorato), 46 prerequisiti non verificabili (22 dei talenti dei mostri, come
-«velocità di volo»; 16 dei manuali; 8 dell'SRD), 15 nomi non riconosciuti (8
-sono pezzi di prosa presi per talenti, 7 nomi veri: Virata ×3, Critico
-Potente, Iniziato della Natura, Anima Forte, Specializzazione nello Scudo).
-Nessun talento dei manuali risulta violato sulle parti leggibili.
+Bestiario dopo il giro: 73 schede con talenti, **23 violazioni in 12 schede**
+(21 da `srd`; 1 da `srd-mostri`: Colpo Terrificante senza Spingere Migliorato;
+1 da un manuale: *Rend* del Draconomicon senza *Snatch*), 41 prerequisiti non
+verificabili, 15 nomi non riconosciuti (8 sono pezzi di prosa presi per
+talenti, 7 nomi veri: Virata ×3, Critico Potente, Iniziato della Natura, Anima
+Forte, Specializzazione nello Scudo).
 
-**Limite da dire**: il repo PCGen non dichiara una licenza. Qui entrano solo
+**Limiti da dire**: le due fonti non concordano su 353 talenti su 1.156, quindi
+una violazione che viene da un manuale va riletta sul libro prima di toccare la
+scheda. Il repo PCGen non dichiara una licenza, e srd.dndtools.org riporta
+testo di manuali non OGL. Qui entrano solo
 fatti di regola (nome, soglie), come già per gli indici dei nomi; se il DM
 preferisce non tenerli, `talenti_manuali.toml` si toglie e quei talenti
 tornano «non verificabili, fonte 3.5 manuale».
