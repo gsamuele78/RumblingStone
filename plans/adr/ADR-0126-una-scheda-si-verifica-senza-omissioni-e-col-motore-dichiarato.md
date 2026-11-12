@@ -409,6 +409,72 @@ nano): le altre restano un dubbio; i 3.5 dei manuali vengono dai tag di PCGen
 e non sono riscontrati sul libro. Il rigiudizio delle 7 violazioni di talenti
 rimaste dalla #378 resta fuori: aspetta la risposta del DM alla card.
 
+### Lotto 4 — il numero dei talenti (2026-11-12)
+
+Il generatore sapeva quanti talenti spettano a un personaggio
+(`dmcore.talenti.quanti`, dal lotto 3 delle regole complete); il verificatore
+no: controllava i prerequisiti di ogni talento, non quanti fossero. Una scheda
+con due talenti di troppo passava. Ora `verifica_scheda.numero_talenti` conta:
+
+- **quanti ne spettano**: i generali per dadi vita (3.5: 1 + 1 ogni 3; PF1e: uno
+  ai livelli dispari; i dadi vita razziali contano), i talenti bonus delle
+  classi (capacità `creature.talenti`), il talento dell'umano. Per il ladro il
+  conto è una forbice: una capacità speciale (3.5, dal 10°) o un talento da
+  ladro (PF1e) può essere un talento oppure no;
+- **quanti ne scrive la scheda**: le voci della riga, tolte quelle che la classe
+  concede per nome (Seguire Tracce del ranger, Scrivere Pergamene del mago, i
+  due del dominio della Guerra 3.5 se la scheda nomina il dominio) e quelle che
+  la scheda **dichiara** fuori dal conto accanto al nome: «(B)» del mostro,
+  «(razziale)», «(dominio)», «(difetto)», «(tratto)». Un nome che la lettura non
+  conosce è comunque un talento scritto e si conta.
+
+Regola `numero.talenti`: di più è una violazione, di meno pure (uno slot non
+speso è un'omissione). Resta un dubbio, mai una violazione, quando il conto non
+si può fare: una classe di cui il plugin non ha i talenti bonus (classi di
+prestigio e dei manuali 3.5), la composizione dei dadi vita non letta, un
+umanoide con più di tre dadi «razziali» e nessuna classe (sono livelli non
+letti), prosa finita nella riga dei talenti.
+
+I tre dati nuovi stanno in `talenti_in_piu.toml` dei due plugin (capacità
+`creature.costruzione`), scritti a mano
+con la fonte: umano +1 (SRD e PRD, «Humans»), dominio della Guerra 3.5,
+livelli a cui il ladro può scegliere un talento.
+
+| | Prima (main 74a6cf80) | Lotto 4 |
+|---|---|---|
+| Un talento in più o in meno messo apposta, visto da `verifica_scheda` | 0 su 127 | 101 su 127 (80%) |
+| di cui nelle schede di cui il conto si può fare | 0 su 101 | 101 su 101 |
+| nelle schede dove il conto è un dubbio (13 schede) | 0 su 26 | 0 su 26 |
+| Schede del Bestiario fuori conto | non misurate | 15 su 73 |
+| `verifica_scheda Bestiario 0*/` | 57 violazioni in 19 schede, 315 dubbi | 72 in 33, 321 dubbi |
+
+Banco: `muta_numero_talenti.py`, misure in `misure-numero-talenti.json`. Dieci
+mutazioni non entrano nel conto: cadono su una scheda già fuori conto e la
+rimettono in regola, non sono un errore messo apposta. Le violazioni salgono da
+57 a 72 perché il controllo vede di più: nessuna scheda è stata modificata.
+
+Cosa ha trovato, e **non è corretto**: quale talento togliere, aggiungere o
+dichiarare lo sceglie il DM. Quindici schede in un elenco «in attesa» nel test
+del cancello:
+
+- **di troppo** (11): `duergar-chierico3-cr4` (4 contro 2), `underdark-cleric-ainin-cr5`
+  (4 contro 2: ha i due talenti del dominio della Guerra ma la scheda non nomina
+  il dominio), `gnoll-hyenodon-rider-cr4` (3 contro 1), `ogre-skullcrusher-cr5`
+  (5 contro 3), `drow-wizard7-cr8`, `duergar-ladro1-cr1`, `duergar-mago3-cr4`,
+  `hell-hound-mezzoimmondo-cr4` (Seguire Tracce è il bonus del segugio: va
+  scritto «(B)»), `myconid-sovereign-cr7`, `warpriest-tiamat-cr7`,
+  `koth-signore-dei-dragoni-cr8` (uno di troppo ciascuna);
+- **in meno** (4): `bruto-deforme-sottosuolo-cr11` (4 contro 6),
+  `ogre-micelio-sporeborn-cr8`, `lomyn-redtongue-bardo8-cr8` e
+  `avarthel-druido-cr9` (uno in meno; gli ultimi due sono umani).
+
+Limiti dichiarati: i difetti (Arcani Rivelati) e i tratti si accettano solo se
+dichiarati, non si verifica che il personaggio li abbia; i talenti bonus dei
+mostri del manuale non sono nei dati, si riconoscono solo dal «(B)»; i talenti
+epici oltre il 20° non si contano a parte; gli «effetti dei talenti sui
+numeri» del piano non sono in questo lotto (`dmcore.talenti.effetti` li calcola
+per il generatore, il cancello ne riconosce una parte): restano da misurare.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore
