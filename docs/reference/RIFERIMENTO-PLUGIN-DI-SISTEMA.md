@@ -81,9 +81,12 @@ dichiara davvero), `catena` e `voci`.
 
 ## 5 · Il catalogo delle capacità
 
-Generato dal catalogo, dal manifest dei tool e dai plugin di main al
-2026-11-12 (c2cc7756). «Chi la chiede» è il campo `sistema.capacita` di
-`scripts/tools.manifest.json`.
+Una riga per ogni capacità di `sistemi/catalogo.toml`. «Chi la chiede» è il
+campo `sistema.capacita` di `scripts/tools.manifest.json` (le parentesi sono
+note); le colonne dnd35 e pf1e danno i `dati` di `sistema.toml` o il plugin da
+cui la capacità è ereditata. `scripts/tests/test_riferimento_plugin.py` lo
+controlla: una PR che cambia una capacità, chi la chiede o i suoi file
+aggiorna anche questa tabella.
 
 | Capacità | Cosa contiene | Chi la chiede | dnd35 | pf1e |
 |---|---|---|---|---|
@@ -201,6 +204,7 @@ albero, stesso risultato, nessuna rete, nessuna scrittura.
 | Un plugin d20 finto entra senza toccare il nucleo | `scripts/tests/test_prova_del_nove_2.py`, `test_sistemi_prova_del_nove.py` | suite |
 | Un plugin non d20 finto: chi lo lavora e chi lo rifiuta | `scripts/tests/test_prova_non_d20.py` | suite |
 | `verifica_scheda` dichiara nel manifest ogni capacità che legge | `scripts/tests/test_capacita_verifica_scheda.py` | suite |
+| Il §5 di questo file dice quello che dicono catalogo, manifest e plugin | `scripts/tests/test_riferimento_plugin.py` | suite |
 | Le schede PF1e tornano con le regole PF1e | `python3 scripts/conformita_statblocchi.py --cancello-moduli` | bloccante sui conti fatti |
 | Le tabelle dei plugin contro SRD e PRD | `plans/esperimenti/plugin-regole-2026-11-09/misura_plugin_regole.py` | no, in prova (ADR-0121) |
 
