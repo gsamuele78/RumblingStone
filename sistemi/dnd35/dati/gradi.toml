@@ -42,6 +42,7 @@ umano_per_livello = 1
 "sense motive" = "Sag"
 "sleight of hand" = "Des"
 "speak language" = ""
+"spellcraft" = "Int"
 "spot" = "Sag"
 "survival" = "Sag"
 "swim" = "For"

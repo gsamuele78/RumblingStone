@@ -21,6 +21,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
 "creature.armi" = { dati = ["sistemi/dnd35/dati/armi.toml"], nota = "SRD 3.5, Equipment, «Table: Weapons» e «Weapon Size»; scritto da estrai_armi.py" }
 "creature.incantatori" = { dati = ["sistemi/dnd35/dati/incantatori.toml"], nota = "SRD 3.5, tabelle delle classi e «Table: Ability Modifiers and Bonus Spells»; scritto da estrai_incantatori.py" }
+"creature.prestigio" = { dati = ["sistemi/dnd35/dati/prestigio.toml"], nota = "SRD 3.5 (Prestige Classes) e, per le classi dei manuali, i tag PRE di PCGen; scritto da estrai_prestigio.py. Solo nomi e numeri: i requisiti speciali sono contati, non copiati" }
 "bonus.cumulo" = { eredita = "d20", motivo = "il cumulo dei bonus per tipo è lo stesso in 3.5 e PF1e (SRD e PRD, «Bonus Types»)" }
 "lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
 "lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }

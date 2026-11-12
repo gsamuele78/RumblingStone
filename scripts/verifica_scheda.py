@@ -21,6 +21,10 @@ Scopo
     incantatori  incantesimi al giorno (tabella della classe, incantesimi
              bonus, slot di dominio o di scuola), conosciuti, livello massimo
              lanciabile e CD (capacità `creature.incantatori`; ADR-0126, lotto 3)
+    prestigio  i requisiti delle classi di prestigio: bonus di attacco base
+             delle altre classi, gradi (massimo prima dell'ingresso e abilità
+             scritta), talenti, razza, allineamento, livello d'incantesimo
+             (capacità `creature.prestigio`; ADR-0126, lotto 3-bis)
 
   Le regole sono quelle del plugin del sistema della scheda (`sistemi/<id>`).
   Un conto che il plugin non sa fare non compare: `non_verificabili` dice che
@@ -647,6 +651,112 @@ def incantatori(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+def _prestigio_en(nome: str, sistema: str) -> "str | None":
+    """Il nome inglese della classe di prestigio, se il plugin ne ha i requisiti."""
+    from dmcore import prestigio as PR
+    k = nome.strip().lower()
+    return next((c for c in (k, VT.T._ALIAS.get(k, k), _classi_it().get(k, k)) if PR.classe(c, sistema)), None)
+
+
+def _gradi_che_il_bonus_regge(s: "L.Scheda", sistema: str) -> "tuple[dict[str, int], set[str]] | None":
+    """{abilità: bonus scritto − modificatore di caratteristica} e le abilità di
+    Forza e Destrezza, dove la penalità di armatura può nascondere dei gradi."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    from dmcore.magia import mod as M_mod
+    riga = next((m.group(1) for r in s.testo.splitlines()
+                 if (m := RIGA_ABILITA.search(r)) and re.search(r"[+−-]\d", m.group(1))), None)
+    if riga is None:
+        return None
+    chiave = S.dati(sistema, "creature.gradi")["chiave"]
+    car = {k: v for k, v in s.attributi.items() if isinstance(v, int)}
+    regge: dict[str, int] = {}
+    for nome, _, bonus in VOCE_ABILITA.findall(re.sub(r"[*_`]", "", riga)):
+        en = _abilita_it().get(LR.norma(nome.strip()), nome.strip().lower())
+        en = next((k for k in chiave if en == k or en.startswith(k + " ")), None)
+        if en is None:
+            continue
+        mod = M_mod(car.get(chiave[en], 10)) if chiave[en] else 0
+        regge[en] = max(regge.get(en, -99), int(bonus.replace("−", "-")) - mod)
+    return regge, {k for k, c in chiave.items() if c in ("For", "Des")}
+
+
+def prestigio(p: Path) -> "tuple[list[dict], list[dict]]":
+    """(violazioni, non verificabili) dei requisiti delle classi di prestigio
+    (ADR-0126, lotto 3-bis). Regole `prestigio.bab`, `.gradi.massimo`, `.gradi`,
+    `.talenti`, `.razza`, `.allineamento`, `.incantesimi`; i requisiti che non
+    si riducono a un numero vanno fra i non verificabili (`prestigio.speciali`)."""
+    import lessico_regole as LR
+    from dmcore import prestigio as PR
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    f = VT.leggi(p) or {}
+    sistema = VT.sistema_di(p, s.testo)
+    livelli = dict(f.get("livelli") or L.livelli_di_classe(s))
+    ignote = []
+    for voce in f.get("classi_ignote") or []:
+        nome, _, n = voce.rpartition(" ")
+        livelli[nome.lower()] = livelli.get(nome.lower(), 0) + int(n)
+        ignote.append(nome.lower())
+    righe = s.testo.splitlines()
+    n_riga = next((i + 1 for i, r in enumerate(righe) if r.lower().startswith("tipo:")), 1)
+    base = {"file": VT_rel(p), "riga": n_riga, "verifica": "prestigio"}
+    try:
+        dati = PR.requisiti(sistema)
+    except S.ErroreSistemi:
+        dati = None
+    costruzione = S.dati(sistema, "creature.costruzione")
+    di_prestigio = {**costruzione.get("prestigio", {}),
+                    **{k: v for k, v in costruzione.get("classi_manuali", {}).items() if v.get("prestigio")}}
+    viol, nv = [], []
+    for nome, n in livelli.items():
+        k = nome.lower()
+        en = _prestigio_en(nome, sistema) if dati else None
+        if en is None:
+            if any(c in di_prestigio for c in (k, VT.T._ALIAS.get(k, k), _classi_it().get(k, k))):
+                nv.append({**base, "regola": "prestigio", "fonte": sistema,
+                           "testo": f"{nome} {n}: classe di prestigio senza requisiti nel plugin {sistema}"})
+            continue
+        req = PR.classe(en, sistema)
+        tot = max(sum(g.n for g in s.gruppi), sum(livelli.values()))
+        altri = [g for g in s.gruppi if g.nome.lower() != k]
+        bab_prima = None
+        if s.composizione_nota and len(altri) == len(s.gruppi) - 1 and sum(g.n for g in s.gruppi) == tot <= 20:
+            bab_prima = PR.bab_di(altri)
+        gradi = _gradi_che_il_bonus_regge(s, sistema)
+        scritti = (f.get("talenti") or []) + (f.get("senza_regole") or [])
+        fatti = {
+            "bab_prima": bab_prima,
+            "gradi_massimi": tot - n + S.dati(sistema, "creature.gradi")["regole"]["massimo_piu"],
+            "abilita": gradi[0] if gradi else None, "incerte": gradi[1] if gradi else (),
+            "talenti": {PR.senza_parentesi(x["en"]) for x in scritti}
+                       | {PR.senza_parentesi(x) for x in VT.talenti_concessi({c: v for c, v in livelli.items() if c != nome})},
+            "talenti_ignoti": bool(f.get("ignoti")) or not f,
+            "razza": s.tipo or "",
+            "razze_it": {v["srd35"].lower(): (v["it"].lower(),) for v in LR.tabella_35() if v["tipo"] == "razza"},
+            "allineamento": (f.get("fisici") or VT.fatti_fisici(s))["allineamento"],
+            "classi": {x: v for c, v in livelli.items() if c != nome for x in (c, VT.T._ALIAS.get(c, c))},
+            "car": {k: v for k, v in s.attributi.items() if isinstance(v, int)},
+            "classi_ignote": any(c in ignote or c in di_prestigio or _classi_it().get(c, c) in di_prestigio
+                                 for c in livelli if c != nome),
+        }
+        scarti, incerti = PR.giudica(req, fatti, sistema)
+        chi = f"{nome} {n}"
+        if req.get("diverge"):      # più libri danno requisiti diversi: lo scarto è un dubbio
+            incerti = [{**x, "nota": x["nota"] + " (la classe ha requisiti diversi in più manuali)"}
+                       for x in scarti] + incerti
+            scarti = []
+        for x in scarti:
+            viol.append({**base, "fonte": req["fonte"], "regola": f"prestigio.{x['campo']}",
+                         "atteso": x["atteso"], "ha": x["scritto"], "testo": f"{chi}: {x['nota']}"})
+        for x in incerti:
+            nv.append({**base, "fonte": req["fonte"], "regola": f"prestigio.{x['campo']}",
+                       "testo": f"{chi}: {x['nota']}"})
+    return viol, nv
+
+
 def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
     """La CA dei recinti della scheda, ricostruita dalle sue voci (ADR-0126, lotto 1-bis)."""
     import conformita_statblocchi as C
@@ -738,10 +848,11 @@ def main(argv: "list[str] | None" = None) -> int:
         cv, cn = classe_armatura(p)
         dv, dn = danno(p)
         mv, mn = incantatori(p)
+        pv, pn = prestigio(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
-                      or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv
-        nv += tn + ti + nn + cn + dn + an + inn + mn
+                      or pv or pn or L.leggi(p))
+        viol += tv + nvv + cv + dv + av + iv + mv + pv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)
