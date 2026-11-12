@@ -388,3 +388,14 @@ classi di prestigio, le capacità di classe che toccano i numeri, il rigiudizio
 delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON per scheda
 per il thread della #379.
 
+### Lotto 4 chiuso (2026-11-12)
+
+Gli effetti dei talenti sulle abilità sono nel conto dei gradi (ADR-0126,
+«Lotto 4, seconda parte»): `estrai_effetti_talenti.py`, `muta_effetti_talenti.py`,
+`misure-effetti-talenti.json`. Gli altri effetti (pf, tiri salvezza, iniziativa,
+attacco, danno) erano già nei conti. Restano, fuori dal lotto 4: l'avanzamento
+d'incantatore delle classi di prestigio, le capacità di classe che toccano i
+numeri, il rigiudizio delle 7 violazioni di talenti (card aperta al DM),
+l'uscita JSON per scheda per il thread della #379, e Autoipnosi fra le abilità
+3.5 del plugin.
+

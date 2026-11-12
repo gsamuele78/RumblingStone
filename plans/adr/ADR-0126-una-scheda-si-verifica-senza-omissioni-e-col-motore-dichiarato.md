@@ -484,6 +484,52 @@ epici oltre il 20° non si contano a parte; gli «effetti dei talenti sui
 numeri» del piano non sono in questo lotto (`dmcore.talenti.effetti` li calcola
 per il generatore, il cancello ne riconosce una parte): restano da misurare.
 
+### Lotto 4, seconda parte — gli effetti dei talenti sulle abilità (2026-11-12)
+
+**Contesto.** Degli effetti dei talenti sui numeri, i conti di scheda
+coprivano già pf (Robustezza), tiri salvezza (Tempra Possente, Riflessi
+Fulminei, Volontà di Ferro), iniziativa (Iniziativa Migliorata), attacco (Arma
+Focalizzata e Superiore, Arma Accurata) e danno (Arma Specializzata, lotto 2).
+Restavano le abilità. Il conto dei gradi dava 3 punti di margine a **tutte** le
+abilità di una scheda che nominasse, in qualsiasi punto del testo, un talento
+d'abilità: «Allerta» alzava il tetto anche di Scalare, e bastava la parola
+«agile» o «furtivo» in una frase («attacco furtivo») per avere il margine.
+
+**Decisione.** Il bonus va solo alle abilità che il talento nomina, col suo
+numero, e i numeri stanno nel plugin: `sistemi/dnd35/dati/effetti_talenti.toml`
+(19 talenti: i quindici da +2 a due abilità e Abilità Focalizzata dell'SRD,
+Abilità Focalizzata Epica, i due psionici) e `sistemi/pf1e/dati/effetti_talenti.toml`
+(11 talenti del manuale base, col bonus che raddoppia a 10 gradi), generati da
+`estrai_effetti_talenti.py` dalla riga «Benefit» delle fonti, solo nomi e
+numeri, e letti dalla capacità `creature.gradi`. L'abilità scelta di Abilità
+Focalizzata si legge fra parentesi; se manca, il bonus vale per tutte. Un
+talento nominato fuori dalla riga dei talenti («Allerta dal famiglio», o una
+riga dei talenti che la lettura non trova) vale lo stesso, ma solo sulle sue
+abilità. In PF1e si prende il bonus alto quando i dadi vita permettono 10 gradi.
+
+**Misura** (`muta_effetti_talenti.py`, `misure-effetti-talenti.json`): nelle 10
+schede del Bestiario che nominano un talento d'abilità, il bonus di ogni abilità
+alzato al valore più alto che il conto di prima accettava.
+
+| | Prima (main 813213e4) | Dopo |
+|---|---|---|
+| Abilità fuori regola messe apposta, viste | 0 su 44 | 44 su 44 |
+| Abilità in regola (talento da +3 proprio su quella) segnate a torto | 0 su 2 | 0 su 2 |
+| `verifica_scheda Bestiario 0*/` | 72 violazioni, 321 dubbi | 72 violazioni, 321 dubbi |
+
+**Conseguenze e limiti dichiarati.** Nessuna scheda vera cambia giudizio: il
+conto dei gradi resta una condizione necessaria con un margine di 4 o più punti
+(sinergia, razza), e vede gli errori grossi. Il banco tocca solo 10 schede,
+perché solo quelle nominano un talento d'abilità. Il bonus PF1e a 10 gradi si
+concede a chi ha 10 dadi vita, senza sapere se i gradi ci sono davvero.
+«Furtivo» in «attacco furtivo» conta ancora come il talento Furtivo quando la
+riga dei talenti non ne ha (ora solo su Nascondersi e Muoversi Silenziosamente,
+prima su tutte). I talenti dei manuali che alzano un'abilità non sono nei dati.
+Autoipnosi manca dalle abilità 3.5 del plugin (`gradi.toml`): il bonus di
+«Autonomous» su quella non si applica. Gli effetti condizionali (Schivare,
+Incantare in Combattimento, Resistenza Fisica) non spostano un numero scritto e
+restano fuori. Con questo il lotto 4 del piano è chiuso.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore

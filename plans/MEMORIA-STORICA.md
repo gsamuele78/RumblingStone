@@ -938,3 +938,14 @@ repo scritto con altre parole.
 - **Testo:** Lotto 4 del programma «regole senza omissioni». `verifica_scheda.numero_talenti` (regola `numero.talenti`) conta i talenti scritti contro quelli che spettano per dadi vita, talenti bonus di classe e razza umana; fuori dal conto i concessi dalla classe e quelli dichiarati accanto al nome. Un talento in più o in meno messo apposta: 101 su 127. Quindici schede del Bestiario fuori conto, non corrette.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il conto esisteva già nel generatore (`dmcore.talenti.quanti`) ma le chiavi dei talenti bonus 3.5 sono in italiano («guerriero») e la lettura delle schede dà le classi in inglese: senza alias il guerriero 8 risultava con 3 talenti invece di 8; `quanti` somma anche i «concessi» (Seguire Tracce, Scrivere Pergamene), che una scheda può scrivere o no, per questo il verificatore li toglie dai scritti invece di aggiungerli agli attesi; i dadi vita di `verifica_talenti.leggi` sono la somma dei gruppi letti e per un mostro con una classe possono essere solo i livelli (minotauro 6 + barbaro 1 dava 1): serve `dv_totali`; un nome sconosciuto alla lettura va contato come talento, altrimenti ogni scheda con un talento dei manuali esce dal controllo (al primo giro il banco dava 91 su 127 per questo).
+
+### MS-0080 · 2026-11-12 · ADR-0126 lotto 4: effetti dei talenti sulle abilità
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 4, seconda parte» in `plans/CHANGELOG.md`
+- **Testo:** Seconda parte del lotto 4 del programma «regole senza omissioni». Nel conto dei gradi di `verifica_scheda` il bonus di un talento d'abilità va solo alle abilità che il talento nomina, col numero del plugin (`effetti_talenti.toml` di 3.5 e PF1e, capacità `creature.gradi`, generati da `estrai_effetti_talenti.py`). Banco `muta_effetti_talenti.py`: 44 errori su 44 visti, prima 0; 2 controlli in regola, nessuno segnato a torto; il Bestiario resta a 72 violazioni.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** degli effetti dei talenti sui numeri, pf, tiri salvezza, iniziativa, attacco e danno erano già nei conti (`conformita_statblocchi`, `dmcore.danno`): mancavano solo le abilità; il margine di prima scattava su una parola nel testo, e «furtivo» di «attacco furtivo» o «agile» in una frase bastavano; il banco tocca solo 10 schede perché solo quelle nominano un talento d'abilità; Autoipnosi manca da `gradi.toml` (l'estrattore dei gradi legge la tabella riassuntiva delle abilità, che non ha le psioniche fuori da Psicraft e Usare Oggetti Psionici).

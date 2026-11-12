@@ -148,7 +148,8 @@ def talenti(p: Path) -> "tuple[list[dict], list[dict], list[dict]]":
 #: riga delle abilità: «**Abilità**: Ascoltare +12, …», «Skills: Hide +5, …»
 RIGA_ABILITA = re.compile(r"(?:^|[\s*·])(?:Abilit[àa]|Skills)\**:?\**\s+(?=[A-ZÀ-Ý])(.+?)(?=\s·\s|\s\*\*[A-ZÀ-Ý]|$)")
 VOCE_ABILITA = re.compile(r"([A-Za-zÀ-ú' ]+?)(?:\s*\(([^)]*)\))?\s*([+\-−]\d+)")
-#: talenti che danno +2 a due abilità o +3 a una: margine quando la scheda li ha
+#: talenti che danno +2 a due abilità o +3 a una, nominati fuori dalla riga dei talenti:
+#: lì non si sa su quale abilità, e il margine vale per tutte
 TALENTI_ABILITA = re.compile(r"Skill Focus|Abilità Focalizzata|Alertness|Allerta|Acrobatic|Agile|Athletic|Atletico|"
                              r"Deceitful|Deft Hands|Diligent|Investigator|Magical Aptitude|Negotiator|Nimble Fingers|"
                              r"Persuasive|Persuasivo|Self-Sufficient|Stealthy|Furtivo|Animal Affinity", re.I)
@@ -175,12 +176,58 @@ def _punti_di_classe(regole: dict, classe: str) -> "int | None":
     return v.get("gradi") if isinstance(v, dict) else v
 
 
+def _bonus_dei_talenti(nomi: "list[str]", sistema: str, effetti: dict, chiave: dict,
+                       dv: int) -> "tuple[dict[str, int], int]":
+    """({abilità: bonus}, bonus su tutte) che i talenti scritti danno alle abilità.
+
+    I numeri sono del plugin (`effetti_talenti`): +2 a due abilità, +3 a una
+    scelta. L'abilità scelta sta fra parentesi accanto al talento; se non si
+    legge, il bonus vale per tutte (il conto resta una condizione necessaria).
+    Dove il bonus cresce coi gradi (PF1e) si prende il più alto che i dadi vita
+    permettono. Bonus di talenti diversi sulla stessa abilità si sommano."""
+    import lessico_regole as LR
+    per: dict[str, int] = {}
+    a_tutte = 0
+    for nome in nomi:
+        r = VT.risolvi(sistema, nome)
+        e = effetti.get((r or {}).get("en", "").lower())
+        if not e:
+            continue
+        b = e["bonus_con_gradi"] if dv >= e.get("con_gradi", 10 ** 6) else e["bonus"]
+        if e.get("a_scelta"):
+            m = re.search(r"[(:]\s*([^)]+)", nome)
+            en = _abilita_it().get(LR.norma(m.group(1).strip()), m.group(1).strip().lower()) if m else None
+            en = next((k for k in chiave if en and (en == k or en.startswith(k + " "))), None)
+            if en is None:
+                a_tutte = max(a_tutte, b)
+            else:
+                per[en] = per.get(en, 0) + b
+            continue
+        for a in e.get("abilita", []):
+            k = next((k for k in chiave if a == k or a.startswith(k + " ")), a)
+            per[k] = per.get(k, 0) + b
+    return per, a_tutte
+
+
+def _talenti_d_abilita(nomi: "list[str]", testo: str, sistema: str, regole: dict,
+                       dv: int) -> "tuple[dict[str, int], int]":
+    """Il bonus dei talenti sulle abilità: dalla riga dei talenti, e se lì non ce
+    n'è da dove il testo li nomina («Allerta dal famiglio», una riga dei talenti
+    che la lettura non trova): valgono lo stesso, sulle loro abilità."""
+    effetti, chiave = regole.get("effetti_talenti", {}), regole["chiave"]
+    per, a_tutte = _bonus_dei_talenti(nomi, sistema, effetti, chiave, dv)
+    if not per and not a_tutte:
+        altrove = [m.group(0) for m in re.finditer(rf"(?:{TALENTI_ABILITA.pattern})(?:\s*\([^)]*\))?", testo, re.I)]
+        per, a_tutte = _bonus_dei_talenti(list(dict.fromkeys(altrove)), sistema, effetti, chiave, dv)
+    return per, a_tutte
+
+
 def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     """(violazioni, non verificabili) dei gradi delle abilità.
 
     La scheda scrive il bonus totale, non i gradi: i gradi **minimi** che un
     bonus chiede sono bonus − modificatore della caratteristica chiave − margine
-    (sinergia +2, razza, talenti). Due regole, tutte e due condizioni necessarie:
+    (sinergia +2, razza) − il bonus dei talenti su quell'abilità. Due regole, tutte e due condizioni necessarie:
       gradi.massimo  i gradi minimi di un'abilità non superano il massimo
                      (3.5: dadi vita + 3; PF1e: dadi vita, più 3 d'abilità di classe)
       gradi.punti    la somma dei gradi minimi non supera i punti abilità che
@@ -245,11 +292,11 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     umano = bool(re.search(r"\b(?:human|umano|umana)\b", s.testo[:1500], re.I))
     punti += (dv + r["primo_dado"] - 1) * r["umano_per_livello"] if umano else 0
     massimo = dv + r["massimo_piu"] + r.get("bonus_di_classe", 0)
-    # margine: sinergia o oggetto +2; razza +2 (mostri: +4, o +8 se la scheda parla di bonus razziali);
-    # +3 se la scheda ha un talento che alza le abilità
+    # margine: sinergia o oggetto +2; razza +2 (mostri: +4, o +8 se la scheda parla di bonus razziali).
+    # Il bonus dei talenti non è margine: va solo alle abilità che il talento nomina.
     margine = 2 + (8 if re.search(r"razzial|racial", s.testo, re.I) else 4 if razziali else 2)
-    margine += 3 if TALENTI_ABILITA.search(s.testo) else 0
     chiave = regole["chiave"]
+    da_talento, a_tutte = _talenti_d_abilita(f.get("nomi") or [], s.testo, sistema, regole, dv)
     viol, nv, somma, lette = [], [], 0, 0
     for nome, _, bonus in VOCE_ABILITA.findall(re.sub(r"[*_`]", "", riga)):
         nome = nome.strip()
@@ -259,12 +306,14 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
             continue
         lette += 1
         mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
-        minimi = int(bonus.replace("−", "-")) - mod - margine
+        talento = max(da_talento.get(en, 0), a_tutte)
+        minimi = int(bonus.replace("−", "-")) - mod - margine - talento
         somma += max(0, minimi)
         if minimi > massimo:
             viol.append({**base, "regola": "gradi.massimo", "abilita": en, "atteso": massimo, "ha": minimi,
                          "testo": f"{nome} {bonus}: servono almeno {minimi} gradi "
-                                  f"(tolti {mod:+d} di caratteristica e {margine} di margine), il massimo è {massimo}"})
+                                  f"(tolti {mod:+d} di caratteristica, {margine} di margine"
+                                  + (f" e {talento} dei talenti" if talento else "") + f"), il massimo è {massimo}"})
     if sconosciute:
         nv.append({**base, "regola": "gradi.punti", "testo": "punti abilità non calcolabili: "
                    + ", ".join(sconosciute) + " fuori dalle regole del plugin"})
