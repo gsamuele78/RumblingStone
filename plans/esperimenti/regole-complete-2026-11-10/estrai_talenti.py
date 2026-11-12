@@ -403,18 +403,39 @@ def incantatori_pf1e(base: Path) -> "dict[str, dict[str, int]]":
 
 # ------------------------------------------------------------------ 3.5
 
+#: I file dei talenti dell'SRD 3.5 e il `libro` che ognuno scrive nei dati.
+#: Fino al 2026-11-11 si leggeva solo feats.md: i talenti dei mostri (Multiattacco,
+#: Attacco in Volo, Armatura Naturale Migliorata), epici, divini e psionici
+#: dell'SRD restavano «ignoti» al controllo delle schede (ADR-0124).
+FILE_TALENTI_35 = (("basic-rules-and-legal/feats.md", "srd"),
+                   ("monsters/monster-feats.md", "srd-mostri"),
+                   ("epic/epic-feats.md", "srd-epici"),
+                   ("divine/divine-abilities-and-feats.md", "srd-divini"),
+                   ("psionics/psionic-feats.md", "srd-psionici"))
+
+
+def _blocchi_35(base: Path):
+    """(libro, blocco) di ogni talento dei file dell'SRD, il primo file vince."""
+    for rel, libro in FILE_TALENTI_35:
+        f = base / SRD / rel
+        if not f.exists():
+            continue
+        for b in re.split(r"\n#{2,3} ", f.read_text(encoding="utf-8"))[1:]:
+            yield libro, b
+
+
 def talenti_35(base: Path) -> "tuple[dict, set]":
-    testo = (base / SRD / "basic-rules-and-legal/feats.md").read_text(encoding="utf-8")
-    blocchi = re.split(r"\n### ", testo)[1:]
     grezzi, guerriero = {}, set()
-    for b in blocchi:
+    for libro, b in _blocchi_35(base):
         testa = b.split("\n", 1)[0]
         m = re.match(r"(.+?)\s*<small>\[(.+?)\]</small>", testa)
         if not m or m.group(1) == "Feat Name":
             continue
         nome, tipi = m.group(1).strip(), [x.strip() for x in m.group(2).split(",")]
+        if nome in grezzi:
+            continue
         pre = re.search(r"\*\*Prerequisites?:\*\*\s*(.+)", b)
-        grezzi[nome] = {"tipi": tipi, "pre": pre.group(1) if pre else ""}
+        grezzi[nome] = {"tipi": tipi, "pre": pre.group(1) if pre else "", "libro": libro}
         if re.search(r"fighter may select .+? as one of his fighter bonus feats", b, re.I):
             guerriero.add(nome)
     noti = {_k(n): n for n in grezzi}
@@ -422,7 +443,7 @@ def talenti_35(base: Path) -> "tuple[dict, set]":
     out = {}
     for nome, g in grezzi.items():
         tipi = g["tipi"] + (["Fighter"] if nome in guerriero else [])
-        out[nome] = {"it": it.get(_k(nome), ""), "tipi": sorted(set(tipi)), "libro": "srd",
+        out[nome] = {"it": it.get(_k(nome), ""), "tipi": sorted(set(tipi)), "libro": g["libro"],
                      **prerequisiti(g["pre"], noti)}
     return out, guerriero
 

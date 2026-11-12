@@ -119,12 +119,18 @@ class IncantatoriEProfiliDalPlugin(unittest.TestCase):
     MODULI = {"T": T, "P": P, "C": C}
 
     def test_stessi_valori_di_prima(self):
+        # Le classi dei manuali fuori SRD (classi_manuali.toml, ADR-0124 §8) si
+        # aggiungono: la parte SRD deve restare quella di prima.
         for chiave, attesa in IMPRONTE_L5B.items():
             modulo, nome = chiave.split(".")
-            self.assertEqual(impronta(getattr(self.MODULI[modulo], nome)), attesa, chiave)
+            valore = getattr(self.MODULI[modulo], nome)
+            if chiave in ("P.PRESTIGIO", "P.DADO_DI_CLASSE"):
+                valore = {k: v for k, v in valore.items() if k not in P.MANUALI}
+            self.assertEqual(impronta(valore), attesa, chiave)
 
     def test_nomi_di_classe_stesso_insieme(self):
-        self.assertEqual(impronta(frozenset(P.NOMI_DI_CLASSE)), "692243b47b976b91")
+        self.assertEqual(impronta(frozenset(P.NOMI_DI_CLASSE) - P.MANUALI), "692243b47b976b91")
+        self.assertGreater(len(P.MANUALI), 500)
 
     def test_alias_restano_la_stessa_griglia(self):
         self.assertIs(T.DRUIDO, T.CHIERICO)

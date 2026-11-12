@@ -34,6 +34,9 @@ skill = []
 "creature.incantesimi" = { eredita = "dnd35", motivo = "stesse liste" }
 "creature.regole_di_tipo" = { eredita = "dnd35", motivo = "stesse regole di tipo" }
 "creature.conformita" = { eredita = "dnd35", motivo = "stessi conti" }
+"creature.talenti" = { eredita = "dnd35", motivo = "stessi talenti" }
+"creature.gradi" = { eredita = "dnd35", motivo = "stessi gradi" }
+"creature.liste_incantesimi" = { eredita = "dnd35", motivo = "stesse liste" }
 
 [moduli]
 piu_forte = "incontri:piu_forte"

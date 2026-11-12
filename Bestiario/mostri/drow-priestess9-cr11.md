@@ -7,7 +7,7 @@ ca: 22
 ca-dettaglio: (+8 +1 full plate, +3 Dex, +1 light shield)
 pf: 49
 pf-dado: 9d8+9
-ts: Temp +7, Rifl +6, Vol +11
+ts: Temp +7, Rifl +7, Vol +11
 attributi: For 12 Des 16 Cos 12 Int 14 Sag 19 Car 16
 velocita: 20 ft
 iniziativa: +3
@@ -17,7 +17,7 @@ iniziativa: +3
 
 **Size/Type**: Medium humanoid (elf) | **HD**: 9d8+9 (49 HP)
 **AC**: 22 (+8 +1 full plate, +3 Dex, +1 light shield) | **Init**: +3 | **Speed**: 20 ft
-**Saves**: Fort +7, Ref +6, Will +11 | **BAB/Grapple**: +6/+7
+**Saves**: Fort +7, Ref +7, Will +11 (mantello della resistenza +1 incluso) | **BAB/Grapple**: +6/+7
 **Attacks**: +1 snake-headed whip/scourge +8/+3 (1d4+2 + 1d6 poison on bite)
 **Abilities**: Str 12, Dex 16, Con 12, Int 14, Wis 19, Cha 16
 **Domains**: Evil, Destruction (or Drow, Trickery — FRCS)
@@ -26,3 +26,5 @@ iniziativa: +3
 **SR**: 20 | **SLA**: *clairaudience/clairvoyance, detect good, detect magic, dispel magic, levitate, suggestion* (CL 9)
 **Feats**: Combat Casting, Spell Focus (evocation), Extra Turning, Divine Metamagic (Extend, CD), Improved Counterspell
 **Notes**: Usata per Notte dei Drow Fase 0 + rituale Spider-Kiss. Matrona Sajak simile ma CR 13-14.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Volontà +11 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Riflessi +6 → **+7**. Prezzo da ricontrollare col lotto della ricchezza per livello.
