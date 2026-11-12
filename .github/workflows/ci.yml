@@ -124,6 +124,10 @@ jobs:
       - name: La memoria è allineata (MEMORIA.md, ADR-0087)
         run: python scripts/memoria.py --check
 
+      # ADR-0127: la memoria storica resta cercabile e collegata al changelog
+      - name: La memoria storica è in forma (plans/MEMORIA-STORICA.md, ADR-0127)
+        run: python scripts/memoria_storica.py --check
+
       - name: Plans discipline gate — CHANGELOG obbligatorio + promemoria ADR (ADR-0009)
         if: github.event_name == 'pull_request'
         run: python scripts/check_plans_discipline.py --base "origin/${{ github.base_ref }}"

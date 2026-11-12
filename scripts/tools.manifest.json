@@ -2223,6 +2223,162 @@
       "idempotent": true
     },
     {
+      "id": "memoria_storica",
+      "path": "scripts/memoria_storica.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/memoria_storica.py [PAROLE ...] [--pr N] [--adr N] [--tema T] [--da DATA] [--a DATA] [--id MS-NNNN] [--elenco] [--json] [--check]",
+      "summary": "ADR-0127: la storia del lavoro che esce dalla memoria corta delle sessioni. Legge plans/MEMORIA-STORICA.md (una voce MS-NNNN per riga tolta dalla memoria del progetto, con data, PR, ADR, temi, testo intero, dove il fatto si ritrova nel repo e cosa c'è solo lì) e restituisce le voci che passano tutti i filtri: PR, ADR, tema, intervallo di date, id, parole (senza badare a maiuscole e accenti). --json è l'uscita per un agente. --check è il cancello della CI: numeri consecutivi, date valide, campi obbligatori, collegamento da plans/CHANGELOG.md. Sola lettura.",
+      "use_case": "«Sto rivedendo una soluzione già adottata o cercando la causa di una regressione: che cosa si sapeva allora di questa PR, di questo ADR, di questo tema?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "parole",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Parole che devono comparire tutte nella voce."
+        },
+        {
+          "name": "--pr",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero della PR, senza #."
+        },
+        {
+          "name": "--adr",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero dell'ADR, anche senza zeri (93 = ADR-0093)."
+        },
+        {
+          "name": "--tema",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Un tema della voce (campo Temi), per esempio prosa, regole, arc07."
+        },
+        {
+          "name": "--da",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Prima data, AAAA-MM-GG compresa."
+        },
+        {
+          "name": "--a",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ultima data, AAAA-MM-GG compresa."
+        },
+        {
+          "name": "--id",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Una voce sola, per esempio MS-0042."
+        },
+        {
+          "name": "--elenco",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Solo id, data e titolo delle voci trovate."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: le voci con id, data, titolo, riga, campi e testo."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il cancello: exit 1 se il file è scritto male o il CHANGELOG dei piani non lo collega."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/MEMORIA-STORICA.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/CHANGELOG.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ricerca eseguita (anche senza voci trovate) o file in forma con --check",
+        "1": "file scritto male o non collegato, solo con --check",
+        "2": "errore d'uso: data non valida, file mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex e ordine del file; nessun modello, nessuna data."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/memoria_storica.py --check",
+      "tests": [
+        "scripts/tests/test_memoria_storica.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md"
+      ]
+    },
+    {
       "id": "derive_statblocks",
       "path": "scripts/derive_statblocks.py",
       "category": "E-bestiary-catalog",
