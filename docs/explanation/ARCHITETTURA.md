@@ -1253,7 +1253,7 @@ sono rimaste identiche byte per byte.
 | Verifica di una scheda via MCP (ADR-0124, proposta) | `scripts/verifica_talenti.py`, `scripts/verifica_scheda.py`, capacità `creature.gradi` e `creature.liste_incantesimi`; talenti e classi dei manuali 3.5 fuori SRD solo con nomi e numeri | fatto: prerequisiti dei talenti nell'ordine SRD d20 → 3.5 → PF1e, gradi, incantesimi per livello, numeri di `conformita_statblocchi` in una chiamata |
 | Cumulo dei bonus per tipo (ADR-0126, proposta) | capacità `bonus.cumulo` in `sistemi/d20/dati/bonus.toml`, `dmcore/bonus.py` | lotto 1 di 12 del programma «regole senza omissioni»: `verifica_scheda` giudica TS e attacco senza tolleranza; gli altri lotti cambieranno questa riga |
 | Coerenza della storia (ADR-0125, accettata) | `coerenza_campagna.py fatti … --state` contro `campaign/state.yaml` | in testing, solo sui fatti strutturati |
-| Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
+| Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato per intero da 4 strumenti e in parte da 2 (suggest_encounter, genera_creatura), 16 lo rifiutano. Resta una prova, non un sistema supportato |
 
 Riferimenti: [ADR-0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
 [ADR-0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),

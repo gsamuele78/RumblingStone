@@ -101,8 +101,9 @@ a un sistema spento rende il cancello rosso: o lo riassegni o non spegni.
 
 Vale per un sistema che condivide l'impianto d20 (dado, caratteristiche, TS,
 BAB, GS). Un sistema non d20 oggi resta fuori: il plugin finto a mucchio di
-d10 dei test entra senza toccare il nucleo, ma degli strumenti ci lavorano 4
-su 20 e il tiro non ha una capacità nel catalogo.
+d10 dei test entra senza toccare il nucleo, ma ci lavorano per intero solo 4
+strumenti, 2 in parte (`suggest_encounter`, `genera_creatura`) e 16 lo
+rifiutano; il tiro non ha una capacità nel catalogo.
 
 1. **Prima la misura.** Scrivi da dove vengono le regole (SRD, PRD, un
    documento con licenza aperta) e scaricale in cache con
