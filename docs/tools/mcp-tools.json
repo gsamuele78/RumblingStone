@@ -4072,6 +4072,68 @@
       "deterministic": true
     },
     {
+      "name": "memoria_storica",
+      "description": "«Sto rivedendo una soluzione già adottata o cercando la causa di una regressione: che cosa si sapeva allora di questa PR, di questo ADR, di questo tema?»\n\nADR-0127: la storia del lavoro che esce dalla memoria corta delle sessioni. Legge plans/MEMORIA-STORICA.md (una voce MS-NNNN per riga tolta dalla memoria del progetto, con data, PR, ADR, temi, testo intero, dove il fatto si ritrova nel repo e cosa c'è solo lì) e restituisce le voci che passano tutti i filtri: PR, ADR, tema, intervallo di date, id, parole (senza badare a maiuscole e accenti). --json è l'uscita per un agente. --check è il cancello della CI: numeri consecutivi, date valide, campi obbligatori, collegamento da plans/CHANGELOG.md. Sola lettura.",
+      "use_case": "«Sto rivedendo una soluzione già adottata o cercando la causa di una regressione: che cosa si sapeva allora di questa PR, di questo ADR, di questo tema?»",
+      "invocation": "python3 scripts/memoria_storica.py [PAROLE ...] [--pr N] [--adr N] [--tema T] [--da DATA] [--a DATA] [--id MS-NNNN] [--elenco] [--json] [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "parole": {
+            "type": "string",
+            "description": "Parole che devono comparire tutte nella voce."
+          },
+          "pr": {
+            "type": "integer",
+            "description": "Numero della PR, senza #."
+          },
+          "adr": {
+            "type": "integer",
+            "description": "Numero dell'ADR, anche senza zeri (93 = ADR-0093)."
+          },
+          "tema": {
+            "type": "string",
+            "description": "Un tema della voce (campo Temi), per esempio prosa, regole, arc07."
+          },
+          "da": {
+            "type": "string",
+            "description": "Prima data, AAAA-MM-GG compresa."
+          },
+          "a": {
+            "type": "string",
+            "description": "Ultima data, AAAA-MM-GG compresa."
+          },
+          "id": {
+            "type": "string",
+            "description": "Una voce sola, per esempio MS-0042."
+          },
+          "elenco": {
+            "type": "boolean",
+            "description": "Solo id, data e titolo delle voci trovate."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Uscita machine-readable: le voci con id, data, titolo, riga, campi e testo."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Il cancello: exit 1 se il file è scritto male o il CHANGELOG dei piani non lo collega."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<stdout>"
+      ],
+      "exit_codes": {
+        "0": "ricerca eseguita (anche senza voci trovate) o file in forma con --check",
+        "1": "file scritto male o non collegato, solo con --check",
+        "2": "errore d'uso: data non valida, file mancante"
+      },
+      "deterministic": true
+    },
+    {
       "name": "migliora_prosa",
       "description": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»\n\nLa pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
       "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
@@ -4852,7 +4914,7 @@
     },
     {
       "name": "verifica_scheda",
-      "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Canale testing (ADR-0099): misura, non cancello.",
+      "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Canale testing (ADR-0099): misura, non cancello.",
       "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
       "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check] [--tolleranza]",
       "inputSchema": {

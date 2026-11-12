@@ -484,6 +484,40 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
+    """La CA dei recinti della scheda, ricostruita dalle sue voci (ADR-0126, lotto 1-bis)."""
+    import conformita_statblocchi as C
+    from dmcore import classe_armatura as CA
+    testo = p.read_text(encoding="utf-8")
+    sis = VT.sistema_di(p, testo)
+    if sis != "dnd35":
+        return [], []          # il PF1e ha già contatto, sprovvista e DMC nel cancello dei moduli
+    viol, nv = [], []
+    with contextlib.redirect_stderr(io.StringIO()):
+        blocchi = list(C._recinti_del_master(testo))
+    righe = testo.split("\n")
+    for b in blocchi:
+        sb = b["sb"]
+        riga = next((i + 1 for i in range(b["riga"] - 1, min(len(righe), b["riga"] + 40))
+                     if righe[i].startswith("ca:")), b["riga"])
+        scarti, non = CA.giudica(C._int(sb.ca), sb.ca_dettaglio or "",
+                                 C._mod_caratteristica(sb.attributi or "", "Des"), testo, sis)
+        base = {"file": VT_rel(p), "riga": riga, "verifica": "numeri", "fonte": "srd"}
+        for x in scarti:
+            viol.append(dict(base, regola=f"numero.{x['campo']}", atteso=x["atteso"], ha=x["scritto"],
+                             testo=f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']})"))
+        for x in non:
+            nv.append(dict(base, regola="numero.CA", testo=x["nota"]))
+        # sensi e CD: gli stessi conti che il cancello dei moduli fa sui recinti dei master
+        for x in C.conti_del_recinto(b, {}, sis):
+            if x["campo"] == "sensi" or x["campo"].startswith("CD"):
+                campo = x["campo"].replace(" ", "_")
+                viol.append(dict(base, riga=b["riga"], regola=f"numero.{campo}", atteso=x["atteso"],
+                                 ha=x["scritto"],
+                                 testo=f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']})"))
+    return viol, nv
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -506,9 +540,10 @@ def main(argv: "list[str] | None" = None) -> int:
         nvv, nn = numeri(p)
         av, an = abilita(p)
         iv, inn = incantesimi(p)
-        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or L.leggi(p))
-        viol += tv + nvv + av + iv
-        nv += tn + ti + nn + an + inn
+        cv, cn = classe_armatura(p)
+        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or L.leggi(p))
+        viol += tv + nvv + cv + av + iv
+        nv += tn + ti + nn + cn + an + inn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

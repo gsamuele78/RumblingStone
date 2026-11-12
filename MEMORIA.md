@@ -9,6 +9,7 @@ git fetch --prune origin
 python3 scripts/memoria.py --check      # questa pagina è allineata?
 python3 scripts/decisioni_dm.py --check # le decisioni aperte
 python3 scripts/fase1.py <file>         # sempre, prima di toccare
+python3 scripts/memoria_storica.py --pr N  # la storia di una PR, di un ADR, di un tema
 ```
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
@@ -85,6 +86,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
 | 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
 | 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 1.007/1.279 (55% → 79%); TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente trovati e chiusi: 6 difetti del verific… |
@@ -95,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
 | 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 punti 3-5 (scelta del DM): `scripts/verifica_talenti.py` nel manifest… | ✅ Bestiario da 30 violazioni in 19 schede a 21 in 11; giro di correzione con test (--check 1 → 0); le 21 al DM |
-| 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | Verificatore logico (Prolog) per le regole: misura in… | 🟡 misura fatta, decisione al DM |
-| 2026-11-10 | ADR-0123 | `docs/` riorganizzata in Diátaxis (card del DM: «Riorganizzare docs/ subito»):… | ✅ fatto; `docs/tools/` e `docs/audit/` restano dove sono (superficie pubblica e registri della CI) |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
+- **Memoria storica**: 72 voci, l'ultima MS-0072 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
@@ -113,6 +115,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Cosa è successo | [`plans/CHANGELOG.md`](plans/CHANGELOG.md) |
 | Che piani esistono | [`plans/INDEX.md`](plans/INDEX.md) |
 | Perché si è deciso così | [`plans/adr/`](plans/adr/) |
+| Cosa sapevano le sessioni prima, la storia dietro una scelta | [`plans/MEMORIA-STORICA.md`](plans/MEMORIA-STORICA.md), si cerca con `scripts/memoria_storica.py` (ADR-0127) |
 | Le norme e chi le misura | [`skills/REGISTRO-NORME-EDITORIALI.md`](skills/REGISTRO-NORME-EDITORIALI.md) |
 | Le regole per gli agenti | [`AGENTS.md`](AGENTS.md) |
 | Questa pagina | `scripts/memoria.py`, mai a mano |

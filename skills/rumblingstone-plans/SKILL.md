@@ -38,6 +38,7 @@ K-A) e dall'header di `plans/INDEX.md`.
 | Decisioni architetturali (il "perché") | `plans/adr/` |
 | Vista d'insieme: stato, %, lotti rimanenti, gate | `plans/INDEX.md` |
 | Storia: una riga per lotto chiuso | `plans/CHANGELOG.md` |
+| Memoria storica: decisioni, misure, questioni aperte dietro le righe (ADR-0127) | `plans/MEMORIA-STORICA.md`, si cerca con `scripts/memoria_storica.py` |
 | Classe prevista e usata di ogni lotto chiuso | [`plans/REGISTRO-LOTTI.md`](../../plans/REGISTRO-LOTTI.md) |
 
 ## Procedura
@@ -189,7 +190,10 @@ e non bloccano.
 1. la **checklist del piano** (o la nota "STATO ATTUAZIONE" di una ricerca);
 2. la **riga del piano in `plans/INDEX.md`** (stato, %, lotti rimanenti, gate)
    e la sua sezione "Prossimi passaggi";
-3. **una riga in `plans/CHANGELOG.md`** (§ Formato d'uscita);
+3. **una riga in `plans/CHANGELOG.md`** (§ Formato d'uscita) e, con essa,
+   **una voce `MS-NNNN` in coda a `plans/MEMORIA-STORICA.md`** (addendum,
+   ADR-0127): le decisioni, le misure, le questioni aperte e i rimandi che la
+   riga non tiene. Modello nel file; `python3 scripts/memoria_storica.py --check`;
 4. se il lotto **chiude o apre una decisione del DM**: la riga nella tabella
    marcata `<!-- decisioni-dm: … -->` **dentro il piano**, poi
    `python3 scripts/decisioni_dm.py --emit` per rigenerare l'aggregato di
@@ -204,6 +208,8 @@ e non bloccano.
 - **Blocca** (rosso in CI, push rifiutato) modifiche a file strutturali
   (`scripts/`, `skills/`, `converters/`, `.github/`, `plans/adr/`) senza una
   riga in `plans/CHANGELOG.md` nello stesso range di commit.
+- **Blocca** una PR che aggiunge righe a `plans/CHANGELOG.md` senza almeno
+  una voce nuova in `plans/MEMORIA-STORICA.md` (addendum, ADR-0127).
 - **Blocca** l'aggregato di `STATO-E-ORDINE` §4 che non combacia con le tabelle
   dei piani (`scripts/decisioni_dm.py --check`, ADR-0047; l'incidente che l'ha
   fatto nascere è nell'ADR). ⚠️ `D<n>` **non è globale**: otto piani hanno il
@@ -250,7 +256,8 @@ Prima di aprire (o dichiarare pronta) una PR che completa lavoro pianificato:
       (non serve un piano formale per tutto: serve la riga).
 - [ ] `plans/INDEX.md`: riga di stato + "Prossimi passaggi" (anche solo ⬜
       opzionali/gated).
-- [ ] `plans/CHANGELOG.md`: riga con riferimento alla PR.
+- [ ] `plans/CHANGELOG.md`: riga con riferimento alla PR, e la voce
+      `MS-NNNN` in `plans/MEMORIA-STORICA.md` (addendum, ADR-0127).
 - [ ] Tooling/script nuovi: `scripts/README-automation.md` (tool map)
       aggiornato.
 - [ ] Skill nuova o toccata: `./scripts/build-skills.sh --no-deploy` e

@@ -74,7 +74,7 @@ corregge solo il master, e PDF, mappe, recap e pacchetti si rigenerano.
 | 🧠 | 18 skill per agenti: regole 3.5 e PF1e, lore 1372 DR, stile, mappe, editoria; ognuna dichiara i suoi cancelli deterministici | [`skills/`](skills/) |
 | 🛠️ | `dm.py` e gli script, ognuno con il suo contratto nel manifest | [`scripts/`](scripts/), [registro](docs/tools/README.md) |
 | 🎯 | Regole come plugin di dati: D&D 3.5 per la campagna, Pathfinder 1e per due moduli; `dm.py sistemi` dice quale sistema usa un file | [`sistemi/`](sistemi/), [GUIDA-SISTEMI-DI-GIOCO](docs/how-to/GUIDA-SISTEMI-DI-GIOCO.md) |
-| 🧭 | Piani, 122 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
+| 🧭 | Piani, 123 ADR, decisioni del DM tracciate | [`plans/`](plans/) |
 | ✍️ | Misure della prosa e voto al cieco del DM | ADR-0093 |
 
 ## Come funziona

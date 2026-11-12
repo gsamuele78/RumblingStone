@@ -114,7 +114,7 @@ flowchart TB
 
     subgraph GOV["Governo"]
         PLANS["plans/<br/>piani, INDEX, CHANGELOG dei piani"]
-        ADR["plans/adr/<br/>122 decisioni"]
+        ADR["plans/adr/<br/>123 decisioni"]
         CHG["CHANGELOG.md<br/>i rilasci"]
     end
 
