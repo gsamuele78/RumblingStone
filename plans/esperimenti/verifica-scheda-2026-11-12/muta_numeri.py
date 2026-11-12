@@ -52,12 +52,13 @@ def main() -> int:
     conto = {c: {"mutanti": 0, "trovati": 0, "persi": []} for c in MUTAZIONI}
     with tempfile.TemporaryDirectory() as tmp:
         for p in sorted((ROOT / "Bestiario").rglob("*-cr*.md")):
-            if V.numeri(p)[0]:
-                continue
+            # si salta il campo che ha già una violazione, non tutta la scheda:
+            # a tolleranza zero 28 schede ne hanno una, e sparirebbero dal banco
+            gia = {x["regola"] for x in V.numeri(p)[0]}
             testo = p.read_text(encoding="utf-8")
             for campo in MUTAZIONI:
                 nuovo = muta(testo, campo)
-                if nuovo is None:
+                if nuovo is None or f"numero.{MUTAZIONI[campo][0]}" in gia:
                     continue
                 q = Path(tmp) / p.name
                 q.write_text(nuovo, encoding="utf-8")

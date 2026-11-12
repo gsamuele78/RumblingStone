@@ -50,6 +50,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import verifica_talenti as VT  # noqa: E402
 from dmcore import lettura_creatura as L  # noqa: E402
+from dmcore import bonus as B  # noqa: E402
 
 #: campo di conformita_statblocchi → riga della scheda dove cercarlo
 ETICHETTE = {"BAB": ("bab", "base attack"), "lotta": ("lotta", "grapple", "bmc"),
@@ -65,6 +66,11 @@ def _riga(testo: str, campo: str) -> "int | None":
     return None
 
 
+#: Tolleranza zero su tiri salvezza e attacco (DM, 2026-11-12). `--tolleranza`
+#: la rimette com'era: TS fino a +4 sopra l'atteso, attacco fra −1 e +2.
+SEVERO = True
+
+
 def numeri(p: Path) -> "tuple[list[dict], list[dict]]":
     """(violazioni, non verificabili) dei numeri di una scheda."""
     import conformita_statblocchi as C
@@ -76,8 +82,9 @@ def numeri(p: Path) -> "tuple[list[dict], list[dict]]":
             sis = VT.sistema_di(p, s.testo)
             return [], [{"file": VT_rel(p), "riga": None, "verifica": "numeri", "regola": "sistema",
                          "testo": f"i conti di scheda non coprono il sistema {sis}", "fonte": sis}]
-        g = C.giudica(s)
+        g = C.giudica(s, severo=SEVERO)
     viol, nv = [], []
+    dichiarati = B.dichiarati(L.senza_note(s.testo))
     ignote = (VT.leggi(p) or {}).get("classi_ignote") or []
     if not g["verificabile"]:
         nv.append({"file": g["file"], "riga": None, "verifica": "numeri", "regola": "lettura",
@@ -88,6 +95,14 @@ def numeri(p: Path) -> "tuple[list[dict], list[dict]]":
                 "testo": f"{campo} {scritto}, la regola dà {atteso} (scarto {scarto:+d})"
                 if isinstance(scarto, int) else f"{campo} {scritto}, la regola dà {atteso}",
                 "fonte": "srd"}
+        if campo in B.CAMPI_TS or campo == "attacco":
+            contate = B.somma(dichiarati.get(campo, []))[1]
+            voce["bonus_contati"] = [{"valore": v.valore, "tipo": v.tipo, "sorgente": v.sorgente}
+                                     for v in contate]
+            voce["testo"] += ("; bonus dichiarati e contati: "
+                              + ", ".join(f"+{v.valore} {v.tipo.replace('_', ' ')} ({v.sorgente})"
+                                          for v in contate) if contate
+                              else "; la scheda non dichiara nessun bonus su questo numero")
         if "-cr" not in p.name:
             # conformita_statblocchi è collaudato sulle schede `*-cr*.md`; nei dossier
             # («BAB/Lotta: +8 / +10») la lettura prende il numero sbagliato
@@ -475,7 +490,11 @@ def main(argv: "list[str] | None" = None) -> int:
     ap.add_argument("percorsi", nargs="+", type=Path, help="schede o cartelle")
     ap.add_argument("--json", action="store_true", help="uscita JSON per l'agente")
     ap.add_argument("--check", action="store_true", help="esce 1 se c'è almeno una violazione")
+    ap.add_argument("--tolleranza", action="store_true",
+                    help="rimette la tolleranza di prima su tiri salvezza (+4) e attacco (−1…+2)")
     a = ap.parse_args(argv)
+    global SEVERO
+    SEVERO = not a.tolleranza
     percorsi = [p if p.is_absolute() else ROOT / p for p in a.percorsi]
     for p in percorsi:
         if not p.exists():

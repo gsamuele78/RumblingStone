@@ -19,6 +19,7 @@ skill = []
 "termini.vietati" = { eredita = "d20", motivo = "famiglia" }
 "statblocco.campi" = { eredita = "d20", motivo = "famiglia" }
 "formule.regole" = { eredita = "d20", motivo = "famiglia" }
+"bonus.cumulo" = { eredita = "d20", motivo = "famiglia" }
 "stampa.etichette" = { eredita = "d20", motivo = "famiglia" }
 "lessico.abilita" = { eredita = "dnd35", motivo = "stesse abilità" }
 "lessico.entita" = { eredita = "dnd35", motivo = "stesse classi e razze" }

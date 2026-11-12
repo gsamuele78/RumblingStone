@@ -90,6 +90,9 @@ from dmcore.lettura_creatura import (  # noqa: E402
 
 FOCALIZZATA = re.compile(r"\b(?:Weapon Focus|Arma Focalizzata)\b", re.I)
 ACCURATA = re.compile(r"\b(?:Weapon Finesse|Arma Accurata)\b", re.I)
+TS_CONDIVISI = re.compile(
+    r"share saving throws|condivid\w+\s+(?:i\s+)?tiri salvezza"
+    r"|condivide\s+(?:la|i)\s+(?:tempra|riflessi|volont[aà])\s+base", re.I)
 PERFETTA = re.compile(r"\b(?:perfett[oa]|masterwork|mwk)\b", re.I)
 
 #: I template semplici PF1e (skill `pathfinder-1e-srd`, «rebuild rules»), come
@@ -184,8 +187,13 @@ def attacco_dichiarato(riga: str) -> "tuple[int, int] | None":
     return int(m.group(1)), (int(pot.group(1)) if pot else 0)
 
 
-def verifica(s: Scheda, attr: "dict | None" = None) -> dict:
-    """Ogni identita': (dichiarato, atteso, scarto) o None se non verificabile."""
+def verifica(s: Scheda, attr: "dict | None" = None, severo: bool = False) -> dict:
+    """Ogni identita': (dichiarato, atteso, scarto) o None se non verificabile.
+
+    `severo` toglie la tolleranza a tiri salvezza e attacco (DM, 2026-11-12: «un
+    +4 è un bonus importante»): ogni punto in più dell'atteso deve venire da un
+    talento o da un oggetto che la scheda dichiara. Senza `severo` un tiro
+    salvezza fino a +4 sopra l'atteso e un attacco fra −1 e +2 passano."""
     attr = attr or s.attributi
     out = {}
     mi = INIZIATIVA.search(s.testo)
@@ -229,16 +237,35 @@ def verifica(s: Scheda, attr: "dict | None" = None) -> dict:
                                        and mod(attr.get("Des")) > mod(attr.get("For")))) else "For"
         fisso = (mod(attr.get(car)) + taglia + pot
                  + (1 if not pot and PERFETTA.search(s.mischia) else 0)
-                 + (1 if FOCALIZZATA.search(s.testo) else 0))
+                 + (1 if FOCALIZZATA.search(s.testo) else 0)
+                 + talenti(s.testo).get("attacco", 0))
         att = min((b + fisso for b in babs), key=lambda a: abs(dich - a))
+        if severo and not incorporeo:
+            # senza tolleranza serve il conto fine di `attacco_atteso`: il
+            # potenziamento in mezzo al nome («+1 gelido»), Arma Focalizzata
+            # solo sull'arma che nomina, Arma Focalizzata Superiore
+            righe_car = " ".join(f"{k} {v}" for k, v in attr.items() if isinstance(v, int))
+            fini = [x[1] for x in (attacco_atteso(s.mischia, b, righe_car, L.senza_note(s.testo), taglia)
+                                   for b in babs) if x]
+            if fini:
+                extra = talenti(s.testo).get("attacco", 0)
+                att = min((f + extra for f in fini), key=lambda a: abs(dich - a))
         d = dich - att
-        out["attacco"] = (dich, att, 0 if -1 <= d <= 2 else d)
+        out["attacco"] = (dich, att, d if severo or not -1 <= d <= 2 else 0)
     if not s.composizione_nota:
         return out
     if s.ts:
         lo, hi = ts_attesi(s, attr)
+        # SRD, cavalcatura del paladino e famiglio («Share Saving Throws»): per
+        # ogni TS vale la base più alta fra la sua e quella del padrone, che
+        # non è in questa scheda. Sopra l'atteso non si può giudicare.
+        condivisi = bool(TS_CONDIVISI.search(L.senza_note(s.testo)))
         for nome, dich, a, b in zip(("Temp", "Rifl", "Vol"), s.ts, lo, hi):
-            d = 0 if a <= dich <= b + 4 else (dich - a if dich < a else dich - b - 4)
+            if condivisi and dich > b:
+                out[nome] = (dich, f"{a} o la base del padrone", 0)
+                continue
+            largo = 0 if severo else 4
+            d = 0 if a <= dich <= b + largo else (dich - a if dich < a else dich - b - largo)
             out[nome] = (dich, a if a == b else f"{a}..{b}", d)
     return out
 
@@ -316,8 +343,8 @@ def template_dichiarati(testo: str) -> "list[str]":
     return fuori
 
 
-def giudica(s: Scheda) -> dict:
-    esito = verifica(s)
+def giudica(s: Scheda, severo: bool = False) -> dict:
+    esito = verifica(s, severo=severo)
     esito.update(verifica_variante_advanced(s))
     fuori = scarti(esito)
     spiegazione = None
@@ -325,7 +352,7 @@ def giudica(s: Scheda) -> dict:
     # template su caratteristiche **scelte** non spiega niente
     if fuori and s.provenienza != "generate" and not any(k.startswith("variante") for k in fuori):
         for nome in TEMPLATE:
-            if not scarti(verifica(s, con_template(s.attributi, nome))):
+            if not scarti(verifica(s, con_template(s.attributi, nome), severo=severo)):
                 spiegazione = nome
                 break
     come_la_fonte = []
