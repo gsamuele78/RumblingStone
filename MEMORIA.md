@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
-| 2026-11-09 | CODA-DEL-SECONDO-LETTORE | Punto 4: la *d* eufonica (D3) | ✅ norma in `editorial-standards.md` §4 e nel REGISTRO; `validate_lingua.py --d-eufonica` la segnala in canale testing, non bloccante fino al 2026-11-24 (tarata… |
 
 ## Le misure che si portano dietro
 
