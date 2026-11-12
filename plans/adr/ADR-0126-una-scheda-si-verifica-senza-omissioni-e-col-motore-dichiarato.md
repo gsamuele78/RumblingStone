@@ -323,6 +323,92 @@ Limiti, detti:
   rigiudizio delle 7 violazioni vecchie: vanno in un **lotto 3-bis**, come è
   stato per la CA nel lotto 1.
 
+### Lotto 3-bis — i requisiti delle classi di prestigio (2026-11-12)
+
+Una scheda poteva scrivere «Blackguard 10» senza nessun'altra classe e
+`verifica_scheda` non diceva nulla: dei requisiti d'ingresso delle classi di
+prestigio non c'era un dato. Ora la capacità `creature.prestigio` li porta e
+`dmcore.prestigio` li giudica contro il personaggio **prima** del primo livello
+della classe, che è quando i requisiti servono. La scheda scrive il personaggio
+com'è adesso, quindi ogni giudizio è una condizione necessaria:
+
+- **bonus di attacco base**: quello che danno le altre classi (dalla
+  composizione dei dadi vita, quando la scheda la scrive tutta);
+- **gradi**: il requisito non supera il massimo che i dadi vita prima
+  dell'ingresso permettono (3.5: dadi vita + 3; PF1e: dadi vita), e l'abilità è
+  scritta nella scheda con un bonus che quei gradi li regge. Un'abilità di
+  Forza o Destrezza scritta con un bonus basso resta un dubbio (la penalità di
+  armatura può nascondere i gradi); una non scritta è una violazione;
+- **talenti**: per nome. La parentesi («Arma Focalizzata (martello da guerra)»)
+  non si giudica. Se la scheda ha un talento che la lettura non conosce, il
+  talento mancante è un dubbio e non una violazione;
+- **razza** e **allineamento**: quelli scritti nel tipo;
+- **livello d'incantesimo**: una delle altre classi lancia incantesimi arcani o
+  divini di quel livello, contando lo slot che viene solo dagli incantesimi
+  bonus (paladino 8 con Saggezza 14).
+
+**I dati, e quello che non c'è.** `estrai_prestigio.py` scrive due file, solo
+nomi e numeri. `sistemi/dnd35/dati/prestigio.toml`: 15 classi dalle sezioni
+«Requirements» dell'SRD 3.5 e 478 dai tag `PRE…` di PCGen per i manuali (un
+nome dell'SRD vince). `sistemi/pf1e/dati/prestigio.toml`: le 10 classi del Core
+dal PRD, con i loro gradi (assassino: Camuffare 2 e Furtività 5, non 4 e 8).
+Un requisito che non si riduce a un numero (speciale, divinità, lingua,
+regione, «due scuole a scelta») **non si copia**: se ne tiene il conto in
+`non_verificati` e la scheda lo porta fra i non verificabili.
+
+| | 3.5 (493 classi) | PF1e (10 classi) |
+|---|---|---|
+| Requisiti ridotti a un numero | 1.301 (60%) | 26 (70%) |
+| Requisiti solo contati (`non_verificati`) | 877 (40%) | 11 (30%) |
+| Classi con soli requisiti speciali | 39 | 0 |
+| Classi di cui i dati non hanno nessun requisito | 17 | 0 |
+| Classi in più manuali con requisiti diversi (`diverge`) | 6 | 0 |
+
+Le 17 classi senza requisiti e le 6 che divergono non danno mai una
+violazione: la scheda esce con un dubbio che dice di leggere il manuale.
+
+| | Prima (main f33282c0) | Lotto 3-bis |
+|---|---|---|
+| Requisiti tolti apposta dalle schede vere, visti da `verifica_scheda` | 0 su 30 | 30 su 30 |
+| Requisiti tolti a ogni classe dei dati, visti da `dmcore.prestigio` | non c'era | tutti (test su 503 classi) |
+| Violazioni vere trovate nel Bestiario | non misurate | 3 in 2 schede |
+| `verifica_scheda Bestiario 0*/` | 54 violazioni in 17 schede, 308 dubbi | 57 in 19, 315 dubbi |
+
+Il banco (`muta_prestigio.py`, `misure-prestigio.json`) è piccolo e va letto
+per quello che è: le schede con una classe di prestigio sono 8, tutte nel
+Bestiario, e le mutazioni sono 30 (allineamento 5, razza 1, talento 10, abilità
+8, livelli 6). Due mutazioni perse al primo giro erano difetti del banco, una
+era un difetto vero del controllo (un'abilità di Destrezza non scritta passava
+per dubbio) ed è corretta. Il 30 su 30 dice che la lettura di queste 8 schede
+regge, non che reggerà su una scheda scritta in un altro modo. Nessun modulo
+(`0*/`) ha una classe di prestigio che la lettura riconosca.
+
+Cosa ha trovato, e **non è corretto** (i livelli di un PNG sono del DM): due
+schede in un elenco «in attesa» esplicito nel test del cancello.
+
+- `abbathor-blackguard-cr10`: «Blackguard 10» senza altre classi. La guardia
+  nera chiede bonus di attacco base +6 e Nascondersi 5 gradi prima del primo
+  livello: con zero livelli d'altro non si entra.
+- `drow-assassina-lolth-cr10`: Ladro 4 / Assassino 5. Nascondersi e Muoversi
+  Silenziosamente a 8 gradi chiedono 5 dadi vita prima dell'ingresso (massimo
+  dei gradi 7 al 4° livello).
+
+**Un buco del lotto 1, chiuso.** L'estrattore dei gradi non leggeva
+«Spellcraft» (nell'SRD è l'unica abilità col titolo senza `<small>`):
+`creature.gradi` aveva 37 abilità su 38 e Sapienza Magica non entrava né nel
+massimo né nella somma dei punti. Corretto l'estrattore e rigenerato
+`gradi.toml`: nessuna violazione nuova nelle 150 schede.
+
+Limiti dichiarati: i requisiti si giudicano contro tutte le altre classi, non
+contro l'ordine vero dei livelli (che la scheda non scrive), quindi un
+personaggio con due classi di prestigio può passare anche se la prima è
+servita a entrare nella seconda fuori ordine; oltre i 20 dadi vita il bonus di
+attacco base non si ricostruisce; le razze si riconoscono in inglese e, in
+italiano, solo per le cinque del lessico (elfo, gnomo, halfling, mezzelfo,
+nano): le altre restano un dubbio; i 3.5 dei manuali vengono dai tag di PCGen
+e non sono riscontrati sul libro. Il rigiudizio delle 7 violazioni di talenti
+rimaste dalla #378 resta fuori: aspetta la risposta del DM alla card.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore
