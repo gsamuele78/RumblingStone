@@ -923,8 +923,9 @@ ORDA = re.compile(r"\b(orda|horde|azarr|mano rossa|red hand|armata|army|hobgobli
 MOD_PERMANENTE = re.compile(r"([+−-])\s*(\d)\s*(FOR|DES|COS|INT|SAG|CAR|STR|DEX|CON|WIS|CHA)\b")
 
 
-def ancore_state(path: Path = STATE) -> dict:
+def ancore_state(path: Path | None = None) -> dict:
     """I campi di state.yaml che fanno da `atteso` per S1, S5, S6 e S7."""
+    path = STATE if path is None else path   # letto alla chiamata: i test possono cambiare STATE
     d = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     an: dict = {"giorno_arrivo": (d.get("march_clock") or {}).get("giorno_arrivo"),
                 "portatori": {}, "modifiche": {}, "echi": [], "fonte": _rel(path)}
@@ -1050,7 +1051,8 @@ def verifica_storia(files: list[Path], an: dict, echi_in: list[Path] | None = No
         "regole": list(REGOLE_STORIA),
         "violazioni": viol,
         "non_verificabili": {"chi sa cosa (conoscenze senza tempo)":
-                             f"{an.get('conoscenze_senza_tempo', 0)} su {an.get('conoscenze', 0)}"},
+                             f"{an.get('conoscenze_senza_tempo', 0)} su {an.get('conoscenze', 0)}"}
+        | ({} if ga else {"S1 arrivo dell'orda": "state.yaml senza march_clock.giorno_arrivo"}),
         "ancore": {k: an[k] for k in ("giorno_arrivo", "portatori", "modifiche")} | {
             "echi_armati": [e["id"] for e in an["echi"]]},
     }

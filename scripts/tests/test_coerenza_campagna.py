@@ -419,6 +419,33 @@ class TestStoria(unittest.TestCase):
         self.assertEqual(storia["regole"], ["S1", "S5", "S6", "S7"])
         self.assertTrue(any(v["regola"].startswith("S5") for v in storia["violazioni"]))
 
+    def test_cli_legge_lo_state_indicato(self):
+        """La CLI usa cc.STATE al momento della chiamata, non quello dell'import."""
+        import contextlib
+        import io
+        import json
+        altro = _scrivi(self.state.parent, "state-37.yaml", STATE_FINTO.replace("giorno_arrivo: 42",
+                                                                                "giorno_arrivo: 37"))
+        _scrivi(self.arco, "M.md", "# M\n\nL'orda arriva a Rethmar il Giorno 42.\n")
+        buf = io.StringIO()
+        vecchio = cc.STATE
+        cc.STATE = altro
+        try:
+            with contextlib.redirect_stdout(buf):
+                cc.main(["fatti", str(self.arco), "--state", "--json"])
+        finally:
+            cc.STATE = vecchio
+        storia = json.loads(buf.getvalue())["storia"]
+        self.assertEqual(storia["ancore"]["giorno_arrivo"], 37)
+        self.assertEqual([(v["atteso"], v["ha"]) for v in storia["violazioni"] if v["regola"].startswith("S1")],
+                         [("Giorno 37", "Giorno 42")])
+
+    def test_s1_senza_giorno_arrivo_dichiarato(self):
+        an = dict(self.an, giorno_arrivo=None)
+        r = cc.verifica_storia([], an, [])
+        self.assertIn("S1 arrivo dell'orda", r["non_verificabili"])
+        self.assertNotIn("S1 arrivo dell'orda", cc.verifica_storia([], self.an, [])["non_verificabili"])
+
 
 class TestResidui(unittest.TestCase):
     """Il cancello di CI: una contraddizione nuova blocca, un residuo risolto
