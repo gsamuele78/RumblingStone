@@ -8,7 +8,7 @@ di guardrail contro le allucinazioni, e vedere dove si applicano nel repo.
 
 **Fonti**: Firecrawl (ricerca web e articoli), storia git del repo. Decisione
 in [ADR-0109](adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md),
-grammatica in [GUIDA-MARCATURE](../docs/guides/GUIDA-MARCATURE.md).
+grammatica in [GUIDA-MARCATURE](../docs/reference/GUIDA-MARCATURE.md).
 
 ## In breve
 
@@ -87,7 +87,7 @@ grammatica in [GUIDA-MARCATURE](../docs/guides/GUIDA-MARCATURE.md).
    - `[GENERATO — <script>]` — numero calcolato.
    - Fonti: `[SRD: <voce>]`, `[Private source — <manuale, p.>]`, `⚠ **Non SRD**` restano come sono.
    - Un'ipotesi scartata dal DM va in `<!-- storico -->` con la sua data, e sotto c'è il fatto nuovo.
-2. **Un posto solo**: la grammatica sta in un file (`docs/guides/GUIDA-MARCATURE.md`); AGENTS.md, le skill e gli agent la richiamano con una riga e non la riscrivono. Un test lo controlla.
+2. **Un posto solo**: la grammatica sta in un file (`docs/reference/GUIDA-MARCATURE.md`); AGENTS.md, le skill e gli agent la richiamano con una riga e non la riscrivono. Un test lo controlla.
 3. **Un blocco vincoli uguale in ogni skill che scrive contenuto**: permesso di dire «non so», ordine delle fonti (3.5 → PF1e → SRD, versione più forte), divieto di inventare statblocchi e poteri, e il passo finale «rileggi ogni numero: fonte, GENERATO o INFERRED».
 4. **Cancelli**: niente `[INFERRED]` senza domanda nelle righe nuove; niente INFERRED tolto da un sorgente senza CANONE, GENERATO o storico nello stesso commit.
 

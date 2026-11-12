@@ -3,4 +3,4 @@ name: trappola-c03-il-pozzo-di-varkhul-non
 expected_outcome: |
   Trappola: il Pozzo di Varkhul non esiste nel repo: profondità e tipo di parete non sono dati. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna C03.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna C03.

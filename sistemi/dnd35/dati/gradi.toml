@@ -1,0 +1,135 @@
+# sistemi/dnd35/dati/gradi.toml — i gradi delle abilità 3.5 (ADR-0124)
+# Generato da plans/esperimenti/verifica-scheda-2026-11-12/estrai_gradi.py dall'SRD 3.5
+# (olimot/srd-v3.5-md@c7f30a0c): «Skills Summary», la riga «Skill Points at Each
+# Additional Level» di ogni classe, «Skill points equal to» di ogni tipo.
+
+[regole]
+# gradi massimi in un'abilità di classe = dadi vita + 3; il primo dado vita vale 4 volte;
+# almeno 1 punto per dado vita; gli umani hanno 1 punto in più per livello
+massimo_piu = 3
+primo_dado = 4
+minimo_per_dado = 1
+umano_per_livello = 1
+
+[chiave]
+"appraise" = "Int"
+"balance" = "Des"
+"bluff" = "Car"
+"climb" = "For"
+"concentration" = "Cos"
+"craft" = "Int"
+"decipher script" = "Int"
+"diplomacy" = "Car"
+"disable device" = "Int"
+"disguise" = "Car"
+"escape artist" = "Des"
+"forgery" = "Int"
+"gather information" = "Car"
+"handle animal" = "Car"
+"heal" = "Sag"
+"hide" = "Des"
+"intimidate" = "Car"
+"jump" = "For"
+"knowledge" = "Int"
+"listen" = "Sag"
+"move silently" = "Des"
+"open lock" = "Des"
+"perform" = "Car"
+"profession" = "Sag"
+"psicraft" = "Int"
+"ride" = "Des"
+"search" = "Int"
+"sense motive" = "Sag"
+"sleight of hand" = "Des"
+"speak language" = ""
+"spot" = "Sag"
+"survival" = "Sag"
+"swim" = "For"
+"tumble" = "Des"
+"use magic device" = "Car"
+"use psionic device" = "Car"
+"use rope" = "Des"
+
+[classi]
+"adept" = 2
+"agent retriever" = 6
+"arcane archer" = 4
+"arcane trickster" = 4
+"archmage" = 2
+"aristocrat" = 4
+"assassin" = 4
+"barbarian" = 4
+"bard" = 6
+"blackguard" = 2
+"cerebremancer" = 2
+"cleric" = 2
+"commoner" = 2
+"cosmic descryer" = 2
+"divine emissary" = 4
+"dragon disciple" = 2
+"druid" = 4
+"duelist" = 4
+"dwarven defender" = 2
+"eldritch knight" = 2
+"elocater" = 6
+"epic arcane archer" = 4
+"epic arcane trickster" = 4
+"epic assassin" = 4
+"epic blackguard" = 2
+"epic dragon disciple" = 2
+"epic duelist" = 4
+"epic dwarven defender" = 2
+"epic eldritch knight" = 2
+"epic horizon walker" = 4
+"epic infiltrator" = 8
+"epic loremaster" = 4
+"epic mystic theurge" = 2
+"epic shadowdancer" = 6
+"expert" = 6
+"fighter" = 2
+"guardian paramount" = 4
+"hierophant" = 2
+"high proselytizer" = 2
+"horizon walker" = 4
+"legendary dreadnought" = 2
+"loremaster" = 4
+"metamind" = 2
+"monk" = 4
+"mystic theurge" = 2
+"paladin" = 2
+"perfect wight" = 8
+"psion" = 2
+"psion uncarnate" = 2
+"psionic fist" = 4
+"psychic warrior" = 2
+"pyrokineticist" = 2
+"ranger" = 6
+"rogue" = 8
+"shadowdancer" = 6
+"slayer" = 4
+"sorcerer" = 2
+"soulknife" = 4
+"thaumaturgist" = 2
+"thrallherd" = 2
+"union sentinel" = 2
+"war mind" = 2
+"warrior" = 2
+"wilder" = 4
+"wizard" = 2
+
+[tipi]
+"aberration" = 2
+"animal" = 2
+"construct" = 2
+"dragon" = 6
+"elemental" = 2
+"fey" = 6
+"giant" = 2
+"humanoid" = 2
+"magical beast" = 2
+"monstrous humanoid" = 2
+"ooze" = 2
+"outsider" = 8
+"plant" = 2
+"undead" = 4
+"vermin" = 2

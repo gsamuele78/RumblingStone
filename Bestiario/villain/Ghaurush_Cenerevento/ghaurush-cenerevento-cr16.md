@@ -13,7 +13,7 @@ ts: Temp +11, Rifl +3, Vol +11
 attributi: For 21 Des 10 Cos 21 Int 14 Sag 14 Car 22
 velocita: 12 m (9 m in armatura), volo 12 m (perfetto/buono, Sop, a volontà)
 attacchi:
-  - Mischia spadone Large +11/+6 (3d6+7)
+  - Mischia spadone Large +11/+6 (3d6+7/19-20)
 ```
 
 > Correzione 3.5 da `scripts/conformita_statblocchi.py`, superata dalla nota qui sotto: variante «Cenere Piena», CA 23 → **25** (29 con *scudo*): il template Advanced dà +2 di armatura naturale **e** +4 Des, cioè altri +2 alla CA. La regola rapida PF1e dice lo stesso: +4 alla CA.
@@ -31,7 +31,7 @@ Large giant (ogre magi), LE.
 
 **Difesa** **CA 22** (−1 taglia, +5 naturale, +6 giaco di maglia +2 Large, +2 deflessione), contatto 11, colto alla sprovvista 22 — **26 con *scudo* attivo** · **hp 107** (**DV 5d8 + 8d4**, Stregone 8; Con 21 con *amuleto di salute +4*) · **TS** Temp +11, Rifl +3, Vol +11 · **RI 19**, **Rigenerazione 5** (fuoco e acido infliggono danni normali)
 
-**Attacco** Vel 12 m (9 m in armatura), **volo 12 m (perfetto/buono, Sop, a volontà)** · **Mischia** spadone Large +11/+6 (3d6+7) · **Distanza** — usa incantesimi.
+**Attacco** Vel 12 m (9 m in armatura), **volo 12 m (perfetto/buono, Sop, a volontà)** · **Mischia** spadone Large +11/+6 (3d6+7/19-20) · **Distanza** — usa incantesimi.
 
 **Incantesimi da Stregone 8** (CL 8; CD 10 + livello + 6, +1 per Invocazione)
 | Liv | Al giorno | Conosciuti (SRD) |
@@ -91,3 +91,5 @@ Boost log: correzione dei conti (armatura naturale +5 e scurovisione 27 m dell'o
 - era: variante «Cenere Piena» spadone 3d6+9
 - era: benchmark letto sulla riga 16 con pf 200 e attacco +25 (la tabella del repo dà 240 e +26)
 <!-- /storico -->
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Mischia spadone Large» scritto (19-20, tabella delle armi dell'SRD).

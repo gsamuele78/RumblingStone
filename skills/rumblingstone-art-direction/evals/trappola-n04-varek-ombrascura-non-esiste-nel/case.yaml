@@ -3,4 +3,4 @@ name: trappola-n04-varek-ombrascura-non-esiste-nel
 expected_outcome: |
   Trappola: Varek Ombrascura non esiste nel repo: aspetto, età ed equipaggiamento non sono dati. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna N04.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna N04.

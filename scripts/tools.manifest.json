@@ -511,7 +511,7 @@
       "ci_smoke": "python scripts/build_chapter_marks.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md"
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md"
       ]
     },
     {
@@ -592,7 +592,7 @@
       "ci_smoke": "python scripts/build_image_derivatives.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-IMMAGINI.md"
+        "docs/how-to/GUIDA-IMMAGINI.md"
       ]
     },
     {
@@ -787,7 +787,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md",
-        "docs/guides/GUIDA-MAPPE.md"
+        "docs/how-to/GUIDA-MAPPE.md"
       ]
     },
     {
@@ -2223,6 +2223,162 @@
       "idempotent": true
     },
     {
+      "id": "memoria_storica",
+      "path": "scripts/memoria_storica.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/memoria_storica.py [PAROLE ...] [--pr N] [--adr N] [--tema T] [--da DATA] [--a DATA] [--id MS-NNNN] [--elenco] [--json] [--check]",
+      "summary": "ADR-0127: la storia del lavoro che esce dalla memoria corta delle sessioni. Legge plans/MEMORIA-STORICA.md (una voce MS-NNNN per riga tolta dalla memoria del progetto, con data, PR, ADR, temi, testo intero, dove il fatto si ritrova nel repo e cosa c'è solo lì) e restituisce le voci che passano tutti i filtri: PR, ADR, tema, intervallo di date, id, parole (senza badare a maiuscole e accenti). --json è l'uscita per un agente. --check è il cancello della CI: numeri consecutivi, date valide, campi obbligatori, collegamento da plans/CHANGELOG.md. Sola lettura.",
+      "use_case": "«Sto rivedendo una soluzione già adottata o cercando la causa di una regressione: che cosa si sapeva allora di questa PR, di questo ADR, di questo tema?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "parole",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Parole che devono comparire tutte nella voce."
+        },
+        {
+          "name": "--pr",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero della PR, senza #."
+        },
+        {
+          "name": "--adr",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero dell'ADR, anche senza zeri (93 = ADR-0093)."
+        },
+        {
+          "name": "--tema",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Un tema della voce (campo Temi), per esempio prosa, regole, arc07."
+        },
+        {
+          "name": "--da",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Prima data, AAAA-MM-GG compresa."
+        },
+        {
+          "name": "--a",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ultima data, AAAA-MM-GG compresa."
+        },
+        {
+          "name": "--id",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Una voce sola, per esempio MS-0042."
+        },
+        {
+          "name": "--elenco",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Solo id, data e titolo delle voci trovate."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: le voci con id, data, titolo, riga, campi e testo."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il cancello: exit 1 se il file è scritto male o il CHANGELOG dei piani non lo collega."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/MEMORIA-STORICA.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/CHANGELOG.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ricerca eseguita (anche senza voci trovate) o file in forma con --check",
+        "1": "file scritto male o non collegato, solo con --check",
+        "2": "errore d'uso: data non valida, file mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex e ordine del file; nessun modello, nessuna data."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/memoria_storica.py --check",
+      "tests": [
+        "scripts/tests/test_memoria_storica.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md"
+      ]
+    },
+    {
       "id": "derive_statblocks",
       "path": "scripts/derive_statblocks.py",
       "category": "E-bestiary-catalog",
@@ -2313,7 +2469,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa/sistemi). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -2322,7 +2478,7 @@
       ],
       "args": [
         {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa",
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa|asset|ambiente|booklet|prompts|gruppo|sistemi",
           "type": "subcommand",
           "required": true,
           "default": null,
@@ -2340,10 +2496,16 @@
             "volume",
             "corredo",
             "bestiario",
-            "prosa"
+            "prosa",
+            "asset",
+            "ambiente",
+            "booklet",
+            "prompts",
+            "gruppo",
+            "sistemi"
           ],
           "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto."
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto. «sistemi» passa i flag a scripts/sistemi.py (ADR-0111): i sistemi attivi, il sistema di un file con --di, la matrice strumenti × sistemi, il cancello con --check."
         }
       ],
       "inputs": [
@@ -2752,8 +2914,8 @@
         "scripts/tests/test_schede.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
-        "docs/guides/GUIDA-FLUSSO-LOCALE.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
+        "docs/explanation/GUIDA-FLUSSO-LOCALE.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ],
@@ -3174,7 +3336,7 @@
         "scripts/tests/test_statblock.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BESTIARIO.md",
+        "docs/how-to/GUIDA-BESTIARIO.md",
         "plans/adr/ADR-0021-statblocchi-machine-readable.md"
       ]
     },
@@ -3428,6 +3590,7 @@
           "creature.incantesimi",
           "creature.statistiche_per_gs",
           "creature.talenti",
+          "formule.regole",
           "statblocco.campi"
         ]
       }
@@ -5008,7 +5171,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
@@ -5105,7 +5268,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
@@ -6204,7 +6367,7 @@
       "docs": [
         "plans/adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md",
         "plans/esperimenti/ricerca-rete-2026-10-23/RICERCA.md",
-        "docs/ARCHITETTURA.md"
+        "docs/explanation/ARCHITETTURA.md"
       ]
     },
     {
@@ -6310,7 +6473,7 @@
         "scripts/tests/test_tools_manifest.py"
       ],
       "docs": [
-        "docs/guides/TOOL-AUTHORING-STANDARD.md"
+        "docs/reference/TOOL-AUTHORING-STANDARD.md"
       ]
     },
     {
@@ -6581,7 +6744,7 @@
         "scripts/tests/test_booklets.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ]
@@ -6951,11 +7114,14 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_lingua.py",
-      "summary": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
+      "summary": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice (come li legge CommonMark: markdown-it-py se disponibile, altrimenti una regola stdlib), inline, URL, front-matter e guide alla pronuncia; legge le righe rientrate che sono prosa. `<!-- sic -->` marca una citazione alla lettera. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
       "use_case": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
+      "optional_deps": [
+        "markdown-it-py"
+      ],
       "args": [
         {
           "name": "files",
@@ -10041,7 +10207,7 @@
         "scripts/tests/test_asset_2mtt.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10119,7 +10285,7 @@
         "scripts/tests/test_watabou_citta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10198,7 +10364,7 @@
         "scripts/tests/test_texture_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10346,7 +10512,7 @@
         "scripts/tests/test_oggetti_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10527,7 +10693,7 @@
         "scripts/tests/test_misura_resa.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md"
       ]
     },
@@ -11332,7 +11498,7 @@
       ],
       "docs": [
         "plans/PIANO-AMBIENTE-RIPRODUCIBILE.md",
-        "docs/guides/GUIDA-SETUP-MACCHINA.md"
+        "docs/tutorials/GUIDA-SETUP-MACCHINA.md"
       ]
     },
     {
@@ -11454,7 +11620,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_plan",
       "path": "scripts/release_plan.py",
@@ -11540,7 +11706,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_notes",
       "path": "scripts/release_notes.py",
@@ -11674,9 +11840,9 @@
       "path": "scripts/coerenza_campagna.py",
       "category": "G-orchestration-governance",
       "language": "python",
-      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
-      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
-      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] [--state] | tutto --fronti F... --archi D... --out DIR}",
+      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Con `fatti --state` (ADR-0125, canale testing) aggiunge le regole con l'atteso in campaign/state.yaml: S1 giorno d'arrivo dell'orda a Rethmar, S5 chi porta quale artefatto, S6 modifiche permanenti di un PG, S7 echi armati senza un file che li cita; ogni violazione dice regola, atteso, ha e file:riga, e \"chi sa cosa\" senza tempo esce fra i non verificabili. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto? Questo master contraddice state.yaml sul giorno d'arrivo dell'orda o su chi porta l'ascia?»",
       "stability": "beta",
       "stdlib_only": false,
       "external_bins": [
@@ -11700,13 +11866,22 @@
           "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
         },
         {
+          "name": "percorsi",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "(fronti) i file YAML di fronti e orologi; (fatti) le cartelle d'arco da leggere, per esempio campaign o 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist."
+        },
+        {
           "name": "--state",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura. (fatti) Aggiunge le regole S1, S5, S6, S7 contro campaign/state.yaml, con regola, atteso, ha e file:riga (ADR-0125)."
         },
         {
           "name": "--bestiario",
@@ -11816,7 +11991,232 @@
         "scripts/tests/test_coerenza_campagna.py"
       ],
       "docs": [
-        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
+        "plans/adr/ADR-0125-la-coerenza-della-storia-si-verifica-contro-state-yaml-solo-sui-fatti-strutturati.md"
+      ]
+    },
+    {
+      "id": "verifica_talenti",
+      "path": "scripts/verifica_talenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_talenti.py [SCHEDA|CARTELLA ...] [--json] [--check]",
+      "summary": "ADR-0124. I prerequisiti dei talenti delle schede che esistono (difetto: Bestiario/), con la stessa regola del generatore (dmcore.talenti.violazioni). Per ogni violazione dice file:riga, talento, regola (car.X, bab, lic, classe.X, talento, capacita), valore atteso e valore che la scheda ha: con --json e' l'uscita che un agente legge per correggere la scheda e richiamare. Esclude i talenti bonus senza prerequisiti (monaco, ranger) e le competenze date dalla classe; senza classi dichiarate, lic/capacita/classe vanno fra i non verificabili. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Questa scheda puo' avere Incalzare Potenziato? Quale prerequisito manca, e quanto vale quello che ha?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": false,
+          "default": "Bestiario",
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere (difetto: Bestiario/)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con regola, atteso, ha, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
+      ]
+    },
+    {
+      "id": "verifica_scheda",
+      "path": "scripts/verifica_scheda.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check] [--tolleranza]",
+      "summary": "ADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Dal lotto 2 il danno delle armi della tabella (capacita' creature.armi): dado per taglia, bonus di Forza, potenziamento e talenti, critico (regole numero.danno.dado, numero.danno.bonus, numero.danno.critico); attacchi naturali e armi fuori tabella vanno in non_verificabili. Dal lotto 3 gli incantatori (capacita' creature.incantatori, 3.5 dall'SRD e PF1e dal PRD): incantesimi al giorno dalla tabella della classe piu' gli incantesimi bonus e lo slot di dominio o di scuola, conosciuti di bardo e stregone, livello massimo lanciabile e CD (regole numero.incantesimi.al_giorno, .conosciuti, .livello, .cd); una lista di cui non si leggono classe, livello o caratteristica va in non_verificabili, e cosi' la tabella PF1e del bardo scelta dal DM (numero.incantesimi.variante). Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con verifica, regola, atteso, ha, fonte, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        },
+        {
+          "name": "--tolleranza",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rimette la tolleranza di prima su tiri salvezza (+4) e attacco (-1..+2)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/dnd35/dati/gradi.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/gradi.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/d20/dati/bonus.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
       ]
     },
     {
@@ -12229,7 +12629,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
-        "docs/guides/GUIDA-MARCATURE.md"
+        "docs/reference/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
@@ -12300,7 +12700,7 @@
         "scripts/tests/test_controlla_marche.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MARCATURE.md",
+        "docs/reference/GUIDA-MARCATURE.md",
         "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
       ],
       "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
@@ -12893,7 +13293,7 @@
         "scripts/tests/test_prove_skill.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-SCHEDE-PROMPT.md",
+        "docs/reference/GUIDA-SCHEDE-PROMPT.md",
         "plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md"
       ],
       "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",

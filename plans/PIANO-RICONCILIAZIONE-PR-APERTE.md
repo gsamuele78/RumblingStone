@@ -105,7 +105,7 @@ l'**omissione nell'instradamento**, e quello lo chiude il gate.
 
 ## Lotto R3 — la legenda funzionale `[✅ recuperata e risolta: ⛰ da ADR-0043, ⬛ da ADR-0042]`
 
-**Fonte**: PR #72, `docs/guides/LEGENDA-FUNZIONALE-SPEC.md`.
+**Fonte**: PR #72, `docs/reference/LEGENDA-FUNZIONALE-SPEC.md`.
 
 Il documento è stato recuperato e **ri-verificato sui numeri di oggi**, non
 ricopiato: parte dei difetti che elencava sono già stati chiusi, e ne è emerso

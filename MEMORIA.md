@@ -9,6 +9,7 @@ git fetch --prune origin
 python3 scripts/memoria.py --check      # questa pagina è allineata?
 python3 scripts/decisioni_dm.py --check # le decisioni aperte
 python3 scripts/fase1.py <file>         # sempre, prima di toccare
+python3 scripts/memoria_storica.py --pr N  # la storia di una PR, di un ADR, di un tema
 ```
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
@@ -48,7 +49,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 |---|---|---|
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11 (ADR… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
-| **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/guides/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
+| **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/how-to/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
 | **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: i pf di Terros (345 o 348 con Robustezza); *Virata* da riscontrare su d20srd; la portata del sussurro della Catena… | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
 | **P10 · Mappe, le scelte del DM**: texture e tessere nella pagina di scelta (R8, livello B), la prima immagine di ComfyUI (R4-quinquies), il giro di prova sui modelli 3D CC0 e lo zip Standard di Quaternius (R4-ter), il… | [RESA-ASSET](plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md) §8 · [COLLAUDO-MAPPE](plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) | DM; poi l'agente mette le tessere nel tema e rimisura |
 | **P11 · I collaudi che solo il DM può fare**: l'import `.uvtt` in Foundry (INTEGRAZIONE, ~92%), il gate κ ≥ 0,6 (MISURA-EDITORIALE, ~90%), la prova del blocco dei segreti (PRATICHE PI-3), il collaudo del Drappo L9 al ta… | i piani | DM |
@@ -85,22 +86,23 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 3: talenti dei PNG secondo la regola.… | ✅ numero di talenti al 7° per ogni classe, contato a mano sul manuale: 3.5 0/11 → 11/11, PF1e 0/32 → 32/32; prerequisiti dei talenti generali 11/11 e 32/32; im… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 1 (richiesta del DM «verifica che le regole PF1e siano c… | ✅ PF1e 1546/1551 giuste su 1733 righe, nessun errore nei dati; 3.5 da 166 a 167/172: EL 19 del tesoro 60.000 → 61.000 (SRD); «scaglie» non è più un'armatura (c… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Lotto PF1e dell'audit dei plugin (ADR-0121, richiesta del DM «completa i limiti… | ✅ misura PF1e da 59 coperte/46 giuste su 217 (main 421dbd0) a 217/217; uso: 55/55 classi generate e 20/20 tipi convertiti passano il cancello PF1e (prima 0 e 7… |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
-| 2026-11-09 | CODA-DEL-SECONDO-LETTORE | Punto 4: la *d* eufonica (D3) | ✅ norma in `editorial-standards.md` §4 e nel REGISTRO; `validate_lingua.py --d-eufonica` la segnala in canale testing, non bloccante fino al 2026-11-24 (tarata… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3: capacità `creature.incantatori` (… | ✅ Errori messi apposta visti 0/616 → 376/616 (84% nelle liste che si leggono). Trovati 40 scarti veri in 9 file, nessuno corretto: sono incantesimi preparati e… |
+| 2026-11-12 | AVVENTURE-COMMUNITY | Punti chiave, grafo degli eventi, Prolog e RAG per «chi sa cosa» (domanda del D… | laboratorio; T1/T2 in `coerenza_campagna --state` solo dopo la conferma dei giorni dal DM |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 2: capacità `creature.armi` (`sistemi/dnd35/dati/armi.toml`, 72… | ✅ Errori di danno messi apposta visti 0/364 → 336/364 (92%); 13 scarti veri chiusi nel Bestiario (12 critici non scritti, 1 bonus). 🟡 4 scarti di ARC-07 (giave… |
+| 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
+| 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
+| 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 1.007/1.279 (55% → 79%); TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente trovati e chiusi: 6 difetti del verific… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §11 (DM: «correggi gli errori», prima finire le classi):… | ✅ Violazioni 34 → 7 (12 falsi positivi tolti, 16 corrette, 1 nuova); righe di incantesimi senza classe 94 → 16; errori messi apposta visti 247/254 (erano 167/1… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
+- **Memoria storica**: 76 voci, l'ultima MS-0076 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
@@ -113,6 +115,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Cosa è successo | [`plans/CHANGELOG.md`](plans/CHANGELOG.md) |
 | Che piani esistono | [`plans/INDEX.md`](plans/INDEX.md) |
 | Perché si è deciso così | [`plans/adr/`](plans/adr/) |
+| Cosa sapevano le sessioni prima, la storia dietro una scelta | [`plans/MEMORIA-STORICA.md`](plans/MEMORIA-STORICA.md), si cerca con `scripts/memoria_storica.py` (ADR-0127) |
 | Le norme e chi le misura | [`skills/REGISTRO-NORME-EDITORIALI.md`](skills/REGISTRO-NORME-EDITORIALI.md) |
 | Le regole per gli agenti | [`AGENTS.md`](AGENTS.md) |
 | Questa pagina | `scripts/memoria.py`, mai a mano |

@@ -5,8 +5,8 @@
 ```statblocco
 gs: 4
 tipo: Large monstrous humanoid HD 3d8+3d8+18 (51 HP)
-ca: 18
-ca-dettaglio: (-1 size, +0 Dex, +7 natural, +2 hide)
+ca: 19
+ca-dettaglio: (-1 size, +0 Dex, +7 natural, +3 hide)
 pf: 51
 pf-dado: 3d8+3d8+18
 ts: Temp +7, Rifl +4, Vol +6
@@ -17,4 +17,6 @@ attributi: For 20 Des 10 Cos 16 Int 10 Sag 14 Car 10
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-Large monstrous humanoid HD 3d8+3d8+18 (51 HP). AC 18 (-1 size, +0 Dex, +7 natural, +2 hide). Fort +7 Ref +4 Will +6. BAB/Grapple +6/+15. Heavy mace +11 (2d6+6) + slam +6 (1d6+2). Str 20 Dex 10 Con 16 Int 10 Wis 14 Cha 10. Special: panoramic vision (4 eyes, all-around, +4 vs gaze), scent, corrupted (evil alignment). Feats: Power Attack, Cleave, Weapon Focus (mace). Notes: fanteria pesante Shaar; 240 unità.
+Large monstrous humanoid HD 3d8+3d8+18 (51 HP). AC 19 (-1 size, +0 Dex, +7 natural, +3 hide). Fort +7 Ref +4 Will +6. BAB/Grapple +6/+15. Heavy mace +11 (2d6+6) + slam +6 (1d6+2). Str 20 Dex 10 Con 16 Int 10 Wis 14 Cha 10. Special: panoramic vision (4 eyes, all-around, +4 vs gaze), scent, corrupted (evil alignment). Feats: Power Attack, Cleave, Weapon Focus (mace). Notes: fanteria pesante Shaar; 240 unità.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): l'armatura di pelle dà +3 (SRD), non +2. CA 18 → **19**.

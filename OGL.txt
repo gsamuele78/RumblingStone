@@ -5,7 +5,7 @@ Questo file esiste per una ragione operativa, non decorativa: la Sezione 10
 della licenza qui sotto dice che una copia della licenza va inclusa con ogni
 copia dell'Open Game Content che si distribuisce. Finché il repo resta privato
 non è un adempimento; nel momento in cui qualcosa esce, lo è — ed è parte del
-cancello d'uscita di `docs/guides/GUIDA-CONDIVISIONE-IP.md` §7. Averlo qui
+cancello d'uscita di `docs/how-to/GUIDA-CONDIVISIONE-IP.md` §7. Averlo qui
 significa che il cancello si può passare invece che solo citare.
 
 

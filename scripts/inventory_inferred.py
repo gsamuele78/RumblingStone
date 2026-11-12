@@ -117,7 +117,7 @@ def e_regola(rel: str) -> bool:
             or "/fixtures/" in f"/{rel}"
             or nome.upper().startswith("README")
             or rel in ("AGENTS.md", "CLAUDE.md")
-            or rel == "docs/guides/GUIDA-MARCATURE.md")
+            or rel == "docs/reference/GUIDA-MARCATURE.md")
 
 
 def classe(rel: str) -> str:
@@ -251,7 +251,7 @@ def scrivi_inventario(trovati: list[dict], tipizzati: list[dict]) -> str:
     forme = defaultdict(int)
     for t in aperti:
         forme[t["forma"]] += 1
-    w(f"Forma degli aperti ([GUIDA-MARCATURE](../guides/GUIDA-MARCATURE.md)): "
+    w(f"Forma degli aperti ([GUIDA-MARCATURE](../reference/GUIDA-MARCATURE.md)): "
       f"**{forme['nuova']}** con domanda e base, {forme['vecchia']} con una nota "
       f"d'altro tipo, {forme['nuda']} nudi.")
     w("")

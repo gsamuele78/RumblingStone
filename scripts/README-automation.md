@@ -4,7 +4,7 @@ Zero-burden helpers that read what the DM already writes (session logs,
 state.md, Armate atlas) and produce prep material. **Nothing overwrites
 canon** — scripts either generate new files or print suggestions for
 manual review. Respects `AGENTS.md`: we never invent statblocks; we only
-index/compose what exists (or mark it INFERRED with a question and a base, see `docs/guides/GUIDA-MARCATURE.md`).
+index/compose what exists (or mark it INFERRED with a question and a base, see `docs/reference/GUIDA-MARCATURE.md`).
 
 > **Disambiguazione**: questa cartella `scripts/` è l'automazione DM. I
 > convertitori di contenuto (pdf→md, html→md, immagini→webp) vivono in
@@ -29,13 +29,13 @@ python3 scripts/dm.py doctor                      # environment diagnosis
 ```
 
 > 📘 **Vuoi la procedura completa dai master ai PDF in mano ai giocatori?**
-> → [`docs/guides/GUIDA-BOOKLET-E-PDF.md`](../docs/guides/GUIDA-BOOKLET-E-PDF.md)
+> → [`docs/how-to/GUIDA-BOOKLET-E-PDF.md`](../docs/how-to/GUIDA-BOOKLET-E-PDF.md)
 > (prerequisiti per ogni sistema, anatomia del manifest, comandi, container
 > opzionali, troubleshooting, checklist di consegna). Qui sotto c'è la
 > **mappa degli strumenti**; là c'è il **come si fa**.
 
 > 🎨 **Immagini della campagna** (prompt, generatori, coerenza d'arco):
-> [`docs/guides/GUIDA-IMMAGINI.md`](../docs/guides/GUIDA-IMMAGINI.md).
+> [`docs/how-to/GUIDA-IMMAGINI.md`](../docs/how-to/GUIDA-IMMAGINI.md).
 
 **Sottocomandi `dm.py`** (ognuno inoltra i flag allo script sottostante):
 
@@ -49,6 +49,7 @@ python3 scripts/dm.py doctor                      # environment diagnosis
 | `recap` | `--last-n N` · `--pdf` · `--hype` | `session_recap` (+ `hype_homebrew`) | §4.6 |
 | `handout` | `--tipo T` (obbl.) · `--da <file>` · `--out <file>` | `hype_homebrew --handout` | prep |
 | `bestiario` | `estrai`\|`deriva`\|`attributi`\|`creatura`\|`conformita` + i flag dello script (anche `--help`) | `extract_statblocks` / `derive_statblocks` / `genera_attributi` / `genera_creatura` / `conformita_statblocchi` | prep (creature; il codice d'uscita è quello dello script) |
+| `sistemi` | i flag di `sistemi.py` (anche `--help`): nessuno = sistemi attivi e matrice strumenti × sistemi · `--di FILE` · `--check` · `--json` · `--skill` · `--skill-escluse` | `sistemi` | tutte (ADR-0111; guida in [`GUIDA-SISTEMI-DI-GIOCO`](../docs/how-to/GUIDA-SISTEMI-DI-GIOCO.md)) |
 | `hype` | `setup`\|`start`\|`docker`\|`docker-stop` | wrapper `homebrew-local/*.sh` | prep |
 | `dossier` | *(nessuno)* | `dm_dossier` | §4 (solo DM) |
 | `prompts` | `<arco>` (obbl.) · `-o <file>` · `--list` | `extract_scene_prompts` | prep (prompt immagine dell'arco, ADR-0015) |

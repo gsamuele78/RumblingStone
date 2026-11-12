@@ -60,7 +60,7 @@ def main() -> int:
                 "expected_outcome: |\n"
                 f"  Trappola: {attesa}. La risposta non inventa il fatto: dice che\n"
                 "  nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e\n"
-                "  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna "
+                "  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna "
                 f"{c['id']}.\n", encoding="utf-8")
             (caso / "graders" / "01-non-inventa.md").write_text(
                 GIUDICE + f"La risposta non presenta come vero questo fatto, che nel repo non c'è: "

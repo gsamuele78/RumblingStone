@@ -54,6 +54,10 @@ def cartella():
         shutil.rmtree(d, ignore_errors=True)
 
 
+VOCE_STORICA = ("### MS-0001 · 2026-11-12 · prova\n\n- **Data:** 2026-11-12\n- **PR:** —\n"
+                "- **ADR:** —\n- **Temi:** prova\n- **Origine:** prova\n- **Testo:** prova\n")
+
+
 class BaseDecisione(unittest.TestCase):
     """Ogni asserzione dice anche *quale* riga del manifest sta verificando."""
 
@@ -181,6 +185,7 @@ class TestCheckPlansDiscipline(BaseDecisione):
             (d / "plans" / "CHANGELOG.md").write_text(
                 "| Data | Piano |\n|---|---|\n| 2026-09-03 | PROVA | riga | — | ✅ |\n",
                 encoding="utf-8")
+            (d / "plans" / "MEMORIA-STORICA.md").write_text(VOCE_STORICA, encoding="utf-8")
             subprocess.run(["git", "add", "-A"], cwd=str(d), capture_output=True, check=True)
             subprocess.run(["git", "commit", "-qm", "tocco scripts/ e traccio"], cwd=str(d),
                            capture_output=True, check=True)
@@ -188,9 +193,11 @@ class TestCheckPlansDiscipline(BaseDecisione):
                             esegui("check_plans_discipline.py", "--repo-root", str(d),
                                    "--base", "HEAD~1", "--head", "HEAD"))
 
-    def _tocca_changelog(self, d: Path, riga: str) -> None:
+    def _tocca_changelog(self, d: Path, riga: str, voce: bool = True) -> None:
         (d / "plans" / "CHANGELOG.md").write_text(
             "| Data | Piano |\n|---|---|\n" + riga + "\n", encoding="utf-8")
+        if voce:
+            (d / "plans" / "MEMORIA-STORICA.md").write_text(VOCE_STORICA, encoding="utf-8")
         subprocess.run(["git", "add", "-A"], cwd=str(d), capture_output=True, check=True)
         subprocess.run(["git", "commit", "-qm", "riga"], cwd=str(d),
                        capture_output=True, check=True)
@@ -219,6 +226,23 @@ class TestCheckPlansDiscipline(BaseDecisione):
             self._tocca_changelog(
                 d, "| 2026-09-01 | PROVA | lotto | — | ✅ `auto\\|inkscape` |\n"
                    "| 2026-10-08 | PROVA | lotto | — | ✅ senza barra finale")
+            self.assertEsce("check_plans_discipline", 0,
+                            esegui("check_plans_discipline.py", "--repo-root", str(d),
+                                   "--base", "HEAD~1", "--head", "HEAD"))
+
+    def test_riga_del_changelog_senza_voce_storica_viene_bocciata(self):
+        """ADR-0127: la storia entra al merge, con la riga del changelog."""
+        with cartella() as d:
+            self._repo_git(d)
+            self._tocca_changelog(d, "| 2026-11-12 | PROVA | lotto | — | ✅ |", voce=False)
+            self.assertEsce("check_plans_discipline", 1,
+                            esegui("check_plans_discipline.py", "--repo-root", str(d),
+                                   "--base", "HEAD~1", "--head", "HEAD"))
+
+    def test_riga_del_changelog_con_voce_storica_passa(self):
+        with cartella() as d:
+            self._repo_git(d)
+            self._tocca_changelog(d, "| 2026-11-12 | PROVA | lotto | — | ✅ |")
             self.assertEsce("check_plans_discipline", 0,
                             esegui("check_plans_discipline.py", "--repo-root", str(d),
                                    "--base", "HEAD~1", "--head", "HEAD"))
