@@ -1167,7 +1167,7 @@ microkernel guidato dai dati.
 flowchart LR
     subgraph CFG["Configurazione"]
         STOML["sistemi.toml<br/>predefinito, attivi, rinforzo,<br/>[moduli] cartella → sistema,<br/>[ambientazioni], [opzioni.pf1e]"]
-        CAT["sistemi/catalogo.toml<br/>20 capacità"]
+        CAT["sistemi/catalogo.toml<br/>23 capacità"]
     end
     subgraph PLUG["Plugin in sistemi/"]
         D20["d20 · famiglia<br/>formule, statblocco, stampa,<br/>termini vietati; codice: potenze"]
