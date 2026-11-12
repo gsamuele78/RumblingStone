@@ -264,7 +264,8 @@ sensi: scurovisione 18 m, visione crepuscolare, fiuto
 attacchi:
   - Mischia pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)
 voci:
-  - Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco; Lotta +15
+  - Lotta: +15
+  - Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.
 fonte: wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD
 ```

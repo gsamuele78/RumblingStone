@@ -7858,7 +7858,8 @@ ___
 
 **STATISTICHE**
 ___
-Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco; Lotta +15  
+Lotta: +15  
+Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco  
 
 **TATTICHE**
 ___
