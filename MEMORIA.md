@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | Cancello del riferimento dei plugin: `scripts/tests/test_riferimento_plugin.py`… | ✅ sulle teste di main dopo #376, #386, #388 e #390 avrebbe trovato 5, 6, 15 e 17 disaccordi; su main di oggi 0; una riga tolta, un file sbagliato e uno strumen… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
 | 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
 | 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 1.007/1.279 (55% → 79%); TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente trovati e chiusi: 6 difetti del verific… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 80 voci, l'ultima MS-0080 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 81 voci, l'ultima MS-0081 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

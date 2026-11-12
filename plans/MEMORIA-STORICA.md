@@ -949,3 +949,14 @@ repo scritto con altre parole.
 - **Testo:** Seconda parte del lotto 4 del programma «regole senza omissioni». Nel conto dei gradi di `verifica_scheda` il bonus di un talento d'abilità va solo alle abilità che il talento nomina, col numero del plugin (`effetti_talenti.toml` di 3.5 e PF1e, capacità `creature.gradi`, generati da `estrai_effetti_talenti.py`). Banco `muta_effetti_talenti.py`: 44 errori su 44 visti, prima 0; 2 controlli in regola, nessuno segnato a torto; il Bestiario resta a 72 violazioni.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** degli effetti dei talenti sui numeri, pf, tiri salvezza, iniziativa, attacco e danno erano già nei conti (`conformita_statblocchi`, `dmcore.danno`): mancavano solo le abilità; il margine di prima scattava su una parola nel testo, e «furtivo» di «attacco furtivo» o «agile» in una frase bastavano; il banco tocca solo 10 schede perché solo quelle nominano un talento d'abilità; Autoipnosi manca da `gradi.toml` (l'estrattore dei gradi legge la tabella riassuntiva delle abilità, che non ha le psioniche fuori da Psicraft e Usare Oggetti Psionici).
+
+### MS-0081 · 2026-11-12 · Cancello del riferimento dei plugin
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0111, ADR-0123
+- **Temi:** documentazione plugin cancelli
+- **Origine:** addendum della riga del 2026-11-12 «Cancello del riferimento dei plugin» in `plans/CHANGELOG.md`
+- **Testo:** Il §5 di `docs/reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md` (una riga per capacità: chi la chiede, file dati di dnd35 e pf1e) è rimasto indietro quattro volte il 2026-11-12, dopo le #376, #386, #388 e #390, ed è stato riallineato a mano con le #387 e #389. `scripts/tests/test_riferimento_plugin.py` lo confronta con catalogo, manifest e `sistema.toml`: sulle teste di main dopo quelle quattro PR avrebbe dato 5, 6, 15 e 17 disaccordi, su 591dd927 zero. Costo: una PR di regole che cambia una capacità, chi la chiede o i suoi file è rossa finché non aggiorna la riga.
+- **Trovato nel repo:** `scripts/tests/test_riferimento_plugin.py`
+- **Solo qui:** `creature.armi` e `creature.incantatori` mancavano dal §5 già prima della #376 (lotti 2 e 3 di ADR-0126); le parentesi della colonna «chi la chiede» sono note e il test le ignora, quindi «— (la legge verifica_scheda)» conta come nessuno strumento.
