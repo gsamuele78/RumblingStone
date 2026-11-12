@@ -93,6 +93,14 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
    Senza la riga nella scheda il prerequisito resta non verificabile. Non
    verificabili da 76 a 47, nessuna violazione nuova (ESITO §2-quater).
 
+10. **Incantesimi contro le liste di classe.** Capacità nuova
+    `creature.liste_incantesimi` (dnd35 dall'SRD, pf1e dal PRD che c'era già).
+    `verifica_scheda` segnala l'incantesimo fuori dalla lista della classe
+    (`incantesimo.lista`) e quello scritto sotto il suo livello
+    (`incantesimo.livello`); un nome che le liste non hanno resta non
+    verificabile. 6 violazioni sulle schede vere; errori messi apposta visti
+    167 su 170 (ESITO §2-quinquies).
+
 ## Conseguenze
 
 - L'LLM riceve la regola esatta e il controesempio senza imparare un motore

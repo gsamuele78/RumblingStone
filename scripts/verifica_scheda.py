@@ -15,6 +15,9 @@ Scopo
              attacco, iniziativa (`conformita_statblocchi.giudica`)
     abilita  gradi delle abilità: massimo per abilità e punti disponibili
              (capacità `creature.gradi` del plugin; 3.5 e PF1e)
+    incantesimi  ogni incantesimo scritto per livello è nella lista della classe
+             (o in un dominio) e non sotto il suo livello (capacità
+             `creature.liste_incantesimi`; 3.5 dall'SRD, PF1e dal PRD)
 
   Le regole sono quelle del plugin del sistema della scheda (`sistemi/<id>`).
   Un conto che il plugin non sa fare non compare: `non_verificabili` dice che
@@ -249,6 +252,116 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+# --- incantesimi: sono nella lista della classe, al livello scritto? (ADR-0124 §10) ---
+
+#: «- 5° (3+1): *colpo infuocato* (CD 19), …», «Level 3: Dispel Magic, …», «**2°** — *aiuto*»
+RIGA_LIVELLO = re.compile(r"^\s*(?:[-*•]\s*)?\**(?:Level\s+|Livello\s+)?(\d)(?:°|º|st|nd|rd|th)?\**\s*"
+                          r"(?:\([^)]*\))?\s*\**\s*[:—–-]\s*(\S.*)$", re.I)
+#: come una scheda nomina la classe che lancia
+CLASSI_INCANTATRICI = {"chieric": "cleric", "cleric": "cleric", "clr": "cleric", "mag[oa]\\b": "wizard", "wizard": "wizard",
+                       "wiz": "wizard", "stregon": "sorcerer", "sorcerer": "sorcerer", "sor\\b": "sorcerer",
+                       "bard": "bard", "brd": "bard", "druid": "druid", "drd": "druid", "paladin": "paladin",
+                       "pal\\b": "paladin", "ranger": "ranger", "rgr": "ranger"}
+TESTA_INCANTESIMI = re.compile(r"incantesimi|spells", re.I)
+
+
+@lru_cache(maxsize=None)
+def _incantesimi_it() -> "dict[str, str]":
+    import lessico_regole as LR
+    return {LR.norma(v["it"]): v["srd35"] for v in LR.tabella_35() if v["tipo"] == "incantesimo"}
+
+
+@lru_cache(maxsize=None)
+def _liste(sistema: str) -> "tuple[dict, dict, dict]":
+    """(classe → {nome normalizzato: livello}, dominio → idem, nome normalizzato → nome della fonte)."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    d = S.dati(sistema, "creature.liste_incantesimi")
+    nomi: dict = {}
+
+    def piatta(gruppo: dict) -> dict:
+        out: dict = {}
+        for chiave, livelli in gruppo.items():
+            for liv, voci in livelli.items():
+                for n in voci:
+                    k = LR.norma(n)
+                    nomi.setdefault(k, n)
+                    out.setdefault(chiave, {})[k] = min(int(liv), out.get(chiave, {}).get(k, 9))
+        return out
+    return piatta(d.get("liste", {})), piatta(d.get("domini", {})), nomi
+
+
+def _classe_che_lancia(righe: "list[str]", i: int) -> "str | None":
+    """La classe nominata dall'intestazione degli incantesimi più vicina sopra la riga i."""
+    for j in range(i, max(-1, i - 14), -1):
+        if j != i and not RIGA_LIVELLO.match(righe[j]) and righe[j].strip() and not TESTA_INCANTESIMI.search(righe[j]):
+            if j < i - 1:
+                return None   # fra la lista e l'intestazione c'è dell'altro
+            continue
+        if TESTA_INCANTESIMI.search(righe[j]):
+            testa = righe[j] if j != i else righe[j].split("—")[0]
+            trovate = {v for k, v in CLASSI_INCANTATRICI.items() if re.search(r"\b" + k, testa, re.I)}
+            return trovate.pop() if len(trovate) == 1 else None
+    return None
+
+
+def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
+    """(violazioni, non verificabili) degli incantesimi scritti per livello.
+
+    Regole: `incantesimo.lista` (l'incantesimo non è nella lista della classe né
+    in un dominio), `incantesimo.livello` (è scritto a un livello più basso del
+    suo; più alto si accetta, è uno slot superiore o un talento di metamagia).
+    Un nome che le liste non hanno (manuali, nomi propri) non è verificabile."""
+    testo = p.read_text(encoding="utf-8", errors="replace")
+    sistema = VT.sistema_di(p, testo)
+    from dmcore import sistemi as S
+    try:
+        liste, domini, nomi = _liste(sistema)
+    except S.ErroreSistemi:   # il sistema non ha liste di classe
+        return [], []
+    import lessico_regole as LR
+    it = _incantesimi_it() if sistema == "dnd35" else {}
+    righe = testo.splitlines()
+    viol, nv = [], []
+    for i, riga in enumerate(righe):
+        m = RIGA_LIVELLO.match(riga)
+        if not m or "*" not in m.group(2) and not re.search(r"\bLevel\b", riga):
+            continue
+        classe = _classe_che_lancia(righe, i)
+        if classe is None or classe not in liste:
+            continue
+        scritto = int(m.group(1))
+        di_dominio = False
+        for pezzo in re.split(r"[,;]", re.sub(r"\((?:CD|DC)[^)]*\)", "", m.group(2))):
+            if re.search(r"\bdomini[oa]\b|\bdomain\b", pezzo, re.I):
+                di_dominio = True
+            dominio = di_dominio or bool(re.search(r"\((?:D|d)\)|\bD\b\s*$", pezzo))
+            nome = re.sub(r"\b(?:domini[oa]|domain)\s*:?|\([^)]*\)|[×x]\s*\d+\b|\bD\s*$", "", pezzo).strip(" *_.·")
+            k = LR.norma(nome)
+            if not k or len(k) < 3 or re.fullmatch(r"[\d+ /]+", k):
+                continue
+            k = LR.norma(it[k]) if k in it else k
+            base = {"file": VT_rel(p), "riga": i + 1, "verifica": "incantesimi", "incantesimo": nome,
+                    "fonte": "srd" if sistema == "dnd35" else "prd"}
+            if k not in nomi:
+                nv.append({**base, "regola": "incantesimo.nome", "atteso": None, "ha": None,
+                           "testo": f"«{nome}» non è nelle liste del plugin {sistema}"})
+                continue
+            suo = liste[classe].get(k)
+            da_dominio = min((d[k] for d in domini.values() if k in d), default=None)
+            if suo is None and da_dominio is not None and classe == "cleric":
+                suo = da_dominio
+            elif suo is not None and dominio and da_dominio is not None:
+                suo = min(suo, da_dominio)
+            if suo is None:
+                viol.append({**base, "regola": "incantesimo.lista", "atteso": f"lista {classe}", "ha": "fuori lista",
+                             "testo": f"{nomi[k]} non è nella lista {classe}"})
+            elif scritto < suo:
+                viol.append({**base, "regola": "incantesimo.livello", "atteso": suo, "ha": scritto,
+                             "testo": f"{nomi[k]} è di {suo}° livello per {classe}, la scheda lo scrive al {scritto}°"})
+    return viol, nv
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -266,9 +379,10 @@ def main(argv: "list[str] | None" = None) -> int:
         tv, tn, ti = talenti(p)
         nvv, nn = numeri(p)
         av, an = abilita(p)
-        lette += bool(tv or tn or ti or nvv or nn or av or an or L.leggi(p))
-        viol += tv + nvv + av
-        nv += tn + ti + nn + an
+        iv, inn = incantesimi(p)
+        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or L.leggi(p))
+        viol += tv + nvv + av + iv
+        nv += tn + ti + nn + an + inn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

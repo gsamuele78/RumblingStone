@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 3: talenti dei PNG secondo la regola.… | ✅ numero di talenti al 7° per ogni classe, contato a mano sul manuale: 3.5 0/11 → 11/11, PF1e 0/32 → 32/32; prerequisiti dei talenti generali 11/11 e 32/32; im… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 1 (richiesta del DM «verifica che le regole PF1e siano c… | ✅ PF1e 1546/1551 giuste su 1733 righe, nessun errore nei dati; 3.5 da 166 a 167/172: EL 19 del tesoro 60.000 → 61.000 (SRD); «scaglie» non è più un'armatura (c… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
 
 ## Le misure che si portano dietro
 

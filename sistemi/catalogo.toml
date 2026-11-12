@@ -26,6 +26,7 @@
 "creature.conformita" = "i conti che il controllo delle schede sa fare nel sistema, e come si arrotondano i pf (F4 di ADR-0112)"
 "creature.talenti" = "i talenti con i prerequisiti, i talenti bonus delle classi e le capacità che i talenti chiedono (regole complete, lotto 3)"
 "creature.gradi" = "i gradi delle abilità: caratteristica chiave, punti per livello di classe e per dado vita di tipo, massimo dei gradi (ADR-0124)"
+"creature.liste_incantesimi" = "le liste di classe e di dominio degli incantesimi, per livello: chi può lanciare che cosa (ADR-0124 §10)"
 "statblocco.campi" = "i campi meccanici del blocco statistiche"
 "formule.regole" = "le formule del sistema scritte come nel manuale (modificatore, TS, CD), valutate da dmcore.formule (F3 di ADR-0112)"
 "stampa.etichette" = "le sigle meccaniche stampate nel riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sensi)"

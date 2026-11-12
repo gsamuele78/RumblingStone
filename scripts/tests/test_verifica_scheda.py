@@ -152,5 +152,53 @@ class ClassiDeiManuali(unittest.TestCase):
         assert VS._punti_di_classe(regole, "fighter") == 2
 
 
+
+class Incantesimi(unittest.TestCase):
+    """Gli incantesimi scritti per livello contro le liste del plugin (ADR-0124 §10)."""
+
+    SCHEDA = ("# Prova\n\n```statblocco\ngs: 5\ntipo: Medium humanoid (human), Chierico 5, LN\n```\n\n"
+              "**Incantesimi da chierico** (LI 5, CD 13 + livello):\n"
+              "- 3° (2+1): *dissolvi magie*, *preghiera*; dominio: *protezione dall'energia*\n"
+              "- 2° (3+1): *aiuto*, *blocca persone* (CD 15)\n"
+              "- 1° (4+1): *benedizione*, *scudo della fede*\n")
+
+    def _giudica(self, testo):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "prova-cr5.md"
+            p.write_text(testo, encoding="utf-8")
+            return V.incantesimi(p)
+
+    def test_scheda_pulita(self):
+        self.assertEqual(self._giudica(self.SCHEDA), ([], []))
+
+    def test_livello_troppo_basso(self):
+        viol, _ = self._giudica(self.SCHEDA.replace("*benedizione*", "*benedizione*, *colpo infuocato*"))
+        self.assertEqual([(v["regola"], v["atteso"], v["ha"]) for v in viol], [("incantesimo.livello", 5, 1)])
+
+    def test_fuori_lista(self):
+        viol, _ = self._giudica(self.SCHEDA.replace("*aiuto*", "*palla di fuoco*"))
+        self.assertEqual([v["regola"] for v in viol], ["incantesimo.lista"])
+        self.assertEqual(viol[0]["riga"], 10)
+
+    def test_slot_piu_alto_si_accetta(self):
+        self.assertEqual(self._giudica(self.SCHEDA.replace("*preghiera*", "*preghiera*, *benedizione*"))[0], [])
+
+    def test_nome_fuori_dalle_liste_non_si_giudica(self):
+        viol, nv = self._giudica(self.SCHEDA.replace("*aiuto*", "*lampo oscuro di Nessuno*"))
+        self.assertEqual(viol, [])
+        self.assertEqual([x["regola"] for x in nv], ["incantesimo.nome"])
+
+    def test_senza_classe_nell_intestazione_non_si_giudica(self):
+        self.assertEqual(self._giudica(self.SCHEDA.replace("Incantesimi da chierico", "Incantesimi")
+                                       .replace("*aiuto*", "*palla di fuoco*")), ([], []))
+
+    def test_liste_nei_due_plugin(self):
+        from dmcore import sistemi as S
+        d35, pf = S.dati("dnd35", "creature.liste_incantesimi"), S.dati("pf1e", "creature.liste_incantesimi")
+        self.assertIn("Fireball", d35["liste"]["wizard"]["3"])
+        self.assertIn("Flame Strike", d35["domini"]["sun"]["5"])
+        self.assertIn("Fireball", pf["liste"]["wizard"]["3"])
+
+
 if __name__ == "__main__":
     unittest.main()

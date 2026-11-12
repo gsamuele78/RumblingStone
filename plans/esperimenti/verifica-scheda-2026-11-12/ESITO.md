@@ -140,6 +140,33 @@ quello non si conclude che gli attacchi siano pochi. Dei 1.515 prerequisiti
 numerosi restano razza (357), capacità di classe (187), divinità o regione
 (101): la razza è il prossimo che si può leggere dalla scheda.
 
+## 2-quinquies. Incantesimi: lista della classe e livello
+
+Capacità nuova `creature.liste_incantesimi`. Per il 3.5
+`sistemi/dnd35/dati/liste_incantesimi.toml`, generato dalla riga «Level:» di
+ogni incantesimo dell'SRD (`plans/esperimenti/incantesimi-35-2026-11-12/`): 601
+incantesimi, 7 classi, 22 domini. Per il PF1e le liste del PRD c'erano già
+(ADR-0119, lotto 3) e nessuno strumento le leggeva. `verifica_scheda.incantesimi`
+legge le righe «N° — *nome*, *nome*» sotto un'intestazione che nomina la classe.
+
+| Misura | Valore |
+|---|---|
+| Righe di incantesimi per livello nel repo | 203: 109 con la classe leggibile, 94 no (non giudicate) |
+| Violazioni sulle schede vere | **6** |
+| Nomi che le liste non hanno | 63 (manuali fuori SRD, varianti del nome italiano) |
+| Livello abbassato di uno apposta, visto | 82 / 85 |
+| Incantesimo fuori lista aggiunto apposta, visto | 85 / 85 |
+
+Le 6: *Grazia del Gatto* al 1° e *Suggestione di Massa* al 3° di un bardo
+(Salvatore); *profanare* al 2° per due chierici, dove il lessico dice che
+«Profanare» è *Unhallow* (5°) e l'incantesimo di 2° è «Dissacrare»
+(*Desecrate*); *Fulmine* a un bardo in due file di ARC-08.
+
+Limiti: adepto, assassino e guardia nera non hanno lista (nell'SRD sta nel
+testo della classe); le liste delle classi dei manuali (warmage, hexblade,
+healer: il sito le ha) non sono caricate; non si controlla quanti incantesimi
+al giorno; un livello più alto del dovuto passa sempre.
+
 ## 3. Divario dei plugin, sezione per sezione
 
 | Sezione | Plugin `dnd35` oggi | SRD 3.5 in cache | srd.dndtools.org | Dati PCGen (WotC 3.5) | Plugin `pf1e` |
