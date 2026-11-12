@@ -367,3 +367,15 @@ master e nel Bestiario non vale (lì i pf stanno nella fascia dei dadi).
 Il lotto 1-bis porta CA, sensi e CD in `verifica_scheda`, somma le voci della
 CA per tipo con `dmcore.bonus` (due bonus di armatura non si sommano) e aggiunge
 gli oggetti dell'SRD col prezzo. Da pubblicare dopo il merge della #380.
+
+### Lotto 3-bis fatto (2026-11-12)
+
+I requisiti delle classi di prestigio sono in `verifica_scheda` (ADR-0126,
+«Lotto 3-bis»): `estrai_prestigio.py`, `muta_prestigio.py`,
+`misure-prestigio.json`. Del lotto 3 del piano restano: l'avanzamento
+d'incantatore dato dalle classi di prestigio («+1 livello della classe
+esistente»: oggi una lista di un chierico 9 / Runecaster 4 si giudica da
+chierico 9 o resta non letta), le capacità di classe che toccano i numeri, il
+rigiudizio delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON
+per scheda chiesta dal thread della #379. Vanno nel lotto 4.
+

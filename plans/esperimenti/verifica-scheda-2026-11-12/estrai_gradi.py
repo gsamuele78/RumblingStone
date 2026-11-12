@@ -36,7 +36,7 @@ def chiavi(base: Path) -> "dict[str, str]":
     out = {}
     for f in ("skills-i.md", "skills-ii.md"):
         t = (base / "basic-rules-and-legal" / f).read_text(encoding="utf-8")
-        for nome, car in re.findall(r"^#{2,3} ([A-Z][\w' ]+?) <small>\((\w+)", t, flags=re.M):
+        for nome, car in re.findall(r"^#{2,3} ([A-Z][\w' ]+?) (?:<small>)?\((\w+)", t, flags=re.M):
             if car.lower() in CAR:
                 out[nome.strip().lower()] = CAR[car.lower()]
     for f in sorted((base / "psionics").glob("*.md")):

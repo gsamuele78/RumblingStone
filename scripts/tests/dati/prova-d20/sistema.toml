@@ -21,6 +21,7 @@ skill = []
 "formule.regole" = { eredita = "d20", motivo = "famiglia" }
 "creature.armi" = { eredita = "dnd35", motivo = "stesse tabelle" }
 "creature.incantatori" = { eredita = "dnd35", motivo = "stesse tabelle" }
+"creature.prestigio" = { eredita = "dnd35", motivo = "stessi requisiti" }
 "bonus.cumulo" = { eredita = "d20", motivo = "famiglia" }
 "stampa.etichette" = { eredita = "d20", motivo = "famiglia" }
 "lessico.abilita" = { eredita = "dnd35", motivo = "stesse abilità" }
