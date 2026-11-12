@@ -81,6 +81,27 @@ def _da_voci(voci: "list[tuple[str, str]]", fonte: str) -> dict:
     return c
 
 
+def _avanza_da_tabella(html: str) -> "dict | None":
+    """I livelli della classe che danno «+1 level of existing … class», dalla
+    colonna «Spells per Day» della tabella. tipo: arcane, divine, both (una
+    lista arcana e una divina insieme), any."""
+    livelli, tipi = [], set()
+    for riga in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S):
+        celle = [re.sub(r"<[^>]+>", "", c) for c in re.findall(r"<td[^>]*>(.*?)</td>", riga, re.S)]
+        m = re.match(r"\s*(\d+)(?:st|nd|rd|th)", celle[0]) if celle else None
+        qui = [c for c in celle[1:] if re.search(r"level of existing", c, re.I)]
+        if not m or not qui:
+            continue
+        livelli.append(int(m.group(1)))
+        for c in qui:
+            tipi |= set(re.findall(r"existing (arcane|divine)", c, re.I)) or {"any"}
+    if not livelli:
+        return None
+    tipi = {x.lower() for x in tipi}
+    tipo = "both" if {"arcane", "divine"} <= tipi else "any" if "any" in tipi or len(tipi) != 1 else tipi.pop()
+    return {"tipo": tipo, "livelli": livelli}
+
+
 def dall_srd(radice: Path) -> dict:
     testo = (radice / "basic-rules-and-legal" / "prestige-classes.md").read_text(encoding="utf-8")
     classi = {}
@@ -89,6 +110,9 @@ def dall_srd(radice: Path) -> dict:
         if req:
             voci = re.findall(r"^\*\*([^:*]+):\*\*\s*(.+)$", req.group(1), re.M)
             classi[m.group("nome").strip().lower()] = _da_voci(voci, "SRD 3.5, Prestige Classes")
+            tab = re.search(r"<table.*?</table>", m.group("corpo"), re.S)
+            if tab and (a := _avanza_da_tabella(tab.group(0))):
+                classi[m.group("nome").strip().lower()]["avanza"] = a
     return classi
 
 
@@ -103,6 +127,9 @@ def dal_prd(radice: Path) -> dict:
             voci = [(k, re.sub(r"<[^>]+>", "", v or "")) for k, v in
                     db.execute("select name, body from sections where parent_id=? order by section_id", r)]
             classi[nome.strip().lower()] = _da_voci(voci, "PRD PF1e, Core Rulebook, Prestige Classes")
+            tab = db.execute("select body from sections where type='table' and name=?", (f"Table: {nome.strip()}",)).fetchone()
+            if tab and (a := _avanza_da_tabella(tab[0])):
+                classi[nome.strip().lower()]["avanza"] = a
     return classi
 
 
@@ -122,6 +149,18 @@ def da_pcgen(radice: Path) -> dict:
             if r.startswith("CLASS:") and re.search(r"\tTYPE:[^\t]*Prestige", r):
                 prestigio.add(r.split("\t")[0][6:].strip())
         qui: dict[str, dict] = {}
+        corrente, avanza = None, {}
+        for r in righe:
+            if r.startswith("CLASS:"):
+                corrente = r.split("\t")[0][6:].strip()
+            elif corrente in prestigio and (m := re.match(r"(\d+)(?::REPEATLEVEL:(\d+))?\t", r)):
+                tipi = re.findall(r"ADD:SPELLCASTER\|([^\t|]*)", r)
+                if tipi:
+                    da, passo = int(m.group(1)), int(m.group(2) or 0)
+                    liv = list(range(da, max(10, da) + 1, passo)) if passo else [da]
+                    a = avanza.setdefault(corrente.lower(), {"livelli": set(), "tipi": set()})
+                    a["livelli"] |= set(liv)
+                    a["tipi"].add("both" if {"Arcane", "Divine"} <= set(tipi) else tipi[0].strip().lower())
         for r in righe:
             if not r.startswith("CLASS:"):
                 continue
@@ -179,13 +218,20 @@ def da_pcgen(radice: Path) -> dict:
                 else:
                     c["non_verificati"] += 1
         for nome, c in qui.items():
+            a = avanza.get(nome)
+            if a and "psionic" not in a["tipi"]:
+                # tipi diversi da un livello all'altro: non si sa quale lista avanza
+                c["avanza"] = {"tipo": next(iter(a["tipi"])) if len(a["tipi"]) == 1 else "any",
+                               "livelli": sorted(a["livelli"])}
             per_libro.setdefault(nome, []).append(c)
     classi = {}
     for nome, versioni in per_libro.items():
         c = dict(versioni[0])
-        senza = [{k: v for k, v in x.items() if k != "fonte"} for x in versioni]
+        senza = [{k: v for k, v in x.items() if k not in ("fonte", "avanza")} for x in versioni]
         if any(x != senza[0] for x in senza[1:]):
             c["diverge"] = True
+        if any(x.get("avanza") != versioni[0].get("avanza") for x in versioni[1:]):
+            c["avanza"] = {"diverge": True}      # due libri danno avanzamenti diversi: il verificatore non giudica
         classi[nome] = c
     return classi
 
@@ -212,6 +258,8 @@ def _stampa(testa: "list[str]", classi: dict) -> None:
     for riga in testa:
         print(f"# {riga}")
     print("# `non_verificati` conta i requisiti che non si riducono a un numero (speciali, divinità, lingue).")
+    print("# `avanza` = i livelli della classe che danno +1 livello d'incantatore a una classe che si aveva già")
+    print("# (tipo: arcane, divine, both, any, o il nome della classe); senza `avanza` la classe non ne dà.")
     print()
     print("# descrizioni delle classi: chi lancia incantesimi arcani e chi divini")
     print('[tipi_di_magia]')
