@@ -37,6 +37,9 @@ Uso
   python3 scripts/verifica_scheda.py Bestiario/png/x.md           # una scheda
   python3 scripts/verifica_scheda.py Bestiario/villain --json     # una cartella, per l'agente
   python3 scripts/verifica_scheda.py x.md --check                 # esce 1 se c'è una violazione
+  python3 scripts/verifica_scheda.py x.md --fatti                 # non giudica: talenti, incantesimi,
+                                                                  # capacità speciali e righe di «Tattiche»
+                                                                  # e «Descrizione», in JSON (ADR-0126)
 
 Exit  0 = misura fatta (o nessuna violazione con --check)
       1 = violazioni, solo con --check
@@ -998,12 +1001,92 @@ def danno(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+#: «**Vista cieca (Str)**», «- **Aura di paura (Sop)**:», «Spell Resistance (Su)»
+_CAPACITA = re.compile(r"(?:\*{1,2}|_{1,2})\s*([^*_()]{2,70}?)\s*\((Str|Sop|Mag|Ex|Su|Sp)\)\s*(?:\*{1,2}|_{1,2})|"
+                       r"(?:\*{1,2}|_{1,2})\s*([^*_()]{2,70}?)\s*(?:\*{1,2}|_{1,2})\s*\((Str|Sop|Mag|Ex|Su|Sp)\)|"
+                       r"^#{1,6}\s*([^*_()#]{2,70}?)\s*\((Str|Sop|Mag|Ex|Su|Sp)\)")
+#: l'etichetta di una sezione di prosa: titolo («### Tattiche») o grassetto a inizio riga («**Tattiche**:»)
+_SEZIONE = re.compile(r"^\s*(?:[-*•]\s+)?(?:#{1,6}\s*|\*\*\s*)(Tattiche|Tactics|Descrizione|Description)\b", re.I)
+_TITOLO = re.compile(r"^\s*(?:#{1,6}\s|---+\s*$)")
+_ALTRA_SEZIONE = re.compile(r"^\s*(?:#{1,6}\s|\*\*[A-ZÀ-Ý][^*]{1,40}\*\*|---+\s*$)")
+
+
+def fatti(p: Path) -> dict:
+    """I fatti di una scheda che un controllo di coerenza può incrociare con la
+    prosa (ADR-0126; chiesti dal controllo di coerenza della storia, regola S8):
+    talenti, incantesimi e capacità speciali con il nome canonico e la riga, e
+    le righe di inizio e fine di ogni «Tattiche» e «Descrizione» del file (un
+    booklet ne ha più d'una). Sola lettura: non giudica nulla. Un nome che il
+    plugin non conosce ha `canonico` nullo. I talenti sono quelli della prima
+    riga «Talenti» del file, come nel resto dello strumento."""
+    import lessico_regole as LR
+    from dmcore import magia as M
+    from dmcore import sistemi as S
+    testo = p.read_text(encoding="utf-8", errors="replace")
+    righe = testo.splitlines()
+    sistema = VT.sistema_di(p, testo)
+    f = VT.leggi(p)
+    scheda = L.leggi(p) is not None
+    if f is None:    # un file che la lettura delle schede non riconosce: resta la riga «Talenti»
+        n, riga = next(((i + 1, m.group(1)) for i, r in enumerate(righe) if (m := VT.RIGA.match(r))), (None, ""))
+        f = {"riga": n, "nomi": list(VT.pezzi(riga)) if n else []}
+    talenti_ = [{"nome": n, "canonico": (VT.risolvi(sistema, n) or {}).get("en"), "riga": f.get("riga")}
+                for n in f.get("nomi") or []]
+    try:
+        nomi = _liste(sistema)[2]
+    except S.ErroreSistemi:
+        nomi = {}
+    it = _incantesimi_it() if sistema == "dnd35" else {}
+    incantesimi_, capacita, sezioni = [], [], {}
+    for i, riga in enumerate(righe):
+        m = M.RIGA.match(riga)
+        if m and "*" in m.group("resto") and not re.match(r"\d", m.group("resto")):
+            della_riga = []
+            for pezzo in re.split(r"[,;]", re.sub(r"\([^()]*\)|\[[^\]]*\]|[(\[].*$", "", m.group("resto"))):
+                volte = re.search(r"[×x]\s*(\d+)\b", pezzo)
+                nome = re.sub(r"\b(?:domini[oa]|domain)\s*:?|\([^)]*\)|[×x]\s*\d+\b|\bD\s*$", "", pezzo).strip(" *_.·")
+                k = LR.norma(nome)
+                if not k or len(k) < 3 or re.fullmatch(r"[\d+ /]+", k):
+                    continue
+                k = LR.norma(it[k]) if k in it else k
+                della_riga.append({"nome": nome, "canonico": nomi.get(k), "livello": int(m.group("liv")),
+                                   "usi": m.group("par") or None, "volte": int(volte.group(1)) if volte else 1,
+                                   "riga": i + 1})
+            # Fuori da una scheda riconosciuta «1° …» è spesso un elenco di prosa: la riga
+            # conta solo se almeno un nome è un incantesimo che il plugin conosce.
+            if scheda or any(x["canonico"] for x in della_riga):
+                incantesimi_ += della_riga
+        for c in _CAPACITA.finditer(riga):
+            capacita.append({"nome": (c.group(1) or c.group(3) or c.group(5)).strip(" -:·"),
+                             "tipo": c.group(2) or c.group(4) or c.group(6), "riga": i + 1})
+        s = _SEZIONE.match(riga)
+        if s:
+            chiave = "tattiche" if s.group(1).lower().startswith("ta") else "descrizione"
+            if not any(v["inizio"] <= i + 1 <= v["fine"] for v in sezioni.get(chiave, [])):
+                # Un titolo si chiude al titolo dopo (dentro ha i suoi grassetti: «**Round 1**»);
+                # un'etichetta in grassetto si chiude all'etichetta dopo.
+                ferma = _TITOLO if riga.lstrip().startswith("#") else _ALTRA_SEZIONE
+                fine = i
+                for j in range(i + 1, len(righe)):
+                    if ferma.match(righe[j]):
+                        break
+                    if righe[j].strip():
+                        fine = j
+                sezioni.setdefault(chiave, []).append({"inizio": i + 1, "fine": fine + 1})
+    return {"file": VT_rel(p), "sistema": sistema, "talenti": talenti_, "incantesimi": incantesimi_,
+            "capacita_speciali": capacita, "tattiche": sezioni.get("tattiche", []),
+            "descrizione": sezioni.get("descrizione", [])}
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("percorsi", nargs="+", type=Path, help="schede o cartelle")
     ap.add_argument("--json", action="store_true", help="uscita JSON per l'agente")
     ap.add_argument("--check", action="store_true", help="esce 1 se c'è almeno una violazione")
+    ap.add_argument("--fatti", action="store_true",
+                    help="non giudica: stampa in JSON, per scheda, talenti, incantesimi, capacità speciali "
+                         "e le righe di «Tattiche» e «Descrizione»")
     ap.add_argument("--tolleranza", action="store_true",
                     help="rimette la tolleranza di prima su tiri salvezza (+4) e attacco (−1…+2)")
     a = ap.parse_args(argv)
@@ -1014,6 +1097,12 @@ def main(argv: "list[str] | None" = None) -> int:
         if not p.exists():
             print(f"verifica_scheda: {p} non esiste", file=sys.stderr)
             return 2
+    if a.fatti:
+        tutti = [fatti(p) for p in VT.schede(percorsi)]
+        json.dump([f for f in tutti if any(f[k] for k in f if k not in ("file", "sistema"))], sys.stdout,
+                  ensure_ascii=False, indent=1)
+        print()
+        return 0
     viol, nv, lette = [], [], 0
     for p in VT.schede(percorsi):
         tv, tn, ti = talenti(p)

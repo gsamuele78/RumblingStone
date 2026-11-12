@@ -576,6 +576,32 @@ Autoipnosi manca dalle abilità 3.5 del plugin (`gradi.toml`): il bonus di
 Incantare in Combattimento, Resistenza Fisica) non spostano un numero scritto e
 restano fuori. Con questo il lotto 4 del piano è chiuso.
 
+### Lotto 3, coda — i fatti di una scheda in JSON (2026-11-12)
+
+**Contesto.** Il controllo di coerenza della storia (regola S8) deve incrociare
+«Tattiche» e «Descrizione» con la scheda: se la prosa fa lanciare un
+incantesimo, la scheda deve averlo. Per farlo gli servono i fatti della scheda
+con la riga, e li rileggeva per conto suo con espressioni sue.
+
+**Decisione.** `verifica_scheda --fatti` (funzione `fatti`) stampa in JSON, per
+file: i talenti (nome scritto, nome canonico, riga), gli incantesimi (nome,
+canonico, livello, usi o slot, volte, riga), le capacità speciali (nome, tipo
+Str/Sop/Mag, riga) e le righe di inizio e fine di ogni «Tattiche» e
+«Descrizione». Non giudica nulla ed esce sempre 0. Usa le capacità che lo
+strumento dichiara già (talenti e liste d'incantesimi): il manifest dei plugin
+non cambia.
+
+**Misura** (`misure-fatti-scheda.json`, `Bestiario 0*/`): 185 file con almeno
+un fatto; 470 talenti canonici su 493; 626 incantesimi canonici su 688; 203
+capacità speciali; 250 sezioni «Tattiche» in 110 file; 120 «Descrizione».
+
+**Limiti dichiarati.** I talenti sono quelli della prima riga «Talenti» del
+file: in un booklet con più blocchi gli altri non escono. Un incantesimo
+scritto in italiano che il dizionario dell'SRD non ha esce con `canonico`
+nullo (62 su 688). Fuori da una scheda riconosciuta una riga «1° …» conta solo
+se almeno un nome è un incantesimo noto, per non prendere gli elenchi di prosa.
+Le capacità speciali senza la sigla fra parentesi non escono.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore
