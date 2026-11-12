@@ -28,7 +28,7 @@ Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *a
 **Car** For 8, Des 18, Cos 12, Int 20, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **individuazione delle trappole**, schivare prodigioso, **prestidigitazione a distanza**.
 **Capacità magiche** (1/giorno, CL 10): *luci danzanti*, *oscurità*, *fuoco fatuo*.
-**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Tiro Preciso (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
+**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Tiro Ravvicinato, Tiro Preciso (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
 
 **Prestidigitazione a Distanza (Str, 1/giorno)**: usa **Rapidità di Mano**, Disattivare Congegni o Scassinare Serrature **a 9 m di distanza**, come azione standard. La prova subisce +5 alla CD e provoca un attacco di opportunità se il DM lo ritiene percepibile.
 
@@ -51,3 +51,5 @@ Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *a
 > 🎯 **Aggancio di campagna (E-07b, `campaign/state.md` §7.E)**: il **Seme-Mercato di Varis** viaggia **nello zaino di Tordek**, integro e mai toccato. Un Trickster Arcano che lo sfila a 9 m di distanza è il modo più elegante di far esplodere quell'eco — e di mettere Artemis nella posizione di **dover** rincorrere Varis. *Da usare solo con l'ok del DM: cambia il ramo dell'eco.*
 
 Notes: unità di infiltrazione della compagnia di **Sonjak**, non un ammazza-PG. Il suo valore è **portare via qualcosa** e sparire. Da schierare 1 per incontro (2 al massimo, in un colpo di mano), tipicamente in copertura dietro `drow-warrior-cr1.md`/`drow-fighter3-cr4.md` o insieme a `drow-assassina-lolth-cr10.md`. Da solo è un EL 11: contro il party è un incontro **facile in combattimento e duro in conseguenze**.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): aggiunto **Tiro Ravvicinato**, prerequisito di Tiro Preciso; la scheda aveva 5 talenti su 6 (4 da 10 DV + 2 da mago), quindi nessun talento è stato tolto.

@@ -71,3 +71,34 @@ non come spostamento di file. In concreto:
 Alternative valutate: (B) riorganizzare subito `docs/` in quattro cartelle,
 più pulito ma con 61 file da ricontrollare e nessun difetto misurato che lo
 chieda; (C) niente Diátaxis, che però lascia senza regola le guide nuove.
+
+## Dopo la riorganizzazione (ADR-0123, rimisurata il 2026-11-12)
+
+Il DM ha scelto l'alternativa B. Stesso metodo e stesso criterio (80% delle
+sezioni in una forma), sui file delle quattro cartelle. Le sezioni ridotte a
+un rimando contano come navigazione. Classificazione a giudizio come sopra.
+
+| | Prima (main f65d78e) | Dopo (questo ramo) |
+|---|---:|---:|
+| File di documentazione | 14 | 21 (5 nuovi dalle divisioni, 2 nuovi del 10/11) |
+| In una forma sola | 5 (36%) | 15 (71%) |
+| Misti | 9 | 6 |
+| Link e percorsi rotti (`validate_docs --sorgenti`) | 0 | 0 |
+| Ancore `#…` verso file del repo, rotte | 0 su 2 | 0 su 20 |
+
+**Restano misti, e lo si dichiara:**
+
+- `tutorials/GUIDA-SETUP-MACCHINA` (67% tutorial): la parte «cosa serve» è
+  riferimento e il «se qualcosa non funziona» è guida pratica;
+- `how-to/RILASCIO` (71%): «I numeri» è riferimento;
+- `reference/GUIDA-MARCATURE` e `reference/GUIDA-SCHEDE-PROMPT` (75%): un
+  «Perché così» in fondo;
+- `reference/LEGENDA-FUNZIONALE-SPEC`: i confini di licenza e i limiti
+  dichiarati sono fra riferimento e spiegazione;
+- `reference/RIFERIMENTO-MAPPE`: dentro il tema texture c'è una ricetta «Da
+  zero, in ordine».
+
+Per la regola 2 di ADR-0123 si spezzano quando si toccano per altro. Nella
+prima misura la §5 di GUIDA-MAPPE era contata come guida pratica: rileggendola
+per spostarla, è soprattutto la descrizione dei formati e dei temi, quindi è
+andata nel riferimento. È un caso di confine, come la misura aveva avvertito.

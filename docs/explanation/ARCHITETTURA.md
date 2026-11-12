@@ -114,7 +114,7 @@ flowchart TB
 
     subgraph GOV["Governo"]
         PLANS["plans/<br/>piani, INDEX, CHANGELOG dei piani"]
-        ADR["plans/adr/<br/>119 decisioni"]
+        ADR["plans/adr/<br/>122 decisioni"]
         CHG["CHANGELOG.md<br/>i rilasci"]
     end
 
@@ -1167,7 +1167,7 @@ microkernel guidato dai dati.
 flowchart LR
     subgraph CFG["Configurazione"]
         STOML["sistemi.toml<br/>predefinito, attivi, rinforzo,<br/>[moduli] cartella → sistema,<br/>[ambientazioni], [opzioni.pf1e]"]
-        CAT["sistemi/catalogo.toml<br/>17 capacità"]
+        CAT["sistemi/catalogo.toml<br/>20 capacità"]
     end
     subgraph PLUG["Plugin in sistemi/"]
         D20["d20 · famiglia<br/>formule, statblocco, stampa,<br/>termini vietati; codice: potenze"]
@@ -1240,7 +1240,7 @@ involucro del sistema predefinito e danno i valori di prima. Ogni lotto della
 migrazione è passato dal banco d'invarianza: le 12 impronte dei moduli 3.5
 sono rimaste identiche byte per byte.
 
-| Pezzo | Dove | Stato su main al 2026-11-10 |
+| Pezzo | Dove | Stato su main al 2026-11-12 (c2cc7756) |
 |---|---|---|
 | Configurazione e caricatore unico | `sistemi.toml`, `scripts/dmcore/sistemi.py` | fatto (L0-L8 di PIANO-SISTEMI-DI-GIOCO-PLUGIN) |
 | Fonti delle regole come dati | `sistemi/<id>/dati/fonti.toml`, letto da `riscontro_srd.py` | fatto (F1) |
@@ -1250,10 +1250,16 @@ sono rimaste identiche byte per byte.
 | Funzioni registrate nel plugin | `[moduli]`, `sistemi/<id>/codice/` | fatto (F5): «potenze» e «somma_px» |
 | Schema JSON per ogni file di dati (ADR-0112 §3) | — | **non ancora nel codice**: `sistemi.py --check` controlla la struttura del plugin, non i campi dei file di dati |
 | Regole complete delle creature (lotti 1-5, #369-#375) | capacità `creature.talenti` (`sistemi/<id>/dati/talenti.toml`, regola in `dmcore/talenti.py`; in PF1e anche i requisiti di 18 classi di prestigio in `[requisiti]`); in `creature.toml` le tabelle `[tratti_tipo]` (costrutti e non morti senza Costituzione, melme e parassiti senza Intelligenza) e `[pf_bonus_costrutti]` (pf bonus per taglia) | fatto: tratti dei tipi 45/45 in 3.5 e PF1e, bonus dei costrutti 9/9; li usa `genera_creatura` (e `creature_pf1e` per PF1e) |
+| Verifica di una scheda via MCP (ADR-0124, proposta) | `scripts/verifica_talenti.py`, `scripts/verifica_scheda.py`, capacità `creature.gradi` e `creature.liste_incantesimi`; talenti e classi dei manuali 3.5 fuori SRD solo con nomi e numeri | fatto: prerequisiti dei talenti nell'ordine SRD d20 → 3.5 → PF1e, gradi, incantesimi per livello, numeri di `conformita_statblocchi` in una chiamata |
+| Cumulo dei bonus per tipo (ADR-0126, proposta) | capacità `bonus.cumulo` in `sistemi/d20/dati/bonus.toml`, `dmcore/bonus.py` | lotto 1 di 12 del programma «regole senza omissioni»: `verifica_scheda` giudica TS e attacco senza tolleranza; gli altri lotti cambieranno questa riga |
+| Coerenza della storia (ADR-0125, accettata) | `coerenza_campagna.py fatti … --state` contro `campaign/state.yaml` | in testing, solo sui fatti strutturati |
 | Prova con un plugin d20 finto e uno non d20 | `scripts/tests/dati/prova-d20-due/`, `prova-mucchio-d10/` | fatto: d20 senza toccare il nucleo; non d20 lavorato da 4 strumenti su 20, gli altri lo rifiutano. Resta una prova, non un sistema supportato |
 
 Riferimenti: [ADR-0111](../../plans/adr/ADR-0111-il-sistema-di-gioco-e-un-plugin-di-dati.md),
 [ADR-0112](../../plans/adr/ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md),
+[ADR-0124](../../plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md),
+[ADR-0125](../../plans/adr/ADR-0125-la-coerenza-della-storia-si-verifica-contro-state-yaml-solo-sui-fatti-strutturati.md),
+[ADR-0126](../../plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md),
 [GUIDA-SISTEMI-DI-GIOCO](../how-to/GUIDA-SISTEMI-DI-GIOCO.md) (uso),
 [RIFERIMENTO-PLUGIN-DI-SISTEMA](../reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md) (chi scrive un plugin).
 

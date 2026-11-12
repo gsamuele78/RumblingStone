@@ -188,25 +188,39 @@ def costruisci(t: dict, argomenti: dict[str, Any]) -> list[str]:
     # passarla verbatim vorrebbe dire lanciare `--all` che nessuno ha chiesto.
     # Il fatto a macchina sono `path` e `language`.
     argv = ([sys.executable] if t["language"] == "python" else []) + [str(ROOT / t["path"])]
+    # Con argparse le opzioni del parser principale vanno PRIMA del sottocomando
+    # e quelle del sottocomando DOPO («coerenza_campagna fatti --state»): prima
+    # del nome il parser principale le rifiuta. Il manifest lo dice con l'ordine
+    # degli argomenti: un'opzione elencata prima del sottocomando e' del parser
+    # principale (riscontro_srd --cache), una elencata dopo e' sua (ADR-0125).
+    sotto_visto = not any(a["type"] == "subcommand" for a in per_chiave.values())
+    prima: list[str] = []
+    sotto: list[str] = []
     opzioni: list[str] = []
     posizionali: list[str] = []
     for chiave, a in per_chiave.items():          # l'ordine e' quello del manifest
+        if a["type"] == "subcommand":
+            sotto_visto = True
         if chiave not in argomenti:
             continue
         pezzi = _valida(argomenti[chiave], a, chiave)
         flag = a["name"].split("/")[0]
+        if a["type"] == "subcommand":
+            sotto.extend(pezzi)
+            continue
+        dove = opzioni if sotto_visto else prima
         if not flag.startswith("-"):
             posizionali.extend(pezzi)
             continue
         if a["type"] == "bool":
             if argomenti[chiave]:
-                opzioni.append(flag)
+                dove.append(flag)
             continue
         # `--flag=valore` e non `--flag valore`: un valore che comincia per «-»
         # verrebbe letto come un'altra opzione, ed e' il modo in cui un argomento
         # si trasforma in un comando.
-        opzioni.extend(f"{flag}={p}" for p in pezzi)
-    argv += opzioni
+        dove.extend(f"{flag}={p}" for p in pezzi)
+    argv += prima + sotto + opzioni
     if posizionali:
         # `--` chiude le opzioni: da qui in poi sono valori, anche se cominciano
         # per «-». argparse lo capisce, ed e' la stessa difesa di sopra.

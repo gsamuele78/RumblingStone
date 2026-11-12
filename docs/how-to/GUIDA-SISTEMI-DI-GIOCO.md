@@ -111,7 +111,7 @@ su 20 e il tiro non ha una capacità nel catalogo.
 2. **La cartella.** Crea `sistemi/<id>/sistema.toml` con `id`, `nome`,
    `tipo = "sistema"`, `famiglia = "d20"`, `licenza`, `fonti`, `riconosci`,
    `skill`. Parti copiando `sistemi/pf1e/sistema.toml`.
-3. **Le capacità.** Per ognuna delle 17 del catalogo scegli un modo:
+3. **Le capacità.** Per ognuna delle 20 del catalogo scegli un modo:
    `eredita` da `d20` o da un altro sistema quando la regola è la stessa
    (con il motivo), `dati` con i tuoi file in `sistemi/<id>/dati/` quando è
    diversa, `non_supportato` con il motivo quando non serve. Non lasciarne

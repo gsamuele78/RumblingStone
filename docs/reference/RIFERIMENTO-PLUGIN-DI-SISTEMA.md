@@ -82,7 +82,7 @@ dichiara davvero), `catena` e `voci`.
 ## 5 · Il catalogo delle capacità
 
 Generato dal catalogo, dal manifest dei tool e dai plugin di main al
-2026-11-10. «Chi la chiede» è il campo `sistema.capacita` di
+2026-11-12 (c2cc7756). «Chi la chiede» è il campo `sistema.capacita` di
 `scripts/tools.manifest.json`.
 
 | Capacità | Cosa contiene | Chi la chiede | dnd35 | pf1e |
@@ -97,7 +97,10 @@ Generato dal catalogo, dal manifest dei tool e dai plugin di main al
 | `incontri.livello` | come si somma la sfida di più creature in un incontro | suggest_encounter | `incontri.toml` | `incontri.toml` |
 | `creature.costruzione` | le tabelle per costruire una creatura: tipi, classi, DV, TS, BAB, taglie, armature, array; anche `[tratti_tipo]` (chi non ha Costituzione o Intelligenza) e `[pf_bonus_costrutti]` (pf bonus dei costrutti per taglia) | conformita_statblocchi, derive_statblocks, genera_attributi, genera_creatura, impronta_creature, suggest_encounter | `creature.toml` | `creature.toml`, `classi.toml`, `liste_incantesimi.toml` |
 | `creature.statistiche_per_gs` | i bersagli numerici per GS (pf, CA, attacco, CD) | derive_statblocks, genera_creatura, validate_bestiario | da pf1e: `pf1e-statistiche-per-gs.yaml` | `pf1e-statistiche-per-gs.yaml` |
-| `creature.talenti` | i talenti con i prerequisiti, i talenti bonus delle classi e le capacità che i talenti chiedono; in PF1e anche `[requisiti."<classe di prestigio>"]` (BAB, talenti, gradi, incantesimi, capacità; `altro` = ciò che decide il DM) per 18 classi di prestigio; regola in `dmcore/talenti.py` | — (nel manifest nessuno strumento la dichiara ancora; la legge `genera_creatura`) | `talenti.toml` | `talenti.toml` |
+| `creature.talenti` | i talenti con i prerequisiti, i talenti bonus delle classi e le capacità che i talenti chiedono; in PF1e anche `[requisiti."<classe di prestigio>"]` (BAB, talenti, gradi, incantesimi, capacità; `altro` = ciò che decide il DM) per 18 classi di prestigio; regola in `dmcore/talenti.py` | verifica_scheda, verifica_talenti (la legge anche `genera_creatura`) | `talenti.toml`, `talenti_manuali.toml` (manuali 3.5 fuori SRD, da PCGen), `talenti_equivalenti.toml` | `talenti.toml` |
+| `creature.gradi` | i gradi delle abilità: caratteristica chiave, punti per livello di classe e per dado vita di tipo, massimo dei gradi (ADR-0124) | — (la legge `verifica_scheda`) | `gradi.toml`, `classi_manuali.toml` | `gradi.toml`, `classi.toml` |
+| `creature.liste_incantesimi` | le liste di classe e di dominio degli incantesimi per livello: chi può lanciare che cosa (ADR-0124 §10) | — (la legge `verifica_scheda`) | `liste_incantesimi.toml` (SRD), `liste_incantesimi_manuali.toml` (manuali 3.5, solo nomi e livelli) | `liste_incantesimi.toml` |
+| `bonus.cumulo` | il cumulo dei bonus per tipo e le sorgenti (oggetti, talenti, razze) che una scheda può dichiarare su TS e attacco (ADR-0126) | — (la legge `verifica_scheda` tramite `dmcore.bonus`) | da d20: `bonus.toml` | da d20: `bonus.toml` |
 | `creature.incantesimi` | le liste di incantesimi per classe | genera_creatura | `incantesimi.toml` | `incantesimi.toml` del 3.5 e del PF1e |
 | `creature.regole_di_tipo` | le regole di tipo che cambiano i conti (es. il non morto PF1e usa il Carisma) | conformita_statblocchi | `creature.toml` | `creature.toml` |
 | `creature.conformita` | i conti che il controllo delle schede sa fare nel sistema, e come si arrotondano i pf | conformita_statblocchi | `conformita.toml` | `conformita.toml`, `conformita_prd.toml` |

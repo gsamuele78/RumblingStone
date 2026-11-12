@@ -437,7 +437,7 @@ Apri `campaign/state.md` §0 per vedere il cruscotto in tempo reale. Template:
 | 08 Hammerfist | ✅ | completato | Day 19 | 12 | Sync point ✓ |
 | 09 P1A Hella | 🟡 | in corso | Day 27 | 13 | Deadline Day 30 |
 | 09 P2 Rhest | ⬜ | non iniziato | — | — | Regiarix vivo |
-| 09 P3 Rethmar | ⬜ | non iniziato | Target Day 40 | — | Battaglia finale |
+| 09 P3 Rethmar | ⬜ | non iniziato | Target Day 42 | — | Battaglia finale |
 
 **Legenda**: ✅ completato · 🟡 in corso · ⬜ non iniziato · ❌ fallito · ⏸ sospeso
 
@@ -450,11 +450,11 @@ Riassunto operativo di `campaign-coherence.md` §5.2/§5.2.bis:
 ### March Clock (deterministico)
 
 - **Tick +1** per ogni giorno in-world che passa (anche se i PG non fanno nulla / sessione off-screen)
-- Gira **Day 1 → Day 40**
+- Gira **Day 1 → Day 42** (`campaign/state.yaml`, `march_clock`)
 - Eventi **locked** (non toccare mai):
-  - Day 5: PG non interferiscono a Skull Gorge ✓
+  - Day 8-9: il ponte di Skull Gorge è attraversato intatto (i PG non lo sabotano) ✓
   - **Day 19**: Terrelton cade = fine Battaglia di Hammerfist (sync)
-  - Day 40: Orda arriva a Rethmar
+  - Day 40: Notte dei Drow (Fase 0); **Day 42**: l'orda arriva a Rethmar e si accampa
 
 ### Ritual Clock Azarr Kul (indipendente)
 
