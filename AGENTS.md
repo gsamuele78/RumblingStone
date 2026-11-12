@@ -50,6 +50,14 @@ regenerate via `dm.py recap --hype` / `dm.py handout`, never edit by hand.
 > Non si scrive a mano: si corregge la fonte che indica, poi si rigenera. E
 > niente di utile resta nello scratchpad di una sessione: prima di chiudere
 > entra nel repo.
+>
+> **La storia dietro una scelta** (regressione, soluzione già provata) sta in
+> [`plans/MEMORIA-STORICA.md`](plans/MEMORIA-STORICA.md): si cerca con
+> `python3 scripts/memoria_storica.py --pr N | --adr N | --tema T | parole`.
+> Ogni PR che aggiunge una riga a `plans/CHANGELOG.md` aggiunge anche una
+> voce lì (decisioni, misure, questioni aperte: la CI la esige), e chi
+> toglie una riga dalla memoria delle sessioni la archivia lì prima
+> ([ADR-0127](plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md)).
 
 > **DMs: start with `campaign/DM-CAMPAIGN-PLAYBOOK.md`**: session workflow,
 > worked examples, the `§0` dashboard and the new-group reset
