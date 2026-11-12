@@ -24,6 +24,7 @@ from __future__ import annotations
 import functools
 import re
 
+from dmcore import formule as _F
 from dmcore import sistemi as S
 
 __all__ = ["tabelle", "classe", "bonus", "al_giorno", "conosciuti", "cd", "leggi_al_giorno",
@@ -49,9 +50,23 @@ def classe(nome: str, sistema: str = "dnd35") -> "dict | None":
     return tabelle(sistema)["classi"].get(nome)
 
 
-def bonus(mod: int, livello: int) -> int:
+def _f(nome: str, **valori: int) -> int:
+    """Le formule stanno nel plugin d20 (`sistemi/d20/dati/formule.toml`, F3 di ADR-0112)."""
+    return _F.formula(nome)(**valori)
+
+
+def mod(punteggio: int) -> int:
+    return _f("modificatore", punteggio=punteggio)
+
+
+def bonus(modificatore: int, livello: int) -> int:
     """Incantesimi bonus al giorno per modificatore e livello d'incantesimo."""
-    return 0 if livello < 1 or mod < livello else 1 + (mod - livello) // 4
+    return _f("incantesimi_bonus", livello=livello, modificatore=modificatore)
+
+
+def serve(livello: int) -> int:
+    """Il punteggio che serve per lanciare un incantesimo di quel livello."""
+    return _f("punteggio_per_lanciare", livello=livello)
 
 
 def al_giorno(nome: str, livello_classe: int, punteggio: int, sistema: str = "dnd35",
@@ -63,17 +78,17 @@ def al_giorno(nome: str, livello_classe: int, punteggio: int, sistema: str = "dn
     if c is None:
         return None
     riga = c["al_giorno"].get(str(max(1, min(20, livello_classe))), [])
-    mod = (punteggio - 10) // 2
+    m = mod(punteggio)
     fuori = []
     for liv, base in enumerate(riga):
         if base < 0 and liv == 0 and "conosciuti" in c:
             fuori.append((-1, 0))          # trucchetti a volontà (PF1e): il numero al giorno non si giudica
             continue
-        if base < 0 or punteggio < 10 + liv:
+        if base < 0 or punteggio < serve(liv):
             fuori.append((0, 0))
             continue
         extra = 1 if liv >= 1 and (c.get("slot_di_dominio") or specialista) else 0
-        fuori.append((base + bonus(mod, liv), extra))
+        fuori.append((base + bonus(m, liv), extra))
     while fuori and sum(fuori[-1]) <= 0:
         fuori.pop()
     return fuori
@@ -90,7 +105,7 @@ def conosciuti(nome: str, livello_classe: int, sistema: str = "dnd35") -> "list[
 
 
 def cd(livello: int, punteggio: int) -> int:
-    return 10 + livello + (punteggio - 10) // 2
+    return _f("cd_incantesimo", livello=livello, modificatore=mod(punteggio))
 
 
 def leggi_al_giorno(testo: str) -> "list[tuple[int, int]] | None":
@@ -165,7 +180,7 @@ def giudica_riga(livello: int, par: str, resto: str, attesi: "list[tuple[int, in
     scarti = []
     if attesi is not None:
         if livello >= len(attesi) or (sum(attesi[livello]) == 0 and livello > 0):
-            motivo = (f"serve la caratteristica a {10 + livello}" if punteggio < 10 + livello
+            motivo = (f"serve la caratteristica a {serve(livello)}" if punteggio < serve(livello)
                       else "la classe a questo livello non lo lancia")
             return [{"campo": "incantesimi.livello", "scritto": f"{livello}°", "atteso": "nessuno", "nota": motivo}]
         a = attesi[livello]
@@ -195,6 +210,6 @@ def giudica_riga(livello: int, par: str, resto: str, attesi: "list[tuple[int, in
     for v in sorted({int(x) for x in _CD.findall((par or "") + " " + resto)}):
         if not giusta <= v <= giusta + focalizzato:
             scarti.append({"campo": "incantesimi.cd", "scritto": v, "atteso": giusta,
-                           "nota": f"10 + {livello} + modificatore {(punteggio - 10) // 2:+d}"
+                           "nota": f"10 + {livello} + modificatore {mod(punteggio):+d}"
                                    + (f", fino a +{focalizzato} con gli Incantesimi Focalizzati" if focalizzato else "")})
     return scarti

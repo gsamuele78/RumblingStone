@@ -134,7 +134,7 @@ class TestScheda(unittest.TestCase):
     def giudica(self, **k):
         import verifica_scheda as V
         k = {"sag": 18, "car": 18, **k}
-        with tempfile.TemporaryDirectory(dir=RADICE / "Bestiario") as d:
+        with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "prova.md"
             p.write_text(SCHEDA.format(**k), encoding="utf-8")
             v, n = V.incantatori(p)
