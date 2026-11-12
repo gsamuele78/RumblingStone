@@ -2,7 +2,7 @@
 
 Il DM, 2026-11-07: per regole, skill e agent vale la regola più stringente, e
 senza duplicazioni. La grammatica delle marche sta in un posto solo,
-`docs/guides/GUIDA-MARCATURE.md`; le skill dove nascono i fatti di gioco hanno
+`docs/reference/GUIDA-MARCATURE.md`; le skill dove nascono i fatti di gioco hanno
 la sezione «Vincoli sui fatti» con lo stesso elenco della guida, parola per
 parola. Se la guida cambia, questa prova dice quali skill vanno riallineate.
 """
@@ -13,7 +13,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-GUIDA = ROOT / "docs" / "guides" / "GUIDA-MARCATURE.md"
+GUIDA = ROOT / "docs" / "reference" / "GUIDA-MARCATURE.md"
 SEZIONE = "## Vincoli sui fatti"
 
 # Le skill dove nascono i fatti di gioco (scheda 5 = A).
@@ -67,7 +67,7 @@ class TestVincoliDelleSkill(unittest.TestCase):
 
     def test_agents_rimanda_alla_guida(self):
         testo = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
-        self.assertIn("docs/guides/GUIDA-MARCATURE.md", testo)
+        self.assertIn("docs/reference/GUIDA-MARCATURE.md", testo)
         self.assertNotRegex(testo, r"needs DM\s+confirmation")
 
 

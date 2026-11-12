@@ -19,7 +19,7 @@ una quest o un incontro:
 3. se esiste solo come sorgente storica (`pregen-pcgen/`) → **trascrivi** nel
    formato standard (lotto L1 del piano), senza reinventare i numeri;
 4. solo se non esiste da nessuna parte → genera ex-novo col template e
-   marca `[INFERRED — <domanda al DM>; base: <fonte o dato>]` ([GUIDA-MARCATURE](../docs/guides/GUIDA-MARCATURE.md)).
+   marca `[INFERRED — <domanda al DM>; base: <fonte o dato>]` ([GUIDA-MARCATURE](../docs/reference/GUIDA-MARCATURE.md)).
 
 ## Struttura
 

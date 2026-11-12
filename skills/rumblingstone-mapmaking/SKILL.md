@@ -35,7 +35,7 @@ regola 7). Le altre forme d'uscita: `editoria` · `edizione` · `art-direction`
 ## Fonti
 
 Guida passo passo per umani (modalità, comandi, export VTT, problemi):
-[`docs/guides/GUIDA-MAPPE.md`](../../docs/guides/GUIDA-MAPPE.md); questa skill
+[`docs/how-to/GUIDA-MAPPE.md`](../../docs/how-to/GUIDA-MAPPE.md); questa skill
 è la reference operativa per gli agenti.
 
 | Compito | Reference |

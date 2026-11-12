@@ -29,7 +29,7 @@ di ADR-0109, p = 0,059).
 
 ## Decisione
 
-**Ogni prompt del repo segue la sua scheda di [GUIDA-SCHEDE-PROMPT](../../docs/guides/GUIDA-SCHEDE-PROMPT.md),
+**Ogni prompt del repo segue la sua scheda di [GUIDA-SCHEDE-PROMPT](../../docs/reference/GUIDA-SCHEDE-PROMPT.md),
 e ogni skill ha almeno tre prove con trappola in `skills/<nome>/evals/`.**
 
 1. **Scheda skill**: frontmatter con «cosa fa e quando», poi `Quando no`,

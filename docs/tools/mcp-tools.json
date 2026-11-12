@@ -3581,7 +3581,7 @@
     },
     {
       "name": "dm",
-      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa/sistemi). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "invocation": "python3 scripts/dm.py",
       "inputSchema": {
@@ -3589,7 +3589,7 @@
         "properties": {
           "comando": {
             "type": "string",
-            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto.",
+            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto. «sistemi» passa i flag a scripts/sistemi.py (ADR-0111): i sistemi attivi, il sistema di un file con --di, la matrice strumenti × sistemi, il cancello con --check.",
             "enum": [
               "prep",
               "post",
@@ -3604,7 +3604,13 @@
               "volume",
               "corredo",
               "bestiario",
-              "prosa"
+              "prosa",
+              "asset",
+              "ambiente",
+              "booklet",
+              "prompts",
+              "gruppo",
+              "sistemi"
             ]
           }
         },
@@ -4707,7 +4713,7 @@
     },
     {
       "name": "validate_lingua",
-      "description": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»\n\nRefusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
+      "description": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»\n\nRefusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice (come li legge CommonMark: markdown-it-py se disponibile, altrimenti una regola stdlib), inline, URL, front-matter e guide alla pronuncia; legge le righe rientrate che sono prosa. `<!-- sic -->` marca una citazione alla lettera. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
       "use_case": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»",
       "invocation": "python3 scripts/validate_lingua.py",
       "inputSchema": {
@@ -4908,7 +4914,7 @@
     },
     {
       "name": "verifica_scheda",
-      "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Canale testing (ADR-0099): misura, non cancello.",
+      "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Dal lotto 2 il danno delle armi della tabella (capacita' creature.armi): dado per taglia, bonus di Forza, potenziamento e talenti, critico (regole numero.danno.dado, numero.danno.bonus, numero.danno.critico); attacchi naturali e armi fuori tabella vanno in non_verificabili. Canale testing (ADR-0099): misura, non cancello.",
       "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
       "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check] [--tolleranza]",
       "inputSchema": {

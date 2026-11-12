@@ -15,7 +15,7 @@ attributi: For 8 Des 14 Cos 14 Int 16 Sag 10 Car 8
 velocita: 6 m
 iniziativa: +2
 attacchi:
-  - Distanza balestra leggera perfetta +3 (1d8)
+  - Distanza balestra leggera perfetta +3 (1d8/19-20)
 voci:
   - Talenti: Incantare in Combattimento, Incantesimi Ingranditi, Incantesimi Focalizzati (necromanzia)
 ```
@@ -23,9 +23,11 @@ voci:
 
 
 Medium humanoid (dwarf, duergar), Wizard 3 (necromanzia; abiurazione proibita), LE. **hp 16**; **AC 13**, touch 12, flat-footed 11. Init +2; Vel 6 m. TS Temp +4, Rifl +4, Vol +4 (mantello della resistenza +1 incluso). BAB +1; Lotta +0.
-**Distanza** balestra leggera perfetta +3 (1d8). Incantesimi da Wizard 3 (4/3/2; CD 12+liv, necro +1): tipici *ray of frost, mage armor, magic missile, ray of enfeeblement, web*. SLA duergar. Famiglio. Scurovisione 36 m, immune paralisi/veleno. Int 15, Des 14. Talenti: Incantare in Combattimento, Incantesimi Ingranditi, Incantesimi Focalizzati (necromanzia).
+**Distanza** balestra leggera perfetta +3 (1d8/19-20). Incantesimi da Wizard 3 (4/3/2; CD 12+liv, necro +1): tipici *ray of frost, mage armor, magic missile, ray of enfeeblement, web*. SLA duergar. Famiglio. Scurovisione 36 m, immune paralisi/veleno. Int 15, Des 14. Talenti: Incantare in Combattimento, Incantesimi Ingranditi, Incantesimi Focalizzati (necromanzia).
 Notes: mago da supporto del ponte; coppia con il chierico Justin.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Volontà +4 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Tempra +3 → **+4**, Riflessi +3 → **+4**. Prezzo da ricontrollare col lotto della ricchezza per livello.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Distanza balestra leggera perfetta» scritto (19-20, tabella delle armi dell'SRD).

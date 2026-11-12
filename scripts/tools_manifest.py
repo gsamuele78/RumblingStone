@@ -18,7 +18,7 @@ Uso:
     python3 scripts/tools_manifest.py --render-md    # solo docs/tools/README.md
     python3 scripts/tools_manifest.py --emit-mcp     # solo docs/tools/mcp-tools.json
 
-Exit code (convenzione repo — vedi docs/guides/TOOL-AUTHORING-STANDARD.md):
+Exit code (convenzione repo — vedi docs/reference/TOOL-AUTHORING-STANDARD.md):
     0 = ok
     1 = manifest non conforme / drift rilevato (--check)
     2 = errore d'uso
@@ -403,7 +403,7 @@ def emit_markdown(manifest: dict) -> str:
     lines.append("---")
     lines.append("")
     lines.append("Aggiungere un tool? Vedi "
-                 "[`../guides/TOOL-AUTHORING-STANDARD.md`](../guides/TOOL-AUTHORING-STANDARD.md).")
+                 "[`../reference/TOOL-AUTHORING-STANDARD.md`](../reference/TOOL-AUTHORING-STANDARD.md).")
     lines.append("")
     return "\n".join(lines)
 

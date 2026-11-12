@@ -281,3 +281,10 @@ Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della fam
 **Stato**: accettato dal DM il 2026-11-08 (D1 di ADR-0112) · **Dettaglio**: [ADR-0112](ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), F3.
 
 simpleeval 1.0.8 (MIT, un file, nessuna dipendenza) valuta le formule d20 scritte nei dati dei plugin. Non sta in `requirements.txt`: è copiato intero in `scripts/dmcore/_vendor/simpleeval.py`, con la licenza accanto e versione e sha256 in `_vendor/LIBRERIE.toml` (lo ricontrolla `test_formule.py`). Quindi la catena della sessione resta su Python nudo e il rischio delle 20:45 non cresce. È entrata perché è lo standard di fatto per questo problema e la misura I1 l'ha promossa: 7/7 formule su 598 casi, 50/50 espressioni ostili rifiutate. Aggiornarla vuol dire riscaricare la wheel, ricopiare il file, riscrivere lo sha256 e rifare il banco.
+
+
+## Emendamento del 2026-11-11 — markdown-it-py, la sesta
+
+**Stato**: accettato dal DM il 2026-11-12 (card sul parser) · **Dettaglio**: [ADR-0120](ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md), emendamento del 2026-11-11.
+
+`markdown-it-py` (MIT, puro Python) è la sesta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Dice a `validate_lingua.py` quali righe rientrate sono codice per CommonMark; senza, il validatore ripiega su una regola stdlib, lo stampa, e sul banco di semina trova gli stessi errori.

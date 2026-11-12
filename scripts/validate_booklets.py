@@ -339,7 +339,7 @@ def main() -> int:
     if args.stampa:
         if not typst_motore.disponibile():
             saltata = ("typst non c'è (né il pacchetto PyPI né la CLI): controllo di stampa SALTATO "
-                       "(vedi docs/guides/GUIDA-BOOKLET-E-PDF.md §4)")
+                       "(vedi docs/how-to/GUIDA-BOOKLET-E-PDF.md §4)")
         elif not errori:
             try:
                 import pymupdf  # noqa: F401, PLC0415

@@ -1,5 +1,7 @@
 # Guida completa — generare le immagini della campagna
 
+> Forma: **guida pratica** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 > **Cosa copre**: dal «mi servirebbe un'illustrazione di questa scena» fino
 > all'immagine incorporata nel booklet. Quale generatore usare per cosa, come
 > si scrive un prompt che funziona davvero, come si prepara l'intero arco in

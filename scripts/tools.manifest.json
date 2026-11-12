@@ -511,7 +511,7 @@
       "ci_smoke": "python scripts/build_chapter_marks.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md"
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md"
       ]
     },
     {
@@ -592,7 +592,7 @@
       "ci_smoke": "python scripts/build_image_derivatives.py --help",
       "tests": [],
       "docs": [
-        "docs/guides/GUIDA-IMMAGINI.md"
+        "docs/how-to/GUIDA-IMMAGINI.md"
       ]
     },
     {
@@ -787,7 +787,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md",
-        "docs/guides/GUIDA-MAPPE.md"
+        "docs/how-to/GUIDA-MAPPE.md"
       ]
     },
     {
@@ -2469,7 +2469,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa/sistemi). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -2478,7 +2478,7 @@
       ],
       "args": [
         {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa",
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa|asset|ambiente|booklet|prompts|gruppo|sistemi",
           "type": "subcommand",
           "required": true,
           "default": null,
@@ -2496,10 +2496,16 @@
             "volume",
             "corredo",
             "bestiario",
-            "prosa"
+            "prosa",
+            "asset",
+            "ambiente",
+            "booklet",
+            "prompts",
+            "gruppo",
+            "sistemi"
           ],
           "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto."
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto. «sistemi» passa i flag a scripts/sistemi.py (ADR-0111): i sistemi attivi, il sistema di un file con --di, la matrice strumenti × sistemi, il cancello con --check."
         }
       ],
       "inputs": [
@@ -2908,8 +2914,8 @@
         "scripts/tests/test_schede.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
-        "docs/guides/GUIDA-FLUSSO-LOCALE.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
+        "docs/explanation/GUIDA-FLUSSO-LOCALE.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ],
@@ -3330,7 +3336,7 @@
         "scripts/tests/test_statblock.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BESTIARIO.md",
+        "docs/how-to/GUIDA-BESTIARIO.md",
         "plans/adr/ADR-0021-statblocchi-machine-readable.md"
       ]
     },
@@ -5163,7 +5169,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
@@ -5260,7 +5266,7 @@
         "scripts/tests/test_tema_pianta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
@@ -6359,7 +6365,7 @@
       "docs": [
         "plans/adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md",
         "plans/esperimenti/ricerca-rete-2026-10-23/RICERCA.md",
-        "docs/ARCHITETTURA.md"
+        "docs/explanation/ARCHITETTURA.md"
       ]
     },
     {
@@ -6465,7 +6471,7 @@
         "scripts/tests/test_tools_manifest.py"
       ],
       "docs": [
-        "docs/guides/TOOL-AUTHORING-STANDARD.md"
+        "docs/reference/TOOL-AUTHORING-STANDARD.md"
       ]
     },
     {
@@ -6736,7 +6742,7 @@
         "scripts/tests/test_booklets.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "docs/how-to/GUIDA-BOOKLET-E-PDF.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
         "scripts/README-automation.md"
       ]
@@ -7106,11 +7112,14 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_lingua.py",
-      "summary": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
+      "summary": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice (come li legge CommonMark: markdown-it-py se disponibile, altrimenti una regola stdlib), inline, URL, front-matter e guide alla pronuncia; legge le righe rientrate che sono prosa. `<!-- sic -->` marca una citazione alla lettera. Bloccante in CI sugli errori dal 2026-09-24; gli avvisi no, e --strict li alza a errori.",
       "use_case": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
+      "optional_deps": [
+        "markdown-it-py"
+      ],
       "args": [
         {
           "name": "files",
@@ -10196,7 +10205,7 @@
         "scripts/tests/test_asset_2mtt.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10274,7 +10283,7 @@
         "scripts/tests/test_watabou_citta.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10353,7 +10362,7 @@
         "scripts/tests/test_texture_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10501,7 +10510,7 @@
         "scripts/tests/test_oggetti_cc0.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
@@ -10682,7 +10691,7 @@
         "scripts/tests/test_misura_resa.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MAPPE.md",
+        "docs/how-to/GUIDA-MAPPE.md",
         "plans/adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md"
       ]
     },
@@ -11487,7 +11496,7 @@
       ],
       "docs": [
         "plans/PIANO-AMBIENTE-RIPRODUCIBILE.md",
-        "docs/guides/GUIDA-SETUP-MACCHINA.md"
+        "docs/tutorials/GUIDA-SETUP-MACCHINA.md"
       ]
     },
     {
@@ -11609,7 +11618,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_plan",
       "path": "scripts/release_plan.py",
@@ -11695,7 +11704,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
-        "docs/RILASCIO.md"
+        "docs/how-to/RILASCIO.md"
       ],
       "id": "release_notes",
       "path": "scripts/release_notes.py",
@@ -12090,7 +12099,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check] [--tolleranza]",
-      "summary": "ADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Canale testing (ADR-0099): misura, non cancello.",
+      "summary": "ADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Dal lotto 2 il danno delle armi della tabella (capacita' creature.armi): dado per taglia, bonus di Forza, potenziamento e talenti, critico (regole numero.danno.dado, numero.danno.bonus, numero.danno.critico); attacchi naturali e armi fuori tabella vanno in non_verificabili. Canale testing (ADR-0099): misura, non cancello.",
       "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
       "stability": "beta",
       "stdlib_only": true,
@@ -12618,7 +12627,7 @@
       ],
       "docs": [
         "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
-        "docs/guides/GUIDA-MARCATURE.md"
+        "docs/reference/GUIDA-MARCATURE.md"
       ],
       "use_case": "«Quanti marcatori INFERRED aperti ha il repo, dove stanno, e quanti ne ho tolti con questo lotto?»",
       "optional_deps": [
@@ -12689,7 +12698,7 @@
         "scripts/tests/test_controlla_marche.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-MARCATURE.md",
+        "docs/reference/GUIDA-MARCATURE.md",
         "plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md"
       ],
       "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
@@ -13282,7 +13291,7 @@
         "scripts/tests/test_prove_skill.py"
       ],
       "docs": [
-        "docs/guides/GUIDA-SCHEDE-PROMPT.md",
+        "docs/reference/GUIDA-SCHEDE-PROMPT.md",
         "plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md"
       ],
       "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
