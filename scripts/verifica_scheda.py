@@ -25,6 +25,9 @@ Scopo
              delle altre classi, gradi (massimo prima dell'ingresso e abilità
              scritta), talenti, razza, allineamento, livello d'incantesimo
              (capacità `creature.prestigio`; ADR-0126, lotto 3-bis)
+    numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
+             dal conto quelli concessi dalla classe e quelli dichiarati
+             («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
 
   Le regole sono quelle del plugin del sistema della scheda (`sistemi/<id>`).
   Un conto che il plugin non sa fare non compare: `non_verificabili` dice che
@@ -757,6 +760,85 @@ def prestigio(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+#: un talento che la scheda dichiara fuori dal conto per livello: «(B)» del mostro,
+#: «(razziale)», «[dominio]», «(difetto)», «(tratto)»
+_FUORI_CONTO = re.compile(r"\(B\)|razzial|racial|domini|domain|difett|flaw|tratt[oi]\b|\btrait", re.I)
+
+
+def numero_talenti(p: Path) -> "tuple[list[dict], list[dict]]":
+    """(violazioni, non verificabili) del numero dei talenti (ADR-0126, lotto 4).
+
+    I talenti scritti, tolti quelli che la classe concede per nome e quelli che
+    la scheda dichiara fuori dal conto, devono essere quanti ne danno i dadi
+    vita e i talenti bonus delle classi (`dmcore.talenti`), più quello
+    dell'umano. Regola `numero.talenti`: di più è una violazione, di meno pure
+    (uno slot non speso). Con una classe di cui il plugin non conosce i talenti
+    bonus il conto resta un dubbio."""
+    from dmcore import sistemi as S
+    f = VT.leggi(p)
+    s = L.leggi(p)
+    if f is None or s is None:
+        return [], []
+    sistema, T = f["sistema"], VT.T
+    costruzione = S.dati(sistema, "creature.costruzione")
+    in_piu = costruzione.get("talenti_in_piu", {})
+    bonus = T.dati(sistema)["bonus"]
+    livelli: dict[str, int] = {}
+    for k, v in f["livelli"].items():
+        k = k if k in bonus else T._ALIAS.get(k, k) if T._ALIAS.get(k, k) in bonus else k
+        livelli[k] = livelli.get(k, 0) + v
+    note = set(costruzione.get("classi", {})) | set(bonus)
+    ignote = list(f["classi_ignote"]) + [k for k in livelli if k not in note and T._ALIAS.get(k, k) not in note]
+    tot = max(f["dv"], L.dv_totali(s.testo) or 0, sum(livelli.values()))
+    # la composizione dei dadi vita non letta, o un umanoide con più di tre dadi «razziali» e
+    # nessuna classe: sono livelli di una classe che la lettura non ha visto
+    if not s.composizione_nota or any(g.nome == "classe non dichiarata" for g in s.gruppi) or (
+            not livelli and any(g.nome == "humanoid" and g.n > 3 for g in s.gruppi)):
+        ignote.append("una classe non letta")
+    en_di = {c: (c if c in T.CLASSI_EN_IT else T._ALIAS.get(c, c)) for c in livelli}
+    concessi = {PR_senza(t) for _, t in T.concessi(sistema, livelli)} | {PR_senza(t) for t in VT.talenti_concessi(livelli)}
+    for d in in_piu.get("domini", {}).values():
+        if any(livelli.get(c) or livelli.get(T._ALIAS.get(c, c)) for c in d["classi"]) and re.search(
+                rf"(?:domin\w+|domains?)\b[^\n]*\b(?:{'|'.join(d['nomi'])})\b", s.testo, re.I):
+            concessi |= {PR_senza(t) for t in d["talenti"]}
+    contati, fuori, ignoti = 0, 0, 0
+    for nome in f["nomi"]:
+        r = VT.risolvi(sistema, nome)
+        if _FUORI_CONTO.search(nome):
+            fuori += 1
+        elif r and PR_senza(r["en"]) in concessi:
+            fuori += 1
+        elif r is None and (len(nome.split()) > 6 or re.search(r"[.:;«»]|\b(?:era|sono|non|che)\b", nome)):
+            ignoti += 1          # prosa finita nella riga, non un nome: il conto resta un dubbio
+        else:
+            contati += 1         # anche un nome che la lettura non conosce è un talento scritto
+    minimo = T.generali(sistema, tot) + len(T.bonus_di_classe(sistema, livelli))
+    umano = bool(re.search(rf"\b(?:{'|'.join(in_piu.get('razza_umana', ['human']))})\b", s.tipo or "", re.I))
+    minimo += in_piu.get("umano", 0) if umano else 0
+    massimo = minimo + sum(1 for c, n in livelli.items()
+                           for lv in in_piu.get("capacita_o_talento", {}).get(en_di[c], ()) if lv <= n)
+    base = {"file": f["file"], "riga": f["riga"], "verifica": "numero_talenti", "regola": "numero.talenti",
+            "fonte": "srd" if sistema == "dnd35" else f"{sistema} prd"}
+    atteso = str(minimo) if minimo == massimo else f"{minimo}-{massimo}"
+    come = (f"{T.generali(sistema, tot)} per {tot} dadi vita, {len(T.bonus_di_classe(sistema, livelli))} bonus di classe"
+            + (", 1 da umano" if umano and in_piu.get("umano") else "")
+            + (f"; {fuori} fuori dal conto (concessi dalla classe o dichiarati)" if fuori else ""))
+    if minimo <= contati <= massimo:
+        return [], []
+    testo = (f"la scheda conta {contati} talenti, la regola ne dà {atteso} ({come})")
+    if ignote:
+        return [], [{**base, "testo": testo + f"; i talenti bonus di {', '.join(ignote)} non sono nel plugin"}]
+    if ignoti:
+        return [], [{**base, "testo": testo + f"; la riga ha {ignoti} voci di prosa che non si contano"}]
+    if contati > massimo:
+        testo += "; un talento fuori dal conto va dichiarato accanto al nome: (B), (razziale), (dominio), (difetto)"
+    return [{**base, "atteso": atteso, "ha": contati, "testo": testo}], []
+
+
+def PR_senza(nome: str) -> str:
+    return re.sub(r"\s*\(.*$", "", nome).strip().lower()
+
+
 def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
     """La CA dei recinti della scheda, ricostruita dalle sue voci (ADR-0126, lotto 1-bis)."""
     import conformita_statblocchi as C
@@ -849,10 +931,11 @@ def main(argv: "list[str] | None" = None) -> int:
         dv, dn = danno(p)
         mv, mn = incantatori(p)
         pv, pn = prestigio(p)
+        qv, qn = numero_talenti(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

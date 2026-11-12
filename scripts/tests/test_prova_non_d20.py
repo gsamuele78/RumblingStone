@@ -50,9 +50,10 @@ CARTELLA = "moduli-di-prova"
 CENSIMENTO = {
     "tutte": {"domande_developer", "validate_modules", "validate_prosa", "validate_standalone"},
     "in_parte": {"suggest_encounter",  # la minaccia sì, le schede del Bestiario no
-                 "genera_creatura"},   # formule.regole sì (dichiarata dalla #376), il resto no: rifiuta
+                 "genera_creatura",    # formule.regole sì (dichiarata dalla #376), il resto no: rifiuta
+                 "verifica_scheda"},   # dichiara le 13 capacità che legge (lotto 4): formule.regole sì, i conti d20 no
 }
-CENSIMENTO_NESSUNA = 16  # genera_creatura passa in «in_parte» con la #376; +verifica_talenti e verifica_scheda (ADR-0124): talenti e conti sono d20
+CENSIMENTO_NESSUNA = 15  # verifica_scheda passa in «in_parte» col lotto 4 di ADR-0126. Prima: genera_creatura passa in «in_parte» con la #376; +verifica_talenti e verifica_scheda (ADR-0124): talenti e conti sono d20
 
 
 def _file_dei_plugin() -> "set[str]":

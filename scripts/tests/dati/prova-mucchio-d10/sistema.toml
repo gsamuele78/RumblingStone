@@ -40,6 +40,10 @@ skill = []
 "creature.talenti" = { non_supportato = "niente talenti d20: i tratti si comprano con l'esperienza" }
 "creature.gradi" = { non_supportato = "niente gradi d20: le abilità sono mucchi di dadi" }
 "creature.liste_incantesimi" = { non_supportato = "niente liste di classe: la magia non va per livelli d20" }
+"creature.armi" = { non_supportato = "niente dado dell'arma per taglia né critico d20" }
+"creature.incantatori" = { non_supportato = "niente incantesimi al giorno per livello di classe" }
+"creature.prestigio" = { non_supportato = "niente classi, quindi niente classi di prestigio" }
+"bonus.cumulo" = { non_supportato = "niente bonus con un tipo che si cumula o no" }
 "statblocco.campi" = { non_supportato = "la scheda ha attributi, abilità e salute, non i campi d20" }
 "stampa.etichette" = { non_supportato = "il riquadro della creatura stampato è d20" }
 

@@ -379,3 +379,12 @@ chierico 9 o resta non letta), le capacità di classe che toccano i numeri, il
 rigiudizio delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON
 per scheda chiesta dal thread della #379. Vanno nel lotto 4.
 
+### Lotto 4 fatto in parte (2026-11-12)
+
+Il numero dei talenti è in `verifica_scheda` (ADR-0126, «Lotto 4»):
+`muta_numero_talenti.py`, `misure-numero-talenti.json`. Del lotto 4 restano gli
+effetti dei talenti sui numeri, e dal lotto 3 l'avanzamento d'incantatore delle
+classi di prestigio, le capacità di classe che toccano i numeri, il rigiudizio
+delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON per scheda
+per il thread della #379.
+
