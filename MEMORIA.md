@@ -86,17 +86,17 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §11 (DM: «correggi gli errori», prima finire le classi):… | ✅ Violazioni 34 → 7 (12 falsi positivi tolti, 16 corrette, 1 nuova); righe di incantesimi senza classe 94 → 16; errori messi apposta visti 247/254 (erano 167/1… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
+| 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 punti 3-5 (scelta del DM): `scripts/verifica_talenti.py` nel manifest… | ✅ Bestiario da 30 violazioni in 19 schede a 21 in 11; giro di correzione con test (--check 1 → 0); le 21 al DM |
+| 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | Verificatore logico (Prolog) per le regole: misura in… | 🟡 misura fatta, decisione al DM |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 3: talenti dei PNG secondo la regola.… | ✅ numero di talenti al 7° per ogni classe, contato a mano sul manuale: 3.5 0/11 → 11/11, PF1e 0/32 → 32/32; prerequisiti dei talenti generali 11/11 e 32/32; im… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 1 (richiesta del DM «verifica che le regole PF1e siano c… | ✅ PF1e 1546/1551 giuste su 1733 righe, nessun errore nei dati; 3.5 da 166 a 167/172: EL 19 del tesoro 60.000 → 61.000 (SRD); «scaglie» non è più un'armatura (c… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN | Impronte del banco d'invarianza rigenerate dopo la #364: `suggest_encounter` (u… | ✅ `impronte.py --confronta` verde |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Lotto PF1e dell'audit dei plugin (ADR-0121, richiesta del DM «completa i limiti… | ✅ misura PF1e da 59 coperte/46 giuste su 217 (main 421dbd0) a 217/217; uso: 55/55 classi generate e 20/20 tipi convertiti passano il cancello PF1e (prima 0 e 7… |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Liste di classe degli incantesimi PF1e (ADR-0119 lotto 3, chieste dal thread de… | ✅ dati scritti; li collega il thread della #365 |
 
 ## Le misure che si portano dietro
 

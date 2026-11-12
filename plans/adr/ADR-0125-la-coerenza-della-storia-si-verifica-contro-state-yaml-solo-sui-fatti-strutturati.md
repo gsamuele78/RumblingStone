@@ -3,7 +3,7 @@
 **Stato**: proposta (2026-11-12)
 **Data**: 2026-11-12
 **Decisione-fonte**: il DM (Jfs), 2026-11-11, nel thread della #378: *«L'idea che ha dato inizio al thread ha senso applicarla per la parte di generazione e coerenza della storia?»*; poi la card «Sì, thread separato».
-**Rapporti**: applica alla storia il pattern di ADR-0124 (regola, atteso, ha, `file:riga`; PR #378, ancora aperta); si appoggia ad [ADR-0050](ADR-0050-stato-di-campagna-dati-e-prosa.md) (`state.yaml` è il master dei fatti) e ad [ADR-0067](ADR-0067-il-confine-dichiarato-fra-codice-e-llm.md). Misure in [plans/esperimenti/coerenza-storia-2026-11-12/ESITO.md](../esperimenti/coerenza-storia-2026-11-12/ESITO.md).
+**Rapporti**: applica alla storia il pattern di [ADR-0124](ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md) (regola, atteso, ha, `file:riga`); si appoggia ad [ADR-0050](ADR-0050-stato-di-campagna-dati-e-prosa.md) (`state.yaml` è il master dei fatti) e ad [ADR-0067](ADR-0067-il-confine-dichiarato-fra-codice-e-llm.md). Misure in [plans/esperimenti/coerenza-storia-2026-11-12/ESITO.md](../esperimenti/coerenza-storia-2026-11-12/ESITO.md).
 
 ## Contesto
 

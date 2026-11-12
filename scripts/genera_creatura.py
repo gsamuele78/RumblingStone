@@ -1219,7 +1219,7 @@ def applica_talenti(sb: Statblocco, conto: Conto, sistema: str, ruolo: str, rng:
         stile = "Archery" if ruolo == "tiratore" else "Two-Weapon"
     if "sorcerer" in st["livelli"]:
         stile = "Arcane"
-    s = TL.Stato(car=attr, bab=st["bab"], livelli=st["livelli"], lic=st["lic"])
+    s = TL.Stato(car=attr, bab=st["bab"], livelli=st["livelli"], lic=st["lic"], dv=st.get("dv", 0))
     if firma and TL.nome_inglese(sistema, firma) and TL.manca(sistema, TL.nome_inglese(sistema, firma), s):
         # il carattere tira un talento che il PNG non può avere: si prende un altro
         # carattere dello stesso ruolo il cui talento è lecito (o non è un talento)

@@ -37,7 +37,7 @@ __all__ = [
     "pf_dado_sospetto", "CITAZIONE", "SESTINA", "PCG_STAT", "parole_del_file",
     "INTESTAZIONE", "sestine_citate", "dalla_scheda", "BAB_SCRITTO", "LOTTA_SCRITTA",
     "LOTTA_TAGLIA", "LOTTA_MIGLIORATA", "numeri_della_fonte", "INIZIATIVA_SCRITTA",
-    "INIZIATIVA_MIGLIORATA", "senza_note", "MARCA", "CODA_FONTE", "CODA_SCHEDA",
+    "INIZIATIVA_MIGLIORATA", "senza_note", "livelli_di_classe", "MARCA", "CODA_FONTE", "CODA_SCHEDA",
     "CODA_ARRAY", "TS_CAMPO", "ATTRIBUTI", "MISCHIA", "TALENTI", "RESISTENZA",
     "talenti", "Scheda", "provenienza", "DV_PROSA", "DV_ACCANTO_AI_PF",
     "LIVELLO_IGNOTO", "dv_totali", "dadi_di_pf", "composizione", "leggi",
@@ -550,6 +550,20 @@ def composizione(testo: str, tipo: str) -> "tuple[list[Gruppo], bool]":
     if razziali > 0:
         gruppi.insert(0, Gruppo(chiave, razziali, dado, buoni, bab))
     return gruppi, True
+
+
+def livelli_di_classe(s: "Scheda") -> "dict[str, int]":
+    """{classe: livelli} delle classi che la scheda dichiara, senza i DV razziali.
+
+    Il nome è quello della tabella delle classi (abbreviazioni sciolte: «Ftr»
+    → fighter); serve a chi controlla i prerequisiti (verifica_talenti, ADR-0124).
+    """
+    out: dict[str, int] = {}
+    for g in s.gruppi:
+        n = _P.ABBREVIAZIONI.get(g.nome.lower(), g.nome.lower())
+        if _classe(n):
+            out[n] = out.get(n, 0) + g.n
+    return out
 
 
 def leggi(p: Path) -> "Scheda | None":
