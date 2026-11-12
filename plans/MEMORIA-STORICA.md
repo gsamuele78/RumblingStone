@@ -960,6 +960,7 @@ repo scritto con altre parole.
 - **Testo:** Lotto 3-ter del programma «regole senza omissioni». `prestigio.toml` (3.5 e PF1e) ha per ogni classe di prestigio i livelli che danno +1 livello d'incantatore a una classe che si aveva già (`avanza`); `dmcore.prestigio.avanzamento` fa il conto e `verifica_scheda` ha la regola `numero.incantesimi.livello_incantatore`. Banco `muta_avanzamento.py`: 12 liste troppo alte su 12 viste, prima 0; 6 controlli, nessuno segnato a torto; il Bestiario resta a 72 violazioni.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** in PCGen l'avanzamento è il tag `ADD:SPELLCASTER|Arcane/Divine/ANY` sulle righe di livello, con `REPEATLEVEL` per «ogni N livelli»; `BONUS:PCLEVEL` è un altro meccanismo (stirpi, psionici) e non si legge; l'assenza del tag non prova che la classe non avanzi, per questo una classe dei manuali senza `avanza` è un dubbio e una dell'SRD no; tre classi hanno avanzamenti diversi in due libri (`avanza = { diverge = true }`); il confronto fra i libri per `diverge` dei requisiti esclude `avanza`, altrimenti i requisiti di molte classi sarebbero diventati dubbi; senza livello scritto la lista di un «Chierico 3 / Loremaster 2» si giudicava da chierico di 3°.
+
 ### MS-0082 · 2026-11-12 · Cancello del riferimento dei plugin
 
 - **Data:** 2026-11-12
