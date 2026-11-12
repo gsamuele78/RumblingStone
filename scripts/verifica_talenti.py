@@ -37,6 +37,7 @@ import argparse
 import json
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,6 +62,10 @@ COMPETENZE_DI_CLASSE = {
     "Armor Proficiency (Medium)": {"barbarian", "cleric", "druid", "fighter", "paladin", "ranger"},
     "Armor Proficiency (Heavy)": {"cleric", "fighter", "paladin"},
 }
+#: I maghi specialisti: nel `tipo` stanno col nome della scuola.
+SPECIALISTI = {"abjurer", "conjurer", "diviner", "enchanter", "evoker", "illusionist", "necromancer",
+               "transmuter", "abiuratore", "evocatore", "divinatore", "ammaliatore", "invocatore",
+               "illusionista", "negromante", "trasmutatore"}
 #: Regole che senza classi dichiarate non si possono giudicare.
 SERVE_LA_CLASSE = ("lic", "capacita", "classe.")
 
@@ -78,7 +83,69 @@ def pezzi(riga: str) -> "list[str]":
         else:
             buf += ch
     out.append(buf)
-    return [re.sub(r"\s*\(.*?\)\s*", " ", x).strip(" .;") for x in out if x.strip()]
+    return [re.sub(r"\s+", " ", x).strip(" .;") for x in out if x.strip()]
+
+
+def _senza_parentesi(nome: str) -> str:
+    return re.sub(r"\s*\(.*?\)\s*", " ", nome).strip(" .;")
+
+
+def _candidati(nome: str) -> "list[str]":
+    """Il nome senza parentesi, poi l'inglese che il DM mette fra parentesi
+    («Incidere Rune (Inscribe Rune)»), se ce n'è uno."""
+    out = [_senza_parentesi(nome)]
+    out += [m.strip() for m in re.findall(r"\(([A-Z][A-Za-z' -]+?)\s*(?:[,;][^)]*)?\)", nome)]
+    return [x for x in out if x]
+
+
+@lru_cache(maxsize=None)
+def _lessici() -> "tuple[dict, dict, dict, set]":
+    """(italiano 3.5 → inglese, inglese → manuale 3.5, italiano PF1e → inglese, inglesi PF1e)."""
+    import lessico_regole as LR
+    it35 = {LR.norma(v["it"]): v["srd35"] for v in LR.tabella_35() if v["tipo"] == "talento"}
+    for v in LR.tabella_35():
+        if v["tipo"] == "talento":
+            for x in (v.get("varianti") or "").split("|"):
+                if x.strip():
+                    it35.setdefault(LR.norma(x), v["srd35"])
+    itpf = {k: v["pf1"] for k, v in LR.tabella_pf1().items()}
+    return it35, LR.talenti_dei_manuali(), itpf, LR.talenti_pf1_dei_manuali()
+
+
+def risolvi(sistema: str, nome: str) -> "dict | None":
+    """Il talento e la fonte che lo decide, nell'ordine SRD d20 → D&D 3.5 → PF1e
+    (DM, 2026-11-12). Una scheda 3.5 cerca prima i dati del suo sistema (SRD 3.5:
+    base, mostri, epici, psionici, divini), poi i manuali 3.5, di cui il repo ha
+    solo i nomi, poi il PRD PF1e. Una scheda PF1e cerca nel PRD e poi nei manuali
+    PF1e. Restituisce {en, sistema, fonte, verificabile} o None."""
+    import lessico_regole as LR
+    it35, man35, itpf, manpf = _lessici()
+    cand = _candidati(nome)
+    for c in cand:
+        en = T.nome_inglese(sistema, c)
+        if en:
+            libro = T.dati(sistema)["talenti"][en].get("libro") or sistema
+            return {"en": en, "sistema": sistema, "fonte": libro, "verificabile": True}
+    if sistema == "dnd35":
+        for c in cand:
+            en = it35.get(LR.norma(c)) or (man35.get(LR.norma(c)) or {}).get("srd35")
+            if not en:
+                continue
+            noto = T.nome_inglese("dnd35", en)
+            if noto:
+                return {"en": noto, "sistema": "dnd35",
+                        "fonte": T.dati("dnd35")["talenti"][noto].get("libro"), "verificabile": True}
+            man = (man35.get(LR.norma(en)) or {}).get("manuale") or "manuale 3.5"
+            return {"en": en, "sistema": "dnd35", "fonte": f"3.5 {man}".strip(), "verificabile": False}
+    for c in cand:
+        en = T.nome_inglese("pf1e", c) or T.nome_inglese("pf1e", itpf.get(LR.norma(c), ""))
+        if en:
+            libro = T.dati("pf1e")["talenti"][en].get("libro") or "prd"
+            return {"en": en, "sistema": "pf1e", "fonte": f"pf1e {libro}", "verificabile": True}
+    for c in cand:
+        if LR.norma(c) in manpf:
+            return {"en": c, "sistema": "pf1e", "fonte": "pf1e manuale", "verificabile": False}
+    return None
 
 
 def sistema_di(p: Path, testo: str) -> str:
@@ -105,38 +172,75 @@ def leggi(p: Path) -> "dict | None":
     for n, liv in L.livelli_di_classe(s).items():
         n = T._ALIAS.get(n, n) if n in T.CLASSI_EN_IT.values() else n
         livelli[n] = livelli.get(n, 0) + liv
+    # Le classi che il `tipo` nomina e la lettura non conosce (classi di prestigio,
+    # specialisti): il mago specialista è un mago; le altre rendono inaffidabili
+    # livello d'incantatore, capacità e livelli di classe, che vanno fra i non verificabili.
+    ignote = []
+    tipo = next((r for r in righe if r.lower().startswith("tipo:")), "")
+    for nome, liv in re.findall(r"(?:^|[,/])\s*([A-Za-zÀ-ú' -]+?)\s+(\d+)(?=\s*(?:[,/]|$))", tipo[5:]):
+        k = nome.strip().lower()
+        if k in SPECIALISTI:
+            livelli["wizard"] = livelli.get("wizard", 0) + int(liv)
+        elif T._ALIAS.get(k, k) not in livelli and k not in livelli:
+            ignote.append(f"{nome.strip()} {liv}")
     dv = sum(g.n for g in s.gruppi)
     lic = int(max([livelli.get(c, 0) * f if livelli.get(c, 0) >= (4 if f < 1 else 1) else 0
                    for c, f in INCANTATORI.items()] or [0]))
-    talenti, ignoti = [], []
+    talenti, senza_regole, ignoti = [], [], []
+    nomi = []
     for nome in pezzi(riga):
-        en = T.nome_inglese(sistema, nome)
-        (talenti if en else ignoti).append(en or nome)
+        # «Arma Focalizzata e Arma Specializzata»: due talenti, se le due metà lo sono
+        parti = re.split(r"\s+(?:e|and)\s+", nome)
+        ok = len(parti) > 1 and risolvi(sistema, nome) is None and all(risolvi(sistema, x) for x in parti)
+        nomi += parti if ok else [nome]
+    for nome in nomi:
+        r = risolvi(sistema, nome)
+        if r is None:
+            ignoti.append(_senza_parentesi(nome))
+        elif r["verificabile"]:
+            talenti.append(r)
+        else:
+            senza_regole.append(r)
     return {"file": p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else str(p),
             "riga": n_riga, "sistema": sistema,
             "car": {k: v for k, v in s.attributi.items() if isinstance(v, int)},
             "bab": s.bab, "livelli": livelli, "dv": dv, "lic": lic,
-            "talenti": sorted(set(talenti)), "ignoti": ignoti}
+            "talenti": list({r["en"]: r for r in talenti}.values()),
+            "senza_regole": senza_regole, "ignoti": ignoti, "classi_ignote": ignote}
 
 
 def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
-    """(violazioni, non verificabili) di una scheda letta da `leggi`."""
+    """(violazioni, non verificabili) di una scheda letta da `leggi`.
+
+    Ogni voce porta `fonte`: il libro che ha deciso la regola (srd, srd-mostri,
+    srd-epici, …, «pf1e apg»). Un talento dei manuali 3.5 di cui il repo non ha
+    i prerequisiti va fra i non verificabili con regola `fonte`: non passa per
+    buono e non viene segnato come sbagliato."""
     dalla_classe = [c for c, classi in COMPETENZE_DI_CLASSE.items() if classi & set(f["livelli"])]
+    nomi = [r["en"] for r in f["talenti"]] + [r["en"] for r in f["senza_regole"]]
     st = T.Stato(car=f["car"], bab=f["bab"] if f["bab"] is not None else 99,
-                 livelli=f["livelli"], lic=f["lic"], talenti=f["talenti"] + dalla_classe, dv=f["dv"])
+                 livelli=f["livelli"], lic=f["lic"], talenti=nomi + dalla_classe, dv=f["dv"])
     viol, nv = [], []
-    for en in f["talenti"]:
+    for r in f["senza_regole"]:
+        nv.append({"file": f["file"], "riga": f["riga"], "talento": r["en"], "talento_it": r["en"],
+                   "regola": "fonte", "atteso": "prerequisiti del manuale", "ha": None,
+                   "testo": f"prerequisiti di {r['en']} non nel repo", "fonte": r["fonte"],
+                   "nota": "talento di un manuale: il repo ha il nome, non i prerequisiti"})
+    for r in f["talenti"]:
+        en, sis = r["en"], r["sistema"]
         if T.bonus_senza_prerequisiti(f["sistema"], en, f["livelli"]):
             continue
-        for v in T.violazioni(f["sistema"], en, st):
+        for v in T.violazioni(sis, en, st):
             if v["regola"] == "bab" and f["bab"] is None:
                 continue
             voce = {"file": f["file"], "riga": f["riga"], "talento": en,
-                    "talento_it": T.italiano(f["sistema"], en), **v}
-            senza_classe = (not f["livelli"] and v["regola"].startswith(SERVE_LA_CLASSE)
+                    "talento_it": T.italiano(sis, en), **v, "fonte": r["fonte"]}
+            ignote = f.get("classi_ignote") or []
+            senza_classe = ((not f["livelli"] or ignote) and v["regola"].startswith(SERVE_LA_CLASSE)
                             and v["regola"] != "classe.character")
             if senza_classe:
-                voce["nota"] = "la scheda non dichiara le classi nel tipo né nel titolo"
+                voce["nota"] = ("classi che la lettura non conosce: " + ", ".join(ignote) if ignote else
+                                "la scheda non dichiara le classi nel tipo né nel titolo")
             (nv if v["regola"] in NON_VERIFICABILI or senza_classe else viol).append(voce)
     return viol, nv
 
@@ -177,7 +281,7 @@ def main(argv: "list[str] | None" = None) -> int:
     else:
         for v in viol:
             print(f"{v['file']}:{v['riga']}: {v['talento_it']} ({v['talento']}) — "
-                  f"manca {v['testo']}  [regola {v['regola']}]")
+                  f"manca {v['testo']}  [regola {v['regola']}, fonte {v['fonte']}]")
         print(f"{'✗' if viol else '✓'} verifica_talenti: {lette} schede con talenti, "
               f"{len(viol)} violazioni in {len({v['file'] for v in viol})} schede, "
               f"{len(nv)} prerequisiti non verificabili, {len(ignoti)} nomi non riconosciuti")

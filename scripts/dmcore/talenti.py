@@ -65,13 +65,25 @@ def _k(nome: str) -> str:
 
 @lru_cache(maxsize=None)
 def dati(sistema: str) -> dict:
-    return _S.regole(sistema).dati("creature.talenti")
+    """I dati dei talenti del sistema. `talenti_manuali` (i manuali 3.5 fuori
+    SRD, dai dati PCGen) si fonde sotto `talenti`: un nome dell'SRD vince. Il
+    generatore sceglie solo dai libri base (`_ordine`), quindi i talenti dei
+    manuali servono alla verifica, non alla scelta (ADR-0124)."""
+    d = dict(_S.regole(sistema).dati("creature.talenti"))
+    if d.get("talenti_manuali"):
+        d["talenti"] = {**d.pop("talenti_manuali"), **d["talenti"]}
+    return d
 
 
 def _per_chiave(sistema: str) -> "dict[str, str]":
     d = dati(sistema)["talenti"]
     out = {_k(n): n for n in d}
     out.update({_k(v["it"]): n for n, v in d.items() if v.get("it")})
+    # «Incantesimi focalizzati (bene, caos, legge o male)»: il lessico mette fra
+    # parentesi le varianti, la scheda scrive solo il nome (ADR-0124)
+    for n, v in d.items():
+        if v.get("it"):
+            out.setdefault(_k(re.sub(r"\s*\(.*\)$", "", v["it"])), n)
     return out
 
 

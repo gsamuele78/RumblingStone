@@ -28372,8 +28372,7 @@
     "incantesimi dalla lista di **mago**, funzione «controllore» (ruolo tattico: controllore) — mai a sorte da tutto il SRD, e mai dalla lista di un'altra classe",
     "collaudo PNG: livelli e GS tornano (GS 2). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 2 avrebbe 16 pf e CA 9: questo PNG (7 pf, CA 14) non regge un incontro da solo, e va accompagnato o protetto",
-    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi focalizzati (bene, caos, legge o male) [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti"
+    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi focalizzati (bene, caos, legge o male) [generale]"
    ],
    "rincari": []
   },
@@ -29064,8 +29063,7 @@
     "For 12: l'attacco non si risolve per un controllore — +4 contro un bersaglio di +3, e va bene così: il suo danno passa dagli incantesimi",
     "CA = 10 +2 Des +0 naturale = 12",
     "TS = base per DV + modificatore → Temp +6, Rifl +3, Vol +2",
-    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti"
+    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]"
    ],
    "rincari": [
     "+4 a tutte le caratteristiche (→ +8 pf, +2 CA da Des), +2 armatura naturale",
@@ -29706,8 +29704,7 @@
     "For 12: l'attacco non si risolve per un controllore — +4 contro un bersaglio di +5, e va bene così: il suo danno passa dagli incantesimi",
     "CA = 10 +2 Des +0 naturale = 12",
     "TS = base per DV + modificatore → Temp +6, Rifl +3, Vol +2",
-    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti"
+    "talenti: 2 su 2 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]"
    ],
    "rincari": [
     "+4 a tutte le caratteristiche (→ +10 pf, +2 CA da Des), +2 armatura naturale",
@@ -30300,8 +30297,7 @@
     "incantesimi dalla lista di **mago**, funzione «controllore» (ruolo tattico: controllore) — mai a sorte da tutto il SRD, e mai dalla lista di un'altra classe",
     "collaudo PNG: livelli e GS tornano (GS 5). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 5 avrebbe 44 pf e CA 13: questo PNG (17 pf, CA 15) non regge un incontro da solo, e va accompagnato o protetto",
-    "talenti: 4 su 4 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti"
+    "talenti: 4 su 4 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]"
    ],
    "rincari": []
   },
@@ -30914,7 +30910,6 @@
     "CA = 10 +2 Des +3 naturale -1 taglia = 14",
     "TS = base per DV + modificatore → Temp +8, Rifl +8, Vol +3",
     "talenti: 3 su 3 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -30930,7 +30925,6 @@
     "CA = 10 +2 Des +3 naturale -1 taglia = 14",
     "TS = base per DV + modificatore → Temp +8, Rifl +8, Vol +3",
     "talenti: 3 su 3 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -30953,7 +30947,6 @@
     "collaudo PNG: livelli e GS tornano (GS 6). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 6 avrebbe 56 pf e CA 14: questo PNG (21 pf, CA 17) non regge un incontro da solo, e va accompagnato o protetto",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -30973,7 +30966,6 @@
     "collaudo PNG: livelli e GS tornano (GS 6). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 6 avrebbe 56 pf e CA 14: questo PNG (21 pf, CA 17) non regge un incontro da solo, e va accompagnato o protetto",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -31570,7 +31562,6 @@
     "CA = 10 +2 Des +4 naturale -1 taglia = 15",
     "TS = base per DV + modificatore → Temp +8, Rifl +8, Vol +4",
     "talenti: 4 su 4 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -32219,7 +32210,6 @@
     "CA = 10 +2 Des +5 naturale -1 taglia = 16",
     "TS = base per DV + modificatore → Temp +9, Rifl +9, Vol +4",
     "talenti: 4 su 4 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -32315,7 +32305,6 @@
     "CA = 10 +2 Des +4 naturale = 16",
     "TS = base per DV + modificatore → Temp +11, Rifl +5, Vol +4",
     "talenti: 4 su 4 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -32874,7 +32863,6 @@
     "CA = 10 +2 Des +7 naturale -1 taglia = 18",
     "TS = base per DV + modificatore → Temp +10, Rifl +10, Vol +5",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -33533,7 +33521,6 @@
     "CA = 10 +2 Des +8 naturale -1 taglia = 19",
     "TS = base per DV + modificatore → Temp +10, Rifl +10, Vol +5",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -33549,7 +33536,6 @@
     "CA = 10 +2 Des +8 naturale -1 taglia = 19",
     "TS = base per DV + modificatore → Temp +10, Rifl +10, Vol +5",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -33616,7 +33602,6 @@
     "CA = 10 +2 Des +7 naturale = 19",
     "TS = base per DV + modificatore → Temp +12, Rifl +6, Vol +5",
     "talenti: 5 su 5 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -34902,7 +34887,6 @@
     "collaudo PNG: livelli e GS tornano (GS 12). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 12 avrebbe 128 pf e CA 22: questo PNG (42 pf, CA 20) non regge un incontro da solo, e va accompagnato o protetto",
     "talenti: 8 su 8 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi silenziosi [bonus mago 10°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -35530,7 +35514,6 @@
     "CA = 10 +2 Des +12 naturale -1 taglia = 23",
     "TS = base per DV + modificatore → Temp +13, Rifl +12, Vol +6",
     "talenti: 6 su 6 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -36200,7 +36183,6 @@
     "CA = 10 +2 Des +13 naturale -1 taglia = 24",
     "TS = base per DV + modificatore → Temp +14, Rifl +13, Vol +7",
     "talenti: 7 su 7 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -36870,7 +36852,6 @@
     "CA = 10 +2 Des +14 naturale -1 taglia = 25",
     "TS = base per DV + modificatore → Temp +15, Rifl +14, Vol +7",
     "talenti: 7 su 7 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -38223,7 +38204,6 @@
     "CA = 10 +2 Des +16 naturale -1 taglia = 27",
     "TS = base per DV + modificatore → Temp +17, Rifl +15, Vol +8",
     "talenti: 8 su 8 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -38246,7 +38226,6 @@
     "collaudo PNG: livelli e GS tornano (GS 17). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 17 avrebbe 216 pf e CA 27: questo PNG (59 pf, CA 21) non regge un incontro da solo, e va accompagnato o protetto",
     "talenti: 10 su 10 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi silenziosi [bonus mago 10°]; Incantesimi immobili [bonus mago 15°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Robustezza [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4, pf +3"
    ],
    "rincari": []
@@ -38308,7 +38287,6 @@
     "CA = 10 +2 Des +15 naturale = 27",
     "TS = base per DV + modificatore → Temp +18, Rifl +9, Vol +8",
     "talenti: 8 su 8 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -38880,7 +38858,6 @@
     "CA = 10 +2 Des +17 naturale -1 taglia = 28",
     "TS = base per DV + modificatore → Temp +18, Rifl +15, Vol +8",
     "talenti: 8 su 8 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": []
@@ -38896,7 +38873,6 @@
     "CA = 10 +2 Des +17 naturale -1 taglia = 28",
     "TS = base per DV + modificatore → Temp +18, Rifl +15, Vol +8",
     "talenti: 8 su 8 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4"
    ],
    "rincari": [
@@ -39612,7 +39588,6 @@
     "collaudo PNG: livelli e GS tornano (GS 19). La tabella della classe è la fonte; il resto sono conseguenze.",
     "per confronto, un MOSTRO di GS 19 avrebbe 264 pf e CA 29: questo PNG (66 pf, CA 23) non regge un incontro da solo, e va accompagnato o protetto",
     "talenti: 11 su 11 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Scrivere pergamene [concesso da mago]; Incantesimi estesi [bonus mago 5°]; Incantesimi silenziosi [bonus mago 10°]; Incantesimi immobili [bonus mago 15°]; Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Robustezza [generale]; Volontà di ferro [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4, pf +3, vol +2"
    ],
    "rincari": [
@@ -39640,7 +39615,6 @@
     "CA = 10 +2 Des +17 naturale = 29",
     "TS = base per DV + modificatore → Temp +20, Rifl +10, Vol +9",
     "talenti: 9 su 9 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]; Robustezza [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4, pf +3"
    ],
    "rincari": []
@@ -40233,7 +40207,6 @@
     "CA = 10 +2 Des +20 naturale -1 taglia = 31",
     "TS = base per DV + modificatore → Temp +21, Rifl +17, Vol +9",
     "talenti: 9 su 9 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]; Robustezza [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4, pf +3"
    ],
    "rincari": []
@@ -40249,7 +40222,6 @@
     "CA = 10 +2 Des +20 naturale -1 taglia = 31",
     "TS = base per DV + modificatore → Temp +21, Rifl +17, Vol +9",
     "talenti: 9 su 9 della regola (3.5: 1 + 1 ogni 3 livelli, più bonus e concessi delle classi) — Incantesimi focalizzati (bene, caos, legge o male) [generale]; Incantare in combattimento [generale]; Iniziativa migliorata [generale]; Incantesimi focalizzati superiore [generale]; Incantesimi inarrestabili [generale]; Incantesimi estesi [generale]; Incantesimi silenziosi [generale]; Incantesimi immobili [generale]; Robustezza [generale]",
-    "talenti: «Incantesimi Focalizzati» non è un talento: resta nel carattere, non tra i talenti",
     "effetti dei talenti sui numeri: iniziativa +4, pf +3"
    ],
    "rincari": [

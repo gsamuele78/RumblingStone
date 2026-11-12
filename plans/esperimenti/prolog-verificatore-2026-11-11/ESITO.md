@@ -115,3 +115,44 @@ python3 muta.py fatti-bestiario.json       # scrive misure-mutanti.json
   cambiano solo i talenti che la correzione vuole (40 voci 3.5: Autorità ai
   comandanti, Arma Specializzata e Arma Focalizzata Superiore ai guerrieri,
   Padronanza degli Incantesimi al mago).
+
+## 7. Cascata delle fonti e talenti dei manuali (DM, 2026-11-12)
+
+Il DM ha chiesto che la verifica segua l'ordine **SRD d20 → D&D 3.5 → PF1e** e
+che i prerequisiti mancanti si cerchino nel repo e in rete (PCGen compreso).
+
+- **SRD 3.5 completo**: i dati avevano solo `feats.md` (110 talenti).
+  `estrai_talenti.py` ora legge anche i talenti dei mostri, epici, psionici e
+  divini dell'SRD: **363**. L'impronta delle creature generate non cambia.
+- **Manuali 3.5 fuori SRD**: dndtools.net non risponde. I prerequisiti vengono
+  dai dati PCGen di BahamutDragon/pcgen (campi `PRExxx`), tradotti da
+  `plans/esperimenti/talenti-manuali-35-2026-11-12/estrai_pcgen.py` in
+  `sistemi/dnd35/dati/talenti_manuali.toml`: **2.037 talenti**, di cui 926 con
+  almeno un prerequisito che la regola non sa leggere (`altro`: taglia, razza,
+  tiro salvezza base, divinità). Si prendono solo nome, manuale e
+  prerequisiti, niente testo. Dei 3.998 nomi di `talenti_manuali_35.tsv`,
+  **1.846 restano senza prerequisiti** (manuali che PCGen non copre).
+- **PF1e** è l'ultima fonte: un nome che nessun libro 3.5 ha si verifica col PRD.
+  Sul Bestiario di oggi non serve mai (0 casi), ma la prova c'è nel test.
+- Ogni voce porta `fonte` (`srd`, `srd-mostri`, `3.5 Complete Warrior`, `pf1e apg`).
+- **D3, trovato strada facendo**: il lessico scrive «Incantesimi focalizzati
+  (bene, caos, legge o male)» e il generatore cercava «Incantesimi
+  Focalizzati»: 28 creature «controllore» avevano la nota «non è un talento».
+  Corretto in `talenti._per_chiave`.
+- **Classi che la lettura non conosce** (classi di prestigio nel `tipo`: Deep
+  Diviner, Hammer of Moradin, Berserker Furioso): livello d'incantatore, capacità
+  e livelli di classe passano fra i non verificabili, con la nota che dice
+  quali classi. Il mago specialista (Diviner 5) conta come mago.
+
+Bestiario dopo il giro: 73 schede con talenti, **22 violazioni in 11 schede**
+(21 da `srd`, 1 da `srd-mostri`: Colpo Terrificante senza Spingere
+Migliorato), 46 prerequisiti non verificabili (22 dei talenti dei mostri, come
+«velocità di volo»; 16 dei manuali; 8 dell'SRD), 15 nomi non riconosciuti (8
+sono pezzi di prosa presi per talenti, 7 nomi veri: Virata ×3, Critico
+Potente, Iniziato della Natura, Anima Forte, Specializzazione nello Scudo).
+Nessun talento dei manuali risulta violato sulle parti leggibili.
+
+**Limite da dire**: il repo PCGen non dichiara una licenza. Qui entrano solo
+fatti di regola (nome, soglie), come già per gli indici dei nomi; se il DM
+preferisce non tenerli, `talenti_manuali.toml` si toglie e quei talenti
+tornano «non verificabili, fonte 3.5 manuale».

@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
 | 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 punti 3-5 (scelta del DM): `scripts/verifica_talenti.py` nel manifest… | ✅ Bestiario da 30 violazioni in 19 schede a 21 in 11; giro di correzione con test (--check 1 → 0); le 21 al DM |
 | 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | Verificatore logico (Prolog) per le regole: misura in… | 🟡 misura fatta, decisione al DM |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Lotto PF1e dell'audit dei plugin (ADR-0121, richiesta del DM «completa i limiti… | ✅ misura PF1e da 59 coperte/46 giuste su 217 (main 421dbd0) a 217/217; uso: 55/55 classi generate e 20/20 tipi convertiti passano il cancello PF1e (prima 0 e 7… |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Riallineamento della #363 a main dopo la #364: `attacco` tra i conti bloccanti… | ✅ `--cancello-numeri` verde senza toccare la baseline; un test |
 | 2026-11-10 | MOTORE-AGNOSTICO-D20 | Pf bonus dei costrutti PF1e per taglia in `creature.toml`, chiesti dal thread d… | ✅ test con i sette valori; `--check` del generatore |
-| 2026-11-10 | MOTORE-AGNOSTICO-D20 | Difetto del cancello PF1e trovato dal thread dell'audit sui blocchi multiclasse… | ✅ due test: senza la correzione un BAB sbagliato passava |
 
 ## Le misure che si portano dietro
 

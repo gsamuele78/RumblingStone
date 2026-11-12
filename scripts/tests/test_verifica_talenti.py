@@ -58,6 +58,10 @@ class Regola(unittest.TestCase):
         self.assertIsNone(TL.bonus_senza_prerequisiti("dnd35", "Improved Trip", {"fighter": 6}))
 
 
+def _r(en: str) -> dict:
+    return {"en": en, "sistema": "dnd35", "fonte": "srd", "verificabile": True}
+
+
 class Strumento(unittest.TestCase):
     def _esegui(self, *argv) -> "tuple[int, dict]":
         buf = io.StringIO()
@@ -88,16 +92,64 @@ class Strumento(unittest.TestCase):
 
     def test_competenza_della_classe_non_e_una_violazione(self):
         f = {"file": "x.md", "riga": 1, "sistema": "dnd35", "car": CAR, "bab": 8,
-             "livelli": {"fighter": 8}, "dv": 8, "lic": 0, "talenti": ["Improved Shield Bash"], "ignoti": []}
+             "livelli": {"fighter": 8}, "dv": 8, "lic": 0, "talenti": [_r("Improved Shield Bash")], "senza_regole": [], "ignoti": []}
         self.assertEqual(V.verifica(f), ([], []))
         f["livelli"] = {}
         self.assertEqual([x["regola"] for x in V.verifica(f)[0]], ["talento"])
 
     def test_senza_classi_il_livello_d_incantatore_non_si_giudica(self):
         f = {"file": "x.md", "riga": 1, "sistema": "dnd35", "car": CAR, "bab": 5,
-             "livelli": {}, "dv": 11, "lic": 0, "talenti": ["Scribe Scroll"], "ignoti": []}
+             "livelli": {}, "dv": 11, "lic": 0, "talenti": [_r("Scribe Scroll")], "senza_regole": [], "ignoti": []}
         viol, nv = V.verifica(f)
         self.assertEqual((viol, [x["regola"] for x in nv]), ([], ["lic"]))
+
+    def test_cascata_srd_poi_manuali_35(self):
+        # SRD 3.5, anche i talenti dei mostri; poi i manuali 3.5 (nome sì, prerequisiti no)
+        self.assertEqual(V.risolvi("dnd35", "Colpo terrificante")["fonte"], "srd-mostri")
+        self.assertEqual(V.risolvi("dnd35", "Incantesimi Focalizzati")["en"], "Spell Focus")
+        # manuali 3.5: i prerequisiti vengono dai dati PCGen (talenti_manuali.toml)
+        r = V.risolvi("dnd35", "Robustezza Migliorata")
+        self.assertEqual((r["en"], r["verificabile"], r["fonte"]),
+                         ("Improved Toughness", True, "3.5 Complete Warrior"))
+        # un manuale che i dati PCGen non coprono: nome sì, prerequisiti no
+        r = V.risolvi("dnd35", "Abjurative Potency")
+        self.assertEqual((r["verificabile"], r["fonte"][:3]), (False, "3.5"))
+        # l'inglese fra parentesi decide quando l'italiano non è in lessico
+        self.assertEqual(V.risolvi("dnd35", "Rune Incise (Inscribe Rune)")["en"], "Inscribe Rune")
+        self.assertIsNone(V.risolvi("dnd35", "Virata"))
+
+    def test_cascata_ultima_fonte_pf1e(self):
+        # un talento che nessun libro 3.5 ha si verifica col PRD PF1e
+        r = V.risolvi("dnd35", "Furious Focus")
+        self.assertEqual((r["sistema"], r["verificabile"]), ("pf1e", True))
+        self.assertTrue(r["fonte"].startswith("pf1e"))
+
+    def test_talento_di_manuale_non_e_ne_buono_ne_sbagliato(self):
+        f = {"file": "x.md", "riga": 1, "sistema": "dnd35", "car": CAR, "bab": 8, "livelli": {"fighter": 8},
+             "dv": 8, "lic": 0, "talenti": [], "senza_regole": [V.risolvi("dnd35", "Abjurative Potency")],
+             "ignoti": []}
+        viol, nv = V.verifica(f)
+        self.assertEqual((viol, [(x["regola"], x["talento"]) for x in nv]), ([], [("fonte", "Abjurative Potency")]))
+
+    def test_prerequisiti_dei_manuali_35(self):
+        # Critico Poderoso (Complete Warrior): Arma Focalizzata e BAB +4
+        st = TL.Stato(car=CAR, bab=3, livelli={"fighter": 3}, talenti=[], dv=3)
+        self.assertEqual(sorted(x["regola"] for x in TL.violazioni("dnd35", "Power Critical", st)),
+                         ["bab", "talento"])
+        # Ira Intimidatoria chiede l'ira: un guerriero no, un barbaro sì
+        self.assertEqual([x["regola"] for x in TL.violazioni("dnd35", "Intimidating Rage", st)], ["capacita"])
+        st = TL.Stato(car=CAR, bab=3, livelli={"barbarian": 3}, talenti=[], dv=3)
+        self.assertEqual(TL.violazioni("dnd35", "Intimidating Rage", st), [])
+        # un nome dell'SRD non viene mai sostituito dal manuale
+        self.assertEqual(TL.dati("dnd35")["talenti"]["Power Attack"]["libro"], "srd")
+
+    def test_classe_che_la_lettura_non_conosce(self):
+        f = {"file": "x.md", "riga": 1, "sistema": "dnd35", "car": CAR, "bab": 5, "livelli": {"paladin": 8},
+             "dv": 10, "lic": 4, "talenti": [V.risolvi("dnd35", "Divine Armor")], "senza_regole": [],
+             "ignoti": [], "classi_ignote": ["Hammer of Moradin 2"]}
+        viol, nv = V.verifica(f)
+        self.assertEqual(viol, [])
+        self.assertIn("Hammer of Moradin 2", nv[0]["nota"])
 
     def test_percorso_inesistente(self):
         with redirect_stdout(io.StringIO()):

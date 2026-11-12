@@ -51,6 +51,17 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
 5. Il giro di correzione ha un test (`test_verifica_talenti.py`): scheda
    segnalata, corretta come dice la violazione, `--check` passa da 1 a 0.
 
+6. **Ordine delle fonti (DM, 2026-11-12): SRD d20 → D&D 3.5 → PF1e.** Una
+   scheda 3.5 si verifica prima sull'SRD 3.5 (base, mostri, epici, psionici,
+   divini: 363 talenti), poi sui manuali 3.5 fuori SRD
+   (`sistemi/dnd35/dati/talenti_manuali.toml`, 2.037 talenti con i
+   prerequisiti dai dati PCGen di BahamutDragon/pcgen, solo nome e soglie),
+   poi sul PRD PF1e. Ogni voce dell'uscita porta `fonte`. Un nome dell'SRD
+   vince sempre su un manuale, e il generatore continua a scegliere solo dai
+   libri base. Un talento di cui il repo ha solo il nome (1.846 su 3.998), o
+   una scheda con classi che la lettura non conosce, va fra i **non
+   verificabili**: non passa per buono e non viene segnato come sbagliato.
+
 ## Conseguenze
 
 - L'LLM riceve la regola esatta e il controesempio senza imparare un motore
@@ -60,6 +71,9 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
   sa cosa, attraverso chi, entro quale giorno» va scritta in Python.
 - Il giro di autocorrezione (messaggio libero contro uscita strutturata) **non è
   misurato**: resta da fare col protocollo di ESITO §5.
+
+- I dati PCGen non dichiarano una licenza: si tengono solo fatti di regola, e
+  il file si può togliere senza toccare il codice.
 
 **Da rivedere se**: arriva un dominio con regole davvero ricorsive o temporali
 su fatti già strutturati (per esempio §4 «chi sa cosa» di `state.yaml` con una
