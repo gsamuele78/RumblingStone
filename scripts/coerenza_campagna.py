@@ -39,10 +39,18 @@ Scopo
            salta le righe di storico (→, «prima della correzione», errata,
            barrato) e le frasi condizionali per vivo/morto. Non decide chi ha
            ragione: dice dove guardare.
+           Con --state aggiunge le regole che hanno l'atteso in
+           campaign/state.yaml (ADR-0125, canale testing):
+             S1  giorno d'arrivo dell'orda a Rethmar = march_clock.giorno_arrivo
+             S5  chi porta quale artefatto           = artefatti[].portatore
+             S6  modifiche permanenti di un PG: stesso segno e nessuna
+                 caratteristica che party[].hp non tocca
+             S7  ogni eco `armato` è citato per ID in almeno un file d'arco
+           e conta ciò che non si può verificare («chi sa cosa» senza tempo).
 
 Uso
   python3 scripts/coerenza_campagna.py fronti FILE.yaml [FILE.yaml ...] [--state] [--json]
-  python3 scripts/coerenza_campagna.py fatti DIR [DIR ...] [--bestiario] [--json]
+  python3 scripts/coerenza_campagna.py fatti DIR [DIR ...] [--bestiario] [--state] [--json]
   python3 scripts/coerenza_campagna.py tutto --fronti F.yaml ... --archi DIR ... --out DIR [--bestiario]
 
 Exit  0 = nessuna violazione (fronti) o misura eseguita (fatti, tutto)
@@ -886,6 +894,177 @@ def rileva_contraddizioni(dirs: list[Path], bestiario: bool = False,
 
 
 # =========================================================================== #
+# 3 · La storia contro state.yaml (ADR-0125)
+# =========================================================================== #
+# `fatti` confronta la prosa con la prosa e non sa chi ha ragione. Con --state
+# si aggiungono le regole che hanno un'àncora in campaign/state.yaml (il master
+# dei fatti, ADR-0050), e quindi un `atteso`: è il pattern di ADR-0124 (regola,
+# atteso, ha, file:riga) applicato alla storia. Solo le quattro regole precise
+# della misura del 2026-11-12 (plans/esperimenti/coerenza-storia-2026-11-12/):
+# S2 (waypoint), S3 (finestre delle quest) e S4 (livello del party) restano nel
+# laboratorio finché la precisione non passa. Misura, non cancello: una frase
+# d'autore sfugge quasi sempre (1 parafrasi su 18).
+REGOLE_STORIA = ("S1", "S5", "S6", "S7")
+STAT = {"FOR": "FOR", "DES": "DES", "COS": "COS", "INT": "INT", "SAG": "SAG", "CAR": "CAR",
+        "STR": "FOR", "DEX": "DES", "CON": "COS", "WIS": "SAG", "CHA": "CAR"}
+COND_STORIA = re.compile(
+    r"\bse\b|\bqualora\b|\bram[oi]\b|alternativ|ritard|rallent|anticip|"
+    r"\bdelay|\bslow|\bif\b|\bunless\b|\boppure\b|\bin caso\b|\bnel caso\b|"
+    r"\bdefault\b|\?|\bsenza\b|\bfallisc|\bfail", re.I)
+"""Condizionale STRETTO: la marcia si può ritardare, un ramo può cambiare chi porta cosa."""
+GIORNO_STORIA = re.compile(r"\b(?:day|giorno|g\.)\s*\**\s*(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?\b", re.I)
+GIORNO_LOCALE = re.compile(r"da giorni|days ago|dell'assedio|d'assedio|di battaglia|del torneo|"
+                           r"of the siege|giorno\s+\d\s+(?:del|di)\b", re.I)
+"""«Giorno 2 dell'assedio» conta un altro tempo, non il March Clock."""
+RETHMAR = re.compile(r"\b(rethmar|rethman|brindol)\b", re.I)
+ARRIVO = re.compile(r"arriv|giung|reach|encamp|accamp|si accampa|alle porte|under siege|"
+                    r"cinge d'assedio|inizia l'assedio|assault begins|arrives", re.I)
+ORDA = re.compile(r"\b(orda|horde|azarr|mano rossa|red hand|armata|army|hobgoblin)\b", re.I)
+MOD_PERMANENTE = re.compile(r"([+−-])\s*(\d)\s*(FOR|DES|COS|INT|SAG|CAR|STR|DEX|CON|WIS|CHA)\b")
+
+
+def ancore_state(path: Path = STATE) -> dict:
+    """I campi di state.yaml che fanno da `atteso` per S1, S5, S6 e S7."""
+    d = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    an: dict = {"giorno_arrivo": (d.get("march_clock") or {}).get("giorno_arrivo"),
+                "portatori": {}, "modifiche": {}, "echi": [], "fonte": _rel(path)}
+    for a in d.get("artefatti") or []:
+        port = str(a.get("portatore", ""))
+        pg = next((p for p in PG if re.match(p + r"\b", port)), None)
+        if pg:
+            an["portatori"][str(a.get("artefatto", "")).split(" (")[0]] = pg
+    # separatore «/» obbligatorio fra le voci: nessun backtracking esponenziale
+    # (CodeQL py/redos sulla forma con «\s*/?\s*» ripetuta)
+    voce = r"[+−-] ?\d ?(?:FOR|DES|COS|INT|SAG|CAR)"
+    elenco = re.compile(r"(" + voce + r"(?: ?/ ?" + voce + r")*)\**\s*permanent")
+    for p in d.get("party") or []:
+        hp = str(p.get("hp", ""))
+        m = elenco.search(hp)
+        if m:
+            an["modifiche"][p["pg"]] = {
+                st: (-1 if seg in "−-" else 1) * int(val)
+                for seg, val, st in re.findall(r"([+−-])\s*(\d)\s*(FOR|DES|COS|INT|SAG|CAR)", m.group(1))}
+        elif re.search(r"nessun malus permanente", hp, re.I):
+            an["modifiche"][p["pg"]] = {}
+    an["echi"] = [{"id": e["id"], "miccia": e.get("miccia")}
+                  for e in d.get("echi") or [] if e.get("stato") == "armato"]
+    con = d.get("conoscenze") or []
+    an["conoscenze"] = len(con)
+    an["conoscenze_senza_tempo"] = sum(1 for c in con if "tempo" not in c)
+    return an
+
+
+def _frasi_storia(riga: str) -> list[str]:
+    return [f for f in re.split(r"(?<=[.;!])\s+|\s+\|\s+", riga) if f.strip()]
+
+
+def dirs_echi(root: Path = ROOT) -> list[Path]:
+    """Dove cercare la scena di un eco: tutti gli archi e campaign/, in profondità."""
+    return sorted(d for d in root.iterdir() if d.is_dir() and re.match(r"\d\d_", d.name)) + [root / "campaign"]
+
+
+def verifica_storia(files: list[Path], an: dict, echi_in: list[Path] | None = None) -> dict:
+    """S1, S5, S6, S7: per ogni violazione regola, atteso, ha, file, riga, testo."""
+    viol: list[dict] = []
+
+    def v(regola, atteso, ha, rel, n, testo):
+        viol.append({"regola": regola, "atteso": atteso, "ha": ha, "file": rel, "riga": n,
+                     "testo": testo.strip()[:240]})
+
+    ga = an.get("giorno_arrivo")
+    for p in files:
+        rel = _rel(p)
+        fence, titolo = False, ""
+        for n, riga in enumerate(p.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            if riga.lstrip().startswith("```"):
+                fence = not fence
+                continue
+            # le cronologie stanno spesso in un blocco ``` e si leggono per S1;
+            # il titolo di sezione è il contesto della riga
+            if not fence and HEADING.match(riga):
+                titolo = riga
+            if STORICO_RIGA.search(riga):
+                continue
+            for fr in _frasi_storia(riga):
+                if COND_STORIA.search(fr):
+                    continue
+                # S1 arrivo dell'orda a Rethmar
+                if ga and (RETHMAR.search(fr) or RETHMAR.search(titolo) or RETHMAR.search(rel)) \
+                        and ARRIVO.search(fr) and (ORDA.search(fr) or ORDA.search(titolo)):
+                    gg = [m for m in GIORNO_STORIA.finditer(fr)
+                          if not GIORNO_LOCALE.search(fr[m.start():m.end() + 20])]
+                    # una riga che nomina già il giorno giusto è un confronto, non un errore;
+                    # un intervallo («Giorno 38-42») non afferma un arrivo
+                    if not any(int(m.group(1)) == ga for m in gg):
+                        for m in gg:
+                            g = int(m.group(1))
+                            if not m.group(2) and g >= 30:
+                                v("S1 arrivo dell'orda", f"Giorno {ga}", f"Giorno {g}", rel, n, riga)
+                if fence:
+                    continue
+                # S6 modifiche permanenti alle caratteristiche di un PG
+                if not re.search(r"permanent", fr, re.I):
+                    continue
+                for pg, mods in an["modifiche"].items():
+                    if not re.search(r"\b" + pg + r"\b", fr) or any(
+                            x != pg and re.search(r"\b" + x + r"\b", fr) for x in PG):
+                        continue
+                    for seg, val, st in MOD_PERMANENTE.findall(fr):
+                        st = STAT[st]
+                        x = (-1 if seg in "−-" else 1) * int(val)
+                        c = mods.get(st)
+                        if c is None or (c > 0) != (x > 0) or abs(x) > abs(c):
+                            canone = " / ".join(f"{k} {'+' if w > 0 else '−'}{abs(w)}"
+                                                for k, w in mods.items()) or "nessuna"
+                            v("S6 modifica permanente", f"{pg}: {canone}",
+                              f"{st} {'+' if x > 0 else '−'}{abs(x)}", rel, n, riga)
+    # S5 chi porta quale artefatto: lo stesso estrattore di `fatti`
+    rac = Raccolta()
+    for p in files:
+        estrai_prosa(p, rac, {k.lower(): k for k in PG})
+    for (ent, attr), valori in rac.occ.items():
+        if attr != "portatore":
+            continue
+        nome = rac.nomi.get(ent, ent)
+        att = next((pg for art, pg in an["portatori"].items()
+                    if art.lower().startswith(nome.lower()[:12])), None)
+        if not att:
+            continue
+        for val, occ in valori.items():
+            if val != att:
+                for o in occ:
+                    v("S5 portatore dell'artefatto", f"{nome}: {att}", val, o["file"], o["riga"], o["testo"])
+    # S7 ogni eco armato ha una scena che lo cita per ID (A12 di ARC-08)
+    if an["echi"]:
+        testi = []
+        for d in echi_in if echi_in is not None else dirs_echi():
+            for q in sorted(d.rglob("*.md")) if d.is_dir() else []:
+                if not q.name.startswith("state") and "changelog" not in q.name.lower():
+                    testi.append(q.read_text(encoding="utf-8", errors="replace"))
+        corpus = "\n".join(testi)
+        for e in an["echi"]:
+            if not re.search(r"(?<![\w-])" + re.escape(e["id"]) + r"(?!\w)", corpus):
+                v("S7 eco armato senza scena", f"{e['id']} citato in almeno un file d'arco "
+                  f"(miccia: {e['miccia']})", "0 file", an.get("fonte", _rel(STATE)), 0, "")
+    return {
+        "regole": list(REGOLE_STORIA),
+        "violazioni": viol,
+        "non_verificabili": {"chi sa cosa (conoscenze senza tempo)":
+                             f"{an.get('conoscenze_senza_tempo', 0)} su {an.get('conoscenze', 0)}"},
+        "ancore": {k: an[k] for k in ("giorno_arrivo", "portatori", "modifiche")} | {
+            "echi_armati": [e["id"] for e in an["echi"]]},
+    }
+
+
+def testo_storia(s: dict) -> str:
+    out = [f"== Storia contro state.yaml ({', '.join(s['regole'])}): {len(s['violazioni'])} violazioni"
+           f" · non verificabili: {s['non_verificabili']}"]
+    for x in s["violazioni"]:
+        out.append(f"   ✗ {x['regola']} · atteso {x['atteso']} · ha {x['ha']} · {x['file']}:{x['riga']}")
+    return "\n".join(out)
+
+
+# =========================================================================== #
 # Uscita
 # =========================================================================== #
 def testo_fronti(esiti: list[dict], state: list[dict] | None) -> str:
@@ -959,6 +1138,10 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("archi", nargs="+", type=Path)
     b.add_argument("--bestiario", action="store_true")
     b.add_argument("--tutti", action="store_true", help="legge anche i file fuori perimetro")
+    b.add_argument("--state", action="store_true",
+                   help="aggiunge le regole con l'àncora in campaign/state.yaml (S1 arrivo "
+                        "dell'orda, S5 portatore, S6 modifiche permanenti, S7 echi armati "
+                        "senza scena): regola, atteso, ha, file:riga (ADR-0125)")
     b.add_argument("--json", action="store_true")
     b.add_argument("--check", type=Path, metavar="RESIDUI",
                    help="cancello: exit 1 se c'è una contraddizione che RESIDUI non "
@@ -993,7 +1176,12 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "fatti":
         r = rileva_contraddizioni(args.archi, args.bestiario, args.tutti)
-        print(json.dumps(r, ensure_ascii=False, indent=2) if args.json else testo_fatti(r))
+        if args.state:
+            r["storia"] = verifica_storia(file_degli_archi(args.archi, args.tutti), ancore_state())
+        if args.json:
+            print(json.dumps(r, ensure_ascii=False, indent=2))
+        else:
+            print(testo_fatti(r) + ("\n" + testo_storia(r["storia"]) if args.state else ""))
         return controlla_residui(r, args.check) if args.check else 0
 
     esiti = [controlla_fronti(carica(p)) for p in args.fronti]
