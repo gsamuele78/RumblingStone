@@ -86,7 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… |  |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, coda del lotto 3: `genera_creatura` dichiara nel manifest le c… | ✅ Capacità lette e dichiarate 1/3 → 3/3; il cancello di `sistemi.py` ora le chiede a ogni sistema attivo (i tre sistemi di prova le coprono già su main). 🟡 Mis… |
