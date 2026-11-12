@@ -817,3 +817,25 @@ repo scritto con altre parole.
 - **Origine:** addendum della riga del 2026-11-12 «la memoria storica nel repo (ADR-0127)» in `plans/CHANGELOG.md`
 - **Testo:** Richiesta del DM: verificare che la riduzione della memoria del progetto (da circa 25 KB a 8 KB, 2026-11-12) non avesse perso niente, salvare il resto nel repo collegato al changelog, farne un meccanismo che eviti la saturazione e si possa leggere quando serve, e obbligare tutte le sessioni «tipo changelog, tipo addendum». Fatto: MS-0001…MS-0067 con le 67 righe della memoria lunga; `scripts/memoria_storica.py` (lettore e `--check`, nel server MCP); addendum in `check_plans_discipline.py` (riga del changelog senza voce nuova = PR bocciata); regola in AGENTS.md, nel modello delle PR, nella skill rumblingstone-plans e nell'intestazione della memoria del progetto. Misura: riferimenti delle 67 righe nel repo da 127/165 a 165/165; fatti di contenuto non trovati da 24 a 0. Delle 67 righe 53 nascevano da una PR (l'addendum le avrebbe prese), 14 no (regole, ambiente, routine, roadmap, scelte in chat): per queste resta solo la regola. Deciso dal DM (card del 2026-11-12): i dati personali tolti da MS-0005, MS-0006, MS-0009 restano fuori dal repo, nelle note di memoria. Notato durante la verifica: ADR-0104 (personaggi in posa) è citato come «proposta» ma il file non esiste in `plans/adr/`; ADR-0123 è usato sia dal ramo della #371 sia dai commit locali della #370.
 - **Trovato nel repo:** `ADR-0127` → `plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md`
+
+### MS-0069 · 2026-11-12 · ADR-0126 lotto 1: cumulo dei bonus, niente tolleranza
+
+- **Data:** 2026-11-12
+- **PR:** #380
+- **ADR:** ADR-0126 ADR-0124
+- **Temi:** regole motore
+- **Origine:** voce scritta dopo il merge, per la riga del 2026-11-12 «ADR-0126 … lotto 1» in `plans/CHANGELOG.md` (la PR è entrata prima dell'addendum)
+- **Testo:** PR #380 unita il 2026-11-12 (merge b23fd0d0). Programma «regole senza omissioni» in 12 lotti, chiesto dal DM; lotto 1 = cumulo dei bonus per tipo (`bonus.cumulo`, `dmcore.bonus`), tiri salvezza e attacco senza tolleranza in `verifica_scheda` (`--tolleranza` per tornare indietro). Misura: errori messi apposta visti 55% → 79% (701 → 1.007 su 1.279), TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente chiusi (16 in 14 schede con la sorgente scelta dal DM: mantello della resistenza o bonus razziale). Prossimo: lotto 1-bis (CA 3.5, oggetti col prezzo). Il DM ha scelto anche: variante della campagna per elemento intero, motore dichiarabile e vincolabile, forme ibride solo nella variante e registrate.
+- **Trovato nel repo:** `#380` → `plans/CHANGELOG.md` (riga senza numero di PR) · `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** lo SHA del merge b23fd0d0 e il numero #380 accanto alla riga del changelog
+
+### MS-0070 · 2026-11-12 · Coerenza della storia contro state.yaml
+
+- **Data:** 2026-11-12
+- **PR:** #379
+- **ADR:** ADR-0125
+- **Temi:** coerenza storia regole
+- **Origine:** voce scritta dopo il merge, per le due righe ADR-0125 del 2026-11-12 in `plans/CHANGELOG.md` (la PR è entrata prima dell'addendum)
+- **Testo:** PR #379 unita il 2026-11-12 (merge c2cc7756), dopo la #380. Verificatore deterministico della storia con àncora su `state.yaml`; scelta del DM «solo le regole precise, in testing»: `coerenza_campagna.py fatti --state` con S1 arrivo dell'orda, S5 portatore, S6 modifiche permanenti, S7 echi armati senza scena; «chi sa cosa» fra i non verificabili; S2-S4 restano in laboratorio. Misura: +4 incoerenze su 35 del corpus storico, mutanti S1/S5/S6 9/9, parafrasi 0/9 (1/18 nel prototipo), 0 violazioni su main. Il server MCP ora passa le opzioni di un sottocomando. Segue la PR del grafo degli eventi (Prolog/clingo equivalenti a Python; RAG col modello locale 3B: 0 rilievi veri su 23); prova sulla GPU locale ancora da fare. Aperti al DM: i 5 file di ARC-09 tarati per l'11°-12°.
+- **Trovato nel repo:** `#379` → `plans/CHANGELOG.md` · `ADR-0125` → `plans/adr/` (file ADR-0125)
+- **Solo qui:** lo SHA del merge c2cc7756; il seguito sul grafo degli eventi e l'esito del RAG col modello locale
