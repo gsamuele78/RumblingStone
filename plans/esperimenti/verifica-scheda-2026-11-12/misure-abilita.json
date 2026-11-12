@@ -1,23 +1,23 @@
 {
- "schede": 29,
+ "schede": 32,
  "una +4": {
-  "mutanti": 29,
+  "mutanti": 32,
   "trovati": 3
  },
  "una +8": {
-  "mutanti": 29,
-  "trovati": 18
+  "mutanti": 32,
+  "trovati": 20
  },
  "una +12": {
-  "mutanti": 29,
-  "trovati": 21
+  "mutanti": 32,
+  "trovati": 23
  },
  "tutte +3": {
-  "mutanti": 29,
+  "mutanti": 32,
   "trovati": 4
  },
  "tutte +6": {
-  "mutanti": 29,
-  "trovati": 14
+  "mutanti": 32,
+  "trovati": 16
  }
 }

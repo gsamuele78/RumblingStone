@@ -141,6 +141,9 @@ def _classi_it() -> "dict[str, str]":
 
 def _punti_di_classe(regole: dict, classe: str) -> "int | None":
     v = regole.get("classi", {}).get(classe)
+    if v is None:   # le classi dei manuali 3.5 fuori SRD (classi_manuali.toml)
+        m = regole.get("classi_manuali", {}).get(classe) or {}
+        return None if "punti" in (m.get("diverge") or ()) else m.get("punti")
     return v.get("gradi") if isinstance(v, dict) else v
 
 

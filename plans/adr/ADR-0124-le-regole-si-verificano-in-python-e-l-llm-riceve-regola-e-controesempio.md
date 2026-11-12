@@ -77,6 +77,15 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
    l'ordine in cui chiudere il divario dei plugin stanno in
    [plans/esperimenti/verifica-scheda-2026-11-12/ESITO.md](../esperimenti/verifica-scheda-2026-11-12/ESITO.md).
 
+8. **Classi dei manuali 3.5 fuori SRD** (DM, 2026-11-12: «solo nomi e
+   numeri» dalle fonti non OGL). `sistemi/dnd35/dati/classi_manuali.toml`, 658
+   classi da srd.dndtools.org e PCGen. Entrano nei conti (`dmcore.progressione`)
+   solo quelle con numeri regolari e su cui le due fonti non divergono; le
+   altre restano «non verificabili». Un nome dell'SRD vince sempre, e un nome
+   dei manuali vale solo scritto intero. Misura: numeri sbagliati visti da 666
+   a 701 su 1.278, non verificabili da 82 a 76, 4 schede del Bestiario ora
+   leggibili (ESITO §2-ter).
+
 ## Conseguenze
 
 - L'LLM riceve la regola esatta e il controesempio senza imparare un motore

@@ -1,7 +1,7 @@
 {
  "BAB +1": {
   "mutanti": 91,
-  "trovati": 66,
+  "trovati": 71,
   "persi": [
    "blue-psion-cr1.md",
    "drow-assassina-lolth-cr10.md",
@@ -15,18 +15,13 @@
    "loxo-warrior3-cr4.md",
    "thayan-knight-cr8.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
    "tyrgarun-blue-old-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
    "abbathor-blackguard-cr10.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md"
   ]
  },
@@ -444,7 +439,7 @@
  },
  "Temp -2": {
   "mutanti": 121,
-  "trovati": 89,
+  "trovati": 94,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -466,23 +461,18 @@
    "tiamat-warpriest-elite-cr11.md",
    "underdark-dovil-runecaster-cr7.md",
    "cavalcatura-ariete-moradin-cr5.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md"
   ]
  },
  "Rifl -2": {
   "mutanti": 121,
-  "trovati": 88,
+  "trovati": 93,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -503,25 +493,20 @@
    "thayan-knight-cr8.md",
    "underdark-cleric-ainin-cr5.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
    "koth-signore-dei-dragoni-cr8.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md",
    "phantom-fungus-cr3.md"
   ]
  },
  "Vol -2": {
   "mutanti": 120,
-  "trovati": 79,
+  "trovati": 84,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -551,24 +536,19 @@
    "thayan-red-wizard7-cr9.md",
    "tiamat-warpriest-elite-cr11.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md",
    "phantom-fungus-cr3.md"
   ]
  },
  "Temp +5": {
   "mutanti": 121,
-  "trovati": 91,
+  "trovati": 96,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -587,24 +567,19 @@
    "myconid-sovereign-cr7.md",
    "thayan-knight-cr8.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
    "koth-signore-dei-dragoni-cr8.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md"
   ]
  },
  "Rifl +5": {
   "mutanti": 121,
-  "trovati": 91,
+  "trovati": 96,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -624,23 +599,18 @@
    "thayan-knight-cr8.md",
    "tiamat-warpriest-elite-cr11.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md"
   ]
  },
  "Vol +5": {
   "mutanti": 120,
-  "trovati": 87,
+  "trovati": 92,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -662,18 +632,13 @@
    "myconid-sovereign-cr7.md",
    "thayan-knight-cr8.md",
    "underdark-dovil-runecaster-cr7.md",
-   "rurik-gorunn-cr10.md",
    "avatar-tiamat-cr17.md",
    "ghaurush-cenerevento-cr16.md",
    "ghaurush-cenerevento-secondo-incontro-cr18.md",
-   "zarim-illithid-luogotenente-cr12.md",
    "zin-thara-vel-ryn-cr12.md",
-   "balvar-fuocospento-cr13.md",
    "beholder-death-tyrant-cr14.md",
-   "draxoksus-shamano-draconico-cr8.md",
    "duergar-scala-di-ossa-cr11.md",
    "koth-signore-dei-dragoni-cr8.md",
-   "krusk-sfondacancelli-cr14.md",
    "minotauro-karkilan-cr5.md"
   ]
  }

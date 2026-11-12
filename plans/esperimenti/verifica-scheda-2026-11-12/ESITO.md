@@ -79,6 +79,44 @@ Vede gli errori grossi e non quelli piccoli: il margine (da 4 a 13 punti) è
 largo apposta per non segnalare schede giuste. Per stringerlo servono i bonus
 razziali per razza e le abilità di classe per classe, che il plugin non ha.
 
+## 2-ter. Classi dei manuali 3.5 fuori SRD (2026-11-12, secondo lotto)
+
+`sistemi/dnd35/dati/classi_manuali.toml`, da
+`plans/esperimenti/classi-manuali-35-2026-11-12/estrai_classi.py`: **658 classi**
+(dado vita, BAB, tiri salvezza buoni, punti abilità, abilità di classe, nome
+italiano del lessico per 194). Solo nome e numeri (scelta del DM).
+
+| Fonte | Classi |
+|---|---|
+| srd.dndtools.org (332 pagine di classi; 25 erano già nel plugin) | 304 |
+| di cui anche in PCGen | 153: **136 con gli stessi numeri, 17 diverse** |
+| solo PCGen (`TYPE` da personaggio; via i dadi vita razziali e le classi decadute) | 354 |
+
+Le 17 su cui le fonti divergono, le 10 senza tabella leggibile, le 2 col BAB
+irregolare e quelle coi tiri salvezza «medi» **non entrano nei conti**: restano
+sconosciute, quindi «non verificabili». Il sito sbaglia almeno due dadi vita
+che conosco dal libro (Factotum e Healer d6, il libro e PCGen danno d8): per
+questo una divergenza non si risolve a favore di nessuno.
+
+| Misura | Prima | Dopo |
+|---|---|---|
+| Classi che la lettura conosce (3.5) | 30 | 30 + 612 dei manuali |
+| Numeri sbagliati messi apposta, visti | 666 / 1.278 | **701 / 1.278** |
+| Schede con abilità calcolabili | 29 | **32** |
+| Voci non verificabili su Bestiario e archi 00-09 | 82 | **76** |
+| Violazioni | 26 | 28 (2 prima nascoste: Rurik, livello d'incantatore 4 con un talento che ne chiede 5; il runecaster dovil senza incantesimi divini) |
+| Schede del Bestiario che cambiano lettura | — | 4 (Rurik, Balvar, il dovil, Zarim: ora la composizione si legge) |
+
+Il guadagno è piccolo perché nel repo le classi fuori SRD con un livello
+scritto sono poche: warlock (24 volte, quasi tutte nei moduli e non in schede),
+shaman, dragon shaman, deep diviner, favored soul, knight, scout, swordsage.
+
+Limiti: un nome dei manuali vale solo scritto intero («tempest» leggeva
+«Cantore delle tempeste 2» come 2 livelli di Tempest, corretto prima del
+commit); un nome che finisce con una classe dell'SRD («Red Wizard 7») si legge
+ancora come quella classe; le 354 classi solo PCGen hanno una fonte sola e
+nessun riscontro; la progressione degli incantatori di queste classi non c'è.
+
 ## 3. Divario dei plugin, sezione per sezione
 
 | Sezione | Plugin `dnd35` oggi | SRD 3.5 in cache | srd.dndtools.org | Dati PCGen (WotC 3.5) | Plugin `pf1e` |

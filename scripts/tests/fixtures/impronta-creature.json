@@ -17480,6 +17480,15 @@
     "composizione": [
      [
       {
+       "bab": 0.5,
+       "buoni": [
+        "vol"
+       ],
+       "dado": 4,
+       "n": 1,
+       "nome": "Deep Diviner"
+      },
+      {
        "bab": 1.0,
        "buoni": [
         "temp"
@@ -17571,6 +17580,15 @@
     "bab": 3,
     "composizione_nota": false,
     "gruppi": [
+     {
+      "bab": 0.5,
+      "buoni": [
+       "vol"
+      ],
+      "dado": 4,
+      "n": 1,
+      "nome": "Deep Diviner"
+     },
      {
       "bab": 1.0,
       "buoni": [
@@ -21082,6 +21100,26 @@
     "come_la_fonte": [],
     "decisione": null,
     "esito": {
+     "BAB": [
+      10,
+      10,
+      0
+     ],
+     "Rifl": [
+      3,
+      3,
+      0
+     ],
+     "Temp": [
+      13,
+      13,
+      0
+     ],
+     "Vol": [
+      8,
+      8,
+      0
+     ],
      "attacco": [
       14,
       13,
@@ -21096,7 +21134,13 @@
       12,
       12,
       0
-     ]
+     ],
+     "pf": [
+      80,
+      "30-120",
+      0
+     ],
+     "pf_media": 75
     },
     "file": "Bestiario/png/rurik-gorunn-cr10.md",
     "provenienza": "a mano",
@@ -21116,9 +21160,18 @@
        "dado": 10,
        "n": 8,
        "nome": "Paladin"
+      },
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 10,
+       "n": 2,
+       "nome": "Hammer of Moradin"
       }
      ],
-     false
+     true
     ],
     "dadi_di_pf": [
      [
@@ -21214,7 +21267,21 @@
     }
    },
    "pf_dado_corretto": null,
-   "pf_dado_corretto_forzato": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 14",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     30,
+     120
+    ],
+    "file": "Bestiario/png/rurik-gorunn-cr10.md",
+    "legale": true,
+    "media": 75,
+    "motivo": null,
+    "nuovo": "10d10+20",
+    "pf": 80,
+    "vecchio": "10d10+20"
+   },
    "scheda": {
     "attributi": {
      "Car": 14,
@@ -21225,7 +21292,7 @@
      "Sag": 14
     },
     "bab": 10,
-    "composizione_nota": false,
+    "composizione_nota": true,
     "gruppi": [
      {
       "bab": 1.0,
@@ -21235,6 +21302,15 @@
       "dado": 10,
       "n": 8,
       "nome": "Paladin"
+     },
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 10,
+      "n": 2,
+      "nome": "Hammer of Moradin"
      }
     ],
     "gs": 10.0,
@@ -23058,13 +23134,13 @@
      "Cos": 14,
      "Des": 14,
      "For": 12,
-     "Int": 21,
+     "Int": 18,
      "Sag": 11
     },
     [
-     "array elite del Manuale del DM (creatura)",
+     "array elite del Manuale del DM (PNG con classe)",
      "variazione a seme fisso: Car +1, Sag −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 12) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "un avanzamento ogni 4 livelli, contati sul GS 12 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
      "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
      "Cos 14 **ricavata da pf 73 su 12 DV** — il vincolo batte l'array",
@@ -23077,13 +23153,13 @@
      "Cos": 14,
      "Des": 14,
      "For": 12,
-     "Int": 21,
+     "Int": 18,
      "Sag": 11
     },
     [
-     "array elite del Manuale del DM (creatura)",
+     "array elite del Manuale del DM (PNG con classe)",
      "variazione a seme fisso: Car +1, Sag −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 12) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "un avanzamento ogni 4 livelli, contati sul GS 12 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
      "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
      "Cos 14 **ricavata da pf 73 su 12 DV** — il vincolo batte l'array",
@@ -23094,6 +23170,26 @@
     "come_la_fonte": [],
     "decisione": null,
     "esito": {
+     "BAB": [
+      8,
+      8,
+      0
+     ],
+     "Rifl": [
+      7,
+      7,
+      0
+     ],
+     "Temp": [
+      9,
+      9,
+      0
+     ],
+     "Vol": [
+      15,
+      15,
+      0
+     ],
      "attacco": [
       10,
       10,
@@ -23108,7 +23204,13 @@
       9,
       9,
       0
-     ]
+     ],
+     "pf": [
+      73,
+      "39-107",
+      0
+     ],
+     "pf_media": 73
     },
     "file": "Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md",
     "provenienza": "a mano",
@@ -23119,8 +23221,27 @@
    },
    "letture": {
     "composizione": [
-     [],
-     false
+     [
+      {
+       "bab": 0.75,
+       "buoni": [
+        "vol"
+       ],
+       "dado": 8,
+       "n": 8,
+       "nome": "aberration"
+      },
+      {
+       "bab": 0.5,
+       "buoni": [
+        "vol"
+       ],
+       "dado": 4,
+       "n": 4,
+       "nome": "Psion"
+      }
+     ],
+     true
     ],
     "dadi_di_pf": [
      [
@@ -23164,7 +23285,20 @@
      "init": 4
     },
     "template_dichiarati": [],
-    "tetti_dai_ts": {},
+    "tetti_dai_ts": {
+     "Cos": [
+      2,
+      "ricavata da Temp +9 (base +7)"
+     ],
+     "Des": [
+      2,
+      "ricavata da Rifl +7 (base +5)"
+     ],
+     "Sag": [
+      3,
+      "ricavata da Vol +15 (base +12)"
+     ]
+    },
     "vincoli": {
      "cos_da_pf": [
       14,
@@ -23210,8 +23344,27 @@
      "Sag": 16
     },
     "bab": 8,
-    "composizione_nota": false,
-    "gruppi": [],
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 0.75,
+      "buoni": [
+       "vol"
+      ],
+      "dado": 8,
+      "n": 8,
+      "nome": "aberration"
+     },
+     {
+      "bab": 0.5,
+      "buoni": [
+       "vol"
+      ],
+      "dado": 4,
+      "n": 4,
+      "nome": "Psion"
+     }
+    ],
     "gs": 12.0,
     "lotta": 9,
     "mischia": "4 tentacoli +10 (1d4+1, afferrare migliorato)",
@@ -24317,6 +24470,26 @@
     "come_la_fonte": [],
     "decisione": null,
     "esito": {
+     "BAB": [
+      9,
+      9,
+      0
+     ],
+     "Rifl": [
+      8,
+      8,
+      0
+     ],
+     "Temp": [
+      13,
+      13,
+      0
+     ],
+     "Vol": [
+      17,
+      17,
+      0
+     ],
      "attacco": [
       11,
       11,
@@ -24331,7 +24504,13 @@
       10,
       10,
       0
-     ]
+     ],
+     "pf": [
+      101,
+      "52-143",
+      0
+     ],
+     "pf_media": 97
     },
     "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
     "provenienza": "a mano",
@@ -24352,9 +24531,19 @@
        "dado": 8,
        "n": 9,
        "nome": "Chierico"
+      },
+      {
+       "bab": 0.75,
+       "buoni": [
+        "temp",
+        "vol"
+       ],
+       "dado": 8,
+       "n": 4,
+       "nome": "Runecaster"
       }
      ],
-     false
+     true
     ],
     "dadi_di_pf": [
      [
@@ -24388,7 +24577,20 @@
      "Vol": 2
     },
     "template_dichiarati": [],
-    "tetti_dai_ts": {},
+    "tetti_dai_ts": {
+     "Cos": [
+      3,
+      "ricavata da Temp +13 (base +10)"
+     ],
+     "Des": [
+      2,
+      "ricavata da Rifl +8 (base +6)"
+     ],
+     "Sag": [
+      5,
+      "ricavata da Vol +17 (base +12)"
+     ]
+    },
     "vincoli": {
      "cos_da_pf": [
       16,
@@ -24409,7 +24611,21 @@
     }
    },
    "pf_dado_corretto": null,
-   "pf_dado_corretto_forzato": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 16",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     52,
+     143
+    ],
+    "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+    "legale": true,
+    "media": 97,
+    "motivo": null,
+    "nuovo": "13d8+39",
+    "pf": 101,
+    "vecchio": "13d8+39"
+   },
    "scheda": {
     "attributi": {
      "Car": 14,
@@ -24420,7 +24636,7 @@
      "Sag": 20
     },
     "bab": 9,
-    "composizione_nota": false,
+    "composizione_nota": true,
     "gruppi": [
      {
       "bab": 0.75,
@@ -24431,6 +24647,16 @@
       "dado": 8,
       "n": 9,
       "nome": "Chierico"
+     },
+     {
+      "bab": 0.75,
+      "buoni": [
+       "temp",
+       "vol"
+      ],
+      "dado": 8,
+      "n": 4,
+      "nome": "Runecaster"
      }
     ],
     "gs": 13.0,
@@ -24903,22 +25129,44 @@
      "Des": 16,
      "For": 20,
      "Int": 9,
-     "Sag": 19
+     "Sag": 9
     },
     [
-     "array elite del Manuale del DM (creatura)",
+     "array elite del Manuale del DM (PNG con classe)",
      "variazione a seme fisso: Int +1, Des −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 8) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "un avanzamento ogni 4 livelli, contati sul GS 8 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: hobgoblin Des +2 Cos +2",
      "Des 16 **letta da ca-dettaglio** — il vincolo batte l'array",
      "Des 16 **ricavata dall'iniziativa** — il vincolo batte l'array",
      "Cos 16 **ricavata da pf 56 su 6 DV** — il vincolo batte l'array",
-     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
+     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array",
+     "Sag 9 **ricavata da Vol +4 (base +5)** — il tetto del TS batte l'array"
     ]
    ],
    "giudica": {
     "come_la_fonte": [],
     "decisione": null,
     "esito": {
+     "BAB": [
+      4,
+      4,
+      0
+     ],
+     "Rifl": [
+      5,
+      5,
+      0
+     ],
+     "Temp": [
+      8,
+      8,
+      0
+     ],
+     "Vol": [
+      4,
+      4,
+      0
+     ],
      "attacco": [
       11,
       11,
@@ -24954,14 +25202,17 @@
     "composizione": [
      [
       {
-       "bab": -1.0,
-       "buoni": [],
+       "bab": 0.75,
+       "buoni": [
+        "temp",
+        "vol"
+       ],
        "dado": 10,
        "n": 6,
-       "nome": "classe non dichiarata"
+       "nome": "Dragon Shaman"
       }
      ],
-     false
+     true
     ],
     "dadi_di_pf": [
      [
@@ -25036,7 +25287,20 @@
     "template_dichiarati": [
      "Mezzo-immondo"
     ],
-    "tetti_dai_ts": {},
+    "tetti_dai_ts": {
+     "Cos": [
+      3,
+      "ricavata da Temp +8 (base +5)"
+     ],
+     "Des": [
+      3,
+      "ricavata da Rifl +5 (base +2)"
+     ],
+     "Sag": [
+      -1,
+      "ricavata da Vol +4 (base +5)"
+     ]
+    },
     "vincoli": {
      "cos_da_pf": [
       16,
@@ -25057,7 +25321,21 @@
     }
    },
    "pf_dado_corretto": null,
-   "pf_dado_corretto_forzato": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 16",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     24,
+     78
+    ],
+    "file": "Bestiario/villain/draxoksus-shamano-draconico-cr8.md",
+    "legale": true,
+    "media": 51,
+    "motivo": null,
+    "nuovo": "6d10+18",
+    "pf": 56,
+    "vecchio": "6d10+18"
+   },
    "scheda": {
     "attributi": {
      "Car": 15,
@@ -25068,14 +25346,17 @@
      "Sag": 8
     },
     "bab": 4,
-    "composizione_nota": false,
+    "composizione_nota": true,
     "gruppi": [
      {
-      "bab": -1.0,
-      "buoni": [],
+      "bab": 0.75,
+      "buoni": [
+       "temp",
+       "vol"
+      ],
       "dado": 10,
       "n": 6,
-      "nome": "classe non dichiarata"
+      "nome": "Dragon Shaman"
      }
     ],
     "gs": 8.0,
@@ -25647,6 +25928,26 @@
     "come_la_fonte": [],
     "decisione": null,
     "esito": {
+     "BAB": [
+      13,
+      13,
+      0
+     ],
+     "Rifl": [
+      6,
+      6,
+      0
+     ],
+     "Temp": [
+      20,
+      20,
+      0
+     ],
+     "Vol": [
+      7,
+      7,
+      0
+     ],
      "attacco": [
       24,
       24,
@@ -25661,7 +25962,13 @@
       27,
       27,
       0
-     ]
+     ],
+     "pf": [
+      166,
+      "91-232",
+      0
+     ],
+     "pf_media": 161
     },
     "file": "Bestiario/villain/krusk-sfondacancelli-cr14.md",
     "provenienza": "a mano",
@@ -25690,9 +25997,18 @@
        "dado": 10,
        "n": 1,
        "nome": "Guerriero"
+      },
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 12,
+       "n": 7,
+       "nome": "Berserker Furioso"
       }
      ],
-     false
+     true
     ],
     "dadi_di_pf": [
      [
@@ -25746,7 +26062,20 @@
      "init": 4
     },
     "template_dichiarati": [],
-    "tetti_dai_ts": {},
+    "tetti_dai_ts": {
+     "Cos": [
+      6,
+      "ricavata da Temp +20 (base +14)"
+     ],
+     "Des": [
+      0,
+      "ricavata da Rifl +6 (base +6)"
+     ],
+     "Sag": [
+      1,
+      "ricavata da Vol +7 (base +6)"
+     ]
+    },
     "vincoli": {
      "cos_da_pf": [
       22,
@@ -25767,7 +26096,21 @@
     }
    },
    "pf_dado_corretto": null,
-   "pf_dado_corretto_forzato": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 22",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     91,
+     232
+    ],
+    "file": "Bestiario/villain/krusk-sfondacancelli-cr14.md",
+    "legale": true,
+    "media": 161,
+    "motivo": null,
+    "nuovo": "12d12+1d10+78",
+    "pf": 166,
+    "vecchio": "12d12+1d10+78"
+   },
    "scheda": {
     "attributi": {
      "Car": 6,
@@ -25778,7 +26121,7 @@
      "Sag": 12
     },
     "bab": 13,
-    "composizione_nota": false,
+    "composizione_nota": true,
     "gruppi": [
      {
       "bab": 1.0,
@@ -25797,6 +26140,15 @@
       "dado": 10,
       "n": 1,
       "nome": "Guerriero"
+     },
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 12,
+      "n": 7,
+      "nome": "Berserker Furioso"
      }
     ],
     "gs": 14.0,

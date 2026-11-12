@@ -83,9 +83,16 @@ class Scheda(unittest.TestCase):
         self.assertGreater(v["ha"], v["atteso"])
 
     def test_gradi_classe_fuori_dal_plugin_non_si_giudica(self):
-        viol, nv = V.abilita(KRUSK)
+        # Krusk ha il Berserker Furioso, che dal 2026-11-12 il plugin conosce
+        # (classi_manuali.toml): la classe ignota qui è inventata.
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / KRUSK.name
+            p.write_text(KRUSK.read_text(encoding="utf-8").replace("Berserker Furioso 7", "Spaccatutto di Nessuno 7"),
+                         encoding="utf-8")
+            viol, nv = V.abilita(p)
         self.assertEqual(viol, [])
         self.assertTrue(any(x["regola"] == "gradi.punti" for x in nv))
+        self.assertEqual(V.abilita(KRUSK), ([], []))
 
     def test_regole_dei_gradi_nei_due_plugin(self):
         from dmcore import sistemi as S
@@ -107,6 +114,42 @@ class Scheda(unittest.TestCase):
     def test_percorso_inesistente(self):
         with redirect_stdout(io.StringIO()):
             self.assertEqual(V.main(["non/esiste.md"]), 2)
+
+
+class ClassiDeiManuali(unittest.TestCase):
+    """Le classi 3.5 fuori SRD (classi_manuali.toml, ADR-0124 §8)."""
+
+    def test_classe_dei_manuali_entra_nei_conti(self):
+        from dmcore import progressione as P
+        assert P.classe("warlock") == (6, ("vol",), 0.75)
+        assert P.classe("berserker furioso") == P.classe("frenzied berserker")
+        # una classe dell'SRD non viene mai sostituita da un manuale
+        assert P.classe("fighter") == (10, ("temp",), 1.0)
+
+
+    def test_classe_dei_manuali_solo_a_nome_intero(self):
+        from dmcore import progressione as P
+        # «tempest» (Complete Adventurer) non deve leggere «Cantore delle tempeste 2»
+        assert P.CLASSE_LIVELLO.findall("Bardo 12 / Cantore delle tempeste 2") == [("Bardo", "12")]
+        assert P.CLASSE_LIVELLO.findall("Umano Warlock 6") == [("Warlock", "6")]
+        assert P.CLASSE_LIVELLO.findall("Guerriera 4") == [("Guerrier", "4")]
+
+
+    def test_classe_su_cui_le_fonti_divergono_resta_sconosciuta(self):
+        from dmcore import progressione as P
+        from dmcore import sistemi as S
+        manuali = S.dati("dnd35", "creature.costruzione")["classi_manuali"]
+        divergenti = [n for n, v in manuali.items() if v.get("diverge")]
+        assert divergenti and all(P.classe(n) is None for n in divergenti)
+        assert all(not P.manuale_affidabile(manuali[n]) for n in divergenti)
+
+
+    def test_punti_abilita_di_una_classe_dei_manuali(self):
+        import verifica_scheda as VS
+        from dmcore import sistemi as S
+        regole = S.dati("dnd35", "creature.gradi")
+        assert VS._punti_di_classe(regole, "scout") == 8
+        assert VS._punti_di_classe(regole, "fighter") == 2
 
 
 if __name__ == "__main__":
