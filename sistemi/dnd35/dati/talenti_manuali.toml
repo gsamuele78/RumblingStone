@@ -99,6 +99,7 @@ bab = 3
 [talenti_manuali."Active Shield Defense"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Shield Specialization", "Shield Proficiency"]
 
@@ -118,6 +119,7 @@ talenti = ["Combat Reflexes", "Vexing Flanker"]
 [talenti_manuali."Adaptive Style"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "or warblade" = 1 }
 altro = ["Crusader", "swordsage"]
@@ -125,6 +127,7 @@ altro = ["Crusader", "swordsage"]
 [talenti_manuali."Adroit Flyby Attack"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Flyby Attack"]
 altro = ["Fly speed 90", "Hover or Wingover"]
@@ -132,6 +135,7 @@ altro = ["Fly speed 90", "Hover or Wingover"]
 [talenti_manuali."Advantageous Avoidance"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Luck"]
 classe = { "character" = 3 }
 altro = ["any luck feat"]
@@ -160,6 +164,7 @@ tipi = ["Host"]
 [talenti_manuali."Agile Athlete"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "climb" = 1, "jump" = 1 }
 
@@ -171,6 +176,7 @@ altro = ["Know astral construct"]
 [talenti_manuali."Agile Shield Fighter"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Improved Shield Bash", "Shield Specialization", "Shield Proficiency"]
 
@@ -210,6 +216,7 @@ altro = ["Must prepare arcane spells"]
 [talenti_manuali."Aleval School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 gradi = { "spellcraft" = 2 }
 bab = 4
@@ -253,6 +260,7 @@ altro = ["Dwarf"]
 [talenti_manuali."Ancestral Relic"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 3 }
 altro = ["Any good alignment"]
@@ -336,6 +344,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Arcane Accompaniment"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 4 }
 lic = 1
@@ -354,6 +363,7 @@ capacita = ["cast arcane spells"]
 [talenti_manuali."Arcane Defense"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Spell Focus"]
 altro = ["Spell Focus in specific school"]
@@ -373,6 +383,7 @@ altro = ["deity's alignment"]
 [talenti_manuali."Arcane Flourish"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 4 }
 lic = 1
@@ -388,6 +399,7 @@ altro = ["deity Boccob"]
 [talenti_manuali."Arcane Mastery"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 capacita = ["cast arcane spells"]
 altro = ["invocations", "or use spell-like abilities"]
@@ -492,6 +504,7 @@ altro = ["favored enemy"]
 [talenti_manuali."Ascetic Knight"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Improved Unarmed Strike"]
 altro = ["smite evil"]
@@ -499,6 +512,7 @@ altro = ["smite evil"]
 [talenti_manuali."Ascetic Mage"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Improved Unarmed Strike"]
 altro = ["spontaneous 2nd-level arcane spells"]
@@ -657,6 +671,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Azure Enmity"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["favored enemy class feature"]
@@ -664,6 +679,7 @@ altro = ["favored enemy class feature"]
 [talenti_manuali."Azure Talent"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum", "Psionic"]
 car = { "Cos" = 13 }
 altro = ["a power point reserve"]
@@ -671,6 +687,7 @@ altro = ["a power point reserve"]
 [talenti_manuali."Azure Touch"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["lay on hands or wholeness of body class feature"]
@@ -678,12 +695,14 @@ altro = ["lay on hands or wholeness of body class feature"]
 [talenti_manuali."Azure Toughness"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Azure Turning"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["turn undead class feature"]
@@ -691,6 +710,7 @@ altro = ["turn undead class feature"]
 [talenti_manuali."Azure Wild Shape"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 capacita = ["wild shape"]
@@ -767,6 +787,7 @@ altro = ["PRELEVELMAX:1"]
 [talenti_manuali."Battlecaster Defense"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 1
 talenti = ["Combat Casting"]
@@ -840,6 +861,7 @@ talenti = ["Aberration Blood"]
 [talenti_manuali."Better Lucky than Good"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Luck"]
 classe = { "character" = 6 }
 altro = ["any two luck feats"]
@@ -862,6 +884,7 @@ talenti = ["Bind Vestige"]
 [talenti_manuali."Black Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Black)"]
@@ -869,6 +892,7 @@ talenti = ["Draconic Heritage", "Draconic Heritage (Black)"]
 [talenti_manuali."Black Lore of Moil"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 lic = 7
 talenti = ["Spell Focus", "Spell Focus (Necromancy)"]
@@ -877,6 +901,7 @@ capacita = ["cast spells"]
 [talenti_manuali."Blackwater Invocation"]
 libro = "3.5 Stormwrack"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["channel negative energy"]
 
@@ -990,6 +1015,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Block Arrow"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 13 }
 talenti = ["Shield Proficiency"]
@@ -1014,6 +1040,7 @@ altro = ["PRERACE:1,Orc", "PREVARGTEQ:TL+CHA,10"]
 [talenti_manuali."Blood-Spiked Charger"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "Tactical"]
 car = { "For" = 13 }
 bab = 6
@@ -1049,6 +1076,7 @@ altro = ["size Huge or larger"]
 [talenti_manuali."Blue Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Blue)"]
@@ -1056,6 +1084,7 @@ talenti = ["Draconic Heritage", "Draconic Heritage (Blue)"]
 [talenti_manuali."Boar's Ferocity"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -1080,6 +1109,7 @@ tipi = ["Monstrous"]
 [talenti_manuali."Bonus Essentia"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13 }
 classe = { "character" = 6 }
@@ -1104,6 +1134,7 @@ car = { "Des" = 13 }
 [talenti_manuali."Born of the Three Thunders"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 gradi = { "knowledge (nature)" = 4 }
 talenti = ["Energy Substitution", "Energy Substitution (Electricity)"]
@@ -1117,6 +1148,7 @@ altro = ["Ability to cast 5th-level spells"]
 [talenti_manuali."Bounding Assault"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 car = { "Des" = 13 }
 bab = 12
@@ -1142,6 +1174,7 @@ altro = ["Lawful evil", "devil"]
 [talenti_manuali."Brass Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Brass)"]
@@ -1172,6 +1205,7 @@ car = { "Sag" = 13 }
 [talenti_manuali."Bronze Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Bronze)"]
@@ -1221,6 +1255,7 @@ tipi = ["General"]
 [talenti_manuali."Captivating Melody"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 capacita = ["cast arcane spells"]
 altro = ["Bardic music"]
@@ -1252,6 +1287,7 @@ tipi = ["General"]
 [talenti_manuali."Cautious Attack"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Sag" = 13 }
 talenti = ["Dodge"]
@@ -1283,6 +1319,7 @@ altro = ["Ability to acquire a new familiar", "minimum level requirement (see te
 [talenti_manuali."Celestial Heritage"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Celestial", "General"]
 classe = { "sorcerer" = 1 }
 altro = ["Nonevil alignment"]
@@ -1296,6 +1333,7 @@ classe = { "paladin" = 4 }
 [talenti_manuali."Celestial Sorcerer Aura"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Celestial", "General"]
 classe = { "sorcerer" = 1 }
 talenti = ["Celestial Sorcerer Heritage", "Celestial Heritage"]
@@ -1308,6 +1346,7 @@ classe = { "sorcerer" = 1 }
 [talenti_manuali."Celestial Sorcerer Lance"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Celestial", "General"]
 classe = { "sorcerer" = 1 }
 talenti = ["Celestial Sorcerer Heritage", "Celestial Heritage"]
@@ -1315,6 +1354,7 @@ talenti = ["Celestial Sorcerer Heritage", "Celestial Heritage"]
 [talenti_manuali."Celestial Sorcerer Lore"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Celestial", "General"]
 classe = { "sorcerer" = 1 }
 talenti = ["Celestial Sorcerer Heritage"]
@@ -1323,6 +1363,7 @@ altro = ["any two other celestial sorcerer heritage feats"]
 [talenti_manuali."Celestial Sorcerer Wings"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Celestial", "General"]
 classe = { "sorcerer" = 1 }
 talenti = ["Celestial Sorcerer Heritage", "Celestial Heritage"]
@@ -1343,18 +1384,21 @@ altro = ["Centaur"]
 [talenti_manuali."Cerulean Fortitude"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Cerulean Reflexes"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Cerulean Will"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
@@ -1375,6 +1419,7 @@ altro = ["PREWEAPONPROF:1,Chakram"]
 [talenti_manuali."Channel Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 altro = ["legacy ability"]
@@ -1389,6 +1434,7 @@ altro = ["Half-orc"]
 [talenti_manuali."Chant of Fortitude"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "concentration" = 8, "perform" = 8 }
 altro = ["Bardic music"]
@@ -1396,6 +1442,7 @@ altro = ["Bardic music"]
 [talenti_manuali."Chant of the Long Road"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "perform" = 6 }
 altro = ["Bardic music"]
@@ -1441,6 +1488,7 @@ altro = ["Member of the Cheetah Tribe"]
 [talenti_manuali."Cheetah's Speed"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -1513,6 +1561,7 @@ altro = ["Ability to cast 3rd-level spells"]
 [talenti_manuali."Clarion Commander"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["White Raven Defense"]
@@ -1525,12 +1574,14 @@ dati = "dndtools"
 [talenti_manuali."Clever Opportunist"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Combat Reflexes"]
 
 [talenti_manuali."Clever Wrestling"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Improved Unarmed Strike"]
 altro = ["Small or Medium size"]
@@ -1543,6 +1594,7 @@ tipi = ["Shifter"]
 [talenti_manuali."Climb Like An Ape"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 gradi = { "spot" = 2 }
 capacita = ["wild shape"]
@@ -1586,18 +1638,21 @@ altro = ["Ability to cast 2nd-level spells"]
 [talenti_manuali."Cobalt Charge"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Cobalt Critical"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Cobalt Expertise"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13, "Int" = 13 }
 talenti = ["Combat Expertise"]
@@ -1605,6 +1660,7 @@ talenti = ["Combat Expertise"]
 [talenti_manuali."Cobalt Power"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13, "For" = 13 }
 talenti = ["Power Attack"]
@@ -1612,6 +1668,7 @@ talenti = ["Power Attack"]
 [talenti_manuali."Cobalt Precision"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 talenti = ["Point Blank Shot"]
@@ -1619,6 +1676,7 @@ talenti = ["Point Blank Shot"]
 [talenti_manuali."Cobalt Rage"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 capacita = ["rage"]
@@ -1704,6 +1762,7 @@ talenti = ["Combat Focus", "Dodge"]
 [talenti_manuali."Combat Familiar"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 1
 capacita = ["cast arcane spells"]
@@ -1732,6 +1791,7 @@ bab = 5
 [talenti_manuali."Combat Panache"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "Tactical"]
 gradi = { "bluff" = 8, "intimidate" = 8, "perform" = 8 }
 
@@ -1890,6 +1950,7 @@ altro = ["Animal companion or special mount class feature"]
 [talenti_manuali."Copper Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Copper)"]
@@ -1987,6 +2048,7 @@ altro = ["Caster Level 5."]
 [talenti_manuali."Craft Contingent Spell"]
 libro = "3.5 Unapproachable East"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["ItemCreation"]
 lic = 11
 
@@ -2010,6 +2072,7 @@ altro = ["PRECLASS:1,Raumathari Battlemage=1"]
 [talenti_manuali."Craft Rune Circle"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["ItemCreation"]
 lic = 5
 
@@ -2064,6 +2127,7 @@ altro = ["Huge size."]
 [talenti_manuali."Crushing Strike"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 14
 talenti = ["Melee Weapon Mastery", "Weapon Focus", "Weapon Specialization", "Weapon Mastery (Bludgeoning)"]
@@ -2117,6 +2181,7 @@ altro = ["size Small or Medium"]
 [talenti_manuali."Curative Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 altro = ["legacy ability with daily use limit", "ability to cast cure light wounds"]
@@ -2199,6 +2264,7 @@ tipi = ["General"]
 [talenti_manuali."Daunting Presence"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 car = { "Car" = 13 }
 bab = 1
@@ -2306,6 +2372,7 @@ tipi = ["Item Creation", "ItemCreation"]
 [talenti_manuali."Debilitating Spell"]
 libro = "3.5 Heroes Of Horror"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tainted"]
 talenti = ["Surge Of Malevolence", "Surge of Malevolence"]
 altro = ["moderate taint"]
@@ -2313,6 +2380,7 @@ altro = ["moderate taint"]
 [talenti_manuali."Debilitating Strike"]
 libro = "3.5 Heroes Of Horror"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tainted"]
 talenti = ["Surge Of Malevolence", "Surge of Malevolence"]
 altro = ["moderate taint"]
@@ -2367,6 +2435,7 @@ altro = ["Watchful spirit class feature"]
 [talenti_manuali."Defense against the Supernatural"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "knowledge (arcana)" = 2, "knowledge (arcane)" = 2 }
 
@@ -2402,6 +2471,7 @@ bab = 15
 [talenti_manuali."Defensive Throw"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 13 }
 talenti = ["Combat Reflexes", "Dodge", "Improved Trip", "Improved Unarmed Strike"]
@@ -2409,6 +2479,7 @@ talenti = ["Combat Reflexes", "Dodge", "Improved Trip", "Improved Unarmed Strike
 [talenti_manuali."Deflective Armor"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 talenti = ["Heavy Armor Optimization"]
 
@@ -2450,6 +2521,7 @@ altro = ["PREALIGN:LE,NE,CE", "non PREABILITY:1,CATEGORY=FEAT,TYPE=VileDeformity
 [talenti_manuali."Deformity (Skin)"]
 libro = "3.5 Heroes Of Horror"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Vile"]
 talenti = ["Willing Deformity"]
 altro = ["Evil alignment"]
@@ -2485,6 +2557,7 @@ talenti = ["Combat Reflexes"]
 [talenti_manuali."Deft Strike"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Int" = 13 }
 gradi = { "spot" = 10 }
@@ -2561,6 +2634,7 @@ altro = ["PREABILITY:1,CATEGORY=Special Ability,TYPE.Desert Wind Maneuver"]
 [talenti_manuali."Despana School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 bab = 5
 talenti = ["Power Attack"]
@@ -2597,6 +2671,7 @@ gradi = { "knowledge (arcana)" = 5, "spellcraft" = 5 }
 [talenti_manuali."Devil's Aura"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Devil-Touched"]
 car = { "Car" = 13 }
 gradi = { "intimidate" = 9 }
@@ -2611,6 +2686,7 @@ altro = ["Pact with devil"]
 [talenti_manuali."Devil's Flesh"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Devil-Touched"]
 car = { "Cos" = 15 }
 talenti = ["Devil's Favor"]
@@ -2618,6 +2694,7 @@ talenti = ["Devil's Favor"]
 [talenti_manuali."Devil's Sight"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Devil-Touched"]
 car = { "Sag" = 15 }
 talenti = ["Devil's Favor"]
@@ -2625,6 +2702,7 @@ talenti = ["Devil's Favor"]
 [talenti_manuali."Devil's Stamina"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Devil-Touched"]
 talenti = ["Devil's Favor"]
 altro = ["base Fort save +3"]
@@ -2632,6 +2710,7 @@ altro = ["base Fort save +3"]
 [talenti_manuali."Devil's Tongue"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Devil-Touched"]
 car = { "Car" = 15 }
 talenti = ["Devil's Favor"]
@@ -2731,6 +2810,7 @@ tipi = ["General"]
 [talenti_manuali."Disease Immunity"]
 libro = "3.5 Heroes Of Horror"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13 }
 altro = ["Constitution 13"]
@@ -2757,6 +2837,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Disguise Spell"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 9 }
 altro = ["bardic music"]
@@ -2783,6 +2864,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Distant Horizon"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 car = { "Int" = 13 }
 bab = 6
@@ -2817,6 +2899,7 @@ capacita = ["cast divine spells", "turn or rebuke creatures"]
 [talenti_manuali."Divine Censure"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["good alignment"]
@@ -2830,6 +2913,7 @@ altro = ["PREABILITY:1,CATEGORY=Special Ability,TYPE.TurnUndead,TYPE.RebukeUndea
 [talenti_manuali."Divine Damage Reduction"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense", "Earth's Warding"]
@@ -2837,6 +2921,7 @@ talenti = ["Earth Sense", "Earth's Warding"]
 [talenti_manuali."Divine Defiance"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 lic = 3
 capacita = ["cast divine spells", "turn or rebuke creatures"]
@@ -2858,6 +2943,7 @@ capacita = ["cast divine spells", "turn or rebuke creatures"]
 [talenti_manuali."Divine Intercession"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Travel or Trickery domain"]
@@ -2865,6 +2951,7 @@ altro = ["Travel or Trickery domain"]
 [talenti_manuali."Divine Justice"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 
@@ -2898,6 +2985,7 @@ altro = ["PREABILITY:1,CATEGORY=Special Ability,TYPE.TurnUndead,TYPE.RebukeUndea
 [talenti_manuali."Divine Soultouch"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 car = { "Cos" = 13 }
 capacita = ["turn or rebuke creatures"]
@@ -2980,6 +3068,7 @@ altro = ["level 9th"]
 [talenti_manuali."Double Draconic Aura"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 12 }
 altro = ["ability to project two draconic auras"]
@@ -3017,6 +3106,7 @@ altro = ["Dark knowledge class feature"]
 [talenti_manuali."Draconic Armor"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 1 }
 talenti = ["Draconic Heritage"]
@@ -3024,24 +3114,28 @@ talenti = ["Draconic Heritage"]
 [talenti_manuali."Draconic Aura"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 3 }
 
 [talenti_manuali."Draconic Breath"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
 [talenti_manuali."Draconic Claw"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
 [talenti_manuali."Draconic Flight"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
@@ -3074,12 +3168,14 @@ talenti = ["Draconic Heritage"]
 [talenti_manuali."Draconic Power"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
 [talenti_manuali."Draconic Presence"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
@@ -3106,6 +3202,7 @@ altro = ["dragonblood subtype Gain keen senses similar to a dragon's"]
 [talenti_manuali."Draconic Skin"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 talenti = ["Draconic Heritage"]
 
@@ -3119,6 +3216,7 @@ talenti = ["Draconic Heritage"]
 [talenti_manuali."Draconic Vigor"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 1 }
 talenti = ["Draconic Heritage"]
@@ -3126,6 +3224,7 @@ talenti = ["Draconic Heritage"]
 [talenti_manuali."Dragon Breath"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 altro = ["Half-dragon", "6 HD", "breath weapon"]
@@ -3140,6 +3239,7 @@ altro = ["Speak Language (Draconic)"]
 [talenti_manuali."Dragon Familiar"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Car" = 13 }
 lic = 7
@@ -3188,6 +3288,7 @@ altro = ["Speak Language (Draconic)"]
 [talenti_manuali."Dragon Tail"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["FirstLevel", "General"]
 classe = { "only" = 1 }
 altro = ["Dragonblood subtype"]
@@ -3237,6 +3338,7 @@ capacita = ["wild shape"]
 [talenti_manuali."Dragon Wings"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["FirstLevel", "General"]
 classe = { "only" = 1 }
 altro = ["Dragonblood subtype"]
@@ -3266,6 +3368,7 @@ talenti = ["Dragonfoe", "Dragonbane"]
 [talenti_manuali."Dragonfire Assault"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 car = { "Car" = 11, "For" = 13 }
 talenti = ["Power Attack"]
@@ -3274,6 +3377,7 @@ altro = ["dragonblood subtype"]
 [talenti_manuali."Dragonfire Channeling"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine", "Draconic"]
 car = { "Car" = 11 }
 capacita = ["turn or rebuke creatures"]
@@ -3309,6 +3413,7 @@ altro = ["Speak Language (Draconic)"]
 [talenti_manuali."Dragonsong"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Car" = 13 }
 gradi = { "knowledge (arcana)" = 4, "perform" = 6 }
@@ -3329,6 +3434,7 @@ car = { "Car" = 11 }
 [talenti_manuali."Dragonwrought"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["FirstLevel", "General"]
 classe = { "only" = 1 }
 altro = ["Kobold"]
@@ -3374,6 +3480,7 @@ altro = ["PREVARGTEQ:TotalManifesterLVL,5"]
 [talenti_manuali."Driving Attack"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 bab = 14
 talenti = ["Weapon Focus", "Melee Weapon Mastery", "Weapon Specialization", "Weapon Mastery (Piercing)"]
@@ -3381,6 +3488,7 @@ talenti = ["Weapon Focus", "Melee Weapon Mastery", "Weapon Specialization", "Wea
 [talenti_manuali."Dromite Barrier"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic", "Racial"]
 talenti = ["Dromite Ray"]
 altro = ["Dromite", "3 HD"]
@@ -3454,6 +3562,7 @@ altro = ["PRERACE:1,Dwarf (Gray%"]
 [talenti_manuali."Dumb Luck"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Luck"]
 classe = { "character" = 6 }
 altro = ["any two luck feats"]
@@ -3479,12 +3588,14 @@ tipi = ["Monstrous"]
 [talenti_manuali."Dutiful Guardian"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Constant Guardian"]
 
 [talenti_manuali."Dwarven Armor Proficiency"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Racial"]
 talenti = ["Armor Proficiency (Heavy)"]
 altro = ["Dwarf"]
@@ -3525,6 +3636,7 @@ car = { "Des" = 15 }
 [talenti_manuali."Eagle's Wings"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -3532,6 +3644,7 @@ altro = ["Ability to use wild shape"]
 [talenti_manuali."Earth Adept"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense"]
@@ -3544,6 +3657,7 @@ tipi = ["Domain"]
 [talenti_manuali."Earth Fist"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "Racial"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense", "Improved Unarmed Strike", "Earth Adept"]
@@ -3556,6 +3670,7 @@ dati = "dndtools"
 [talenti_manuali."Earth Master"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Adept", "Earth Sense"]
@@ -3563,6 +3678,7 @@ talenti = ["Earth Adept", "Earth Sense"]
 [talenti_manuali."Earth Power"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense"]
@@ -3581,6 +3697,7 @@ car = { "Cos" = 13, "Sag" = 13 }
 [talenti_manuali."Earth Spell"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense", "Heighten Spell"]
@@ -3596,6 +3713,7 @@ altro = ["Improved Grapple or improved grab"]
 [talenti_manuali."Earth's Warding"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense"]
@@ -3683,6 +3801,7 @@ talenti = ["Armor Proficiency (Heavy)"]
 [talenti_manuali."Eilservs School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 gradi = { "spellcraft" = 2 }
 bab = 6
@@ -3845,6 +3964,7 @@ altro = ["Int 17 or elf"]
 [talenti_manuali."Embed Spell Focus"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 car = { "Cos" = 13 }
 capacita = ["cast spells"]
@@ -3858,6 +3978,7 @@ altro = ["Know astral construct"]
 [talenti_manuali."Empower Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 altro = ["spell-like or command-activated legacy ability"]
@@ -3871,6 +3992,7 @@ altro = ["Any other metashadow feat"]
 [talenti_manuali."Empower Supernatural Ability"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 altro = ["Supernatural ability", "6 HD"]
@@ -3897,6 +4019,7 @@ altro = ["undead type", "incorporeal subtype", "supernatural ability to drain or
 [talenti_manuali."Enchanting Song"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["BardicMusic"]
 gradi = { "perform (any)" = 5 }
 talenti = ["Spell Focus", "Spell Focus (Enchantment)"]
@@ -3930,6 +4053,7 @@ tipi = ["General"]
 [talenti_manuali."Energize Armor"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 talenti = ["Invest Armor"]
 
@@ -3954,6 +4078,7 @@ talenti = ["Energy Substitution"]
 [talenti_manuali."Energy Gestalt"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 lic = 3
 talenti = ["Spell Focus", "Spell Focus (Evocation)"]
@@ -4025,6 +4150,7 @@ tipi = ["Metashadow", "Shadow Magic"]
 [talenti_manuali."Enlarge Supernatural Ability"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 4 }
 altro = ["Supernatural ability", "4 HD"]
@@ -4111,6 +4237,7 @@ altro = ["PREPCLEVEL:MIN=21"]
 [talenti_manuali."Epic of the Lost King"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "perform" = 6 }
 altro = ["Bardic music"]
@@ -4129,6 +4256,7 @@ altro = ["PRECLASS:1,SPELLCASTER.Arcane=10,SPELLCASTER.Divine=10,SPELLCASTER.Inf
 [talenti_manuali."Eternal Strength"]
 libro = "3.5 Races Of Destiny"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 car = { "For" = 13 }
 classe = { "cleric" = 5 }
@@ -4213,12 +4341,14 @@ altro = ["spell resistance"]
 [talenti_manuali."Exalted Turning"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Exalted"]
 capacita = ["turn or rebuke creatures"]
 
 [talenti_manuali."Exalted Wild Shape"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Exalted", "Wild"]
 classe = { "wild shaping class" = 8 }
 altro = ["Wild shape class ability"]
@@ -4249,6 +4379,7 @@ altro = ["Armor Proficiency of the appropriate sort"]
 [talenti_manuali."Exotic Shield Proficiency"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 1
 talenti = ["Shield Proficiency"]
@@ -4291,6 +4422,7 @@ talenti = ["Ghost Ride"]
 [talenti_manuali."Expanded Soulmeld Capacity"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 15 }
 classe = { "meldshaper" = 1 }
@@ -4315,6 +4447,7 @@ tipi = ["General"]
 [talenti_manuali."Expert Siege Engineer"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "profession (siege engineer)" = 8 }
 
@@ -4346,12 +4479,14 @@ tipi = ["Metashadow", "Shadow Magic"]
 [talenti_manuali."Extend Rage"]
 libro = "3.5 Eberron"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 capacita = ["rage"]
 
 [talenti_manuali."Extend Spreading Breath"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metabreath"]
 car = { "Cos" = 15 }
 talenti = ["Shape Breath", "Spreading Breath"]
@@ -4360,6 +4495,7 @@ altro = ["breath weapon", "size Small or larger"]
 [talenti_manuali."Extend Supernatural Ability"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 4 }
 altro = ["Supernatural ability", "4 HD"]
@@ -4397,6 +4533,7 @@ car = { "Car" = 11 }
 [talenti_manuali."Extra Edge"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "warmage" = 4 }
 
@@ -4409,6 +4546,7 @@ altro = ["Dragonblood subtype", "breath weapon with limited uses per day"]
 [talenti_manuali."Extra Followers"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "LEADER"]
 car = { "Car" = 13 }
 talenti = ["Leadership"]
@@ -4416,6 +4554,7 @@ talenti = ["Leadership"]
 [talenti_manuali."Extra Granted Maneuver"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "crusader" = 1 }
 
@@ -4439,6 +4578,7 @@ capacita = ["rage"]
 [talenti_manuali."Extra Readied Maneuver"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "swordsage" = 1 }
 
@@ -4461,6 +4601,7 @@ altro = ["Whisper gnome"]
 [talenti_manuali."Extra Slot"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 4
 capacita = ["cast spells"]
@@ -4468,6 +4609,7 @@ capacita = ["cast spells"]
 [talenti_manuali."Extra Smiting"]
 libro = "3.5 Dragonlance"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 bab = 4
 altro = ["Smite ability"]
@@ -4475,6 +4617,7 @@ altro = ["Smite ability"]
 [talenti_manuali."Extra Spell"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 3
 capacita = ["cast spells"]
@@ -4583,6 +4726,7 @@ altro = ["Darkness spell-like ability"]
 [talenti_manuali."Faith Unswerving"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Devoted Bulwark"]
@@ -4597,6 +4741,7 @@ altro = ["Cold or Winter domain"]
 [talenti_manuali."Falling Sun Attack"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Stunning Fist"]
 altro = ["one Setting Sun strike"]
@@ -4622,6 +4767,7 @@ altro = ["Dancing lights spell-like ability"]
 [talenti_manuali."Fast Wild Shape"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 car = { "Des" = 13 }
 capacita = ["wild shape"]
@@ -4849,6 +4995,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Fearless Destiny"]
 libro = "3.5 Races Of Destiny"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Racial"]
 classe = { "character" = 6 }
 talenti = ["Heroic Destiny"]
@@ -4895,6 +5042,7 @@ altro = ["Nonlawful alignment"]
 [talenti_manuali."Fey Legacy"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fey", "General"]
 classe = { "character" = 9 }
 talenti = ["Fey Heritage"]
@@ -5034,6 +5182,7 @@ talenti = ["Sanctify Ki Strike", "Stunning Fist"]
 [talenti_manuali."Fists of Iron"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 bab = 2
 talenti = ["Improved Unarmed Strike", "Stunning Fist"]
@@ -5079,6 +5228,7 @@ tipi = ["General"]
 [talenti_manuali."Flick of the Wrist"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 17 }
 gradi = { "sleight of hand" = 5, "slightofhand" = 5 }
@@ -5087,6 +5237,7 @@ talenti = ["Quick Draw", "QuickDraw"]
 [talenti_manuali."Fling Ally"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "For" = 19 }
 talenti = ["Rock Hurling"]
@@ -5094,6 +5245,7 @@ talenti = ["Rock Hurling"]
 [talenti_manuali."Fling Enemy"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "For" = 19 }
 talenti = ["Rock Hurling"]
@@ -5147,6 +5299,7 @@ talenti = ["Blind-Fight"]
 [talenti_manuali."Focused Shield"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 talenti = ["Shield Proficiency"]
 
@@ -5223,6 +5376,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Fortuitous Strike"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Luck"]
 classe = { "character" = 6 }
 altro = ["any luck feat"]
@@ -5269,6 +5423,7 @@ talenti = ["Haunting Appearance"]
 [talenti_manuali."Frightful Presence"]
 libro = "3.5 Ghostwalk"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Ghost", "Haunt"]
 car = { "Car" = 15 }
 gradi = { "intimidate" = 9 }
@@ -5318,6 +5473,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Furious Inhalation"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Breath"]
 car = { "Cos" = 13 }
 capacita = ["rage"]
@@ -5491,6 +5647,7 @@ altro = ["Githzerai", "psionic daze"]
 [talenti_manuali."Gloom Razor"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 gradi = { "hide" = 9 }
 bab = 6
@@ -5525,6 +5682,7 @@ altro = ["Gnome"]
 [talenti_manuali."Gnome Tunnel Acrobatics"]
 libro = "3.5 Dungeonscape"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "Tactical"]
 gradi = { "knowledge (dungeoneering)" = 2, "tumble" = 9 }
 bab = 4
@@ -5567,6 +5725,7 @@ tipi = ["Domain"]
 [talenti_manuali."Good Karma"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Luck"]
 classe = { "character" = 3 }
 
@@ -5695,6 +5854,7 @@ tipi = ["General"]
 [talenti_manuali."Greater Heavy Armor Optimization"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 8
 talenti = ["Armor Proficiency (Heavy)", "Heavy Armor Optimization"]
@@ -5812,6 +5972,7 @@ car = { "Sag" = 11 }
 [talenti_manuali."Green Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Green)"]
@@ -5819,6 +5980,7 @@ talenti = ["Draconic Heritage", "Draconic Heritage (Green)"]
 [talenti_manuali."Green Ear"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 10 }
 altro = ["bardic music"]
@@ -5848,6 +6010,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Grizzly's Claws"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -5985,6 +6148,7 @@ talenti = ["Control Visage", "Improved Control Visage"]
 [talenti_manuali."Haunting Melody"]
 libro = "3.5 Eberron"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 9 }
 altro = ["Bardic music class feature"]
@@ -6039,6 +6203,7 @@ altro = ["base Will save +3", "PREMULT:1,[PRERACE:1,Tanarukk],[PREMULT:2,[PRERAC
 [talenti_manuali."Healing Soul"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 gradi = { "heal" = 1 }
@@ -6084,6 +6249,7 @@ tipi = ["General"]
 [talenti_manuali."Heavy Armor Optimization"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 4
 talenti = ["Armor Proficiency (Heavy)"]
@@ -6112,6 +6278,7 @@ altro = ["breath weapon"]
 [talenti_manuali."Heighten Spell-Like Ability"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 6
 
@@ -6370,6 +6537,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Imbued Summoning"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 talenti = ["Augment Summoning", "Spell Focus", "Spell Focus (Conjuration)"]
 
@@ -6382,6 +6550,7 @@ altro = ["Sneak attack +4d6"]
 [talenti_manuali."Imperious Command"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Car" = 15 }
 gradi = { "intimidate" = 8 }
@@ -6414,12 +6583,14 @@ altro = ["Soul binding"]
 [talenti_manuali."Improved Buckler Defense"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Shield Proficiency"]
 
 [talenti_manuali."Improved Cohort"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "LEADER"]
 car = { "Car" = 15 }
 talenti = ["Leadership"]
@@ -6480,6 +6651,7 @@ altro = ["PRERACE:1,RACESUBTYPE=Draconian"]
 [talenti_manuali."Improved Dragon Wings"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 talenti = ["Dragon Wings"]
@@ -6505,6 +6677,7 @@ tipi = ["General"]
 [talenti_manuali."Improved Essentia Capacity"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 15 }
 altro = ["essentia pool 2"]
@@ -6587,12 +6760,14 @@ altro = ["Fly speed 150", "Hover or Wingover"]
 [talenti_manuali."Improved Manifestation"]
 libro = "3.5 Expanded Psionics Handbook"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Epic", "Psionic"]
 classe = { "character" = 21 }
 
 [talenti_manuali."Improved Metapsionics"]
 libro = "3.5 Expanded Psionics Handbook"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Epic", "Psionic"]
 classe = { "character" = 21 }
 gradi = { "psicraft" = 30 }
@@ -6623,6 +6798,7 @@ altro = ["three or more arms"]
 [talenti_manuali."Improved Oneiromancy"]
 libro = "3.5 Heroes Of Horror"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Oneiromancy", "Dreamtelling"]
 capacita = ["cast spells"]
@@ -6645,6 +6821,7 @@ altro = ["PRETEMPLATE:1,Psionic"]
 [talenti_manuali."Improved Paralysis"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 talenti = ["Ability Focus (Paralysis)"]
 altro = ["Undead type", "paralysis extraordinary ability"]
@@ -6814,6 +6991,7 @@ altro = ["No essentia pool"]
 [talenti_manuali."Incarnum Spellshaping"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["ability to cast 1st-level spells"]
@@ -6841,6 +7019,7 @@ tipi = ["Fighter", "General"]
 [talenti_manuali."Indigo Strike"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["skirmish", "sneak attack", "or sudden strike class feature"]
@@ -6871,6 +7050,7 @@ classe = { "sorcerer" = 1 }
 [talenti_manuali."Infernal Sorcerer Eyes"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "Infernal"]
 classe = { "sorcerer" = 1 }
 talenti = ["Infernal Sorcerer Heritage", "Infernal Heritage"]
@@ -6883,6 +7063,7 @@ classe = { "sorcerer" = 1 }
 [talenti_manuali."Infernal Sorcerer Howl"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "Infernal"]
 classe = { "sorcerer" = 1 }
 talenti = ["Infernal Sorcerer Heritage", "Infernal Heritage"]
@@ -6890,6 +7071,7 @@ talenti = ["Infernal Sorcerer Heritage", "Infernal Heritage"]
 [talenti_manuali."Infernal Sorcerer Resistance"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "Infernal"]
 classe = { "sorcerer" = 1 }
 talenti = ["Infernal Sorcerer Heritage", "Infernal Heritage"]
@@ -6909,6 +7091,7 @@ talenti = ["Aberration Blood"]
 [talenti_manuali."Initiate Of Aasterinian"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Aasterinian"]
@@ -6916,6 +7099,7 @@ altro = ["dragonblood", "deity Aasterinian"]
 [talenti_manuali."Initiate Of Astilabor"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Astilabor"]
@@ -6923,6 +7107,7 @@ altro = ["dragonblood", "deity Astilabor"]
 [talenti_manuali."Initiate Of Bahamut"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Bahamut"]
@@ -6930,6 +7115,7 @@ altro = ["dragonblood", "deity Bahamut"]
 [talenti_manuali."Initiate Of Falazure"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Falazure"]
@@ -6937,6 +7123,7 @@ altro = ["dragonblood", "deity Falazure"]
 [talenti_manuali."Initiate Of Garyx"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 5 }
 altro = ["dragonblood", "deity Garyx"]
@@ -6944,6 +7131,7 @@ altro = ["dragonblood", "deity Garyx"]
 [talenti_manuali."Initiate Of Hlal"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 5 }
 altro = ["dragonblood", "deity Hlal"]
@@ -6951,6 +7139,7 @@ altro = ["dragonblood", "deity Hlal"]
 [talenti_manuali."Initiate Of Io"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Io"]
@@ -6958,6 +7147,7 @@ altro = ["dragonblood", "deity Io"]
 [talenti_manuali."Initiate Of Lendys"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Lendys"]
@@ -6965,6 +7155,7 @@ altro = ["dragonblood", "deity Lendys"]
 [talenti_manuali."Initiate Of Tamara"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 3 }
 altro = ["dragonblood", "deity Tamara"]
@@ -6972,6 +7163,7 @@ altro = ["dragonblood", "deity Tamara"]
 [talenti_manuali."Initiate Of Tiamat"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Initiate"]
 classe = { "cleric" = 5 }
 altro = ["dragonblood", "deity Tiamat"]
@@ -7151,6 +7343,7 @@ altro = ["PREDEITY:1,Varae", "PRERACE:1,Extaminaar"]
 [talenti_manuali."Inlindl School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 car = { "Int" = 13 }
 talenti = ["Combat Expertise", "Shield Proficiency", "Weapon Finesse"]
@@ -7205,6 +7398,7 @@ tipi = ["General"]
 [talenti_manuali."Inspirational Leadership"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "LEADER"]
 car = { "Car" = 17 }
 talenti = ["Leadership"]
@@ -7212,6 +7406,7 @@ talenti = ["Leadership"]
 [talenti_manuali."Inspire Spellpower"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["BardicMusic"]
 gradi = { "perform (any)" = 8 }
 altro = ["bardic music"]
@@ -7230,6 +7425,7 @@ capacita = ["rage"]
 [talenti_manuali."Instinctive Consummator"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 car = { "For" = 13 }
 talenti = ["Power Attack", "Cleave"]
@@ -7249,6 +7445,7 @@ altro = ["Darkness spell-like ability"]
 [talenti_manuali."Intensify Spell"]
 libro = "3.5 Epic Level Handbook"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Epic", "Metamagic"]
 classe = { "character" = 21 }
 gradi = { "spellcraft" = 30 }
@@ -7334,6 +7531,7 @@ altro = ["One Iron Heart stance"]
 [talenti_manuali."Ironskin Chant"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "concentration" = 12, "perform" = 12 }
 altro = ["Bardic music"]
@@ -7462,6 +7660,7 @@ tipi = ["General"]
 [talenti_manuali."Knight of Lolth"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "ride" = 1 }
 talenti = ["Mounted Combat", "Vermin Trainer"]
@@ -7601,6 +7800,7 @@ tipi = ["Least Legacy", "Legacy"]
 [talenti_manuali."Legacy Focus"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 
@@ -7754,6 +7954,7 @@ altro = ["Member of the Lion Tribe"]
 [talenti_manuali."Lion's Pounce"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -7809,6 +8010,7 @@ tipi = ["Shifter"]
 [talenti_manuali."Lord of the Uttercold"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 gradi = { "knowledge (the planes)" = 9 }
 talenti = ["Energy Substitution", "Energy Substitution (Cold)"]
@@ -7910,6 +8112,7 @@ capacita = ["cast arcane spells"]
 [talenti_manuali."Lyric Spell"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "perform" = 9 }
 lic = 6
@@ -8014,6 +8217,7 @@ altro = ["PREABILITY:1,CATEGORY=FEAT,TYPE=ItemCreation"]
 [talenti_manuali."Magical Fortune"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 3
 altro = ["any luck feat"]
@@ -8027,6 +8231,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Make Your Own Luck"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 altro = ["any luck feat"]
@@ -8053,6 +8258,7 @@ altro = ["Access to 1 psionic mantle"]
 [talenti_manuali."Mark Of Avernus"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Bel"]
@@ -8060,6 +8266,7 @@ altro = ["allegiance to Bel"]
 [talenti_manuali."Mark Of Cania"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Mephistopheles"]
@@ -8067,6 +8274,7 @@ altro = ["allegiance to Mephistopheles"]
 [talenti_manuali."Mark Of Dis"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Dispater"]
@@ -8074,6 +8282,7 @@ altro = ["allegiance to Dispater"]
 [talenti_manuali."Mark Of Maladomini"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Baalzebul"]
@@ -8081,6 +8290,7 @@ altro = ["allegiance to Baalzebul"]
 [talenti_manuali."Mark Of Malbolge"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Glasya"]
@@ -8088,6 +8298,7 @@ altro = ["allegiance to Glasya"]
 [talenti_manuali."Mark Of Minauros"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Mammon"]
@@ -8095,6 +8306,7 @@ altro = ["allegiance to Mammon"]
 [talenti_manuali."Mark Of Nessus"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Asmodeus"]
@@ -8102,6 +8314,7 @@ altro = ["allegiance to Asmodeus"]
 [talenti_manuali."Mark Of Phlegethos"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Belial"]
@@ -8109,6 +8322,7 @@ altro = ["allegiance to Belial"]
 [talenti_manuali."Mark Of Stygia"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Brand Of The Nine Hells"]
 altro = ["allegiance to Levistus"]
@@ -8162,6 +8376,7 @@ altro = ["Goliath"]
 [talenti_manuali."Martial Stalker"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Martial Weapon Proficiency"]
 altro = ["ki power"]
@@ -8270,6 +8485,7 @@ tipi = ["Martial Study Novice Discipline"]
 [talenti_manuali."Master Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 gradi = { "use magic device" = 4 }
 talenti = ["Channel Legacy", "Least Legacy"]
@@ -8325,6 +8541,7 @@ altro = ["Any two metashadow feats"]
 [talenti_manuali."Maximize Spell-Like Ability"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 6
 capacita = ["cast spells"]
@@ -8339,6 +8556,7 @@ talenti = ["Combat Expertise", "Dodge"]
 [talenti_manuali."Melee Weapon Mastery"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 8
 talenti = ["Weapon Focus", "Weapon Specialization"]
@@ -8346,6 +8564,7 @@ talenti = ["Weapon Focus", "Weapon Specialization"]
 [talenti_manuali."Melodic Casting"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 4, "spellcraft" = 4 }
 altro = ["bardic music class feature"]
@@ -8407,6 +8626,7 @@ altro = ["Any two metamagic feats", "bardic music"]
 [talenti_manuali."Metamagic Spell Trigger"]
 libro = "3.5 Complete Mage"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "use magic device or spellcraft" = 15 }
 altro = ["Any metamagic feat"]
@@ -8438,6 +8658,7 @@ altro = ["PREABILITY:1,CATEGORY=Feat,TYPE.Metamagic", "PRERACE:1,Beholder%"]
 [talenti_manuali."Midnight Augmentation"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum", "Psionic"]
 car = { "Cos" = 13 }
 altro = ["ability to manifest 2nd-level psionic powers"]
@@ -8445,12 +8666,14 @@ altro = ["ability to manifest 2nd-level psionic powers"]
 [talenti_manuali."Midnight Dodge"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13, "Des" = 13 }
 
 [talenti_manuali."Midnight Metamagic"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["ability to prepare", "cast 1st-level spells", "any metamagic feat"]
@@ -8507,6 +8730,7 @@ altro = ["Power point reserve", "sneak attack +2d6"]
 [talenti_manuali."Mind Empowerment"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 talenti = ["Mind Cleave"]
 altro = ["Mind blade", "psychic strike"]
@@ -8566,6 +8790,7 @@ tipi = ["Luck"]
 [talenti_manuali."Misleading Song"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["BardicMusic"]
 gradi = { "perform (any)" = 5 }
 talenti = ["Spell Focus", "Spell Focus (Illusion)"]
@@ -8631,6 +8856,7 @@ altro = ["PREABILITY:1,CATEGORY=Special Ability,TYPE.Death Attack"]
 [talenti_manuali."Mother Cyst"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 gradi = { "knowledge (religion)" = 2 }
 lic = 1
@@ -8650,6 +8876,7 @@ dati = "dndtools"
 [talenti_manuali."Mounted Mobility"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "ride" = 4 }
 talenti = ["Mounted Combat"]
@@ -8703,6 +8930,7 @@ tipi = ["General"]
 [talenti_manuali."Music of the Outer Spheres"]
 libro = "3.5 Lords Of Madness"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "bard" = 9 }
 gradi = { "perform (any)" = 11 }
@@ -8744,6 +8972,7 @@ dati = "dndtools"
 [talenti_manuali."Natural Leader"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Car" = 13 }
 
@@ -8797,6 +9026,7 @@ tipi = ["General"]
 [talenti_manuali."Necropotent"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "fighter" = 4 }
 talenti = ["Weapon Focus", "Weapon Specialization"]
@@ -8899,6 +9129,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Nonlethal Substitution"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 gradi = { "knowledge (arcana)" = 5 }
 altro = ["Any other metamagic feat", "Knowledge (arcana)"]
@@ -8939,6 +9170,7 @@ capacita = ["cast arcane spells"]
 [talenti_manuali."Ocular Spell"]
 libro = "3.5 Lords Of Madness"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamatic", "Wizard"]
 gradi = { "knowledge (dungeoneering)" = 4, "knowledge (dungeoneerong)" = 4 }
 altro = ["2 or more eyes"]
@@ -8964,6 +9196,7 @@ altro = ["spellcaster"]
 [talenti_manuali."Open Greater Chakra"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 17 }
 classe = { "character" = 18 }
@@ -8971,6 +9204,7 @@ classe = { "character" = 18 }
 [talenti_manuali."Open Least Chakra"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13 }
 classe = { "character" = 6 }
@@ -8978,6 +9212,7 @@ classe = { "character" = 6 }
 [talenti_manuali."Open Lesser Chakra"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 15 }
 classe = { "character" = 12 }
@@ -9033,6 +9268,7 @@ altro = ["Energy vulnerability"]
 [talenti_manuali."Overhead Thrust"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 bab = 6
 talenti = ["Close-Quarters Fighting", "Power Attack", "Close Quarters Fighting"]
@@ -9053,6 +9289,7 @@ bab = 15
 [talenti_manuali."Overwhelming Critical"]
 libro = "3.5 Epic Level Handbook"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Epic"]
 car = { "For" = 23 }
 classe = { "character" = 21 }
@@ -9101,6 +9338,7 @@ talenti = ["Privileged Energy"]
 [talenti_manuali."Paralyzing Fists"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Sag" = 15 }
 talenti = ["Improved Unarmed Strike", "Stunning Fist"]
@@ -9108,6 +9346,7 @@ talenti = ["Improved Unarmed Strike", "Stunning Fist"]
 [talenti_manuali."Parrying Shield"]
 libro = "3.5 Lords Of Madness"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Shield Proficiency"]
 
@@ -9150,6 +9389,7 @@ talenti = ["Point Blank Shot"]
 [talenti_manuali."Perfect Clarity of Mind And Body"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Unnerving Calm"]
@@ -9241,6 +9481,7 @@ talenti = ["Mage Slayer"]
 [talenti_manuali."Pierce The Darkness"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["darkvision"]
@@ -9278,6 +9519,7 @@ talenti = ["Two-Weapon Fighting"]
 [talenti_manuali."Pious Defiance"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 
@@ -9314,6 +9556,7 @@ tipi = ["Domain"]
 [talenti_manuali."Plunging Shot"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 13 }
 talenti = ["Point Blank Shot"]
@@ -9321,6 +9564,7 @@ talenti = ["Point Blank Shot"]
 [talenti_manuali."Poison Expert"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "craft (poisonmaking" = 4, "craft (poisonmaking)" = 8 }
 altro = ["Poison use"]
@@ -9445,6 +9689,7 @@ tipi = ["General"]
 [talenti_manuali."Powerful Wild Shape"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Powerful build racial trait"]
@@ -9470,6 +9715,7 @@ talenti = ["Bind Vestige"]
 [talenti_manuali."Practiced Cohort"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General", "LEADER"]
 car = { "Car" = 15 }
 talenti = ["Leadership"]
@@ -9559,6 +9805,7 @@ capacita = ["cast divine spells", "turn or rebuke creatures"]
 [talenti_manuali."Profane Boost"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Ability to turn/rebuke undead"]
@@ -9649,6 +9896,7 @@ altro = ["PRELANG:1,Draconic"]
 [talenti_manuali."Protected Destiny"]
 libro = "3.5 Races Of Destiny"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Racial"]
 classe = { "character" = 3 }
 talenti = ["Heroic Destiny"]
@@ -9684,6 +9932,7 @@ altro = ["Ability to manifest psionic powers or use psi-like abilities."]
 [talenti_manuali."Psithief"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "manifester" = 1 }
 altro = ["steal spell"]
@@ -9691,6 +9940,7 @@ altro = ["steal spell"]
 [talenti_manuali."Psycarnum Blade"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum", "Psionic"]
 car = { "Cos" = 13 }
 altro = ["ability to form a mind blade"]
@@ -9698,6 +9948,7 @@ altro = ["ability to form a mind blade"]
 [talenti_manuali."Psycarnum Crystal"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 car = { "Cos" = 13 }
 talenti = ["Psicrystal Affinity"]
@@ -9706,6 +9957,7 @@ altro = ["essentia pool"]
 [talenti_manuali."Psycarnum Infusion"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 car = { "Cos" = 13 }
 gradi = { "concentration" = 4 }
@@ -9713,6 +9965,7 @@ gradi = { "concentration" = 4 }
 [talenti_manuali."Psychic Luck"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "manifester" = 3 }
 altro = ["any luck feat"]
@@ -9720,6 +9973,7 @@ altro = ["any luck feat"]
 [talenti_manuali."Psychic Refusal"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Iron Will"]
 altro = ["Spell resistance"]
@@ -9742,6 +9996,7 @@ tipi = ["Psionic"]
 [talenti_manuali."Psymbiot"]
 libro = "3.5 Complete Psionic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Psionic"]
 classe = { "manifester" = 3 }
 gradi = { "knowledge (psionics)" = 8 }
@@ -9769,6 +10024,7 @@ altro = ["Any good alignment"]
 [talenti_manuali."Purify Spell Trigger"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Exalted"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Craft Wand or Craft Staff"]
@@ -9836,6 +10092,7 @@ talenti = ["Least Dragonmark"]
 [talenti_manuali."Quicken Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 altro = ["spell-like or command-activated legacy ability Trigger legacy ability as a swift action"]
@@ -9881,6 +10138,7 @@ altro = ["deity Pelor"]
 [talenti_manuali."Radiant Flicker"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Dazzling Fire"]
 altro = ["faerie fire spell-like ability"]
@@ -9930,6 +10188,7 @@ altro = ["Smite evil class ability"]
 [talenti_manuali."Ranged Spell Specialization"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 4
 talenti = ["Weapon Focus (Ranged Spell)"]
@@ -9938,6 +10197,7 @@ capacita = ["cast spells"]
 [talenti_manuali."Ranged Sunder"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 car = { "Des" = 15, "For" = 13 }
 bab = 5
@@ -9946,6 +10206,7 @@ talenti = ["Point Blank Shot", "Precise Shot", "Ranged Pin"]
 [talenti_manuali."Ranged Weapon Mastery"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 8
 talenti = ["Weapon Specialization", "Weapon Focus"]
@@ -9986,6 +10247,7 @@ altro = ["ability to spontaneously cast spells"]
 [talenti_manuali."Rapid Pact Making"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "intimidate" = 8 }
 talenti = ["Expel Vestige"]
@@ -10088,6 +10350,7 @@ altro = ["Spell resistance"]
 [talenti_manuali."Ready Shot"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Point Blank Shot"]
 
@@ -10100,6 +10363,7 @@ altro = ["PREALIGN:LE,NE,CE"]
 [talenti_manuali."Reaping Talons"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Two-Weapon Fighting"]
@@ -10171,6 +10435,7 @@ altro = ["breath weapon"]
 [talenti_manuali."Red Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Red)"]
@@ -10185,6 +10450,7 @@ altro = ["wings", "a glide or fly speed"]
 [talenti_manuali."Rend"]
 libro = "3.5 Draconomicon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 car = { "For" = 13 }
 talenti = ["Snatch", "Power Attack"]
@@ -10224,6 +10490,7 @@ tipi = ["General"]
 [talenti_manuali."Requiem"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform (any)" = 8 }
 altro = ["Bardic music"]
@@ -10277,6 +10544,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Resounding Blow"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "For" = 13 }
 gradi = { "intimidate" = 7 }
@@ -10295,6 +10563,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Retrieve Spell"]
 libro = "3.5 Champions Of Valor"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Any two divine feats"]
@@ -10325,6 +10594,7 @@ tipi = ["General"]
 [talenti_manuali."Righteous Wrath"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Exalted"]
 capacita = ["rage"]
 altro = ["Rage class ability"]
@@ -10404,6 +10674,7 @@ gradi = { "craft (rune)" = 4 }
 [talenti_manuali."Sacred Boost"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Ability to turn/rebuke undead"]
@@ -10411,6 +10682,7 @@ altro = ["Ability to turn/rebuke undead"]
 [talenti_manuali."Sacred Healing"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 gradi = { "heal" = 8 }
 capacita = ["turn or rebuke creatures"]
@@ -10419,6 +10691,7 @@ altro = ["ability to turn/ rebuke undead"]
 [talenti_manuali."Sacred Purification"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 talenti = ["Sacred Healing"]
 capacita = ["turn or rebuke creatures"]
@@ -10445,6 +10718,7 @@ altro = ["PREDEITY:1,Anhur,Geb,Hathor,Horus-Re,Isis,Nephthys,Osiris,Sebek,Set,Th
 [talenti_manuali."Sacred Vengeance"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 
@@ -10503,6 +10777,7 @@ altro = ["Ki strike (lawful)"]
 [talenti_manuali."Sanctify Martial Strike"]
 libro = "3.5 Book Of Exalted Deeds"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Exalted"]
 car = { "Car" = 15 }
 talenti = ["Weapon Focus"]
@@ -10518,6 +10793,7 @@ altro = ["One or more natural weapon attacks"]
 [talenti_manuali."Sanctify Relic"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["ItemCreation"]
 lic = 7
 altro = ["Any other item creation feat"]
@@ -10525,6 +10801,7 @@ altro = ["Any other item creation feat"]
 [talenti_manuali."Sanctify Water"]
 libro = "3.5 Stormwrack"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 car = { "Car" = 13 }
 capacita = ["channel positive energy"]
@@ -10573,6 +10850,7 @@ dati = "dndtools"
 [talenti_manuali."Sapphire Fist"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 talenti = ["Stunning Fist"]
@@ -10580,6 +10858,7 @@ talenti = ["Stunning Fist"]
 [talenti_manuali."Sapphire Smite"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 altro = ["ability to smite"]
@@ -10587,6 +10866,7 @@ altro = ["ability to smite"]
 [talenti_manuali."Sapphire Sprint"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
@@ -10624,6 +10904,7 @@ altro = ["PREALIGN:NE", "non PREABILITY:1,CATEGORY=FEAT,Disciple of Darkness", "
 [talenti_manuali."Scorching Sirocco"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Desert Wind Dodge"]
@@ -10667,6 +10948,7 @@ altro = ["PRESIZELTEQ:S", "PREABILITY:1,CATEGORY=Special Ability,Improved Evasio
 [talenti_manuali."Scribe Martial Script"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Item Creation", "ItemCreation"]
 classe = { "crusader or swordsage" = 1 }
 
@@ -10747,6 +11029,7 @@ tipi = ["General"]
 [talenti_manuali."Serpent's Venom"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -10765,6 +11048,7 @@ altro = ["One Shadow Hand maneuver"]
 [talenti_manuali."Shadow Cast"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Shadow Magic"]
 gradi = { "concentration" = 5 }
 lic = 1
@@ -10772,6 +11056,7 @@ lic = 1
 [talenti_manuali."Shadow Familiar"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Shadow Magic"]
 lic = 3
 
@@ -10782,6 +11067,7 @@ dati = "dndtools"
 [talenti_manuali."Shadow Reflection"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Shadow Magic"]
 lic = 3
 altro = ["ability to cast dusk", "dawn or ephemeral image"]
@@ -10807,6 +11093,7 @@ gradi = { "hide" = 12, "move silently" = 12 }
 [talenti_manuali."Shadow Trickster"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 1
 capacita = ["cast spells"]
@@ -10893,6 +11180,7 @@ altro = ["PREMULT:1,[PRESTAT:1,WIS=15],[PREDEITY:1,Shar]"]
 [talenti_manuali."Shadowborn Warrior"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Blind-Fight", "Dodge"]
 
@@ -10932,12 +11220,14 @@ talenti = ["Ectoplasm"]
 [talenti_manuali."Shape Soulmeld"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Shards of Granite"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Stone Power"]
@@ -10952,6 +11242,7 @@ altro = ["Ability to shape soulmelds", "share spells class feature"]
 [talenti_manuali."Shared Fury"]
 libro = "3.5 Races Of The Wild"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "handle animal" = 4 }
 capacita = ["rage"]
@@ -10985,6 +11276,7 @@ altro = ["PREGENDER:F", "PRERACE:1,Human"]
 [talenti_manuali."Shi'quos School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 car = { "Des" = 13 }
 bab = 6
@@ -11018,6 +11310,7 @@ talenti = ["Improved Shield Bash", "Shield Charge"]
 [talenti_manuali."Shield Sling"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 9
 talenti = ["Improved Shield Bash", "Shield Specialization", "Shield Proficiency"]
@@ -11025,18 +11318,21 @@ talenti = ["Improved Shield Bash", "Shield Specialization", "Shield Proficiency"
 [talenti_manuali."Shield Specialization"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Shield Proficiency"]
 
 [talenti_manuali."Shield Wall"]
 libro = "3.5 Dragonlance"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Shield Proficiency"]
 
 [talenti_manuali."Shield Ward"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Shield Specialization"]
 
@@ -11050,6 +11346,7 @@ altro = ["PREPROFWITHSHIELD:1,TYPE.Shield", "PREWEAPONPROF:2,Waraxe (Dwarven),Ha
 [talenti_manuali."Shielded Casting"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "concentration" = 5 }
 talenti = ["Combat Casting", "Shield Proficiency"]
@@ -11057,6 +11354,7 @@ talenti = ["Combat Casting", "Shield Proficiency"]
 [talenti_manuali."Shielded Manifesting"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "concentration" = 5 }
 talenti = ["Shield Proficiency", "Combat Manifesting"]
@@ -11101,6 +11399,7 @@ altro = ["dragon type", "size Large"]
 [talenti_manuali."Short Haft"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 3
 talenti = ["Weapon Focus", "Weapon Focus (TYPE=Reach)"]
@@ -11145,6 +11444,7 @@ altro = ["base Fortitude save +2"]
 [talenti_manuali."Silver Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (Silver)"]
@@ -11202,6 +11502,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Slashing Flurry"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 bab = 14
 talenti = ["Weapon Focus", "Melee Weapon Mastery", "Weapon Specialization"]
@@ -11239,6 +11540,7 @@ altro = ["PREABILITY:1,CATEGORY=Special Ability,Smite%"]
 [talenti_manuali."Smiting Spell"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Metamagic"]
 bab = 1
 lic = 1
@@ -11348,6 +11650,7 @@ tipi = ["General"]
 [talenti_manuali."Soulsight"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13, "Sag" = 13 }
 gradi = { "concentration" = 4 }
@@ -11355,12 +11658,14 @@ gradi = { "concentration" = 4 }
 [talenti_manuali."Soultouched Spellcasting"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Incarnum"]
 car = { "Cos" = 13 }
 
 [talenti_manuali."Sound of Silence"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "perform" = 9 }
 altro = ["Bardic music"]
@@ -11404,6 +11709,7 @@ bab = 6
 [talenti_manuali."Spell Drain"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 car = { "Car" = 15 }
 lic = 5
@@ -11460,6 +11766,7 @@ talenti = ["Craft Contingent Spell"]
 [talenti_manuali."Spell Rehearsal"]
 libro = "3.5 Races Of The Dragon"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 lic = 1
 capacita = ["cast spells"]
@@ -11523,6 +11830,7 @@ altro = ["PREALIGN:LE,NE,CE", "PREDEITY:1,Lolth"]
 [talenti_manuali."Spider Companion"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Vermin Trainer"]
 altro = ["animal companion"]
@@ -11554,6 +11862,7 @@ altro = ["near-death experience"]
 [talenti_manuali."Spiritual Counter"]
 libro = "3.5 Champions Of Valor"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Divine"]
 capacita = ["turn or rebuke creatures"]
 altro = ["Any other divine feat"]
@@ -11604,6 +11913,7 @@ altro = ["nonevil"]
 [talenti_manuali."Spontaneous Summoner"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Sag" = 13 }
 gradi = { "knowledge (nature)" = 4 }
@@ -11612,6 +11922,7 @@ altro = ["partly neutral alignment"]
 [talenti_manuali."Spontaneous Wounder"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Sag" = 13 }
 gradi = { "knowledge (religion)" = 4 }
@@ -11639,6 +11950,7 @@ tipi = ["General"]
 [talenti_manuali."Staggering Critical"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 bab = 12
 talenti = ["Improved Critical"]
@@ -11692,6 +12004,7 @@ gradi = { "concentration" = 8 }
 [talenti_manuali."Steady Mountaineer"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "jump" = 8, "or climb" = 8 }
 altro = ["Goliath"]
@@ -11699,6 +12012,7 @@ altro = ["Goliath"]
 [talenti_manuali."Steal and Strike"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 talenti = ["Combat Expertise", "Improved Disarm", "Two-Weapon Fighting", "Weapon Focus"]
 
@@ -11739,6 +12053,7 @@ altro = ["base Fortitude save +3", "PRERACE:1,Planetouched (Genasi)", "PREABILIT
 [talenti_manuali."Stone Form"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 car = { "Cos" = 13 }
 capacita = ["wild shape"]
@@ -11753,6 +12068,7 @@ altro = ["one Stone Dragon maneuver"]
 [talenti_manuali."Stone Rage"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Cos" = 13, "Sag" = 13 }
 talenti = ["Earth Sense"]
@@ -11772,6 +12088,7 @@ tipi = ["General"]
 [talenti_manuali."Stoneback"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 talenti = ["Shield Proficiency", "Tunnel Fighting"]
 
@@ -11809,6 +12126,7 @@ tipi = ["General"]
 [talenti_manuali."Stormguard Warrior"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 bab = 6
 talenti = ["Ironheart Aura"]
@@ -11886,6 +12204,7 @@ tipi = ["General"]
 [talenti_manuali."Subsonics"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 10 }
 altro = ["Bardic music"]
@@ -12011,12 +12330,14 @@ talenti = ["Improved Unarmed Strike"]
 [talenti_manuali."Supernatural Crusader"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "knowledge (arcana)" = 2, "knowledge (arcane)" = 2 }
 
 [talenti_manuali."Supernatural Instincts"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Combat Reflexes"]
 
@@ -12060,6 +12381,7 @@ altro = ["Mild taint"]
 [talenti_manuali."Surprising Riposte"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Int" = 13 }
 talenti = ["Combat Expertise", "Improved Feint"]
@@ -12084,6 +12406,7 @@ tipi = ["General"]
 [talenti_manuali."Survivors Luck"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 9 }
 altro = ["any luck feat"]
@@ -12151,6 +12474,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Swim Like a Fish"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -12272,6 +12596,7 @@ altro = ["breath weapon", "size Large or larger"]
 [talenti_manuali."Tempting Fate"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 altro = ["any luck feat"]
@@ -12279,6 +12604,7 @@ altro = ["any luck feat"]
 [talenti_manuali."Terrifying Strike"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Ambush"]
 gradi = { "intimidate" = 4 }
 altro = ["sneak attack +2d6"]
@@ -12373,6 +12699,7 @@ altro = ["sneak attack +3d6"]
 [talenti_manuali."Throw Anything"]
 libro = "3.5 Complete Warrior"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 15 }
 bab = 2
@@ -12399,6 +12726,7 @@ talenti = ["Improved Unarmed Strike", "Power Attack"]
 [talenti_manuali."Tiger Blooded"]
 libro = "3.5 Tome Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 capacita = ["rage", "wild shape"]
 altro = ["or shift", "one Tiger Claw maneuver"]
@@ -12412,6 +12740,7 @@ altro = ["PREMULT:1,[!PREABILITY:1,CATEGORY=FEAT,TYPE=Regional],[PREABILITY:1,CA
 [talenti_manuali."Titan Fighting"]
 libro = "3.5 Races Of Stone"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "Racial"]
 talenti = ["Dodge"]
 altro = ["racial dodge bonus against giants"]
@@ -12494,6 +12823,7 @@ altro = ["Natural attack dealing ability damage", "ability drain", "or energy dr
 [talenti_manuali."Touch Spell Specialization"]
 libro = "3.5 Complete Arcane"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 lic = 4
 talenti = ["Weapon Focus (Touch Spell)"]
@@ -12562,6 +12892,7 @@ tipi = ["Metamagic"]
 [talenti_manuali."Transfer Legacy"]
 libro = "3.5 Weapons Of Legacy"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Legacy", "Legacy Champion"]
 talenti = ["Least Legacy"]
 altro = ["legacy ability"]
@@ -12569,6 +12900,7 @@ altro = ["legacy ability"]
 [talenti_manuali."Trap Engineer"]
 libro = "3.5 Dungeonscape"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "engineering)" = 1, "knowledge (dungeoneering)" = 4 }
 altro = ["Knowledge (architecture"]
@@ -12759,6 +13091,7 @@ tipi = ["General"]
 [talenti_manuali."Undead Leadership"]
 libro = "3.5 Libris Mortis"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 6 }
 gradi = { "knowledge (religion)" = 1 }
@@ -12767,6 +13100,7 @@ altro = ["nongood"]
 [talenti_manuali."Undead Meldshaper"]
 libro = "3.5 Magic Of Incarnum"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Monstrous"]
 car = { "Int" = 3 }
 altro = ["undead type"]
@@ -12781,6 +13115,7 @@ altro = ["Small or smaller"]
 [talenti_manuali."Undermountain Tactics"]
 libro = "3.5 Dungeonscape"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 gradi = { "knowledge (dungeoneering)" = 2 }
 bab = 6
@@ -12889,6 +13224,7 @@ altro = ["know at least four utterances"]
 [talenti_manuali."Vae School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 car = { "Int" = 13 }
 bab = 7
@@ -12922,6 +13258,7 @@ altro = ["Watchful spirit class feature"]
 [talenti_manuali."Vengeful Surge"]
 libro = "3.5 Fiendish Codex Ii"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 talenti = ["Iron Will"]
 
@@ -12954,6 +13291,7 @@ tipi = ["General"]
 [talenti_manuali."Vermin Trainer"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "handle animal" = 4, "knowledge (religion)" = 4 }
 altro = ["Drow"]
@@ -12961,6 +13299,7 @@ altro = ["Drow"]
 [talenti_manuali."Verminfriend"]
 libro = "3.5 Book Of Vile Darkness"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Vile"]
 car = { "Car" = 15 }
 altro = ["Drow"]
@@ -12968,12 +13307,14 @@ altro = ["Drow"]
 [talenti_manuali."Versatile Combatant"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 car = { "Des" = 15 }
 
 [talenti_manuali."Versatile Performer"]
 libro = "3.5 Complete Adventurer"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform" = 5 }
 
@@ -12996,6 +13337,7 @@ dati = "dndtools"
 [talenti_manuali."Veteran Knowledge"]
 libro = "3.5 Heroes Of Battle"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 gradi = { "knowledge (history)" = 1 }
 bab = 2
@@ -13098,6 +13440,7 @@ talenti = ["Sacred Vow"]
 [talenti_manuali."Vow of Decadence"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Vile"]
 talenti = ["Unspeakable Vow"]
 
@@ -13134,12 +13477,14 @@ talenti = ["Sacred Vow"]
 [talenti_manuali."Vow of Vengeance"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Vile"]
 talenti = ["Unspeakable Vow"]
 
 [talenti_manuali."Vow of the Spider Queen"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Vile"]
 lic = 6
 talenti = ["Unspeakable Vow", "Verminfriend"]
@@ -13193,6 +13538,7 @@ tipi = ["General"]
 [talenti_manuali."Warning Shout"]
 libro = "3.5 Complete Scoundrel"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Bardic Music"]
 gradi = { "perform" = 9 }
 altro = ["Bardic music", "evasion"]
@@ -13379,6 +13725,7 @@ tipi = ["Divine", "Fighter", "General"]
 [talenti_manuali."Weapon Supremacy"]
 libro = "3.5 Players Handbook 2"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Fighter", "General"]
 classe = { "fighter" = 18 }
 talenti = ["Greater Weapon Focus", "Greater Weapon Specialization", "Weapon Focus", "Weapon Specialization", "Weapon Mastery"]
@@ -13425,6 +13772,7 @@ altro = ["deity Vecna"]
 [talenti_manuali."White Dragon Lineage"]
 libro = "3.5 Dragon Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Draconic"]
 classe = { "sorcerer" = 3 }
 talenti = ["Draconic Heritage", "Draconic Heritage (White)"]
@@ -13438,6 +13786,7 @@ altro = ["One White Raven maneuver"]
 [talenti_manuali."Widen Supernatural Ability"]
 libro = "3.5 Tome Of Magic"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 classe = { "character" = 8 }
 altro = ["Supernatural ability", "8 HD"]
@@ -13466,6 +13815,7 @@ altro = ["Ability to cast 3rd-level spells"]
 [talenti_manuali."Windsinger"]
 libro = "3.5 Stormwrack"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["General"]
 gradi = { "perform (sing or wind instruments)" = 5 }
 altro = ["Bardic music"]
@@ -13541,6 +13891,7 @@ altro = ["PREREGION:Rashemen"]
 [talenti_manuali."Wolfpack"]
 libro = "3.5 Races Of The Wild"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Tactical"]
 car = { "Des" = 15 }
 bab = 6
@@ -13549,6 +13900,7 @@ talenti = ["Dodge", "Mobility", "Spring Attack"]
 [talenti_manuali."Wolverine's Rage"]
 libro = "3.5 Complete Divine"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Wild"]
 capacita = ["wild shape"]
 altro = ["Ability to use wild shape"]
@@ -13594,6 +13946,7 @@ gradi = { "heal" = 10, "knowledge (arcana)" = 5 }
 [talenti_manuali."Xaniqos School"]
 libro = "3.5 Drow Of The Underdark"
 dati = "dndtools+pcgen"
+diverge = true
 tipi = ["Style"]
 car = { "Des" = 13 }
 bab = 6

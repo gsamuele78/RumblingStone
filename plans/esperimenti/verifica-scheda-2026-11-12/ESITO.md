@@ -167,6 +167,57 @@ testo della classe); le liste delle classi dei manuali (warmage, hexblade,
 healer: il sito le ha) non sono caricate; non si controlla quanti incantesimi
 al giorno; un livello più alto del dovuto passa sempre.
 
+
+## 2-sexies. Chiusura delle violazioni, liste dei manuali, razza
+
+Richiesta del DM (2026-11-12): correggere gli errori, ma prima finire la parte
+delle classi (righe senza classe, liste delle classi dei manuali, razza).
+
+| Misura | Prima | Dopo |
+|---|---|---|
+| Violazioni (Bestiario + moduli) | 34 in 20 schede | **7 in 6 schede** |
+| Righe di incantesimi senza classe leggibile | 94 su 203 | 16 su 174 (29 erano intervalli «1–4:», non righe di livello) |
+| Incantesimi nelle liste 3.5 | 601 (SRD) | 601 + 3.969 dei manuali (PCGen) |
+| Classi con una lista | 7 | 84, più 62 che pescano da liste altrui |
+| Livello abbassato di uno apposta, visto | 82 / 85 | 123 / 127 |
+| Incantesimo fuori lista aggiunto apposta, visto | 85 / 85 | 124 / 127 |
+| Voci non verificabili | 120 | 129 (le righe nuove portano nomi che le liste non hanno) |
+
+Dove sono finite le 34: 12 erano falsi positivi dello strumento (talento che
+la classe del manuale concede, talento equivalente, fonti dei manuali che
+divergono, file con più schede), 16 sono state corrette in 9 schede, 1 è nuova
+(righe che prima non si leggevano), 7 restano.
+
+Corrette (nessun numero scritto cambia):
+
+| Scheda | Correzione |
+|---|---|
+| orco-berserk-barbaro2-cr2 | «Carica Devastante» era *Powerful Charge* nella fonte PCGen: ora «Carica Possente» |
+| abbathor-cleric11-cr11, emissario-red-hand-cr12 | *profanare* (5°) scritto al 2° per *dissacrare* |
+| drow-trickster-arcano-cr11 | aggiunto Tiro Ravvicinato (aveva 5 talenti su 6) |
+| drow-assassina-lolth-cr10 | 5 talenti con 9 DV: aggiunto Tiro Ravvicinato, tolti Furtivo e Attacco Rapido |
+| drow-noble-guard-cr5 | *Improved Two-Weapon Fighting* (BAB +6, ne ha +3) → *Combat Reflexes* |
+| ogre-frantumapietra-barbaro6-cr9 | Incalzare Potenziato → Spingere Migliorato, prerequisito di Colpo Terrificante |
+| bruto-deforme-sottosuolo-cr11, ogre-micelio-sporeborn-cr8 | Lottare Migliorato (e Sbilanciare Migliorato) segnati «(B)», talenti bonus della creatura |
+
+Le 7 rimaste, vere anche con i dati delle classi dei manuali:
+
+| Dove | Che cosa | Perché resta |
+|---|---|---|
+| Salvatore.md:217, :221 | *Grazia del Gatto* al 1°, *Suggestione di Massa* al 3° | l'Accordo Sublime pesca dalle liste di bardo e mago ma dà solo slot dal 4° in su; la Spia non lancia |
+| ARC08-01:679, ARC08-02:603 | *Fulmine* fra gli incantesimi da bardo di Tempestas | non è in nessuna lista da bardo; lo Stormsinger non è nei dati PCGen e la sua pagina non lo concede |
+| rurik-gorunn-cr10.md:21 | *Divine Armor* chiede livello d'incantatore divino 5 | paladino 8 = LI 4; il Martello di Moradin non fa avanzare gli incantesimi. PCGen lo accetta perché conta il livello di classe |
+| underdark-dovil-runecaster-cr7.md:23 | *Inscribe Rune* chiede incantesimi divini | divinatore, deep diviner e guerriero non ne lanciano |
+| Arco-Post-Hammerfist-P1C:361 | *Flame Strike* al 4° per un chierico 8 | è di 5°; le tattiche dell'incontro (righe 374-480) sono costruite su quel colpo |
+
+Limiti: «(B)» è una dichiarazione del DM, lo strumento la accetta solo per chi
+ha dadi vita razziali ma non sa se la creatura dovrebbe averla. Razza e
+allineamento non cambiano nessun esito sulle schede di oggi: nessun talento
+scritto li chiede in una forma che la riga del tipo permetta di giudicare. I
+nomi italiani degli incantesimi dei manuali non sono nel lessico: una scheda
+che li scrive in italiano resta non verificabile. L'ambiente non è usato da
+nessuna regola.
+
 ## 3. Divario dei plugin, sezione per sezione
 
 | Sezione | Plugin `dnd35` oggi | SRD 3.5 in cache | srd.dndtools.org | Dati PCGen (WotC 3.5) | Plugin `pf1e` |

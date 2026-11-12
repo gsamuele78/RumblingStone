@@ -272,8 +272,14 @@ def _incantesimi_it() -> "dict[str, str]":
 
 
 @lru_cache(maxsize=None)
-def _liste(sistema: str) -> "tuple[dict, dict, dict]":
-    """(classe → {nome normalizzato: livello}, dominio → idem, nome normalizzato → nome della fonte)."""
+def _liste(sistema: str) -> "tuple[dict, dict, dict, dict]":
+    """(classe → {nome normalizzato: livello}, dominio → idem, nome normalizzato →
+    nome della fonte, classe → nomi che vengono dai manuali).
+
+    Ordine delle fonti (DM, 2026-11-12): prima la lista dell'SRD, poi quella dei
+    manuali 3.5 (`liste_manuali`, da PCGen: solo nomi e livelli). Una classe che
+    pesca dalle liste altrui (`liste_prese`: anima prescelta → chierico, accordo
+    sublime → bardo, stregone, mago) eredita quelle liste."""
     import lessico_regole as LR
     from dmcore import sistemi as S
     d = S.dati(sistema, "creature.liste_incantesimi")
@@ -288,20 +294,112 @@ def _liste(sistema: str) -> "tuple[dict, dict, dict]":
                     nomi.setdefault(k, n)
                     out.setdefault(chiave, {})[k] = min(int(liv), out.get(chiave, {}).get(k, 9))
         return out
-    return piatta(d.get("liste", {})), piatta(d.get("domini", {})), nomi
+    liste, domini = piatta(d.get("liste", {})), piatta(d.get("domini", {}))
+    dai_manuali: dict = {}
+    for chiave, voci in piatta(d.get("liste_manuali", {})).items():
+        for k, liv in voci.items():
+            if k not in liste.setdefault(chiave, {}):
+                liste[chiave][k] = liv
+                dai_manuali.setdefault(chiave, set()).add(k)
+    # I domini dei manuali hanno un prefisso: valgono solo dove la scheda segna
+    # l'incantesimo come di dominio. Senza il segno, un chierico prenderebbe per
+    # buono qualunque incantesimo che uno dei 102 domini dei manuali concede.
+    for chiave, voci in piatta(d.get("domini_manuali", {})).items():
+        for k, liv in voci.items():
+            domini.setdefault("manuali:" + chiave, {}).setdefault(k, liv)
+    for chiave, altre in d.get("liste_prese", {}).items():
+        if chiave in liste and chiave not in altre:
+            continue          # ha una lista sua
+        for altra in altre:
+            for k, liv in liste.get(altra, {}).items():
+                if altra == chiave:
+                    continue
+                mia = liste.setdefault(chiave, {})
+                mia[k] = min(liv, mia.get(k, 9))
+                if k in dai_manuali.get(altra, ()):
+                    dai_manuali.setdefault(chiave, set()).add(k)
+    return liste, domini, nomi, dai_manuali
 
 
-def _classe_che_lancia(righe: "list[str]", i: int) -> "str | None":
-    """La classe nominata dall'intestazione degli incantesimi più vicina sopra la riga i."""
-    for j in range(i, max(-1, i - 14), -1):
-        if j != i and not RIGA_LIVELLO.match(righe[j]) and righe[j].strip() and not TESTA_INCANTESIMI.search(righe[j]):
-            if j < i - 1:
-                return None   # fra la lista e l'intestazione c'è dell'altro
+@lru_cache(maxsize=None)
+def _classi_dei_manuali(sistema: str) -> "list[tuple[re.Pattern, str]]":
+    """Le classi con una lista che l'SRD non ha, come le nomina una scheda: il nome
+    inglese e, dove il lessico lo dà, quello italiano. Le più lunghe per prime
+    («savage bard» prima di «bard»)."""
+    from dmcore import sistemi as S
+    try:
+        liste = _liste(sistema)[0]
+    except S.ErroreSistemi:
+        return []
+    srd = set(CLASSI_INCANTATRICI.values())
+    it = {k: v.get("it") for k, v in (L.T._DATI.get("classi_manuali") or {}).items()} if sistema == "dnd35" else {}
+    out = []
+    for nome in sorted(liste, key=len, reverse=True):
+        if nome in srd or len(nome) < 5 or not re.fullmatch(r"[a-z' -]+", nome):
             continue
-        if TESTA_INCANTESIMI.search(righe[j]):
-            testa = righe[j] if j != i else righe[j].split("—")[0]
-            trovate = {v for k, v in CLASSI_INCANTATRICI.items() if re.search(r"\b" + k, testa, re.I)}
-            return trovate.pop() if len(trovate) == 1 else None
+        for forma in filter(None, (nome, it.get(nome))):
+            # una parola sola («adept», «innato») è anche una parola comune: vale
+            # solo con il livello dopo («Adept 5») o come «Healer Spells»
+            coda = r"(?!\w)" if " " in forma else r"(?=\s*\**\s*\d|\s+spells\b)"
+            out.append((re.compile(r"(?<!\w)" + re.escape(forma) + coda, re.I), nome))
+    return out
+
+
+def _classi_nella_riga(riga: str, sistema: str) -> "set[str]":
+    trovate = {v for k, v in CLASSI_INCANTATRICI.items() if re.search(r"\b" + k, riga, re.I)}
+    for rx, nome in _classi_dei_manuali(sistema):
+        m = rx.search(riga)
+        if m:
+            # «savage bard» non è anche «bard»
+            trovate -= {v for v in trovate if v in m.group(0).lower()}
+            return trovate | {nome}
+    return trovate
+
+
+#: quante righe non vuote possono stare fra l'intestazione e la lista («Livello
+#: incantatore 14…», «Esempio di preparazione:»)
+FRA_TESTA_E_LISTA = 4
+CLASSE_CON_LIVELLO = r"\s*\**\s*\d{1,2}\b"
+
+
+def _classe_che_lancia(righe: "list[str]", i: int, sistema: str = "dnd35") -> "str | None":
+    """La classe che lancia la riga i: quella nominata dall'intestazione degli
+    incantesimi più vicina sopra; se l'intestazione non la nomina («Prepared
+    Spells:»), l'unica classe incantatrice scritta con il suo livello più sopra
+    nello stesso blocco («Chierico 12»)."""
+    testa = None
+    altro = 0
+    for j in range(i, max(-1, i - 20), -1):
+        r = righe[j]
+        if j != i and RIGA_LIVELLO.match(r):
+            continue                                   # un'altra riga della lista
+        if TESTA_INCANTESIMI.search(r):
+            testa = j
+            break
+        if j != i and r.strip():
+            altro += 1
+            if altro > FRA_TESTA_E_LISTA or r.lstrip().startswith("#"):
+                return None                            # fra la lista e l'intestazione c'è dell'altro
+    if testa is None:
+        return None
+    riga = righe[testa] if testa != i else righe[testa].split("—")[0]
+    trovate = _classi_nella_riga(riga, sistema)
+    if trovate:
+        # «Bardo 8 + Accordo Sublime 1»: la lista è l'unione delle due
+        return "+".join(sorted(trovate))
+    for j in range(testa - 1, max(-1, testa - 40), -1):
+        r = righe[j]
+        if re.match(r"\s*(?:---+|\*\*\*+)\s*$", r):
+            return None                                # finisce il blocco della creatura
+        con_livello = {c for c in _classi_nella_riga(r, sistema)
+                       if any(re.search(rx.pattern + CLASSE_CON_LIVELLO, r, re.I)
+                              for rx, n in _classi_dei_manuali(sistema) if n == c)
+                       or any(re.search(r"\b" + k + r"[a-z]*" + CLASSE_CON_LIVELLO, r, re.I)
+                              for k, v in CLASSI_INCANTATRICI.items() if v == c)}
+        if con_livello:
+            return "+".join(sorted(con_livello))
+        if r.lstrip().startswith("#") and j < testa - 1:
+            return None
     return None
 
 
@@ -316,7 +414,7 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
     sistema = VT.sistema_di(p, testo)
     from dmcore import sistemi as S
     try:
-        liste, domini, nomi = _liste(sistema)
+        liste, domini, nomi, dai_manuali = _liste(sistema)
     except S.ErroreSistemi:   # il sistema non ha liste di classe
         return [], []
     import lessico_regole as LR
@@ -327,9 +425,16 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
         m = RIGA_LIVELLO.match(riga)
         if not m or "*" not in m.group(2) and not re.search(r"\bLevel\b", riga):
             continue
-        classe = _classe_che_lancia(righe, i)
-        if classe is None or classe not in liste:
+        if re.match(r"\d", m.group(2)):      # «1–4: cura, …» è un intervallo, non un livello
             continue
+        classe = _classe_che_lancia(righe, i, sistema)
+        if classe is None or not all(c in liste for c in classe.split("+")):
+            continue
+        sua: dict = {}
+        for c in classe.split("+"):
+            for nome_k, liv in liste[c].items():
+                sua[nome_k] = min(liv, sua.get(nome_k, 9))
+        manuale = set().union(*(dai_manuali.get(c, set()) for c in classe.split("+")))
         scritto = int(m.group(1))
         di_dominio = False
         for pezzo in re.split(r"[,;]", re.sub(r"\((?:CD|DC)[^)]*\)", "", m.group(2))):
@@ -342,14 +447,16 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
                 continue
             k = LR.norma(it[k]) if k in it else k
             base = {"file": VT_rel(p), "riga": i + 1, "verifica": "incantesimi", "incantesimo": nome,
-                    "fonte": "srd" if sistema == "dnd35" else "prd"}
+                    "fonte": "prd" if sistema != "dnd35" else
+                    "3.5 manuali (PCGen)" if k in manuale else "srd"}
             if k not in nomi:
                 nv.append({**base, "regola": "incantesimo.nome", "atteso": None, "ha": None,
                            "testo": f"«{nome}» non è nelle liste del plugin {sistema}"})
                 continue
-            suo = liste[classe].get(k)
-            da_dominio = min((d[k] for d in domini.values() if k in d), default=None)
-            if suo is None and da_dominio is not None and classe == "cleric":
+            suo = sua.get(k)
+            da_dominio = min((d[k] for n_d, d in domini.items()
+                              if k in d and (dominio or not n_d.startswith("manuali:"))), default=None)
+            if suo is None and da_dominio is not None and "cleric" in classe.split("+"):
                 suo = da_dominio
             elif suo is not None and dominio and da_dominio is not None:
                 suo = min(suo, da_dominio)

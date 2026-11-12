@@ -100,6 +100,32 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
     (`incantesimo.livello`); un nome che le liste non hanno resta non
     verificabile. 6 violazioni sulle schede vere; errori messi apposta visti
     167 su 170 (ESITO §2-quinquies).
+11. **Chiusura delle violazioni e liste dei manuali** (DM, 2026-11-12:
+    «correggi gli errori», e prima di chiuderli finire le classi).
+    - Liste di incantesimi dei manuali 3.5 da PCGen, solo nomi e livelli:
+      `sistemi/dnd35/dati/liste_incantesimi_manuali.toml` (3.969 incantesimi,
+      84 classi, 102 domini, 62 classi che pescano da liste altrui). L'SRD
+      vince dove c'è; le voci con una condizione (divinità) restano fuori; un
+      dominio dei manuali vale solo dove la scheda segna l'incantesimo come di
+      dominio.
+    - La classe che lancia si legge anche quando l'intestazione non la nomina
+      (l'unica classe incantatrice scritta con il livello più sopra): le righe
+      fuori dal controllo scendono da 94 a 16.
+    - Razza, sottotipo e allineamento come prerequisito, letti dalla riga del
+      tipo. Sulle schede di oggi non cambiano nessun esito.
+    - Tre regole che tolgono falsi positivi: il talento bonus «(B)» della
+      creatura con dadi vita razziali (SRD, *Monster Feats*), il talento che la
+      classe del manuale concede (`talenti_concessi` in `classi_manuali.toml`,
+      19 classi), il talento che ne vale un altro come prerequisito
+      (`talenti_equivalenti.toml`). Dove le due fonti di un talento dei manuali
+      divergono, o il file porta più schede, la voce passa fra i non
+      verificabili con il motivo.
+    - Violazioni 34 → 7: 12 erano falsi positivi dello strumento, 16 corrette
+      in 9 schede (ogni scheda ha la nota «correzione 3.5 da
+      verifica_scheda.py»), 1 nuova trovata dalle righe prima non lette. Le 7
+      rimaste sono vere anche con i dati delle classi dei manuali e vanno al DM
+      (ESITO §2-sexies).
+
 
 ## Conseguenze
 

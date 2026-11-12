@@ -69,23 +69,36 @@ class Strumento(unittest.TestCase):
             rc = V.main([*argv, "--json"])
         return rc, json.loads(buf.getvalue())
 
+    def _sporca(self, tmp) -> Path:
+        """Krusk con un talento in più di cui non ha il prerequisito (Tiro Preciso senza
+        Tiro Ravvicinato). Il suo «Duro a morire» non è più l'esempio: lo dà il Berserker
+        Furioso al 1° livello (ADR-0124 §11)."""
+        p = Path(tmp) / KRUSK.name
+        p.write_text(KRUSK.read_text(encoding="utf-8").replace("Duro a morire", "Duro a morire, Tiro Preciso", 1),
+                     encoding="utf-8")
+        return p
+
+    def test_scheda_vera_pulita(self):
+        rc, d = self._esegui(str(KRUSK), "--check")
+        self.assertEqual((rc, d["violazioni"]), (0, []))
+
     def test_uscita_per_l_agente(self):
-        rc, d = self._esegui(str(KRUSK))
-        self.assertEqual(rc, 0)
-        v = d["violazioni"]
-        self.assertEqual([(x["talento"], x["regola"], x["atteso"]) for x in v],
-                         [("Diehard", "talento", "Endurance")])
-        self.assertEqual(v[0]["file"], "Bestiario/villain/krusk-sfondacancelli-cr14.md")
-        riga = KRUSK.read_text(encoding="utf-8").splitlines()[v[0]["riga"] - 1]
-        self.assertIn("Duro a morire", riga)
+        with tempfile.TemporaryDirectory() as tmp:
+            p = self._sporca(tmp)
+            rc, d = self._esegui(str(p))
+            self.assertEqual(rc, 0)
+            v = d["violazioni"]
+            self.assertEqual([(x["talento"], x["regola"], x["atteso"]) for x in v],
+                             [("Precise Shot", "talento", "Point Blank Shot")])
+            riga = p.read_text(encoding="utf-8").splitlines()[v[0]["riga"] - 1]
+            self.assertIn("Tiro Preciso", riga)
 
     def test_giro_di_correzione(self):
         """Segnalata, corretta come dice la violazione, pulita: --check passa da 1 a 0."""
         with tempfile.TemporaryDirectory() as tmp:
-            p = Path(tmp) / KRUSK.name
-            shutil.copy(KRUSK, p)
+            p = self._sporca(tmp)
             self.assertEqual(self._esegui(str(p), "--check")[0], 1)
-            testo = p.read_text(encoding="utf-8").replace("Duro a morire", "Resistenza fisica, Duro a morire", 1)
+            testo = p.read_text(encoding="utf-8").replace("Tiro Preciso", "Tiro Ravvicinato, Tiro Preciso", 1)
             p.write_text(testo, encoding="utf-8")
             rc, d = self._esegui(str(p), "--check")
             self.assertEqual((rc, d["violazioni"]), (0, []))
@@ -200,3 +213,75 @@ class PrerequisitiFisici(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RazzaEAllineamento(unittest.TestCase):
+    """Razza, sottotipo e allineamento come prerequisito (ADR-0124 §11)."""
+
+    VUOTI = {"movimenti": None, "taglia": None, "attacchi_naturali": None, "armatura_naturale": None,
+             "soffio": False, "ts_base": None}
+    NANO = {**VUOTI, "sottotipi": {"dwarf", "hill"}, "allineamento": "LG", "tipo": "humanoid"}
+
+    def test_razza(self):
+        self.assertEqual(V.giudica_altro("PRERACE:1,Dwarf", self.NANO), (True, "sottotipo dwarf"))
+        self.assertEqual(V.giudica_altro("dwarf", self.NANO), (True, "sottotipo dwarf"))
+        self.assertEqual(V.giudica_altro("gnome", self.NANO), (False, "razza dwarf"))
+        self.assertEqual(V.giudica_altro("PRERACE:1,Human", {**self.NANO, "sottotipi": {"umano"}})[0], True)
+
+    def test_razza_che_la_riga_non_scrive(self):
+        # il drow è scritto «(elf)»: non si sa; senza sottotipi non si sa
+        self.assertIsNone(V.giudica_altro("drow", {**self.NANO, "sottotipi": {"elf"}}))
+        self.assertIsNone(V.giudica_altro("dwarf", {**self.NANO, "sottotipi": None}))
+        self.assertIsNone(V.giudica_altro("dwarf", {**self.VUOTI, "sottotipi": {"earth"}, "allineamento": None, "tipo": "giant"}))
+
+    def test_sottotipo(self):
+        fuoco = {**self.VUOTI, "sottotipi": {"fire", "extraplanar"}, "allineamento": "LE", "tipo": "outsider"}
+        self.assertTrue(V.giudica_altro("fire subtype", fuoco)[0])
+        self.assertFalse(V.giudica_altro("incorporeal subtype", fuoco)[0])
+        self.assertIsNone(V.giudica_altro("dragonblood subtype", fuoco))
+
+    def test_allineamento(self):
+        self.assertEqual(V.giudica_altro("any good alignment", self.NANO), (True, "allineamento LG"))
+        self.assertFalse(V.giudica_altro("nongood", self.NANO)[0])
+        self.assertFalse(V.giudica_altro("evil alignment", self.NANO)[0])
+        self.assertTrue(V.giudica_altro("nonlawful alignment", {**self.NANO, "allineamento": "CE"})[0])
+        self.assertFalse(V.giudica_altro("PREALIGN:LE,NE,CE", self.NANO)[0])
+        self.assertTrue(V.giudica_altro("nongood", {**self.NANO, "allineamento": "N"})[0])
+        self.assertIsNone(V.giudica_altro("evil alignment", {**self.NANO, "allineamento": None}))
+
+    def test_letti_dalla_scheda(self):
+        f = V.leggi(REPO / "Bestiario/png/rurik-gorunn-cr10.md")
+        self.assertEqual(f["fisici"]["sottotipi"], {"dwarf"})
+        self.assertEqual(f["fisici"]["allineamento"], "LG")
+
+
+class EccezioniDichiarate(unittest.TestCase):
+    """Talenti che una regola dà senza prerequisiti (ADR-0124 §11)."""
+
+    def _scheda(self, tipo, talenti, attributi="For 25 Des 8 Cos 17 Int 4 Sag 10 Car 5"):
+        tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, tmp)
+        p = tmp / "prova-cr8.md"
+        p.write_text(f"# Prova\n\n```statblocco\ngs: 8\ntipo: {tipo}\nattributi: {attributi}\n"
+                     f"voci:\n  - Talenti: {talenti}\n```\n", encoding="utf-8")
+        return V.verifica(V.leggi(p))
+
+    def test_talento_bonus_della_creatura(self):
+        viol, _ = self._scheda("Large giant, 8 DV, CE", "Attacco Poderoso, Lottare Migliorato")
+        self.assertTrue([v for v in viol if v["talento"] == "Improved Grapple"])
+        viol, _ = self._scheda("Large giant, 8 DV, CE", "Attacco Poderoso, Lottare Migliorato (B)")
+        self.assertFalse(viol)
+
+    def test_il_bonus_non_vale_per_chi_ha_solo_classi(self):
+        viol, _ = self._scheda("Medium humanoid (human), Guerriero 8, N", "Attacco Poderoso, Lottare Migliorato (B)")
+        self.assertTrue([v for v in viol if v["talento"] == "Improved Grapple"])
+
+    def test_talento_che_la_classe_del_manuale_concede(self):
+        self.assertEqual(V.talenti_concessi({"frenzied berserker": 1}), {"Diehard"})
+        self.assertEqual(V.talenti_concessi({"fighter": 4}), set())
+
+    def test_talento_equivalente(self):
+        """Expeditious Dodge vale Dodge come prerequisito: Mobility non è una violazione."""
+        viol, _ = self._scheda("Medium humanoid (human), Guerriero 4, N", "Expeditious Dodge, Mobility",
+                               "For 14 Des 15 Cos 12 Int 10 Sag 10 Car 10")
+        self.assertFalse([v for v in viol if v["talento"] == "Mobility"])

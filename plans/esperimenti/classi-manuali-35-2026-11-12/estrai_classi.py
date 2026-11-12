@@ -130,9 +130,20 @@ def leggi_pcgen(clone: Path) -> "dict[str, dict]":
     fuori: dict[str, dict] = {}
     for f in sorted(clone.glob("data/35e/**/*class*.lst")):
         libro = f.parent.name.replace("_", " ").title()
+        ultima = None
         for riga in f.read_text(encoding="utf-8", errors="replace").splitlines():
+            # «1<TAB>ABILITY:FEAT|VIRTUAL|Diehard»: un talento che la classe concede a quel livello
+            m = re.match(r"(\d+)\t", riga)
+            if m and ultima in fuori:
+                for dono in re.findall(r"ABILITY:FEAT\|(?:VIRTUAL|AUTOMATIC)\|([^\t]+)", riga):
+                    nomi = [x.strip() for x in dono.split("|") if x.strip() and not x.startswith("PRE")]
+                    nomi = [re.sub(r"\s*\(", " (", x) for x in nomi if "Proficiency" not in x]
+                    if nomi:
+                        fuori[ultima].setdefault("talenti_concessi", {}).setdefault(m.group(1), []).extend(nomi)
+                continue
             if not riga.startswith("CLASS:") or riga.startswith("CLASS:CATEGORY="):
                 continue
+            ultima = riga.split("\t")[0][6:].split(".MOD")[0].strip().lower()
             campi = riga.split("\t")
             nome = campi[0][6:].split(".MOD")[0].strip().lower()
             v = fuori.setdefault(nome, {"libro": libro})
@@ -199,6 +210,8 @@ def raccogli(pagine: Path, clone: "Path | None") -> "tuple[dict, dict]":
             if "ts_buoni" in v and "ts_buoni" in p and sorted(v["ts_buoni"]) != sorted(p["ts_buoni"]) \
                     and not v.get("ts_medi"):
                 diversi.append("ts_buoni")
+            if p.get("talenti_concessi"):
+                v["talenti_concessi"] = p["talenti_concessi"]
             for k in ("bab", "punti", "ts_buoni"):   # ciò che la pagina non dà e PCGen sì
                 if k not in v and k in p and "bab_irregolare" not in v:
                     v[k] = p[k]
@@ -221,6 +234,8 @@ def raccogli(pagine: Path, clone: "Path | None") -> "tuple[dict, dict]":
 
 
 def _toml(v) -> str:
+    if isinstance(v, dict):
+        return "{ " + ", ".join(f"{json.dumps(k)} = {_toml(x)}" for k, x in sorted(v.items(), key=lambda t: int(t[0]))) + " }"
     if isinstance(v, bool):
         return "true" if v else "false"
     if isinstance(v, (int, float)):
@@ -231,7 +246,7 @@ def _toml(v) -> str:
 
 
 ORDINE = ("it", "dv", "bab", "bab_irregolare", "ts_buoni", "ts_medi", "punti", "livelli", "prestigio",
-          "libro", "dati", "diverge", "abilita")
+          "libro", "dati", "diverge", "talenti_concessi", "abilita")
 
 
 def scrivi(classi: dict, conto: dict) -> str:

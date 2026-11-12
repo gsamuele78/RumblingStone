@@ -226,6 +226,8 @@ def fondi(pcgen: "dict[str, dict]", cartella: Path) -> "tuple[dict[str, dict], s
         uguali += stesso
         diversi += not stesso
         t["manuale"], t["tipi"], t["dati"] = p["manuale"], p.get("tipi"), "dndtools+pcgen"
+        if not stesso:
+            t["diverge"] = True   # le due fonti non danno gli stessi prerequisiti: si rilegge sul libro
         for k in ("car", "classe", "gradi"):
             if p.get(k):
                 t[k] = {**p[k], **t.get(k, {})}
@@ -258,6 +260,8 @@ def scrivi(d: "dict[str, dict]", commit: str) -> str:
         righe.append(f"[talenti_manuali.{_q(nome)}]")
         righe.append(f"libro = {_q('3.5 ' + p['manuale'])}")
         righe.append(f"dati = {_q(p.get('dati', 'pcgen'))}")
+        if p.get("diverge"):
+            righe.append("diverge = true")
         if p.get("tipi"):
             righe.append("tipi = [" + ", ".join(_q(t) for t in p["tipi"]) + "]")
         for k in ("car", "classe", "gradi"):

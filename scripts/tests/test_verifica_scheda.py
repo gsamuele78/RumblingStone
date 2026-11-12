@@ -35,7 +35,8 @@ class Scheda(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / KRUSK.name
             testo = KRUSK.read_text(encoding="utf-8")
-            # un BAB sbagliato in più, oltre al talento che già manca
+            # un BAB sbagliato e un talento senza il suo prerequisito
+            testo = testo.replace("Duro a morire", "Duro a morire, Tiro Preciso", 1)
             testo = re.sub(r"(BAB \+)(\d+)", lambda m: m.group(1) + str(int(m.group(2)) + 3), testo)
             p.write_text(testo, encoding="utf-8")
             rc, d = self._esegui(str(p), "--check")
@@ -188,9 +189,56 @@ class Incantesimi(unittest.TestCase):
         self.assertEqual(viol, [])
         self.assertEqual([x["regola"] for x in nv], ["incantesimo.nome"])
 
-    def test_senza_classe_nell_intestazione_non_si_giudica(self):
+    def test_senza_classe_da_nessuna_parte_non_si_giudica(self):
         self.assertEqual(self._giudica(self.SCHEDA.replace("Incantesimi da chierico", "Incantesimi")
-                                       .replace("*aiuto*", "*palla di fuoco*")), ([], []))
+                                       .replace("Chierico 5, ", "").replace("*aiuto*", "*palla di fuoco*")), ([], []))
+
+    def test_intestazione_senza_classe_prende_quella_del_tipo(self):
+        """«Prepared Spells:» non nomina la classe: vale l'unica classe incantatrice
+        scritta con il livello più sopra (erano 94 righe su 203 fuori dal controllo)."""
+        viol, _ = self._giudica(self.SCHEDA.replace("Incantesimi da chierico", "Incantesimi")
+                                .replace("*aiuto*", "*palla di fuoco*"))
+        self.assertEqual([(v["regola"], v["atteso"]) for v in viol], [("incantesimo.lista", "lista cleric")])
+
+    def test_righe_fra_intestazione_e_lista(self):
+        testo = self.SCHEDA.replace("livello):\n", "livello):\n\n- Livello incantatore 5.\n- Esempio di preparazione:\n")
+        viol, _ = self._giudica(testo.replace("*aiuto*", "*palla di fuoco*"))
+        self.assertEqual([v["regola"] for v in viol], ["incantesimo.lista"])
+
+    def test_un_incantesimo_che_si_chiama_incantesimi_non_e_un_intestazione(self):
+        testo = self.SCHEDA.replace("- 3° (2+1)", "- 4° (1): *immunità agli incantesimi*\n- 3° (2+1)")
+        viol, _ = self._giudica(testo.replace("*aiuto*", "*palla di fuoco*"))
+        self.assertEqual([v["regola"] for v in viol], ["incantesimo.lista"])
+
+    def test_un_intervallo_di_livelli_non_e_una_riga(self):
+        self.assertEqual(self._giudica(self.SCHEDA + "- 1–4: *colpo infuocato*, *silenzio*\n"), ([], []))
+
+    def test_lista_di_un_manuale(self):
+        """La lista del warmage viene dai manuali (PCGen): Fireball c'è, Bless no."""
+        testo = ("# Prova\n\n**Warmage 6**\n\n**Warmage Spells Known** (CL 6):\n"
+                 "- 3rd: *Fireball*\n- 1st: *Magic Missile*, *Bless*\n")
+        viol, _ = self._giudica(testo)
+        self.assertEqual([(v["regola"], v["incantesimo"]) for v in viol], [("incantesimo.lista", "Bless")])
+
+    def test_classe_che_pesca_dalle_liste_altrui(self):
+        """L'anima prescelta lancia dalla lista del chierico; due classi nell'intestazione sommano le liste."""
+        testo = "# Prova\n\n**Favored Soul Spells Known** (CL 7th):\n- 3rd: *Prayer*, *Fireball*\n"
+        viol, _ = self._giudica(testo)
+        self.assertEqual([v["incantesimo"] for v in viol], ["Fireball"])
+        due = "# Prova\n\n**Incantesimi** (Bardo 8 + Accordo Sublime 1):\n- 4°: *Confusion*, *Dimension Door*\n- 1°: *Cat's Grace*\n"
+        viol, _ = self._giudica(due)
+        self.assertEqual([(v["incantesimo"], v["atteso"], v["ha"]) for v in viol], [("Cat's Grace", 2, 1)])
+
+    def test_una_parola_comune_non_e_una_classe(self):
+        """«innato» è il nome italiano del wilder, ma in una frase non nomina la classe."""
+        testo = self.SCHEDA.replace("**Incantesimi da chierico**", "**Incantesimi da chierico** (sommato all'innato)")
+        self.assertEqual(self._giudica(testo), ([], []))
+
+    def test_fonte_dei_manuali(self):
+        liste, _, _, dai_manuali = V._liste("dnd35")
+        self.assertIn("warmage", liste)
+        self.assertGreater(len(dai_manuali["bard"]), 100)
+        self.assertNotIn("fireball", liste["cleric"])   # le voci con condizione (divinità) restano fuori
 
     def test_liste_nei_due_plugin(self):
         from dmcore import sistemi as S

@@ -198,7 +198,9 @@ def leggi(p: Path) -> "dict | None":
         if r is None:
             ignoti.append(_senza_parentesi(nome))
         elif r["verificabile"]:
-            talenti.append(r)
+            # «(B)» è il talento bonus della creatura: il Manuale dei Mostri lo dà
+            # senza prerequisiti (SRD, Monster Feats, «Bonus Feats»).
+            talenti.append({**r, "bonus": True} if re.search(r"\(B\)", nome) else r)
         else:
             senza_regole.append(r)
     return {"file": p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else str(p),
@@ -207,6 +209,8 @@ def leggi(p: Path) -> "dict | None":
             "bab": s.bab, "livelli": livelli, "dv": dv, "lic": lic,
             "talenti": list({r["en"]: r for r in talenti}.values()),
             "senza_regole": senza_regole, "ignoti": ignoti, "classi_ignote": ignote,
+            "piu_schede": len(L.BLOCCO.findall(s.testo)) > 1,
+            "fonte_ufficiale": bool(re.search(r"^# .*\[TRANSCRIBED — (?!PCGen)", s.testo, re.M)),
             "fisici": fatti_fisici(s)}
 
 
@@ -257,7 +261,12 @@ def fatti_fisici(s: "L.Scheda") -> dict:
     base = None
     if s.composizione_nota and s.gruppi:
         base = L.ts_base(s.gruppi)[0]
-    return {"movimenti": movimenti, "taglia": L.taglia_di(testo) if s.tipo else None,
+    tra_parentesi = re.search(r"\(([^)]*)\)", s.tipo or "")
+    sottotipi = {x.strip().lower() for x in tra_parentesi.group(1).split(",")} if tra_parentesi else None
+    sigla = re.search(r"(?:,|\s)\s*\**([LNC][GNEBM]|N)\**\s*\.?\s*$", (s.tipo or "").strip())
+    allineamento = sigla.group(1).upper().translate(str.maketrans("BM", "GE")) if sigla else None
+    return {"sottotipi": sottotipi, "allineamento": allineamento,
+            "movimenti": movimenti, "taglia": L.taglia_di(testo) if s.tipo else None,
             "tipo": T_tipo(s.tipo), "attacchi_naturali": naturali, "attacco_completo": completo,
             "armatura_naturale": bool(re.search(r"natural", ca.group(0), re.I)) if ca else None,
             "soffio": bool(re.search(r"\bsoffio\b|breath weapon", testo, re.I)), "ts_base": base}
@@ -267,9 +276,54 @@ def T_tipo(tipo: str) -> "str | None":
     return L.T.normalizza_tipo(tipo) if tipo else None
 
 
+#: le razze che la riga del tipo scrive come sottotipo dell'umanoide, e che si escludono a vicenda
+_RAZZE = {"human", "dwarf", "elf", "gnome", "halfling", "orc", "gnoll", "goblinoid", "reptilian"}
+_RAZZE_IT = {"umano": "human", "nano": "dwarf", "elfo": "elf", "gnomo": "gnome", "orco": "orc"}
+#: i sottotipi dell'SRD che una riga del tipo scrive sempre, se la creatura li ha
+_SOTTOTIPI = {"air", "aquatic", "cold", "earth", "fire", "incorporeal", "swarm", "water", "shapechanger"}
+_ALLINEAMENTI = {"good": "G", "evil": "E", "lawful": "L", "chaotic": "C"}
+
+
+def _giudica_razza(t: str, fatti: dict) -> "tuple[bool, str] | None":
+    """Razza e sottotipo: si giudicano solo se la riga del tipo scrive i sottotipi."""
+    m = re.fullmatch(r"prerace:1,([a-z][a-z' -]*)|([a-z][a-z' -]*?)(?: (sub)?type)?", t)
+    if not m:
+        return None
+    serve = (m.group(1) or m.group(2)).strip()
+    suoi = fatti.get("sottotipi")
+    if suoi is None or not (serve in _RAZZE or serve in _SOTTOTIPI or serve in suoi):
+        return None
+    suoi = {_RAZZE_IT.get(x, x) for x in suoi}
+    if serve in suoi:
+        return True, "sottotipo " + serve
+    if serve in _SOTTOTIPI and m.group(3):
+        return False, "sottotipi " + ", ".join(sorted(suoi))
+    if serve in _RAZZE and fatti.get("tipo") == "humanoid" and suoi & _RAZZE:
+        return False, "razza " + ", ".join(sorted(suoi & _RAZZE))
+    return None
+
+
+def _giudica_allineamento(t: str, fatti: dict) -> "tuple[bool, str] | None":
+    ha = fatti.get("allineamento")
+    m = re.fullmatch(r"prealign:([a-z,]+)", t)
+    if m:
+        ammessi = {x.upper().replace("TN", "N") for x in m.group(1).split(",")}
+        return None if ha is None else (ha in ammessi, "allineamento " + ha)
+    m = re.fullmatch(r"(?:any )?(non-?)?\s*(good|evil|lawful|chaotic)(?: alignment)?", t)
+    if not m or ha is None:
+        return None
+    lettera = _ALLINEAMENTI[m.group(2)]
+    ce = lettera in (ha[0] if lettera in "LC" else ha[-1]) and ha != "N"
+    return (not ce if m.group(1) else ce), "allineamento " + ha
+
+
 def giudica_altro(prerequisito: str, fatti: dict) -> "tuple[bool, str] | None":
     """(soddisfatto, che cosa ha la scheda) di un prerequisito fisico, o None se non si sa leggere."""
     t = prerequisito.lower().strip()
+    for giudice in (_giudica_allineamento, _giudica_razza):
+        esito = giudice(t, fatti)
+        if esito is not None:
+            return esito
     mov = fatti["movimenti"]
     for nome, inglese in (("volo", "fly"), ("nuoto", "swim"), ("scalare", "climb"), ("scavare", "burrow")):
         m = re.fullmatch(rf"{inglese} speed(?: (?:of )?(\d+)(?: ft\.?| feet)?)?(?: or (?:more|higher|better))?", t)
@@ -325,6 +379,11 @@ def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
     buono e non viene segnato come sbagliato."""
     dalla_classe = [c for c, classi in COMPETENZE_DI_CLASSE.items() if classi & set(f["livelli"])]
     nomi = [r["en"] for r in f["talenti"]] + [r["en"] for r in f["senza_regole"]]
+    # «Expeditious Dodge» vale come Dodge per i prerequisiti (talenti_equivalenti.toml)
+    for base, sostituti in T.dati(f["sistema"]).get("equivalenti", {}).items():
+        if base not in nomi and any(x in nomi for x in sostituti):
+            nomi.append(base)
+    concessi = talenti_concessi(f["livelli"])
     st = T.Stato(car=f["car"], bab=f["bab"] if f["bab"] is not None else 99,
                  livelli=f["livelli"], lic=f["lic"], talenti=nomi + dalla_classe, dv=f["dv"])
     viol, nv = [], []
@@ -335,7 +394,11 @@ def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
                    "nota": "talento di un manuale: il repo ha il nome, non i prerequisiti"})
     for r in f["talenti"]:
         en, sis = r["en"], r["sistema"]
-        if T.bonus_senza_prerequisiti(f["sistema"], en, f["livelli"]):
+        if T.bonus_senza_prerequisiti(f["sistema"], en, f["livelli"]) or en in concessi:
+            continue
+        # il talento bonus «(B)» vale solo per chi ha dadi vita razziali: a un PNG
+        # fatto solo di classi nessuna regola lo dà
+        if r.get("bonus") and (f["dv"] or 0) > sum((f["livelli"] or {}).values()):
             continue
         for v in T.violazioni(sis, en, st):
             if v["regola"] == "bab" and f["bab"] is None:
@@ -348,6 +411,10 @@ def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
             if senza_classe:
                 voce["nota"] = ("classi che la lettura non conosce: " + ", ".join(ignote) if ignote else
                                 "la scheda non dichiara le classi nel tipo né nel titolo")
+            if T.dati(sis)["talenti"].get(en, {}).get("diverge") and v["regola"] not in NON_VERIFICABILI:
+                # PCGen e la tabella del manuale non danno gli stessi prerequisiti (ADR-0124 §6)
+                nv.append({**voce, "nota": "le due fonti del manuale divergono su questo talento: rileggere sul libro"})
+                continue
             if v["regola"] == "altro" and f.get("fisici"):
                 esito = giudica_altro(str(v["atteso"]), f["fisici"])
                 if esito is not None:
@@ -357,7 +424,29 @@ def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
                     viol.append(voce)
                     continue
             (nv if v["regola"] in NON_VERIFICABILI or senza_classe else viol).append(voce)
+    # Una violazione non si afferma quando la scheda non è una sola (i talenti letti
+    # possono essere di un'altra) o quando ripete una fonte ufficiale così com'è stampata.
+    motivo = ("il file ha più schede: classi e talenti letti possono essere di schede diverse"
+              if f.get("piu_schede") else
+              "uguale alla fonte ufficiale trascritta: il difetto, se c'è, è del manuale"
+              if f.get("fonte_ufficiale") else None)
+    if motivo:
+        nv += [{**v, "nota": motivo} for v in viol]
+        viol = []
     return viol, nv
+
+
+def talenti_concessi(livelli: "dict[str, int]") -> "set[str]":
+    """I talenti che le classi dei manuali danno per nome ai livelli che la scheda ha
+    (`talenti_concessi` di classi_manuali.toml): si hanno anche senza i prerequisiti."""
+    manuali = L.T._DATI.get("classi_manuali", {})
+    per_nome = {**manuali, **{v["it"]: v for v in manuali.values() if v.get("it")}}
+    out: set = set()
+    for classe, n in livelli.items():
+        for liv, nomi in (per_nome.get(classe, {}).get("talenti_concessi") or {}).items():
+            if int(liv) <= n:
+                out.update(nomi)
+    return out
 
 
 def schede(percorsi: "list[Path]") -> "list[Path]":

@@ -1,12 +1,12 @@
 {
  "livello abbassato di uno": [
-  82,
-  85
+  123,
+  127
  ],
  "incantesimo fuori lista": [
-  85,
-  85
+  124,
+  127
  ],
- "righe con classe": 109,
- "righe senza classe": 94
+ "righe con classe": 158,
+ "righe senza classe": 16
 }

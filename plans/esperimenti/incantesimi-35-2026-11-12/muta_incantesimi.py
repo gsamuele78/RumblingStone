@@ -19,9 +19,16 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
 import verifica_scheda as V  # noqa: E402
 
-FUORI_LISTA = {"cleric": "palla di fuoco", "druid": "palla di fuoco", "wizard": "cura ferite leggere",
-               "sorcerer": "cura ferite leggere", "bard": "palla di fuoco", "paladin": "palla di fuoco",
-               "ranger": "palla di fuoco"}
+#: un incantesimo che la classe non ha: il primo dei tre che nessuna delle sue liste porta
+CANDIDATI = (("palla di fuoco", "fireball"), ("cura ferite leggere", "cure light wounds"), ("intralciare", "entangle"))
+
+
+def fuori_lista(classe: str) -> "str | None":
+    liste = V._liste("dnd35")[0]
+    for it, en in CANDIDATI:
+        if not any(en in liste.get(c, {}) for c in classe.split("+")):
+            return it
+    return None
 
 
 def main() -> int:
@@ -34,17 +41,18 @@ def main() -> int:
             righe = testo.splitlines()
             for i, riga in enumerate(righe):
                 m = V.RIGA_LIVELLO.match(riga)
-                if not m or "*" not in m.group(2):
+                if not m or "*" not in m.group(2) or re.match(r"\d", m.group(2)):
                     continue
                 classe = V._classe_che_lancia(righe, i)
                 conto["righe con classe" if classe else "righe senza classe"] += 1
                 if classe is None or int(m.group(1)) < 1 or any(v["riga"] == i + 1 for v in V.incantesimi(p)[0]):
                     continue
                 q = Path(tmp) / p.name
+                intruso = fuori_lista(classe)
                 for nome, nuova in (
                         ("livello abbassato di uno", riga[:m.start(1)] + str(int(m.group(1)) - 1) + riga[m.end(1):]),
-                        ("incantesimo fuori lista", riga + f", *{FUORI_LISTA[classe]}*")):
-                    if nome.startswith("livello") and not re.search(r"\*", riga):
+                        ("incantesimo fuori lista", riga + f", *{intruso}*")):
+                    if nome.startswith("livello") and not re.search(r"\*", riga) or nome.startswith("inc") and not intruso:
                         continue
                     q.write_text("\n".join(righe[:i] + [nuova] + righe[i + 1:]) + "\n", encoding="utf-8")
                     conto[nome][1] += 1
