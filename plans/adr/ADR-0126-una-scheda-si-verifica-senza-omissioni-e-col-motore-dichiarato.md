@@ -22,7 +22,7 @@ incantesimi, ma con tre limiti misurati:
 
 | Opzione | A favore | Contro |
 |---|---|---|
-| **Tolleranza zero, bonus dichiarati e sommati per tipo** (scelta) | ogni punto ha una sorgente scritta; la regola del cumulo è quella dell'SRD; sul banco gli errori visti passano dal 55% al 78% | 22 numeri di 20 schede vere diventano violazioni e vanno decisi uno per uno |
+| **Tolleranza zero, bonus dichiarati e sommati per tipo** (scelta) | ogni punto ha una sorgente scritta; la regola del cumulo è quella dell'SRD; sul banco gli errori visti passano dal 55% al 79% | 22 numeri di 20 schede vere diventano violazioni e vanno chiusi uno per uno |
 | Stringere la fascia (per esempio +1) | meno violazioni da decidere | resta una soglia arbitraria; un +1 non dichiarato è comunque un bonus che nessuno ha scelto |
 | Tenere la fascia e marcare «sospetto» | nessuna scheda cambia stato | è la situazione di prima con un'etichetta: non verifica niente |
 | Il più forte regola per regola | massimizza ogni numero | mescola pezzi di sistemi diversi senza controllo; il DM ha scelto «per elemento intero» |
@@ -87,12 +87,23 @@ Misura (banco `muta_numeri.py`, stessi errori messi apposta):
 
 | | Prima (#378) | Lotto 1 |
 |---|---|---|
-| Errori visti | 701 su 1.279 (55%) | 959 su 1.231 (78%) |
-| Tiri salvezza gonfiati di +2 visti | 1 su 362 | 270 su 346 |
-| Violazioni di numero sulle schede vere | 0 | 22 in 20 schede |
+| Errori visti | 701 su 1.279 (55%) | 1.007 su 1.279 (79%) |
+| Tiri salvezza gonfiati di +2 visti | 1 su 362 | 286 su 362 |
+| Violazioni di numero sulle schede vere | 0 (nascoste dalla fascia) | 22 trovate, 0 rimaste |
 
-Le 22 sono numeri che la scheda scrive e non spiega: vanno al DM, scheda per
-scheda (tenere il numero dichiarando la sorgente, o riportarlo al conto).
+Le 22 trovate, chiuse nello stesso lotto:
+
+- 6 erano difetti del verificatore sull'attacco (potenziamento in mezzo al
+  nome dell'arma, Arma Focalizzata contata anche su un'altra arma, Arma
+  Focalizzata Superiore non contata): senza tolleranza si usa il conto fine
+  di `attacco_atteso`;
+- 2 (Avarthel) erano il talento Anima Forte, ora fra le sorgenti;
+- 16 numeri in 14 schede erano tiri salvezza senza sorgente. Scelta del DM
+  (card del 2026-11-12): «tenere il numero, dichiarare la sorgente». Undici
+  PNG e umanoidi ricevono un *mantello della resistenza* (+1 o +2, SRD), che
+  alza anche gli altri tiri salvezza; tre creature fatte in casa (due
+  razorfiend, la guardia d'élite dei miconidi) dichiarano un bonus razziale
+  alla Volontà, segnato «Non SRD». Ogni scheda porta la nota in fondo.
 
 Restano fuori dal lotto 1, detti: la CA del 3.5, i bonus all'attacco diversi
 da potenziamento, perfetta, Arma Focalizzata e prisma; gli oggetti col prezzo;

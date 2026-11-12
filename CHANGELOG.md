@@ -172,6 +172,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ### Cambiato
 - `verifica_scheda` giudica tiri salvezza e attacco **senza tolleranza** (ADR-0126, D-A): prima passavano un tiro salvezza fino a +4 sopra l'atteso e un attacco fra −1 e +2. Ogni violazione elenca i bonus contati. `--tolleranza` rimette la fascia di prima; `conformita_statblocchi` e i cancelli della CI non cambiano (`severo=False` è il predefinito delle funzioni).
+- Bestiario, 14 schede: tiri salvezza che superavano il conto ora hanno la sorgente dichiarata (ADR-0126, scelta del DM): un *mantello della resistenza* +1 o +2 per undici PNG e umanoidi, con gli altri tiri salvezza alzati di conseguenza, e un bonus razziale alla Volontà per tre creature fatte in casa. Ogni scheda porta la nota «correzione 3.5 da `verifica_scheda.py`».
 - `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 
 ## [1.0.0] - 2026-10-23

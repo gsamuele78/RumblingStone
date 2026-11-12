@@ -95,3 +95,23 @@ class TestSevero(unittest.TestCase):
     def test_tiri_salvezza_condivisi_non_si_giudicano_verso_l_alto(self):
         s = self._scheda("Temp +9, Rifl +2, Vol +1", "Capacità speciali condividere tiri salvezza\n")
         assert not C.scarti(C.verifica(s, severo=True))
+
+
+class TestAttaccoSevero(unittest.TestCase):
+    def _scheda(self, mischia, talenti_):
+        testo = ("```statblocco\nnome: Prova\ngs: 8\ntipo: Medium humanoid (dwarf), Fighter 8, LG\n"
+                 "pf: 60\nts: Temp +8, Rifl +3, Vol +2\n"
+                 "attributi: For 16 Des 12 Cos 14 Int 10 Sag 10 Car 10\nbab: +8\n"
+                 f"attacchi:\n  - Mischia {mischia}\n  - Distanza balista +9 (3d8)\n```\n**Talenti** {talenti_}\n")
+        return L.leggi_testo(testo, ROOT / "Bestiario" / "prova-cr8.md")
+
+    def test_potenziamento_in_mezzo_al_nome_e_focalizzata_superiore(self):
+        s = self._scheda("martello da guerra +1 gelido +14/+9 (1d8+4)",
+                         "Arma Focalizzata (martello da guerra), Arma Focalizzata Superiore (martello da guerra)")
+        self.assertNotIn("attacco", C.scarti(C.verifica(s, severo=True)))
+
+    def test_focalizzata_su_un_altra_arma_non_conta(self):
+        s = self._scheda("ascia da battaglia perfetta +12/+7 (1d8+3)", "Arma Focalizzata (balista)")
+        self.assertNotIn("attacco", C.scarti(C.verifica(s, severo=True)))
+        s = self._scheda("ascia da battaglia perfetta +13/+8 (1d8+3)", "Arma Focalizzata (balista)")
+        self.assertIn("attacco", C.scarti(C.verifica(s, severo=True)))

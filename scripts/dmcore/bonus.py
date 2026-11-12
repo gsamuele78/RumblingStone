@@ -29,7 +29,8 @@ __all__ = ["Voce", "CAMPI_TS", "regole", "somma", "dichiarati", "totali"]
 CAMPI_TS = ("Temp", "Rifl", "Vol")
 _NOME_CAMPO = (("Temp", r"temp(?:ra)?|fort(?:itude)?"), ("Rifl", r"rifl(?:essi)?|ref(?:lex)?"),
                ("Vol", r"vol(?:ont[aà])?|will"))
-_RIGA_TS = re.compile(r"^(?:ts:|.*\bTS\b|.*\bTiri Salvezza\b).*$", re.M | re.I)
+_RIGA_TS = re.compile(
+    r"^(?:ts:|.*\bTS\b|.*\bTiri Salvezza\b|.*\bSaves\b|.*\bFort\s*[+-]\d).*$", re.M | re.I)
 _RIGA_TIPO = re.compile(r"^tipo:.*$", re.M | re.I)
 _PARENTESI = re.compile(r"\(([^()]*)\)")
 

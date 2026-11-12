@@ -349,3 +349,15 @@ cambiato e che non correggo senza avvisarlo: Sentinella Silenziosa (DEF-1),
 beholder-death-tyrant-cr14, hobgoblin-captain-cr8, drow-priestess9-cr11,
 gnoll-hyenodon-rider-cr4, thayan-knight-cr8, Lirien, Karkator, ogre-skullcrusher-cr5,
 Skullcrusher Vecchio e Wyvern di DEF-4.
+
+## 10. Lotto 1-bis, misura di partenza (2026-11-12, in locale)
+
+I conti dei recinti dei master (`conformita_statblocchi.conti_del_recinto`:
+somma della CA, contatto e sprovvista, sensi, CD) oggi girano nel cancello dei
+moduli e non in `verifica_scheda`. Applicati così come sono alle 134 schede
+recintate del Bestiario trovano: CA 27, sensi 10 (scurovisione mancante), CD
+del soffio 1. Danno anche 25 scarti sui pf, che però sono la regola «media» dei
+master e nel Bestiario non vale (lì i pf stanno nella fascia dei dadi).
+Il lotto 1-bis porta CA, sensi e CD in `verifica_scheda`, somma le voci della
+CA per tipo con `dmcore.bonus` (due bonus di armatura non si sommano) e aggiunge
+gli oggetti dell'SRD col prezzo. Da pubblicare dopo il merge della #380.

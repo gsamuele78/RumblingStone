@@ -240,6 +240,16 @@ def verifica(s: Scheda, attr: "dict | None" = None, severo: bool = False) -> dic
                  + (1 if FOCALIZZATA.search(s.testo) else 0)
                  + talenti(s.testo).get("attacco", 0))
         att = min((b + fisso for b in babs), key=lambda a: abs(dich - a))
+        if severo and not incorporeo:
+            # senza tolleranza serve il conto fine di `attacco_atteso`: il
+            # potenziamento in mezzo al nome («+1 gelido»), Arma Focalizzata
+            # solo sull'arma che nomina, Arma Focalizzata Superiore
+            righe_car = " ".join(f"{k} {v}" for k, v in attr.items() if isinstance(v, int))
+            fini = [x[1] for x in (attacco_atteso(s.mischia, b, righe_car, L.senza_note(s.testo), taglia)
+                                   for b in babs) if x]
+            if fini:
+                extra = talenti(s.testo).get("attacco", 0)
+                att = min((f + extra for f in fini), key=lambda a: abs(dich - a))
         d = dich - att
         out["attacco"] = (dich, att, d if severo or not -1 <= d <= 2 else 0)
     if not s.composizione_nota:

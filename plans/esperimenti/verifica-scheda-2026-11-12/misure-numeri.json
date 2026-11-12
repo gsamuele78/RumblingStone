@@ -60,8 +60,8 @@
   ]
  },
  "Temp +2": {
-  "mutanti": 120,
-  "trovati": 96,
+  "mutanti": 121,
+  "trovati": 97,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -90,8 +90,8 @@
   ]
  },
  "Rifl +2": {
-  "mutanti": 118,
-  "trovati": 92,
+  "mutanti": 121,
+  "trovati": 95,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -122,8 +122,8 @@
   ]
  },
  "Vol +2": {
-  "mutanti": 108,
-  "trovati": 82,
+  "mutanti": 120,
+  "trovati": 94,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -154,8 +154,8 @@
   ]
  },
  "Temp -2": {
-  "mutanti": 120,
-  "trovati": 94,
+  "mutanti": 121,
+  "trovati": 95,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -186,8 +186,8 @@
   ]
  },
  "Rifl -2": {
-  "mutanti": 118,
-  "trovati": 90,
+  "mutanti": 121,
+  "trovati": 93,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -220,13 +220,14 @@
   ]
  },
  "Vol -2": {
-  "mutanti": 108,
-  "trovati": 77,
+  "mutanti": 120,
+  "trovati": 89,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
    "centaur-chieftain-cr7.md",
    "centaur-ranger4-corrupted-cr5.md",
+   "drow-priestess9-cr11.md",
    "drow-trickster-arcano-cr11.md",
    "drow-warrior-cr1.md",
    "duergar-guerriero2-cr3.md",
@@ -238,7 +239,6 @@
    "gnoll-ranger4-cr5.md",
    "gnoll-warrior2-cr2.md",
    "hobgoblin-captain-cr8.md",
-   "hobgoblin-regular-warrior4-cr3.md",
    "loxo-shaman6-cr7.md",
    "orco-berserk-barbaro2-cr2.md",
    "rethmar-city-guard-cr2.md",
@@ -257,8 +257,8 @@
   ]
  },
  "Temp +5": {
-  "mutanti": 120,
-  "trovati": 99,
+  "mutanti": 121,
+  "trovati": 100,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -284,8 +284,8 @@
   ]
  },
  "Rifl +5": {
-  "mutanti": 118,
-  "trovati": 97,
+  "mutanti": 121,
+  "trovati": 100,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
@@ -311,8 +311,8 @@
   ]
  },
  "Vol +5": {
-  "mutanti": 108,
-  "trovati": 87,
+  "mutanti": 120,
+  "trovati": 99,
   "persi": [
    "blue-psion-cr1.md",
    "bone-naga-cr10.md",
