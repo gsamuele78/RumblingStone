@@ -17,11 +17,11 @@ Uso:
 """
 from __future__ import annotations
 
-import html
 import json
 import re
 import subprocess
 import sys
+from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -43,9 +43,35 @@ LIBRI = {"Cad": "Complete Adventurer", "Carc": "Complete Arcane", "Cd": "Complet
 TS = ("temp", "rifl", "vol")
 
 
+class _Testo(HTMLParser):
+    """Il testo di una pagina, con «|» al posto di ogni marcatore; script, stili e commenti fuori."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.pezzi: "list[str]" = []
+        self._muto = 0
+
+    def handle_starttag(self, tag, attrs):
+        self._muto += tag in ("script", "style")
+        self.pezzi.append("|")
+
+    def handle_startendtag(self, tag, attrs):
+        self.pezzi.append("|")
+
+    def handle_endtag(self, tag):
+        self._muto = max(0, self._muto - (tag in ("script", "style")))
+        self.pezzi.append("|")
+
+    def handle_data(self, data):
+        if not self._muto:
+            self.pezzi.append(data)
+
+
 def _testo(pagina: str) -> str:
-    t = re.sub(r"<script.*?</script>|<style.*?</style>|<!--.*?-->", "", pagina, flags=re.S)
-    t = html.unescape(re.sub(r"<[^>]+>", "|", t))
+    lettore = _Testo()
+    lettore.feed(pagina)
+    lettore.close()
+    t = "".join(lettore.pezzi)
     return re.sub(r"\s+", " ", t.replace("�", "'").replace("’", "'"))
 
 
