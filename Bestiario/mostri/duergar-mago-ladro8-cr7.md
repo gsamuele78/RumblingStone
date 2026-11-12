@@ -8,6 +8,7 @@ tipo: Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4
 taglia: Media
 spazio: 1,5 m
 portata: 1,5 m
+sensi: scurovisione 36 m
 ca: 13
 ca-dettaglio: touch 13, flat-footed 11 (+1 vs trappole)
 pf: 37
@@ -28,3 +29,5 @@ Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4. **hp 37** (7 HD); **AC 13*
 **Mischia** spada corta +1 +7 (1d6+1/19-20). **Furtivo +2d6**; Eludere, Trovare/Sentire Trappole. Incantesimi da Wizard 4 + SLA duergar. Famiglio. Scurovisione 36 m, immune paralisi/veleno. Talenti: Iniziativa Migliorata, Scrivere Pergamene, Incantesimi Silenziosi, Arma Accurata.
 **Variante testo epico — Rogue 3/Wizard 5 (CR 8)**: hp 48, aggiunge *fireball, displacement*; «uno è quello fuggito».
 Notes: i mago/ladri duergar dello scontro del ponte; usano Missile Magico/Palla di Fuoco + Furtivo.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.

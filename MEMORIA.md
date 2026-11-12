@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
 | 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
 | 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 1.007/1.279 (55% → 79%); TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente trovati e chiusi: 6 difetti del verific… |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §7: `scripts/verifica_scheda.py` via MCP (talenti + numeri di… | 🟡 lotti successivi: abilità, classi fuori SRD |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §6 (DM): verifica dei talenti nell'ordine SRD d20 → D&D 3.5 → PF1e,… | 🟡 correzioni delle schede al DM |
 | 2026-11-11 | STANDARD-STAMPA | Misure in prova dal giro di lettura e pedine delle mappe collegate alle schede… | ✅ `misura_stampa`: sigle morte 9, righe brevi incomplete 8, titoli rovinati 4→0 (apostrofo perso nel tema); `misura_mappe_schede`: unità nemiche collegate 0→41… |
-| 2026-11-11 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 punti 3-5 (scelta del DM): `scripts/verifica_talenti.py` nel manifest… | ✅ Bestiario da 30 violazioni in 19 schede a 21 in 11; giro di correzione con test (--check 1 → 0); le 21 al DM |
 
 ## Le misure che si portano dietro
 

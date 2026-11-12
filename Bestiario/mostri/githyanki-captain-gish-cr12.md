@@ -7,8 +7,8 @@ gs: 12
 taglia: Media
 spazio: 1,5 m
 portata: 1,5 m
-ca: 23
-ca-dettaglio: (+10 +3 full plate, +2 Dex, +1 shield)
+ca: 24
+ca-dettaglio: (+11 +3 mithral full plate, +2 Dex, +1 shield)
 pf: 80
 pf-dado: 8d10+3d4+22
 ts: Temp +9, Rifl +5, Vol +6
@@ -22,4 +22,6 @@ attributi: For 17 Des 14 Cos 14 Int 16 Sag 13 Car 12
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-HD 8d10+3d4+22 (80 HP). AC 23 (+10 +3 full plate, +2 Dex, +1 shield). Fort +9 Ref +5 Will +6. BAB +9/+4. +2 silver greatsword +16/+11 (2d6+8/19-20). Str 17 Dex 14 Con 14 Int 16 Wis 13 Cha 12. Spells/day Wiz 3 (CL 7 with Practiced Spellcaster) CD 13+lvl: 0-4 1-4 2-2. Typical: shield, magic missile, scorching ray. SLA +blink, telekinesis, plane shift 1/day. Feats: Combat Casting, Arcane Strike, Practiced Spellcaster (wizard), Improved Initiative, Scribe ScrollB, Weapon FocusB (greatsword), Power AttackB, CleaveB, Weapon SpecializationB (greatsword), Greater Weapon FocusB (greatsword). Notes: élite Vaereth, ~10 captains.
+HD 8d10+3d4+22 (80 HP). AC 24 (+11 +3 mithral full plate, +2 Dex, +1 shield). Fort +9 Ref +5 Will +6. BAB +9/+4. +2 silver greatsword +16/+11 (2d6+8/19-20). Str 17 Dex 14 Con 14 Int 16 Wis 13 Cha 12. Spells/day Wiz 3 (CL 7 with Practiced Spellcaster) CD 13+lvl: 0-4 1-4 2-2. Typical: shield, magic missile, scorching ray. SLA +blink, telekinesis, plane shift 1/day. Feats: Combat Casting, Arcane Strike, Practiced Spellcaster (wizard), Improved Initiative, Scribe ScrollB, Weapon FocusB (greatsword), Power AttackB, CleaveB, Weapon SpecializationB (greatsword), Greater Weapon FocusB (greatsword). Notes: élite Vaereth, ~10 captains.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): un'armatura completa +3 dà +11 (8 +3, SRD), non +10; e con Des +2 l'armatura deve essere di mithral (Des massima +3 invece di +1). CA 23 → **24**.
