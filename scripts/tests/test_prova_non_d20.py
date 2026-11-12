@@ -49,9 +49,10 @@ CARTELLA = "moduli-di-prova"
 #: (lavorano), quanti una parte, quanti nessuna (devono rifiutare il file).
 CENSIMENTO = {
     "tutte": {"domande_developer", "validate_modules", "validate_prosa", "validate_standalone"},
-    "in_parte": {"suggest_encounter"},  # la minaccia sì, le schede del Bestiario no
+    "in_parte": {"suggest_encounter",  # la minaccia sì, le schede del Bestiario no
+                 "genera_creatura"},   # formule.regole sì (dichiarata dalla #376), il resto no: rifiuta
 }
-CENSIMENTO_NESSUNA = 17  # +verifica_talenti e verifica_scheda (ADR-0124): talenti e conti sono d20
+CENSIMENTO_NESSUNA = 16  # genera_creatura passa in «in_parte» con la #376; +verifica_talenti e verifica_scheda (ADR-0124): talenti e conti sono d20
 
 
 def _file_dei_plugin() -> "set[str]":
