@@ -302,7 +302,11 @@
   // La tabella della persona portata da ADR-0107 («Chi si incontra in questo
   // capitolo») sta sempre in cima: in fondo alla pagina Typst 0.15 la mette
   // sopra il riquadro della colonna accanto (Notte e Alba, p. 24, 2026-11-03).
-  let dove = if sezione == "Chi si incontra in questo capitolo" { top } else { auto }
+  // Dal 2026-11-12 vale per ogni tabella che scavalca: con la riga di taglia,
+  // spazio e portata (ADR-0128) e la CA spiegata (ADR-0126) la scheda di
+  // Skullcrusher Vecchio finiva 3 righe dentro il float in fondo (Notte e
+  // Alba p. 114, Resurrezione p. 128; validate_corredo, 98 difetti).
+  let dove = top
   let scavalca = place(dove, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
     #if sezione != none [
       #text(font: TITOLI, size: 7.5pt, fill: seppia, tracking: 0.3pt)[#upper(sezione)]
