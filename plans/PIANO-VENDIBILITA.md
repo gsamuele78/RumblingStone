@@ -293,7 +293,7 @@ ciò che porta il primo utente.
 > illustrati e non mappe. Sotto `validate_maps` ce ne sono **40**, di 18 master.
 >
 > **Decisione attuata**: [ADR-0048](adr/ADR-0048-legenda-funzionale-fonte-unica.md).
-> **Spec normativa**: [`LEGENDA-FUNZIONALE-SPEC`](../docs/guides/LEGENDA-FUNZIONALE-SPEC.md).
+> **Spec normativa**: [`LEGENDA-FUNZIONALE-SPEC`](../docs/reference/LEGENDA-FUNZIONALE-SPEC.md).
 
 ### 9.0 · Informazioni mancanti e assunzioni dichiarate
 

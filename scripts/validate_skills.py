@@ -361,7 +361,7 @@ def check_regole_doro(root: Path) -> list[str]:
 
 
 # ADR-0114: la scheda della skill. Le sezioni nell'ordine di
-# docs/guides/GUIDA-SCHEDE-PROMPT.md; «Vincoli sui fatti» solo nelle skill di
+# docs/reference/GUIDA-SCHEDE-PROMPT.md; «Vincoli sui fatti» solo nelle skill di
 # contenuto (la presidia test_vincoli_delle_skill.py). Canale testing: qui
 # sono AVVISI, non errori, finché l'audit settimanale non propone di renderli
 # bloccanti (come i cancelli di ADR-0109).

@@ -3,4 +3,4 @@ name: trappola-c13-il-fratello-di-hella-e
 expected_outcome: |
   Trappola: il fratello di Hella e la sua lettera non esistono nel repo. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna C13.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna C13.
