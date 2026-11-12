@@ -1,6 +1,6 @@
 # ADR-0125 — La coerenza della storia si verifica contro state.yaml, e solo sui fatti che state.yaml ha come campi
 
-**Stato**: proposta (2026-11-12)
+**Stato**: accettata (2026-11-12, card del DM «Solo le regole precise, in testing»)
 **Data**: 2026-11-12
 **Decisione-fonte**: il DM (Jfs), 2026-11-11, nel thread della #378: *«L'idea che ha dato inizio al thread ha senso applicarla per la parte di generazione e coerenza della storia?»*; poi la card «Sì, thread separato».
 **Rapporti**: applica alla storia il pattern di [ADR-0124](ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md) (regola, atteso, ha, `file:riga`); si appoggia ad [ADR-0050](ADR-0050-stato-di-campagna-dati-e-prosa.md) (`state.yaml` è il master dei fatti) e ad [ADR-0067](ADR-0067-il-confine-dichiarato-fra-codice-e-llm.md). Misure in [plans/esperimenti/coerenza-storia-2026-11-12/ESITO.md](../esperimenti/coerenza-storia-2026-11-12/ESITO.md).
@@ -36,12 +36,17 @@ mutanti, la lettura di ogni rilievo su main.
    cosa», 31 righe su 31 senza tempo.
 3. **Nessun motore logico e nessun modello** per la coerenza della storia: la
    misura dice che il collo di bottiglia è leggere il fatto, non ragionarci.
-4. **Il prototipo resta nel laboratorio** finché il DM non sceglie (card del
-   2026-11-12). La proposta consigliata: le regole precise (S1 arrivo
-   dell'orda, S5 portatore, S6 modifiche permanenti, S7 echi armati senza
-   scena) entrano in `coerenza_campagna` come opzione `--state`, una norma e
-   un rilevatore, in canale testing ([ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)) e nel server MCP in sola
-   lettura. S2, S3 e S4 restano fuori finché la precisione non passa.
+4. **Le regole precise entrano nel repo, le altre restano in laboratorio**
+   (card del DM del 2026-11-12, «Solo le regole precise, in testing»). S1
+   (arrivo dell'orda), S5 (portatore), S6 (modifiche permanenti) e S7 (echi
+   armati senza scena) stanno in `scripts/coerenza_campagna.py fatti --state`,
+   in canale testing ([ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)) e nel server MCP in sola
+   lettura. Sui mutanti piani e sul replay delle «−2 COS» danno gli stessi
+   rilievi del prototipo. S2, S3 e S4 restano in
+   `plans/esperimenti/coerenza-storia-2026-11-12/` finché la precisione non
+   passa. Il server MCP mette ora le opzioni di un sottocomando dopo il suo
+   nome, nell'ordine del manifest: prima `coerenza_campagna` via MCP rispondeva
+   solo con l'errore d'uso.
 5. **Non è un cancello.** Una frase d'autore sfugge quasi sempre, quindi il
    verde non vuol dire coerente. Il DM che legge resta il controllo vero
    (vedi la lettura scena per scena del 2026-11-02).

@@ -137,7 +137,9 @@ decisione già presa (Day 42, `state.yaml` `march_clock`) e non tocca canone:
 2. **Vraath al Day 1** in ARMATE-SYNC r.11 («Baseline Orda al Day 1 (Vraath
    Keep)») contro `state.yaml` (Day 1 il Fane, Day 6 Vraath): può essere il
    raduno di RHoD, può essere un errore.
-3. **Se promuovere il prototipo** (card nel thread): le regole con l'àncora
-   precise (S1, S5, S6, S7) dentro `coerenza_campagna` come opzione `--state`,
-   in canale testing e via MCP in sola lettura; S2, S3 e S4 restano nel
-   laboratorio finché la precisione non passa.
+3. ~~Se promuovere il prototipo~~ **Deciso il 2026-11-12** (card «Solo le
+   regole precise, in testing»): S1, S5, S6 e S7 sono in
+   `scripts/coerenza_campagna.py fatti --state` e via MCP. Sui 9 mutanti piani
+   di S1, S5 e S6 il codice promosso prende gli stessi 9 del prototipo, sulle 9
+   parafrasi nessuno; sul replay delle «−2 COS» le stesse 3 righe su 6; su main
+   0 violazioni. S2, S3 e S4 restano qui.
