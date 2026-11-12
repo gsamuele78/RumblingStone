@@ -60,7 +60,10 @@ class TestDati(unittest.TestCase):
         # nessun testo dei manuali: un nome di talento, abilità o razza è corto e non ha frasi
         for nome, c in PR.requisiti()["prestigio"].items():
             self.assertLessEqual(set(c), {"fonte", "non_verificati", "bab", "abilita", "talenti", "razza",
-                                          "allineamento", "incantesimi", "diverge"}, nome)
+                                          "allineamento", "incantesimi", "diverge", "avanza"}, nome)
+            # l'avanzamento d'incantatore (lotto 3-ter): un tipo di una parola o due e dei numeri
+            self.assertLessEqual(set(c.get("avanza", {})), {"tipo", "livelli", "diverge"}, nome)
+            self.assertLess(len(c.get("avanza", {}).get("tipo", "")), 30, nome)
             voci = [t for g in c.get("talenti", ()) for t in g["fra"]] + c.get("razza", []) \
                 + [a for g in c.get("abilita", ()) for a in g["fra"]]
             for v in voci:

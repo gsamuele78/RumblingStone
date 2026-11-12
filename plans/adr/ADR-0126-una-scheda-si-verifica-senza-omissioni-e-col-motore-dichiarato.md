@@ -409,6 +409,52 @@ nano): le altre restano un dubbio; i 3.5 dei manuali vengono dai tag di PCGen
 e non sono riscontrati sul libro. Il rigiudizio delle 7 violazioni di talenti
 rimaste dalla #378 resta fuori: aspetta la risposta del DM alla card.
 
+### Lotto 3-ter — l'avanzamento d'incantatore delle classi di prestigio (2026-11-12)
+
+**Contesto.** Il controllo degli incantatori (lotto 3) giudicava una lista dal
+livello scritto in testa, o da quello della classe nella riga `tipo:`. Una
+classe di prestigio non entrava nel conto: «Chierico 3 / Assassino 2» con una
+lista da chierico di 5° passava, e «Chierico 3 / Loremaster 2» senza livello
+scritto si giudicava da chierico di 3°, con violazioni false sugli slot.
+
+**Decisione.** I livelli della classe di prestigio che danno «+1 livello di
+una classe che si aveva già» stanno nel plugin, in `prestigio.toml`, voce
+`avanza` (`tipo`: arcane, divine, both, any o il nome della classe; `livelli`).
+Li scrive `estrai_prestigio.py`: dall'SRD 3.5 e dal PRD PF1e la colonna
+«Spells per Day» della tabella della classe, dai manuali 3.5 il tag
+`ADD:SPELLCASTER` di PCGen, solo nomi e numeri. 201 classi 3.5 su 493 e 6 PF1e
+su 10 hanno un avanzamento. `dmcore.prestigio.avanzamento` fa il conto;
+`verifica_scheda`, regola nuova `numero.incantesimi.livello_incantatore`:
+livello scritto in testa alla lista ≠ livelli della classe + avanzamento è una
+violazione; se il livello non è scritto, la lista si giudica da quello che le
+classi danno. È un dubbio, non una violazione, quando la classe viene da un
+manuale e il plugin non ne ha l'avanzamento, quando due libri divergono, o
+quando un'altra classe del personaggio potrebbe prendere quei livelli.
+
+**Misura** (`muta_avanzamento.py`, `misure-avanzamento.json`). Nel Bestiario
+una sola scheda ha una classe di prestigio che alza gli incantesimi, quindi il
+banco le mette lui: in 6 schede con una lista giudicata, due livelli della
+classe diventano due livelli di Loremaster (la lista resta giusta: controllo),
+di Assassino o di Cavaliere Mistico (la lista è troppo alta: errore).
+
+| | Prima (main d6c3740e) | Dopo |
+|---|---|---|
+| Liste troppo alte messe apposta, viste | 0 su 12 | 12 su 12 |
+| Liste giuste (controllo) segnate a torto | 0 su 6 | 0 su 6 |
+| `verifica_scheda Bestiario 0*/` | 72 violazioni, 321 dubbi | 72 violazioni, 321 dubbi |
+
+**Conseguenze e limiti dichiarati.** Nessuna scheda vera cambia giudizio.
+Balvar (chierico 9 / Runecaster 4, lista da chierico di 13°) torna. Il banco è
+piccolo (6 schede) e sintetico. Il controllo parte solo se la scheda ha una
+riga `tipo:` con la classe e il suo numero e una lista con gli incantesimi fra
+asterischi: `underdark-dovil-runecaster-cr7` scrive in prosa «Incantesimi da
+Diviner 5» mentre Diviner 5 / Deep Diviner 1 dà 6, e il controllo non lo vede
+(trovato a mano, non corretto: lo decide il DM). Per i manuali 3.5 l'assenza
+del tag in PCGen non prova che la classe non avanzi: per questo è un dubbio.
+Le classi di prestigio con una lista propria (Assassino, Guardia Nera) non
+hanno una tabella degli incantesimi nel plugin. Il livello d'incantatore di
+paladino e ranger scritto come «LI» (metà del livello) non si confronta.
+
 ### Lotto 4 — il numero dei talenti (2026-11-12)
 
 Il generatore sapeva quanti talenti spettano a un personaggio

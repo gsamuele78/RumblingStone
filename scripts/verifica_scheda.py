@@ -648,6 +648,20 @@ def incantatori(p: Path) -> "tuple[list[dict], list[dict]]":
             pezzo = t[TESTA_INCANTESIMI.search(t).start():]
             li = _LI.search(pezzo)
             livello = _livello_scritto(pezzo, classe) or (int(li.group(1)) if li else None)
+            # una classe di prestigio alza il livello con cui la lista si lancia (ADR-0126, lotto 3-ter)
+            pr = _prestigio_nel_tipo(righe, testa, classe, sis)
+            if pr and not (livello and _livello_scritto(pezzo, classe) is None and classe in ("paladin", "ranger")):
+                base, piu, parti, dubbio = pr
+                come = f"{classe} {base} + " + " + ".join(parti) if parti else f"{classe} {base}, nessun livello in più"
+                if dubbio:
+                    if livello != base + piu:
+                        nota(testa, f"livello d'incantatore non giudicabile ({come}): {dubbio}")
+                elif livello is None:
+                    livello = base + piu
+                elif livello != base + piu:
+                    viol.append({"file": VT_rel(p), "riga": testa + 1, "verifica": "incantatori", "fonte": fonte,
+                                 "regola": "numero.incantesimi.livello_incantatore", "atteso": base + piu, "ha": livello,
+                                 "testo": f"la lista si lancia da {classe} {livello}, le classi danno {base + piu} ({come})"})
             if livello is None:
                 for j in range(testa - 1, max(-1, testa - 40), -1):
                     if righe[j].lstrip().startswith("#") or re.match(r"\s*(?:---+|\*\*\*+)\s*$", righe[j]):
@@ -701,6 +715,36 @@ def incantatori(p: Path) -> "tuple[list[dict], list[dict]]":
                          "regola": f"numero.{x['campo']}", "atteso": x["atteso"], "ha": x["scritto"],
                          "testo": f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']}; {chi})"})
     return viol, nv
+
+
+def _prestigio_nel_tipo(righe: "list[str]", testa: int, classe: str,
+                        sistema: str) -> "tuple[int, int, list[str], str | None] | None":
+    """(livelli di `classe`, livelli in più, come, dubbio) dalla riga `tipo:` sopra
+    la lista, se nomina `classe` e almeno una classe di prestigio. None altrimenti."""
+    from dmcore import prestigio as PR
+    tipo = next((righe[j] for j in range(testa, -1, -1) if righe[j].lstrip().lower().startswith("tipo:")), None)
+    if tipo is None:
+        return None
+    base, prestigi, altre = 0, [], []
+    for pezzo in re.split(r"[,/]", tipo.split(":", 1)[1]):
+        m = re.match(r"\s*([A-Za-zÀ-ú' -]+?)\s+(\d{1,2})\b", pezzo)
+        if not m:
+            continue
+        nome, n = m.group(1).strip(), int(m.group(2))
+        en = _prestigio_en(nome, sistema)
+        if en:
+            prestigi.append((en, n))
+            continue
+        k = nome.lower()
+        lancia = "wizard" if k in VT.SPECIALISTI else next(
+            (v for rx, v in CLASSI_INCANTATRICI.items() if re.match(rx, k)), None)
+        if lancia == classe:
+            base += n
+        elif lancia:
+            altre.append(lancia)
+    if not prestigi or not base:
+        return None
+    return (base, *PR.avanzamento(classe, prestigi, altre, sistema))
 
 
 def _prestigio_en(nome: str, sistema: str) -> "str | None":
