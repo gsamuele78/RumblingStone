@@ -86,6 +86,13 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
    a 701 su 1.278, non verificabili da 82 a 76, 4 schede del Bestiario ora
    leggibili (ESITO §2-ter).
 
+9. **Prerequisiti fisici letti dalla scheda** (DM, 2026-11-12: tipi,
+   movimenti, ambienti). Volo, nuoto, scalare, scavare, taglia, tipo, attacchi
+   naturali, armatura naturale, soffio e tiri salvezza base si leggono dalla
+   scheda e si confrontano col prerequisito del talento (regola `fisico`).
+   Senza la riga nella scheda il prerequisito resta non verificabile. Non
+   verificabili da 76 a 47, nessuna violazione nuova (ESITO §2-quater).
+
 ## Conseguenze
 
 - L'LLM riceve la regola esatta e il controesempio senza imparare un motore

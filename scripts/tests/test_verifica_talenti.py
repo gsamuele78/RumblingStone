@@ -156,5 +156,47 @@ class Strumento(unittest.TestCase):
             self.assertEqual(V.main(["non/esiste.md"]), 2)
 
 
+
+class PrerequisitiFisici(unittest.TestCase):
+    """Movimento, taglia, tipo e attacchi naturali letti dalla scheda (ADR-0124 §9)."""
+
+    FATTI = {"movimenti": {"volo": 60}, "taglia": -2, "tipo": "dragon", "attacchi_naturali": 4,
+             "attacco_completo": True, "armatura_naturale": True, "soffio": True,
+             "ts_base": {"temp": 5, "rifl": 1, "vol": 1}}
+
+    def test_soddisfatti(self):
+        import verifica_talenti as VT
+        for p in ("Fly speed", "fly speed 20", "Size Huge or larger", "size Large or larger",
+                  "Three or more natural attacks", "Natural armor", "breath weapon", "dragon type",
+                  "Base Fortitude save bonus +2"):
+            self.assertTrue(VT.giudica_altro(p, self.FATTI)[0], p)
+
+    def test_violati_con_il_fatto_che_la_scheda_ha(self):
+        import verifica_talenti as VT
+        a_terra = {**self.FATTI, "movimenti": {}, "taglia": 0, "attacchi_naturali": 1}
+        self.assertEqual(VT.giudica_altro("Fly speed", a_terra), (False, "nessuna velocità di volo"))
+        self.assertEqual(VT.giudica_altro("size Large or larger", a_terra), (False, "taglia medium"))
+        self.assertFalse(VT.giudica_altro("Three or more natural attacks", a_terra)[0])
+        self.assertFalse(VT.giudica_altro("Base Reflex save bonus +2", a_terra)[0])
+
+    def test_senza_la_riga_non_si_giudica(self):
+        import verifica_talenti as VT
+        vuoti = {"movimenti": None, "taglia": None, "tipo": None, "attacchi_naturali": None,
+                 "armatura_naturale": None, "soffio": False, "ts_base": None}
+        for p in ("Fly speed", "size Large or larger", "Three or more natural attacks", "Natural armor",
+                  "breath weapon", "Base Will save bonus +4", "Member of the Ankheg Tribe"):
+            self.assertIsNone(VT.giudica_altro(p, vuoti), p)
+        # l'attacco singolo non prova che gli attacchi naturali siano pochi
+        solo_singolo = {**self.FATTI, "attacchi_naturali": 1, "attacco_completo": False}
+        self.assertIsNone(VT.giudica_altro("Three or more natural attacks", solo_singolo))
+
+    def test_dalla_scheda_vera(self):
+        import verifica_talenti as VT
+        f = VT.leggi(Path(__file__).resolve().parents[2] / "Bestiario" / "mostri" / "abishai-azzurro-mano-cr11.md")
+        self.assertEqual(f["fisici"]["movimenti"], {"volo": 60})
+        self.assertEqual(f["fisici"]["attacchi_naturali"], 4)
+        viol, nv = VT.verifica(f)
+        self.assertFalse([v for v in viol + nv if v["talento"] in ("Flyby Attack", "Multiattack")])
+
 if __name__ == "__main__":
     unittest.main()

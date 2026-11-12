@@ -117,6 +117,29 @@ commit); un nome che finisce con una classe dell'SRD («Red Wizard 7») si legge
 ancora come quella classe; le 354 classi solo PCGen hanno una fonte sola e
 nessun riscontro; la progressione degli incantatori di queste classi non c'è.
 
+## 2-quater. Prerequisiti fisici: movimento, taglia, tipo, attacchi naturali
+
+Dopo le classi, 30 delle 76 voci non verificabili erano prerequisiti che la
+regola non leggeva («Fly speed», «Three or more natural attacks», «size Large
+or larger», «Natural armor», «Base Fortitude save bonus +2», «dragon type»).
+Non mancavano dati nei plugin: mancava la lettura del fatto dalla scheda.
+`verifica_talenti.fatti_fisici` legge velocità (volo, nuoto, scalare, scavare,
+in metri o piedi), taglia, tipo, attacchi naturali, armatura naturale, soffio e
+tiri salvezza base; `giudica_altro` li confronta col prerequisito. Se la scheda
+non ha la riga da cui leggere, il prerequisito resta non verificabile.
+
+| Misura | Prima | Dopo |
+|---|---|---|
+| Voci non verificabili (Bestiario e archi 00-09) | 76 | **47** |
+| Violazioni nuove sulle schede vere | — | 0 (i 29 prerequisiti letti sono tutti soddisfatti) |
+| Fatti tolti apposta (`muta_fisici.py`) | — | volo 5/5, taglia 2/2, attacchi naturali 2/4 |
+
+I 2 attacchi naturali non visti: la scheda scrive solo l'attacco singolo, e da
+quello non si conclude che gli attacchi siano pochi. Dei 1.515 prerequisiti
+`altro` dei talenti dei manuali, questi schemi ne coprono un centinaio; i più
+numerosi restano razza (357), capacità di classe (187), divinità o regione
+(101): la razza è il prossimo che si può leggere dalla scheda.
+
 ## 3. Divario dei plugin, sezione per sezione
 
 | Sezione | Plugin `dnd35` oggi | SRD 3.5 in cache | srd.dndtools.org | Dati PCGen (WotC 3.5) | Plugin `pf1e` |

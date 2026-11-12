@@ -206,7 +206,114 @@ def leggi(p: Path) -> "dict | None":
             "car": {k: v for k, v in s.attributi.items() if isinstance(v, int)},
             "bab": s.bab, "livelli": livelli, "dv": dv, "lic": lic,
             "talenti": list({r["en"]: r for r in talenti}.values()),
-            "senza_regole": senza_regole, "ignoti": ignoti, "classi_ignote": ignote}
+            "senza_regole": senza_regole, "ignoti": ignoti, "classi_ignote": ignote,
+            "fisici": fatti_fisici(s)}
+
+
+# --- i prerequisiti «fisici»: movimento, taglia, tipo, attacchi naturali (ADR-0124 §9) ---
+
+#: taglia → il modificatore di taglia alla CA, che è come `L.taglia_di` la restituisce
+_TAGLIE = {"fine": 8, "diminutive": 4, "tiny": 2, "small": 1, "medium": 0, "large": -1,
+           "huge": -2, "gargantuan": -4, "colossal": -8}
+_MOVIMENTI = {"volo": r"volare|volo|fly", "nuoto": r"nuotare|nuoto|swim",
+              "scalare": r"scalare|climb", "scavare": r"scavare|burrow"}
+_NATURALI = (r"mors[oi]|artigli[oi]?|coda|al[ai]|schiant[oi]|corn[oai]|incornat[ae]|zoccol[oi]|tentacol[oi]|"
+             r"pungiglion[ei]|zann[ae]|sperone|speroni|bites?|claws?|tail(?: slap)?|wings?|slams?|gores?|"
+             r"hoo(?:f|ves)|tentacles?|stings?|talons?|rakes?")
+_NUMERI = {"one": 1, "two": 2, "three": 3, "four": 4}
+_TS_INGLESE = {"fortitude": "temp", "reflex": "rifl", "will": "vol"}
+
+
+def fatti_fisici(s: "L.Scheda") -> dict:
+    """Quello che la scheda scrive di movimento, taglia, tipo e attacchi naturali.
+
+    Un fatto è None quando la scheda non ha la riga da cui leggerlo: allora il
+    prerequisito resta non verificabile, non diventa una violazione."""
+    testo = s.testo
+    riga_vel = re.search(r"^(?:velocita|speed):\s*(.+)$|\*\*Speed\*\*:?\s*([^|\n]+)|\bVel\.?\s+(\d[^·\n]*)",
+                         testo, re.M | re.I)
+    vel = next((g for g in riga_vel.groups() if g), None) if riga_vel else None
+    movimenti = None
+    if vel is not None:
+        movimenti = {}
+        for nome, parole in _MOVIMENTI.items():
+            m = re.search(rf"\b(?:{parole})\s+(\d+(?:[.,]\d+)?)\s*(m|ft|feet)\b", vel, re.I)
+            if m:
+                n = float(m.group(1).replace(",", "."))
+                movimenti[nome] = round(n / 1.5 * 5) if m.group(2).lower() == "m" else int(n)
+    blocco = re.search(r"^attacchi:\n((?:\s+-.*\n?)+)", testo, re.M)
+    riga_att = blocco.group(1) if blocco else next(
+        (r for r in testo.splitlines() if re.search(r"\*\*(?:Attacco|Attack|Full Attack|Mischia|Melee)\*\*", r)), None)
+    # Gli attacchi naturali si contano dove sono di più: il blocco `attacchi:` a
+    # volte porta solo l'attacco singolo. `completo` dice se la scheda scrive
+    # l'attacco completo: solo allora un conto basso è una violazione.
+    conta = lambda r: sum(int(n or 1) for n, _ in  # noqa: E731
+                          re.findall(rf"(?:\b(\d)\s+)?\b({_NATURALI})\b\s*[+-]\d", r, re.I))
+    pieno = re.search(r"\*\*(?:Attacco completo|Full Attack)\*\*:?\s*([^\n]*(?:\n(?!\n)[^\n]*){0,2})", testo, re.I)
+    fonti_att = [x for x in (riga_att, pieno.group(1) if pieno else None) if x is not None]
+    naturali = max(map(conta, fonti_att)) if fonti_att else None
+    completo = bool(pieno) or bool(blocco and len(blocco.group(1).strip().splitlines()) > 1)
+    ca = re.search(r"^ca-dettaglio:.*$|\*\*(?:AC|CA)\*\*:?[^\n]*", testo, re.M)
+    base = None
+    if s.composizione_nota and s.gruppi:
+        base = L.ts_base(s.gruppi)[0]
+    return {"movimenti": movimenti, "taglia": L.taglia_di(testo) if s.tipo else None,
+            "tipo": T_tipo(s.tipo), "attacchi_naturali": naturali, "attacco_completo": completo,
+            "armatura_naturale": bool(re.search(r"natural", ca.group(0), re.I)) if ca else None,
+            "soffio": bool(re.search(r"\bsoffio\b|breath weapon", testo, re.I)), "ts_base": base}
+
+
+def T_tipo(tipo: str) -> "str | None":
+    return L.T.normalizza_tipo(tipo) if tipo else None
+
+
+def giudica_altro(prerequisito: str, fatti: dict) -> "tuple[bool, str] | None":
+    """(soddisfatto, che cosa ha la scheda) di un prerequisito fisico, o None se non si sa leggere."""
+    t = prerequisito.lower().strip()
+    mov = fatti["movimenti"]
+    for nome, inglese in (("volo", "fly"), ("nuoto", "swim"), ("scalare", "climb"), ("scavare", "burrow")):
+        m = re.fullmatch(rf"{inglese} speed(?: (?:of )?(\d+)(?: ft\.?| feet)?)?(?: or (?:more|higher|better))?", t)
+        if m:
+            if mov is None:
+                return None
+            serve = int(m.group(1) or 1)
+            return mov.get(nome, 0) >= serve, (f"{nome} {mov[nome]} ft" if nome in mov else f"nessuna velocità di {nome}")
+    m = re.fullmatch(r"(?:size )?(\w+) or (larger|smaller)(?: size)?|size (\w+) or (larger|smaller)", t)
+    if m:
+        nome, verso = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
+        if nome not in _TAGLIE or fatti["taglia"] is None:
+            return None
+        ha = fatti["taglia"]
+        ok = ha <= _TAGLIE[nome] if verso == "larger" else ha >= _TAGLIE[nome]
+        return ok, "taglia " + next(k for k, v in _TAGLIE.items() if v == ha)
+    m = re.fullmatch(r"(\w+) or more natural (?:attacks|weapons)|(two) claw attacks|natural (?:weapon|attack)s?", t)
+    if m:
+        if fatti["attacchi_naturali"] is None:
+            return None
+        if m.group(2):
+            return None   # servono proprio due artigli: il conto degli attacchi non basta
+        serve = _NUMERI.get(m.group(1) or "one", None) or (int(m.group(1)) if (m.group(1) or "").isdigit() else None)
+        if serve is None:
+            return None
+        if fatti["attacchi_naturali"] < serve and not fatti.get("attacco_completo"):
+            return None
+        return fatti["attacchi_naturali"] >= serve, f"{fatti['attacchi_naturali']} attacchi naturali"
+    if t == "natural armor":
+        return None if fatti["armatura_naturale"] is None else (fatti["armatura_naturale"], "armatura naturale"
+                                                                if fatti["armatura_naturale"] else "nessuna armatura naturale")
+    if t in ("breath weapon", "breath weapon attack"):
+        return (True, "soffio") if fatti["soffio"] else None   # l'assenza della parola non prova niente
+    m = re.fullmatch(r"base (fortitude|reflex|will) save(?: bonus)? \+(\d+)", t)
+    if m:
+        if fatti["ts_base"] is None:
+            return None
+        ha = fatti["ts_base"][_TS_INGLESE[m.group(1)]]
+        return ha >= int(m.group(2)), f"tiro salvezza base +{ha}"
+    m = re.fullmatch(r"(\w+(?: \w+)?) type|(aberration|animal|construct|dragon|elemental|fey|giant|humanoid|"
+                     r"magical beast|monstrous humanoid|ooze|outsider|plant|undead|vermin)", t)
+    if m and fatti["tipo"]:
+        return fatti["tipo"] == (m.group(1) or m.group(2)), f"tipo {fatti['tipo']}"
+    return None
 
 
 def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
@@ -241,6 +348,14 @@ def verifica(f: dict) -> "tuple[list[dict], list[dict]]":
             if senza_classe:
                 voce["nota"] = ("classi che la lettura non conosce: " + ", ".join(ignote) if ignote else
                                 "la scheda non dichiara le classi nel tipo né nel titolo")
+            if v["regola"] == "altro" and f.get("fisici"):
+                esito = giudica_altro(str(v["atteso"]), f["fisici"])
+                if esito is not None:
+                    if esito[0]:
+                        continue
+                    voce.update(regola="fisico", ha=esito[1], testo=f"{v['atteso']} (ha: {esito[1]})")
+                    viol.append(voce)
+                    continue
             (nv if v["regola"] in NON_VERIFICABILI or senza_classe else viol).append(voce)
     return viol, nv
 
