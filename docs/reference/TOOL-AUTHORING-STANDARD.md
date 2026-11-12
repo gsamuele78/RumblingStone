@@ -1,5 +1,7 @@
 # Standard di authoring dei tool — RumblingStone
 
+> Forma: **riferimento** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 > **Regola vincolante** (ADR-0012): ogni nuovo tool eseguibile del repo
 > (`scripts/`, `converters/`) rispetta questo standard, **verificato in CI**.
 > Implementazione di riferimento: [`scripts/tools_manifest.py`](../../scripts/tools_manifest.py).

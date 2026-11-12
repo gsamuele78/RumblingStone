@@ -1,5 +1,7 @@
 # Guida completa — preparare una macchina nuova (o un secondo DM)
 
+> Forma: **tutorial** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 > **Cosa copre**: dal repo appena clonato a «funziona tutto», passo per
 > passo. Cosa serve davvero e cosa è opzionale, come si attivano le skill
 > per gli agenti, come si prepara il flusso di sessione con il branch di
@@ -149,7 +151,7 @@ brew install --cask chromium   # macOS
 ```
 
 Dettagli e alternative (container, stampa dal browser):
-[GUIDA-BOOKLET-E-PDF §2 e §7](GUIDA-BOOKLET-E-PDF.md).
+[GUIDA-BOOKLET-E-PDF §2 e §7](../how-to/GUIDA-BOOKLET-E-PDF.md).
 
 ### Immagini grandi nei booklet → Pillow
 
@@ -270,7 +272,7 @@ Se i tre comandi girano, la macchina è pronta.
 | `python3: command not found` o versione < 3.13 | installa Python 3.13+: su Debian 13 `sudo apt install python3`; su Ubuntu 24.04 (che ha 3.12) il PPA deadsnakes, `sudo apt install python3.13` |
 | `doctor` segnala **✗ monster_catalog** o «catalogo vecchio» | `python3 scripts/build_monster_catalog.py` |
 | Un agente non «vede» le skill aggiornate | `./scripts/sync-skills.sh` (e, se non usi Claude Code, `./scripts/install-git-hooks.sh` una volta sola) |
-| `validate_maps` rosso appena clonato | qualcuno ha committato un SVG disallineato: `python3 scripts/dm.py maps render <master>` e ricommitta ([GUIDA-MAPPE §6](GUIDA-MAPPE.md)) |
+| `validate_maps` rosso appena clonato | qualcuno ha committato un SVG disallineato: `python3 scripts/dm.py maps render <master>` e ricommitta ([GUIDA-MAPPE §6](../how-to/GUIDA-MAPPE.md)) |
 | `ERRORE: nessun Chromium/Chrome trovato` | vedi §5, o usa il container, o stampa dal browser |
 | `git push` rifiutato sul branch di gruppo | il flusso ADR-0007 protegge `main`: lavora sul branch del gruppo (`dm.py session branch`) |
 | I PDF compaiono in `git status` | non dovrebbero: `*.pdf` è gitignored — controlla di non aver modificato `.gitignore` |
@@ -283,8 +285,8 @@ Se i tre comandi girano, la macchina è pronta.
 |---|---|
 | Condurre la tua prima sessione | [`campaign/DM-QUICKSTART-NUOVI-DM.md`](../../campaign/DM-QUICKSTART-NUOVI-DM.md) |
 | Il ciclo completo prima/durante/dopo | [`campaign/DM-CAMPAIGN-PLAYBOOK.md`](../../campaign/DM-CAMPAIGN-PLAYBOOK.md) |
-| Fare booklet e PDF | [`GUIDA-BOOKLET-E-PDF.md`](GUIDA-BOOKLET-E-PDF.md) |
-| Fare mappe | [`GUIDA-MAPPE.md`](GUIDA-MAPPE.md) |
-| Aggiungere mostri/PNG/villain | [`GUIDA-BESTIARIO.md`](GUIDA-BESTIARIO.md) |
+| Fare booklet e PDF | [`GUIDA-BOOKLET-E-PDF.md`](../how-to/GUIDA-BOOKLET-E-PDF.md) |
+| Fare mappe | [`GUIDA-MAPPE.md`](../how-to/GUIDA-MAPPE.md) |
+| Aggiungere mostri/PNG/villain | [`GUIDA-BESTIARIO.md`](../how-to/GUIDA-BESTIARIO.md) |
 | Capire regole e convenzioni del repo | [`AGENTS.md`](../../AGENTS.md) |
 | Sapere cosa fa ogni script | [`scripts/README-automation.md`](../../scripts/README-automation.md) |

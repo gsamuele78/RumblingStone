@@ -3,4 +3,4 @@ name: trappola-c01-l-incantesimo-lama-di-brina
 expected_outcome: |
   Trappola: l'incantesimo Lama di Brina di Tempus non esiste nel repo né nell'SRD. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna C01.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna C01.

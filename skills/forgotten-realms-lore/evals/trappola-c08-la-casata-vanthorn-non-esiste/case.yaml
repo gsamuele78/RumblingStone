@@ -3,4 +3,4 @@ name: trappola-c08-la-casata-vanthorn-non-esiste
 expected_outcome: |
   Trappola: la casata Vanthorn non esiste nel repo né nel canone FR. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna C08.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna C08.

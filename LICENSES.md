@@ -65,7 +65,7 @@ Le fonti OGC sono **due**, e per un po' questo file ne dichiarava una sola:
 > Averlo scritto non è un adempimento finché il repo resta a uso privato: lo
 > diventa nel momento in cui qualcosa esce (Sezione 10: una copia della licenza va
 > con ogni copia dell'OGC), ed è **parte del cancello d'uscita** di
-> [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) §7.
+> [`docs/how-to/GUIDA-CONDIVISIONE-IP.md`](docs/how-to/GUIDA-CONDIVISIONE-IP.md) §7.
 > Il file c'è perché quel cancello si possa **passare**, invece che solo citare.
 
 ### 2. I marchi altrui non si licenziano perché si nominano

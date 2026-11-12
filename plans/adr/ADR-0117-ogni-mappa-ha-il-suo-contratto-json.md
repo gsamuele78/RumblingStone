@@ -1,6 +1,6 @@
 # ADR-0117 — Ogni mappa di campagna ha il suo contratto JSON
 
-**Stato**: proposta (2026-11-09)
+**Stato**: accettata (2026-11-10, card del DM; proposta il 2026-11-09)
 **Data**: 2026-11-09
 **Decisione-fonte**: il DM (Jfs), 2026-11-09: *«per le mappe fai sempre il json chiudi il buco e controlla e fixa: su una mappa di Hammerfist (Lotto 2, Assedio), perché le dimensioni dichiarate non tornano con quelle disegnate»*.
 **Rapporti**: completa la migrazione di [PIANO-IMPORT-ULTRACLEAR](../PIANO-IMPORT-ULTRACLEAR-ASCII-TO-JSON.md) e porta in CI il `--strict` di [PIANO-RENDER-MAPPE-FEDELTA](../PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md). Il contratto è quello di `scripts/schemas/tactical_map.schema.json` (Modalità 3 di GUIDA-MAPPE). Chiude due voci di RECUPERO D5.

@@ -5,8 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12
+sensi: scurovisione 18 m
 ca: 16
-ca-dettaglio: (+3 cuoio borchiato, +2 scudo, +1 Des)
+ca-dettaglio: (+4 cuoio borchiato +1, +2 scudo)
 pf: 11
 pf-dado: 2d8+2
 ts: Temp +4, Rifl +0, Vol +0
@@ -23,3 +24,7 @@ fonte: letto dalla prosa (CA, pf, attacchi e talenti li dichiara la scheda); der
 ```
 
 Rider HD 2d8+2 (11 HP) + Hyenodon HD 5d8+12 (34 HP) mount. Rider AC 16 (studded+shield). Mount AC 14. Charge lance +5 (1d8+3 x2 on charge). Mount bite +9 (1d8+7) + trip. Feats: Mounted Combat, Ride-By Attack, Spirited Charge. Notes: 60 cavalry Abbattitori.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): con Des 10 non c'è bonus di Destrezza: la CA 16 si tiene dichiarando il cuoio borchiato +1. La CA non cambia.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, gnoll: scurovisione 18 m (SRD). La scheda non la scriveva.

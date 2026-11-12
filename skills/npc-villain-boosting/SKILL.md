@@ -18,7 +18,7 @@ description: >
 # Potenziare PNG, cattivi e mostri: quando, se, come
 
 > 📘 **Guida passo-passo per umani** (dove va il file, formato statblock,
-> catalogo, gate CI): [`docs/guides/GUIDA-BESTIARIO.md`](../../docs/guides/GUIDA-BESTIARIO.md).
+> catalogo, gate CI): [`docs/how-to/GUIDA-BESTIARIO.md`](../../docs/how-to/GUIDA-BESTIARIO.md).
 
 Il gruppo (4 PG, livello 13, carico di artefatti:
 `rumblingstone-campaign/references/campaign-party.md`) supera quasi tutto il
@@ -65,7 +65,7 @@ In quest'ordine, per una richiesta di potenziamento:
 
 ## Vincoli sui fatti
 
-Grammatica delle marche in `docs/guides/GUIDA-MARCATURE.md` (ADR-0109).
+Grammatica delle marche in `docs/reference/GUIDA-MARCATURE.md` (ADR-0109).
 
 1. Se un fatto non è nelle fonti, puoi dire che non lo sai: è meglio di
    un'invenzione. Lo scrivi solo se serve, marcato INFERRED con domanda e
@@ -99,7 +99,7 @@ lo dice in testa.
   riga `Boost log:` (data, metodo, GS prima → dopo). Niente retcon di nascosto.
 - **Niente invenzioni:** le statistiche derivano dalle regole SRD/PF1e citate
   nei file dei metodi; i valori incerti sono INFERRED con domanda e base
-  (`docs/guides/GUIDA-MARCATURE.md`).
+  (`docs/reference/GUIDA-MARCATURE.md`).
 
 ## Procedura
 

@@ -33,7 +33,7 @@
 >    Nascondersi, Muoversi Silenziosamente, Conoscenze (nobiltà e regalità).
 > 7. Un fatto che serve e che nessuna fonte dà si marca
 >    `[INFERRED — <domanda al DM>; base: <fonte o dato>]`
->    (`docs/guides/GUIDA-MARCATURE.md`).
+>    (`docs/reference/GUIDA-MARCATURE.md`).
 
 ---
 

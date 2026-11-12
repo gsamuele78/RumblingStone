@@ -1,5 +1,7 @@
 # Guida alle schede dei prompt
 
+> Forma: **riferimento** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 Ogni prompt del repo ha una scheda: una skill, un brief a un agente, una prova.
 La scheda fissa *dove* stanno le cose, non quante: un prompt corto che ha tutte
 le sezioni batte uno lungo che ne salta una. Decisione: [ADR-0114](../../plans/adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md).

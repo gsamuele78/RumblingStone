@@ -50,6 +50,14 @@ regenerate via `dm.py recap --hype` / `dm.py handout`, never edit by hand.
 > Non si scrive a mano: si corregge la fonte che indica, poi si rigenera. E
 > niente di utile resta nello scratchpad di una sessione: prima di chiudere
 > entra nel repo.
+>
+> **La storia dietro una scelta** (regressione, soluzione già provata) sta in
+> [`plans/MEMORIA-STORICA.md`](plans/MEMORIA-STORICA.md): si cerca con
+> `python3 scripts/memoria_storica.py --pr N | --adr N | --tema T | parole`.
+> Ogni PR che aggiunge una riga a `plans/CHANGELOG.md` aggiunge anche una
+> voce lì (decisioni, misure, questioni aperte: la CI la esige), e chi
+> toglie una riga dalla memoria delle sessioni la archivia lì prima
+> ([ADR-0127](plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md)).
 
 > **DMs: start with `campaign/DM-CAMPAIGN-PLAYBOOK.md`**: session workflow,
 > worked examples, the `§0` dashboard and the new-group reset
@@ -202,12 +210,12 @@ queste skill da solo: è questa sezione a instradarli.
 4. Cita le fonti: sezione SRD, FRCS p.X, oppure `[Private — Red Hand of Doom, p.X]`.
 5. **Non inventare mai** blocchi statistiche, effetti di incantesimi, statistiche
    di PNG o poteri di artefatti. Se manca la fonte, marca INFERRED con
-   domanda e base: la grammatica sta in `docs/guides/GUIDA-MARCATURE.md`
+   domanda e base: la grammatica sta in `docs/reference/GUIDA-MARCATURE.md`
    (ADR-0109).
 6. Per una scelta di metodo, in ogni parte del progetto, parti dallo
    **standard di fatto della comunità**: una soluzione nostra entra solo se
    la misura lo boccia, con il motivo nell'ADR. Le schede di skill, brief e
-   prove sono in `docs/guides/GUIDA-SCHEDE-PROMPT.md` (ADR-0114).
+   prove sono in `docs/reference/GUIDA-SCHEDE-PROMPT.md` (ADR-0114).
 
 ---
 

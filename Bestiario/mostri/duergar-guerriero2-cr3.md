@@ -5,6 +5,7 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid (dwarf, duergar), Fighter 2, LE
+sensi: scurovisione 36 m
 ca: 19
 ca-dettaglio: touch 10, flat-footed 19
 pf: 20
@@ -27,3 +28,5 @@ Medium humanoid (dwarf, duergar), Fighter 2, LE. **hp 20**; **AC 19**, touch 10,
 Notes: fanteria pesante duergar del ponte.
 
 > `[CANONE — regola, ADR-0118]` L'export PCGen dava spada bastarda +3: è il conto con il −4 di chi la impugna a una mano senza la competenza (BAB +2, For +3, +1 perfetta, +1 del talento di focalizzazione, −4), e contava quattro talenti dove un duergar Guerriero 2 ne ha tre. Versione più forte e legale: **Competenza nelle Armi Esotiche (spada bastarda)** al posto di Schivare, e la spada va a **+6** (BAB +2, For +3, +1 perfetta) a una mano con lo scudo. La CA resta 19.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.

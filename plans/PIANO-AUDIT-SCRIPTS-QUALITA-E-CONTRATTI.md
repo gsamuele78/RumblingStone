@@ -31,7 +31,7 @@
       `test_determinism.py`.
 - [x] **F6 — De-collisione** `Script/`→`converters/` ([ADR-0011](adr/ADR-0011-de-collisione-scripts-converters.md)).
 - [x] **F7 — Standard ingegneria** ([ADR-0012](adr/ADR-0012-standard-ingegneria-tool-verificabile.md))
-      + [`docs/guides/TOOL-AUTHORING-STANDARD.md`](../docs/guides/TOOL-AUTHORING-STANDARD.md),
+      + [`docs/reference/TOOL-AUTHORING-STANDARD.md`](../docs/reference/TOOL-AUTHORING-STANDARD.md),
       applicato dal gate CI.
 
 ## Gate / follow-up (al tavolo / opzionali)

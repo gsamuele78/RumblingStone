@@ -18,7 +18,7 @@ description: >
 # RumblingStone — Direzione artistica
 
 Il repo sa **scrivere** i prompt ([ADR-0015](../../plans/adr/ADR-0015-standard-prompt-immagine.md))
-e **eseguirli** ([`GUIDA-IMMAGINI.md`](../../docs/guides/GUIDA-IMMAGINI.md)).
+e **eseguirli** ([`GUIDA-IMMAGINI.md`](../../docs/how-to/GUIDA-IMMAGINI.md)).
 Questa skill copre il mestiere in mezzo: quello che fa di dieci immagini **un libro**.
 
 > **La riga da ricordare**: un art director non decide come sarà bella
@@ -40,7 +40,7 @@ Questa skill copre il mestiere in mezzo: quello che fa di dieci immagini **un li
 
 1. [ADR-0015](../../plans/adr/ADR-0015-standard-prompt-immagine.md): scheda-prompt, bibbia visiva, confini IP.
 2. [ADR-0019](../../plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md): quale modello si usa, cosa si registra.
-3. [`GUIDA-IMMAGINI.md`](../../docs/guides/GUIDA-IMMAGINI.md): generatori, salvataggio, troubleshooting.
+3. [`GUIDA-IMMAGINI.md`](../../docs/how-to/GUIDA-IMMAGINI.md): generatori, salvataggio, troubleshooting.
 4. [`stile-illustrazione-handout.md`](../rumblingstone-mapmaking/references/stile-illustrazione-handout.md)
    — il vocabolario di stile e l'ancora storica.
 5. Schede-personaggio: master d'arco, statblocco del Bestiario, ritratti canone (§7-bis.1).
