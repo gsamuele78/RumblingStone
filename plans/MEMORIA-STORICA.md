@@ -839,3 +839,14 @@ repo scritto con altre parole.
 - **Testo:** PR #379 unita il 2026-11-12 (merge c2cc7756), dopo la #380. Verificatore deterministico della storia con àncora su `state.yaml`; scelta del DM «solo le regole precise, in testing»: `coerenza_campagna.py fatti --state` con S1 arrivo dell'orda, S5 portatore, S6 modifiche permanenti, S7 echi armati senza scena; «chi sa cosa» fra i non verificabili; S2-S4 restano in laboratorio. Misura: +4 incoerenze su 35 del corpus storico, mutanti S1/S5/S6 9/9, parafrasi 0/9 (1/18 nel prototipo), 0 violazioni su main. Il server MCP ora passa le opzioni di un sottocomando. Segue la PR del grafo degli eventi (Prolog/clingo equivalenti a Python; RAG col modello locale 3B: 0 rilievi veri su 23); prova sulla GPU locale ancora da fare. Aperti al DM: i 5 file di ARC-09 tarati per l'11°-12°.
 - **Trovato nel repo:** `#379` → `plans/CHANGELOG.md` · `ADR-0125` → `plans/adr/` (file ADR-0125)
 - **Solo qui:** lo SHA del merge c2cc7756; il seguito sul grafo degli eventi e l'esito del RAG col modello locale
+
+### MS-0071 · 2026-11-12 · ADR-0126 lotto 1-bis: classe armatura del 3.5
+
+- **Data:** 2026-11-12
+- **PR:** #382
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** voce scritta dopo il merge, per la riga del 2026-11-12 «ADR-0126, lotto 1-bis» in `plans/CHANGELOG.md` (la PR è entrata prima dell'addendum)
+- **Testo:** PR #382 unita il 2026-11-12 (merge 66ce69b6, base c2cc7756). `dmcore.classe_armatura` ricostruisce la CA del 3.5 dalle voci (armature e scudi dalla tabella, bonus per tipo, contatto, sprovvista); sensi della razza e CD delle capacità dentro `verifica_scheda`; banco `muta_ca.py`; 18 schede corrette per la CA e 10 per la scurovisione (27 file del Bestiario toccati, impronta delle creature rigenerata); `_dv` somma i dadi vita di più classi. Misura: errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. Limiti: 28 schede su 145 senza voci di CA restano non verificabili; scurovisione vista solo per le razze in tabella (10/25); gli oggetti col prezzo, annunciati per il 1-bis, passano al lotto 8.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il numero #382 e lo SHA del merge 66ce69b6 accanto alla riga del changelog; lo spostamento degli oggetti col prezzo dal lotto 1-bis al lotto 8 rispetto a quanto annunciato in memoria

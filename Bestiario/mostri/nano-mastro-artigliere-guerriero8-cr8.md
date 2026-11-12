@@ -5,6 +5,7 @@
 ```statblocco
 gs: 8
 tipo: Umanoide Medio (nano), Guerriero 8, LB
+sensi: scurovisione 18 m
 ca: 17
 ca-dettaglio: contatto 13, colto alla sprovvista 14 (+4 giaco di maglia, +3 Des)
 pf: 68
@@ -27,3 +28,5 @@ Notes: uno per ognuna delle sei baliste pesanti di Hammerfist; gli Ingegneri da 
 > `[CANONE — regola, ADR-0118]` **Il conto della balista.** SRD 3.5, *Siege Engines*: la balista è una balestra pesante Enorme, e una creatura Media che la punta ha −4 al tiro per colpire. BAB +8, Des +3, i due talenti di focalizzazione sulla balista +2, balista perfetta +1, −4 = **+10**. Danno 3d8, +2 con il talento di specializzazione. Caratteristiche dalla serie d'élite (15, 14, 13, 12, 10, 8) con i tratti dei nani e i due aumenti di 4° e 8° livello in Destrezza.
 >
 > ⚠ L'SRD non dice quale competenza chiede una macchina d'assedio. Qui i talenti del Guerriero la prendono come un'arma qualunque.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, nano: scurovisione 18 m (SRD). La scheda non la scriveva.

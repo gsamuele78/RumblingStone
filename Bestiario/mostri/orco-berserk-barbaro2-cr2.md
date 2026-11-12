@@ -5,6 +5,7 @@
 ```statblocco
 gs: 2
 tipo: Medium humanoid (orc), Barbarian 2 (orco di montagna), 2 HD
+sensi: scurovisione 18 m
 ca: 13
 ca-dettaglio: touch 9, flat-footed 13
 pf: 27
@@ -26,3 +27,5 @@ Medium humanoid (orc), Barbarian 2 (orco di montagna), 2 HD. **hp 27** (2d12+8);
 Notes: ondate d'assalto orchesche al fianco della Mano Rossa.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): il talento era scritto «Carica Devastante» (*Spirited Charge*, che chiede Combattere in Sella); la fonte PCGen dice *Powerful Charge* (Eberron), ora «Carica Possente».
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, orco: scurovisione 18 m (SRD). La scheda non la scriveva.

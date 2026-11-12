@@ -5,6 +5,7 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (dwarf, duergar), Cleric 3 (Abbathor; domini Inganno/Male), LE
+sensi: scurovisione 36 m
 ca: 20
 ca-dettaglio: touch 10, flat-footed 20 (piastre complete)
 pf: 24
@@ -25,3 +26,5 @@ voci:
 Medium humanoid (dwarf, duergar), Cleric 3 (Abbathor; domini Inganno/Male), LE. **hp 24**; **AC 20**, touch 10, flat-footed 20 (piastre complete). Init +3; Vel 6 m. TS Temp +6, Rifl +0, Vol +4. BAB +2; Lotta +4.
 **Mischia** flagello perfetto +6 (1d8+2). Incantesimi da Cleric 3 (CD 11+liv; spontanee inflict): tipici *bane, cause fear, hold person, silence, comprehend languages*. SLA duergar. Scurovisione 36 m, immune paralisi/veleno, +2 vs incantesimi. For 15, Cos 16, Sag 13. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Scacciare Migliorato, Arma Focalizzata (flagello).
 Notes: sacerdote minore del culto di Abbathor al ponte.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.

@@ -934,7 +934,12 @@ def _recinti_del_master(testo: str):
 
 
 def _dv(sb) -> "int | None":
-    m = re.match(r"\s*(\d+)d\d+", sb.pf_dado or "") or re.match(r"\s*(\d+)\s*DV", sb.pf_dado or "")
+    # tutti i gruppi di dadi: «12d8+4d10+80» sono 16 DV, non 12 (lotto 1-bis di ADR-0126:
+    # la CD del soffio di Azarr Kul risultava 21 invece di 23)
+    dadi = re.findall(r"(\d+)d\d+", (sb.pf_dado or "").split("(")[0])
+    if dadi:
+        return sum(int(n) for n in dadi)
+    m = re.match(r"\s*(\d+)\s*DV", sb.pf_dado or "")
     return int(m.group(1)) if m else None
 
 
