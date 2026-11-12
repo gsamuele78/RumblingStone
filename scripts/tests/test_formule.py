@@ -36,6 +36,11 @@ PRIMA = {
     "punteggio_minimo": (lambda modificatore: max(1, 10 + 2 * modificatore),
                          {"modificatore": range(-10, 21)}),
     "livello_incantatore_ridotto": (lambda livello: max(0, livello - 3), {"livello": range(0, 41)}),
+    # «Table: Ability Modifiers and Bonus Spells»: nessuno sotto il livello, poi uno ogni quattro punti
+    "incantesimi_bonus": (lambda livello, modificatore: 0 if livello < 1 or modificatore < livello
+                          else 1 + (modificatore - livello) // 4,
+                          {"livello": range(0, 10), "modificatore": range(-5, 21)}),
+    "punteggio_per_lanciare": (lambda livello: 10 + livello, {"livello": range(0, 10)}),
 }
 
 #: Le 50 ostili del banco I1 (`i1_formule/banco_formule.py`).

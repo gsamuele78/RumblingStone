@@ -241,6 +241,88 @@ Limiti, detti:
 - i talenti di una scheda con più recinti si cercano dal recinto al successivo:
   una nota di un'altra creatura in quel tratto può ammettere un numero in più.
 
+### Lotto 3 — incantatori: slot, conosciuti, livello e CD (2026-11-12)
+
+`verifica_scheda` controllava che un incantesimo stesse nella lista della
+classe, non quanti se ne possono lanciare. Ora la capacità
+`creature.incantatori` porta le tabelle delle classi che lanciano (bardo,
+chierico, druido, paladino, ranger, stregone, mago, adepto) e `dmcore.magia`
+ricostruisce, per ogni lista di cui si leggono classe, livello e
+caratteristica:
+
+- **incantesimi al giorno**: la cella della tabella al livello di classe, più
+  gli incantesimi bonus della caratteristica (la tabella dei bonus è una
+  formula, riscontrata riga per riga dall'estrattore), più lo slot di dominio
+  del chierico e quello di scuola del mago specialista. Si giudicano la riga
+  «N/N+1/… al giorno» dell'intestazione, la parentesi «(5+1)» di una riga e il
+  numero di incantesimi preparati: più degli slot è uno scarto, meno no (una
+  scheda può scrivere solo gli incantesimi chiave);
+- **incantesimi conosciuti** di bardo e stregone, fissi;
+- **livello**: una riga a un livello che la classe non lancia ancora, o che la
+  caratteristica non regge (serve 10 + livello);
+- **CD**: 10 + livello + modificatore, +1 o +2 se la scheda dichiara
+  Incantesimi Focalizzati.
+
+I dati sono due file scritti da `estrai_incantatori.py`, solo numeri:
+`sistemi/dnd35/dati/incantatori.toml` dall'SRD 3.5 e
+`sistemi/pf1e/dati/incantatori.toml` dal PRD (PSRD-Data, book-cr). Il PF1e non
+eredita: bardo e stregone non hanno slot di livello 0 (trucchetti a volontà),
+il paladino lancia col Carisma, lo stregone ha i conosciuti di stirpe.
+
+**Forma ibrida dichiarata.** Per il bardo il DM ha scelto la tabella del PF1e
+(card del 2026-11-09, `[griglie.bardo]` di `creature.toml`). Una lista di bardo
+3.5 che torna con la tabella PF1e non è una violazione: esce fra i non
+verificabili con la regola `numero.incantesimi.variante`, perché il lotto 11
+la scriva nel registro delle regole custom (D-B-ter). Una lista che non torna
+con nessuna delle due tabelle è una violazione.
+
+| | Prima (main 942899b5) | Lotto 3 |
+|---|---|---|
+| Errori messi apposta negli incantesimi, visti da `verifica_scheda` | 0 su 616 | 376 su 616 (61%) |
+| di cui in liste che si leggono (classe, livello, caratteristica) | 0 su 449 | 376 su 449 (84%) |
+| per campo: CD +1, CD −1 | 0 | 84/126, 80/126 |
+| per campo: slot +1, slot −1, livello | 0 | 58/85, 48/85, 20/29 |
+| per campo: un incantesimo in più | 0 | 86/165 |
+| Scarti veri trovati (Bestiario e moduli) | non misurati | 40 righe in 9 file |
+| `verifica_scheda Bestiario 0*/` | 14 violazioni in 9 schede | 54 in 17 |
+
+Banco: `muta_magia.py`, misure in `misure-magia.json`.
+
+Cosa ha trovato, e **non è corretto**: togliere un incantesimo preparato o
+cambiare gli slot di un personaggio è una scelta del DM, e i moduli toccano i
+booklet. Quattro schede del Bestiario stanno in un elenco «in attesa» esplicito
+nel test del cancello:
+
+- `ur-vrax-voce-del-drago-cr10` (chierico 9, Sag 23): ogni livello dal 1° al 5°
+  ha uno slot in più della tabella (7+1 contro 6+1 al 1°);
+- `morlin-coalhewer-cr12` (chierico 12, Sag 19): 3° e 4° livello, uno in più;
+- `abbathor-cleric11-cr11` (chierico 11, Sag 18): 2° livello, 6+D contro 5+D;
+- `lomyn-redtongue-bardo8-cr8`: slot da bardo 3.5 e conosciuti di 1° da bardo
+  PF1e (5 contro 4), cioè nessuna delle due tabelle per intero;
+- nei moduli: ARC-08 guida del DM (chierico 8, chierico 12, ranger 4 con
+  incantesimi di 2°, druido 14) e schede (drago nero «come stregone 7»,
+  6/8/8/6 contro 6/7/7/5), ARC-05 stanza runica, l'errata dell'arco
+  post-Hammerfist (CD più alte di uno), `villans.md` della Corona (CD da
+  Carisma 20 con Carisma 24 scritto).
+
+Limiti, detti:
+
+- 167 errori messi apposta su 616 cadono in liste che **non si leggono**: manca
+  la caratteristica o il livello nel blocco (schede a prosa dei moduli), o la
+  classe non ha tabella nel plugin (anima prescelta, accordo sublime: manuali,
+  lotto 9). Stanno fra i non verificabili, una riga per lista;
+- 73 errori in liste lette non si vedono: una CD dentro il margine degli
+  Incantesimi Focalizzati (la scuola dell'incantesimo non si guarda ancora), un
+  incantesimo in più in una riga che non riempiva gli slot, uno slot in meno
+  che porta al numero giusto una riga già sbagliata;
+- la verifica dei conosciuti guarda solo l'eccesso;
+- oggetti che danno slot (perla del potere, anello della stregoneria) non si
+  leggono: una scheda che li conta negli slot esce come violazione, e va
+  dichiarata come per i bonus del lotto 1;
+- il lotto 3 del piano aveva anche i requisiti delle classi di prestigio e il
+  rigiudizio delle 7 violazioni vecchie: vanno in un **lotto 3-bis**, come è
+  stato per la CA nel lotto 1.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore

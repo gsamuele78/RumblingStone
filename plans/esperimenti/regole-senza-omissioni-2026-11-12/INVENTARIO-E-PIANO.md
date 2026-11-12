@@ -320,6 +320,12 @@ far dichiarare.
   promozione di S1, S5-S7 tocca il manifest: va in fila dopo i lotti.
 - Thread #370 (standard del volume) e #371 (documentazione): avvisati dal
   coordinatore che 28 schede del Bestiario verranno corrette.
+- Dubbi di regola dal giro di lettura della #370 (serata, `ARC07-DEF-4`,
+  2026-11-12), da riscontrare quando il lotto li copre; il testo esatto lo ha
+  il thread della #370 e le correzioni passano da Jfs perché toccano il master:
+  Concentrazione CD 21 nel duello (lotto 6, abilità), la CD di corrompere
+  l'acqua (lotto 7, qualità speciali), il «fiancheggiamento spalla a spalla»
+  della pattuglia (regola di combattimento, non un numero di scheda: lotto 12).
 - Scadenze che toccano gli stessi conti: promozione dei 14 conti PF1e in prova
   (ADR-0119, 23/11) e xdist in testing fino al 22/11.
 

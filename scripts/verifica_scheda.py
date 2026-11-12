@@ -18,6 +18,9 @@ Scopo
     incantesimi  ogni incantesimo scritto per livello è nella lista della classe
              (o in un dominio) e non sotto il suo livello (capacità
              `creature.liste_incantesimi`; 3.5 dall'SRD, PF1e dal PRD)
+    incantatori  incantesimi al giorno (tabella della classe, incantesimi
+             bonus, slot di dominio o di scuola), conosciuti, livello massimo
+             lanciabile e CD (capacità `creature.incantatori`; ADR-0126, lotto 3)
 
   Le regole sono quelle del plugin del sistema della scheda (`sistemi/<id>`).
   Un conto che il plugin non sa fare non compare: `non_verificabili` dice che
@@ -484,6 +487,166 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+_LI = re.compile(r"(?:\bLI|\bCL|incantatore di|livello (?:dell['’]\s*)?incantatore)\s*(\d{1,2})", re.I)
+_SPECIALISTA = re.compile(r"specialist|scuol[ae] proibit|prohibited school|\b(?:abiurator|ammaliator|divinator|evocator|"
+                          r"illusionist|invocator|necromant|trasmutator)", re.I)
+_CAR = {"Sag": r"(?:Sag|Wis)", "Int": r"Int", "Car": r"(?:Car|Cha)"}
+
+
+def _testa_della_lista(righe: "list[str]", i: int) -> "int | None":
+    """L'intestazione degli incantesimi sopra la riga i (come `_classe_che_lancia`)."""
+    altro = 0
+    for j in range(i, max(-1, i - 20), -1):
+        r = righe[j]
+        if j == i or RIGA_LIVELLO.match(r):
+            continue                 # una riga della lista non è l'intestazione, anche se nomina «incantesimi»
+        if TESTA_INCANTESIMI.search(r):
+            return j
+        if r.strip():
+            altro += 1
+            if altro > FRA_TESTA_E_LISTA or r.lstrip().startswith("#"):
+                return None
+    return None
+
+
+def _livello_scritto(riga: str, classe: str) -> "int | None":
+    """Il livello di `classe` scritto nella riga. «conosciuti e al giorno da
+    stregone 9» vince su «Stregone 6»: è la scheda che dice con quale riga
+    della tabella lancia (un mostro che somma i livelli innati)."""
+    nomi = [k for k, v in CLASSI_INCANTATRICI.items() if v == classe]
+    for k in nomi:
+        m = re.search(r"(?:conosciuti|al giorno)[^;:)]*?\bda\s+" + k + r"[a-z]*\s*(\d{1,2})\b", riga, re.I)
+        if m:
+            return int(m.group(1))
+    for k, v in CLASSI_INCANTATRICI.items():
+        if v == classe:
+            m = re.search(r"\b" + k + r"[a-z]*\s*(?:di\s*)?\**\s*(\d{1,2})\b", riga, re.I)
+            if m:
+                return int(m.group(1))
+    return None
+
+
+def _punteggio_che_lancia(righe: "list[str]", testa: int, car: str) -> "int | None":
+    """Il punteggio della caratteristica: quello che l'intestazione dichiara
+    («con Sag 24»), altrimenti la riga delle caratteristiche più vicina nella
+    stessa sezione, sopra e poi sotto. Le righe «era:» sono numeri vecchi."""
+    rx = re.compile(r"\b" + _CAR[car] + r"\b\s*\**:?\s*(\d{1,2})\b", re.I)
+    pezzo = righe[testa][TESTA_INCANTESIMI.search(righe[testa]).start():]
+    m = rx.search(pezzo)
+    if m:
+        return int(m.group(1))
+    intera = re.compile(r"\b(?:For|Str)\b\s*\**:?\s*\d", re.I)
+    for passo, limite in ((-1, 80), (1, 40)):
+        j = testa
+        for _ in range(limite):
+            j += passo
+            if not 0 <= j < len(righe) or righe[j].lstrip().startswith("#"):
+                break
+            m = rx.search(righe[j])
+            if m and intera.search(righe[j]) and not re.search(r"\bera\b", righe[j][:m.start()]):
+                return int(m.group(1))
+    return None
+
+
+def incantatori(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Incantesimi al giorno, conosciuti, livello massimo e CD (ADR-0126, lotto 3).
+
+    Regole `numero.incantesimi.al_giorno`, `.conosciuti`, `.livello`, `.cd`. Una
+    lista di cui non si legge la classe, il livello o la caratteristica torna fra
+    i non verificabili, una volta per lista."""
+    from dmcore import magia as M
+    from dmcore import sistemi as S
+    testo = p.read_text(encoding="utf-8", errors="replace")
+    sis = VT.sistema_di(p, testo)
+    try:
+        M.tabelle(sis)
+    except S.ErroreSistemi:
+        return [], []
+    righe = testo.splitlines()
+    viol, nv = [], []
+    liste: "dict[int, dict | None]" = {}
+    fonte = "srd" if sis == "dnd35" else "prd"
+
+    def nota(riga: int, perche: str) -> None:
+        nv.append({"file": VT_rel(p), "riga": riga + 1, "verifica": "incantatori", "regola": "numero.incantesimi",
+                   "fonte": fonte, "testo": perche})
+
+    for i, riga in enumerate(righe):
+        m = M.RIGA.match(riga)
+        if not m or "*" not in m.group("resto") or re.match(r"\d", m.group("resto")):
+            continue
+        testa = _testa_della_lista(righe, i)
+        if testa is None:
+            continue
+        if testa not in liste:
+            liste[testa] = None
+            classe = _classe_che_lancia(righe, i, sis)
+            if classe is None:
+                nota(testa, "non si legge quale classe lancia questa lista")
+                continue
+            if M.classe(classe, sis) is None:
+                nota(testa, f"«{classe}» non ha una tabella degli incantesimi nel plugin {sis}")
+                continue
+            dati = M.classe(classe, sis)
+            t = righe[testa]
+            pezzo = t[TESTA_INCANTESIMI.search(t).start():]
+            li = _LI.search(pezzo)
+            livello = _livello_scritto(pezzo, classe) or (int(li.group(1)) if li else None)
+            if livello is None:
+                for j in range(testa - 1, max(-1, testa - 40), -1):
+                    if righe[j].lstrip().startswith("#") or re.match(r"\s*(?:---+|\*\*\*+)\s*$", righe[j]):
+                        break
+                    livello = _livello_scritto(righe[j], classe)
+                    if livello:
+                        break
+            if not livello:
+                nota(testa, f"non si legge il livello di {classe}")
+                continue
+            punti = _punteggio_che_lancia(righe, testa, dati["caratteristica"])
+            if punti is None:
+                nota(testa, f"non si legge {dati['caratteristica']}, la caratteristica che lancia")
+                continue
+            intorno = "\n".join(righe[max(0, testa - 60):testa + 60])
+            foc = (2 if re.search(r"Focalizzat[oi] Superior|Greater Spell Focus", intorno, re.I)
+                   else 1 if re.search(r"Incantesimi Focalizzati|Spell Focus", intorno, re.I) else 0)
+            spec = classe == "wizard" and bool(_SPECIALISTA.search(intorno))
+            var = dati.get("variante_del_dm")
+            liste[testa] = {"classe": classe, "livello": livello, "punti": punti, "foc": foc, "testa": testa,
+                            "prove": [(M.al_giorno(classe, livello, punti, x, spec), M.conosciuti(classe, livello, x), [])
+                                      for x in ([sis, var] if var else [sis])],
+                            "variante": var, "car": dati["caratteristica"]}
+            scritti = M.leggi_al_giorno(pezzo)
+            if scritti:
+                da_zero = dati["al_giorno"]["20"][0] >= 0
+                for attesi, _, scarti in liste[testa]["prove"]:
+                    scarti += [(testa, {"campo": "incantesimi.al_giorno", "scritto": x["scritto"], "atteso": x["atteso"],
+                                        "nota": f"incantesimi al giorno di {x['livello']}°, tabella più incantesimi bonus"})
+                               for x in M.giudica_dichiarati(scritti, attesi, da_zero)]
+        lista = liste[testa]
+        if lista is None:
+            continue
+        for attesi, noti, scarti in lista["prove"]:
+            scarti += [(i, x) for x in M.giudica_riga(int(m.group("liv")), m.group("par") or "", m.group("resto"),
+                                                      attesi, noti, lista["punti"], lista["foc"])]
+    for lista in filter(None, liste.values()):
+        scarti = lista["prove"][0][2]
+        chi = f"{lista['classe']} {lista['livello']}, {lista['car']} {lista['punti']}"
+        if lista["variante"] and scarti and not [x for _, x in lista["prove"][1][2] if x["campo"] != "incantesimi.cd"]:
+            # la scheda segue la tabella che il DM ha scelto per questa classe: è una forma
+            # ibrida dichiarata, va nel registro delle regole custom (D-B-ter, lotto 11)
+            if any(x["campo"] != "incantesimi.cd" for _, x in scarti):
+                nv.append({"file": VT_rel(p), "riga": lista["testa"] + 1, "verifica": "incantatori", "fonte": fonte,
+                           "regola": "numero.incantesimi.variante",
+                           "testo": f"{chi}: gli slot e i conosciuti seguono la tabella {lista['variante']} scelta dal DM "
+                                    f"per questa classe, non quella del {sis}: forma ibrida da registrare"})
+            scarti = [(r, x) for r, x in scarti if x["campo"] == "incantesimi.cd"]
+        for r, x in scarti:
+            viol.append({"file": VT_rel(p), "riga": r + 1, "verifica": "incantatori", "fonte": fonte,
+                         "regola": f"numero.{x['campo']}", "atteso": x["atteso"], "ha": x["scritto"],
+                         "testo": f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']}; {chi})"})
+    return viol, nv
+
+
 def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
     """La CA dei recinti della scheda, ricostruita dalle sue voci (ADR-0126, lotto 1-bis)."""
     import conformita_statblocchi as C
@@ -574,9 +737,11 @@ def main(argv: "list[str] | None" = None) -> int:
         iv, inn = incantesimi(p)
         cv, cn = classe_armatura(p)
         dv, dn = danno(p)
-        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv
-        nv += tn + ti + nn + cn + dn + an + inn
+        mv, mn = incantatori(p)
+        lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
+                      or L.leggi(p))
+        viol += tv + nvv + cv + dv + av + iv + mv
+        nv += tn + ti + nn + cn + dn + an + inn + mn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)
