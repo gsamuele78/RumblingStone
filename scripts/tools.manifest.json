@@ -11919,6 +11919,106 @@
       ]
     },
     {
+      "id": "verifica_scheda",
+      "path": "scripts/verifica_scheda.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check]",
+      "summary": "ADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con verifica, regola, atteso, ha, fonte, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
+      ]
+    },
+    {
       "id": "migliora_prosa",
       "path": "scripts/migliora_prosa.py",
       "category": "G-orchestration-governance",

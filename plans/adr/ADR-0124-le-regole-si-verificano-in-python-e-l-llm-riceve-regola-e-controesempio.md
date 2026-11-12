@@ -64,6 +64,14 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
    una scheda con classi che la lettura non conosce, va fra i **non
    verificabili**: non passa per buono e non viene segnato come sbagliato.
 
+7. **Una chiamata per scheda**: `scripts/verifica_scheda.py` (manifest, server
+   MCP, sola lettura, canale testing) restituisce nella stessa forma i
+   prerequisiti dei talenti e i numeri di `conformita_statblocchi.giudica`
+   (pf, BAB, tiri salvezza, lotta, attacco, iniziativa). Non ha regole sue.
+   Misura con errori messi apposta: 666 su 1.278 visti (52%); il resto e
+   l'ordine in cui chiudere il divario dei plugin stanno in
+   [plans/esperimenti/verifica-scheda-2026-11-12/ESITO.md](../esperimenti/verifica-scheda-2026-11-12/ESITO.md).
+
 ## Conseguenze
 
 - L'LLM riceve la regola esatta e il controesempio senza imparare un motore

@@ -4841,6 +4841,42 @@
       "deterministic": true
     },
     {
+      "name": "verifica_scheda",
+      "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
+      "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "percorsi": {
+            "type": "string",
+            "description": "Schede .md o cartelle da leggere."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Uscita machine-readable: violazioni con verifica, regola, atteso, ha, fonte, file e riga."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Exit 1 se c'e' almeno una violazione."
+          }
+        },
+        "required": [
+          "percorsi"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<stdout>"
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "deterministic": true
+    },
+    {
       "name": "verifica_sezione6",
       "description": "«La tabella dice che restano 27 ADR da indicizzare: e' ancora vero?» Nel caso vero era gia' zero, e nessuno l'aveva eseguito.\n\nEsegue davvero i comandi che le righe di STATO-E-ORDINE §6.2 citano, e boccia una riga che il comando smentisce. Distingue i CANCELLI (stampano un verdetto: un ✓ senza avvisi accanto a una riga ⬜ e' una bugia) dalle MISURE (stampano numeri: la riga deve dichiarare il numero atteso in <!-- attesa: N -->). Esegue testo scritto a mano, quindi forma rigida, allowlist di script e shell=False.",
       "use_case": "«La tabella dice che restano 27 ADR da indicizzare: e' ancora vero?» Nel caso vero era gia' zero, e nessuno l'aveva eseguito.",

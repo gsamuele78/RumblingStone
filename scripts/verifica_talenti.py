@@ -181,7 +181,7 @@ def leggi(p: Path) -> "dict | None":
         k = nome.strip().lower()
         if k in SPECIALISTI:
             livelli["wizard"] = livelli.get("wizard", 0) + int(liv)
-        elif T._ALIAS.get(k, k) not in livelli and k not in livelli:
+        elif not any(T._ALIAS.get(c, c) in livelli for c in (k, k.split()[-1])):  # «hobgoblin barbaro 4»
             ignote.append(f"{nome.strip()} {liv}")
     dv = sum(g.n for g in s.gruppi)
     lic = int(max([livelli.get(c, 0) * f if livelli.get(c, 0) >= (4 if f < 1 else 1) else 0
