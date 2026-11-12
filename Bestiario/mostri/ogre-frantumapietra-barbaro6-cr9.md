@@ -31,11 +31,13 @@ Large giant, CE. **DV 4d8 + 6d12**. **hp 77** (**97 in ira**). **CA 18** (−1 t
 **Distanza** roccia +7 (2d6+7, gittata 36 m).
 **Car** For 25 (*cintura della forza del gigante +2*; **29 in ira**), Des 8, Cos 15 (**19 in ira**), Int 6, Sag 10, Car 7.
 **Qualità speciali** Scurovisione 18 m, ira 2/giorno (6 round), schivare prodigioso, schivare prodigioso migliorato, percezione delle trappole +2.
-**Talenti** Robustezza, Attacco Poderoso, Incalzare Potenziato, **Colpo Terrificante** (*Awesome Blow*).
+**Talenti** Robustezza, Attacco Poderoso, Spingere Migliorato, **Colpo Terrificante** (*Awesome Blow*).
 
 **Colpo Terrificante** — azione standard al posto di un attacco in mischia, −4 al tiro per colpire, solo contro creature **Media o più piccole**: se colpisce, oltre al danno il bersaglio **vola 3 m all'indietro** (nella direzione scelta) e **cade prono**. Non provoca attacchi di opportunità dal bersaglio.
 
-**Tattiche**: due Frantumapietra lavorano in coppia — uno **incalza** (Incalzare Potenziato) per rompere la linea, l'altro **Colpo Terrificante** sul PG più leggero per spedirlo fuori dalla formazione. Contro *Il Rumbling Stone* il bersaglio designato è **Artemis** (o Hella): sfilare un incantatore dal muro di scudi di Thorik vale più di dieci danni in più.
+**Tattiche**: due Frantumapietra lavorano in coppia — uno **spinge** (Spingere Migliorato) per rompere la linea, l'altro **Colpo Terrificante** sul PG più leggero per spedirlo fuori dalla formazione. Contro *Il Rumbling Stone* il bersaglio designato è **Artemis** (o Hella): sfilare un incantatore dal muro di scudi di Thorik vale più di dieci danni in più.
 **Contromossa dei PG (voluta)**: **Ancoraggio della Montagna** di Tordek (2/giorno, immediata, immunità al movimento forzato) annulla il Colpo Terrificante. Il talento esiste **perché il party abbia una risposta** — e solo due volte al giorno.
 
 Notes: stirpe di ogre delle gallerie profonde sotto le Colline di Hammerfist, arruolata dalla Mano Rossa e distinta dagli **Skullcrusher** di montagna (`ogre-skullcrusher-cr5.md`). Scorta d'onore di **Ghaurush «Cenerevento»** (`Bestiario/villain/Ghaurush_Cenerevento/`). Due esemplari = EL 11; con Ghaurush CR 16 → **EL ≈ 16,5** (sotto il tetto APL+4 = 17). CA e pf sono **sotto** il benchmark PF CR 9 (CA 22 / pf 110): è un cannone di vetro corazzato — colpisce durissimo, muore in fretta. Voluto: sono comprimari, non muri.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): Incalzare Potenziato (senza Incalzare) sostituito con **Spingere Migliorato**, che è anche il prerequisito mancante di Colpo Terrificante. Nessun numero scritto cambia.

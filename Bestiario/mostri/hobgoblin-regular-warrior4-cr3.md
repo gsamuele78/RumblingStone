@@ -10,12 +10,14 @@ spazio: 1,5 m
 portata: 1,5 m
 ca: 19
 pf: 26
-ts: Temp +7, Rifl +2, Vol +0
+ts: Temp +8, Rifl +2, Vol +1
 attributi: For 14 Des 11 Cos 12 Int 10 Sag 9 Car 8
 fonte: valori approssimati nella prosa d'origine (scritti con «~»)
 ```
 
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
-Medium humanoid (goblinoid), Warrior 4, LE. Caratteristiche attestate dal .pcg: For 14, Des 10-11, Cos 12, Int 10, Sag 9-10, Car 8. **Valori derivati** (build senza export, confermati dal DM 2026-10-18; Tempra +7 con Tempra Possente): hp ~26 (4d8+4); AC 19 come il regular 3 (stesso equip); TS Temp +7, Rifl +2, Vol +0; BAB +4; spada lunga +7 (1d8+2/19-20), arco +4.
+Medium humanoid (goblinoid), Warrior 4, LE. Caratteristiche attestate dal .pcg: For 14, Des 10-11, Cos 12, Int 10, Sag 9-10, Car 8. **Valori derivati** (build senza export, confermati dal DM 2026-10-18; Tempra +8 con Tempra Possente e il mantello): hp ~26 (4d8+4); AC 19 come il regular 3 (stesso equip); TS Temp +8, Rifl +2, Vol +1 (mantello della resistenza +1 incluso); BAB +4; spada lunga +7 (1d8+2/19-20), arco +4.
 Notes: versione veterana-junior del regular 3; il DM confermi i derivati prima dell'uso.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Riflessi +2 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Tempra +7 → **+8**, Volontà +0 → **+1**. Prezzo da ricontrollare col lotto della ricchezza per livello.

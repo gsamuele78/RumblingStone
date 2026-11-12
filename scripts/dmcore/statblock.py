@@ -166,7 +166,7 @@ def quadretti_portata(metri: float) -> str:
 
 def ingombro(sb: "Statblocco") -> str:
     """La riga «quanti quadretti occupa, quanti ne minaccia» del riquadro
-    (ADR-0123), o `""` se la scheda non dichiara la taglia.
+    (ADR-0127), o `""` se la scheda non dichiara la taglia.
 
     >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="3 m"))
     '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)'
@@ -197,7 +197,7 @@ def ingombro(sb: "Statblocco") -> str:
 
 
 def difetti_ingombro(sb: "Statblocco") -> list[str]:
-    """Cosa non torna fra taglia, spazio e portata di una scheda (ADR-0123).
+    """Cosa non torna fra taglia, spazio e portata di una scheda (ADR-0127).
     Lo spazio è quello della tabella; la portata di base è quella «alta» o
     quella «lunga» della taglia. Le eccezioni (un'arma con portata, il morso
     di un drago) stanno fra parentesi dopo la portata di base.

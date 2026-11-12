@@ -20,6 +20,7 @@ skill = ["pathfinder-1e-srd"]
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
 "statblocco.taglie" = { eredita = "d20", motivo = "la tabella di spazio e portata per taglia è la stessa in 3.5 e PF1e" }
 "formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
+"bonus.cumulo" = { eredita = "d20", motivo = "il cumulo dei bonus per tipo è lo stesso in 3.5 e PF1e (SRD e PRD, «Bonus Types»)" }
 "lessico.abilita" = { dati = ["sistemi/pf1e/dati/abilita.toml", "scripts/lessico_it_pf1.tsv"], nota = "i nomi dalle righe «abilità» del lessico PF1e" }
 "lessico.entita" = { dati = ["scripts/lessico_it_pf1.tsv"], nota = "righe di tipo classe, classe di prestigio e razza, lette con lessico_regole.tabella_pf1" }
 "lessico.italiano" = { dati = ["scripts/lessico_it_pf1.tsv"] }
@@ -33,6 +34,8 @@ skill = ["pathfinder-1e-srd"]
 "creature.regole_di_tipo" = { dati = ["sistemi/pf1e/dati/creature.toml"], nota = "L5d: il non morto PF1e (d8, BAB 3/4, Vol, Carisma) viene da [tipi.undead]; la regola del Carisma in dmcore/lettura_creatura.py" }
 "creature.conformita" = { dati = ["sistemi/pf1e/dati/conformita.toml", "sistemi/pf1e/dati/conformita_prd.toml"], nota = "F4 di ADR-0112 e ADR-0119: pf col primo dado al massimo e mezzi in su; BMC, DMC, BAB, TS, sensi e corrompere l'acqua dal PRD (conformita_prd.toml, generato)" }
 "creature.talenti" = { dati = ["sistemi/pf1e/dati/talenti.toml"], nota = "talenti, prerequisiti, bonus delle classi e capacità, generati dal PRD da plans/esperimenti/regole-complete-2026-11-10/estrai_talenti.py; regola in dmcore/talenti.py" }
+"creature.gradi" = { dati = ["sistemi/pf1e/dati/gradi.toml", "sistemi/pf1e/dati/classi.toml"], nota = "caratteristica chiave e punti per tipo dal PRD (estrai_gradi.py); i punti per livello di classe sono `gradi` in classi.toml; lo usa verifica_scheda.py" }
+"creature.liste_incantesimi" = { dati = ["sistemi/pf1e/dati/liste_incantesimi.toml"], nota = "le liste del PRD (estrai_prd_pf1e.py), già nel plugin dal lotto 3 di ADR-0119: ora le legge verifica_scheda.py" }
 
 # F5 di ADR-0112: il codice del plugin, per nome (modulo:funzione in codice/).
 [moduli]

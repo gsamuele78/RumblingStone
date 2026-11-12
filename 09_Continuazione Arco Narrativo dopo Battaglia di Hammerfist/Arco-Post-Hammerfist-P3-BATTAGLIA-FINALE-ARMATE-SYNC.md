@@ -2,7 +2,7 @@
 
 **Scopo**: allineare i numeri dell'Orda della Mano Rossa che raggiungono Rethmar al **Day 42** del March Clock ufficiale RHoD (adattato Channath Vale / Dalelands, 1372 DR; Day 40 = Notte dei Drow/Fase 0, Day 41 = orda in vista, Day 42 = arrivo + Fasi 1-4) con la struttura di battaglia in `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-RETHMAR-STRUTTURA.md`, i calcoli di `00_Red Hand Of Doom/Armate-CALCOLI-ESERCITI-DINAMICI.md` v2 e il cronoprogramma di `00_Red Hand Of Doom/Armate-SINCRONIZZAZIONE-CAMPAGNA.md` v2.
 
-> **Regola dual-clock**: *March Clock* (Day 1→40, AP ufficiale, deterministico) governa **quando** arriva l'Orda; *Ritual Clock* Azarr Kul (`/18`) governa **se** l'Avatar di Tiamat si manifesta. I due procedono **indipendenti** salvo interventi PG esplicitamente registrati.
+> **Regola dual-clock**: *March Clock* (Day 1→42, AP adattato, deterministico) governa **quando** arriva l'Orda; *Ritual Clock* Azarr Kul (`/18`) governa **se** l'Avatar di Tiamat si manifesta. I due procedono **indipendenti** salvo interventi PG esplicitamente registrati.
 
 ---
 

@@ -64,7 +64,7 @@ class TestIFalsiPositiviGiaTrovati(unittest.TestCase):
         self.assertEqual(LC.dv_totali(t), 7)
 
     def test_una_classe_non_srd_rende_la_composizione_ignota(self):
-        s = scheda("gs: 10\ntipo: Medium humanoid (dwarf), Paladin 8 / Hammer of Moradin 2\n"
+        s = scheda("gs: 10\ntipo: Medium humanoid (dwarf), Paladin 8 / Martello di Nessuno 2\n"
                    "ca: 20\npf: 80\nts: Temp +13, Rifl +3, Vol +8\n"
                    "attributi: For 14 Des 8 Cos 14 Int 10 Sag 14 Car 14")
         self.assertFalse(s.composizione_nota)

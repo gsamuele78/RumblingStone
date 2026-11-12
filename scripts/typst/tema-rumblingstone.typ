@@ -348,7 +348,7 @@
 // cambia solo quanto è piena. Una fascia senza niente dentro non si stampa.
 #let statblocco(
   nome: "", tipo: "", gs: "", iniziativa: "", sensi: "",
-  // ADR-0123: «Taglia · Spazio (quadretti) · Portata (quadretti)», già composta
+  // ADR-0127: «Taglia · Spazio (quadretti) · Portata (quadretti)», già composta
   // da dmcore.statblock.ingombro; vuota finché la scheda non dichiara la taglia.
   ingombro: "",
   ca: "", pf: "", ts: "", velocita: "",

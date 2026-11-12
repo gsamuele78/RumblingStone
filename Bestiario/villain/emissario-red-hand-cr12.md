@@ -41,7 +41,7 @@ Medium humanoid (goblinoid), hobgoblin Chierico 12, Legale Malvagio. Diplomatico
 - 5° (3+1): *colpo infuocato* (CD 19), *cura ferite leggere di massa*, *spezzare incantamento*; dominio: *dissolvi il bene*
 - 4° (4+1): *libertà di movimento*, *potere divino*, *interdizione alla morte*, *veleno* (CD 18); dominio: *infliggi ferite critiche*
 - 3° (5+1): *dissolvi magie*, *preghiera*, *cecità/sordità* (CD 17), *luce incandescente*, *cerchio magico contro il bene*; dominio: *contagio* (CD 17)
-- 2° (5+1): *aiuto*, *arma spirituale*, *resistere all'energia*, *silenzio*, *blocca persone* (CD 16); dominio: *profanare*
+- 2° (5+1): *aiuto*, *arma spirituale*, *resistere all'energia*, *silenzio*, *blocca persone* (CD 16); dominio: *dissacrare*
 - 1° (6+1): *benedizione*, *cura ferite leggere*, *santuario*, *scudo della fede*, *nascondersi ai non morti*, *favore divino*; dominio: *protezione dal bene*
 - 0 (6): *individuazione del magico*, *guida*, *resistenza*, *lettura del magico*, *infliggi ferite minori*, *luce*
 
@@ -74,3 +74,5 @@ Boost log: livelli di classe (Chierico 9 → 12, classe associata) — GS 9 → 
 - era: incantesimi 6/4/4/3/2/1 + dominio, CD massima 18 al 5°
 - la scheda d'arco del Ghostlord (§3) proponeva «Bardo 8 / Chierico 4 (o Stregone 10), PF ~70–80»: superata da questa build
 <!-- /storico -->
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): l'incantesimo di dominio di 2° era scritto *profanare* (*Unhallow*, 5°); il dominio del Male dà *dissacrare* (*Desecrate*).

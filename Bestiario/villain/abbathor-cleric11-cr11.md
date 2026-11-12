@@ -40,7 +40,7 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 - 5° (2+D) — *colpo infuocato, uccidere i vivi*; *visione del vero* (D)
 - 4° (4+D) — *potere divino, libertà di movimento, infondere capacità magiche, interdizione alla morte*; *veleno* (D)
 - 3° (5+D) — *dissolvi magie, epurare invisibilità, cerchio magico contro il bene, scagliare maledizione, preghiera*; *animare morti* (D)
-- 2° (6+D) — *blocca persone, silenzio, forza del toro, resistere all'energia, arma spirituale, profanare*; *celare allineamento* (D)
+- 2° (6+D) — *blocca persone, silenzio, forza del toro, resistere all'energia, arma spirituale, dissacrare*; *celare allineamento* (D)
 - 1° (6+D) — *scudo della fede, favore divino, comando, protezione dal bene, benedizione, causare paura*; *camuffare sé stesso* (D)
 - 0 (6) — *individuazione del magico, lettura del magico, resistenza, guida, luce, creare acqua*
 
@@ -70,3 +70,5 @@ era: attacco morning star +1 +11/+6 (1d8+3), scudo +1 +6 (1d4+2); BAB +8, Lotta 
 era: «CD 13 + liv», «Colpire i Giganti», «Earthen Spell Power» nella prosa: la CD con Sag 18 è 14 + livello; le altre due non sono capacità di un chierico nano SRD.
 era (testo dell'incontro epico): pf 84, CA 24 scomposta «8 piastre + 2 scudo + 1 Des + 3 naturale» (gli oggetti danno 25), TS Rifl +5 e Vol +13 (il conto dà +4 e +12), sei talenti, intimorire 6/giorno.
 <!-- /storico -->
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): al 2° livello era scritto *profanare* (*Unhallow*, 5°); l'incantesimo di 2° è *dissacrare* (*Desecrate*).
