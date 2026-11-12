@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 959/1.231 (55% → 78%); TS +2 visti 1/362 → 270/346; 22 numeri in 20 schede vere senza sorgente dichiarata, al DM |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §11 (DM: «correggi gli errori», prima finire le classi):… | ✅ Violazioni 34 → 7 (12 falsi positivi tolti, 16 corrette, 1 nuova); righe di incantesimi senza classe 94 → 16; errori messi apposta visti 247/254 (erano 167/1… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
@@ -96,7 +97,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 5: tratti dei tipi di creatura nei mostri generati.… | ✅ tratti dei tipi (15 tipi × GS 3/7/12): 3.5 33/45 → 45/45, PF1e 36/45 → 45/45; pf bonus del costrutto alle 9 taglie: 0/9 → 9/9 nei due sistemi; misura di ADR-… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 4: requisiti d'accesso delle 18 classi di prestigio PF1e… | ✅ requisiti letti 0/18 → 18/18 (BAB e talenti contro una seconda lettura del PRD); via d'ingresso legale per classe, costruita a mano: 0/18 → 18/18 con requisi… |
 | 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 2: i 108 nomi d'incantesimo 3.5 fuori dal lessico (185 v… | ✅ misura di ADR-0121, 3.5: liste 441 giuste + 185 non verificabili → 626/626 (totale 605/606 → 790/791); liste riusate dal pf1e 445 + 181 → 626/626. Dietro i n… |
-| 2026-11-10 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, lotto 3: talenti dei PNG secondo la regola.… | ✅ numero di talenti al 7° per ogni classe, contato a mano sul manuale: 3.5 0/11 → 11/11, PF1e 0/32 → 32/32; prerequisiti dei talenti generali 11/11 e 32/32; im… |
 
 ## Le misure che si portano dietro
 

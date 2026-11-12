@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Il cumulo dei bonus per tipo (ADR-0126, lotto 1): capacità `bonus.cumulo` della famiglia d20 in `sistemi/d20/dati/bonus.toml` e modulo `dmcore.bonus`. Due bonus dello stesso tipo non si sommano; schivare, circostanza, razziale e senza tipo sì (SRD 3.5, «Bonus Types»). Una scheda dichiara un bonus con l'oggetto o il talento nel testo, oppure nella riga dei tiri salvezza («+1 fortuna a tutti»); un bonus a condizione («contro gli incantesimi») non entra nel numero base.
 - I prerequisiti dei talenti sulle schede che esistono (ADR-0124, proposta): `python3 scripts/verifica_talenti.py [SCHEDA|CARTELLA] [--json] [--check]`, nel manifest e quindi nel server MCP in sola lettura. Per ogni violazione dà `file:riga`, talento, `regola` (car.X, bab, lic, classe.X, talento, capacita), `atteso` e `ha`. Esclude i talenti bonus senza prerequisiti (monaco, stili del ranger) e le competenze della classe. Canale testing, misura e non cancello: al 2026-11-11 sono 21 violazioni in 11 schede del Bestiario. `dmcore.talenti.violazioni` è la stessa regola di `manca`, in forma strutturata.
 - `verifica_talenti` segue l'ordine delle fonti SRD d20 → D&D 3.5 → PF1e (ADR-0124 §6) e ogni voce porta `fonte`. Nel plugin `dnd35` i talenti dell'SRD passano da 110 a 363 (mostri, epici, psionici, divini) e arriva `sistemi/dnd35/dati/talenti_manuali.toml`: i prerequisiti di 2.193 talenti dei manuali 3.5 fuori SRD, dai dati PCGen e dalle tabelle di srd.dndtools.org. Le classi che la lettura non conosce rendono non verificabili livello d'incantatore e capacità.
 - Tutte le verifiche di regola di una scheda in una chiamata (ADR-0124 §7): `python3 scripts/verifica_scheda.py SCHEDA|CARTELLA [--json] [--check]`, nel manifest e nel server MCP in sola lettura. Unisce i prerequisiti dei talenti e i numeri di `conformita_statblocchi` (pf, BAB, tiri salvezza, lotta, attacco, iniziativa) nella stessa uscita: verifica, regola, atteso, ha, fonte, file:riga. Controlla anche i gradi delle abilità (massimo per abilità e punti disponibili) con la capacità nuova `creature.gradi` dei plugin: `sistemi/dnd35/dati/gradi.toml` dall'SRD 3.5 e `sistemi/pf1e/dati/gradi.toml` dal PRD.
@@ -170,6 +171,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
 
 ### Cambiato
+- `verifica_scheda` giudica tiri salvezza e attacco **senza tolleranza** (ADR-0126, D-A): prima passavano un tiro salvezza fino a +4 sopra l'atteso e un attacco fra −1 e +2. Ogni violazione elenca i bonus contati. `--tolleranza` rimette la fascia di prima; `conformita_statblocchi` e i cancelli della CI non cambiano (`severo=False` è il predefinito delle funzioni).
 - `inventory_inferred.py` conta come meta skill, modelli, README, fixture e lo schema da copiare, e dà la forma di ogni marca: il debito aperto passa da 25 a 0. Le forme vecchie fuori da `plans/` sono migrate (`[ACCEPTED — DM-canon …]` → `[CANONE — DM …]`, 138 righe); `validate_bestiario.py` accetta `[CANONE` nel titolo.
 
 ## [1.0.0] - 2026-10-23

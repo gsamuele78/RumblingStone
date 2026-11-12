@@ -19,6 +19,7 @@ skill = ["dnd-35-srd", "dnd-35-rules", "npc-villain-boosting"]
 "stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
 "formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
+"bonus.cumulo" = { eredita = "d20", motivo = "il cumulo dei bonus per tipo è lo stesso in 3.5 e PF1e (SRD e PRD, «Bonus Types»)" }
 "lessico.abilita" = { dati = ["sistemi/dnd35/dati/abilita.toml"] }
 "lessico.entita" = { dati = ["sistemi/dnd35/dati/entita.toml"] }
 "lessico.italiano" = { dati = ["scripts/lessico_it_35.tsv"] }

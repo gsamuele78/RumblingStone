@@ -412,16 +412,17 @@ RESISTENZA = re.compile(r"(?:cloak of resistance|mantello (?:della|di) resistenz
 
 
 def talenti(testo: str) -> dict:
-    """{campo: bonus} dei talenti e degli oggetti che la scheda dichiara."""
+    """{campo: bonus} dei talenti e degli oggetti che la scheda dichiara.
+
+    Dal lotto 1 (ADR-0126) il conto lo fa `dmcore.bonus`: le sorgenti stanno in
+    `sistemi/d20/dati/bonus.toml` e due bonus dello stesso tipo non si sommano.
+    L'iniziativa resta qui, perché il suo schema serve anche ad altri lettori.
+    """
+    from dmcore import bonus
     pulito = senza_note(testo)
-    fuori = {}
-    for regex, campo, bonus in TALENTI:
-        if regex.search(pulito):
-            fuori[campo] = fuori.get(campo, 0) + bonus
-    m = RESISTENZA.search(pulito)
-    if m:
-        for c in ("Temp", "Rifl", "Vol"):
-            fuori[c] = fuori.get(c, 0) + int(m.group(1))
+    fuori = bonus.totali(pulito)
+    if INIZIATIVA_MIGLIORATA.search(pulito):
+        fuori["init"] = fuori.get("init", 0) + 4
     return fuori
 
 

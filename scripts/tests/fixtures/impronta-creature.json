@@ -19058,12 +19058,12 @@
      ],
      "Temp": [
       8,
-      7,
+      8,
       0
      ],
      "Vol": [
       12,
-      11,
+      12,
       0
      ],
      "attacco": [
@@ -19180,20 +19180,23 @@
      ]
     ],
     "taglia": 0,
-    "talenti": {},
+    "talenti": {
+     "Temp": 1,
+     "Vol": 1
+    },
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
-      2,
-      "ricavata da Temp +8 (base +6)"
+      1,
+      "ricavata da Temp +8 (base +7)"
      ],
      "Des": [
       2,
       "ricavata da Rifl +5 (base +3)"
      ],
      "Sag": [
-      6,
-      "ricavata da Vol +12 (base +6)"
+      5,
+      "ricavata da Vol +12 (base +7)"
      ]
     },
     "vincoli": {
@@ -19573,7 +19576,7 @@
      ],
      "Temp": [
       12,
-      9,
+      "9 o la base del padrone",
       0
      ],
      "Vol": [
