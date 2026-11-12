@@ -1,6 +1,6 @@
 # ADR-0127 — La memoria corta archivia nel repo prima di togliere una riga
 
-**Stato**: proposta (2026-11-12)
+**Stato**: proposta (2026-11-12); i tre livelli (addendum in CI, istruzioni del progetto, regola nella memoria e nei file d'avvio) approvati dal DM il 2026-11-12
 **Data**: 2026-11-12
 **Decisione-fonte**: il DM (Jfs), 2026-11-12: «come si può obbligare tutte le sessioni a questo comportamento, tipo quello del changelog? Tipo addendum?»; prima ancora: salvare in un file del repo, collegato al changelog, ciò che la riduzione della memoria del progetto aveva tolto, e farne un meccanismo che eviti sempre la saturazione e non perda informazioni storiche utili per una regressione o per rivedere una soluzione già adottata, con un modo di leggerlo quando serve.
 **Rapporti**: affianca [ADR-0087](ADR-0087-la-memoria-del-lavoro-e-generata.md) (`MEMORIA.md` generata dal repo: stato aperto, non storia). Non tocca il changelog dei piani (una riga per lotto chiuso), a cui si collega.
@@ -64,7 +64,7 @@ e mostra solo ciò che è aperto.
 5. **Cancello di forma**: `memoria_storica.py --check` in CI: numeri consecutivi,
    date valide, campi obbligatori, e `plans/CHANGELOG.md` che porta al file.
 6. **Dati personali**: nomi dei giocatori, macchine e nomi utente non entrano
-   senza un sì del DM; restano nelle note di memoria.
+   (scelta del DM del 2026-11-12); restano nelle note di memoria.
 
 ## Conseguenze
 

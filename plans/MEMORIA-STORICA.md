@@ -62,7 +62,7 @@ Si aggiunge in coda col numero dopo l'ultimo e si fa girare
 ```
 
 Niente dati personali (nomi dei giocatori, macchine del DM, nomi utente):
-quelli restano nelle note di memoria, salvo un sì del DM.
+quelli restano nelle note di memoria (scelta del DM del 2026-11-12).
 
 ## Da dove vengono le voci MS-0001…MS-0067
 
@@ -70,7 +70,7 @@ Il 2026-11-12 la memoria del progetto è stata ridotta da circa 25 KB a 8 KB
 togliendo la cronologia delle PR unite. Le sue 67 righe sono state
 confrontate con il repo e con le note di memoria e archiviate qui, una per
 voce, col testo intero; «Jfs» è scritto «il DM» come nel resto del repo, e
-tre righe hanno dati personali tolti in attesa del sì del DM (MS-0005,
+tre righe hanno dati personali tolti: il DM ha scelto il 2026-11-12 di lasciarli fuori dal repo (MS-0005,
 MS-0006, MS-0009).
 
 Misura del recupero: dei **165 riferimenti** distinti delle 67 righe (PR,
@@ -132,7 +132,7 @@ repo scritto con altre parole.
 - **ADR:** —
 - **Temi:** ambiente git
 - **Origine:** memoria del progetto, riga 5 di 67 (versione prima della riduzione del 2026-11-12)
-- **Testo:** Push locale dal computer del DM: usare `gh auth setup-git`; il gestore delle credenziali del desktop proponeva un vecchio utente. *[Sistema operativo, desktop e nome del gestore esclusi: dati personali in attesa del sì del DM.]*
+- **Testo:** Push locale dal computer del DM: usare `gh auth setup-git`; il gestore delle credenziali del desktop proponeva un vecchio utente. *[Sistema operativo, desktop e nome del gestore esclusi: dati personali, fuori dal repo per scelta del DM del 2026-11-12.]*
 
 ### MS-0006 · 2026-10-11 · LLM locale per la prosa bocciato (ADR-0089)
 
@@ -141,7 +141,7 @@ repo scritto con altre parole.
 - **ADR:** ADR-0089
 - **Temi:** prosa llm
 - **Origine:** memoria del progetto, riga 6 di 67 (versione prima della riduzione del 2026-11-12)
-- **Testo:** LLM locale per la prosa (ADR-0089, PR #234): gemma4 e4b bocciato il 2026-10-11 (voto 40/42%, cieco 0/10 vs B-con). Prossima prova possibile: gemma4:12b-it-qat sul portatile del DM, poi 26B su un'altra macchina del DM *[modelli delle macchine esclusi: dati personali in attesa del sì del DM]*. Avvio: start.sh poi prova.sh; dopo un riavvio il box impiega minuti.
+- **Testo:** LLM locale per la prosa (ADR-0089, PR #234): gemma4 e4b bocciato il 2026-10-11 (voto 40/42%, cieco 0/10 vs B-con). Prossima prova possibile: gemma4:12b-it-qat sul portatile del DM, poi 26B su un'altra macchina del DM *[modelli delle macchine esclusi: dati personali, fuori dal repo per scelta del DM del 2026-11-12]*. Avvio: start.sh poi prova.sh; dopo un riavvio il box impiega minuti.
 - **Trovato nel repo:** `#234` → `plans/CHANGELOG.md` · `ADR-0089` → `plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md`
 
 ### MS-0007 · 2026-10-12 · Ramo della partita del primo tavolo
@@ -174,7 +174,7 @@ repo scritto con altre parole.
 - **ADR:** —
 - **Temi:** campagna tavolo px
 - **Origine:** memoria del progetto, riga 9 di 67 (versione prima della riduzione del 2026-11-12)
-- **Testo:** Tavolo: chi gioca quale PG è nella nota di memoria `registro-px-gruppo` *[nomi dei giocatori esclusi: dati personali in attesa del sì del DM]*. PX e livelli: vedi Registro PX (PR #312).
+- **Testo:** Tavolo: chi gioca quale PG è nella nota di memoria `registro-px-gruppo` *[nomi dei giocatori esclusi: dati personali, fuori dal repo per scelta del DM del 2026-11-12]*. PX e livelli: vedi Registro PX (PR #312).
 - **Trovato nel repo:** `#312` → `plans/esperimenti/p16-inferred-2026-11-04/ARC09-DECISIONI.md`
 
 ### MS-0010 · 2026-10-18 · Schede PNG e villain (ADR-0091)
@@ -815,5 +815,5 @@ repo scritto con altre parole.
 - **ADR:** ADR-0127
 - **Temi:** memoria regole ci
 - **Origine:** addendum della riga del 2026-11-12 «la memoria storica nel repo (ADR-0127)» in `plans/CHANGELOG.md`
-- **Testo:** Richiesta del DM: verificare che la riduzione della memoria del progetto (da circa 25 KB a 8 KB, 2026-11-12) non avesse perso niente, salvare il resto nel repo collegato al changelog, farne un meccanismo che eviti la saturazione e si possa leggere quando serve, e obbligare tutte le sessioni «tipo changelog, tipo addendum». Fatto: MS-0001…MS-0067 con le 67 righe della memoria lunga; `scripts/memoria_storica.py` (lettore e `--check`, nel server MCP); addendum in `check_plans_discipline.py` (riga del changelog senza voce nuova = PR bocciata); regola in AGENTS.md, nel modello delle PR, nella skill rumblingstone-plans e nell'intestazione della memoria del progetto. Misura: riferimenti delle 67 righe nel repo da 127/165 a 165/165; fatti di contenuto non trovati da 24 a 0. Delle 67 righe 53 nascevano da una PR (l'addendum le avrebbe prese), 14 no (regole, ambiente, routine, roadmap, scelte in chat): per queste resta solo la regola. Aperta al DM: se mettere nel repo i dati personali tolti da MS-0005, MS-0006, MS-0009 (card del 2026-11-12, consigliata «lasciarli fuori»). Notato durante la verifica: ADR-0104 (personaggi in posa) è citato come «proposta» ma il file non esiste in `plans/adr/`; ADR-0123 è usato sia dal ramo della #371 sia dai commit locali della #370.
+- **Testo:** Richiesta del DM: verificare che la riduzione della memoria del progetto (da circa 25 KB a 8 KB, 2026-11-12) non avesse perso niente, salvare il resto nel repo collegato al changelog, farne un meccanismo che eviti la saturazione e si possa leggere quando serve, e obbligare tutte le sessioni «tipo changelog, tipo addendum». Fatto: MS-0001…MS-0067 con le 67 righe della memoria lunga; `scripts/memoria_storica.py` (lettore e `--check`, nel server MCP); addendum in `check_plans_discipline.py` (riga del changelog senza voce nuova = PR bocciata); regola in AGENTS.md, nel modello delle PR, nella skill rumblingstone-plans e nell'intestazione della memoria del progetto. Misura: riferimenti delle 67 righe nel repo da 127/165 a 165/165; fatti di contenuto non trovati da 24 a 0. Delle 67 righe 53 nascevano da una PR (l'addendum le avrebbe prese), 14 no (regole, ambiente, routine, roadmap, scelte in chat): per queste resta solo la regola. Deciso dal DM (card del 2026-11-12): i dati personali tolti da MS-0005, MS-0006, MS-0009 restano fuori dal repo, nelle note di memoria. Notato durante la verifica: ADR-0104 (personaggi in posa) è citato come «proposta» ma il file non esiste in `plans/adr/`; ADR-0123 è usato sia dal ramo della #371 sia dai commit locali della #370.
 - **Trovato nel repo:** `ADR-0127` → `plans/adr/ADR-0127-la-memoria-corta-archivia-nel-repo-prima-di-togliere.md`
