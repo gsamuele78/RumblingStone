@@ -16,6 +16,7 @@ skill = []
 "stampa.etichette" = { dati = ["sistemi/d20/dati/stampa.toml"], nota = "L7: le sigle del riquadro, uguali in 3.5 e PF1e" }
 "statblocco.campi" = { dati = ["sistemi/d20/dati/statblocco.toml"], nota = "L5d: campi obbligatori, ammessi e a lista del blocco statblock" }
 "formule.regole" = { dati = ["sistemi/d20/dati/formule.toml"], nota = "F3 di ADR-0112: modificatore, TS buono e cattivo, CD, punteggio minimo; uguali in 3.5 e PF1e" }
+"bonus.cumulo" = { dati = ["sistemi/d20/dati/bonus.toml"], nota = "ADR-0126: cumulo dei bonus per tipo e sorgenti che una scheda può dichiarare; uguale in 3.5 e PF1e" }
 
 # F5 di ADR-0112: il codice del plugin, per nome (modulo:funzione in codice/).
 # Lo carica dmcore.sistemi.modulo con importlib, solo da questa cartella.

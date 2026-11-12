@@ -78,7 +78,7 @@ LanguageTool.
 
 ## Emendamento del 2026-11-11 — i limiti si misurano seminando, e due si chiudono
 
-**Stato**: proposta · **Chiesto dal DM** il 2026-11-11: «c'è un modo deterministico e affidabile, misurando il miglioramento?»
+**Stato**: accettato dal DM il 2026-11-12 per la scelta del parser (card «parser CommonMark» contro «regola del repo, solo stdlib»); il resto proposta · **Chiesto dal DM** il 2026-11-11: «c'è un modo deterministico e affidabile, misurando il miglioramento?»
 
 ### Contesto
 

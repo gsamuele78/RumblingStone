@@ -305,8 +305,119 @@ class TestDatiDiProva(unittest.TestCase):
             self.assertNotIn("F5", regole, p.name)
 
 
-if __name__ == "__main__":
-    unittest.main()
+STATE_FINTO = """
+schema_version: 1
+march_clock:
+  giorno_corrente: 1
+  giorno_arrivo: 42
+party:
+  - pg: Thorik
+    hp: "−2 DES / +2 COS permanenti dal rito"
+  - pg: Tordek
+    hp: "nessun malus permanente"
+artefatti:
+  - artefatto: Aegis Fang (ascia)
+    portatore: Thorik
+echi:
+  - id: E-01a
+    stato: armato
+    miccia: corta
+  - id: E-01b
+    stato: armato
+    miccia: lunga
+  - id: E-01c
+    stato: esploso
+    miccia: corta
+conoscenze:
+  - png: Sonjak
+    sa_che: qualcosa
+    come: spie
+"""
+
+
+class TestStoria(unittest.TestCase):
+    """`fatti --state` (ADR-0125): ogni violazione ha regola, atteso, ha e file:riga."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        base = Path(self.tmp.name)
+        self.state = _scrivi(base, "state.yaml", STATE_FINTO)
+        self.arco = base / "09_arco"
+        self.an = cc.ancore_state(self.state)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _viol(self, testo: str, regola: str) -> list[dict]:
+        p = _scrivi(self.arco, "M.md", "# Modulo\n\n" + textwrap.dedent(testo).lstrip())
+        r = cc.verifica_storia([p], self.an, [self.arco])
+        return [v for v in r["violazioni"] if v["regola"].startswith(regola)]
+
+    def test_ancore(self):
+        self.assertEqual(self.an["giorno_arrivo"], 42)
+        self.assertEqual(self.an["portatori"], {"Aegis Fang": "Thorik"})
+        self.assertEqual(self.an["modifiche"], {"Thorik": {"DES": -2, "COS": 2}, "Tordek": {}})
+        self.assertEqual([e["id"] for e in self.an["echi"]], ["E-01a", "E-01b"])
+
+    def test_s1_arrivo_sbagliato(self):
+        v = self._viol("- Day 39: l'orda della Mano Rossa arriva a Rethmar.\n", "S1")
+        self.assertEqual(len(v), 1)
+        self.assertEqual((v[0]["atteso"], v[0]["ha"], v[0]["riga"]), ("Giorno 42", "Giorno 39", 3))
+
+    def test_s1_non_scatta(self):
+        for riga in ("- Day 42: l'orda della Mano Rossa arriva a Rethmar.",
+                     "Se la marcia rallenta, l'orda arriva a Rethmar al Giorno 44.",
+                     "Giorno 2 dell'assedio: l'orda arriva a Rethmar con le macchine.",
+                     "L'orda arriva a Rethmar al Day 40 → corretto in 42.",
+                     "Finestra d'arrivo dell'orda a Rethmar: Giorno 38-41."):
+            with self.subTest(riga=riga):
+                self.assertEqual(self._viol(riga + "\n", "S1"), [])
+
+    def test_s5_portatore(self):
+        v = self._viol("Hella impugna Aegis Fang contro il drago.\n", "S5")
+        self.assertEqual(len(v), 1)
+        self.assertEqual((v[0]["atteso"], v[0]["ha"]), ("Aegis Fang: Thorik", "Hella"))
+        self.assertEqual(self._viol("Thorik impugna Aegis Fang contro il drago.\n", "S5"), [])
+
+    def test_s6_modifica_permanente(self):
+        v = self._viol("Thorik paga −2 COS permanente.\n", "S6")
+        self.assertEqual(len(v), 1)
+        self.assertEqual(v[0]["ha"], "COS −2")
+        self.assertEqual(self._viol("Tordek ha −2 DES permanenti dal rito.\n", "S6")[0]["atteso"],
+                         "Tordek: nessuna")
+        for riga in ("Thorik: −2 DES / +2 COS permanenti.",
+                     "Thorik e Tordek pagano −2 SAG permanente.",   # due PG: non si sa di chi
+                     "Thorik paga −2 COS per un'ora."):             # non è permanente
+            with self.subTest(riga=riga):
+                self.assertEqual(self._viol(riga + "\n", "S6"), [])
+
+    def test_s7_eco_armato_senza_scena(self):
+        v = self._viol("Il seme di E-01a germoglia qui.\n", "S7")
+        self.assertEqual([x["atteso"].split()[0] for x in v], ["E-01b"])
+        self.assertEqual(v[0]["riga"], 0)
+
+    def test_chi_sa_cosa_dichiarato_non_verificabile(self):
+        p = _scrivi(self.arco, "M.md", "# M\n")
+        r = cc.verifica_storia([p], self.an, [self.arco])
+        self.assertEqual(r["non_verificabili"], {"chi sa cosa (conoscenze senza tempo)": "1 su 1"})
+
+    def test_cli_fatti_state_json(self):
+        import contextlib
+        import io
+        import json
+        _scrivi(self.arco, "M.md", "# M\n\nHella impugna Aegis Fang.\n")
+        buf = io.StringIO()
+        vecchio = cc.STATE
+        cc.STATE = self.state
+        try:
+            with contextlib.redirect_stdout(buf):
+                rc = cc.main(["fatti", str(self.arco), "--state", "--json"])
+        finally:
+            cc.STATE = vecchio
+        self.assertEqual(rc, 0)   # misura, non cancello
+        storia = json.loads(buf.getvalue())["storia"]
+        self.assertEqual(storia["regole"], ["S1", "S5", "S6", "S7"])
+        self.assertTrue(any(v["regola"].startswith("S5") for v in storia["violazioni"]))
 
 
 class TestResidui(unittest.TestCase):
@@ -333,3 +444,7 @@ class TestResidui(unittest.TestCase):
         p = self._residui([{"chiave": "orog", "attributo": "GS", "ragione": "x"},
                            {"chiave": "hobgoblin", "attributo": "CA", "ragione": "y"}])
         self.assertEqual(cc.controlla_residui(self.R, p), 1)
+
+
+if __name__ == "__main__":
+    unittest.main()

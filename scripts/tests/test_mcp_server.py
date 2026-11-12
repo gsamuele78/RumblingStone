@@ -193,6 +193,29 @@ class TestAderenzaAlManifest(unittest.TestCase):
         argv = M.costruisci(t, {"comando": "status"})
         self.assertEqual(argv[-1], "status")
 
+    def test_le_opzioni_del_sottocomando_vengono_dopo_il_sottocomando(self):
+        # Prima del 2026-11-12 il server scriveva «--json -- fatti DIR»: il parser
+        # principale di coerenza_campagna rifiutava --json e il tool via MCP
+        # rispondeva solo con l'errore d'uso.
+        t = M.carica()["coerenza_campagna"]
+        argv = M.costruisci(t, {"cmd": "fatti", "percorsi": ["campaign"], "state": True,
+                                "json": True})
+        self.assertEqual(argv[2:], ["fatti", "--state", "--json", "--", "campaign"])
+
+    def test_le_opzioni_del_parser_principale_restano_prima(self):
+        t = M.carica()["riscontro_srd"]
+        argv = M.costruisci(t, {"offline": True, "comando": "scarica"})
+        self.assertEqual(argv[2:], ["--offline", "scarica"])
+
+    def test_coerenza_campagna_fatti_state_via_mcp(self):
+        t = M.carica()["coerenza_campagna"]
+        esito = M.esegui(t, M.costruisci(t, {"cmd": "fatti", "percorsi": ["campaign"],
+                                             "state": True, "json": True}))
+        self.assertFalse(esito.get("isError"), esito)
+        testo = esito["content"][0]["text"]
+        self.assertIn('"storia"', testo)
+        self.assertIn('"regole"', testo)
+
     def test_ogni_tool_esposto_esiste_su_disco(self):
         for nome, t in M.carica().items():
             self.assertTrue((REPO / t["path"]).is_file(), f"{nome}: {t['path']}")

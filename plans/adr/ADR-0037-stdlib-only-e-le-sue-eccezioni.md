@@ -285,6 +285,6 @@ simpleeval 1.0.8 (MIT, un file, nessuna dipendenza) valuta le formule d20 scritt
 
 ## Emendamento del 2026-11-11 — markdown-it-py, la sesta
 
-**Stato**: proposta · **Dettaglio**: [ADR-0120](ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md), emendamento del 2026-11-11.
+**Stato**: accettato dal DM il 2026-11-12 (card sul parser) · **Dettaglio**: [ADR-0120](ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md), emendamento del 2026-11-11.
 
 `markdown-it-py` (MIT, puro Python) è la sesta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Dice a `validate_lingua.py` quali righe rientrate sono codice per CommonMark; senza, il validatore ripiega su una regola stdlib, lo stampa, e sul banco di semina trova gli stessi errori.

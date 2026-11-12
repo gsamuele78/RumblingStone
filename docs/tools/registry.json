@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 137,
+  "tool_count": 139,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -8480,9 +8480,9 @@
       "path": "scripts/coerenza_campagna.py",
       "category": "G-orchestration-governance",
       "language": "python",
-      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
-      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
-      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] [--state] | tutto --fronti F... --archi D... --out DIR}",
+      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Con `fatti --state` (ADR-0125, canale testing) aggiunge le regole con l'atteso in campaign/state.yaml: S1 giorno d'arrivo dell'orda a Rethmar, S5 chi porta quale artefatto, S6 modifiche permanenti di un PG, S7 echi armati senza un file che li cita; ogni violazione dice regola, atteso, ha e file:riga, e \"chi sa cosa\" senza tempo esce fra i non verificabili. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto? Questo master contraddice state.yaml sul giorno d'arrivo dell'orda o su chi porta l'ascia?»",
       "stability": "beta",
       "stdlib_only": false,
       "external_bins": [
@@ -8506,13 +8506,22 @@
           "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
         },
         {
+          "name": "percorsi",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "(fronti) i file YAML di fronti e orologi; (fatti) le cartelle d'arco da leggere, per esempio campaign o 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist."
+        },
+        {
           "name": "--state",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura. (fatti) Aggiunge le regole S1, S5, S6, S7 contro campaign/state.yaml, con regola, atteso, ha e file:riga (ADR-0125)."
         },
         {
           "name": "--bestiario",
@@ -8622,7 +8631,8 @@
         "scripts/tests/test_coerenza_campagna.py"
       ],
       "docs": [
-        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
+        "plans/adr/ADR-0125-la-coerenza-della-storia-si-verifica-contro-state-yaml-solo-sui-fatti-strutturati.md"
       ]
     },
     {
@@ -12217,6 +12227,130 @@
       "idempotent": true
     },
     {
+      "id": "verifica_scheda",
+      "path": "scripts/verifica_scheda.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_scheda.py SCHEDA|CARTELLA ... [--json] [--check] [--tolleranza]",
+      "summary": "ADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con verifica, regola, atteso, ha, fonte, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        },
+        {
+          "name": "--tolleranza",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rimette la tolleranza di prima su tiri salvezza (+4) e attacco (-1..+2)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/dnd35/dati/gradi.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/gradi.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/d20/dati/bonus.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
+      ]
+    },
+    {
       "id": "verifica_sezione6",
       "path": "scripts/verifica_sezione6.py",
       "category": "G-orchestration-governance",
@@ -12271,6 +12405,106 @@
       ],
       "docs": [
         "plans/adr/ADR-0056-una-norma-senza-misura-non-esiste.md"
+      ]
+    },
+    {
+      "id": "verifica_talenti",
+      "path": "scripts/verifica_talenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/verifica_talenti.py [SCHEDA|CARTELLA ...] [--json] [--check]",
+      "summary": "ADR-0124. I prerequisiti dei talenti delle schede che esistono (difetto: Bestiario/), con la stessa regola del generatore (dmcore.talenti.violazioni). Per ogni violazione dice file:riga, talento, regola (car.X, bab, lic, classe.X, talento, capacita), valore atteso e valore che la scheda ha: con --json e' l'uscita che un agente legge per correggere la scheda e richiamare. Esclude i talenti bonus senza prerequisiti (monaco, ranger) e le competenze date dalla classe; senza classi dichiarate, lic/capacita/classe vanno fra i non verificabili. Canale testing (ADR-0099): misura, non cancello.",
+      "use_case": "«Questa scheda puo' avere Incalzare Potenziato? Quale prerequisito manca, e quanto vale quello che ha?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "percorsi",
+          "type": "path",
+          "required": false,
+          "default": "Bestiario",
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede .md o cartelle da leggere (difetto: Bestiario/)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable: violazioni con regola, atteso, ha, file e riga."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Exit 1 se c'e' almeno una violazione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "sistemi/dnd35/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "path": "sistemi/pf1e/dati/talenti.toml",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione con --check)",
+        "1": "violazioni, solo con --check",
+        "2": "errore d'uso, percorso inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Regex, dati TOML e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Sola lettura."
+      },
+      "idempotent": true,
+      "sistema": {
+        "capacita": [
+          "creature.talenti"
+        ]
+      },
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/verifica_talenti.py --help",
+      "tests": [
+        "scripts/tests/test_verifica_talenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0124-le-regole-si-verificano-in-python-e-l-llm-riceve-regola-e-controesempio.md"
       ]
     },
     {
