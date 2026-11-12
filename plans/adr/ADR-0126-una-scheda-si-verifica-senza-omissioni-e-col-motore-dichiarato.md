@@ -170,6 +170,77 @@ Limiti, detti:
 - il PF1e non cambia: contatto, sprovvista e DMC stanno già nel cancello dei
   moduli.
 
+### Lotto 2 — armi e danno (2026-11-12)
+
+`verifica_scheda` non guardava il danno: né il dado, né il bonus, né il
+critico. Ora la capacità `creature.armi` porta la tabella delle armi dell'SRD
+(`sistemi/dnd35/dati/armi.toml`, 72 armi, scritto da `estrai_armi.py` da
+«Table: Weapons» e dai nomi italiani del lessico) e `dmcore.danno` ricostruisce
+il danno di ogni attacco con un'arma della tabella:
+
+- **dado** della tabella portato alla taglia di chi impugna (SRD, «Weapon
+  Size»); la taglia viene dalla riga `tipo:` o dalla voce di taglia della CA;
+- **bonus**: Forza (una volta e mezza a due mani, metà con la mano secondaria,
+  niente per archi e balestre, fino alla Forza per gli archi compositi), più il
+  potenziamento dell'arma, più i talenti dichiarati (Arma Specializzata e
+  Superiore sull'arma nominata; specialista del martello del chierico nano);
+- **critico** della tabella; l'intervallo raddoppia con Critico Migliorato
+  sull'arma o con un'arma affilata. Il 20/x2 si può tacere, gli altri no.
+
+Una clausola a condizione («in Ira», «con Attacco Poderoso», «entro 9 m») non
+si giudica. Il manuale base del PF1e ha le stesse 72 armi con lo stesso dado e
+lo stesso critico (riscontro su PSRD-Data, 72 su 72): il plugin `pf1e` eredita
+la capacità, ma la verifica resta sul 3.5 fino al lotto 10.
+
+| | Prima (main) | Lotto 2 |
+|---|---|---|
+| Errori di danno messi apposta, visti da `verifica_scheda` | 0 su 364 | 336 su 364 (92%) |
+| per campo: dado, critico tolto, critico sbagliato | 0 | 95/96, 54/54, 20/20 |
+| per campo: bonus +1, bonus −2 | 0 | 80/97, 87/97 |
+| Scarti veri trovati (Bestiario e moduli) | non misurati | 16 critici non scritti, 2 bonus |
+| Scarti rimasti dopo le correzioni | | 4, tutti di ARC-07, in attesa del DM |
+
+Banco: `plans/esperimenti/regole-senza-omissioni-2026-11-12/muta_danno.py`,
+misure in `misure-danno.json` accanto.
+
+Cosa è stato corretto, in 11 schede del Bestiario:
+
+- 12 critici non scritti (stocco 18-20, spada lunga e spadone 19-20, spada
+  bastarda, balestre, pugnale): è il numero della tabella;
+- il cavaliere githyanki d'élite: mazzafrusto pesante a due mani 1d10+3 →
+  1d10+4 (Forza +3 per una volta e mezza), regola del DM «il numero più forte,
+  se si ricostruisce» (ADR-0118).
+
+Cosa **non** è stato corretto, e perché. Quattro scarti stanno nel master di
+ARC-07 (`ARC07-DEF-4`) e nelle sue copie: toccarlo cambia le impronte dei
+booklet della serata e la copia di Balvar che un test tiene uguale al
+Bestiario. Restano violazioni nell'uscita di `verifica_scheda` e vanno al DM:
+
+- Zog'tar, giavellotti Grandi 1d8+13: con Forza 30 la regola dà +10; +13 è il
+  danno in Ira Superiore (Forza 36) e la riga non lo dice;
+- guardie di Zog'tar, spadone 2d6+6 senza critico (19-20);
+- Balvar, martello da guerra runico +1 senza critico (x3), nel master e nella
+  scheda del Bestiario.
+
+Difetti del verificatore trovati e chiusi lungo la strada: i talenti scritti
+nella prosa sotto il recinto, la condizione scritta dopo la parentesi, la
+stessa arma ripetuta senza nome, il potenziamento dello scudo che non va al
+danno, il dado del colpo senz'armi del monaco.
+
+Limiti, detti:
+
+- **attacchi naturali** (78 righe) e **armi fuori tabella** (19: balista, nerbo,
+  raffica, righe senza nome) restano non verificabili: il dado di un morso viene
+  dalla creatura (lotto 5), le armi dei manuali arrivano con gli oggetti;
+- 28 errori messi apposta su 364 non si vedono: un'arma a una mano senza scudo
+  ammette due letture (una mano o due), l'arco composito ammette ogni bonus fino
+  alla Forza, il monaco e le schede senza Forza leggibile non si giudicano;
+- il danno aggiuntivo (furtivo, elementale, «più veleno») non si giudica;
+- Arma Specializzata scritta senza l'arma fra parentesi vale come «forse»: sono
+  ammessi il numero con e quello senza;
+- i talenti di una scheda con più recinti si cercano dal recinto al successivo:
+  una nota di un'altra creatura in quel tratto può ammettere un numero in più.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore
