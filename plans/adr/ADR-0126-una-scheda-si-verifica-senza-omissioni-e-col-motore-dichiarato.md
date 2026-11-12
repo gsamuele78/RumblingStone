@@ -197,7 +197,7 @@ la capacità, ma la verifica resta sul 3.5 fino al lotto 10.
 | Errori di danno messi apposta, visti da `verifica_scheda` | 0 su 364 | 336 su 364 (92%) |
 | per campo: dado, critico tolto, critico sbagliato | 0 | 95/96, 54/54, 20/20 |
 | per campo: bonus +1, bonus −2 | 0 | 80/97, 87/97 |
-| Scarti veri trovati (Bestiario e moduli) | non misurati | 16 critici non scritti, 2 bonus |
+| Scarti veri trovati (Bestiario e moduli) | non misurati | 17: 15 critici non scritti, 2 bonus |
 | Scarti rimasti dopo le correzioni | | 4, tutti di ARC-07, in attesa del DM |
 
 Banco: `plans/esperimenti/regole-senza-omissioni-2026-11-12/muta_danno.py`,
