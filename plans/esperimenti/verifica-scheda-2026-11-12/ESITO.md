@@ -11,8 +11,9 @@ chiudere il divario dove la misura dice che serve. Decisione in
 
 `scripts/verifica_scheda.py`, nel manifest e quindi nel server MCP, sola
 lettura. Una chiamata, un'uscita: per ogni difetto `verifica` (talenti o
-numeri), `regola`, `atteso`, `ha`, `fonte`, `file:riga`. Non ha regole sue:
-chiama `verifica_talenti` e `conformita_statblocchi.giudica`.
+numeri o abilita), `regola`, `atteso`, `ha`, `fonte`, `file:riga`. Chiama
+`verifica_talenti` e `conformita_statblocchi.giudica`; l'unica regola sua è
+quella dei gradi delle abilità (§2-bis).
 
 Bestiario: 126 schede lette, **23 violazioni in 12 schede** (tutte di
 talenti), 65 voci non verificabili.
@@ -45,9 +46,38 @@ Perché ne perde metà, contato sui mutanti persi:
 - **Schede a dossier** (`Bestiario/png/*/*.md`): la lettura dei numeri non è
   collaudata su quel formato («BAB/Lotta: +8 / +10» letto come lotta 8), quindi
   i loro numeri vanno fra i non verificabili.
-- **Gradi delle abilità: nessun controllo.** Il plugin 3.5 ha i nomi delle
-  abilità ma non la caratteristica chiave né i punti per livello di classe e di
-  tipo; il PF1e ha i punti per livello delle classi.
+- **Gradi delle abilità: non c'era nessun controllo.** Aggiunto in questo
+  giro, vedi §2-bis.
+
+## 2-bis. Gradi delle abilità (capacità nuova `creature.gradi`)
+
+`estrai_gradi.py` scrive le regole nei due plugin, da fonti OGL in cache:
+`sistemi/dnd35/dati/gradi.toml` (SRD 3.5: 37 abilità con la caratteristica
+chiave, punti per livello di 65 classi, punti per dado vita di 15 tipi; massimo
+= dadi vita + 3, primo dado × 4) e `sistemi/pf1e/dati/gradi.toml` (PRD: 26
+abilità, 13 tipi; massimo = dadi vita, +3 d'abilità di classe; i punti per
+livello delle classi erano già in `classi.toml`).
+
+La scheda scrive il bonus, non i gradi. Lo strumento calcola i gradi **minimi**
+che un bonus chiede (bonus − caratteristica − margine per sinergia, razza e
+talenti) e applica due condizioni necessarie: `gradi.massimo` per abilità e
+`gradi.punti` sulla somma.
+
+Bestiario: 33 schede con una riga di abilità; 29 pulite, 4 non calcolabili (3
+per classi di prestigio fuori dal plugin, 1 per il tipo), **0 segnalazioni
+sulle schede vere**. Con errori messi apposta (`muta_abilita.py`, 29 schede):
+
+| Errore messo | Visto |
+|---|---|
+| una abilità +4 | 3 / 29 |
+| una abilità +8 | 18 / 29 |
+| una abilità +12 | 21 / 29 |
+| tutte le abilità +3 | 4 / 29 |
+| tutte le abilità +6 | 14 / 29 |
+
+Vede gli errori grossi e non quelli piccoli: il margine (da 4 a 13 punti) è
+largo apposta per non segnalare schede giuste. Per stringerlo servono i bonus
+razziali per razza e le abilità di classe per classe, che il plugin non ha.
 
 ## 3. Divario dei plugin, sezione per sezione
 
@@ -56,8 +86,8 @@ Perché ne perde metà, contato sui mutanti persi:
 | Talenti | 363 SRD + 2.193 dei manuali (da oggi) | 363 | 38 pagine, 1.553 in tabella | 2.037 | 1.227 |
 | Classi base | 11 + 5 da PNG | 11 + psioniche | 65 pagine | 74 file `class` (base e prestigio) | 55 |
 | Classi di prestigio | 14 (SRD) | 14 + epiche e psioniche | **268 pagine** | compresi sopra | nelle 55 |
-| Abilità | solo nomi | pagine complete | 4 pagine | 28 file | nomi |
-| Punti abilità per livello | **assenti** | nelle pagine di classe e di tipo | nelle pagine di classe | campi `STARTSKILLPTS` | presenti |
+| Abilità | nomi + caratteristica chiave di 37 (da oggi) | pagine complete | 4 pagine | 28 file | 26 con la chiave (da oggi) |
+| Punti abilità per livello | 65 classi, 15 tipi (da oggi) | nelle pagine di classe e di tipo | nelle pagine di classe | campi `STARTSKILLPTS` | classi + 13 tipi (da oggi) |
 | Incantesimi (liste per classe) | 6 classi, liste corte del generatore | tutti | 27 pagine | 72 file | liste complete |
 | Razze | 20 | Core + mostri | 2 pagine indice | 57 file | 37 + 100 voci |
 | Tipi di creatura | 15 | sì | sì | — | 13 |
@@ -71,9 +101,9 @@ manuali.
 
 ## 4. Ordine in cui chiudere (dal più utile alla verifica)
 
-1. **Punti e gradi delle abilità** (3.5 e PF1e): è il controllo che manca del
-   tutto. Servono caratteristica chiave, punti per livello di classe e di
-   tipo; l'SRD in cache li ha, quindi resta dentro l'OGL.
+1. **Punti e gradi delle abilità** (3.5 e PF1e): fatto in questo giro (§2-bis).
+   Per vedere anche gli errori piccoli servono le abilità di classe per classe
+   e i bonus razziali per razza.
 2. **Classi di prestigio e classi base fuori SRD** (BAB, TS, dado vita, punti
    abilità, avanzamento da incantatore): toglie «la regola non parte» e i
    «non verificabili per classe ignota». Fonti: srd.dndtools.org e PCGen,
@@ -102,4 +132,6 @@ manuali.
 ```bash
 python3 scripts/verifica_scheda.py Bestiario
 python3 plans/esperimenti/verifica-scheda-2026-11-12/muta_numeri.py
+python3 plans/esperimenti/verifica-scheda-2026-11-12/muta_abilita.py
+python3 plans/esperimenti/verifica-scheda-2026-11-12/estrai_gradi.py --check
 ```

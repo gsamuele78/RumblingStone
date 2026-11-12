@@ -64,6 +64,38 @@ class Scheda(unittest.TestCase):
         _, d = self._esegui(str(p))
         self.assertFalse([x for x in d["violazioni"] if x["verifica"] == "numeri"])
 
+    def test_gradi_di_abilita_gonfiati(self):
+        # un'abilità alzata di 20: i gradi minimi superano il massimo (dadi vita + 3)
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / ABISHAI.name
+            testo = ABISHAI.read_text(encoding="utf-8")
+            self.assertEqual(V.abilita(ABISHAI), ([], []))
+            riga = next(r for r in testo.splitlines() if V.RIGA_ABILITA.search(r))
+            nuova = re.sub(r"\+(\d+)", lambda m: f"+{int(m.group(1)) + 20}", riga, count=1) \
+                if not V.RIGA_ABILITA.search(riga).start(1) else None
+            m = V.RIGA_ABILITA.search(riga)
+            gonfia = re.sub(r"\+(\d+)", lambda k: f"+{int(k.group(1)) + 20}", m.group(1), count=1)
+            p.write_text(testo.replace(riga, riga[:m.start(1)] + gonfia + riga[m.end(1):]), encoding="utf-8")
+            del nuova
+            viol, _ = V.abilita(p)
+        self.assertIn("gradi.massimo", {x["regola"] for x in viol})
+        v = next(x for x in viol if x["regola"] == "gradi.massimo")
+        self.assertGreater(v["ha"], v["atteso"])
+
+    def test_gradi_classe_fuori_dal_plugin_non_si_giudica(self):
+        viol, nv = V.abilita(KRUSK)
+        self.assertEqual(viol, [])
+        self.assertTrue(any(x["regola"] == "gradi.punti" for x in nv))
+
+    def test_regole_dei_gradi_nei_due_plugin(self):
+        from dmcore import sistemi as S
+        d35, pf = S.dati("dnd35", "creature.gradi"), S.dati("pf1e", "creature.gradi")
+        self.assertEqual((d35["regole"]["massimo_piu"], d35["regole"]["primo_dado"]), (3, 4))
+        self.assertEqual((pf["regole"]["massimo_piu"], pf["regole"]["primo_dado"]), (0, 1))
+        self.assertEqual((d35["classi"]["rogue"], d35["tipi"]["outsider"], d35["chiave"]["hide"]), (8, 8, "Des"))
+        self.assertEqual((pf["classi"]["rogue"]["gradi"], pf["tipi"]["outsider"], pf["chiave"]["stealth"]),
+                         (8, 6, "Des"))
+
     def test_sola_lettura(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / KRUSK.name

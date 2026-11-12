@@ -8,11 +8,13 @@ Scopo
   **fonte** che decide e `file:riga`. Corregge e richiama finché è pulita.
   Sola lettura: non scrive mai il canone.
 
-  Mette insieme i verificatori che esistono, senza regole nuove:
+  Mette insieme i verificatori che esistono, più il controllo dei gradi:
     talenti  prerequisiti dei talenti (`verifica_talenti`: SRD d20 → manuali
              3.5 → PF1e)
     numeri   pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta,
              attacco, iniziativa (`conformita_statblocchi.giudica`)
+    abilita  gradi delle abilità: massimo per abilità e punti disponibili
+             (capacità `creature.gradi` del plugin; 3.5 e PF1e)
 
   Le regole sono quelle del plugin del sistema della scheda (`sistemi/<id>`).
   Un conto che il plugin non sa fare non compare: `non_verificabili` dice che
@@ -35,7 +37,9 @@ import argparse
 import contextlib
 import io
 import json
+import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -113,6 +117,135 @@ def talenti(p: Path) -> "tuple[list[dict], list[dict], list[dict]]":
     return v, nv, ign
 
 
+#: riga delle abilità: «**Abilità**: Ascoltare +12, …», «Skills: Hide +5, …»
+RIGA_ABILITA = re.compile(r"(?:^|[\s*·])(?:Abilit[àa]|Skills)\**:?\**\s+(?=[A-ZÀ-Ý])(.+?)(?=\s·\s|\s\*\*[A-ZÀ-Ý]|$)")
+VOCE_ABILITA = re.compile(r"([A-Za-zÀ-ú' ]+?)(?:\s*\(([^)]*)\))?\s*([+-−]\d+)")
+#: talenti che danno +2 a due abilità o +3 a una: margine quando la scheda li ha
+TALENTI_ABILITA = re.compile(r"Skill Focus|Abilità Focalizzata|Alertness|Allerta|Acrobatic|Agile|Athletic|Atletico|"
+                             r"Deceitful|Deft Hands|Diligent|Investigator|Magical Aptitude|Negotiator|Nimble Fingers|"
+                             r"Persuasive|Persuasivo|Self-Sufficient|Stealthy|Furtivo|Animal Affinity", re.I)
+
+
+@lru_cache(maxsize=None)
+def _abilita_it() -> "dict[str, str]":
+    import lessico_regole as LR
+    return {LR.norma(v["it"]): v["srd35"].lower() for v in LR.tabella_35() if v["tipo"] == "abilità"}
+
+
+@lru_cache(maxsize=None)
+def _classi_it() -> "dict[str, str]":
+    import lessico_regole as LR
+    return {v["it"].lower(): v["srd35"].lower() for v in LR.tabella_35()
+            if v["tipo"] in ("classe", "classe di prestigio")}
+
+
+def _punti_di_classe(regole: dict, classe: str) -> "int | None":
+    v = regole.get("classi", {}).get(classe)
+    return v.get("gradi") if isinstance(v, dict) else v
+
+
+def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
+    """(violazioni, non verificabili) dei gradi delle abilità.
+
+    La scheda scrive il bonus totale, non i gradi: i gradi **minimi** che un
+    bonus chiede sono bonus − modificatore della caratteristica chiave − margine
+    (sinergia +2, razza, talenti). Due regole, tutte e due condizioni necessarie:
+      gradi.massimo  i gradi minimi di un'abilità non superano il massimo
+                     (3.5: dadi vita + 3; PF1e: dadi vita, più 3 d'abilità di classe)
+      gradi.punti    la somma dei gradi minimi non supera i punti abilità che
+                     classi e dadi vita razziali danno
+    Con margini larghi vede gli errori grossi, non quelli di un punto."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    f = VT.leggi(p) or {}
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    n_riga, riga = next(((i + 1, m.group(1)) for i, r in enumerate(s.testo.splitlines())
+                         if (m := RIGA_ABILITA.search(r)) and re.search(r"[+−-]\d", m.group(1))), (None, None))
+    if riga is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    rel = VT_rel(p)
+    try:
+        regole = S.dati(sistema, "creature.gradi")
+    except S.ErroreSistemi as e:
+        return [], [{"file": rel, "riga": n_riga, "verifica": "abilita", "regola": "sistema",
+                     "testo": str(e), "fonte": sistema}]
+    car = {k: v for k, v in s.attributi.items() if isinstance(v, int)}
+    dv = sum(g.n for g in s.gruppi)
+    livelli = f.get("livelli") or {k: v for k, v in L.livelli_di_classe(s).items()}
+    ignote = f.get("classi_ignote") or []
+    base = {"file": rel, "riga": n_riga, "verifica": "abilita",
+            "fonte": "srd" if sistema == "dnd35" else f"{sistema} prd"}
+    if not dv or "Int" not in car:
+        return [], [{**base, "regola": "lettura", "testo": "dadi vita o Intelligenza non leggibili"}]
+    r = regole["regole"]
+    intel = (car["Int"] - 10) // 2
+    # il tipo sta nella riga `tipo:` (o «Type»); il più lungo che combacia, perché
+    # «monstrous humanoid» contiene «humanoid»
+    riga_tipo = next((x for x in s.testo.splitlines() if re.match(r"\W*(?:tipo|type)\b", x, re.I)), s.testo[:400])
+    alias = S.dati(sistema, "creature.costruzione").get("alias_tipo", {})
+    nomi_tipo = {**{t: t for t in regole["tipi"]}, **{it: en for it, en in alias.items() if en in regole["tipi"]}}
+    tipo = next((nomi_tipo[t] for t in sorted(nomi_tipo, key=len, reverse=True)
+                 if re.search(rf"\b{re.escape(t)}\b", riga_tipo, re.I)), None)
+    # le classi che la lettura dei livelli non conosce ma il plugin dei gradi sì («Druid 9»)
+    livelli = dict(livelli)
+    for voce in ignote:
+        nome, _, n = voce.rpartition(" ")
+        livelli[nome] = livelli.get(nome, 0) + int(n)
+    razziali = max(0, dv - sum(livelli.values()))
+    quote, sconosciute = [], []
+    for classe, n in livelli.items():
+        k = classe.lower()
+        pt = next((x for x in (_punti_di_classe(regole, c) for c in (k, VT.T._ALIAS.get(k, k), _classi_it().get(k, k)))
+                   if x is not None), None)
+        if pt is None:
+            sconosciute.append(f"{classe} {n}")
+        else:
+            quote.append((n, pt))
+    if razziali:
+        if tipo is None:
+            sconosciute.append("tipo della creatura")
+        else:
+            quote.append((razziali, regole["tipi"][tipo]))
+    per_dado = [max(r["minimo_per_dado"], pt + intel) for _, pt in quote]
+    punti = sum(n * q for (n, _), q in zip(quote, per_dado)) + (r["primo_dado"] - 1) * max(per_dado, default=0)
+    umano = bool(re.search(r"\b(?:human|umano|umana)\b", s.testo[:1500], re.I))
+    punti += (dv + r["primo_dado"] - 1) * r["umano_per_livello"] if umano else 0
+    massimo = dv + r["massimo_piu"] + r.get("bonus_di_classe", 0)
+    # margine: sinergia o oggetto +2; razza +2 (mostri: +4, o +8 se la scheda parla di bonus razziali);
+    # +3 se la scheda ha un talento che alza le abilità
+    margine = 2 + (8 if re.search(r"razzial|racial", s.testo, re.I) else 4 if razziali else 2)
+    margine += 3 if TALENTI_ABILITA.search(s.testo) else 0
+    chiave = regole["chiave"]
+    viol, nv, somma, lette = [], [], 0, 0
+    for nome, _, bonus in VOCE_ABILITA.findall(re.sub(r"[*_`]", "", riga)):
+        nome = nome.strip()
+        en = _abilita_it().get(LR.norma(nome), nome.lower())
+        en = next((k for k in chiave if en == k or en.startswith(k + " ")), None)
+        if en is None:
+            continue
+        lette += 1
+        mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
+        minimi = int(bonus.replace("−", "-")) - mod - margine
+        somma += max(0, minimi)
+        if minimi > massimo:
+            viol.append({**base, "regola": "gradi.massimo", "abilita": en, "atteso": massimo, "ha": minimi,
+                         "testo": f"{nome} {bonus}: servono almeno {minimi} gradi "
+                                  f"(tolti {mod:+d} di caratteristica e {margine} di margine), il massimo è {massimo}"})
+    if sconosciute:
+        nv.append({**base, "regola": "gradi.punti", "testo": "punti abilità non calcolabili: "
+                   + ", ".join(sconosciute) + " fuori dalle regole del plugin"})
+        nv += [{**v, "nota": "classi che la lettura non conosce: il massimo può essere più alto"} for v in viol]
+        return [], nv
+    if lette and somma > punti:
+        viol.append({**base, "regola": "gradi.punti", "atteso": punti, "ha": somma,
+                     "testo": f"le abilità scritte chiedono almeno {somma} gradi, "
+                              f"classi e dadi vita ne danno {punti}"})
+    return viol, nv
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -129,9 +262,10 @@ def main(argv: "list[str] | None" = None) -> int:
     for p in VT.schede(percorsi):
         tv, tn, ti = talenti(p)
         nvv, nn = numeri(p)
-        lette += bool(tv or tn or ti or nvv or nn or L.leggi(p))
-        viol += tv + nvv
-        nv += tn + ti + nn
+        av, an = abilita(p)
+        lette += bool(tv or tn or ti or nvv or nn or av or an or L.leggi(p))
+        viol += tv + nvv + av
+        nv += tn + ti + nn + an
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

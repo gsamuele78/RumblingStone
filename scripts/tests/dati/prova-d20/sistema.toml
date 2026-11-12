@@ -33,3 +33,4 @@ skill = []
 "creature.regole_di_tipo" = { eredita = "dnd35", motivo = "stesse regole di tipo" }
 "creature.conformita" = { eredita = "dnd35", motivo = "stessi conti" }
 "creature.talenti" = { eredita = "dnd35", motivo = "stessi talenti" }
+"creature.gradi" = { eredita = "dnd35", motivo = "stessi gradi" }

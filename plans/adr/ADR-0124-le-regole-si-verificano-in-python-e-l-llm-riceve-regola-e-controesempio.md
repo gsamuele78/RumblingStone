@@ -67,7 +67,12 @@ elencano, gli stessi fatti dati a tre motori, più 141 difetti iniettati.
 7. **Una chiamata per scheda**: `scripts/verifica_scheda.py` (manifest, server
    MCP, sola lettura, canale testing) restituisce nella stessa forma i
    prerequisiti dei talenti e i numeri di `conformita_statblocchi.giudica`
-   (pf, BAB, tiri salvezza, lotta, attacco, iniziativa). Non ha regole sue.
+   (pf, BAB, tiri salvezza, lotta, attacco, iniziativa), più i **gradi delle
+   abilità**: capacità nuova `creature.gradi` nei plugin `dnd35` (dall'SRD) e
+   `pf1e` (dal PRD), con massimo per abilità e punti disponibili calcolati sui
+   gradi minimi che il bonus scritto chiede. Sulle schede vere 0 segnalazioni;
+   con errori inseriti vede 18 su 29 abilità gonfiate di 8 e 3 su 29 gonfiate
+   di 4: il margine è largo per non segnalare schede giuste.
    Misura con errori messi apposta: 666 su 1.278 visti (52%); il resto e
    l'ordine in cui chiudere il divario dei plugin stanno in
    [plans/esperimenti/verifica-scheda-2026-11-12/ESITO.md](../esperimenti/verifica-scheda-2026-11-12/ESITO.md).
