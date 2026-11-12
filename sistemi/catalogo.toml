@@ -29,4 +29,5 @@
 "creature.liste_incantesimi" = "le liste di classe e di dominio degli incantesimi, per livello: chi può lanciare che cosa (ADR-0124 §10)"
 "statblocco.campi" = "i campi meccanici del blocco statistiche"
 "formule.regole" = "le formule del sistema scritte come nel manuale (modificatore, TS, CD), valutate da dmcore.formule (F3 di ADR-0112)"
+"bonus.cumulo" = "il cumulo dei bonus per tipo e le sorgenti (oggetti, talenti, razze) che una scheda può dichiarare sui tiri salvezza e sull'attacco (ADR-0126)"
 "stampa.etichette" = "le sigle meccaniche stampate nel riquadro della creatura (CA, pf, TS, Vel, GS, Iniziativa, Sensi)"
