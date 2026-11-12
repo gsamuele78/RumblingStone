@@ -468,6 +468,15 @@ del cancello:
   `ogre-micelio-sporeborn-cr8`, `lomyn-redtongue-bardo8-cr8` e
   `avarthel-druido-cr9` (uno in meno; gli ultimi due sono umani).
 
+**Le capacità dichiarate.** `verifica_scheda` leggeva 13 capacità dei plugin e
+nel manifest ne dichiarava una (`creature.talenti`): lo stesso buco che la #376
+ha chiuso per `genera_creatura`, trovato dal thread della documentazione. Ora le
+dichiara tutte e 13 (misura: `misura_capacita_verifica_scheda.py`, da 1 su 13 a
+13 su 13) e un test boccia una capacità letta e non dichiarata. I due plugin di
+prova dichiarano le quattro che mancavano (`bonus.cumulo`, `creature.armi`,
+`creature.incantatori`, `creature.prestigio`); nel censimento del plugin non
+d20 lo strumento passa da «nessuna» a «in parte».
+
 Limiti dichiarati: i difetti (Arcani Rivelati) e i tratti si accettano solo se
 dichiarati, non si verifica che il personaggio li abbia; i talenti bonus dei
 mostri del manuale non sono nei dati, si riconoscono solo dal «(B)»; i talenti

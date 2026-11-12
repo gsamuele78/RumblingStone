@@ -12501,7 +12501,19 @@
       "idempotent": true,
       "sistema": {
         "capacita": [
-          "creature.talenti"
+          "bonus.cumulo",
+          "creature.armi",
+          "creature.conformita",
+          "creature.costruzione",
+          "creature.gradi",
+          "creature.incantatori",
+          "creature.liste_incantesimi",
+          "creature.prestigio",
+          "creature.regole_di_tipo",
+          "creature.talenti",
+          "fonti.regole",
+          "formule.regole",
+          "statblocco.campi"
         ]
       },
       "consumes_schema": null,
