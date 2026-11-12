@@ -25,7 +25,7 @@ import re
 from dmcore import magia as M
 from dmcore import sistemi as S
 
-__all__ = ["requisiti", "classe", "senza_parentesi", "bab_di", "giudica"]
+__all__ = ["avanzamento", "requisiti", "classe", "senza_parentesi", "bab_di", "giudica"]
 
 
 @functools.cache
@@ -158,3 +158,43 @@ def giudica(req: dict, fatti: dict, sistema: str = "dnd35") -> "tuple[list[dict]
         incerto("speciali", f"{req['non_verificati']} requisiti della classe non si riducono a un numero "
                             "(speciale, divinità, lingua): vanno letti sul manuale")
     return scarti, nv
+
+
+def avanzamento(classe_che_lancia: str, prestigi: "list[tuple[str, int]]", altre_che_lanciano: "list[str]",
+                sistema: str = "dnd35") -> "tuple[int, list[str], str | None]":
+    """(livelli in più, come si arriva, dubbio) che le classi di prestigio danno
+    alla lista di `classe_che_lancia`.
+
+    `prestigi` = [(classe di prestigio, livelli)]; `altre_che_lanciano` = le altre
+    classi con incantesimi che il personaggio ha. Ogni livello della classe di
+    prestigio scritto in `avanza.livelli` dà +1 a una classe che si aveva già:
+    a questa se il tipo combacia (arcane, divine, both, any, o il suo nome). Il
+    dubbio dice perché il conto non è sicuro: avanzamenti che divergono fra due
+    libri, o un'altra classe che potrebbe prenderli."""
+    dati = requisiti(sistema)
+    tipi = dati.get("tipi_di_magia", {})
+    mio = next((k for k, v in tipi.items() if classe_che_lancia in v), None)
+    piu, parti, dubbio = 0, [], None
+    for nome, livelli in prestigi:
+        c = classe(nome, sistema) or {}
+        a = c.get("avanza")
+        if not a:
+            if not str(c.get("fonte", "")).startswith(("SRD", "PRD")):
+                dubbio = dubbio or f"«{nome}» viene da un manuale e il plugin non ne ha l'avanzamento"
+            continue
+        if a.get("diverge"):
+            dubbio = dubbio or f"l'avanzamento di «{nome}» diverge fra due libri"
+            continue
+        tipo = a["tipo"]
+        if tipo not in ("any", "both", mio, classe_che_lancia):
+            continue
+        rivali = [x for x in altre_che_lanciano
+                  if tipo == "any" or x == tipo or (tipo in tipi and x in tipi[tipo])] if tipo != "both" else \
+                 [x for x in altre_che_lanciano if mio and x in tipi.get(mio, [])]
+        if rivali:
+            dubbio = dubbio or f"i livelli di «{nome}» possono andare anche a {', '.join(rivali)}"
+        n = sum(1 for x in a["livelli"] if x <= livelli)
+        piu += n
+        parti.append(f"{nome} {livelli} (+{n})")
+    return piu, parti, dubbio
+

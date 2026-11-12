@@ -399,3 +399,11 @@ numeri, il rigiudizio delle 7 violazioni di talenti (card aperta al DM),
 l'uscita JSON per scheda per il thread della #379, e Autoipnosi fra le abilità
 3.5 del plugin.
 
+### Lotto 3-ter fatto (2026-11-12)
+
+L'avanzamento d'incantatore delle classi di prestigio è in `verifica_scheda`
+(ADR-0126, «Lotto 3-ter»): `estrai_prestigio.py` (voce `avanza`),
+`muta_avanzamento.py`, `misure-avanzamento.json`. Dubbio nuovo per il DM:
+`underdark-dovil-runecaster-cr7` lancia «da Diviner 5», Diviner 5 / Deep
+Diviner 1 dà 6. Restano le liste proprie di Assassino e Guardia Nera.
+
