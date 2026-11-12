@@ -905,3 +905,14 @@ repo scritto con altre parole.
 - **Testo:** Lotto 3 del programma «regole senza omissioni». Capacità `creature.incantatori` (tabelle delle classi che lanciano, 3.5 dall'SRD e PF1e dal PRD, solo numeri) e `dmcore.magia`; `verifica_scheda` giudica incantesimi al giorno, conosciuti, livello massimo e CD. Errori messi apposta visti 0/616 → 376/616. Trovati 40 scarti veri in 9 file, non corretti: slot e incantesimi preparati sono scelta del DM. La tabella PF1e del bardo (card del 2026-11-09) esce come forma ibrida dichiarata, non come violazione.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il costruttore non calcola gli incantesimi bonus (`dmcore.tabelle` dà solo la griglia della classe): gli slot delle schede sono scritti a mano, ed è lì che nascono gli scarti (ur-vrax ne ha uno in più a ogni livello); una riga della lista che nomina «incantesimi» (immunità agli incantesimi) veniva presa per intestazione
+
+### MS-0077 · 2026-11-12 · genera_creatura dichiara le capacità che legge
+
+- **Data:** 2026-11-12
+- **PR:** #376
+- **ADR:** ADR-0111, ADR-0121
+- **Temi:** regole motore plugin
+- **Origine:** addendum della riga del 2026-11-12 «Regole complete, coda del lotto 3» in `plans/CHANGELOG.md`
+- **Testo:** Segnalazione del thread della documentazione (#371): `creature.talenti` era nel catalogo e nei due plugin, ma nessuno strumento la dichiarava, quindi la matrice di `dm.py sistemi` non la mostrava e il cancello non controllava che un sistema attivo la coprisse. Misura con una spia su `dmcore.sistemi.capacita` durante 288 generazioni: `genera_creatura` legge `creature.costruzione`, `creature.talenti` e `formule.regole`; su main ne dichiarava 1 su 3, dopo 3 su 3. `formule.regole` è uscita dalla misura, non dalla segnalazione. Nella prima versione della PR (10/11) le righe dei sistemi di prova erano mie; nel frattempo le hanno portate su main le PR di ADR-0126, quindi nel merge ho tenuto le loro. La CI della prima versione era rossa per la riga di CHANGELOG mancante e la PR è rimasta ferma due giorni senza che me ne accorgessi.
+- **Trovato nel repo:** la misura → `plans/esperimenti/regole-complete-2026-11-10/misura_capacita_dichiarate.py`
+- **Solo qui:** `creature.incantesimi` e `creature.statistiche_per_gs` sono dichiarate, ma la spia non le vede passare da `capacita()`, perché vengono lette per altra via. Va controllato prima di toglierle. Gli altri strumenti col blocco `sistema` non sono stati spiati.
