@@ -884,3 +884,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il riscontro PCGen su «specialista del martello»; quali test si rompono toccando il master di ARC-07
 
+### MS-0075 · 2026-11-12 · Grafo degli eventi, Prolog e RAG per «chi sa cosa»
+
+- **Data:** 2026-11-12
+- **PR:** #383
+- **ADR:** ADR-0125
+- **Temi:** coerenza storia regole
+- **Origine:** voce scritta con la PR, per la riga del 2026-11-12 «Punti chiave, grafo degli eventi, Prolog e RAG» in `plans/CHANGELOG.md`
+- **Testo:** Domanda del DM del 12/11: punti chiave nel tempo, grafo degli eventi, Prolog e RAG, tutto insieme e misurato. Laboratorio `plans/esperimenti/grafo-eventi-2026-11-12/`. Misura: i giorni si ricavano da state.yaml solo per 6 righe su 31 di §4; Python, SWI-Prolog e clingo danno violazioni identiche (29/29 sui mutanti, 6/6 su main), quindi il motore logico non entra; la regola ricorsiva trova 3 catene rotte in §4; il RAG (BM25 + e5-small + Qwen2.5-3B su CPU) recupera 8 parafrasi su 11 ma su main dà 0 rilievi veri su 23, quindi non entra; regole + RAG: parafrasi 0/11 → 5/11 con 42 rilievi in più. Correzione in corsa: la Cerimonia delle 100 Asce è al Day 21, non al 19; numeri invariati. Due correzioni alla #379 dalla revisione automatica arrivata dopo il merge: S1 dichiarata non verificabile se manca `giorno_arrivo`, `STATE` letto alla chiamata; gli altri 8 rilievi restano come limiti dichiarati nella PR. Decisione del DM (card): i giorni di §4 li propone il thread e li conferma lui riga per riga; T1 e T2 entrano in `coerenza_campagna --state` solo dopo. Aperti al DM: le 31 righe di `PROPOSTA-GIORNI-CHI-SA-COSA.md` e D1-D4 (D1: la lettera di Brenna usa «Custodi Eterni» ed è datata al Day 21 e al Giorno 22 nello stesso file); `ARC07-DEF-1-PIANO-TERRA-TERROS.md:69`; la prova del lettore con 7B e 12B via Ollama sulla RTX 4050 (6 GB di VRAM: il 12B non ci sta tutto).
+- **Trovato nel repo:** `ADR-0125` → `plans/adr/` (file ADR-0125) · il laboratorio → `plans/esperimenti/grafo-eventi-2026-11-12/ESITO.md`
+- **Solo qui:** il criterio per riprovare il lettore (90% di SÌ giusti, 5% col PNG sbagliato, 70% di precisione su main) accanto alla decisione di non adottarlo; l'errore di lettura dello stato della PR (controlli verdi ma PR in conflitto dopo #382 e #381)
