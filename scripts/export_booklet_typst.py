@@ -1205,7 +1205,7 @@ def per_scheda(man: dict, base: Path, tutti: bool, binario: str, nome: str,
     if not trovate:
         print("✗ --per-scheda: nessun capitolo «\"layout\": \"schede\"» nel manifest.\n"
               "  È la chiave che accende l'impaginazione a scheda — vedi "
-              "docs/guides/GUIDA-BOOKLET-E-PDF.md §1.2.", file=sys.stderr)
+              "docs/how-to/GUIDA-BOOKLET-E-PDF.md §1.2.", file=sys.stderr)
         return 2
 
     fuori.mkdir(exist_ok=True)

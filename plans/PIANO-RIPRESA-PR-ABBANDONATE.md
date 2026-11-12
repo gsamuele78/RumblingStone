@@ -669,7 +669,7 @@ markdown→Typst. Il gate ha ripetuto l'errore che quella riga documentava.
 Corretto nel validatore — `senza_code_span` — **senza toccare un documento**.
 
 ⚠️ **Il difetto vero non era un link rotto.**
-`docs/guides/LEGENDA-FUNZIONALE-SPEC.md:26` citava
+`docs/reference/LEGENDA-FUNZIONALE-SPEC.md:26` citava
 `ADR-0014-legenda-funzionale-fonte-unica.md`, che non esiste in nessun posto:
 era l'ADR-0014 della **PR #72**, e il commit `82e1c16` dice che di quella PR se
 ne recuperarono **due** (ex-0016 → ADR-0039, ex-0017 → ADR-0040) perché

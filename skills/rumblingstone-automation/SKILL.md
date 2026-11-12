@@ -177,7 +177,7 @@ Il corredo è preparazione, non canone: il tavolo si chiude con `dm.py session e
   obbligatorio: file del gruppo SEPARATO e spoiler-free (titolo evocativo, mai
   il nome dello scontro), hint/echi per-PG, canone giocato annotato nei master.
   📘 Procedura completa (prerequisiti, manifest, container, troubleshooting,
-  checklist): `docs/guides/GUIDA-BOOKLET-E-PDF.md`.
+  checklist): `docs/how-to/GUIDA-BOOKLET-E-PDF.md`.
 - `corredo <SERATA>.corredo.json [--stampa]`: il corredo della serata (qui
   sopra, passo 3; controlla i pezzi con `validate_corredo.py`).
 - `maps render|validate`: per il *contenuto* delle mappe caricare

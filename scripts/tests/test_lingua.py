@@ -133,7 +133,7 @@ class TestFalsiPositivi(unittest.TestCase):
         self.assertEqual(errori, [])
 
     def test_un_link_markdown_non_e_prosa(self):
-        errori, _ = _testo("Vedi [la guida](docs/guides/GUIDA-MAPPE.md) e prosegui.")
+        errori, _ = _testo("Vedi [la guida](docs/how-to/GUIDA-MAPPE.md) e prosegui.")
         self.assertEqual(errori, [])
 
     def test_i_due_spazi_prima_di_unancora_non_sono_un_refuso(self):

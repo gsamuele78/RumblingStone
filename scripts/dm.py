@@ -29,6 +29,9 @@ Sottocomandi (fase del Playbook tra parentesi):
                      creatura, conformita
     prosa     (prep) la catena della prosa in ordine (ADR-0101): misura, ciclo,
                      mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto
+    sistemi   (tutte) i sistemi di gioco (ADR-0111): quali sono attivi, il sistema
+                     di un file (--di), la matrice strumenti × sistemi, il
+                     cancello (--check); i flag passano a scripts/sistemi.py
     skills    (manutenzione) build/sync pipeline skill multi-agente
     doctor    (tutte) diagnosi ambiente e freschezza del catalogo
 
@@ -40,6 +43,7 @@ Esempi:
     python3 scripts/dm.py handout --tipo lettera --da bozza.md
     python3 scripts/dm.py bestiario creatura --gs 7 --ruolo bruto
     python3 scripts/dm.py prosa coerenza fatti "07_il Portale Della Forgia Eterna"
+    python3 scripts/dm.py sistemi --di "10-stand-alone/Il-Drappo-di-Tarsilia/README.md"
     python3 scripts/dm.py doctor
 
 I flag non riconosciuti da `prep`/`recap` vengono inoltrati allo script
@@ -210,6 +214,12 @@ def cmd_prosa(args: argparse.Namespace, extra: list[str]) -> int:
         print("[dm] i flag passano allo script: `dm.py prosa <azione> --help`")
         return 2
     return run(PROSA[args.action], *extra)
+
+
+def cmd_sistemi(args: argparse.Namespace, extra: list[str]) -> int:
+    # nessuna azione: i flag (--di, --check, --json, --skill, …) sono di
+    # sistemi.py, e `dm.py sistemi --help` stampa il suo aiuto (ADR-0111)
+    return run("sistemi.py", *extra)
 
 
 def cmd_post(args: argparse.Namespace, extra: list[str]) -> int:
@@ -418,7 +428,7 @@ def cmd_volume(args: argparse.Namespace, extra: list[str]) -> int:
     # e' esattamente il punto in cui il lotto E aveva trovato il buco — una
     # regola scritta che nessuno carica non e' una regola.
     print("\n  \u26a0 Prima che questo volume esca dal repo: il cancello \u00a77 di "
-          "docs/guides/GUIDA-CONDIVISIONE-IP.md.\n"
+          "docs/how-to/GUIDA-CONDIVISIONE-IP.md.\n"
           "    Uso privato al tavolo: nessun cancello. Fuori di li', quelle cinque "
           "domande vengono prima — e se c'\u00e8 di mezzo del denaro, ci si ferma "
           "(ADR-0005).")
@@ -816,6 +826,11 @@ def main(argv: list[str] | None = None) -> int:
                             "coerenza / domande / migliora / cieco / banco / voto")
     p.add_argument("action", nargs="?", choices=list(PROSA))
 
+    sub.add_parser("sistemi", add_help=False,
+                   help="i sistemi di gioco (ADR-0111): attivi, il sistema di un file "
+                        "(--di FILE), la matrice strumenti × sistemi, --check (i flag "
+                        "passano a sistemi.py)")
+
     p = sub.add_parser("ambiente", add_help=False,
                        help="l'ambiente di sviluppo completo col registro: piano / installa "
                             "[--con blender,comfyui,typst] / stato / rimuovi [--venv] / "
@@ -918,6 +933,7 @@ def main(argv: list[str] | None = None) -> int:
         "prep": cmd_prep, "maps": cmd_maps, "post": cmd_post, "recap": cmd_recap,
         "handout": cmd_handout, "hype": cmd_hype, "dossier": cmd_dossier,
         "booklet": cmd_booklet, "prompts": cmd_prompts, "bestiario": cmd_bestiario, "prosa": cmd_prosa, "ambiente": cmd_ambiente,
+        "sistemi": cmd_sistemi,
         "session": cmd_session, "asset": cmd_asset, "volume": cmd_volume, "corredo": cmd_corredo, "skills": cmd_skills, "doctor": cmd_doctor,
         "gruppo": cmd_gruppo,
     }[args.cmd](args, extra)

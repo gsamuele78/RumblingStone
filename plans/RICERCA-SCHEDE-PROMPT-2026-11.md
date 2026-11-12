@@ -8,7 +8,7 @@ della comunità.
 **Fonti**: WebSearch e le pagine Markdown della documentazione di Anthropic
 (Firecrawl senza crediti quel giorno), il repo. Decisione in
 [ADR-0114](adr/ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md), schede in
-[GUIDA-SCHEDE-PROMPT](../docs/guides/GUIDA-SCHEDE-PROMPT.md). Misura con
+[GUIDA-SCHEDE-PROMPT](../docs/reference/GUIDA-SCHEDE-PROMPT.md). Misura con
 [`misura_prompt.py`](esperimenti/schede-prompt-2026-11-08/misura_prompt.py),
 esito prima del lavoro in [`misura-prima.txt`](esperimenti/schede-prompt-2026-11-08/misura-prima.txt).
 
@@ -82,7 +82,7 @@ La storia («nasce da un fallimento il …») esce dal corpo e va nell'ADR che l
 racconta già, con un rimando di una riga.
 
 **Scheda brief** — un modello unico per ogni prompt a un subagente, a un thread
-o a un agente di workflow (§2 di `docs/guides/GUIDA-SCHEDE-PROMPT.md`): Obiettivo · Stato vero
+o a un agente di workflow (§2 di `docs/reference/GUIDA-SCHEDE-PROMPT.md`): Obiettivo · Stato vero
 (file con il percorso, cosa è canone) · Cosa puoi toccare · Vincoli (rimando) ·
 Formato d'uscita · Fatto quando · Se non sai. Le regole non si riscrivono: si
 richiamano.

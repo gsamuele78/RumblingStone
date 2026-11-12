@@ -1,5 +1,7 @@
 # Guida alle marcature: come si segna chi ha deciso un fatto
 
+> Forma: **riferimento** ([Diátaxis](../../plans/adr/ADR-0123-la-documentazione-segue-diataxis.md)).
+
 Questa guida è **l'unico posto** dove sta scritta la grammatica delle
 marcature ([ADR-0109](../../plans/adr/ADR-0109-una-marcatura-sola-e-il-dm-decide-il-canone.md)).
 AGENTS.md, le skill e gli agent la richiamano con una riga e non la
@@ -53,7 +55,7 @@ Le skill dove nascono i fatti di gioco hanno una sezione
 `## Vincoli sui fatti` con questo testo, più gli esempi del loro campo. Il
 testo è lo stesso ovunque; lo controlla `test_vincoli_delle_skill.py`.
 
-> **Vincoli sui fatti** (grammatica in `docs/guides/GUIDA-MARCATURE.md`)
+> **Vincoli sui fatti** (grammatica in `docs/reference/GUIDA-MARCATURE.md`)
 >
 > 1. Se un fatto non è nelle fonti, puoi dire che non lo sai: è meglio di
 >    un'invenzione. Lo scrivi solo se serve, marcato INFERRED con domanda e

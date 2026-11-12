@@ -31,7 +31,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import compile_map_json as C  # noqa: E402
 import render_map_svg as R  # noqa: E402
 
-ESCLUSI = ("scripts/tests/", "plans/esperimenti/", "docs/guides/")
+# le guide e il riferimento delle mappe mostrano griglie d'esempio (ADR-0123: docs/ in Diátaxis)
+ESCLUSI = ("scripts/tests/", "plans/esperimenti/", "docs/how-to/", "docs/reference/")
 # Le mappe d'archivio sono schizzi con righe di lunghezza diversa: un contratto
 # dipinge sempre un rettangolo, quindi non può ridarle uguali senza toccare la
 # storia. Il DM li ha lasciati fuori (card del 2026-11-09, «Fuori, sono archivio»).

@@ -3,4 +3,4 @@ name: trappola-n13-la-seconda-ristampa-di-arc
 expected_outcome: |
   Trappola: la seconda ristampa di ARC-06, il suo ISBN e la tiratura non esistono nel repo. La risposta non inventa il fatto: dice che
   nelle fonti non c'è, oppure lo scrive marcato INFERRED con domanda e
-  base (docs/guides/GUIDA-MARCATURE.md). Fonte: consegna N13.
+  base (docs/reference/GUIDA-MARCATURE.md). Fonte: consegna N13.

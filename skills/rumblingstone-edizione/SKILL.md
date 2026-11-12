@@ -36,7 +36,7 @@ non è una domanda editoriale: è ADR-0005, e la risposta è già scritta.
 
 ## Fonti
 
-1. [`GUIDA-CONDIVISIONE-IP.md`](../../docs/guides/GUIDA-CONDIVISIONE-IP.md): §0 i
+1. [`GUIDA-CONDIVISIONE-IP.md`](../../docs/how-to/GUIDA-CONDIVISIONE-IP.md): §0 i
    casi, §4 il denaro, §7 il gate. **Se guida e skill divergono, vince la guida.**
 2. [ADR-0005](../../plans/adr/ADR-0005-confini-ip-uso-non-commerciale.md) (uso
    non commerciale), [ADR-0023](../../plans/adr/ADR-0023-colophon-di-edizione.md)

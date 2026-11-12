@@ -851,7 +851,17 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il numero #382 e lo SHA del merge 66ce69b6 accanto alla riga del changelog; lo spostamento degli oggetti col prezzo dal lotto 1-bis al lotto 8 rispetto a quanto annunciato in memoria
 
-### MS-0072 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
+### MS-0072 · 2026-11-12 · Documentazione della v1.1.0 e docs/ in Diátaxis
+
+- **Data:** 2026-11-12
+- **PR:** #371 (e #381)
+- **ADR:** ADR-0123 ADR-0117 ADR-0111 ADR-0112
+- **Temi:** documentazione piattaforma
+- **Origine:** addendum delle due righe del 2026-11-10 in `plans/CHANGELOG.md` (passo della documentazione della milestone v1.1.0; ADR-0123)
+- **Testo:** PR #371, passo della documentazione della milestone v1.1.0 chiesto dal DM il 2026-11-09: `dm.py sistemi`, ARCHITETTURA §19 (motore e plugin) e §20 (da dove viene un fatto), guida pratica dei sistemi di gioco e riferimento dei plugin (20 capacità al 2026-11-12). Card del DM del 2026-11-10: Diátaxis scelta «Riorganizzare docs/ subito» (alternativa B, contro la consigliata «regola per le nuove più etichette»), ADR-0117 accettata. `docs/` in `tutorials/`, `how-to/`, `reference/`, `explanation/`; le sezioni spostate tengono il numero e lasciano un rimando, così «GUIDA-MAPPE §5.1.2» negli ADR vecchi resta vero; `docs/tools/` e `docs/audit/` restano dove sono (superficie pubblica e registri della CI). Misura: file in una forma sola 5/14 → 15/21; link e percorsi rotti 0 → 0; ancore verso file del repo 0 rotte su 20. Restano misti 6 file, elencati in `plans/esperimenti/documentazione-2026-11-10/MISURA-DIATAXIS.md`. ADR-0123 era conteso col thread del volume dei booklet: il coordinatore l'ha lasciato alla #371 (precedente del 10/11), il volume rinumera. Sourcery e Codex non hanno revisionato la PR (budget esaurito). La #381, su cui la #371 si è riallineata, è entrata con il merge ba8b8edf (base 66ce69b6), che MS-0068 non riporta.
+- **Trovato nel repo:** `ADR-0123` → `plans/adr/ADR-0123-la-documentazione-segue-diataxis.md` · misura → `plans/esperimenti/documentazione-2026-11-10/MISURA-DIATAXIS.md` · traslochi → `docs/guides/README.md`
+- **Solo qui:** la contesa del numero 0123 e come si è chiusa; lo SHA del merge della #381 (ba8b8edf); l'assenza di revisione dei bot sulla #371
+### MS-0073 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
 
 - **Data:** 2026-11-12
 - **PR:** #370
