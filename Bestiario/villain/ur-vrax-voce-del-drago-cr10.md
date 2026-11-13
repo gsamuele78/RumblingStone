@@ -38,17 +38,17 @@ fonte: ricostruzione del repo su SRD 3.5 e archetipo Avanzato PF1e, 2026-11-09
 
 D = incantesimo di dominio. Domini **Distruzione** e **Male**.
 
+**Tattiche**
+- *Prima del combattimento*: dietro la terza linea con gli Sciamani Draconici `[INFERRED — In quale scena di ARC-08 entra Ur-Vrax?; base: chat Gemini, terza linea con i sacerdoti della Mano del Destino e rituale sulla breccia nel Giorno 2, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Lancia *libertà di movimento* e *scudo della fede* su di sé e *preghiera* quando la fanteria d'élite avanza.
+- *Durante il combattimento*: *dissolvi magie* sulle difese runiche dei nani, poi *colpo infuocato* dove due difensori stanno vicini e *simbolo di dolore* sulla breccia, quando i nani ci si affollano. Sulla breccia aperta lancia *dissacrare*: è l'unico «rituale» che si lancia in battaglia (azione standard). *Profanare*, che la chat Gemini voleva lanciato sulla breccia, chiede 24 ore di lancio: si può solo preparare la notte prima, in un posto che non cambia di mano, e prende uno slot di 5° al posto di *simbolo di dolore*.
+- *Morale*: fugge con *oscurità profonda* sotto i 30 pf. Se Gorthak o Krusk cadono vicino a lui, predica per tenere in linea gli orchi invece di fuggire.
+
 **Statistiche** For 21, Des 14, Cos 18, Int 10, Sag 23, Car 14 · BAB +6; Lotta +11 · **Talenti** Incantare in combattimento (1°), Incantesimi focalizzati (Invocazione) (3°), Incantesimi focalizzati superiore (Invocazione) (6°), Robustezza (9°) · **Abilità** Concentrazione +16 (+20 sulla difensiva), Sapienza Magica +6, Conoscenze (religioni) +6 (24 gradi: 12, 6 e 6) · **Linguaggi** Comune, Orchesco · **Qualità speciali** aura malvagia · **Equipaggiamento** talismano della saggezza +4, cotta di maglia +2 di scaglie di drago nero, mazzafrusto pesante +1, mantello della resistenza +2, anello di protezione +2, polveri di diamante e opale per *simbolo di dolore* (35.465 mo in tutto)
 
 **Capacità speciali**
 - **Punire (Sop)**: dominio Distruzione, 1/giorno, un attacco in mischia a +4 al tiro per colpire e +9 ai danni (il livello da chierico) `[SRD: Destruction Domain]`.
 - **Incantesimi malvagi potenziati (Str)**: dominio Male, lancia gli incantesimi col descrittore male a livello dell'incantatore +1 `[SRD: Evil Domain]`.
 - **Intimorire non morti (Sop)**: 5/giorno (3 + mod. di Car), come un chierico malvagio `[SRD: Cleric]`.
-
-**Tattiche**
-- *Prima del combattimento*: dietro la terza linea con gli Sciamani Draconici `[INFERRED — In quale scena di ARC-08 entra Ur-Vrax?; base: chat Gemini, terza linea con i sacerdoti della Mano del Destino e rituale sulla breccia nel Giorno 2, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Lancia *libertà di movimento* e *scudo della fede* su di sé e *preghiera* quando la fanteria d'élite avanza.
-- *Durante il combattimento*: *dissolvi magie* sulle difese runiche dei nani, poi *colpo infuocato* dove due difensori stanno vicini e *simbolo di dolore* sulla breccia, quando i nani ci si affollano. Sulla breccia aperta lancia *dissacrare*: è l'unico «rituale» che si lancia in battaglia (azione standard). *Profanare*, che la chat Gemini voleva lanciato sulla breccia, chiede 24 ore di lancio: si può solo preparare la notte prima, in un posto che non cambia di mano, e prende uno slot di 5° al posto di *simbolo di dolore*.
-- *Morale*: fugge con *oscurità profonda* sotto i 30 pf. Se Gorthak o Krusk cadono vicino a lui, predica per tenere in linea gli orchi invece di fuggire.
 
 Benchmark: PF T1-1 riga 10 (CA 24, pf 130, attacco +18, CD 18): CA 23 pari / pf 83 sotto / attacco +12 sotto / CD 23 del *colpo infuocato* e 21 del *simbolo di dolore* sopra. Vale il suo GS come pacchetto di incantesimi, come il Chierico di Gruumsh (`Bestiario/mostri/chierico-gruumsh-cr11.md`): va schierato con corpi davanti, mai da solo.
 Combinazioni ed EL: da solo EL 10; con 4 Sciamani Draconici [DA SCRIVERE — scheda degli Sciamani Draconici della chat Gemini; il Bestiario ha Draxoksus, `Bestiario/villain/draxoksus-shamano-draconico-cr8.md`] EL 12 circa.

@@ -55,6 +55,10 @@ class Esito(NamedTuple):
     pdfua: bool = False
     #: perché il PDF/UA-1 non c'è (il messaggio di typst), vuoto se c'è
     motivo_pdfua: str = ""
+    #: il livello PDF/A del PDF («a-2a»), chiesto con `pdfa=`; vuoto se non c'è
+    pdfa: str = ""
+    #: perché il PDF/A non c'è (il messaggio di typst), vuoto se c'è
+    motivo_pdfa: str = ""
 
 
 def motore() -> str | None:
@@ -123,28 +127,47 @@ def _e_rifiuto_pdfua(testo: str) -> bool:
     return "PDF/UA-1 error" in testo
 
 
+def _e_rifiuto_pdfa(testo: str) -> bool:
+    return "PDF/A" in testo and "error" in testo
+
+
+def _prima_riga(testo: str) -> str:
+    return testo.strip().splitlines()[0] if testo.strip() else "rifiutato"
+
+
 def compila(typ: Path, pdf: Path, *, root: Path, font: Path, pacchetti: Path,
             solo_font_del_repo: bool = False, ingressi: dict[str, str] | None = None,
-            pdfua: bool = False) -> Esito:
+            pdfua: bool = False, pdfa: str = "") -> Esito:
     """`typst compile`, col ripiego senza tag PDF quando typst inciampa lì.
 
     `pdfua=True` chiede PDF/UA-1 (ISO 14289-1, lo standard dell'accessibilità
     dei PDF): se typst lo rifiuta si ricompila come prima e l'esito dice
     perché (`motivo_pdfua`). ADR-0032 aveva lasciato fuori veraPDF perché due
     rilievi su tre erano di typst; da typst 0.14 non lo sono più.
+
+    `pdfa="a-2a"` chiede in più PDF/A (ISO 19005, l'archiviazione, ADR-0131),
+    insieme a PDF/UA-1. Se typst rifiuta il PDF/A si ricompila col solo
+    PDF/UA-1 e l'esito dice perché (`motivo_pdfa`).
     """
-    if pdfua:
-        e = _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
-                     solo_font_del_repo=solo_font_del_repo, ingressi=ingressi, standard=["ua-1"])
+    kw = dict(root=root, font=font, pacchetti=pacchetti,
+              solo_font_del_repo=solo_font_del_repo, ingressi=ingressi)
+    motivo_pdfa = ""
+    if pdfua and pdfa:
+        e = _compila(typ, pdf, standard=["ua-1", pdfa], **kw)
         if e.ok:
-            return e._replace(pdfua=True)
+            return e._replace(pdfua=True, pdfa=pdfa)
+        if not (_e_rifiuto_pdfa(e.errore) or _e_rifiuto_pdfua(e.errore)):
+            return e
+        motivo_pdfa = _prima_riga(e.errore)
+    if pdfua:
+        e = _compila(typ, pdf, standard=["ua-1"], **kw)
+        if e.ok:
+            return e._replace(pdfua=True, motivo_pdfa=motivo_pdfa)
         if not _e_rifiuto_pdfua(e.errore):
             return e
-        motivo = e.errore.strip().splitlines()[0] if e.errore.strip() else "rifiutato"
-        return _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
-                        solo_font_del_repo=solo_font_del_repo, ingressi=ingressi)._replace(motivo_pdfua=motivo)
-    return _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
-                    solo_font_del_repo=solo_font_del_repo, ingressi=ingressi)
+        return _compila(typ, pdf, **kw)._replace(motivo_pdfua=_prima_riga(e.errore),
+                                                 motivo_pdfa=motivo_pdfa)
+    return _compila(typ, pdf, **kw)
 
 
 def _compila(typ: Path, pdf: Path, *, root: Path, font: Path, pacchetti: Path,

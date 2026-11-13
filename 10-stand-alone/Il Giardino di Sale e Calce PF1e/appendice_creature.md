@@ -29,6 +29,8 @@ attacchi:
 
 **Attacco** spazio 6 m, portata 6 m · BAB +12 · BMC +25 · DMC 36 (non può essere sbilanciato) · *punire il bene* 1/giorno (+5 al colpire, +16 ai danni)
 
+**Tattiche** Round per round, avviso, gravità invertita e fine dello scontro sono in S1 del modulo. In breve: *dominare mostri* sul combattente più forte, *blasfemia* o *avvizzimento orrendo* sui gruppi, *inversione della gravità* al terzo round, poi la mischia. Con il Cuore acceso il danno che non è fuoco né buono è non letale e la rigenerazione ne toglie 15 a ogni suo turno; Karkator fugge quando il non letale accumulato arriva a 200, o sotto i 50 pf se il Cuore è spento.
+
 **Statistiche** **Talenti** Arma Focalizzata (tentacolo), Attacco Naturale Migliorato (tentacolo), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi Fulminei, Robustezza, Volontà di Ferro · **Abilità** Conoscenze (arcane, storia) +22, Intimidire +24, Nuotare +36, Percezione +23, Raggirare +24, Sapienza Magica +22 · **Linguaggi** Aboleth, Abissale, Aklo, Aquan, Sottocomune; telepatia 30 m (**originale del modulo**)
 
 **Capacità speciali**
@@ -37,8 +39,6 @@ attacchi:
 - **Capacità magiche dell'aboleth** (LI 16°): a volontà *muro illusorio* (CD 19), *immagine permanente* (20), *immagine programmata* (21), *miraggio arcano* (20), *proiettare immagine* (22), *trama ipnotica* (17), *velo* (21); 3/giorno *dominare mostri* (CD 24).
 - **Capacità magiche del mezzo-immondo** (LI 16°): 3/giorno *aura sacrilega* (già addosso solo se è stato avvisato), *oscurità*, *veleno* (CD 19); 1/giorno *blasfemia* (22), *contagio* (19), *dissacrare*, *flagello sacrilego* (19), *profanare*, *avvizzimento orrendo* (23).
 - **Il Cuore di Selenite** (finché è nei perni e Karkator è entro 18 m): rigenerazione 15, *armatura magica* permanente, volo 9 m buono, una volta al giorno *inversione della gravità* (LI 15°, Riflessi CD 20 per aggrapparsi). **Originale del modulo.** Senza il Cuore torna GS 15.
-
-**Tattiche** Round per round, avviso, gravità invertita e fine dello scontro sono in S1 del modulo. In breve: *dominare mostri* sul combattente più forte, *blasfemia* o *avvizzimento orrendo* sui gruppi, *inversione della gravità* al terzo round, poi la mischia. Con il Cuore acceso il danno che non è fuoco né buono è non letale e la rigenerazione ne toglie 15 a ogni suo turno; Karkator fugge quando il non letale accumulato arriva a 200, o sotto i 50 pf se il Cuore è spento.
 
 {{note
 }}
@@ -66,6 +66,8 @@ attacchi:
 ```
 **Attacco** spazio 4,5 m, portata 3 m · BAB +14 · BMC +24 (+28 lottare) · DMC 36 (48 contro sbilanciare) · imboscata eterea
 
+**Tattiche** In G1 del modulo: ancorano il PG isolato, poi il volatore. Fuggono sotto il 25% dei pf.
+
 **Statistiche** **Talenti** Attacco Poderoso, Abilità Focalizzata (Furtività), Capacità Focalizzata (veleno), Iniziativa Migliorata, Riflessi in Combattimento, Tiro Preciso, Tiro Ravvicinato · **Abilità** Furtività +6, Scalare +26
 
 **Capacità speciali**
@@ -73,8 +75,6 @@ attacchi:
 - **Salto etereo** e **imboscata eterea** (Sop): come il ragno fase.
 - **Lancio di catene** (Str, originale, 8/giorno, 15 m): come la ragnatela; il bersaglio è ancorato, chi vola resta appeso. Artista della Fuga CD 22 o Forza CD 26; durezza 10, 20 pf.
 - **Risonanza** (Sop, originale, standard): chi vola entro 12 m, Tempra CD 22 o assordato 1d4 round.
-
-**Tattiche** In G1 del modulo: ancorano il PG isolato, poi il volatore. Fuggono sotto il 25% dei pf.
 
 ## Mastro Tariq
 
@@ -99,13 +99,13 @@ attacchi:
 ```
 **Attacco** BAB +9 · BMC +10 · DMC 21 · *incanalare energia negativa* 2/giorno (7d6, CD 15) · *colpo distruttivo* 9/giorno (+6 ai danni) · *aura distruttiva* 13 round al giorno · *ghiacciolo* 9/giorno (1d6+6 freddo, contatto a distanza 9 m)
 
+**Tattiche** In T1 del modulo, round per round. Sotto i 30 pf scende la scala verso Karkator. La leva per farlo arrendere è nel cast del modulo.
+
 **Statistiche** **Talenti** Incanalare Selettivo, Incantesimi Estesi, Incantare in Combattimento, Incantesimi Inarrestabili, Incantesimi Inarrestabili Superiore, Incantesimi Rapidi, Iniziativa Migliorata, Robustezza · **Abilità** Conoscenze (ingegneria) +17, Conoscenze (religioni) +9, Percezione +10, Sapienza Magica +17 · **Equipaggiamento** armatura completa +2, scudo pesante di metallo +1, tridente +1, *amuleto della Saggezza +4*, *mantello della resistenza +2*, *anello di protezione +1*, chiavi della Torre e dello studio
 
 **Capacità speciali**
 - **Domini** Acqua (resistenza al freddo 20) e Distruzione, di Hasharr, dio del modulo la cui voce è quella di Karkator. **Originale del modulo.**
 - **Incantesimi preparati** (LI 13°, CD 16 + livello): l'elenco è nel riquadro qui sotto.
-
-**Tattiche** In T1 del modulo, round per round. Sotto i 30 pf scende la scala verso Karkator. La leva per farlo arrendere è nel cast del modulo.
 
 {{note
 **Gli incantesimi di Tariq** (D = dominio). 7° *blasfemia*, D *disintegrazione* · 6° *dissolvi magie superiore* ×2, *barriera di lame*, D *cono di freddo* · 5° *potere giusto*, *colpo infuocato*, *uccidere i viventi*, *resistenza agli incantesimi*, D *tempesta di ghiaccio* · 4° *libertà di movimento*, *ancora dimensionale*, *veleno*, *camminare nell'aria*, *potere divino*, D *controllare acqua* · 3° *veste magica* ×2 (già lanciate), *dissolvi magie*, *preghiera*, *protezione dall'energia*, D *respirare sott'acqua* · 2° *blocca persone* ×2, *silenzio*, *resistere all'energia*, *resistenza dell'orso*, *esplosione sonora*, D *nebbia* · 1° *favore divino*, *scudo della fede* ×2, *scudo entropico*, *anatema*, *comando*, D *foschia occultante* · 0 *individuazione del magico*, *guida*, *resistenza*, *lettura del magico*.
@@ -138,9 +138,9 @@ attacchi:
 
 **Attacco** BAB +10 · BMC +15 (+17 spingere) · DMC 27 · addestramento nelle armi (lance) +1
 
-**Statistiche** **Talenti** Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi in Combattimento, Robustezza, Arma Specializzata (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** corazza di mithral +1, scudo pesante di metallo +1, tridente +1 · **Linguaggi** Aboleth, Sottocomune · **QS** anfibio
-
 **Tattiche** Accanto a Tariq, spingono i PG verso la tromba della scala. Combattono fino alla morte se Karkator li guarda; altrimenti si arrendono sotto i 20 pf.
+
+**Statistiche** **Talenti** Arma Focalizzata (tridente), Arma Focalizzata Superiore (tridente), Attacco Poderoso, Iniziativa Migliorata, Multiattacco, Riflessi in Combattimento, Robustezza, Arma Specializzata (tridente), Spingere Migliorato, Volontà di Ferro · **Equipaggiamento** corazza di mithral +1, scudo pesante di metallo +1, tridente +1 · **Linguaggi** Aboleth, Sottocomune · **QS** anfibio
 
 ## Chuul avanzato
 
@@ -167,9 +167,9 @@ attacchi:
 
 **Attacco** spazio 3 m, portata 1,5 m · BAB +7 · BMC +17 (+21 lottare) · DMC 32 (36 contro sbilanciare) · stritolare (2d6+9) · tentacoli paralizzanti (Tempra CD 21, paralizzato 6 round; 1d8+9 dalle mandibole a ogni round)
 
-**Statistiche** **Talenti** Allerta, Arma Focalizzata (chela), Combattere alla Cieca, Iniziativa Migliorata, Riflessi in Combattimento · **QS** anfibio
-
 **Tattiche** Stanno sul fondo delle navate e salgono solo su chi scende dalle scalette o cade dal ponte. Tre chuul: EL 11. Un quarto nella canaletta della galleria del wadi.
+
+**Statistiche** **Talenti** Allerta, Arma Focalizzata (chela), Combattere alla Cieca, Iniziativa Migliorata, Riflessi in Combattimento · **QS** anfibio
 
 ## Sgherro di Hamid
 
@@ -195,9 +195,9 @@ attacchi:
 ```
 **Attacco** BAB +6 · BMC +9 · DMC 21 · addestramento nelle armi (lame pesanti) +1
 
-**Statistiche** **Talenti** Arma Focalizzata (scimitarra), Arma Specializzata (scimitarra) · **Equipaggiamento** giaco di maglia sotto la veste da acquaiolo, scimitarra perfetta, arco corto composito (For +3), 2 pozioni di *cura ferite moderate*, 30 mo
-
 **Tattiche** Non attaccano per primi. Seguono, contano, riferiscono a Tariq; tagliano la fune della gabbia se i PG scendono senza averli tolti di mezzo (P2).
+
+**Statistiche** **Talenti** Arma Focalizzata (scimitarra), Arma Specializzata (scimitarra) · **Equipaggiamento** giaco di maglia sotto la veste da acquaiolo, scimitarra perfetta, arco corto composito (For +3), 2 pozioni di *cura ferite moderate*, 30 mo
 
 ## Asservito armato
 
@@ -222,9 +222,9 @@ attacchi:
 ```
 **Attacco** BAB +4 · BMC +6 · DMC 17
 
-**Statistiche** **Talenti** Arma Focalizzata (lancia corta), Arma Specializzata (lancia corta)
-
 **Tattiche** Si mettono fra i PG e Karkator. Non parlano. Se Karkator sviene o muore cadono in ginocchio, e il giorno dopo sono di nuovo padroni di sé.
+
+**Statistiche** **Talenti** Arma Focalizzata (lancia corta), Arma Specializzata (lancia corta)
 
 ## Il Cuore di Selenite
 

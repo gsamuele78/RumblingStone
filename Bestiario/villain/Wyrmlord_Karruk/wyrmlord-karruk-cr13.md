@@ -32,6 +32,11 @@ attacchi:
 **Full**: +2 greatclub +23/+18/+13 (2d8+12), o 2 schianti +20 (1d4+7) e squartare
 **Ranged**: roccia +13 (2d6+7), 36 m
 
+**Tattiche**
+- *Prima del combattimento*: sfida il campione dei difensori in pubblico, sui gradini della breccia (Carta 13 del mazzo degli eventi della battaglia finale). Non entra in ira prima del duello: la tiene per quando il campione lo ferisce, perché l'ira intimidatoria colpisce meglio a vista.
+- *Durante il combattimento*: round 1, attacco completo col randello e Attacco Poderoso a −5 se il campione ha CA sotto 25; contro un PG che brandisce Aegis Fang o un'arma magica tenta Spezzare Migliorato. Round 2, quando è ferito, entra in ira (217 pf, randello +25/+20/+15, 2d8+15) e chiunque lo veda deve resistere all'ira intimidatoria. Round 3 e seguenti, Incalzare e Incalzare Potenziato sui soldati che il campione si porta dietro. Contro chi vola o resta a distanza scaglia rocce (+13, 2d6+7). Combatte d'onore finché è in vantaggio; se perde, **bara**: sotto metà dei pf fischia al razorfiend Alfa che lo segue, e la scorta entra nel duello.
+- *Morale*: sotto 60 pf, o quando l'ira finisce e lui è affaticato, ripiega verso le sue linee in sella al razorfiend (12 m, scavare): il duello resta «inconcluso» e il settore non cambia di grado. Se è circondato e non può fuggire, combatte fino alla morte; non si arrende a un nano.
+
 **Statistiche** **Abilities**: Str 24, Dex 10, Con 20, Int 10, Wis 12, Cha 10 · **BAB/Grapple**: +14/+25
 **Feats**: Power Attack, Cleave, Great Cleave, Improved Sunder, Weapon Focus (greatclub), Intimidating Rage `[Private source — Complete Warrior]`, Leadership — sette, quanti ne danno 18 DV
 
@@ -50,12 +55,6 @@ attacchi:
 | **Affaticato**, finita l'ira | 22 · 8 · 20 | 181 | 22 | +17 · +4 · +6 | +24 | +22/+17/+12 (2d8+11) | 2d6+6 | 2d6+9 | −1 |
 
 Affaticato: niente corsa né carica fino alla fine dell'incontro (SRD, barbaro). In ira i pf salgono di +36 (Cos +2 × 18 DV) e li perde quando l'ira finisce.
-
-**Tattiche**
-- *Prima del combattimento*: sfida il campione dei difensori in pubblico, sui gradini della breccia (Carta 13 del mazzo degli eventi della battaglia finale). Non entra in ira prima del duello: la tiene per quando il campione lo ferisce, perché l'ira intimidatoria colpisce meglio a vista.
-- *Durante il combattimento*: round 1, attacco completo col randello e Attacco Poderoso a −5 se il campione ha CA sotto 25; contro un PG che brandisce Aegis Fang o un'arma magica tenta Spezzare Migliorato. Round 2, quando è ferito, entra in ira (217 pf, randello +25/+20/+15, 2d8+15) e chiunque lo veda deve resistere all'ira intimidatoria. Round 3 e seguenti, Incalzare e Incalzare Potenziato sui soldati che il campione si porta dietro. Contro chi vola o resta a distanza scaglia rocce (+13, 2d6+7). Combatte d'onore finché è in vantaggio; se perde, **bara**: sotto metà dei pf fischia al razorfiend Alfa che lo segue, e la scorta entra nel duello.
-- *Morale*: sotto 60 pf, o quando l'ira finisce e lui è affaticato, ripiega verso le sue linee in sella al razorfiend (12 m, scavare): il duello resta «inconcluso» e il settore non cambia di grado. Se è circondato e non può fuggire, combatte fino alla morte; non si arrende a un nano.
-
 
 Benchmark: PF T1-1 riga 13: CA 23 sotto (28) / pf 181 in linea (180; 217 in ira) / attacco +23 sopra (+22) / danno pieno ~58 sotto (60) / TS buono +17 sopra (16). Per l'SRD gigante delle colline (GS 7) + 5 livelli di barbaro associati + squartare = GS 13; la Carta 13 mette lo scontro a EL 12-14.
 

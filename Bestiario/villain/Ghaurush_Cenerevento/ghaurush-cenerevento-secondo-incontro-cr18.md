@@ -48,6 +48,23 @@ Large giant (ogre magi), LE.
 | 5 | 3+1 | **muro di forza** |
 
 
+**Tattiche** — *stesso mestiere del primo incontro, corretto sugli errori.*
+
+*Prima del combattimento*
+
+1. **Pre-scontro**: *pelle di pietra* estesa, *scudo*, **resistere all'energia (fuoco)**. Ghaurush non viene mai sorpreso: se lo si sorprende comunque, salta il punto 2 e va al 3.
+
+*Durante il combattimento*
+
+2. **Round 1 — muro di forza**, piazzato in modo da lasciare **Thorik e Tordek da una parte** e **Hella e Artemis dall'altra**. Non lo piazza addosso a nessuno: lo piazza dove il gruppo *non è ancora arrivato*.
+3. **Round 2 — assorbimento vitale** sul bersaglio rimasto scoperto. Tocco a distanza: i tiri salvezza del gruppo non contano.
+4. **Round 3 — muro di fuoco** (bastone) sul secondo asse, oppure *cono di freddo* se due PG si sono raggruppati. Se Artemis ha superato il muro volando, **dissolvi magie sull'Anello** prima di tutto il resto.
+5. **Se viene agganciato**: *forma gassosa*. Se ha già speso la forma gassosa: *teletrasporto* (pergamena) e lo scontro finisce lì.
+
+*Morale*
+
+6. **Uscita**: sotto il 30% dei pf **tratta di nuovo**, e stavolta l'offerta è peggiore per i PG. Se rifiutano, teletrasporto.
+
 **Statistiche** For 21, Des 10, Cos 23, Int 14, Sag 14, Car 24 (20 base + *mantello del carisma +4*) · **BAB/Lotta** +8/**+17** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantare in Combattimento, Incantesimi Estesi, Incantesimi Focalizzati (Invocazione), **Incantesimi Focalizzati Superiore (Invocazione)** · **Qualità speciali** tratti dei giganti
 
 **Equipaggiamento** (tabella PNG livello 18): *amuleto di salute +6*, *mantello del carisma +4*, giaco di maglia +3 (Large), *anello di protezione +3*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di *teletrasporto*, spadone Large perfetto (tiene il +13 della scheda, che con BAB +8 e For 21 tornerebbe +12). Il **registro rilegato in pelle di worg** è ancora addosso a lui, e vale più del resto (vedi dossier).
@@ -92,23 +109,6 @@ viene inflitto nulla e la rigenerazione non si interrompe**.
 > scena diventa un problema da risolvere. **Giocarla nel secondo modo.**
 
 **Il puzzle dell'adamantio, invariato**: con *pelle di pietra* ha **RD 10/adamantio**. Aegis Fang non buca; i pugni di Tordek e i Treant della Collana sì.
-
-**Tattiche** — *stesso mestiere del primo incontro, corretto sugli errori.*
-
-*Prima del combattimento*
-
-1. **Pre-scontro**: *pelle di pietra* estesa, *scudo*, **resistere all'energia (fuoco)**. Ghaurush non viene mai sorpreso: se lo si sorprende comunque, salta il punto 2 e va al 3.
-
-*Durante il combattimento*
-
-2. **Round 1 — muro di forza**, piazzato in modo da lasciare **Thorik e Tordek da una parte** e **Hella e Artemis dall'altra**. Non lo piazza addosso a nessuno: lo piazza dove il gruppo *non è ancora arrivato*.
-3. **Round 2 — assorbimento vitale** sul bersaglio rimasto scoperto. Tocco a distanza: i tiri salvezza del gruppo non contano.
-4. **Round 3 — muro di fuoco** (bastone) sul secondo asse, oppure *cono di freddo* se due PG si sono raggruppati. Se Artemis ha superato il muro volando, **dissolvi magie sull'Anello** prima di tutto il resto.
-5. **Se viene agganciato**: *forma gassosa*. Se ha già speso la forma gassosa: *teletrasporto* (pergamena) e lo scontro finisce lì.
-
-*Morale*
-
-6. **Uscita**: sotto il 30% dei pf **tratta di nuovo**, e stavolta l'offerta è peggiore per i PG. Se rifiutano, teletrasporto.
 
 ---
 

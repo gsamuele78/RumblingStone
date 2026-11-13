@@ -34,16 +34,16 @@ voci:
 
 **Attacco** Vel 6 m (non rallentato dall'armatura) · **Mischia** martello da guerra +1 +14/+9 (1d8+6/x3); con Attacco Poderoso a −3, +11/+6 (1d8+9) · colpo di scudo pesante +11 (1d4+3), senza perdere lo scudo alla CA · **Distanza** balestra pesante +9 (1d10/19-20) · **Attacchi speciali** Fendere; +1 ai tiri per colpire contro orchi e goblinoidi
 
-**Statistiche** For 16, Des 12, Cos 16, Int 10, Sag 14, Car 15 · BAB +8; Lotta +11 · **Talenti** Attacco Poderoso, Incalzare, Arma Focalizzata (martello da guerra), Arma Focalizzata Superiore (martello da guerra), Arma Specializzata (martello da guerra), Attacco con lo Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +1, balestra pesante e 10 quadrelli
-
-**Capacità speciali** Tratti nanici: scurovisione 18 m, esperto minatore, +1 contro orchi e goblinoidi, +4 schivare contro i giganti, stabilità, +2 ai TS contro veleni, incantesimi e capacità magiche.
-
 **Tattiche**
 - *Da solo*:
   - *Prima del combattimento*: non si fa trovare senza una linea davanti a sé. Alla porta di mithral di Hammerfist o sulle mura di Dauth sceglie il punto più stretto, ci mette i suoi uomini migliori ai lati e prende lui il centro. Con +5 d'iniziativa ha quasi sempre il primo ordine.
   - *Durante il combattimento*: avanza di una casella e colpisce chi ha davanti, sempre lo stesso finché non cade; con Fendere passa al vicino. Contro le armature leggere usa Attacco Poderoso a −3, contro le corazze no. Lo scudo lo usa per colpire senza scoprirsi solo quando ha due nemici a contatto. Spinte e sbilanciamenti non lo smuovono (stabilità), e contro un gigante va dritto alle gambe, forte dei +4 di schivare. Non insegue chi vola: prende la balestra pesante e lascia la mischia ai suoi.
   - *Morale*: è un comandante, non un solista, e lo sa. Sotto i 25 pf passa il comando al più anziano dei suoi e si fa coprire, ma non lascia il varco finché le lance lo tengono. Se il varco cade, si ritira con l'ultima fila e mai prima: è lui l'ufficiale che il Torneo di Dauth può restituire «ferito gravemente», non morto.
 - *Al comando delle lance*: combatte come formazione, non come singolo. Arco 09, Torneo di Dauth, terzo giorno (l'assedio della città), «Carta D — Le lance di Khorn»: le 150 lance sono un asset di comando che Thorik (o Tordek) manda dove servono; se la carta è ignorata si schierano da sole al comando di Khorn, con il bonus dimezzato.
+
+**Statistiche** For 16, Des 12, Cos 16, Int 10, Sag 14, Car 15 · BAB +8; Lotta +11 · **Talenti** Attacco Poderoso, Incalzare, Arma Focalizzata (martello da guerra), Arma Focalizzata Superiore (martello da guerra), Arma Specializzata (martello da guerra), Attacco con lo Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +1, balestra pesante e 10 quadrelli
+
+**Capacità speciali** Tratti nanici: scurovisione 18 m, esperto minatore, +1 contro orchi e goblinoidi, +4 schivare contro i giganti, stabilità, +2 ai TS contro veleni, incantesimi e capacità magiche.
 
 
 **Esiti (D4/D5)**: guida le 150 lance a Rethmar solo se gli hook politici ARC-09

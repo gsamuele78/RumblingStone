@@ -38,16 +38,16 @@ Medium humanoid (dwarf), **Guerriero 12**.
 
 **Attacco** Vel 6 m · **Mischia** ascia da guerra nanica +3 +23/+18/+13 (1d10+13, ×3); +1 contro orchi e goblinoidi
 
+**Tattiche**
+- *Da solo, prima del combattimento*: non combatte mai solo per scelta. Si mette sulla seconda fila dei suoi, dove il fronte si incrina, con lo scudo alzato e i due capitani ai lati.
+- *Durante il combattimento*: round 1, avanza di un passo e colpisce il nemico più grosso a portata: contro i giganti ha +4 alla CA e lo sa, e li cerca. Attacco Poderoso pieno (−5) sui bersagli con CA sotto 25; con Incalzare e Incalzare Potenziato apre un varco fra gli hobgoblin, +1 a colpirli. Contro un incantatore usa Spezzare Migliorato sul bastone o sulla bacchetta. Non insegue chi scappa: tiene la linea, perché è la linea che conta.
+- *Morale*: sotto 40 pf si fa tirare indietro dai suoi e beve una pozione, poi torna. Non si arrende alla Mano Rossa; se la piazza cade ordina la ritirata ordinata verso Hammerfist e resta per ultimo.
+
 **Statistiche** For 22, Des 12, Cos 20, Int 10, Sag 12, Car 17 · BAB +12; Lotta +18 · **Talenti** Autorità, Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata (ascia nanica), Arma Focalizzata Superiore (ascia nanica), Arma Specializzata (ascia nanica), Arma Specializzata Superiore (ascia nanica), Spezzare Migliorato, Volontà di Ferro, Riflessi in Combattimento, Iniziativa Migliorata — dodici (cinque di livello, sette da guerriero); la scheda nominava i primi tre · **Abilità** Intimidire +10, Saltare +9, Scalare +9 · **Equipaggiamento** ascia da guerra nanica +3, armatura completa +3, scudo pesante +2, cintura della forza del gigante +4, anello di protezione +1, amuleto dell'armatura naturale +1 (spiegano l'attacco e la CA 28 del modulo)
 
 **Capacità speciali**
 - **Comandante**: comanda 300 mercenari Dauth; +2 morale ai tiri per colpire e ai TS contro paura per tutti i nani entro 18 m (non SRD, canone del DM 2026-10-18; l'arco 09 è allineato). PF1e: si avvicina agli ordini del cavaliere, senza stravolgere.
 - **Nano (SRD)**: +4 di schivare alla CA contro i giganti, +1 a colpire orchi e goblinoidi, stabilità, +2 ai TS contro veleni, incantesimi e capacità magiche.
-
-**Tattiche**
-- *Da solo, prima del combattimento*: non combatte mai solo per scelta. Si mette sulla seconda fila dei suoi, dove il fronte si incrina, con lo scudo alzato e i due capitani ai lati.
-- *Durante il combattimento*: round 1, avanza di un passo e colpisce il nemico più grosso a portata: contro i giganti ha +4 alla CA e lo sa, e li cerca. Attacco Poderoso pieno (−5) sui bersagli con CA sotto 25; con Incalzare e Incalzare Potenziato apre un varco fra gli hobgoblin, +1 a colpirli. Contro un incantatore usa Spezzare Migliorato sul bastone o sulla bacchetta. Non insegue chi scappa: tiene la linea, perché è la linea che conta.
-- *Morale*: sotto 40 pf si fa tirare indietro dai suoi e beve una pozione, poi torna. Non si arrende alla Mano Rossa; se la piazza cade ordina la ritirata ordinata verso Hammerfist e resta per ultimo.
 
 
 - *Con i suoi 300*: arco 09, Battaglia finale. «Stat blocchi epici» §7: i 300 nani non hanno statistiche individuali, sono un blocco di fanteria che assorbe parte delle ondate e stabilizza i fronti. Fase 4 («Circolo, Mythal e statue», §7, ruolo degli alleati): tengono le masse di fanteria lontane dalle strade che portano alla piazza, e in termini meccanici riducono le ondate di base, così i PG vedono solo gli strike team d'élite.
