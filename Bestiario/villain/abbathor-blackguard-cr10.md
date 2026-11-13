@@ -39,6 +39,8 @@ Medium humanoid (dwarf), ex-Paladin 7 / Blackguard 3, LE.
 
 **Attacco** Vel 6 m · **Mischia** spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni) · **Colpire il bene** 4/giorno (+3 al tiro, +3 ai danni) · **Attacco furtivo** +1d6 · **Evocazione immonda** 1/giorno (*evoca mostri I*, livello dell'incantatore 6) · **Aura di disperazione** (i nemici entro 3 m hanno −2 ai TS) · **Incantesimi da Blackguard** (LI 3°; CD 13 + livello): 1° (2) — *arma corrotta, causare paura*; 2° (1) — *forza del toro*
 
+**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove gli antipaladini sono Blackguard 10): *Prima del combattimento* in «Initial Setup» (*arma corrotta* e *forza del toro*: con For 22 l'attacco sale a +18/+13, 1d8+7), *Durante il combattimento* in «Combat Tactics» (caricano la prima linea, colpire il bene e Fendere sul guerriero e sul monaco), *Morale* in «Mid-Combat Adjustments» (sotto metà pf passano alla difesa: imposizione delle mani e pozioni di *cura ferite moderate*).
+
 **Statistiche** For 18, Des 12, Cos 16, Int 10, Sag 16, Car 16 · BAB +10; Lotta +14 · **Talenti** Incalzare, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga) · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, spada lunga sacrilega +1, mantello della resistenza +1, amuleto dell'armatura naturale +1, periapto della saggezza +4, mantello del carisma +2, 2 pozioni di *cura ferite moderate*, 2 pozioni di *forza del toro*
 
 **Capacità speciali**
@@ -47,8 +49,6 @@ Medium humanoid (dwarf), ex-Paladin 7 / Blackguard 3, LE.
 - **Comandare non morti** (Sop): 6 volte al giorno, come un chierico di 1° livello (livello da Guardia Nera −2).
 - **Uso del veleno** (Str): non si avvelena mai applicandolo alla lama.
 - **Evocazione immonda** (paladino caduto di 7°, SRD): una volta al giorno *evoca mostri I* per una creatura malvagia, con livello dell'incantatore doppio del livello da Guardia Nera (6). Il servitore immondo arriva al 5° livello da Guardia Nera: non ce l'ha.
-
-**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove gli antipaladini sono Blackguard 10): *Prima del combattimento* in «Initial Setup» (*arma corrotta* e *forza del toro*: con For 22 l'attacco sale a +18/+13, 1d8+7), *Durante il combattimento* in «Combat Tactics» (caricano la prima linea, colpire il bene e Fendere sul guerriero e sul monaco), *Morale* in «Mid-Combat Adjustments» (sotto metà pf passano alla difesa: imposizione delle mani e pozioni di *cura ferite moderate*).
 
 **Benchmark** PF T1-1 riga 10 (CA 24, pf 130, att. +18, danno medio 45, CD 19): CA 26 ✓ sopra · pf 98 ✗ sotto · att. +16 (+18 con *forza del toro*) ≈ · danno con colpire il bene e furtivo ≈ 40 sul primo round se entrano tutti e due i colpi ≈ · CD 15 al 2° ✗ sotto. Si regge in due, come lo vuole il testo, accanto al chierico.
 

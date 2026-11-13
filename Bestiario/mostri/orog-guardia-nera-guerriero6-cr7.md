@@ -28,14 +28,14 @@ fonte: ricostruzione del repo, 2026-10-19 — ⚠ Non SRD (orog)
 
 **Attacco** Vel 6 m (9 m senza armatura) · Mischia ascia bipenne +1 +13/+8 (1d12+10/x3) · Spazio 1,5 m; Portata 1,5 m · guardia del corpo
 
+**Tattiche** *Prima del combattimento*: marcia attorno a Grimjaw, due davanti e due ai lati. · *Durante il combattimento*: Attacco Poderoso a −3 (+6 danni) contro chi minaccia il generale; Incalzare Potenziato quando i nani serrano le file. · *Morale*: non si ritira mai finché Grimjaw è vivo; se Grimjaw suona la ritirata, copre la sua fuga e resta indietro.
+
 **Statistiche** For 20 Des 10 Cos 20 Int 12 Sag 11 Car 8 · BAB +6; Lotta +11 · Talenti Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata (ascia bipenne), Arma Specializzata (ascia bipenne), Iniziativa Migliorata, Volontà di Ferro · Abilità Intimidire +8, Scalare +4 · Linguaggi Comune, Orchesco, Sottocomune · Equipaggiamento armatura completa +1, ascia bipenne +1, una pozione di *cura ferite gravi* `[CANONE — DM 2026-11-05, P16, Bestiario]`
 
 **Capacità speciali**
 - *Guardia del corpo*: finché è adiacente a Grimjaw, chi attacca il generale in mischia deve prima superare lui; nel combattimento di massa l'unità assorbe i colpi diretti a Grimjaw (`ARC08-02` §5).
 - *Lealtà incrollabile*: immune alla paura e agli effetti di morale finché Grimjaw è vivo; se Grimjaw cade, combatte fino alla morte sul suo corpo (`ARC08-02` §5).
 - ⚠ **Non SRD**: i tratti razziali dell'orog vengono da `[Private source — Monsters of Faerûn / Races of Faerûn]` e qui non si riproducono; restano le caratteristiche della scheda d'unità di `ARC08-01` (For 20, Cos 20).
-
-**Tattiche** *Prima del combattimento*: marcia attorno a Grimjaw, due davanti e due ai lati. · *Durante il combattimento*: Attacco Poderoso a −3 (+6 danni) contro chi minaccia il generale; Incalzare Potenziato quando i nani serrano le file. · *Morale*: non si ritira mai finché Grimjaw è vivo; se Grimjaw suona la ritirata, copre la sua fuga e resta indietro.
 
 **Hook**: ognuna porta sul petto una mano rossa dipinta col sangue di un nano. *Non parlano: è Grimjaw a parlare per loro.*
 

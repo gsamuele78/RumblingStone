@@ -247,7 +247,7 @@ def check_rules(path: Path):
 
 
 #: ADR-0091 §1: le etichette dello statblocco, in quest'ordine, a inizio riga.
-FORMA_STATBLOCCO = ["Difesa", "Attacco", "Statistiche", "Capacità speciali", "Tattiche"]
+FORMA_STATBLOCCO = ["Difesa", "Attacco", "Tattiche", "Statistiche", "Capacità speciali"]
 #: ADR-0091 §2: le sezioni del dossier in ordine, con l'obbligo. «In
 #: combattimento» è obbligatoria solo se il dossier rimanda a uno statblocco.
 FORMA_DOSSIER = [

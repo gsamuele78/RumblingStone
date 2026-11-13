@@ -45,20 +45,6 @@ Slot al giorno da Mago 9 con Int 22 e lo slot dell'illusionista (+1 per livello)
 | 4 | 3+1 | **evocazione delle ombre** (CD 22), *nebbia solida*, *porta dimensionale*, **assassino fantasma** (CD 22) |
 | 5 | 2+1 | **invocazione delle ombre** (CD 23), *teletrasporto*, *immagine persistente* (CD 23) |
 
-**Statistiche** For 8, Des 18, Cos 12, Int 22 (20 + *fascia dell'intelletto +2*), Sag 12, Car 16 · **BAB/Lotta** +5/+4
-**Talenti** Scrivere Pergamene, Schivare, Mobilità, Riflessi in Combattimento, **Incantesimi Focalizzati (Illusione)**, **Incantesimi Focalizzati Superiore (Illusione)**, Incantesimi Silenziosi.
-
-> ⚠ Prerequisito: la Danzatrice delle Ombre (SRD) chiede Nascondersi 10 gradi e Muoversi Silenziosamente 8; per un mago sono abilità di classe incrociata, e 10 gradi arrivano solo al 17° livello del personaggio. Tenuta, perché è nella scheda. PF1e: Danzatore delle Ombre (classe di prestigio PRD/OGL) — si avvicina: chiede Furtività 5 gradi, quindi un mago 9 ci entra, e dà *nascondersi in piena vista* già al 1° livello.
-
-**Capacità speciali**
-**Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **nascondersi in piena vista**, elusione, schivare prodigioso.
-**Capacità magiche** (1/giorno, CL 11): *luci danzanti*, *oscurità*, *fuoco fatuo*.
-
-**Perché è pericolosa proprio per questo party** — *questa è la ragione del personaggio, non un dettaglio*:
-Thorik ha **Mind Blank permanente** (Manto di Pietra e Spirito, Rituale 3 della Corona) e **Volontà Adamantina**: charme, compulsioni, letture del pensiero e divinazioni su di lui **non funzionano più**. Zin'thara non ci prova nemmeno.
-Le sue armi sono **ombre quasi-reali**: *evocazione delle ombre* e *invocazione delle ombre* replicano incantesimi di Evocazione e Invocazione con effetti **parzialmente reali** — il danno arriva **anche a chi non è influenzabile mentalmente**, e il TS per non crederci è una prova di Volontà **contro l'illusione**, non un effetto mentale. Il tank immune al mentale **prende comunque la palla di fuoco d'ombra**. E se lui non ci crede, quella palla di fuoco **fa comunque il 20% dei danni** — che su Hella diventa **×1,5**.
-*Assassino fantasma* resta invece un fantasma (mentale): **inutile su Thorik, letale su Artemis**. Zin'thara lo sa e sceglie il bersaglio di conseguenza — è una professionista, non una fanatica.
-
 **Tattiche**
 
 *Prima del combattimento*
@@ -75,6 +61,20 @@ Le sue armi sono **ombre quasi-reali**: *evocazione delle ombre* e *invocazione 
 *Morale*
 
 6. **Fuga strategica**: *teletrasporto* verso il campo di Sonjak. **Non muore mai al primo incontro se il DM la gioca onestamente** — e questo la rende ricorrente.
+
+**Statistiche** For 8, Des 18, Cos 12, Int 22 (20 + *fascia dell'intelletto +2*), Sag 12, Car 16 · **BAB/Lotta** +5/+4
+**Talenti** Scrivere Pergamene, Schivare, Mobilità, Riflessi in Combattimento, **Incantesimi Focalizzati (Illusione)**, **Incantesimi Focalizzati Superiore (Illusione)**, Incantesimi Silenziosi.
+
+> ⚠ Prerequisito: la Danzatrice delle Ombre (SRD) chiede Nascondersi 10 gradi e Muoversi Silenziosamente 8; per un mago sono abilità di classe incrociata, e 10 gradi arrivano solo al 17° livello del personaggio. Tenuta, perché è nella scheda. PF1e: Danzatore delle Ombre (classe di prestigio PRD/OGL) — si avvicina: chiede Furtività 5 gradi, quindi un mago 9 ci entra, e dà *nascondersi in piena vista* già al 1° livello.
+
+**Capacità speciali**
+**Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **nascondersi in piena vista**, elusione, schivare prodigioso.
+**Capacità magiche** (1/giorno, CL 11): *luci danzanti*, *oscurità*, *fuoco fatuo*.
+
+**Perché è pericolosa proprio per questo party** — *questa è la ragione del personaggio, non un dettaglio*:
+Thorik ha **Mind Blank permanente** (Manto di Pietra e Spirito, Rituale 3 della Corona) e **Volontà Adamantina**: charme, compulsioni, letture del pensiero e divinazioni su di lui **non funzionano più**. Zin'thara non ci prova nemmeno.
+Le sue armi sono **ombre quasi-reali**: *evocazione delle ombre* e *invocazione delle ombre* replicano incantesimi di Evocazione e Invocazione con effetti **parzialmente reali** — il danno arriva **anche a chi non è influenzabile mentalmente**, e il TS per non crederci è una prova di Volontà **contro l'illusione**, non un effetto mentale. Il tank immune al mentale **prende comunque la palla di fuoco d'ombra**. E se lui non ci crede, quella palla di fuoco **fa comunque il 20% dei danni** — che su Hella diventa **×1,5**.
+*Assassino fantasma* resta invece un fantasma (mentale): **inutile su Thorik, letale su Artemis**. Zin'thara lo sa e sceglie il bersaglio di conseguenza — è una professionista, non una fanatica.
 
 **Contromosse del party (devono esistere)**: *individuazione del magico* e Sapienza Magica per le illusioni; **Vera Visione della Corona** (1/giorno, 10 min) smonta l'intero arsenale — è il momento in cui Thorik diventa gli occhi del gruppo invece che lo scudo; l'aura della **Trinità Divina** (+4 TS sacri) rende i TS su Volontà quasi automatici per 5 round, ma li costringe a spenderla presto.
 

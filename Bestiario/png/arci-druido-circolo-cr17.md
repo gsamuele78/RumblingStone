@@ -40,6 +40,11 @@ Medium humanoid, **Druido 17**. La razza la scheda non la dice.
 - Preparati — 9°: *tempesta della vendetta* (o *tsunami*, PF1e) · 8°: *evoca alleato naturale VIII*, *vortice* · 7°: *controllare il tempo atmosferico*, *bastone mutante*, *animare piante*, *camminare nel vento* · 6°: *guscio antivita*, *muro di pietra*, *respingere il legno*, *evoca alleato naturale VI*, *semi di fuoco* · 5°: *controllare i venti*, *pelle di pietra*, *metamorfosi funesta*, *muro di spine*, *piaga d'insetti* · 4°: *controllare l'acqua*, *controllare piante*, *spine di pietra*, *tempesta di ghiaccio*, *libertà di movimento*, *dissolvi magie* · 3°: *crescita di spine*, *dominare animali*, *muro di vento*, *tempesta di nevischio*, *protezione dall'energia*, *invocare il fulmine*, *neutralizzare veleno* · 2°: *arroventare il metallo*, *blocca animali*, *raffica di vento*, *scalare come un ragno*, *corteccia*, *resistere all'energia*, *forza del toro* · 1°: *fuoco fatuo*, *intralciare*, *nebbia oscurante*, *passo senza tracce*, *bacca curativa*, *cura ferite leggere*, *zanna magica* per i livelli 8 e 9 e per gli incantesimi aggiunti agli slot che la scheda lasciava vuoti
 - *Tsunami* è un incantesimo di PF1e (Advanced Player's Guide, OGL) senza gemello 3.5: si avvicina a *tempesta della vendetta* come peso, non la stravolge. Il modulo lo cita «o equivalenti».
 
+**Tattiche**
+- *Prima del combattimento*: prima della Fase 4 si lancia *corteccia*, *pelle di pietra* e *resistere all'energia* (fuoco), estesi; *controllare il tempo atmosferico* lo comincia già nella Fase 3, perché impiega dieci minuti a fare effetto.
+- *Durante il combattimento*: resta nel cerchio. Usa i round fuori dal rituale solo per tre cose, come dice il modulo: *controllare i venti* contro le ondate di volanti, l'acqua e il vento sui fuochi di drago, *muro di spine* o *muro di pietra* sulla strada dell'Orda. Contro un nemico già nel cerchio un *evoca alleato naturale* rapido gli mette davanti una bestia; contro un volante, *muro di vento*. Non prende mai forma selvatica durante il rituale: le servono le mani e la voce.
+- *Morale*: sotto 40 pf esce dal cerchio, prende forma d'elementale dell'aria e si mette in salvo fuori portata; torna se il Circolo resta sotto i sei membri. Davanti all'Avatar non arretra finché il rituale ha bisogno di lei.
+
 **Statistiche** For 10, Des 12, Cos 14, Int 12, Sag 24, Car 16 · BAB +12; Lotta +12 · **Talenti** Incantesimi Naturali, Incantare in Combattimento, Forma Selvatica Extra `[Private source — Complete Divine]`, Incantesimi Estesi, Incantesimo Rapido, Abilità Focalizzata (Concentrazione) — sei, la scheda non li elencava · **Abilità** Concentrazione +25, Conoscenze (natura) +23, Sopravvivenza +27, Guarire +27 · **Linguaggi** Comune, Druidico, Silvano · **Equipaggiamento** periapto della saggezza +4, armatura di pelle +3, anello di protezione +2 (tengono la Sag «22+» e la CA del modulo)
 
 **Capacità speciali**
@@ -48,12 +53,6 @@ Medium humanoid, **Druido 17**. La razza la scheda non la dice.
 - **Alleato naturale evocato** fino al IX; **bastone mutante** (il bastone diventa un treant per ore).
 - **Mille volti**, **immune ai veleni**, **corpo senza tempo**, **resistere al richiamo della natura** (SRD, druido 9-15).
 - **Ancora del Mythal**: ogni round del rituale spende un'azione standard; se è colpita o costretta a muoversi fa Concentrazione CD 25 (ha +25).
-
-**Tattiche**
-- *Prima del combattimento*: prima della Fase 4 si lancia *corteccia*, *pelle di pietra* e *resistere all'energia* (fuoco), estesi; *controllare il tempo atmosferico* lo comincia già nella Fase 3, perché impiega dieci minuti a fare effetto.
-- *Durante il combattimento*: resta nel cerchio. Usa i round fuori dal rituale solo per tre cose, come dice il modulo: *controllare i venti* contro le ondate di volanti, l'acqua e il vento sui fuochi di drago, *muro di spine* o *muro di pietra* sulla strada dell'Orda. Contro un nemico già nel cerchio un *evoca alleato naturale* rapido gli mette davanti una bestia; contro un volante, *muro di vento*. Non prende mai forma selvatica durante il rituale: le servono le mani e la voce.
-- *Morale*: sotto 40 pf esce dal cerchio, prende forma d'elementale dell'aria e si mette in salvo fuori portata; torna se il Circolo resta sotto i sei membri. Davanti all'Avatar non arretra finché il rituale ha bisogno di lei.
-
 
 Benchmark: PF T1-1 riga 17: CA 19-24 sotto (32) / pf 110 sotto (270) / CD 26 sopra (24) / TS buono +17 sotto (20). Per l'SRD una druida di 17° livello vale GS 17 (il modulo la diceva 14); i numeri bassi sono quelli di un'incantatrice che si protegge con gli incantesimi.
 
