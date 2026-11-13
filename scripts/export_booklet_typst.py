@@ -1232,7 +1232,11 @@ def compila(motore: str, typ: Path, pdf: Path,
     che il comando promette. `motore` è quello di `typst_motore.esigi()`:
     lo decide lui, qui serve solo a dire che il controllo è già stato fatto.
     """
-    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI, pdfua=True)
+    # Solo i font del repo (scripts/fonts/ più quelli che typst porta con sé),
+    # come misura_stampa e varianti_stampa: emoji e simboli non cadono più su
+    # un font della macchina che compila (ADR-0130).
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI,
+                             solo_font_del_repo=True, pdfua=True)
     if esito_completo is not None:
         esito_completo.append(e)
     return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag

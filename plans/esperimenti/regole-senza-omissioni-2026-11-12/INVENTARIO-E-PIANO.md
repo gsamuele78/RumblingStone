@@ -326,6 +326,13 @@ far dichiarare.
   Concentrazione CD 21 nel duello (lotto 6, abilità), la CD di corrompere
   l'acqua (lotto 7, qualità speciali), il «fiancheggiamento spalla a spalla»
   della pattuglia (regola di combattimento, non un numero di scheda: lotto 12).
+  Riscontro del 2026-11-13 sull'SRD, senza toccare il master: la
+  Concentrazione CD 21 nella nube di Fluttuare è giusta (10 + metà dei 22 DV
+  del drago); la CD di corrompere l'acqua (25, e 26 nella variante) è giusta,
+  perché l'SRD la fa uguale alla Presenza Terrificante; il fiancheggiamento
+  «spalla a spalla» è contro l'SRD, che vuole i due attaccanti ai lati
+  opposti del bersaglio. La riga è canone del DM (2026-10-12): la corregge
+  solo Jfs.
 - Scadenze che toccano gli stessi conti: promozione dei 14 conti PF1e in prova
   (ADR-0119, 23/11) e xdist in testing fino al 22/11.
 

@@ -36,14 +36,14 @@
         "schede": 32,
         "pagine_con_immagine": 0.044,
         "pagine_con_immagine_decimo": 0.12,
-        "parole": 88416,
+        "parole": 88421,
         "quota_parole_ripetute": 0.126
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 11154
+        "parole_ripetute": 11107
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -88,14 +88,14 @@
         "schede": 24,
         "pagine_con_immagine": 0.027,
         "pagine_con_immagine_decimo": 0.088,
-        "parole": 69540,
-        "quota_parole_ripetute": 0.113
+        "parole": 69541,
+        "quota_parole_ripetute": 0.114
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 3,
         "titoli_rovinati": 0,
-        "parole_ripetute": 7883
+        "parole_ripetute": 7897
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -140,14 +140,14 @@
         "schede": 30,
         "pagine_con_immagine": 0.035,
         "pagine_con_immagine_decimo": 0.081,
-        "parole": 100223,
+        "parole": 100242,
         "quota_parole_ripetute": 0.094
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 9444
+        "parole_ripetute": 9407
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -166,14 +166,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 16449,
+        "parole": 16450,
         "quota_parole_ripetute": 0.062
       },
       "in_prova": {
         "sigle_morte": 1,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1024
+        "parole_ripetute": 1015
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-GRUPPO-CAMMINO.manifest.json": {
@@ -218,14 +218,14 @@
         "schede": 4,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 39498,
-        "quota_parole_ripetute": 0.049
+        "parole": 39501,
+        "quota_parole_ripetute": 0.048
       },
       "in_prova": {
         "sigle_morte": 2,
         "righe_brevi_incomplete": 1,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1924
+        "parole_ripetute": 1913
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-TEASER-GIOCATORI.manifest.json": {
@@ -270,14 +270,14 @@
         "schede": 26,
         "pagine_con_immagine": 0.048,
         "pagine_con_immagine_decimo": 0.105,
-        "parole": 60071,
-        "quota_parole_ripetute": 0.107
+        "parole": 60077,
+        "quota_parole_ripetute": 0.106
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 6424
+        "parole_ripetute": 6387
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
@@ -296,14 +296,14 @@
         "schede": 5,
         "pagine_con_immagine": 0.031,
         "pagine_con_immagine_decimo": 0.031,
-        "parole": 29146,
-        "quota_parole_ripetute": 0.051
+        "parole": 29147,
+        "quota_parole_ripetute": 0.05
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 5,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1478
+        "parole_ripetute": 1470
       }
     },
     "10-stand-alone/Il Giardino di Sale e Calce PF1e/homebrew/giardino-sale-calce-pf1e.manifest.json": {
@@ -530,7 +530,7 @@
         "schede": 38,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 23797,
+        "parole": 23796,
         "quota_parole_ripetute": 0.074
       },
       "in_prova": {
