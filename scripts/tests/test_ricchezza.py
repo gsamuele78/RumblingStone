@@ -111,6 +111,29 @@ class TestRicchezza(unittest.TestCase):
         self.assertEqual(len(n), 1)
         self.assertIn("modificatore di livello", n[0]["testo"])
 
+    def test_razza_senza_dadi_vita_razziali(self):
+        # hobgoblin: livello effettivo 3 + 1 = 4, 3300 mo; drow: 3 + 2 = 5, 4300 mo
+        coda = "**Equipaggiamento** spada lunga +1, anello di protezione +1"
+        v, n = giudica(coda, titolo="Sergente hobgoblin", tipo="Medium humanoid (goblinoid)")
+        self.assertEqual(n, [])
+        self.assertEqual(v[0]["atteso"], "al più 3300 mo")
+        self.assertEqual(giudica(coda, titolo="Esploratrice drow", tipo="Medium humanoid (elf, drow)"), ([], []))
+        v, n = giudica(coda, titolo="Predone orco", tipo="Medium humanoid (orc)")
+        self.assertEqual(v[0]["atteso"], "al più 2500 mo")
+
+    def test_un_modello_non_si_giudica(self):
+        coda = "**Equipaggiamento** spada lunga +1, anello di protezione +1"
+        v, n = giudica(coda, titolo="Hobgoblin mezzo-drago", tipo="Medium humanoid (goblinoid)")
+        self.assertEqual(v, [])
+        self.assertEqual(len(n), 1)
+
+    def test_tabella_dei_modificatori_di_livello(self):
+        d = S.dati("dnd35", "creature.costruzione")["mdl"]
+        self.assertEqual({k: v["mdl"] for k, v in d["razze"].items()},
+                         {"aasimar": 1, "drow": 2, "duergar": 1, "goblin": 0, "hobgoblin": 1, "kobold": 0,
+                          "merfolk": 1, "orc": 0, "svirfneblin": 3, "tiefling": 1})
+        self.assertEqual(set(d["nomi"]), set(d["razze"]))
+
     def test_una_riga_di_storia_non_conta(self):
         self.assertEqual(giudica("> era: Equipaggiamento anello di protezione +5"), ([], []))
 

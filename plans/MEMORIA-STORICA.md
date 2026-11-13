@@ -1190,3 +1190,15 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 ha `oggetti.toml` (623 prezzi degli oggetti magici dell'SRD, prezzo del potenziamento, valore dell'equipaggiamento di un PNG per livello) e `verifica_scheda` ha la verifica `ricchezza` (regola `equipaggiamento.valore`). Misura: violazioni 37 → 37, non verificabili 372 → 374; banco 24 violazioni e 88 non verificabili su 112, su main 0.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la tabella dei PNG (DMG 3.5, Tabella 4-23) non è nell'SRD: nel repo stanno solo i venti numeri, riscontrati su realmshelps.net. La somma è un minimo di proposito: si contano solo gli oggetti dal prezzo certo, così una violazione è sicura e sotto la tabella non si dice niente. 88 schede su 112 del banco restano non verificabili perché il plugin non ha il modificatore di livello delle razze dei mostri: è il resto del lotto 5 e alzerebbe questa misura più di ogni altra aggiunta.
+
+### MS-0103 · 2026-11-13 · ADR-0126 lotto 5: il modificatore di livello delle razze senza dadi vita
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza dadi vita razziali» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha `mdl.toml` (dieci razze che l'SRD presenta come combattenti di 1° livello, con il loro modificatore di livello) e la verifica `ricchezza` lo usa per il livello effettivo. Misura: violazioni 37 → 37, non verificabili 374 → 374; banco della ricchezza: violazioni 24 → 57, non verificabili 88 → 55.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** `creature_base.toml` non ha queste razze perché nell'SRD non hanno dadi vita razziali: il loro blocco è un combattente di 1° livello, ma la riga «Level Adjustment» c'è. Una scheda che nomina un modello (mezzo-drago, vampiro, immondo) non si giudica: il modello cambia il modificatore e il plugin non ha ancora i modelli.
+
