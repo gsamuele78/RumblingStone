@@ -1004,7 +1004,17 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima stesura passava dal lettore delle schede e su un file che quello non riconosce non dava nulla, quindi ora la riga «Talenti» si legge anche da sola. Fuori da una scheda riconosciuta «1° …» è spesso un elenco di prosa (stanze, passi): la riga conta solo se almeno un nome è un incantesimo noto, e così 14 falsi sono usciti. Una sezione aperta da un titolo si chiude al titolo dopo, perché dentro ha i suoi grassetti («**Round 1**»); una aperta da un'etichetta in grassetto si chiude all'etichetta dopo. Limiti: solo la prima riga «Talenti» del file; 62 incantesimi in italiano senza canonico perché il dizionario dell'SRD non li ha; capacità speciali solo con la sigla fra parentesi.
 
-### MS-0086 · 2026-11-13 · S8: le tattiche di una scheda contro la scheda
+### MS-0086 · 2026-11-13 · Le ripetizioni dei booklet hanno una misura
+
+- **Data:** 2026-11-13
+- **PR:** #395
+- **ADR:** ADR-0122 ADR-0099
+- **Temi:** stampa booklet misure
+- **Origine:** voce scritta con la PR, per la riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
+- **Testo:** Il DM, vista la serata di 125 pagine, ha chiesto se c'erano ripetizioni non misurate. C'erano. `misura_stampa.parole_ripetute` conta le parole che stanno in un passo di almeno 8 parole già stampato prima (w-shingling, lo standard di fatto per i quasi-duplicati), dalla seconda volta e senza le testatine. È in prova: avvisa e non ferma. Serata «La Notte e l'Alba» 12,3% (8.842 parole su 72.041) contro l'1,2% di *Burnt Offerings* e lo 0,5% dell'estratto di *Red Hand of Doom*. Nella serata 3.665 parole sono le copie in appendice (schede e mappe), 5.177 stanno nel corpo: le schede d'entrata «in breve» ristampate a ogni scena, pezzi delle schede del capitolo II ridetti nelle scene, la legenda delle mappe a ogni mappa. Dei 20 booklet tre superano il 10%, tredici stanno sopra il 5%.
+- **Trovato nel repo:** `scripts/misura_stampa.py` · `docs/audit/stampa-booklet.json` · `docs/audit/volume-booklet.json` (riferimenti S6) · `scripts/tests/test_misure_in_prova.py`
+- **Solo qui:** nessuna soglia, perché una parte delle copie è voluta e il confronto con gli AP non è alla pari (gli AP non ristampano le schede in appendice); tolte tutte le copie del corpo la serata scenderebbe a circa il 5%, non all'1%; i passi sotto le 22 parole pesano 3.906 parole su 5.177 del corpo e sono in gran parte righe di statistiche, non prosa; quali copie togliere lo decide il DM.
+### MS-0087 · 2026-11-13 · S8: le tattiche di una scheda contro la scheda
 
 - **Data:** 2026-11-13
 - **PR:** —

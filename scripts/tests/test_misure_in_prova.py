@@ -39,6 +39,21 @@ class TestLettura(unittest.TestCase):
         self.assertEqual([t for _, t in MS.titoli_rovinati(doc)], ["LALBA"])
 
 
+    def test_parole_ripetute_dalla_seconda_volta(self):
+        passo = "il drago cala sul cortile con due wyvern e combatte in passate"
+        doc = [_Pagina(f"Prima pagina. {passo}. Poi altro testo diverso qui."),
+               _Pagina(f"Seconda pagina, cose nuove. {passo}. E una coda che non torna.")]
+        parole, ripetute, passi = MS.parole_ripetute(doc)
+        self.assertEqual(ripetute, 12)                 # le 12 parole del passo, una volta sola
+        self.assertEqual(passi[0][:3], (2, 1, 12))     # a pagina 2, già a pagina 1
+        self.assertGreater(parole, 24)
+
+    def test_le_testatine_non_sono_ripetizioni(self):
+        testa = "la notte e l alba appendice della serata le creature del campo"
+        doc = [_Pagina(f"{testa}\npagina numero {n} con il suo testo proprio e diverso {n * 7}")
+               for n in range(12)]
+        self.assertEqual(MS.parole_ripetute(doc)[1], 0)
+
 class TestMappeESchede(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
