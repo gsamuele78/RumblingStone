@@ -1146,3 +1146,14 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 ha `movimento.toml` (velocità delle sette razze dell'SRD, categoria delle armature, velocità ridotta, movimento veloce di barbaro e monaco) e `verifica_scheda` ha la verifica `velocita`: la velocità scritta di chi ha soltanto livelli di classe deve tornare con razza, classe e armatura. Misura: violazioni 33 → 33; 18 schede giudicate su 100; banco 15 su 18 per verso, su main 0.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima lista delle parole che rendono dubbia una velocità aveva «mount» e «carico», e quasi ogni scheda dei nani ha «mountain» nell'ambiente: 8 mutazioni su 18 sfuggivano per questo. La lista ora ha solo gli oggetti e gli incantesimi che cambiano davvero la velocità, più la nota scritta nella riga stessa. Un umano con dadi vita razziali non esiste: la prova «chi ha dadi vita razziali» non si scrive su una scheda di prova umana.
+
+### MS-0099 · 2026-11-13 · ADR-0126 lotto 7: resistenza agli incantesimi e riduzione del danno
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 7 seconda parte: resistenza agli incantesimi e riduzione del danno» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha `difese.toml` (sei razze dell'SRD con la RI «N + livelli di classe», monaco, RD del barbaro per livello) e `verifica_scheda` ha la verifica `difese` (regole `numero.RI`, `numero.RD`). Misura: violazioni 33 → 34 (RI del Collezionista, 27 contro 38, in attesa del DM); 8 RI giudicate su 26 e 3 RD su 4; banco 6 su 6 e 3 su 3 per verso, su main 0.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** i livelli di classe letti dal nome delle classi non bastano: il Trickster Arcano della drow non veniva letto e la RI attesa veniva 19 invece di 21. Si contano i dadi vita oltre quelli della razza. Il nome della razza nel titolo non basta: «Cultista Rakshasa» è un umanoide, e conta il tipo della scheda. I sensi delle razze non si sono fatti perché `conformita_statblocchi` li controlla già.
