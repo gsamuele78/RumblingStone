@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0131: il volume da stampa è anche PDF/A-2a (ISO 19005-2).… | ✅ veraPDF 1.28.2 sui 20 booklet: PDF/A-2a 0 → 20 conformi, controlli falliti 544 → 0 (484 trasparenza senza intento d'uscita, 60 metadati XMP); PDF/UA-1 resta… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | STANDARD-STAMPA | Pagina fitta abbandonata (il DM, 2026-11-13: «preferisco sempre la versione del… | ✅ tolta la chiave `"pagina": "fitta"` da manifest, tema, esportatore, schema e validatore; la serata «La Notte e l'Alba» torna a 125 pagine, corpo 10,2 pt, pas… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 seconda parte: la penalità di armatura alla prova.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 prima parte: le abilità di classe e il margine dei gradi.… | In PR |
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 terza parte: i fatti scheda per scheda.… | In PR |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 105 voci, l'ultima MS-0105 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 106 voci, l'ultima MS-0106 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

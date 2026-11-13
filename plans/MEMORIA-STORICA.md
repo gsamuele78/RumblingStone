@@ -1212,7 +1212,6 @@ repo scritto con altre parole.
 - **Testo:** `oggetti.toml` ha le capacità speciali di armi, armature e scudi e i prezzi delle pergamene; la verifica `ricchezza` legge i nomi italiani dal lessico e conta capacità speciali, pozioni, pergamene e bacchette con le cariche scritte. Misura: violazioni 37 → 37; valore riconosciuto nel Bestiario 224.000 → 267.830 mo; banco, seconda prova: 41 → 57 su 125.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima versione cercava le capacità in tutto il tratto fino alla virgola e prendeva «Cerchio Sacro» (il nome di un arco di Lythiel) per la capacità «sacra»: 2.000 mo diventavano 18.000. Per questo una capacità conta solo se sta attaccata al nome dell'arma o al bonus. La somma deve restare un minimo sicuro: nel dubbio non si conta.
-
 ### MS-0105 · 2026-11-13 · ADR-0126: RI del Collezionista 38 e tratti dei non morti a tre schede
 
 - **Data:** 2026-11-13
@@ -1223,3 +1222,13 @@ repo scritto con altre parole.
 - **Testo:** il DM ha scelto sulle card la RI 38 dell'SRD per il Collezionista (27 del rakshasa + 11 livelli di classe) e la riga «Tratti dei non morti» per deathlock, leone spettrale e leone crudele scheletrico. Le quattro schede sono corrette e `IN_ATTESA` di `test_difese.py` è vuoto. Misura: violazioni 37 → 33.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** le due card erano rimaste aperte dalle PR dei lotti 7 seconda e terza parte; le schede non si toccano senza la risposta del DM, quindi fino a oggi stavano nell'elenco in attesa. La RI 27 era quella del rakshasa base: la regola dell'SRD la alza di uno per livello di classe.
+### MS-0106 · 2026-11-13 · ADR-0131: il volume da stampa è anche PDF/A-2a
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0131 ADR-0129 ADR-0130
+- **Temi:** stampa booklet archiviazione document-ai
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0131: il volume da stampa è anche PDF/A-2a» in `plans/CHANGELOG.md`
+- **Testo:** Terza tecnica della richiesta del DM del 2026-11-13 («continua con le prossime che mancano e che misurate migliorano»). `export_booklet_typst` chiede a typst PDF/A-2a insieme a PDF/UA-1. veraPDF 1.28.2 sui 20 booklet, main 683480af: PDF/A-2a 0/20 e 544 controlli falliti (6.2.10-2 ×484 trasparenza senza intento d'uscita, 6.6.4-1 ×20 e 6.6.2.3.1 ×40 metadati XMP); ramo 20/20 e 0. PDF/UA-1 resta 20/20, pagine 985 = 985, testo estratto identico, peso 75,2 → 75,3 MB.
+- **Trovato nel repo:** `plans/adr/ADR-0131-il-volume-da-stampa-e-anche-pdf-a-2a.md` · `plans/esperimenti/pdfa-2026-11-13/MISURE.md` · `scripts/tests/test_pdfua.py` (TestPdfA)
+- **Solo qui:** typst 0.15.2 rifiuta PDF/A-4 con PDF/UA-1 («mutually incompatible»: A-4 vuole PDF 2.0, UA-1 PDF 1.7); A-2a, 2b, 2u e 3a si combinano. 86 pagine su 985 hanno pixel diversi a 40 dpi, al più 3 livelli su 255 e in media 1: è l'intento d'uscita sRGB, non si vede. Ghostscript `-dPDFA` scartato senza misura perché rifà il PDF e perde i tag. La voce è nata MS-0105 ed è diventata MS-0106 al riallineo, dopo la #414 delle regole.

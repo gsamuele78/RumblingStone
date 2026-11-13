@@ -84,6 +84,10 @@ SCHEDA_PG = ROOT / "scripts" / "typst" / "scheda-pg.typ"
 # dipende dalla rete non e' riproducibile — ne' compilabile offline.
 PACCHETTI = ROOT / "scripts" / "typst" / "packages"
 FONTS = ROOT / "scripts" / "fonts"
+#: PDF/A-2a (ISO 19005-2, livello «a»: archiviazione e struttura), insieme a
+#: PDF/UA-1. È il PDF/A più alto che si combina con PDF/UA-1: A-4 chiede PDF 2.0,
+#: UA-1 PDF 1.7 (ADR-0131).
+PDFA = "a-2a"
 
 
 
@@ -1227,7 +1231,7 @@ def compila(motore: str, typ: Path, pdf: Path,
     # come misura_stampa e varianti_stampa: emoji e simboli non cadono più su
     # un font della macchina che compila (ADR-0130).
     e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI,
-                             solo_font_del_repo=True, pdfua=True)
+                             solo_font_del_repo=True, pdfua=True, pdfa=PDFA)
     if esito_completo is not None:
         esito_completo.append(e)
     return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag
@@ -1342,8 +1346,12 @@ def main() -> int:
               "    Il volume è completo; un lettore di schermo lo legge peggio. Il motivo\n"
               "    sta nel master (titolo che salta un livello, immagine senza testo\n"
               "    alternativo): vedi docs/how-to/GUIDA-BOOKLET-E-PDF.md.", file=sys.stderr)
+    if completo and completo[0].ok and completo[0].motivo_pdfa:
+        print(f"  ⚠ non è PDF/A ({PDFA.upper()}): {completo[0].motivo_pdfa}", file=sys.stderr)
     n = len(capitoli(man, base, args.all))
     ua = ", PDF/UA-1" if completo and completo[0].pdfua else ""
+    if completo and completo[0].pdfa:
+        ua += f", PDF/{completo[0].pdfa[:-1].upper()}{completo[0].pdfa[-1]}"
     print(f"✓ export_booklet_typst: {n} capitoli → {pdf.relative_to(ROOT)} "
           f"({pdf.stat().st_size // 1024} KB, un volume con segnalibri{ua})")
 
