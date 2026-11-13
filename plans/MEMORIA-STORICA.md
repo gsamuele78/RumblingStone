@@ -1232,3 +1232,14 @@ repo scritto con altre parole.
 - **Testo:** Terza tecnica della richiesta del DM del 2026-11-13 («continua con le prossime che mancano e che misurate migliorano»). `export_booklet_typst` chiede a typst PDF/A-2a insieme a PDF/UA-1. veraPDF 1.28.2 sui 20 booklet, main 683480af: PDF/A-2a 0/20 e 544 controlli falliti (6.2.10-2 ×484 trasparenza senza intento d'uscita, 6.6.4-1 ×20 e 6.6.2.3.1 ×40 metadati XMP); ramo 20/20 e 0. PDF/UA-1 resta 20/20, pagine 985 = 985, testo estratto identico, peso 75,2 → 75,3 MB.
 - **Trovato nel repo:** `plans/adr/ADR-0131-il-volume-da-stampa-e-anche-pdf-a-2a.md` · `plans/esperimenti/pdfa-2026-11-13/MISURE.md` · `scripts/tests/test_pdfua.py` (TestPdfA)
 - **Solo qui:** typst 0.15.2 rifiuta PDF/A-4 con PDF/UA-1 («mutually incompatible»: A-4 vuole PDF 2.0, UA-1 PDF 1.7); A-2a, 2b, 2u e 3a si combinano. 86 pagine su 985 hanno pixel diversi a 40 dpi, al più 3 livelli su 255 e in media 1: è l'intento d'uscita sRGB, non si vede. Ghostscript `-dPDFA` scartato senza misura perché rifà il PDF e perde i tag. La voce è nata MS-0105 ed è diventata MS-0106 al riallineo, dopo la #414 delle regole.
+### MS-0107 · 2026-11-13 · ADR-0132: le copie delle immagini tengono la provenienza
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0132 ADR-0019
+- **Temi:** immagini provenienza booklet ai-generativa
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0132: le copie delle immagini tengono la dichiarazione di provenienza» in `plans/CHANGELOG.md`
+- **Testo:** Quarta tecnica della richiesta del DM del 2026-11-13. 28 master del repo hanno un manifesto C2PA firmato (Google per il Drappo e Durik, OpenAI per tre ritratti di Hella) con la sorgente digitale IPTC; le copie `web/` che vanno nei booklet la perdevano alla ricompressione. `provenienza_immagini.py` la riscrive nella copia come XMP IPTC senza ricomprimere. Copie etichettate 0 → 28 su 28; immagini JPEG nei 20 PDF 0 → 36 su 89; pixel e pagine identici.
+- **Trovato nel repo:** `plans/adr/ADR-0132-le-copie-delle-immagini-tengono-la-provenienza.md` · `plans/esperimenti/provenienza-immagini-2026-11-13/MISURE.md` · `scripts/provenienza_immagini.py`
+- **Solo qui:** Gemini mette il manifesto C2PA in un blocco di testo del PNG («Raw profile type app11») scritto in esadecimale, con un'intestazione che ha cifre sue: cercare «c2pa» nei byte del file ne trovava 18 su 28, e togliere tutti i caratteri non esadecimali sfasava la decodifica; si tengono solo le righe lunghe di esadecimale. Typst incorpora il JPEG così com'è, quindi l'XMP arriva dentro il PDF. Firmare le copie con c2pa-python scartato: chiede un certificato della lista di fiducia C2PA. Una prima corsa di misura è stata buttata perché l'export girava nella cartella di lavoro mentre cambiavo ramo: le misure lunghe vanno in un worktree a parte. Le 24 copie senza manifesto (20 di ARC-07, 4 ritratti dei PG) restano senza etichetta: dichiararle è una scelta del DM.
+

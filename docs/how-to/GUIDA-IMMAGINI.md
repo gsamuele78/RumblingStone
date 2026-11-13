@@ -245,6 +245,23 @@ bash converters/Image-to-webp/conver_webp_new.sh <cartella>
 > ricompressa in JPEG a 1400px **solo per l'embed** (nel repo resta
 > l'originale). Ma un PNG da 12 MB nel repo resta 12 MB per sempre: ridimensiona.
 
+### 4.2-bis La copia dice ancora di essere generata
+
+I master di Gemini e di ChatGPT portano un manifesto C2PA firmato: dichiara che
+l'immagine è fatta da un modello. La copia leggera di `web/` lo perde quando
+viene ricompressa, quindi `build_image_derivatives.py` riscrive la dichiarazione
+nella copia col campo standard IPTC `DigitalSourceType` (ADR-0132). I pixel non
+cambiano.
+
+```bash
+python3 scripts/provenienza_immagini.py            # quante copie la dichiarano
+python3 scripts/provenienza_immagini.py --scrivi   # la mette dove manca
+python3 scripts/provenienza_immagini.py --check    # il cancello dei test
+```
+
+Vale solo dove il master ha il manifesto firmato. Un'immagine senza manifesto
+resta senza etichetta: lo strumento non indovina.
+
 ### 4.3 Agganciarla dove serve
 
 | Dove | Come |
