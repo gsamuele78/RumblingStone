@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Stampa: le emoji dei booklet PDF escono a colori dal font Noto Color Emoji, ora nel repo (`scripts/fonts/`, OFL 1.1), e `export_booklet_typst.py` non usa più i font della macchina che compila (ADR-0130). Il volume è uguale su ogni macchina, e i 20 booklet passano PDF/UA-1 con veraPDF (erano 18).
 - Stampa: `misura_stampa.py` conta le parole ripetute di ogni booklet (`parole_ripetute`, `quota_parole_ripetute`, colonna `ripet`): le parole che stanno in un passo di almeno 8 parole già stampato prima, contate dalla seconda volta, testatine escluse. Misura in prova: `--check` avvisa e non ferma. `--dettaglio` elenca i passi con la pagina della copia e quella della prima volta.
 - Le tattiche contro la scheda (ADR-0125, regola S8, canale testing): `python3 scripts/coerenza_campagna.py fatti DIR... --tattiche` segnala un incantesimo (in corsivo) o un talento che le «Tattiche» di una scheda del Bestiario nominano e la scheda non ha. Misura in sola lettura, anche via MCP; non legge i file con più schede né gli incantesimi scritti senza corsivo.
 - Booklet di serata: la scheda da tavolo in testa alla scena (`<!-- scheda-da-tavolo -->` nel master): chi c'è, che cosa si tira, tattiche, sviluppo, tesoro e dove guardare, nella pagina del titolo; esce solo nei capitoli presi per `sezioni`, non nei volumi che stampano il master intero. Prime sei: Scene 6-11 di ARC-07 DEF-4.
