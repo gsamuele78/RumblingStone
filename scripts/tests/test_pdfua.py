@@ -29,14 +29,14 @@ TESTA = ('#import "/scripts/typst/tema-rumblingstone.typ": *\n'
 
 
 def _compila(corpo: str, pdfua: bool = True, solo_repo: bool = False,
-             file: dict[str, str] | None = None) -> tuple[tm.Esito, bytes]:
+             file: dict[str, str] | None = None, pdfa: str = "") -> tuple[tm.Esito, bytes]:
     with tempfile.TemporaryDirectory(dir=REPO) as d:
         for nome, testo in (file or {}).items():
             (Path(d) / nome).write_text(testo, encoding="utf-8")
         typ, pdf = Path(d) / "p.typ", Path(d) / "p.pdf"
         typ.write_text(TESTA + corpo, encoding="utf-8")
         e = tm.compila(typ, pdf, root=REPO, font=ex.FONTS, pacchetti=ex.PACCHETTI,
-                       solo_font_del_repo=solo_repo, pdfua=pdfua)
+                       solo_font_del_repo=solo_repo, pdfua=pdfua, pdfa=pdfa)
         return e, (pdf.read_bytes() if pdf.exists() else b"")
 
 
@@ -113,6 +113,46 @@ class TestEmojiDaiFontDelRepo(unittest.TestCase):
 
 
 @unittest.skipUnless(tm.disponibile(), "typst assente")
+class TestPdfA(unittest.TestCase):
+    """ADR-0131: PDF/A-2a insieme a PDF/UA-1, col ripiego dichiarato."""
+
+    def test_capitolo_esce_pdf_a_2a_e_ua_1(self):
+        corpo = "= Prova\nTesto ⚔️ ⬦.\n" '#image("mappa.svg", alt: "Legenda")\n'
+        e, pdf = _compila(corpo, solo_repo=True, pdfa=ex.PDFA, file={"mappa.svg": SVG_LEGENDA})
+        self.assertTrue(e.ok, e.errore)
+        self.assertEqual((e.pdfua, e.pdfa, e.motivo_pdfa), (True, "a-2a", ""))
+        self.assertIn(b"pdfaid:part", pdf)
+
+    def test_senza_pdfa_il_pdf_non_lo_dichiara(self):
+        e, pdf = _compila("= Prova\nTesto.\n", solo_repo=True)
+        self.assertTrue(e.ok and e.pdfua and not e.pdfa)
+        self.assertNotIn(b"pdfaid:part", pdf)
+
+    def test_un_rifiuto_del_pdfa_ricade_sul_solo_ua_e_lo_dice(self):
+        chiamate = []
+
+        def finto(typ, pdf, *, standard=None, **kw):
+            chiamate.append(standard)
+            if standard and len(standard) == 2:
+                return tm.Esito(False, "PDF/A-2a error: prova\naltro", False)
+            return tm.Esito(True, "", False)
+
+        vero = tm._compila
+        tm._compila = finto
+        try:
+            e = tm.compila(Path("a.typ"), Path("a.pdf"), root=REPO, font=ex.FONTS,
+                           pacchetti=ex.PACCHETTI, pdfua=True, pdfa="a-2a")
+        finally:
+            tm._compila = vero
+        self.assertEqual(chiamate, [["ua-1", "a-2a"], ["ua-1"]])
+        self.assertTrue(e.ok and e.pdfua)
+        self.assertEqual((e.pdfa, e.motivo_pdfa), ("", "PDF/A-2a error: prova"))
+
+    def test_l_esportatore_chiede_pdf_a_2a(self):
+        self.assertEqual(ex.PDFA, "a-2a")
+
+
+@unittest.skipUnless(tm.disponibile(), "typst assente")
 class TestUnBookletVero(unittest.TestCase):
     """Il fascicolo delle schede del Drappo: schede PG con ritratto, titoli muti."""
 
@@ -126,6 +166,7 @@ class TestUnBookletVero(unittest.TestCase):
         try:
             self.assertEqual(r.returncode, 0, r.stderr[-2000:])
             self.assertIn("PDF/UA-1", r.stdout)
+            self.assertIn("PDF/A-2a", r.stdout)
             self.assertNotIn("non è PDF/UA-1", r.stderr)
         finally:
             if not c_era:
