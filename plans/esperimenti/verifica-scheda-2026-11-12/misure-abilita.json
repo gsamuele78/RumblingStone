@@ -6,7 +6,7 @@
  },
  "una +8": {
   "mutanti": 32,
-  "trovati": 19
+  "trovati": 20
  },
  "una +12": {
   "mutanti": 32,
@@ -14,15 +14,15 @@
  },
  "tutte +3": {
   "mutanti": 32,
-  "trovati": 9
+  "trovati": 10
  },
  "tutte +6": {
   "mutanti": 32,
-  "trovati": 18
+  "trovati": 20
  },
  "ciascuna +2": {
   "mutanti": 162,
-  "trovati": 2
+  "trovati": 3
  },
  "ciascuna +4": {
   "mutanti": 162,

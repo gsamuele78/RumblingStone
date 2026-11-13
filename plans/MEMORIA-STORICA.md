@@ -1113,3 +1113,14 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 sa quali abilità sono di quale classe (38 classi), quali aggiungono cinque domini, quali danno sinergia e i bonus delle sette razze dell'SRD. `verifica_scheda` giudica le abilità fuori classe (massimo dimezzato, costo doppio, regola `gradi.massimo.fuori_classe`) e conta il margine vero per le sette razze. Misura: violazioni 33 → 33; banco, ogni abilità +4 da sola 10 → 16 su 162.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il guadagno è piccolo perché 86 schede su 130 non scrivono la riga delle abilità coi numeri e fra le 18 con soltanto classi note solo 6 sono di una razza dell'SRD. Nell'SRD l'elenco delle abilità di classe del mago finisce con un rimando al capitolo 4 e quello dell'arciere arcano ha un punto in mezzo: l'elenco si taglia su virgole e punti, non sulla fine della frase. Le sinergie non stanno solo nella riga «Synergy»: si prendono da ogni frase «If you have 5 or more ranks in».
+
+### MS-0096 · 2026-11-13 · ADR-0126 lotto 6: la penalità di armatura alla prova
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede abilità
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 6 seconda parte: la penalità di armatura alla prova» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha la penalità alla prova di dodici armature e sei scudi dell'SRD e le nove abilità che la subiscono (Nuotare doppia). `verifica_scheda` legge armatura e scudo dalla riga della CA e aggiunge la penalità ai gradi minimi, contando ogni oggetto perfetto. Misura: violazioni 33 → 33; 62 schede con un'armatura riconosciuta; banco, tutte +6 18 → 20 su 32.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** nella tabella dell'SRD lo scudo torre è «+4» con una nota in apice «3»: tolti i tag diventava +43, e gli apici vanno tolti prima. L'armatura si riconosce dal bonus e dalla Des massima, che nella tabella non si ripetono mai, così i nomi italiani del plugin non servono una seconda volta. I gradi dichiarati fra parentesi li scrive abilità per abilità una scheda sola del Bestiario: non se ne fa una regola.

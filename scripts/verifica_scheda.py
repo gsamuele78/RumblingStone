@@ -261,6 +261,48 @@ def _razza_srd(dove: str, regole: dict) -> "str | None":
     return trovate[0] if len(trovate) == 1 else None
 
 
+_RIGA_CA = re.compile(r"^(?:ca-dettaglio:|\W*(?:CA|AC)\b)", re.I)
+_MATERIALI = (("mithral", re.compile(r"\bmithr[ai]l", re.I)),
+              ("legnoscuro", re.compile(r"\b(?:legno\s*scuro|darkwood)", re.I)))
+
+
+def _penalita_di_prova(testo: str, regole: dict, sistema: str) -> "tuple[int, str]":
+    """(penalità minima, da cosa) che armatura e scudo della scheda danno alle prove.
+
+    Si legge la riga della CA, e solo se il file ne ha una sola con un'armatura o
+    uno scudo della tabella: con due schede non si sa di chi è la riga delle
+    abilità. La penalità è la più bassa possibile: ogni oggetto si conta perfetto
+    (−1, ogni armatura magica lo è), il mithral e il legnoscuro tolgono la loro
+    parte. Il carico, che può solo alzarla, non si conta."""
+    pp = regole.get("penalita_di_prova")
+    if not pp:
+        return 0, ""
+    from dmcore import classe_armatura as CA
+    armature, scudi = CA.tabelle(sistema)
+    per_armatura = {(v["ca"], v["des_max"]): v["penalita"] for v in pp["armature"].values()}
+    per_scudo = {v["ca"]: v["penalita"] for v in pp["scudi"].values()}
+    trovate = []
+    for riga in testo.splitlines():
+        if not _RIGA_CA.search(riga):
+            continue
+        tot, nomi = 0, []
+        for v in CA.leggi(riga if "(" in riga else f"({riga})", sistema):
+            if v.tipo not in ("armatura", "scudo"):
+                continue
+            o = CA._oggetto(v.testo, scudi if v.tipo == "scudo" else armature)
+            if o is None:
+                continue
+            piena = per_scudo.get(o[1]) if v.tipo == "scudo" else per_armatura.get((o[1], o[2]))
+            if piena is None:
+                continue
+            meno = next((pp[m] for m, r in _MATERIALI if r.search(v.testo)), pp["perfetta"])
+            tot += max(0, piena - meno)
+            nomi.append(o[0])
+        if nomi:
+            trovate.append((tot, ", ".join(nomi)))
+    return trovate[0] if len(trovate) == 1 else (0, "")
+
+
 def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     """(violazioni, non verificabili) dei gradi delle abilità.
 
@@ -274,6 +316,9 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     e, per chi ha soltanto livelli di classe tutti con l'elenco nel plugin (3.5):
       gradi.massimo.fuori_classe  un'abilità che non è di nessuna delle sue
                      classi ha il massimo dimezzato, e i suoi gradi costano il doppio
+    La penalità di armatura alla prova (lotto 6): l'armatura e lo scudo della riga della CA
+    abbassano il bonus scritto delle abilità di forza e destrezza che la subiscono, quindi
+    alzano i gradi minimi; si conta la più bassa possibile (oggetti perfetti).
     Con margini larghi vede gli errori grossi, non quelli di un punto."""
     import lessico_regole as LR
     from dmcore import sistemi as S
@@ -365,6 +410,8 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
         razza_ = _razza_srd(" ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), regole)
         if razza_ is not None and not re.search(r"razzial|racial", s.testo, re.I):
             preciso = regole["razze"].get(razza_, {})
+    pp = regole.get("penalita_di_prova") or {}
+    penalita, da_armatura = _penalita_di_prova(s.testo, regole, sistema)
     for nome, en, bonus in voci:
         lette += 1
         mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
@@ -372,7 +419,8 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
         if preciso is not None:
             fonti = [x for x in regole.get("sinergie", {}).get(en, []) if x in scritte]
             margine = regole["margine"]["oggetto"] + preciso.get(en, 0) + regole["margine"]["sinergia"] * len(fonti)
-        minimi = int(bonus.replace("−", "-")) - mod - margine - talento
+        pen = penalita * (2 if en in pp.get("doppia", ()) else 1) if en in pp.get("abilita", ()) else 0
+        minimi = int(bonus.replace("−", "-")) - mod - margine - talento + pen
         if sue is not None and not razziali and not any(a == en or a.startswith(en + " (") for a in sue):
             # fuori classe: il massimo è la metà e ogni grado costa il doppio (SRD, «Skills Summary»)
             tetto = massimo / fuori["massimo_diviso"]
@@ -383,6 +431,7 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
                              "testo": f"{nome} {bonus}: servono almeno {minimi} gradi "
                                       f"(tolti {mod:+d} di caratteristica, {margine} di margine"
                                       + (f" e {talento} dei talenti" if talento else "")
+                                      + (f", aggiunti {pen} di penalità di {da_armatura}" if pen else "")
                                       + f"), ma non è un'abilità di nessuna delle sue classi: il massimo è {tetto:g}"})
             continue
         somma += max(0, minimi)
@@ -390,7 +439,9 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
             viol.append({**base, "regola": "gradi.massimo", "abilita": en, "atteso": massimo, "ha": minimi,
                          "testo": f"{nome} {bonus}: servono almeno {minimi} gradi "
                                   f"(tolti {mod:+d} di caratteristica, {margine} di margine"
-                                  + (f" e {talento} dei talenti" if talento else "") + f"), il massimo è {massimo}"})
+                                  + (f" e {talento} dei talenti" if talento else "")
+                                  + (f", aggiunti {pen} di penalità di {da_armatura}" if pen else "")
+                                  + f"), il massimo è {massimo}"})
     if sconosciute:
         nv.append({**base, "regola": "gradi.punti", "testo": "punti abilità non calcolabili: "
                    + ", ".join(sconosciute) + " fuori dalle regole del plugin"})

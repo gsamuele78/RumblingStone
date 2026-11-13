@@ -263,3 +263,36 @@ sinergia = 2
 # è la metà di quello di classe
 costo = 2
 massimo_diviso = 2
+
+[penalita_di_prova]
+# SRD, «Armor Check Penalty»: la penalità dell'armatura e dello scudo si sommano e vanno
+# alle abilità di `abilita`; a quelle di `doppia` vanno due volte. `perfetta`: quanto
+# un'armatura perfetta (e ogni armatura magica lo è) la riduce; `mithral` e `legnoscuro`:
+# quanto la riducono i materiali speciali, perfetta compresa.
+abilita = ["balance", "climb", "escape artist", "hide", "jump", "move silently", "sleight of hand", "swim", "tumble"]
+doppia = ["swim"]
+perfetta = 1
+mithral = 3
+legnoscuro = 2
+
+[penalita_di_prova.armature]
+"padded" = { ca = 1, des_max = 8, penalita = 0 }
+"leather" = { ca = 2, des_max = 6, penalita = 0 }
+"studded leather" = { ca = 3, des_max = 5, penalita = 1 }
+"chain shirt" = { ca = 4, des_max = 4, penalita = 2 }
+"hide" = { ca = 3, des_max = 4, penalita = 3 }
+"scale mail" = { ca = 4, des_max = 3, penalita = 4 }
+"chainmail" = { ca = 5, des_max = 2, penalita = 5 }
+"breastplate" = { ca = 5, des_max = 3, penalita = 4 }
+"splint mail" = { ca = 6, des_max = 0, penalita = 7 }
+"banded mail" = { ca = 6, des_max = 1, penalita = 6 }
+"half-plate" = { ca = 7, des_max = 0, penalita = 7 }
+"full plate" = { ca = 8, des_max = 1, penalita = 6 }
+
+[penalita_di_prova.scudi]
+"buckler" = { ca = 1, penalita = 1 }
+"shield, light wooden" = { ca = 1, penalita = 1 }
+"shield, light steel" = { ca = 1, penalita = 1 }
+"shield, heavy wooden" = { ca = 2, penalita = 2 }
+"shield, heavy steel" = { ca = 2, penalita = 2 }
+"shield, tower" = { ca = 4, penalita = 10 }
