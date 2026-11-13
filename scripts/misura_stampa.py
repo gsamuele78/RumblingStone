@@ -24,6 +24,7 @@ quello che un controllo di prestampa misura, più le schede delle creature:
 | `rimandi_sbagliati` | «scheda a pagina N» senza la creatura a pagina N, «continua a pagina N» senza «(segue)» a pagina N, «continua nella colonna accanto» senza «(segue)» sulla stessa pagina | 0 |
 | `pagine_con_immagine` | quota di pagine con un'immagine raster di almeno un quarto di pagina | da registrare |
 | `pagine_con_immagine_decimo` | la stessa quota con la soglia di 1/10 di pagina, dove il piano pone l'obiettivo ≥ 0,3 (Paizo 0,40) | da registrare |
+| `parole_ripetute`, `quota_parole_ripetute` | parole che stanno in un passo di almeno 8 parole già stampato prima, testatine escluse | in prova; *Burnt Offerings* 0,012, *Red Hand of Doom* (estratto) 0,005 |
 
 Le schede si riconoscono dai segnaposti `<sb-inizio>` e `<sb-fine>` che il
 tema mette in ogni `#statblocco`; si leggono con `typst eval`.
@@ -78,10 +79,15 @@ REGISTRO = ROOT / "docs" / "audit" / "stampa-booklet.json"
 CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "immagini_sotto_300dpi",
              "schede_spezzate", "font_non_incorporati", "rimandi_sbagliati")
 REGISTRATE = ("pagine", "corpo_mediano_pt", "corpo_minimo_pt", "schede", "pagine_con_immagine",
-              "pagine_con_immagine_decimo")
+              "pagine_con_immagine_decimo", "parole", "quota_parole_ripetute")
 #: Le misure in prova (canale testing, ADR-0099): nate dal giro di lettura del
 #: 2026-11-10. Si registrano e `--check` avvisa se salgono, senza fermare.
-IN_PROVA = ("sigle_morte", "righe_brevi_incomplete", "titoli_rovinati")
+IN_PROVA = ("sigle_morte", "righe_brevi_incomplete", "titoli_rovinati", "parole_ripetute")
+#: Un passo ripetuto è lungo almeno tante parole identiche (w-shingling, Broder
+#: 1997: lo standard di fatto per trovare testo riusato).
+PASSO_RIPETUTO = 8
+#: Un n-gramma che torna su più di tante pagine è una testatina, non una ripetizione.
+PAGINE_DI_TESTATINA = 8
 MINIMO_PT = 7.0
 DPI_MINIMI = 300
 # Typst appende punteggiatura e trattini nel margine (text.overhang, la
@@ -242,6 +248,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
     spezzate = [s for s in schede if s["a"] != s["da"]]
     rimandi = rimandi_sbagliati(doc)
     sigle, brevi, titoli = sigle_morte(doc), righe_brevi_incomplete(doc), titoli_rovinati(doc)
+    parole, ripetute, passi = parole_ripetute(doc)
     return {
         "pagine": len(doc),
         "font_non_incorporati": sorted(font_mancanti),
@@ -256,6 +263,9 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         "sigle_morte": len(sigle),
         "righe_brevi_incomplete": len(brevi),
         "titoli_rovinati": len(titoli),
+        "parole": parole,
+        "parole_ripetute": ripetute,
+        "quota_parole_ripetute": round(ripetute / parole, 3) if parole else 0,
         "pagine_con_immagine": round(pagine_illustrate / len(doc), 3) if len(doc) else 0,
         "pagine_con_immagine_decimo": round(pagine_illustrate_decimo / len(doc), 3) if len(doc) else 0,
         "dettaglio": {
@@ -264,6 +274,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
             "schede_spezzate": spezzate, "rimandi_sbagliati": rimandi[:30],
             "sigle_morte": sigle[:30], "righe_brevi_incomplete": brevi[:30],
             "titoli_rovinati": titoli[:30],
+            "passi_ripetuti": passi[:30],
         },
     }
 
@@ -302,6 +313,52 @@ def rimandi_sbagliati(doc) -> list[tuple]:
                 elif "continua nella colonna accanto" in testo and "(segue)" not in testi[n - 1]:
                     sbagliati.append((n, "", "continua nella colonna accanto"))
     return sbagliati
+
+
+_PAROLA = re.compile(r"[a-zà-ùA-ZÀ-Ù0-9+]+")
+
+
+def parole_ripetute(doc, passo: int = PASSO_RIPETUTO) -> tuple[int, int, list[tuple]]:
+    """Quante parole del volume stanno in un passo già stampato prima.
+
+    Un passo è una sequenza di almeno `passo` parole identiche; si conta dalla
+    seconda volta in poi. Le testatine e i piè di pagina, che tornano su più di
+    `PAGINE_DI_TESTATINA` pagine, non contano. Misurato il 2026-11-13 sui
+    riferimenti di ADR-0122: *Burnt Offerings* 1,2%, l'estratto di *Red Hand of
+    Doom* 0,5%; il booklet di serata «La Notte e l'Alba» 12,3%.
+
+    Torna (parole del volume, parole ripetute, passi): ogni passo è
+    (pagina, pagina della prima volta, parole, come comincia), dal più lungo.
+    """
+    parole: list[tuple[str, int]] = []
+    for n, pagina in enumerate(doc, start=1):
+        testo = re.sub(r"-\n(?=[a-zà-ù])", "", pagina.get_text().replace("\xad", ""))
+        parole += [(w.lower(), n) for w in _PAROLA.findall(testo)]
+    ws = [w for w, _ in parole]
+    dove: dict[tuple, list[int]] = {}
+    for i in range(len(ws) - passo + 1):
+        dove.setdefault(tuple(ws[i:i + passo]), []).append(i)
+    ripetuta, testatina = [False] * len(ws), [False] * len(ws)
+    for ii in dove.values():
+        if len({parole[i][1] for i in ii}) > PAGINE_DI_TESTATINA:
+            for i in ii:
+                testatina[i:i + passo] = [True] * passo
+        for i in ii[1:]:
+            ripetuta[i:i + passo] = [True] * passo
+    conta = [a and not b for a, b in zip(ripetuta, testatina)]
+    passi, i = [], 0
+    while i < len(ws):
+        if not conta[i]:
+            i += 1
+            continue
+        j = i
+        while j < len(ws) and conta[j]:
+            j += 1
+        prima = dove.get(tuple(ws[i:i + passo]), [i])[0]
+        passi.append((parole[i][1], parole[prima][1], j - i, " ".join(ws[i:i + 10])))
+        i = j
+    passi.sort(key=lambda p: -p[2])
+    return len(ws), sum(conta), passi
 
 
 _SIGLA = re.compile(r"\b[Aa]ppendice\s+([A-Z])(\.\d+(?:-(?:bis|ter))?)?(?![\w-])")
@@ -396,12 +453,12 @@ def main(argv: list[str] | None = None) -> int:
         print(f"✓ registro riscritto in {REGISTRO.relative_to(ROOT)}")
         return 0
     print(f"{'booklet':<44} {'pag':>4} {'corpo':>5} {'<7pt':>5} {'marg':>5} {'dpi':>4} "
-          f"{'font':>4} {'min':>4} {'schede':>6} {'spezz':>5} {'immag':>7}")
+          f"{'font':>4} {'min':>4} {'schede':>6} {'spezz':>5} {'immag':>7} {'ripet':>6}")
     for nome, v in risultati.items():
         print(f"{nome[-44:]:<44} {v['pagine']:>4} {v['corpo_mediano_pt'] or 0:>5} "
               f"{v['testi_sotto_minimo']:>5} {v['fuori_margine']:>5} {v['immagini_sotto_300dpi']:>4} "
               f"{len(v['font_non_incorporati']):>4} {v['corpo_minimo_pt'] or 0:>4} {v['schede']:>6} {v['schede_spezzate']:>5} "
-              f"{v['pagine_con_immagine']:>7.0%}")
+              f"{v['pagine_con_immagine']:>7.0%} {v['quota_parole_ripetute']:>6.1%}")
         if a.dettaglio:
             for chiave, voci in v["dettaglio"].items():
                 for voce in voci[:10]:

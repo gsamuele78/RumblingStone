@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Stampa: `misura_stampa.py` conta le parole ripetute di ogni booklet (`parole_ripetute`, `quota_parole_ripetute`, colonna `ripet`): le parole che stanno in un passo di almeno 8 parole già stampato prima, contate dalla seconda volta, testatine escluse. Misura in prova: `--check` avvisa e non ferma. `--dettaglio` elenca i passi con la pagina della copia e quella della prima volta.
 - Booklet di serata: la scheda da tavolo in testa alla scena (`<!-- scheda-da-tavolo -->` nel master): chi c'è, che cosa si tira, tattiche, sviluppo, tesoro e dove guardare, nella pagina del titolo; esce solo nei capitoli presi per `sezioni`, non nei volumi che stampano il master intero. Prime sei: Scene 6-11 di ARC-07 DEF-4.
 - Stampa: il punto e virgola dopo un grassetto, un corsivo o un codice non spariva più solo a schermo: nel PDF Typst lo mangiava («**CA 28**; costa −2» usciva «CA 28 costa −2»). Corretto nell'esportatore, per tutti i booklet.
 - Booklet di serata: nelle Scene 6-11 la riga «In scena», il riassunto «In tre righe» e la scheda da tavolo diventano un blocco solo, la scheda, con le voci «Succede», «Dove», «Chi c'è», «Chi vuole cosa», «Come finisce» e l'EL nel titolo; sta sempre nella pagina del titolo della scena. Nel master il riassunto resta fra `<!-- senza-scheda -->` e `<!-- /senza-scheda -->` e si stampa nei volumi che la scheda non la stampano, che non cambiano.
