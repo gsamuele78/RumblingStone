@@ -86,7 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-13 | AVVENTURE-COMMUNITY | Canone di «chi sa cosa» (scelte del DM del 2026-11-13 su D1-D4 e sulla riga 69… | ✅ righe di «chi sa cosa» con un giorno: 0 su 31 → 32 su 33; T2 su main 0 violazioni; T1 resta in laboratorio (servono chiave del fatto, alias e finestre dei fi… |
+| 2026-11-13 | AVVENTURE-COMMUNITY | Canone di «chi sa cosa» (scelte del DM del 2026-11-13 su D1-D4 e sulla riga 69… | ✅ righe di «chi sa cosa» con un giorno: 0 su 31 → 27 su 33; T2 su main 0 violazioni; T1 resta in laboratorio (servono chiave del fatto, alias e finestre dei fi… |
 | 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… | In PR |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0131: il volume da stampa è anche PDF/A-2a (ISO 19005-2).… | ✅ veraPDF 1.28.2 sui 20 booklet: PDF/A-2a 0 → 20 conformi, controlli falliti 544 → 0 (484 trasparenza senza intento d'uscita, 60 metadati XMP); PDF/UA-1 resta… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |

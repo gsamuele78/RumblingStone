@@ -110,8 +110,9 @@ chi informa un PNG sa qualcosa non dopo di lui.
   (Thorik comandante, consegna al Giorno 22), Norro e il titolo (dal Giorno
   23), Brenna e Lorana (direttamente, dal 16-18), «I Rumbling Stones» in
   DEF-1, e il Collezionista che sa dei Custodi e degli artefatti dalla sua
-  gilda, dal Giorno 22 (riga nuova). I giorni delle altre 27 righe sono quelli **proposti**: la conferma
-  del DM è l'approvazione della PR che li scrive.
+  gilda, dal Giorno 22 (riga nuova). Dei 27 giorni **proposti** il DM ne ha confermati 22 su card; i cinque a
+  fiducia bassa restano senza giorno: un buco contato vale più di un giorno
+  indovinato.
 - **T1 non entra.** La regola temporale sulla prosa («un PNG mostra di sapere
   prima del suo giorno») ha bisogno di tre cose che `state.yaml` non ha: una
   chiave per il fatto, gli alias del PNG e la finestra di giorni di ogni file.
@@ -120,8 +121,8 @@ chi informa un PNG sa qualcosa non dopo di lui.
   l'informatore che non sa nulla in tempo, non quello che sa in tempo un'altra
   cosa. Su main 0 violazioni; la catena che il laboratorio aveva trovato
   (Tempestas → Brenna) è stata sciolta dal DM, non dalla regola.
-- **Non verificabili**: le righe senza `dal_giorno`, 1 su 33 (i Tiri Kitor,
-  che non sanno nulla).
+- **Non verificabili**: le righe senza `dal_giorno`, 6 su 33: i Tiri Kitor,
+  che non sanno nulla, e le cinque non confermate.
 
 **Da rivedere se**: il DM dà il tempo alle righe di §4 «chi sa cosa» (allora
 le regole diventano temporali, e Prolog o clingo vanno rimisurati come dice
