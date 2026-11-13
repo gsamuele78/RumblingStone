@@ -1028,7 +1028,7 @@ repo scritto con altre parole.
 ### MS-0088 · 2026-11-13 · Serata più corta: pagina fitta e copie una volta sola
 
 - **Data:** 2026-11-13
-- **PR:** —
+- **PR:** #399
 - **ADR:** ADR-0122
 - **Temi:** stampa booklet misure
 - **Origine:** voce scritta con la PR, per la seconda riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
