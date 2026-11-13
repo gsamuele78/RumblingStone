@@ -1103,10 +1103,21 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** i cinque file del Bestiario saltati per «più schede» non avevano due schede: la seconda riga «Talenti» era una nota citata con «>» o la stessa scheda riscritta più sotto, e tre file con il recinto senza talenti li hanno in prosa sotto un altro titolo. Aggiungere una chiave a ogni voce dei fatti rompeva i test che confrontano le voci intere: il blocco di una riga si chiede a `blocco_di`. Provata sugli archi, S8 dà 33 segnalazioni fra negazioni («senza Estrazione Rapida») e booklet generati: lì serve una lettura una per una prima di farne una misura.
 
-### MS-0095 · 2026-11-13 · Pagina fitta abbandonata: la serata torna com'era il 12 novembre
+### MS-0095 · 2026-11-13 · ADR-0126 lotto 6: le abilità di classe
 
 - **Data:** 2026-11-13
-- **PR:** #404
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede abilità
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 6 prima parte: le abilità di classe e il margine dei gradi» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 sa quali abilità sono di quale classe (38 classi), quali aggiungono cinque domini, quali danno sinergia e i bonus delle sette razze dell'SRD. `verifica_scheda` giudica le abilità fuori classe (massimo dimezzato, costo doppio, regola `gradi.massimo.fuori_classe`) e conta il margine vero per le sette razze. Misura: violazioni 33 → 33; banco, ogni abilità +4 da sola 10 → 16 su 162.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il guadagno è piccolo perché 86 schede su 130 non scrivono la riga delle abilità coi numeri e fra le 18 con soltanto classi note solo 6 sono di una razza dell'SRD. Nell'SRD l'elenco delle abilità di classe del mago finisce con un rimando al capitolo 4 e quello dell'arciere arcano ha un punto in mezzo: l'elenco si taglia su virgole e punti, non sulla fine della frase. Le sinergie non stanno solo nella riga «Synergy»: si prendono da ogni frase «If you have 5 or more ranks in».
+
+### MS-0096 · 2026-11-13 · Pagina fitta abbandonata: la serata torna com'era il 12 novembre
+
+- **Data:** 2026-11-13
+- **PR:** #405
 - **ADR:** ADR-0122
 - **Temi:** stampa booklet schede
 - **Origine:** voce scritta con la PR, per la quarta riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`

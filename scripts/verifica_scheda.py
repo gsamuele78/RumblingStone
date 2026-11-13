@@ -245,6 +245,22 @@ def _e_umano(testo: str, nomi) -> bool:
     return bool(re.search(rf"\b(?:{'|'.join(nomi)})\b", testo, re.I))
 
 
+def _razza_srd(dove: str, regole: dict) -> "str | None":
+    """Quale delle razze di `[razze]` è la scheda, o None: una sola deve
+    combaciare, e nessuna delle «altre» (un duergar è «umanoide (nano)» ma i
+    suoi bonus alle abilità non sono quelli del nano)."""
+    nomi = regole.get("razze_nomi") or {}
+    if any(re.search(rf"\b(?:{n})\b", dove, re.I) for n in nomi.get("altre", [])):
+        return None
+    if _MEZZOSANGUE.search(dove):
+        trovate = [r for r in ("half-elf", "half-orc")
+                   if any(re.search(rf"\b(?:{n})\b", dove, re.I) for n in nomi.get(r, []))]
+    else:
+        trovate = [r for r, v in nomi.items() if r != "altre" and not r.startswith("half-")
+                   and any(re.search(rf"\b(?:{n})\b", dove, re.I) for n in v)]
+    return trovate[0] if len(trovate) == 1 else None
+
+
 def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     """(violazioni, non verificabili) dei gradi delle abilità.
 
@@ -255,6 +271,9 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
                      (3.5: dadi vita + 3; PF1e: dadi vita, più 3 d'abilità di classe)
       gradi.punti    la somma dei gradi minimi non supera i punti abilità che
                      classi e dadi vita razziali danno
+    e, per chi ha soltanto livelli di classe tutti con l'elenco nel plugin (3.5):
+      gradi.massimo.fuori_classe  un'abilità che non è di nessuna delle sue
+                     classi ha il massimo dimezzato, e i suoi gradi costano il doppio
     Con margini larghi vede gli errori grossi, non quelli di un punto."""
     import lessico_regole as LR
     from dmcore import sistemi as S
@@ -297,9 +316,20 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
         livelli[nome] = livelli.get(nome, 0) + int(n)
     razziali = max(0, dv - sum(livelli.values()))
     quote, sconosciute = [], []
+    # le abilità di classe (lotto 6 di ADR-0126): si giudica «fuori classe» solo chi ha
+    # soltanto livelli di classe, tutti con l'elenco nel plugin; un chierico può avere
+    # quelle di ogni dominio, perché i domini non si leggono qui
+    elenchi, fuori = regole.get("di_classe") or {}, regole.get("fuori_classe") or {}
+    sue: "set[str] | None" = set() if elenchi and fuori and livelli else None
     for classe, n in livelli.items():
         k = classe.lower()
-        pt = next((x for x in (_punti_di_classe(regole, c) for c in (k, VT.T._ALIAS.get(k, k), _classi_it().get(k, k)))
+        nomi_classe = (k, VT.T._ALIAS.get(k, k), _classi_it().get(k, k))
+        elenco = next((elenchi[c] for c in nomi_classe if c in elenchi), None)
+        if sue is not None:
+            sue = None if elenco is None else sue | set(elenco)
+        if sue is not None and "cleric" in nomi_classe:
+            sue |= {a for v in (regole.get("di_dominio") or {}).values() for a in v}
+        pt = next((x for x in (_punti_di_classe(regole, c) for c in nomi_classe)
                    if x is not None), None)
         if pt is None:
             sconosciute.append(f"{classe} {n}")
@@ -321,16 +351,40 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     chiave = regole["chiave"]
     da_talento, a_tutte = _talenti_d_abilita(f.get("nomi") or [], s.testo, sistema, regole, dv)
     viol, nv, somma, lette = [], [], 0, 0
+    voci = []
     for nome, _, bonus in VOCE_ABILITA.findall(re.sub(r"[*_`]", "", riga)):
         nome = nome.strip()
         en = _abilita_it().get(LR.norma(nome), nome.lower())
         en = next((k for k in chiave if en == k or en.startswith(k + " ")), None)
-        if en is None:
-            continue
+        if en is not None:
+            voci.append((nome, en, bonus))
+    # il margine vero (lotto 6 di ADR-0126): per chi ha soltanto livelli di classe ed è di una
+    # delle razze dell'SRD, razza e sinergie si contano voce per voce invece del margine fisso
+    preciso, scritte = None, {en for _, en, _ in voci}
+    if sue is not None and not razziali and regole.get("margine"):
+        razza_ = _razza_srd(" ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), regole)
+        if razza_ is not None and not re.search(r"razzial|racial", s.testo, re.I):
+            preciso = regole["razze"].get(razza_, {})
+    for nome, en, bonus in voci:
         lette += 1
         mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
         talento = max(da_talento.get(en, 0), a_tutte)
+        if preciso is not None:
+            fonti = [x for x in regole.get("sinergie", {}).get(en, []) if x in scritte]
+            margine = regole["margine"]["oggetto"] + preciso.get(en, 0) + regole["margine"]["sinergia"] * len(fonti)
         minimi = int(bonus.replace("−", "-")) - mod - margine - talento
+        if sue is not None and not razziali and not any(a == en or a.startswith(en + " (") for a in sue):
+            # fuori classe: il massimo è la metà e ogni grado costa il doppio (SRD, «Skills Summary»)
+            tetto = massimo / fuori["massimo_diviso"]
+            somma += max(0, minimi) * fuori["costo"]
+            if minimi > tetto:
+                viol.append({**base, "regola": "gradi.massimo.fuori_classe", "abilita": en,
+                             "atteso": f"{tetto:g}", "ha": minimi,
+                             "testo": f"{nome} {bonus}: servono almeno {minimi} gradi "
+                                      f"(tolti {mod:+d} di caratteristica, {margine} di margine"
+                                      + (f" e {talento} dei talenti" if talento else "")
+                                      + f"), ma non è un'abilità di nessuna delle sue classi: il massimo è {tetto:g}"})
+            continue
         somma += max(0, minimi)
         if minimi > massimo:
             viol.append({**base, "regola": "gradi.massimo", "abilita": en, "atteso": massimo, "ha": minimi,

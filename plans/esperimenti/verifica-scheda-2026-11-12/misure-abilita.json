@@ -2,22 +2,30 @@
  "schede": 32,
  "una +4": {
   "mutanti": 32,
-  "trovati": 3
+  "trovati": 4
  },
  "una +8": {
   "mutanti": 32,
-  "trovati": 20
+  "trovati": 19
  },
  "una +12": {
   "mutanti": 32,
-  "trovati": 23
+  "trovati": 26
  },
  "tutte +3": {
   "mutanti": 32,
-  "trovati": 4
+  "trovati": 9
  },
  "tutte +6": {
   "mutanti": 32,
+  "trovati": 18
+ },
+ "ciascuna +2": {
+  "mutanti": 162,
+  "trovati": 2
+ },
+ "ciascuna +4": {
+  "mutanti": 162,
   "trovati": 16
  }
 }
