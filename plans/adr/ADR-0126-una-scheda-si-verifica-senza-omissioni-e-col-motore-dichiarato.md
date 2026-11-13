@@ -602,6 +602,54 @@ nullo (62 su 688). Fuori da una scheda riconosciuta una riga «1° …» conta s
 se almeno un nome è un incantesimo noto, per non prendere gli elenchi di prosa.
 Le capacità speciali senza la sigla fra parentesi non escono.
 
+### Lotto 5, prima parte — la creatura base (2026-11-13)
+
+**Contesto.** Un «Ogre + Barbaro 6» porta con sé i numeri dell'ogre: dadi vita
+razziali, armatura naturale, dado degli attacchi naturali. Il motore non li
+aveva: 85 attacchi naturali del Bestiario finivano fra i non verificabili con
+«il dado viene dalla creatura», e l'armatura naturale scritta non si
+confrontava con niente.
+
+**Decisione.** Capacità nuova `creature.base` (`sistemi/dnd35/dati/creature_base.toml`,
+scritto da `estrai_creature_base.py` sui blocchi di statistiche dell'SRD 3.5, e
+`sistemi/pf1e/dati/creature_base.toml` dai Bestiary 1-4 di PSRD-Data, 1138
+creature): per il 3.5 409 creature con taglia, tipo, dadi vita razziali, armatura naturale,
+caratteristiche, attacchi naturali col dado, modificatore di livello e grado di
+sfida; più la tabella dei draghi veri, dove il dado viene dalla taglia.
+`dmcore/creature_base.py` trova la base **solo dove la scheda la dichiara**
+nella riga della fonte («SRD *Ogre* + …», «MM p.33 Centaur + …»), in un file
+con un blocco solo, e solo se il tipo del blocco è quello della base. Un
+archetipo dichiarato (scheletro, immondo, avanzato…) ferma il confronto. Un
+drago vero si riconosce dal colore scritto accanto alla parola «drago».
+`verifica_scheda` ha la verifica `creatura_base` con due regole,
+`numero.dv.razziali` e `numero.CA.naturale`, e il conto del danno giudica il
+dado degli attacchi naturali della base quando la taglia è la stessa (con
+Attacco Naturale Migliorato vale anche un passo in più).
+
+**Scartato.** Dedurre la base dal sottotipo del `tipo` («umanoide (gnoll)»):
+provato e tolto, perché un flind è un umanoide (gnoll) e non è uno gnoll, e
+dava due violazioni false. Dedurla dal nome della scheda: «ghost lion» non è
+un leone.
+
+**Misura** (`misure-creature-base.json`, `Bestiario 0*/`, contro main 3cc11aee):
+non verificabili 321 → 297; attacchi naturali senza dado 85 → 61 (i 24 chiusi
+sono cinque draghi veri, tutti coi dadi della tabella); violazioni 72 → 73: la
+nuova è vera, `gnoll-warrior2-cr2` scrive armatura naturale +2 e lo gnoll
+dell'SRD ha +1.
+
+**Limiti dichiarati.** Solo 8 schede del Bestiario dichiarano una base
+dell'SRD nella fonte: la copertura è piccola finché le schede non la
+dichiarano. I mostri dei manuali (abishai, flind, naga d'ossa) non sono nei
+dati. Con taglia diversa dalla base il confronto resta un dubbio: l'avanzamento
+per dadi vita non è nel motore. Il bonus di Forza degli attacchi naturali
+(primario, secondario, unico) non si giudica. Modificatori razziali di
+caratteristica, modificatore di livello e archetipi sono nei dati o nominati,
+ma nessuna regola li usa ancora: restano della seconda parte del lotto.
+In PF1e della base si usano dadi vita razziali e armatura naturale; il dado
+degli attacchi naturali no, perché il conto del danno PF1e arriva col lotto 10,
+e nessuna scheda PF1e del repo dichiara oggi una base: i dati PF1e sono
+riscontrati solo sulle prove.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore

@@ -25,6 +25,10 @@ Scopo
              delle altre classi, gradi (massimo prima dell'ingresso e abilità
              scritta), talenti, razza, allineamento, livello d'incantesimo
              (capacità `creature.prestigio`; ADR-0126, lotto 3-bis)
+    creatura_base  dadi vita razziali e armatura naturale della creatura base
+             che la fonte della scheda dichiara («SRD *Ogre* + …»), e il dado
+             dei suoi attacchi naturali nel conto del danno (capacità
+             `creature.base`; ADR-0126, lotto 5)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -969,6 +973,89 @@ def classe_armatura(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+_FONTE_SCHEDA = re.compile(r"\*\*(?:Source|Fonte)\*\*\s*:?\s*([^|\n]*)", re.I)
+_TAGLIE_IT = {"minuscola": "Fine", "minuta": "Diminutive", "piccolissima": "Tiny", "piccola": "Small",
+              "media": "Medium", "grande": "Large", "enorme": "Huge", "mastodontica": "Gargantuan",
+              "colossale": "Colossal"}
+_TIPI_IT = {"gigante": "giant", "umanoide mostruoso": "monstrous humanoid", "umanoide": "humanoid",
+            "bestia magica": "magical beast", "animale": "animal", "aberrazione": "aberration",
+            "esterno": "outsider", "non morto": "undead", "costrutto": "construct", "drago": "dragon",
+            "elementale": "elemental", "folletto": "fey", "melma": "ooze", "vegetale": "plant",
+            "parassita": "vermin"}
+
+
+def _base_del_blocco(testo: str, sb, un_blocco: bool, sistema: str) -> "tuple[str, dict, bool] | None":
+    """(nome, voce, stessa taglia) della creatura base che la scheda dichiara, o None.
+
+    La dichiara la riga della fonte («SRD *Ogre* + …», solo se il file ha un
+    blocco solo). Il sottotipo non basta: un flind è «umanoide (gnoll)» e non è
+    uno gnoll. Un drago vero (col colore scritto) ha per base la sua taglia.
+    Vale solo se il tipo della base è quello del blocco: «MM Rakshasa + Rogue 3»
+    su un umanoide è il cultista di un rakshasa, non un rakshasa."""
+    from dmcore import creature_base as CB
+    tipo_ = (sb.tipo or "").lower()
+    for it, en in _TIPI_IT.items():
+        tipo_ = tipo_.replace(it, en)
+    dove = (sb.taglia or "").lower() + " " + tipo_
+    taglia = next((en for it, en in _TAGLIE_IT.items() if re.search(rf"\b{it}\b", dove)), None) or next(
+        (t for t in _TAGLIE_IT.values() if re.search(rf"\b{t.lower()}\b", dove)), None)
+    trovata = None
+    if un_blocco:
+        m = _FONTE_SCHEDA.search(testo)
+        trovata = CB.dichiarata(m.group(1), sistema) if m else None
+    if trovata is None and ("dragon" in tipo_ or (not tipo_ and un_blocco)):
+        # un drago vero: il colore sta nel tipo o, con un blocco solo, nel titolo della scheda
+        trovata = CB.drago((sb.tipo or "") + (" " + testo.split("\n", 1)[0] if un_blocco else ""), taglia, sistema)
+        if trovata:
+            return trovata[0], trovata[1], True
+    if trovata is None or trovata[1]["tipo"] not in tipo_:
+        return None
+    return trovata[0], trovata[1], taglia == trovata[1]["taglia"]
+
+
+def creatura_base(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Dadi vita razziali e armatura naturale della creatura base dichiarata (ADR-0126, lotto 5)."""
+    import conformita_statblocchi as C
+    testo = p.read_text(encoding="utf-8")
+    sis = VT.sistema_di(p, testo)
+    viol, nv = [], []
+    with contextlib.redirect_stderr(io.StringIO()):
+        blocchi = list(C._recinti_del_master(testo))
+    for b in blocchi:
+        sb = b["sb"]
+        trovata = _base_del_blocco(testo, sb, len(blocchi) == 1, sis)
+        if trovata is None:
+            continue
+        nome, voce, stessa = trovata
+        if "dv" not in voce:
+            continue               # un drago vero: dalla taglia vengono solo gli attacchi
+        base = {"file": VT_rel(p), "riga": b["riga"], "verifica": "creatura_base", "fonte": "srd"}
+        # dadi vita razziali: «4d8» dell'ogre deve stare nei dadi scritti
+        dadi = " ".join(x for x in (sb.pf_dado or "", sb.tipo or "") if x)
+        scritti = re.findall(r"(\d+)d(\d+)", dadi)
+        if scritti and isinstance(voce["dv"], int):
+            if (str(voce["dv"]), str(voce["dado"])) not in scritti:
+                viol.append(dict(base, regola="numero.dv.razziali", atteso=f"{voce['dv']}d{voce['dado']}",
+                                 ha="+".join(f"{n}d{f}" for n, f in scritti),
+                                 testo=f"dadi vita {'+'.join(f'{n}d{f}' for n, f in scritti)}: la creatura base "
+                                       f"{nome} porta {voce['dv']}d{voce['dado']} razziali"))
+        elif not scritti:
+            nv.append(dict(base, regola="numero.dv.razziali",
+                           testo=f"la scheda non scrive i dadi vita: i {voce['dv']}d{voce['dado']} di {nome} non si riscontrano"))
+        # armatura naturale: la base, se la taglia è la stessa
+        nat = re.search(r"([+-]?\d+)\s*(?:naturale|natural|nat\b)", (sb.ca_dettaglio or "").replace("−", "-"), re.I)
+        if nat and stessa:
+            ha = int(nat.group(1))
+            if ha != voce["naturale"]:
+                viol.append(dict(base, regola="numero.CA.naturale", atteso=voce["naturale"], ha=ha,
+                                 testo=f"armatura naturale {ha:+d}: la creatura base {nome} ha {voce['naturale']:+d} "
+                                       f"(un bonus in più va dichiarato con la sua sorgente)"))
+        elif nat and not stessa:
+            nv.append(dict(base, regola="numero.CA.naturale",
+                           testo=f"taglia diversa da quella di {nome} ({voce['taglia']}): l'armatura naturale non si riscontra"))
+    return viol, nv
+
+
 def danno(p: Path) -> "tuple[list[dict], list[dict]]":
     """Dado, bonus e critico delle armi della tabella (ADR-0126, lotto 2)."""
     import conformita_statblocchi as C
@@ -992,7 +1079,9 @@ def danno(p: Path) -> "tuple[list[dict], list[dict]]":
             riga = next((n + 1 for n in range(b["riga"] - 1, min(len(righe), b["riga"] + 60))
                          if att.strip()[:40] in righe[n]), b["riga"])
             base = {"file": VT_rel(p), "riga": riga, "verifica": "numeri", "fonte": "srd"}
-            scarti, non = D.giudica(att, mod_for, sb.tipo or "", intorno, scudo, sb.ca_dettaglio or "", sis)
+            trovata = _base_del_blocco(testo, sb, len(blocchi) == 1, sis)
+            scarti, non = D.giudica(att, mod_for, sb.tipo or "", intorno, scudo, sb.ca_dettaglio or "", sis,
+                                    creatura=trovata[:2] if trovata and trovata[2] else None)
             for x in scarti:
                 viol.append(dict(base, regola=f"numero.{x['campo']}", atteso=x["atteso"], ha=x["scritto"],
                                  testo=f"{x['campo']} {x['scritto']}, la regola dà {x['atteso']} ({x['nota']})"))
@@ -1114,10 +1203,11 @@ def main(argv: "list[str] | None" = None) -> int:
         mv, mn = incantatori(p)
         pv, pn = prestigio(p)
         qv, qn = numero_talenti(p)
+        bv, bn = creatura_base(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)
