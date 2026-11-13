@@ -111,6 +111,7 @@ aggiorna anche questa tabella.
 | `creature.regole_di_tipo` | le regole di tipo che cambiano i conti (es. il non morto PF1e usa il Carisma) | conformita_statblocchi, verifica_scheda | `creature.toml` | `creature.toml` |
 | `creature.conformita` | i conti che il controllo delle schede sa fare nel sistema, e come si arrotondano i pf | conformita_statblocchi, verifica_scheda | `conformita.toml` | `conformita.toml`, `conformita_prd.toml` |
 | `statblocco.campi` | i campi meccanici del blocco statistiche | build_monster_catalog, conformita_statblocchi, extract_statblocks, genera_creatura, validate_bestiario, verifica_scheda | da d20: `statblocco.toml` | da d20: `statblocco.toml` |
+| `statblocco.taglie` | spazio e portata per taglia (tabella SRD, ADR-0128) | — (la legge `dmcore.statblock`, nessuno strumento la dichiara nel manifest) | da d20: `taglie.toml` | da d20: `taglie.toml` |
 | `formule.regole` | le formule del sistema scritte come nel manuale, valutate da `dmcore.formule` | genera_creatura, verifica_scheda (le usa anche il nucleo) | da d20: `formule.toml` | da d20: `formule.toml` |
 | `stampa.etichette` | le sigle meccaniche stampate nel riquadro della creatura | build_booklet_html, export_booklet_typst | da d20: `stampa.toml` | da d20: `stampa.toml` |
 
