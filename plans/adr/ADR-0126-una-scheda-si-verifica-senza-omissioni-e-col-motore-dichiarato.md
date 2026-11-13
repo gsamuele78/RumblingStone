@@ -935,3 +935,43 @@ Limiti: le razze dei mostri non hanno i linguaggi nel plugin; PF1e non ha la
 tabella. Il lotto 7 è chiuso con questa parte; di tutto il lotto restano fuori
 il carico, i sensi oltre quelli che `conformita_statblocchi` già guarda, la RD
 che non è N/— e i sottotipi.
+
+### Lotto 8, prima parte — il valore dell'equipaggiamento (2026-11-13)
+
+**Contesto.** Nessun controllo guardava quanto vale l'equipaggiamento di una
+scheda. Il plugin non aveva i prezzi degli oggetti magici, e l'SRD 3.5 non ha
+la tabella del valore dell'equipaggiamento di un PNG per livello.
+
+**Decisione.** `estrai_oggetti.py` legge dall'SRD i prezzi delle tabelle degli
+oggetti magici (623 voci: armature, scudi e armi specifiche, pozioni, anelli,
+verghe, bastoni, bacchette, oggetti meravigliosi) e il prezzo base del bonus di
+potenziamento di armi e armature, e scrive `sistemi/dnd35/dati/oggetti.toml`
+dentro la capacità `creature.costruzione`. La tabella dei PNG viene dal Dungeon
+Master's Guide 3.5 (Tabella 4-23), che non è nell'SRD: nel repo entrano solo i
+venti numeri, con la fonte e il riscontro in rete scritti nel file.
+`verifica_scheda` ha la verifica nuova `ricchezza`, regola
+`equipaggiamento.valore`. Somma solo gli oggetti dal prezzo certo: tredici
+famiglie di nomi (anello di protezione, mantello della resistenza e del
+carisma, amuleti, guanti, cintura, fascia, periapto, bracciali, stivali della
+velocità, anello dello schermo mentale) e armature, scudi e armi «+N» per il
+solo potenziamento. La somma è quindi un minimo, e il giudizio va in un verso
+solo: se il minimo supera il valore della tabella per il livello effettivo
+(dadi vita più modificatore di livello della creatura base, come dice l'SRD in
+«Improving Monsters») è una violazione; sotto la tabella non si dice niente.
+Se la razza non è una delle sette dell'SRD e la creatura base non è dichiarata,
+lo scarto è un non verificabile.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 37 → 37, non
+verificabili 372 → 374 (Therysol: 20.000 mo riconosciuti a 2 dadi vita, razza
+senza modificatore di livello noto; Ghaurush al secondo incontro: livello
+effettivo 22, oltre la tabella). Portata: 7 schede del Bestiario hanno oggetti
+dal prezzo certo, 5 stanno sotto la tabella. Banco `muta_ricchezza.py` →
+`misure-ricchezza.json`: aggiunti 75.000 mo a 125 schede, 24 violazioni, 88 non
+verificabili, 0 perse, 13 fuori portata (oltre il 15° livello); su main 0.
+Limiti dichiarati. Il guadagno è piccolo: poche schede scrivono
+l'equipaggiamento, e 88 schede su 112 non si giudicano finché il plugin non ha
+il modificatore di livello delle razze dei mostri (resto del lotto 5). Non si
+contano pozioni, pergamene, bacchette, bastoni, capacità speciali di armi e
+armature, materiali e oggetti comuni. Una violazione non dice che la scheda è
+illegale: il DMG lascia dare a un PNG più equipaggiamento, ma allora conta nel
+GS, e la scheda deve dirlo. PF1e non ha la tabella nel plugin.

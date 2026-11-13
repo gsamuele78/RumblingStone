@@ -41,6 +41,9 @@ Scopo
     linguaggi i linguaggi automatici della razza e il Druidico del druido nella riga
              dei linguaggi (tabella `[linguaggi]` della capacità
              `creature.costruzione`; ADR-0126, lotto 7)
+    ricchezza il valore minimo dell'equipaggiamento (oggetti dal prezzo certo)
+             contro quello di un PNG del suo livello effettivo (tabella
+             `[oggetti]` della capacità `creature.costruzione`; ADR-0126, lotto 8)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -1718,6 +1721,118 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
                       f"(SRD, linguaggi automatici)"}], []
 
 
+_TESTA_EQUIP = re.compile(r"^\W*(?:equipaggiamento|equipment|possessions|gear|oggetti magici|magic items)\b", re.I)
+_FINE_EQUIP = re.compile(r"^\s*(?:#{1,6}\s|---+\s*$|\*\*[^*|]{2,60}\*\*\s*:?\s*$|```)")
+
+
+def _righe_dell_equipaggiamento(testo: str) -> "list[tuple[int, str]]":
+    """Le righe che elencano l'equipaggiamento: quella che comincia con «Equipaggiamento» (o «Gear»,
+    «Possessions»…) e, se è un titolo o finisce lì, l'elenco o la tabella che la segue."""
+    out, dentro = [], False
+    for n, r in enumerate(testo.split("\n"), 1):
+        if _TESTA_EQUIP.match(r) and not _RIGA_DI_STORIA.match(r):
+            resto = _TESTA_EQUIP.sub("", r, count=1).strip(" *:#")
+            dentro = len(resto) < 12 or r.lstrip().startswith("#")
+            if not dentro:
+                out.append((n, r))
+        elif dentro:
+            if _FINE_EQUIP.match(r):
+                dentro = False
+            elif r.strip() and not _RIGA_DI_STORIA.match(r):
+                out.append((n, r))
+    return out
+
+
+def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, int]]":
+    """Gli oggetti della riga che hanno un prezzo certo: quelli di `[[oggetti.nomi]]`, e armature,
+    scudi e armi «+N» (il solo bonus di potenziamento: una capacità speciale costa di più e non si
+    conta). Ogni tratto della riga conta una volta."""
+    from dmcore import classe_armatura as CA
+    from dmcore import sistemi as S
+    trovati, presi = [], []
+
+    def libero(a: int, b: int) -> bool:
+        return all(b <= x or a >= y for x, y in presi)
+
+    for voce in d["nomi"]:
+        for m in re.finditer(voce["schema"], riga, re.I):
+            nome = voce["nome"].replace("N", m.group(1)) if "N" in voce["nome"] else voce["nome"]
+            if nome in d["prezzi"] and libero(*m.span()):
+                presi.append(m.span())
+                trovati.append((nome, d["prezzi"][nome]))
+    armature, scudi = CA.tabelle(sistema)
+    armi = [n for a in S.dati(sistema, "creature.armi").get("armi", []) for n in a["nomi"]]
+    for nomi, tabella, che in ((list(armature) + list(scudi), d["potenziamento"]["armatura"], "armatura"),
+                               (armi, d["potenziamento"]["arma"], "arma")):
+        for nome in sorted(set(nomi), key=len, reverse=True):
+            for m in re.finditer(rf"(?<!\w){re.escape(nome)}(?!\w)(?:\s+[^\W\d]+){{0,2}}\s*\+(\d+)(?!\d)", riga, re.I):
+                n = int(m.group(1))
+                if 1 <= n <= len(tabella) and libero(*m.span()):
+                    presi.append(m.span())
+                    trovati.append((f"{nome} +{n} ({che})", tabella[n - 1]))
+    return trovati
+
+
+def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Il valore dell'equipaggiamento contro quello di un PNG del suo livello (ADR-0126, lotto 8).
+
+    Si sommano solo gli oggetti dal prezzo certo, quindi la somma è un minimo:
+    se il minimo supera il valore della tabella dei PNG per il livello, la
+    scheda ha più equipaggiamento di quello che il suo GS conta. Il livello è
+    quello effettivo: dadi vita più il modificatore di livello della creatura
+    base; se la razza non è una delle sette dell'SRD e la base non si conosce,
+    uno scarto è un non verificabile. Sotto la tabella non si dice niente."""
+    import conformita_statblocchi as C
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    try:
+        d = S.dati(sistema, "creature.costruzione").get("oggetti")
+        gradi = S.dati(sistema, "creature.gradi")
+    except S.ErroreSistemi:
+        return [], []
+    if not d:
+        return [], []
+    with contextlib.redirect_stderr(io.StringIO()):
+        blocchi = list(C._recinti_del_master(s.testo))
+    if len(blocchi) > 1:
+        return [], []
+    righe = _righe_dell_equipaggiamento(s.testo)
+    oggetti = [(n, o) for n, r in righe for o in _oggetti_col_prezzo(r, d, sistema)]
+    dadi_vita = sum(g.n for g in s.gruppi)
+    if not oggetti or not dadi_vita:
+        return [], []
+    totale = sum(o[1] for _, o in oggetti)
+    tabella = d["png"]["per_livello"]
+    base = {"file": VT_rel(p), "riga": oggetti[0][0], "verifica": "ricchezza", "fonte": sistema,
+            "regola": "equipaggiamento.valore"}
+    elenco = ", ".join(f"{nome} {mo}" for _, (nome, mo) in oggetti)
+    if totale <= tabella[min(dadi_vita, len(tabella)) - 1]:
+        return [], []
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    mdl = 0 if _razza_srd(dove, gradi) else None
+    if mdl is None and blocchi:
+        trovata = _base_del_blocco(s.testo, blocchi[0]["sb"], True, sistema)
+        if trovata and isinstance(trovata[1].get("mdl"), int):
+            mdl = trovata[1]["mdl"]
+    if mdl is None:
+        return [], [dict(base, testo=f"equipaggiamento per almeno {totale} mo ({elenco}) contro i "
+                                     f"{tabella[min(dadi_vita, len(tabella)) - 1]} mo di un PNG di {dadi_vita} dadi "
+                                     f"vita, ma il modificatore di livello della razza non si conosce")]
+    livello = dadi_vita + mdl
+    if livello > len(tabella):
+        return [], [dict(base, testo=f"livello effettivo {livello}: la tabella dei PNG si ferma al {len(tabella)}°")]
+    limite = tabella[livello - 1]
+    if totale <= limite:
+        return [], []
+    return [dict(base, atteso=f"al più {limite} mo", ha=f"almeno {totale} mo",
+                 testo=f"equipaggiamento per almeno {totale} mo ({elenco}) contro i {limite} mo di un PNG di "
+                       f"livello effettivo {livello} (DMG 3.5, Tabella 4-23): l'equipaggiamento in più va "
+                       f"dichiarato e conta nel GS")], []
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1759,10 +1874,11 @@ def main(argv: "list[str] | None" = None) -> int:
         ev, en_ = velocita(p)
         fv, fn = difese(p)
         lv, ln = linguaggi(p)
+        rv, rn = ricchezza(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev + fv + lv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_ + fn + ln
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev + fv + lv + rv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_ + fn + ln + rn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

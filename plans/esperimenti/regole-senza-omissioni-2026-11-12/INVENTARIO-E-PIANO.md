@@ -487,3 +487,15 @@ automatici delle sette razze e Druidico del druido. Verifica nuova `linguaggi`
 37 → 37; 7 schede giudicate su 24 con la riga; banco `muta_linguaggi.py` 13 su
 13, su main 0. Lotto 7 chiuso. Fuori dal lotto, dichiarati: carico, RD che non
 è N/—, sottotipi, razze dei mostri, PF1e.
+
+### Lotto 8, prima parte: il valore dell'equipaggiamento (2026-11-13)
+
+`oggetti.toml` del 3.5 (capacità `creature.costruzione`): 623 prezzi dell'SRD,
+prezzo del potenziamento di armi e armature, valore dell'equipaggiamento di un
+PNG per livello (DMG 3.5, Tabella 4-23, solo i numeri). Verifica nuova
+`ricchezza` (regola `equipaggiamento.valore`): la somma degli oggetti dal
+prezzo certo è un minimo, e conta solo se supera la tabella. Misura: violazioni
+37 → 37, non verificabili 372 → 374; 7 schede con oggetti dal prezzo certo;
+banco `muta_ricchezza.py`: 24 violazioni e 88 non verificabili su 112, su main
+0. Resta del lotto 8: pozioni, pergamene, bacchette e bastoni, capacità
+speciali, modificatore di livello delle razze dei mostri, tabella PF1e.
