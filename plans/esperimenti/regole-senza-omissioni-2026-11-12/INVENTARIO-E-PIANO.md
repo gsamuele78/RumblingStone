@@ -470,3 +470,11 @@ Collezionista, 27 contro 38: decide il DM), non verificabili 371 → 372; 8 RI
 giudicate su 26 scritte e 3 RD su 4; banco `muta_difese.py` 6 su 6 e 3 su 3 per
 verso, su main 0. I sensi hanno già un controllo. Restano del lotto 7: immunità
 dei tipi, linguaggi.
+
+### Lotto 7, terza parte: le immunità del tipo (2026-11-13)
+
+`[difese.immunita]` in `difese.toml`: le immunità dei sette tipi dell'SRD che
+ne hanno. Regola nuova `tratti.immunita` nella verifica `difese`: formula
+«tratti dei …» o elenco completo. Misura: violazioni 34 → 37 (tre non morti
+senza i tratti: decide il DM); 18 schede in regola su 21 del tipo; banco 16 su
+18, su main 0. Resta del lotto 7: i linguaggi.

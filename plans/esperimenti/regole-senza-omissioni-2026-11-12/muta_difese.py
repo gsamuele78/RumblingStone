@@ -8,11 +8,16 @@ come trovata se compare una violazione `numero.RI` o `numero.RD`. Le schede che
 il controllo non giudica (nessuna razza o classe della tabella) non possono
 dare violazioni: si contano a parte, è la portata del controllo.
 
+Immunità del tipo: a ogni scheda di un tipo che le dà, e che oggi è in regola,
+si toglie la formula «tratti dei …» oppure, se le elenca, la prima immunità
+dell'elenco. La copia conta come trovata se compare `tratti.immunita`.
+
 Uso: python3 muta_difese.py  (scrive misure-difese.json accanto)
 """
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -20,6 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "scripts"))
 import verifica_scheda as V  # noqa: E402
+from dmcore import sistemi as S  # noqa: E402
 
 CAMPI = {"RI": V._SCRITTA_RI, "RD": V._SCRITTA_RD}
 
@@ -77,6 +83,32 @@ def main() -> int:
                     esiti[chiave][0] += 1
                 else:
                     perse.append(f"{p.relative_to(ROOT)}: {chiave}")
+    imm = S.dati("dnd35", "creature.costruzione")["difese"]["immunita"]
+    conto["immunità"] = {"schede del tipo": 0, "in regola": 0, "già fuori regola": 0}
+    esiti["immunità tolta"] = [0, 0]
+    for p in sorted((ROOT / "Bestiario").rglob("*.md")):
+        s = V.L.leggi(p)
+        if s is None:
+            continue
+        prima = re.split(r"[(,/]", s.tipo or "", maxsplit=1)[0]
+        tipi = [k for k in imm["tipi"] if re.search(rf"(?<![\w-])(?<!mezzo )(?:{k}|{imm['nomi'][k]})\b", prima, re.I)]
+        if len(tipi) != 1:
+            continue
+        conto["immunità"]["schede del tipo"] += 1
+        if any(x["regola"] == "tratti.immunita" for x in V.difese(p)[0]):
+            conto["immunità"]["già fuori regola"] += 1
+            continue
+        conto["immunità"]["in regola"] += 1
+        testo = p.read_text(encoding="utf-8")
+        formula = rf"tratti\s+(?:(?:de[il]|dei|degli|da|del tipo)\s+)?(?:{imm['nomi'][tipi[0]]})|\b{tipi[0]} traits\b"
+        copia = re.sub(formula, "…", testo, flags=re.I)
+        if copia == testo:
+            copia = re.sub(imm["parole"][imm["tipi"][tipi[0]][-1]], "…", testo, flags=re.I)
+        esiti["immunità tolta"][1] += 1
+        if any(x["regola"] == "tratti.immunita" for x in _giudica(copia, p.name)[0]):
+            esiti["immunità tolta"][0] += 1
+        else:
+            perse.append(f"{p.relative_to(ROOT)}: immunità tolta")
     fuori = {"conto": conto, "esiti": {k: {"trovate": a, "scritte": b} for k, (a, b) in esiti.items()},
              "perse": perse}
     (Path(__file__).parent / "misure-difese.json").write_text(

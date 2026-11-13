@@ -159,9 +159,83 @@ class TestRiduzioneDelDanno(unittest.TestCase):
         self.assertEqual(giudica("RD 3/—"), ([], []))
 
 
+class TestImmunitaDelTipo(unittest.TestCase):
+    """SRD, tratti dei tipi: le immunità del tipo stanno nella scheda, o con la formula o una per una."""
+    NM = {"tipo": "Medium undead", "classe": "Fighter 3", "dadi": "3d12"}
+    TUTTE = "immune a influenza mentale, veleno, sonno, paralisi, stordimento, malattia ed effetti di morte"
+
+    def solo_immunita(self, *a, **k):
+        v, n = giudica(*a, **k)
+        return [x for x in v if x[0] == "tratti.immunita"], n
+
+    def test_dati(self):
+        imm = S.dati("dnd35", "creature.costruzione")["difese"]["immunita"]
+        self.assertEqual(set(imm["tipi"]), {"construct", "dragon", "elemental", "ooze", "plant", "undead", "vermin"})
+        self.assertEqual(imm["tipi"]["dragon"], ["sonno", "paralisi"])
+        self.assertEqual(imm["tipi"]["undead"], ["influenza mentale", "veleno", "sonno", "paralisi", "stordimento",
+                                                 "malattia", "effetti di morte"])
+        self.assertIn("necromanzia", imm["tipi"]["construct"])
+        self.assertIn("metamorfosi", imm["tipi"]["plant"])
+        self.assertEqual(set(imm["nomi"]), set(imm["tipi"]))
+        for voci in imm["tipi"].values():
+            self.assertLessEqual(set(voci), set(imm["parole"]))
+
+    def test_la_formula_basta(self):
+        for formula in ("tratti dei non morti", "Tratti dei non-morti", "undead traits", "tratti del tipo non morto"):
+            self.assertEqual(self.solo_immunita(f"**Qualità** {formula}", **self.NM), ([], []), formula)
+        self.assertEqual(self.solo_immunita("Scurovisione 18 m, tratti vegetali.", tipo="Medium plant")[0], [])
+
+    def test_l_elenco_completo_basta(self):
+        self.assertEqual(self.solo_immunita(self.TUTTE, **self.NM), ([], []))
+
+    def test_chi_non_scrive_niente(self):
+        v, _ = self.solo_immunita("", **self.NM)
+        self.assertEqual(len(v), 1)
+        self.assertEqual(v[0][1], ["influenza mentale", "veleno", "sonno", "paralisi", "stordimento", "malattia",
+                                   "effetti di morte"])
+
+    def test_un_elenco_a_meta_dice_che_cosa_manca(self):
+        with tempfile.TemporaryDirectory() as d:
+            q = Path(d) / "prova-cr4.md"
+            q.write_text(SCHEDA.format(titolo="Prova", coda="Immune cold, veleno e sonno", **self.NM), encoding="utf-8")
+            v = [x for x in V.difese(q)[0] if x["regola"] == "tratti.immunita"]
+        self.assertEqual(len(v), 1)
+        self.assertIn("influenza mentale, paralisi, stordimento, malattia, effetti di morte", v[0]["testo"])
+        self.assertNotIn("veleno,", v[0]["testo"])
+
+    def test_la_formula_in_una_riga_di_storia_non_conta(self):
+        self.assertEqual(len(self.solo_immunita("> era: tratti dei non morti", **self.NM)[0]), 1)
+
+    def test_drago(self):
+        d = {"tipo": "Large dragon", "classe": "Fighter 3", "dadi": "3d12"}
+        self.assertEqual(self.solo_immunita("immune a elettricità, paralisi e sonno", **d), ([], []))
+        self.assertEqual(len(self.solo_immunita("immune a elettricità e sonno", **d)[0]), 1)
+
+    def test_chi_non_e_del_tipo(self):
+        self.assertEqual(self.solo_immunita(""), ([], []))
+        self.assertEqual(self.solo_immunita("", tipo="Medium humanoid (elf)", classe="Dragon Shaman 3"), ([], []))
+        self.assertEqual(self.solo_immunita("", tipo="Large aberration (undead)"), ([], []))
+        self.assertEqual(self.solo_immunita("", tipo="Medium half-dragon humanoid"), ([], []))
+
+    def test_il_costrutto_con_l_intelligenza(self):
+        """Chi ha un punteggio di Intelligenza non è «mindless»; la scheda di prova lo ha (Int 10)."""
+        senza_mente = "immune a veleno, sonno, paralisi, stordimento, malattia, effetti di morte e necromanzia"
+        testo = SCHEDA.format(titolo="Prova", tipo="Large construct", classe="Fighter 3", dadi="3d10+30",
+                              coda=senza_mente)
+        with tempfile.TemporaryDirectory() as d:
+            q = Path(d) / "prova-cr4.md"
+            q.write_text(testo, encoding="utf-8")
+            self.assertEqual([x for x in V.difese(q)[0] if x["regola"] == "tratti.immunita"], [])
+            q.write_text(testo.replace("Int 10", "Int —"), encoding="utf-8")
+            v = [x for x in V.difese(q)[0] if x["regola"] == "tratti.immunita"]
+        self.assertEqual(len(v), 1)
+        self.assertIn("influenza mentale", v[0]["testo"])
+
+
 class Bestiario(unittest.TestCase):
     #: scarti veri in attesa della decisione del DM (card del thread delle regole)
-    IN_ATTESA = {"Il_Collezionista_Rakshasa.md"}
+    IN_ATTESA = {"Il_Collezionista_Rakshasa.md", "deathlock-cr8.md", "ghost-lion-spettrale-cr8.md",
+                 "skeletal-dire-lion-cr6.md"}
 
     def test_il_bestiario_non_ha_altri_scarti(self):
         trovate, attese = [], set()

@@ -875,3 +875,35 @@ N/— (magia, adamantio, allineamento) non si guarda; PF1e non ha la tabella.
 I sensi non entrano in questo lotto perché un controllo c'è già
 (`conformita_statblocchi`, scurovisione dal tipo nel 3.5 e dalla razza in
 PF1e). Restano del lotto 7: immunità dei tipi, linguaggi.
+
+### Lotto 7, terza parte — le immunità del tipo (2026-11-13)
+
+**Contesto.** Un non morto, un costrutto o un vegetale hanno dal tipo una lista
+di immunità (SRD, tratti dei tipi). Una scheda che non le scrive lascia il DM a
+ricordarsele al tavolo: è un'omissione, e nessun controllo la vedeva.
+
+**Decisione.** `estrai_difese.py` legge dall'SRD anche le righe «Immunity to …»
+(e «Mindless … immunity to all mind-affecting effects») dei sette tipi che ne
+hanno: costrutto, drago, elementale, melma, vegetale, non morto, parassita.
+Stanno in `[difese.immunita]` di `difese.toml`, con i nomi italiani del tipo e
+le parole con cui una scheda scrive ogni immunità (scritti a mano, non vengono
+dall'SRD). La verifica `difese` ha la regola nuova `tratti.immunita`: la scheda
+di uno di quei tipi deve avere la formula («tratti dei non morti», «tratti
+vegetali», «undead traits») oppure nominare ogni immunità in una riga che dice
+«immune». Il tipo si legge prima della prima parentesi o virgola della riga del
+tipo: un «aberration (undead)» o un mezzo-drago non si giudicano. Chi ha un
+punteggio di Intelligenza non è senza mente: a costrutti, melme e parassiti
+l'immunità all'influenza mentale si chiede solo se non lo hanno.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 34 → 37, non
+verificabili 372 → 372. Le tre violazioni nuove sono tre non morti che non
+scrivono i tratti del tipo (deathlock, leone spettrale, leone crudele
+scheletrico, che scrive solo «Immune cold»): le schede non si toccano, decide
+il DM, e intanto stanno in `IN_ATTESA` di `test_difese.py`. Portata: 21 schede
+del Bestiario sono di uno dei sette tipi, 18 in regola. Banco `muta_difese.py`:
+tolta la formula o un'immunità dell'elenco, 16 su 18; su main 0. Le due che
+sfuggono (fungo fantasma, retriever) scrivono le immunità due volte, con la
+formula e per esteso: tolta una resta l'altra. Limiti: non si guardano i
+sottotipi (freddo, fuoco, arconte), né le immunità oltre la lista del tipo, né
+«non soggetto a colpi critici»; PF1e non ha la tabella. Resta del lotto 7: i
+linguaggi.

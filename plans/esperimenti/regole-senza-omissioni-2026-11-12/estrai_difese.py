@@ -10,6 +10,8 @@ Dall'SRD 3.5 (olimot/srd-v3.5-md@c7f30a0c, OGL), solo nomi e numeri:
              della razza preso dal titolo che la precede
   ri.classi  «Diamond Soul» del monaco: livello + 10, dal livello della tabella
   rd.classi  «Damage reduction N/—» della tabella del barbaro, per livello
+  immunita.tipi  le righe «—Immunity to …» (e «Mindless … immunity to all
+             mind-affecting effects») di ogni «X Type» dei tipi di creatura
 """
 from __future__ import annotations
 
@@ -24,6 +26,20 @@ CACHE = Path.home() / ".cache" / "rumblingstone" / "srd" / "srd-v3.5-md-c7f30a0c
 NOMI = {"drow": ["drow"], "svirfneblin": ["svirfneblin", "gnom[oi] delle profondità", "deep gnomes?"],
         "rakshasa": ["rakshasa"], "hound archon": ["hound archons?", "arcont[ei] segugi[oi]?"],
         "azer": ["azer"], "pixie": ["pixie"]}
+#: ogni immunità dei tipi: come la scrive l'SRD e come la scrive una scheda (non viene dall'SRD)
+IMMUNITA = {
+    "influenza mentale": (r"mind-affecting", r"mental|mind-affecting|\bmente\b"),
+    "veleno": (r"poison", r"velen|poison"),
+    "sonno": (r"sleep", r"sonno|sleep"),
+    "paralisi": (r"paralysis", r"paralisi|paraly"),
+    "stordimento": (r"stunning", r"stordi|stun"),
+    "malattia": (r"disease", r"malatti|disease"),
+    "effetti di morte": (r"death effects", r"morte|death"),
+    "necromanzia": (r"necromancy", r"necromanzi|necromanc"),
+    "metamorfosi": (r"polymorph", r"metamorf|polimorf|polymorph"),
+}
+TIPI_IT = {"construct": "costrutt[oi]", "dragon": "dragh?[oi]", "elemental": "elemental[ei]", "ooze": "melm[ae]",
+           "plant": "vegetal[ei]", "undead": "non[ -]mort[oi]", "vermin": "parassit[ai]"}
 
 
 def _celle(riga: str) -> "list[str]":
@@ -69,9 +85,25 @@ def barbaro(base: Path) -> "list[int]":
     return out
 
 
+def immunita(base: Path) -> "dict[str, list[str]]":
+    t = (base / "basic-rules-and-legal" / "types-subtypes-and-special-abilities.md").read_text(encoding="utf-8")
+    out, tipo = {}, None
+    for riga in t.split("\n"):
+        m = re.match(r"\*\*([A-Z][A-Za-z ]+) (Type|Subtype):\*\*", riga)
+        if m:
+            tipo = m.group(1).lower() if m.group(2) == "Type" else None
+        elif tipo and re.match(r"—(?:Immunity to|Mindless:)", riga):
+            for chiave, (srd, _) in IMMUNITA.items():
+                if re.search(srd, riga) and chiave not in out.setdefault(tipo, []):
+                    out[tipo].append(chiave)
+    return out
+
+
 def genera(base: Path) -> str:
     razze, (dal, piu), rd = ri_razze(base), monaco(base), barbaro(base)
+    imm = immunita(base)
     assert set(razze) == set(NOMI) and len(rd) == 20 and rd[-1] == 5, (razze, rd)
+    assert set(imm) == set(TIPI_IT), imm
     q = lambda s: '"' + s + '"'  # noqa: E731
     return "\n".join([
         "# sistemi/dnd35/dati/difese.toml — resistenza agli incantesimi e riduzione del danno 3.5",
@@ -95,6 +127,18 @@ def genera(base: Path) -> str:
         "[difese.rd.classi]",
         "# barbaro, «Damage Reduction»: N/— per livello (dal 1° al 20°)",
         "barbarian = { per_livello = [" + ", ".join(map(str, rd)) + "] }",
+        "",
+        "[difese.immunita.tipi]",
+        "# SRD, tipi di creatura: le righe «Immunity to …» dei tratti di ogni tipo",
+        *[f"{q(n)} = [{', '.join(q(x) for x in v)}]" for n, v in sorted(imm.items())],
+        "",
+        "[difese.immunita.nomi]",
+        "# come una scheda chiama il tipo in italiano, per la formula «tratti dei …» (non viene dall'SRD)",
+        *[f"{q(n)} = {q(TIPI_IT[n])}" for n in sorted(imm)],
+        "",
+        "[difese.immunita.parole]",
+        "# come una scheda scrive ogni immunità (espressioni regolari; non vengono dall'SRD)",
+        *[f"{q(n)} = '{v[1]}'" for n, v in IMMUNITA.items()],
         "",
     ])
 
