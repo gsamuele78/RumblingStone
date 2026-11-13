@@ -134,5 +134,107 @@ class TestMargineVero(unittest.TestCase):
         self.assertEqual(_prova(SERGENTE.name, self.testo.replace("Intimidate +7", "Intimidate +10"))[0], [])
 
 
+# Guerriero 4 umano, For 16: Scalare e Nuotare sono di classe, massimo 7 gradi, margine 2 (oggetto).
+# Senza armatura Scalare regge fino a +12 (7 + 3 + 2).
+ARMATO = """# Prova [INFERRED]
+**Faction**: none | **Role**: brute | **Environment**: any | **CR**: 4
+
+```statblocco
+gs: 4
+tipo: Medium humanoid (human), Fighter 4, LN
+ca: {ca}
+ca-dettaglio: {dettaglio}
+pf: 30
+pf-dado: 4d10+8
+ts: Temp +6, Rifl +2, Vol +2
+attributi: For 16 Des 12 Cos 14 Int 10 Sag 12 Car 8
+velocita: 6 m
+iniziativa: +1
+attacchi:
+  - Mischia spada lunga +7 (1d8+3/19-20)
+voci:
+  - Abilità: {abilita}
+  - Talenti: Attacco Poderoso, Incalzare, Arma Focalizzata (spada lunga), Iniziativa Migliorata, Robustezza
+```
+"""
+
+
+def _armato(abilita: str, dettaglio: str = "contatto 11, colto alla sprovvista 18 (+8 full plate, +1 Des)",
+            ca: int = 19, coda: str = "") -> "list[tuple]":
+    viol, nv = _prova("prova-cr4.md", ARMATO.format(ca=ca, dettaglio=dettaglio, abilita=abilita) + coda)
+    if any(x["regola"] in ("lettura", "sistema") for x in nv):
+        raise AssertionError(f"il conto dei gradi non parte: {nv}")
+    return [(v["regola"], v.get("abilita"), v["ha"]) for v in viol]
+
+
+class TestPenalitaDiArmatura(unittest.TestCase):
+    """Lotto 6, seconda parte: l'armatura abbassa il bonus scritto, quindi alza i gradi minimi."""
+
+    def test_i_dati_dall_srd(self):
+        pp = S.dati("dnd35", "creature.gradi")["penalita_di_prova"]
+        self.assertEqual(pp["abilita"], ["balance", "climb", "escape artist", "hide", "jump", "move silently",
+                                         "sleight of hand", "swim", "tumble"])
+        self.assertEqual(pp["doppia"], ["swim"])
+        self.assertEqual(pp["armature"]["full plate"], {"ca": 8, "des_max": 1, "penalita": 6})
+        self.assertEqual(pp["armature"]["leather"]["penalita"], 0)
+        self.assertEqual(pp["scudi"]["shield, tower"], {"ca": 4, "penalita": 10})   # il «+4³» della tabella è 4
+        self.assertEqual(len(pp["armature"]), 12)
+        coppie = [(v["ca"], v["des_max"]) for v in pp["armature"].values()]
+        self.assertEqual(len(set(coppie)), 12)      # bonus e Des massima bastano a riconoscere l'armatura
+
+    def test_l_armatura_completa_toglie_cinque_a_scalare(self):
+        # perfetta: 6 − 1 = 5. Scalare +7: 7 − 3 − 2 + 5 = 7 gradi, il massimo
+        self.assertEqual(_armato("Scalare +7, Intimidire +6"), [])
+        self.assertEqual(_armato("Scalare +8, Intimidire +6"), [("gradi.massimo", "climb", 8)])
+
+    def test_senza_armatura_lo_stesso_bonus_passa(self):
+        self.assertEqual(_armato("Scalare +12", "contatto 11, colto alla sprovvista 10 (+1 Des)", 11), [])
+        self.assertEqual(_armato("Scalare +13", "contatto 11, colto alla sprovvista 10 (+1 Des)", 11),
+                         [("gradi.massimo", "climb", 8)])
+
+    def test_un_abilita_che_non_la_subisce_non_cambia(self):
+        # Intimidire (Car −1): 7 + (−1) + 2 = +8 è il tetto con e senza armatura
+        self.assertEqual(_armato("Intimidire +8"), [])
+        self.assertEqual(_armato("Intimidire +9"), [("gradi.massimo", "intimidate", 8)])
+
+    def test_a_nuotare_vale_doppia(self):
+        self.assertEqual(_armato("Nuotare +2"), [])                       # 2 − 3 − 2 + 10 = 7
+        self.assertEqual(_armato("Nuotare +3"), [("gradi.massimo", "swim", 8)])
+
+    def test_lo_scudo_si_somma(self):
+        d = "contatto 11, colto alla sprovvista 20 (+8 full plate, +2 scudo pesante, +1 Des)"
+        self.assertEqual(_armato("Scalare +6", d, 21), [])                # 5 + 1 = 6 di penalità
+        self.assertEqual(_armato("Scalare +7", d, 21), [("gradi.massimo", "climb", 8)])
+
+    def test_il_mithral_toglie_tre(self):
+        d = "contatto 11, colto alla sprovvista 18 (+8 full plate di mithral, +1 Des)"
+        self.assertEqual(_armato("Scalare +9", d), [])                    # 6 − 3 = 3 di penalità
+        self.assertEqual(_armato("Scalare +10", d), [("gradi.massimo", "climb", 8)])
+
+    def test_il_cuoio_non_ha_penalita(self):
+        d = "contatto 11, colto alla sprovvista 12 (+2 leather, +1 Des)"
+        self.assertEqual(_armato("Scalare +12", d, 13), [])
+
+    def test_con_due_righe_di_ca_non_si_conta(self):
+        # due schede nel file: non si sa di chi è la riga delle abilità, si resta al conto di prima
+        coda = "\n**CA** 15 (+4 chain shirt, +1 Des)\n"
+        self.assertEqual(_armato("Scalare +12", coda=coda), [])
+        self.assertEqual(V._penalita_di_prova("ca-dettaglio: (+8 full plate)" + coda,
+                                              S.dati("dnd35", "creature.gradi"), "dnd35"), (0, ""))
+
+    def test_la_penalita_letta(self):
+        r = S.dati("dnd35", "creature.gradi")
+        for riga, attesa in (("ca-dettaglio: contatto 10 (armatura completa +1, scudo pesante +1, −1 Des)", 6),
+                             ("ca-dettaglio: (+4 giaco di maglia, +2 Des)", 1),
+                             ("**AC** 17 (+5 breastplate, +2 Dex)", 3),
+                             ("ca-dettaglio: (+3 Des, +2 naturale)", 0)):
+            with self.subTest(riga=riga):
+                self.assertEqual(V._penalita_di_prova(riga, r, "dnd35")[0], attesa)
+
+    def test_pf1e_non_ha_la_tabella_e_non_conta(self):
+        self.assertEqual(V._penalita_di_prova("ca-dettaglio: (+9 full plate)", S.dati("pf1e", "creature.gradi"),
+                                              "pf1e"), (0, ""))
+
+
 if __name__ == "__main__":
     unittest.main()

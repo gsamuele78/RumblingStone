@@ -6,6 +6,7 @@ Scrive `sistemi/dnd35/dati/gradi.toml` e `sistemi/pf1e/dati/gradi.toml`:
   [classi]   classe → punti abilità per livello («4 + Int modifier» → 4)
   [tipi]     tipo di creatura → punti per dado vita razziale
   [di_classe] classe → abilità di classe («Class Skills»); [fuori_classe] costo e massimo
+  [penalita_di_prova] le abilità che la subiscono e la penalità di ogni armatura e scudo
   [regole]   massimo dei gradi, moltiplicatore del primo dado vita, minimo per dado
 
 Fonte: olimot/srd-v3.5-md@c7f30a0c (la stessa di talenti.toml), OGL.
@@ -145,6 +146,47 @@ def sinergie(base: Path, chiave: "dict[str, str]") -> "dict[str, list[str]]":
     return {a: sorted(v) for a, v in sorted(out.items()) if v}
 
 
+def penalita_di_prova(base: Path, chiave: "dict[str, str]") -> "tuple[list[str], list[str], dict, dict]":
+    """(abilità con la penalità, abilità con la penalità doppia, armature, scudi).
+
+    Le abilità sono quelle col titolo «(Dex; Armor Check Penalty)»; la doppia è
+    quella di «subject to double the normal armor check penalty» (Nuotare).
+    Armature e scudi vengono dalla tabella «Armor and Shields»: nome → bonus,
+    Des massima e penalità (positiva). Chi legge una scheda riconosce l'oggetto
+    dal bonus e dalla Des massima, che nella tabella non si ripetono."""
+    con, doppia = [], []
+    for f in ("skills-i.md", "skills-ii.md"):
+        t = (base / "basic-rules-and-legal" / f).read_text(encoding="utf-8")
+        for blocco in re.split(r"^#{2,3} ", t, flags=re.M)[1:]:
+            titolo = blocco.split("\n", 1)[0]
+            nome = re.sub(r"<.*", "", titolo).strip().lower()
+            if nome in chiave and "Armor Check Penalty" in titolo:
+                con.append(nome)
+                if re.search(r"double the normal armor check penalty", blocco):
+                    doppia.append(nome)
+    t = (base / "basic-rules-and-legal" / "equipment.md").read_text(encoding="utf-8")
+    tabella = re.search(r"<table[^>]*><caption>Table: Armor and Shields</caption>.*?</table>", t, re.S).group(0)
+    armature, scudi, dove = {}, {}, None
+    for riga in re.findall(r"<tr>(.*?)</tr>", tabella, re.S):
+        celle = [re.sub(r"<[^>]+>", "", re.sub(r"<sup>.*?</sup>", "", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", riga, re.S)]
+        if not celle:
+            continue
+        if celle[0] in ("Light armor", "Medium armor", "Heavy armor"):
+            dove = armature
+        elif celle[0] == "Shields":
+            dove = scudi
+        elif celle[0] == "Extras":
+            dove = None
+        elif dove is not None and len(celle) > 4 and re.fullmatch(r"\+\d+", celle[2]):
+            ca = int(re.match(r"\+(\d+)", celle[2]).group(1))
+            pen = abs(int(celle[4].replace("–", "-").replace("−", "-")))
+            voce = {"ca": ca, "penalita": pen}
+            if dove is armature:
+                voce["des_max"] = int(celle[3].replace("+", ""))
+            dove[celle[0].lower()] = voce
+    return sorted(con), sorted(doppia), armature, scudi
+
+
 def razze(base: Path, chiave: "dict[str, str]") -> "dict[str, dict[str, int]]":
     """Razza dell'SRD → il bonus razziale più alto che dà a ogni abilità («+2
     racial bonus on Listen, Search, and Spot checks»), anche quando vale solo
@@ -282,6 +324,27 @@ def genera() -> str:
         "# è la metà di quello di classe",
         "costo = 2",
         "massimo_diviso = 2",
+        "",
+    ]
+    con, doppia, armature, scudi = penalita_di_prova(CACHE, k)
+    righe += [
+        "[penalita_di_prova]",
+        "# SRD, «Armor Check Penalty»: la penalità dell'armatura e dello scudo si sommano e vanno",
+        "# alle abilità di `abilita`; a quelle di `doppia` vanno due volte. `perfetta`: quanto",
+        "# un'armatura perfetta (e ogni armatura magica lo è) la riduce; `mithral` e `legnoscuro`:",
+        "# quanto la riducono i materiali speciali, perfetta compresa.",
+        "abilita = [" + ", ".join(_q(x) for x in con) + "]",
+        "doppia = [" + ", ".join(_q(x) for x in doppia) + "]",
+        "perfetta = 1",
+        "mithral = 3",
+        "legnoscuro = 2",
+        "",
+        "[penalita_di_prova.armature]",
+        *[f"{_q(n)} = {{ ca = {v['ca']}, des_max = {v['des_max']}, penalita = {v['penalita']} }}"
+          for n, v in armature.items()],
+        "",
+        "[penalita_di_prova.scudi]",
+        *[f"{_q(n)} = {{ ca = {v['ca']}, penalita = {v['penalita']} }}" for n, v in scudi.items()],
         "",
     ]
     return "\n".join(righe)
