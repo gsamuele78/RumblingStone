@@ -993,7 +993,18 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0122` e `ADR-0128` → `plans/adr/` · `plans/esperimenti/standard-volume-2026-11-10/` · `plans/esperimenti/taglia-portata-2026-11-10/` · `docs/audit/stampa-booklet.json` · `docs/audit/mappe-schede.json`
 - **Solo qui:** l'ADR di taglia e portata è nato 0123, poi 0127, infine 0128, perché i primi due numeri erano di altre PR; le 17 misure di prosa della community restano non adottate; ripetizioni mai misurate, contate il 2026-11-13 su domanda del DM (passi di almeno 8 parole identiche, dalla seconda volta): serata 12,3% delle parole contro l'1,2% di *Burnt Offerings* e lo 0,5% dell'estratto di *Red Hand of Doom*; circa 3.700 parole sono le copie volute in appendice, circa 5.200 stanno nel corpo e non sono toccate qui; aperti 69 pedine senza scheda, pedine non in scala nel disegno, 4 card del DM sul volume (VOL-3)
 
-### MS-0085 · 2026-11-13 · Le ripetizioni dei booklet hanno una misura
+### MS-0085 · 2026-11-12 · ADR-0126 coda del lotto 3: i fatti di una scheda in JSON
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede coerenza
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, coda del lotto 3» in `plans/CHANGELOG.md`
+- **Testo:** `verifica_scheda --fatti` (funzione `fatti`) stampa per file talenti, incantesimi e capacità speciali con nome canonico e riga, più inizio e fine di ogni «Tattiche» e «Descrizione». L'aveva chiesto il thread della coerenza della storia per la regola S8 (prosa contro scheda). Non giudica ed esce 0. Misura su `Bestiario 0*/`: 186 file, 486/508 talenti canonici, 626/688 incantesimi canonici, 214 capacità speciali, 265 «Tattiche» in 111 file, 120 «Descrizione».
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la prima stesura passava dal lettore delle schede e su un file che quello non riconosce non dava nulla, quindi ora la riga «Talenti» si legge anche da sola. Fuori da una scheda riconosciuta «1° …» è spesso un elenco di prosa (stanze, passi): la riga conta solo se almeno un nome è un incantesimo noto, e così 14 falsi sono usciti. Una sezione aperta da un titolo si chiude al titolo dopo, perché dentro ha i suoi grassetti («**Round 1**»); una aperta da un'etichetta in grassetto si chiude all'etichetta dopo. Limiti: solo la prima riga «Talenti» del file; 62 incantesimi in italiano senza canonico perché il dizionario dell'SRD non li ha; capacità speciali solo con la sigla fra parentesi.
+
+### MS-0086 · 2026-11-13 · Le ripetizioni dei booklet hanno una misura
 
 - **Data:** 2026-11-13
 - **PR:** #395
