@@ -499,3 +499,13 @@ prezzo certo è un minimo, e conta solo se supera la tabella. Misura: violazioni
 banco `muta_ricchezza.py`: 24 violazioni e 88 non verificabili su 112, su main
 0. Resta del lotto 8: pozioni, pergamene, bacchette e bastoni, capacità
 speciali, modificatore di livello delle razze dei mostri, tabella PF1e.
+
+### Lotto 5, quarta parte: modificatore di livello delle razze senza dadi vita (2026-11-13)
+
+`mdl.toml` del 3.5 (capacità `creature.costruzione`): dieci razze che l'SRD
+presenta come combattenti di 1° livello, con la loro riga «Level Adjustment».
+`ricchezza` le usa per il livello effettivo. Misura: violazioni 37 → 37, non
+verificabili 374 → 374; banco `muta_ricchezza.py`: violazioni 24 → 57, non
+verificabili 88 → 55. Resta del lotto 5: modificatori razziali alle
+caratteristiche, modelli, avanzamento per dadi vita, mostri dei manuali.
+

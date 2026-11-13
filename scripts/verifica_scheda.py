@@ -1773,6 +1773,17 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
     return trovati
 
 
+_MODELLO = re.compile(r"half[- ]|mezzo?[- ]?(?:drag|immond|celest)|vampir|lich\b|licantrop|lycanthrop|\bwere|mannar|"
+                      r"fantasma|ghost|scheletr|skelet|zombi|celestial|fiendish|immondo|template|modello|archetip", re.I)
+
+
+def _tipo_en(tipo: str) -> str:
+    tipo = tipo.lower()
+    for it, en in _TIPI_IT.items():
+        tipo = tipo.replace(it, en)
+    return tipo
+
+
 def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     """Il valore dell'equipaggiamento contro quello di un PNG del suo livello (ADR-0126, lotto 8).
 
@@ -1780,7 +1791,8 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     se il minimo supera il valore della tabella dei PNG per il livello, la
     scheda ha più equipaggiamento di quello che il suo GS conta. Il livello è
     quello effettivo: dadi vita più il modificatore di livello della creatura
-    base; se la razza non è una delle sette dell'SRD e la base non si conosce,
+    base, o della razza senza dadi vita razziali (`[mdl]`: hobgoblin, drow,
+    orco…); se né razza né base si conoscono, o la scheda nomina un modello,
     uno scarto è un non verificabile. Sotto la tabella non si dice niente."""
     import conformita_statblocchi as C
     from dmcore import sistemi as S
@@ -1813,6 +1825,13 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
         return [], []
     dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
     mdl = 0 if _razza_srd(dove, gradi) else None
+    if mdl is None:
+        # una razza senza dadi vita razziali (hobgoblin, drow, orco…): il suo modificatore di livello
+        senza_dv = S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}
+        sue = [r for r, rx in senza_dv["nomi"].items() if re.search(rf"(?<![\w-])(?:{rx})(?![\w-])", dove, re.I)
+               and re.search(rf"\b{senza_dv['razze'][r]['tipo']}\b", _tipo_en(s.tipo or ""), re.I)]
+        if len(sue) == 1 and not _MODELLO.search(dove):
+            mdl = senza_dv["razze"][sue[0]]["mdl"]
     if mdl is None and blocchi:
         trovata = _base_del_blocco(s.testo, blocchi[0]["sb"], True, sistema)
         if trovata and isinstance(trovata[1].get("mdl"), int):

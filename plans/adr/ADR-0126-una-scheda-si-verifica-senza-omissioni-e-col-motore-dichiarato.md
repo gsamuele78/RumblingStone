@@ -975,3 +975,29 @@ contano pozioni, pergamene, bacchette, bastoni, capacità speciali di armi e
 armature, materiali e oggetti comuni. Una violazione non dice che la scheda è
 illegale: il DMG lascia dare a un PNG più equipaggiamento, ma allora conta nel
 GS, e la scheda deve dirlo. PF1e non ha la tabella nel plugin.
+
+### Lotto 5, quarta parte — il modificatore di livello delle razze senza dadi vita (2026-11-13)
+
+**Contesto.** La verifica `ricchezza` (lotto 8) vuole il livello effettivo. Il
+plugin aveva il modificatore di livello solo delle creature con dadi vita
+razziali (`creature_base.toml`): hobgoblin, goblin, orchi, drow e duergar, che
+l'SRD presenta come combattenti di 1° livello, restavano non verificabili.
+
+**Decisione.** `estrai_mdl.py` legge dall'SRD ogni blocco «X, 1st-Level
+Warrior» con la sua riga «Level Adjustment» e scrive
+`sistemi/dnd35/dati/mdl.toml` dentro la capacità `creature.costruzione`: dieci
+razze (aasimar +1, drow +2, duergar +1, goblin +0, hobgoblin +1, coboldo +0,
+marinide +1, orco +0, svirfneblin +3, tiefling +1). `ricchezza` le usa quando
+la scheda nomina una sola di queste razze, il tipo è quello della razza e non
+c'è un modello (mezzo-drago, vampiro, immondo…): con un modello il
+modificatore cambia e lo scarto resta non verificabile.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 37 → 37, non
+verificabili 374 → 374. Banco `muta_ricchezza.py` (75.000 mo aggiunti a 112
+schede): violazioni 24 → 57, non verificabili 88 → 55, perse 0. Limiti: i 55
+rimasti sono creature con dadi vita razziali che non dichiarano la base nella
+riga della fonte, draghi, modelli. La tabella serve oggi solo a `ricchezza`:
+`grado_di_sfida` ha già le sue eccezioni di razza in `gs.toml` e non è stato
+toccato. Del lotto 5 restano i modificatori razziali alle caratteristiche, i
+modelli, l'avanzamento per dadi vita e i mostri dei manuali.
+
