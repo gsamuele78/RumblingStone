@@ -2579,7 +2579,7 @@ solo i gridi.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 7 | **La scheda da tavolo**: il testo intero segue |
+| Scena 7 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
 |---|---|
 | **Succede** | I PG entrano nella tenda di Zog'tar. Se parlano prima di colpire, Balvar tratta |
 | **Dove** | La tenda |
@@ -3010,7 +3010,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 8 · EL 17, 16 senza Balvar | **La scheda da tavolo**: il testo intero segue |
+| Scena 8 · EL 17, 16 senza Balvar | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
 |---|---|
 | **Succede** | Lo scontro nella tenda, da quando Zog'tar si alza dal seggio |
 | **Dove** | La tenda |
@@ -3387,7 +3387,7 @@ si gioca su M7-B.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 9 | **La scheda da tavolo**: il testo intero segue |
+| Scena 9 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
 |---|---|
 | **Succede** | Al ritorno, fra le tende, i PG incrociano Vatore, il ladro che diventerà Sal |
 | **Dove** | Fra le tende |
@@ -3596,7 +3596,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 10 · EL 16 se Zog'tar sale | **La scheda da tavolo**: il testo intero segue |
+| Scena 10 · EL 16 se Zog'tar sale | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
 |---|---|
 | **Succede** | Il primo ariete arriva alle mura, e il gruppo sceglie una via su tre per tenerle |
 | **Dove** | Le mura |
@@ -3789,7 +3789,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 11 · EL 17 | **La scheda da tavolo**: il testo intero segue |
+| Scena 11 · EL 17 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
 |---|---|
 | **Succede** | Skullcrusher cala sul cortile con due wyvern e combatte in passate, gridando i nomi che ha sentito di notte attraverso la Catena |
 | **Dove** | Il cortile |

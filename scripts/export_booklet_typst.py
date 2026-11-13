@@ -911,7 +911,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
-    "schede", "chi_si_incontra", "copie", "pagina",
+    "schede", "chi_si_incontra", "pagina",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -1096,11 +1096,6 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     appendice = modo in ("appendice", "entrambe", "prima-volta")
     if appendice:
         parti.append(f'#modo-schede.update("{modo}")')
-    # `"copie": "una-volta"` (scelta del DM del 2026-11-13): la riga per il
-    # tavolo e la scheda d'entrata in breve escono una volta sola nel corpo
-    una_volta = modo == "prima-volta" and man.get("copie") == "una-volta"
-    if una_volta:
-        parti.append('#copie-una-volta.update(true)')
     # `"chi_si_incontra": true` (ADR-0107): chi si incontra sta nel capitolo,
     # con scheda, ritratto, riquadro e mappa, portati dal master che li ha.
     # Si accompagna a «entrambe», così l'appendice resta.
@@ -1109,8 +1104,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     predefinito = bool(man.get("capolettera", True))
     # «prima-volta» (ADR-0122): chi è presentato e le mappe stampate, capitolo
     # per capitolo, perché il corpo li stampi una volta sola
-    volume = {"capitolo": "", "persone": {}, "mappe": {}, "native": {},
-              "una_volta": una_volta, "rimandati": set()} \
+    volume = {"capitolo": "", "persone": {}, "mappe": {}, "native": {}} \
         if modo == "prima-volta" and indice is not None else None
     if volume is not None:
         for cap, titolo, f in elenco:

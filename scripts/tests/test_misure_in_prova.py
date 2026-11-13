@@ -62,18 +62,8 @@ class TestLettura(unittest.TestCase):
         self.assertEqual(MS.parole_ripetute(doc)[1], 0)
 
 
-class TestCopieUnaVolta(unittest.TestCase):
-    """`"copie": "una-volta"` e `"pagina": "fitta"` (scelta del DM del 2026-11-13)."""
-
-    def test_la_scheda_in_breve_esce_al_primo_rimando_soltanto(self):
-        from dmcore import chi_si_incontra as C
-        v = {"capitolo": "capitolo V", "persone": {"durin": "capitolo II"},
-             "una_volta": True, "rimandati": set()}
-        e = ["| **Aspetto** | veterano |"]
-        self.assertTrue(C._rimando(v, "durin", "Durin", e))
-        self.assertEqual(C._rimando(v, "durin", "Durin", e), [])
-        v["una_volta"], v["rimandati"] = False, set()
-        self.assertEqual(C._rimando(v, "durin", "Durin", e), C._rimando(v, "durin", "Durin", e))
+class TestPaginaFitta(unittest.TestCase):
+    """`"pagina": "fitta"` (scelta del DM del 2026-11-13)."""
 
     def test_il_manifest_arriva_al_tema(self):
         import export_booklet_typst as E
@@ -81,8 +71,7 @@ class TestCopieUnaVolta(unittest.TestCase):
         self.assertIn('  pagina: "fitta",', E.intestazione(man, base=E.ROOT))
         self.assertNotIn('  pagina: "fitta",', E.intestazione({"title": "Prova"}, base=E.ROOT))
         tema = (E.ROOT / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
-        for pezzo in ("copie-una-volta", "<sb-riga>", 'pagina == "fitta"'):
-            self.assertIn(pezzo, tema)
+        self.assertIn('pagina == "fitta"', tema)
 
 
 class TestMappeESchede(unittest.TestCase):

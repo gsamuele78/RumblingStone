@@ -329,8 +329,7 @@ def parole_ripetute(doc, passo: int = PASSO_RIPETUTO) -> tuple[int, int, list[tu
     righe in testa e in coda che tornano uguali su un'altra pagina, né i passi
     presenti su più di `PAGINE_DI_TESTATINA` pagine. Misurato il 2026-11-13
     sui riferimenti di ADR-0122: *Burnt Offerings* 1,1%, l'estratto di *Red
-    Hand of Doom* 0,4%; il booklet di serata «La Notte e l'Alba» 11,8% prima
-    di `"copie": "una-volta"`, 11,4% dopo.
+    Hand of Doom* 0,4%; il booklet di serata «La Notte e l'Alba» 11,9%.
 
     Torna (parole del volume, parole ripetute, passi): ogni passo è
     (pagina, pagina della prima volta, parole, come comincia), dal più lungo.

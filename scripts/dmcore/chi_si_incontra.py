@@ -296,24 +296,6 @@ def _rimando_persona(nome: str, dove: str, entrata: list[str] | None = None) -> 
             "", *campi]
 
 
-def _rimando(volume: dict, k: str, nome: str, entrata: "list[str] | None") -> list[str]:
-    """Il rimando di chi è già stato presentato. Con `"copie": "una-volta"`
-    nel manifest la scheda d'entrata in breve esce al primo rimando soltanto:
-    dal secondo resta il riquadro, che il tema stampa come riga con le pagine.
-
-    >>> v = {"capitolo": "capitolo V", "persone": {"durin": "capitolo II"},
-    ...      "una_volta": True, "rimandati": set()}
-    >>> e = ["| **Aspetto** | veterano |"]
-    >>> len(_rimando(v, "durin", "Durin", e)) > 0, _rimando(v, "durin", "Durin", e)
-    (True, [])
-    """
-    if volume.get("una_volta"):
-        if k in volume["rimandati"]:
-            return []
-        volume["rimandati"].add(k)
-    return _rimando_persona(nome, volume["persone"][k], entrata)
-
-
 def _solo_riquadro(k: str, idx: Indice, f: Path, volume: "dict | None" = None) -> list[str]:
     # «prima-volta»: il riquadro è quello con cui la persona è stata
     # presentata nel volume (il drago di stasera, non quello del master)
@@ -369,7 +351,7 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
         sostituzioni[p.inizio] = p2
         if _altrove(volume, k):
             sb = riquadri.get(k)
-            p2.righe = _rimando(volume, k, p.nome, p.righe) + \
+            p2.righe = _rimando_persona(p.nome, volume["persone"][k], p.righe) + \
                 ([] if sb is not None else _solo_riquadro(k, idx, f, volume))
             fatto.append(f"già presentato, rimando: {p.nome.split(',')[0]}")
             continue
@@ -419,7 +401,8 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
                 continue
             portati.add(k)
             if _altrove(volume, k):
-                nuovi += _rimando(volume, k, idx.entrate[k].nome, idx.entrate[k].righe) + \
+                nuovi += _rimando_persona(idx.entrate[k].nome, volume["persone"][k],
+                                          idx.entrate[k].righe) + \
                     ([] if k in riquadri else _solo_riquadro(k, idx, f, volume))
                 fatto.append(f"già presentato, rimando nella scena: {idx.entrate[k].nome.split(',')[0]}")
                 continue
@@ -441,7 +424,8 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
             blocco = ["", "### Chi si incontra in questo capitolo", ""]
             for k in candidati:
                 if _altrove(volume, k):
-                    blocco += _rimando(volume, k, idx.entrate[k].nome, idx.entrate[k].righe) + \
+                    blocco += _rimando_persona(idx.entrate[k].nome, volume["persone"][k],
+                                               idx.entrate[k].righe) + \
                         _solo_riquadro(k, idx, f, volume)
                     continue
                 if volume is not None:
