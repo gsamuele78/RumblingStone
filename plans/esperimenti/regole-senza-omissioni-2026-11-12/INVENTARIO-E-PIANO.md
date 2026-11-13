@@ -509,3 +509,12 @@ verificabili 374 → 374; banco `muta_ricchezza.py`: violazioni 24 → 57, non
 verificabili 88 → 55. Resta del lotto 5: modificatori razziali alle
 caratteristiche, modelli, avanzamento per dadi vita, mostri dei manuali.
 
+### Lotto 8, seconda parte: capacità speciali, pozioni, pergamene, bacchette (2026-11-13)
+
+`oggetti.toml` ha le capacità speciali di armi, armature e scudi e i prezzi
+delle pergamene; i nomi italiani vengono dal lessico. Una capacità conta solo
+attaccata al nome o al bonus, una bacchetta solo con le cariche scritte.
+Misura: violazioni 37 → 37, non verificabili 374 → 374; valore riconosciuto
+nel Bestiario 224.000 → 267.830 mo; banco, seconda prova: 41 → 57 su 125.
+Resta del lotto 8: bastoni, materiali speciali, tabella PF1e.
+

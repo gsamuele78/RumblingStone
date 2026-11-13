@@ -75,8 +75,44 @@ class TestOggetti(unittest.TestCase):
 
     def test_armature_e_armi_col_solo_potenziamento(self):
         self.assertEqual([mo for _, mo in self.trova("corazza di piastre +1, picca lunga +1")], [1000, 2000])
-        self.assertEqual([mo for _, mo in self.trova("**Scudo Pesante +2 animato**")], [4000])
-        self.assertEqual([mo for _, mo in self.trova("**Spadone Sacrilego +2**")], [8000])
+
+    def test_capacita_speciali_attaccate_al_nome_o_al_bonus(self):
+        # animato +2 e sacrilego +2: (2 + 2)² × 1000 e × 2000; infuocata e affilata: (1 + 2)² × 2000
+        self.assertEqual([mo for _, mo in self.trova("**Scudo Pesante +2 animato**")], [16000])
+        self.assertEqual([mo for _, mo in self.trova("**Spadone Sacrilego +2**")], [32000])
+        self.assertEqual([mo for _, mo in self.trova("spada lunga +1 infuocata e affilata")], [18000])
+        self.assertEqual([mo for _, mo in self.trova("longsword +1 flaming")], [8000])
+        # limite dichiarato: la capacità scritta prima del nome non si legge, resta il potenziamento
+        self.assertEqual([mo for _, mo in self.trova("flaming longsword +1")], [2000])
+
+    def test_una_parola_lontana_non_e_una_capacita(self):
+        # «Cerchio Sacro» è un nome proprio: l'arco resta un +1
+        self.assertEqual([mo for _, mo in self.trova("Arco lungo composito +1 di tasso del Cerchio Sacro")], [2000])
+
+    def test_oltre_il_piu_dieci_resta_il_potenziamento(self):
+        self.assertEqual([mo for _, mo in self.trova("spada lunga +5 vorpal sacrilega")], [50000])
+
+    def test_pozioni_pergamene_e_bacchette(self):
+        self.assertEqual(self.trova("3 pozioni di *cura ferite leggere*"),
+                         [("3 × potion of cure light wounds (potion)", 150)])
+        self.assertEqual(self.trova("due pergamene di palla di fuoco"), [("2 × fireball", 750)])
+        self.assertEqual(self.trova("potion of cure moderate wounds x2"),
+                         [("2 × potion of cure moderate wounds (potion)", 600)])
+        # una bacchetta vale per le cariche scritte; senza cariche non si conta
+        self.assertEqual(self.trova("bacchetta di dardo incantato (20 cariche)"), [("wand of magic missile (1st)", 300)])
+        self.assertEqual(self.trova("bacchetta di dardo incantato"), [])
+        self.assertEqual(self.trova("pozione di un liquido verde"), [])
+
+    def test_nomi_del_lessico(self):
+        self.assertEqual(self.trova("Bracciali dell'arciere superiori, Stivali elfici"),
+                         [("boots of elvenkind", 2500), ("bracers of archery, greater", 25000)])
+
+    def test_tabelle_delle_capacita_e_delle_pergamene(self):
+        c = self.d["capacita"]
+        self.assertEqual((c["arma"]["keen"], c["arma"]["vorpal"], c["armatura"]["animated"]),
+                         ({"bonus": 1}, {"bonus": 5}, {"bonus": 2}))
+        self.assertEqual(c["armatura"]["glamered"], {"mo": 2700})
+        self.assertEqual((self.d["pergamene"]["fireball"], self.d["pergamene"]["cure light wounds"]), (375, 25))
 
     def test_senza_bonus_non_ha_prezzo(self):
         self.assertEqual(self.trova("spada lunga perfetta, armatura completa, 2 pozioni"), [])

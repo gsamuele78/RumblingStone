@@ -642,6 +642,674 @@ armatura = [1000, 4000, 9000, 16000, 25000]
 "winged shield" = 17257
 "wings of flying" = 54000
 
+[oggetti.capacita.arma]
+# SRD, «Table: Melee/Ranged Weapon Special Abilities»: bonus equivalente da sommare al potenziamento, o prezzo in mo
+"anarchic" = { bonus = 2 }
+"axiomatic" = { bonus = 2 }
+"bane" = { bonus = 1 }
+"brilliant energy" = { bonus = 4 }
+"dancing" = { bonus = 4 }
+"defending" = { bonus = 1 }
+"disruption" = { bonus = 2 }
+"distance" = { bonus = 1 }
+"flaming" = { bonus = 1 }
+"flaming burst" = { bonus = 2 }
+"frost" = { bonus = 1 }
+"ghost touch" = { bonus = 1 }
+"holy" = { bonus = 2 }
+"icy burst" = { bonus = 2 }
+"keen" = { bonus = 1 }
+"ki focus" = { bonus = 1 }
+"merciful" = { bonus = 1 }
+"mighty cleaving" = { bonus = 1 }
+"returning" = { bonus = 1 }
+"seeking" = { bonus = 1 }
+"shock" = { bonus = 1 }
+"shocking burst" = { bonus = 2 }
+"speed" = { bonus = 3 }
+"spell storing" = { bonus = 1 }
+"throwing" = { bonus = 1 }
+"thundering" = { bonus = 1 }
+"unholy" = { bonus = 2 }
+"vicious" = { bonus = 1 }
+"vorpal" = { bonus = 5 }
+"wounding" = { bonus = 2 }
+
+[oggetti.capacita.armatura]
+# SRD, «Table: Armor/Shield Special Abilities»: bonus equivalente da sommare al potenziamento, o prezzo in mo
+"acid resistance" = { mo = 18000 }
+"acid resistance, greater" = { mo = 66000 }
+"acid resistance, improved" = { mo = 42000 }
+"animated" = { bonus = 2 }
+"arrow catching" = { bonus = 1 }
+"arrow deflection" = { bonus = 2 }
+"bashing" = { bonus = 1 }
+"blinding" = { bonus = 1 }
+"cold resistance" = { mo = 18000 }
+"cold resistance, greater" = { mo = 66000 }
+"cold resistance, improved" = { mo = 42000 }
+"electricity resistance" = { mo = 18000 }
+"electricity resistance, greater" = { mo = 66000 }
+"electricity resistance, improved" = { mo = 42000 }
+"etherealness" = { mo = 49000 }
+"fire resistance" = { mo = 18000 }
+"fire resistance, greater" = { mo = 66000 }
+"fire resistance, improved" = { mo = 42000 }
+"fortification, heavy" = { bonus = 5 }
+"fortification, light" = { bonus = 1 }
+"fortification, moderate" = { bonus = 3 }
+"ghost touch" = { bonus = 3 }
+"glamered" = { mo = 2700 }
+"invulnerability" = { bonus = 3 }
+"reflecting" = { bonus = 5 }
+"shadow" = { mo = 3750 }
+"shadow, greater" = { mo = 33750 }
+"shadow, improved" = { mo = 15000 }
+"silent moves" = { mo = 3750 }
+"silent moves, greater" = { mo = 33750 }
+"silent moves, improved" = { mo = 15000 }
+"slick" = { mo = 3750 }
+"slick, greater" = { mo = 33750 }
+"slick, improved" = { mo = 15000 }
+"sonic resistance" = { mo = 18000 }
+"sonic resistance, greater" = { mo = 66000 }
+"sonic resistance, improved" = { mo = 42000 }
+"spell resistance (13)" = { bonus = 2 }
+"spell resistance (15)" = { bonus = 3 }
+"spell resistance (17)" = { bonus = 4 }
+"spell resistance (19)" = { bonus = 5 }
+"undead controlling" = { mo = 49000 }
+"wild" = { bonus = 3 }
+
+[oggetti.pergamene]
+# SRD, «Table: Arcane Spell Scrolls» e «Table: Divine Spell Scrolls»: il prezzo più basso (mo intere)
+"acid arrow" = 150
+"acid fog" = 1650
+"acid splash" = 12
+"air walk" = 700
+"alarm" = 25
+"analyze dweomer" = 1650
+"animal growth" = 1125
+"animal messenger" = 150
+"animal shapes" = 3000
+"animal trance" = 150
+"animate dead" = 625
+"animate objects" = 1650
+"animate plants" = 2275
+"animate rope" = 25
+"antilife shell" = 1650
+"antimagic field" = 1650
+"antipathy" = 3000
+"antiplant shell" = 700
+"arcane eye" = 700
+"arcane lock" = 175
+"arcane mark" = 12
+"arcane sight" = 375
+"arcane sight, greater" = 2275
+"astral projection" = 4870
+"atonement" = 3625
+"augury" = 175
+"awaken" = 2375
+"baleful polymorph" = 1125
+"bane" = 25
+"banishment" = 1650
+"barkskin" = 150
+"bear's endurance" = 150
+"bear's endurance, mass" = 1650
+"bestow curse" = 375
+"binding" = 8500
+"black tentacles" = 700
+"blade barrier" = 1650
+"blasphemy" = 2275
+"bless" = 25
+"bless water" = 50
+"bless weapon" = 100
+"blight" = 700
+"blindness/deafness" = 150
+"blink" = 375
+"blur" = 150
+"break enchantment" = 700
+"bull's strength" = 150
+"bull's strength, mass" = 1650
+"burning hands" = 25
+"call lightning" = 375
+"call lightning storm" = 1125
+"calm animals" = 25
+"calm emotions" = 150
+"cat's grace" = 150
+"cat's grace, mass" = 1650
+"cause fear" = 25
+"chain lightning" = 1650
+"changestaff" = 2275
+"charm animal" = 25
+"charm monster" = 700
+"charm monster, mass" = 3000
+"charm person" = 25
+"chill metal" = 150
+"chill touch" = 25
+"circle of death" = 2150
+"clairaudience/clairvoyance" = 375
+"clenched fist" = 3000
+"cloak of chaos" = 3000
+"clone" = 4000
+"cloudkill" = 1125
+"color spray" = 25
+"command" = 25
+"command plants" = 700
+"command undead" = 150
+"command, greater" = 1125
+"commune" = 1625
+"commune with nature" = 1125
+"comprehend languages" = 25
+"cone of cold" = 1125
+"confusion" = 700
+"confusion, lesser" = 50
+"consecrate" = 200
+"contact other plane" = 1125
+"contagion" = 375
+"contingency" = 1650
+"continual flame" = 200
+"control plants" = 3000
+"control undead" = 2275
+"control water" = 700
+"control weather" = 2275
+"control winds" = 1125
+"create food and water" = 375
+"create greater undead" = 3000
+"create undead" = 1650
+"create water" = 12
+"creeping doom" = 2275
+"crushing despair" = 700
+"crushing hand" = 3825
+"cure critical wounds" = 700
+"cure critical wounds, mass" = 3000
+"cure light wounds" = 25
+"cure light wounds, mass" = 1125
+"cure minor wounds" = 12
+"cure moderate wounds" = 150
+"cure moderate wounds, mass" = 1650
+"cure serious wounds" = 375
+"cure serious wounds, mass" = 2275
+"curse water" = 50
+"dancing lights" = 12
+"darkness" = 150
+"darkvision" = 150
+"daylight" = 375
+"daze" = 12
+"daze monster" = 150
+"death knell" = 150
+"death ward" = 700
+"deathwatch" = 25
+"deep slumber" = 375
+"deeper darkness" = 375
+"delay poison" = 150
+"delayed blast fireball" = 2275
+"demand" = 3600
+"desecrate" = 200
+"destruction" = 2275
+"detect animals or plants" = 25
+"detect chaos/evil/good/law" = 25
+"detect magic" = 12
+"detect poison" = 12
+"detect scrying" = 700
+"detect secret doors" = 25
+"detect snares and pits" = 25
+"detect thoughts" = 150
+"detect undead" = 25
+"dictum" = 2275
+"dimension door" = 700
+"dimensional anchor" = 700
+"dimensional lock" = 3000
+"diminish plants" = 375
+"discern lies" = 700
+"discern location" = 3000
+"disguise self" = 25
+"disintegrate" = 1650
+"dismissal" = 700
+"dispel chaos/evil/good/law" = 1125
+"dispel magic" = 375
+"dispel magic, greater" = 1625
+"displacement" = 375
+"disrupt undead" = 12
+"disrupting weapon" = 1125
+"divination" = 725
+"divine favor" = 25
+"divine power" = 700
+"dominate animal" = 375
+"dominate monster" = 3825
+"dominate person" = 1125
+"doom" = 25
+"dream" = 1125
+"eagle's splendor" = 150
+"eagle's splendor, mass" = 1650
+"earthquake" = 3000
+"elemental swarm" = 3825
+"endure elements" = 25
+"energy drain" = 3825
+"enervation" = 700
+"enlarge person" = 25
+"enlarge person, mass" = 700
+"entangle" = 25
+"enthrall" = 150
+"entropic shield" = 25
+"erase" = 25
+"ethereal jaunt" = 2275
+"etherealness" = 3825
+"expeditious retreat" = 25
+"explosive runes" = 375
+"eyebite" = 1650
+"fabricate" = 1125
+"faerie fire" = 25
+"false life" = 150
+"false vision" = 1375
+"fear" = 700
+"feather fall" = 25
+"feeblemind" = 1125
+"find the path" = 1650
+"find traps" = 150
+"finger of death" = 2275
+"fire seeds" = 1650
+"fire shield" = 700
+"fire storm" = 3000
+"fire trap" = 175
+"fireball" = 375
+"flame arrow" = 375
+"flame blade" = 150
+"flame strike" = 1125
+"flaming sphere" = 150
+"flare" = 12
+"flesh to stone" = 1650
+"floating disk" = 25
+"fly" = 375
+"fog cloud" = 150
+"forbiddance" = 4650
+"forcecage" = 23775
+"forceful hand" = 1650
+"foresight" = 3825
+"fox's cunning" = 150
+"fox's cunning, mass" = 1650
+"freedom" = 3825
+"freedom of movement" = 700
+"freezing sphere" = 1650
+"gaseous form" = 375
+"gate" = 8825
+"geas, lesser" = 700
+"geas/quest" = 1650
+"gentle repose" = 150
+"ghost sound" = 12
+"ghoul touch" = 150
+"giant vermin" = 700
+"glibness" = 525
+"glitterdust" = 150
+"globe of invulnerability" = 1650
+"globe of invulnerability, lesser" = 700
+"glyph of warding" = 575
+"glyph of warding, greater" = 1650
+"good hope" = 525
+"goodberry" = 25
+"grasping hand" = 2275
+"grease" = 25
+"guards and wards" = 1650
+"guidance" = 12
+"gust of wind" = 150
+"hallow" = 6125
+"hallucinatory terrain" = 700
+"halt undead" = 375
+"harm" = 1650
+"haste" = 375
+"heal" = 1650
+"heal mount" = 375
+"heal, mass" = 3825
+"heat metal" = 150
+"helping hand" = 375
+"heroes' feast" = 1650
+"heroism" = 375
+"heroism, greater" = 1650
+"hide from animals" = 25
+"hide from undead" = 25
+"hideous laughter" = 150
+"hold animal" = 150
+"hold monster" = 1125
+"hold monster, mass" = 3825
+"hold person" = 150
+"hold person, mass" = 2275
+"hold portal" = 25
+"holy aura" = 3000
+"holy sword" = 700
+"holy word" = 2275
+"horrid wilting" = 3000
+"hypnotic pattern" = 150
+"hypnotism" = 25
+"ice storm" = 700
+"identify" = 125
+"illusory script" = 425
+"illusory wall" = 700
+"imbue with spell ability" = 700
+"implosion" = 3825
+"imprisonment" = 3825
+"incendiary cloud" = 3000
+"inflict critical wounds" = 700
+"inflict critical wounds, mass" = 3000
+"inflict light wounds" = 25
+"inflict light wounds, mass" = 1125
+"inflict minor wounds" = 12
+"inflict moderate wounds" = 150
+"inflict moderate wounds, mass" = 1650
+"inflict serious wounds" = 375
+"inflict serious wounds, mass" = 2275
+"insanity" = 2275
+"insect plague" = 1125
+"instant summons" = 3275
+"interposing hand" = 1125
+"invisibility" = 150
+"invisibility purge" = 375
+"invisibility sphere" = 375
+"invisibility, greater" = 700
+"invisibility, mass" = 2275
+"iron body" = 3000
+"ironwood" = 1650
+"irresistible dance" = 3000
+"jump" = 25
+"keen edge" = 375
+"knock" = 150
+"know direction" = 12
+"legend lore" = 1900
+"levitate" = 150
+"light" = 12
+"lightning bolt" = 375
+"limited wish" = 3775
+"liveoak" = 1650
+"locate creature" = 700
+"locate object" = 150
+"longstrider" = 25
+"lullaby" = 12
+"mage armor" = 25
+"mage hand" = 12
+"mage's disjunction" = 3825
+"mage's faithful hound" = 1125
+"mage's lucubration" = 1650
+"mage's magnificent mansion" = 2275
+"mage's private sanctum" = 1125
+"mage's sword" = 2275
+"magic aura" = 25
+"magic circle against chaos/evil/good/law" = 375
+"magic fang" = 25
+"magic fang, greater" = 375
+"magic jar" = 1125
+"magic missile" = 25
+"magic mouth" = 160
+"magic stone" = 25
+"magic vestment" = 375
+"magic weapon" = 25
+"magic weapon, greater" = 375
+"major creation" = 1125
+"major image" = 375
+"make whole" = 150
+"mark of justice" = 1125
+"maze" = 3000
+"meld into stone" = 375
+"mending" = 12
+"message" = 12
+"meteor swarm" = 3825
+"mind blank" = 3000
+"mind fog" = 1125
+"minor creation" = 700
+"minor image" = 150
+"miracle" = 28825
+"mirage arcana" = 1125
+"mirror image" = 150
+"misdirection" = 150
+"mislead" = 1650
+"mnemonic enhancer" = 700
+"modify memory" = 1000
+"moment of prescience" = 3000
+"mount" = 25
+"move earth" = 1650
+"neutralize poison" = 375
+"nightmare" = 1125
+"nondetection" = 425
+"obscure object" = 150
+"obscuring mist" = 25
+"open/close" = 12
+"overland flight" = 1125
+"owl's wisdom" = 150
+"owl's wisdom, mass" = 1650
+"pass without trace" = 25
+"passwall" = 1125
+"permanency" = 10125
+"permanent image" = 1650
+"persistent image" = 1125
+"phantasmal killer" = 700
+"phantom steed" = 375
+"phantom trap" = 200
+"phase door" = 2275
+"planar ally" = 2400
+"planar ally, greater" = 5500
+"planar ally, lesser" = 1200
+"planar binding" = 1650
+"planar binding, greater" = 3000
+"planar binding, lesser" = 1125
+"plane shift" = 1125
+"plant growth" = 375
+"poison" = 700
+"polar ray" = 3000
+"polymorph" = 700
+"polymorph any object" = 3000
+"power word blind" = 2275
+"power word kill" = 3825
+"power word stun" = 3000
+"prayer" = 375
+"prestidigitation" = 12
+"prismatic sphere" = 3825
+"prismatic spray" = 2275
+"prismatic wall" = 3000
+"produce flame" = 25
+"programmed image" = 1675
+"project image" = 2280
+"protection from arrows" = 150
+"protection from chaos/evil/good/law" = 25
+"protection from energy" = 375
+"protection from spells" = 3500
+"prying eyes" = 1125
+"prying eyes, greater" = 3000
+"purify food and drink" = 12
+"pyrotechnics" = 150
+"quench" = 375
+"rage" = 375
+"rainbow pattern" = 700
+"raise dead" = 6125
+"ray of enfeeblement" = 25
+"ray of exhaustion" = 375
+"ray of frost" = 12
+"read magic" = 12
+"reduce animal" = 150
+"reduce person" = 25
+"reduce person, mass" = 700
+"refuge" = 3775
+"regenerate" = 2275
+"reincarnate" = 700
+"remove blindness/deafness" = 375
+"remove curse" = 375
+"remove disease" = 375
+"remove fear" = 25
+"remove paralysis" = 150
+"repel metal or stone" = 3000
+"repel vermin" = 700
+"repel wood" = 1650
+"repulsion" = 1650
+"resilient sphere" = 700
+"resist energy" = 150
+"resistance" = 12
+"restoration" = 800
+"restoration, greater" = 4775
+"restoration, lesser" = 150
+"resurrection" = 12275
+"reverse gravity" = 2275
+"righteous might" = 1125
+"rope trick" = 150
+"rusting grasp" = 700
+"sanctuary" = 25
+"scare" = 150
+"scintillating pattern" = 3000
+"scorching ray" = 150
+"screen" = 3000
+"scrying" = 700
+"scrying, greater" = 2275
+"sculpt sound" = 525
+"searing light" = 375
+"secret chest" = 1125
+"secret page" = 375
+"secure shelter" = 700
+"see invisibility" = 150
+"seeming" = 1125
+"sending" = 700
+"sepia snake sigil" = 875
+"sequester" = 2275
+"shades" = 3825
+"shadow conjuration" = 700
+"shadow conjuration, greater" = 2275
+"shadow evocation" = 1125
+"shadow evocation, greater" = 3000
+"shadow walk" = 1650
+"shambler" = 3825
+"shapechange" = 3825
+"shatter" = 150
+"shield" = 25
+"shield of faith" = 25
+"shield of law" = 3000
+"shield other" = 150
+"shillelagh" = 25
+"shocking grasp" = 25
+"shout" = 700
+"shout, greater" = 3000
+"shrink item" = 375
+"silence" = 150
+"silent image" = 25
+"simulacrum" = 7275
+"slay living" = 1125
+"sleep" = 25
+"sleet storm" = 375
+"slow" = 375
+"snare" = 150
+"soften earth and stone" = 150
+"solid fog" = 700
+"song of discord" = 1625
+"soul bind" = 3825
+"sound burst" = 150
+"speak with animals" = 25
+"speak with dead" = 375
+"speak with plants" = 150
+"spectral hand" = 150
+"spell immunity" = 700
+"spell immunity, greater" = 3000
+"spell resistance" = 1125
+"spell turning" = 2275
+"spellstaff" = 1650
+"spider climb" = 150
+"spike growth" = 375
+"spike stones" = 700
+"spiritual weapon" = 150
+"statue" = 2275
+"status" = 150
+"stinking cloud" = 375
+"stone shape" = 375
+"stone tell" = 1650
+"stone to flesh" = 1650
+"stoneskin" = 950
+"storm of vengeance" = 3825
+"suggestion" = 375
+"suggestion, mass" = 1650
+"summon instrument" = 12
+"summon monster i" = 25
+"summon monster ii" = 150
+"summon monster iii" = 375
+"summon monster iv" = 700
+"summon monster ix" = 3825
+"summon monster v" = 1125
+"summon monster vi" = 1650
+"summon monster vii" = 2275
+"summon monster viii" = 3000
+"summon nature's ally i" = 25
+"summon nature's ally ii" = 150
+"summon nature's ally iii" = 375
+"summon nature's ally iv" = 700
+"summon nature's ally ix" = 3825
+"summon nature's ally v" = 1125
+"summon nature's ally vi" = 1650
+"summon nature's ally vii" = 2275
+"summon nature's ally viii" = 3000
+"summon swarm" = 150
+"sunbeam" = 2275
+"sunburst" = 3000
+"symbol of death" = 8000
+"symbol of fear" = 2650
+"symbol of insanity" = 8000
+"symbol of pain" = 2125
+"symbol of persuasion" = 6650
+"symbol of sleep" = 2125
+"symbol of stunning" = 7275
+"symbol of weakness" = 7275
+"sympathetic vibration" = 2400
+"sympathy" = 4500
+"telekinesis" = 1125
+"telekinetic sphere" = 3000
+"telepathic bond" = 1125
+"teleport" = 1125
+"teleport object" = 2275
+"teleport, greater" = 2275
+"teleportation circle" = 4825
+"temporal stasis" = 3500
+"time stop" = 3825
+"tiny hut" = 375
+"tongues" = 375
+"touch of fatigue" = 12
+"touch of idiocy" = 150
+"transformation" = 1950
+"transmute metal to wood" = 2275
+"transmute mud to rock" = 1125
+"transmute rock to mud" = 1125
+"transport via plants" = 1650
+"trap the soul" = 13000
+"tree shape" = 150
+"tree stride" = 700
+"true resurrection" = 28825
+"true seeing" = 1375
+"true strike" = 25
+"undeath to death" = 2150
+"undetectable alignment" = 50
+"unhallow" = 6125
+"unholy aura" = 3000
+"unseen servant" = 25
+"vampiric touch" = 375
+"veil" = 1650
+"ventriloquism" = 25
+"virtue" = 12
+"vision" = 2775
+"wail of the banshee" = 3825
+"wall of fire" = 700
+"wall of force" = 1125
+"wall of ice" = 700
+"wall of iron" = 1700
+"wall of stone" = 1125
+"wall of thorns" = 1125
+"warp wood" = 150
+"water breathing" = 375
+"water walk" = 375
+"waves of exhaustion" = 2275
+"waves of fatigue" = 1125
+"web" = 150
+"weird" = 3825
+"whirlwind" = 3000
+"whispering wind" = 150
+"wind walk" = 1650
+"wind wall" = 375
+"wish" = 28825
+"wood shape" = 150
+"word of chaos" = 2275
+"word of recall" = 1650
+"zone of silence" = 1000
+"zone of truth" = 150
+
 # come una scheda scrive un oggetto (espressioni regolari; non vengono dall'SRD). «N» è il bonus letto.
 [[oggetti.nomi]]
 nome = "ring of protection +N"

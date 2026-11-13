@@ -1743,10 +1743,70 @@ def _righe_dell_equipaggiamento(testo: str) -> "list[tuple[int, str]]":
     return out
 
 
+_PREFISSI_OGGETTO = (("ring of ", "anell[oi]"), ("rod of ", "vergh?[ae]"), ("staff of ", "baston[ei]"))
+_NUMERI_IT = {"un": 1, "una": 1, "uno": 1, "due": 2, "tre": 3, "quattro": 4, "cinque": 5, "sei": 6}
+_QUANTI = r"(?:(\d+|un[ao]?|due|tre|quattro|cinque|sei)\s+)?"
+_PREP = r"(?:di|del|dello|della|dei|degli|delle|dell['’]|of)\s*"
+
+
+def _schema_del_nome(nome: str) -> str:
+    """Il nome di un oggetto come espressione regolare: spazi liberi, la virgola del lessico facoltativa."""
+    return r"\s+".join(re.escape(x) for x in nome.replace(",", " ").split()).replace("'", "['’]")
+
+
+@lru_cache(maxsize=None)
+def _oggetti_del_lessico(sistema: str) -> "tuple[tuple[re.Pattern, str], ...]":
+    """(schema, chiave del prezzo senza «+N») dei nomi italiani e inglesi del lessico che hanno un
+    prezzo nel plugin. Un anello, una verga o un bastone che il lessico chiama col solo effetto
+    («Protezione») vuole davanti la parola dell'oggetto."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    prezzi = S.dati(sistema, "creature.costruzione")["oggetti"]["prezzi"]
+    basi = {re.sub(r"\s*\+\d+$", "", k) for k in prezzi}
+    out = []
+    for v in LR.tabella_35():
+        if v["tipo"] != "oggetto magico":
+            continue
+        en = v["srd35"].lower().replace("’", "'").strip()
+        nomi = [n for n in [v["it"], v["srd35"]] + (v.get("varianti") or "").split("|") if len(n) >= 6]
+        if en in basi:
+            out += [(re.compile(rf"(?<!\w){_schema_del_nome(n)}(?!\w)", re.I), en) for n in nomi]
+            continue
+        for prefisso, parola in _PREFISSI_OGGETTO:
+            if prefisso + en in basi:
+                out += [(re.compile(rf"(?<!\w)(?:{parola}|{prefisso.split()[0]}s?)\s+{_PREP}{_schema_del_nome(n)}(?!\w)",
+                                    re.I), prefisso + en) for n in nomi]
+    return tuple(sorted(out, key=lambda x: -len(x[0].pattern)))
+
+
+@lru_cache(maxsize=None)
+def _capacita_del_lessico(sistema: str) -> "dict[str, tuple[tuple[re.Pattern, dict], ...]]":
+    """Per armi e armature, (schema, {bonus} o {mo}) delle capacità speciali coi nomi del lessico.
+    L'ultima vocale è libera: «affilata» e «affilato» sono la stessa capacità."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    cap = S.dati(sistema, "creature.costruzione")["oggetti"].get("capacita") or {}
+    nomi: dict[str, set[str]] = {}
+    for v in LR.tabella_35():
+        if v["tipo"] in ("oggetto magico", "proprietà magica"):
+            en = re.sub(r"\s*\((?:ex|su|sp)\)$", "", v["srd35"].lower().replace("’", "'").strip())
+            nomi.setdefault(en, {en}).update(n.lower() for n in [v["it"]] + (v.get("varianti") or "").split("|") if n)
+    out = {}
+    for che, voci in cap.items():
+        schemi = []
+        for en, valore in voci.items():
+            for n in nomi.get(en, {en}):
+                s = _schema_del_nome(n)
+                s = re.sub(r"[aoei]$", "[aoei]", s) if n != en else s
+                schemi.append((re.compile(rf"(?<!\w){s}(?!\w)", re.I), valore, en))
+        out[che] = tuple(sorted(schemi, key=lambda x: -len(x[0].pattern)))
+    return out
+
+
 def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, int]]":
-    """Gli oggetti della riga che hanno un prezzo certo: quelli di `[[oggetti.nomi]]`, e armature,
-    scudi e armi «+N» (il solo bonus di potenziamento: una capacità speciale costa di più e non si
-    conta). Ogni tratto della riga conta una volta."""
+    """Gli oggetti della riga che hanno un prezzo certo: quelli di `[[oggetti.nomi]]` e del lessico,
+    armature, scudi e armi «+N» con le capacità speciali scritte accanto, pozioni e pergamene di
+    un incantesimo, bacchette con le cariche scritte. Ogni tratto della riga conta una volta."""
     from dmcore import classe_armatura as CA
     from dmcore import sistemi as S
     trovati, presi = [], []
@@ -1754,22 +1814,76 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
     def libero(a: int, b: int) -> bool:
         return all(b <= x or a >= y for x, y in presi)
 
+    def quanti(parola: "str | None") -> int:
+        return 1 if not parola else int(parola) if parola.isdigit() else _NUMERI_IT.get(parola.lower(), 1)
+
     for voce in d["nomi"]:
         for m in re.finditer(voce["schema"], riga, re.I):
             nome = voce["nome"].replace("N", m.group(1)) if "N" in voce["nome"] else voce["nome"]
             if nome in d["prezzi"] and libero(*m.span()):
                 presi.append(m.span())
                 trovati.append((nome, d["prezzi"][nome]))
+    # armature, scudi e armi: potenziamento più le capacità speciali del tratto fino alla virgola
     armature, scudi = CA.tabelle(sistema)
     armi = [n for a in S.dati(sistema, "creature.armi").get("armi", []) for n in a["nomi"]]
+    capacita = _capacita_del_lessico(sistema)
     for nomi, tabella, che in ((list(armature) + list(scudi), d["potenziamento"]["armatura"], "armatura"),
                                (armi, d["potenziamento"]["arma"], "arma")):
         for nome in sorted(set(nomi), key=len, reverse=True):
-            for m in re.finditer(rf"(?<!\w){re.escape(nome)}(?!\w)(?:\s+[^\W\d]+){{0,2}}\s*\+(\d+)(?!\d)", riga, re.I):
-                n = int(m.group(1))
-                if 1 <= n <= len(tabella) and libero(*m.span()):
-                    presi.append(m.span())
-                    trovati.append((f"{nome} +{n} ({che})", tabella[n - 1]))
+            for m in re.finditer(rf"(?<!\w){re.escape(nome)}(?!\w)((?:\s+[^\W\d]+){{0,3}})\s*\+(\d+)(?!\d)([^,;|()]*)",
+                                 riga, re.I):
+                n = int(m.group(2))
+                if not (1 <= n <= len(tabella) and libero(*m.span())):
+                    continue
+                # una capacità conta solo se sta attaccata al nome o al bonus («spadone sacrilego +2»,
+                # «spada lunga +1 infuocata e affilata»): più in là può essere un nome proprio
+                bonus, mo, dette = 0, 0, []
+                for tratto in (m.group(1), m.group(3)):
+                    resto = tratto
+                    while True:
+                        resto = re.sub(r"^\s*(?:e\s+|and\s+)?", "", resto)
+                        c = next(((s.match(resto), v, en) for s, v, en in capacita.get(che, ()) if s.match(resto)), None)
+                        if c is None:
+                            break
+                        resto = resto[c[0].end():]
+                        bonus += c[1].get("bonus", 0)
+                        mo += c[1].get("mo", 0)
+                        dette.append(c[2])
+                if n + bonus > len(tabella):
+                    bonus, mo, dette = 0, 0, []     # oltre la tabella: resta il solo potenziamento
+                presi.append(m.span())
+                trovati.append((f"{nome} +{n}{''.join(' ' + x for x in dette)} ({che})", tabella[n + bonus - 1] + mo))
+    # pozioni e pergamene di un incantesimo, bacchette con le cariche scritte
+    incantesimi = _incantesimi_it()
+    for parole, prefisso, tabella in ((r"pozion[ei]|oli[oi]|potions?|oils?", "potion of ", d["prezzi"]),
+                                      (r"pergamen[ae]|scrolls?", "", d.get("pergamene", {})),
+                                      (r"bacchett[ae]|wands?", "wand of ", d["prezzi"])):
+        for m in re.finditer(rf"(?<!\w){_QUANTI}(?:{parole})\s+{_PREP}[*_]*([^*_,;|()×]+?)[*_]*\s*"
+                             rf"(?:[×x]\s*(\d+)\s*)?(?:\((\d+)\s+cariche\)|\(|[,;|.]|$)", riga, re.I):
+            import lessico_regole as LR
+            detto = m.group(2).strip()
+            en = incantesimi.get(LR.norma(detto), detto).lower().replace("’", "'")
+            # più voci per lo stesso incantesimo (livello dell'incantatore diverso): vale la meno cara
+            chiavi = sorted((k for k in tabella if k == prefisso + en or k.startswith(f"{prefisso}{en} (")),
+                            key=lambda k: tabella[k])
+            if not chiavi or not libero(*m.span()):
+                continue
+            if prefisso == "wand of ":
+                if not m.group(4):
+                    continue
+                mo, n = tabella[chiavi[0]] * min(int(m.group(4)), 50) // 50, 1
+            else:
+                mo, n = tabella[chiavi[0]], quanti(m.group(1)) * int(m.group(3) or 1)
+            presi.append(m.span())
+            trovati.append((f"{n} × {chiavi[0]}" if n > 1 else chiavi[0], mo * n))
+    # gli altri oggetti che il lessico nomina
+    for schema, chiave in _oggetti_del_lessico(sistema):
+        for m in schema.finditer(riga):
+            piu = re.match(r"\s*\+(\d+)", riga[m.end():])
+            nome = f"{chiave} +{piu.group(1)}" if piu and f"{chiave} +{piu.group(1)}" in d["prezzi"] else chiave
+            if nome in d["prezzi"] and libero(*m.span()):
+                presi.append(m.span())
+                trovati.append((nome, d["prezzi"][nome]))
     return trovati
 
 
@@ -1787,7 +1901,9 @@ def _tipo_en(tipo: str) -> str:
 def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     """Il valore dell'equipaggiamento contro quello di un PNG del suo livello (ADR-0126, lotto 8).
 
-    Si sommano solo gli oggetti dal prezzo certo, quindi la somma è un minimo:
+    Si sommano solo gli oggetti dal prezzo certo (oggetti con un nome del
+    lessico, armi e armature «+N» con le capacità speciali attaccate, pozioni,
+    pergamene, bacchette con le cariche scritte), quindi la somma è un minimo:
     se il minimo supera il valore della tabella dei PNG per il livello, la
     scheda ha più equipaggiamento di quello che il suo GS conta. Il livello è
     quello effettivo: dadi vita più il modificatore di livello della creatura
