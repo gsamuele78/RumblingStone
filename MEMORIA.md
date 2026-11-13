@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11 (prima parte): giavellotti di Z… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5, prima parte: la creatura base. Capacità `creature.base` (409… | In PR |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
 | 2026-11-13 | STANDARD-STAMPA | Misura delle ripetizioni nei booklet (domanda del DM del 2026-11-12: «siamo sic… | ✅ `misura_stampa.parole_ripetute` (w-shingling, Broder 1997: passi di almeno 8 parole identiche, dalla seconda volta, testatine escluse), in prova; 20 booklet… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-ter: l'avanzamento d'incantatore delle classi di prestigio.… | ✅ liste troppo alte messe apposta: da 0 a 12 su 12; 6 controlli, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Trovato a mano e non… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 88 voci, l'ultima MS-0088 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 89 voci, l'ultima MS-0089 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
