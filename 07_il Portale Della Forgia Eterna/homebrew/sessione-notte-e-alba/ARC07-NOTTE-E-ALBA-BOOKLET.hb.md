@@ -524,7 +524,7 @@ ___
 
 **ATTACCO**
 ___
-Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
+Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
 
 **STATISTICHE**
 ___
@@ -555,7 +555,7 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
+**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi)
 
 **DIFESA**
 ___
@@ -6264,7 +6264,7 @@ ___
 
 **ATTACCO**
 ___
-Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
+Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
 
 **STATISTICHE**
 ___
@@ -6288,7 +6288,7 @@ La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta n
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
+**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi)
 
 **DIFESA**
 ___

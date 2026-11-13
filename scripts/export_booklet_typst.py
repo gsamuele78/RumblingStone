@@ -911,7 +911,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
-    "schede", "chi_si_incontra",
+    "schede", "chi_si_incontra", "pagina",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -997,6 +997,9 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
         extra.append(f'  carta: {json.dumps(carta, ensure_ascii=False)},')
     if formato != "a4":
         extra.append(f'  formato: {json.dumps(formato, ensure_ascii=False)},')
+    # `"pagina": "fitta"`: corpo e margini di un AP stampato (solo in A4)
+    if man.get("pagina") == "fitta":
+        extra.append('  pagina: "fitta",')
     return [
         f'#import "{typ_path(TEMA)}": *',
         f'#import "{typ_path(SCHEDA_PG)}": scheda',
@@ -1223,7 +1226,11 @@ def compila(motore: str, typ: Path, pdf: Path,
     che il comando promette. `motore` è quello di `typst_motore.esigi()`:
     lo decide lui, qui serve solo a dire che il controllo è già stato fatto.
     """
-    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI, pdfua=True)
+    # Solo i font del repo (scripts/fonts/ più quelli che typst porta con sé),
+    # come misura_stampa e varianti_stampa: emoji e simboli non cadono più su
+    # un font della macchina che compila (ADR-0130).
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI,
+                             solo_font_del_repo=True, pdfua=True)
     if esito_completo is not None:
         esito_completo.append(e)
     return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag

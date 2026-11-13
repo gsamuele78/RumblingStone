@@ -28,12 +28,16 @@ TESTA = ('#import "/scripts/typst/tema-rumblingstone.typ": *\n'
          '  capitolo: "Prova", apparato: false)\n')
 
 
-def _compila(corpo: str, pdfua: bool = True) -> tm.Esito:
+def _compila(corpo: str, pdfua: bool = True, solo_repo: bool = False,
+             file: dict[str, str] | None = None) -> tuple[tm.Esito, bytes]:
     with tempfile.TemporaryDirectory(dir=REPO) as d:
-        typ = Path(d) / "p.typ"
+        for nome, testo in (file or {}).items():
+            (Path(d) / nome).write_text(testo, encoding="utf-8")
+        typ, pdf = Path(d) / "p.typ", Path(d) / "p.pdf"
         typ.write_text(TESTA + corpo, encoding="utf-8")
-        return tm.compila(typ, Path(d) / "p.pdf", root=REPO, font=ex.FONTS,
-                          pacchetti=ex.PACCHETTI, pdfua=pdfua)
+        e = tm.compila(typ, pdf, root=REPO, font=ex.FONTS, pacchetti=ex.PACCHETTI,
+                       solo_font_del_repo=solo_repo, pdfua=pdfua)
+        return e, (pdf.read_bytes() if pdf.exists() else b"")
 
 
 class TestTitoliSenzaSalti(unittest.TestCase):
@@ -67,20 +71,45 @@ class TestIlTemaProducePdfUa(unittest.TestCase):
         corpo = ('#capitolo-aperto("I · Apertura", none)\n'
                  '#heading(level: 2)[Chi si incontra] <come-3>\n'
                  'Testo.\n== Sezione\nAltro testo.\n')
-        e = _compila(corpo)
+        e, _ = _compila(corpo)
         self.assertTrue(e.ok, e.errore)
         self.assertTrue(e.pdfua, e.motivo_pdfua)
 
     def test_hide_del_titolo_era_il_difetto(self):
         """Il modo di prima: typst lo rifiuta, e l'esito lo dice invece di fallire."""
-        e = _compila("#hide(heading(level: 1)[Nascosto])\n== Dopo\nTesto.\n")
+        e, _ = _compila("#hide(heading(level: 1)[Nascosto])\n== Dopo\nTesto.\n")
         self.assertTrue(e.ok, e.errore)
         self.assertFalse(e.pdfua)
         self.assertIn("first heading", e.motivo_pdfua)
 
     def test_senza_pdfua_si_compila_come_prima(self):
-        e = _compila("= Uno\nTesto.\n", pdfua=False)
+        e, _ = _compila("= Uno\nTesto.\n", pdfua=False)
         self.assertTrue(e.ok and not e.pdfua and not e.motivo_pdfua)
+
+
+SVG_LEGENDA = ('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40">'
+               '<text x="5" y="25" font-family="Georgia,serif" font-size="14">'
+               '⏳ Forgia ▸ DC 24 🔮</text></svg>')
+
+
+@unittest.skipUnless(tm.disponibile(), "typst assente")
+class TestEmojiDaiFontDelRepo(unittest.TestCase):
+    """ADR-0130: emoji e simboli escono dai font del repo, anche dentro le SVG."""
+
+    def test_emoji_e_simboli_coi_soli_font_del_repo(self):
+        corpo = ("= Prova\n⚔️ 🛡️ 🔮 ⏳ ⬦ ► ▸ ☐ ① ★ ⟺ ⟶ testo.\n"
+                 '#image("mappa.svg", alt: "Legenda")\n')
+        e, pdf = _compila(corpo, solo_repo=True, file={"mappa.svg": SVG_LEGENDA})
+        self.assertTrue(e.ok, e.errore)
+        self.assertTrue(e.pdfua, e.motivo_pdfua)
+        self.assertIn(b"NotoColorEmoji", pdf)
+        for di_sistema in (b"Unifont", b"FreeSans", b"Inter-", b"Liberation"):
+            self.assertNotIn(di_sistema, pdf)
+
+    def test_l_esportatore_usa_i_soli_font_del_repo(self):
+        sorgente = (REPO / "scripts/export_booklet_typst.py").read_text(encoding="utf-8")
+        self.assertIn("solo_font_del_repo=True", sorgente)
+        self.assertTrue((REPO / "scripts/fonts/NotoColorEmoji.ttf").exists())
 
 
 @unittest.skipUnless(tm.disponibile(), "typst assente")

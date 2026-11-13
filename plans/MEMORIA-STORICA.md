@@ -1035,8 +1035,30 @@ repo scritto con altre parole.
 - **Testo:** Prima parte del lotto 5 del programma «regole senza omissioni». Capacità `creature.base` nel plugin 3.5: 409 creature dell'SRD con dadi vita razziali, armatura naturale, attacchi naturali col dado, modificatore di livello; più la tabella dei draghi veri per taglia. `verifica_scheda` confronta dadi vita razziali, armatura naturale e dado degli attacchi naturali con la base, solo dove la scheda la dichiara nella fonte. Bestiario: non verificabili 321 → 297, violazioni 72 → 73.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** i blocchi dell'SRD in cache sono tabelle HTML dentro il Markdown: con più colonne i nomi stanno nella prima riga, con una creatura sola la tabella parte dal tipo e il nome è il titolo sopra (senza questo caso se ne leggevano 157 su 409). Dedurre la base dal sottotipo dava due violazioni false sul flind, che è «umanoide (gnoll)». Il colore del drago deve stare accanto alla parola «drago»: la lucertola del tuono «progenie azzurra di Tiamat (drago)» è di tipo drago ma non è un drago vero, e con il colore sciolto veniva presa. Le righe `tipo:` in italiano («Drago Enorme … drago nero») vanno lette prima di tradurre il tipo, altrimenti «drago nero» diventa «dragon nero» e non si riconosce. Nel conto del danno il nome `base` era già una variabile locale: il parametro si chiama `creatura`. Il test `test_nessuna_capacita_pf1e_resta_non_supportata` non lascia dichiarare `non_supportato` in PF1e, e i sistemi di prova in `scripts/tests/dati/` devono coprire ogni capacità del catalogo: per questo i dati PF1e (1138 creature dei Bestiary 1-4 di PSRD-Data) sono entrati nella stessa PR.
+### MS-0089 · 2026-11-13 · ADR-0130: le emoji del volume vengono dal repo
 
-### MS-0089 · 2026-11-13 · Decisioni del DM sulle schede: tagli, prestigio, talenti, Zog'tar
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0130 ADR-0129 ADR-0020
+- **Temi:** stampa booklet font accessibilita document-ai
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0130: le emoji del volume da stampa vengono dal repo» in `plans/CHANGELOG.md`
+- **Testo:** Seconda tecnica della richiesta del DM del 2026-11-13. Il DM vuole le emoji a colori, con i font nel repo se la licenza è compatibile e lo standard di fatto della community, senza problemi per typst e veraPDF. Su main 80 caratteri (3.172 occorrenze) uscivano da font di sistema: Noto Color Emoji, FreeSans, Inter, Unifont. Unifont lasciava non conformi il Palio e Terros (7 controlli 7.21.5-1). Con Noto Color Emoji 2.051 CBDT nel repo e l'export coi soli font del repo: veraPDF 18/20 → 20/20, 7 → 0; pagine uguali (985); 83 pagine con ► e ⬦ in un altro tratto.
+- **Trovato nel repo:** `plans/adr/ADR-0130-le-emoji-del-volume-vengono-dal-repo.md` · `plans/esperimenti/glifi-2026-11-13/MISURE.md` · `scripts/fonts/README.md`
+- **Solo qui:** la prima scelta era il Noto vettoriale COLRv1 di Google Fonts (5 MB, tolta la tabella SVG): typst non disegna i glifi COLR dentro le immagini SVG, «⏳» spariva dalla legenda della Sala della Forgia e due booklet uscivano non conformi. Noto Sans Symbols 2 intero cambiava le etichette SVG del Palio («DC 2 4» con le cifre di un altro font); ridotto ai soli simboli rompeva «⏳»; i font interni di typst coprono già i 13 simboli. GitHub raw di googlefonts/noto-emoji e jsDelivr sono bloccati nel container: il CBDT viene da deb.debian.org (sha256 del .deb 03141cd5…). Una corsa che esporta e misura i 20 booklet in un solo comando fa uccidere il worker per memoria (exit 137): va in uno script in background. Twemoji Mozilla passa veraPDF ma cambia lo stile; OpenMoji è CC BY-SA, incompatibile; le icone (game-icons.net, Material) sono una scelta di stile al DM, con card aperta (consigliata: Noto a colori).
+
+### MS-0090 · 2026-11-13 · Serata più corta con la pagina fitta, e le copie rimesse
+
+- **Data:** 2026-11-13
+- **PR:** #399
+- **ADR:** ADR-0122
+- **Temi:** stampa booklet misure
+- **Origine:** voce scritta con la PR, per la seconda riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
+- **Testo:** Alla card «quali copie togliere» il DM ha risposto: pagine più fitte, schede d'entrata ripetute e copie del corpo, insieme. Fatte tutte e tre, il DM ha visto il PDF e ha bocciato le copie una volta sola: le schede di PNG, mostri, villain e gregari si leggono peggio accorpate. Resta una chiave di manifest, `"pagina": "fitta"`: A4 con corpo 9,6 pt (quello dell'A5), interlinea 0,56em, margini alto e basso più stretti, spenta per tutti gli altri booklet. Serata «La Notte e l'Alba»: 125 → 114 pagine, 561 → 614 parole per pagina, schede e righe per il tavolo in ogni scena come prima.
+- **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` (`pagina`) · `scripts/schemas/booklet_manifest.schema.json` · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
+- **Solo qui:** la chiave `"copie": "una-volta"` (riga per il tavolo e scheda in breve una volta sola, poi un rimando con le pagine) è stata scritta, misurata e tolta nella stessa PR: non accorciava (113 pagine con e senza, a margini laterali stretti) e portava i numeri di Zog'tar da 5 a 13 pagine di distanza in mediana. Non riproporla senza una misura diversa. I margini laterali stretti (1,8 e 1,3 cm) facevano 113 pagine ma `misura_stampa` contava 2.337 righe fuori margine e 12 emoji delle mappe salivano sopra i 2 cm, a 72 dpi: tornati a 2,0 e 1,5 cm come gli altri booklet, al prezzo di una pagina. La stima di «circa 100 pagine» data sulla card era sbagliata: tabelle, schede, mappe e scene a pagina nuova non si stringono con il corpo. La misura delle ripetizioni contava come copia la testatina dei capitoli corti: corretta, i riferimenti scendono a 1,1% e 0,4%. Nel corpo della serata restano circa 1.100 parole di frasi dette due volte fra regia e scene, non toccate, e due schede intere di Skullcrusher (capitolo II e capitolo X).
+
+
+### MS-0091 · 2026-11-13 · Decisioni del DM sulle schede: tagli, prestigio, talenti, Zog'tar
 
 - **Data:** 2026-11-13
 - **PR:** —

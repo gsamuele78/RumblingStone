@@ -18,6 +18,8 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Stampa: le emoji dei booklet PDF escono a colori dal font Noto Color Emoji, ora nel repo (`scripts/fonts/`, OFL 1.1), e `export_booklet_typst.py` non usa più i font della macchina che compila (ADR-0130). Il volume è uguale su ogni macchina, e i 20 booklet passano PDF/UA-1 con veraPDF (erano 18).
+- Booklet: chiave nuova nel manifest, solo per la stampa. `"pagina": "fitta"` compone l'A4 con corpo 9,6 pt, interlinea 0,56em e margini alto e basso più stretti (quelli laterali restano 2,0 e 1,5 cm). Senza la chiave non cambia niente. Il booklet di serata «La Notte e l'Alba» la usa: da 125 a 114 pagine, con le schede e le righe per il tavolo dove erano.
 - Stampa: `misura_stampa.py` conta le parole ripetute di ogni booklet (`parole_ripetute`, `quota_parole_ripetute`, colonna `ripet`): le parole che stanno in un passo di almeno 8 parole già stampato prima, contate dalla seconda volta, testatine escluse. Misura in prova: `--check` avvisa e non ferma. `--dettaglio` elenca i passi con la pagina della copia e quella della prima volta.
 - Le tattiche contro la scheda (ADR-0125, regola S8, canale testing): `python3 scripts/coerenza_campagna.py fatti DIR... --tattiche` segnala un incantesimo (in corsivo) o un talento che le «Tattiche» di una scheda del Bestiario nominano e la scheda non ha. Misura in sola lettura, anche via MCP; non legge i file con più schede né gli incantesimi scritti senza corsivo.
 - Booklet di serata: la scheda da tavolo in testa alla scena (`<!-- scheda-da-tavolo -->` nel master): chi c'è, che cosa si tira, tattiche, sviluppo, tesoro e dove guardare, nella pagina del titolo; esce solo nei capitoli presi per `sezioni`, non nei volumi che stampano il master intero. Prime sei: Scene 6-11 di ARC-07 DEF-4.
@@ -189,6 +191,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
 ### Corretto
+- Stampa: `misura_stampa.parole_ripetute` toglie le testatine riga per riga. Nei capitoli di poche pagine la testatina contava come copia; i valori del registro scendono di poco (serata 12,3% → 11,8% a parità di testo).
 - I titoli ricomposti dal tema Typst perdevano l'apostrofo («LALBA» per «L'ALBA»): `to-string` ora rende gli apostrofi.
 - `coerenza_campagna fatti --state` (ADR-0125): se `state.yaml` non ha `march_clock.giorno_arrivo`, S1 finisce fra i `non_verificabili` invece di tacere; `ancore_state()` legge `STATE` alla chiamata, non all'import (il test della CLI ora prova davvero lo state indicato). Dalla revisione automatica della #379.
 - `dmcore.talenti.manca` (ADR-0124, D1 e D2): una classe 3.5 vale col nome inglese e con quello italiano, quindi un guerriero generato prende Specializzazione in un'Arma e Arma Focalizzata Superiore; il «livello del personaggio» di Leadership sono i dadi vita totali (`Stato.dv`). Nelle creature generate 3.5 cambiano solo questi talenti (Autorità ai comandanti, Arma Specializzata ai guerrieri, Padronanza degli Incantesimi al mago): impronta delle creature aggiornata.
