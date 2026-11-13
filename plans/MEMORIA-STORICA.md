@@ -1072,7 +1072,7 @@ repo scritto con altre parole.
 ### MS-0092 · 2026-11-13 · Pagina fitta: le schede tengono l'interlinea di prima
 
 - **Data:** 2026-11-13
-- **PR:** #401
+- **PR:** #402
 - **ADR:** ADR-0122
 - **Temi:** stampa booklet schede
 - **Origine:** voce scritta con la PR, per la terza riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
