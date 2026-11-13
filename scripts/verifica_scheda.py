@@ -38,6 +38,9 @@ Scopo
     difese    resistenza agli incantesimi (razza + livelli di classe, monaco) e
              riduzione del danno del barbaro (tabella `[difese]` della capacità
              `creature.costruzione`; ADR-0126, lotto 7)
+    linguaggi i linguaggi automatici della razza e il Druidico del druido nella riga
+             dei linguaggi (tabella `[linguaggi]` della capacità
+             `creature.costruzione`; ADR-0126, lotto 7)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -1667,6 +1670,54 @@ def _immunita_del_tipo(s, dati: dict, righe: "list[tuple[int, str]]", base: dict
                       f"(basta «tratti del tipo»; SRD, tratti dei tipi)"}], []
 
 
+_RIGA_LINGUAGGI = re.compile(r"(?:^|[.·|]\s*)\W*(?:linguaggi|lingue|languages)\b\W*:?\**\s*([^·|\n]*)", re.I)
+
+
+def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
+    """I linguaggi che razza e classe danno da soli stanno nella riga dei linguaggi (ADR-0126, lotto 7).
+
+    Solo per chi scrive una riga «Linguaggi» (una sola, fuori dalle righe di
+    storia): una delle sette razze dell'SRD ha i suoi linguaggi automatici, il
+    druido ha il Druidico. Quanti linguaggi in più si possono avere non si
+    giudica: dipende da regione e gradi che la scheda non scrive."""
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    try:
+        d = S.dati(sistema, "creature.costruzione").get("linguaggi")
+        gradi = S.dati(sistema, "creature.gradi")
+    except S.ErroreSistemi:
+        return [], []
+    if not d:
+        return [], []
+    trovate = [(n + 1, m.group(1)) for n, r in enumerate(s.testo.split("\n")) if not _RIGA_DI_STORIA.match(r)
+               for m in _RIGA_LINGUAGGI.finditer(r)]
+    if len(trovate) != 1:
+        return [], []
+    n_riga, scritti = trovate[0]
+    attesi, perche = [], []
+    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    if razza in d["razze"]:
+        attesi += d["razze"][razza]
+        perche.append(razza)
+    f = VT.leggi(p) or {}
+    it = _classi_it()
+    for nome in dict(f.get("livelli") or L.livelli_di_classe(s)):
+        en = it.get(nome.lower(), nome.lower())
+        if en in d["classi"]:
+            attesi += [x for x in d["classi"][en] if x not in attesi]
+            perche.append(en)
+    mancano = [x for x in attesi if not re.search(rf"\b(?:{d['nomi'][x]})\b", scritti, re.I)]
+    if not mancano:
+        return [], []
+    return [{"file": VT_rel(p), "riga": n_riga, "verifica": "linguaggi", "fonte": sistema,
+             "regola": "tratti.linguaggi", "atteso": attesi, "ha": scritti.strip(),
+             "testo": f"la riga dei linguaggi non ha {', '.join(mancano)}, che {' e '.join(perche)} dà da sé "
+                      f"(SRD, linguaggi automatici)"}], []
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1707,10 +1758,11 @@ def main(argv: "list[str] | None" = None) -> int:
         gv, gn = grado_di_sfida(p)
         ev, en_ = velocita(p)
         fv, fn = difese(p)
+        lv, ln = linguaggi(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev + fv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_ + fn
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev + fv + lv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_ + fn + ln
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

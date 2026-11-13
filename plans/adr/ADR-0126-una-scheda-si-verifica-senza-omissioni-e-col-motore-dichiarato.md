@@ -907,3 +907,31 @@ formula e per esteso: tolta una resta l'altra. Limiti: non si guardano i
 sottotipi (freddo, fuoco, arconte), né le immunità oltre la lista del tipo, né
 «non soggetto a colpi critici»; PF1e non ha la tabella. Resta del lotto 7: i
 linguaggi.
+
+### Lotto 7, quarta parte — i linguaggi automatici (2026-11-13)
+
+**Contesto.** Una scheda che scrive la riga dei linguaggi può dimenticare
+quello che la razza dà da sé (il Nanico di un nano) o il Druidico di un druido.
+Nessun controllo guardava quella riga.
+
+**Decisione.** `estrai_linguaggi.py` legge dall'SRD i linguaggi automatici
+delle sette razze e il Druidico del druido, e scrive
+`sistemi/dnd35/dati/linguaggi.toml` dentro la capacità `creature.costruzione`.
+`verifica_scheda` ha la verifica nuova `linguaggi`, regola `tratti.linguaggi`:
+chi scrive una sola riga dei linguaggi, fuori dalle righe di storia, deve
+averci quelli della sua razza e, se è druido, il Druidico. Due cose non si
+giudicano, e sono scelte dichiarate. Chi non scrive la riga non è una
+violazione: nel 3.5 il blocco delle statistiche non ha una riga dei linguaggi,
+e nel Bestiario la scrivono 24 schede. Quanti linguaggi in più si possono avere
+non si conta: dipende dalla regione (i linguaggi regionali della campagna) e
+dai gradi di Parlare Linguaggi, che le schede non scrivono.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 37 → 37, non
+verificabili 372 → 372: le righe giudicate sono tutte in regola. Portata: 24
+schede con la riga, 7 giudicate (le altre sono di razze che la tabella non ha:
+goblinoidi, orchi, draghi, immondi). Banco `muta_linguaggi.py` →
+`misure-linguaggi.json`: tolto un linguaggio automatico, 13 su 13; su main 0.
+Limiti: le razze dei mostri non hanno i linguaggi nel plugin; PF1e non ha la
+tabella. Il lotto 7 è chiuso con questa parte; di tutto il lotto restano fuori
+il carico, i sensi oltre quelli che `conformita_statblocchi` già guarda, la RD
+che non è N/— e i sottotipi.
