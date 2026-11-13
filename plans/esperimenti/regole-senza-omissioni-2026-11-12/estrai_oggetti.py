@@ -9,6 +9,8 @@ Dall'SRD 3.5 (olimot/srd-v3.5-md@c7f30a0c, OGL), solo nomi e numeri:
   potenziamento  «Table: Weapons» e «Table: Armor and Shields»: il prezzo base del bonus +N
   prezzi         ogni riga con un «Market Price» delle tabelle di armature, scudi e armi
                  specifiche, pozioni, anelli, verghe, bastoni, bacchette e oggetti meravigliosi
+  capacita       le tabelle delle capacità speciali di armi, armature e scudi
+  pergamene      le tabelle delle pergamene arcane e divine
 
 Non dall'SRD (che non l'ha), solo numeri:
   png            Dungeon Master's Guide 3.5, Tabella 4-23 «NPC Gear Value», riscontrata il
@@ -101,8 +103,44 @@ def prezzi(base: Path) -> "dict[str, int]":
     return dict(sorted(out.items()))
 
 
+def capacita(base: Path) -> "dict[str, dict[str, dict]]":
+    """Le capacità speciali di armi, armature e scudi: bonus equivalente («+1 bonus») o prezzo in mo."""
+    out: dict[str, dict[str, dict]] = {"arma": {}, "armatura": {}}
+    for nome, righe in _tabelle(base):
+        if not nome.endswith("Special Abilities"):
+            continue
+        dove = out["arma" if "Weapon" in nome else "armatura"]
+        for r in righe[1:]:
+            if len(r) < 2:
+                continue
+            voce = re.sub(r"\d$", "", r[-2]).strip().lower()
+            m = re.fullmatch(r"\+(\d+) bonus\d?", r[-1])
+            mo = _mo(re.sub(r"(?<=gp)\d$", "", r[-1]))
+            if m:
+                dove.setdefault(voce, {"bonus": int(m.group(1))})
+            elif mo is not None:
+                dove.setdefault(voce, {"mo": mo})
+    return {k: dict(sorted(v.items())) for k, v in out.items()}
+
+
+def pergamene(base: Path) -> "dict[str, int]":
+    """Il prezzo più basso di una pergamena per incantesimo (arcana o divina), in mo intere."""
+    out: dict[str, int] = {}
+    for nome, righe in _tabelle(base):
+        if not nome.endswith("Spell Scrolls"):
+            continue
+        for r in righe:
+            m = re.fullmatch(r"([\d,]+) gp(?: 5 sp)?\d?", r[-1]) if len(r) == 3 else None
+            if m:
+                voce = r[1].lower().replace("’", "'")
+                mo = int(m.group(1).replace(",", ""))
+                out[voce] = min(out.get(voce, mo), mo)
+    return dict(sorted(out.items()))
+
+
 def testo(base: Path) -> str:
     pot, pr = potenziamento(base), prezzi(base)
+    cap, perg = capacita(base), pergamene(base)
     righe = [
         "# sistemi/dnd35/dati/oggetti.toml — prezzi degli oggetti magici e valore dell'equipaggiamento",
         "# di un PNG per livello (ADR-0126, lotto 8)",
@@ -126,6 +164,14 @@ def testo(base: Path) -> str:
         "# e pozioni hanno davanti il nome della loro tabella.",
     ]
     righe += [f'"{k}" = {v}' for k, v in pr.items()]
+    for che, titolo in (("arma", "Melee/Ranged Weapon Special Abilities"),
+                        ("armatura", "Armor/Shield Special Abilities")):
+        righe += ["", f"[oggetti.capacita.{che}]",
+                  f"# SRD, «Table: {titolo}»: bonus equivalente da sommare al potenziamento, o prezzo in mo"]
+        righe += [f'"{k}" = {{ {next(iter(v))} = {next(iter(v.values()))} }}' for k, v in cap[che].items()]
+    righe += ["", "[oggetti.pergamene]",
+              "# SRD, «Table: Arcane Spell Scrolls» e «Table: Divine Spell Scrolls»: il prezzo più basso (mo intere)"]
+    righe += [f'"{k}" = {v}' for k, v in perg.items()]
     righe += ["", "# come una scheda scrive un oggetto (espressioni regolari; non vengono dall'SRD). «N» è il bonus letto."]
     for nome, schema in NOMI:
         righe += ["[[oggetti.nomi]]", f'nome = "{nome}"', f"schema = '''{schema}'''", ""]

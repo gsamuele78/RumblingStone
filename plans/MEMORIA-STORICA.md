@@ -1202,3 +1202,14 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** `creature_base.toml` non ha queste razze perché nell'SRD non hanno dadi vita razziali: il loro blocco è un combattente di 1° livello, ma la riga «Level Adjustment» c'è. Una scheda che nomina un modello (mezzo-drago, vampiro, immondo) non si giudica: il modello cambia il modificatore e il plugin non ha ancora i modelli.
 
+### MS-0104 · 2026-11-13 · ADR-0126 lotto 8: capacità speciali, pozioni, pergamene, bacchette
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchette» in `plans/CHANGELOG.md`
+- **Testo:** `oggetti.toml` ha le capacità speciali di armi, armature e scudi e i prezzi delle pergamene; la verifica `ricchezza` legge i nomi italiani dal lessico e conta capacità speciali, pozioni, pergamene e bacchette con le cariche scritte. Misura: violazioni 37 → 37; valore riconosciuto nel Bestiario 224.000 → 267.830 mo; banco, seconda prova: 41 → 57 su 125.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la prima versione cercava le capacità in tutto il tratto fino alla virgola e prendeva «Cerchio Sacro» (il nome di un arco di Lythiel) per la capacità «sacra»: 2.000 mo diventavano 18.000. Per questo una capacità conta solo se sta attaccata al nome dell'arma o al bonus. La somma deve restare un minimo sicuro: nel dubbio non si conta.
+
