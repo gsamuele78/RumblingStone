@@ -661,28 +661,3 @@ modificatori = { For = 2, Cos = 2, Int = -2 }
 "immondo" = "outsider"
 "tiefling" = "outsider"
 "mezzodrago" = "dragon"
-
-[gs]  # grado di sfida di chi è fatto di livelli di classe (ADR-0126, lotto 5, seconda parte)
-# 3.5: classe da PG = livello; classe da PNG = livello −1 (regola del manuale del DM
-# [Private source — Dungeon Master's Guide 3.5, solo numeri]; l'SRD la mostra nei blocchi:
-# hobgoblin combattente di 1° GS 1/2). Sotto 1 si scende per gradini: 1/2, 1/3, 1/4, 1/6, 1/8.
-# Le razze qui sotto hanno la loro riga «Challenge Rating» nell'SRD (monsters-*.md).
-classi_png = ["warrior", "adept", "expert", "aristocrat", "commoner"]
-pg = 0
-png = -1
-gradini = ["1/2", "1/3", "1/4", "1/6", "1/8"]
-# creatura con dadi vita razziali (SRD, improving-monsters.md): livello associato +1;
-# non associato +1/2 finché i livelli non pareggiano i DV d'origine, poi +1
-non_associato = 0.5
-modelli = ["half-(?!orc|elf)", "mezz[oa]?[- ]?(?:immond|drag|celest|demon|diavol|ogre|fatat)", "template", "archetipo", "advanced", "avanzat", "skeleton", "scheletr", "zombi", "celestial", "fiendish", "immond", "augmented", "lycanthrop", "licantrop", "mannar", "vampir", "\\blich\\b", "\\bghost\\b", "fantasma", "in sella", "graft", "innest", "pseudonatural", "spettral"]  # espressioni regolari
-# le razze da un dado vita della fonte (SRD 3.5) a cui la regola generale si applica; una razza che
-# non è qui (o è in `fuori_fonte`) ha la sua riga in un manuale che i dati non hanno: non verificabile
-razze_fonte = ["human", "uman[oaie]", "dwarf", "nan[oaie]", "elf", "elf[oaie]", "gnome", "gnom[oaie]", "halfling", "half-elf", "mezzelf[oaie]", "half-orc", "mezzorc[ohie]+", "orc", "orc[ohie]+", "hobgoblin", "goblin", "kobold", "cobold[oi]", "drow", "duergar", "svirfneblin", "aasimar", "tiefling"]
-fuori_fonte = ["orog", "githyanki", "githzerai", "tanarukk", "fey'ri", "loxo", "gigante"]
-
-[gs.razze]  # {pg, png, come la scheda la nomina}
-drow = { pg = 1, png = 0, nomi = ["drow"], fonte = "monsters-e-f.md" }
-duergar = { pg = 1, png = 0, nomi = ["duergar"], fonte = "monsters-dr-dw.md" }
-svirfneblin = { pg = 1, png = 0, nomi = ["svirfneblin"], fonte = "monsters-g.md" }
-goblin = { png = -2, nomi = ["goblin"], fonte = "monsters-g.md" }
-kobold = { png = -3, nomi = ["kobold", "coboldo"], fonte = "monsters-k-l.md" }
