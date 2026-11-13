@@ -1129,7 +1129,45 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     return testo
 
 
-def compila(motore: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
+#: un titolo del sorgente Typst: «=== Testo» a inizio riga; i capitoli si aprono
+#: con `#capitolo-aperto(` e le schede PG con `#scheda(`: tutti e due aprono al livello 1
+_TITOLO_TYP = re.compile(r"^(=+)\s+(.*)$")
+_APRE_LIVELLO_1 = re.compile(r"^\s*#(?:capitolo-aperto|scheda)\(")
+
+
+def titoli_senza_salti(src: str) -> tuple[str, int]:
+    """Nessun salto di livello fra un titolo e il successivo (PDF/UA-1, 7.4.2-1).
+
+    I master saltano un livello in due casi noti: la tabella «Chi si incontra
+    in questo capitolo» (`###` subito sotto il titolo del capitolo, ADR-0107)
+    e qualche `####` sotto un `##`. Per un lettore di schermo la gerarchia è
+    rotta, e typst con `pdf_standards: ua-1` rifiuta di compilare. Qui il
+    titolo sale al livello giusto nell'albero dei tag, e l'etichetta
+    `<come-N>` dice al tema di disegnarlo come prima: la pagina stampata non
+    cambia. Un titolo che era sotto la profondità dell'indice (3) resta
+    fuori dall'indice. Restituisce il sorgente e quanti titoli ha spostato.
+    """
+    righe, prima, spostati = src.split("\n"), 0, 0
+    for i, r in enumerate(righe):
+        if _APRE_LIVELLO_1.match(r):
+            prima = 1
+            continue
+        m = _TITOLO_TYP.match(r)
+        if not m:
+            continue
+        lvl, corpo = len(m.group(1)), m.group(2)
+        if prima and lvl > prima + 1 and not re.search(r"<[\w-]+>\s*$", corpo):
+            nuovo = prima + 1
+            indice = "" if lvl <= 3 else ", outlined: false"
+            righe[i] = f"#heading(level: {nuovo}{indice})[{corpo}] <come-{lvl}>"
+            spostati += 1
+            lvl = nuovo
+        prima = lvl
+    return "\n".join(righe), spostati
+
+
+def compila(motore: str, typ: Path, pdf: Path,
+            esito_completo: list | None = None) -> tuple[subprocess.CompletedProcess, bool]:
     """Un `typst compile` (ADR-0116), col ripiego sui tag PDF dichiarato dal chiamante.
 
     Typst 0.15.1 ha un bug interno nella costruzione dell'albero dei tag PDF
@@ -1139,7 +1177,9 @@ def compila(motore: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProc
     che il comando promette. `motore` è quello di `typst_motore.esigi()`:
     lo decide lui, qui serve solo a dire che il controllo è già stato fatto.
     """
-    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI)
+    e = typst_motore.compila(typ, pdf, root=ROOT, font=FONTS, pacchetti=PACCHETTI, pdfua=True)
+    if esito_completo is not None:
+        esito_completo.append(e)
     return subprocess.CompletedProcess([motore, "compile", str(typ)], 0 if e.ok else 1, "", e.errore), e.senza_tag
 
 
@@ -1225,9 +1265,14 @@ def main() -> int:
     except SchedaError as e:
         print(f"✗ export_booklet_typst: {e}", file=sys.stderr)
         return 1
+    src, spostati = titoli_senza_salti(src)
+    if spostati:
+        print(f"  · {spostati} titoli saltavano un livello: nell'albero dei tag salgono "
+              "di livello, sulla pagina restano uguali (PDF/UA-1)", file=sys.stderr)
     typ.write_text(src, encoding="utf-8")
 
-    esito, degradato = compila(binario, typ, pdf)
+    completo: list = []
+    esito, degradato = compila(binario, typ, pdf, completo)
 
     if not args.keep_typ:
         typ.unlink(missing_ok=True)
@@ -1242,9 +1287,15 @@ def main() -> int:
               "    di typst — la riga di fallback si toglie il giorno che compila.",
               file=sys.stderr)
 
+    if completo and completo[0].ok and not completo[0].pdfua:
+        print(f"  ⚠ non è PDF/UA-1 (ISO 14289-1): {completo[0].motivo_pdfua}\n"
+              "    Il volume è completo; un lettore di schermo lo legge peggio. Il motivo\n"
+              "    sta nel master (titolo che salta un livello, immagine senza testo\n"
+              "    alternativo): vedi docs/how-to/GUIDA-BOOKLET-E-PDF.md.", file=sys.stderr)
     n = len(capitoli(man, base, args.all))
+    ua = ", PDF/UA-1" if completo and completo[0].pdfua else ""
     print(f"✓ export_booklet_typst: {n} capitoli → {pdf.relative_to(ROOT)} "
-          f"({pdf.stat().st_size // 1024} KB, un volume con segnalibri)")
+          f"({pdf.stat().st_size // 1024} KB, un volume con segnalibri{ua})")
 
     if args.per_scheda:
         return per_scheda(man, base, args.all, binario,
