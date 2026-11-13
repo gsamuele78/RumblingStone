@@ -233,9 +233,8 @@ class TestImmunitaDelTipo(unittest.TestCase):
 
 
 class Bestiario(unittest.TestCase):
-    #: scarti veri in attesa della decisione del DM (card del thread delle regole)
-    IN_ATTESA = {"Il_Collezionista_Rakshasa.md", "deathlock-cr8.md", "ghost-lion-spettrale-cr8.md",
-                 "skeletal-dire-lion-cr6.md"}
+    #: scarti veri in attesa della decisione del DM (card del thread delle regole); vuoto dal 13/11
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altri_scarti(self):
         trovate, attese = [], set()

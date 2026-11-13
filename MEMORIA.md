@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 seconda parte: la penalità di armatura alla prova.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 prima parte: le abilità di classe e il margine dei gradi.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 terza parte: i fatti scheda per scheda.… | In PR |
-| 2026-11-13 | STANDARD-STAMPA | Pagina fitta: le schede tengono l'interlinea di prima (il DM, 2026-11-13: «mi s… | ✅ passo di riga delle schede in appendice 10,6 → 11,2 pt (come il 2 e il 12 novembre), delle schede in breve nei capitoli 11,1 → 11,7 pt (12,0 il 12 novembre);… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 104 voci, l'ultima MS-0104 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 105 voci, l'ultima MS-0105 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

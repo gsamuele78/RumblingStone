@@ -14,6 +14,8 @@ pf: 52
 pf-dado: 8d12
 ts: Temp +2, Rifl +5, Vol +8
 attributi: For 12 Des 16 Cos — Int 15 Sag 14 Car 16
+voci:
+  - Tratti dei non morti
 ```
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.

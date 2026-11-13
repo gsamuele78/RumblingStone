@@ -29,7 +29,7 @@ voci:
   - CD degli incantesimi: 15 + livello (9° livello: CD 24)
   - Conosciuti — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: contingenza, dissolvi magie superiore, disintegrazione · 7°: dito della morte, gabbia di forza, desiderio limitato · 8°: labirinto, urlo superiore · 9°: arresto del tempo
   - ⚠ **Non è inteso per lo scontro fisico.** La scheda dichiara GS 17-19 e dice che il villain non combatte mai in campo aperto: questi numeri servono se i PG lo mettono all'angolo, non a progettare un incontro
-  - Rakshasa (SRD): RD 15/bene e perforante, RI 27, cambiare forma, individuazione del pensiero a volontà
+  - Rakshasa (SRD): RD 15/bene e perforante, RI 38 (27 del rakshasa + 11 livelli di classe), cambiare forma, individuazione del pensiero a volontà
   - Amuleto dell'Eclissi Planare: vuoto mentale e anti-individuazione continui a LI 20 — nemmeno la visione del vero lo smaschera
 fonte: rakshasa (SRD 3.5) 7 DV + Stregone 11, rifatto a mano: vedi Boost log in fondo
 ```
