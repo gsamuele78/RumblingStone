@@ -1720,8 +1720,8 @@ gira l'anello dei lupi.
   tacca in più `[CANONE — DM 2026-10-07, Q15]`.
 - **Come combatte la pattuglia** `[CANONE — DM 2026-10-12]`. Sono
   soldati, non predoni: marciano in due file da quattro e combattono in coppia,
-  due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
-  (+2, SRD). **Non gridano**, perché in un campo che dorme un grido sveglia il
+  due su ogni PG che vedono, ai due lati opposti del PG per darsi il
+  fiancheggiamento (+2, SRD). **Non gridano**, perché in un campo che dorme un grido sveglia il
   generale, e il generale frusta chi l'ha svegliato. Per questo mandano un
   corridore, ed è il tiro di 1d6 qui sopra.
   - *Contro chi è invisibile* colpiscono il quadretto da cui è venuto il colpo,
@@ -4317,13 +4317,13 @@ iniziativa: +9
 sensi: scurovisione 18 m; Ascoltare +11, Osservare +3
 attacchi:
   - Mischia ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira
-  - Distanza 3 giavellotti Grandi +19 (1d8+13), incremento 9 m
+  - Distanza 3 giavellotti Grandi +19 (1d8+13) in Ira; (1d8+10) fuori dall'Ira; incremento 9 m
 ```
 **Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **Difesa** **CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)
 
-**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
+**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
 
 **Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
 
@@ -4351,7 +4351,7 @@ velocita: 6 m (armatura pesante)
 iniziativa: +1
 sensi: Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 attacchi:
-  - Mischia spadone +14 (2d6+6)
+  - Mischia spadone +14 (2d6+6/19-20)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
 ```
 <!-- /blocco -->
@@ -4446,7 +4446,7 @@ velocita: 6 m
 iniziativa: +2
 sensi: scurovisione 18 m; Ascoltare +5, Osservare +5
 attacchi:
-  - Mischia martello da guerra runico +1 +11/+6 (1d8+2)
+  - Mischia martello da guerra runico +1 +11/+6 (1d8+2/x3)
 voci:
   - Talenti: Incidere Rune (Inscribe Rune), Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
   - Abilità: Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19
@@ -4455,7 +4455,7 @@ voci:
 
 **Difesa** **CA 24**, contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2) · **pf 101** (13 DV) · TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia) · immune a paura (patto con Abbathor) · **Debolezza** le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).
 
-**Attacco** Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero)<!-- storico --> (aggiunto il 2026-10-07 su richiesta del DM)<!-- /storico -->.
+**Attacco** Vel 6 m · **Mischia** martello da guerra runico +1 +11/+6 (1d8+2/x3) · Domini **Inganno** e **Runa** (dominio Runa = FRCS). Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (uno slot di 5° libero)<!-- storico --> (aggiunto il 2026-10-07 su richiesta del DM)<!-- /storico -->.
 
 **Statistiche** For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14 · BAB +9; Lotta +10 · **Abilità** Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19 (il conto dei gradi è nella nota in testa) · **Talenti** Incidere Rune `[Private source — FRCS]`, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene · **Equipaggiamento** armatura completa di mithral +2, anello di protezione +2, martello da guerra runico +1, polvere di diamante per i glifi
 

@@ -119,8 +119,8 @@ class TestGiudizio(unittest.TestCase):
 class TestCancello(unittest.TestCase):
     """Quello che il controllo ha trovato è stato corretto: da qui in poi è un cancello."""
 
-    #: scarti veri che aspettano il DM: la scheda è legata al master di ARC-07 (ADR-0126, lotto 2)
-    IN_ATTESA = {"balvar-fuocospento-cr13.md"}
+    #: scarti veri che aspettano il DM: nessuno (Balvar corretto il 2026-11-13 col master di ARC-07)
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_scarti_di_danno(self):
         import verifica_scheda as V

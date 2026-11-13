@@ -24613,7 +24613,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5356,
+    "senza_note": 5362,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -24705,7 +24705,7 @@
     ],
     "gs": 13.0,
     "lotta": 10,
-    "mischia": "martello da guerra runico +1 +11/+6 (1d8+2)",
+    "mischia": "martello da guerra runico +1 +11/+6 (1d8+2/x3)",
     "pf": 101,
     "provenienza": "a mano",
     "tipo": "Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE",

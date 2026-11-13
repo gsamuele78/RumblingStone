@@ -9,8 +9,8 @@ taglia: Media
 spazio: 1,5 m
 portata: 1,5 m
 sensi: scurovisione 18 m
-ca: 16
-ca-dettaglio: (+3 studded, +1 light shield, +2 natural)
+ca: 15
+ca-dettaglio: (+3 studded, +1 light shield, +1 natural)
 pf: 26
 pf-dado: 2d8+2d8+8
 ts: Temp +6, Rifl +0, Vol +0
@@ -22,6 +22,6 @@ attributi: For 15 Des 11 Cos 14 Int 8 Sag 11 Car 8
 
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-Medium humanoid (gnoll) HD 2d8+2d8+8 (26 HP). AC 16 (+3 studded, +1 light shield, +2 natural). Fort +6 Ref +0 Will +0. BAB/Grapple +3/+5. Battleaxe +5 (1d8+3/x3); longbow +2 (1d8/x3). Str 15 Dex 11 Con 14 Int 8 Wis 11 Cha 8. Feats: Power Attack, Weapon Focus (battleaxe). Darkvision 60 ft. Notes: fanteria tribale, 400+ disponibili.
+Medium humanoid (gnoll) HD 2d8+2d8+8 (26 HP). AC 15 (+3 studded, +1 light shield, +1 natural). Fort +6 Ref +0 Will +0. BAB/Grapple +3/+5. Battleaxe +5 (1d8+3/x3); longbow +2 (1d8/x3). Str 15 Dex 11 Con 14 Int 8 Wis 11 Cha 8. Feats: Power Attack, Weapon Focus (battleaxe). Darkvision 60 ft. Notes: fanteria tribale, 400+ disponibili.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, gnoll: scurovisione 18 m (SRD). La scheda non la scriveva.
