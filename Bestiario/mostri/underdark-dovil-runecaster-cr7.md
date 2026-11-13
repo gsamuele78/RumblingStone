@@ -23,7 +23,7 @@ iniziativa: +6
 attacchi:
   - Mischia spadone +1 a due mani +6 (2d6+2/19-20)
 voci:
-  - Talenti: Incantare in Combattimento, Iniziativa Migliorata, Incidere Rune (Inscribe Rune), Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone)
+  - Talenti: Incantare in Combattimento, Iniziativa Migliorata, Scrivere Pergamene, Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone)
 ```
 
 > `pf-dado` tolto da `scripts/conformita_statblocchi.py`: portava «2d6+2», che non sono i dadi vita (pf-dado «2d6+2» ha 2 dadi, il testo dichiara 7 DV). I dadi non si ricostruiscono senza inventare: la composizione delle classi non è leggibile o comprende una classe non SRD. Da completare a mano.
@@ -31,7 +31,9 @@ voci:
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
 Medium humanoid (dwarf, hill), Diviner 5 / Deep Diviner 1 / Fighter 1, N. **hp 37** (7 HD); **AC 20**, touch 12, flat-footed 19 (piastre complete). Init +6; Vel 6 m. TS Temp +5, Rifl +3, Vol +6. BAB +3; Lotta +4.
-**Mischia** spadone +1 a due mani +6 (2d6+2/19-20). Incantesimi da Diviner 5 (scuola Divinazione; +2 Sapienza Magica sulle divinazioni); **Node Spellcasting**, Locate Node, famiglio. SLA da oggetto: *repair minor damage, comprehend languages*. Scurovisione 18 m, tratti nanici. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Incidere Rune (Inscribe Rune), Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone).
+**Mischia** spadone +1 a due mani +6 (2d6+2/19-20). Incantesimi da mago divinatore, livello d'incantatore 6 (Diviner 5 + Deep Diviner 1), slot 5/5/5/4 (0, 1°, 2°, 3°), CD 13 + livello, 14 + livello per le divinazioni (scuola Divinazione; +2 Sapienza Magica sulle divinazioni); **Node Spellcasting**, Locate Node, famiglio. SLA da oggetto: *repair minor damage, comprehend languages*. Scurovisione 18 m, tratti nanici. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Scrivere Pergamene, Smiting Spell, Incantesimi Focalizzati (Divinazione), Arma Focalizzata (spadone).
 Notes: runecaster nanico legato ai nodi terrestri dell'Underdark.
 
 > `[CANONE — regola, ADR-0118]` Spadone +1 a **+6**, non +5 come nell'export: BAB +3, For +1, +1 di potenziamento, +1 Arma Focalizzata (spadone).
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisioni del DM sulle card): il Deep Diviner fa avanzare gli incantesimi, quindi il livello d'incantatore è **6** (Diviner 5 + Deep Diviner 1) e gli slot passano da 5/5/4/3 a **5/5/5/4** (tabella del mago di 6°, specialista, Int 16). **Incidere Rune** chiede incantesimi divini che un mago non ha: al suo posto **Scrivere Pergamene**, il talento bonus del mago di 1° che in scheda mancava. «Runecaster» resta nel nome come colore.

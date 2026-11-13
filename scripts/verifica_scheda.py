@@ -229,6 +229,18 @@ def _talenti_d_abilita(nomi: "list[str]", testo: str, sistema: str, regole: dict
     return per, a_tutte
 
 
+
+_MEZZOSANGUE = re.compile(r"half[- ]?(?:elf|orc)|mezz['’ ]?(?:elf|orc)|\w+\s*/\s*human|human\s*/\s*\w+", re.I)
+
+
+def _e_umano(testo: str, nomi) -> bool:
+    """Umano, non mezzosangue: il mezzelfo «(elf/human)» e il mezzorco hanno
+    sangue umano ma non il talento né i punti abilità in più dell'umano (SRD)."""
+    if _MEZZOSANGUE.search(testo):
+        return False
+    return bool(re.search(rf"\b(?:{'|'.join(nomi)})\b", testo, re.I))
+
+
 def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     """(violazioni, non verificabili) dei gradi delle abilità.
 
@@ -296,7 +308,7 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
             quote.append((razziali, regole["tipi"][tipo]))
     per_dado = [max(r["minimo_per_dado"], pt + intel) for _, pt in quote]
     punti = sum(n * q for (n, _), q in zip(quote, per_dado)) + (r["primo_dado"] - 1) * max(per_dado, default=0)
-    umano = bool(re.search(r"\b(?:human|umano|umana)\b", s.testo[:1500], re.I))
+    umano = _e_umano(s.testo[:1500], ("human", "umano", "umana"))
     punti += (dv + r["primo_dado"] - 1) * r["umano_per_livello"] if umano else 0
     massimo = dv + r["massimo_piu"] + r.get("bonus_di_classe", 0)
     # margine: sinergia o oggetto +2; razza +2 (mostri: +4, o +8 se la scheda parla di bonus razziali).
@@ -913,7 +925,7 @@ def numero_talenti(p: Path) -> "tuple[list[dict], list[dict]]":
         else:
             contati += 1         # anche un nome che la lettura non conosce è un talento scritto
     minimo = T.generali(sistema, tot) + len(T.bonus_di_classe(sistema, livelli))
-    umano = bool(re.search(rf"\b(?:{'|'.join(in_piu.get('razza_umana', ['human']))})\b", s.tipo or "", re.I))
+    umano = _e_umano(s.tipo or "", in_piu.get("razza_umana", ["human"]))
     minimo += in_piu.get("umano", 0) if umano else 0
     massimo = minimo + sum(1 for c, n in livelli.items()
                            for lv in in_piu.get("capacita_o_talento", {}).get(en_di[c], ()) if lv <= n)

@@ -22,7 +22,7 @@ attacchi:
   - Distanza balestra pesante +1 +9/+4 (1d10+1/19-20)
 voci:
   - Talenti: Creare Armi e Armature Magiche, Incantare in Combattimento, Ottimizzazione delle Armature Pesanti, Arma Focalizzata (martello da guerra), Attacco Poderoso
-  - Incantesimi: chierico 12, LI 12, 6/6+1/5+1/6+1/5+1/3+1/2+1, CD 14 + livello
+  - Incantesimi: chierico 12, LI 12, 6/6+1/5+1/5+1/4+1/3+1/2+1, CD 14 + livello
 ```
 
 > **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 che l'export elenca fra gli oggetti (10 −1 +1). For 16 e Sag 19 vengono dai guanti della potenza dell'orco e dal periapto della saggezza +2.
@@ -38,8 +38,8 @@ voci:
 **Attacco** Vel 6 m · **Mischia** martello da guerra +2 +15/+10 (1d8+7/x3); con Attacco Poderoso a −3, +12/+7 (1d8+10) · colpo di scudo pesante +12 (1d4+3) · **Distanza** balestra pesante +1 +9/+4 (1d10+1/19-20) · **Attacchi speciali** punire i giganti 4/giorno (+3 al colpire, +12 ai danni) · **Incantesimi preparati** (chierico 12, LI 12, incantesimi del bene a LI 13; CD 14 + livello; D = dominio):
 - 6° — *guarigione*, *dissolvi magie superiore*, *barriera di lame* (D)
 - 5° — *colpo infuocato* (CD 19), *spezzare incantamento*, *giusto potere*, *dissolvi il male* (D)
-- 4° — *potere divino*, *arma magica superiore*, *libertà di movimento*, *neutralizzare veleno*, *cura ferite critiche*, *punizione sacra* (D, CD 18)
-- 3° — *dissolvi magie*, *cerchio magico contro il male* (D), *luce incandescente*, *preghiera*, *veste magica*, *cura ferite gravi*, *anello di lame* [Private source — supplemento WotC non SRD]
+- 4° — *potere divino*, *arma magica superiore*, *libertà di movimento*, *cura ferite critiche*, *punizione sacra* (D, CD 18)
+- 3° — *dissolvi magie*, *cerchio magico contro il male* (D), *luce incandescente*, *preghiera*, *veste magica*, *cura ferite gravi*
 - 2° — *aiuto* (D), *blocca persone* (CD 16), *resistere all'energia*, *arma spirituale*, *forza del toro*, *silenzio* (uno slot in meno: lo prende lo specialista del martello)
 - 1° — *benedizione*, *comando* (CD 15), *favore divino*, *protezione dal male* (D), *scudo della fede*, *rimuovi paura*, *santuario*
 - 0 — *individuazione del magico*, *individuazione del veleno*, *guida*, *lettura del magico*, *evocare simbolo sacro* [Private source — supplemento WotC non SRD], *resistenza*

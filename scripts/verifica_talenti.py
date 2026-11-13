@@ -178,7 +178,7 @@ def leggi(p: Path) -> "dict | None":
     ignote = []
     tipo = next((r for r in righe if r.lower().startswith("tipo:")), "")
     for nome, liv in re.findall(r"(?:^|[,/])\s*([A-Za-zÀ-ú' -]+?)\s+(\d+)(?=\s*(?:[,/]|$))", tipo[5:]):
-        k = nome.strip().lower()
+        k = re.sub(r"^ex[- ]", "", nome.strip().lower())  # «ex-Paladin 7»: i livelli restano
         if k in SPECIALISTI:
             livelli["wizard"] = livelli.get("wizard", 0) + int(liv)
         elif not any(x in livelli for c in (k, k.split()[-1]) for x in (c, T._ALIAS.get(c, c))):  # «hobgoblin barbaro 4»
@@ -186,6 +186,9 @@ def leggi(p: Path) -> "dict | None":
     dv = sum(g.n for g in s.gruppi)
     lic = int(max([livelli.get(c, 0) * f if livelli.get(c, 0) >= (4 if f < 1 else 1) else 0
                    for c, f in INCANTATORI.items()] or [0]))
+    # SRD, pietra ioun «orange prism»: +1 al livello dell'incantatore di chi la porta.
+    if lic and re.search(r"prisma arancione|orange prism", s.testo, re.I):
+        lic += 1
     talenti, senza_regole, ignoti = [], [], []
     nomi = []
     for nome in pezzi(riga):

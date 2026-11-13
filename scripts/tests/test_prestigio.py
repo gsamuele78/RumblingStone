@@ -189,7 +189,7 @@ class TestCancello(unittest.TestCase):
     """Le violazioni trovate nel Bestiario aspettano il DM: cambiare i livelli di
     un PNG è una scelta sua. Nessun'altra scheda ne ha."""
 
-    IN_ATTESA = {"abbathor-blackguard-cr10.md", "drow-assassina-lolth-cr10.md"}
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altre_violazioni(self):
         import verifica_scheda as V
