@@ -102,13 +102,7 @@ class TestCancello(unittest.TestCase):
     """Le schede del Bestiario fuori conto aspettano il DM: quale talento togliere,
     aggiungere o dichiarare lo sceglie lui. Nessun'altra scheda è fuori conto."""
 
-    IN_ATTESA = {
-        "bruto-deforme-sottosuolo-cr11.md", "drow-wizard7-cr8.md",
-        "duergar-chierico3-cr4.md", "duergar-ladro1-cr1.md", "duergar-mago3-cr4.md",
-        "gnoll-hyenodon-rider-cr4.md", "hell-hound-mezzoimmondo-cr4.md", "koth-signore-dei-dragoni-cr8.md",
-        "myconid-sovereign-cr7.md", "ogre-micelio-sporeborn-cr8.md",
-        "ogre-skullcrusher-cr5.md", "underdark-cleric-ainin-cr5.md", "warpriest-tiamat-cr7.md",
-    }
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altre_schede_fuori_conto(self):
         trovate, attese = [], set()

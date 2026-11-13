@@ -276,6 +276,30 @@ class EccezioniDichiarate(unittest.TestCase):
         viol, _ = self._scheda("Medium humanoid (human), Guerriero 8, N", "Attacco Poderoso, Lottare Migliorato (B)")
         self.assertTrue([v for v in viol if v["talento"] == "Improved Grapple"])
 
+    def test_ex_paladino_tiene_i_livelli(self):
+        """«ex-Paladin 7 / Blackguard 3»: sette livelli da paladino, nessuna classe ignota."""
+        tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, tmp)
+        p = tmp / "prova-cr10.md"
+        p.write_text("# Prova\n\n```statblocco\ngs: 10\ntipo: Medium humanoid (dwarf), ex-Paladin 7 / Blackguard 3, LE\n"
+                     "pf-dado: 10d10+30\nattributi: For 18 Des 12 Cos 16 Int 10 Sag 16 Car 16\n"
+                     "voci:\n  - Talenti: Attacco Poderoso\n```\n", encoding="utf-8")
+        f = V.leggi(p)
+        self.assertEqual(f["livelli"].get("paladin"), 7)
+        self.assertFalse([c for c in f["classi_ignote"] if "paladin" in c.lower()])
+
+    def test_la_pietra_ioun_arancione_alza_il_livello_dell_incantatore(self):
+        """SRD, orange prism: +1 al livello dell'incantatore. Paladino 8: 4, con la pietra 5."""
+        tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, tmp)
+        base = ("# Prova\n\n```statblocco\ngs: 8\ntipo: Medium humanoid (dwarf), Paladin 8, LG\n"
+                "attributi: For 14 Des 8 Cos 14 Int 10 Sag 14 Car 14\nvoci:\n  - Talenti: Volontà di Ferro\n```\n")
+        senza, con = tmp / "senza-cr8.md", tmp / "con-cr8.md"
+        senza.write_text(base, encoding="utf-8")
+        con.write_text(base + "\nEquipaggiamento: *pietra ioun, prisma arancione*.\n", encoding="utf-8")
+        self.assertEqual(V.leggi(senza)["lic"], 4)
+        self.assertEqual(V.leggi(con)["lic"], 5)
+
     def test_talento_che_la_classe_del_manuale_concede(self):
         self.assertEqual(V.talenti_concessi({"frenzied berserker": 1}), {"Diehard"})
         self.assertEqual(V.talenti_concessi({"fighter": 4}), set())

@@ -29,11 +29,11 @@ fonte: ricostruzione del repo su SRD 3.5 e archetipo Avanzato PF1e, 2026-11-09
 **Difesa** CA 23 (+7 cotta di maglia +2, +2 Des, il massimo che la cotta lascia, +2 naturale dall'archetipo Avanzato, +2 deflessione), contatto 14, colto alla sprovvista 21 · **pf 83** (9d8+39: primo dado al massimo, gli altri alla media, +3 da Robustezza) · TS Temp +12, Rifl +7, Vol +14 (mantello della resistenza +2 incluso) · **Debolezze** sensibilità alla luce (abbagliato in piena luce solare o in *luce diurna*)
 
 **Attacco** Vel 6 m (9 m dell'orco, cotta di maglia) · **Mischia** mazzafrusto pesante +1 a due mani +12/+7 (1d10+8/19-20) · **Punire** 1/giorno, +4 al tiro per colpire e +9 ai danni (dominio Distruzione) · intimorire non morti 5/giorno · **Incantesimi da chierico** (LI 9°, gli incantesimi malvagi a LI 10°; CD 16 + livello, +2 per le invocazioni):
-- 5° (3+1): *infliggi ferite leggere di massa* (D), *colpo infuocato* (CD 23) ×2, *simbolo di dolore* (CD 21)
-- 4° (4+1): *infliggi ferite critiche* (D), *potere divino*, *veleno* (CD 20), *libertà di movimento*, *infliggi ferite critiche* (CD 20)
-- 3° (5+1): *cerchio magico contro il bene* (D), *preghiera*, *dissolvi magie* ×2, *oscurità profonda*, *infliggi ferite gravi* (CD 19)
-- 2° (7+1): *dissacrare* (D), *blocca persone* (CD 18) ×2, *silenzio*, *forza del toro*, *arma spirituale* ×2, *resistere all'energia*
-- 1° (7+1): *protezione dal bene* (D), *anatema*, *comando* (CD 17) ×2, *favore divino*, *scudo della fede* ×2, *infliggi ferite leggere*
+- 5° (2+1): *infliggi ferite leggere di massa* (D), *colpo infuocato* (CD 23), *simbolo di dolore* (CD 21)
+- 4° (3+1): *infliggi ferite critiche* (D), *potere divino*, *veleno* (CD 20), *libertà di movimento*
+- 3° (4+1): *cerchio magico contro il bene* (D), *preghiera*, *dissolvi magie* ×2, *oscurità profonda*
+- 2° (6+1): *dissacrare* (D), *blocca persone* (CD 18) ×2, *silenzio*, *forza del toro*, *arma spirituale*, *resistere all'energia*
+- 1° (6+1): *protezione dal bene* (D), *anatema*, *comando* (CD 17) ×2, *favore divino*, *scudo della fede* ×2
 - 0 (6): *guida*, *resistenza*, *individuazione del magico*, *infliggi ferite minori* ×3
 
 D = incantesimo di dominio. Domini **Distruzione** e **Male**.

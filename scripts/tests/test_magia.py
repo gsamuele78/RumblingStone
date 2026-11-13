@@ -175,8 +175,7 @@ class TestCancello(unittest.TestCase):
     """Gli scarti che il controllo ha trovato nel Bestiario aspettano il DM: togliere
     un incantesimo preparato è una scelta sua. Nessun'altra scheda ne ha."""
 
-    IN_ATTESA = {"abbathor-cleric11-cr11.md", "lomyn-redtongue-bardo8-cr8.md", "morlin-coalhewer-cr12.md",
-                 "ur-vrax-voce-del-drago-cr10.md"}
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altri_scarti(self):
         import verifica_scheda as V

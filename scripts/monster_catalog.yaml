@@ -980,8 +980,8 @@ monsters:
     role: generalist
     environment: underdark
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/ERRATA-PARTE1-Quest-Hellas-35-Verification.md"
-  - id: drow-assassina-di-lolth-ladro-4-assassino-5-58b191
-    name: "Drow Assassina di Lolth (Ladro 4 / Assassino 5)"
+  - id: drow-assassina-di-lolth-ladro-5-assassino-4-58b191
+    name: "Drow Assassina di Lolth (Ladro 5 / Assassino 4)"
     cr: 10.0
     faction: drow-sonjak
     role: caster-subdolo

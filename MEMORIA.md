@@ -86,7 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11 (prima parte): giavellotti di Z… | In PR |
+| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11: giavellotti di Zog'tar 1d8+13… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5, prima parte: la creatura base. Capacità `creature.base` (409… | In PR |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
 | 2026-11-13 | STANDARD-STAMPA | Misura delle ripetizioni nei booklet (domanda del DM del 2026-11-12: «siamo sic… | ✅ `misura_stampa.parole_ripetute` (w-shingling, Broder 1997: passi di almeno 8 parole identiche, dalla seconda volta, testatine escluse), in prova; 20 booklet… |

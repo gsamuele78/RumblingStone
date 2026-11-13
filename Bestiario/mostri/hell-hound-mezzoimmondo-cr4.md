@@ -19,13 +19,15 @@ iniziativa: +5
 attacchi:
   - Mischia morso +6 (1d8+3 + Morso Infuocato)
 voci:
-  - Talenti: Clinging Breath, Iniziativa Migliorata, Seguire Tracce
+  - Talenti: Clinging Breath, Iniziativa Migliorata, Seguire Tracce (B)
 ```
 
 
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
 Medium outsider (evil, extraplanar, fire, lawful, dragonblood), 4 HD, LE. **hp 26**; **AC 17**, touch 11, flat-footed 16. Init +5; Vel 12 m. TS Temp +6, Rifl +5, Vol +4. BAB +4; Lotta +6.
-**Mischia** morso +6 (1d8+3 + **Morso Infuocato**). **Soffio** (fuoco; Clinging Breath: +1 round di danno). Scurovisione 18 m, visione crepuscolare. Vulnerabilità al freddo. Talenti: Clinging Breath, Iniziativa Migliorata, Seguire Tracce.
+**Mischia** morso +6 (1d8+3 + **Morso Infuocato**). **Soffio** (fuoco; Clinging Breath: +1 round di danno). Scurovisione 18 m, visione crepuscolare. Vulnerabilità al freddo. Talenti: Clinging Breath, Iniziativa Migliorata, Seguire Tracce (B).
 **Variante draconica** (`Hell Hound_draconico.pcg` + `regolari/Hell Hound - Draconic.pcg`): template Draconic Creature sul medesimo outsider 4 HD — +2 AC naturale e immunità a sonno/paralisi (derivati dal template `[Private source — Races of the Dragon]`, il .pcg non ha export).
 Notes: i segugi della Mano Rossa; usati in coppia coi Doom Hand.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): Seguire Tracce segnato **(B)**: nel segugio infernale dell'SRD è un talento bonus («Improved Initiative, Run, Track B»). Con 4 DV i talenti contati restano 2. Nessun numero cambia.
