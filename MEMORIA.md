@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, coda del lotto 3: `verifica_scheda --fatti` stampa in JSON i fatti di… | In PR |
 | 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, coda del lotto 3: `genera_creatura` dichiara nel manifest le c… | ✅ Capacità lette e dichiarate 1/3 → 3/3; il cancello di `sistemi.py` ora le chiede a ogni sistema attivo (i tre sistemi di prova le coprono già su main). 🟡 Mis… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3: capacità `creature.incantatori` (… | ✅ Errori messi apposta visti 0/616 → 376/616 (84% nelle liste che si leggono). Trovati 40 scarti veri in 9 file, nessuno corretto: sono incantesimi preparati e… |
-| 2026-11-12 | AVVENTURE-COMMUNITY | Punti chiave, grafo degli eventi, Prolog e RAG per «chi sa cosa» (domanda del D… | laboratorio; T1/T2 in `coerenza_campagna --state` solo dopo la conferma dei giorni dal DM |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 85 voci, l'ultima MS-0085 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 86 voci, l'ultima MS-0086 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

@@ -143,3 +143,28 @@ decisione già presa (Day 42, `state.yaml` `march_clock`) e non tocca canone:
    di S1, S5 e S6 il codice promosso prende gli stessi 9 del prototipo, sulle 9
    parafrasi nessuno; sul replay delle «−2 COS» le stesse 3 righe su 6; su main
    0 violazioni. S2, S3 e S4 restano qui.
+
+## Aggiunta del 2026-11-13: S8, le tattiche contro la scheda
+
+Regola in `scripts/coerenza_campagna.py fatti --tattiche`, banco in
+`muta_tattiche.py`, esiti in `misure/mutanti-tattiche.json`. L'àncora è la
+scheda (`verifica_scheda --fatti`, PR #393), non `state.yaml`.
+
+| Famiglia di mutanti | Mutanti | Visti |
+|---|---|---|
+| La scheda perde l'incantesimo o il talento che la tattica usa | 183 | 181 |
+| La tattica usa un incantesimo (corsivo) o un talento (maiuscole) che la scheda non ha | 180 | 178 |
+| Parafrasi: talento di più parole in minuscolo | 60 | 60 |
+| Parafrasi: incantesimo senza corsivo | 60 | 0 |
+| Parafrasi: talento di una parola in minuscolo | 60 | 0 |
+| Controllo: scambio fra due incantesimi della scheda (non va segnalato) | 26 | 0 |
+
+Su main (3cc11aee): 0 violazioni su 220 menzioni in 60 schede; 5 file con più
+schede e 178 file senza «Tattiche» non si giudicano. Il banco gira in circa
+tre minuti. I quattro mutanti non visti hanno un nome che la scheda scrive
+anche per altro («velocita: 9 m» nel frontmatter, «fendere»).
+
+I mutanti usano il dizionario della regola: dicono che la regola fa ciò che
+dichiara, non quanto spesso un autore sbaglia così. Su main non c'è nessun
+errore vero di questo tipo, quindi il valore oggi è di guardia sulle schede
+che cambiano (i lotti di ADR-0126 tolgono e aggiungono talenti e incantesimi).

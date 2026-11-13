@@ -8,6 +8,7 @@ devono restare leggibili dallo schema.
 from __future__ import annotations
 
 import copy
+import shutil
 import sys
 import tempfile
 import textwrap
@@ -445,6 +446,68 @@ class TestStoria(unittest.TestCase):
         r = cc.verifica_storia([], an, [])
         self.assertIn("S1 arrivo dell'orda", r["non_verificabili"])
         self.assertNotIn("S1 arrivo dell'orda", cc.verifica_storia([], self.an, [])["non_verificabili"])
+
+
+class TestTattiche(unittest.TestCase):
+    """S8: un incantesimo o un talento che le «Tattiche» nominano e la scheda non ha."""
+
+    SCHEDA = ("# Mago di prova\n\n**Talenti**: Attacco Poderoso, Incantare in Combattimento\n\n"
+              "**Incantesimi preparati** (mago 5):\n- 3° — *palla di fuoco*, *velocità*\n"
+              "- 1° — *dardo incantato*\n\n**Equipaggiamento** pozione di *invisibilità*\n\n"
+              "**Tattiche**: {}\n\n**Morale**: fugge sotto 10 pf.\n")
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+
+    def _viol(self, tattica, scheda=None):
+        p = _scrivi(self.tmp, "mago.md", (scheda or self.SCHEDA).format(tattica))
+        return cc.verifica_tattiche([p])
+
+    def test_tattica_coerente(self):
+        r = self._viol("apre con *palla di fuoco*, beve *invisibilità* e usa Attacco Poderoso.")
+        self.assertEqual(r["violazioni"], [])
+        self.assertEqual(r["letti"], {"schede": 1, "menzioni": 3})
+
+    def test_incantesimo_che_la_scheda_non_ha(self):
+        r = self._viol("apre con *fermare il tempo*, poi *palla di fuoco*.")
+        self.assertEqual([(v["regola"], v["ha"], v["riga"]) for v in r["violazioni"]],
+                         [("S8 tattica senza riscontro in scheda", "assente", 11)])
+        self.assertIn("Time Stop", r["violazioni"][0]["atteso"])
+
+    def test_talento_che_la_scheda_non_ha_anche_in_minuscolo(self):
+        for forma in ("Tiro Multiplo", "tiro multiplo"):
+            with self.subTest(forma=forma):
+                r = self._viol(f"da lontano usa {forma}.")
+                self.assertEqual(len(r["violazioni"]), 1)
+                self.assertIn("Manyshot", r["violazioni"][0]["atteso"])
+
+    def test_incantesimo_altrui_e_nota_del_dm_non_contano(self):
+        r = self._viol("contro *fermare il tempo* si arrende.\n> era scritto *desiderio*.")
+        self.assertEqual(r["violazioni"], [])
+
+    def test_limiti_dichiarati(self):
+        # senza corsivo l'incantesimo non si legge; un talento di una parola in minuscolo nemmeno
+        self.assertEqual(self._viol("apre con fermare il tempo e poi usa mobilità.")["violazioni"], [])
+
+    def test_file_con_due_schede_non_si_giudica(self):
+        due = self.SCHEDA + "\n# Secondo\n\n**Talenti**: Schivare\n"
+        r = self._viol("apre con *fermare il tempo*.", due)
+        self.assertEqual(r["violazioni"], [])
+        self.assertEqual(r["non_verificabili"], {"più schede nel file": "1 file"})
+
+    def test_cli_tattiche_sul_bestiario_vero(self):
+        import contextlib
+        import io
+        import json
+        buf = io.StringIO()
+        arco = _scrivi(self.tmp / "arco", "A.md", "# A\n").parent
+        with contextlib.redirect_stdout(buf):
+            self.assertEqual(cc.main(["fatti", str(arco), "--tattiche", "--json"]), 0)
+        t = json.loads(buf.getvalue())["tattiche"]
+        self.assertEqual(t["regole"], ["S8"])
+        self.assertGreaterEqual(t["letti"]["schede"], 50)
+        self.assertEqual(t["violazioni"], [], "una tattica del Bestiario nomina ciò che la scheda non ha")
 
 
 class TestResidui(unittest.TestCase):
