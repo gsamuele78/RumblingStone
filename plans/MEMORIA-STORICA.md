@@ -1223,3 +1223,15 @@ repo scritto con altre parole.
 - **Testo:** il DM ha scelto sulle card la RI 38 dell'SRD per il Collezionista (27 del rakshasa + 11 livelli di classe) e la riga «Tratti dei non morti» per deathlock, leone spettrale e leone crudele scheletrico. Le quattro schede sono corrette e `IN_ATTESA` di `test_difese.py` è vuoto. Misura: violazioni 37 → 33.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** le due card erano rimaste aperte dalle PR dei lotti 7 seconda e terza parte; le schede non si toccano senza la risposta del DM, quindi fino a oggi stavano nell'elenco in attesa. La RI 27 era quella del rakshasa base: la regola dell'SRD la alza di uno per livello di classe.
+
+### MS-0106 · 2026-11-13 · ADR-0126 lotto 8: adamantio, mithral, bastoni con le cariche
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche» in `plans/CHANGELOG.md`
+- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
+

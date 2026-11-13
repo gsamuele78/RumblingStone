@@ -14,6 +14,10 @@ Seconda prova (lotto 8, seconda parte): uno «spadone +3 sacrilego» e sei pozio
 di cura ferite gravi (54.500 mo; col solo potenziamento 18.000). Conta le sole
 violazioni: misura quanto pesa leggere le capacità speciali e le pozioni.
 
+Terza prova (lotto 8, terza parte): un'armatura completa +1 di adamantio, un'ascia
+bipenne di adamantio e un bastone del fuoco con 40 cariche (33.200 mo; senza
+materiali e bastoni 1.000). Conta le sole violazioni.
+
 Uso: python3 muta_ricchezza.py  (scrive misure-ricchezza.json accanto)
 """
 from __future__ import annotations
@@ -31,6 +35,9 @@ AGGIUNTA = "\n\n**Equipaggiamento** *anello di protezione +5*, *mantello della r
 #: seconda prova (lotto 8, seconda parte): un'arma il cui prezzo sta quasi tutto nella capacità speciale
 #: (+3 sacrilega = +5, 50.000 mo; il solo +3 ne vale 18.000) e sei pozioni
 SPECIALE = "\n\n**Equipaggiamento** spadone +3 sacrilego, 6 pozioni di *cura ferite gravi*\n"
+#: terza prova (lotto 8, terza parte): il prezzo sta nei materiali e nel bastone
+MATERIALI = ("\n\n**Equipaggiamento** armatura completa +1 di adamantio, ascia bipenne di adamantio, "
+             "bastone del fuoco (40 cariche)\n")
 
 
 def main() -> int:
@@ -39,6 +46,7 @@ def main() -> int:
     esito = {"violazione": 0, "non verificabile": 0, "niente": 0}
     perse = []
     speciale = {"violazione": 0, "scritte": 0}
+    materiali = {"violazione": 0, "scritte": 0}
     for p in sorted((ROOT / "Bestiario").rglob("*.md")):
         s = V.L.leggi(p)
         if s is None or not sum(g.n for g in s.gruppi):
@@ -59,6 +67,9 @@ def main() -> int:
             vs, _ = V.ricchezza(q)
             speciale["violazione"] += bool(vs)
             speciale["scritte"] += 1
+            q.write_text(testo + MATERIALI, encoding="utf-8")
+            materiali["violazione"] += bool(V.ricchezza(q)[0])
+            materiali["scritte"] += 1
             q.write_text(testo + AGGIUNTA, encoding="utf-8")
             v, n = V.ricchezza(q)
         if v:
@@ -70,7 +81,8 @@ def main() -> int:
         else:
             esito["niente"] += 1
             perse.append(str(p.relative_to(ROOT)))
-    fuori = {"conto": conto, "esito": esito, "perse": perse, "capacità speciale e pozioni": speciale}
+    fuori = {"conto": conto, "esito": esito, "perse": perse, "capacità speciale e pozioni": speciale,
+             "materiali e bastone": materiali}
     (Path(__file__).parent / "misure-ricchezza.json").write_text(
         json.dumps(fuori, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for k, n in {**conto, **esito}.items():
@@ -78,6 +90,7 @@ def main() -> int:
     for x in perse:
         print("  persa:", x)
     print(f"{'arma con capacità speciale e pozioni':40} {speciale['violazione']}/{speciale['scritte']}")
+    print(f"{'materiali speciali e bastone':40} {materiali['violazione']}/{materiali['scritte']}")
     return 0
 
 

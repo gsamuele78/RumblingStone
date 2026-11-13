@@ -1040,3 +1040,33 @@ leone spettrale e leone crudele scheletrico scrivono «Tratti dei non morti».
 Le quattro schede sono corrette e `IN_ATTESA` di `test_difese.py` è vuoto.
 Misura su `Bestiario 0*/`: violazioni 37 → 33, non verificabili 374 → 374.
 
+### Lotto 8, terza parte — adamantio, mithral, bastoni con le cariche (2026-11-13)
+
+**Contesto.** Dopo la seconda parte restavano fuori dalla somma i materiali
+speciali e i bastoni. Una «armatura completa +1 di mithral» valeva 1.000 mo
+invece di 10.000.
+
+**Decisione.** `estrai_oggetti.py` aggiunge a `oggetti.toml` la tabella
+`[oggetti.materiali]` dalle due tabelle di «Special Materials» dell'SRD:
+adamantio (armatura leggera, media, pesante, arma) e mithral (armatura
+leggera, media, pesante, scudo). `verifica_scheda` somma il costo del
+materiale al potenziamento, e conta anche l'oggetto senza «+N» («mithral
+chainmail», «ascia di adamantio»). La categoria dell'armatura viene da
+`[movimento.armature]`. Un bastone conta solo con le cariche scritte, in
+proporzione alle 50 di un bastone nuovo, come le bacchette. Il materiale conta
+solo attaccato al nome o al bonus; un'arma di mithral e uno scudo di adamantio
+non si contano, perché la tabella non li prezza.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 33 → 33, non
+verificabili 374 → 375. Il non verificabile nuovo è Ghaurush Cenerevento
+(GS 16): col bastone del fuoco da 10 cariche (3.550 mo) l'equipaggiamento
+arriva a 36.300 mo contro i 35.000 di un PNG di 13 dadi vita, ma il
+modificatore di livello della razza non si conosce. Banco `muta_ricchezza.py`,
+terza prova (armatura completa +1 di adamantio, ascia bipenne di adamantio,
+bastone del fuoco con 40 cariche, aggiunti a 125 schede): violazioni 1 → 52.
+Limiti: il materiale scritto dopo una capacità speciale («pugnale +1 infuocato
+di adamantio») non si legge; ferro freddo, argento alchemico, legnoscuro e
+pelle di drago restano fuori (dipendono dal prezzo o dal peso dell'oggetto);
+il prezzo base degli oggetti comuni non si conta; PF1e non ha le tabelle. Del
+lotto 8 restano il prezzo base degli oggetti comuni e la tabella PF1e.
+
