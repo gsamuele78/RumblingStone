@@ -82,20 +82,20 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 114,
-        "corpo_mediano_pt": 9.5,
+        "pagine": 125,
+        "corpo_mediano_pt": 10.0,
         "corpo_minimo_pt": 7.0,
         "schede": 24,
-        "pagine_con_immagine": 0.026,
-        "pagine_con_immagine_decimo": 0.088,
-        "parole": 70043,
-        "quota_parole_ripetute": 0.119
+        "pagine_con_immagine": 0.024,
+        "pagine_con_immagine_decimo": 0.08,
+        "parole": 70107,
+        "quota_parole_ripetute": 0.118
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 8329
+        "parole_ripetute": 8278
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {

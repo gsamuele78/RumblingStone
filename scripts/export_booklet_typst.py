@@ -911,7 +911,7 @@ CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
     "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
-    "schede", "chi_si_incontra", "pagina",
+    "schede", "chi_si_incontra",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -997,9 +997,6 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
         extra.append(f'  carta: {json.dumps(carta, ensure_ascii=False)},')
     if formato != "a4":
         extra.append(f'  formato: {json.dumps(formato, ensure_ascii=False)},')
-    # `"pagina": "fitta"`: corpo e margini di un AP stampato (solo in A4)
-    if man.get("pagina") == "fitta":
-        extra.append('  pagina: "fitta",')
     return [
         f'#import "{typ_path(TEMA)}": *',
         f'#import "{typ_path(SCHEDA_PG)}": scheda',

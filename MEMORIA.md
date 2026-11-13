@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | STANDARD-STAMPA | Pagina fitta abbandonata (il DM, 2026-11-13: «preferisco sempre la versione del… | ✅ tolta la chiave `"pagina": "fitta"` da manifest, tema, esportatore, schema e validatore; la serata «La Notte e l'Alba» torna a 125 pagine, corpo 10,2 pt, pas… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 seconda parte: la penalità di armatura alla prova.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 prima parte: le abilità di classe e il margine dei gradi.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 terza parte: i fatti scheda per scheda.… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5, prima parte: la creatura base. Capacità `creature.base` (409… | In PR |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
 | 2026-11-13 | STANDARD-STAMPA | Misura delle ripetizioni nei booklet (domanda del DM del 2026-11-12: «siamo sic… | ✅ `misura_stampa.parole_ripetute` (w-shingling, Broder 1997: passi di almeno 8 parole identiche, dalla seconda volta, testatine escluse), in prova; 20 booklet… |
-| 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 96 voci, l'ultima MS-0096 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 97 voci, l'ultima MS-0097 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

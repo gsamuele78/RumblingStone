@@ -1124,3 +1124,14 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 ha la penalità alla prova di dodici armature e sei scudi dell'SRD e le nove abilità che la subiscono (Nuotare doppia). `verifica_scheda` legge armatura e scudo dalla riga della CA e aggiunge la penalità ai gradi minimi, contando ogni oggetto perfetto. Misura: violazioni 33 → 33; 62 schede con un'armatura riconosciuta; banco, tutte +6 18 → 20 su 32.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** nella tabella dell'SRD lo scudo torre è «+4» con una nota in apice «3»: tolti i tag diventava +43, e gli apici vanno tolti prima. L'armatura si riconosce dal bonus e dalla Des massima, che nella tabella non si ripetono mai, così i nomi italiani del plugin non servono una seconda volta. I gradi dichiarati fra parentesi li scrive abilità per abilità una scheda sola del Bestiario: non se ne fa una regola.
+
+### MS-0097 · 2026-11-13 · Pagina fitta abbandonata: la serata torna com'era il 12 novembre
+
+- **Data:** 2026-11-13
+- **PR:** #406
+- **ADR:** ADR-0122
+- **Temi:** stampa booklet schede
+- **Origine:** voce scritta con la PR, per la quarta riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
+- **Testo:** Dopo aver visto la serata a 114 pagine con le schede rimesse larghe (MS-0093), il DM ha scelto la versione del 12 novembre e ha chiesto di abbandonare la versione stretta per tutto. La chiave `"pagina": "fitta"` è tolta da manifest, tema, esportatore, schema e validatore: nessun booklet la usava oltre alla serata. La serata torna a 125 pagine, corpo 10,2 pt, con lo stesso passo di riga delle schede del 12 novembre.
+- **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
+- **Solo qui:** in un giorno il DM ha bocciato tre modi di accorciare la serata: le schede accorpate (MS-0090), le schede strette (MS-0093) e la pagina fitta intera (questa voce). La lunghezza della serata non si riduce stringendo la pagina né togliendo le schede dalle scene: non riproporlo. Resta di quella giornata solo la misura delle ripetizioni corretta sulle testatine. Il testo della serata non è identico a quello del 12 novembre: porta le correzioni alle schede entrate dopo (#400 e seguenti).
