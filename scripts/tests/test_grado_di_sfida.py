@@ -1,0 +1,142 @@
+"""Il grado di sfida (ADR-0126, lotto 5, seconda parte): conto puro, lettura della scheda, Bestiario."""
+from __future__ import annotations
+
+import sys
+import tempfile
+import unittest
+from fractions import Fraction as F
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import verifica_scheda as V  # noqa: E402
+from dmcore import gs as GS  # noqa: E402
+from dmcore import sistemi as S  # noqa: E402
+
+RADICE = Path(__file__).resolve().parents[2]
+T35 = S.dati("dnd35", "creature.costruzione")["gs"]
+TPF = S.dati("pf1e", "creature.costruzione")["gs"]
+
+SCHEDA = """# {titolo}
+
+```statblocco
+gs: {gs}
+tipo: {tipo}
+pf: 30
+pf-dado: {dadi}
+attributi: For 14 Des 12 Cos 12 Int 10 Sag 10 Car 10
+```
+"""
+
+
+def giudica(gs, tipo, dadi, titolo="Prova", nome="prova-cr1.md"):
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / nome
+        p.write_text(SCHEDA.format(gs=gs, tipo=tipo, dadi=dadi, titolo=titolo), encoding="utf-8")
+        return V.grado_di_sfida(p)
+
+
+class Conto(unittest.TestCase):
+    def uno(self, esito):
+        self.assertEqual(esito["min"], esito["max"], esito)
+        return esito["min"]
+
+    def test_classe_da_pg_vale_il_livello(self):
+        self.assertEqual(self.uno(GS.atteso({"fighter": 6}, 0, None, "humanoid (human)", T35)), 6)
+
+    def test_classe_da_png_vale_un_grado_in_meno(self):
+        """SRD: hobgoblin combattente di 1° GS 1/2; di 3° GS 2."""
+        self.assertEqual(self.uno(GS.atteso({"warrior": 1}, 0, None, "hobgoblin", T35)), F(1, 2))
+        self.assertEqual(self.uno(GS.atteso({"warrior": 3}, 0, None, "hobgoblin", T35)), 2)
+
+    def test_le_razze_con_la_loro_riga_nell_srd(self):
+        """monsters-*.md: drow e duergar +1 con classi da PG, pari al livello con classi da PNG;
+        goblin −2 e coboldo −3 con classi da PNG (blocchi SRD: goblin 1/3, coboldo 1/4, drow 1)."""
+        self.assertEqual(self.uno(GS.atteso({"rogue": 1}, 0, None, "humanoid (dwarf, duergar)", T35)), 2)
+        self.assertEqual(self.uno(GS.atteso({"warrior": 1}, 0, None, "humanoid (elf) drow", T35)), 1)
+        self.assertEqual(self.uno(GS.atteso({"warrior": 1}, 0, None, "goblin", T35)), F(1, 3))
+        self.assertEqual(self.uno(GS.atteso({"warrior": 1}, 0, None, "kobold", T35)), F(1, 4))
+
+    def test_hobgoblin_non_e_un_goblin(self):
+        self.assertIsNone(GS.razza("Medium humanoid (goblinoid) hobgoblin", T35))
+
+    def test_pf1e_scala_di_uno_e_di_due(self):
+        self.assertEqual(self.uno(GS.atteso({"fighter": 6}, 0, None, "human", TPF)), 5)
+        self.assertEqual(self.uno(GS.atteso({"fighter": 1}, 0, None, "human", TPF)), F(1, 2))
+        self.assertEqual(self.uno(GS.atteso({"warrior": 1}, 0, None, "human", TPF)), F(1, 3))
+        self.assertEqual(self.uno(GS.atteso({"warrior": 2}, 0, None, "human", TPF)), F(1, 2))
+
+    def test_classi_miste_e_razze_fuori_fonte_non_si_giudicano(self):
+        self.assertIn("perche", GS.atteso({"rogue": 4, "expert": 4}, 0, None, "human", T35))
+        self.assertIn("perche", GS.atteso({"fighter": 3}, 0, None, "githyanki", T35))
+        self.assertIn("perche", GS.atteso({"fighter": 3}, 0, None, "Medium humanoid (extraplanar)", T35))
+
+    def test_il_mezzorco_non_e_un_modello_il_mezzo_immondo_si(self):
+        self.assertIsNone(GS.modello("Medium humanoid (orc), mezzorco, half-orc", T35))
+        self.assertIsNotNone(GS.modello("segugio infernale mezzo-immondo", T35))
+        self.assertIn("perche", GS.atteso({"fighter": 3}, 0, None, "half-fiend human", T35))
+
+    def test_creatura_base_con_livelli_e_una_forbice(self):
+        """SRD, improving-monsters.md: ogre GS 3 con 4 DV; Barbaro 6 associato dà 9, non associato
+        3 + 4×½ + 2 = 7."""
+        ogre = {"gs": 3, "dv": 4}
+        e = GS.atteso({"barbarian": 6}, 4, ogre, "Large giant", T35)
+        self.assertEqual((e["min"], e["max"]), (7, 9))
+        e = GS.atteso({"warrior": 2}, 4, ogre, "Large giant", T35)   # da PNG: sempre non associati
+        self.assertEqual((e["min"], e["max"]), (4, 4))
+
+    def test_creatura_base_senza_livelli_e_avanzata(self):
+        ogre = {"gs": 3, "dv": 4}
+        self.assertEqual(self.uno(GS.atteso({}, 4, ogre, "Large giant", T35)), 3)
+        self.assertIn("perche", GS.atteso({}, 8, ogre, "Large giant", T35))
+        self.assertIn("perche", GS.atteso({}, 6, None, "Medium plant", T35))
+
+
+class Scheda(unittest.TestCase):
+    def test_scarto_e_riga(self):
+        v, nv = giudica("1", "Medium humanoid (dwarf, duergar), Rogue 1, LE", "1d6+2")
+        self.assertEqual([(x["regola"], x["atteso"], x["ha"], x["riga"]) for x in v], [("numero.gs", "2", "1", 4)])
+        self.assertEqual(nv, [])
+
+    def test_giusta(self):
+        self.assertEqual(giudica("2", "Medium humanoid (dwarf, duergar), Rogue 1, LE", "1d6+2"), ([], []))
+        self.assertEqual(giudica("1/2", "Medium humanoid (goblinoid), hobgoblin, Warrior 1, LE", "1d8+1"), ([], []))
+
+    def test_la_frazione_si_legge_dalla_riga(self):
+        v, _ = giudica("1/2", "Small humanoid (goblinoid), goblin, Warrior 1, NE", "1d8+1")
+        self.assertEqual([(x["atteso"], x["ha"]) for x in v], [("1/3", "1/2")])
+
+    def test_la_classe_di_prestigio_scritta_nel_tipo_conta(self):
+        """«Bardo 12 / Cantore delle tempeste 2»: 14 livelli: la classe che nessuna tabella conosce conta come classe da PG."""
+        self.assertEqual(giudica("14", "Medium humanoid (elf), Bardo 12 / Cantore delle tempeste 2, NB", "14d6+42"),
+                         ([], []))
+
+    def test_senza_dadi_non_si_giudica(self):
+        v, nv = giudica("7", "Large monstrous humanoid", "")
+        self.assertEqual(v, [])
+        self.assertEqual(len(nv), 1)
+
+    def test_base_riconosciuta_dal_nome_col_tipo_e_i_dadi(self):
+        v, nv = giudica("12", "Huge outsider (chaotic, evil, extraplanar), 12d8+96", "12d8+96",
+                        titolo="Bebilith guardiano", nome="bebilith-guardiano-cr12.md")
+        self.assertEqual(nv, [])
+        self.assertEqual([(x["atteso"], x["ha"]) for x in v], [("10", "12")])
+
+
+class Bestiario(unittest.TestCase):
+    #: scarti veri in attesa della decisione del DM (card del thread delle regole)
+    IN_ATTESA = {"duergar-ladro1-cr1.md", "duergar-mago-ladro8-cr7.md", "goblin-warrior1-cr05.md"}
+
+    def test_il_bestiario_non_ha_altri_scarti(self):
+        trovate, attese = [], set()
+        for p in sorted((RADICE / "Bestiario").rglob("*.md")):
+            v = V.grado_di_sfida(p)[0]
+            if p.name in self.IN_ATTESA:
+                attese |= {p.name} if v else set()
+            else:
+                trovate += [f"{x['file']}:{x['riga']} {x['testo']}" for x in v]
+        self.assertEqual(trovate, [])
+        self.assertEqual(attese, self.IN_ATTESA, "una scheda in attesa è stata corretta: toglierla dall'elenco")
+
+
+if __name__ == "__main__":
+    unittest.main()

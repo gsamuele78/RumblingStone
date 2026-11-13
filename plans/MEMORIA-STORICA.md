@@ -1069,7 +1069,19 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** le decisioni erano in elenco nel testo del thread dal 12/11 e il DM non le trovava: sono arrivate tutte in due minuti appena messe su card con scheda, file e riga. Le «sette violazioni vecchie» di talenti, rigiudicate dopo i lotti 3-5, erano due. Una riga del master ripetuta nei booklet si corregge nel master e poi si rigenerano i `.hb.md` con `build_booklet_html.py <manifest> --format hb` (il test dei manifest lo chiede); gli HTML dei booklet in repo erano già indietro rispetto ai manifest e non sono stati rigenerati qui. Cambiare la CA di una scheda del Bestiario cambia la fixture `impronta-creature.json` (`impronta_creature.py --scrivi`); cambiarne il titolo cambia l'id nel catalogo (`build_monster_catalog.py`). La prima card su Abbathor (Guerriero 6 / Guardia Nera 4) era sbagliata: Nascondersi è incrociata e i 5 gradi arrivano al 7° livello. Due schede «fuori conto» erano un errore del controllo (mezzelfi letti come umani). Il controllo cerca i nomi dei talenti in tutto il testo: una nota che nomina il talento tolto lo fa ricontare (lotta dell'ogre), quindi le note lo descrivono senza nominarlo. Persuasive nell'SRD dà Raggirare e Intimidire, non Diplomazia. Koth aveva una nota «si tengono tutti e cinque, come chiede il DM»: la superano le card del 13/11.
 
-### MS-0092 · 2026-11-13 · Pagina fitta: le schede tengono l'interlinea di prima
+### MS-0092 · 2026-11-13 · ADR-0126 lotto 5: il grado di sfida
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede plugin
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 5 seconda parte: il grado di sfida» in `plans/CHANGELOG.md`
+- **Testo:** Il grado di sfida scritto nel blocco si confronta con quello che danno i livelli di classe, la razza e la creatura base. Classe da PG pari al livello e classe da PNG un grado sotto nel 3.5, uno e due sotto in PF1e; drow, duergar e svirfneblin +1 con classi da PG; goblin −2 e coboldo −3 con classi da PNG; creatura base con livelli dentro la forbice fra tutti non associati e tutti associati. Misura: violazioni 30 → 33, non verificabili 293 → 371. Tre scarti veri vanno al DM: due duergar con classi da PG scritti senza il +1 e il goblin combattente a 1/2 invece di 1/3.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la lettura della scheda rende «1/2» come 1, quindi il grado si legge dalla riga del blocco. I dadi di una classe che la lettura non conosce finiscono al tipo come dadi razziali: si tolgono quando il tipo nomina la classe. «Mezzorco» conteneva «mezzo» e passava per un modello: le parole dei modelli sono espressioni regolari. La regola generale di PG e PNG del 3.5 non è nell'SRD ma nel manuale del DM: nel repo solo i numeri, e i blocchi dell'SRD la confermano. Githyanki e orog hanno la loro riga in manuali fuori dai dati e restano dubbi.
+
+
+### MS-0093 · 2026-11-13 · Pagina fitta: le schede tengono l'interlinea di prima
 
 - **Data:** 2026-11-13
 - **PR:** #402
