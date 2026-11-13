@@ -1032,3 +1032,11 @@ all'inglese («+1 flaming longsword») non si legge; i bastoni non si contano
 fuori; PF1e non ha le tabelle. Del lotto 8 restano i bastoni, i materiali e la
 tabella PF1e.
 
+### Addendum 2026-11-13: le due card delle difese hanno risposta
+
+Il DM ha risposto alle due card rimaste dal lotto 7. La RI del Collezionista
+è 38, come dà l'SRD (27 del rakshasa + 11 livelli di classe). Deathlock,
+leone spettrale e leone crudele scheletrico scrivono «Tratti dei non morti».
+Le quattro schede sono corrette e `IN_ATTESA` di `test_difese.py` è vuoto.
+Misura su `Bestiario 0*/`: violazioni 37 → 33, non verificabili 374 → 374.
+
