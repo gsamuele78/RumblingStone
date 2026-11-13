@@ -1080,3 +1080,14 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la lettura della scheda rende «1/2» come 1, quindi il grado si legge dalla riga del blocco. I dadi di una classe che la lettura non conosce finiscono al tipo come dadi razziali: si tolgono quando il tipo nomina la classe. «Mezzorco» conteneva «mezzo» e passava per un modello: le parole dei modelli sono espressioni regolari. La regola generale di PG e PNG del 3.5 non è nell'SRD ma nel manuale del DM: nel repo solo i numeri, e i blocchi dell'SRD la confermano. Githyanki e orog hanno la loro riga in manuali fuori dai dati e restano dubbi.
 
+
+### MS-0093 · 2026-11-13 · Pagina fitta: le schede tengono l'interlinea di prima
+
+- **Data:** 2026-11-13
+- **PR:** #402
+- **ADR:** ADR-0122
+- **Temi:** stampa booklet schede
+- **Origine:** voce scritta con la PR, per la terza riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
+- **Testo:** Il DM ha letto la serata a 114 pagine e ha trovato le schede di PG, PNG, villain e mostri «tutte attaccate». Confronto con i PDF del 2 e del 12 novembre: corpo delle schede uguale (8,8 pt), ma l'interlinea della pagina fitta (0,56em) entrava anche nelle schede, e il passo di riga scendeva da 11,2 a 10,6 pt in appendice e da 12,0 a 11,1 pt nelle schede in breve dei capitoli. Ora `statblocco` fissa l'interlinea del tema: 11,2 e 11,7 pt. La serata resta di 114 pagine.
+- **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` (`statblocco`) · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
+- **Solo qui:** rispetto al 2 novembre le schede portano anche più righe (taglia, spazio e portata di ADR-0128, i sensi interi): quella parte di «attaccato» non viene dall'interlinea e resta. Le schede in breve nei capitoli non hanno le fasce Difesa/Attacco dell'appendice: proposto al DM, non fatto. Confronti in `/mnt/project-files/serata-corta-2026-11-13/`.

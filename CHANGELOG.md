@@ -192,6 +192,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
 ### Corretto
+- Booklet con `"pagina": "fitta"`: le schede delle creature tengono l'interlinea del tema. Con la pagina fitta le righe delle schede si erano strette del 5-7% e il DM le leggeva male.
 - Stampa: `misura_stampa.parole_ripetute` toglie le testatine riga per riga. Nei capitoli di poche pagine la testatina contava come copia; i valori del registro scendono di poco (serata 12,3% → 11,8% a parità di testo).
 - I titoli ricomposti dal tema Typst perdevano l'apostrofo («LALBA» per «L'ALBA»): `to-string` ora rende gli apostrofi.
 - `coerenza_campagna fatti --state` (ADR-0125): se `state.yaml` non ha `march_clock.giorno_arrivo`, S1 finisce fra i `non_verificabili` invece di tacere; `ancore_state()` legge `STATE` alla chiamata, non all'import (il test della CLI ora prova davvero lo state indicato). Dalla revisione automatica della #379.

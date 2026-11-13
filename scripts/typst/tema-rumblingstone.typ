@@ -426,7 +426,9 @@
   let resto(tattiche) = [
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
     #set text(size: 8.8pt)
-    #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false)
+    // l'interlinea delle schede è sempre quella del tema, anche con
+    // `pagina: "fitta"`: il DM le ha trovate «tutte attaccate» (2026-11-13)
+    #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false, leading: eval(VARIANTE.interlinea))
     #if ingombro != "" and ingombro != [] { v(2pt); ingombro }
     #if apertura != none { v(2pt); apertura }
     #fascia("Difesa", difesa)
@@ -519,7 +521,7 @@
       // attacco per chi la legge (serata, p. 58, 2026-11-12)
       block(width: 100%, breakable: false, above: 0.9em, below: 0.6em,
         stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
-        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
+        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em, leading: eval(VARIANTE.interlinea))
         #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
         #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
         #if pagina != none {
