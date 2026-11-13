@@ -241,6 +241,341 @@ Limiti, detti:
 - i talenti di una scheda con più recinti si cercano dal recinto al successivo:
   una nota di un'altra creatura in quel tratto può ammettere un numero in più.
 
+### Lotto 3 — incantatori: slot, conosciuti, livello e CD (2026-11-12)
+
+`verifica_scheda` controllava che un incantesimo stesse nella lista della
+classe, non quanti se ne possono lanciare. Ora la capacità
+`creature.incantatori` porta le tabelle delle classi che lanciano (bardo,
+chierico, druido, paladino, ranger, stregone, mago, adepto) e `dmcore.magia`
+ricostruisce, per ogni lista di cui si leggono classe, livello e
+caratteristica:
+
+- **incantesimi al giorno**: la cella della tabella al livello di classe, più
+  gli incantesimi bonus della caratteristica (la tabella dei bonus è una
+  formula, riscontrata riga per riga dall'estrattore), più lo slot di dominio
+  del chierico e quello di scuola del mago specialista. Si giudicano la riga
+  «N/N+1/… al giorno» dell'intestazione, la parentesi «(5+1)» di una riga e il
+  numero di incantesimi preparati: più degli slot è uno scarto, meno no (una
+  scheda può scrivere solo gli incantesimi chiave);
+- **incantesimi conosciuti** di bardo e stregone, fissi;
+- **livello**: una riga a un livello che la classe non lancia ancora, o che la
+  caratteristica non regge (serve 10 + livello);
+- **CD**: 10 + livello + modificatore, +1 o +2 se la scheda dichiara
+  Incantesimi Focalizzati.
+
+I dati sono due file scritti da `estrai_incantatori.py`, solo numeri:
+`sistemi/dnd35/dati/incantatori.toml` dall'SRD 3.5 e
+`sistemi/pf1e/dati/incantatori.toml` dal PRD (PSRD-Data, book-cr). Il PF1e non
+eredita: bardo e stregone non hanno slot di livello 0 (trucchetti a volontà),
+il paladino lancia col Carisma, lo stregone ha i conosciuti di stirpe.
+
+**Forma ibrida dichiarata.** Per il bardo il DM ha scelto la tabella del PF1e
+(card del 2026-11-09, `[griglie.bardo]` di `creature.toml`). Una lista di bardo
+3.5 che torna con la tabella PF1e non è una violazione: esce fra i non
+verificabili con la regola `numero.incantesimi.variante`, perché il lotto 11
+la scriva nel registro delle regole custom (D-B-ter). Una lista che non torna
+con nessuna delle due tabelle è una violazione.
+
+| | Prima (main 942899b5) | Lotto 3 |
+|---|---|---|
+| Errori messi apposta negli incantesimi, visti da `verifica_scheda` | 0 su 616 | 376 su 616 (61%) |
+| di cui in liste che si leggono (classe, livello, caratteristica) | 0 su 449 | 376 su 449 (84%) |
+| per campo: CD +1, CD −1 | 0 | 84/126, 80/126 |
+| per campo: slot +1, slot −1, livello | 0 | 58/85, 48/85, 20/29 |
+| per campo: un incantesimo in più | 0 | 86/165 |
+| Scarti veri trovati (Bestiario e moduli) | non misurati | 40 righe in 9 file |
+| `verifica_scheda Bestiario 0*/` | 14 violazioni in 9 schede | 54 in 17 |
+
+Banco: `muta_magia.py`, misure in `misure-magia.json`.
+
+Cosa ha trovato, e **non è corretto**: togliere un incantesimo preparato o
+cambiare gli slot di un personaggio è una scelta del DM, e i moduli toccano i
+booklet. Quattro schede del Bestiario stanno in un elenco «in attesa» esplicito
+nel test del cancello:
+
+- `ur-vrax-voce-del-drago-cr10` (chierico 9, Sag 23): ogni livello dal 1° al 5°
+  ha uno slot in più della tabella (7+1 contro 6+1 al 1°);
+- `morlin-coalhewer-cr12` (chierico 12, Sag 19): 3° e 4° livello, uno in più;
+- `abbathor-cleric11-cr11` (chierico 11, Sag 18): 2° livello, 6+D contro 5+D;
+- `lomyn-redtongue-bardo8-cr8`: slot da bardo 3.5 e conosciuti di 1° da bardo
+  PF1e (5 contro 4), cioè nessuna delle due tabelle per intero;
+- nei moduli: ARC-08 guida del DM (chierico 8, chierico 12, ranger 4 con
+  incantesimi di 2°, druido 14) e schede (drago nero «come stregone 7»,
+  6/8/8/6 contro 6/7/7/5), ARC-05 stanza runica, l'errata dell'arco
+  post-Hammerfist (CD più alte di uno), `villans.md` della Corona (CD da
+  Carisma 20 con Carisma 24 scritto).
+
+Limiti, detti:
+
+- 167 errori messi apposta su 616 cadono in liste che **non si leggono**: manca
+  la caratteristica o il livello nel blocco (schede a prosa dei moduli), o la
+  classe non ha tabella nel plugin (anima prescelta, accordo sublime: manuali,
+  lotto 9). Stanno fra i non verificabili, una riga per lista;
+- 73 errori in liste lette non si vedono: una CD dentro il margine degli
+  Incantesimi Focalizzati (la scuola dell'incantesimo non si guarda ancora), un
+  incantesimo in più in una riga che non riempiva gli slot, uno slot in meno
+  che porta al numero giusto una riga già sbagliata;
+- la verifica dei conosciuti guarda solo l'eccesso;
+- oggetti che danno slot (perla del potere, anello della stregoneria) non si
+  leggono: una scheda che li conta negli slot esce come violazione, e va
+  dichiarata come per i bonus del lotto 1;
+- il lotto 3 del piano aveva anche i requisiti delle classi di prestigio e il
+  rigiudizio delle 7 violazioni vecchie: vanno in un **lotto 3-bis**, come è
+  stato per la CA nel lotto 1.
+
+### Lotto 3-bis — i requisiti delle classi di prestigio (2026-11-12)
+
+Una scheda poteva scrivere «Blackguard 10» senza nessun'altra classe e
+`verifica_scheda` non diceva nulla: dei requisiti d'ingresso delle classi di
+prestigio non c'era un dato. Ora la capacità `creature.prestigio` li porta e
+`dmcore.prestigio` li giudica contro il personaggio **prima** del primo livello
+della classe, che è quando i requisiti servono. La scheda scrive il personaggio
+com'è adesso, quindi ogni giudizio è una condizione necessaria:
+
+- **bonus di attacco base**: quello che danno le altre classi (dalla
+  composizione dei dadi vita, quando la scheda la scrive tutta);
+- **gradi**: il requisito non supera il massimo che i dadi vita prima
+  dell'ingresso permettono (3.5: dadi vita + 3; PF1e: dadi vita), e l'abilità è
+  scritta nella scheda con un bonus che quei gradi li regge. Un'abilità di
+  Forza o Destrezza scritta con un bonus basso resta un dubbio (la penalità di
+  armatura può nascondere i gradi); una non scritta è una violazione;
+- **talenti**: per nome. La parentesi («Arma Focalizzata (martello da guerra)»)
+  non si giudica. Se la scheda ha un talento che la lettura non conosce, il
+  talento mancante è un dubbio e non una violazione;
+- **razza** e **allineamento**: quelli scritti nel tipo;
+- **livello d'incantesimo**: una delle altre classi lancia incantesimi arcani o
+  divini di quel livello, contando lo slot che viene solo dagli incantesimi
+  bonus (paladino 8 con Saggezza 14).
+
+**I dati, e quello che non c'è.** `estrai_prestigio.py` scrive due file, solo
+nomi e numeri. `sistemi/dnd35/dati/prestigio.toml`: 15 classi dalle sezioni
+«Requirements» dell'SRD 3.5 e 478 dai tag `PRE…` di PCGen per i manuali (un
+nome dell'SRD vince). `sistemi/pf1e/dati/prestigio.toml`: le 10 classi del Core
+dal PRD, con i loro gradi (assassino: Camuffare 2 e Furtività 5, non 4 e 8).
+Un requisito che non si riduce a un numero (speciale, divinità, lingua,
+regione, «due scuole a scelta») **non si copia**: se ne tiene il conto in
+`non_verificati` e la scheda lo porta fra i non verificabili.
+
+| | 3.5 (493 classi) | PF1e (10 classi) |
+|---|---|---|
+| Requisiti ridotti a un numero | 1.301 (60%) | 26 (70%) |
+| Requisiti solo contati (`non_verificati`) | 877 (40%) | 11 (30%) |
+| Classi con soli requisiti speciali | 39 | 0 |
+| Classi di cui i dati non hanno nessun requisito | 17 | 0 |
+| Classi in più manuali con requisiti diversi (`diverge`) | 6 | 0 |
+
+Le 17 classi senza requisiti e le 6 che divergono non danno mai una
+violazione: la scheda esce con un dubbio che dice di leggere il manuale.
+
+| | Prima (main f33282c0) | Lotto 3-bis |
+|---|---|---|
+| Requisiti tolti apposta dalle schede vere, visti da `verifica_scheda` | 0 su 30 | 30 su 30 |
+| Requisiti tolti a ogni classe dei dati, visti da `dmcore.prestigio` | non c'era | tutti (test su 503 classi) |
+| Violazioni vere trovate nel Bestiario | non misurate | 3 in 2 schede |
+| `verifica_scheda Bestiario 0*/` | 54 violazioni in 17 schede, 308 dubbi | 57 in 19, 315 dubbi |
+
+Il banco (`muta_prestigio.py`, `misure-prestigio.json`) è piccolo e va letto
+per quello che è: le schede con una classe di prestigio sono 8, tutte nel
+Bestiario, e le mutazioni sono 30 (allineamento 5, razza 1, talento 10, abilità
+8, livelli 6). Due mutazioni perse al primo giro erano difetti del banco, una
+era un difetto vero del controllo (un'abilità di Destrezza non scritta passava
+per dubbio) ed è corretta. Il 30 su 30 dice che la lettura di queste 8 schede
+regge, non che reggerà su una scheda scritta in un altro modo. Nessun modulo
+(`0*/`) ha una classe di prestigio che la lettura riconosca.
+
+Cosa ha trovato, e **non è corretto** (i livelli di un PNG sono del DM): due
+schede in un elenco «in attesa» esplicito nel test del cancello.
+
+- `abbathor-blackguard-cr10`: «Blackguard 10» senza altre classi. La guardia
+  nera chiede bonus di attacco base +6 e Nascondersi 5 gradi prima del primo
+  livello: con zero livelli d'altro non si entra.
+- `drow-assassina-lolth-cr10`: Ladro 4 / Assassino 5. Nascondersi e Muoversi
+  Silenziosamente a 8 gradi chiedono 5 dadi vita prima dell'ingresso (massimo
+  dei gradi 7 al 4° livello).
+
+**Un buco del lotto 1, chiuso.** L'estrattore dei gradi non leggeva
+«Spellcraft» (nell'SRD è l'unica abilità col titolo senza `<small>`):
+`creature.gradi` aveva 37 abilità su 38 e Sapienza Magica non entrava né nel
+massimo né nella somma dei punti. Corretto l'estrattore e rigenerato
+`gradi.toml`: nessuna violazione nuova nelle 150 schede.
+
+Limiti dichiarati: i requisiti si giudicano contro tutte le altre classi, non
+contro l'ordine vero dei livelli (che la scheda non scrive), quindi un
+personaggio con due classi di prestigio può passare anche se la prima è
+servita a entrare nella seconda fuori ordine; oltre i 20 dadi vita il bonus di
+attacco base non si ricostruisce; le razze si riconoscono in inglese e, in
+italiano, solo per le cinque del lessico (elfo, gnomo, halfling, mezzelfo,
+nano): le altre restano un dubbio; i 3.5 dei manuali vengono dai tag di PCGen
+e non sono riscontrati sul libro. Il rigiudizio delle 7 violazioni di talenti
+rimaste dalla #378 resta fuori: aspetta la risposta del DM alla card.
+
+### Lotto 3-ter — l'avanzamento d'incantatore delle classi di prestigio (2026-11-12)
+
+**Contesto.** Il controllo degli incantatori (lotto 3) giudicava una lista dal
+livello scritto in testa, o da quello della classe nella riga `tipo:`. Una
+classe di prestigio non entrava nel conto: «Chierico 3 / Assassino 2» con una
+lista da chierico di 5° passava, e «Chierico 3 / Loremaster 2» senza livello
+scritto si giudicava da chierico di 3°, con violazioni false sugli slot.
+
+**Decisione.** I livelli della classe di prestigio che danno «+1 livello di
+una classe che si aveva già» stanno nel plugin, in `prestigio.toml`, voce
+`avanza` (`tipo`: arcane, divine, both, any o il nome della classe; `livelli`).
+Li scrive `estrai_prestigio.py`: dall'SRD 3.5 e dal PRD PF1e la colonna
+«Spells per Day» della tabella della classe, dai manuali 3.5 il tag
+`ADD:SPELLCASTER` di PCGen, solo nomi e numeri. 201 classi 3.5 su 493 e 6 PF1e
+su 10 hanno un avanzamento. `dmcore.prestigio.avanzamento` fa il conto;
+`verifica_scheda`, regola nuova `numero.incantesimi.livello_incantatore`:
+livello scritto in testa alla lista ≠ livelli della classe + avanzamento è una
+violazione; se il livello non è scritto, la lista si giudica da quello che le
+classi danno. È un dubbio, non una violazione, quando la classe viene da un
+manuale e il plugin non ne ha l'avanzamento, quando due libri divergono, o
+quando un'altra classe del personaggio potrebbe prendere quei livelli.
+
+**Misura** (`muta_avanzamento.py`, `misure-avanzamento.json`). Nel Bestiario
+una sola scheda ha una classe di prestigio che alza gli incantesimi, quindi il
+banco le mette lui: in 6 schede con una lista giudicata, due livelli della
+classe diventano due livelli di Loremaster (la lista resta giusta: controllo),
+di Assassino o di Cavaliere Mistico (la lista è troppo alta: errore).
+
+| | Prima (main d6c3740e) | Dopo |
+|---|---|---|
+| Liste troppo alte messe apposta, viste | 0 su 12 | 12 su 12 |
+| Liste giuste (controllo) segnate a torto | 0 su 6 | 0 su 6 |
+| `verifica_scheda Bestiario 0*/` | 72 violazioni, 321 dubbi | 72 violazioni, 321 dubbi |
+
+**Conseguenze e limiti dichiarati.** Nessuna scheda vera cambia giudizio.
+Balvar (chierico 9 / Runecaster 4, lista da chierico di 13°) torna. Il banco è
+piccolo (6 schede) e sintetico. Il controllo parte solo se la scheda ha una
+riga `tipo:` con la classe e il suo numero e una lista con gli incantesimi fra
+asterischi: `underdark-dovil-runecaster-cr7` scrive in prosa «Incantesimi da
+Diviner 5» mentre Diviner 5 / Deep Diviner 1 dà 6, e il controllo non lo vede
+(trovato a mano, non corretto: lo decide il DM). Per i manuali 3.5 l'assenza
+del tag in PCGen non prova che la classe non avanzi: per questo è un dubbio.
+Le classi di prestigio con una lista propria (Assassino, Guardia Nera) non
+hanno una tabella degli incantesimi nel plugin. Il livello d'incantatore di
+paladino e ranger scritto come «LI» (metà del livello) non si confronta.
+
+### Lotto 4 — il numero dei talenti (2026-11-12)
+
+Il generatore sapeva quanti talenti spettano a un personaggio
+(`dmcore.talenti.quanti`, dal lotto 3 delle regole complete); il verificatore
+no: controllava i prerequisiti di ogni talento, non quanti fossero. Una scheda
+con due talenti di troppo passava. Ora `verifica_scheda.numero_talenti` conta:
+
+- **quanti ne spettano**: i generali per dadi vita (3.5: 1 + 1 ogni 3; PF1e: uno
+  ai livelli dispari; i dadi vita razziali contano), i talenti bonus delle
+  classi (capacità `creature.talenti`), il talento dell'umano. Per il ladro il
+  conto è una forbice: una capacità speciale (3.5, dal 10°) o un talento da
+  ladro (PF1e) può essere un talento oppure no;
+- **quanti ne scrive la scheda**: le voci della riga, tolte quelle che la classe
+  concede per nome (Seguire Tracce del ranger, Scrivere Pergamene del mago, i
+  due del dominio della Guerra 3.5 se la scheda nomina il dominio) e quelle che
+  la scheda **dichiara** fuori dal conto accanto al nome: «(B)» del mostro,
+  «(razziale)», «(dominio)», «(difetto)», «(tratto)». Un nome che la lettura non
+  conosce è comunque un talento scritto e si conta.
+
+Regola `numero.talenti`: di più è una violazione, di meno pure (uno slot non
+speso è un'omissione). Resta un dubbio, mai una violazione, quando il conto non
+si può fare: una classe di cui il plugin non ha i talenti bonus (classi di
+prestigio e dei manuali 3.5), la composizione dei dadi vita non letta, un
+umanoide con più di tre dadi «razziali» e nessuna classe (sono livelli non
+letti), prosa finita nella riga dei talenti.
+
+I tre dati nuovi stanno in `talenti_in_piu.toml` dei due plugin (capacità
+`creature.costruzione`), scritti a mano
+con la fonte: umano +1 (SRD e PRD, «Humans»), dominio della Guerra 3.5,
+livelli a cui il ladro può scegliere un talento.
+
+| | Prima (main 74a6cf80) | Lotto 4 |
+|---|---|---|
+| Un talento in più o in meno messo apposta, visto da `verifica_scheda` | 0 su 127 | 101 su 127 (80%) |
+| di cui nelle schede di cui il conto si può fare | 0 su 101 | 101 su 101 |
+| nelle schede dove il conto è un dubbio (13 schede) | 0 su 26 | 0 su 26 |
+| Schede del Bestiario fuori conto | non misurate | 15 su 73 |
+| `verifica_scheda Bestiario 0*/` | 57 violazioni in 19 schede, 315 dubbi | 72 in 33, 321 dubbi |
+
+Banco: `muta_numero_talenti.py`, misure in `misure-numero-talenti.json`. Dieci
+mutazioni non entrano nel conto: cadono su una scheda già fuori conto e la
+rimettono in regola, non sono un errore messo apposta. Le violazioni salgono da
+57 a 72 perché il controllo vede di più: nessuna scheda è stata modificata.
+
+Cosa ha trovato, e **non è corretto**: quale talento togliere, aggiungere o
+dichiarare lo sceglie il DM. Quindici schede in un elenco «in attesa» nel test
+del cancello:
+
+- **di troppo** (11): `duergar-chierico3-cr4` (4 contro 2), `underdark-cleric-ainin-cr5`
+  (4 contro 2: ha i due talenti del dominio della Guerra ma la scheda non nomina
+  il dominio), `gnoll-hyenodon-rider-cr4` (3 contro 1), `ogre-skullcrusher-cr5`
+  (5 contro 3), `drow-wizard7-cr8`, `duergar-ladro1-cr1`, `duergar-mago3-cr4`,
+  `hell-hound-mezzoimmondo-cr4` (Seguire Tracce è il bonus del segugio: va
+  scritto «(B)»), `myconid-sovereign-cr7`, `warpriest-tiamat-cr7`,
+  `koth-signore-dei-dragoni-cr8` (uno di troppo ciascuna);
+- **in meno** (4): `bruto-deforme-sottosuolo-cr11` (4 contro 6),
+  `ogre-micelio-sporeborn-cr8`, `lomyn-redtongue-bardo8-cr8` e
+  `avarthel-druido-cr9` (uno in meno; gli ultimi due sono umani).
+
+**Le capacità dichiarate.** `verifica_scheda` leggeva 13 capacità dei plugin e
+nel manifest ne dichiarava una (`creature.talenti`): lo stesso buco che la #376
+ha chiuso per `genera_creatura`, trovato dal thread della documentazione. Ora le
+dichiara tutte e 13 (misura: `misura_capacita_verifica_scheda.py`, da 1 su 13 a
+13 su 13) e un test boccia una capacità letta e non dichiarata. I due plugin di
+prova dichiarano le quattro che mancavano (`bonus.cumulo`, `creature.armi`,
+`creature.incantatori`, `creature.prestigio`); nel censimento del plugin non
+d20 lo strumento passa da «nessuna» a «in parte».
+
+Limiti dichiarati: i difetti (Arcani Rivelati) e i tratti si accettano solo se
+dichiarati, non si verifica che il personaggio li abbia; i talenti bonus dei
+mostri del manuale non sono nei dati, si riconoscono solo dal «(B)»; i talenti
+epici oltre il 20° non si contano a parte; gli «effetti dei talenti sui
+numeri» del piano non sono in questo lotto (`dmcore.talenti.effetti` li calcola
+per il generatore, il cancello ne riconosce una parte): restano da misurare.
+
+### Lotto 4, seconda parte — gli effetti dei talenti sulle abilità (2026-11-12)
+
+**Contesto.** Degli effetti dei talenti sui numeri, i conti di scheda
+coprivano già pf (Robustezza), tiri salvezza (Tempra Possente, Riflessi
+Fulminei, Volontà di Ferro), iniziativa (Iniziativa Migliorata), attacco (Arma
+Focalizzata e Superiore, Arma Accurata) e danno (Arma Specializzata, lotto 2).
+Restavano le abilità. Il conto dei gradi dava 3 punti di margine a **tutte** le
+abilità di una scheda che nominasse, in qualsiasi punto del testo, un talento
+d'abilità: «Allerta» alzava il tetto anche di Scalare, e bastava la parola
+«agile» o «furtivo» in una frase («attacco furtivo») per avere il margine.
+
+**Decisione.** Il bonus va solo alle abilità che il talento nomina, col suo
+numero, e i numeri stanno nel plugin: `sistemi/dnd35/dati/effetti_talenti.toml`
+(19 talenti: i quindici da +2 a due abilità e Abilità Focalizzata dell'SRD,
+Abilità Focalizzata Epica, i due psionici) e `sistemi/pf1e/dati/effetti_talenti.toml`
+(11 talenti del manuale base, col bonus che raddoppia a 10 gradi), generati da
+`estrai_effetti_talenti.py` dalla riga «Benefit» delle fonti, solo nomi e
+numeri, e letti dalla capacità `creature.gradi`. L'abilità scelta di Abilità
+Focalizzata si legge fra parentesi; se manca, il bonus vale per tutte. Un
+talento nominato fuori dalla riga dei talenti («Allerta dal famiglio», o una
+riga dei talenti che la lettura non trova) vale lo stesso, ma solo sulle sue
+abilità. In PF1e si prende il bonus alto quando i dadi vita permettono 10 gradi.
+
+**Misura** (`muta_effetti_talenti.py`, `misure-effetti-talenti.json`): nelle 10
+schede del Bestiario che nominano un talento d'abilità, il bonus di ogni abilità
+alzato al valore più alto che il conto di prima accettava.
+
+| | Prima (main 813213e4) | Dopo |
+|---|---|---|
+| Abilità fuori regola messe apposta, viste | 0 su 44 | 44 su 44 |
+| Abilità in regola (talento da +3 proprio su quella) segnate a torto | 0 su 2 | 0 su 2 |
+| `verifica_scheda Bestiario 0*/` | 72 violazioni, 321 dubbi | 72 violazioni, 321 dubbi |
+
+**Conseguenze e limiti dichiarati.** Nessuna scheda vera cambia giudizio: il
+conto dei gradi resta una condizione necessaria con un margine di 4 o più punti
+(sinergia, razza), e vede gli errori grossi. Il banco tocca solo 10 schede,
+perché solo quelle nominano un talento d'abilità. Il bonus PF1e a 10 gradi si
+concede a chi ha 10 dadi vita, senza sapere se i gradi ci sono davvero.
+«Furtivo» in «attacco furtivo» conta ancora come il talento Furtivo quando la
+riga dei talenti non ne ha (ora solo su Nascondersi e Muoversi Silenziosamente,
+prima su tutte). I talenti dei manuali che alzano un'abilità non sono nei dati.
+Autoipnosi manca dalle abilità 3.5 del plugin (`gradi.toml`): il bonus di
+«Autonomous» su quella non si applica. Gli effetti condizionali (Schivare,
+Incantare in Combattimento, Resistenza Fisica) non spostano un numero scritto e
+restano fuori. Con questo il lotto 4 del piano è chiuso.
+
 ## Conseguenze
 
 - Una scheda nuova deve dichiarare da dove viene ogni punto: il generatore

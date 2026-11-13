@@ -22,6 +22,19 @@
 #let boxLeggi  = rgb("#ece0c6")
 #let boxLato   = rgb("#efe6d2")
 
+// Il titolo VISIBILE di un capitolo o di una scheda è anche il titolo che legge
+// un lettore di schermo (PDF/UA-1, ISO 14289-1, dal 2026-11-13). Il titolo
+// nascosto con `hide` resta, perché fa la voce d'indice, il segnalibro e la
+// testatina; ma `hide` lo toglie dall'albero dei tag, e senza un titolo di
+// livello 1 lì dentro typst con `pdf_standards: ua-1` si ferma su «the first
+// heading must be of level 1». Questo è fuori dall'indice e dai segnalibri,
+// che restano di quello nascosto, e si disegna com'era: `corpo` porta già la
+// sua forma, e le spaziature del `show heading` del tema qui non valgono.
+#let titolo-visibile(livello, corpo) = {
+  show heading: set block(above: 0pt, below: 0pt, sticky: false)
+  heading(level: livello, outlined: false, bookmarked: false, corpo)
+}
+
 #let SERIF = "EB Garamond"
 #let TITOLI = "Cinzel"
 #let MONO = "Inconsolata"
@@ -43,8 +56,9 @@
       #line(length: 100%, stroke: 0.6pt + seppia)
       #v(7pt)
       #grid(columns: (1.5cm, 1fr), column-gutter: 10pt, align: horizon,
-        if fregio != none { image(fregio, width: 1.5cm) } else { [] },
-        text(font: TITOLI, size: 17pt, weight: 600, fill: rosso)[#titolo])
+        // il fregio è decorazione: un artefatto, senza testo alternativo (PDF/UA-1)
+        if fregio != none { pdf.artifact(image(fregio, width: 1.5cm)) } else { [] },
+        titolo-visibile(1, text(font: TITOLI, size: 17pt, weight: 600, fill: rosso)[#titolo]))
       #v(5pt)
       #line(length: 100%, stroke: 0.6pt + seppia)
     ]
@@ -764,7 +778,7 @@
         set text(size: 8pt, fill: seppia, style: "italic")
         // La testatina destra segue il CAPITOLO corrente: è ciò che rende
         // sfogliabile un volume di sessanta pagine.
-        let qui = query(selector(heading.where(level: 1)).before(here()))
+        let qui = query(selector(heading.where(level: 1, outlined: true)).before(here()))
         grid(columns: (1fr, 1fr),
           align(left)[#titolo],
           align(right)[#if qui.len() > 0 { qui.last().body } else { capitolo }],
@@ -797,14 +811,18 @@
   // difetto che si nota per primo sfogliando: `sticky` lo tiene attaccato.
   show heading: set block(above: 1.1em, below: 0.65em, sticky: true)
   show heading: it => {
-    set text(font: TITOLI, fill: if it.level == 1 { rosso } else { seppia })
-    if it.level == 1 { text(size: 15pt, weight: 600)[#it.body] }
+    let etichetta = it.at("label", default: none)
+    // `<come-N>`: un titolo che nei master saltava un livello sale nell'albero
+    // dei tag (export_booklet_typst.titoli_senza_salti) ma si disegna come prima
+    let livello = if etichetta == <come-3> { 3 } else if etichetta == <come-4> { 4 } else { it.level }
+    set text(font: TITOLI, fill: if livello == 1 { rosso } else { seppia })
+    if livello == 1 { text(size: 15pt, weight: 600)[#it.body] }
     else {
       // «§3 · Titolo» → medaglione(3) + Titolo. Se il titolo non comincia con
       // un §, resta esattamente com'è.
       let grezzo = to-string(it.body)
       let m = grezzo.match(regex("^§\s*([0-9]+(?:[-–][a-z]+)?)\s*(?:·|-|—)?\s*(.*)$"))
-      let dim = if it.level == 2 { 11.5pt } else { 10pt }
+      let dim = if livello == 2 { 11.5pt } else { 10pt }
       if m != none {
         text(size: dim, weight: 600)[#medaglione(m.captures.at(0))~#m.captures.at(1)]
       } else {

@@ -207,7 +207,7 @@ def leggi(p: Path) -> "dict | None":
             "riga": n_riga, "sistema": sistema,
             "car": {k: v for k, v in s.attributi.items() if isinstance(v, int)},
             "bab": s.bab, "livelli": livelli, "dv": dv, "lic": lic,
-            "talenti": list({r["en"]: r for r in talenti}.values()),
+            "talenti": list({r["en"]: r for r in talenti}.values()), "nomi": nomi,
             "senza_regole": senza_regole, "ignoti": ignoti, "classi_ignote": ignote,
             "piu_schede": len(L.BLOCCO.findall(s.testo)) > 1,
             "fonte_ufficiale": bool(re.search(r"^# .*\[TRANSCRIBED — (?!PCGen)", s.testo, re.M)),

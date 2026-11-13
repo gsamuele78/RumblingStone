@@ -38,6 +38,10 @@ skill = []
 "creature.talenti" = { eredita = "dnd35", motivo = "stessi talenti" }
 "creature.gradi" = { eredita = "dnd35", motivo = "stessi gradi" }
 "creature.liste_incantesimi" = { eredita = "dnd35", motivo = "stesse liste" }
+"creature.armi" = { eredita = "dnd35", motivo = "stesse armi" }
+"creature.incantatori" = { eredita = "dnd35", motivo = "stesse tabelle" }
+"creature.prestigio" = { eredita = "dnd35", motivo = "stessi requisiti" }
+"bonus.cumulo" = { eredita = "d20", motivo = "famiglia" }
 
 [moduli]
 piu_forte = "incontri:piu_forte"

@@ -884,7 +884,105 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il riscontro PCGen su «specialista del martello»; quali test si rompono toccando il master di ARC-07
 
-### MS-0075 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
+### MS-0075 · 2026-11-12 · Grafo degli eventi, Prolog e RAG per «chi sa cosa»
+
+- **Data:** 2026-11-12
+- **PR:** #383
+- **ADR:** ADR-0125
+- **Temi:** coerenza storia regole
+- **Origine:** voce scritta con la PR, per la riga del 2026-11-12 «Punti chiave, grafo degli eventi, Prolog e RAG» in `plans/CHANGELOG.md`
+- **Testo:** Domanda del DM del 12/11: punti chiave nel tempo, grafo degli eventi, Prolog e RAG, tutto insieme e misurato. Laboratorio `plans/esperimenti/grafo-eventi-2026-11-12/`. Misura: i giorni si ricavano da state.yaml solo per 6 righe su 31 di §4; Python, SWI-Prolog e clingo danno violazioni identiche (29/29 sui mutanti, 6/6 su main), quindi il motore logico non entra; la regola ricorsiva trova 3 catene rotte in §4; il RAG (BM25 + e5-small + Qwen2.5-3B su CPU) recupera 8 parafrasi su 11 ma su main dà 0 rilievi veri su 23, quindi non entra; regole + RAG: parafrasi 0/11 → 5/11 con 42 rilievi in più. Correzione in corsa: la Cerimonia delle 100 Asce è al Day 21, non al 19; numeri invariati. Due correzioni alla #379 dalla revisione automatica arrivata dopo il merge: S1 dichiarata non verificabile se manca `giorno_arrivo`, `STATE` letto alla chiamata; gli altri 8 rilievi restano come limiti dichiarati nella PR. Decisione del DM (card): i giorni di §4 li propone il thread e li conferma lui riga per riga; T1 e T2 entrano in `coerenza_campagna --state` solo dopo. Aperti al DM: le 31 righe di `PROPOSTA-GIORNI-CHI-SA-COSA.md` e D1-D4 (D1: la lettera di Brenna usa «Custodi Eterni» ed è datata al Day 21 e al Giorno 22 nello stesso file); `ARC07-DEF-1-PIANO-TERRA-TERROS.md:69`; la prova del lettore con 7B e 12B via Ollama sulla RTX 4050 (6 GB di VRAM: il 12B non ci sta tutto).
+- **Trovato nel repo:** `ADR-0125` → `plans/adr/` (file ADR-0125) · il laboratorio → `plans/esperimenti/grafo-eventi-2026-11-12/ESITO.md`
+- **Solo qui:** il criterio per riprovare il lettore (90% di SÌ giusti, 5% col PNG sbagliato, 70% di precisione su main) accanto alla decisione di non adottarlo; l'errore di lettura dello stato della PR (controlli verdi ma PR in conflitto dopo #382 e #381)
+
+### MS-0076 · 2026-11-12 · ADR-0126 lotto 3: incantatori
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 3» in `plans/CHANGELOG.md`
+- **Testo:** Lotto 3 del programma «regole senza omissioni». Capacità `creature.incantatori` (tabelle delle classi che lanciano, 3.5 dall'SRD e PF1e dal PRD, solo numeri) e `dmcore.magia`; `verifica_scheda` giudica incantesimi al giorno, conosciuti, livello massimo e CD. Errori messi apposta visti 0/616 → 376/616. Trovati 40 scarti veri in 9 file, non corretti: slot e incantesimi preparati sono scelta del DM. La tabella PF1e del bardo (card del 2026-11-09) esce come forma ibrida dichiarata, non come violazione.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il costruttore non calcola gli incantesimi bonus (`dmcore.tabelle` dà solo la griglia della classe): gli slot delle schede sono scritti a mano, ed è lì che nascono gli scarti (ur-vrax ne ha uno in più a ogni livello); una riga della lista che nomina «incantesimi» (immunità agli incantesimi) veniva presa per intestazione
+
+### MS-0077 · 2026-11-12 · genera_creatura dichiara le capacità che legge
+
+- **Data:** 2026-11-12
+- **PR:** #376
+- **ADR:** ADR-0111, ADR-0121
+- **Temi:** regole motore plugin
+- **Origine:** addendum della riga del 2026-11-12 «Regole complete, coda del lotto 3» in `plans/CHANGELOG.md`
+- **Testo:** Segnalazione del thread della documentazione (#371): `creature.talenti` era nel catalogo e nei due plugin, ma nessuno strumento la dichiarava, quindi la matrice di `dm.py sistemi` non la mostrava e il cancello non controllava che un sistema attivo la coprisse. Misura con una spia su `dmcore.sistemi.capacita` durante 288 generazioni: `genera_creatura` legge `creature.costruzione`, `creature.talenti` e `formule.regole`; su main ne dichiarava 1 su 3, dopo 3 su 3. `formule.regole` è uscita dalla misura, non dalla segnalazione. Nella prima versione della PR (10/11) le righe dei sistemi di prova erano mie; nel frattempo le hanno portate su main le PR di ADR-0126, quindi nel merge ho tenuto le loro. Effetto sul sistema di prova non d20 (`test_prova_non_d20`): `genera_creatura` passa da «nessuna capacità coperta» a «in parte», perché il d10 copre `formule.regole`, ma rifiuta comunque la generazione. Il censimento è aggiornato: nessuna 17 → 16. La CI della prima versione era rossa per la riga di CHANGELOG mancante e la PR è rimasta ferma due giorni senza che me ne accorgessi.
+- **Trovato nel repo:** la misura → `plans/esperimenti/regole-complete-2026-11-10/misura_capacita_dichiarate.py`
+- **Solo qui:** `creature.incantesimi` e `creature.statistiche_per_gs` sono dichiarate, ma la spia non le vede passare da `capacita()`, perché vengono lette per altra via. Va controllato prima di toglierle. Gli altri strumenti col blocco `sistema` non sono stati spiati.
+
+### MS-0078 · 2026-11-12 · ADR-0126 lotto 3-bis: classi di prestigio
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 3-bis» in `plans/CHANGELOG.md`
+- **Testo:** Lotto 3-bis del programma «regole senza omissioni». Capacità `creature.prestigio` (requisiti d'ingresso delle classi di prestigio: 493 classi 3.5 dall'SRD e dai tag PRE di PCGen, 10 PF1e dal PRD, solo nomi e numeri) e `dmcore.prestigio`; `verifica_scheda` giudica bonus di attacco base delle altre classi, gradi, talenti, razza, allineamento e livello d'incantesimo contro il personaggio prima dell'ingresso. Requisiti tolti apposta dalle 8 schede vere: 30 su 30. Trovate e non corrette 3 violazioni in 2 schede del Bestiario (Blackguard 10 senza altre classi; Ladro 4 / Assassino 5 con Nascondersi 8).
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il 40% dei requisiti 3.5 (877 su 2.178) non si riduce a un numero e resta solo contato: chi vuole chiuderli deve leggere i manuali, i tag di PCGen li danno come testo libero (PRETEXT) che non si copia; PCGen scrive la stessa classe in più libri (6 con requisiti diversi) e l'Assassino del suo file della Guida del DM è una variante, per questo le 15 classi dell'SRD si leggono dall'SRD; l'alias delle classi di `dmcore.talenti` è bidirezionale (cleric ↔ chierico), una mappa costruita passandoci dentro i nomi inglesi li rovescia in italiano; l'estrattore dei gradi del lotto 1 saltava Spellcraft per un titolo senza `<small>`, e nessun test lo vedeva perché nessuno contava le 38 abilità; `verifica_scheda` non può importare `dmcore.progressione` senza far salire il censimento A2 (le chiamate passano da `dmcore.prestigio.bab_di`).
+
+### MS-0079 · 2026-11-12 · ADR-0126 lotto 4: numero dei talenti
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 4» in `plans/CHANGELOG.md`
+- **Testo:** Lotto 4 del programma «regole senza omissioni». `verifica_scheda.numero_talenti` (regola `numero.talenti`) conta i talenti scritti contro quelli che spettano per dadi vita, talenti bonus di classe e razza umana; fuori dal conto i concessi dalla classe e quelli dichiarati accanto al nome. Un talento in più o in meno messo apposta: 101 su 127. Quindici schede del Bestiario fuori conto, non corrette.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il conto esisteva già nel generatore (`dmcore.talenti.quanti`) ma le chiavi dei talenti bonus 3.5 sono in italiano («guerriero») e la lettura delle schede dà le classi in inglese: senza alias il guerriero 8 risultava con 3 talenti invece di 8; `quanti` somma anche i «concessi» (Seguire Tracce, Scrivere Pergamene), che una scheda può scrivere o no, per questo il verificatore li toglie dai scritti invece di aggiungerli agli attesi; i dadi vita di `verifica_talenti.leggi` sono la somma dei gruppi letti e per un mostro con una classe possono essere solo i livelli (minotauro 6 + barbaro 1 dava 1): serve `dv_totali`; un nome sconosciuto alla lettura va contato come talento, altrimenti ogni scheda con un talento dei manuali esce dal controllo (al primo giro il banco dava 91 su 127 per questo).
+
+### MS-0080 · 2026-11-12 · ADR-0126 lotto 4: effetti dei talenti sulle abilità
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 4, seconda parte» in `plans/CHANGELOG.md`
+- **Testo:** Seconda parte del lotto 4 del programma «regole senza omissioni». Nel conto dei gradi di `verifica_scheda` il bonus di un talento d'abilità va solo alle abilità che il talento nomina, col numero del plugin (`effetti_talenti.toml` di 3.5 e PF1e, capacità `creature.gradi`, generati da `estrai_effetti_talenti.py`). Banco `muta_effetti_talenti.py`: 44 errori su 44 visti, prima 0; 2 controlli in regola, nessuno segnato a torto; il Bestiario resta a 72 violazioni.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** degli effetti dei talenti sui numeri, pf, tiri salvezza, iniziativa, attacco e danno erano già nei conti (`conformita_statblocchi`, `dmcore.danno`): mancavano solo le abilità; il margine di prima scattava su una parola nel testo, e «furtivo» di «attacco furtivo» o «agile» in una frase bastavano; il banco tocca solo 10 schede perché solo quelle nominano un talento d'abilità; Autoipnosi manca da `gradi.toml` (l'estrattore dei gradi legge la tabella riassuntiva delle abilità, che non ha le psioniche fuori da Psicraft e Usare Oggetti Psionici).
+
+### MS-0081 · 2026-11-12 · ADR-0126 lotto 3-ter: avanzamento d'incantatore delle classi di prestigio
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole motore schede
+- **Origine:** addendum della riga del 2026-11-12 «ADR-0126, lotto 3-ter» in `plans/CHANGELOG.md`
+- **Testo:** Lotto 3-ter del programma «regole senza omissioni». `prestigio.toml` (3.5 e PF1e) ha per ogni classe di prestigio i livelli che danno +1 livello d'incantatore a una classe che si aveva già (`avanza`); `dmcore.prestigio.avanzamento` fa il conto e `verifica_scheda` ha la regola `numero.incantesimi.livello_incantatore`. Banco `muta_avanzamento.py`: 12 liste troppo alte su 12 viste, prima 0; 6 controlli, nessuno segnato a torto; il Bestiario resta a 72 violazioni.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** in PCGen l'avanzamento è il tag `ADD:SPELLCASTER|Arcane/Divine/ANY` sulle righe di livello, con `REPEATLEVEL` per «ogni N livelli»; `BONUS:PCLEVEL` è un altro meccanismo (stirpi, psionici) e non si legge; l'assenza del tag non prova che la classe non avanzi, per questo una classe dei manuali senza `avanza` è un dubbio e una dell'SRD no; tre classi hanno avanzamenti diversi in due libri (`avanza = { diverge = true }`); il confronto fra i libri per `diverge` dei requisiti esclude `avanza`, altrimenti i requisiti di molte classi sarebbero diventati dubbi; senza livello scritto la lista di un «Chierico 3 / Loremaster 2» si giudicava da chierico di 3°.
+
+### MS-0082 · 2026-11-12 · Cancello del riferimento dei plugin
+
+- **Data:** 2026-11-12
+- **PR:** —
+- **ADR:** ADR-0111, ADR-0123
+- **Temi:** documentazione plugin cancelli
+- **Origine:** addendum della riga del 2026-11-12 «Cancello del riferimento dei plugin» in `plans/CHANGELOG.md`
+- **Testo:** Il §5 di `docs/reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md` (una riga per capacità: chi la chiede, file dati di dnd35 e pf1e) è rimasto indietro quattro volte il 2026-11-12, dopo le #376, #386, #388 e #390, ed è stato riallineato a mano con le #387 e #389. `scripts/tests/test_riferimento_plugin.py` lo confronta con catalogo, manifest e `sistema.toml`: sulle teste di main dopo quelle quattro PR avrebbe dato 5, 6, 15 e 17 disaccordi, su 591dd927 zero. Costo: una PR di regole che cambia una capacità, chi la chiede o i suoi file è rossa finché non aggiorna la riga.
+- **Trovato nel repo:** `scripts/tests/test_riferimento_plugin.py`
+- **Solo qui:** `creature.armi` e `creature.incantatori` mancavano dal §5 già prima della #376 (lotti 2 e 3 di ADR-0126); le parentesi della colonna «chi la chiede» sono note e il test le ignora, quindi «— (la legge verifica_scheda)» conta come nessuno strumento.
+
+### MS-0083 · 2026-11-13 · ADR-0129: il volume da stampa è PDF/UA-1
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0129, ADR-0032
+- **Temi:** stampa booklet accessibilita document-ai
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0129: il volume da stampa è PDF/UA-1» in `plans/CHANGELOG.md`
+- **Testo:** Prima tecnica della richiesta del DM del 2026-11-13 (document AI, explainable AI, AI generativa con standard e librerie standard di fatto, misurate). veraPDF 1.28.2 profilo ua1 sui 19 booklet: main 837876d6 0/19 conformi e 132 controlli falliti (7.3-1 ×78 figure senza alt, 7.4.2-1 ×9 titoli che saltano un livello, 5-1 ×19 e 7.1-10 ×19 di typst, 7.21.5-1 ×7 font); ramo 17/19 e 7. Misure di stampa identiche su tutte le chiavi, pagine identiche al pixel salvo 4 pagine d'indice in 3 booklet.
+- **Trovato nel repo:** `plans/esperimenti/pdfua-2026-11-13/MISURE.md` · `plans/adr/ADR-0129-il-volume-da-stampa-e-pdf-ua-1.md`
+- **Solo qui:** `hide(heading(...))` toglie il titolo dall'albero dei tag e typst con ua-1 si ferma su «the first heading must be of level 1»; la prima prova col titolo trasparente passava PDF/UA ma metteva il testo due volte (fuori_margine 0 → 6 nelle schede PG, titolo doppio nel testo estratto), quindi è stata scartata; la testatina interrogava ogni titolo di livello 1 e con il titolo visibile taggato mostrava il titolo grande in rosso, da qui `outlined: true` nella query. repo1.maven.org ha risposto 429, lo specchio repo.maven.apache.org no. I glifi su Unifont dipendono dai font della macchina: su un'altra il 7.21.5-1 può cambiare.
+### MS-0084 · 2026-11-12 · Standard del volume, booklet di serata, taglia spazio e portata
 
 - **Data:** 2026-11-12
 - **PR:** #370
@@ -893,4 +991,4 @@ repo scritto con altre parole.
 - **Origine:** voce scritta con la PR, per le righe STANDARD-STAMPA del 2026-11-10, 11 e 12 in `plans/CHANGELOG.md`
 - **Testo:** Misura del volume S1-S5 contro *Burnt Offerings* e *Red Hand of Doom* (canale testing; linea di base 10 booklet del DM, 36 misure sotto soglia). Booklet di serata «La Notte e l'Alba» per `sezioni`: 158 → 122 pagine, 32 → 24 schede stampate una volta sola, con «Il foglio della serata» di una pagina (pagina unica di sessione, dal «Lazy DM») e una scheda da tavolo in testa alle Scene 6-11, scelta dal DM il 2026-11-12 fra i candidati della community. Taglia, spazio e portata in ogni scheda (ADR-0128, proposta; il DM ha voluto l'SRD su tutte e cinque le schede dubbie: la frusta non minaccia, il cavaliere senza lancia minaccia 1,5 m). Pedine delle mappe collegate alle schede: 41 su 110, taglie discordi 4 → 0. Tre misure di lettura in prova nate dai giri dei tre lettori (sigle morte, righe brevi incomplete, titoli rovinati). Corretto nell'esportatore il «;» che spariva dopo un grassetto in ogni PDF. Giudizio del developer sulle schede da tavolo: sotto gli AP, perché «In scena», «In tre righe» e scheda ripetevano le stesse cose; il DM ha chiesto la fusione il 2026-11-12 e nella serata i tre strati sono un blocco solo (il riassunto resta nel master fra i segni `senza-scheda` per gli altri volumi). Giro al cieco fra le due versioni: DM e redattore scelgono la fusa, il developer la sceglie al secondo giro, dopo la riga «Succede», e la tiene «peggio degli AP, di poco». CI rossa su 81403a04: `validate_corredo --stampa`, 98 righe sovrapposte in due volumi; causa, l'interazione fra la riga di taglia, spazio e portata (ADR-0128) e la CA spiegata del lotto 1-bis (#382), che hanno allungato la scheda di Skullcrusher Vecchio fin sopra una tabella messa a fondo pagina (difetto dei float di Typst 0.15); la correzione nel tema è generale: ogni tabella che scavalca sta in cima.
 - **Trovato nel repo:** `ADR-0122` e `ADR-0128` → `plans/adr/` · `plans/esperimenti/standard-volume-2026-11-10/` · `plans/esperimenti/taglia-portata-2026-11-10/` · `docs/audit/stampa-booklet.json` · `docs/audit/mappe-schede.json`
-- **Solo qui:** l'ADR di taglia e portata è nato 0123, poi 0127, infine 0128, perché i primi due numeri erano di altre PR; le 17 misure di prosa della community restano non adottate; aperti 69 pedine senza scheda, pedine non in scala nel disegno, 4 card del DM sul volume (VOL-3)
+- **Solo qui:** l'ADR di taglia e portata è nato 0123, poi 0127, infine 0128, perché i primi due numeri erano di altre PR; le 17 misure di prosa della community restano non adottate; ripetizioni mai misurate, contate il 2026-11-13 su domanda del DM (passi di almeno 8 parole identiche, dalla seconda volta): serata 12,3% delle parole contro l'1,2% di *Burnt Offerings* e lo 0,5% dell'estratto di *Red Hand of Doom*; circa 3.700 parole sono le copie volute in appendice, circa 5.200 stanno nel corpo e non sono toccate qui; aperti 69 pedine senza scheda, pedine non in scala nel disegno, 4 card del DM sul volume (VOL-3)

@@ -40,3 +40,13 @@ fonte = "PRD PF1e, ranger e paladino: livello dell'incantatore = livello di clas
 # (al 14°: 11 contro 7), secondo la regola del DM «la versione più potente,
 # con la fonte segnata». ⚠ Non SRD 3.5: l'SRD dice «one-half his ranger
 # level» dal 4° (character-classes-ii.md, righe 57 e 179 della fonte in cache).
+
+[formule.incantesimi_bonus]
+espressione = "0 if livello < 1 else (0 if modificatore < livello else 1 + (modificatore - livello) // 4)"
+ingressi = ["livello", "modificatore"]
+fonte = "SRD 3.5 e PRD PF1e, «Table: Ability Modifiers and Bonus Spells»: riscontrata riga per riga da estrai_incantatori.py (ADR-0126, lotto 3)"
+
+[formule.punteggio_per_lanciare]
+espressione = "10 + livello"
+ingressi = ["livello"]
+fonte = "SRD 3.5, classi che lanciano: per un incantesimo di livello L serve la caratteristica a 10 + L"

@@ -320,6 +320,12 @@ far dichiarare.
   promozione di S1, S5-S7 tocca il manifest: va in fila dopo i lotti.
 - Thread #370 (standard del volume) e #371 (documentazione): avvisati dal
   coordinatore che 28 schede del Bestiario verranno corrette.
+- Dubbi di regola dal giro di lettura della #370 (serata, `ARC07-DEF-4`,
+  2026-11-12), da riscontrare quando il lotto li copre; il testo esatto lo ha
+  il thread della #370 e le correzioni passano da Jfs perché toccano il master:
+  Concentrazione CD 21 nel duello (lotto 6, abilità), la CD di corrompere
+  l'acqua (lotto 7, qualità speciali), il «fiancheggiamento spalla a spalla»
+  della pattuglia (regola di combattimento, non un numero di scheda: lotto 12).
 - Scadenze che toccano gli stessi conti: promozione dei 14 conti PF1e in prova
   (ADR-0119, 23/11) e xdist in testing fino al 22/11.
 
@@ -361,3 +367,43 @@ master e nel Bestiario non vale (lì i pf stanno nella fascia dei dadi).
 Il lotto 1-bis porta CA, sensi e CD in `verifica_scheda`, somma le voci della
 CA per tipo con `dmcore.bonus` (due bonus di armatura non si sommano) e aggiunge
 gli oggetti dell'SRD col prezzo. Da pubblicare dopo il merge della #380.
+
+### Lotto 3-bis fatto (2026-11-12)
+
+I requisiti delle classi di prestigio sono in `verifica_scheda` (ADR-0126,
+«Lotto 3-bis»): `estrai_prestigio.py`, `muta_prestigio.py`,
+`misure-prestigio.json`. Del lotto 3 del piano restano: l'avanzamento
+d'incantatore dato dalle classi di prestigio («+1 livello della classe
+esistente»: oggi una lista di un chierico 9 / Runecaster 4 si giudica da
+chierico 9 o resta non letta), le capacità di classe che toccano i numeri, il
+rigiudizio delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON
+per scheda chiesta dal thread della #379. Vanno nel lotto 4.
+
+### Lotto 4 fatto in parte (2026-11-12)
+
+Il numero dei talenti è in `verifica_scheda` (ADR-0126, «Lotto 4»):
+`muta_numero_talenti.py`, `misure-numero-talenti.json`. Del lotto 4 restano gli
+effetti dei talenti sui numeri, e dal lotto 3 l'avanzamento d'incantatore delle
+classi di prestigio, le capacità di classe che toccano i numeri, il rigiudizio
+delle 7 violazioni di talenti (card aperta al DM) e l'uscita JSON per scheda
+per il thread della #379.
+
+### Lotto 4 chiuso (2026-11-12)
+
+Gli effetti dei talenti sulle abilità sono nel conto dei gradi (ADR-0126,
+«Lotto 4, seconda parte»): `estrai_effetti_talenti.py`, `muta_effetti_talenti.py`,
+`misure-effetti-talenti.json`. Gli altri effetti (pf, tiri salvezza, iniziativa,
+attacco, danno) erano già nei conti. Restano, fuori dal lotto 4: l'avanzamento
+d'incantatore delle classi di prestigio, le capacità di classe che toccano i
+numeri, il rigiudizio delle 7 violazioni di talenti (card aperta al DM),
+l'uscita JSON per scheda per il thread della #379, e Autoipnosi fra le abilità
+3.5 del plugin.
+
+### Lotto 3-ter fatto (2026-11-12)
+
+L'avanzamento d'incantatore delle classi di prestigio è in `verifica_scheda`
+(ADR-0126, «Lotto 3-ter»): `estrai_prestigio.py` (voce `avanza`),
+`muta_avanzamento.py`, `misure-avanzamento.json`. Dubbio nuovo per il DM:
+`underdark-dovil-runecaster-cr7` lancia «da Diviner 5», Diviner 5 / Deep
+Diviner 1 dà 6. Restano le liste proprie di Assassino e Guardia Nera.
+

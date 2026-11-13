@@ -1,0 +1,19 @@
+{
+ "schede_con_talenti": 73,
+ "per_mutazione": {
+  "uno in più": {
+   "trovate": 55,
+   "in_schede_giudicate": 55,
+   "in_schede_dubbie": 13
+  },
+  "uno in meno": {
+   "trovate": 46,
+   "in_schede_giudicate": 46,
+   "in_schede_dubbie": 13
+  }
+ },
+ "annullate_da_una_violazione_gia_presente": 10,
+ "trovate": "101/127",
+ "nelle_schede_giudicate": "101/101",
+ "perse": []
+}

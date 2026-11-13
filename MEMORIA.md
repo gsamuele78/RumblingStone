@@ -86,23 +86,23 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
 | 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
 | 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | Cancello del riferimento dei plugin: `scripts/tests/test_riferimento_plugin.py`… | ✅ sulle teste di main dopo #376, #386, #388 e #390 avrebbe trovato 5, 6, 15 e 17 disaccordi; su main di oggi 0; una riga tolta, un file sbagliato e uno strumen… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-ter: l'avanzamento d'incantatore delle classi di prestigio.… | ✅ liste troppo alte messe apposta: da 0 a 12 su 12; 6 controlli, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Trovato a mano e non… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, coda del lotto 3: `genera_creatura` dichiara nel manifest le c… | ✅ Capacità lette e dichiarate 1/3 → 3/3; il cancello di `sistemi.py` ora le chiede a ogni sistema attivo (i tre sistemi di prova le coprono già su main). 🟡 Mis… |
+| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3: capacità `creature.incantatori` (… | ✅ Errori messi apposta visti 0/616 → 376/616 (84% nelle liste che si leggono). Trovati 40 scarti veri in 9 file, nessuno corretto: sono incantesimi preparati e… |
+| 2026-11-12 | AVVENTURE-COMMUNITY | Punti chiave, grafo degli eventi, Prolog e RAG per «chi sa cosa» (domanda del D… | laboratorio; T1/T2 in `coerenza_campagna --state` solo dopo la conferma dei giorni dal DM |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 2: capacità `creature.armi` (`sistemi/dnd35/dati/armi.toml`, 72… | ✅ Errori di danno messi apposta visti 0/364 → 336/364 (92%); 13 scarti veri chiusi nel Bestiario (12 critici non scritti, 1 bonus). 🟡 4 scarti di ARC-07 (giave… |
-| 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
-| 2026-11-12 | AVVENTURE-COMMUNITY | ADR-0125 punto 4 (scelta del DM: «Solo le regole precise, in testing»):… | ✅ mutanti piani S1/S5/S6 9 su 9 come il prototipo, parafrasi 0 su 9; replay «−2 COS» 3 righe su 6; 0 violazioni su main; S2-S4 restano in laboratorio |
-| 2026-11-12 | AVVENTURE-COMMUNITY | Coerenza della storia con un verificatore deterministico (ADR-0125, proposta):… | 🟡 promozione in `coerenza_campagna --state` e 5 file di ARC-09 tarati per l'11°-12° al DM |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126 (programma «regole senza omissioni», proposta), lotto 1: capacità… | ✅ Errori messi apposta visti 701/1.279 → 1.007/1.279 (55% → 79%); TS +2 visti 1/362 → 286/362; 22 numeri senza sorgente trovati e chiusi: 6 difetti del verific… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §11 (DM: «correggi gli errori», prima finire le classi):… | ✅ Violazioni 34 → 7 (12 falsi positivi tolti, 16 corrette, 1 nuova); righe di incantesimi senza classe 94 → 16; errori messi apposta visti 247/254 (erano 167/1… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §10: capacità `creature.liste_incantesimi` (dnd35:… | ✅ 6 violazioni vere (Salvatore, *profanare* per *dissacrare* in due chierici, *Fulmine* a un bardo in ARC-08); errori messi apposta visti 167/170; 94 righe su… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §9: prerequisiti fisici dei talenti letti dalla scheda (volo, nuoto, s… | ✅ non verificabili 76 → 47, 0 violazioni nuove; fatti tolti apposta visti 9 su 11 (attacchi naturali 2/4 quando la scheda scrive solo l'attacco singolo) |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0124 §8 (DM: «solo nomi e numeri» dalle fonti non OGL):… | ✅ numeri sbagliati visti 666 → 701 su 1.278, non verificabili 82 → 76, 4 schede del Bestiario ora leggibili; il sito sbaglia il dado vita di Factotum e Healer,… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 75 voci, l'ultima MS-0075 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 84 voci, l'ultima MS-0084 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
