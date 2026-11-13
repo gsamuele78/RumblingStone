@@ -13,7 +13,8 @@
    "S3_entro_una": 0.545,
    "S3_mediana": 1,
    "S4": "22 pp. regione (Sandpoint, Thassilon) + 11 pp. creature e personaggi su 100",
-   "S5": "8 PNG su 15 con ritratto accanto alla scheda"
+   "S5": "8 PNG su 15 con ritratto accanto alla scheda",
+   "S6_parole_ripetute": "854 su 73.899 (0,012), 100 pp.; passi di almeno 8 parole già stampati prima, testatine escluse (`misura_stampa.parole_ripetute`, 2026-11-13)"
   },
   "red-hand-of-doom-estratto": {
    "S1_intro_caratteri": [
@@ -24,7 +25,8 @@
    "S3_entro_una": 1.0,
    "S3_mediana": 0,
    "S4": "non misurabile sull'estratto",
-   "S5": "non misurabile sull'estratto"
+   "S5": "non misurabile sull'estratto",
+   "S6_parole_ripetute": "0,005 sull'estratto"
   }
  },
  "soglie": {
@@ -37,5 +39,6 @@
   "S4_appendice_regione": true,
   "S4_appendice_png": true,
   "S5_quota_con_ritratto": 0.53
- }
+ },
+ "_S6": "Ripetizioni (in prova, 2026-11-13): i due riferimenti stanno fra 0,005 e 0,012; nessuna soglia finché il DM non decide quali copie togliere, perché una parte delle copie dei booklet è voluta (schede e mappe in appendice). I valori dei booklet stanno in `docs/audit/stampa-booklet.json`, colonna `quota_parole_ripetute`."
 }
