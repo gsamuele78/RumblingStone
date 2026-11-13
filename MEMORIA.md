@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 quarta parte: i linguaggi automatici.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 terza parte: le immunità del tipo.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 seconda parte: resistenza agli incantesimi e riduzione del da… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | STANDARD-STAMPA | Pagina fitta: le schede tengono l'interlinea di prima (il DM, 2026-11-13: «mi s… | ✅ passo di riga delle schede in appendice 10,6 → 11,2 pt (come il 2 e il 12 novembre), delle schede in breve nei capitoli 11,1 → 11,7 pt (12,0 il 12 novembre);… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 seconda parte: il grado di sfida. Verifica `grado_di_sfida` i… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11: giavellotti di Zog'tar 1d8+13… | In PR |
-| 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 114 pagine (561 → 614 parole per pagina; *Burnt Offerings* 725), schede e ri… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 101 voci, l'ultima MS-0101 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 102 voci, l'ultima MS-0102 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

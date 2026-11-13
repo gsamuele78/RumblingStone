@@ -1179,3 +1179,14 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 ha `linguaggi.toml` (linguaggi automatici delle sette razze dell'SRD, Druidico del druido) e `verifica_scheda` ha la verifica `linguaggi` (regola `tratti.linguaggi`), solo per chi scrive la riga dei linguaggi. Misura: violazioni 37 → 37; 7 schede giudicate su 24; banco 13 su 13, su main 0. Il lotto 7 è chiuso.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** il numero dei linguaggi non si conta di proposito. Le schede dei PNG hanno linguaggi regionali (Chondathan, Illuskan, Shaaran) che l'SRD non conosce e non scrivono i gradi di Parlare Linguaggi: un conto darebbe violazioni che sono scelte del DM. Chi non scrive la riga non è una violazione, perché il blocco 3.5 non la prevede.
+
+### MS-0102 · 2026-11-13 · ADR-0126 lotto 8: il valore dell'equipaggiamento
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha `oggetti.toml` (623 prezzi degli oggetti magici dell'SRD, prezzo del potenziamento, valore dell'equipaggiamento di un PNG per livello) e `verifica_scheda` ha la verifica `ricchezza` (regola `equipaggiamento.valore`). Misura: violazioni 37 → 37, non verificabili 372 → 374; banco 24 violazioni e 88 non verificabili su 112, su main 0.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la tabella dei PNG (DMG 3.5, Tabella 4-23) non è nell'SRD: nel repo stanno solo i venti numeri, riscontrati su realmshelps.net. La somma è un minimo di proposito: si contano solo gli oggetti dal prezzo certo, così una violazione è sicura e sotto la tabella non si dice niente. 88 schede su 112 del banco restano non verificabili perché il plugin non ha il modificatore di livello delle razze dei mostri: è il resto del lotto 5 e alzerebbe questa misura più di ogni altra aggiunta.
