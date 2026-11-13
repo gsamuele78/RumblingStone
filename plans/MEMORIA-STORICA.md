@@ -1243,3 +1243,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-14 · ADR-0091: le voci che mancavano in sei schede di ARC07-DEF-4
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0091
+- **Temi:** schede stampa booklet regole
+- **Origine:** riga del 2026-11-14 «ADR-0091, le voci che mancavano nelle schede di ARC07-DEF-4» in `plans/CHANGELOG.md`
+- **Testo:** seconda PR della scelta del DM «Voci mancanti, ordine PF1e» (2026-11-13). Linguaggi, Qualità speciali e «Altro equipaggiamento» in sei schede, solo da ciò che la scheda usa già o che l'SRD 3.5 dà alla razza. La serata Notte e Alba passa da 125 a 126 pagine e il booklet completo da 158 a 159: la scheda di Balvar si spezza su due pagine, e il DM l'ha accettato sulla card del 2026-11-14.
+- **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md` · `docs/audit/stampa-booklet.json`
+- **Solo qui:** bastano quattro righe in più nelle schede di guardie e sacerdote per spezzare Balvar, prima ancora che le sue tre righe tornino intere. `verifica_scheda` legge l'equipaggiamento solo da una riga che comincia con «Equipaggiamento»: non vede né la voce dentro le Statistiche (la forma di ADR-0091) né «Altro equipaggiamento», quindi la misura di `ricchezza` non si muove; detto al thread delle regole. `linguaggi.toml` ha solo le razze dei PG: per hobgoblin e orco i linguaggi automatici stanno nelle voci dei mostri dell'SRD. Sulla card avevo scritto «due pagine affiancate» senza verificarlo, e l'ho corretto subito dopo. La riga 994 di questo file è storia e non si corregge, anche dove l'audit del 2026-11-13 la trova superata. Nella stessa PR le righe ferme trovate dall'audit del 2026-11-13: P09 e inventario Gemini in STATO-E-ORDINE, casella VOL-3 del piano di stampa.
