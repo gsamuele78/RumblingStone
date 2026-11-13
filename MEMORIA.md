@@ -86,7 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 113 pagine (561 → 620 parole per pagina; *Burnt Offerings* 725), schede e ri… |
+| 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 114 pagine (561 → 614 parole per pagina; *Burnt Offerings* 725), schede e ri… |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0130: le emoji del volume da stampa vengono dal repo. Noto Color Emoji 2.05… | ✅ veraPDF sui 20 booklet: conformi 18 → 20, controlli falliti 7 → 0; font di sistema nei PDF 5 → 0; pagine 985 = 985; 83 pagine cambiano sopra il piede (► e ⬦… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5, prima parte: la creatura base. Capacità `creature.base` (409… | In PR |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |

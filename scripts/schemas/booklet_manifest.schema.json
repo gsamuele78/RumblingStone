@@ -142,7 +142,7 @@
       "enum": [
         "fitta"
       ],
-      "description": "'fitta' (scelta del DM del 2026-11-13): pagina A4 con corpo 9,6 pt, interlinea 0,56em e margini più stretti, per i volumi lunghi. Senza la chiave la pagina è quella di sempre (10,2 pt). In A5 non cambia niente. Catene: stampa."
+      "description": "'fitta' (scelta del DM del 2026-11-13): pagina A4 con corpo 9,6 pt, interlinea 0,56em e margini alto e basso più stretti, per i volumi lunghi. Senza la chiave la pagina è quella di sempre (10,2 pt). In A5 non cambia niente. Catene: stampa."
     },
     "chi_si_incontra": {
       "type": "boolean",

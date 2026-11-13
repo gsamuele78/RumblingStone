@@ -764,7 +764,8 @@
   // tascabile vero.
   let a5 = formato == "a5"
   // `pagina: "fitta"` (manifest `"pagina": "fitta"`, scelta del DM del
-  // 2026-11-13): il corpo e i margini di un AP stampato, per i volumi lunghi.
+  // 2026-11-13): il corpo di un AP stampato, per i volumi lunghi. I margini laterali
+  // restano quelli dell'A4: `misura_stampa` controlla l'area di stampa su quelli.
   // *Burnt Offerings* porta 739 parole per pagina, la pagina ariosa 576.
   let fitta = pagina == "fitta" and not a5
   let fondo = if carta == "bianca" { white } else { avorio }
@@ -774,7 +775,7 @@
     // Margini SPECULARI: rilegato o pinzato, il margine interno finisce nella
     // piega. `inside`/`outside` è ciò che distingue un libro da una risma.
     margin: if a5 { (inside: 1.5cm, outside: 1.1cm, top: 1.5cm, bottom: 1.4cm) }
-            else if fitta { (inside: 1.8cm, outside: 1.3cm, top: 1.8cm, bottom: 1.6cm) }
+            else if fitta { (inside: 2.0cm, outside: 1.5cm, top: 1.8cm, bottom: 1.6cm) }
             else { (inside: 2.0cm, outside: 1.5cm, top: 2.1cm, bottom: 2.0cm) },
     binding: left,
     fill: fondo,

@@ -98,10 +98,12 @@ copie tolte; visto il PDF, ha bocciato le copie tolte.
 
 **Decisione.** Una chiave di manifest, solo stampa, spenta dove non scritta.
 `"pagina": "fitta"`: A4 a 9,6 pt (il corpo già usato in A5), interlinea
-0,56em, margini 1,8/1,3/1,8/1,6 cm. Le schede e le righe per il tavolo restano
+0,56em, margini alto 1,8 e basso 1,6 cm; i laterali restano 2,0 e 1,5 cm
+come negli altri booklet (stretti a 1,8 e 1,3 davano una pagina in meno, ma
+uscivano dall'area di stampa misurata e ingrandivano le mappe sotto i 300 dpi). Le schede e le righe per il tavolo restano
 in ogni scena: «una volta sola» è stata provata e scartata dal DM, perché le
 schede si leggono peggio accorpate e le pagine non scendevano.
 
-**Conseguenze.** Serata 125 → 113 pagine, non le 100 stimate. La distanza fra
+**Conseguenze.** Serata 125 → 114 pagine, non le 100 stimate. La distanza fra
 la scena e i numeri di chi c'è non peggiora. Si torna indietro togliendo la
 chiave.
