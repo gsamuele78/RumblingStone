@@ -47,10 +47,16 @@ Scopo
                  caratteristica che party[].hp non tocca
              S7  ogni eco `armato` è citato per ID in almeno un file d'arco
            e conta ciò che non si può verificare («chi sa cosa» senza tempo).
+           Con --tattiche aggiunge la regola che ha l'atteso nella scheda
+           (ADR-0125, aggiunta del 2026-11-13, canale testing):
+             S8  un incantesimo (in corsivo) o un talento (con le maiuscole,
+                 o di più parole) che le «Tattiche» di una scheda del
+                 Bestiario nominano sta nella scheda: fra i fatti di
+                 `verifica_scheda --fatti` o scritto altrove nel file
 
 Uso
   python3 scripts/coerenza_campagna.py fronti FILE.yaml [FILE.yaml ...] [--state] [--json]
-  python3 scripts/coerenza_campagna.py fatti DIR [DIR ...] [--bestiario] [--state] [--json]
+  python3 scripts/coerenza_campagna.py fatti DIR [DIR ...] [--bestiario] [--state] [--tattiche] [--json]
   python3 scripts/coerenza_campagna.py tutto --fronti F.yaml ... --archi DIR ... --out DIR [--bestiario]
 
 Exit  0 = nessuna violazione (fronti) o misura eseguita (fatti, tutto)
@@ -1058,8 +1064,132 @@ def verifica_storia(files: list[Path], an: dict, echi_in: list[Path] | None = No
     }
 
 
+# ---------------------------------------------------------------------------
+# S8 — le «Tattiche» di una scheda contro la scheda stessa. L'àncora non è
+# state.yaml ma la scheda: `verifica_scheda --fatti` (ADR-0126) dà talenti e
+# incantesimi col nome canonico e le righe delle «Tattiche». Una tattica che
+# nomina un incantesimo (in corsivo) o un talento (con le maiuscole, o di più
+# parole anche in minuscolo) che la
+# scheda non ha, né fra i fatti né scritto altrove nel file (pozioni, pergamene,
+# capacità magiche), è una violazione. Misura, non cancello (ADR-0125, aggiunta
+# del 2026-11-13; banco in plans/esperimenti/coerenza-storia-2026-11-12/).
+_S8_CORSIVO = re.compile(r"(?<![*\w])\*(?!\*)([^*\n]{3,60}?)\*(?!\*)")
+_S8_MAIUSCOLE = re.compile(
+    r"\b[A-ZÀ-Ý][a-zà-ÿ']+(?:\s+(?:(?:in|di|del|della|dei|con|a|al|su|e|da|il|la|the|of|con le|a due)\s+)?"
+    r"[A-ZÀ-Ý][a-zà-ÿ']+)*")
+_S8_ALTRUI = re.compile(r"(?:\bcontro|\bimmun[ei] a|\bsubisce|\bsotto)\s+(?:un[oa']?\s+|il\s+|la\s+|l')?$", re.I)
+"""«Contro *polvere luccicante*»: l'incantesimo è di chi attacca la creatura."""
+_S8_CONDIVISI = re.compile(r"condivi\w+ (?:gli )?incantesimi|share spells", re.I)
+"""Condividere incantesimi (SRD): l'incantesimo è del padrone, non della cavalcatura."""
+_S8_TOGLI = re.compile(r"`[^`]*`|\[INFERRED[^\]]*\]")
+
+
+def _piatto(t: str) -> str:
+    """Come `lessico_regole.norma`, ma tiene il contenuto delle parentesi: gli
+    incantesimi preparati e le pozioni di una scheda stanno quasi sempre lì."""
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
+    return " " + re.sub(r"[^a-z0-9+]+", " ", re.sub(r"['`*_]", "", t)).strip() + " "
+
+
+def schede_con_tattiche(radice: Path | None = None) -> list[Path]:
+    radice = ROOT / "Bestiario" if radice is None else radice
+    return sorted(q for q in radice.rglob("*.md") if q.is_file())
+
+
+def verifica_tattiche(files: list[Path]) -> dict:
+    """S8: per ogni incantesimo o talento che le «Tattiche» nominano e la scheda
+    non ha: regola, atteso, ha, file, riga, testo. Solo i file con una scheda
+    sola (una riga «Talenti» al più): `--fatti` legge i talenti della prima."""
+    import lessico_regole as LR
+    import verifica_scheda as VS
+    import verifica_talenti as VT
+    viol, lette, menzioni, saltate = [], 0, 0, {"senza tattiche": 0, "più schede nel file": 0}
+    for p in files:
+        righe = p.read_text(encoding="utf-8", errors="replace").splitlines()
+        f = VS.fatti(p)
+        if not f["tattiche"]:
+            saltate["senza tattiche"] += 1
+            continue
+        if sum(1 for r in righe if VT.RIGA.match(r)) > 1:
+            saltate["più schede nel file"] += 1
+            continue
+        lette += 1
+        dentro: set[int] = set()
+        for t in f["tattiche"]:
+            dentro |= set(range(t["inizio"], t["fine"] + 1))
+        fuori = _piatto("\n".join(r for i, r in enumerate(righe, 1) if i not in dentro))
+        sis = f["sistema"]
+        try:
+            nomi = VS._liste(sis)[2]
+        except Exception:                                    # un sistema senza liste di incantesimi
+            nomi = {}
+        it = VS._incantesimi_it() if sis == "dnd35" else {}
+        ha_inc = {LR.norma(x["canonico"]) for x in f["incantesimi"] if x["canonico"]}
+        ha_tal = {x["canonico"] for x in f["talenti"] if x["canonico"]}
+        multi = [k for k in VT._lessici()[0] if " " in k] if sis == "dnd35" else []
+        visti: set[tuple[str, str]] = set()
+
+        def v(tipo, nome, canonico, n, dove):
+            if (tipo, canonico) in visti:
+                return
+            visti.add((tipo, canonico))
+            viol.append({"regola": "S8 tattica senza riscontro in scheda",
+                         "atteso": f"{nome} ({canonico}) {dove} della scheda",
+                         "ha": "assente", "file": _rel(p), "riga": n,
+                         "testo": righe[n - 1].strip()[:240]})
+
+        for n in sorted(dentro):
+            r = _S8_TOGLI.sub("", righe[n - 1])
+            if r.lstrip().startswith(">"):                   # le note del DM non sono tattica
+                continue
+            for m in _S8_CORSIVO.finditer(r):
+                nome = m.group(1).strip(" .,;:")
+                k = LR.norma(nome)
+                k = LR.norma(it[k]) if k in it else k
+                if k not in nomi or _S8_ALTRUI.search(r[:m.start()]) or _S8_CONDIVISI.search(r):
+                    continue
+                menzioni += 1
+                if k not in ha_inc and _piatto(nome) not in fuori and f" {k} " not in fuori:
+                    v("incantesimo", nome, nomi[k], n, "fra incantesimi, capacità magiche od oggetti")
+            contati: set[str] = set()
+            for m in _S8_MAIUSCOLE.finditer(r.replace("*", "")):
+                nome = m.group(0)
+                x = VT.risolvi(sis, nome)
+                # una parola sola («Corona») conta solo se è un talento dei dati del sistema
+                if not x or (" " not in nome and not x["verificabile"]):
+                    continue
+                menzioni += 1
+                contati.add(x["en"])
+                if x["en"] not in ha_tal and _piatto(nome) not in fuori and _piatto(x["en"]) not in fuori:
+                    v("talento", nome, x["en"], n, "fra i talenti")
+            # un talento di più parole si riconosce anche in minuscolo («attacco poderoso»):
+            # misurato su main, 50 menzioni e nessun falso allarme
+            piana = _piatto(r)
+            for k in multi:
+                if f" {k} " not in piana:
+                    continue
+                x = VT.risolvi(sis, k)
+                if not x or x["en"] in contati:
+                    continue
+                menzioni += 1
+                if x["en"] not in ha_tal and f" {k} " not in fuori and _piatto(x["en"]) not in fuori:
+                    v("talento", k, x["en"], n, "fra i talenti")
+    return {"regole": ["S8"], "violazioni": viol,
+            "letti": {"schede": lette, "menzioni": menzioni},
+            "non_verificabili": {k: f"{n} file" for k, n in saltate.items() if n}}
+
+
 def testo_storia(s: dict) -> str:
     out = [f"== Storia contro state.yaml ({', '.join(s['regole'])}): {len(s['violazioni'])} violazioni"
+           f" · non verificabili: {s['non_verificabili']}"]
+    for x in s["violazioni"]:
+        out.append(f"   ✗ {x['regola']} · atteso {x['atteso']} · ha {x['ha']} · {x['file']}:{x['riga']}")
+    return "\n".join(out)
+
+
+def testo_tattiche(s: dict) -> str:
+    out = [f"== Tattiche contro la scheda (S8): {len(s['violazioni'])} violazioni su "
+           f"{s['letti']['menzioni']} menzioni in {s['letti']['schede']} schede"
            f" · non verificabili: {s['non_verificabili']}"]
     for x in s["violazioni"]:
         out.append(f"   ✗ {x['regola']} · atteso {x['atteso']} · ha {x['ha']} · {x['file']}:{x['riga']}")
@@ -1144,6 +1274,10 @@ def main(argv: list[str] | None = None) -> int:
                    help="aggiunge le regole con l'àncora in campaign/state.yaml (S1 arrivo "
                         "dell'orda, S5 portatore, S6 modifiche permanenti, S7 echi armati "
                         "senza scena): regola, atteso, ha, file:riga (ADR-0125)")
+    b.add_argument("--tattiche", action="store_true",
+                   help="aggiunge la regola S8: un incantesimo (in corsivo) o un talento (con le "
+                        "maiuscole) che le «Tattiche» di una scheda del Bestiario nominano e la "
+                        "scheda non ha. Misura in sola lettura (ADR-0125)")
     b.add_argument("--json", action="store_true")
     b.add_argument("--check", type=Path, metavar="RESIDUI",
                    help="cancello: exit 1 se c'è una contraddizione che RESIDUI non "
@@ -1180,10 +1314,13 @@ def main(argv: list[str] | None = None) -> int:
         r = rileva_contraddizioni(args.archi, args.bestiario, args.tutti)
         if args.state:
             r["storia"] = verifica_storia(file_degli_archi(args.archi, args.tutti), ancore_state())
+        if args.tattiche:
+            r["tattiche"] = verifica_tattiche(schede_con_tattiche())
         if args.json:
             print(json.dumps(r, ensure_ascii=False, indent=2))
         else:
-            print(testo_fatti(r) + ("\n" + testo_storia(r["storia"]) if args.state else ""))
+            print(testo_fatti(r) + ("\n" + testo_storia(r["storia"]) if args.state else "")
+                  + ("\n" + testo_tattiche(r["tattiche"]) if args.tattiche else ""))
         return controlla_residui(r, args.check) if args.check else 0
 
     esiti = [controlla_fronti(carica(p)) for p in args.fronti]

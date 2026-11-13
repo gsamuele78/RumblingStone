@@ -63,6 +63,39 @@ mutanti, la lettura di ogni rilievo su main.
 - Se l'àncora è sbagliata il verificatore la difende (caso del pegno del
   Rituale 3, 2026-08-06).
 
+## Aggiunta del 2026-11-13: S8, le tattiche contro la scheda
+
+Stesso criterio del punto 4 (solo regole precise, in canale testing), con
+un'àncora diversa: non `state.yaml` ma la scheda, letta da `verifica_scheda
+--fatti` ([ADR-0126](ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md)).
+`coerenza_campagna.py fatti --tattiche` segnala un incantesimo (in corsivo) o
+un talento (con le maiuscole, o di più parole anche in minuscolo) che le
+«Tattiche» di una scheda del Bestiario nominano e che la scheda non ha, né fra
+i fatti né scritto altrove nel file (pozioni, pergamene, capacità magiche).
+
+- **Misura su main (3cc11aee)**: 0 violazioni su 220 menzioni in 60 schede.
+  Prima dei filtri erano 9, tutte false, lette una per una: nomi fra parentesi
+  che il normalizzatore toglieva (5), «la Corona» presa per un talento, una
+  nota di correzione del DM, l'incantesimo di chi attacca la creatura («contro
+  *polvere luccicante*»), l'incantesimo che il padrone passa alla cavalcatura
+  con condividere incantesimi.
+- **Mutanti** (`muta_tattiche.py`, 569): la scheda perde ciò che la tattica
+  usa, 181 visti su 183; la tattica usa ciò che la scheda non ha, 178 su 180;
+  scambio fra due incantesimi della scheda, 0 falsi allarmi su 26. Parafrasi:
+  talento di più parole in minuscolo 60 su 60; incantesimo senza corsivo 0 su
+  60; talento di una parola in minuscolo 0 su 60.
+- **Limiti**: i mutanti usano lo stesso dizionario della regola, quindi la
+  misura è ottimistica. Un nome che è anche una parola comune della scheda
+  («velocità», «fendere») passa sempre, perché «scritto altrove» lo assolve
+  (4 mutanti su 363). Si leggono solo i file con una scheda sola (5 del
+  Bestiario ne hanno di più) e non i master degli archi, dove le tattiche
+  rimandano a una scheda in un altro file (4 falsi allarmi su 4 nella prova).
+  «Descrizione» non si legge: 7 schede su 60 ne hanno una e nessuna nomina
+  regole. Non dice se la tattica è buona, solo se usa ciò che c'è.
+- **Scartato con la misura**: leggere anche gli incantesimi senza corsivo.
+  Su main 32 menzioni in più e 2 falsi allarmi su 2 («un muro di forza» dei
+  PG, «soffio di fuoco» del drago), nessun errore vero trovato.
+
 **Da rivedere se**: il DM dà il tempo alle righe di §4 «chi sa cosa» (allora
 le regole diventano temporali, e Prolog o clingo vanno rimisurati come dice
 ADR-0124); oppure su 30 rilievi letti in canale testing la precisione delle
