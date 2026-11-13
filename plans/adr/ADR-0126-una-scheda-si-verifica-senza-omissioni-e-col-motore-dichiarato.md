@@ -737,3 +737,43 @@ i non verificabili. Il confine del blocco è il titolo che lo precede: una
 sul Bestiario: sugli archi dà 33 segnalazioni non ancora lette una per una
 (negazioni come «senza Estrazione Rapida», booklet generati che ripetono il
 master), quindi lì non è né cancello né misura.
+
+### Lotto 6, prima parte — le abilità di classe e il margine dei gradi (2026-11-13)
+
+**Contesto.** La verifica delle abilità (ADR-0124) contava ogni grado come se
+l'abilità fosse di classe e lasciava a tutti lo stesso margine fisso per
+razza, sinergie e oggetti. Chi mette troppi gradi in un'abilità che la sua
+classe non ha passava, e il margine largo copriva gli errori di due o quattro
+punti. Il plugin non sapeva quali abilità sono di quale classe.
+
+**Decisione.** `estrai_gradi.py` legge dall'SRD e scrive in `gradi.toml` del
+plugin 3.5: `[di_classe]` (le abilità di classe di 38 classi; l'esperto, il
+maestro del sapere, il discepolo dei draghi e le classi psioniche ed epiche non
+hanno un elenco e restano fuori), `[di_dominio]` (le abilità che cinque domini
+aggiungono al chierico), `[sinergie]` (per ogni abilità, quelle che con 5 gradi
+le danno +2), `[razze]` (i bonus alle abilità delle sette razze dell'SRD),
+`[margine]` e `[fuori_classe]` (costo 2, massimo diviso 2). `verifica_scheda`
+ha la regola nuova `gradi.massimo.fuori_classe`: chi ha soltanto livelli di
+classe, tutti con l'elenco, non supera la metà del massimo in un'abilità che
+nessuna delle sue classi ha, e quei gradi contano doppio nella somma dei punti.
+Il chierico riceve le abilità di tutti e cinque i domini, perché la scheda non
+sempre li scrive: si sbaglia a favore della scheda. Per chi è di una delle
+sette razze dell'SRD e non scrive «razziale» nel testo, il margine fisso lascia
+il posto a un conto: 2 per l'oggetto, il bonus della razza, 2 per ogni
+abilità che dà sinergia ed è scritta nella riga delle abilità.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 33 → 33, non
+verificabili 371 → 371; nessuna scheda toccata e nessuna violazione nuova.
+Banco `muta_abilita.py` (32 schede, main → qui): un'abilità +4 3 → 4, +8
+19 → 19, +12 24 → 26; tutte +3 6 → 9, tutte +6 18 → 18; ogni abilità della riga
+alzata da sola, casi nuovi: +2 1 → 2 su 162, +4 10 → 16 su 162. Il guadagno è
+piccolo e si dice: su 130 schede lette 37 scrivono una riga di abilità coi
+numeri, 18 hanno soltanto classi con l'elenco e 6 hanno il margine contato
+(le altre sono goblinoidi, drow, duergar, cioè razze che l'SRD descrive fra i
+mostri); le abilità fuori classe giudicate sono 8 in 4 schede. Limiti: la
+penalità di armatura alla prova non si conta ancora; i gradi dichiarati fra
+parentesi («8 gradi») non si leggono; i gradi comprati a un livello di una
+classe che aveva l'abilità si contano di classe per tutte le classi della
+scheda (l'SRD lo vuole livello per livello, e la scheda non lo dice); le razze
+dei mostri non hanno i bonus alle abilità nel plugin; PF1e non ha queste
+tabelle e resta com'era.

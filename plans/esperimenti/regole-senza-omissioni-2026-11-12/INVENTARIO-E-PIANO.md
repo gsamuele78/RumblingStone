@@ -431,3 +431,13 @@ dati da `--fatti` 500 → 748; S8 sul Bestiario 60 → 65 schede lette, 0
 violazioni. Restano del lotto 5: modificatori razziali delle caratteristiche,
 modificatore di livello, modelli, avanzamento per dadi vita, mostri dei manuali.
 
+### Lotto 6, prima parte: le abilità di classe (2026-11-13)
+
+`gradi.toml` del 3.5 ha le abilità di classe di 38 classi, quelle di cinque
+domini, le sinergie e i bonus alle abilità delle sette razze dell'SRD.
+`verifica_scheda` ha la regola `gradi.massimo.fuori_classe` (massimo dimezzato,
+costo doppio) e conta il margine vero per le sette razze. Misura: violazioni
+33 → 33, non verificabili 371 → 371; banco `muta_abilita.py`, ogni abilità +4
+da sola: 10 → 16 su 162. Restano del lotto 6: penalità di armatura alla prova,
+gradi dichiarati fra parentesi, bonus alle abilità delle razze dei mostri,
+le stesse tabelle per PF1e.

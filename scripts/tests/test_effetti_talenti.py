@@ -10,17 +10,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import verifica_scheda as V  # noqa: E402
 from dmcore import sistemi as S  # noqa: E402
 
-# Guerriero 4, Int 10: massimo 7 gradi; margine 4 (sinergia 2, razza 2).
+# Barbaro 4, Int 10: massimo 7 gradi; margine 4 (sinergia 2, razza 2). Barbaro e non guerriero
+# perché Ascoltare e Scalare devono essere abilità di classe (lotto 6: fuori classe il massimo è la metà).
 # Ascoltare (Sag +1): 12 senza talenti. Scalare (For +3): 14 senza talenti.
 SCHEDA = """# Prova [INFERRED]
 **Faction**: none | **Role**: brute | **Environment**: any | **CR**: 4
 
 ```statblocco
 gs: 4
-tipo: Medium humanoid (orc), Fighter 4, CE
+tipo: Medium humanoid (orc), Barbarian 4, CE
 ca: 14
-pf: 30
-pf-dado: 4d10+8
+pf: 34
+pf-dado: 4d12+8
 ts: Temp +6, Rifl +2, Vol +2
 attributi: For 16 Des 12 Cos 14 Int 10 Sag 12 Car 8
 velocita: 9 m

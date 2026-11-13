@@ -3,7 +3,8 @@
 
 Per ogni scheda del Bestiario con una riga di abilità e senza violazioni si
 fanno copie con (a) **una** abilità alzata di 4, 8, 12 e (b) **tutte** le
-abilità alzate di 3 e di 6, e si conta quante lo strumento ne segnala.
+abilità alzate di 3 e di 6, e (c) **ciascuna** abilità della riga, una alla
+volta, alzata di 2 e di 4; si conta quante lo strumento ne segnala.
 
 Uso:  python3 muta_abilita.py     # stampa il conto e scrive misure-abilita.json
 """
@@ -61,9 +62,22 @@ def main() -> int:
                 q.write_text("\n".join(righe[:i] + [nuova] + righe[i + 1:]), encoding="utf-8")
                 conto[nome]["mutanti"] += 1
                 conto[nome]["trovati"] += bool(V.abilita(q)[0])
+            # ogni abilità della riga, una alla volta (lotto 6 di ADR-0126): la prima sola
+            # non dice nulla delle abilità fuori classe, che stanno dove capita
+            numeri = list(NUM.finditer(m.group(1)))
+            for quanto in (2, 4):
+                for n in numeri:
+                    v = int(n.group(0).replace("−", "-")) + quanto
+                    testo = m.group(1)[:n.start()] + f"{v:+d}" + m.group(1)[n.end():]
+                    nuova = righe[i][:m.start(1)] + testo + righe[i][m.end(1):]
+                    q = Path(tmp) / p.name
+                    q.write_text("\n".join(righe[:i] + [nuova] + righe[i + 1:]), encoding="utf-8")
+                    c = conto.setdefault(f"ciascuna +{quanto}", {"mutanti": 0, "trovati": 0})
+                    c["mutanti"] += 1
+                    c["trovati"] += bool(V.abilita(q)[0])
     print(f"{schede} schede con abilità, pulite e calcolabili")
     for k, c in conto.items():
-        print(f"{k:9s} {c['trovati']:3d}/{c['mutanti']:3d}")
+        print(f"{k:12s} {c['trovati']:3d}/{c['mutanti']:3d}")
     (Path(__file__).parent / "misure-abilita.json").write_text(
         json.dumps({"schede": schede, **conto}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return 0

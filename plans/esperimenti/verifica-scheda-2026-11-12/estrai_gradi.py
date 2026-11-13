@@ -5,6 +5,7 @@ Scrive `sistemi/dnd35/dati/gradi.toml` e `sistemi/pf1e/dati/gradi.toml`:
   [chiave]   abilità → caratteristica chiave («Climb (Str)» → For)
   [classi]   classe → punti abilità per livello («4 + Int modifier» → 4)
   [tipi]     tipo di creatura → punti per dado vita razziale
+  [di_classe] classe → abilità di classe («Class Skills»); [fuori_classe] costo e massimo
   [regole]   massimo dei gradi, moltiplicatore del primo dado vita, minimo per dado
 
 Fonte: olimot/srd-v3.5-md@c7f30a0c (la stessa di talenti.toml), OGL.
@@ -58,6 +59,110 @@ def classi(base: Path) -> "dict[str, int]":
             m = re.search(r"\*\*Skill Points at Each (?:Additional )?Level:?\*\*:?\s*(\d+) \+ Int", blocco)
             if m:
                 out[re.sub(r"\s*<small>.*", "", nome).lower()] = int(m.group(1))
+    return dict(sorted(out.items()))
+
+
+def di_classe(base: Path, chiave: "dict[str, str]") -> "dict[str, list[str]]":
+    """Classe → le sue abilità di classe, dal paragrafo «Class Skills» («The
+    barbarian's class skills (and the key ability for each skill) are Climb
+    (Str), …»). I nomi sono quelli di `[chiave]`: «Knowledge (arcana)» resta
+    con la sua parentesi, «Knowledge (all skills, taken individually)» diventa
+    «knowledge», e chi legge prende per buona ogni voce che comincia così.
+    Una classe il cui paragrafo non si legge (o dà nomi fuori da `[chiave]`)
+    non esce: chi verifica la tratta come classe senza elenco."""
+    out = {}
+    for rel in FILE_CLASSI:
+        f = base / rel
+        if not f.is_file():
+            continue
+        for blocco in re.split(r"^## ", f.read_text(encoding="utf-8"), flags=re.M)[1:]:
+            nome = re.sub(r"\s*<small>.*", "", blocco.split("\n", 1)[0].strip()).lower()
+            m = re.search(r"class skills \(and the key ability for each skill\) are ([^\n]+)", blocco)
+            if not m:
+                continue
+            testo = re.sub(r"\s*See Chapter 4.*$", "", m.group(1))
+            testo = re.sub(r"\((?:Str|Dex|Con|Int|Wis|Cha|None)\)", "", testo)
+            testo = re.sub(r"\(all skills,? taken individually\)|\(any\)", "", testo)
+            voci, ignote = [], []
+            # «Hide (Dex). Listen (Wis)» nell'arciere arcano: il punto in mezzo è un refuso della fonte
+            for v in re.split(r"[,.]\s*(?:and\s+)?|\s+and\s+(?![^()]*\))", testo):
+                v = re.sub(r"\s+", " ", v.replace("(n/a)", "")).strip(" .").lower()
+                if not v:
+                    continue
+                radice = v.split(" (")[0]
+                (voci if radice in chiave else ignote).append(v)
+            if voci and not ignote:
+                out[nome] = sorted(set(voci))
+    return dict(sorted(out.items()))
+
+
+def di_dominio(base: Path, chiave: "dict[str, str]") -> "dict[str, list[str]]":
+    """Dominio → le abilità che aggiunge a quelle di classe del chierico («Add
+    Bluff, Disguise, and Hide to your list of cleric class skills»)."""
+    t = (base / "spells" / "spell-list-i.md").read_text(encoding="utf-8")
+    out = {}
+    for blocco in re.split(r"^### ", t, flags=re.M)[1:]:
+        nome = blocco.split("\n", 1)[0].strip()
+        m = re.search(r"Add (.+?) to your list of cleric class skills", blocco)
+        if not nome.endswith(" Domain") or not m:
+            continue
+        testo = re.sub(r"\ball Knowledge skills\b", "Knowledge", m.group(1))
+        voci = [re.sub(r"\s+", " ", v).strip().lower() for v in re.split(r",\s*(?:and\s+)?|\s+and\s+", testo)]
+        voci = [v for v in voci if v.split(" (")[0] in chiave]
+        if voci:
+            out[nome[:-len(" Domain")].lower()] = sorted(voci)
+    return dict(sorted(out.items()))
+
+
+NOMI_RAZZE = {"dwarf": ["dwarf", "nan[oaie]"], "elf": ["elf", "elf[oaie]"], "gnome": ["gnome", "gnom[oaie]"],
+              "half-elf": ["half-elf", "mezzelf[oaie]"], "half-orc": ["half-orc", "mezzorc[ohie]+"],
+              "halfling": ["halfling"], "human": ["human", "uman[oaie]"]}
+#: chi ha un nome di queste non è una delle sette razze, anche se il tipo dice «(elfo)» o «(nano)»
+ALTRE_RAZZE = ["drow", "duergar", "svirfneblin", "derro", "aasimar", "tiefling", "githyanki", "githzerai",
+               "orog", "tanarukk", "fey'ri", "goblin", "hobgoblin", "bugbear", "kobold", "cobold[oi]",
+               "(?<!half-)orc", "orc[ohie]+", "grigi[oa]", "scur[oa]", "profond[oa]", "selvaggi[oa]", "acquatic[oa]"]
+
+
+def _abilita_in(testo: str, chiave: "dict[str, str]") -> "list[str]":
+    """Le abilità di `[chiave]` nominate nel testo, le più lunghe per prime."""
+    t = testo.lower()
+    return [a for a in sorted(chiave, key=len, reverse=True) if re.search(rf"\b{re.escape(a)}\b", t)]
+
+
+def sinergie(base: Path, chiave: "dict[str, str]") -> "dict[str, list[str]]":
+    """Abilità → le abilità che con 5 gradi le danno +2 («If you have 5 or more
+    ranks in Bluff, Knowledge (nobility and royalty), or Sense Motive, you get
+    a +2 bonus on Diplomacy checks»). Le condizioni («…checks related to
+    scrolls») non si tengono: il +2 è un tetto, vale quando può valere. Le
+    Conoscenze sono una voce sola, come in `[chiave]`."""
+    out: "dict[str, set[str]]" = {}
+    for f in ("skills-i.md", "skills-ii.md"):
+        t = (base / "basic-rules-and-legal" / f).read_text(encoding="utf-8")
+        for da, a in re.findall(r"If you have 5 (?:or more )?ranks in (.+?), you (?:get|gain) a \+2 bonus (?:on|to) "
+                                r"(.+?) checks", t):
+            for bersaglio in _abilita_in(a, chiave):
+                out.setdefault(bersaglio, set()).update(x for x in _abilita_in(da, chiave) if x != bersaglio)
+    return {a: sorted(v) for a, v in sorted(out.items()) if v}
+
+
+def razze(base: Path, chiave: "dict[str, str]") -> "dict[str, dict[str, int]]":
+    """Razza dell'SRD → il bonus razziale più alto che dà a ogni abilità («+2
+    racial bonus on Listen, Search, and Spot checks»), anche quando vale solo
+    in certi casi (la pietra dei nani): è un tetto. Una razza senza bonus
+    esce con la tabella vuota, perché «nessun bonus» è un fatto anche quello."""
+    t = (base / "basic-rules-and-legal" / "races.md").read_text(encoding="utf-8")
+    nomi = {"Humans": "human", "Dwarves": "dwarf", "Elves": "elf", "Gnomes": "gnome", "Half-Elves": "half-elf",
+            "Half-Orcs": "half-orc", "Halflings": "halfling"}
+    out = {}
+    for blocco in re.split(r"^## ", t, flags=re.M)[1:]:
+        nome = nomi.get(blocco.split("\n", 1)[0].strip())
+        if not nome:
+            continue
+        voci: "dict[str, int]" = {}
+        for n, resto in re.findall(r"\+(\d) racial bonus on ([^.]+?) checks", blocco):
+            for a in _abilita_in(resto, chiave):
+                voci[a] = max(voci.get(a, 0), int(n))
+        out[nome] = dict(sorted(voci.items()))
     return dict(sorted(out.items()))
 
 
@@ -141,6 +246,42 @@ def genera() -> str:
         "",
         "[tipi]",
         *[f"{_q(a)} = {v}" for a, v in t.items()],
+        "",
+        "# le abilità di classe, dal paragrafo «Class Skills» (lotto 6 di ADR-0126). «knowledge»",
+        "# senza parentesi vuol dire tutte le Conoscenze. Una classe che qui manca non ha un",
+        "# elenco leggibile nella fonte (l'esperto ne sceglie dieci): per lei nessuna abilità si",
+        "# giudica fuori classe.",
+        "[di_classe]",
+        *[f"{_q(a)} = [{', '.join(_q(x) for x in v)}]" for a, v in di_classe(CACHE, k).items()],
+        "",
+        "# le abilità che un dominio aggiunge a quelle di classe del chierico (SRD, «Cleric Domains»)",
+        "[di_dominio]",
+        *[f"{_q(a)} = [{', '.join(_q(x) for x in v)}]" for a, v in di_dominio(CACHE, k).items()],
+        "",
+        "# chi con 5 gradi dà +2 a un'abilità (SRD, «Synergy» di ogni abilità): abilità → fonti",
+        "[sinergie]",
+        *[f"{_q(a)} = [{', '.join(_q(x) for x in v)}]" for a, v in sinergie(CACHE, k).items()],
+        "",
+        "# il bonus razziale alle abilità delle sette razze dell'SRD (anche se vale solo in certi casi)",
+        *[riga for r, v in razze(CACHE, k).items()
+          for riga in (f"[razze.{_q(r)}]", *[f"{_q(a)} = {n}" for a, n in v.items()], "")],
+        "# come una scheda nomina le sette razze (espressioni regolari, italiano e inglese); una",
+        "# sottorazza (drow, duergar…) ha i suoi bonus in un'altra pagina e non è qui",
+        "[razze_nomi]",
+        *[f"{_q(r)} = [{', '.join(_q(x) for x in v)}]" for r, v in NOMI_RAZZE.items()],
+        "altre = [" + ", ".join(_q(x) for x in ALTRE_RAZZE) + "]",
+        "",
+        "[margine]",
+        "# quanto un oggetto può aggiungere senza che la scheda lo dica (attrezzi perfetti: +2 di",
+        "# circostanza, SRD «Tools and Skill Kits»); `sinergia` è il +2 di ogni fonte con 5 gradi",
+        "oggetto = 2",
+        "sinergia = 2",
+        "",
+        "[fuori_classe]",
+        "# SRD, «Skills Summary»: un grado in un'abilità fuori classe costa 2 punti e il massimo",
+        "# è la metà di quello di classe",
+        "costo = 2",
+        "massimo_diviso = 2",
         "",
     ]
     return "\n".join(righe)
