@@ -54,6 +54,26 @@ class TestLettura(unittest.TestCase):
                for n in range(12)]
         self.assertEqual(MS.parole_ripetute(doc)[1], 0)
 
+    def test_la_testatina_di_un_capitolo_corto(self):
+        # tre pagine sole: il conto delle pagine non la riconosce, la riga in testa sì
+        testa = "la notte e l alba vi atto iii l alba le mura"
+        doc = [_Pagina(f"{testa}\npagina numero {n} con il suo testo proprio e diverso {n * 7}\n{n}")
+               for n in range(3)]
+        self.assertEqual(MS.parole_ripetute(doc)[1], 0)
+
+
+class TestPaginaFitta(unittest.TestCase):
+    """`"pagina": "fitta"` (scelta del DM del 2026-11-13)."""
+
+    def test_il_manifest_arriva_al_tema(self):
+        import export_booklet_typst as E
+        man = {"title": "Prova", "pagina": "fitta"}
+        self.assertIn('  pagina: "fitta",', E.intestazione(man, base=E.ROOT))
+        self.assertNotIn('  pagina: "fitta",', E.intestazione({"title": "Prova"}, base=E.ROOT))
+        tema = (E.ROOT / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        self.assertIn('pagina == "fitta"', tema)
+
+
 class TestMappeESchede(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

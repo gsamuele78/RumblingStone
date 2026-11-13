@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 114 pagine (561 → 614 parole per pagina; *Burnt Offerings* 725), schede e ri… |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0130: le emoji del volume da stampa vengono dal repo. Noto Color Emoji 2.05… | ✅ veraPDF sui 20 booklet: conformi 18 → 20, controlli falliti 7 → 0; font di sistema nei PDF 5 → 0; pagine 985 = 985; 83 pagine cambiano sopra il piede (► e ⬦… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5, prima parte: la creatura base. Capacità `creature.base` (409… | In PR |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | Cancello del riferimento dei plugin: `scripts/tests/test_riferimento_plugin.py`… | ✅ sulle teste di main dopo #376, #386, #388 e #390 avrebbe trovato 5, 6, 15 e 17 disaccordi; su main di oggi 0; una riga tolta, un file sbagliato e uno strumen… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-ter: l'avanzamento d'incantatore delle classi di prestigio.… | ✅ liste troppo alte messe apposta: da 0 a 12 su 12; 6 controlli, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Trovato a mano e non… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 89 voci, l'ultima MS-0089 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 90 voci, l'ultima MS-0090 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
