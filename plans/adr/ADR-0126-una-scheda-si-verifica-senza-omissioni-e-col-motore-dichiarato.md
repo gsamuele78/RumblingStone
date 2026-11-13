@@ -591,9 +591,9 @@ Str/Sop/Mag, riga) e le righe di inizio e fine di ogni «Tattiche» e
 strumento dichiara già (talenti e liste d'incantesimi): il manifest dei plugin
 non cambia.
 
-**Misura** (`misure-fatti-scheda.json`, `Bestiario 0*/`): 185 file con almeno
-un fatto; 470 talenti canonici su 493; 626 incantesimi canonici su 688; 203
-capacità speciali; 250 sezioni «Tattiche» in 110 file; 120 «Descrizione».
+**Misura** (`misure-fatti-scheda.json`, `Bestiario 0*/`): 186 file con almeno
+un fatto; 486 talenti canonici su 508; 626 incantesimi canonici su 688; 214
+capacità speciali; 265 sezioni «Tattiche» in 111 file; 120 «Descrizione».
 
 **Limiti dichiarati.** I talenti sono quelli della prima riga «Talenti» del
 file: in un booklet con più blocchi gli altri non escono. Un incantesimo
