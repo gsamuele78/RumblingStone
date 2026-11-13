@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Large monstrous humanoid, 7 HD (Minotauro 6 / Barbarian 1), CE
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 18
 ca-dettaglio: contatto 9, colto alla sprovvista 18 (-1 taglia, +5 naturale, +4 giaco di maglia; astuzia naturale: mai colto alla sprovvista)
 pf: 67

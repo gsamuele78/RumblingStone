@@ -85,6 +85,9 @@ class Statblocco:
     nome: str = ""
     gs: str = ""
     tipo: str = ""
+    taglia: str = ""
+    spazio: str = ""
+    portata: str = ""
     ca: str = ""
     ca_dettaglio: str = ""
     pf: str = ""
@@ -105,6 +108,129 @@ class Statblocco:
 
     def mancanti(self) -> list[str]:
         return [c for c in campi()["OBBLIGATORI"] if not getattr(self, c.replace("-", "_"))]
+
+
+def taglie(id_: str = "d20") -> dict:
+    """La tabella di spazio e portata per taglia (capacità `statblocco.taglie`)."""
+    return _S.regole(id_).dati("statblocco.taglie")
+
+
+def taglia_canonica(testo: str) -> str:
+    """La taglia scritta in una riga di tipo, col nome della tabella.
+
+    >>> taglia_canonica("Nano Medio · Guerriero 6")
+    'Media'
+    >>> taglia_canonica("Large dragon (water)")
+    'Grande'
+    >>> taglia_canonica("Umanoide (goblinoide)")
+    ''
+    """
+    alias = taglie()["alias"]
+    for parola in re.findall(r"[^\W\d_]+", testo or ""):
+        if parola.lower() in alias:
+            return alias[parola.lower()]
+    return ""
+
+
+def _metri(testo: str) -> float | None:
+    m = re.match(r"\s*(\d+(?:[.,]\d+)?)\s*m\b", testo or "")
+    return float(m.group(1).replace(",", ".")) if m else None
+
+
+def _m(x: float) -> str:
+    return (f"{x:g}".replace(".", ",")) + " m"
+
+
+def quadretti_spazio(metri: float) -> str:
+    """Quanti quadretti da 1,5 m occupa un lato di `metri`.
+
+    >>> quadretti_spazio(1.5), quadretti_spazio(3.0), quadretti_spazio(0.75)
+    ('1 quadretto', '2×2 quadretti', 'meno di un quadretto')
+    """
+    if metri < 1.5:
+        return "meno di un quadretto"
+    n = round(metri / 1.5)
+    return "1 quadretto" if n == 1 else f"{n}×{n} quadretti"
+
+
+def quadretti_portata(metri: float) -> str:
+    """
+    >>> quadretti_portata(0), quadretti_portata(1.5), quadretti_portata(4.5)
+    ('nel suo quadretto', '1 quadretto', '3 quadretti')
+    """
+    if metri < 1.5:
+        return "nel suo quadretto"
+    n = round(metri / 1.5)
+    return "1 quadretto" if n == 1 else f"{n} quadretti"
+
+
+def ingombro(sb: "Statblocco") -> str:
+    """La riga «quanti quadretti occupa, quanti ne minaccia» del riquadro
+    (ADR-0128), o `""` se la scheda non dichiara la taglia.
+
+    >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="3 m"))
+    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)'
+    >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="1,5 m (3 m con il morso)"))
+    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto); 3 m (2 quadretti) con il morso'
+    >>> ingombro(Statblocco(nome="Guardia (4)", taglia="Media", spazio="1,5 m", portata="1,5 m"))
+    '**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)'
+    >>> ingombro(Statblocco())
+    ''
+    """
+    if not sb.taglia:
+        return ""
+    pezzi = [f"**Taglia** {sb.taglia}"]
+    # una scheda per un gruppo, «Guardia (4)»: lo spazio è di ciascuno
+    gruppo = " ciascuno" if re.search(r"\(\d+(?:-\d+)?\)", sb.nome or "") else ""
+    if (s := _metri(sb.spazio)) is not None:
+        pezzi.append(f"**Spazio** {_m(s)} ({quadretti_spazio(s)}){gruppo}")
+    if (p := _metri(sb.portata)) is not None:
+        testo = f"**Portata** {_m(p)} ({quadretti_portata(p)})"
+        if nota := re.search(r"\(([^)]*)\)", sb.portata):
+            # l'eccezione in quadretti come il resto (giro del 2026-11-10)
+            e = nota.group(1)
+            if (pe := _metri(e)) is not None:
+                e = re.sub(r"^\s*\d+(?:[.,]\d+)?\s*m\b", f"{_m(pe)} ({quadretti_portata(pe)})", e)
+            testo += f"; {e}"
+        pezzi.append(testo)
+    return " · ".join(pezzi)
+
+
+def difetti_ingombro(sb: "Statblocco") -> list[str]:
+    """Cosa non torna fra taglia, spazio e portata di una scheda (ADR-0128).
+    Lo spazio è quello della tabella; la portata di base è quella «alta» o
+    quella «lunga» della taglia. Le eccezioni (un'arma con portata, il morso
+    di un drago) stanno fra parentesi dopo la portata di base.
+
+    >>> difetti_ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="1,5 m (3 m con il morso)"))
+    []
+    >>> difetti_ingombro(Statblocco(tipo="Gigante Grande", taglia="Media", spazio="1,5 m", portata="1,5 m"))
+    ['taglia «Media», ma il tipo dice «Grande»']
+    >>> difetti_ingombro(Statblocco(taglia="Grande", spazio="1,5 m", portata="6 m"))
+    ['spazio 1,5 m: una creatura Grande occupa 3 m', 'portata 6 m: una creatura Grande arriva a 3 m (alta) o a 1,5 m (lunga)']
+    >>> difetti_ingombro(Statblocco())
+    ['manca la taglia', 'manca lo spazio', 'manca la portata']
+    """
+    tab = taglie()["taglie"]
+    fuori = []
+    if not sb.taglia:
+        fuori.append("manca la taglia")
+    elif sb.taglia not in tab:
+        fuori.append(f"taglia «{sb.taglia}» sconosciuta (ammesse: {', '.join(taglie()['ordine'])})")
+    elif (t := taglia_canonica(sb.tipo)) and t != sb.taglia:
+        fuori.append(f"taglia «{sb.taglia}», ma il tipo dice «{t}»")
+    riga = tab.get(sb.taglia)
+    s, p = _metri(sb.spazio), _metri(sb.portata)
+    if s is None:
+        fuori.append("manca lo spazio")
+    elif riga and abs(s - riga["spazio"]) > 1e-6:
+        fuori.append(f"spazio {_m(s)}: una creatura {sb.taglia} occupa {_m(riga['spazio'])}")
+    if p is None:
+        fuori.append("manca la portata")
+    elif riga and all(abs(p - riga[k]) > 1e-6 for k in ("alta", "lunga")):
+        fuori.append(f"portata {_m(p)}: una creatura {sb.taglia} arriva a {_m(riga['alta'])}"
+                     + ("" if riga["alta"] == riga["lunga"] else f" (alta) o a {_m(riga['lunga'])} (lunga)"))
+    return fuori
 
 
 def _campo(chiave: str) -> str:

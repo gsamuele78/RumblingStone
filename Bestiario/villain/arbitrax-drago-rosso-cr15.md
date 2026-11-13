@@ -5,6 +5,9 @@
 ```statblocco
 gs: 15
 tipo: Huge dragon (fire), 19 HD, LE
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 32
 ca-dettaglio: (−2 taglia, +24 naturale); contatto 8, colto alla sprovvista 32
 pf: 237

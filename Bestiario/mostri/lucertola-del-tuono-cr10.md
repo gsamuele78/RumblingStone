@@ -4,6 +4,9 @@
 ```statblocco
 gs: 10
 tipo: Large dragon (earth), 12 DV, LE
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: (-1 taglia, +15 naturale)
 pf: 138

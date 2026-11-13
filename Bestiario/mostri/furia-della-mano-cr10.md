@@ -4,6 +4,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (goblinoid), hobgoblin barbaro 10, CE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+7 corazza di piastre +2, +2 Des, +1 deflessione)
 pf: 105

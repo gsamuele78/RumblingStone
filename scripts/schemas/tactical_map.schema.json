@@ -394,6 +394,11 @@
           },
           "note": {
             "type": "string"
+          },
+          "scheda": {
+            "type": "string",
+            "minLength": 4,
+            "description": "La scheda di questa unità: il file col recinto statblocco, dalla radice del repo, e dopo «#» il nome della scheda se il file ne ha più d'una (es. «Bestiario/mostri/hobgoblin-sergente-cr5.md», «…/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md#Guardia di Zog'tar (4)»). Da qui misura_mappe_schede.py controlla che la taglia sulla pianta sia quella della scheda e che nello scontro esca la variante giusta."
           }
         }
       }

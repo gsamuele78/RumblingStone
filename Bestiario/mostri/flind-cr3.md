@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid (gnoll) HD 3d8+6 (19 HP)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 sensi: scurovisione 18 m
 ca: 18
 ca-dettaglio: (+5 breastplate, +1 Dex, +2 natural)

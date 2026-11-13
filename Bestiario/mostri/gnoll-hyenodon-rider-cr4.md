@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (gnoll), 2d8+2 — in sella a un ienodonte 5d8+12
+taglia: Media
+spazio: 1,5 m (in sella 3 m, quello della cavalcatura Grande)
+portata: 1,5 m (3 m con la lancia da cavaliere, e allora non i quadretti adiacenti)
 sensi: scurovisione 18 m
 ca: 16
 ca-dettaglio: (+4 cuoio borchiato +1, +2 scudo)

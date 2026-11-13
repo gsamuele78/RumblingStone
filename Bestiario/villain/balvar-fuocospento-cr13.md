@@ -5,6 +5,9 @@
 ```statblocco
 gs: 13
 tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (goblinoid), Fighter 7, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: touch 13, flat-footed 16 (Mobilità, Difesa con Due Armi)
 pf: 58

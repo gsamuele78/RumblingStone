@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Large monstrous humanoid HD 3d8+3d8+18 (51 HP)
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 19
 ca-dettaglio: (-1 size, +0 Dex, +7 natural, +3 hide)
 pf: 51

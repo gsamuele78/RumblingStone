@@ -5,6 +5,9 @@
 ```statblocco
 gs: 14
 tipo: Large undead (augmented aberration), death tyrant mezzo-illithid, 16d12
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: (-1 taglia, +13 naturale), contatto 9, colto alla sprovvista 22
 pf: 104
@@ -36,7 +39,7 @@ Large undead (augmented aberration), death tyrant mezzo-illithid avanzato, 16d12
 
 **Difesa** **CA 22** (-1 taglia, +13 naturale), contatto 9, colto alla sprovvista 22 · **pf 104** (16 DV) · TS Temp +5, Rifl +5, Vol +12 · **RI 26**, **RD 5/tagliente**, resistenza allo scacciare +2, tratti dei non morti
 
-**Attacco** Vel Volare 6 m (buona) · Spazio 3 m, portata 3 m (4,5 m coi tentacoli) · **Mischia** 4 tentacoli +11 (1d4+4) e morso +6 (2d4+2) · **Distanza** raggi degli occhi +7 contatto (45 m) · **Esplosione mentale** · **Afferrare migliorato** · **Estrarre**
+**Attacco** Vel Volare 6 m (buona) · Spazio 3 m, portata 1,5 m · **Mischia** 4 tentacoli +11 (1d4+4) e morso +6 (2d4+2) · **Distanza** raggi degli occhi +7 contatto (45 m) · **Esplosione mentale** · **Afferrare migliorato** · **Estrarre**
 
 **Statistiche** For 18, Des 10, Cos —, Int —, Sag 15, Car 17 · BAB +8; Lotta +16 · senza mente: niente abilità né talenti
 

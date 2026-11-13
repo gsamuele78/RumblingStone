@@ -5,6 +5,9 @@
 ```statblocco
 gs: 17
 tipo: Huge outsider (lawful, evil, extraplanar), 20d10+120
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 34
 ca-dettaglio: (−2 taglia, +4 Des, +22 naturale); contatto 12, colto alla sprovvista 30
 pf: 230

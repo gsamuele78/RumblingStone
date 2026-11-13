@@ -18,6 +18,7 @@ skill = ["pathfinder-1e-srd"]
 "termini.vietati" = { eredita = "d20", motivo = "le meccaniche 5e sono vietate in tutta la famiglia" }
 "stampa.etichette" = { eredita = "d20", motivo = "le sigle del riquadro sono le stesse in 3.5 e PF1e" }
 "statblocco.campi" = { eredita = "d20", motivo = "GS, CA, pf e TS sono gli stessi campi in 3.5 e PF1e" }
+"statblocco.taglie" = { eredita = "d20", motivo = "la tabella di spazio e portata per taglia è la stessa in 3.5 e PF1e" }
 "formule.regole" = { eredita = "d20", motivo = "modificatore, TS e CD si calcolano allo stesso modo in 3.5 e PF1e" }
 "creature.armi" = { eredita = "dnd35", motivo = "le 72 armi della tabella del manuale base PF1e hanno lo stesso dado e lo stesso critico dell'SRD 3.5 (riscontro su PSRD-Data, 72 su 72, 2026-11-12); le armi degli altri libri arrivano col lotto 10" }
 "creature.incantatori" = { dati = ["sistemi/pf1e/dati/incantatori.toml"], nota = "PRD PF1e (PSRD-Data, book-cr), tabelle delle classi; scritto da estrai_incantatori.py. Bardo e stregone non hanno slot di livello 0, il paladino lancia col Carisma, la stirpe dà conosciuti in più" }

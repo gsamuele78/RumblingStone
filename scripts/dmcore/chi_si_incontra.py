@@ -45,7 +45,7 @@ LONTANO = 200
 
 # I capitoli di consultazione (regia, cassetta, cast, appendici): nominano
 # tutto, ma non è lì che si incontra qualcuno o si combatte.
-CONSULTAZIONE = re.compile(r"regia|cassetta|\bcast\b|introduzione|dove siamo|indice|glossario|appendice|ponte",
+CONSULTAZIONE = re.compile(r"regia|foglio della serata|cassetta|\bcast\b|introduzione|dove siamo|indice|glossario|appendice|ponte",
                            re.I)
 
 _TITOLI = {
@@ -266,10 +266,70 @@ def _statistiche_qui(titolo: list[str]) -> list[str]:
     return testo.split("\n")
 
 
+def _altrove(volume: "dict | None", k: str) -> bool:
+    """Presentato in un capitolo prima di questo (stato di «prima-volta»)."""
+    return volume is not None and volume["persone"].get(k) not in (None, volume["capitolo"])
+
+
+def _rimando_persona(nome: str, dove: str, entrata: list[str] | None = None) -> list[str]:
+    """La persona già presentata, come il paragrafo «Creature» di un AP:
+    l'aspetto e quel che vuole in due righe, il resto dov'è.
+
+    >>> _rimando_persona("Durin, la pattuglia", "capitolo II",
+    ...                  ["| **Aspetto** | veterano |", "| **Vuole** | tornare |", "| **Sa** | x |"])[:2]
+    ["**Scheda d'entrata — Durin, in breve** *(intera, con chi è e ritratto, nel capitolo II)*", '']
+    """
+    corto = nome.split(",")[0].strip()
+    campi = []
+    for r in entrata or []:
+        m = re.match(r"^\|\s*\*\*(Aspetto|Vuole)\*\*\s*\|\s*(.*?)\s*\|?\s*$", r)
+        if m:
+            # la prima frase: un promemoria, non la scheda ripetuta
+            frase = m.group(2) if len(m.group(2)) <= 160 else \
+                re.split(r"(?<=[.!?»])\s+(?=[A-ZÀ-Ú«*])", m.group(2), maxsplit=1)[0]
+            frase = frase.rstrip(" .")
+            campi += [f"**{m.group(1)}** {frase}.", ""]
+    if not campi:
+        return [f"*{corto}: chi è, aspetto e ritratto nel {dove}; "
+                f"qui sotto la riga per il tavolo e la tattica di questo incontro.*", ""]
+    return [f"**Scheda d'entrata — {corto}, in breve** *(intera, con chi è e ritratto, nel {dove})*",
+            "", *campi]
+
+
+def _solo_riquadro(k: str, idx: Indice, f: Path, volume: "dict | None" = None) -> list[str]:
+    # «prima-volta»: il riquadro è quello con cui la persona è stata
+    # presentata nel volume (il drago di stasera, non quello del master)
+    if volume is not None and k in volume.get("riquadri", {}):
+        righe, da = volume["riquadri"][k]
+        return _riscrivi_percorsi(righe, da, f) + [""]
+    if k not in idx.riquadri:
+        return []
+    q = idx.riquadri[k]
+    return _riscrivi_percorsi(q.righe, q.file, f) + [""]
+
+
+def mappe_stampate(md: str) -> list[str]:
+    """I codici delle mappe che un capitolo stampa di suo (un'immagine da `Mappe/`)."""
+    fuori = []
+    for r in md.split("\n"):
+        m = _IMMAGINE.match(r)
+        if m and "Mappe/" in m.group(2) and (c := _ALT_MAPPA.match(m.group(1))):
+            if c.group(1) not in fuori:
+                fuori.append(c.group(1))
+    return fuori
+
+
 def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
-                soglia: int = SOGLIA_CAPITOLO) -> tuple[str, list[str]]:
+                soglia: int = SOGLIA_CAPITOLO, volume: "dict | None" = None) -> tuple[str, list[str]]:
     """Il capitolo con chi si incontra e le mappe che nomina. Torna anche un
     elenco di quel che ha fatto, una riga per mossa, per il rapporto.
+
+    `volume` (manifest con `"schede": "prima-volta"`, ADR-0122): lo stato del
+    volume, `{"capitolo": "cap. V", "persone": {chiave: capitolo},
+    "mappe": {codice: capitolo}}`. Chi è già stato presentato in un capitolo
+    prima non si ripresenta: una riga di rimando e il riquadro, che il tema
+    stampa come riga con la pagina e la tattica. Una mappa già stampata prima
+    non si copia: una riga dice dove sta. Senza `volume`, ADR-0107 com'era.
 
     Non si chiama sui capitoli di consultazione (`CONSULTAZIONE`): la regia e
     la cassetta nominano tutti, ma lì non si incontra nessuno."""
@@ -289,6 +349,14 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
             continue
         p2 = Pezzo(p.file, p.inizio, p.fine, p.righe, p.nome)
         sostituzioni[p.inizio] = p2
+        if _altrove(volume, k):
+            sb = riquadri.get(k)
+            p2.righe = _rimando_persona(p.nome, volume["persone"][k], p.righe) + \
+                ([] if sb is not None else _solo_riquadro(k, idx, f, volume))
+            fatto.append(f"già presentato, rimando: {p.nome.split(',')[0]}")
+            continue
+        if volume is not None:
+            volume["persone"].setdefault(k, volume["capitolo"])
         nuovo = list(p.righe)
         sb = riquadri.get(k)
         vicino = sb is not None and 0 <= sb.inizio - p.fine < 60
@@ -311,6 +379,14 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
         if nuovo != p.righe:
             p2.righe = nuovo
 
+    # «prima-volta»: chi ha il riquadro in questo capitolo è presentato qui
+    # (il capitolo «Chi c'è stanotte» ha le schede senza titolo d'entrata)
+    if volume is not None:
+        for k, sb in riquadri.items():
+            if k and k not in pg:
+                volume["persone"].setdefault(k, volume["capitolo"])
+                volume.setdefault("riquadri", {}).setdefault(k, (list(sb.righe), sb.file))
+
     # 3. chi si incontra e non ha la scheda nel capitolo
     nel_capitolo = {chiave(p.nome) for p in entrate}
     portati: set[str] = set()
@@ -323,8 +399,16 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
             k = chiave(nome)
             if not k or k in pg or k in nel_capitolo or k in portati or k not in idx.entrate:
                 continue
-            nuovi += _pezzo_portato(k, idx, f)
             portati.add(k)
+            if _altrove(volume, k):
+                nuovi += _rimando_persona(idx.entrate[k].nome, volume["persone"][k],
+                                          idx.entrate[k].righe) + \
+                    ([] if k in riquadri else _solo_riquadro(k, idx, f, volume))
+                fatto.append(f"già presentato, rimando nella scena: {idx.entrate[k].nome.split(',')[0]}")
+                continue
+            if volume is not None:
+                volume["persone"].setdefault(k, volume["capitolo"])
+            nuovi += _pezzo_portato(k, idx, f)
             fatto.append(f"scheda portata nella scena: {idx.entrate[k].nome.split(',')[0]}")
         if nuovi:
             inserimenti.append((i, [""] + nuovi))
@@ -339,6 +423,13 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
             testa = next((i for i, r in enumerate(righe) if r.startswith("# ")), -1)
             blocco = ["", "### Chi si incontra in questo capitolo", ""]
             for k in candidati:
+                if _altrove(volume, k):
+                    blocco += _rimando_persona(idx.entrate[k].nome, volume["persone"][k],
+                                               idx.entrate[k].righe) + \
+                        _solo_riquadro(k, idx, f, volume)
+                    continue
+                if volume is not None:
+                    volume["persone"].setdefault(k, volume["capitolo"])
                 blocco += _pezzo_portato(k, idx, f) + [""]
                 fatto.append(f"scheda portata in testa al capitolo: {idx.entrate[k].nome.split(',')[0]}")
             inserimenti.append((testa, blocco))
@@ -353,10 +444,34 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
         if m and "Mappe/" in m.group(2) and (c := _ALT_MAPPA.match(m.group(1))):
             stampata_a.setdefault(c.group(1), i)
     dove_va = punti_delle_mappe(righe, set(idx.mappe)) if _SCONTRO.search(md) else {}
+    if volume is not None:
+        for c in stampata_a:
+            volume["mappe"].setdefault(c, volume["capitolo"])
     for c, i in sorted(dove_va.items(), key=lambda x: x[1]):
         # già stampata prima del punto, o poco dopo: niente copia
         if c in stampata_a and stampata_a[c] - i < LONTANO:
             continue
+        nativa = (volume or {}).get("native", {}).get(c)
+        if volume is not None and c not in stampata_a and nativa and nativa != volume["capitolo"]:
+            # la mappa ha il suo posto in un altro capitolo del volume, anche
+            # più avanti (la pianta del duello accanto al duello): lì e basta
+            j = i
+            while j + 1 < len(righe) and righe[j + 1].strip():
+                j += 1
+            inserimenti.append((j, ["", f"*La mappa {c} è nel {nativa}, e intera "
+                                        f"nell'appendice delle mappe in fondo.*"]))
+            fatto.append(f"mappa {c}: rimando al {nativa}")
+            continue
+        if volume is not None and c in volume["mappe"] and c not in stampata_a:
+            j = i
+            while j + 1 < len(righe) and righe[j + 1].strip():
+                j += 1
+            inserimenti.append((j, ["", f"*La mappa {c} è nel {volume['mappe'][c]}, e intera "
+                                        f"nell'appendice delle mappe in fondo.*"]))
+            fatto.append(f"mappa {c}: rimando al {volume['mappe'][c]}")
+            continue
+        if volume is not None:
+            volume["mappe"].setdefault(c, volume["capitolo"])
         j = i
         while j + 1 < len(righe) and righe[j + 1].strip():
             j += 1
@@ -391,7 +506,86 @@ def arricchisci(md: str, f: Path, idx: Indice, pg: set[str] = frozenset(),
         if i in dopo:
             fuori += dopo[i]
         i += 1
+    if volume is not None:
+        fuori = tattiche_locali(fuori, f, fatto)
     return "\n".join(fuori), fatto
+
+
+_TITOLO_TATTICA = re.compile(
+    r"^(?:#{2,6}\s+(?P<h>.*?(?:[Tt]attic|[Cc]ome (?:si )?combatte).*?)\s*$"
+    r"|\*\*(?P<b>(?:[Tt]attic|[Cc]ome (?:si )?combatte)[^*]*)\*\*)")
+
+
+def _tattiche_del_capitolo(righe: list[str], f: Path) -> list[tuple[str, str]]:
+    """I paragrafi di tattica scritti nella scena (non le righe «**Tattiche**»
+    dei riquadri): (titolo, testo fino al titolo dopo, al massimo 15 righe).
+
+    >>> _tattiche_del_capitolo(["**Come combatte sulla breccia**. Zog'tar sale."], Path("x.md"))
+    [('Come combatte sulla breccia', "**Come combatte sulla breccia**. Zog'tar sale.")]
+    """
+    dentro: set[int] = set()
+    for sb in statblocchi(righe, f):
+        dentro.update(range(sb.inizio, sb.fine))
+    fuori = []
+    for i, r in enumerate(righe):
+        if i in dentro or (m := _TITOLO_TATTICA.match(r)) is None:
+            continue
+        titolo = re.sub(r"[^\w'’»«)(—,. -]", "", m.group("h") or m.group("b")).strip(" .:—")
+        titolo = re.sub(r"\s*\((?:stile|aggancio)[^)]*\)", "", titolo).strip()
+        # il paragrafo fino al titolo dopo (una tabella «Chi | Round 1 …» compresa)
+        j = i + 1
+        while j < len(righe) and j < i + 16 and not righe[j].startswith("#"):
+            j += 1
+        fuori.append((titolo, "\n".join(righe[i:j])))
+    return fuori
+
+
+def tattiche_locali(righe: list[str], f: Path, fatto: list[str] | None = None) -> list[str]:
+    """«prima-volta» (ADR-0122): nella riga per il tavolo la tattica deve
+    essere quella di QUESTO incontro, come negli Adventure Path. Se il
+    capitolo ha un paragrafo di tattica che nomina la creatura, la riga
+    «**Tattiche**» del suo riquadro rimanda lì invece di ripetere quella
+    generale della scheda (che resta intera nell'appendice).
+
+    >>> r = ["```statblocco", "nome: Zog'tar Deatheye", "```",
+    ...      "**Tattiche** La tenda della Scena 8.", "", "**Come combatte sulla breccia**",
+    ...      "Zog'tar sale."]
+    >>> tattiche_locali(r, Path("x.md"))[3]
+    '**Tattiche** In questo incontro: «Come combatte sulla breccia», qui sotto nel capitolo.'
+    """
+    locali = _tattiche_del_capitolo(righe, f)
+    if not locali:
+        return righe
+    fuori = list(righe)
+    for sb in statblocchi(righe, f):
+        k = chiave(sb.nome)
+        if not k:
+            continue
+        titolo = next((t for t, testo in locali
+                       if k in piega_ascii(testo).lower().replace("'", "").replace("’", "")), None)
+        if titolo is None:
+            continue
+        riga = f"**Tattiche** In questo incontro: «{titolo}», qui sotto nel capitolo."
+        posto = next((i for i in range(sb.inizio, sb.fine) if fuori[i].startswith("**Tattic")), None)
+        if posto is None:
+            fine = sb.fine
+            while fine > sb.inizio and not fuori[fine - 1].strip():
+                fine -= 1
+            fuori.insert(fine, "")
+            fuori.insert(fine + 1, riga)
+            # le posizioni dopo si spostano di due: si rifà il giro
+            return tattiche_locali(fuori, f, fatto) if fatto is None else \
+                _ancora(fuori, f, fatto, sb.nome)
+        if fuori[posto] != riga:
+            fuori[posto] = riga
+            if fatto is not None:
+                fatto.append(f"tattica di questo incontro: {sb.nome.split(',')[0]} → «{titolo}»")
+    return fuori
+
+
+def _ancora(righe: list[str], f: Path, fatto: list[str], nome: str) -> list[str]:
+    fatto.append(f"tattica di questo incontro: {nome.split(',')[0]} (aggiunta)")
+    return tattiche_locali(righe, f, fatto)
 
 
 def punti_delle_mappe(righe: list[str], codici: set[str]) -> dict[str, int]:

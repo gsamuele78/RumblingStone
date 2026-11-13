@@ -71,7 +71,7 @@ costruito, e da lì vengono le mura e il duello.
 | 9 | `DEF-4` Scena 11: «Dopo il barile», la scheda d'entrata, il giro round per round, «Chi sceglie», «Chi non vola», la sidebar di scala, l'Appendice A.1-bis e le wyvern in A.6 |
 
 Il Seme (capitolo IV), se non è ancora stato giocato, si fa al ritorno: §3. La
-Forgia ricorda (capitolo VII) si apre durante il duello.
+Forgia ricorda (`PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`) si apre durante il duello.
 
 **Sul tavolo**: il foglio dell'orologio della notte con le tacche segnate come
 le ha il tavolo, compresa quella del volo; le mappe M7-H e M7-C scoperte,
@@ -89,11 +89,11 @@ vuole, l'aspetto e il ritratto accanto ai numeri:
 |---|---|
 | Skullcrusher Vecchio, capitolo II (il resto della scheda dell'Adulto in `DEF-4` Appendice A.1) | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
 | Le due wyvern, capitolo II | questo gruppo conta come straripante: ci sono, dal round 2 del duello |
-| Durik, capitolo VIII | +50% di danni dall'acido: il soffio lo prende in pieno. Con la runa prima il +50%, poi −20 (cap. VI §1, Hella). Senza runa il soffio gli fa in media più di 50: Tempra CD 15 o torna polvere, e la carica rimasta dopo i Treant dell'alba lo riporta per un'ora (Scena 11, riga 4-bis) |
+| Durik, `08-SCHEDA-DURIK.md` | +50% di danni dall'acido: il soffio lo prende in pieno. Con la runa prima il +50%, poi −20 (`DEF-4` §1, Hella). Senza runa il soffio gli fa in media più di 50: Tempra CD 15 o torna polvere, e la carica rimasta dopo i Treant dell'alba lo riporta per un'ora (Scena 11, riga 4-bis) |
 | Il capitolo III, la scheda da tavolo e il §8 | lo sgancio e i round nel fuoco: è lo scontro con cui si apre |
 | Zog'tar, le quattro guardie, il sacerdote e Grask, capitolo II | i round nel fuoco, o le mura se Zog'tar è vivo all'alba |
 | Balvar, capitolo II | il *dissolvi* al round 4. Dopo il barile non tratta più da solo, ma chi gli parla per primo del nipote Hald lo trova ancora aperto (capitolo III, §10) |
-| La Forgia ricorda le ferite, capitolo VII | si segnano le ferite durante il duello, non dopo |
+| La Forgia ricorda le ferite, `PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` | si segnano le ferite durante il duello, non dopo |
 
 **Gli echi.** Se il tavolo li ha già avuti in fortezza, salta questo
 paragrafo. Se no, **consegnali** adesso, uno a testa, piegati. Di' solo:

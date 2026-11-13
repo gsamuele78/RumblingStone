@@ -1498,6 +1498,9 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
 nome: Hella Oakenshield, risorta
 gs: PG di 13°
 tipo: Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 25
 ca-dettaglio: contatto 12, colta alla sprovvista 24
 pf: 80
@@ -1548,6 +1551,9 @@ mithral affilato, un cuore di energia terrestre.»*
 nome: Treant di Adamantio (evocato dalla Collana)
 gs: ~10
 tipo: Vegetale Grande · Neutrale Buono
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 24
 ca-dettaglio: contatto 9, colto alla sprovvista 24 (−1 taglia, +15 naturale)
 pf: 95
@@ -1609,6 +1615,9 @@ SRD, più il +8 FOR del canone `[CANONE — DM 2026-10-18]`.
 nome: Hella, Avatar della Radice
 gs: forma di Hella
 tipo: Ibrido Treant/Nano Enorme · 10 round, 1 volta al giorno
+taglia: Enorme
+spazio: 4,5 m
+portata: 4,5 m
 ca: 21
 ca-dettaglio: contatto 8, colta alla sprovvista 21 (−2 taglia, +13 naturale)
 pf: quelli di Hella

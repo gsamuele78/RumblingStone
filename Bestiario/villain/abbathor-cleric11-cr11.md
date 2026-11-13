@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 25
 ca-dettaglio: contatto 10, colto alla sprovvista 25 (armatura completa +2, scudo pesante d'acciaio +2, +1 naturale)
 pf: 86

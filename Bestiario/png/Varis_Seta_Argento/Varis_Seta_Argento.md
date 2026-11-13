@@ -4,6 +4,9 @@
 ```statblocco
 gs: 6
 tipo: Medium humanoid (human), Ladro 4 / Esperto 4, N
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: contatto 12, colto alla sprovvista 16 (+4 giaco di cuoio borchiato +1, +2 Des; schivare prodigioso)
 pf: 44

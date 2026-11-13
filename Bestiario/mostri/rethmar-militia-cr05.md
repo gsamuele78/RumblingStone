@@ -8,6 +8,9 @@
 
 ```statblocco
 gs: 0.5
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (+4 chain shirt, +1 Dex)
 pf: 5

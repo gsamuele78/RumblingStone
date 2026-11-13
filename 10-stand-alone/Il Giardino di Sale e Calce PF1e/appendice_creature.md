@@ -8,6 +8,9 @@ Le creature vengono dal Bestiario di Pathfinder 1e (contenuto aperto OGL 1.0a), 
 nome: Karkator, aboleth mezzo-immondo gigante
 gs: 16
 tipo: Aberrazione Mastodontica (acquatica, esterno nativo per l'archetipo) · LM
+taglia: Mastodontica
+spazio: 6 m
+portata: 6 m
 ca: 22
 ca-dettaglio: contatto 7, colto alla sprovvista 21 (+1 Des, +15 naturale, −4 taglia); 30 con aura sacrilega e il Cuore (contatto 11, colto alla sprovvista 29)
 pf: 248
@@ -46,6 +49,9 @@ attacchi:
 nome: Ragno delle Catene
 gs: 10
 tipo: Bestia magica Enorme (ragno fase gigante a 14 DV) · N
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m
 ca: 18
 ca-dettaglio: contatto 10, colto alla sprovvista 16 (+2 Des, +8 naturale, −2 taglia)
 pf: 147
@@ -76,6 +82,9 @@ attacchi:
 nome: Mastro Tariq, ingegnere delle acque
 gs: 12
 tipo: Umano chierico 13 di Hasharr · CM Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 25
 ca-dettaglio: contatto 11, colto alla sprovvista 25 (+11 armatura, +3 scudo, +1 deviazione); 31 con veste magica ×2
 pf: 101
@@ -108,6 +117,9 @@ attacchi:
 nome: Skum guerriero 8
 gs: 10
 tipo: Umanoide mostruoso Medio (acquatico) · LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 12, colto alla sprovvista 22 (+7 armatura, +3 scudo, +2 Des, +2 naturale)
 pf: 115
@@ -136,6 +148,9 @@ attacchi:
 nome: Chuul avanzato
 gs: 8
 tipo: Aberrazione Grande (acquatica) · CM
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 26
 ca-dettaglio: contatto 14, colto alla sprovvista 21 (+5 Des, +12 naturale, −1 taglia)
 pf: 105
@@ -162,6 +177,9 @@ attacchi:
 nome: Sgherro di Hamid, falso acquaiolo
 gs: 5
 tipo: Umano guerriero 6 · NM Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: contatto 12, colto alla sprovvista 15 (+5 armatura, +2 Des)
 pf: 50
@@ -187,6 +205,9 @@ attacchi:
 nome: Asservito armato
 gs: 3
 tipo: Umano guerriero 4 · N (asservito) Medio
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: contatto 11, colto alla sprovvista 15 (+4 armatura, +1 Des, +1 scudo)
 pf: 35

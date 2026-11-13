@@ -79,6 +79,9 @@ CON_TETTO = ("testi_sotto_minimo", "fuori_margine", "immagini_sotto_300dpi",
              "schede_spezzate", "font_non_incorporati", "rimandi_sbagliati")
 REGISTRATE = ("pagine", "corpo_mediano_pt", "corpo_minimo_pt", "schede", "pagine_con_immagine",
               "pagine_con_immagine_decimo")
+#: Le misure in prova (canale testing, ADR-0099): nate dal giro di lettura del
+#: 2026-11-10. Si registrano e `--check` avvisa se salgono, senza fermare.
+IN_PROVA = ("sigle_morte", "righe_brevi_incomplete", "titoli_rovinati")
 MINIMO_PT = 7.0
 DPI_MINIMI = 300
 # Typst appende punteggiatura e trattini nel margine (text.overhang, la
@@ -238,6 +241,7 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         pagine_illustrate_decimo += media
     spezzate = [s for s in schede if s["a"] != s["da"]]
     rimandi = rimandi_sbagliati(doc)
+    sigle, brevi, titoli = sigle_morte(doc), righe_brevi_incomplete(doc), titoli_rovinati(doc)
     return {
         "pagine": len(doc),
         "font_non_incorporati": sorted(font_mancanti),
@@ -249,12 +253,17 @@ def misura_pdf(pdf: Path, schede: list[dict], formato: str = "a4") -> dict:
         "schede": len(schede),
         "schede_spezzate": len(spezzate),
         "rimandi_sbagliati": len(rimandi),
+        "sigle_morte": len(sigle),
+        "righe_brevi_incomplete": len(brevi),
+        "titoli_rovinati": len(titoli),
         "pagine_con_immagine": round(pagine_illustrate / len(doc), 3) if len(doc) else 0,
         "pagine_con_immagine_decimo": round(pagine_illustrate_decimo / len(doc), 3) if len(doc) else 0,
         "dettaglio": {
             "sotto_minimo": sotto[:30], "fuori_margine": fuori[:30],
             "immagini_basse": immagini_basse[:30],
             "schede_spezzate": spezzate, "rimandi_sbagliati": rimandi[:30],
+            "sigle_morte": sigle[:30], "righe_brevi_incomplete": brevi[:30],
+            "titoli_rovinati": titoli[:30],
         },
     }
 
@@ -281,7 +290,10 @@ def rimandi_sbagliati(doc) -> list[tuple]:
                 if m := re.search(r"scheda a pagina (\d+)", testo):
                     # Il nome apre la riga dell'incontro: è il primo pezzo del blocco.
                     nome, dove = _piano(righe[0][0]), int(m.group(1))
-                    if not (1 <= dove <= len(testi)) or nome not in testi[dove - 1]:
+                    # senza trattini né spazi: «mezzo-immondo» spezzato a fine riga
+                    # nel titolo della scheda torna dal PDF come «mezzo- immondo»
+                    stretto = lambda t: re.sub(r"[-\s]", "", t)  # noqa: E731
+                    if not (1 <= dove <= len(testi)) or stretto(nome) not in stretto(testi[dove - 1]):
                         sbagliati.append((n, nome[:40], f"scheda a pagina {dove}"))
                 elif m := re.search(r"continua a pagina (\d+)", testo):
                     dove = int(m.group(1))
@@ -290,6 +302,66 @@ def rimandi_sbagliati(doc) -> list[tuple]:
                 elif "continua nella colonna accanto" in testo and "(segue)" not in testi[n - 1]:
                     sbagliati.append((n, "", "continua nella colonna accanto"))
     return sbagliati
+
+
+_SIGLA = re.compile(r"\b[Aa]ppendice\s+([A-Z])(\.\d+(?:-(?:bis|ter))?)?(?![\w-])")
+
+
+def sigle_morte(doc) -> list[tuple]:
+    """I rimandi «Appendice A.3» che nel volume stampato non portano a niente.
+
+    Una sigla è viva se da qualche parte una riga comincia con lei («A.3 …»)
+    o con «Appendice A» come titolo. Giro del 2026-11-10: il booklet per
+    sezioni stampava sigle dei master che l'appendice del booklet non ha."""
+    righe = [(n, _piano(r)) for n, p in enumerate(doc, 1) for r in p.get_text().splitlines() if r.strip()]
+    inizi = {r for _, r in righe}
+    def viva(lettera: str, numero: str | None) -> bool:
+        if numero:
+            return any(r.startswith(f"{lettera}{numero} ") or r == f"{lettera}{numero}"
+                       or r.startswith(f"{lettera}{numero} ·") for r in inizi)
+        return any(re.match(rf"(?i:appendice)\s+{lettera}\b\s*(?:[·:—–-]|$)", r) for r in inizi)
+    morte = []
+    for n, pagina in enumerate(doc, 1):
+        for m in _SIGLA.finditer(_piano(pagina.get_text())):
+            if not viva(m.group(1), m.group(2)):
+                morte.append((n, m.group(0)))
+    return morte
+
+
+def righe_brevi_incomplete(doc) -> list[tuple]:
+    """Le righe d'incontro («scheda a pagina N») senza quello che serve per
+    giocare il round: iniziativa, tiri salvezza e almeno un attacco. Giro del
+    2026-11-10: con CA e pf soltanto il DM sfoglia a ogni attacco."""
+    manca = []
+    for n, pagina in enumerate(doc, 1):
+        for blocco in pagina.get_text("blocks"):
+            testo = _piano(blocco[4])
+            if "scheda a pagina" not in testo:
+                continue
+            cosa = [nome for nome, segno in (("iniziativa", r"\bIniz"), ("TS", r"\bTS\b|\bTemp"),
+                                             ("attacco", r"\bMischia\b|\bDistanza\b|\+\d+ \("))
+                    if not re.search(segno, testo)]
+            if cosa:
+                manca.append((n, testo[:40], "manca " + ", ".join(cosa)))
+    return manca
+
+
+_ELISIONE = re.compile(r"\b(DELL|DALL|NELL|SULL|ALL|QUELL|UN|L|D)([AEIOUÀÈÉÌÒÙ][A-ZÀ-Ý]{2,})\b")
+
+
+def titoli_rovinati(doc) -> list[tuple]:
+    """I titoli in maiuscolo che hanno perso l'apostrofo («LALBA» per
+    «L'ALBA»): la parola intera non esiste altrove nel volume, la seconda
+    metà sì."""
+    tutto = " ".join(_piano(p.get_text()) for p in doc)
+    parole = Counter(w.lower() for w in re.findall(r"[A-Za-zÀ-ÿ]+", tutto) if not w.isupper())
+    rovinati = []
+    for n, pagina in enumerate(doc, 1):
+        for m in _ELISIONE.finditer(_piano(pagina.get_text())):
+            intera, resto = m.group(0).lower(), m.group(2).lower()
+            if parole[resto] and not parole[intera]:
+                rovinati.append((n, m.group(0)))
+    return rovinati
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -338,6 +410,11 @@ def main(argv: list[str] | None = None) -> int:
         sopra = sopra_il_tetto(registro.get("booklet", {}), risultati)
         for riga in sopra:
             print(f"✗ {riga}", file=sys.stderr)
+        for nome, v in risultati.items():
+            prima = registro.get("booklet", {}).get(nome, {}).get("in_prova", {})
+            for m in IN_PROVA:
+                if m in prima and v[m] > prima[m]:
+                    print(f"⚠ {nome}: {m} = {v[m]}, era {prima[m]} (in prova, non ferma)", file=sys.stderr)
         if sopra:
             return 1
         print(f"✓ {len(risultati)} booklet, nessuno sopra i suoi tetti di stampa")
@@ -357,6 +434,7 @@ def scrivi_registro(registro: dict, risultati: dict) -> None:
         nuovi[nome] = {
             "tetti": {m: min(valore(v, m), prima.get(m, valore(v, m))) for m in CON_TETTO},
             "misura": {m: v[m] for m in REGISTRATE},
+            "in_prova": {m: v[m] for m in IN_PROVA},
         }
     REGISTRO.parent.mkdir(parents=True, exist_ok=True)
     REGISTRO.write_text(json.dumps({

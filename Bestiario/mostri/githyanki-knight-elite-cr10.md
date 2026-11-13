@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Medium monstrous humanoid, 10d10
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 21
 ca-dettaglio: (+1 Des, +10 armatura)
 pf: 75

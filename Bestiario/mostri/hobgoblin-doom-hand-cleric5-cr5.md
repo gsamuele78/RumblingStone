@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Medium humanoid (goblinoid), Cleric 5 (Mano del Destino di Tiamat), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: touch 10, flat-footed 20 (+7 banded mail +1, +3 scudo pesante +1)
 pf: 41

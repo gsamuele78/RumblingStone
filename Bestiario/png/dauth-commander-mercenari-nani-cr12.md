@@ -5,6 +5,9 @@
 ```statblocco
 gs: 12
 tipo: Medium humanoid (dwarf), Guerriero 12, 12d10+60
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 28
 ca-dettaglio: (+11 armatura completa +3, +4 scudo pesante +2, +1 Des, +1 deflessione, +1 naturale); contatto 12, colto alla sprovvista 27; +4 schivare contro i giganti
 pf: 126

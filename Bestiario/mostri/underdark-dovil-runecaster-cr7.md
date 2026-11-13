@@ -10,6 +10,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (dwarf, hill), Diviner 5 / Deep Diviner 1 / Fighter 1, N
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: touch 12, flat-footed 19 (piastre complete)
 pf: 37

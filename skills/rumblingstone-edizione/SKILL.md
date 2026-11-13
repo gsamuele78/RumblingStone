@@ -149,3 +149,4 @@ Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
 
 - `python3 scripts/validate_booklets.py --stampa`: il gate d'uscita compila davvero.
 - `python3 scripts/misura_distanza_pagine.py`: quanto sfoglia il DM nel volume stampato.
+- `python3 scripts/misura_distanza_pagine.py --volume --manifest <manifest>`: la struttura del volume come gli AP, S1-S5 (ADR-0122, canale testing).

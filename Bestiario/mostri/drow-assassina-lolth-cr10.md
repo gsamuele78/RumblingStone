@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (elf), NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 21
 ca-dettaglio: (+5 Des, +5 giaco di maglia mithral +1, +1 anello), contatto 16, colto alla sprovvista 16
 pf: 40

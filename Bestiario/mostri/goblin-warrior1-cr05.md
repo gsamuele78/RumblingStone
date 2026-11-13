@@ -5,6 +5,9 @@
 
 ```statblocco
 gs: 1/2
+taglia: Piccola
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (+1 size, +1 Dex, +2 leather, +1 light shield)
 pf: 5

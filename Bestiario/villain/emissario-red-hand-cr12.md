@@ -5,6 +5,9 @@
 ```statblocco
 gs: 12
 tipo: Medium humanoid (goblinoid), hobgoblin Chierico 12, LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+0 Des, +10 armatura completa +2), contatto 10, colto alla sprovvista 20
 pf: 72

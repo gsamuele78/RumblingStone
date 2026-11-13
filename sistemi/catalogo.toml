@@ -28,6 +28,7 @@
 "creature.gradi" = "i gradi delle abilità: caratteristica chiave, punti per livello di classe e per dado vita di tipo, massimo dei gradi (ADR-0124)"
 "creature.liste_incantesimi" = "le liste di classe e di dominio degli incantesimi, per livello: chi può lanciare che cosa (ADR-0124 §10)"
 "statblocco.campi" = "i campi meccanici del blocco statistiche"
+"statblocco.taglie" = "spazio e portata per taglia (tabella SRD)"
 "formule.regole" = "le formule del sistema scritte come nel manuale (modificatore, TS, CD), valutate da dmcore.formule (F3 di ADR-0112)"
 "creature.armi" = "le armi: dado per taglia Media, critico, impugnatura, il dado al cambiare della taglia, i talenti che danno bonus al danno (ADR-0126, lotto 2)"
 "creature.incantatori" = "gli incantatori: incantesimi al giorno e conosciuti per livello di classe, caratteristica che lancia, incantesimi bonus, slot di dominio (ADR-0126, lotto 3)"

@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 12
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: (10 base, +1 Des, +3 armatura [tuta psicoadattiva], +4 naturale, +4 deviazione [scudo psionico passivo]), contatto 15, colto alla sprovvista 21
 pf: 74

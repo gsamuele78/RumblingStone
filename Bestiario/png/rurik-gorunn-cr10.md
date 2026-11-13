@@ -5,6 +5,9 @@
 ```statblocco
 gs: 10
 tipo: Medium humanoid (dwarf), Paladin 8 / Hammer of Moradin 2, LG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 ca-dettaglio: touch 10, flat-footed 22 (armatura completa +1, scudo pesante +1, anello di protezione +1, −1 Des)
 pf: 80

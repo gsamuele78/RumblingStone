@@ -184,6 +184,9 @@ Tutto SRD 3.5. La riga in rosso è ciò che questa creatura fa *in questa avvent
 nome: Scheletro umano (6)
 gs: 1/3
 tipo: NM Medio non-morto
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 pf: 6
 pf-dado: 1d12
@@ -204,6 +207,9 @@ attacchi:
 nome: Wight (3)
 gs: 3
 tipo: ML Medio non-morto
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 pf: 26
 pf-dado: 4d12
@@ -227,6 +233,9 @@ attacchi:
 nome: Lacedon (ghoul acquatico) (6)
 gs: 1
 tipo: CM Medio non-morto
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 pf: 13
 pf-dado: 2d12
@@ -249,6 +258,9 @@ attacchi:
 nome: Skum (4)
 gs: 2
 tipo: ML Medio mostruoso (acquatico)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 pf: 13
 pf-dado: 2d8+4
@@ -271,6 +283,9 @@ attacchi:
 nome: Grinza, megera acquatica
 gs: 4
 tipo: CM Medio mostruoso
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 pf: 26
 pf-dado: 4d8+8
@@ -293,6 +308,9 @@ attacchi:
 nome: Còlpa, megera verde
 gs: 5
 tipo: NM Medio mostruoso
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 22
 pf: 49
 pf-dado: 9d8+9
@@ -314,6 +332,9 @@ attacchi:
 nome: Marèa, annis
 gs: 6
 tipo: CM Grande mostruoso
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 20
 pf: 52
 pf-dado: 7d8+21
@@ -342,6 +363,9 @@ Ogni potere 1/giorno; occorre un'azione di round completo di tutte e tre **EL 10
 nome: Corsaro (6)
 gs: 2
 tipo: Umano guerriero 3
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 pf: 22
 ts: Temp +4, Rifl +3, Vol +1
@@ -362,6 +386,9 @@ attacchi:
 nome: Arciere corsaro (2)
 gs: 3
 tipo: Umano ladro 3
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 pf: 15
 ts: Temp +2, Rifl +7, Vol +2
@@ -384,6 +411,9 @@ attacchi:
 nome: Guardia del borgo (4)
 gs: 1/2
 tipo: Umano guerriero 1
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 pf: 9
 ts: —
@@ -400,6 +430,9 @@ attacchi:
 nome: Ancella
 gs: 1/3
 tipo: Umana popolano 1
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 11
 pf: 4
 ts: —

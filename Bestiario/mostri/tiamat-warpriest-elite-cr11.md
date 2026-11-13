@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Medium humanoid, 11d8
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+0 Des, +10 armatura)
 pf: 60

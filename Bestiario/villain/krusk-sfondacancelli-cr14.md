@@ -4,6 +4,9 @@
 ```statblocco
 gs: 14
 tipo: Large humanoid (orc), mezzorco gigante, Barbaro 5 / Guerriero 1 / Berserker Furioso 7, CE
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 19
 ca-dettaglio: (−1 taglia, +5 bracciali dell'armatura, +3 naturale, +2 deflessione), contatto 11, colto alla sprovvista 19 (schivare prodigioso); 17 in ira, 13 in ira e frenesia
 pf: 166

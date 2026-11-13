@@ -5,6 +5,9 @@
 ```statblocco
 gs: 12
 tipo: Medium humanoid (elf), femmina, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+4 Des, +4 *armatura magica*, +1 anello, +1 amuleto), contatto 15, colto alla sprovvista 20 (schivare prodigioso)
 pf: 44

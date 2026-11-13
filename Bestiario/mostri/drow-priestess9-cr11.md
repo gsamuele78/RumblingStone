@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 11
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m (4,5 m con la frusta, anche i quadretti adiacenti, senza minacciare)
 ca: 23
 ca-dettaglio: (+9 +1 mithral full plate, +3 Dex, +1 light shield)
 pf: 49

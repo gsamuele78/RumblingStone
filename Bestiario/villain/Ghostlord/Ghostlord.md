@@ -6,6 +6,9 @@
 
 ```statblocco
 gs: 15
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 26
 ca-dettaglio: (+2 Des, +5 naturale da lich, +5 *pelle coriacea*, +4 deviazione), contatto 16, colto alla sprovvista 24
 pf: 90

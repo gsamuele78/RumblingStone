@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (human), Guerriero 6 / Esperto 2, LG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 18
 ca-dettaglio: contatto 12, colto alla sprovvista 16 (+5 cuoio rinforzato +2, +2 Des, +1 scudo rotondo)
 pf: 62

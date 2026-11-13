@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid (orc), Warrior 4, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: (cotta di maglia + Des)
 pf: 30

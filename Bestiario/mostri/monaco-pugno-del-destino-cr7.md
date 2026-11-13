@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (goblinoid), Monk 7 (ordine del Pugno del Destino), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m (3 m con la catena chiodata, anche i quadretti adiacenti)
 ca: 19
 ca-dettaglio: touch 17, flat-footed 16
 pf: 52

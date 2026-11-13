@@ -4,6 +4,9 @@
 ```statblocco
 gs: 7
 tipo: Medium humanoid (orc), Guerriero 6, LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+9 armatura completa +1), contatto 10, colto alla sprovvista 19
 pf: 63

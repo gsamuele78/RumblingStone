@@ -4,6 +4,9 @@
 ```statblocco
 gs: 6
 tipo: Large magical beast (extraplanar), 8 DV, NB
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 16
 ca-dettaglio: (-1 taglia, +4 Des, +3 naturale), contatto 13, colto alla sprovvista 12
 pf: 52

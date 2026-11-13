@@ -221,3 +221,4 @@ Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
 - `python3 scripts/validate_booklets.py --stampa`: il volume compila, ha i segnalibri, non stampa apparato oltre il tetto.
 - `python3 scripts/misura_standard_tavolo.py`: chi si incontra nel capitolo e note di lavoro in stampa; cricchetto in test_misura_standard_tavolo.
 - `python3 scripts/misura_distanza_pagine.py`: pagine fra la scena e i numeri, lette dal PDF.
+- `python3 scripts/misura_distanza_pagine.py --volume --tutti --check`: lo standard del volume degli AP (ADR-0122), non bloccante.

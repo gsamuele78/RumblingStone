@@ -822,6 +822,8 @@ flowchart LR
     VOL --> VB{"validate_booklets --stampa"}
     VOL --> MS{"misura_stampa<br/>tetti per booklet"}
     VOL --> MD["misura_distanza_pagine<br/>scena → numeri, indicatore"]
+    VOL --> SV{"misura_distanza_pagine --volume<br/>S1-S5 contro Burnt Offerings e RHoD<br/>testing, ADR-0122"}
+    RIF["riferimenti annotati<br/>chiavi delle mappe di carta"] -.-> SV
     TYP --> MSB{"misura_statblocchi_booklet<br/>misura_standard_tavolo"}
 ```
 
@@ -843,11 +845,13 @@ booklet; Terros resta fuori perché la misura peggiorava.
 | `misura_stampa --tutti --check` | corpo sotto 7 pt, testo oltre la gabbia, immagini sotto 300 dpi, riquadri spezzati, font | job `stampa-misurata`, tetti in `docs/audit/stampa-booklet.json` |
 | `misura_standard_tavolo` | per capitolo e persona: numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa; note di lavoro in stampa | cricchetto nei test sulle note di lavoro |
 | `misura_distanza_pagine` | sul PDF, le pagine fra dove una persona agisce e la pagina con CA e pf | indicatore, a mano |
+| `misura_distanza_pagine --volume` | lo standard del volume (ADR-0122): introduzione di capitolo (S1), chiavi d'area testo ↔ mappa (S2), mappa entro una pagina (S3), appendice regione e PNG (S4), ritratto dei PNG principali (S5), con le soglie prese da *Burnt Offerings* e *Red Hand of Doom* in `docs/audit/volume-booklet.json` | job `stampa-misurata`, passo non bloccante (testing) |
 
 Riferimenti: [ADR-0105](../../plans/adr/ADR-0105-ogni-creatura-esce-nello-stesso-riquadro.md) (un riquadro per tutte le creature),
 [ADR-0106](../../plans/adr/ADR-0106-ogni-mappa-si-stampa-in-pianta.md) (mappe in pianta),
 [ADR-0107](../../plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md) (chi si incontra sta nel capitolo),
 [ADR-0108](../../plans/adr/ADR-0108-i-cancelli-deterministici-stanno-in-ogni-skill.md) (cricchetti e distanza in pagine),
+[ADR-0122](../../plans/adr/ADR-0122-il-volume-segue-lo-schema-degli-adventure-path.md) (lo standard del volume),
 [GUIDA-BOOKLET-E-PDF](../how-to/GUIDA-BOOKLET-E-PDF.md).
 
 ## 13. La catena delle skill
@@ -1032,6 +1036,7 @@ il DM ha davanti al tavolo.
 | CI, a ogni PR | la *d* eufonica fuori norma nei testi di contenuto (ADR-0120) | `python3 scripts/validate_lingua.py --d-eufonica` | ✗ con file, riga e forma corretta | testing, non bloccante (promozione dal 2026-11-24); nel passo bloccante è un avviso |
 | chi prepara la serata | al tavolo chi si incontra ha tutto nel capitolo | `python3 scripts/misura_standard_tavolo.py` | sei elementi per capitolo e persona, mappe, note di lavoro in stampa | indicatore; cricchetto sulle note |
 | chi prepara la serata | quante pagine sfoglia il DM per i numeri | `python3 scripts/misura_distanza_pagine.py PDF` | mediana delle distanze per persona | indicatore, a mano |
+| CI, a ogni PR | il volume ha la struttura degli AP: introduzioni, chiavi d'area, mappe vicine, appendici, ritratti (ADR-0122) | `python3 scripts/misura_distanza_pagine.py --volume --tutti --check` | ✗ per booklet e misura sotto la soglia dei riferimenti | testing, non bloccante (job `stampa-misurata`) |
 | CI, a ogni PR | il volume regge la prestampa | `python3 scripts/misura_stampa.py --tutti --check` | corpo, gabbia, dpi, riquadri spezzati | job `stampa-misurata`, tetti |
 | CI, a ogni PR | un box non dice al gruppo cosa capisce o sa («capite che…») | `python3 scripts/misura_box_telecomando.py --check` | colpi fuori da `ACCETTATI` | cancello nei test (`test_misure_rigorose`) |
 | chi riscrive la prosa | un'immagine già usata in un altro box, anche con altre parole | `python3 scripts/misura_ripetizioni_frasi.py --check` | coppie sopra 0,80 (embedding MiniLM) fuori da `plans/scrittura/ripetizioni-accettate.json` | cancello locale |
@@ -1066,9 +1071,9 @@ flowchart LR
         CM2["conformita_statblocchi<br/>--cancello-moduli<br/>regole PF1e dal PRD"]
         FONTI --> CM2
     end
-    subgraph STAMPA["Stampa (ADR-0105…0108)"]
+    subgraph STAMPA["Stampa (ADR-0105…0108, ADR-0122)"]
         ST["misura_standard_tavolo"]
-        DP["misura_distanza_pagine"]
+        DP["misura_distanza_pagine<br/>e --volume S1-S5"]
         MP["misura_stampa"]
     end
     MAP --> VM

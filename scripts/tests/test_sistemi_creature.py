@@ -174,7 +174,7 @@ class RegoleDiTipoECampiDalPlugin(unittest.TestCase):
     IMPRONTE = {
         "ALIAS_TIPO": "ee9d0a3a4dd5bd38",
         "OBBLIGATORI": "76269d2a7d4a1fc5",
-        "AMMESSI": "25ad1456d85f8cd5",
+        "AMMESSI": "4cc38d37ad840269",
         "LISTE": "95c5850902a37d41",
         "NON_MORTO_PF1E": "b1097a871dea2f15",
     }

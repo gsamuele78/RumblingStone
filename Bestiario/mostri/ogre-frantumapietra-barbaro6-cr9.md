@@ -5,6 +5,9 @@
 ```statblocco
 gs: 9
 tipo: Large giant, CE
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 18
 ca-dettaglio: (−1 taglia, +5 naturale, +5 cotta di maglia, −1 Des), contatto 8, colto alla sprovvista 18 — 16 in ira
 pf: 77

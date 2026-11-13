@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Large animal (celestiale; cavalcatura speciale da paladino, trattata come bestia magica), 8 HD, N
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 21
 ca-dettaglio: touch 10, flat-footed 20 (−1 taglia, +1 Des, +11 naturale)
 pf: 60

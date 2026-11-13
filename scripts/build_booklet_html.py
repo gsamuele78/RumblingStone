@@ -57,9 +57,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, riscala_link, togli_storico  # noqa: E402
+from dmcore.testo import capitoli_del_volume, fondi_contratto_e_scheda, leggi_per_la_stampa, riscala_link, togli_storico  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
-    FASCE, StatblockError, accosta_parte_leggibile, caratteristiche, etichetta_gs, leggi as leggi_statblocco,
+    FASCE, StatblockError, accosta_parte_leggibile, caratteristiche, etichetta_gs, ingombro, leggi as leggi_statblocco,
     sezioni_leggibili, senza_caratteristiche,
 )
 
@@ -88,6 +88,13 @@ FACCE = (
 
 
 INCORPORA_FONT = True
+
+
+def _letto(f, capitoli, sezioni):
+    """Il capitolo per la stampa; dove la scheda da tavolo si stampa (capitoli
+    letti per `sezioni`) la riga «In scena» entra nella scheda."""
+    md = leggi_per_la_stampa(f, capitoli, sezioni)
+    return fondi_contratto_e_scheda(md) if sezioni else md
 
 
 def css_font_face() -> str:
@@ -465,6 +472,8 @@ def _statblocco_intero(corpo: str, titolo: str, sezioni, con_tattica: bool = Tru
              + (f'<span class="sb-gs">{html.escape(etichetta_gs(sb.gs, ET["gs"]))}</span>' if etichetta_gs(sb.gs, ET["gs"]) else "") + "</div>"]
     if sb.tipo:
         parti.append(f'<div class="sb-tipo">{inline_md(sb.tipo)}</div>')
+    if ingombro(sb):
+        parti.append(f'<p class="sb-ingombro">{inline_md(ingombro(sb))}</p>')
     if "Iniziativa" in per:
         parti.append(f"<p><b>{ET['iniziativa']}</b> {inline_md(per['Iniziativa'].testo)}</p>")
     else:
@@ -523,6 +532,8 @@ def statblocchi_homebrewery(md: str) -> str:
                                 if r.startswith("#")), "")
         hb = ["{{monster,frame", f"## {nome}",
               f"*{sb.tipo}*" + (f" · {etichetta_gs(sb.gs, ET['gs'])}" if etichetta_gs(sb.gs, ET["gs"]) else ""), "___"]
+        if ingombro(sb):
+            hb.append(ingombro(sb))
         if "Iniziativa" in per:
             hb.append(f"**{ET['iniziativa']}** {per['Iniziativa'].testo}")
         elif sb.iniziativa or sb.sensi:
@@ -812,7 +823,7 @@ def build(manifest_path: Path, out_override: Path | None = None) -> Path:
     tabs = ['<button role="tab" aria-selected="true" data-pane="c0">Copertina</button>']
     for k, ch in enumerate(mf["chapters"], 1):
         p = base / ch["file"]
-        body = md_to_html(spoglia_homebrewery(leggi_per_la_stampa(p, capitoli)), p.parent)
+        body = md_to_html(spoglia_homebrewery(_letto(p, capitoli, ch.get("sezioni"))), p.parent)
         tag = TAGS.get(ch.get("tag", ""), "")
         foot = player_footer if ch.get("tag") == "player" else footer
         tabs.append(f'<button role="tab" aria-selected="false" data-pane="c{k}">'
@@ -940,8 +951,8 @@ def testo_hb(manifest_path: Path, out_override: Path | None = None) -> tuple[Pat
 
     capitoli = capitoli_del_volume(base, mf)
 
-    def _incorpora(sorgente: Path) -> str:
-        return riscala_link(statblocchi_homebrewery(togli_storico(leggi_per_la_stampa(sorgente, capitoli))),
+    def _incorpora(sorgente: Path, sezioni=None) -> str:
+        return riscala_link(statblocchi_homebrewery(togli_storico(_letto(sorgente, capitoli, sezioni))),
                             sorgente.resolve().parent, dest)
 
     if mf.get("intro_md"):
@@ -954,7 +965,7 @@ def testo_hb(manifest_path: Path, out_override: Path | None = None) -> tuple[Pat
         tag = HB_TAGS.get(ch.get("tag", ""))
         if tag:
             parts.append(tag + "\n")
-        parts.append(_incorpora(base / ch["file"]))
+        parts.append(_incorpora(base / ch["file"], ch.get("sezioni")))
     if APPENDICE_HB:
         parts += ["\n\\page\n", "# Appendice: le creature\n"]
         parts += [r for _, r in sorted(APPENDICE_HB.values(), key=lambda v: v[0].lower())]

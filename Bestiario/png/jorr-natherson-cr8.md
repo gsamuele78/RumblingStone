@@ -10,6 +10,9 @@
 ```statblocco
 gs: 8
 tipo: Medium humanoid (human, Shaaran), Ranger 5 / Rogue 3, CG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: touch 13, flat-footed 14 (cuoio borchiato +1, +3 Des)
 pf: 53

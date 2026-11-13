@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Huge construct (extraplanar), 10d10+80
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m
 ca: 21
 ca-dettaglio: contatto 11, colto alla sprovvista 18 (-2 taglia, +3 Des, +10 naturale)
 pf: 135

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Large monstrous HD 4d8+4d8+24 (60 HP)
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: (-1 size, +2 Dex, +3 natural, +3 studded)
 pf: 60

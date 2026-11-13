@@ -5,6 +5,9 @@
 ```statblocco
 gs: 12
 tipo: Large animal (forma selvatica: orso bruno), Druido 10 / Barbaro 2
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: in forma d'orso bruno (−1 taglia, +1 Des, +5 naturale, +5 armatura di pelle +2 selvatica); contatto 10, colto alla sprovvista 19
 pf: 106

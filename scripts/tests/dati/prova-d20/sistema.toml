@@ -18,6 +18,7 @@ skill = []
 [capacita]
 "termini.vietati" = { eredita = "d20", motivo = "famiglia" }
 "statblocco.campi" = { eredita = "d20", motivo = "famiglia" }
+"statblocco.taglie" = { eredita = "d20", motivo = "famiglia" }
 "formule.regole" = { eredita = "d20", motivo = "famiglia" }
 "creature.armi" = { eredita = "dnd35", motivo = "stesse tabelle" }
 "creature.incantatori" = { eredita = "dnd35", motivo = "stesse tabelle" }

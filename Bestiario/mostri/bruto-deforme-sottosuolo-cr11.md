@@ -5,6 +5,9 @@
 ```statblocco
 gs: 11
 tipo: Huge giant (earth), CE
+taglia: Enorme
+spazio: 4,5 m
+portata: 4,5 m
 ca: 26
 ca-dettaglio: (−2 taglia, +1 Des, +14 naturale, +3 pelle), contatto 9, colto alla sprovvista 25
 pf: 172

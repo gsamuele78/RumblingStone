@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium undead HD 8d12 (52 HP)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: (+3 Dex, +4 natural)
 pf: 52

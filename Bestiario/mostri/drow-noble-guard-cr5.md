@@ -3,6 +3,9 @@
 
 ```statblocco
 gs: 5
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (+5 mithral chain shirt +1, +4 Dex, +1 light shield)
 pf: 28

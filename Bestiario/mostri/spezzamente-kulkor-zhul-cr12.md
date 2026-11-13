@@ -4,6 +4,9 @@
 ```statblocco
 gs: 12
 tipo: Medium humanoid (goblinoid), hobgoblin mago 12, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+4 bracciali, +2 Des, +2 deflessione, +1 naturale)
 pf: 66

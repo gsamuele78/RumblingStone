@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium humanoid (dwarf, duergar), Wizard 3 (necromanzia; abiurazione proibita), LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 sensi: scurovisione 36 m
 ca: 13
 ca-dettaglio: touch 12, flat-footed 11

@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium humanoid (dwarf, duergar), Fighter 2, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 sensi: scurovisione 36 m
 ca: 19
 ca-dettaglio: touch 10, flat-footed 19

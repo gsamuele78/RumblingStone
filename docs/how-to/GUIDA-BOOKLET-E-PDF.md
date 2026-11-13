@@ -274,6 +274,7 @@ nella solita cartella `pdf/` con i permessi del tuo utente.
 - [ ] `python3 scripts/dm.py booklet <booklet DM> --format both --pdf-all` → hint `pg-` (uno a testa, in privato) + schede `dm-` per te
 - [ ] `python3 scripts/validate_modules.py` verde se hai toccato un master
 - [ ] `python3 scripts/misura_standard_tavolo.py --manifest <booklet DM>`: chi si incontra ha scheda, riquadro e mappa nel capitolo
+- [ ] `python3 scripts/misura_distanza_pagine.py --volume --manifest <booklet DM>`: le misure S1-S5 contro le soglie degli AP di riferimento (ADR-0122; avvisano, non bloccano)
 - [ ] Letto il booklet da DM, scena per scena: i validatori verdi non bastano (serata del 2026-11-02)
 
 ---

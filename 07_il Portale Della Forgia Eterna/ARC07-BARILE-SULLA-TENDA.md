@@ -27,6 +27,11 @@
 > (`plans/esperimenti/barile-zogtar-2026-10-24/simula_barile.py`; i risultati
 > completi sono in `ESITI-SIMULAZIONE.md`, nella stessa cartella)<!-- /storico -->.
 
+**In tre righe**
+- **Succede**: in volo e invisibili sopra lo spiazzo del capo, i PG sganciano la botte e i barilotti sulla tenda di Zog'tar; si tirano i dieci passi della scheda, nell'ordine.
+- **Chi vuole cosa**: dentro, Zog'tar racconta alle guardie come impalerà il re, Balvar incide, il sacerdote dorme; fuori Grask tiene il corno, e il campo intorno dorme finché non brucia.
+- **Come finisce**: la tenda in fiamme o crollata, il corno suonato o no, i PG ancora in aria; poi il ritorno o la discesa (Scene 6-8 di DEF-4), e i conti per le mura all'alba (§10).
+
 ## La scheda da tavolo
 
 Dieci passi, nell'ordine in cui si tirano. Ogni riga dice da quale regola

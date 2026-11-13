@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium plant, 8d8+32
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: (+1 Des, +6 naturale), touch 11, flat-footed 16
 pf: 68

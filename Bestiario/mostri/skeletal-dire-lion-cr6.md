@@ -5,6 +5,9 @@
 ```statblocco
 gs: 6
 tipo: Large undead HD 16d12 (104 HP with skeleton template 2x HD)
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (-1 size, +2 Dex, +4 natural)
 pf: 104

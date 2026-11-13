@@ -5,6 +5,9 @@
 ```statblocco
 gs: 7
 tipo: Large plant, 14d8+56
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 20
 ca-dettaglio: (-1 taglia, +11 naturale), touch 9, flat-footed 20
 pf: 119

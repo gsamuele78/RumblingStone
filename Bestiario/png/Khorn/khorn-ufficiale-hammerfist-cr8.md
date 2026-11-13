@@ -5,6 +5,9 @@
 ```statblocco
 gs: 8
 tipo: Medium humanoid (dwarf), Fighter 8, LG
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: touch 11, flat-footed 22 (armatura completa +1, scudo pesante +1, +1 Des)
 pf: 76

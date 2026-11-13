@@ -45,6 +45,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -54,11 +55,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore import chi_si_incontra  # noqa: E402
 from dmcore.testo import (  # noqa: E402
-    capitoli_del_volume, leggi_per_la_stampa, piega_ascii, slug, togli_storico, traduci_rimandi,
+    capitoli_del_volume, fondi_contratto_e_scheda, leggi_per_la_stampa, piega_ascii, sigle_d_appendice, slug, togli_storico, traduci_rimandi,
 )
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
-    StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, leggi as leggi_statblocco,
+    StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, ingombro, leggi as leggi_statblocco,
     sezioni_leggibili, senza_caratteristiche,
 )
 
@@ -243,6 +244,11 @@ def _inline(s: str) -> str:
                 testo = s[i + 1:j].replace("\\", "\\\\").replace('"', '\\"')
                 fuori.append(f'#raw("{testo}")')
                 i = j + 1
+                # `#raw(...);`: il punto e virgola chiude l'espressione e non
+                # si stampa (giro del 2026-11-12, Scena 10: «CA 28 costa −2»)
+                if i < len(s) and s[i] == ";":
+                    fuori.append("\\;")
+                    i += 1
                 continue
         if c == "*":
             n = 0
@@ -259,6 +265,10 @@ def _inline(s: str) -> str:
             else:
                 fuori.append(_esc("*" * n))
             i += n
+            # `#strong[...];`: lo stesso punto e virgola mangiato
+            if fuori[-1].endswith("]") and i < len(s) and s[i] == ";":
+                fuori.append("\\;")
+                i += 1
             continue
         fuori.append(_esc(c))
         i += 1
@@ -693,6 +703,7 @@ def statblocco_typ(corpo: str, titolo_corrente: str = "", sezioni=()) -> str:
         ("tipo", sb.tipo), ("gs", etichetta_gs(sb.gs, ET["gs"])), ("iniziativa", sb.iniziativa),
         ("sensi", sb.sensi), ("pf", (sb.pf + (f" ({sb.pf_dado})" if sb.pf_dado else "")).strip()),
         ("velocita", sb.velocita), ("tattica", sb.tattica), ("fonte", sb.fonte),
+        ("ingombro", ingombro(sb)),
     ):
         if valore:
             voci.append(f"{chiave}: [{inline(valore)}]")
@@ -1066,7 +1077,9 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # capitolo 12 non è ancora stato convertito.
     RIMANDI.clear()
     for cap, titolo, f in elenco:
-        RIMANDI[f.name] = "cap-" + slug(f.stem, ripiego="capitolo")
+        # un master può dare più capitoli (chiave `sezioni`): l'etichetta è del primo
+        RIMANDI.setdefault(f.name, "cap-" + slug(f.stem, ripiego="capitolo"))
+    etichettati: set[str] = set()
 
     avvisa_chiavi(man)
     # I rimandi a un master («master #3», «DEF-3 §7») diventano il suo capitolo
@@ -1077,7 +1090,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # appendice, con la riga e la tattica nell'incontro; «qui» per i volumi che
     # le schede le vogliono dove sono scritte.
     modo = man.get("schede", "appendice")
-    appendice = modo in ("appendice", "entrambe")
+    appendice = modo in ("appendice", "entrambe", "prima-volta")
     if appendice:
         parti.append(f'#modo-schede.update("{modo}")')
     # `"chi_si_incontra": true` (ADR-0107): chi si incontra sta nel capitolo,
@@ -1086,6 +1099,15 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     indice = chi_si_incontra.indice_del_repo() if man.get("chi_si_incontra") else None
     pg = {piega_ascii(p.stem).lower() for p in (ROOT / "PG" / "schede").glob("*.yaml")} if indice else set()
     predefinito = bool(man.get("capolettera", True))
+    # «prima-volta» (ADR-0122): chi è presentato e le mappe stampate, capitolo
+    # per capitolo, perché il corpo li stampi una volta sola
+    volume = {"capitolo": "", "persone": {}, "mappe": {}, "native": {}} \
+        if modo == "prima-volta" and indice is not None else None
+    if volume is not None:
+        for cap, titolo, f in elenco:
+            m_ = re.match(r"^\s*([IVXLC]+)\s*·", titolo)
+            for c in chi_si_incontra.mappe_stampate(leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))):
+                volume["native"].setdefault(c, f"capitolo {m_.group(1)}" if m_ else f"capitolo «{titolo}»")
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
             parti.append(schede(cap, base, f))
@@ -1094,15 +1116,24 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         fr = fregio_per(titolo, f, base, man.get("fregio"))
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
-        parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
-        md = leggi_per_la_stampa(f, nel_volume)
+        if f.name not in etichettati:
+            etichettati.add(f.name)
+            parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
+        md = leggi_per_la_stampa(f, nel_volume, cap.get("sezioni"))
         # la regia e la cassetta nominano tutti, ma lì non si incontra nessuno
         if indice is not None and not chi_si_incontra.CONSULTAZIONE.search(titolo):
-            md, fatto = chi_si_incontra.arricchisci(md, f, indice, pg)
+            if volume is not None:
+                m_ = re.match(r"^\s*([IVXLC]+)\s*·", titolo)
+                volume["capitolo"] = f"capitolo {m_.group(1)}" if m_ else f"capitolo «{titolo}»"
+            md, fatto = chi_si_incontra.arricchisci(md, f, indice, pg, volume=volume)
             # quel che arriva da un altro master parla ancora di «DEF-4»
             md = traduci_rimandi(md, f, nel_volume)
             for riga in fatto:
                 print(f"  · {titolo[:40]}: {riga}", file=sys.stderr)
+        if cap.get("sezioni"):
+            md = fondi_contratto_e_scheda(md)
+        if volume is not None:
+            md = sigle_d_appendice(md)
         corpo = md_to_typ(md, f.parent,
                           capolettera=bool(cap.get("capolettera", predefinito)))
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
@@ -1110,6 +1141,8 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         parti.append("")
     if appendice:
         parti.append("#appendice-creature()")
+    if volume is not None and volume["mappe"] and indice is not None:
+        parti.append(appendice_mappe(volume["mappe"], indice, base))
     testo = "\n".join(parti)
     # L'indice analitico e' opt-in dal manifest: non tutti i volumi lo vogliono
     # (un teaser di due pagine con un indice analitico e' una presa in giro).
@@ -1127,6 +1160,19 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
                   "compare in questo volume: la pagina non si aggiunge",
                   file=sys.stderr)
     return testo
+
+
+def appendice_mappe(mappe: dict, indice, base: Path) -> str:
+    """L'appendice delle mappe (ADR-0122): ogni mappa usata nel volume, intera
+    con la sua legenda, una per pagina, nell'ordine in cui il volume le usa."""
+    righe = []
+    for codice in mappe:
+        for alt, dove in indice.mappe.get(codice, []):
+            righe += [f"![{alt}]({os.path.relpath(dove, base)})", "", "<!-- nuova-pagina -->", ""]
+    while righe and righe[-1] in ("", "<!-- nuova-pagina -->"):
+        righe.pop()
+    corpo = md_to_typ("\n".join(righe), base, capolettera=False)
+    return "#capitolo-aperto(\"Appendice: le mappe\", none)\n" + corpo
 
 
 #: un titolo del sorgente Typst: «=== Testo» a inizio riga; i capitoli si aprono

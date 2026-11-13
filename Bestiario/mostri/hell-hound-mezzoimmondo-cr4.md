@@ -5,6 +5,9 @@
 ```statblocco
 gs: 4
 tipo: Medium outsider (evil, extraplanar, fire, lawful, dragonblood), 4 HD, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: touch 11, flat-footed 16
 pf: 26

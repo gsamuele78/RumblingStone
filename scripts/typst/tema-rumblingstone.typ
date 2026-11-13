@@ -72,6 +72,9 @@
   else if c.has("children") { c.children.map(to-string).join("") }
   else if c.has("body") { to-string(c.body) }
   else if c == [ ] { " " }
+  // l'apostrofo del markdown è un `smartquote`: senza questa riga i titoli
+  // ricomposti uscivano «LALBA» per «L'ALBA» (misura titoli_rovinati)
+  else if c.func() == smartquote { if c.at("double", default: true) { "\u{201D}" } else { "\u{2019}" } }
   else { "" }
 }
 
@@ -313,7 +316,11 @@
   // La tabella della persona portata da ADR-0107 («Chi si incontra in questo
   // capitolo») sta sempre in cima: in fondo alla pagina Typst 0.15 la mette
   // sopra il riquadro della colonna accanto (Notte e Alba, p. 24, 2026-11-03).
-  let dove = if sezione == "Chi si incontra in questo capitolo" { top } else { auto }
+  // Dal 2026-11-12 vale per ogni tabella che scavalca: con la riga di taglia,
+  // spazio e portata (ADR-0128) e la CA spiegata (ADR-0126) la scheda di
+  // Skullcrusher Vecchio finiva 3 righe dentro il float in fondo (Notte e
+  // Alba p. 114, Resurrezione p. 128; validate_corredo, 98 difetti).
+  let dove = top
   let scavalca = place(dove, float: true, scope: "parent", clearance: 18pt, block(width: 100%)[
     #if sezione != none [
       #text(font: TITOLI, size: 7.5pt, fill: seppia, tracking: 0.3pt)[#upper(sezione)]
@@ -359,6 +366,9 @@
 // cambia solo quanto è piena. Una fascia senza niente dentro non si stampa.
 #let statblocco(
   nome: "", tipo: "", gs: "", iniziativa: "", sensi: "",
+  // ADR-0128: «Taglia · Spazio (quadretti) · Portata (quadretti)», già composta
+  // da dmcore.statblock.ingombro; vuota finché la scheda non dichiara la taglia.
+  ingombro: "",
   ca: "", pf: "", ts: "", velocita: "",
   attributi: (), attacchi: (), voci: (), tattica: "", fonte: "",
   sezioni: (:),
@@ -417,6 +427,7 @@
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
     #set text(size: 8.8pt)
     #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false)
+    #if ingombro != "" and ingombro != [] { v(2pt); ingombro }
     #if apertura != none { v(2pt); apertura }
     #fascia("Difesa", difesa)
     #fascia("Attacco", attacco)
@@ -494,12 +505,69 @@
     // Con «entrambe» la stessa scheda esce in due capitoli, e i rimandi
     // riscritti per capitolo cambiano il testo: lì la stessa creatura è
     // stesso nome, GS, CA e pf, non lo stesso testo.
-    let chiave = if modo-schede.get() == "entrambe" {
+    let modo = modo-schede.get()
+    let chiave = if modo == "entrambe" or modo == "prima-volta" {
       to-string(nome) + "|" + repr(gs) + "|" + repr(ca) + "|" + repr(pf)
     } else { chiave }
+    // La riga dell'incontro (ADR-0105 §7): CA, pf, la pagina della scheda e
+    // la tattica di QUESTO incontro. `dove`: «scheda a pagina N».
+    let riga(pagina) = {
+      let pezzi = ()
+      if ca != "" and ca != [] { pezzi.push([*CA* #ca]) }
+      if pf != "" and pf != [] { pezzi.push([*pf* #pf]) }
+      // intera: spezzata fra due colonne la riga breve perde iniziativa, TS e
+      // attacco per chi la legge (serata, p. 58, 2026-11-12)
+      block(width: 100%, breakable: false, above: 0.9em, below: 0.6em,
+        stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
+        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
+        #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
+        #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
+        #if pagina != none {
+          h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
+        }
+        #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
+        #if ingombro != "" and ingombro != [] [ \ #text(size: 8.8pt)[#ingombro] ]
+        // Giro del 2026-11-10 (lettura del DM): con CA e pf soltanto si
+        // sfoglia a ogni attacco del nemico. La riga porta anche iniziativa,
+        // velocità, TS e gli attacchi, come il blocco breve degli AP.
+        #{
+          let mossa = ()
+          if iniziativa != "" and iniziativa != [] { mossa.push([*#etichette.iniziativa* #iniziativa]) }
+          if velocita != "" and velocita != [] { mossa.push([*#etichette.vel* #velocita]) }
+          if ts != "" and ts != [] { mossa.push([*#etichette.ts* #ts]) }
+          if mossa.len() > 0 [ \ #text(size: 8.8pt)[#mossa.join([ · ])] ]
+          if attacchi.len() > 0 [ \ #text(size: 8.8pt)[#attacchi.map(a => [*#a.at(0)* #a.at(1)]).join([ · ])] ]
+        }
+        #if tattiche != none [
+          #v(2pt)
+          #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]
+          #v(1pt)
+          #text(size: 8.6pt)[#tattiche]
+        ]
+      ]
+    }
+    // «prima-volta» (ADR-0122, scelta del DM del 2026-11-10): come negli AP
+    // Paizo, la scheda intera esce nel corpo solo la prima volta; dopo, la
+    // riga con la pagina della scheda e la tattica di questo incontro. In
+    // appendice ci sono tutte, come con «entrambe».
+    if modo == "prima-volta" {
+      let gia = query(selector(<sb-corpo>).before(here())).filter(m => m.value == chiave)
+      if gia.len() > 0 {
+        [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
+                    lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
+        // la pagina dove la scheda comincia davvero: il segnaposto sta prima
+        // del riquadro, che può passare intero alla colonna o alla pagina dopo
+        let dentro = query(selector(<sb-inizio>).after(gia.first().location()))
+          .filter(m => m.value == to-string(nome))
+        let dove = if dentro.len() > 0 { dentro.first().location() } else { gia.first().location() }
+        riga(counter(page).at(dove).first())
+        return
+      }
+      [#metadata(chiave) <sb-corpo>]
+    }
     if modo-schede.get() != "appendice" {
       // «entrambe»: il riquadro intero qui, e una copia anche nell'appendice.
-      if modo-schede.get() == "entrambe" {
+      if modo == "entrambe" or modo == "prima-volta" {
         [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
                     lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
       }
@@ -509,7 +577,7 @@
       // Se non entra nello spazio che resta nella colonna, va a capo colonna
       // da sé: sotto un float Typst 0.15 sbaglia lo spazio che resta, e un
       // blocco che non si spezza finirebbe sopra il piede.
-      if modo-schede.get() != "entrambe" or larga {
+      if (modo != "entrambe" and modo != "prima-volta") or larga {
         let corpo = intero(tattiche, spezzabile: true)
         if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
         return
@@ -551,33 +619,12 @@
     [#metadata((chiave: chiave, nome: to-string(nome), intero: intero(none, spezzabile: false),
                 lungo: lungo(chiave), accanto: lungo(chiave, accanto: true))) <sb-dato>]
     // La riga dell'incontro: quanto serve per tenere il conto al tavolo, e la
-    // pagina dove sta il resto. I campi brevi, non le fasce: CA e pf.
+    // pagina dove sta il resto, in appendice.
     let pagina = {
       let qui = query(<sb-app>).filter(m => m.value == chiave)
       if qui.len() > 0 { counter(page).at(qui.first().location()).first() } else { none }
     }
-    let pezzi = ()
-    if ca != "" and ca != [] { pezzi.push([*CA* #ca]) }
-    if pf != "" and pf != [] { pezzi.push([*pf* #pf]) }
-    // Spezzabile: sotto un float a tutta pagina Typst 0.15 sbaglia lo spazio
-    // che resta in colonna, e un blocco che non si spezza finiva sopra il piede
-    // (Abbazia, p. 26, 2026-10-29). Il nome resta attaccato alla prima riga.
-    block(width: 100%, breakable: true, above: 0.9em, below: 0.6em,
-      stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
-      #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
-      #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
-      #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
-      #if pagina != none {
-        h(1fr); text(size: 8.4pt, style: "italic", fill: seppia)[scheda a pagina #pagina]
-      }
-      #if pezzi.len() > 0 [ \ #text(size: 8.8pt)[#pezzi.join([ · ])] ]
-      #if tattiche != none [
-        #v(2pt)
-        #text(font: TITOLI, size: 7.4pt, weight: 600, fill: rosso, tracking: 0.8pt)[TATTICHE]
-        #v(1pt)
-        #text(size: 8.6pt)[#tattiche]
-      ]
-    ]
+    riga(pagina)
   }
 }
 
@@ -629,7 +676,7 @@
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, below: 1em, v.accanto)
       col = 1
-      y = cima-destra + alto - resta + 30pt + spazio
+      y = cima-destra + alto - resta + 12pt + spazio
     } else if alto < colonna * 0.92 {
       [#metadata(v.chiave) <sb-app>]
       block(width: 100%, breakable: false, below: 1em, v.intero)

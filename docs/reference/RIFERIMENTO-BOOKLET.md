@@ -141,6 +141,7 @@ qualcuno non allunga un equipaggiamento.
 | la **prestampa**: corpo sotto 7 pt, testo oltre la gabbia, immagini sotto 300 dpi, riquadri spezzati | `misura_stampa.py --tutti --check`, job CI `stampa-misurata` |
 | **chi si incontra** nel capitolo (numeri, aspetto, ritratto, chi è, cosa vuole, tattica, mappa) e le **note di lavoro** in stampa | `misura_standard_tavolo.py`: indicatore, con cricchetto nei test sulle note |
 | quante **pagine** separano la scena dai numeri di chi c'è | `misura_distanza_pagine.py <PDF>`: indicatore, a mano |
+| lo **standard del volume** degli AP (ADR-0122): introduzione di capitolo, chiavi d'area uguali fra testo e mappa, mappa vicina alla descrizione, appendice di regione e PNG, ritratto dei PNG principali | `misura_distanza_pagine.py --volume --tutti --check`, passo non bloccante del job `stampa-misurata` (canale testing); `dm.py volume <manifest> --stampa`, passo `struttura` |
 | il **giudizio estetico** | ⚠️ nessuno, e nessuno potrà: si guarda a occhio, in locale |
 
 > 📌 **Dal 2026-08-22 in CI c'è `typst`.** Prima non c'era, e la conseguenza è

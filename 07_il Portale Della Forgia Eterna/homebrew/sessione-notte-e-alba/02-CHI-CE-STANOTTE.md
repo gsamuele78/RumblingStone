@@ -26,6 +26,9 @@
 nome: Zog'tar Deatheye, generale dell'orda antica
 gs: 15 (Avanzato)
 tipo: Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1
+taglia: Grande
+spazio: 3 m
+portata: 3 m
 ca: 26
 ca-dettaglio: contatto 12, impreparato 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat); 24 in Ira
 pf: 283
@@ -67,6 +70,9 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 nome: Guardia di Zog'tar (4)
 gs: 8
 tipo: Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: +8 arm. completa, +1 DES, il massimo che l'armatura lascia; spadone, niente scudo
 pf: 60
@@ -93,6 +99,9 @@ giavellotto, al round 3 (capitolo III, §8). Ritratto: nessuno.
 nome: Sacerdote dell'orda
 gs: 6
 tipo: Hobgoblin Medio · Adepto 7
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 12
 ca-dettaglio: +2 DES
 pf: 38
@@ -148,6 +157,9 @@ entro **1d4 round** dal boato, se è vivo (capitolo III, §8).
 nome: Balvar Fuocospento, il Consigliere dell'Orda
 gs: 13
 tipo: Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 24
 ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
 pf: 101
@@ -195,7 +207,7 @@ voci:
 ![Skullcrusher nel cortile](../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
 Stasera il drago è il **Vecchio**. La scheda qui sotto rimanda alla scheda
-dell'Adulto (`DEF-4` Appendice A.1, capitolo VI di questo booklet) per
+dell'Adulto (`DEF-4` Appendice A.1) per
 sensi, velocità, capacità magiche, talenti e abilità.
 
 <!-- nuova-pagina -->
@@ -205,24 +217,28 @@ sensi, velocità, capacità magiche, talenti e abilità.
 nome: Skullcrusher Vecchio
 gs: 17 (Vecchio GS 16, +1 Avanzato)
 tipo: Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 36
 ca-dettaglio: contatto 10, impreparato 34 (−2 taglia, +2 DES, +26 nat); 40 con armatura magica
 pf: 337
 pf-dado: 25d12+175
 ts: Temp +21, Rifl +18, Vol +20
 attributi: For 33 Des 14 Cos 25 Int 18 Sag 19 Car 18
-velocita: come A.1
+velocita: 18 m, volare 45 m (scarsa), nuotare 18 m
 iniziativa: +6
+sensi: percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4
 attacchi:
   - Mischia morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16)
 ```
-**Iniziativa** +6 · **Sensi** come A.1
+**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare e Osservare come l'Adulto (A.1)
 
 **Difesa** **CA 36** (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34; **40 con *armatura magica*** · **pf 337** (25d12+175) · TS Temp +21, Rifl +18, Vol +20 · RD 10/magia · RI 22 · immune acido, sonno, paralisi
 
-**Attacco** come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)
+**Attacco** Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)
 
-**Statistiche** For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1
+**Statistiche** For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1
 
 **Capacità speciali**
 - **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).
@@ -236,13 +252,20 @@ attacchi:
 nome: Wyvern (2)
 gs: 6
 tipo: Drago Grande · wyvern SRD
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 18
 pf: 59
 ts: Temp +7, Rifl +6, Vol +6
-velocita: volare 18 m
+velocita: 6 m, volare 18 m (scarsa)
+iniziativa: +1
 sensi: scurovisione 18 m, visione crepuscolare, fiuto
 attacchi:
   - Mischia pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)
+voci:
+  - Lotta: +15
+  - Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco
 tattica: Vanno su chi tiene la corda dell'ala e su chi vola.
 fonte: wyvern dell'SRD; i tiri salvezza sono quelli della sua scheda SRD
 ```

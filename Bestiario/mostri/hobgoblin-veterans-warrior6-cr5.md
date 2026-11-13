@@ -5,6 +5,9 @@
 ```statblocco
 gs: 5
 tipo: Medium humanoid (goblinoid), Warrior 6, LE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: touch 11, flat-footed 18
 pf: 43

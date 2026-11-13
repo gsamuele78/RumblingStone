@@ -7,6 +7,9 @@
 ```statblocco
 gs: 12
 tipo: Medium aberration (illithid), Psion 4 (12 DV)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 23
 ca-dettaglio: (+2 Des, +3 naturale, +4 armatura da *armatura inerziale*, +4 scudo da *schermo di forza*), contatto 12, colto alla sprovvista 21
 pf: 73

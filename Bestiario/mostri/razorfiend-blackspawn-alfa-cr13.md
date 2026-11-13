@@ -6,6 +6,9 @@
 ```statblocco
 gs: 13
 tipo: Huge dragon (earth), 16 DV, LE
+taglia: Enorme
+spazio: 4,5 m
+portata: 4,5 m
 ca: 25
 ca-dettaglio: (−2 taglia, +0 Des, +17 naturale)
 pf: 215

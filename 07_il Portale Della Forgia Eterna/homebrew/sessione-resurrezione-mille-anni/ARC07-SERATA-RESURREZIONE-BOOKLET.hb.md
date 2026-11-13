@@ -3403,6 +3403,7 @@ Sono nel volume dei giocatori, *Il Cuore e la Porta*, un foglio ciascuno.
 ## Hella Oakenshield, risorta
 *Dream Dwarf · Ranger 1 / Druida 12 · Ibrido Treant (risorta) · Neutrale Buono · Media* · PG di 13°
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** scurovisione 27 m (Dream Dwarf)
 
 **DIFESA**
@@ -3442,6 +3443,7 @@ mithral affilato, un cuore di energia terrestre.»*
 ## Treant di Adamantio (evocato dalla Collana)
 *Vegetale Grande · Neutrale Buono* · GS ~10
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 **Iniziativa** +0 · **Sensi** visione crepuscolare; Ascoltare +8, Osservare +8
 
 **DIFESA**
@@ -3497,6 +3499,7 @@ SRD, più il +8 FOR del canone.
 ## Hella, Avatar della Radice
 *Ibrido Treant/Nano Enorme · 10 round, 1 volta al giorno* · forma di Hella
 ___
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 4,5 m (3 quadretti)
 
 **DIFESA**
 ___
@@ -5109,6 +5112,11 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 **In scena** — Dove: la postierla · il campo — Chi: Durin · Grask · i cavalieri dei lupi · la pattuglia di quattro orchi · le vedette goblin · lo squadrone hobgoblin · il corridore
 
+**In tre righe**
+- **Succede**: dalla postierla al centro del campo, di notte, con la prova di gruppo del viaggio; ogni fallimento costa una tacca, e il terzo porta la pattuglia (EL 10).
+- **Chi vuole cosa**: l'orda dorme e non aspetta nessuno; Grask non lascia il corno, il corridore porta le notizie alla tenda.
+- **Come finisce**: davanti alla tenda senza farsi vedere, con una pattuglia alle calcagna o con il campo pre-allertato; dopo la tenda, il ritorno, che cambia se il corno ha suonato.
+
 > **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
 > sempre e che nessun cronista mette per iscritto. Il fiato esce bianco nel
@@ -5552,6 +5560,11 @@ solo i gridi.
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · Balvar · le quattro guardie
 
+**In tre righe**
+- **Succede**: i PG entrano nella tenda di Zog'tar, dove Balvar incide sullo sgabello in fondo; se parlano prima di colpire, Balvar tratta.
+- **Chi vuole cosa**: Zog'tar vuole Hammerfist e racconta come impalerà il re; Balvar vuole che la fortezza cada in fretta, perché ha già visto la fame di un assedio lungo.
+- **Come finisce**: con Balvar che parla o tace, e con Zog'tar che si alza dal seggio: è la Scena 8.
+
 > **Read-aloud (Andor lead) — la tenda.** *Al centro del campo, una tenda più
 > alta delle altre, di pelle nera, con ossa ai tiranti che battono nel vento.
 > Le pattuglie qui non passano. Dentro si ride.*
@@ -5962,6 +5975,11 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · le quattro guardie · Balvar · il sacerdote dell'orda
 
+**In tre righe**
+- **Succede**: lo scontro nella tenda con Zog'tar, le quattro guardie, il sacerdote e Balvar, se non è passato ai PG.
+- **Chi vuole cosa**: Zog'tar vuole uccidere chi è entrato davanti ai suoi, le guardie lo coprono, Grask non lascia il corno.
+- **Come finisce**: Zog'tar ucciso in silenzio, ucciso in modo spettacolare o umiliato e vivo (Via A); l'esito va nell'Echo Ledger (§7) e pesa sulle mura e sul drago.
+
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
 > **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
@@ -6314,6 +6332,11 @@ si gioca su M7-B.
 
 **In scena** — Dove: fra le tende — Chi: Vatore
 
+**In tre righe**
+- **Succede**: al ritorno, fra le tende, i PG incrociano Vatore, il ladro che diventerà Sal; dieci minuti.
+- **Chi vuole cosa**: Vatore vuole potere e che il conto lo paghino altri, e ha paura di quattro persone che non dovrebbero esistere.
+- **Come finisce**: Vatore sopravvive comunque (il Cronolito lo salva a 1 pf); se i PG tornano in volo senza scendere, lo si ritrova sulle mura all'alba.
+
 **Scheda d'entrata — Vatore, il ladro che diventerà Sal**
 
 | | |
@@ -6472,7 +6495,12 @@ L'artefatto che stringe al petto è in **Appendice B**.
 
 ### SCENA 10 — Le mura all'alba
 
-**In scena** — Dove: le mura — Chi: Hrodgar · Re Thorek I
+**In scena** — Dove: le mura — Chi: Hrodgar · Re Thorek I · Zog'tar Deatheye, se è vivo all'alba
+
+**In tre righe**
+- **Succede**: il primo ariete arriva alle mura e il gruppo sceglie una via su tre per una prova collettiva, dopo la tabella «Dalla notte».
+- **Chi vuole cosa**: l'orda vuole la breccia prima che il sole superi il crinale; Re Thorek I e il capitano delle mura vogliono tenere il camminamento est.
+- **Come finisce**: mura tenute saldamente, a stento o breccia ceduta; il dado dei caduti dice quanti difensori con un nome muoiono, poi il drago cala sul cortile.
 
 Si arriva qui **dove le tacche hanno lasciato i PG** (tabella di uscita
 dell'orologio, §4). Se Hella ha vegliato i semi, i **due Treant di Adamantio**
@@ -6502,6 +6530,7 @@ Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 |---|---|---|
 | **Hrodgar, il capitano delle mura** | nano con la barba bruciata da un lato, di un'altra battaglia, e un elmo senza cresta perché la cresta si vede da lontano. Vuole tenere il tratto est fino a che il re non gli dice di lasciarlo, e sa dove la pietra è più giovane: lo stesso punto che Balvar ha segnato sulla mappa di Zog'tar | dà gli ordini con una parola sola |
 | **Hald, il nipote di Balvar** | nano di diciannove anni, di guardia sul camminamento est col gruppo di Hrodgar; la barba ancora corta, l'ascia troppo nuova. Non sa che lo zio esiliato è vivo, né che è nel campo di Zog'tar | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
+| **Zog'tar Deatheye, se è vivo all'alba** | il generale mezzo-ogre, l'ascia in mano e la pietra nera al posto dell'occhio destro, che guida l'orda sotto le mura; con 0-1 successi sale sulla breccia (la tattica sul camminamento è sotto la tabella «Dalla notte», la scheda d'entrata nella Scena 7) | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 
 > **Read-aloud (Salvatore lead) — il camminamento.** *Il camminamento è largo
 > quanto un tavolo da pranzo e lungo quanto la fortezza. Sotto, l'orda non
@@ -6615,6 +6644,11 @@ successo in più o in meno, si applica allo stesso modo.
 ### SCENA 11 — Il duello con Skullcrusher
 
 **In scena** — Dove: il cortile — Chi: Skullcrusher · Re Thorek I · Aegis Fang
+
+**In tre righe**
+- **Succede**: Skullcrusher il Nero cala sul cortile con due wyvern e combatte in passate, gridando i nomi che ha sentito di notte attraverso la Catena.
+- **Chi vuole cosa**: il drago vuole vincere davanti all'orda, perché per lui il potere è quello che gli altri hanno visto; Re Thorek I è nel cortile con i PG.
+- **Come finisce**: drago ucciso, ferito grave, fuggito, o vinto sporco (§6); con l'esito la serata si ferma, prima della Scena 12.
 
 **Dopo il barile**. Attraverso la
 gemella sul corno il drago ha sentito i gridi della notte, «Dall'alto. Hanno
@@ -7412,6 +7446,7 @@ naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14.
 ## Skullcrusher il Nero, il Primo Nero
 *Drago Enorme (acqua), caotico malvagio · drago nero adulto maturo, Avanzato · capostipite di Fauci di Palude* · GS 14
 ___
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso
 **Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare +29, Osservare +29
 
 **DIFESA**
@@ -7489,7 +7524,8 @@ gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 ## Skullcrusher Vecchio
 *Drago Enorme (acqua), caotico malvagio · drago nero Vecchio dell'SRD, Avanzato* · GS 17 (Vecchio GS 16, +1 Avanzato)
 ___
-**Iniziativa** +6 · **Sensi** come A.1
+**Taglia** Enorme · **Spazio** 4,5 m (3×3 quadretti) · **Portata** 3 m (2 quadretti); 4,5 m (3 quadretti) con il morso
+**Iniziativa** +6 · **Sensi** percezione cieca 18 m, scurovisione 36 m, visione crepuscolare ×4; Ascoltare e Osservare come l'Adulto (A.1)
 
 **DIFESA**
 ___
@@ -7497,11 +7533,11 @@ ___
 
 **ATTACCO**
 ___
-come A.1 · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
+Vel 18 m, volare 45 m (scarsa), nuotare 18 m · **Mischia** morso +34 (2d8+11), 2 artigli +29 (2d6+5), 2 ali +29 (1d8+5), colpo di coda +29 (2d6+16) · **Schiacciare** 2d8+16, Riflessi CD 29 (solo creature Piccole o minori) · **Soffio acido** linea di 30 m, 16d4, Riflessi CD 31 dimezza (aderente come A.1) · **Capacità magiche** come A.1, ma *oscurità* con raggio 24 m e *corrompere l'acqua* a CD 26 (la CD della sua Presenza Terrificante, come nell'SRD), più *crescita vegetale* 1/giorno · **Incantesimi da stregone** incantatore di 7°: 6/7/7/5 al giorno (*lentezza* CD 17)  
 
 **STATISTICHE**
 ___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** quelli di A.1 (Virata, non Ghermire), più Allerta · **Abilità** e il resto: come A.1  
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -7536,6 +7572,7 @@ si sommano a parte (§8 A).
 ## Zog'tar Deatheye, generale dell'orda antica
 *Mezzo-Ogre/Orco Grande, caotico malvagio · Barbaro 14 / Guerriero 1* · GS 15 (Avanzato)
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 **Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **DIFESA**
@@ -7567,6 +7604,7 @@ La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta n
 ## Guardia di Zog'tar (4)
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
@@ -7591,6 +7629,7 @@ ___
 ## Sacerdote dell'orda
 *Hobgoblin Medio · Adepto 7* · GS 6
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
 
 **DIFESA**
@@ -7617,6 +7656,7 @@ Sta nella tenda di Zog'tar (Scena 8).
 ## Durin Rocciadura
 *Nano Medio · Guerriero 6* · GS 6
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** scurovisione 18 m
 
 **DIFESA**
@@ -7630,6 +7670,10 @@ ___
 **STATISTICHE**
 ___
 For 18, Cos 16, Sag 14 · BAB +6; Lotta +10  
+
+**TATTICHE**
+___
+Non vuole lo scontro con i PG e sa di non reggerlo: alla prima ferita grave getta l'ascia e grida *«Se siete dei nostri, dimostratelo!»* (§6, «Attaccano la pattuglia di Durin»). Nella Scena 6 li accompagna fino alla postierla e lì resta (la tiene aperta per il ritorno, Scena 8).  
 }}
 
 **Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
@@ -7641,6 +7685,7 @@ For 18, Cos 16, Sag 14 · BAB +6; Lotta +10
 ## Balvar Fuocospento, il Consigliere dell'Orda
 *Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE* · GS 13
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +5, Osservare +5
 
 **DIFESA**
@@ -7703,6 +7748,7 @@ questa tabella.
 ## Worg dei cavalieri dei lupi
 *Bestia magica Media · worg SRD* · GS 2
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** olfatto 9 m; Ascoltare +6, Osservare +6
 
 **DIFESA**
@@ -7722,6 +7768,7 @@ ___
 ## Orco della ronda
 *Orco Medio · guerriero 1 SRD* · GS ½
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
 **Sensi** scurovisione 18 m
 
 **DIFESA**
@@ -7744,6 +7791,7 @@ Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestia
 ## Hobgoblin della pattuglia (8)
 *Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
 ___
+**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
 **Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
 
 **DIFESA**
@@ -7764,6 +7812,7 @@ ___
 ## Treant di Adamantio
 *Vegetale Grande, evocato dalla Collana di Hella* · GS ~10
 ___
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)
 
 **DIFESA**
 ___
@@ -7793,7 +7842,8 @@ Dura 1 ora.
 ## Wyvern (2)
 *Drago Grande · wyvern SRD* · GS 6
 ___
-**Sensi** scurovisione 18 m, visione crepuscolare, fiuto
+**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) ciascuno · **Portata** 1,5 m (1 quadretto)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m, visione crepuscolare, fiuto
 
 **DIFESA**
 ___
@@ -7803,8 +7853,13 @@ ___
 
 **ATTACCO**
 ___
-**Velocità** volare 18 m  
+**Velocità** 6 m, volare 18 m (scarsa)  
 **Mischia** pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4)  
+
+**STATISTICHE**
+___
+Lotta: +15  
+Talenti: Allerta, Attacco in Volo, Capacità Focalizzata (veleno), Multiattacco  
 
 **TATTICHE**
 ___

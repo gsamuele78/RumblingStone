@@ -5,6 +5,9 @@
 ```statblocco
 gs: 3
 tipo: Medium plant, 2d8+6
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 14
 ca-dettaglio: contatto 10, colto alla sprovvista 14 (+4 naturale)
 pf: 15

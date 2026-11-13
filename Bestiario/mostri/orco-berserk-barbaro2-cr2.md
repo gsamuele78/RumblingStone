@@ -5,6 +5,9 @@
 ```statblocco
 gs: 2
 tipo: Medium humanoid (orc), Barbarian 2 (orco di montagna), 2 HD
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 sensi: scurovisione 18 m
 ca: 13
 ca-dettaglio: touch 9, flat-footed 13

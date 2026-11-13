@@ -4,6 +4,9 @@
 
 ```statblocco
 gs: 18
+taglia: Enorme
+spazio: 4,5 m
+portata: 3 m (4,5 m con il morso)
 ca: 37
 ca-dettaglio: (-2 taglia, +29 naturale); contatto 8, colto alla sprovvista 37
 pf: 405

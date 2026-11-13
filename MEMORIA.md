@@ -87,6 +87,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
+| 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
+| 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | Cancello del riferimento dei plugin: `scripts/tests/test_riferimento_plugin.py`… | ✅ sulle teste di main dopo #376, #386, #388 e #390 avrebbe trovato 5, 6, 15 e 17 disaccordi; su main di oggi 0; una riga tolta, un file sbagliato e uno strumen… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-ter: l'avanzamento d'incantatore delle classi di prestigio.… | ✅ liste troppo alte messe apposta: da 0 a 12 su 12; 6 controlli, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Trovato a mano e non… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
@@ -96,13 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3: capacità `creature.incantatori` (… | ✅ Errori messi apposta visti 0/616 → 376/616 (84% nelle liste che si leggono). Trovati 40 scarti veri in 9 file, nessuno corretto: sono incantesimi preparati e… |
 | 2026-11-12 | AVVENTURE-COMMUNITY | Punti chiave, grafo degli eventi, Prolog e RAG per «chi sa cosa» (domanda del D… | laboratorio; T1/T2 in `coerenza_campagna --state` solo dopo la conferma dei giorni dal DM |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 2: capacità `creature.armi` (`sistemi/dnd35/dati/armi.toml`, 72… | ✅ Errori di danno messi apposta visti 0/364 → 336/364 (92%); 13 scarti veri chiusi nel Bestiario (12 critici non scritti, 1 bonus). 🟡 4 scarti di ARC-07 (giave… |
-| 2026-11-12 | STATO-E-ORDINE | la memoria storica nel repo (ADR-0127) | ✅ Richiesta del DM: salvare ciò che la riduzione della memoria del progetto aveva tolto, in un file collegato a questo changelog, e farne un meccanismo.… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 1-bis: `dmcore.classe_armatura` (CA del 3.5 ricostruita dalle v… | ✅ Errori di CA messi apposta visti 0/379 → 377/379; scarti veri nel Bestiario 31 → 0. 🟡 28 schede su 145 senza voci di CA restano non verificabili; scurovision… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 83 voci, l'ultima MS-0083 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 84 voci, l'ultima MS-0084 del 2026-11-12 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
