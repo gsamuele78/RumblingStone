@@ -204,8 +204,11 @@ Capacità speciali**, nel sorgente e in stampa. L'equipaggiamento si scrive in
 due voci, come nei due manuali: quello che il PNG usa in combattimento
 (pozioni, pergamene, bacchette) e il resto.
 
-**Conseguenze.** 89 schede in 51 file riordinate a macchina, spostando le
-sezioni intere senza cambiare una parola (`riordina_fasce.py`, stessa
-cartella). Le pagine dei booklet si spostano. Le voci mancanti si riempiono in
+**Conseguenze.** 99 schede riordinate spostando le sezioni intere: 89 a
+macchina (`riordina_fasce.py`, stessa cartella), 6 col secondo passo per le
+Tattiche staccate dalla scheda da una nota (`riordina_staccate.py`), 4 a mano
+(i due Ghaurush, Zin'thara, Tyrgarun). Una sola parola cambia: in Tyrgarun il
+rimando «Tattiche qui sotto» diventa «qui sopra». La riga breve nel capitolo e
+la scheda in appendice senza Tattiche restano come sono (ADR-0107). Le pagine dei booklet si spostano. Le voci mancanti si riempiono in
 PR successive, solo da testo già nel repo o dall'SRD; ciò che non è scritto da
 nessuna parte va a Jfs scheda per scheda.

@@ -1213,3 +1213,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima versione cercava le capacità in tutto il tratto fino alla virgola e prendeva «Cerchio Sacro» (il nome di un arco di Lythiel) per la capacità «sacra»: 2.000 mo diventavano 18.000. Per questo una capacità conta solo se sta attaccata al nome dell'arma o al bonus. La somma deve restare un minimo sicuro: nel dubbio non si conta.
 
+### MS-0105 · 2026-11-13 · ADR-0091: le schede nell'ordine di Burnt Offerings
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0091
+- **Temi:** schede stampa booklet
+- **Origine:** riga del 2026-11-13 «ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e» in `plans/CHANGELOG.md`
+- **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
+- **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
+- **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
