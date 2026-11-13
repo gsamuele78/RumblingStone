@@ -414,3 +414,12 @@ L'avanzamento d'incantatore delle classi di prestigio è in `verifica_scheda`
 `underdark-dovil-runecaster-cr7` lancia «da Diviner 5», Diviner 5 / Deep
 Diviner 1 dà 6. Restano le liste proprie di Assassino e Guardia Nera.
 
+### Lotto 5, seconda parte: il grado di sfida (2026-11-13)
+
+Verifica `grado_di_sfida` (regola `numero.gs`), conto in `scripts/dmcore/gs.py`,
+numeri in `[gs]` di `creature.toml` (3.5 e PF1e). Misura: violazioni 30 → 33,
+non verificabili 293 → 371 (78 dubbi nuovi, tutti con la ragione). Banco
+`muta_gs.py` → `misure-gs.json`: 92 su 98. Restano del lotto 5: modificatori
+razziali delle caratteristiche, modificatore di livello, modelli, avanzamento
+per dadi vita, mostri dei manuali, chiave per blocco in `--fatti`.
+
