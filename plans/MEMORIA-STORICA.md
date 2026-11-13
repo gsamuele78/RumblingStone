@@ -1135,3 +1135,14 @@ repo scritto con altre parole.
 - **Testo:** Dopo aver visto la serata a 114 pagine con le schede rimesse larghe (MS-0093), il DM ha scelto la versione del 12 novembre e ha chiesto di abbandonare la versione stretta per tutto. La chiave `"pagina": "fitta"` è tolta da manifest, tema, esportatore, schema e validatore: nessun booklet la usava oltre alla serata. La serata torna a 125 pagine, corpo 10,2 pt, con lo stesso passo di riga delle schede del 12 novembre.
 - **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
 - **Solo qui:** in un giorno il DM ha bocciato tre modi di accorciare la serata: le schede accorpate (MS-0090), le schede strette (MS-0093) e la pagina fitta intera (questa voce). La lunghezza della serata non si riduce stringendo la pagina né togliendo le schede dalle scene: non riproporlo. Resta di quella giornata solo la misura delle ripetizioni corretta sulle testatine. Il testo della serata non è identico a quello del 12 novembre: porta le correzioni alle schede entrate dopo (#400 e seguenti).
+
+### MS-0098 · 2026-11-13 · ADR-0126 lotto 7: la velocità a terra
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 7 prima parte: la velocità a terra» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha `movimento.toml` (velocità delle sette razze dell'SRD, categoria delle armature, velocità ridotta, movimento veloce di barbaro e monaco) e `verifica_scheda` ha la verifica `velocita`: la velocità scritta di chi ha soltanto livelli di classe deve tornare con razza, classe e armatura. Misura: violazioni 33 → 33; 18 schede giudicate su 100; banco 15 su 18 per verso, su main 0.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la prima lista delle parole che rendono dubbia una velocità aveva «mount» e «carico», e quasi ogni scheda dei nani ha «mountain» nell'ambiente: 8 mutazioni su 18 sfuggivano per questo. La lista ora ha solo gli oggetti e gli incantesimi che cambiano davvero la velocità, più la nota scritta nella riga stessa. Un umano con dadi vita razziali non esiste: la prova «chi ha dadi vita razziali» non si scrive su una scheda di prova umana.
