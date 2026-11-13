@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | STANDARD-STAMPA | Pagina fitta: le schede tengono l'interlinea di prima (il DM, 2026-11-13: «mi s… | ✅ passo di riga delle schede in appendice 10,6 → 11,2 pt (come il 2 e il 12 novembre), delle schede in breve nei capitoli 11,1 → 11,7 pt (12,0 il 12 novembre);… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11: giavellotti di Zog'tar 1d8+13… | In PR |
 | 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 114 pagine (561 → 614 parole per pagina; *Burnt Offerings* 725), schede e ri… |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0130: le emoji del volume da stampa vengono dal repo. Noto Color Emoji 2.05… | ✅ veraPDF sui 20 booklet: conformi 18 → 20, controlli falliti 7 → 0; font di sistema nei PDF 5 → 0; pagine 985 = 985; 83 pagine cambiano sopra il piede (► e ⬦… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
 | 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | Cancello del riferimento dei plugin: `scripts/tests/test_riferimento_plugin.py`… | ✅ sulle teste di main dopo #376, #386, #388 e #390 avrebbe trovato 5, 6, 15 e 17 disaccordi; su main di oggi 0; una riga tolta, un file sbagliato e uno strumen… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-ter: l'avanzamento d'incantatore delle classi di prestigio.… | ✅ liste troppo alte messe apposta: da 0 a 12 su 12; 6 controlli, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Trovato a mano e non… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 91 voci, l'ultima MS-0091 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 92 voci, l'ultima MS-0092 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
