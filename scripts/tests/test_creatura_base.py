@@ -1,0 +1,156 @@
+"""Le creature base (ADR-0126, lotto 5): dati, dichiarazione nella fonte, giudizi."""
+from __future__ import annotations
+
+import re
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import verifica_scheda as V  # noqa: E402
+from dmcore import creature_base as CB  # noqa: E402
+from dmcore import danno as D  # noqa: E402
+
+SCHEDA = """# {titolo}
+**Faction**: prova | **CR**: 5 | **Source**: {fonte} | **Status**: prova
+
+```statblocco
+gs: 5
+tipo: {tipo}
+ca: 17
+ca-dettaglio: ({ca})
+pf: 40
+pf-dado: {dadi}
+ts: Temp +6, Rifl +2, Vol +2
+attributi: For 21 Des 10 Cos 15 Int 6 Sag 10 Car 7
+attacchi:
+  - {attacco}
+```
+"""
+
+
+def giudica(**campi) -> "tuple[list[dict], list[dict]]":
+    dati = dict(titolo="Prova", fonte="SRD *Ogre* + Barbaro 2", tipo="Large giant, CE",
+                ca="-1 taglia, +5 naturale, +3 pelle", dadi="4d8+2d12+18", attacco="Mischia randello +9 (2d8+7)")
+    dati.update(campi)
+    with tempfile.TemporaryDirectory() as d:
+        p = Path(d) / "prova.md"
+        p.write_text(SCHEDA.format(**dati), encoding="utf-8")
+        bv, bn = V.creatura_base(p)
+        dv, dn = V.danno(p)
+    return bv + dv, bn + dn
+
+
+def regole(voci: "list[dict]") -> "set[str]":
+    return {x["regola"] for x in voci}
+
+
+class TestDati(unittest.TestCase):
+    def test_forma(self):
+        tab = CB.tabella("dnd35")
+        self.assertGreater(len(tab), 400)
+        for nome, v in tab.items():
+            self.assertTrue({"taglia", "tipo", "dv", "dado", "naturale", "fonte"} <= set(v), nome)
+            self.assertIn(v["dado"], (4, 6, 8, 10, 12), nome)
+            for a in (v.get("attacchi") or {}).values():
+                self.assertRegex(a["dado"], r"^\d+d\d+$", nome)
+
+    def test_valori_noti_dell_srd(self):
+        ogre = CB.creatura("ogre")
+        self.assertEqual((ogre["taglia"], ogre["dv"], ogre["dado"], ogre["naturale"], ogre["mdl"]),
+                         ("Large", 4, 8, 5, 2))
+        self.assertEqual(CB.creatura("gnoll")["naturale"], 1)
+        self.assertEqual(CB.creatura("troll")["attacchi"]["claw"], {"dado": "1d6", "n": 2})
+
+    def test_pf1e_ha_le_sue_creature(self):
+        tab = CB.tabella("pf1e")
+        self.assertGreater(len(tab), 1000)
+        ogre = tab["ogre"]
+        self.assertEqual((ogre["taglia"], ogre["tipo"], ogre["dv"], ogre["dado"], ogre["naturale"]),
+                         ("Large", "humanoid", 4, 8, 5))
+        self.assertEqual(tab["troll"]["attacchi"]["bite"]["dado"], "1d8")     # 3.5: 1d6
+        self.assertIsNone(CB.drago("Red Dragon", "Huge", "pf1e"))             # la tabella per taglia è del 3.5
+
+    def test_solo_nomi_e_numeri(self):
+        testo = (Path(__file__).resolve().parents[2] / "sistemi/dnd35/dati/creature_base.toml").read_text("utf-8")
+        for riga in testo.splitlines():
+            if riga and not riga.startswith(("#", "[")):
+                valori = re.findall(r'= "([^"]*)"', riga)
+                self.assertTrue(all(len(v) < 40 for v in valori), riga[:80])
+
+
+class TestDichiarazione(unittest.TestCase):
+    def test_la_fonte_dichiara_la_base(self):
+        for fonte, attesa in (("SRD *Ogre* (CR 3) + Barbaro 6", "ogre"), ("MM p.33 Centaur + PHB Ranger 4", "centaur"),
+                              ("MM Gnoll + PHB Warrior 2", "gnoll"), ("SRD *Ogre Mage* + stregone", "ogre mage")):
+            self.assertEqual(CB.dichiarata(fonte)[0], attesa, fonte)
+
+    def test_un_archetipo_o_un_altro_manuale_non_dichiarano(self):
+        for fonte in ("MM Dire Lion + skeleton template", "MM II p.104 Flind", "Races of Faerûn", "",
+                      "SRD *Stone Giant* + template semplice PF1e"):
+            self.assertIsNone(CB.dichiarata(fonte), fonte)
+
+    def test_il_tipo_deve_essere_quello_della_base(self):
+        # «MM Rakshasa + Rogue 3» su un umanoide è il cultista di un rakshasa
+        viol, nv = giudica(fonte="MM Rakshasa + PHB Rogue 3", tipo="Medium humanoid, LE", dadi="3d6+6")
+        self.assertEqual(regole(viol) & {"numero.dv.razziali", "numero.CA.naturale"}, set())
+
+    def test_drago_vero_solo_col_colore_accanto(self):
+        self.assertIsNotNone(CB.drago("Huge dragon (fire) — Drago Rosso", "Huge"))
+        self.assertIsNotNone(CB.drago("Blue Old Dragon", "Huge"))
+        self.assertIsNone(CB.drago("progenie azzurra di Tiamat (drago)", "Large"))
+        self.assertIsNone(CB.drago("Large dragon (earth)", "Large"))
+
+
+class TestGiudizi(unittest.TestCase):
+    def test_scheda_in_regola(self):
+        viol, _ = giudica()
+        self.assertEqual(regole(viol) & {"numero.dv.razziali", "numero.CA.naturale"}, set())
+
+    def test_dadi_vita_razziali_mancanti(self):
+        viol, _ = giudica(dadi="2d8+2d12+12")
+        self.assertIn("numero.dv.razziali", regole(viol))
+
+    def test_armatura_naturale_diversa(self):
+        viol, _ = giudica(ca="-1 taglia, +7 naturale, +3 pelle")
+        v = next(x for x in viol if x["regola"] == "numero.CA.naturale")
+        self.assertEqual((v["ha"], v["atteso"]), (7, 5))
+
+    def test_taglia_diversa_resta_dubbio(self):
+        viol, nv = giudica(tipo="Huge giant, CE", ca="-2 taglia, +8 naturale")
+        self.assertNotIn("numero.CA.naturale", regole(viol))
+        self.assertIn("numero.CA.naturale", regole(nv))
+
+    def test_dado_dell_attacco_naturale(self):
+        troll = ("troll", CB.creatura("troll"))
+        scarti, nv = D.giudica("Mischia 2 artigli +9 (1d6+6)", 6, "Large giant", creatura=troll)
+        self.assertEqual((scarti, nv), ([], []))
+        scarti, _ = D.giudica("Mischia 2 artigli +9 (1d8+6)", 6, "Large giant", creatura=troll)
+        self.assertEqual([(x["campo"], x["scritto"], x["atteso"]) for x in scarti], [("danno.dado", "1d8", "1d6")])
+
+    def test_attacco_naturale_migliorato_alza_di_un_passo(self):
+        troll = ("troll", CB.creatura("troll"))
+        scarti, _ = D.giudica("Mischia 2 artigli +9 (1d8+6)", 6, "Large giant",
+                              talenti="Attacco Naturale Migliorato (artigli)", creatura=troll)
+        self.assertEqual(scarti, [])
+
+    def test_senza_base_resta_il_dubbio_di_prima(self):
+        _, nv = D.giudica("Mischia morso +9 (1d8+6)", 6, "Large giant")
+        self.assertIn("il dado viene dalla creatura", nv[0]["nota"])
+        _, nv = D.giudica("Mischia pungiglione +9 (1d8+6)", 6, "Large giant", creatura=("troll", CB.creatura("troll")))
+        self.assertIn("il dado viene dalla creatura", nv[0]["nota"])
+
+    def test_drago_vero_dalla_taglia(self):
+        viol, nv = giudica(titolo="Prova, Drago Rosso", fonte="PCGen", tipo="Huge dragon (fire), 19 HD, LE",
+                           ca="-2 taglia, +20 naturale", dadi="19d12+95",
+                           attacco="Mischia morso +27 (2d8+10); 2 artigli +22 (2d6+5); 2 ali +22 (1d8+5); coda +22 (2d6+15)")
+        self.assertEqual(regole(viol), set())
+        self.assertFalse([x for x in nv if "naturale" in x["testo"]])
+        viol, _ = giudica(titolo="Prova, Drago Rosso", fonte="PCGen", tipo="Huge dragon (fire), 19 HD, LE",
+                          ca="-2 taglia, +20 naturale", dadi="19d12+95", attacco="Mischia morso +27 (4d6+10)")
+        self.assertIn("numero.danno.dado", regole(viol))
+
+
+if __name__ == "__main__":
+    unittest.main()

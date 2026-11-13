@@ -12681,6 +12681,7 @@
         "capacita": [
           "bonus.cumulo",
           "creature.armi",
+          "creature.base",
           "creature.conformita",
           "creature.costruzione",
           "creature.gradi",

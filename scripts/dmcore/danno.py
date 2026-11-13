@@ -150,9 +150,17 @@ _MONACO = re.compile(r"\b(?:monaco|monk)\b", re.I)
 _SENZ_ARMI = "Unarmed strike"
 
 
+_NATURALE_MIGLIORATO = re.compile(r"improved natural attack|attacco naturale migliorato", re.I)
+
+
 def giudica(riga: str, mod_for: "int | None", tipo: str = "", talenti: str = "", scudo: bool = True,
-            ca_dettaglio: str = "", sistema: str = "dnd35") -> "tuple[list[dict], list[dict]]":
-    """(scarti, non verificabili) degli attacchi con un'arma della tabella."""
+            ca_dettaglio: str = "", sistema: str = "dnd35",
+            creatura: "tuple[str, dict] | None" = None) -> "tuple[list[dict], list[dict]]":
+    """(scarti, non verificabili) degli attacchi con un'arma della tabella.
+
+    Con una `creatura` base (nome, voce di `creature.base`) della stessa taglia
+    della scheda, anche il dado degli attacchi naturali che la base ha."""
+    from dmcore import creature_base as CB
     scarti, nv = [], []
     t = tabella(sistema)
     passi = passi_di_taglia(tipo, ca_dettaglio, sistema)
@@ -164,8 +172,17 @@ def giudica(riga: str, mod_for: "int | None", tipo: str = "", talenti: str = "",
         if arma is None:
             if not _NATURALI.search(a.nome):
                 nv.append({"campo": "danno", "nota": f"«{a.nome.strip()}»: arma che la tabella non ha"})
-            else:
+                continue
+            nat = CB.attacco_naturale(a.nome, creatura[1]) if creatura else None
+            if nat is None:
                 nv.append({"campo": "danno", "nota": f"«{a.nome.strip()}»: attacco naturale, il dado viene dalla creatura"})
+                continue
+            leciti = {nat["dado"]}
+            if _NATURALE_MIGLIORATO.search(talenti):      # il dado sale come per una taglia in più
+                leciti.add(dado_per_taglia(nat["dado"], 1, sistema) or nat["dado"])
+            if a.dado not in leciti:
+                scarti.append({"parentesi": a.testo, "campo": "danno.dado", "scritto": a.dado, "atteso": nat["dado"],
+                               "nota": f"«{a.nome.strip()}»: {nat['nome']} della creatura base {creatura[0]}"})
             continue
         chi = a.nome.strip()
         if arma["nome"] == _SENZ_ARMI and _MONACO.search(tipo + " " + talenti):
