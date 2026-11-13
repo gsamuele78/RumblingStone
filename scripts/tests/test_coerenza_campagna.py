@@ -490,11 +490,25 @@ class TestTattiche(unittest.TestCase):
         # senza corsivo l'incantesimo non si legge; un talento di una parola in minuscolo nemmeno
         self.assertEqual(self._viol("apre con fermare il tempo e poi usa mobilità.")["violazioni"], [])
 
-    def test_file_con_due_schede_non_si_giudica(self):
-        due = self.SCHEDA + "\n# Secondo\n\n**Talenti**: Schivare\n"
-        r = self._viol("apre con *fermare il tempo*.", due)
+    def test_file_con_due_schede_si_giudica_scheda_per_scheda(self):
+        # il secondo blocco ha *fermare il tempo* e Schivare: non valgono per le tattiche del primo
+        due = (self.SCHEDA + "\n# Secondo\n\n**Talenti**: Schivare\n\n"
+               "**Incantesimi preparati** (mago 17):\n- 9° — *fermare il tempo*\n\n"
+               "**Tattiche**: apre con *fermare il tempo* e resta in Schivare.\n")
+        r = self._viol("apre con *fermare il tempo* e poi usa Schivare.", due)
+        self.assertEqual([(v["riga"], v["atteso"].split(" (")[0]) for v in r["violazioni"]],
+                         [(11, "fermare il tempo"), (11, "Schivare")])
+        self.assertEqual(r["letti"]["schede"], 2)
+        self.assertEqual(r["non_verificabili"], {})
+
+    def test_blocco_senza_talenti_e_tattiche_fuori_blocco_restano_contati(self):
+        testo = ("# Scena\n\n**Tattiche**: il gruppo usa Attacco Poderoso.\n\n" + self.SCHEDA.replace("# ", "## ")
+                 + "\n## Gregario\n\n```statblocco\nnome: Gregario\n```\n\n"
+                   "**Tattiche**: colpisce con Attacco Poderoso.\n")
+        r = self._viol("usa Attacco Poderoso.", testo)
         self.assertEqual(r["violazioni"], [])
-        self.assertEqual(r["non_verificabili"], {"più schede nel file": "1 file"})
+        self.assertEqual(r["non_verificabili"],
+                         {"tattiche fuori da una scheda": 1, "blocchi senza riga Talenti": 1})
 
     def test_cli_tattiche_sul_bestiario_vero(self):
         import contextlib

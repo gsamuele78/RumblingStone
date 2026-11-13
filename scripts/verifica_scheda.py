@@ -46,7 +46,8 @@ Uso
   python3 scripts/verifica_scheda.py x.md --check                 # esce 1 se c'è una violazione
   python3 scripts/verifica_scheda.py x.md --fatti                 # non giudica: talenti, incantesimi,
                                                                   # capacità speciali e righe di «Tattiche»
-                                                                  # e «Descrizione», in JSON (ADR-0126)
+                                                                  # e «Descrizione», in JSON (ADR-0126);
+                                                                  # `blocchi`: una voce per scheda del file
 
 Exit  0 = misura fatta (o nessuna violazione con --check)
       1 = violazioni, solo con --check
@@ -1196,7 +1197,10 @@ def fatti(p: Path) -> dict:
     le righe di inizio e fine di ogni «Tattiche» e «Descrizione» del file (un
     booklet ne ha più d'una). Sola lettura: non giudica nulla. Un nome che il
     plugin non conosce ha `canonico` nullo. I talenti sono quelli della prima
-    riga «Talenti» del file, come nel resto dello strumento."""
+    riga «Talenti» del file, come nel resto dello strumento; `blocchi` dà una
+    voce per scheda del file (titolo, righe di inizio e fine, talenti): un
+    incantesimo, una capacità o una «Tattiche» è della scheda che ne contiene
+    la riga (`blocco_di`)."""
     import lessico_regole as LR
     from dmcore import magia as M
     from dmcore import sistemi as S
@@ -1251,9 +1255,71 @@ def fatti(p: Path) -> dict:
                     if righe[j].strip():
                         fine = j
                 sezioni.setdefault(chiave, []).append({"inizio": i + 1, "fine": fine + 1})
+    blocchi = _blocchi_dei_fatti(righe, sistema)
     return {"file": VT_rel(p), "sistema": sistema, "talenti": talenti_, "incantesimi": incantesimi_,
             "capacita_speciali": capacita, "tattiche": sezioni.get("tattiche", []),
-            "descrizione": sezioni.get("descrizione", [])}
+            "descrizione": sezioni.get("descrizione", []), "blocchi": blocchi}
+
+
+def blocco_di(blocchi: "list[dict]", riga: int) -> "int | None":
+    """L'indice del blocco di `fatti()["blocchi"]` che contiene la riga, o None."""
+    return next((k for k, b in enumerate(blocchi) if b["inizio"] <= riga <= b["fine"]), None)
+
+
+_RECINTO_SB = re.compile(r"^```statblocco\s*$")
+_INTESTAZIONE = re.compile(r"^#{1,6}\s+(.+?)\s*$")
+
+
+def _blocchi_dei_fatti(righe: "list[str]", sistema: str) -> "list[dict]":
+    """Le schede di un file, una per blocco: titolo, righe di inizio e fine, talenti.
+
+    Un blocco comincia a ogni recinto ```statblocco``` e, fuori dai recinti, a
+    ogni riga «Talenti» che ha un titolo fra sé e l'inizio del blocco prima (un
+    secondo «Talenti» sotto lo stesso titolo è la stessa scheda riscritta, e una
+    riga citata con «>» è una nota). Il blocco parte dal titolo che lo precede e
+    finisce dove parte il successivo (gli stessi talenti riscritti più sotto non
+    aprono un blocco); con una scheda sola il blocco è tutto il
+    file. Un recinto senza talenti seguito dai talenti in prosa è una scheda
+    sola. I talenti sono quelli della prima riga «Talenti» non citata del blocco."""
+    partenze: "list[int]" = []          # indice (da 0) della riga che apre un blocco
+    dentro, ultimo, suoi = False, -1, None          # `suoi`: i talenti del blocco aperto, o None
+    for i, r in enumerate(righe):
+        m = None if r.lstrip().startswith(">") else VT.RIGA.match(r)
+        nomi = {x.lower() for x in VT.pezzi(m.group(1))} if m else None
+        if _RECINTO_SB.match(r):
+            dentro, suoi = True, None
+            partenze.append(i)
+            ultimo = i
+        elif dentro:
+            dentro = r.strip() != "```"
+            suoi = nomi if suoi is None and m else suoi
+            ultimo = i
+        elif m:
+            # un recinto senza talenti seguito dai talenti in prosa è una scheda sola, e
+            # gli stessi talenti riscritti più sotto sono ancora la stessa scheda
+            if not partenze or (suoi is not None and not nomi <= suoi
+                                and any(_INTESTAZIONE.match(x) for x in righe[ultimo + 1:i])):
+                partenze.append(i)
+                suoi = nomi
+            suoi = nomi if suoi is None else suoi
+            ultimo = i
+    inizi = []
+    for k, i in enumerate(partenze):
+        prima = partenze[k - 1] if k else -1
+        t = next((j for j in range(i, prima, -1) if _INTESTAZIONE.match(righe[j])), None)
+        # con una scheda sola il blocco è il file; con più schede parte dal suo titolo
+        inizi.append(0 if len(partenze) == 1 else (t if t is not None else i))
+    fuori = []
+    for k, i in enumerate(inizi):
+        fine = (inizi[k + 1] if k + 1 < len(inizi) else len(righe)) - 1
+        t = next((m.group(1) for j in range(partenze[k], i - 1, -1) if (m := _INTESTAZIONE.match(righe[j]))),
+                 fuori[-1]["titolo"] if fuori else "")
+        n, riga = next(((j + 1, m.group(1)) for j in range(i, fine + 1)
+                        if not righe[j].lstrip().startswith(">") and (m := VT.RIGA.match(righe[j]))), (None, ""))
+        fuori.append({"titolo": re.sub(r"[*#`]", "", t).strip() if k >= len(fuori) else t, "inizio": i + 1, "fine": fine + 1,
+                      "talenti": [{"nome": x, "canonico": (VT.risolvi(sistema, x) or {}).get("en"), "riga": n}
+                                  for x in (VT.pezzi(riga) if n else [])]})
+    return fuori
 
 
 def main(argv: "list[str] | None" = None) -> int:

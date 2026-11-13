@@ -596,7 +596,8 @@ un fatto; 486 talenti canonici su 508; 626 incantesimi canonici su 688; 214
 capacità speciali; 265 sezioni «Tattiche» in 111 file; 120 «Descrizione».
 
 **Limiti dichiarati.** I talenti sono quelli della prima riga «Talenti» del
-file: in un booklet con più blocchi gli altri non escono. Un incantesimo
+file: in un booklet con più blocchi gli altri non escono (dal 2026-11-13
+escono in `blocchi`, vedi «Lotto 5, terza parte»). Un incantesimo
 scritto in italiano che il dizionario dell'SRD non ha esce con `canonico`
 nullo (62 su 688). Fuori da una scheda riconosciuta una riga «1° …» conta solo
 se almeno un nome è un incantesimo noto, per non prendere gli elenchi di prosa.
@@ -706,3 +707,33 @@ Limiti: il conto per il livello di chi ha classi miste, i modelli e
 l'avanzamento per dadi vita restano da fare; la base si riconosce dal nome
 inglese (il «gigante delle colline» resta un dubbio).
 
+### Lotto 5, terza parte — i fatti scheda per scheda (2026-11-13)
+
+**Contesto.** `--fatti` dava i talenti della prima riga «Talenti» del file. In
+un file con più schede (i master degli archi, i booklet) i talenti delle altre
+non uscivano, e la regola S8 (le «Tattiche» contro la scheda, ADR-0125) saltava
+ogni file con più di una riga «Talenti». Nel Bestiario i file saltati erano
+cinque, e in tutti e cinque la seconda riga non era una seconda scheda: era una
+nota citata con «>» o la stessa scheda riscritta più sotto.
+
+**Decisione.** `fatti()` aggiunge la chiave `blocchi`: una voce per scheda del
+file con titolo, righe di inizio e fine e talenti (nome, canonico, riga). Un
+blocco comincia a ogni recinto `statblocco` e, fuori dai recinti, a ogni riga
+«Talenti» non citata che ha un titolo fra sé e la scheda prima e nomina talenti
+diversi. Un recinto senza talenti seguito dai talenti in prosa è una scheda
+sola. Le altre chiavi non cambiano; `blocco_di(blocchi, riga)` dice di quale
+scheda è una riga. S8 giudica un file con più schede scheda per scheda: le
+«Tattiche» di un blocco contro i talenti, gli incantesimi e il testo di quel
+blocco.
+
+**Conseguenze.** Misura su `Bestiario 0*/` (595 file): talenti che `--fatti` dà
+500 → 748 (720 col nome canonico), in 148 schede; 16 file hanno più di una
+scheda. S8 sul Bestiario: schede lette 60 → 65, menzioni 220 → 246, violazioni
+0 → 0, file non giudicati per «più schede» 5 → 0. Limiti: in un file con più
+schede un blocco senza riga «Talenti» non giudica i talenti, e le «Tattiche»
+scritte fuori da ogni scheda non si giudicano: tutti e due restano contati fra
+i non verificabili. Il confine del blocco è il titolo che lo precede: una
+«Tattiche» scritta sotto il titolo della scheda dopo passa a quella. S8 resta
+sul Bestiario: sugli archi dà 33 segnalazioni non ancora lette una per una
+(negazioni come «senza Estrazione Rapida», booklet generati che ripetono il
+master), quindi lì non è né cancello né misura.

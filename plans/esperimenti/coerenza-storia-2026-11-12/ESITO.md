@@ -152,15 +152,19 @@ scheda (`verifica_scheda --fatti`, PR #393), non `state.yaml`.
 
 | Famiglia di mutanti | Mutanti | Visti |
 |---|---|---|
-| La scheda perde l'incantesimo o il talento che la tattica usa | 183 | 181 |
-| La tattica usa un incantesimo (corsivo) o un talento (maiuscole) che la scheda non ha | 180 | 178 |
-| Parafrasi: talento di più parole in minuscolo | 60 | 60 |
-| Parafrasi: incantesimo senza corsivo | 60 | 0 |
-| Parafrasi: talento di una parola in minuscolo | 60 | 0 |
-| Controllo: scambio fra due incantesimi della scheda (non va segnalato) | 26 | 0 |
+| La scheda perde l'incantesimo o il talento che la tattica usa | 206 | 204 |
+| La tattica usa un incantesimo (corsivo) o un talento (maiuscole) che la scheda non ha | 195 | 193 |
+| Parafrasi: talento di più parole in minuscolo | 65 | 65 |
+| Parafrasi: incantesimo senza corsivo | 65 | 0 |
+| Parafrasi: talento di una parola in minuscolo | 65 | 0 |
+| Controllo: scambio fra due incantesimi della scheda (non va segnalato) | 29 | 0 |
 
-Su main (3cc11aee): 0 violazioni su 220 menzioni in 60 schede; 5 file con più
-schede e 178 file senza «Tattiche» non si giudicano. Il banco gira in circa
+Dal lotto 5, terza parte, di ADR-0126 (2026-11-13, su 9f019c18): 0 violazioni
+su 246 menzioni in 65 schede; 178 file senza «Tattiche» non si giudicano. Prima
+(3cc11aee) erano 220 menzioni in 60 schede, con 5 file saltati per «più
+schede»: non ne avevano due, la seconda riga «Talenti» era una nota o la stessa
+scheda riscritta, e ora `--fatti` li dà come un blocco solo. I numeri del banco
+di prima: 181 su 183, 178 su 180, 60 su 60, 0 su 60, 0 su 60, 0 su 26. Il banco gira in circa
 tre minuti. I quattro mutanti non visti hanno un nome che la scheda scrive
 anche per altro («velocita: 9 m» nel frontmatter, «fendere»).
 

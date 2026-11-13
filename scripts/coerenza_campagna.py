@@ -53,6 +53,7 @@ Scopo
                  o di più parole) che le «Tattiche» di una scheda del
                  Bestiario nominano sta nella scheda: fra i fatti di
                  `verifica_scheda --fatti` o scritto altrove nel file
+                 (un file con più schede si giudica scheda per scheda)
 
 Uso
   python3 scripts/coerenza_campagna.py fronti FILE.yaml [FILE.yaml ...] [--state] [--json]
@@ -1098,85 +1099,103 @@ def schede_con_tattiche(radice: Path | None = None) -> list[Path]:
 
 def verifica_tattiche(files: list[Path]) -> dict:
     """S8: per ogni incantesimo o talento che le «Tattiche» nominano e la scheda
-    non ha: regola, atteso, ha, file, riga, testo. Solo i file con una scheda
-    sola (una riga «Talenti» al più): `--fatti` legge i talenti della prima."""
+    non ha: regola, atteso, ha, file, riga, testo. Un file con più schede si
+    giudica scheda per scheda, coi blocchi di `--fatti`: le «Tattiche» di un
+    blocco contro i talenti, gli incantesimi e il testo di quel blocco. In un
+    file con più schede, un blocco senza riga «Talenti» non giudica i talenti e
+    le «Tattiche» fuori da ogni blocco non si giudicano: restano contate."""
     import lessico_regole as LR
     import verifica_scheda as VS
     import verifica_talenti as VT
-    viol, lette, menzioni, saltate = [], 0, 0, {"senza tattiche": 0, "più schede nel file": 0}
+    viol, lette, menzioni = [], 0, 0
+    saltate = {"senza tattiche": 0, "tattiche fuori da una scheda": 0, "blocchi senza riga Talenti": 0}
     for p in files:
         righe = p.read_text(encoding="utf-8", errors="replace").splitlines()
         f = VS.fatti(p)
         if not f["tattiche"]:
             saltate["senza tattiche"] += 1
             continue
-        if sum(1 for r in righe if VT.RIGA.match(r)) > 1:
-            saltate["più schede nel file"] += 1
-            continue
-        lette += 1
-        dentro: set[int] = set()
-        for t in f["tattiche"]:
-            dentro |= set(range(t["inizio"], t["fine"] + 1))
-        fuori = _piatto("\n".join(r for i, r in enumerate(righe, 1) if i not in dentro))
         sis = f["sistema"]
         try:
             nomi = VS._liste(sis)[2]
         except Exception:                                    # un sistema senza liste di incantesimi
             nomi = {}
         it = VS._incantesimi_it() if sis == "dnd35" else {}
-        ha_inc = {LR.norma(x["canonico"]) for x in f["incantesimi"] if x["canonico"]}
-        ha_tal = {x["canonico"] for x in f["talenti"] if x["canonico"]}
         multi = [k for k in VT._lessici()[0] if " " in k] if sis == "dnd35" else []
-        visti: set[tuple[str, str]] = set()
+        if len(f["blocchi"]) <= 1:
+            unita = [(f["tattiche"], range(1, len(righe) + 1), f["talenti"], f["incantesimi"], True)]
+        else:
+            di = {id(t): VS.blocco_di(f["blocchi"], t["inizio"]) for t in f["tattiche"]}
+            saltate["tattiche fuori da una scheda"] += sum(1 for k in di.values() if k is None)
+            unita = []
+            for k, b in enumerate(f["blocchi"]):
+                sue = [t for t in f["tattiche"] if di[id(t)] == k]
+                if not sue:
+                    continue
+                if not b["talenti"]:
+                    saltate["blocchi senza riga Talenti"] += 1
+                unita.append((sue, range(b["inizio"], b["fine"] + 1), b["talenti"],
+                              [x for x in f["incantesimi"] if b["inizio"] <= x["riga"] <= b["fine"]], bool(b["talenti"])))
+        for tattiche, campo, talenti, incantesimi, giudica_talenti in unita:
+            lette += 1
+            dentro: set[int] = set()
+            for t in tattiche:
+                dentro |= set(range(t["inizio"], t["fine"] + 1))
+            fuori = _piatto("\n".join(righe[i - 1] for i in campo if i not in dentro))
+            ha_inc = {LR.norma(x["canonico"]) for x in incantesimi if x["canonico"]}
+            ha_tal = {x["canonico"] for x in talenti if x["canonico"]}
+            visti: set[tuple[str, str]] = set()
 
-        def v(tipo, nome, canonico, n, dove):
-            if (tipo, canonico) in visti:
-                return
-            visti.add((tipo, canonico))
-            viol.append({"regola": "S8 tattica senza riscontro in scheda",
-                         "atteso": f"{nome} ({canonico}) {dove} della scheda",
-                         "ha": "assente", "file": _rel(p), "riga": n,
-                         "testo": righe[n - 1].strip()[:240]})
+            def v(tipo, nome, canonico, n, dove):
+                if (tipo, canonico) in visti:
+                    return
+                visti.add((tipo, canonico))
+                viol.append({"regola": "S8 tattica senza riscontro in scheda",
+                             "atteso": f"{nome} ({canonico}) {dove} della scheda",
+                             "ha": "assente", "file": _rel(p), "riga": n,
+                             "testo": righe[n - 1].strip()[:240]})
 
-        for n in sorted(dentro):
-            r = _S8_TOGLI.sub("", righe[n - 1])
-            if r.lstrip().startswith(">"):                   # le note del DM non sono tattica
-                continue
-            for m in _S8_CORSIVO.finditer(r):
-                nome = m.group(1).strip(" .,;:")
-                k = LR.norma(nome)
-                k = LR.norma(it[k]) if k in it else k
-                if k not in nomi or _S8_ALTRUI.search(r[:m.start()]) or _S8_CONDIVISI.search(r):
+            for n in sorted(dentro):
+                r = _S8_TOGLI.sub("", righe[n - 1])
+                if r.lstrip().startswith(">"):                   # le note del DM non sono tattica
                     continue
-                menzioni += 1
-                if k not in ha_inc and _piatto(nome) not in fuori and f" {k} " not in fuori:
-                    v("incantesimo", nome, nomi[k], n, "fra incantesimi, capacità magiche od oggetti")
-            contati: set[str] = set()
-            for m in _S8_MAIUSCOLE.finditer(r.replace("*", "")):
-                nome = m.group(0)
-                x = VT.risolvi(sis, nome)
-                # una parola sola («Corona») conta solo se è un talento dei dati del sistema
-                if not x or (" " not in nome and not x["verificabile"]):
+                for m in _S8_CORSIVO.finditer(r):
+                    nome = m.group(1).strip(" .,;:")
+                    k = LR.norma(nome)
+                    k = LR.norma(it[k]) if k in it else k
+                    if k not in nomi or _S8_ALTRUI.search(r[:m.start()]) or _S8_CONDIVISI.search(r):
+                        continue
+                    menzioni += 1
+                    if k not in ha_inc and _piatto(nome) not in fuori and f" {k} " not in fuori:
+                        v("incantesimo", nome, nomi[k], n, "fra incantesimi, capacità magiche od oggetti")
+                contati: set[str] = set()
+                if not giudica_talenti:
                     continue
-                menzioni += 1
-                contati.add(x["en"])
-                if x["en"] not in ha_tal and _piatto(nome) not in fuori and _piatto(x["en"]) not in fuori:
-                    v("talento", nome, x["en"], n, "fra i talenti")
-            # un talento di più parole si riconosce anche in minuscolo («attacco poderoso»):
-            # misurato su main, 50 menzioni e nessun falso allarme
-            piana = _piatto(r)
-            for k in multi:
-                if f" {k} " not in piana:
-                    continue
-                x = VT.risolvi(sis, k)
-                if not x or x["en"] in contati:
-                    continue
-                menzioni += 1
-                if x["en"] not in ha_tal and f" {k} " not in fuori and _piatto(x["en"]) not in fuori:
-                    v("talento", k, x["en"], n, "fra i talenti")
+                for m in _S8_MAIUSCOLE.finditer(r.replace("*", "")):
+                    nome = m.group(0)
+                    x = VT.risolvi(sis, nome)
+                    # una parola sola («Corona») conta solo se è un talento dei dati del sistema
+                    if not x or (" " not in nome and not x["verificabile"]):
+                        continue
+                    menzioni += 1
+                    contati.add(x["en"])
+                    if x["en"] not in ha_tal and _piatto(nome) not in fuori and _piatto(x["en"]) not in fuori:
+                        v("talento", nome, x["en"], n, "fra i talenti")
+                # un talento di più parole si riconosce anche in minuscolo («attacco poderoso»):
+                # misurato su main, 50 menzioni e nessun falso allarme
+                piana = _piatto(r)
+                for k in multi:
+                    if f" {k} " not in piana:
+                        continue
+                    x = VT.risolvi(sis, k)
+                    if not x or x["en"] in contati:
+                        continue
+                    menzioni += 1
+                    if x["en"] not in ha_tal and f" {k} " not in fuori and _piatto(x["en"]) not in fuori:
+                        v("talento", k, x["en"], n, "fra i talenti")
     return {"regole": ["S8"], "violazioni": viol,
             "letti": {"schede": lette, "menzioni": menzioni},
-            "non_verificabili": {k: f"{n} file" for k, n in saltate.items() if n}}
+            "non_verificabili": {k: (f"{n} file" if k == "senza tattiche" else n) for k, n in saltate.items() if n}}
 
 
 def testo_storia(s: dict) -> str:

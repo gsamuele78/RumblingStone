@@ -1091,3 +1091,14 @@ repo scritto con altre parole.
 - **Testo:** Il DM ha letto la serata a 114 pagine e ha trovato le schede di PG, PNG, villain e mostri «tutte attaccate». Confronto con i PDF del 2 e del 12 novembre: corpo delle schede uguale (8,8 pt), ma l'interlinea della pagina fitta (0,56em) entrava anche nelle schede, e il passo di riga scendeva da 11,2 a 10,6 pt in appendice e da 12,0 a 11,1 pt nelle schede in breve dei capitoli. Ora `statblocco` fissa l'interlinea del tema: 11,2 e 11,7 pt. La serata resta di 114 pagine.
 - **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` (`statblocco`) · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
 - **Solo qui:** rispetto al 2 novembre le schede portano anche più righe (taglia, spazio e portata di ADR-0128, i sensi interi): quella parte di «attaccato» non viene dall'interlinea e resta. Le schede in breve nei capitoli non hanno le fasce Difesa/Attacco dell'appendice: proposto al DM, non fatto. Confronti in `/mnt/project-files/serata-corta-2026-11-13/`.
+
+### MS-0094 · 2026-11-13 · ADR-0126 lotto 5: i fatti scheda per scheda
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede coerenza
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 5 terza parte: i fatti scheda per scheda» in `plans/CHANGELOG.md`
+- **Testo:** `verifica_scheda --fatti` dà una voce per scheda del file (`blocchi`: titolo, righe di inizio e fine, talenti) e la regola S8 giudica le «Tattiche» di ogni scheda contro quella scheda anche nei file che ne hanno più d'una. Misura: talenti dati da `--fatti` 500 → 748 su 595 file; S8 sul Bestiario 60 → 65 schede lette e 220 → 246 menzioni, sempre 0 violazioni.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** i cinque file del Bestiario saltati per «più schede» non avevano due schede: la seconda riga «Talenti» era una nota citata con «>» o la stessa scheda riscritta più sotto, e tre file con il recinto senza talenti li hanno in prosa sotto un altro titolo. Aggiungere una chiave a ogni voce dei fatti rompeva i test che confrontano le voci intere: il blocco di una riga si chiede a `blocco_di`. Provata sugli archi, S8 dà 33 segnalazioni fra negazioni («senza Estrazione Rapida») e booklet generati: lì serve una lettura una per una prima di farne una misura.

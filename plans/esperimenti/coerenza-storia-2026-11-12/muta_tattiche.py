@@ -56,7 +56,7 @@ def main(argv: list[str]) -> int:
             testo = p.read_text(encoding="utf-8", errors="replace")
             righe = testo.splitlines()
             f = VS.fatti(p)
-            if not f["tattiche"] or sum(1 for r in righe if VT.RIGA.match(r)) > 1:
+            if not f["tattiche"] or len(f["blocchi"]) > 1:
                 continue
             sis = f["sistema"]
             if sis != "dnd35":
