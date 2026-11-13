@@ -44,6 +44,9 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 - 1° (6+D) — *scudo della fede, favore divino, comando, protezione dal bene, benedizione, causare paura*; *camuffare sé stesso* (D)
 - 0 (6) — *individuazione del magico, lettura del magico, resistenza, guida, luce, creare acqua*
 
+**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove il chierico è «the evil cleric»): *Prima del combattimento* in «Initial Setup» (*benedizione*, *scudo della fede* e *protezione dal bene* su di sé e sugli alleati), *Durante il combattimento* in «Combat Tactics» (*blocca persone*, *scagliare maledizione* e *comando superiore* da pergamena, cure agli alleati), l'escalation quando il gruppo prende il sopravvento in «Mid-Combat Adjustments» (*ferire* e *colpo infuocato*). Incantesimi Rapidi gli dà un secondo incantesimo per round: *favore divino* o *scudo della fede* rapidi in uno slot di 5°.
+- *Morale*: sotto i 30 pf beve una pozione di *cura ferite gravi* e arretra dietro gli antipaladini; se cadono i due antipaladini e lui è sotto metà pf, legge la pergamena di *comando superiore* («fuggite») e ripiega verso l'Underdark. Abbathor premia chi conserva il proprio tesoro, non chi muore per un ponte.
+
 **Statistiche** For 16, Des 10, Cos 16, Int 12, Sag 18, Car 14 · BAB +8; Lotta +11 · **Talenti** Iniziativa Migliorata, Incantesimi Rapidi, Incantare in Combattimento, Incantesimi Inarrestabili · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, morning star +1, mantello della resistenza +2, amuleto dell'armatura naturale +1, bacchetta di *cura ferite moderate* (50 cariche), 2 pozioni di *cura ferite gravi*, pergamena di *ferire*, pergamena di *comando superiore*
 
 **Capacità speciali**
@@ -51,9 +54,6 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 - **Domini**: Inganno (Raggirare, Camuffare e Nascondersi di classe) e Male (+1 al livello degli incantesimi del Male).
 - **Tratti del nano**: stabilità, esperto minatore, +1 ai tiri per colpire contro orchi e goblinoidi, +4 di schivare contro i giganti.
 - Aura del male.
-
-**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove il chierico è «the evil cleric»): *Prima del combattimento* in «Initial Setup» (*benedizione*, *scudo della fede* e *protezione dal bene* su di sé e sugli alleati), *Durante il combattimento* in «Combat Tactics» (*blocca persone*, *scagliare maledizione* e *comando superiore* da pergamena, cure agli alleati), l'escalation quando il gruppo prende il sopravvento in «Mid-Combat Adjustments» (*ferire* e *colpo infuocato*). Incantesimi Rapidi gli dà un secondo incantesimo per round: *favore divino* o *scudo della fede* rapidi in uno slot di 5°.
-- *Morale*: sotto i 30 pf beve una pozione di *cura ferite gravi* e arretra dietro gli antipaladini; se cadono i due antipaladini e lui è sotto metà pf, legge la pergamena di *comando superiore* («fuggite») e ripiega verso l'Underdark. Abbathor premia chi conserva il proprio tesoro, non chi muore per un ponte.
 
 **Benchmark** PF T1-1 riga 11 (CA 25, pf 145, att. +19, danno medio 50, CD 20): CA 25 ✓ · pf 86 ✗ sotto · att. +12 ✗ (è un incantatore) · CD 20 al 6° ✓, 19 al 5° ≈. Un GS 11 da incantatore: regge con i due antipaladini davanti.
 

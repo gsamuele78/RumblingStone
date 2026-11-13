@@ -49,17 +49,6 @@ Large giant (ogre magi), LE.
 
 > ⚠️ Uno Stregone 8 **conosce un solo incantesimo di 4° livello**. La varietà elementale di Ghaurush viene dall'**equipaggiamento**, non da slot inventati.
 
-**Statistiche** For 21, Des 10, Cos 21, Int 14, Sag 14, Car 22 (20 base + *mantello del carisma +2*) · **BAB/Lotta** +7/**+16** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantare in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimi Estesi · **Qualità speciali** tratti dei giganti
-
-**Equipaggiamento** (tabella PNG livello 16, DMG): *amuleto di salute +4*, *mantello del carisma +2*, giaco di maglia +2 (Large), *anello di protezione +2*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di **assorbimento vitale** (*enervation*: tocco a distanza, 1d4 livelli negativi, **nessun TS**), 2 pergamene di *dissolvi magie*, spadone Large.
-
-**Capacità speciali**
-
-**Capacità magiche (CL 9, CD basata su Car)**: *a volontà* — **oscurità**, **invisibilità**; *1/giorno* — **charme su persone** (CD 17), **cono di freddo** (9d6, **CD 21**), **forma gassosa**, **metamorfosi**, **sonno** (CD 17).
-
-**Il puzzle dell'adamantio (la parte memorabile)**: con *pelle di pietra* attiva ha **RD 10/adamantio**. I pugni di Tordek (Bracieri, adamantio) e i Treant Adamantini di Hella la **superano**; **Aegis Fang no** (è sacra, non adamantina). Il tank del gruppo scopre di essere l'unico che non buca — e la soluzione è il compagno che di solito sta dietro.
-**Il puzzle del fuoco**: la Rigenerazione 5 si spegne **solo** con fuoco o acido. L'unico fuoco affidabile del party è quello di Tordek e Artemis — e ogni fiamma che accendono è una minaccia per Hella (vulnerabilità ×1,5). **Ucciderlo costa a Hella lo spazio in cui stare.**
-
 **Tattiche** — *Ghaurush non viene mai sorpreso e non combatte mai a terra.*
 
 *Prima del combattimento*
@@ -76,6 +65,17 @@ Large giant (ogre magi), LE.
 *Morale*
 
 6. **Fuga** (≤ 25% pf o RD superata): *metamorfosi* in qualcosa di piccolo + *invisibilità*, oppure forma gassosa nei camini/crepacci. **Ghaurush è progettato per tornare.**
+
+**Statistiche** For 21, Des 10, Cos 21, Int 14, Sag 14, Car 22 (20 base + *mantello del carisma +2*) · **BAB/Lotta** +7/**+16** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantare in Combattimento, Incantesimi Focalizzati (Invocazione), Incantesimi Estesi · **Qualità speciali** tratti dei giganti
+
+**Equipaggiamento** (tabella PNG livello 16, DMG): *amuleto di salute +4*, *mantello del carisma +2*, giaco di maglia +2 (Large), *anello di protezione +2*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di **assorbimento vitale** (*enervation*: tocco a distanza, 1d4 livelli negativi, **nessun TS**), 2 pergamene di *dissolvi magie*, spadone Large.
+
+**Capacità speciali**
+
+**Capacità magiche (CL 9, CD basata su Car)**: *a volontà* — **oscurità**, **invisibilità**; *1/giorno* — **charme su persone** (CD 17), **cono di freddo** (9d6, **CD 21**), **forma gassosa**, **metamorfosi**, **sonno** (CD 17).
+
+**Il puzzle dell'adamantio (la parte memorabile)**: con *pelle di pietra* attiva ha **RD 10/adamantio**. I pugni di Tordek (Bracieri, adamantio) e i Treant Adamantini di Hella la **superano**; **Aegis Fang no** (è sacra, non adamantina). Il tank del gruppo scopre di essere l'unico che non buca — e la soluzione è il compagno che di solito sta dietro.
+**Il puzzle del fuoco**: la Rigenerazione 5 si spegne **solo** con fuoco o acido. L'unico fuoco affidabile del party è quello di Tordek e Artemis — e ogni fiamma che accendono è una minaccia per Hella (vulnerabilità ×1,5). **Ucciderlo costa a Hella lo spazio in cui stare.**
 
 **Variante «Cenere Piena» (Advanced, template semplice PF1e) — CR 17**: +4 a tutte le caratteristiche, +2 CA naturale, +2 a tiri per colpire, TS e CD. Risultato: **hp 133, CA 26** (30 con *scudo*), For 25 → spadone +13/+8 (3d6+10), **cono di freddo CD 23**, *palla di fuoco* CD 22. Usare questa versione **solo se Ghaurush combatte da solo** (EL 17 = APL+4, tetto della skill di boosting).
 

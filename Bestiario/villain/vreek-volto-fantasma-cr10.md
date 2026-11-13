@@ -31,6 +31,11 @@ fonte: ricostruzione del repo su SRD 3.5 e archetipo Avanzato PF1e, 2026-11-09
 
 **Attacco** Vel 9 m · **Mischia** pugnale +1 +14 (1d4+6/19-20) · **Attacco completo** pugnale +1 +12/+7 (1d4+6/19-20) e pugnale +1 +12/+7 (1d4+3/19-20) · **Attacco furtivo** +5d6 · **Attacco mortale** Tempra CD 15 (10 + 2 livelli da assassino + 3 Int) · **Veleno** di viverna, 3 dosi · **Incantesimi da assassino** (LI 2°; 2 al giorno di 1° livello, CD 14): *colpo accurato*, *foschia occultante*, *sonno*
 
+**Tattiche**
+- *Prima del combattimento*: unge i due pugnali (2 dosi), lancia *foschia occultante* in un incrocio di gallerie e si nasconde con gli Assassini Spettrali `[INFERRED — In quale scena di ARC-08 entra Vreek?; base: chat Gemini, gli Assassini Spettrali cacciano i nani nei tunnel durante la ritirata della Sessione 3, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Studia per 3 round il bersaglio più debole: un chierico ferito, un comandante, Dana o re Thorek.
+- *Durante il combattimento*: colpo mortale sul bersaglio studiato con *colpo accurato*, poi attacco completo coi due pugnali sui fianchi. Non resta mai in mezzo a più di due nemici: Acrobazia per uscire, poi di nuovo nelle ombre.
+- *Morale*: sotto i 25 pf fugge per un cunicolo laterale e lascia dietro due Assassini a coprirlo. Non si arrende, perché un orco che serve Tiamat sa cosa fanno i nani ai sicari.
+
 **Statistiche** For 20, Des 25, Cos 18, Int 17, Sag 12, Car 10 · BAB +6; Lotta +11 · **Talenti** Combattere con due armi (1°), Arma accurata (3°), Iniziativa migliorata (6°), Combattere con due armi migliorato (9°) · **Abilità** Nascondersi +19, Muoversi Silenziosamente +19, Acrobazia +19, Scassinare Serrature +15, Ascoltare +13, Osservare +13, Camuffare +12, Cercare +11, Disattivare Congegni +11, Raggirare +10, Scalare +11 (112 gradi: 12 in Nascondersi, Muoversi Silenziosamente, Acrobazia, Ascoltare, Osservare e Camuffare; 8 in Scassinare Serrature, Cercare e Disattivare Congegni; 10 in Raggirare, 6 in Scalare) · **Linguaggi** Comune, Orchesco, Goblin, Nanico · **Qualità speciali** scoprire trappole, uso dei veleni · **Equipaggiamento** guanti della destrezza +4, fascia dell'intelletto +2, giaco di maglia in mithral +1, 2 pugnali +1, maschera d'osso, 3 dosi di veleno di viverna (35.704 mo in tutto)
 
 **Capacità speciali**
@@ -39,11 +44,6 @@ fonte: ricostruzione del repo su SRD 3.5 e archetipo Avanzato PF1e, 2026-11-09
 - **Uso dei veleni (Str)**: non rischia mai di avvelenarsi da solo. Veleno di viverna, ferimento, Tempra CD 17, 2d6 Cos / 2d6 Cos; 3.000 mo a dose `[SRD: Poison]`.
 - **Schivare prodigioso migliorato (Str)**: non perde la Des alla CA e non lo si attacca ai fianchi se non con 13 livelli da ladro `[SRD: Assassin]`.
 - **Eludere (Str)**: niente danni con un TS sui Riflessi riuscito contro un effetto che dimezza `[SRD: Rogue]`.
-
-**Tattiche**
-- *Prima del combattimento*: unge i due pugnali (2 dosi), lancia *foschia occultante* in un incrocio di gallerie e si nasconde con gli Assassini Spettrali `[INFERRED — In quale scena di ARC-08 entra Vreek?; base: chat Gemini, gli Assassini Spettrali cacciano i nani nei tunnel durante la ritirata della Sessione 3, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Studia per 3 round il bersaglio più debole: un chierico ferito, un comandante, Dana o re Thorek.
-- *Durante il combattimento*: colpo mortale sul bersaglio studiato con *colpo accurato*, poi attacco completo coi due pugnali sui fianchi. Non resta mai in mezzo a più di due nemici: Acrobazia per uscire, poi di nuovo nelle ombre.
-- *Morale*: sotto i 25 pf fugge per un cunicolo laterale e lascia dietro due Assassini a coprirlo. Non si arrende, perché un orco che serve Tiamat sa cosa fanno i nani ai sicari.
 
 Benchmark: PF T1-1 riga 10 (CA 24, pf 130, attacco +18, danno 45, CD 18): CA 23 pari / pf 70 sotto / attacco +14 sotto / danno con attacco furtivo su due colpi ≈ 2 × (1d4+6+5d6) ≈ 60 sopra / CD 15 sotto, ma l'attacco mortale uccide. È un sicario: vale il suo GS solo se apre lui il combattimento.
 Combinazioni ed EL: da solo EL 10; con 4 Assassini Spettrali [DA SCRIVERE — scheda degli Assassini Spettrali; nella chat Gemini sono 20 orchi ladri] EL 12 circa.

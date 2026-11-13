@@ -29,6 +29,8 @@ fonte: ricostruzione del repo su SRD 3.5, 2026-10-19
 
 **Attacco** Vel 9 m · Mischia morning star perfetta +11 (1d8+3) · Distanza giavellotto +9 (1d6+3) · attacco furtivo +4d6, attacco mortale (Tempra CD 16)
 
+**Tattiche** *Prima del combattimento*: aspetta nei tunnel laterali o dietro le stalagmiti e studia il bersaglio per i 3 round dell'attacco mortale; i difensori lo notano con Osservare contro il suo Nascondersi +17, e i file fissano la prova a CD 25 nell'oscurità dei tunnel (`ARC08-01` imboscata). · *Durante il combattimento*: lancia *foschia occultante* per coprire l'avvicinamento, poi l'attacco mortale su Re Thorek o su un comandante; dopo il primo colpo combatte in coppia per fiancheggiare. · *Morale*: se è scoperto prima del colpo, o se cade metà della squadra, svanisce nei tunnel con una nuova prova di Nascondersi; nel Cuore della Montagna, dopo l'Apparizione, cerca la fuga (`ARC08-01` 3B, round 11).
+
 **Statistiche** For 17 Des 17 Cos 14 Int 18 Sag 10 Car 6 · BAB +6; Lotta +9 · Talenti Allerta, Arma Focalizzata (morning star), Iniziativa Migliorata, Furtivo · Abilità Acrobazia +11, Ascoltare +13, Camuffare +6, Muoversi Silenziosamente +21, Nascondersi +17, Osservare +13, Scalare +9 · Linguaggi Comune, Goblin, Draconico, Gigante, Orchesco · Equipaggiamento cuoio borchiato +1, morning star perfetta, 3 giavellotti, fascia dell'intelletto +2, due dosi di **lama mortale** sulla lama (*deathblade*, ferimento, Tempra CD 20, 1d6 COS / 2d6 COS, 1.800 mo la dose; SRD, Veleni) `[CANONE — DM 2026-11-05, P16, Bestiario]`
 
 **Capacità speciali**
@@ -37,8 +39,6 @@ fonte: ricostruzione del repo su SRD 3.5, 2026-10-19
 - *Incantesimi da assassino*: 2 al giorno di 1° livello, CD 15; conosce *foschia occultante*, *colpo accurato*, *camuffare se stesso* (SRD, lista dell'Assassino).
 - *Schivare prodigioso migliorato (Str)*: schivare prodigioso arriva da due classi, quindi diventa migliorato: non può essere fiancheggiato, salvo da un ladro di almeno 11° livello (SRD).
 - *Uso dei veleni (Str)*: non si avvelena mai da solo applicando il veleno alla lama (SRD).
-
-**Tattiche** *Prima del combattimento*: aspetta nei tunnel laterali o dietro le stalagmiti e studia il bersaglio per i 3 round dell'attacco mortale; i difensori lo notano con Osservare contro il suo Nascondersi +17, e i file fissano la prova a CD 25 nell'oscurità dei tunnel (`ARC08-01` imboscata). · *Durante il combattimento*: lancia *foschia occultante* per coprire l'avvicinamento, poi l'attacco mortale su Re Thorek o su un comandante; dopo il primo colpo combatte in coppia per fiancheggiare. · *Morale*: se è scoperto prima del colpo, o se cade metà della squadra, svanisce nei tunnel con una nuova prova di Nascondersi; nel Cuore della Montagna, dopo l'Apparizione, cerca la fuga (`ARC08-01` 3B, round 11).
 
 **Hook**: i bugbear non portano insegne della Mano Rossa: sono pagati, non fedeli. *Il primo segno è l'odore, non il rumore.*
 

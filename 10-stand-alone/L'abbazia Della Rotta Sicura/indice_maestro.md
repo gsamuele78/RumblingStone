@@ -213,13 +213,13 @@ ts: Temp +4, Rifl +0, Vol +6
 ```
 **Difesa** **CA 13** · **pf 11** · TS Tempra +4, Riflessi +0, Volontà +6
 
+**Tattiche** **Non combatte mai per primo.**
+
 **Statistiche** **Abilità** Diplomazia +6, Sapienza (religione) +5
 
 **Capacità speciali**
 - Scaccia non-morti 4/giorno (livello effettivo 2, inutile qui ed è il punto).
 - Incantesimi 3/2+1.
-
-**Tattiche** **Non combatte mai per primo.**
 
 {{note
 MEDIO **D12 · La durata dichiarata non regge**

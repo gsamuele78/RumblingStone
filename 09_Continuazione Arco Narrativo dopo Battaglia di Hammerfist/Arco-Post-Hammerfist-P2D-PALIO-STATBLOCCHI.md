@@ -28,12 +28,12 @@ attacchi:
 
 **Attacco** **Mischia** nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato
 
+**Tattiche** Cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.
+
 **Statistiche** For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Carica Devastante*, *Attacco in Sella*
 
 **Capacità speciali**
 - **Legame col cavallo**: +2 alle prove di Cavalcare del proprio destriero (empatia).
-
-**Tattiche** Cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.
 
 ### 1.2 Fantino Ladro — "corsa assassina" (GS 8)
 ```statblocco
@@ -54,13 +54,13 @@ attacchi:
 
 **Attacco** **Mischia** nerbo con aghi +11 (1d4+1 + veleno CD 14, 1d2 Des); *Attacco Furtivo* se il rivale è Colto alla Sprovvista (curva cieca, Zona 5) · **Sbilanciare/Spingere in sella** +13
 
+**Tattiche** Sta dietro, colpisce nelle curve cieche, punta a **disarcionare** più che a vincere.
+
 **Statistiche** Des 18 · **Abilità** Cavalcare +12, Raggirare +14, Furtività +14
 
 **Capacità speciali**
 - *Attacco Furtivo* +4d6.
 - **Slealtà**: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).
-
-**Tattiche** Sta dietro, colpisce nelle curve cieche, punta a **disarcionare** più che a vincere.
 
 ---
 
@@ -125,13 +125,13 @@ attacchi:
 
 **Attacco** Balestra a mano + veleno drow (sonno, CD 17) · **Attacco Furtivo** +6d6
 
+**Tattiche** **Obiettivo**: **il cavallo**, non i PG: colpire e sparire. Se scoperti, coprono la fuga.
+
 **Statistiche** Des 20
 
 **Capacità speciali**
 - **Morte Improvvisa** (CD 18), *Nascondersi nelle Ombre*.
 - **Innata**: *Oscurità*, *Fuoco delle Fate*.
-
-**Tattiche** **Obiettivo**: **il cavallo**, non i PG: colpire e sparire. Se scoperti, coprono la fuga.
 
 
 ### 3.2 Drow Chierica di Lolth (GS 10)
@@ -149,12 +149,12 @@ attributi: Sag 18
 ```
 **Difesa** **CA 22** · **pf 63**
 
+**Tattiche** Comanda l'assalto; usa **Silenzio** per soffocare gli allarmi, **Ragnatela** in stalla. **Cattura viva** = intel Fase 0 Rethmar + −1 clock Sonjak.
+
 **Statistiche** Sag 18
 
 **Capacità speciali**
 - **Incantesimi** fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). *Oscurità*, *Individuazione Magico*.
-
-**Tattiche** Comanda l'assalto; usa **Silenzio** per soffocare gli allarmi, **Ragnatela** in stalla. **Cattura viva** = intel Fase 0 Rethmar + −1 clock Sonjak.
 
 
 ### 3.3 Servitore della Spora (GS 3, ariete vivente)

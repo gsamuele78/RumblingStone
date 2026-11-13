@@ -28,12 +28,12 @@ fonte: ricostruzione del repo su SRD 3.5, 2026-10-18
 
 **Attacco** Vel 9 m · Mischia bastone ferrato +5 (1d6−1) · incantesimi da mago (LI 12; +14 per superare la RI; scuole proibite evocazione e necromanzia). Ammaliamento, CD 18 + livello: 6° *suggestione di massa* (CD 24); 5° *dominare persone* (CD 23), *debilitazione mentale* (CD 23); 4° *confusione* (CD 22), *charme sui mostri* (CD 22); 3° *blocca persone* (CD 21); 2° *risata incontenibile* (CD 20, anche rapida in uno slot di 6°); 1° *charme su persone* (CD 19). Le altre scuole, CD 16 + livello: 4° *invisibilità superiore*, *pelle di pietra*; 3° *dissolvi magie*, *lentezza* (CD 19), *velocità*; 2° *immagine speculare*; 1° *scudo*
 
+**Tattiche** *Prima del combattimento*: *pelle di pietra* e *invisibilità superiore* appena sente l'allarme; si mette dietro la prima fila con un'uscita alle spalle. · *Durante il combattimento*: *dominare persone* sul combattente più forte del gruppo, poi *confusione* su chi resta vicino. *Risata incontenibile* rapida sull'incantatore che prova a dissolvere. Non entra mai in mischia. · *Morale*: senza *pelle di pietra* e sotto i 30 pf legge la pergamena di *teletrasporto* e torna al Fane. Al Fane non ha più dove andare, e resta.
+
 **Statistiche** For 8 Des 15 Cos 16 Int 22 Sag 12 Car 10 · BAB +6/+1; Lotta +5 · Talenti Iniziativa Migliorata, Incantesimi Focalizzati (ammaliamento), Incantesimi Focalizzati Superiore (ammaliamento), Incantesimi Inarrestabili, Volontà di Ferro; bonus da mago Scrivere Pergamene, Incantesimi Rapidi, Incantesimi Estesi · Abilità Concentrazione +18, Conoscenze (arcane) +21, Muoversi Silenziosamente +6, Sapienza Magica +23 · Linguaggi Comune, Draconico, Goblin, Infernale, Orchesco · Qualità speciali famiglio (corvo) · Equipaggiamento bracciali dell'armatura +4, anello di protezione +2, amuleto dell'armatura naturale +1, mantello della resistenza +3, fascia dell'intelletto +4, pergamena di *teletrasporto*, bastone ferrato
 
 **Capacità speciali**
 - *Mago specialista (ammaliamento)*: un incantesimo in più per livello, solo di ammaliamento. Le CD di ammaliamento contano Incantesimi Focalizzati e la versione Superiore (+2).
-
-**Tattiche** *Prima del combattimento*: *pelle di pietra* e *invisibilità superiore* appena sente l'allarme; si mette dietro la prima fila con un'uscita alle spalle. · *Durante il combattimento*: *dominare persone* sul combattente più forte del gruppo, poi *confusione* su chi resta vicino. *Risata incontenibile* rapida sull'incantatore che prova a dissolvere. Non entra mai in mischia. · *Morale*: senza *pelle di pietra* e sotto i 30 pf legge la pergamena di *teletrasporto* e torna al Fane. Al Fane non ha più dove andare, e resta.
 
 **Hook**: un accademico della guerra che parla ai PG con cortesia, come a una lezione. *«Non vi chiedo di arrendervi. Vi chiedo di guardare chi avete accanto.»*
 
