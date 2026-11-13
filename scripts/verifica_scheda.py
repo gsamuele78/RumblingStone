@@ -1632,7 +1632,39 @@ def difese(p: Path) -> "tuple[list[dict], list[dict]]":
         elif scritte and numeri[0] != atteso:
             viol.append({**b, "atteso": atteso, "ha": numeri[0],
                          "testo": f"RD {numeri[0]}/—, la regola dà {atteso}/— ({perche})"})
-    return viol, nv
+    viol_i, nv_i = _immunita_del_tipo(s, d.get("immunita") or {}, righe, base)
+    return viol + viol_i, nv + nv_i
+
+
+def _immunita_del_tipo(s, dati: dict, righe: "list[tuple[int, str]]", base: dict) -> "tuple[list[dict], list[dict]]":
+    """Le immunità che il tipo dà (SRD, tratti dei tipi) devono stare nella scheda: o la
+    formula «tratti dei non morti» / «undead traits», o ogni immunità nominata in una riga
+    che dice «immune». Chi ha un punteggio di Intelligenza non è «mindless»: l'immunità
+    all'influenza mentale gli si chiede solo se il tipo la dà da sola (vegetali, non morti)."""
+    if not dati:
+        return [], []
+    prima = re.split(r"[(,/]", s.tipo or "", maxsplit=1)[0]
+    tipi = [k for k in dati["tipi"]
+            if re.search(rf"(?<![\w-])(?<!mezzo )(?:{k}|{dati['nomi'][k]})\b", prima, re.I)]
+    if len(tipi) != 1:
+        return [], []
+    tipo = tipi[0]
+    nome = dati["nomi"][tipo]
+    testo = "\n".join(r for _, r in righe)
+    if re.search(rf"tratti\s+(?:(?:de[il]|dei|degli|da|del tipo)\s+)?(?:{nome})|\b{tipo} traits\b", testo, re.I):
+        return [], []
+    attese = list(dati["tipi"][tipo])
+    senza_mente = tipo in ("construct", "ooze", "vermin")
+    if senza_mente and re.search(r"\bInt\.?\s+\d", testo):
+        attese = [x for x in attese if x != "influenza mentale"]
+    di_immunita = " ".join(r for _, r in righe if re.search(r"immun", r, re.I))
+    mancano = [x for x in attese if not re.search(dati["parole"][x], di_immunita, re.I)]
+    if not mancano:
+        return [], []
+    riga = next((n for n, r in righe if re.search(r"immun", r, re.I)), 1)
+    return [{**base, "riga": riga, "regola": "tratti.immunita", "atteso": attese, "ha": None,
+             "testo": f"il tipo «{tipo}» dà immunità che la scheda non scrive: {', '.join(mancano)} "
+                      f"(basta «tratti del tipo»; SRD, tratti dei tipi)"}], []
 
 
 def main(argv: "list[str] | None" = None) -> int:

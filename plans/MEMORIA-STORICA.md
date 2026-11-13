@@ -1157,3 +1157,14 @@ repo scritto con altre parole.
 - **Testo:** il plugin 3.5 ha `difese.toml` (sei razze dell'SRD con la RI «N + livelli di classe», monaco, RD del barbaro per livello) e `verifica_scheda` ha la verifica `difese` (regole `numero.RI`, `numero.RD`). Misura: violazioni 33 → 34 (RI del Collezionista, 27 contro 38, in attesa del DM); 8 RI giudicate su 26 e 3 RD su 4; banco 6 su 6 e 3 su 3 per verso, su main 0.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** i livelli di classe letti dal nome delle classi non bastano: il Trickster Arcano della drow non veniva letto e la RI attesa veniva 19 invece di 21. Si contano i dadi vita oltre quelli della razza. Il nome della razza nel titolo non basta: «Cultista Rakshasa» è un umanoide, e conta il tipo della scheda. I sensi delle razze non si sono fatti perché `conformita_statblocchi` li controlla già.
+
+### MS-0100 · 2026-11-13 · ADR-0126 lotto 7: le immunità del tipo
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 7 terza parte: le immunità del tipo» in `plans/CHANGELOG.md`
+- **Testo:** `difese.toml` ha `[difese.immunita]` (le immunità che l'SRD dà a sette tipi di creatura) e la verifica `difese` ha la regola `tratti.immunita`: la scheda scrive «tratti dei …» o tutte le immunità del tipo. Misura: violazioni 34 → 37 (deathlock, leone spettrale e leone crudele scheletrico senza i tratti dei non morti, in attesa del DM); 18 schede in regola su 21; banco 16 su 18, su main 0.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** i miconidi scrivono «tratti vegetali», senza «dei»: la formula deve accettarla, altrimenti quattro schede giuste diventano violazioni. La parola «mente» da sola combacia con gli avverbi («completamente»): va cercata come parola intera. La scheda di prova dei test ha Int 10, quindi un costrutto di prova non è mai «senza mente» se non glielo si toglie.

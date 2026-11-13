@@ -11,6 +11,11 @@
    "giudicate": 3,
    "già fuori regola": 0,
    "dubbie": 0
+  },
+  "immunità": {
+   "schede del tipo": 21,
+   "in regola": 18,
+   "già fuori regola": 3
   }
  },
  "esiti": {
@@ -29,7 +34,14 @@
   "RD meno 1": {
    "trovate": 3,
    "scritte": 3
+  },
+  "immunità tolta": {
+   "trovate": 16,
+   "scritte": 18
   }
  },
- "perse": []
+ "perse": [
+  "Bestiario/villain/phantom-fungus-cr3.md: immunità tolta",
+  "Bestiario/villain/retriever-cr11.md: immunità tolta"
+ ]
 }
