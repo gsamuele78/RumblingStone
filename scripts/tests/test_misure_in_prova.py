@@ -62,18 +62,6 @@ class TestLettura(unittest.TestCase):
         self.assertEqual(MS.parole_ripetute(doc)[1], 0)
 
 
-class TestPaginaFitta(unittest.TestCase):
-    """`"pagina": "fitta"` (scelta del DM del 2026-11-13)."""
-
-    def test_il_manifest_arriva_al_tema(self):
-        import export_booklet_typst as E
-        man = {"title": "Prova", "pagina": "fitta"}
-        self.assertIn('  pagina: "fitta",', E.intestazione(man, base=E.ROOT))
-        self.assertNotIn('  pagina: "fitta",', E.intestazione({"title": "Prova"}, base=E.ROOT))
-        tema = (E.ROOT / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
-        self.assertIn('pagina == "fitta"', tema)
-
-
 class TestMappeESchede(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

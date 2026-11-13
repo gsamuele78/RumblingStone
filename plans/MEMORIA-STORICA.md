@@ -1102,3 +1102,14 @@ repo scritto con altre parole.
 - **Testo:** `verifica_scheda --fatti` dà una voce per scheda del file (`blocchi`: titolo, righe di inizio e fine, talenti) e la regola S8 giudica le «Tattiche» di ogni scheda contro quella scheda anche nei file che ne hanno più d'una. Misura: talenti dati da `--fatti` 500 → 748 su 595 file; S8 sul Bestiario 60 → 65 schede lette e 220 → 246 menzioni, sempre 0 violazioni.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** i cinque file del Bestiario saltati per «più schede» non avevano due schede: la seconda riga «Talenti» era una nota citata con «>» o la stessa scheda riscritta più sotto, e tre file con il recinto senza talenti li hanno in prosa sotto un altro titolo. Aggiungere una chiave a ogni voce dei fatti rompeva i test che confrontano le voci intere: il blocco di una riga si chiede a `blocco_di`. Provata sugli archi, S8 dà 33 segnalazioni fra negazioni («senza Estrazione Rapida») e booklet generati: lì serve una lettura una per una prima di farne una misura.
+
+### MS-0095 · 2026-11-13 · Pagina fitta abbandonata: la serata torna com'era il 12 novembre
+
+- **Data:** 2026-11-13
+- **PR:** #404
+- **ADR:** ADR-0122
+- **Temi:** stampa booklet schede
+- **Origine:** voce scritta con la PR, per la quarta riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
+- **Testo:** Dopo aver visto la serata a 114 pagine con le schede rimesse larghe (MS-0093), il DM ha scelto la versione del 12 novembre e ha chiesto di abbandonare la versione stretta per tutto. La chiave `"pagina": "fitta"` è tolta da manifest, tema, esportatore, schema e validatore: nessun booklet la usava oltre alla serata. La serata torna a 125 pagine, corpo 10,2 pt, con lo stesso passo di riga delle schede del 12 novembre.
+- **Trovato nel repo:** `scripts/typst/tema-rumblingstone.typ` · `docs/audit/stampa-booklet.json` · `ADR-0122` → `plans/adr/`
+- **Solo qui:** in un giorno il DM ha bocciato tre modi di accorciare la serata: le schede accorpate (MS-0090), le schede strette (MS-0093) e la pagina fitta intera (questa voce). La lunghezza della serata non si riduce stringendo la pagina né togliendo le schede dalle scene: non riproporlo. Resta di quella giornata solo la misura delle ripetizioni corretta sulle testatine. Il testo della serata non è identico a quello del 12 novembre: porta le correzioni alle schede entrate dopo (#400 e seguenti).

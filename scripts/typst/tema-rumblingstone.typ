@@ -426,9 +426,7 @@
   let resto(tattiche) = [
     #if tipo != "" [ #v(1pt) #text(size: 8.6pt, style: "italic", fill: seppia)[#tipo] ]
     #set text(size: 8.8pt)
-    // l'interlinea delle schede è sempre quella del tema, anche con
-    // `pagina: "fitta"`: il DM le ha trovate «tutte attaccate» (2026-11-13)
-    #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false, leading: eval(VARIANTE.interlinea))
+    #set par(spacing: 0.5em, first-line-indent: 0pt, justify: false)
     #if ingombro != "" and ingombro != [] { v(2pt); ingombro }
     #if apertura != none { v(2pt); apertura }
     #fascia("Difesa", difesa)
@@ -521,7 +519,7 @@
       // attacco per chi la legge (serata, p. 58, 2026-11-12)
       block(width: 100%, breakable: false, above: 0.9em, below: 0.6em,
         stroke: (left: 2pt + rosso), inset: (left: 7pt, y: 3pt))[
-        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em, leading: eval(VARIANTE.interlinea))
+        #set par(first-line-indent: 0pt, justify: false, spacing: 0.4em)
         #text(font: TITOLI, size: 9.5pt, weight: 600, fill: rosso, hyphenate: false)[#nome]
         #if gs != "" { h(0.4em); text(font: TITOLI, size: 8pt, fill: seppia)[#gs] }
         #if pagina != none {
@@ -752,7 +750,7 @@
 // una stampante di casa sono una cartuccia: il volume «da leggere» e il volume
 // «da stampare stasera» non sono lo stesso file.
 #let libro(titolo: "", sottotitolo: "", brand: "", banner: "", meta: "", capitolo: "",
-           apparato: true, carta: "avorio", formato: "a4", pagina: "ariosa", copertina: none, intro: none,
+           apparato: true, carta: "avorio", formato: "a4", copertina: none, intro: none,
            crediti: none,
            corpo) = {
   // A5 è il formato «libretto»: **una colonna sola**, perché in A5 due colonne
@@ -765,11 +763,6 @@
   // pagine per foglio A4 tiene il corpo a 9.6 pt, che è la misura di un manuale
   // tascabile vero.
   let a5 = formato == "a5"
-  // `pagina: "fitta"` (manifest `"pagina": "fitta"`, scelta del DM del
-  // 2026-11-13): il corpo di un AP stampato, per i volumi lunghi. I margini laterali
-  // restano quelli dell'A4: `misura_stampa` controlla l'area di stampa su quelli.
-  // *Burnt Offerings* porta 739 parole per pagina, la pagina ariosa 576.
-  let fitta = pagina == "fitta" and not a5
   let fondo = if carta == "bianca" { white } else { avorio }
   set document(title: titolo)
   set page(
@@ -777,7 +770,6 @@
     // Margini SPECULARI: rilegato o pinzato, il margine interno finisce nella
     // piega. `inside`/`outside` è ciò che distingue un libro da una risma.
     margin: if a5 { (inside: 1.5cm, outside: 1.1cm, top: 1.5cm, bottom: 1.4cm) }
-            else if fitta { (inside: 2.0cm, outside: 1.5cm, top: 1.8cm, bottom: 1.6cm) }
             else { (inside: 2.0cm, outside: 1.5cm, top: 2.1cm, bottom: 2.0cm) },
     binding: left,
     fill: fondo,
@@ -800,9 +792,9 @@
       align(center)[#text(size: 7pt)[⬦]~#counter(page).display()~#text(size: 7pt)[⬦]]
     },
   )
-  set text(font: SERIF, size: if a5 { 9.6pt } else if fitta { 9.6pt } else { 10.2pt },
+  set text(font: SERIF, size: if a5 { 9.6pt } else { 10.2pt },
            fill: inchiostro, lang: "it")
-  set par(justify: true, leading: if fitta { 0.56em } else { eval(VARIANTE.interlinea) }, first-line-indent: 1.1em)
+  set par(justify: true, leading: eval(VARIANTE.interlinea), first-line-indent: 1.1em)
 
   // Il § nei TITOLI diventa un numero dentro un medaglione — la stessa cornice
   // circolare dei fregi di capitolo, così il libro ha un segno solo invece di
