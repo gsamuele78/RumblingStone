@@ -20,6 +20,7 @@ attacchi:
   - Mischia tocco corruttore +9 (8d6, contatto incorporeo; Tempra CD 21 dimezza)
 voci:
   - BAB +6; lotta — (incorporeo)
+  - Tratti dei non morti
   - Incorporeo: 50% di mancare contro gli attacchi non magici; passa attraverso muri e pavimenti
   - Resistenza a incanalare +4; ringiovanimento (torna in 2d4 giorni se non si scioglie il suo legame con la tana del Ghostlord)
   - Gemito Terrificante: Volontà CD 21 o in preda al panico per 2d4 round (effetto di paura, sonoro)

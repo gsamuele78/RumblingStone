@@ -1213,3 +1213,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima versione cercava le capacità in tutto il tratto fino alla virgola e prendeva «Cerchio Sacro» (il nome di un arco di Lythiel) per la capacità «sacra»: 2.000 mo diventavano 18.000. Per questo una capacità conta solo se sta attaccata al nome dell'arma o al bonus. La somma deve restare un minimo sicuro: nel dubbio non si conta.
 
+### MS-0105 · 2026-11-13 · ADR-0126: RI del Collezionista 38 e tratti dei non morti a tre schede
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, due decisioni del DM sulle card delle difese» in `plans/CHANGELOG.md`
+- **Testo:** il DM ha scelto sulle card la RI 38 dell'SRD per il Collezionista (27 del rakshasa + 11 livelli di classe) e la riga «Tratti dei non morti» per deathlock, leone spettrale e leone crudele scheletrico. Le quattro schede sono corrette e `IN_ATTESA` di `test_difese.py` è vuoto. Misura: violazioni 37 → 33.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** le due card erano rimaste aperte dalle PR dei lotti 7 seconda e terza parte; le schede non si toccano senza la risposta del DM, quindi fino a oggi stavano nell'elenco in attesa. La RI 27 era quella del rakshasa base: la regola dell'SRD la alza di uno per livello di classe.
