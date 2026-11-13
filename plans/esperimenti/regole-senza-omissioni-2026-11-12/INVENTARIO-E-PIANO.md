@@ -460,3 +460,13 @@ nuova `velocita` (regola `numero.velocita`). Misura: violazioni 33 → 33; 18
 schede giudicate su 100 con la riga; banco `muta_velocita.py` 15 su 18 per
 verso, su main 0. Restano del lotto 7: resistenza agli incantesimi, riduzione
 del danno, immunità dei tipi, sensi delle razze, linguaggi.
+
+### Lotto 7, seconda parte: resistenza agli incantesimi e riduzione del danno (2026-11-13)
+
+`difese.toml` del 3.5 (capacità `creature.costruzione`): sei razze con la RI
+«N + livelli di classe», monaco, RD del barbaro. Verifica nuova `difese`
+(regole `numero.RI`, `numero.RD`). Misura: violazioni 33 → 34 (la RI del
+Collezionista, 27 contro 38: decide il DM), non verificabili 371 → 372; 8 RI
+giudicate su 26 scritte e 3 RD su 4; banco `muta_difese.py` 6 su 6 e 3 su 3 per
+verso, su main 0. I sensi hanno già un controllo. Restano del lotto 7: immunità
+dei tipi, linguaggi.

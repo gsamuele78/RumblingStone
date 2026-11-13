@@ -35,6 +35,9 @@ Scopo
     velocita  la velocità a terra scritta contro razza, movimento veloce di barbaro e
              monaco, armatura media o pesante (tabella `[movimento]` della capacità
              `creature.costruzione`; ADR-0126, lotto 7)
+    difese    resistenza agli incantesimi (razza + livelli di classe, monaco) e
+             riduzione del danno del barbaro (tabella `[difese]` della capacità
+             `creature.costruzione`; ADR-0126, lotto 7)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -1532,6 +1535,106 @@ def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
     return [{**base, "regola": "numero.velocita", "atteso": atteso, "ha": ha, "testo": testo}], []
 
 
+_SCRITTA_RI = re.compile(r"(?<![\w/])(?:RI|SR|resistenza agli incantesimi|spell resistance)\b[\s:*]*(\d+)([^|·\n]{0,60})",
+                         re.I)
+_SCRITTA_RD = re.compile(r"(?<![\w/])(?:RD|DR|riduzione del danno|damage reduction)\b[\s:*]*(\d+)\s*/\s*(?:—|–|-)(?![\w])",
+                         re.I)
+#: righe che raccontano la storia della scheda, non la scheda: citazioni, «era:», registri delle correzioni
+_RIGA_DI_STORIA = re.compile(r"^\s*(?:>|[-*]\s*era\b|era\b|boost log|changelog)", re.I)
+#: ciò che dà o cambia la resistenza agli incantesimi e che il conto non sa
+_ALTRA_RI = re.compile(r"(?:manto|mantello|mantle|veste|robe) (?:della|of) (?:resistenza agli incantesimi|spell resistance)|"
+                       r"\*(?:resistenza agli incantesimi|spell resistance)\*|holy aura|unholy aura|aura (?:sacra|sacrilega)",
+                       re.I)
+
+
+def difese(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Resistenza agli incantesimi e riduzione del danno contro razza e classe (ADR-0126, lotto 7).
+
+    RI: la razza di `[difese.ri.razze]` dà N + i livelli di classe; il monaco dà
+    livello + 10 dal 13°; vale la più alta. RD: il barbaro ha N/— per livello.
+    Chi dovrebbe averla e non la scrive è una violazione. Una nota accanto al
+    numero, o un oggetto o un incantesimo che la dà, fanno di uno scarto un non
+    verificabile. Più numeri diversi nella scheda: non verificabile."""
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    try:
+        d = S.dati(sistema, "creature.costruzione").get("difese")
+    except S.ErroreSistemi:
+        return [], []
+    if not d:
+        return [], []
+    try:
+        creature = S.dati(sistema, "creature.base").get("creature_base", {})
+    except S.ErroreSistemi:
+        creature = {}
+    f = VT.leggi(p) or {}
+    livelli: dict[str, int] = {}
+    it = _classi_it()
+    for nome, n in dict(f.get("livelli") or L.livelli_di_classe(s)).items():
+        en = it.get(nome.lower(), nome.lower())
+        livelli[en] = livelli.get(en, 0) + n
+    dadi_vita = sum(g.n for g in s.gruppi)
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    righe = [(i + 1, r) for i, r in enumerate(s.testo.split("\n")) if not _RIGA_DI_STORIA.match(r)]
+    base = {"file": VT_rel(p), "verifica": "difese", "fonte": sistema}
+    viol, nv = [], []
+
+    # resistenza agli incantesimi: la razza conta i livelli di classe, cioè i dadi vita oltre quelli della
+    # razza (una razza che la tabella delle creature non ha, come il drow, non ne ha di suoi)
+    attese = []
+    razze = [r for r, nomi in d["ri"]["nomi"].items()
+             if any(re.search(rf"\b(?:{n})\b", dove, re.I) for n in nomi)
+             and re.search(rf"\b{creature.get(r, {}).get('tipo', 'humanoid')}\b", s.tipo or "", re.I)]
+    if len(razze) == 1:
+        suoi = creature.get(razze[0], {}).get("dv", 0)
+        di_classe = dadi_vita - suoi if dadi_vita >= suoi and dadi_vita else sum(livelli.values())
+        attese.append((d["ri"]["razze"][razze[0]] + di_classe,
+                       f"{razze[0]} {d['ri']['razze'][razze[0]]} + {di_classe} livelli di classe"))
+    for classe, v in d["ri"]["classi"].items():
+        if livelli.get(classe, 0) >= v["dal"]:
+            attese.append((livelli[classe] + v["piu"], f"{classe} {livelli[classe]} + {v['piu']}"))
+    if attese:
+        atteso, perche = max(attese)
+        scritte = [(n, int(m.group(1)), m.group(2)) for n, r in righe for m in _SCRITTA_RI.finditer(r)]
+        numeri = sorted({x[1] for x in scritte})
+        riga = scritte[0][0] if scritte else 1
+        b = {**base, "riga": riga, "regola": "numero.RI"}
+        if not scritte:
+            viol.append({**b, "atteso": atteso, "ha": None,
+                         "testo": f"senza resistenza agli incantesimi, la regola dà RI {atteso} ({perche})"})
+        elif len(numeri) > 1:
+            nv.append({**b, "testo": f"RI non ricostruibile: la scheda ne scrive più d'una ({', '.join(map(str, numeri))})"})
+        elif numeri[0] != atteso:
+            testo = f"RI {numeri[0]}, la regola dà {atteso} ({perche})"
+            if _ALTRA_RI.search(s.testo) or re.match(r"\s*\**\s*\(", scritte[0][2]):
+                nv.append({**b, "testo": testo + "; la scheda nomina un oggetto, un incantesimo o una nota che la cambia"})
+            else:
+                viol.append({**b, "atteso": atteso, "ha": numeri[0], "testo": testo})
+
+    # riduzione del danno N/—
+    for classe, v in d["rd"]["classi"].items():
+        n = livelli.get(classe, 0)
+        if not n:
+            continue
+        atteso = v["per_livello"][min(n, len(v["per_livello"])) - 1]
+        scritte = [(i, int(m.group(1))) for i, r in righe for m in _SCRITTA_RD.finditer(r)]
+        numeri = sorted({x[1] for x in scritte})
+        b = {**base, "riga": scritte[0][0] if scritte else 1, "regola": "numero.RD"}
+        perche = f"{classe} di {n}° livello"
+        if not scritte and atteso:
+            viol.append({**b, "atteso": atteso, "ha": None,
+                         "testo": f"senza riduzione del danno, la regola dà RD {atteso}/— ({perche})"})
+        elif len(numeri) > 1:
+            nv.append({**b, "testo": f"RD non ricostruibile: la scheda ne scrive più d'una ({', '.join(f'{x}/—' for x in numeri)})"})
+        elif scritte and numeri[0] != atteso:
+            viol.append({**b, "atteso": atteso, "ha": numeri[0],
+                         "testo": f"RD {numeri[0]}/—, la regola dà {atteso}/— ({perche})"})
+    return viol, nv
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1571,10 +1674,11 @@ def main(argv: "list[str] | None" = None) -> int:
         bv, bn = creatura_base(p)
         gv, gn = grado_di_sfida(p)
         ev, en_ = velocita(p)
+        fv, fn = difese(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev + fv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_ + fn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)

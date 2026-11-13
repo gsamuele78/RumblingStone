@@ -838,3 +838,40 @@ carico non si conta; le velocità di volo, nuoto e scavo non si guardano; le
 razze dei mostri e le creature base non hanno la velocità nel plugin; PF1e non
 ha la tabella. Restano del lotto 7: resistenza agli incantesimi, riduzione del
 danno, immunità dei tipi, sensi delle razze, linguaggi.
+
+### Lotto 7, seconda parte — resistenza agli incantesimi e riduzione del danno (2026-11-13)
+
+**Contesto.** Nessun controllo guardava la resistenza agli incantesimi e la
+riduzione del danno. Un drow con la RI di un livello fa, o un barbaro di 10°
+con la RD del 7°, passavano; e passava un rakshasa con livelli di classe che
+tiene la RI del rakshasa senza livelli.
+
+**Decisione.** `estrai_difese.py` legge dall'SRD e scrive
+`sistemi/dnd35/dati/difese.toml`, dentro la capacità `creature.costruzione`:
+le sei razze che l'SRD scrive con «spell resistance equal to N + class levels»
+(azer 13, drow 11, arconte segugio 16, pixie 15, rakshasa 27, svirfneblin 11),
+il monaco (livello + 10 dal 13°) e la riduzione del danno N/— del barbaro per
+livello. `verifica_scheda` ha la verifica nuova `difese`, regole `numero.RI` e
+`numero.RD`. I livelli di classe sono i dadi vita oltre quelli della razza
+(presi dalla capacità `creature.base`; il drow e lo svirfneblin non ne hanno).
+La razza conta solo se il tipo della scheda è quello della razza: il «cultista
+rakshasa» umanoide non è un rakshasa. Chi dovrebbe avere la RI o la RD e non la
+scrive è una violazione. Una nota fra parentesi accanto al numero, o un oggetto
+o un incantesimo che dà la RI, fanno di uno scarto un non verificabile. Più
+numeri diversi nella stessa scheda: non verificabile. Le righe di storia
+(citazioni, «era:», registri delle correzioni) non si leggono.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 33 → 34, non
+verificabili 371 → 372. La violazione nuova è il Collezionista (rakshasa con 11
+livelli da stregone, RI 27 scritta contro 38 dell'SRD): la scheda non si tocca,
+decide il DM, e intanto sta in `IN_ATTESA` di `test_difese.py`. Il dubbio nuovo
+è la guardia nobile drow (RI 16 con la nota «drow noble +4», la regola dà 15).
+Portata: 26 schede del Bestiario scrivono una RI e il controllo ne giudica 8 (6
+in regola, una fuori, una dubbia); 4 scrivono una RD N/— e ne giudica 3. Banco
+`muta_difese.py` → `misure-difese.json`: un punto in più o in meno alla RI 6 su
+6 per verso, alla RD 3 su 3 per verso; su main 0. Limiti: la RI delle creature
+senza livelli di classe e quella dei modelli non si guardano; la RD che non è
+N/— (magia, adamantio, allineamento) non si guarda; PF1e non ha la tabella.
+I sensi non entrano in questo lotto perché un controllo c'è già
+(`conformita_statblocchi`, scurovisione dal tipo nel 3.5 e dalla razza in
+PF1e). Restano del lotto 7: immunità dei tipi, linguaggi.
