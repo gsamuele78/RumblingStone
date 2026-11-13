@@ -2,35 +2,34 @@
  "riassunto": {
   "main": {
    "violazioni": 0,
-   "schede": 60,
-   "menzioni": 220,
+   "schede": 65,
+   "menzioni": 246,
    "non_verificabili": {
-    "senza tattiche": "178 file",
-    "più schede nel file": "5 file"
+    "senza tattiche": "178 file"
    }
   },
   "tolto": {
-   "mutanti": 183,
-   "visti": 181
+   "mutanti": 206,
+   "visti": 204
   },
   "cambiato": {
-   "mutanti": 180,
-   "visti": 178
+   "mutanti": 195,
+   "visti": 193
   },
   "parafrasi: incantesimo senza corsivo": {
-   "mutanti": 60,
+   "mutanti": 65,
    "visti": 0
   },
   "parafrasi: talento di più parole in minuscolo": {
-   "mutanti": 60,
-   "visti": 60
+   "mutanti": 65,
+   "visti": 65
   },
   "parafrasi: talento di una parola in minuscolo": {
-   "mutanti": 60,
+   "mutanti": 65,
    "visti": 0
   },
   "controllo": {
-   "mutanti": 26,
+   "mutanti": 29,
    "visti": 0
   }
  },
@@ -779,6 +778,48 @@
   },
   {
    "file": "Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md",
+   "famiglia": "parafrasi: talento di una parola in minuscolo",
+   "cosa": "talento: + mobilità",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "incantesimo: + fermare il tempo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
+   "famiglia": "parafrasi: incantesimo senza corsivo",
+   "cosa": "incantesimo: + fermare il tempo",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Tiro Multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
+   "famiglia": "parafrasi: talento di più parole in minuscolo",
+   "cosa": "talento: + tiro multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Mobilità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
    "famiglia": "parafrasi: talento di una parola in minuscolo",
    "cosa": "talento: + mobilità",
    "visto": false,
@@ -1724,13 +1765,6 @@
   },
   {
    "file": "Bestiario/png/lomyn-redtongue-bardo8-cr8.md",
-   "famiglia": "tolto",
-   "cosa": "ritirata rapida",
-   "visto": true,
-   "atteso": true
-  },
-  {
-   "file": "Bestiario/png/lomyn-redtongue-bardo8-cr8.md",
    "famiglia": "cambiato",
    "cosa": "incantesimo: charme su persone → fermare il tempo",
    "visto": true,
@@ -2549,6 +2583,55 @@
    "atteso": false
   },
   {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "suggestione",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "incantesimo: suggestione → fermare il tempo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "parafrasi: incantesimo senza corsivo",
+   "cosa": "incantesimo: suggestione → fermare il tempo",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Tiro Multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "parafrasi: talento di più parole in minuscolo",
+   "cosa": "talento: + tiro multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Mobilità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
+   "famiglia": "parafrasi: talento di una parola in minuscolo",
+   "cosa": "talento: + mobilità",
+   "visto": false,
+   "atteso": true
+  },
+  {
    "file": "Bestiario/villain/Salvatore/Salvatore.md",
    "famiglia": "cambiato",
    "cosa": "incantesimo: + fermare il tempo",
@@ -3005,6 +3088,13 @@
   },
   {
    "file": "Bestiario/villain/abbathor-blackguard-cr10.md",
+   "famiglia": "tolto",
+   "cosa": "cura ferite moderate",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-blackguard-cr10.md",
    "famiglia": "cambiato",
    "cosa": "incantesimo: forza del toro → fermare il tempo",
    "visto": true,
@@ -3044,6 +3134,139 @@
    "cosa": "talento: + mobilità",
    "visto": false,
    "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-blackguard-cr10.md",
+   "famiglia": "controllo",
+   "cosa": "forza del toro → cura ferite moderate",
+   "visto": false,
+   "atteso": false
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "benedizione",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "scudo della fede",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "protezione dal bene",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "blocca persone",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "scagliare maledizione",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "comando superiore",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "ferire",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "colpo infuocato",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "favore divino",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "cura ferite gravi",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "tolto",
+   "cosa": "Incantesimi Rapidi",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "cambiato",
+   "cosa": "incantesimo: benedizione → fermare il tempo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "parafrasi: incantesimo senza corsivo",
+   "cosa": "incantesimo: benedizione → fermare il tempo",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Tiro Multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "parafrasi: talento di più parole in minuscolo",
+   "cosa": "talento: + tiro multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Mobilità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "parafrasi: talento di una parola in minuscolo",
+   "cosa": "talento: + mobilità",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/abbathor-cleric11-cr11.md",
+   "famiglia": "controllo",
+   "cosa": "benedizione → scudo della fede",
+   "visto": false,
+   "atteso": false
   },
   {
    "file": "Bestiario/villain/arbitrax-drago-rosso-cr15.md",
@@ -3128,6 +3351,48 @@
    "cosa": "scudo → grazia del gatto",
    "visto": false,
    "atteso": false
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "incantesimo: + fermare il tempo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "parafrasi: incantesimo senza corsivo",
+   "cosa": "incantesimo: + fermare il tempo",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Tiro Multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "parafrasi: talento di più parole in minuscolo",
+   "cosa": "talento: + tiro multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Mobilità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/balvar-fuocospento-cr13.md",
+   "famiglia": "parafrasi: talento di una parola in minuscolo",
+   "cosa": "talento: + mobilità",
+   "visto": false,
+   "atteso": true
   },
   {
    "file": "Bestiario/villain/bebilith-guardiano-cr10.md",
@@ -3504,6 +3769,132 @@
    "file": "Bestiario/villain/emissario-red-hand-cr12.md",
    "famiglia": "controllo",
    "cosa": "libertà di movimento → scudo della fede",
+   "visto": false,
+   "atteso": false
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "armatura magica",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "scudo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "invisibilità superiore",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "volare",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "fulmine",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "cecità/sordità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "raggio di indebolimento",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "sfera infuocata",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "dardo incantato",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "polvere luccicante",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "tolto",
+   "cosa": "Sudden Enlarge",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "incantesimo: armatura magica → fermare il tempo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "parafrasi: incantesimo senza corsivo",
+   "cosa": "incantesimo: armatura magica → fermare il tempo",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Tiro Multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "parafrasi: talento di più parole in minuscolo",
+   "cosa": "talento: + tiro multiplo",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "cambiato",
+   "cosa": "talento: + Mobilità",
+   "visto": true,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "parafrasi: talento di una parola in minuscolo",
+   "cosa": "talento: + mobilità",
+   "visto": false,
+   "atteso": true
+  },
+  {
+   "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
+   "famiglia": "controllo",
+   "cosa": "armatura magica → scudo",
    "visto": false,
    "atteso": false
   },

@@ -423,3 +423,11 @@ non verificabili 293 → 371 (78 dubbi nuovi, tutti con la ragione). Banco
 razziali delle caratteristiche, modificatore di livello, modelli, avanzamento
 per dadi vita, mostri dei manuali, chiave per blocco in `--fatti`.
 
+### Lotto 5, terza parte: i fatti scheda per scheda (2026-11-13)
+
+`--fatti` ha la chiave `blocchi` (una voce per scheda del file: titolo, righe,
+talenti) e S8 giudica i file con più schede scheda per scheda. Misura: talenti
+dati da `--fatti` 500 → 748; S8 sul Bestiario 60 → 65 schede lette, 0
+violazioni. Restano del lotto 5: modificatori razziali delle caratteristiche,
+modificatore di livello, modelli, avanzamento per dadi vita, mostri dei manuali.
+

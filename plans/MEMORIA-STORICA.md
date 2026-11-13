@@ -1080,3 +1080,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la lettura della scheda rende «1/2» come 1, quindi il grado si legge dalla riga del blocco. I dadi di una classe che la lettura non conosce finiscono al tipo come dadi razziali: si tolgono quando il tipo nomina la classe. «Mezzorco» conteneva «mezzo» e passava per un modello: le parole dei modelli sono espressioni regolari. La regola generale di PG e PNG del 3.5 non è nell'SRD ma nel manuale del DM: nel repo solo i numeri, e i blocchi dell'SRD la confermano. Githyanki e orog hanno la loro riga in manuali fuori dai dati e restano dubbi.
 
+### MS-0093 · 2026-11-13 · ADR-0126 lotto 5: i fatti scheda per scheda
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede coerenza
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 5 terza parte: i fatti scheda per scheda» in `plans/CHANGELOG.md`
+- **Testo:** `verifica_scheda --fatti` dà una voce per scheda del file (`blocchi`: titolo, righe di inizio e fine, talenti) e la regola S8 giudica le «Tattiche» di ogni scheda contro quella scheda anche nei file che ne hanno più d'una. Misura: talenti dati da `--fatti` 500 → 748 su 595 file; S8 sul Bestiario 60 → 65 schede lette e 220 → 246 menzioni, sempre 0 violazioni.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** i cinque file del Bestiario saltati per «più schede» non avevano due schede: la seconda riga «Talenti» era una nota citata con «>» o la stessa scheda riscritta più sotto, e tre file con il recinto senza talenti li hanno in prosa sotto un altro titolo. Aggiungere una chiave a ogni voce dei fatti rompeva i test che confrontano le voci intere: il blocco di una riga si chiede a `blocco_di`. Provata sugli archi, S8 dà 33 segnalazioni fra negazioni («senza Estrazione Rapida») e booklet generati: lì serve una lettura una per una prima di farne una misura.

@@ -48,6 +48,41 @@ def _fatti(testo: str = SCHEDA) -> dict:
         return V.fatti(p)
 
 
+class TestBlocchi(unittest.TestCase):
+    """`blocchi`: una voce per scheda del file, e ogni fatto porta l'indice della sua."""
+
+    def test_una_scheda_un_blocco_che_e_tutto_il_file(self):
+        f = _fatti()
+        self.assertEqual([(b["titolo"], b["inizio"], [t["canonico"] for t in b["talenti"]]) for b in f["blocchi"]],
+                         [("Sacerdote di prova", 1, ["Iron Will", None])])
+        self.assertEqual(f["blocchi"][0]["fine"], len(SCHEDA.splitlines()))
+        self.assertEqual({V.blocco_di(f["blocchi"], x.get("riga") or x["inizio"])
+                          for x in f["incantesimi"] + f["capacita_speciali"] + f["tattiche"]}, {0})
+
+    def test_due_schede_due_blocchi_coi_loro_talenti(self):
+        f = _fatti(SCHEDA + "\n## Secondo\n\n**Talenti:** Schivare\n\n- 1° (1): *sonno*\n\n**Tattiche** Fugge.\n")
+        self.assertEqual([(b["titolo"], [t["nome"] for t in b["talenti"]]) for b in f["blocchi"]],
+                         [("Sacerdote di prova", ["Volontà di Ferro", "Talento Che Non Esiste"]),
+                          ("Secondo", ["Schivare"])])
+        self.assertEqual(f["blocchi"][0]["fine"] + 1, f["blocchi"][1]["inizio"])
+        self.assertEqual([V.blocco_di(f["blocchi"], i["riga"]) for i in f["incantesimi"] if i["nome"] == "sonno"], [1])
+        self.assertEqual([V.blocco_di(f["blocchi"], t["inizio"]) for t in f["tattiche"]], [0, 1])
+        self.assertIsNone(V.blocco_di(f["blocchi"], 9999))
+        # la chiave di prima non cambia: i talenti della prima riga del file
+        self.assertEqual([t["nome"] for t in f["talenti"]], ["Volontà di Ferro", "Talento Che Non Esiste"])
+
+    def test_nota_citata_e_talenti_ripetuti_sotto_lo_stesso_titolo_non_aprono_un_blocco(self):
+        f = _fatti(SCHEDA + "\n> **Talenti**: la scheda ne elencava sei.\n\nTalenti: Volontà di Ferro\n")
+        self.assertEqual(len(f["blocchi"]), 1)
+
+    def test_recinto_senza_talenti_e_talenti_in_prosa_sono_una_scheda(self):
+        f = _fatti("# Drago\n\n```statblocco\nnome: Drago\n```\n\n## Statistiche\n\n**Talenti:** Schivare\n")
+        self.assertEqual([(b["inizio"], [t["nome"] for t in b["talenti"]]) for b in f["blocchi"]], [(1, ["Schivare"])])
+
+    def test_file_senza_schede(self):
+        self.assertEqual(_fatti("# Appunti\n\nNiente numeri.\n")["blocchi"], [])
+
+
 class TestFatti(unittest.TestCase):
     def test_talenti_con_canonico_e_riga(self):
         f = _fatti()
@@ -99,7 +134,7 @@ class TestFatti(unittest.TestCase):
         dati = json.loads(out.getvalue())
         self.assertEqual(len(dati), 1)
         self.assertEqual(set(dati[0]), {"file", "sistema", "talenti", "incantesimi", "capacita_speciali",
-                                        "tattiche", "descrizione"})
+                                        "tattiche", "descrizione", "blocchi"})
 
 
 if __name__ == "__main__":
