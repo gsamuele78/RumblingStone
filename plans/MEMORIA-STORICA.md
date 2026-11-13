@@ -1243,3 +1243,15 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-13 · I giorni di «chi sa cosa» in state.yaml e la regola T2
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0125
+- **Temi:** coerenza storia canone state
+- **Origine:** voce scritta con la PR, per la riga del 2026-11-13 «Canone di «chi sa cosa»» in `plans/CHANGELOG.md`
+- **Testo:** Il DM ha risposto a D1-D4 della proposta dei giorni e alla riga 69 di ARC07-DEF-1. `conoscenze[]` ha `dal_giorno` e `informato_da`; 31 righe su 32 hanno un giorno. Lettera di Brenna: Thorik comandante, niente «Custodi Eterni», consegna al Giorno 22; Brenna sa della vittoria dal Giorno 19 (uccelli) e di Lorana di persona. Norro conosce il titolo dal Giorno 23. DEF-1 r.69: «I Rumbling Stones». `coerenza_campagna fatti --state` ha T2; su main 0 violazioni.
+- **Trovato nel repo:** `ADR-0125` → `plans/adr/` (file ADR-0125, «i giorni di chi sa cosa e la regola T2») · la proposta → `plans/esperimenti/grafo-eventi-2026-11-12/PROPOSTA-GIORNI-CHI-SA-COSA.md`
+- **Solo qui:** T1 non è entrata perché state.yaml non ha chiave del fatto, alias e finestre dei file; T2 senza chiave del fatto confronta i PNG e non i fatti. Brenna non ha `informato_da: tempestas`: col giorno 19 sarebbe stata una catena rotta, perché Tempestas ha la sua prima riga al 21, e il DM ha messo gli uccelli come fonte della vittoria. Zalkatar ha il giorno 26 scritto, uguale a quello di Sethrax che lo informa nello stesso giorno. Le righe 6 e 17 (Conte Valerius) restano doppie: nessuna risposta del DM. La riga «il Collezionista sa dei Custodi e degli artefatti» manca: la card su fonte e giorno è aperta. Il dossier del DM rigenerato porta anche i livelli degli archi che erano rimasti indietro dal 17/10. Il coordinatore aveva prenotato MS-0114: il cancello vuole la sequenza, quindi il numero si rifà al riallineo.
+
