@@ -10,6 +10,10 @@ razza non ha un modificatore di livello noto o il livello passa il 20°. Le
 schede dal 16° livello effettivo in su non si possono giudicare con questa
 aggiunta e si contano a parte.
 
+Seconda prova (lotto 8, seconda parte): uno «spadone +3 sacrilego» e sei pozioni
+di cura ferite gravi (54.500 mo; col solo potenziamento 18.000). Conta le sole
+violazioni: misura quanto pesa leggere le capacità speciali e le pozioni.
+
 Uso: python3 muta_ricchezza.py  (scrive misure-ricchezza.json accanto)
 """
 from __future__ import annotations
@@ -24,6 +28,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import verifica_scheda as V  # noqa: E402
 
 AGGIUNTA = "\n\n**Equipaggiamento** *anello di protezione +5*, *mantello della resistenza +5*\n"
+#: seconda prova (lotto 8, seconda parte): un'arma il cui prezzo sta quasi tutto nella capacità speciale
+#: (+3 sacrilega = +5, 50.000 mo; il solo +3 ne vale 18.000) e sei pozioni
+SPECIALE = "\n\n**Equipaggiamento** spadone +3 sacrilego, 6 pozioni di *cura ferite gravi*\n"
 
 
 def main() -> int:
@@ -31,6 +38,7 @@ def main() -> int:
              "sopra il 15° livello": 0}
     esito = {"violazione": 0, "non verificabile": 0, "niente": 0}
     perse = []
+    speciale = {"violazione": 0, "scritte": 0}
     for p in sorted((ROOT / "Bestiario").rglob("*.md")):
         s = V.L.leggi(p)
         if s is None or not sum(g.n for g in s.gruppi):
@@ -47,6 +55,10 @@ def main() -> int:
             conto["con equipaggiamento dal prezzo certo"] += 1
         with tempfile.TemporaryDirectory() as t:
             q = Path(t) / p.name
+            q.write_text(testo + SPECIALE, encoding="utf-8")
+            vs, _ = V.ricchezza(q)
+            speciale["violazione"] += bool(vs)
+            speciale["scritte"] += 1
             q.write_text(testo + AGGIUNTA, encoding="utf-8")
             v, n = V.ricchezza(q)
         if v:
@@ -58,13 +70,14 @@ def main() -> int:
         else:
             esito["niente"] += 1
             perse.append(str(p.relative_to(ROOT)))
-    fuori = {"conto": conto, "esito": esito, "perse": perse}
+    fuori = {"conto": conto, "esito": esito, "perse": perse, "capacità speciale e pozioni": speciale}
     (Path(__file__).parent / "misure-ricchezza.json").write_text(
         json.dumps(fuori, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     for k, n in {**conto, **esito}.items():
         print(f"{k:40} {n}")
     for x in perse:
         print("  persa:", x)
+    print(f"{'arma con capacità speciale e pozioni':40} {speciale['violazione']}/{speciale['scritte']}")
     return 0
 
 

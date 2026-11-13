@@ -1001,3 +1001,34 @@ riga della fonte, draghi, modelli. La tabella serve oggi solo a `ricchezza`:
 toccato. Del lotto 5 restano i modificatori razziali alle caratteristiche, i
 modelli, l'avanzamento per dadi vita e i mostri dei manuali.
 
+### Lotto 8, seconda parte — capacità speciali, pozioni, pergamene, bacchette (2026-11-13)
+
+**Contesto.** La prima parte contava di un'arma il solo potenziamento e
+riconosceva tredici famiglie di nomi scritte a mano. Uno «spadone sacrilego +2»
+valeva 8.000 mo invece di 32.000, e pozioni, pergamene e bacchette non
+contavano.
+
+**Decisione.** `estrai_oggetti.py` aggiunge a `oggetti.toml` le tabelle delle
+capacità speciali di armi (30) e di armature e scudi (43), col bonus
+equivalente o il prezzo in mo, e i prezzi delle pergamene (586 incantesimi, il
+più basso fra arcana e divina). `verifica_scheda` legge i nomi italiani dal
+lessico (`scripts/lessico_it_35.tsv`): gli oggetti magici che hanno un prezzo
+nel plugin, le capacità speciali, gli incantesimi di pozioni, pergamene e
+bacchette. Quattro regole tengono la somma un minimo sicuro. Una capacità
+speciale conta solo se sta attaccata al nome o al bonus («spadone sacrilego
++2», «spada lunga +1 infuocata e affilata»): «Arco +1 di tasso del Cerchio
+Sacro» resta un +1. Se potenziamento e capacità passano il +10 resta il solo
+potenziamento. Una bacchetta conta solo con le cariche scritte, in
+proporzione. Fra più voci dello stesso incantesimo vale la meno cara.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 37 → 37, non
+verificabili 374 → 374. Valore riconosciuto nelle righe dell'equipaggiamento
+del Bestiario: 224.000 → 267.830 mo (30 → 34 oggetti). Banco
+`muta_ricchezza.py`, seconda prova (uno spadone +3 sacrilego e sei pozioni
+aggiunti a 125 schede): violazioni 41 → 57; la prima prova non cambia (57
+violazioni, 55 non verificabili). Limiti: la capacità scritta prima del nome
+all'inglese («+1 flaming longsword») non si legge; i bastoni non si contano
+(le cariche cambiano il prezzo); materiali speciali e oggetti comuni restano
+fuori; PF1e non ha le tabelle. Del lotto 8 restano i bastoni, i materiali e la
+tabella PF1e.
+
