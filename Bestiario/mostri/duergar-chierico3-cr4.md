@@ -16,18 +16,20 @@ pf-dado: 3d8+9
 ts: Temp +6, Rifl +0, Vol +4
 attributi: For 15 Des 8 Cos 16 Int 10 Sag 13 Car 10
 velocita: 6 m
-iniziativa: +3
+iniziativa: -1
 attacchi:
   - Mischia flagello perfetto +6 (1d8+2)
 voci:
-  - Talenti: Incantare in Combattimento, Iniziativa Migliorata, Scacciare Migliorato, Arma Focalizzata (flagello)
+  - Talenti: Incantare in Combattimento, Arma Focalizzata (flagello)
 ```
 
 
 > [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ la CA di contatto suggerisce Des 10, la fonte dice 8: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.
 
-Medium humanoid (dwarf, duergar), Cleric 3 (Abbathor; domini Inganno/Male), LE. **hp 24**; **AC 20**, touch 10, flat-footed 20 (piastre complete). Init +3; Vel 6 m. TS Temp +6, Rifl +0, Vol +4. BAB +2; Lotta +4.
-**Mischia** flagello perfetto +6 (1d8+2). Incantesimi da Cleric 3 (CD 11+liv; spontanee inflict): tipici *bane, cause fear, hold person, silence, comprehend languages*. SLA duergar. Scurovisione 36 m, immune paralisi/veleno, +2 vs incantesimi. For 15, Cos 16, Sag 13. Talenti: Incantare in Combattimento, Iniziativa Migliorata, Scacciare Migliorato, Arma Focalizzata (flagello).
+Medium humanoid (dwarf, duergar), Cleric 3 (Abbathor; domini Inganno/Male), LE. **hp 24**; **AC 20**, touch 10, flat-footed 20 (piastre complete). Init -1; Vel 6 m. TS Temp +6, Rifl +0, Vol +4. BAB +2; Lotta +4.
+**Mischia** flagello perfetto +6 (1d8+2). Incantesimi da Cleric 3 (CD 11+liv; spontanee inflict): tipici *bane, cause fear, hold person, silence, comprehend languages*. SLA duergar. Scurovisione 36 m, immune paralisi/veleno, +2 vs incantesimi. For 15, Cos 16, Sag 13. Talenti: Incantare in Combattimento, Arma Focalizzata (flagello).
 Notes: sacerdote minore del culto di Abbathor al ponte.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): 3 DV danno 2 talenti e la scheda ne aveva 4. Tolti **Scacciare Migliorato** e **Iniziativa Migliorata**; restano Incantare in Combattimento e Arma Focalizzata (flagello). Iniziativa +3 → **−1** (Des 8, senza il +4 del talento).

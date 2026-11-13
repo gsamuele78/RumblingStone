@@ -27,7 +27,9 @@ iniziativa: +3
 **Specialization**: Evoker (prohibited: Enchantment, Illusion) or generalist.
 **Typical**: *magic missile x2, shield, ray of enfeeblement*; *scorching ray, web, invisibility*; *fireball, lightning bolt (CD 17), dispel magic*; *dimension door, evard's black tentacles (CD 18)*
 **SR**: 18 | **SLA**: as drow warrior
-**Feats**: Scribe Scroll, Spell Focus (evocation), Greater Spell Focus (evoc), Combat Casting, Extend Spell, Empower Spell
+**Feats**: Scribe Scroll (B), Spell Focus (evocation), Greater Spell Focus (evoc), Combat Casting, Empower Spell
 **Notes**: Supporto magia Sonjak.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +1* aggiunto all'equipaggiamento (SRD, 1.000 mo), perché Volontà +7 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Tempra +3 → **+4**, Riflessi +5 → **+6**. Prezzo da ricontrollare col lotto della ricchezza per livello.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): 7 DV danno 3 talenti più il bonus del mago di 5°, e Scribe Scroll è il bonus del 1° **(B)**: la scheda ne aveva uno in più. Tolto **Extend Spell**. Nessun numero cambia.

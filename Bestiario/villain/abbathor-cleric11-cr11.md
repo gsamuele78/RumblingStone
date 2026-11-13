@@ -40,7 +40,7 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 - 5° (2+D) — *colpo infuocato, uccidere i vivi*; *visione del vero* (D)
 - 4° (4+D) — *potere divino, libertà di movimento, infondere capacità magiche, interdizione alla morte*; *veleno* (D)
 - 3° (5+D) — *dissolvi magie, epurare invisibilità, cerchio magico contro il bene, scagliare maledizione, preghiera*; *animare morti* (D)
-- 2° (6+D) — *blocca persone, silenzio, forza del toro, resistere all'energia, arma spirituale, dissacrare*; *celare allineamento* (D)
+- 2° (5+D) — *blocca persone, silenzio, forza del toro, arma spirituale, dissacrare*; *celare allineamento* (D)
 - 1° (6+D) — *scudo della fede, favore divino, comando, protezione dal bene, benedizione, causare paura*; *camuffare sé stesso* (D)
 - 0 (6) — *individuazione del magico, lettura del magico, resistenza, guida, luce, creare acqua*
 

@@ -773,7 +773,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4426,
+    "senza_note": 4460,
     "sestine_citate": [],
     "taglia": -2,
     "talenti": {
@@ -2637,7 +2637,7 @@
         "rifl"
        ],
        "dado": 6,
-       "n": 4,
+       "n": 5,
        "nome": "Ladro"
       },
       {
@@ -2646,7 +2646,7 @@
         "rifl"
        ],
        "dado": 6,
-       "n": 5,
+       "n": 4,
        "nome": "Assassino"
       }
      ],
@@ -2686,7 +2686,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 2985,
+    "senza_note": 2986,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -2760,7 +2760,7 @@
        "rifl"
       ],
       "dado": 6,
-      "n": 4,
+      "n": 5,
       "nome": "Ladro"
      },
      {
@@ -2769,7 +2769,7 @@
        "rifl"
       ],
       "dado": 6,
-      "n": 5,
+      "n": 4,
       "nome": "Assassino"
      }
     ],
@@ -4060,7 +4060,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 1405,
+    "senza_note": 1396,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -4220,8 +4220,8 @@
       0
      ],
      "iniziativa": [
-      3,
-      3,
+      -1,
+      -1,
       0
      ],
      "lotta": [
@@ -4300,7 +4300,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1559,
+    "senza_note": 1470,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_Chierico_3liv_4cr.html",
@@ -4317,9 +4317,7 @@
      ]
     ],
     "taglia": 0,
-    "talenti": {
-     "init": 4
-    },
+    "talenti": {},
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
@@ -4799,7 +4797,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1329,
+    "senza_note": 1310,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_ladro_1liv_2cr.html",
@@ -5339,7 +5337,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 1558,
+    "senza_note": 1559,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_mago_3liv_4cr.html",
@@ -7187,7 +7185,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 1283,
+    "senza_note": 1198,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -8528,7 +8526,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1564,
+    "senza_note": 1573,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Hell Hound 4cr .htm",
@@ -12281,7 +12279,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1479,
+    "senza_note": 1462,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Fight_fungi_colony-formatted.txt",
@@ -13347,7 +13345,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 3164,
+    "senza_note": 3176,
     "sestine_citate": [],
     "taglia": -1,
     "talenti": {},
@@ -13507,8 +13505,8 @@
       0
      ],
      "lotta": [
-      21,
-      21,
+      17,
+      17,
       0
      ],
      "pf": [
@@ -13580,7 +13578,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1532,
+    "senza_note": 1430,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Ogre, Skullcrusher cr5.html",
@@ -13668,7 +13666,7 @@
      }
     ],
     "gs": 5.0,
-    "lotta": 21,
+    "lotta": 17,
     "mischia": "morning star +12 (2d6+7) e spuntone dello scudo +8 (1d8+3, TWF); Distanza roccia +6 (2d6+7, lancio di rocce)",
     "pf": 60,
     "provenienza": "trascritte",
@@ -17350,7 +17348,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1707,
+    "senza_note": 1724,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Underdark cleric cr5 Ainin.htm",
@@ -17569,7 +17567,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1664,
+    "senza_note": 1783,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Underdark dovil runecaster deep diviner cr7.htm",
@@ -17786,7 +17784,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 1403,
+    "senza_note": 1389,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -20733,7 +20731,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5237,
+    "senza_note": 5199,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Lómyn redTongue bard 8.pcg",
@@ -20996,7 +20994,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 7777,
+    "senza_note": 7691,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/nano Morlin Coalhewer cr12.htm",
@@ -21269,7 +21267,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5661,
+    "senza_note": 5728,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Rurik Gorunn martello di moradin 10 liv.htm",
@@ -23680,8 +23678,8 @@
       0
      ],
      "Temp": [
-      14,
-      14,
+      15,
+      15,
       0
      ],
      "Vol": [
@@ -23727,7 +23725,16 @@
         "temp"
        ],
        "dado": 10,
-       "n": 10,
+       "n": 7,
+       "nome": "Paladin"
+      },
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 10,
+       "n": 3,
        "nome": "Blackguard"
       }
      ],
@@ -23775,7 +23782,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5292,
+    "senza_note": 5682,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt",
@@ -23891,7 +23898,16 @@
        "temp"
       ],
       "dado": 10,
-      "n": 10,
+      "n": 7,
+      "nome": "Paladin"
+     },
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 10,
+      "n": 3,
       "nome": "Blackguard"
      }
     ],
@@ -23900,9 +23916,9 @@
     "mischia": "spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni)",
     "pf": 98,
     "provenienza": "a mano",
-    "tipo": "Medium humanoid (dwarf), Blackguard 10, LE",
+    "tipo": "Medium humanoid (dwarf), ex-Paladin 7 / Blackguard 3, LE",
     "ts": [
-     14,
+     15,
      8,
      10
     ]
@@ -24056,7 +24072,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5931,
+    "senza_note": 5908,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt",
@@ -24613,7 +24629,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5356,
+    "senza_note": 5362,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -24705,7 +24721,7 @@
     ],
     "gs": 13.0,
     "lotta": 10,
-    "mischia": "martello da guerra runico +1 +11/+6 (1d8+2)",
+    "mischia": "martello da guerra runico +1 +11/+6 (1d8+2/x3)",
     "pf": 101,
     "provenienza": "a mano",
     "tipo": "Umanoide Medio (nano), Chierico 9 di Abbathor / Runecaster 4, NE",
@@ -25816,7 +25832,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4889,
+    "senza_note": 4866,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/signore dei Dragoni Koth.htm",
@@ -27431,7 +27447,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 8413,
+    "senza_note": 8311,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {

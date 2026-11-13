@@ -26,8 +26,10 @@ iniziativa: +1
 **Domains**: Destruction, Evil (or Scalykind)
 **Spells/day (CL 7, CD 13+lvl)**: 0 — 6; 1 — 5+1; 2 — 4+1; 3 — 3+1; 4 — 2+1.
 **Typical prep**: *bless, divine favor, magic weapon, shield of faith*; *bull's strength, spiritual weapon, hold person*; *prayer, dispel magic, bestow curse*; *divine power, unholy blight (CD 17)*.
-**Feats**: Combat Casting, Extra Turning, Weapon Focus (heavy mace), Spell Focus (evocation)
+**Feats**: Combat Casting, Weapon Focus (heavy mace), Spell Focus (evocation)
 **Skills**: Concentration +12, Knowledge (religion) +10, Spellcraft +8
 **Notes**: 20 unità. Ruolo: buff + emergency heal orda. Turn rebuke for undead ally.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): un'armatura completa dà +8 (SRD), non +7. CA 20 → **21**.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): 7 DV danno 3 talenti e la scheda ne aveva 4. Tolto il talento dello scacciare in più. Nessun numero scritto cambia.

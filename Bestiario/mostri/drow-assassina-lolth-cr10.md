@@ -1,5 +1,5 @@
-# Drow Assassina di Lolth (Ladro 4 / Assassino 5) [CANONE — DM 2026-09-23]
-**Faction**: drow-sonjak | **Role**: caster-subdolo/infiltratrice | **Environment**: underdark/urban | **CR**: 10 | **Source**: SRD drow + Ladro 4 + CdP **Assassino** (SRD) | **Status**: accepted
+# Drow Assassina di Lolth (Ladro 5 / Assassino 4) [CANONE — DM 2026-09-23]
+**Faction**: drow-sonjak | **Role**: caster-subdolo/infiltratrice | **Environment**: underdark/urban | **CR**: 10 | **Source**: SRD drow + Ladro 5 + CdP **Assassino** (SRD) | **Status**: accepted
 
 
 ```statblocco
@@ -26,20 +26,20 @@ attacchi:
 > [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 12 ricavata da pf 40 su 9 DV, ma la scheda scrive 10: si tiene la scheda, da verificare.
 
 Medium humanoid (elf), NE. **DV 9d6**. **hp 40**. **CA 21** (+5 Des, +5 giaco di maglia mithral +1, +1 anello), contatto 16, colto alla sprovvista 16. Iniziativa +9. Vel 9 m.
-**TS** Temp +4, Rifl +15, Vol +5 (mantello della resistenza +2 incluso; +2 razziale vs incantesimi, +2 vs ammaliamenti, **+3 vs veleni**). **BAB/Lotta** +6/+7. **RI 20**.
+**TS** Temp +4, Rifl +15, Vol +5 (mantello della resistenza +2 incluso; +2 razziale vs incantesimi, +2 vs ammaliamenti, **+2 vs veleni**). **BAB/Lotta** +6/+7. **RI 20**.
 **Mischia** spada corta +1 +12/+7 (1d6+2/19-20). **Distanza** balestra a mano +13 (1d4 + veleno).
-**Attacco furtivo** +5d6. **Attacco Mortale** (dopo 3 round di studio: Tempra **CD 19** o **morte**, oppure paralisi 1d6+5 round).
+**Attacco furtivo** +5d6. **Attacco Mortale** (dopo 3 round di studio: Tempra **CD 18** o **morte**, oppure paralisi 1d6+4 round).
 **Car** For 12, Des 20, Cos 10, Int 18, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, uso dei veleni (mai auto-avvelenamento), schivare prodigioso, individuazione delle trappole.
 **Capacità magiche** (1/giorno, CL 9): *luci danzanti*, *oscurità*, *fuoco fatuo*.
 **Talenti** Iniziativa Migliorata, Tiro Ravvicinato, Tiro Preciso, Arma Accurata (spada corta).
 **Veleni** veleno drow (Tempra CD 13, incosciente), 3 dosi di *sangue nero di Lolth* (**Tempra CD 17, 1d6 Cos / 1d6 Cos** — veleno di ragno gigante concentrato).
 
-**Incantesimi da Assassino (CL 5; CD 10 + livello + 4)**
+**Incantesimi da Assassino (CL 4; CD 10 + livello + 4)**
 | Liv | Al giorno | Tipici (SRD) |
 |---|---|---|
 | 1 | 3 | *camuffare se stesso*, *colpo accurato*, *nube di nebbia* |
-| 2 | 2 | **invisibilità**, *passo senza tracce*, *alterare se stesso* |
+| 2 | 1 | **invisibilità**, *passo senza tracce*, *alterare se stesso* |
 
 **Tattiche**: **non combatte**. Studia (3 round, di solito da un tetto o da un condotto), colpisce una volta con Attacco Mortale + attacco furtivo, e sparisce. Se il primo colpo non uccide, ripiega sotto *invisibilità* e riprova la notte dopo.
 **Bersaglio prioritario contro *Il Rumbling Stone***: **Hella** (TS Tempra buono ma non blindato, e la sua morte ha già un precedente che il party non ha superato) oppure un **PNG alleato** — Brenna Sorvane, Lythiel, Norro Wiston. Uccidere un alleato costa al party molto più di 40 pf.
@@ -53,3 +53,5 @@ Notes: agente della compagnia di **Sonjak**, impiegata nella **Notte dei Drow** 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, scelta del DM «tenere il numero, dichiarare la sorgente»): *mantello della resistenza +2* aggiunto all'equipaggiamento (SRD, 4.000 mo), perché Tempra +4, Volontà +5 superava il conto senza un bonus dichiarato. Il mantello vale per tutti e tre i tiri salvezza: Riflessi +13 → **+15**. Prezzo da ricontrollare col lotto della ricchezza per livello.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis, regola del DM «il numero più forte, se si ricostruisce»): un giaco di maglia +1 dà +5 (4 +1, SRD), non +4; contatto e colto alla sprovvista restano 16. CA 20 → **21**.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): l'Assassino chiede 8 gradi in Muoversi Silenziosamente e Nascondersi, che un Ladro ha dal 5° livello. La scheda passa da Ladro 4 / Assassino 5 a **Ladro 5 / Assassino 4**. Non cambiano DV, pf, BAB, tiri salvezza (Ladro 5 +1/+4/+1, Assassino 4 +1/+4/+1), CA, attacchi e attacco furtivo (+3d6 dal Ladro, +2d6 dall'Assassino). Cambiano: Attacco Mortale CD 19 → **18** (10 + 4 livelli + Int 4), paralisi 1d6+5 → **1d6+4**, livello d'incantatore 5 → **4** con un incantesimo di 2° in meno (3 di 1°, 1 di 2°), bonus contro i veleni +3 → **+2**. La nota qui sopra sui Riflessi resta valida col conto nuovo: Ladro 5 (+4) + Assassino 4 (+4) + Des 20 (+5) + mantello +2 = +15.
