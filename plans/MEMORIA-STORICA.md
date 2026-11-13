@@ -996,7 +996,7 @@ repo scritto con altre parole.
 ### MS-0085 · 2026-11-13 · Le ripetizioni dei booklet hanno una misura
 
 - **Data:** 2026-11-13
-- **PR:** —
+- **PR:** #395
 - **ADR:** ADR-0122 ADR-0099
 - **Temi:** stampa booklet misure
 - **Origine:** voce scritta con la PR, per la riga STANDARD-STAMPA del 2026-11-13 in `plans/CHANGELOG.md`
