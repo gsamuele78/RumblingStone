@@ -23,6 +23,7 @@ SCRIVONO_NEL_REPO = {
     "test_validate_docs.py",            # ADR finti in plans/adr/, fixtures/_tmp_*
     "test_migliora_prosa.py",           # pipeline/cieco/_testi-provvisori.md
     "test_misura_stampa.py",            # scripts/tests/_tmp_appendice.*, _tmp_misura_stampa/
+    "test_pdfua.py",                    # il PDF delle schede del Drappo, cartelle tmp* in radice
 }
 
 

@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Il volume da stampa è PDF/UA-1, lo standard dei PDF accessibili (ISO 14289-1; ADR-0129). `export_booklet_typst` lo chiede a typst e lo scrive nella riga finale («…, PDF/UA-1»); se typst lo rifiuta il volume esce lo stesso con «⚠ non è PDF/UA-1» e il motivo. `typst_motore.compila` ha il parametro `pdfua` e l'esito i campi `pdfua` e `motivo_pdfua`. Nel tema `titolo-visibile` (il titolo che leggono i lettori di schermo) e la testatina che legge solo i titoli dell'indice.
 - `dm.py sistemi`: i sistemi di gioco dall'ingresso unico (ADR-0111, ADR-0002). Passa i flag a `scripts/sistemi.py`: senza flag i sistemi attivi e la matrice strumenti × sistemi, `--di FILE` il sistema di un file, `--check` il cancello, `--json`, `--skill`. Il manifest dei tool conosce ora anche `asset`, `ambiente`, `booklet`, `prompts` e `gruppo`, che `dm.py` aveva già ma il server MCP non vedeva.
 - L'avanzamento d'incantatore delle classi di prestigio in `verifica_scheda` (ADR-0126, lotto 3-ter): regola nuova `numero.incantesimi.livello_incantatore`; `prestigio.toml` di 3.5 e PF1e ha la voce `avanza` per classe; funzione nuova `dmcore.prestigio.avanzamento`.
 - Gli effetti dei talenti sulle abilità in `verifica_scheda` (ADR-0126, lotto 4): nel conto dei gradi il bonus di Allerta, Abilità Focalizzata e degli altri talenti d'abilità va solo alle abilità che il talento nomina; dati nuovi `effetti_talenti.toml` per 3.5 e PF1e (capacità `creature.gradi`).

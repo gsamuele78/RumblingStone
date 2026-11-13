@@ -971,3 +971,14 @@ repo scritto con altre parole.
 - **Testo:** Il §5 di `docs/reference/RIFERIMENTO-PLUGIN-DI-SISTEMA.md` (una riga per capacità: chi la chiede, file dati di dnd35 e pf1e) è rimasto indietro quattro volte il 2026-11-12, dopo le #376, #386, #388 e #390, ed è stato riallineato a mano con le #387 e #389. `scripts/tests/test_riferimento_plugin.py` lo confronta con catalogo, manifest e `sistema.toml`: sulle teste di main dopo quelle quattro PR avrebbe dato 5, 6, 15 e 17 disaccordi, su 591dd927 zero. Costo: una PR di regole che cambia una capacità, chi la chiede o i suoi file è rossa finché non aggiorna la riga.
 - **Trovato nel repo:** `scripts/tests/test_riferimento_plugin.py`
 - **Solo qui:** `creature.armi` e `creature.incantatori` mancavano dal §5 già prima della #376 (lotti 2 e 3 di ADR-0126); le parentesi della colonna «chi la chiede» sono note e il test le ignora, quindi «— (la legge verifica_scheda)» conta come nessuno strumento.
+
+### MS-0083 · 2026-11-13 · ADR-0129: il volume da stampa è PDF/UA-1
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0129, ADR-0032
+- **Temi:** stampa booklet accessibilita document-ai
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0129: il volume da stampa è PDF/UA-1» in `plans/CHANGELOG.md`
+- **Testo:** Prima tecnica della richiesta del DM del 2026-11-13 (document AI, explainable AI, AI generativa con standard e librerie standard di fatto, misurate). veraPDF 1.28.2 profilo ua1 sui 19 booklet: main 837876d6 0/19 conformi e 132 controlli falliti (7.3-1 ×78 figure senza alt, 7.4.2-1 ×9 titoli che saltano un livello, 5-1 ×19 e 7.1-10 ×19 di typst, 7.21.5-1 ×7 font); ramo 17/19 e 7. Misure di stampa identiche su tutte le chiavi, pagine identiche al pixel salvo 4 pagine d'indice in 3 booklet.
+- **Trovato nel repo:** `plans/esperimenti/pdfua-2026-11-13/MISURE.md` · `plans/adr/ADR-0129-il-volume-da-stampa-e-pdf-ua-1.md`
+- **Solo qui:** `hide(heading(...))` toglie il titolo dall'albero dei tag e typst con ua-1 si ferma su «the first heading must be of level 1»; la prima prova col titolo trasparente passava PDF/UA ma metteva il testo due volte (fuori_margine 0 → 6 nelle schede PG, titolo doppio nel testo estratto), quindi è stata scartata; la testatina interrogava ogni titolo di livello 1 e con il titolo visibile taggato mostrava il titolo grande in rosso, da qui `outlined: true` nella query. repo1.maven.org ha risposto 429, lo specchio repo.maven.apache.org no. I glifi su Unifont dipendono dai font della macchina: su un'altra il 7.21.5-1 può cambiare.

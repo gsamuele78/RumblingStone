@@ -255,6 +255,7 @@ nella solita cartella `pdf/` con i permessi del tuo utente.
 | Mappe ASCII tagliate sul lato | in stampa i blocchi `pre` si riducono da soli; se resta tagliata, la mappa è troppo larga: accorcia le righe nel master |
 | Emoji delle mappe non renderizzate nel container | manca il font emoji → l'immagine include `fonts-noto-color-emoji`; se hai personalizzato il Dockerfile, rimettilo |
 | `git status` mostra i PDF | non dovrebbe: `*.pdf` è gitignored. Se compaiono, hai un `.gitignore` modificato |
+| `⚠ non è PDF/UA-1` dopo `export_booklet_typst` | il volume c'è, ma un lettore di schermo lo legge peggio (ADR-0129). Il motivo è nella riga dopo: `missing alt text` = un'immagine del master con `![](…)` senza testo fra le parentesi quadre, da scrivere; un altro motivo va riportato come difetto del tema |
 
 ---
 

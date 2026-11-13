@@ -48,6 +48,13 @@ class Esito(NamedTuple):
     #: «internal error: parent group» su float annidati: i tag sono
     #: accessibilità, non impaginazione, e il chiamante lo dice).
     senza_tag: bool
+    #: True se il PDF è PDF/UA-1 (ISO 14289-1), chiesto con `pdfua=True`.
+    #: Typst verifica da sé gli obblighi che dipendono dal documento (titoli
+    #: senza salti, testo alternativo, lingua, titolo) e rifiuta di compilare
+    #: se ne manca uno: allora si ricompila senza, e il chiamante lo dice.
+    pdfua: bool = False
+    #: perché il PDF/UA-1 non c'è (il messaggio di typst), vuoto se c'è
+    motivo_pdfua: str = ""
 
 
 def motore() -> str | None:
@@ -112,16 +119,46 @@ def _e_bug_dei_tag(testo: str) -> bool:
     return "internal error" in testo and "tag" in testo
 
 
+def _e_rifiuto_pdfua(testo: str) -> bool:
+    return "PDF/UA-1 error" in testo
+
+
 def compila(typ: Path, pdf: Path, *, root: Path, font: Path, pacchetti: Path,
-            solo_font_del_repo: bool = False, ingressi: dict[str, str] | None = None) -> Esito:
-    """`typst compile`, col ripiego senza tag PDF quando typst inciampa lì."""
+            solo_font_del_repo: bool = False, ingressi: dict[str, str] | None = None,
+            pdfua: bool = False) -> Esito:
+    """`typst compile`, col ripiego senza tag PDF quando typst inciampa lì.
+
+    `pdfua=True` chiede PDF/UA-1 (ISO 14289-1, lo standard dell'accessibilità
+    dei PDF): se typst lo rifiuta si ricompila come prima e l'esito dice
+    perché (`motivo_pdfua`). ADR-0032 aveva lasciato fuori veraPDF perché due
+    rilievi su tre erano di typst; da typst 0.14 non lo sono più.
+    """
+    if pdfua:
+        e = _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
+                     solo_font_del_repo=solo_font_del_repo, ingressi=ingressi, standard=["ua-1"])
+        if e.ok:
+            return e._replace(pdfua=True)
+        if not _e_rifiuto_pdfua(e.errore):
+            return e
+        motivo = e.errore.strip().splitlines()[0] if e.errore.strip() else "rifiutato"
+        return _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
+                        solo_font_del_repo=solo_font_del_repo, ingressi=ingressi)._replace(motivo_pdfua=motivo)
+    return _compila(typ, pdf, root=root, font=font, pacchetti=pacchetti,
+                    solo_font_del_repo=solo_font_del_repo, ingressi=ingressi)
+
+
+def _compila(typ: Path, pdf: Path, *, root: Path, font: Path, pacchetti: Path,
+             solo_font_del_repo: bool, ingressi: dict[str, str] | None,
+             standard: list[str] | None = None) -> Esito:
     m = esigi()
     if m == "pypi":
         opz = _opzioni_py(root, font, pacchetti, solo_font_del_repo, ingressi)
         ts = _data()
         if ts is not None:
             opz["timestamp"] = ts
-        for tag in (True, False):
+        if standard:
+            opz["pdf_standards"] = standard
+        for tag in (True, False) if not standard else (True,):
             try:
                 _typst.compile(str(typ), output=str(pdf), pdf_tags=tag, **opz)
                 return Esito(True, "", not tag)
@@ -130,8 +167,10 @@ def compila(typ: Path, pdf: Path, *, root: Path, font: Path, pacchetti: Path,
                     return Esito(False, str(e), not tag)
     cmd = [binari.esigi(binari.TYPST), "compile",
            *_opzioni_cli(root, font, pacchetti, solo_font_del_repo, ingressi)]
+    for st in standard or ():
+        cmd += ["--pdf-standard", st]
     r = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
-    if r.returncode != 0 and _e_bug_dei_tag(r.stderr):
+    if r.returncode != 0 and _e_bug_dei_tag(r.stderr) and not standard:
         r = subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)], capture_output=True, text=True)
         return Esito(r.returncode == 0, r.stderr, True)
     return Esito(r.returncode == 0, r.stderr, False)
