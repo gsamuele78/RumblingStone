@@ -50,7 +50,7 @@ attacchi:
 
 **Tattiche** La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.
 
-**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
+**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare) · **Altro equipaggiamento** armatura completa di mithral +2, ascia a due mani +1, 3 giavellotti (tutto di taglia Grande); Occhio di Ossidiana (sotto)
 
 **Capacità speciali**
 - **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).
@@ -79,10 +79,13 @@ pf: 60
 ts: Temp +8, Rifl +3, Vol +1
 velocita: 6 m (armatura pesante)
 iniziativa: +1
-sensi: Ascoltare +1, Osservare +1 (senza gradi)
+sensi: scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi)
 attacchi:
   - Mischia spadone +14 (2d6+6/19-20)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
+voci:
+  - Linguaggi: Comune, Goblin
+  - Altro equipaggiamento: armatura completa, spadone, giavellotti
 ```
 <!-- /include -->
 
@@ -110,11 +113,11 @@ ts: Temp +4, Rifl +4, Vol +7
 attributi: For 10 Des 14 Cos 15 Int 14 Sag 15 Car 8
 velocita: 9 m
 iniziativa: +2
-sensi: Ascoltare +2, Osservare +2
+sensi: scurovisione 18 m; Ascoltare +2, Osservare +2
 attacchi:
   - Mischia bastone ferrato +3 (1d6)
 ```
-**Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
+**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +2, Osservare +2
 
 **Difesa** **CA 12** (+2 DES) · **pf 38** (7d6+14) · TS Temp +4, Rifl +4, Vol +7
 
@@ -122,7 +125,7 @@ attacchi:
 
 **Tattiche** Sta nella tenda di Zog'tar (Scena 8).
 
-**Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12
+**Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12 · **Linguaggi** Comune, Goblin · **Altro equipaggiamento** bastone ferrato
 <!-- /include -->
 
 ## Grask, l'araldo col corno
