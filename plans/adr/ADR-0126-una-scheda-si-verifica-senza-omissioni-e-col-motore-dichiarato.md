@@ -777,3 +777,33 @@ classe che aveva l'abilità si contano di classe per tutte le classi della
 scheda (l'SRD lo vuole livello per livello, e la scheda non lo dice); le razze
 dei mostri non hanno i bonus alle abilità nel plugin; PF1e non ha queste
 tabelle e resta com'era.
+
+### Lotto 6, seconda parte — la penalità di armatura alla prova (2026-11-13)
+
+**Contesto.** Il bonus che la scheda scrive per Scalare o Nascondersi ha già
+dentro la penalità dell'armatura e dello scudo. Il conto dei gradi non la
+conosceva: a un guerriero in armatura completa lasciava sei punti di margine in
+più di quelli che ha, e a Nuotare dodici.
+
+**Decisione.** `estrai_gradi.py` legge dall'SRD e scrive in `gradi.toml` del
+3.5 la tabella `[penalita_di_prova]`: le nove abilità che la subiscono (dal
+titolo «Armor Check Penalty» di ogni abilità), quella a cui vale doppia
+(Nuotare), e la penalità di dodici armature e sei scudi con bonus e Des massima
+(tabella «Armor and Shields»). `verifica_scheda` legge la riga della CA con lo
+stesso lettore del conto della CA, riconosce armatura e scudo dal bonus e dalla
+Des massima e aggiunge la penalità ai gradi minimi di quelle abilità. La
+penalità è la più bassa possibile: ogni oggetto si conta perfetto (−1), il
+mithral toglie 3 e il legnoscuro 2. Il carico, che la può solo alzare, non si
+conta. Se il file ha più di una riga della CA con un'armatura, la penalità non
+si conta: non si sa di chi è la riga delle abilità.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 33 → 33, non
+verificabili 371 → 371; nessuna scheda toccata. Le schede del Bestiario con
+un'armatura o uno scudo riconosciuti sono 62. Banco `muta_abilita.py` (32
+schede, main → qui): un'abilità +4 4 → 4, +8 19 → 20, +12 26 → 26; tutte +3
+9 → 10, tutte +6 18 → 20; ogni abilità da sola +2 2 → 3 su 162, +4 16 → 16 su
+162. Il guadagno è di pochi casi. Limiti: PF1e non ha la tabella e resta
+com'era; il carico non si conta; chi porta un'armatura fuori dalla tabella
+dell'SRD non ha penalità. I gradi dichiarati fra parentesi non si leggono: nel
+Bestiario li scrive abilità per abilità una scheda sola (la capitana Lorana),
+altre tre li scrivono in prosa, e una regola per quattro schede non si fa.

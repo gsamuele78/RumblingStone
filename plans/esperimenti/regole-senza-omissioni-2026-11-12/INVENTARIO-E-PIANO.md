@@ -441,3 +441,13 @@ costo doppio) e conta il margine vero per le sette razze. Misura: violazioni
 da sola: 10 → 16 su 162. Restano del lotto 6: penalità di armatura alla prova,
 gradi dichiarati fra parentesi, bonus alle abilità delle razze dei mostri,
 le stesse tabelle per PF1e.
+
+### Lotto 6, seconda parte: la penalità di armatura alla prova (2026-11-13)
+
+`gradi.toml` del 3.5 ha `[penalita_di_prova]` (nove abilità, Nuotare doppia,
+dodici armature e sei scudi dell'SRD) e `verifica_scheda` la aggiunge ai gradi
+minimi delle abilità che la subiscono, nella misura più bassa possibile.
+Misura: violazioni 33 → 33, non verificabili 371 → 371; 62 schede con
+un'armatura riconosciuta; banco, tutte +6: 18 → 20 su 32. Restano del lotto 6:
+bonus alle abilità delle razze dei mostri, le stesse tabelle per PF1e. I gradi
+dichiarati fra parentesi non si fanno: li scrive una scheda sola.
