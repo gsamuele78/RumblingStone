@@ -40,13 +40,13 @@ iniziativa: +9
 sensi: scurovisione 18 m; Ascoltare +11, Osservare +3
 attacchi:
   - Mischia ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira
-  - Distanza 3 giavellotti Grandi +19 (1d8+13) in Ira; (1d8+10) fuori dall'Ira; incremento 9 m
+  - Distanza 3 giavellotti Grandi +19 (1d8+13) in Ira, (1d8+10) fuori, incremento 9 m
 ```
 **Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **Difesa** **CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)
 
-**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
+**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
 
 **Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
 
@@ -79,7 +79,7 @@ pf: 60
 ts: Temp +8, Rifl +3, Vol +1
 velocita: 6 m (armatura pesante)
 iniziativa: +1
-sensi: Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
+sensi: Ascoltare +1, Osservare +1 (senza gradi)
 attacchi:
   - Mischia spadone +14 (2d6+6/19-20)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
