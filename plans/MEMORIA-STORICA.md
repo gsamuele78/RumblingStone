@@ -1168,3 +1168,14 @@ repo scritto con altre parole.
 - **Testo:** `difese.toml` ha `[difese.immunita]` (le immunità che l'SRD dà a sette tipi di creatura) e la verifica `difese` ha la regola `tratti.immunita`: la scheda scrive «tratti dei …» o tutte le immunità del tipo. Misura: violazioni 34 → 37 (deathlock, leone spettrale e leone crudele scheletrico senza i tratti dei non morti, in attesa del DM); 18 schede in regola su 21; banco 16 su 18, su main 0.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** i miconidi scrivono «tratti vegetali», senza «dei»: la formula deve accettarla, altrimenti quattro schede giuste diventano violazioni. La parola «mente» da sola combacia con gli avverbi («completamente»): va cercata come parola intera. La scheda di prova dei test ha Int 10, quindi un costrutto di prova non è mai «senza mente» se non glielo si toglie.
+
+### MS-0101 · 2026-11-13 · ADR-0126 lotto 7: i linguaggi automatici
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 7 quarta parte: i linguaggi automatici» in `plans/CHANGELOG.md`
+- **Testo:** il plugin 3.5 ha `linguaggi.toml` (linguaggi automatici delle sette razze dell'SRD, Druidico del druido) e `verifica_scheda` ha la verifica `linguaggi` (regola `tratti.linguaggi`), solo per chi scrive la riga dei linguaggi. Misura: violazioni 37 → 37; 7 schede giudicate su 24; banco 13 su 13, su main 0. Il lotto 7 è chiuso.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** il numero dei linguaggi non si conta di proposito. Le schede dei PNG hanno linguaggi regionali (Chondathan, Illuskan, Shaaran) che l'SRD non conosce e non scrivono i gradi di Parlare Linguaggi: un conto darebbe violazioni che sono scelte del DM. Chi non scrive la riga non è una violazione, perché il blocco 3.5 non la prevede.

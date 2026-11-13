@@ -478,3 +478,12 @@ ne hanno. Regola nuova `tratti.immunita` nella verifica `difese`: formula
 «tratti dei …» o elenco completo. Misura: violazioni 34 → 37 (tre non morti
 senza i tratti: decide il DM); 18 schede in regola su 21 del tipo; banco 16 su
 18, su main 0. Resta del lotto 7: i linguaggi.
+
+### Lotto 7, quarta parte: i linguaggi automatici (2026-11-13)
+
+`linguaggi.toml` del 3.5 (capacità `creature.costruzione`): linguaggi
+automatici delle sette razze e Druidico del druido. Verifica nuova `linguaggi`
+(regola `tratti.linguaggi`), solo per chi scrive la riga. Misura: violazioni
+37 → 37; 7 schede giudicate su 24 con la riga; banco `muta_linguaggi.py` 13 su
+13, su main 0. Lotto 7 chiuso. Fuori dal lotto, dichiarati: carico, RD che non
+è N/—, sottotipi, razze dei mostri, PF1e.
