@@ -3496,8 +3496,8 @@ cambia davvero.
     costa 3 m di volo, e nel round in cui vira non sale: resta in quota o
     scende. È il talento che gli fa girare un drago Enorme dentro un cortile
     di 36 m: entra, soffia, e torna indietro sulla stessa linea quando il
-    gruppo pensava di averlo alle spalle. Riscontrato sull'SRD 3.5, *Monster
-    Feats*, *Wingover*.
+    gruppo pensava di averlo alle spalle. 🔎 Il testo è quello dell'SRD letto
+    su una trascrizione: va riscontrato su d20srd.org.
   - ***Colpo accurato*** (SRD, *true strike*, stregone di 1°). Azione
     standard: +20 di intuizione al prossimo tiro per colpire, entro la fine
     del round dopo, e niente probabilità di mancare per occultamento. La
