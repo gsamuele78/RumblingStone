@@ -36,14 +36,14 @@
         "schede": 32,
         "pagine_con_immagine": 0.044,
         "pagine_con_immagine_decimo": 0.12,
-        "parole": 90846,
-        "quota_parole_ripetute": 0.129
+        "parole": 88416,
+        "quota_parole_ripetute": 0.126
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 11719
+        "parole_ripetute": 11154
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -62,8 +62,8 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 1590,
-        "quota_parole_ripetute": 0.038
+        "parole": 1536,
+        "quota_parole_ripetute": 0.039
       },
       "in_prova": {
         "sigle_morte": 0,
@@ -82,20 +82,20 @@
         "rimandi_sbagliati": 0
       },
       "misura": {
-        "pagine": 125,
-        "corpo_mediano_pt": 10.0,
+        "pagine": 113,
+        "corpo_mediano_pt": 9.5,
         "corpo_minimo_pt": 7.0,
         "schede": 24,
-        "pagine_con_immagine": 0.024,
-        "pagine_con_immagine_decimo": 0.08,
-        "parole": 72036,
-        "quota_parole_ripetute": 0.123
+        "pagine_con_immagine": 0.027,
+        "pagine_con_immagine_decimo": 0.088,
+        "parole": 69540,
+        "quota_parole_ripetute": 0.113
       },
       "in_prova": {
         "sigle_morte": 0,
-        "righe_brevi_incomplete": 0,
+        "righe_brevi_incomplete": 3,
         "titoli_rovinati": 0,
-        "parole_ripetute": 8854
+        "parole_ripetute": 7883
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -114,14 +114,14 @@
         "schede": 1,
         "pagine_con_immagine": 0.263,
         "pagine_con_immagine_decimo": 0.263,
-        "parole": 3613,
-        "quota_parole_ripetute": 0.03
+        "parole": 3405,
+        "quota_parole_ripetute": 0.019
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 109
+        "parole_ripetute": 63
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json": {
@@ -140,14 +140,14 @@
         "schede": 30,
         "pagine_con_immagine": 0.035,
         "pagine_con_immagine_decimo": 0.081,
-        "parole": 102696,
-        "quota_parole_ripetute": 0.097
+        "parole": 100223,
+        "quota_parole_ripetute": 0.094
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 9955
+        "parole_ripetute": 9444
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -166,14 +166,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 16819,
-        "quota_parole_ripetute": 0.063
+        "parole": 16449,
+        "quota_parole_ripetute": 0.062
       },
       "in_prova": {
         "sigle_morte": 1,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1057
+        "parole_ripetute": 1024
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-GRUPPO-CAMMINO.manifest.json": {
@@ -192,8 +192,8 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 588,
-        "quota_parole_ripetute": 0.024
+        "parole": 568,
+        "quota_parole_ripetute": 0.025
       },
       "in_prova": {
         "sigle_morte": 0,
@@ -218,14 +218,14 @@
         "schede": 4,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 40351,
-        "quota_parole_ripetute": 0.051
+        "parole": 39498,
+        "quota_parole_ripetute": 0.049
       },
       "in_prova": {
         "sigle_morte": 2,
         "righe_brevi_incomplete": 1,
         "titoli_rovinati": 0,
-        "parole_ripetute": 2077
+        "parole_ripetute": 1924
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-terros/ARC07-TEASER-GIOCATORI.manifest.json": {
@@ -244,7 +244,7 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 572,
+        "parole": 558,
         "quota_parole_ripetute": 0.0
       },
       "in_prova": {
@@ -270,14 +270,14 @@
         "schede": 26,
         "pagine_con_immagine": 0.048,
         "pagine_con_immagine_decimo": 0.105,
-        "parole": 61639,
-        "quota_parole_ripetute": 0.109
+        "parole": 60071,
+        "quota_parole_ripetute": 0.107
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 6731
+        "parole_ripetute": 6424
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
@@ -296,14 +296,14 @@
         "schede": 5,
         "pagine_con_immagine": 0.031,
         "pagine_con_immagine_decimo": 0.031,
-        "parole": 29781,
-        "quota_parole_ripetute": 0.062
+        "parole": 29146,
+        "quota_parole_ripetute": 0.051
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 5,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1834
+        "parole_ripetute": 1478
       }
     },
     "10-stand-alone/Il Giardino di Sale e Calce PF1e/homebrew/giardino-sale-calce-pf1e.manifest.json": {
@@ -322,14 +322,14 @@
         "schede": 7,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 11304,
-        "quota_parole_ripetute": 0.086
+        "parole": 11007,
+        "quota_parole_ripetute": 0.082
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 967
+        "parole_ripetute": 900
       }
     },
     "10-stand-alone/Il Giardino di Sale e Calce/homebrew/giardino-sale-calce.manifest.json": {
@@ -348,14 +348,14 @@
         "schede": 7,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 18204,
-        "quota_parole_ripetute": 0.084
+        "parole": 17712,
+        "quota_parole_ripetute": 0.081
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1537
+        "parole_ripetute": 1430
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BENVENUTO-TAVOLO.manifest.json": {
@@ -374,7 +374,7 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 664,
+        "parole": 661,
         "quota_parole_ripetute": 0.0
       },
       "in_prova": {
@@ -400,14 +400,14 @@
         "schede": 14,
         "pagine_con_immagine": 0.114,
         "pagine_con_immagine_decimo": 0.205,
-        "parole": 41781,
-        "quota_parole_ripetute": 0.07
+        "parole": 40835,
+        "quota_parole_ripetute": 0.059
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 2938
+        "parole_ripetute": 2414
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-BOOKLET-GIOCATORI.manifest.json": {
@@ -426,14 +426,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.625,
-        "parole": 2568,
-        "quota_parole_ripetute": 0.013
+        "parole": 2511,
+        "quota_parole_ripetute": 0.007
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 33
+        "parole_ripetute": 17
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-FASCICOLO-SCHEDE.manifest.json": {
@@ -452,14 +452,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.091,
         "pagine_con_immagine_decimo": 0.455,
-        "parole": 4573,
-        "quota_parole_ripetute": 0.061
+        "parole": 4476,
+        "quota_parole_ripetute": 0.047
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 280
+        "parole_ripetute": 209
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-PROP.manifest.json": {
@@ -478,14 +478,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.167,
-        "parole": 813,
-        "quota_parole_ripetute": 0.011
+        "parole": 747,
+        "quota_parole_ripetute": 0.0
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 9
+        "parole_ripetute": 0
       }
     },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-SCHEDE-PG.manifest.json": {
@@ -504,14 +504,14 @@
         "schede": 0,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 4022,
-        "quota_parole_ripetute": 0.093
+        "parole": 3812,
+        "quota_parole_ripetute": 0.051
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 375
+        "parole_ripetute": 194
       }
     },
     "10-stand-alone/L'abbazia Della Rotta Sicura/homebrew/abbazia-rotta-sicura.manifest.json": {
@@ -530,14 +530,14 @@
         "schede": 38,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 24326,
-        "quota_parole_ripetute": 0.076
+        "parole": 23797,
+        "quota_parole_ripetute": 0.074
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 1848
+        "parole_ripetute": 1764
       }
     }
   }

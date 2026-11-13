@@ -88,3 +88,22 @@ arriva un terzo riferimento intero che sposta una soglia; un OCR legge le
 etichette delle mappe di carta (allora la trascrizione a vista si toglie);
 dopo 14 giorni e 10 corse su `main` senza falsi allarmi non spiegati, e con le
 scelte del DM fatte, il passo può salire a stable.
+
+## Aggiornamento del 2026-11-13: pagina fitta e copie una volta sola
+
+**Contesto.** La serata «La Notte e l'Alba» era di 125 pagine. La misura delle
+ripetizioni (MS-0086) dice che le copie valgono poco e che pesa la pagina: 561
+parole contro le 725 di *Burnt Offerings*. Il DM ha scelto tutte e tre le leve
+insieme: pagina più fitta, schede d'entrata ripetute, copie del corpo.
+
+**Decisione.** Due chiavi di manifest, solo stampa, spente dove non scritte.
+`"pagina": "fitta"`: A4 a 9,6 pt (il corpo già usato in A5), interlinea
+0,56em, margini 1,8/1,3/1,8/1,6 cm. `"copie": "una-volta"`: con «prima-volta»
+la riga per il tavolo e la scheda d'entrata in breve escono una volta sola nel
+corpo; dalla seconda resta una riga con le due pagine e la tattica.
+
+**Conseguenze.** Serata 125 → 113 pagine, non le 100 stimate. Si sfoglia di
+più: per i numeri di Zog'tar 13 pagine in mediana invece di 5. Le frasi dette
+due volte fra regia e scene restano: meno di due pagine, e ogni taglio è una
+scelta di testo. Si torna indietro togliendo una chiave.
+

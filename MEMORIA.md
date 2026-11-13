@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | STANDARD-STAMPA | Serata più corta: pagina fitta e copie una volta sola (scelta del DM del 2026-1… | ✅ manifest `"pagina": "fitta"` e `"copie": "una-volta"`, usati solo dalla serata «La Notte e l'Alba»: 125 → 113 pagine (561 → 615 parole per pagina; *Burnt Off… |
 | 2026-11-13 | AVVENTURE-COMMUNITY | ADR-0125, aggiunta S8 (tattiche contro la scheda):… | ✅ su main 0 violazioni su 220 menzioni in 60 schede (9 falsi allarmi prima dei filtri, letti uno per uno); mutanti: scheda che perde ciò che la tattica usa 181… |
 | 2026-11-13 | STANDARD-STAMPA | Misura delle ripetizioni nei booklet (domanda del DM del 2026-11-12: «siamo sic… | ✅ `misura_stampa.parole_ripetute` (w-shingling, Broder 1997: passi di almeno 8 parole identiche, dalla seconda volta, testatine escluse), in prova; 20 booklet… |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4, seconda parte: gli effetti dei talenti sulle abilità nel con… | ✅ abilità fuori regola messe apposta: da 0 a 44 su 44; 2 controlli in regola, nessuno segnato a torto; Bestiario invariato (72 violazioni, 321 dubbi). Lotto 4… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 4: il numero dei talenti in `verifica_scheda` (regola… | ✅ un talento in più o in meno messo apposta: da 0 a 101 su 127 (101 su 101 nelle schede di cui il conto si può fare, 0 su 26 nelle 13 con una classe senza tale… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 3-bis: capacità `creature.prestigio` (… | ✅ requisiti tolti apposta dalle 8 schede vere: da 0 a 30 su 30; ogni requisito di 503 classi tolto e visto nei test; 1.301 requisiti 3.5 ridotti a un numero (6… |
-| 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN, MOTORE-AGNOSTI… | Regole complete, coda del lotto 3: `genera_creatura` dichiara nel manifest le c… | ✅ Capacità lette e dichiarate 1/3 → 3/3; il cancello di `sistemi.py` ora le chiede a ogni sistema attivo (i tre sistemi di prova le coprono già su main). 🟡 Mis… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 87 voci, l'ultima MS-0087 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 88 voci, l'ultima MS-0088 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

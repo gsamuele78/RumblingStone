@@ -2073,7 +2073,7 @@ solo i gridi `[CANONE — DM 2026-11-04, P16, la tenda di Zog'tar]`.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 7 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
+| Scena 7 | **La scheda da tavolo**: il testo intero segue |
 |---|---|
 | **Succede** | I PG entrano nella tenda di Zog'tar. Se parlano prima di colpire, Balvar tratta |
 | **Chi c'è** | Zog'tar sul seggio, le quattro guardie, Balvar che incide sullo sgabello in fondo. Lo scontro, se parte, è la Scena 8: **EL 17** con Balvar contro, 16 senza |
@@ -2534,7 +2534,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 8 · EL 17, 16 senza Balvar | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
+| Scena 8 · EL 17, 16 senza Balvar | **La scheda da tavolo**: il testo intero segue |
 |---|---|
 | **Succede** | Lo scontro nella tenda, da quando Zog'tar si alza dal seggio |
 | **Chi c'è** | Zog'tar Deatheye: 283 pf, CA 26 (24 in Ira), iniziativa +9, ascia +29/+24/+19 in Ira (3d6+20). Le quattro guardie; il sacerdote dell'orda, che dorme dietro il seggio; Balvar, se non è passato ai PG. **EL 17** con Balvar, 16 senza. Grask è fuori col corno |
@@ -2917,7 +2917,7 @@ si gioca su M7-B `[CANONE — DM 2026-10-07, Q29-bis]`.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 9 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
+| Scena 9 | **La scheda da tavolo**: il testo intero segue |
 |---|---|
 | **Succede** | Al ritorno, fra le tende, i PG incrociano Vatore, il ladro che diventerà Sal |
 | **Chi c'è** | Vatore, da solo, con un fagotto stretto al petto. Non combatte. Per colpirlo: **CA 22, contatto 16**. L'Anello di Artemis diventa gelido |
@@ -3107,7 +3107,7 @@ L'artefatto che stringe al petto è in **Appendice B**.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 10 · EL 16 se Zog'tar sale | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
+| Scena 10 · EL 16 se Zog'tar sale | **La scheda da tavolo**: il testo intero segue |
 |---|---|
 | **Succede** | Il primo ariete arriva alle mura, e il gruppo sceglie una via su tre per tenerle |
 | **Chi c'è** | Hrodgar, il capitano delle mura; Hald, il nipote di Balvar; Re Thorek I. Zog'tar e le sue guardie, solo se è vivo all'alba e i successi sono 0 o 1 (EL 16). Vatore, se i PG sono tornati in volo senza scendere |
@@ -3291,7 +3291,7 @@ successo in più o in meno, si applica allo stesso modo.
 <!-- scheda-da-tavolo -->
 <!-- tabella: larga -->
 
-| Scena 11 · EL 17 | **La scheda da tavolo**: che cosa succede, chi c'è, cosa vuole e come si conduce; il testo intero segue |
+| Scena 11 · EL 17 | **La scheda da tavolo**: il testo intero segue |
 |---|---|
 | **Succede** | Skullcrusher cala sul cortile con due wyvern e combatte in passate, gridando i nomi che ha sentito di notte attraverso la Catena |
 | **Chi c'è** | Skullcrusher il **Vecchio** (GS 17): 337 pf, CA 36 (40 con *armatura magica*), contatto 10. Dal round 2 due wyvern, su chi tiene la corda e su chi vola; fuggono quando fugge lui. **EL 17**. Re Thorek è nel cortile, alle spalle dei PG |

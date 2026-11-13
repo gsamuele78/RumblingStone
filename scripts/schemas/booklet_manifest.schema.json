@@ -137,6 +137,20 @@
       ],
       "description": "Dove esce il riquadro intero delle creature (ADR-0105 punto 7). 'appendice' (predefinito): nell'incontro una riga con nome, GS, CA, pf, rimando e tattica, il riquadro in un'appendice in fondo al volume. 'qui': il riquadro dove è scritto, per i volumi da consegnare ai giocatori. 'entrambe': il riquadro dove è scritto e in più l'appendice in fondo, solo nel PDF (l'HTML fa come 'qui'). Catene: entrambe. 'prima-volta' (ADR-0122): come gli AP Paizo, il riquadro intero nel corpo solo alla prima comparsa, poi la riga con la pagina della scheda e la tattica dell'incontro; in fondo l'appendice con tutte. Solo nel PDF (l'HTML fa come 'qui')."
     },
+    "copie": {
+      "type": "string",
+      "enum": [
+        "una-volta"
+      ],
+      "description": "Solo con schede: 'prima-volta' (scelta del DM del 2026-11-13). 'una-volta': la riga per il tavolo di una creatura e la sua scheda d'entrata in breve escono nel corpo una volta sola; dalla seconda volta resta una riga con la pagina della riga, la pagina della scheda e la tattica di quell'incontro. Senza la chiave ogni incontro ristampa la riga. Catene: stampa."
+    },
+    "pagina": {
+      "type": "string",
+      "enum": [
+        "fitta"
+      ],
+      "description": "'fitta' (scelta del DM del 2026-11-13): pagina A4 con corpo 9,6 pt, interlinea 0,56em e margini più stretti, per i volumi lunghi. Senza la chiave la pagina è quella di sempre (10,2 pt). In A5 non cambia niente. Catene: stampa."
+    },
     "chi_si_incontra": {
       "type": "boolean",
       "description": "ADR-0107: prima di stampare, ogni capitolo riceve le persone che vi si incontrano (scheda d'entrata con la riga Chi è, ritratto, riquadro con la tattica) e le mappe che nomina, prese dal master che le ha (dmcore.chi_si_incontra). Va con schede: entrambe, così l'appendice resta."

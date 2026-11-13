@@ -24,7 +24,7 @@ quello che un controllo di prestampa misura, più le schede delle creature:
 | `rimandi_sbagliati` | «scheda a pagina N» senza la creatura a pagina N, «continua a pagina N» senza «(segue)» a pagina N, «continua nella colonna accanto» senza «(segue)» sulla stessa pagina | 0 |
 | `pagine_con_immagine` | quota di pagine con un'immagine raster di almeno un quarto di pagina | da registrare |
 | `pagine_con_immagine_decimo` | la stessa quota con la soglia di 1/10 di pagina, dove il piano pone l'obiettivo ≥ 0,3 (Paizo 0,40) | da registrare |
-| `parole_ripetute`, `quota_parole_ripetute` | parole che stanno in un passo di almeno 8 parole già stampato prima, testatine escluse | in prova; *Burnt Offerings* 0,012, *Red Hand of Doom* (estratto) 0,005 |
+| `parole_ripetute`, `quota_parole_ripetute` | parole che stanno in un passo di almeno 8 parole già stampato prima, testatine escluse | in prova; *Burnt Offerings* 0,011, *Red Hand of Doom* (estratto) 0,004 |
 
 Le schede si riconoscono dai segnaposti `<sb-inizio>` e `<sb-fine>` che il
 tema mette in ogni `#statblocco`; si leggono con `typst eval`.
@@ -88,6 +88,9 @@ IN_PROVA = ("sigle_morte", "righe_brevi_incomplete", "titoli_rovinati", "parole_
 PASSO_RIPETUTO = 8
 #: Un n-gramma che torna su più di tante pagine è una testatina, non una ripetizione.
 PAGINE_DI_TESTATINA = 8
+#: Quante righe in testa e in coda alla pagina si guardano per togliere le
+#: testatine: titolo del volume, capitolo, numero di pagina.
+RIGHE_DI_BORDO = 3
 MINIMO_PT = 7.0
 DPI_MINIMI = 300
 # Typst appende punteggiatura e trattini nel margine (text.overhang, la
@@ -322,17 +325,34 @@ def parole_ripetute(doc, passo: int = PASSO_RIPETUTO) -> tuple[int, int, list[tu
     """Quante parole del volume stanno in un passo già stampato prima.
 
     Un passo è una sequenza di almeno `passo` parole identiche; si conta dalla
-    seconda volta in poi. Le testatine e i piè di pagina, che tornano su più di
-    `PAGINE_DI_TESTATINA` pagine, non contano. Misurato il 2026-11-13 sui
-    riferimenti di ADR-0122: *Burnt Offerings* 1,2%, l'estratto di *Red Hand of
-    Doom* 0,5%; il booklet di serata «La Notte e l'Alba» 12,3%.
+    seconda volta in poi. Le testatine e i piè di pagina non contano: né le
+    righe in testa e in coda che tornano uguali su un'altra pagina, né i passi
+    presenti su più di `PAGINE_DI_TESTATINA` pagine. Misurato il 2026-11-13
+    sui riferimenti di ADR-0122: *Burnt Offerings* 1,1%, l'estratto di *Red
+    Hand of Doom* 0,4%; il booklet di serata «La Notte e l'Alba» 11,8% prima
+    di `"copie": "una-volta"`, 11,3% dopo.
 
     Torna (parole del volume, parole ripetute, passi): ogni passo è
     (pagina, pagina della prima volta, parole, come comincia), dal più lungo.
     """
+    # Le righe in testa e in coda che tornano uguali su un'altra pagina sono
+    # testatine e piè di pagina: fuori prima di contare, anche nei capitoli
+    # corti, dove il conto delle pagine non le riconosce.
+    pagine = [pagina.get_text().replace("\xad", "").split("\n") for pagina in doc]
+    bordo: dict[str, int] = {}
+    for righe in pagine:
+        for r in {x.strip() for x in righe[:RIGHE_DI_BORDO] + righe[-RIGHE_DI_BORDO:]}:
+            if _PAROLA.search(r):
+                bordo[r] = bordo.get(r, 0) + 1
     parole: list[tuple[str, int]] = []
-    for n, pagina in enumerate(doc, start=1):
-        testo = re.sub(r"-\n(?=[a-zà-ù])", "", pagina.get_text().replace("\xad", ""))
+    for n, righe in enumerate(pagine, start=1):
+        a, z = 0, len(righe)
+        while a < min(RIGHE_DI_BORDO, z) and bordo.get(righe[a].strip(), 0) > 1:
+            a += 1
+        while z > max(a, len(righe) - RIGHE_DI_BORDO) and (
+                bordo.get(righe[z - 1].strip(), 0) > 1 or not righe[z - 1].strip()):
+            z -= 1
+        testo = re.sub(r"-\n(?=[a-zà-ù])", "", "\n".join(righe[a:z]))
         parole += [(w.lower(), n) for w in _PAROLA.findall(testo)]
     ws = [w for w, _ in parole]
     dove: dict[tuple, list[int]] = {}
