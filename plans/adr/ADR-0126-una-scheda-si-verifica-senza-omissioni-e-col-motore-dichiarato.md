@@ -667,3 +667,42 @@ riscontrati solo sulle prove.
   generale);
 - una sorgente di bonus dei manuali diverge fra due fonti (D-D);
 - il DM vuole un quinto motore (3.0, PF1e solo manuale base).
+
+### Lotto 5, seconda parte — il grado di sfida (2026-11-13)
+
+**Contesto.** Il grado di sfida è il numero che il DM usa per comporre un
+incontro e per i punti esperienza, e nessuna verifica lo confrontava con la
+scheda. Nel Bestiario 126 schede lo scrivono nel blocco.
+
+**Decisione.** Verifica `grado_di_sfida` in `verifica_scheda`, regola
+`numero.gs`, col conto puro in `scripts/dmcore/gs.py` e i numeri nella tabella
+`[gs]` della capacità `creature.costruzione` (nessuna capacità nuova):
+
+- chi è fatto di soli livelli di classe: 3.5, classe da PG = livello, classe da
+  PNG = livello −1 (`[Private source — Dungeon Master's Guide 3.5]`, solo i
+  numeri; l'SRD lo mostra nei blocchi: hobgoblin combattente di 1° GS 1/2);
+  PF1e, livello −1 e livello −2 (PRD). Sotto 1 si scende per gradini;
+- le razze che nell'SRD hanno la loro riga «Challenge Rating»: drow, duergar e
+  svirfneblin +1 con classi da PG e pari al livello con classi da PNG; goblin −2
+  e coboldo −3 con classi da PNG;
+- creatura base più livelli (SRD, *Improving Monsters*): livello associato +1,
+  non associato +½ finché i livelli non pareggiano i dadi vita d'origine. Quali
+  livelli sono associati lo decide chi costruisce: il grado è legale dentro la
+  forbice fra tutti non associati e tutti associati;
+- creatura base senza livelli: il grado della base.
+
+Non si giudica, e lo si dice fra i non verificabili: un modello o un innesto,
+l'avanzamento per dadi vita, una cavalcatura nel blocco, classi da PG e da PNG
+insieme, una razza fuori dalla fonte (githyanki, orog…) o non riconosciuta, una
+scheda che non scrive la composizione dei dadi vita.
+
+**Conseguenze.** Misura sul Bestiario e sugli archi: violazioni 30 → 33,
+non verificabili 293 → 371. Delle 126 schede col grado, 49 sono in regola, 3
+fuori (`duergar-ladro1-cr1`, `duergar-mago-ladro8-cr7`, `goblin-warrior1-cr05`:
+decisione del DM, le schede non si toccano qui) e 74 dubbie con la ragione
+scritta. Banco `muta_gs.py`: 92 gradi sbagliati messi apposta trovati su 98; i
+6 che restano sono dentro la forbice legale di una creatura base con livelli.
+Limiti: il conto per il livello di chi ha classi miste, i modelli e
+l'avanzamento per dadi vita restano da fare; la base si riconosce dal nome
+inglese (il «gigante delle colline» resta un dubbio).
+

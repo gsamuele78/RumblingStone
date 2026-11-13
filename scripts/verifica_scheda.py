@@ -29,6 +29,9 @@ Scopo
              che la fonte della scheda dichiara («SRD *Ogre* + …»), e il dado
              dei suoi attacchi naturali nel conto del danno (capacità
              `creature.base`; ADR-0126, lotto 5)
+    grado_di_sfida  il grado di sfida scritto contro livelli di classe (da PG o
+             da PNG), eccezioni di razza e creatura base (tabella `[gs]` della
+             capacità `creature.costruzione`; ADR-0126, lotto 5)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -1068,6 +1071,80 @@ def creatura_base(p: Path) -> "tuple[list[dict], list[dict]]":
     return viol, nv
 
 
+def grado_di_sfida(p: Path) -> "tuple[list[dict], list[dict]]":
+    """Il grado di sfida scritto contro quello che danno livelli, razza e creatura base (ADR-0126, lotto 5)."""
+    import conformita_statblocchi as C
+    from dmcore import gs as GS
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    # il grado si legge dalla riga del blocco: «1/2» resta una frazione
+    m = re.search(r"^\s*gs\s*:\s*(\d+\s*/\s*\d+|\d+(?:[.,]\d+)?)\s*$", s.testo, re.M | re.I)
+    ha = GS.frazione(m.group(1).replace(" ", "")) if m else None
+    if ha is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    tabella = S.dati(sistema, "creature.costruzione").get("gs")
+    if not tabella:
+        return [], []
+    righe = s.testo.splitlines()
+    n_riga = next((i + 1 for i, r in enumerate(righe) if re.match(r"\s*gs\s*:", r, re.I)), 1)
+    base = {"file": VT_rel(p), "riga": n_riga, "verifica": "grado_di_sfida", "fonte": sistema}
+    f = VT.leggi(p) or {}
+    it = _classi_it()
+    livelli: dict[str, int] = {}
+    for nome, n in dict(f.get("livelli") or L.livelli_di_classe(s)).items():
+        en = it.get(nome.lower(), nome.lower())
+        livelli[en] = livelli.get(en, 0) + n
+    for voce in f.get("classi_ignote") or []:
+        nome, _, n = voce.rpartition(" ")
+        livelli[nome.lower()] = livelli.get(nome.lower(), 0) + int(n)
+    # le classi che il `tipo` nomina e nessuna tabella conosce (di prestigio, dei manuali): livelli da PG
+    tipo = (s.tipo or "")
+    for nome, n in re.findall(r"(?:^|[,/])\s*([A-Za-zÀ-ú' -]+?)\s+(\d+)(?=\s*(?:[,/(]|$))", tipo):
+        k = re.sub(r"^ex[- ]", "", nome.strip().lower())
+        en = "wizard" if k in VT.SPECIALISTI else it.get(k, VT.T._ALIAS.get(k, k))
+        if en not in livelli and k not in livelli and k.split()[-1] not in livelli and it.get(k.split()[-1]) not in livelli:
+            livelli[en] = int(n)
+    if not s.composizione_nota:
+        return [], [dict(base, regola="numero.gs",
+                         testo="la scheda non scrive la composizione dei dadi vita: il grado di sfida non si ricostruisce")]
+    classi_nei_gruppi = sum(g.n for g in s.gruppi
+                            if it.get(g.nome.lower(), L._P.ABBREVIAZIONI.get(g.nome.lower(), g.nome.lower())) in livelli
+                            or g.nome.lower() in livelli)
+    dv_razziali = sum(g.n for g in s.gruppi) - classi_nei_gruppi
+    # una classe che la lettura dei dadi non conosce lascia i suoi dadi al tipo: sono livelli, non dadi razziali
+    dv_razziali = max(0, dv_razziali - max(0, sum(livelli.values()) - classi_nei_gruppi))
+    with contextlib.redirect_stderr(io.StringIO()):
+        blocchi = list(C._recinti_del_master(s.testo))
+    trovata = _base_del_blocco(s.testo, blocchi[0]["sb"], len(blocchi) == 1, sistema) if blocchi else None
+    dove = " ".join((s.tipo or "", righe[0] if righe else "", p.stem.replace("-", " ")))
+    voce = trovata[1] if trovata else None
+    if voce is None and dv_razziali > 1:
+        # per il grado di sfida basta il nome: lo confermano il tipo e, in `GS.atteso`, i dadi vita razziali
+        from dmcore import creature_base as CB
+        tipo_en = (s.tipo or "").lower()
+        for it_, en_ in _TIPI_IT.items():
+            tipo_en = tipo_en.replace(it_, en_)
+        for come, chiave in CB._nomi(sistema):
+            v = CB.tabella(sistema)[chiave]
+            if re.search(rf"\b{re.escape(come)}s?\b", dove, re.I) and v.get("tipo") and v["tipo"] in tipo_en \
+                    and "dv" in v and v.get("gs") is not None:
+                voce = v
+                break
+    esito = GS.atteso(livelli, dv_razziali, voce, dove, tabella)
+    if "perche" in esito:
+        return [], [dict(base, regola="numero.gs", testo=esito["perche"])]
+    if esito["min"] <= ha <= esito["max"]:
+        return [], []
+    atteso = GS.scritto(esito["min"]) if esito["min"] == esito["max"] else (
+        f"da {GS.scritto(esito['min'])} a {GS.scritto(esito['max'])}")
+    return [dict(base, regola="numero.gs", atteso=atteso, ha=GS.scritto(ha),
+                 testo=f"grado di sfida {GS.scritto(ha)}, la regola dà {atteso} ({esito['conto']}); "
+                       f"uno scarto va dichiarato con la sua ragione")], []
+
+
 def danno(p: Path) -> "tuple[list[dict], list[dict]]":
     """Dado, bonus e critico delle armi della tabella (ADR-0126, lotto 2)."""
     import conformita_statblocchi as C
@@ -1216,10 +1293,11 @@ def main(argv: "list[str] | None" = None) -> int:
         pv, pn = prestigio(p)
         qv, qn = numero_talenti(p)
         bv, bn = creatura_base(p)
+        gv, gn = grado_di_sfida(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)
