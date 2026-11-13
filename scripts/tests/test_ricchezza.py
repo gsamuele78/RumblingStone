@@ -107,6 +107,10 @@ class TestOggetti(unittest.TestCase):
         self.assertEqual(self.trova("Bracciali dell'arciere superiori, Stivali elfici"),
                          [("boots of elvenkind", 2500), ("bracers of archery, greater", 25000)])
 
+    def test_un_nome_italiano_di_una_parola_non_basta(self):
+        self.assertEqual(self.trova("un ventaglio di seta, un mantello"), [])
+        self.assertEqual(self.trova("Wind fan"), [("wind fan", 5500)])
+
     def test_tabelle_delle_capacita_e_delle_pergamene(self):
         c = self.d["capacita"]
         self.assertEqual((c["arma"]["keen"], c["arma"]["vorpal"], c["armatura"]["animated"]),

@@ -1768,7 +1768,10 @@ def _oggetti_del_lessico(sistema: str) -> "tuple[tuple[re.Pattern, str], ...]":
         if v["tipo"] != "oggetto magico":
             continue
         en = v["srd35"].lower().replace("’", "'").strip()
-        nomi = [n for n in [v["it"], v["srd35"]] + (v.get("varianti") or "").split("|") if len(n) >= 6]
+        # un nome di una parola sola vale solo se è quello inglese: «Ventaglio» (wind fan) in una
+        # riga dell'equipaggiamento può essere un ventaglio qualunque
+        nomi = [n for n in [v["it"], v["srd35"]] + (v.get("varianti") or "").split("|")
+                if len(n) >= 6 and (" " in n.strip() or n == v["srd35"])]
         if en in basi:
             out += [(re.compile(rf"(?<!\w){_schema_del_nome(n)}(?!\w)", re.I), en) for n in nomi]
             continue
