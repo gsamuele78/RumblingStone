@@ -86,7 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… |  |
+| 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
