@@ -87,6 +87,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 terza parte: i fatti scheda per scheda.… | In PR |
+| 2026-11-13 | STANDARD-STAMPA | Pagina fitta: le schede tengono l'interlinea di prima (il DM, 2026-11-13: «mi s… | ✅ passo di riga delle schede in appendice 10,6 → 11,2 pt (come il 2 e il 12 novembre), delle schede in breve nei capitoli 11,1 → 11,7 pt (12,0 il 12 novembre);… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 seconda parte: il grado di sfida. Verifica `grado_di_sfida` i… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, decisioni del DM sulle card del 13/11: giavellotti di Zog'tar 1d8+13… | In PR |
 | 2026-11-13 | STANDARD-STAMPA | Serata più corta con la pagina fitta (scelta del DM del 2026-11-13; le copie un… | ✅ manifest `"pagina": "fitta"`, usato solo dalla serata «La Notte e l'Alba»: 125 → 114 pagine (561 → 614 parole per pagina; *Burnt Offerings* 725), schede e ri… |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0129: il volume da stampa è PDF/UA-1 (ISO 14289-1). `export_booklet_typst`… | ✅ veraPDF 1.28.2 sui 19 booklet: conformi 0 → 17, controlli falliti 132 → 7; typst compila in PDF/UA-1 2 → 19. Misure di stampa identiche, pagine identiche al… |
 | 2026-11-12 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, coda del lotto 3: `verifica_scheda --fatti` stampa in JSON i fatti di… | In PR |
 | 2026-11-12 | STANDARD-STAMPA | Fusione dei tre strati d'apertura delle Scene 6-11 nella serata (richiesta del… | ✅ «In scena», «In tre righe» e scheda da tavolo: da 3 blocchi a 1 per scena, parole d'apertura 3.165 → 3.047 (−4%), con dentro le voci nuove («Succede», «Chi v… |
-| 2026-11-12 | STANDARD-STAMPA | Scheda da tavolo in testa a ogni scena della serata (scelta del DM del 2026-11-… | ✅ sei schede per le Scene 6-11 di DEF-4, solo da canone, niente tolto; giro dei tre lettori (DM, playtester, developer): 1 errore di regola e 2 incoerenze fra… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 93 voci, l'ultima MS-0093 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 94 voci, l'ultima MS-0094 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
