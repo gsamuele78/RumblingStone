@@ -807,3 +807,34 @@ com'era; il carico non si conta; chi porta un'armatura fuori dalla tabella
 dell'SRD non ha penalità. I gradi dichiarati fra parentesi non si leggono: nel
 Bestiario li scrive abilità per abilità una scheda sola (la capitana Lorana),
 altre tre li scrivono in prosa, e una regola per quattro schede non si fa.
+
+### Lotto 7, prima parte — la velocità a terra (2026-11-13)
+
+**Contesto.** Nessun controllo guardava la riga della velocità. Un umano in
+armatura completa scritto a 9 metri, o un barbaro senza i suoi 3 metri in più,
+passavano.
+
+**Decisione.** `estrai_movimento.py` legge dall'SRD e scrive
+`sistemi/dnd35/dati/movimento.toml`, dentro la capacità `creature.costruzione`:
+la velocità a terra delle sette razze e chi non rallenta in armatura (il nano),
+la categoria di ogni armatura, la tabella della velocità ridotta, il movimento
+veloce del barbaro (+10 piedi, non in armatura pesante) e del monaco (per
+livello, senza armatura né scudo). `verifica_scheda` ha la verifica nuova
+`velocita`, regola `numero.velocita`: per chi ha soltanto livelli di classe ed
+è di una delle sette razze, la velocità scritta deve essere quella della razza,
+più il movimento veloce, ridotta dall'armatura media o pesante. Il mithral conta
+una categoria più leggera. Se la scheda nomina stivali della velocità o
+dell'andatura, *velocità*, *passo veloce* o *ritirata rapida*, o scrive una nota
+nella riga stessa, uno scarto è un non verificabile e non una violazione.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 33 → 33, non
+verificabili 371 → 371: le velocità giudicate sono tutte in regola. Portata:
+100 schede del Bestiario hanno una riga di velocità, il controllo ne giudica 18
+(le altre hanno dadi vita razziali o una razza che non è fra le sette). Banco
+`muta_velocita.py` → `misure-velocita.json`: con 3 metri in più 15 su 18, con 3
+metri in meno 15 su 18; su main 0 su 18. Le tre che sfuggono hanno una classe
+che il plugin non conosce o un incantesimo che cambia la velocità. Limiti: il
+carico non si conta; le velocità di volo, nuoto e scavo non si guardano; le
+razze dei mostri e le creature base non hanno la velocità nel plugin; PF1e non
+ha la tabella. Restano del lotto 7: resistenza agli incantesimi, riduzione del
+danno, immunità dei tipi, sensi delle razze, linguaggi.

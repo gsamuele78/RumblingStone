@@ -451,3 +451,12 @@ Misura: violazioni 33 → 33, non verificabili 371 → 371; 62 schede con
 un'armatura riconosciuta; banco, tutte +6: 18 → 20 su 32. Restano del lotto 6:
 bonus alle abilità delle razze dei mostri, le stesse tabelle per PF1e. I gradi
 dichiarati fra parentesi non si fanno: li scrive una scheda sola.
+
+### Lotto 7, prima parte: la velocità a terra (2026-11-13)
+
+`movimento.toml` del 3.5 (capacità `creature.costruzione`): velocità delle sette
+razze, categoria delle armature, velocità ridotta, barbaro e monaco. Verifica
+nuova `velocita` (regola `numero.velocita`). Misura: violazioni 33 → 33; 18
+schede giudicate su 100 con la riga; banco `muta_velocita.py` 15 su 18 per
+verso, su main 0. Restano del lotto 7: resistenza agli incantesimi, riduzione
+del danno, immunità dei tipi, sensi delle razze, linguaggi.

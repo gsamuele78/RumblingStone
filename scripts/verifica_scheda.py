@@ -32,6 +32,9 @@ Scopo
     grado_di_sfida  il grado di sfida scritto contro livelli di classe (da PG o
              da PNG), eccezioni di razza e creatura base (tabella `[gs]` della
              capacità `creature.costruzione`; ADR-0126, lotto 5)
+    velocita  la velocità a terra scritta contro razza, movimento veloce di barbaro e
+             monaco, armatura media o pesante (tabella `[movimento]` della capacità
+             `creature.costruzione`; ADR-0126, lotto 7)
     numero_talenti  quanti talenti: per dadi vita, bonus di classe, umano; fuori
              dal conto quelli concessi dalla classe e quelli dichiarati
              («(B)», «(razziale)», «(dominio)», «(difetto)») (ADR-0126, lotto 4)
@@ -266,6 +269,26 @@ _MATERIALI = (("mithral", re.compile(r"\bmithr[ai]l", re.I)),
               ("legnoscuro", re.compile(r"\b(?:legno\s*scuro|darkwood)", re.I)))
 
 
+def _oggetti_della_ca(testo: str, sistema: str) -> "list[list[tuple]]":
+    """Per ogni riga della CA con un'armatura o uno scudo della tabella del plugin, le sue voci:
+    (tipo, nome, bonus base, Des massima, testo della voce)."""
+    from dmcore import classe_armatura as CA
+    armature, scudi = CA.tabelle(sistema)
+    righe = []
+    for riga in testo.splitlines():
+        if not _RIGA_CA.search(riga):
+            continue
+        voci = []
+        for v in CA.leggi(riga if "(" in riga else f"({riga})", sistema):
+            if v.tipo in ("armatura", "scudo"):
+                o = CA._oggetto(v.testo, scudi if v.tipo == "scudo" else armature)
+                if o is not None:
+                    voci.append((v.tipo, o[0], o[1], o[2], v.testo))
+        if voci:
+            righe.append(voci)
+    return righe
+
+
 def _penalita_di_prova(testo: str, regole: dict, sistema: str) -> "tuple[int, str]":
     """(penalità minima, da cosa) che armatura e scudo della scheda danno alle prove.
 
@@ -277,27 +300,18 @@ def _penalita_di_prova(testo: str, regole: dict, sistema: str) -> "tuple[int, st
     pp = regole.get("penalita_di_prova")
     if not pp:
         return 0, ""
-    from dmcore import classe_armatura as CA
-    armature, scudi = CA.tabelle(sistema)
     per_armatura = {(v["ca"], v["des_max"]): v["penalita"] for v in pp["armature"].values()}
     per_scudo = {v["ca"]: v["penalita"] for v in pp["scudi"].values()}
     trovate = []
-    for riga in testo.splitlines():
-        if not _RIGA_CA.search(riga):
-            continue
+    for voci in _oggetti_della_ca(testo, sistema):
         tot, nomi = 0, []
-        for v in CA.leggi(riga if "(" in riga else f"({riga})", sistema):
-            if v.tipo not in ("armatura", "scudo"):
-                continue
-            o = CA._oggetto(v.testo, scudi if v.tipo == "scudo" else armature)
-            if o is None:
-                continue
-            piena = per_scudo.get(o[1]) if v.tipo == "scudo" else per_armatura.get((o[1], o[2]))
+        for tipo, nome, ca, des_max, voce in voci:
+            piena = per_scudo.get(ca) if tipo == "scudo" else per_armatura.get((ca, des_max))
             if piena is None:
                 continue
-            meno = next((pp[m] for m, r in _MATERIALI if r.search(v.testo)), pp["perfetta"])
+            meno = next((pp[m] for m, r in _MATERIALI if r.search(voce)), pp["perfetta"])
             tot += max(0, piena - meno)
-            nomi.append(o[0])
+            nomi.append(nome)
         if nomi:
             trovate.append((tot, ", ".join(nomi)))
     return trovate[0] if len(trovate) == 1 else (0, "")
@@ -1427,6 +1441,97 @@ def _blocchi_dei_fatti(righe: "list[str]", sistema: str) -> "list[dict]":
     return fuori
 
 
+_RIGA_VELOCITA = re.compile(r"^velocita:\s*(\d+(?:[.,]\d+)?)\s*(m|ft)\b(.*)$", re.M | re.I)
+#: ciò che cambia la velocità e che il conto non sa: oggetti e incantesimi nominati nella scheda…
+_ALTRA_VELOCITA = re.compile(r"stivali del(?:la velocit|l'andatura)|boots of (?:speed|striding)|\bhaste\b|\*velocit[àa]\*|"
+                             r"longstrider|passo veloce|expeditious|ritirata rapida", re.I)
+#: …e ciò che la riga stessa della velocità dichiara fra parentesi
+_NOTA_VELOCITA = re.compile(r"stivali|boots|sella|mount|carico|encumb|armored|armatura|corazza", re.I)
+
+
+def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
+    """La velocità a terra scritta contro razza, classe e armatura (ADR-0126, lotto 7).
+
+    Solo per chi ha soltanto livelli di classe ed è di una delle razze di
+    `[movimento.razze]`: velocità della razza, più il movimento veloce del
+    barbaro (non in armatura pesante) o del monaco (senza armatura né scudo),
+    ridotta dall'armatura media o pesante se la razza rallenta. Il mithral conta
+    una categoria più leggera. Chi nomina stivali della velocità o un incantesimo che la cambia, o
+    scrive una nota nella riga stessa, non è una violazione: è un non verificabile."""
+    from dmcore import sistemi as S
+    s = L.leggi(p)
+    if s is None:
+        return [], []
+    sistema = VT.sistema_di(p, s.testo)
+    try:
+        mv = S.dati(sistema, "creature.costruzione").get("movimento")
+        gradi = S.dati(sistema, "creature.gradi")
+    except S.ErroreSistemi:
+        return [], []
+    righe = list(_RIGA_VELOCITA.finditer(s.testo))
+    if not mv or len(righe) != 1:
+        return [], []
+    m = righe[0]
+    n_riga = s.testo[:m.start()].count("\n") + 1
+    base = {"file": VT_rel(p), "riga": n_riga, "verifica": "velocita", "fonte": sistema}
+    numero = float(m.group(1).replace(",", "."))
+    ha = round(numero * mv["piedi_per_metro_e_mezzo"] / 1.5) if m.group(2).lower() == "m" else round(numero)
+    f = VT.leggi(p) or {}
+    livelli: dict[str, int] = {}
+    it = _classi_it()
+    for nome, n in dict(f.get("livelli") or L.livelli_di_classe(s)).items():
+        en = it.get(nome.lower(), nome.lower())
+        livelli[en] = livelli.get(en, 0) + n
+    ignote = f.get("classi_ignote") or []
+    if not livelli or sum(g.n for g in s.gruppi) != sum(livelli.values()) + sum(
+            int(v.rpartition(" ")[2]) for v in ignote):
+        return [], []                                   # dadi vita razziali: la velocità è della creatura
+    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    if razza is None or razza not in mv["razze"]:
+        return [], []
+    if ignote:
+        return [], [{**base, "regola": "numero.velocita",
+                     "testo": "velocità non ricostruibile: " + ", ".join(ignote) + " fuori dalle regole del plugin"}]
+    oggetti = _oggetti_della_ca(s.testo, sistema)
+    if len(oggetti) > 1:
+        return [], [{**base, "regola": "numero.velocita",
+                     "testo": "velocità non ricostruibile: più di una riga della CA con un'armatura"}]
+    per_armatura = {(a["ca"], a["des_max"]): a["categoria"] for a in mv["armature"].values()}
+    ordine = ["leggera", "media", "pesante"]
+    categoria, scudo, nome_armatura = None, False, ""
+    for tipo, nome, ca, des_max, voce in (oggetti[0] if oggetti else []):
+        if tipo == "scudo":
+            scudo = True
+            continue
+        c = per_armatura.get((ca, des_max))
+        if c is None:
+            continue
+        if _MATERIALI[0][1].search(voce):               # mithral: una categoria più leggera
+            c = ordine[max(0, ordine.index(c) - 1)]
+        categoria, nome_armatura = c, nome
+    atteso, perche = mv["razze"][razza], [f"{razza} {mv['razze'][razza]}"]
+    barbaro = mv["classi"].get("barbarian") or {}
+    if livelli.get("barbarian") and barbaro and categoria not in barbaro.get("non_in", []):
+        atteso += barbaro["piu"]
+        perche.append(f"barbaro +{barbaro['piu']}")
+    monaco = (mv["classi"].get("monk") or {}).get("per_livello") or []
+    if livelli.get("monk") and monaco and categoria is None and not scudo:
+        piu = monaco[min(livelli["monk"], len(monaco)) - 1]
+        if piu:
+            atteso += piu
+            perche.append(f"monaco +{piu}")
+    if categoria in mv["rallentano"] and razza not in mv["non_rallenta"]:
+        atteso = mv["ridotta"].get(str(atteso), atteso)
+        perche.append(f"ridotta da {nome_armatura} ({categoria})")
+    if ha == atteso:
+        return [], []
+    testo = f"velocità {m.group(1)} {m.group(2)} ({ha} piedi), la regola dà {atteso} piedi ({', '.join(perche)})"
+    if _ALTRA_VELOCITA.search(s.testo) or _NOTA_VELOCITA.search(m.group(3)):
+        return [], [{**base, "regola": "numero.velocita",
+                     "testo": testo + "; la scheda nomina un oggetto, un incantesimo o una nota che la cambia"}]
+    return [{**base, "regola": "numero.velocita", "atteso": atteso, "ha": ha, "testo": testo}], []
+
+
 def main(argv: "list[str] | None" = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1465,10 +1570,11 @@ def main(argv: "list[str] | None" = None) -> int:
         qv, qn = numero_talenti(p)
         bv, bn = creatura_base(p)
         gv, gn = grado_di_sfida(p)
+        ev, en_ = velocita(p)
         lette += bool(tv or tn or ti or nvv or nn or av or an or iv or inn or cv or cn or dv or dn or mv or mn
                       or pv or pn or L.leggi(p))
-        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv
-        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn
+        viol += tv + nvv + cv + dv + av + iv + mv + pv + qv + bv + gv + ev
+        nv += tn + ti + nn + cn + dn + an + inn + mn + pn + qn + bn + gn + en_
     if a.json:
         json.dump({"schede": lette, "violazioni": viol, "non_verificabili": nv}, sys.stdout,
                   ensure_ascii=False, indent=1)
