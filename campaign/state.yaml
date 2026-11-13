@@ -460,6 +460,11 @@ conoscenze:
   sa_che: Therysol is alive and hunting him
   come: Inferred from missing guild operatives in Underdark
   dal_giorno: 0
+- png: Il Collezionista
+  png_id: il-collezionista
+  sa_che: The party are the Custodi Eterni and carry major divine artifacts; knows their names, abilities, and routes
+  come: His own guild operatives, who have tracked the party since the minotaur lair, report after the Cerimonia delle 100 Asce (Day 21); set by the DM on 2026-11-13
+  dal_giorno: 22
 - png: Re Thorek Hammerfist
   png_id: re-thorek
   sa_che: The party are now Custodi Eterni; he has named them so

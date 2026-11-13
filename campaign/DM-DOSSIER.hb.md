@@ -319,6 +319,7 @@ the listed consequence triggers.
 | Varis "Seta-Argento" | Some statues might be alive; does NOT know Sal is the supplier chain origin | Involuntary observation 3 months ago |
 | Il Collezionista | Artemis carries the Ring of Chaotic Illumination | Witnessed at minotaur lair; sent guild operatives to track |
 | Il Collezionista | Therysol is alive and hunting him | Inferred from missing guild operatives in Underdark |
+| Il Collezionista | The party are the Custodi Eterni and carry major divine artifacts; knows their names, abilities, and routes | His own guild operatives, who have tracked the party since the minotaur lair, report after the Cerimonia delle 100 Asce (Day 21); set by the DM on 2026-11-13 |
 | Re Thorek Hammerfist | The party are now Custodi Eterni; he has named them so | Awarded post-siege |
 | Maestro Varis "Seta-Argento" | Artemis is a buyer of Underdark relics; willing to broker | Three transactions to date |
 | Salvatore "Sal" | The party are Custodi Eterni carrying major divine artifacts; knows their names, abilities, and routes | Briefed by Il Collezionista before deploying to desert road |
