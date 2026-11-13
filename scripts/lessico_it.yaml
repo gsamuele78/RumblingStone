@@ -364,11 +364,12 @@
   pf1: 
   varianti: Evasione migliorata
   nota: "capacità di classe, non talento"
-- it: Virata
+- it: Virare
   tipo: talento
   srd35: Wingover
   pf1: Wingover
-  nota: "nome italiano del repo (canone D71): Wingover non è nell'elenco italiano dei talenti"
+  varianti: Virata
+  nota: "nome delle due fonti italiane (lessico_it_35.tsv); «Virata» era il nome del repo fino alla decisione del DM del 2026-11-13"
 - it: Attacco con lo Scudo Migliorato
   tipo: talento
   srd35: Improved Shield Bash

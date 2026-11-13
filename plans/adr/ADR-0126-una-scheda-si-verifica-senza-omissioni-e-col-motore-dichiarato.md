@@ -1070,3 +1070,21 @@ pelle di drago restano fuori (dipendono dal prezzo o dal peso dell'oggetto);
 il prezzo base degli oggetti comuni non si conta; PF1e non ha le tabelle. Del
 lotto 8 restano il prezzo base degli oggetti comuni e la tabella PF1e.
 
+### Addendum 2026-11-13: cinque decisioni del DM sulle card
+
+Il DM ha risposto sulle card del 13/11 (thread dell'audit). (1) I due duergar
+con classi da PG hanno il grado di sfida della regola: `duergar-ladro1-cr2.md`
+GS 2 e `duergar-mago-ladro8-cr8.md` GS 8, con i file rinominati. (2) Il goblin
+combattente di 1° è GS 1/3 come nell'SRD; il file resta
+`goblin-warrior1-cr05.md`. `IN_ATTESA` di `test_grado_di_sfida.py` è vuoto.
+(3) Le tre righe accorciate di Balvar in `ARC07-DEF-4` tornano intere: il DM
+non ha scelto la consigliata, e la scheda di Balvar si spezza su due pagine
+nel booklet della notte (tetto `schede_spezzate` da 0 a 1 per i due booklet
+in `docs/audit/stampa-booklet.json`). (4) Terros ha 348 pf (30d8+210, +3 di
+Robustezza); le soglie 260 e 172 restano. (5) Il talento *Wingover* si chiama
+«Virare», come nelle due fonti italiane, e non più «Virata»: scheda di
+Skullcrusher, `ARC07-DEF-4`, booklet e le altre schede che lo nominano; il
+testo del talento è riscontrato sull'SRD («Monster Feats»). Misura su
+`Bestiario 0*/`: violazioni 33 → 30, non verificabili 375 → 372. Il nome
+`goblin-warrior1-cr05.md` resta per scelta del DM: `extract_statblocks.py`
+lo sa da `GS_COL_NOME_VECCHIO`. Il `pf-dado` di Terros è `30d8+213`.

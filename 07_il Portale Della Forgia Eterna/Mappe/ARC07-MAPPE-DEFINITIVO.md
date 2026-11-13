@@ -357,7 +357,7 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 @taglia K8 ; Enorme
 @tipo tattica interni
 ```
-- **Tipo / scala**: tattica BOSS, sfera Ø 60 m. **Terros l'Antico, CR 15, 345 pf**.
+- **Tipo / scala**: tattica BOSS, sfera Ø 60 m. **Terros l'Antico, CR 15, 348 pf**.
 - **Terreno & altitudini**: **ZERO-G** ovunque (🌫️) tranne l'**Altare** centrale
   (13,5 × 9 m, gravità normale). In zero-G chi non vola si muove solo
   **spingendosi** (linea retta, ½ mov) e combatte a **−4** senza appiglio; contro
@@ -366,7 +366,7 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 - **Posizioni dal round 2** (Altare già centrato): Terros 🟣 sull'Altare (K08-M10,
   3×3); Thorik 🛡️ (J09) e Tordek 🥋 (N08) sull'Altare; Artemis 🔮 in volo nella
   zona zero-G. Al round 1 l'Altare è ancora attraccato alla soglia nord.
-- **Tattiche Terros (nemico — soglie & giro, DEF-1 §8)**: **345 pf**; a **260** usa
+- **Tattiche Terros (nemico — soglie & giro, DEF-1 §8)**: **348 pf**; a **260** usa
   **Scudo di Geodi** (+4 CA, no critici); a **172** si ritira sull'Altare e
   **rigenera 15/round** a contatto con la pietra; a **0** si sbriciola → **Smeraldo**.
   Giro (3.5, 1 azione/round): full-attack 2 schianti +33 (2d10+12 + Push FOR 25) ·

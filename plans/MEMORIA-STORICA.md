@@ -1251,7 +1251,7 @@ repo scritto con altre parole.
 - **ADR:** ADR-0126
 - **Temi:** regole schede
 - **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche» in `plans/CHANGELOG.md`
-- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125.
+- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125. Nella stessa PR le risposte di Jfs a cinque card del 13/11 (thread dell'audit): duergar con classi da PG a GS 2 e 8 con i file rinominati, goblin combattente di 1° a GS 1/3, tre righe di Balvar rimesse intere (Jfs non ha scelto la consigliata «tieni i tagli»), Terros 348 pf, «Virare» al posto di «Virata».
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
 
