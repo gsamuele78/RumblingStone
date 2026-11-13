@@ -54,6 +54,16 @@ class TestConto(unittest.TestCase):
         sei = "Attacco Poderoso, Incalzare, Arma Focalizzata (spada lunga), Schivare, Iniziativa Migliorata, Allerta"
         self.assertEqual(giudica("Medium humanoid (human), Fighter 4, LN", "4d10+8", sei), ([], []))
 
+    def test_il_mezzelfo_non_ha_il_talento_dell_umano(self):
+        # «(elf/human)» è il mezzelfo dell'SRD: sangue umano, niente talento in più
+        cinque = "Attacco Poderoso, Incalzare, Arma Focalizzata (spada lunga), Schivare, Iniziativa Migliorata"
+        for tipo in ("Medium humanoid (elf/human), Fighter 4, N", "Medium humanoid (half-elf), Fighter 4, N",
+                     "Medium humanoid (orc/human), Fighter 4, N"):
+            with self.subTest(tipo=tipo):
+                self.assertEqual(giudica(tipo, "4d10+8", cinque), ([], []))
+                v, _ = giudica(tipo, "4d10+8", cinque + ", Allerta")
+                self.assertEqual([(x["ha"], x["atteso"]) for x in v], [(6, "5")])
+
     def test_il_talento_bonus_del_mostro_non_entra_nel_conto(self):
         # orco di 4 dadi vita: due talenti, il terzo è dichiarato (B)
         self.assertEqual(giudica("Large giant, CE", "4d8+8", "Attacco Poderoso, Robustezza, Seguire Tracce (B)", 3),
@@ -93,10 +103,10 @@ class TestCancello(unittest.TestCase):
     aggiungere o dichiarare lo sceglie lui. Nessun'altra scheda è fuori conto."""
 
     IN_ATTESA = {
-        "avarthel-druido-cr9.md", "bruto-deforme-sottosuolo-cr11.md", "drow-wizard7-cr8.md",
+        "bruto-deforme-sottosuolo-cr11.md", "drow-wizard7-cr8.md",
         "duergar-chierico3-cr4.md", "duergar-ladro1-cr1.md", "duergar-mago3-cr4.md",
         "gnoll-hyenodon-rider-cr4.md", "hell-hound-mezzoimmondo-cr4.md", "koth-signore-dei-dragoni-cr8.md",
-        "lomyn-redtongue-bardo8-cr8.md", "myconid-sovereign-cr7.md", "ogre-micelio-sporeborn-cr8.md",
+        "myconid-sovereign-cr7.md", "ogre-micelio-sporeborn-cr8.md",
         "ogre-skullcrusher-cr5.md", "underdark-cleric-ainin-cr5.md", "warpriest-tiamat-cr7.md",
     }
 
