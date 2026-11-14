@@ -143,10 +143,10 @@ def _muovi(sb, car: dict[str, int], naturale: int, passi_taglia: int,
         sb.pf = str(max(dv, int(sb.pf) + delta_pf))
         # `pf-dado` registra i dadi e i bonus che non vengono dalla Costituzione:
         # il bonus di Costituzione sta nella riga del tipo, ed è quello che cambia
+        # (solo se la riga lo scrive: quella di un PNG porta i dadi e basta)
         sb.tipo = _PF_DADO.sub(
             lambda m: f"{m.group(1)}d{m.group(2)}"
-                      + (f"{int(m.group(3) or 0) + delta_pf:+d}"
-                         if int(m.group(3) or 0) + delta_pf else ""),
+                      + (f"{int(m.group(3)) + delta_pf:+d}" if m.group(3) else ""),
             sb.tipo, count=1)
 
     taglia = taglia_di(sb)
