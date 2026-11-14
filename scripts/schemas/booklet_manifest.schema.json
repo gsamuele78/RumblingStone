@@ -171,9 +171,14 @@
           "layout": {
             "type": "string",
             "enum": [
-              "schede"
+              "schede",
+              "carte"
             ],
-            "description": "'schede': una pagina A4 per personaggio invece di un capitolo a colonne. Catene: stampa."
+            "description": "'schede': una pagina A4 per personaggio invece di un capitolo a colonne. 'carte': carte da tavolo 63 x 88 mm, nove per foglio A4 (file = regole della corsa). Catene: stampa."
+          },
+          "contrade": {
+            "type": "string",
+            "description": "Master delle contrade (§1 tabella, §7 stemmi). Solo layout 'carte'."
           },
           "retro": {
             "type": "string",

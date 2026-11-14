@@ -58,6 +58,7 @@ from dmcore.testo import (  # noqa: E402
     capitoli_del_volume, fondi_contratto_e_scheda, leggi_per_la_stampa, piega_ascii, sigle_d_appendice, slug, togli_storico, traduci_rimandi,
 )
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
+from dmcore import carte_tavolo  # noqa: E402
 from dmcore.statblock import (  # noqa: E402
     StatblockError, accosta_parte_leggibile, etichetta_gs, caratteristiche, ingombro, leggi as leggi_statblocco,
     sezioni_leggibili, senza_caratteristiche,
@@ -79,6 +80,7 @@ def _etichette_per(manifest_path: Path) -> None:
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
 SCHEDA_PG = ROOT / "scripts" / "typst" / "scheda-pg.typ"
+CARTE_TAVOLO = ROOT / "scripts" / "typst" / "carte-tavolo.typ"
 # Pacchetti Typst vendorizzati (ADR-0026): la build non scarica niente. Senza
 # questo percorso `@preview/...` andrebbe a packages.typst.org, e una build che
 # dipende dalla rete non e' riproducibile — ne' compilabile offline.
@@ -868,6 +870,71 @@ def schede(cap: dict, base: Path, f: Path) -> str:
     return "\n\n".join(corpo for _, corpo in schede_di(cap, base, f))
 
 
+# ── le carte da tavolo ───────────────────────────────────────────────────────
+# Un capitolo `"layout": "carte"` non si legge: si ritaglia. Il master del
+# capitolo (`file`) sono le regole della corsa; `contrade` è il master delle
+# contrade. I dati li legge `dmcore.carte_tavolo`; la forma sta tutta in
+# `typst/carte-tavolo.typ`. Le carte di un foglio sono nove: un mazzetto che
+# non riempie il foglio si completa con patti in bianco, che a un tavolo di
+# Partiti non bastano mai.
+
+def _carta(mazzo: str, /, **campi: str) -> str:
+    return f"carta-{mazzo}(" + ", ".join(f"{k.replace('_', '-')}: {v}" for k, v in campi.items()) + ")"
+
+
+def carte(cap: dict, base: Path, f: Path) -> str:
+    """Il sorgente Typst dei fogli di carte di un capitolo `"layout": "carte"`."""
+    if not cap.get("contrade"):
+        raise carte_tavolo.CarteError(f"{cap.get('title', f.name)}: manca la chiave «contrade» "
+                                      "(il master delle contrade)")
+    contrade = carte_tavolo.contrade((base / cap["contrade"]).resolve())
+    n_funi = carte_tavolo.cavalli_alle_funi(f)
+    giri = carte_tavolo.giri(f)
+    tratti = carte_tavolo.tratti(f)
+    posti = carte_tavolo.posti(f)
+    nomi_tratti = "(" + "".join(_str(t.nome) + ", " for t in tratti) + ")"
+
+    patto = _carta("patto",
+                   vale=_riga(carte_tavolo.frase(f, "§4", "In Corsa vale")),
+                   rompere=_riga(carte_tavolo.frase(f, "§4", "**Rompere un patto**") + " "
+                                 + carte_tavolo.frase(f, "§4", "Costa **Morale")))
+    finte = "(" + "".join(_riga(x.rstrip(";.") + ".") + ", " for x in carte_tavolo.finte(f)) + ")"
+    esito = _riga(carte_tavolo.frase(f, "6.1", "**Esito del tiro**"))
+    quando = _riga(carte_tavolo.frase(f, "6.2", "Ogni PG non-fantino"))
+    romani = ("I", "II", "III", "IV", "V")
+    if giri > len(romani):
+        raise carte_tavolo.CarteError(f"{f.name} §6: {giri} giri, le carte ne disegnano al massimo {len(romani)}")
+
+    mazzetti: list[tuple[str, list[str]]] = [
+        ("Le contrade · segnaposto", [
+            _carta("contrada", numero=_str(c.numero), nome=_str(c.nome), dei=_str(c.dei),
+                   livrea=_str(c.livrea), motto=_str(c.motto), giri=str(giri), tratti=nomi_tratti,
+                   **({"stemma_file": _str(typ_path(c.stemma))} if c.stemma else {}))
+            for c in contrade]),
+        ("Lo Stacco · l'ordine alle funi", [
+            *(_carta("funi", posto=_str(str(i)), di=_str(str(n_funi)), finte=finte)
+              for i in range(1, n_funi + 1)),
+            _carta("rincorsa", numero=_str(str(n_funi + 1)),
+                   regola=_riga(carte_tavolo.frase(f, "§5", "L'ottavo resta fuori"))),
+        ]),
+        ("La Ruota · i tratti in ordine di corsa", [
+            _carta("tratto", giro=_str(romani[g]), nome=_str(t.nome), cd=_str(t.cd), nota=_riga(t.nota),
+                   numero=_str(str(g * len(tratti) + i + 1)), totale=_str(str(giri * len(tratti))),
+                   esito=esito)
+            for g in range(giri) for i, t in enumerate(tratti)]),
+        ("I posti dei PG e i patti", [
+            _carta("posto", nome=_str(p.nome), chi=_str(p.chi), azioni=_riga(p.azioni), quando=quando)
+            for p in posti]),
+    ]
+    fogli = []
+    for titolo, mazzo in mazzetti:
+        for i in range(0, len(mazzo), 9):
+            pezzo = mazzo[i:i + 9]
+            pezzo += [patto] * (9 - len(pezzo))
+            fogli.append(f"#foglio-carte({_str(titolo)}, (\n  " + ",\n  ".join(pezzo) + ",\n))")
+    return "\n\n".join(fogli)
+
+
 # ── assemblaggio ─────────────────────────────────────────────────────────────
 
 def capitoli(man: dict, base: Path, tutti: bool) -> list[tuple[dict, str, Path]]:
@@ -1004,6 +1071,7 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
     return [
         f'#import "{typ_path(TEMA)}": *',
         f'#import "{typ_path(SCHEDA_PG)}": scheda',
+        f'#import "{typ_path(CARTE_TAVOLO)}": foglio-carte, carta-contrada, carta-funi, carta-rincorsa, carta-tratto, carta-posto, carta-patto',
         "#show: libro.with(",
         f'  titolo: {json.dumps(man.get("title", ""), ensure_ascii=False)},',
         f'  sottotitolo: {json.dumps(man.get("subtitle", ""), ensure_ascii=False)},',
@@ -1115,6 +1183,10 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
             parti.append(schede(cap, base, f))
+            parti.append("")
+            continue
+        if cap.get("layout") == "carte":
+            parti.append(carte(cap, base, f))
             parti.append("")
             continue
         fr = fregio_per(titolo, f, base, man.get("fregio"))
@@ -1303,7 +1375,7 @@ def main() -> int:
 
     if args.list:
         for cap, t, f in capitoli(man, base, True):
-            marchio = "  [schede]" if cap.get("layout") == "schede" else ""
+            marchio = f"  [{cap['layout']}]" if cap.get("layout") in ("schede", "carte") else ""
             print(f"  {t}{marchio}  ←  {f.relative_to(ROOT) if ROOT in f.parents else f}")
         return 0
 
@@ -1316,7 +1388,7 @@ def main() -> int:
     try:
         src = sorgente(man, base, args.all, args.carta,
                        args.formato or man.get("formato", "a4"))
-    except SchedaError as e:
+    except (SchedaError, carte_tavolo.CarteError) as e:
         print(f"✗ export_booklet_typst: {e}", file=sys.stderr)
         return 1
     src, spostati = titoli_senza_salti(src)

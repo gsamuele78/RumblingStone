@@ -233,8 +233,9 @@ schede in appendice come *Red Hand of Doom***. [ADR-0122](adr/ADR-0122-il-volume
 - [x] **VOL-2** Misura dei 10 booklet del DM: 36 misure sotto soglia, nessuna
   chiave d'area sulle nostre mappe, nessuna appendice di regione
   ([RISULTATO](esperimenti/standard-volume-2026-11-10/RISULTATO.md)).
-- [ ] **VOL-3** Card al DM: dove va ogni contenuto dei booklet di oggi nella
+- [x] **VOL-3** Card al DM: dove va ogni contenuto dei booklet di oggi nella
   struttura nuova, prima di togliere qualcosa (richiesta del 2026-11-10).
+  Le quattro card hanno la risposta del DM dal 2026-11-10 (prima opzione).
 - [ ] **VOL-4** Una versione del booklet centrata sulla serata, che tiene il
   buono dell'attuale, misurata con S1-S5 e `misura_stampa` contro l'attuale.
 - [ ] **VOL-5** Promozione a stable dopo le scelte del DM, 14 giorni e 10 corse.

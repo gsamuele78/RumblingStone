@@ -119,9 +119,10 @@ def compila_misurabile(mp: Path) -> tuple[Path, list[dict], str]:
         schede = interroga_schede(typ)
     finally:
         typ.unlink(missing_ok=True)
-    # Un volume fatto solo di schede da tavolo ha la gabbia della scheda
-    # (scheda-pg.typ), non quella del libro.
-    if man.get("chapters") and all(c.get("layout") == "schede" for c in man["chapters"]):
+    # Un volume fatto solo di schede o di carte da tavolo ha la gabbia del
+    # foglio sciolto (scheda-pg.typ, carte-tavolo.typ: 1 cm per lato), non
+    # quella del libro.
+    if man.get("chapters") and all(c.get("layout") in ("schede", "carte") for c in man["chapters"]):
         formato = "scheda"
     return pdf, schede, formato
 
