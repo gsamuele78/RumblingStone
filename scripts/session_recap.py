@@ -39,6 +39,7 @@ from datetime import date
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore import visibility  # noqa: E402  (policy per-PG, Lotto D)
+from dmcore.bozza_trascrizione import e_bozza  # noqa: E402  (ADR-0135)
 
 ROOT = Path(__file__).resolve().parent.parent
 SESSIONS_DIR = ROOT / "campaign" / "sessions"
@@ -217,6 +218,16 @@ def find_session_files(last_n: int) -> list[Path]:
     if not SESSIONS_DIR.is_dir():
         return []
     files = sorted(SESSIONS_DIR.glob("????-??-??_session-*.md"))  # solo veri log di sessione (convenzione AGENTS.md)
+    # ADR-0135: una bozza della trascrizione non e' storia giocata finche' il
+    # DM non la fa sua (e toglie il segno): il recap la salta e lo dice.
+    tenuti = []
+    for f in files:
+        if e_bozza(f.read_text(encoding="utf-8", errors="ignore")):
+            print(f"[recap] ⚠ {f.name} e' ancora una bozza della trascrizione: saltata.",
+                  file=sys.stderr)
+            continue
+        tenuti.append(f)
+    files = tenuti
     # Sort by filename (should start with YYYY-MM-DD) descending, then take N.
     files = sorted(files, key=lambda p: p.name, reverse=True)[:last_n]
     return list(reversed(files))  # chronological order in output

@@ -13489,6 +13489,126 @@
         "plans/adr/ADR-0107-chi-si-incontra-sta-nel-capitolo.md",
         "plans/RICERCA-USABILITA-AL-TAVOLO-2026-11.md"
       ]
+    },
+    {
+      "id": "transcribe_session",
+      "path": "scripts/transcribe_session.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/transcribe_session.py",
+      "summary": "Trascrive in locale l'audio della serata con whisper.cpp e scrive FUORI dal repo una bozza del log, mai canone (ADR-0135).",
+      "use_case": "«Ho registrato la serata con il consenso di tutti: come ritrovo i momenti giusti per scrivere il log senza riascoltare quattro ore?»",
+      "stability": "external-toolchain",
+      "stdlib_only": true,
+      "external_bins": [
+        "whisper-cli",
+        "ffmpeg"
+      ],
+      "args": [
+        {
+          "name": "comando",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": [
+            "trascrivi",
+            "bozza",
+            "misura",
+            "misura-bozza"
+          ],
+          "repeatable": false,
+          "desc": "trascrivi | bozza | misura | misura-bozza."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi, bozza) cartella FUORI dal repo."
+        },
+        {
+          "name": "--consenso",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi) tutti i giocatori hanno accettato la registrazione."
+        },
+        {
+          "name": "--modello",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi) modello ggml di whisper."
+        },
+        {
+          "name": "--whisper",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi) percorso di whisper-cli."
+        },
+        {
+          "name": "--vad-modello",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi) modello Silero VAD per saltare i silenzi."
+        },
+        {
+          "name": "--nomi-nel-prompt",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(trascrivi) passa a whisper i nomi di state.yaml (prova A/B)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "2": "senza consenso, cartella nel repo o file mancante",
+        "3": "whisper-cli, ffmpeg o modello mancanti (esce pulito)"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "La trascrizione dipende dal modello e dall'hardware; bozza e misure sono deterministiche data la trascrizione."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/transcribe_session.py --help",
+      "tests": [
+        "scripts/tests/test_transcribe_session.py"
+      ],
+      "docs": [
+        "docs/how-to/GUIDA-TRASCRIZIONE-SERATA.md",
+        "plans/adr/ADR-0135-*.md"
+      ]
     }
   ]
 }
