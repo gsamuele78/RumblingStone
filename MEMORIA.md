@@ -86,7 +86,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche.… | In PR Nella stessa PR cinque decisioni del DM del 13/11 sulle card: duergar con classi da PG a GS 2 e 8 (file rinominati), goblin combattente a GS 1/3, tre rig… |
+| 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0134 e ADR-0126, lotto 8 quarta parte: l'equipaggiamento standard. Scelta d… | In PR |
+| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche.… | In PR |
 | 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… | In PR |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0131: il volume da stampa è anche PDF/A-2a (ISO 19005-2).… | ✅ veraPDF 1.28.2 sui 20 booklet: PDF/A-2a 0 → 20 conformi, controlli falliti 544 → 0 (484 trasparenza senza intento d'uscita, 60 metadati XMP); PDF/UA-1 resta… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 terza parte: le immunità del tipo.… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 seconda parte: resistenza agli incantesimi e riduzione del da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 prima parte: la velocità a terra.… | In PR |
-| 2026-11-13 | STANDARD-STAMPA | Pagina fitta abbandonata (il DM, 2026-11-13: «preferisco sempre la versione del… | ✅ tolta la chiave `"pagina": "fitta"` da manifest, tema, esportatore, schema e validatore; la serata «La Notte e l'Alba» torna a 125 pagine, corpo 10,2 pt, pas… |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 108 voci, l'ultima MS-0108 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 109 voci, l'ultima MS-0109 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

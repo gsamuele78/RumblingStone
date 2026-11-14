@@ -1721,7 +1721,11 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
                       f"(SRD, linguaggi automatici)"}], []
 
 
-_TESTA_EQUIP = re.compile(r"^\W*(?:equipaggiamento|equipment|possessions|gear|oggetti magici|magic items)\b", re.I)
+_TESTA_EQUIP = re.compile(r"^\W*(?:equipaggiamento|altro equipaggiamento|equipment|possessions|(?:combat |other )?gear|"
+                          r"oggetti magici|magic items)\b", re.I)
+#: «· **Equipaggiamento** …» dentro la riga delle Statistiche (la forma di ADR-0091): fino alla voce dopo
+_EQUIP_NELLA_RIGA = re.compile(r"·\s*\*\*((?:altro\s+)?equipaggiamento(?:\s+da\s+combattimento)?)\*\*:?\s*(.+?)"
+                               r"(?=\s·\s+\*\*|$)", re.I)
 _FINE_EQUIP = re.compile(r"^\s*(?:#{1,6}\s|---+\s*$|\*\*[^*|]{2,60}\*\*\s*:?\s*$|```)")
 
 
@@ -1740,7 +1744,25 @@ def _righe_dell_equipaggiamento(testo: str) -> "list[tuple[int, str]]":
                 dentro = False
             elif r.strip() and not _RIGA_DI_STORIA.match(r):
                 out.append((n, r))
+        elif "·" in r and not _RIGA_DI_STORIA.match(r):
+            out += [(n, m.group(2)) for m in _EQUIP_NELLA_RIGA.finditer(r)]
     return out
+
+
+def _senza_la_copia(testo: str, oggetti: "list[tuple[int, tuple[str, int]]]") -> "list[tuple[int, tuple[str, int]]]":
+    """Una scheda scrive l'equipaggiamento due volte, nel recinto `statblocco` e nella prosa sotto:
+    è lo stesso equipaggiamento, e si conta una volta sola, dalla parte che ne riconosce di più."""
+    nel_recinto, dentro = set(), False
+    for n, r in enumerate(testo.split("\n"), 1):
+        if r.lstrip().startswith("```"):
+            dentro = not dentro
+        elif dentro:
+            nel_recinto.add(n)
+    blocco = [o for o in oggetti if o[0] in nel_recinto]
+    prosa = [o for o in oggetti if o[0] not in nel_recinto]
+    if not blocco or not prosa:
+        return oggetti
+    return blocco if sum(o[1][1] for o in blocco) >= sum(o[1][1] for o in prosa) else prosa
 
 
 _PREFISSI_OGGETTO = (("ring of ", "anell[oi]"), ("rod of ", "vergh?[ae]"), ("staff of ", "baston[ei]"))
@@ -1884,7 +1906,7 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
                                (armi, d["potenziamento"]["arma"], "arma")):
         for nome in sorted(set(nomi), key=len, reverse=True):
             # «spada lunga infuocata +1 …» oppure, all'inglese, «+1 flaming longsword»
-            for m in re.finditer(rf"(?<!\w){re.escape(nome)}(?!\w)((?:\s+[^\W\d]+){{0,3}})\s*\+(\d+)(?!\d)([^,;|()]*)"
+            for m in re.finditer(rf"(?<!\w){re.escape(nome)}(?!\w)((?:\s+[^\W\d]+(?:['’][^\W\d]+)?){{0,3}})\s*\+(\d+)(?!\d)([^,;|()]*)"
                                  rf"|(?<![\w+])\+(\d+)\s+((?:[^\W\d]+\s+){{0,3}}?){re.escape(nome)}(?!\w)", riga, re.I):
                 n = int(m.group(2) or m.group(4))
                 if not (1 <= n <= len(tabella) and libero(*m.span())):
@@ -2000,6 +2022,10 @@ def _tipo_en(tipo: str) -> str:
     return tipo
 
 
+#: La riga con cui il DM dichiara che l'equipaggiamento supera la tabella per scelta sua
+_SOPRA_LA_TABELLA = re.compile(r"^>?\s*equipaggiamento (?:sopra|oltre) la tabella[^\n]*\b(?:DM|ADR-\d+)\b", re.I | re.M)
+
+
 def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     """Il valore dell'equipaggiamento contro quello di un PNG del suo livello (ADR-0126, lotto 8).
 
@@ -2015,7 +2041,9 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     Una creatura base che non avanza per classe («Advancement» dell'SRD) e
     senza livelli di classe ha un tesoro, non l'equipaggiamento di un PNG
     (SRD, «Improving Monsters»): lo scarto è un non verificabile
-    `equipaggiamento.da_png` e la tabella non la giudica."""
+    `equipaggiamento.da_png` e la tabella non la giudica. Una riga
+    «Equipaggiamento sopra la tabella: … DM …» dichiara lo scarto come scelta
+    del DM, e la verifica tace."""
     import conformita_statblocchi as C
     from dmcore import sistemi as S
     s = L.leggi(p)
@@ -2035,7 +2063,7 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     if len(blocchi) > 1:
         return [], []
     righe = _righe_dell_equipaggiamento(s.testo)
-    oggetti = [(n, o) for n, r in righe for o in _oggetti_col_prezzo(r, d, sistema)]
+    oggetti = _senza_la_copia(s.testo, [(n, o) for n, r in righe for o in _oggetti_col_prezzo(r, d, sistema)])
     dadi_vita = sum(g.n for g in s.gruppi)
     if not oggetti or not dadi_vita:
         return [], []
@@ -2074,7 +2102,7 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     if livello > len(tabella):
         return [], [dict(base, testo=f"livello effettivo {livello}: la tabella dei PNG si ferma al {len(tabella)}°")]
     limite = tabella[livello - 1]
-    if totale <= limite:
+    if totale <= limite or _SOPRA_LA_TABELLA.search(s.testo):
         return [], []
     return [dict(base, atteso=f"al più {limite} mo", ha=f"almeno {totale} mo",
                  testo=f"equipaggiamento per almeno {totale} mo ({elenco}) contro i {limite} mo di un PNG di "

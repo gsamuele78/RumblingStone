@@ -268,12 +268,61 @@ class TestPngPF1e(unittest.TestCase):
         self.assertEqual(sorted(guerrieri), list(range(1, 21)))
         self.assertTrue(all(x["combattimento"] or x["altro"] for x in png))
 
+class TestDoveStaScritto(unittest.TestCase):
+    """Le forme di ADR-0091 e le due voci scelte dal DM il 2026-11-13."""
+
+    def test_dentro_la_riga_delle_statistiche(self):
+        v, _ = giudica("**Statistiche** For 16 · BAB +3 · **Equipaggiamento** amuleto della salute +2 · "
+                       "**Linguaggi** Comune, anello di protezione +5")
+        self.assertEqual(v[0]["ha"], "almeno 4000 mo")   # l'anello sta fra i linguaggi: non è equipaggiamento
+
+    def test_le_due_voci(self):
+        v, _ = giudica("**Statistiche** For 16 · **Equipaggiamento da combattimento** 2 pozioni di cura ferite "
+                       "leggere · **Altro equipaggiamento** amuleto della salute +2")
+        self.assertEqual(v[0]["ha"], "almeno 4100 mo")
+        v, _ = giudica("- Altro equipaggiamento: amuleto della salute +2")
+        self.assertEqual(v[0]["ha"], "almeno 4000 mo")
+
+    def test_recinto_e_prosa_si_contano_una_volta(self):
+        from tests.test_difese import SCHEDA
+        import tempfile
+        testo = SCHEDA.format(titolo="Prova", tipo="Medium humanoid (human)", classe="Fighter 3", dadi="3d10+6",
+                              coda="**Statistiche** For 16 · **Altro equipaggiamento** amuleto della salute +2")
+        testo = testo.replace("  - Talenti:", "  - Altro equipaggiamento: amuleto della salute +2\n  - Talenti:")
+        with tempfile.TemporaryDirectory() as d:
+            q = Path(d) / "prova-cr4.md"
+            q.write_text(testo, encoding="utf-8")
+            v, _ = V.ricchezza(q)
+        self.assertEqual(v[0]["ha"], "almeno 4000 mo")
+
+    def test_materiale_dello_scudo_fra_nome_e_bonus(self):
+        d = S.dati("dnd35", "creature.costruzione")["oggetti"]
+        self.assertEqual(V._oggetti_col_prezzo("scudo pesante d'acciaio +2", d, "dnd35"),
+                         [("scudo pesante +2 (armatura)", 4157)])
+
+    def test_il_dm_dichiara_lo_scarto(self):
+        coda = ("**Equipaggiamento** amuleto della salute +2\n\n"
+                "> Equipaggiamento sopra la tabella: scelta del DM (2026-11-14), conta nel GS.")
+        self.assertEqual(giudica(coda), ([], []))
+
+
 class Bestiario(unittest.TestCase):
-    def test_il_bestiario_non_ha_scarti(self):
-        trovate = []
+    #: schede che superano la Tabella 4-23 col prezzo base e le voci lette da questa PR (ADR-0134):
+    #: una card per scheda al DM, le schede non si toccano qui
+    IN_ATTESA = {"avarthel-druido-cr9.md", "bothor-malvur-cr6.md", "dauth-commander-mercenari-nani-cr12.md",
+                 "abbathor-blackguard-cr10.md", "abbathor-cleric11-cr11.md", "krusk-sfondacancelli-cr14.md",
+                 "ur-vrax-voce-del-drago-cr10.md"}
+
+    def test_il_bestiario_non_ha_altri_scarti(self):
+        trovate, attese = [], set()
         for p in sorted((ROOT / "Bestiario").rglob("*.md")):
-            trovate += [f"{x['file']}:{x['riga']} {x['testo']}" for x in V.ricchezza(p)[0]]
+            v = V.ricchezza(p)[0]
+            if p.name in self.IN_ATTESA:
+                attese |= {p.name} if v else set()
+            else:
+                trovate += [f"{x['file']}:{x['riga']} {x['testo']}" for x in v]
         self.assertEqual(trovate, [])
+        self.assertEqual(attese, self.IN_ATTESA, "una scheda in attesa è stata corretta: toglierla dall'elenco")
 
 
 if __name__ == "__main__":
