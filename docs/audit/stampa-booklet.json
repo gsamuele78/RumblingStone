@@ -36,14 +36,14 @@
         "schede": 32,
         "pagine_con_immagine": 0.044,
         "pagine_con_immagine_decimo": 0.119,
-        "parole": 88710,
+        "parole": 88724,
         "quota_parole_ripetute": 0.128
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 11324
+        "parole_ripetute": 11336
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/ARC07-NOTTE-E-ALBA-GIOCATORI.manifest.json": {
@@ -88,14 +88,14 @@
         "schede": 24,
         "pagine_con_immagine": 0.024,
         "pagine_con_immagine_decimo": 0.079,
-        "parole": 70295,
+        "parole": 70308,
         "quota_parole_ripetute": 0.119
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 8387
+        "parole_ripetute": 8398
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-GIOCATORI.manifest.json": {
@@ -140,14 +140,14 @@
         "schede": 30,
         "pagine_con_immagine": 0.035,
         "pagine_con_immagine_decimo": 0.081,
-        "parole": 100479,
+        "parole": 100486,
         "quota_parole_ripetute": 0.095
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 9536
+        "parole_ripetute": 9541
       }
     },
     "07_il Portale Della Forgia Eterna/homebrew/sessione-ritorno-forgia/ARC07-RITORNO-FORGIA-BOOKLET.manifest.json": {
@@ -218,7 +218,7 @@
         "schede": 4,
         "pagine_con_immagine": 0.0,
         "pagine_con_immagine_decimo": 0.0,
-        "parole": 39501,
+        "parole": 39486,
         "quota_parole_ripetute": 0.048
       },
       "in_prova": {
@@ -270,14 +270,14 @@
         "schede": 26,
         "pagine_con_immagine": 0.048,
         "pagine_con_immagine_decimo": 0.105,
-        "parole": 60303,
+        "parole": 60310,
         "quota_parole_ripetute": 0.108
       },
       "in_prova": {
         "sigle_morte": 0,
         "righe_brevi_incomplete": 0,
         "titoli_rovinati": 0,
-        "parole_ripetute": 6511
+        "parole_ripetute": 6516
       }
     },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
