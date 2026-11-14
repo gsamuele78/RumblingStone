@@ -14,13 +14,12 @@ python3 scripts/memoria_storica.py --pr N  # la storia di una PR, di un ADR, di 
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 2 decisioni aperte
+## Aspetta il DM: 1 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
 | Piano | # | Ambito | Domanda |
 |---|---|---|---|
-| `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 
 ### Revisioni della prosa da approvare: 0
@@ -86,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-13 | RECUPERO-DECISIONI | L4 · I piani fermi, una casella alla volta (e D5 chiusa) | ✅ D5 decisa da Jfs voce per voce (11 risposte sulle card del 13/11) e applicata: 14 caselle, 5 lotti con milestone o thread, 1 regola, 8 attese; nel registro d… |
 | 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… | In PR |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0131: il volume da stampa è anche PDF/A-2a (ISO 19005-2).… | ✅ veraPDF 1.28.2 sui 20 booklet: PDF/A-2a 0 → 20 conformi, controlli falliti 544 → 0 (484 trasparenza senza intento d'uscita, 60 metadati XMP); PDF/UA-1 resta… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |
@@ -97,12 +97,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 seconda parte: resistenza agli incantesimi e riduzione del da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 prima parte: la velocità a terra.… | In PR |
 | 2026-11-13 | STANDARD-STAMPA | Pagina fitta abbandonata (il DM, 2026-11-13: «preferisco sempre la versione del… | ✅ tolta la chiave `"pagina": "fitta"` da manifest, tema, esportatore, schema e validatore; la serata «La Notte e l'Alba» torna a 125 pagine, corpo 10,2 pt, pas… |
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 seconda parte: la penalità di armatura alla prova.… | In PR |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 107 voci, l'ultima MS-0107 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Decisioni**: 1 aperte, 323 chiuse (`decisioni_dm.py`).
+- **Memoria storica**: 108 voci, l'ultima MS-0108 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

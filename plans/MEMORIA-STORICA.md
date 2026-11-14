@@ -1243,3 +1243,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-13 · Piano di recupero: D5 chiusa e lotto L4, il registro delle adozioni prende i lotti interni
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0076
+- **Temi:** piani decisioni adozioni registro
+- **Origine:** riga del 2026-11-13 «L4 · I piani fermi, una casella alla volta (e D5 chiusa)» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha risposto voce per voce alla quinta domanda del piano di recupero sulle card del thread audit (13/11, 23:40-23:50): convertitori e shellcheck nel blocco piattaforma v1.5.0; frecce sulle mappe in attesa di un caso vero; dossier di ARC-09 dopo ARC-07 al tavolo; Foundry quando lo usa; carte del Drappo subito in un thread a parte; riassunto del Drappo dopo una serata; whisper.cpp in prova su una serata; carta del cielo sì per ARC-09; template PF1e sì col thread delle regole; incontri tarati alla chiusura della v1.2.0; Blockbench in attesa. Due card nel thread del piano: il registro prende solo le condizioni misurabili (R-6), e Blockbench aspetta una serie ComfyUI vera.
+- **Trovato nel repo:** `plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md` (R-6, D5, L4) · `plans/adozioni-in-attesa.json` · `scripts/adozioni_in_attesa.py`
+- **Solo qui:** la prima condizione di Blockbench («lo script per le serie ComfyUI su main») era vera dal 2026-09-05 (`scripts/comfyui_batch.py`, 494174ce): la riga di RICERCA-TOOL-LGM §3.3 che lo diceva «non fatto» era ferma da settembre. Le cinque attese lasciate fuori dal registro non hanno nessun allarme: le trova solo la routine del lunedì leggendo i piani. La soglia di 3 righe per «serie vera» e shellcheck nella v1.5.0 sono deduzioni del thread, non risposte di Jfs. La voce è nata MS-0108 (la prossima dopo main); il coordinatore le ha assegnato MS-0118, che prende al riallineo dopo le PR con MS-0108…0117.
