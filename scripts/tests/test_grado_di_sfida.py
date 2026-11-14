@@ -124,7 +124,7 @@ class Scheda(unittest.TestCase):
 
 class Bestiario(unittest.TestCase):
     #: scarti veri in attesa della decisione del DM (card del thread delle regole)
-    IN_ATTESA = {"duergar-ladro1-cr1.md", "duergar-mago-ladro8-cr7.md", "goblin-warrior1-cr05.md"}
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altri_scarti(self):
         trovate, attese = [], set()
