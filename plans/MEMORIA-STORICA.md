@@ -1296,7 +1296,7 @@ repo scritto con altre parole.
 - **ADR:** ADR-0126
 - **Temi:** regole abilità razze saltare verifica-scheda
 - **Origine:** riga del 2026-11-14 «lotto 6 terza parte» in `plans/CHANGELOG.md`
-- **Testo:** Il margine dei gradi contato voce per voce vale anche per nove razze senza dadi vita razziali. Entrano il +4 di taglia a Nascondersi dei Piccoli e il modificatore della velocità a Saltare. Una violazione nuova, vera: Bothor e Malvur hanno Saltare +6 dove la regola dà +2. La scheda aspetta la risposta del DM.
+- **Testo:** Il margine dei gradi contato voce per voce vale anche per nove razze senza dadi vita razziali. Entrano il +4 di taglia a Nascondersi dei Piccoli e il modificatore della velocità a Saltare. Una violazione nuova, vera: Bothor e Malvur hanno Saltare +6 dove la regola dà +2. Il DM ha risposto «Correggi a +2» sulla card e la scheda è corretta.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima estrazione dava «hide = 1» ai Piccoli, perché l'espressione prendeva il «+1» dell'attacco nella stessa frase; l'ha mostrato il diff del file dati. Le schede di prova dei talenti erano un orco barbaro tarato sul margine fisso: ora sono uno gnoll.
 
@@ -1307,7 +1307,7 @@ repo scritto con altre parole.
 - **ADR:** ADR-0126
 - **Temi:** regole velocità razze armature verifica-scheda
 - **Origine:** riga del 2026-11-14 «lotto 7 sesta parte» in `plans/CHANGELOG.md`
-- **Testo:** La verifica `velocita` giudica anche nove razze senza dadi vita razziali: schede giudicate 18 → 34. Due violazioni vere, su card al DM: la Furia della Mano a 12 m con un'armatura media e il bladebearer hobgoblin con il nome dell'armatura sbagliato rispetto alla fonte PCGen. Le schede non sono state toccate.
+- **Testo:** La verifica `velocita` giudica anche nove razze senza dadi vita razziali: schede giudicate 18 → 34. Due violazioni vere, su card al DM: la Furia della Mano a 12 m con un'armatura media e il bladebearer hobgoblin con il nome dell'armatura sbagliato rispetto alla fonte PCGen. Il DM ha risposto sulle card: corazza di mithral per la Furia (resta a 12 m), giaco di maglia +1 per il bladebearer.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** due schede di hobgoblin regolari scrivono 6 m senza scomporre la CA: la prima versione le dava per violazioni, ed erano solo armature non nominate. Da lì la regola del dubbio. La correzione diretta del nome dell'armatura del bladebearer è stata fermata: una scheda si cambia solo con la risposta del DM, anche quando è un errore di trascrizione.
 

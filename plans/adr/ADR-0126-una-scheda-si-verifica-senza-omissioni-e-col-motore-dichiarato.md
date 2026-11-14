@@ -1192,3 +1192,16 @@ piastre +1» dove l'esportazione PCGen citata dice «Chain Shirt +1». Stanno in
 `IN_ATTESA` di `test_velocita.py`. Banco `muta_velocita.py`: più 3 m da 15 su 18
 a 27 su 34, meno 3 m da 15 su 18 a 26 su 34.
 
+### Addendum 2026-11-14: tre decisioni del DM sulle card dei lotti 6 e 7
+
+Il DM ha risposto alle tre card lo stesso giorno, e le schede sono scritte:
+
+- Bothor e Malvur: «Correggi a +2». Saltare +6 → +2 in `Bestiario/png/bothor-malvur-cr6.md`.
+- Furia della Mano: «Corazza di mithral, resta 12 m». La corazza di piastre +2
+  è di mithral, conta leggera e i 12 m sono legali. La ricchezza dichiarata
+  sopra il tetto sale da circa 32.700 a circa 36.700 mo contro 16.000.
+- Bladebearer hobgoblin: «Scrivi giaco di maglia +1», come nella fonte PCGen.
+
+Misura dopo le risposte: `abilita` 0 violazioni, `velocita` 0 violazioni,
+`IN_ATTESA` di `test_velocita.py` vuoto.
+

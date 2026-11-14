@@ -163,8 +163,8 @@ class TestVelocita(unittest.TestCase):
         self.assertIn("non scompone la CA", n[0]["testo"])
         self.assertEqual(len(giudica("6 m")[0]), 1)                           # con le voci scritte è una violazione
 
-    #: schede con una decisione aperta del DM (card nel thread delle regole, 2026-11-14)
-    IN_ATTESA: "set[str]" = {"furia-della-mano-cr10.md", "hobgoblin-bladebearer-ftr6-cr6.md"}
+    #: schede con una decisione aperta del DM
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_violazioni(self):
         fuori, attese = [], set()
