@@ -73,7 +73,7 @@ def modello(nome: str) -> dict:
 
 # ── leggere e scrivere i pezzi del blocco ───────────────────────────────────
 def _mod(punteggio: int) -> int:
-    return (punteggio - 10) // 2
+    return T.mod(punteggio)                # la formula sta nei dati del plugin
 
 
 def leggi_attributi(testo: str) -> dict[str, int | str]:
