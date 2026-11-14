@@ -257,6 +257,15 @@ def _e_umano(testo: str, nomi) -> bool:
     return bool(re.search(rf"\b(?:{'|'.join(nomi)})\b", testo, re.I))
 
 
+def _razza_senza_dv(senza_dv: dict, dove: str, tipo: str) -> "str | None":
+    """Quale razza senza dadi vita razziali di `[mdl]` è la scheda (hobgoblin,
+    drow, orco…), o None: una sola deve combaciare, col suo tipo, e senza un
+    modello nel titolo."""
+    sue = [r for r, rx in senza_dv["nomi"].items() if re.search(rf"(?<![\w-])(?:{rx})(?![\w-])", dove, re.I)
+           and re.search(rf"\b{senza_dv['razze'][r]['tipo']}\b", _tipo_en(tipo), re.I)]
+    return sue[0] if len(sue) == 1 and not _MODELLO.search(dove) else None
+
+
 def _razza_srd(dove: str, regole: dict) -> "str | None":
     """Quale delle razze di `[razze]` è la scheda, o None: una sola deve
     combaciare, e nessuna delle «altre» (un duergar è «umanoide (nano)» ma i
@@ -1680,8 +1689,8 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
     """I linguaggi che razza e classe danno da soli stanno nella riga dei linguaggi (ADR-0126, lotto 7).
 
     Solo per chi scrive una riga «Linguaggi» (una sola, fuori dalle righe di
-    storia): una delle sette razze dell'SRD ha i suoi linguaggi automatici, il
-    druido ha il Druidico. Quanti linguaggi in più si possono avere non si
+    storia): una delle sette razze dell'SRD, o una razza senza dadi vita razziali
+    (hobgoblin, orco, drow…), ha i suoi linguaggi automatici, il druido ha il Druidico. Quanti linguaggi in più si possono avere non si
     giudica: dipende da regione e gradi che la scheda non scrive."""
     from dmcore import sistemi as S
     s = L.leggi(p)
@@ -1701,7 +1710,9 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
         return [], []
     n_riga, scritti = trovate[0]
     attesi, perche = [], []
-    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    razza = _razza_srd(dove, gradi) or _razza_senza_dv(
+        S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove, s.tipo or "")
     if razza in d["razze"]:
         attesi += d["razze"][razza]
         perche.append(razza)
@@ -2079,10 +2090,9 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     if mdl is None:
         # una razza senza dadi vita razziali (hobgoblin, drow, orco…): il suo modificatore di livello
         senza_dv = S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}
-        sue = [r for r, rx in senza_dv["nomi"].items() if re.search(rf"(?<![\w-])(?:{rx})(?![\w-])", dove, re.I)
-               and re.search(rf"\b{senza_dv['razze'][r]['tipo']}\b", _tipo_en(s.tipo or ""), re.I)]
-        if len(sue) == 1 and not _MODELLO.search(dove):
-            mdl = senza_dv["razze"][sue[0]]["mdl"]
+        sua = _razza_senza_dv(senza_dv, dove, s.tipo or "")
+        if sua:
+            mdl = senza_dv["razze"][sua]["mdl"]
     if mdl is None and blocchi:
         trovata = _base_del_blocco(s.testo, blocchi[0]["sb"], True, sistema)
         if trovata and trovata[1].get("avanza") != "classe" and not L.livelli_di_classe(s):

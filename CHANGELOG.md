@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `verifica_scheda`, verifica `linguaggi`: giudica anche nove razze senza dadi vita razziali (hobgoblin, orco, drow, duergar, goblin, coboldo, svirfneblin, aasimar, tiefling), coi linguaggi automatici che l'SRD scrive nel capitolo dei mostri (ADR-0126, lotto 7, quinta parte).
 - Stampa: i booklet PDF sono anche PDF/A-2a (ISO 19005-2, il PDF per l'archiviazione), insieme a PDF/UA-1 (ADR-0131). Se typst non riesce, `export_booklet_typst.py` esce col solo PDF/UA-1 e lo dice. I 20 booklet passano veraPDF in tutti e due i profili.
 - Stampa: le emoji dei booklet PDF escono a colori dal font Noto Color Emoji, ora nel repo (`scripts/fonts/`, OFL 1.1), e `export_booklet_typst.py` non usa più i font della macchina che compila (ADR-0130). Il volume è uguale su ogni macchina, e i 20 booklet passano PDF/UA-1 con veraPDF (erano 18).
 - Stampa: `misura_stampa.py` conta le parole ripetute di ogni booklet (`parole_ripetute`, `quota_parole_ripetute`, colonna `ripet`): le parole che stanno in un passo di almeno 8 parole già stampato prima, contate dalla seconda volta, testatine escluse. Misura in prova: `--check` avvisa e non ferma. `--dettaglio` elenca i passi con la pagina della copia e quella della prima volta.

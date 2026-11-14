@@ -1121,3 +1121,24 @@ uno scudo si prezza dal bonus alla CA, quindi «d'acciaio» vale come «di
 legno» (7 mo invece di 20); la ricerca nei Codex lascia «?» sugli oggetti che
 `ricchezza` non riconosce. Il lotto 8 è chiuso per il 3.5; restano i prezzi
 degli oggetti PF1e.
+
+### Lotto 7, quinta parte — i linguaggi delle razze senza dadi vita razziali (2026-11-14)
+
+**Contesto.** La verifica `linguaggi` conosceva solo le sette razze del
+capitolo delle razze. Una scheda di hobgoblin, orco, drow o duergar con la riga
+dei linguaggi non si giudicava. L'ha chiesto il thread del volume, che scrive
+le righe dei linguaggi nelle schede.
+
+**Decisione.** `estrai_linguaggi.py` legge anche la riga «Automatic Languages»
+che l'SRD scrive nel capitolo dei mostri per nove razze di `mdl.toml`: aasimar,
+drow, duergar, goblin, hobgoblin, coboldo, orco, svirfneblin, tiefling. Il
+marinide non ha la riga e resta fuori. La razza si riconosce come in
+`ricchezza`: un solo nome di `[mdl.nomi]`, col suo tipo, e nessun modello nel
+titolo. Restano fuori le razze coi dadi vita razziali (bugbear, gnoll, ogre,
+troll, lucertoloide e le altre): per loro la riga dell'SRD vale per il
+personaggio giocante, e il mostro del manuale può parlare meno.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni di `linguaggi` 0 → 0.
+Banco `muta_linguaggi.py`: schede giudicate 7 → 14 su 24 con la riga, linguaggi
+tolti e trovati 13 su 13 → 27 su 27. Nessuna scheda toccata.
+

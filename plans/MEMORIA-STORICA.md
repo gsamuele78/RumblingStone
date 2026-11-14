@@ -1277,3 +1277,15 @@ repo scritto con altre parole.
 - **Testo:** Jfs ha autorizzato il lotto J sulla card del 2026-11-13 («Sì, col thread delle regole»). Il generatore applica al blocco finito i sette modelli semplici del Bestiary di PF1e senza cambiare il GS scritto: i numeri stanno in `sistemi/pf1e/dati/modelli.toml` con la fonte per riga, il conto in `scripts/dmcore/modelli.py`, l'opzione è `--template`. `--piu-cattivi` è `--template advanced`. Gli archetipi di classe restano fuori.
 - **Trovato nel repo:** `ADR-0034` → `plans/adr/ADR-0034-generare-dalle-tabelle.md`
 - **Solo qui:** il vecchio conto del modello Avanzato lasciava ferma l'iniziativa e scriveva «+2 Advanced» nel dettaglio della CA invece di alzare Destrezza e armatura naturale; l'ha trovato il test del conto esatto. `pf-dado` registra i dadi e i bonus che non vengono dalla Costituzione, quindi un modello non lo tocca: cambia il bonus nella riga del tipo. I dadi di danno seguono le tabelle delle armi del Core Rulebook; da 2d6 in su le tabelle delle armi e degli attacchi naturali divergono, e un dado che la tabella non ha resta com'è e viene dichiarato. Per disfare un modello serve la traccia di ciò che ha fatto: il passo dei dadi all'ingiù non è l'inverso di quello all'insù.
+
+### MS-0111 · 2026-11-14 · Regole, lotto 7 quinta parte: linguaggi di hobgoblin, orco, drow, duergar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole linguaggi razze verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 7 quinta parte» in `plans/CHANGELOG.md`
+- **Testo:** La verifica `linguaggi` giudica anche nove razze senza dadi vita razziali, coi linguaggi automatici che l'SRD scrive nel capitolo dei mostri. L'ha chiesto il thread del volume. Schede giudicate nel Bestiario 7 → 14 su 24, banco 13 → 27 su 27, nessuna violazione e nessuna scheda toccata.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** le razze coi dadi vita razziali (bugbear, gnoll, ogre, troll) restano fuori apposta: la riga dell'SRD è per il personaggio giocante. Un test vecchio dava il drow come «razza fuori dalla tabella» ed è stato girato.
+
