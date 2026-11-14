@@ -297,7 +297,7 @@ vicino al corno; se non ne ha, un epiteto. Poi cinque cose da tenere davanti:
   A.6) vanno su chi tiene la corda e su chi vola. Fuggono quando il drago fugge
   o muore. Il duello è EL 17, il tetto, e vale circa 4.060 PX a testa (`DEF-4` §8) `[CANONE — DM 2026-10-19]`;
 - **la passata e il nome**: il drago non si ferma in aria. Attraversa il
-  cortile con Attacco in Volo e Virata, e a metà passata soffia o grida un
+  cortile con Attacco in Volo e Virare, e a metà passata soffia o grida un
   nome; al turno dopo morde chi ha nominato. Non ghermisce nessuno: la presa
   in bocca è di Fauci, nel 1372. Si ferma in aria una volta sola, a ⅓ dei pf,
   ed è la prima paura (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19]`;

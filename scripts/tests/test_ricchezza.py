@@ -103,6 +103,26 @@ class TestOggetti(unittest.TestCase):
         self.assertEqual(self.trova("bacchetta di dardo incantato"), [])
         self.assertEqual(self.trova("pozione di un liquido verde"), [])
 
+    def test_bastoni_solo_con_le_cariche(self):
+        self.assertEqual(self.trova("**bastone del fuoco** (*mani brucianti*, *palla di fuoco* — 10 cariche)"),
+                         [("staff of fire (10 cariche)", 3550)])
+        self.assertEqual(self.trova("staff of fire (50 charges)"), [("staff of fire (50 cariche)", 17750)])
+        self.assertEqual(self.trova("bastone del fuoco, bastone ferrato (3 cariche), bastone di cedro"), [])
+
+    def test_adamantio_e_mithral(self):
+        self.assertEqual(self.d["materiali"], {"adamantine": {"leggera": 5000, "media": 10000, "pesante": 15000, "arma": 3000},
+                                               "mithral": {"leggera": 1000, "media": 4000, "pesante": 9000, "scudo": 1000}})
+        self.assertEqual(self.trova("Armatura completa +1 di mithral"), [("armatura completa +1 di mithral (armatura)", 10000)])
+        self.assertEqual(self.trova("+1 mithral full plate"), [("full plate +1 di mithral (armatura)", 10000)])
+        self.assertEqual(self.trova("Mithral chainmail"), [("chainmail di mithral (armatura)", 4000)])
+        self.assertEqual(self.trova("spada lunga di adamantio +1, scudo pesante di mithral"),
+                         [("scudo pesante di mithral (armatura)", 1000), ("spada lunga +1 di adamantio (arma)", 5000)])
+        # la tabella non ha il prezzo di un'arma di mithral né di uno scudo di adamantio; un oggetto
+        # che non è un'arma o un'armatura della tabella non si conta
+        self.assertEqual(self.trova("mithral dagger, scudo pesante di adamantio, Corona di Adamantio"), [])
+        # il materiale lontano dal nome non conta
+        self.assertEqual(self.trova("spada lunga +1 presa nelle miniere di mithral"), [("spada lunga +1 (arma)", 2000)])
+
     def test_nomi_del_lessico(self):
         self.assertEqual(self.trova("Bracciali dell'arciere superiori, Stivali elfici"),
                          [("boots of elvenkind", 2500), ("bracers of archery, greater", 25000)])

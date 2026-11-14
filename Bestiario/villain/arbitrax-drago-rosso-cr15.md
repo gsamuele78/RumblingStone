@@ -19,7 +19,7 @@ iniziativa: +4
 attacchi:
   - Mischia morso +27 (2d8+10); 2 artigli +22 (2d6+5); 2 ali +22 (1d8+5); coda +22 (2d6+15); schiacciare (2d8+15)
 voci:
-  - Talenti: Colpo Terrificante, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virata
+  - Talenti: Colpo Terrificante, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virare
   - Soffio: cono di fuoco 15 m, 10d10, Rifl CD 25; presenza terrificante 45 m, Vol CD 24
   - RI 19; RD 5/magia; immune al fuoco, al sonno e alla paralisi; vulnerabile al freddo (l'anello resiste 10)
   - Incantesimi da stregone di 5° livello, al giorno 6/8/5, CD 15 + livello; localizzare oggetti 5/giorno
@@ -43,7 +43,7 @@ Huge dragon (fire), 19 HD, LE.
 - *Durante il combattimento*: round 1, soffio di fuoco sul gruppo più compatto che entra nell'anello, e la presenza terrificante scatta al primo attacco. Round 2, Attacco in Volo: scende, morde il PG più esposto e risale fuori portata, o lo ghermisce e lo porta in alto. Round 3, se il soffio è pronto lo ripete; altrimenti Colpo Terrificante sul PG che sta colpendo un focus, per scagliarlo fuori dal cerchio. Contro gli incantatori usa *dardo incantato* dall'alto. Non atterra se non per schiacciare cultisti e PG Piccoli; se i PG lo isolano con un muro di forza, combatte da terra con l'attacco completo. Contro un PG invisibile, vista cieca a 18 m.
 - *Morale*: sotto 80 pf abbandona l'altare e vola via verso le linee dell'Orda, ruggendo la ritirata: ha un tesoro da difendere e non muore per un rito. Se il Mythal è attivo e lo inchioda a terra, combatte fino alla morte.
 
-**Statistiche** For 31 Des 10 Cos 23 Int 14 Sag 15 Car 20 · BAB +19; Lotta +37 · **Talenti** Colpo Terrificante, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virata · **Abilità** Ascoltare +24, Osservare +24, Cercare +24, Concentrazione +28, Intimidire +29, Raggirare +15, Valutare +10, Conoscenze (arcane) +12, Conoscenze (religioni) +10 · **Equipaggiamento** amuleto della salute +2, anello minore di resistenza al freddo, mantello del Carisma +6
+**Statistiche** For 31 Des 10 Cos 23 Int 14 Sag 15 Car 20 · BAB +19; Lotta +37 · **Talenti** Colpo Terrificante, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virare · **Abilità** Ascoltare +24, Osservare +24, Cercare +24, Concentrazione +28, Intimidire +29, Raggirare +15, Valutare +10, Conoscenze (arcane) +12, Conoscenze (religioni) +10 · **Equipaggiamento** amuleto della salute +2, anello minore di resistenza al freddo, mantello del Carisma +6
 
 **Capacità speciali** **Presenza Terrificante** (Str): 45 m, creature con meno di 19 DV, Vol CD 24 (10 + ½ DV + Car) o scosse per 4d6 round (panico sotto i 5 DV). **Schiacciare** (Str): atterrando su creature Piccole o più piccole, Rifl CD 25 o bloccate. **Ghermire** e **Colpo Terrificante**: afferra con morso o artigli e scaglia via (Colpo Terrificante: 3 m e prono).
 

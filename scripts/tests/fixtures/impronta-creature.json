@@ -4653,7 +4653,7 @@
     ]
    }
   },
-  "Bestiario/mostri/duergar-ladro1-cr1.md": {
+  "Bestiario/mostri/duergar-ladro1-cr2.md": {
    "controlla": [],
    "genera": [
     {
@@ -4671,16 +4671,16 @@
    ],
    "genera_senza_fonte": [
     {
-     "Car": 5,
+     "Car": 3,
      "Cos": 12,
      "Des": 14,
      "For": 12,
      "Int": 9,
-     "Sag": 9
+     "Sag": 11
     },
     [
      "array standard del Manuale del DM (PNG con classe)",
-     "variazione a seme fisso: Car +1, Sag −1",
+     "variazione a seme fisso: Sag +1, Car −1",
      "modificatori razziali SRD: duergar Cos +2 Car -4",
      "Des 14 **derivata dalla CA di contatto** — il vincolo batte l'array",
      "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
@@ -4734,7 +4734,7 @@
      ],
      "pf_media": 5
     },
-    "file": "Bestiario/mostri/duergar-ladro1-cr1.md",
+    "file": "Bestiario/mostri/duergar-ladro1-cr2.md",
     "provenienza": "trascritte",
     "scarti": {},
     "template": null,
@@ -4797,7 +4797,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1310,
+    "senza_note": 1309,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_ladro_1liv_2cr.html",
@@ -4859,7 +4859,7 @@
      3,
      8
     ],
-    "file": "Bestiario/mostri/duergar-ladro1-cr1.md",
+    "file": "Bestiario/mostri/duergar-ladro1-cr2.md",
     "legale": true,
     "media": 5,
     "motivo": null,
@@ -4889,7 +4889,7 @@
       "nome": "Rogue"
      }
     ],
-    "gs": 1.0,
+    "gs": 2.0,
     "lotta": 1,
     "mischia": "stocco perfetto +2 (1d6+1/18-20)",
     "pf": 8,
@@ -4902,21 +4902,21 @@
     ]
    }
   },
-  "Bestiario/mostri/duergar-mago-ladro8-cr7.md": {
+  "Bestiario/mostri/duergar-mago-ladro8-cr8.md": {
    "controlla": [],
    "genera": [
     {
-     "Car": 9,
+     "Car": 8,
      "Cos": 14,
      "Des": 14,
      "For": 10,
-     "Int": 16,
-     "Sag": 10
+     "Int": 17,
+     "Sag": 9
     },
     [
      "array elite del Manuale del DM (PNG con classe)",
-     "variazione a seme fisso: Car +1, For −1",
-     "un avanzamento ogni 4 livelli, contati sul GS 7 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "variazione a seme fisso: For +1, Sag −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 8 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "modificatori razziali SRD: duergar Cos +2 Car -4",
      "Des 16 **derivata dalla CA di contatto** — il vincolo batte l'array",
      "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
@@ -4926,17 +4926,17 @@
    ],
    "genera_senza_fonte": [
     {
-     "Car": 9,
+     "Car": 8,
      "Cos": 14,
      "Des": 14,
      "For": 10,
-     "Int": 16,
-     "Sag": 10
+     "Int": 17,
+     "Sag": 9
     },
     [
      "array elite del Manuale del DM (PNG con classe)",
-     "variazione a seme fisso: Car +1, For −1",
-     "un avanzamento ogni 4 livelli, contati sul GS 7 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "variazione a seme fisso: For +1, Sag −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 8 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "modificatori razziali SRD: duergar Cos +2 Car -4",
      "Des 16 **derivata dalla CA di contatto** — il vincolo batte l'array",
      "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
@@ -4990,7 +4990,7 @@
      ],
      "pf_media": 34
     },
-    "file": "Bestiario/mostri/duergar-mago-ladro8-cr7.md",
+    "file": "Bestiario/mostri/duergar-mago-ladro8-cr8.md",
     "provenienza": "a mano",
     "scarti": {},
     "template": null,
@@ -5061,7 +5061,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 1658,
+    "senza_note": 1659,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt",
@@ -5149,7 +5149,7 @@
      21,
      48
     ],
-    "file": "Bestiario/mostri/duergar-mago-ladro8-cr7.md",
+    "file": "Bestiario/mostri/duergar-mago-ladro8-cr8.md",
     "legale": true,
     "media": 34,
     "motivo": null,
@@ -5188,7 +5188,7 @@
       "nome": "Wizard"
      }
     ],
-    "gs": 7.0,
+    "gs": 8.0,
     "lotta": 4,
     "mischia": "spada corta +1 +7 (1d6+1/19-20)",
     "pf": 37,
@@ -7817,7 +7817,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 1063,
+    "senza_note": 1064,
     "sestine_citate": [],
     "taglia": 1,
     "talenti": {},
@@ -43744,7 +43744,7 @@
     "scritta": "attributi: For 17 Des 13 Cos 16 Int 10 Sag 10 Car 6"
    },
    {
-    "file": "Bestiario/mostri/duergar-ladro1-cr1.md",
+    "file": "Bestiario/mostri/duergar-ladro1-cr2.md",
     "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ i pf suggeriscono Cos 12, la fonte dice 15: con 1 DV il conto dipende da media o massimo, si tiene la fonte.",
     "note": [
      "trascritta dalla fonte `Duergar_ladro_1liv_2cr.html`",
@@ -44248,7 +44248,7 @@
       }
      ],
      [
-      "duergar-ladro1-cr1.md",
+      "duergar-ladro1-cr2.md",
       {
        "Car": 4,
        "Cos": 15,
@@ -44258,12 +44258,12 @@
        "Sag": 10
       },
       {
-       "Car": 5,
+       "Car": 3,
        "Cos": 12,
        "Des": 14,
        "For": 12,
        "Int": 9,
-       "Sag": 9
+       "Sag": 11
       }
      ],
      [

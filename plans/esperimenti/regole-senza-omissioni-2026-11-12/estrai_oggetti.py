@@ -11,6 +11,7 @@ Dall'SRD 3.5 (olimot/srd-v3.5-md@c7f30a0c, OGL), solo nomi e numeri:
                  specifiche, pozioni, anelli, verghe, bastoni, bacchette e oggetti meravigliosi
   capacita       le tabelle delle capacità speciali di armi, armature e scudi
   pergamene      le tabelle delle pergamene arcane e divine
+  materiali      «Special Materials»: quanto costano in più adamantio e mithral
 
 Non dall'SRD (che non l'ha), solo numeri:
   png            Dungeon Master's Guide 3.5, Tabella 4-23 «NPC Gear Value», riscontrata il
@@ -138,9 +139,29 @@ def pergamene(base: Path) -> "dict[str, int]":
     return dict(sorted(out.items()))
 
 
+#: riga delle tabelle di «Special Materials» → chiave del plugin
+MATERIALI = {"Light armor": "leggera", "Medium armor": "media", "Heavy armor": "pesante",
+             "Weapon": "arma", "Shield": "scudo"}
+
+
+def materiali(base: Path) -> "dict[str, dict[str, int]]":
+    """Quanto costa in più un oggetto di adamantio o di mithral (mo), per categoria."""
+    out: dict[str, dict[str, int]] = {}
+    f = base / "basic-rules-and-legal" / "special-materials.md"
+    for m in re.finditer(r"<table[^>]*>(.*?)</table>", f.read_text(encoding="utf-8"), re.S):
+        righe = [_celle(r) for r in re.findall(r"<tr>(.*?)</tr>", m.group(1), re.S)]
+        t = re.fullmatch(r"Type of (Adamantine|Mithral) Item", righe[0][0]) if righe and righe[0] else None
+        if not t:
+            continue
+        for r in righe[1:]:
+            if len(r) == 2 and r[0] in MATERIALI and _mo(r[1]) is not None:
+                out.setdefault(t.group(1).lower(), {})[MATERIALI[r[0]]] = _mo(r[1])
+    return out
+
+
 def testo(base: Path) -> str:
     pot, pr = potenziamento(base), prezzi(base)
-    cap, perg = capacita(base), pergamene(base)
+    cap, perg, mat = capacita(base), pergamene(base), materiali(base)
     righe = [
         "# sistemi/dnd35/dati/oggetti.toml — prezzi degli oggetti magici e valore dell'equipaggiamento",
         "# di un PNG per livello (ADR-0126, lotto 8)",
@@ -172,6 +193,10 @@ def testo(base: Path) -> str:
     righe += ["", "[oggetti.pergamene]",
               "# SRD, «Table: Arcane Spell Scrolls» e «Table: Divine Spell Scrolls»: il prezzo più basso (mo intere)"]
     righe += [f'"{k}" = {v}' for k, v in perg.items()]
+    for nome, voci in sorted(mat.items()):
+        righe += ["", f"[oggetti.materiali.{nome}]",
+                  "# SRD, «Special Materials»: costo in più dell'oggetto (mo), per categoria"]
+        righe += [f"{k} = {v}" for k, v in voci.items()]
     righe += ["", "# come una scheda scrive un oggetto (espressioni regolari; non vengono dall'SRD). «N» è il bonus letto."]
     for nome, schema in NOMI:
         righe += ["[[oggetti.nomi]]", f'nome = "{nome}"', f"schema = '''{schema}'''", ""]
