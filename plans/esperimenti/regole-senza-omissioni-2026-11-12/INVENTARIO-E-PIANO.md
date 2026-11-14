@@ -518,3 +518,13 @@ Misura: violazioni 37 → 37, non verificabili 374 → 374; valore riconosciuto
 nel Bestiario 224.000 → 267.830 mo; banco, seconda prova: 41 → 57 su 125.
 Resta del lotto 8: bastoni, materiali speciali, tabella PF1e.
 
+### Lotto 8, terza parte: adamantio, mithral, bastoni con le cariche (2026-11-13)
+
+`oggetti.toml` ha `[oggetti.materiali]` (adamantio e mithral, per categoria,
+dalle tabelle di «Special Materials» dell'SRD). La verifica `ricchezza` somma
+il materiale al potenziamento, conta l'oggetto di materiale speciale anche
+senza «+N» e i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non
+verificabili 374 → 375 (Ghaurush Cenerevento GS 16: 36.300 mo contro 35.000,
+razza senza modificatore di livello noto). Banco, terza prova: 1 → 52 su 125.
+Resta del lotto 8: prezzo base degli oggetti comuni, tabella PF1e.
+

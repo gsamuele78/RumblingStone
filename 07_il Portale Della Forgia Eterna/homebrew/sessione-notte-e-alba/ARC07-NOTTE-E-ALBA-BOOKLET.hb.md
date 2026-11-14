@@ -402,7 +402,7 @@ vicino al corno; se non ne ha, un epiteto. Poi cinque cose da tenere davanti:
   A.6) vanno su chi tiene la corda e su chi vola. Fuggono quando il drago fugge
   o muore. Il duello è EL 17, il tetto, e vale circa 4.060 PX a testa (cap. VI §8);
 - **la passata e il nome**: il drago non si ferma in aria. Attraversa il
-  cortile con Attacco in Volo e Virata, e a metà passata soffia o grida un
+  cortile con Attacco in Volo e Virare, e a metà passata soffia o grida un
   nome; al turno dopo morde chi ha nominato. Non ghermisce nessuno: la presa
   in bocca è di Fauci, nel 1372. Si ferma in aria una volta sola, a ⅓ dei pf,
   ed è la prima paura (cap. VI Scena 11);
@@ -524,7 +524,7 @@ ___
 
 **ATTACCO**
 ___
-Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
+Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
 
 **TATTICHE**
 ___
@@ -555,7 +555,7 @@ spadone per terra, una volta sì, due no. Ritratto: nessuno.
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
 ___
@@ -712,7 +712,7 @@ Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 
 **STATISTICHE**
 ___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virare (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -2449,7 +2449,7 @@ Benedizioni ci sono ancora.
   (+25), 2 ali +29 (+25), coda +29 (+25).
 - **La passata e il nome.** Non si ferma mai in aria, finché non ha paura.
   Con Attacco in Volo attraversa il cortile e a metà della passata soffia, o
-  morde, o grida il nome di un PG (*colpo accurato*); con *Virata* torna
+  morde, o grida il nome di un PG (*colpo accurato*); con *Virare* torna
   indietro sulla stessa linea. Il PG nominato lo morde al round dopo, a +54
   (+50), e l'occultamento non lo salva. Il nome non lo chiede: lo ha sentito
   di notte attraverso il corno, o usa un epiteto.
@@ -5500,13 +5500,13 @@ cambia davvero.
     movimento e un'azione standard in un punto qualsiasi del movimento. Il
     soffio è un'azione standard: lo usa a metà della passata e continua a
     volare. Il morso in passata è un attacco solo.
-  - ***Virata*** (SRD, *Wingover*). Una volta per round, con un'azione
+  - ***Virare*** (SRD, *Wingover*). Una volta per round, con un'azione
     gratuita, gira fino a 180° nonostante la manovrabilità scarsa. La virata
     costa 3 m di volo, e nel round in cui vira non sale: resta in quota o
     scende. È il talento che gli fa girare un drago Enorme dentro un cortile
     di 36 m: entra, soffia, e torna indietro sulla stessa linea quando il
-    gruppo pensava di averlo alle spalle. 🔎 Il testo è quello dell'SRD letto
-    su una trascrizione: va riscontrato su d20srd.org.
+    gruppo pensava di averlo alle spalle. Riscontrato sull'SRD 3.5
+    («Monster Feats», *Wingover*): prerequisito velocità di volare.
   - ***Colpo accurato*** (SRD, *true strike*, stregone di 1°). Azione
     standard: +20 di intuizione al prossimo tiro per colpire, entro la fine
     del round dopo, e niente probabilità di mancare per occultamento. La
@@ -6151,7 +6151,7 @@ Il duello della Scena 11: combatte in passata, dice il nome prima di colpire e f
 
 **STATISTICHE**
 ___
-For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18  
+For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virare, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -6161,8 +6161,8 @@ ___
 }}
 
 **Perché GS 14** (scelta del DM): la nota D8 lo voleva GS 12, un Adulto «potenziato» senza numeri. Adesso è un drago dell'SRD intero, Avanzato senza alzare il GS. EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4. Il vero climax resta Fauci nel 1372: qui si semina.
-- Boost log: due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Impregnante** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon.
-- Boost log: un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco.
+- Boost log: due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virare* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Impregnante** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon.
+- Boost log: un talento cambiato: *Ghermire* → **Virare** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco.
 
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
@@ -6229,7 +6229,7 @@ Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 
 **STATISTICHE**
 ___
-For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
+For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virare (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -6251,7 +6251,7 @@ testa**, e 12.600 per un gruppo di 14°, cioè **≈ 3.150 a testa**. Le wyvern
 si sommano a parte (§8 A).
 
 - Boost log: drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
-- Boost log: usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca.
+- Boost log: usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virare** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
@@ -6269,7 +6269,7 @@ ___
 
 **ATTACCO**
 ___
-Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
+Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni  
 
 **TATTICHE**
 ___
@@ -6293,7 +6293,7 @@ ___
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
 ___
