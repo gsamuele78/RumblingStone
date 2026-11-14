@@ -231,9 +231,9 @@
 >   cerchiata culmina un po' a sud (o a nord) dello zenit; ogni grado di scarto è
 >   circa 110 km in quella direzione. Misurare un grado a occhio non si può:
 >   serve un astrolabio, un quadrante o Conoscenze (geografia) CD 20.
->   `[INFERRED — Di quanto e verso dove cammina la Torre?; base: nessuna nel canone, proposta del thread della carta]` Valore proposto: **un grado più a sud** del pianoro della Torre,
->   cioè circa 110 km (tre giorni di marcia a 9 m, quattro a 6 m). La carta non cambia se il
->   DM sceglie un'altra distanza o direzione: cambia solo questa riga.
+>   Deciso dal DM il 2026-11-14: il passo va **un grado più a sud** del pianoro
+>   della Torre, cioè circa 110 km (tre giorni di marcia a 9 m, quattro a 6 m).
+>   La carta non dipende da questa scelta: se cambia, cambia solo questa riga.
 > - **Nome**: «il Sigillo si chiude sulla Torre». È il calcolo del rito di
 >   spostamento di Zalkatar, la stessa vibrazione che sente l'Anello di Artemis.
 > - **Perché non si falsifica**: il cielo è lo stesso per tutti. Una copia con

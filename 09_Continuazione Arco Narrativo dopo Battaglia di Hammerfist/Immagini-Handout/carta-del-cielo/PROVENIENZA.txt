@@ -28,4 +28,4 @@ evidente delle stelle, non un'opera di altri.
 Cosa questa carta NON fissa: dove sta la Torre oggi. L'immagine dipende solo
 dal luogo del passo (latitudine = declinazione della stella-chiave) e dalla
 notte; la distanza e la direzione dal punto di partenza sono nella nota DM
-dell'handout 7 e sono [INFERRED].
+dell'handout 7 (un grado a sud, deciso dal DM il 2026-11-14).
