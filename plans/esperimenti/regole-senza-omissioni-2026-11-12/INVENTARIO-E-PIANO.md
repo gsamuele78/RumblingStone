@@ -536,6 +536,7 @@ dell'equipaggiamento, non conta due volte recinto e prosa; regola
 `equipaggiamento.da_png` («Improving Monsters», 52 creature che avanzano per
 classe). PF1e: `oggetti.toml` (Tabella 14-9) e `codex.toml` (454 PNG), da
 `estrai_codex.py` (`--check`, `--cerca CLASSE LIVELLO`). Misura: violazioni
-30 → 37 (sette schede vere sopra la tabella, in attesa del DM), non
+30 → 30 (sette schede vere sopra la tabella, dichiarate dal DM sulle card
+del 2026-11-14 con la riga «Equipaggiamento sopra la tabella»), non
 verificabili 372 → 374. Banco, quarta prova: 0 → 50 su 118. Lotto 8 chiuso
 per il 3.5; restano i prezzi degli oggetti PF1e.

@@ -309,9 +309,7 @@ class TestDoveStaScritto(unittest.TestCase):
 class Bestiario(unittest.TestCase):
     #: schede che superano la Tabella 4-23 col prezzo base e le voci lette da questa PR (ADR-0134):
     #: una card per scheda al DM, le schede non si toccano qui
-    IN_ATTESA = {"avarthel-druido-cr9.md", "bothor-malvur-cr6.md", "dauth-commander-mercenari-nani-cr12.md",
-                 "abbathor-blackguard-cr10.md", "abbathor-cleric11-cr11.md", "krusk-sfondacancelli-cr14.md",
-                 "ur-vrax-voce-del-drago-cr10.md"}
+    IN_ATTESA: "set[str]" = set()
 
     def test_il_bestiario_non_ha_altri_scarti(self):
         trovate, attese = [], set()

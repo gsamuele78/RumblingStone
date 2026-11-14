@@ -1105,12 +1105,15 @@ Una riga «Equipaggiamento sopra la tabella: … DM …» dichiara lo scarto com
 scelta del DM. I dati di PF1e (Tabella 14-9 e 454 PNG dei Codex) e la regola
 ibrida stanno in [ADR-0134](ADR-0134-l-equipaggiamento-standard-viene-dai-codex-pf1e-entro-il-valore-del-3-5.md).
 
-**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 30 → 37, non
-verificabili 372 → 374. Le sette violazioni nuove sono schede vere che
-superano la tabella dei PNG ora che l'equipaggiamento si legge dov'è scritto:
-Avarthel, Bothor e Malvur, il comandante dei mercenari di Dauth, il blackguard
-e il chierico di Abbathor, Krusk, Ur-Vrax. Stanno in `IN_ATTESA` di
-`test_ricchezza.py`, una card per scheda al DM. Banco `muta_ricchezza.py`,
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni 30 → 30, non
+verificabili 372 → 374. Sette schede vere superano la tabella dei PNG ora che
+l'equipaggiamento si legge dov'è scritto: Avarthel, Bothor e Malvur, il
+comandante dei mercenari di Dauth, il blackguard e il chierico di Abbathor,
+Krusk, Ur-Vrax. Il DM ha risposto alle sette card il 2026-11-14 («Tieni e
+dichiara»): ogni scheda porta la riga «Equipaggiamento sopra la tabella:
+scelta del DM» col valore, il tetto e il GS, nessun numero cambia e
+`IN_ATTESA` di `test_ricchezza.py` è vuoto. Senza le sette dichiarazioni la
+misura sarebbe 37. Banco `muta_ricchezza.py`,
 quarta prova (gli oggetti della prima scritti nella riga delle Statistiche):
 0 → 50 su 118. Limiti: una scheda PF1e non si giudica (mancano i prezzi
 PF1e); ferro freddo, argento alchemico e gli altri materiali restano fuori;

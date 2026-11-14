@@ -74,4 +74,6 @@ categorie) e i PNG già equipaggiati dell'NPC Codex e del Monster Codex.
 - La quarta riga della 14-9 somma 1.750 mo nelle categorie contro un totale
   di 1.650: i dati tengono i numeri del manuale.
 - Le schede che col prezzo base superano il tetto diventano card per il DM,
-  non correzioni automatiche.
+  non correzioni automatiche. Le prime sette (2026-11-14) il DM le ha tenute
+  com'erano: portano la riga «Equipaggiamento sopra la tabella: scelta del
+  DM» col valore, il tetto e il GS.
