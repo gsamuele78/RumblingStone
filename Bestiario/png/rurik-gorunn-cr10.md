@@ -35,6 +35,11 @@ voci:
 
 **Attacco** Vel 6 m · **Mischia** martello da guerra +1 gelido +14/+9 (1d8+3 più 1d6 freddo/x3); colpo di scudo pesante +1 +12/+7 (1d4+2) in alternativa · **Distanza** il martello lanciato +11 (incremento 6 m), torna in mano prima del turno successivo · **Attacchi speciali** punire il male 2/giorno (+2 al colpire, +8 ai danni); *Goblinkiller* 1/giorno; scacciare non morti 5/giorno (come chierico di 5°) · **Incantesimi preparati** (paladino 8, LI 4; CD 12 + livello): 2° — *resistere all'energia*; 1° — *benedire l'arma*, *favore divino*
 
+**Tattiche**
+- *Prima del combattimento*: se ha un minuto, *benedire l'arma* sul martello (contro i malvagi ogni minaccia di critico è confermata) e richiama l'ariete; *resistere all'energia* al fuoco se c'è un drago rosso nell'aria.
+- *Durante il combattimento*: al primo round, se il nemico è lontano, lancia il martello (+11, torna da solo) sul bersaglio malvagio più vicino, oppure carica in sella all'ariete. Contro goblinoidi attiva Goblinkiller con un'azione di movimento e passa all'attacco: con *anatema* il martello fa +2 al colpire e 2d6 in più. Il punire il male lo spende sul capo nemico, non sui gregari. Resta a contatto con i suoi: l'aura di coraggio vale solo entro 3 m. Contro i non morti scaccia prima di colpire. Contro chi vola lancia il martello a ogni round, o beve *volare*.
+- *Morale*: è un paladino, non fugge da un male che minaccia innocenti. Sotto i 25 pf usa l'imposizione delle mani su se stesso (16 pf) e poi la *cura ferite gravi*, senza lasciare la linea. Si ritira soltanto se gli innocenti sono già al sicuro, e per ultimo.
+
 **Statistiche** For 14, Des 8, Cos 14, Int 10, Sag 14, Car 14 · BAB +10; Lotta +12 · **Talenti** Celestial Mount [Private source — Book of Exalted Deeds], Divine Armor [Private source — Player's Handbook II], Volontà di Ferro, Arma Focalizzata (martello da guerra) · **Abilità** Artigianato (fabbro d'armi) +12, Concentrazione +8 · **Linguaggi** Comune, Nanico · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +1 gelido, anello di protezione +1, *pietra ioun, prisma arancione* (+1 al livello dell'incantatore), bacchetta di *cura ferite leggere*, pozioni di *volare*, *cura ferite gravi* e *cura ferite moderate*
 
 **Capacità speciali**
@@ -45,12 +50,6 @@ voci:
 > ⚠ Prerequisito: il Martello di Moradin chiede la regione **Spina del Mondo**; l'export dà a Rurik le **Smoking Mountains**. Gli altri requisiti tornano (BAB +7, Artigianato fabbro d'armi 10 gradi, Volontà di Ferro, Arma Focalizzata martello, incantesimi divini di 2°, patrono Moradin). Si tiene la classe. PF1e: nessuna classe o archetipo del PRD fa lancio-e-ritorno del martello con l'aura del paladino; l'arma *di ritorno* più il talento Lancio Rapido sul paladino base si avvicinano nel combattimento ma perdono Goblinkiller e l'aura, quindi stravolge poco e dà meno. Basta ignorare la regione.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-13, decisione del DM sulla card): Divine Armor chiede livello dell'incantatore 5 e un Paladino 8 ha 4 (il Martello di Moradin non lo fa avanzare). Aggiunta una ***pietra ioun, prisma arancione*** (SRD, +1 al livello dell'incantatore, 30.000 mo): LI **5** finché la porta, e il talento vale solo allora. ⚠ Oltre la ricchezza SRD di un PNG di 10° (16.000 mo): è un dono del clero di Moradin.
-
-**Tattiche**
-- *Prima del combattimento*: se ha un minuto, *benedire l'arma* sul martello (contro i malvagi ogni minaccia di critico è confermata) e richiama l'ariete; *resistere all'energia* al fuoco se c'è un drago rosso nell'aria.
-- *Durante il combattimento*: al primo round, se il nemico è lontano, lancia il martello (+11, torna da solo) sul bersaglio malvagio più vicino, oppure carica in sella all'ariete. Contro goblinoidi attiva Goblinkiller con un'azione di movimento e passa all'attacco: con *anatema* il martello fa +2 al colpire e 2d6 in più. Il punire il male lo spende sul capo nemico, non sui gregari. Resta a contatto con i suoi: l'aura di coraggio vale solo entro 3 m. Contro i non morti scaccia prima di colpire. Contro chi vola lancia il martello a ogni round, o beve *volare*.
-- *Morale*: è un paladino, non fugge da un male che minaccia innocenti. Sotto i 25 pf usa l'imposizione delle mani su se stesso (16 pf) e poi la *cura ferite gravi*, senza lasciare la linea. Si ritira soltanto se gli innocenti sono già al sicuro, e per ultimo.
-
 
 **Benchmark**: PF T1-1 riga 10 (CA 24, pf 130, att +18, danno 45, CD 19): CA 22 (−2), pf 80 (−50), att +14 (−4), danno con l'attacco completo ≈23, ≈31 col punire (sotto). Con l'ariete (GS 5) intorno l'incontro sale a EL 10-11.
 

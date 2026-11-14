@@ -45,12 +45,6 @@ Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. Tutto SRD tr
 - 1° (5) — *charme su persone, armatura magica, dardo incantato, raggio di indebolimento, scudo*
 - 0 (8) — *spruzzo acido, suono fantasma, mano magica, messaggio, apri/chiudi, lettura del magico, individuazione del magico*, *raggio di gelo*
 
-**Statistiche** For 16, Des 15, Cos 16, Int 8, Sag 10, Car 17 · BAB +6; Lotta +9 · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Riflessi Fulminei, Sudden Enlarge · **Abilità** Raggirare +7, Concentrazione +7, Intimidire +3, Muoversi Silenziosamente +6 · **Equipaggiamento** morning star perfetta, mantello del carisma +2, borsa conservante (tipo I), 2 elisir della verità, pozione di *cura ferite moderate*, pergamena di *polvere luccicante*, pergamena di *cavalcatura*, un corindone nero
-
-**Capacità speciali**
-- **Famiglio**: l'export lo prevede e non lo descrive. [DA SCRIVERE — nessun file del repo dice che famiglio abbia.]
-- **Tratti del bugbear**: scurovisione 18 m, +4 razziale a Muoversi Silenziosamente, armatura naturale +3.
-
 **Tattiche**
 - *Prima del combattimento*: *armatura magica* sempre attiva (nel conto). All'allarme lancia *scudo* (CA 23) e beve niente: la pozione è per la fuga.
 - *Durante il combattimento*:
@@ -58,6 +52,12 @@ Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. Tutto SRD tr
   - **Round 2**: *volare*, e si porta in alto, fuori dalla portata dei guerrieri.
   - **Round 3 e seguenti**: dall'alto e invisibile, *fulmine* lungo la linea che prende più PG, *cecità/sordità* sul guerriero più pericoloso, *raggio di indebolimento* su chi colpisce più forte, *sfera infuocata* per spingere gli incantatori fuori dalla copertura. Se un PG vede l'invisibile, *Sudden Enlarge* non serve a niente: cambia bersaglio e usa *dardo incantato*. La pergamena di *polvere luccicante* è per i PG invisibili.
 - *Morale*: sotto 25 pf vola via, invisibile, verso il resto dell'orda. Se non può fuggire (bloccato, senza *volare*), sotto 15 pf **si arrende** e prova a trattare: Koth è il più debole dei Wyrmlord e lo sa, e vale più vivo che morto per quello che sa di Vraath.
+
+**Statistiche** For 16, Des 15, Cos 16, Int 8, Sag 10, Car 17 · BAB +6; Lotta +9 · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Riflessi Fulminei, Sudden Enlarge · **Abilità** Raggirare +7, Concentrazione +7, Intimidire +3, Muoversi Silenziosamente +6 · **Equipaggiamento** morning star perfetta, mantello del carisma +2, borsa conservante (tipo I), 2 elisir della verità, pozione di *cura ferite moderate*, pergamena di *polvere luccicante*, pergamena di *cavalcatura*, un corindone nero
+
+**Capacità speciali**
+- **Famiglio**: l'export lo prevede e non lo descrive. [DA SCRIVERE — nessun file del repo dice che famiglio abbia.]
+- **Tratti del bugbear**: scurovisione 18 m, +4 razziale a Muoversi Silenziosamente, armatura naturale +3.
 
 **Variante draconica** (`bugbear_draconic_koth.pcg`): stesso build con template Draconic Creature `[Private source — Races of the Dragon]` e livelli di sostituzione Dragonblood `[Private source — Races of the Dragon]` (Car 16) (solo .pcg). Più forte, ma senza un export coi numeri: si tiene come variante.
 

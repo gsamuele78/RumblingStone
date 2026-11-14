@@ -360,8 +360,8 @@
 //
 // La forma è una sola per ogni creatura, dal goblin al drago (ADR-0105): il
 // nome e il GS sulla barra, il tipo sotto, la riga dell'iniziativa, poi le
-// fasce DIFESA, ATTACCO, STATISTICHE, CAPACITÀ SPECIALI e TATTICHE, come nelle
-// AP. Le fasce si riempiono con le righe leggibili di ADR-0091 (`sezioni`)
+// fasce DIFESA, ATTACCO, TATTICHE, STATISTICHE e CAPACITÀ SPECIALI, come nelle
+// AP PF1e (ordine di Burnt Offerings, Jfs 2026-11-13). Le fasce si riempiono con le righe leggibili di ADR-0091 (`sezioni`)
 // quando la scheda le ha, e se no coi campi del blocco: la forma non cambia,
 // cambia solo quanto è piena. Una fascia senza niente dentro non si stampa.
 #let statblocco(
@@ -431,11 +431,11 @@
     #if apertura != none { v(2pt); apertura }
     #fascia("Difesa", difesa)
     #fascia("Attacco", attacco)
-    #fascia("Statistiche", statistiche)
-    #fascia("Capacità speciali", capacita)
     #if tattiche != none [
       #fascia("Tattiche", text(size: 8.5pt)[#tattiche])
     ]
+    #fascia("Statistiche", statistiche)
+    #fascia("Capacità speciali", capacita)
     #if fonte != "" [ #v(3pt) #text(size: 7.4pt, fill: seppia)[#fonte] ]
   ]
   let intero(tattiche, spezzabile: true) = block(

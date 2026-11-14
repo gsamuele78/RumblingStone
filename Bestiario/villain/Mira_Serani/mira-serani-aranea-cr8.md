@@ -59,6 +59,13 @@ Rifl +7, Vol +9** (Ferrea Volontà).
 - **1° (CD 14)**: *armatura magica*, *charme sulla persona*, *immagine silente*, *dardo incantato*, *camuffare se stesso*
 - **0 (CD 13)**: *individuazione del magico*, *messaggio*, *mano magica*, *prestidigitazione*, *raggio di gelo*, *lettura del magico*, *luci danzanti*, *resistenza*
 
+**Tattiche**
+- *Prima del combattimento*: entra pre-buffata (armatura magica, immagine speculare).
+- *Durante il combattimento*: usa *charme*/*suggestione* per seminare zizzania; *polvere scintillante* contro i
+  furtivi; morde e avvelena un bersaglio isolato.
+- *Morale*: **fugge (invisibilità superiore, porta dimensionale o mutare
+  forma) appena la situazione si mette male** — è una spia, non un boss.
+
 **Statistiche** Abilità: For 11, Des 15, Cos 14, Int 14, Sag 13, Car 16.
 BAB +6/+1; Lotta +6.
 Talenti: Arma Accurata, Volontà di Ferro, Iniziativa Migliorata, Incantare
@@ -67,13 +74,6 @@ in Combattimento. SQ: **mutare forma** (umanoide Piccolo–Medio), veleno, ragna
 **Capacità speciali**
 - **Veleno** (Str): Tempra **CD 15**, 1d6 For / 1d6 For.
 - **Ragnatela** (Str): 8/giorno, +7 a distanza contatto, fuga CD 15 / rompere CD 18.
-
-**Tattiche**
-- *Prima del combattimento*: entra pre-buffata (armatura magica, immagine speculare).
-- *Durante il combattimento*: usa *charme*/*suggestione* per seminare zizzania; *polvere scintillante* contro i
-  furtivi; morde e avvelena un bersaglio isolato.
-- *Morale*: **fugge (invisibilità superiore, porta dimensionale o mutare
-  forma) appena la situazione si mette male** — è una spia, non un boss.
 
 Benchmark: PF T1-1 riga CR 8 (CA ~21 / hp ~85 / att ~+12 / CD ~16): **hp e CA sotto** (infiltratrice di vetro **per design** — la difesa è depistaggio + fuga), CD incantesimi in banda. **Lettura onesta**: in pura attrizione pesa ~CR 6-7; il CR 8 sta nel controllo + veleno + fuga. Contro PG 8-9 è una spia insidiosa colpisci-e-fuggi — **adeguata**.
 Conversion notes: nessun materiale PF importato; tutto SRD 3.5 / OGL.

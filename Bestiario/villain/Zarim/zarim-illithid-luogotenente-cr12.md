@@ -43,6 +43,8 @@ Medium aberration, illithid 8 DV / Psion 4, Legale Malvagio.
 
 > ⚠ Prerequisito: un Psion 4 manifesta poteri fino al 2° livello; la *telecinesi* della scheda è un potere più alto. Tenuta, perché è nella scheda; si può leggere come un uso della *mano lontana* potenziata. PF1e: Psichico (*Occult Adventures*, OGL) — si avvicina: incantatore mentale con *telecinesi* al 5°, ma lavora a incantesimi spontanei e non a punti potere.
 
+**Tattiche**
+
 **Statistiche** For 12 Des 14 Cos 14 Int 18 Sag 16 Car 16 · BAB +8; Lotta +9 · **Talenti** Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (B), Abilità Focalizzata (esplosione mentale), Robustezza, Tempra Possente (sono i tre talenti che la scheda non sceglieva, presi per tenere CD, pf e Tempra della versione di prima) · **Abilità** [DA SCRIVERE — la scheda non le ha] · **Linguaggi** Sottocomune, Comune; telepatia · **Equipaggiamento** *mantello della resistenza +2*
 
 **Capacità speciali**
@@ -50,8 +52,6 @@ Medium aberration, illithid 8 DV / Psion 4, Legale Malvagio.
 - **Estrarre il cervello** (Str): se comincia il turno con tutti e quattro i tentacoli attaccati e vince la prova di lotta, Tempra CD 19 o la vittima muore.
 - **Afferrare migliorato** (Str): ogni tentacolo che colpisce si attacca con una prova di lotta gratuita.
 - **Archivio delle Anime** (Sop): una volta per scontro, se un nemico scende a 0 pf entro 9 m, ne beve l'eco mentale: cura 3d8+8 pf e +2 ai TS sulla Volontà per 3 round.
-
-**Tattiche**
 
 *Prima del combattimento* — Non entra mai in arena senza preavviso: legge la folla con *individuazione dei pensieri*, manifesta *armatura inerziale* e *schermo di forza*, e si alza di qualche metro con *levitazione*, fuori dalla portata di chi carica. Comanda le ondate dei servi per telepatia, senza farsi vedere.
 
