@@ -1244,7 +1244,29 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
 
-### MS-0108 · 2026-11-14 · RICERCA-TOOL-LGM-2026 §3.1: la carta del cielo di Zalkatar
+### MS-0108 · 2026-11-13 · ADR-0126 lotto 8: adamantio, mithral, bastoni con le cariche
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche» in `plans/CHANGELOG.md`
+- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125. Nella stessa PR le risposte di Jfs a cinque card del 13/11 (thread dell'audit): duergar con classi da PG a GS 2 e 8 con i file rinominati, goblin combattente di 1° a GS 1/3, tre righe di Balvar rimesse intere (Jfs non ha scelto la consigliata «tieni i tagli»), Terros 348 pf, «Virare» al posto di «Virata».
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
+
+### MS-0109 · 2026-11-13 · Piano di recupero: D5 chiusa e lotto L4, il registro delle adozioni prende i lotti interni
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0076
+- **Temi:** piani decisioni adozioni registro
+- **Origine:** riga del 2026-11-13 «L4 · I piani fermi, una casella alla volta (e D5 chiusa)» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha risposto voce per voce alla quinta domanda del piano di recupero sulle card del thread audit (13/11, 23:40-23:50): convertitori e shellcheck nel blocco piattaforma v1.5.0; frecce sulle mappe in attesa di un caso vero; dossier di ARC-09 dopo ARC-07 al tavolo; Foundry quando lo usa; carte del Drappo subito in un thread a parte; riassunto del Drappo dopo una serata; whisper.cpp in prova su una serata; carta del cielo sì per ARC-09; template PF1e sì col thread delle regole; incontri tarati alla chiusura della v1.2.0; Blockbench in attesa. Due card nel thread del piano: il registro prende solo le condizioni misurabili (R-6), e Blockbench aspetta una serie ComfyUI vera.
+- **Trovato nel repo:** `plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md` (R-6, D5, L4) · `plans/adozioni-in-attesa.json` · `scripts/adozioni_in_attesa.py`
+- **Solo qui:** la prima condizione di Blockbench («lo script per le serie ComfyUI su main») era vera dal 2026-09-05 (`scripts/comfyui_batch.py`, 494174ce): la riga di RICERCA-TOOL-LGM §3.3 che lo diceva «non fatto» era ferma da settembre. Le cinque attese lasciate fuori dal registro non hanno nessun allarme: le trova solo la routine del lunedì leggendo i piani. La soglia di 3 righe per «serie vera» e shellcheck nella v1.5.0 sono deduzioni del thread, non risposte di Jfs. La voce è nata MS-0108 ed è diventata MS-0109 al riallineo, dopo la #417 delle regole; il numero MS-0118 assegnato prima non è servito, perché la PR è entrata prima delle altre in coda.
+
+### MS-0110 · 2026-11-14 · RICERCA-TOOL-LGM-2026 §3.1: la carta del cielo di Zalkatar
 
 - **Data:** 2026-11-14
 - **PR:** —
@@ -1253,4 +1275,4 @@ repo scritto con altre parole.
 - **Origine:** riga del 2026-11-14 «§3.1, la carta del cielo come handout» in `plans/CHANGELOG.md`
 - **Testo:** Jfs, 2026-11-13: «Sì, per ARC-09» alla carta del cielo come indizio; sulla card della pista ha scelto la Torre invisibile, «dove cammina» (consigliata). Stellarium 23.4 da apt gira nel container con Xvfb e Mesa software; uno script `.ssc` dà un PNG 1400×1400. Cultura del cielo `rumblingstone` con dieci figure sopra le posizioni reali (Hipparcos); stella-chiave HIP 81833 nel Sigillo, allo zenit a latitudine 38,922, sul meridiano alle 00:04 UT del 2000-06-01 a longitudine 0 (= mezzanotte del 30 Mirtul, giorno 152). Handout 7 con nota DM a tre strati.
 - **Trovato nel repo:** `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-HANDOUTS.md` (handout 7) · `09_…/Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`
-- **Solo qui:** il coordinatore ha assegnato MS-0117: la voce nasce MS-0108 per tenere verde `--check` e si rinumera al riallineo. La 23.4 di Ubuntu non ha il plugin SkyCultureMaker citato nel §3.1: la cultura del cielo è scritta a mano nei file `.fab`. Il segno di selezione è l'unico modo trovato per cerchiare la stella: `MarkerMgr.markerEquatorial` non disegna nulla nella 23.4, e il segno è animato (due lanci differiscono in 36×36 pixel). A mezzanotte esatta la stella è a un grado dal meridiano, quindi lo script usa le 00:04. Il punto di consegna l'ha deciso Jfs sulla card il 2026-11-14 («tutte e due»: il mago dei piromanti drow, e Sethrax come seconda occasione); anche la distanza del passo, un grado a sud (circa 110 km), l'ha decisa Jfs sulla seconda card: nessun `[INFERRED]` resta nell'handout. Il dossier delle piste di ARC-09 è fermo fino alla fine di ARC-07 al tavolo.
+- **Solo qui:** la voce è nata MS-0108 ed è diventata MS-0110 al riallineo, dopo la #417 e la #421. La 23.4 di Ubuntu non ha il plugin SkyCultureMaker citato nel §3.1: la cultura del cielo è scritta a mano nei file `.fab`. Il segno di selezione è l'unico modo trovato per cerchiare la stella: `MarkerMgr.markerEquatorial` non disegna nulla nella 23.4, e il segno è animato (due lanci differiscono in 36×36 pixel). A mezzanotte esatta la stella è a un grado dal meridiano, quindi lo script usa le 00:04. Il punto di consegna l'ha deciso Jfs sulla card il 2026-11-14 («tutte e due»: il mago dei piromanti drow, e Sethrax come seconda occasione); anche la distanza del passo, un grado a sud (circa 110 km), l'ha decisa Jfs sulla seconda card: nessun `[INFERRED]` resta nell'handout. Il dossier delle piste di ARC-09 è fermo fino alla fine di ARC-07 al tavolo.

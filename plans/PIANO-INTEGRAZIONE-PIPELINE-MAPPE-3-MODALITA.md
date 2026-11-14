@@ -154,7 +154,7 @@ realizzata di fatto.
       (`squares` default). *(Idea originaria FreeCAD valutata e scartata: CAD 3D
       senza semantica di gioco, dominato dall'input-metri nativo — vedi CHANGELOG.)*
 - [x] Gate locali verdi: `compileall`, `validate_maps.py`, `validate_skills.py`, `unittest`
-- [ ] **Collaudo al tavolo (DM, gated)**: (b) importare un `.uvtt` in Foundry
+- [ ] ⏳ **Collaudo al tavolo (DM, gated)**: (b) importare un `.uvtt` in Foundry
       e verificare muri/luci; (c) la hero map su una mappa chiave.
   - ✅ (a) **superata il 2026-11-09, già fatta**: le sei carte dell'assedio di
     Dauth (ARC-09, `09_…/Mappe/dauth-assedio/DAUTH-A…E.json`, commit
@@ -164,6 +164,14 @@ realizzata di fatto.
   - ✅ (c, prima metà) **superata il 2026-11-09, già fatta**: ComfyUI gira in
     distrobox con la GPU sulla macchina del DM, che è Debian e non Bazzite
     (RESA-ASSET R4-quinquies, D25, `scripts/comfyui-local/`). Resta la hero map.
+  - ⏳ (b) **2026-11-13, Jfs sulla card (D5 del piano di recupero): «quando
+    usa Foundry»**. Parte quando Jfs dice che Foundry è installato e lo vuole
+    per una serata. Fuori da `adozioni-in-attesa.json`: nessuno script lo
+    misura (R-6 del piano di recupero).
+  - ⏳ (c, seconda metà) la hero map su una mappa chiave: nessuna risposta
+    sua il 2026-11-13 (le sei card di D5 non la nominano). Resta un collaudo
+    del DM al tavolo, con la condizione che aveva: una mappa chiave da
+    preparare per una serata.
 
 ## 5. Rischi / attenzioni
 

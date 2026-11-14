@@ -127,9 +127,22 @@ Un audit onesto dice anche cosa lasciar stare:
 
 Chiuso nel **Lotto 5** del `PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md` (2026-08-15):
 A1-A5, B1-B2, B4, C1-C2, D1-D4, E (UVTT + template prop).
-Restano ⬜: **B3** (carte da tavolo) e **C3** (recap automatico fra le serate),
+Restavano ⬜ (decise il 2026-11-13, qui sotto): **B3** (carte da tavolo) e **C3** (recap automatico fra le serate),
 gated su una sessione vera, perché senza tempi reali si ottimizzerebbe alla
 cieca.
+
+📅 **B3, 2026-11-13, Jfs sulla card (D5 del piano di recupero): «subito»**, non
+la consigliata (che era aspettare una serata giocata). È un lotto, non un'attesa:
+lo fa un thread a parte, che chiude qui la casella con la sua PR.
+
+⏳ **C3, 2026-11-13, Jfs sulla card: «dopo una serata del Drappo»**. Parte
+quando Jfs dice di averne giocata una; con i tempi veri di quella serata si
+decide che cosa il riassunto deve leggere (oggi `session_recap.py` legge lo
+`state.md` della campagna). Fuori da `adozioni-in-attesa.json`: il modulo non
+registra le serate in un file che uno script possa contare (R-6 del piano di
+recupero). Legata a C3: la trascrizione locale di
+[RICERCA-TOOL-ESTERNI §3](RICERCA-TOOL-ESTERNI-DM-2026-08.md), che Jfs vuole
+provare su una serata.
 
 **D5** ✅ **superata il 2026-11-09, già fatta** da un altro piano: il budget
 PF1e è nel plugin del sistema (`sistemi/pf1e/dati/incontri.toml`, PE per GS e
