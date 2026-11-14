@@ -1523,7 +1523,9 @@ def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
     if not livelli or sum(g.n for g in s.gruppi) != sum(livelli.values()) + sum(
             int(v.rpartition(" ")[2]) for v in ignote):
         return [], []                                   # dadi vita razziali: la velocità è della creatura
-    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    razza = _razza_srd(dove, gradi) or _razza_senza_dv(
+        S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove, s.tipo or "")
     if razza is None or razza not in mv["razze"]:
         return [], []
     if ignote:
@@ -1563,12 +1565,18 @@ def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
     if ha == atteso:
         return [], []
     testo = f"velocità {m.group(1)} {m.group(2)} ({ha} piedi), la regola dà {atteso} piedi ({', '.join(perche)})"
+    if not oggetti and ha == mv["ridotta"].get(str(atteso)) and not _CA_CON_LE_VOCI.search(s.testo):
+        # la velocità è quella di chi porta un'armatura media o pesante, e la scheda non scompone la CA
+        return [], [{**base, "regola": "numero.velocita",
+                     "testo": testo + "; è la velocità ridotta da un'armatura, e la scheda non scompone la CA"}]
     if _ALTRA_VELOCITA.search(s.testo) or _NOTA_VELOCITA.search(m.group(3)):
         return [], [{**base, "regola": "numero.velocita",
                      "testo": testo + "; la scheda nomina un oggetto, un incantesimo o una nota che la cambia"}]
     return [{**base, "regola": "numero.velocita", "atteso": atteso, "ha": ha, "testo": testo}], []
 
 
+#: una riga della CA che ne scrive le voci («+5 corazza di piastre», «+1 Des»)
+_CA_CON_LE_VOCI = re.compile(r"^(?:ca-dettaglio:|.*\b(?:CA|AC)\b).*[+]\d+\s+[A-Za-zà]", re.M)
 _SCRITTA_RI = re.compile(r"(?<![\w/])(?:RI|SR|resistenza agli incantesimi|spell resistance)\b[\s:*]*(\d+)([^|·\n]{0,60})",
                          re.I)
 _SCRITTA_RD = re.compile(r"(?<![\w/])(?:RD|DR|riduzione del danno|damage reduction)\b[\s:*]*(\d+)\s*/\s*(?:—|–|-)(?![\w])",

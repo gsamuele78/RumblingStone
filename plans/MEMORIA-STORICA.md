@@ -1300,3 +1300,14 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** la prima estrazione dava «hide = 1» ai Piccoli, perché l'espressione prendeva il «+1» dell'attacco nella stessa frase; l'ha mostrato il diff del file dati. Le schede di prova dei talenti erano un orco barbaro tarato sul margine fisso: ora sono uno gnoll.
 
+### MS-0113 · 2026-11-14 · Regole, lotto 7 sesta parte: velocità di hobgoblin, orco, drow, duergar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole velocità razze armature verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 7 sesta parte» in `plans/CHANGELOG.md`
+- **Testo:** La verifica `velocita` giudica anche nove razze senza dadi vita razziali: schede giudicate 18 → 34. Due violazioni vere, su card al DM: la Furia della Mano a 12 m con un'armatura media e il bladebearer hobgoblin con il nome dell'armatura sbagliato rispetto alla fonte PCGen. Le schede non sono state toccate.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** due schede di hobgoblin regolari scrivono 6 m senza scomporre la CA: la prima versione le dava per violazioni, ed erano solo armature non nominate. Da lì la regola del dubbio. La correzione diretta del nome dell'armatura del bladebearer è stata fermata: una scheda si cambia solo con la risposta del DM, anche quando è un errore di trascrizione.
+

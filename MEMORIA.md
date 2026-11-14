@@ -86,6 +86,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 sesta parte: la velocità delle razze senza dadi vita razziali… | In PR |
 | 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 terza parte: razze dei mostri, taglia e velocità nelle abilit… | In PR |
 | 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 quinta parte: i linguaggi delle razze senza dadi vita razzial… | In PR |
 | 2026-11-14 | GENERATORE-CREATURE-E-PNG | Lotto J, i modelli semplici di PF1e (card del DM del 2026-11-13, «Sì, col threa… | In PR |
@@ -97,12 +98,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 quarta parte: i linguaggi automatici.… | In PR |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 2 aperte, 322 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 112 voci, l'ultima MS-0112 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 113 voci, l'ultima MS-0113 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

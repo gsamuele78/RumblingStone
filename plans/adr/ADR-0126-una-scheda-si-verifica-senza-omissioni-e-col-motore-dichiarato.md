@@ -1171,3 +1171,24 @@ anche il conto di Saltare lo è. La verifica `velocita` conosce ancora solo le
 sette razze. I bonus razziali delle razze coi dadi vita razziali restano nel
 margine fisso.
 
+### Lotto 7, sesta parte — la velocità delle razze senza dadi vita razziali (2026-11-14)
+
+**Contesto.** La verifica `velocita` giudicava solo le sette razze. La terza
+parte del lotto 6 prende per buona la velocità scritta per il conto di Saltare:
+serviva giudicare quella velocità anche per hobgoblin, orchi e drow.
+
+**Decisione.** `estrai_movimento.py` legge «base land speed» dal capitolo dei
+mostri per aasimar, goblin, hobgoblin, coboldo, orco e tiefling; drow, duergar
+e svirfneblin tengono la velocità di elfo, nano e gnomo, e il duergar come il
+nano non rallenta in armatura. Regola nuova di prudenza, che vale per tutte le
+razze: se la velocità scritta è quella ridotta da un'armatura media o pesante e
+la scheda non scompone la CA, l'esito è un dubbio e non una violazione.
+
+**Conseguenze.** Misura su `Bestiario 0*/`, verifica `velocita`: violazioni
+0 → 2, schede giudicate 18 → 34 su 100. Le due violazioni sono vere e aspettano
+il DM su due card: la Furia della Mano va a 12 m con una corazza di piastre,
+che è media (la regola dà 9 m); il bladebearer hobgoblin scrive «corazza di
+piastre +1» dove l'esportazione PCGen citata dice «Chain Shirt +1». Stanno in
+`IN_ATTESA` di `test_velocita.py`. Banco `muta_velocita.py`: più 3 m da 15 su 18
+a 27 su 34, meno 3 m da 15 su 18 a 26 su 34.
+
