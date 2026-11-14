@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- Sessione, in prova (ADR-0135, canale testing): `python3 scripts/transcribe_session.py trascrivi AUDIO --consenso --out DIR` trascrive la serata in locale con whisper.cpp e scrive fuori dal repo una bozza del log con le sezioni pubbliche vuote. `state_apply.py` rifiuta e `session_recap.py` salta un log che porta ancora il segno `<!-- bozza-trascrizione`. Guida in `docs/how-to/GUIDA-TRASCRIZIONE-SERATA.md`.
 - Stampa: i booklet PDF sono anche PDF/A-2a (ISO 19005-2, il PDF per l'archiviazione), insieme a PDF/UA-1 (ADR-0131). Se typst non riesce, `export_booklet_typst.py` esce col solo PDF/UA-1 e lo dice. I 20 booklet passano veraPDF in tutti e due i profili.
 - Stampa: le emoji dei booklet PDF escono a colori dal font Noto Color Emoji, ora nel repo (`scripts/fonts/`, OFL 1.1), e `export_booklet_typst.py` non usa più i font della macchina che compila (ADR-0130). Il volume è uguale su ogni macchina, e i 20 booklet passano PDF/UA-1 con veraPDF (erano 18).
 - Stampa: `misura_stampa.py` conta le parole ripetute di ogni booklet (`parole_ripetute`, `quota_parole_ripetute`, colonna `ripet`): le parole che stanno in un passo di almeno 8 parole già stampato prima, contate dalla seconda volta, testatine escluse. Misura in prova: `--check` avvisa e non ferma. `--dettaglio` elenca i passi con la pagina della copia e quella della prima volta.
