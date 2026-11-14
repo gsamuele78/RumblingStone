@@ -245,7 +245,11 @@ def _dettaglio_ca(dettaglio: str, dm_des: int, naturale: int, d_taglia: int) -> 
         for i, p in enumerate(pezzi):
             m = re.fullmatch(rf"([+-]\d+) {etichetta}", p)
             if m:
-                pezzi[i] = f"{int(m.group(1)) + delta:+d} {etichetta}"
+                nuovo = int(m.group(1)) + delta
+                if nuovo or etichetta != "taglia":
+                    pezzi[i] = f"{nuovo:+d} {etichetta}"
+                else:
+                    del pezzi[i]            # una taglia Media non scrive il suo +0
                 return
         pezzi.append(f"{delta:+d} {etichetta}")
 
