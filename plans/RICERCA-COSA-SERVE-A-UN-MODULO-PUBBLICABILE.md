@@ -131,6 +131,14 @@ Restano ⬜: **B3** (carte da tavolo) e **C3** (recap automatico fra le serate),
 gated su una sessione vera, perché senza tempi reali si ottimizzerebbe alla
 cieca.
 
+**B3** 🟡 **fatta il 2026-11-13 prima della serata, per scelta del DM** («Subito»
+sulla card, contro la consigliata di aspettare): 36 carte in
+`homebrew/DRAPPO-CARTE-DA-TAVOLO.manifest.json` (`"layout": "carte"`,
+`scripts/typst/carte-tavolo.typ`, dati letti dai master da
+`scripts/dmcore/carte_tavolo.py`). Il limite resta quello scritto sopra: sono
+disegnate senza i tempi di una corsa giocata e si rivedono dopo la prima serata.
+Il ⬜ diventa ✅ solo allora.
+
 **D5** ✅ **superata il 2026-11-09, già fatta** da un altro piano: il budget
 PF1e è nel plugin del sistema (`sistemi/pf1e/dati/incontri.toml`, PE per GS e
 difficoltà dal PRD; metodo «somma_px» in `sistemi/pf1e/codice/incontri.py`), e

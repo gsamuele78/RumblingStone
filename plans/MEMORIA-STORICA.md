@@ -1243,3 +1243,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-13 · B3: le carte da tavolo del Drappo prima della serata
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0020 ADR-0129 ADR-0131
+- **Temi:** stampa drappo standalone tavolo
+- **Origine:** riga del 2026-11-13 «Voce B3 della ricerca sul modulo pubblicabile: le carte da tavolo del Drappo» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha scelto «Subito» sulla card delle carte da tavolo del Drappo di Tarsilia (voce B3 di `plans/RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE.md`), contro la consigliata di aspettare una serata vera come diceva il §5. Fatte nella catena typst dei booklet: 36 carte 63 × 88 mm in quattro fogli A4, PDF/UA-1 e PDF/A-2a conformi con veraPDF 1.28.2 (0 controlli falliti); misura_stampa delle carte senza errori. La voce B3 resta 🟡 finché una serata non dice quali carte servono.
+- **Trovato nel repo:** `10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/README.md` (Le carte da tavolo) · `docs/reference/RIFERIMENTO-BOOKLET.md` §1.2-bis · `scripts/tests/test_carte_tavolo.py`
+- **Solo qui:** il coordinatore ha assegnato MS-0116; la voce è MS-0108 sul ramo perché `memoria_storica --check` vuole numeri consecutivi, e si rinumera al riallineo. Gli scudi della serie Golarion portano nel cartiglio il motto del Palio («Pungo solo chi mi assale» per l'Istrice): sulle carte le scritte si tolgono alla lettura e il cartiglio resta vuoto, perché copiare gli SVG avrebbe fatto copie vecchie (CONTRADE §7). La griglia delle Lunghezze sul segnaposto è una scelta di disegno, non una regola: le regole dicono «su un foglio a vista, una riga per contrada».
