@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `verifica_scheda`, verifica `abilita`: il margine contato vale anche per nove razze senza dadi vita razziali (hobgoblin, orco, drow, duergar…), il +4 di taglia a Nascondersi dei Piccoli entra nel conto e la velocità scritta cambia Saltare come nell'SRD (ADR-0126, lotto 6, terza parte).
 - `verifica_scheda`, verifica `linguaggi`: giudica anche nove razze senza dadi vita razziali (hobgoblin, orco, drow, duergar, goblin, coboldo, svirfneblin, aasimar, tiefling), coi linguaggi automatici che l'SRD scrive nel capitolo dei mostri (ADR-0126, lotto 7, quinta parte).
 - Stampa: i booklet PDF sono anche PDF/A-2a (ISO 19005-2, il PDF per l'archiviazione), insieme a PDF/UA-1 (ADR-0131). Se typst non riesce, `export_booklet_typst.py` esce col solo PDF/UA-1 e lo dice. I 20 booklet passano veraPDF in tutti e due i profili.
 - Stampa: le emoji dei booklet PDF escono a colori dal font Noto Color Emoji, ora nel repo (`scripts/fonts/`, OFL 1.1), e `export_booklet_typst.py` non usa più i font della macchina che compila (ADR-0130). Il volume è uguale su ogni macchina, e i 20 booklet passano PDF/UA-1 con veraPDF (erano 18).

@@ -1142,3 +1142,32 @@ personaggio giocante, e il mostro del manuale può parlare meno.
 Banco `muta_linguaggi.py`: schede giudicate 7 → 14 su 24 con la riga, linguaggi
 tolti e trovati 13 su 13 → 27 su 27. Nessuna scheda toccata.
 
+### Lotto 6, terza parte — razze dei mostri, taglia e velocità nelle abilità (2026-11-14)
+
+**Contesto.** Il margine contato voce per voce valeva solo per le sette razze
+del capitolo delle razze. Un hobgoblin o un orco fatti di soli livelli di classe
+tenevano il margine fisso di 4. Due regole dell'SRD mancavano del tutto: il +4
+di taglia a Nascondersi dei Piccoli e il modificatore della velocità a Saltare.
+
+**Decisione.** `estrai_gradi.py` legge i bonus alle abilità anche dal capitolo
+dei mostri, per le nove razze senza dadi vita razziali che hanno la sezione dei
+personaggi (le stesse dei linguaggi). Una sottorazza tiene per tetto anche i
+bonus della razza da cui viene: il drow quelli dell'elfo, il duergar quelli del
+nano, lo svirfneblin quelli dello gnomo. Razziale e taglia si sommano, perché
+sono bonus di tipo diverso. `[salto]` porta la regola di Saltare: +4 ogni 10
+piedi di velocità sopra i 30, −6 ogni 10 sotto. La velocità è quella scritta
+nella scheda, e conta solo dove il margine è contato.
+
+**Conseguenze.** Misura su `Bestiario 0*/`, verifica `abilita`: violazioni
+0 → 1, non verificabili 2 → 2. La violazione nuova è Bothor e Malvur, nani a 6
+metri con Saltare +6: con 9 gradi, +5 di Forza, −6 di armatura e scudo e −6 di
+velocità la regola dà +2. La scheda non si tocca: decide il DM sulla card.
+Banco `muta_abilita.py`: una abilità +4, 4 → 6 su 31; tutte +3, 10 → 12;
+ciascuna +4, 16 su 162 → 24 su 160. Il guadagno è piccolo perché poche schede
+di queste razze scrivono la riga delle abilità coi numeri.
+
+**Limiti dichiarati.** La velocità scritta si prende per buona: se è sbagliata,
+anche il conto di Saltare lo è. La verifica `velocita` conosce ancora solo le
+sette razze. I bonus razziali delle razze coi dadi vita razziali restano nel
+margine fisso.
+

@@ -257,6 +257,20 @@ def _e_umano(testo: str, nomi) -> bool:
     return bool(re.search(rf"\b(?:{'|'.join(nomi)})\b", testo, re.I))
 
 
+def _salto_da_velocita(testo: str, regole: dict) -> int:
+    """Quanto la velocità scritta dà a Saltare (SRD, «Jump»: +4 ogni 10 piedi
+    oltre i 30, −6 ogni 10 piedi sotto). 0 se la scheda non scrive una sola
+    riga della velocità."""
+    r = regole.get("salto")
+    righe = list(_RIGA_VELOCITA.finditer(testo))
+    if not r or len(righe) != 1:
+        return 0
+    numero = float(righe[0].group(1).replace(",", "."))
+    piedi = round(numero * 5 / 1.5) if righe[0].group(2).lower() == "m" else round(numero)
+    passi = (piedi - r["velocita"]) // r["ogni"]
+    return passi * (r["piu"] if passi > 0 else r["meno"])
+
+
 def _razza_senza_dv(senza_dv: dict, dove: str, tipo: str) -> "str | None":
     """Quale razza senza dadi vita razziali di `[mdl]` è la scheda (hobgoblin,
     drow, orco…), o None: una sola deve combaciare, col suo tipo, e senza un
@@ -439,11 +453,14 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     # delle razze dell'SRD, razza e sinergie si contano voce per voce invece del margine fisso
     preciso, scritte = None, {en for _, en, _ in voci}
     if sue is not None and not razziali and regole.get("margine"):
-        razza_ = _razza_srd(" ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), regole)
+        dove_ = " ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+        razza_ = _razza_srd(dove_, regole) or _razza_senza_dv(
+            S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove_, s.tipo or riga_tipo)
         if razza_ is not None and not re.search(r"razzial|racial", s.testo, re.I):
             preciso = regole["razze"].get(razza_, {})
     pp = regole.get("penalita_di_prova") or {}
     penalita, da_armatura = _penalita_di_prova(s.testo, regole, sistema)
+    da_velocita = _salto_da_velocita(s.testo, regole) if preciso is not None else 0
     for nome, en, bonus in voci:
         lette += 1
         mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
@@ -452,6 +469,8 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
             fonti = [x for x in regole.get("sinergie", {}).get(en, []) if x in scritte]
             margine = regole["margine"]["oggetto"] + preciso.get(en, 0) + regole["margine"]["sinergia"] * len(fonti)
         pen = penalita * (2 if en in pp.get("doppia", ()) else 1) if en in pp.get("abilita", ()) else 0
+        if en == "jump":
+            margine += da_velocita                       # SRD, Saltare: +4 o −6 ogni 10 piedi di velocità
         minimi = int(bonus.replace("−", "-")) - mod - margine - talento + pen
         if sue is not None and not razziali and not any(a == en or a.startswith(en + " (") for a in sue):
             # fuori classe: il massimo è la metà e ogni grado costa il doppio (SRD, «Skills Summary»)
