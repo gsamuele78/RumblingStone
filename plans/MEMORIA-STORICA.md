@@ -1255,3 +1255,14 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
 
+
+### MS-0109 · 2026-11-14 · ADR-0134: l'equipaggiamento standard dai Codex PF1e entro il valore del 3.5
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0134, ADR-0126
+- **Temi:** regole schede equipaggiamento
+- **Origine:** riga del 2026-11-14 «ADR-0134 e ADR-0126, lotto 8 quarta parte: l'equipaggiamento standard» in `plans/CHANGELOG.md`
+- **Testo:** Jfs, 2026-11-13 sera: l'equipaggiamento standard di mostri e PNG non si inventa, si prende dalle tabelle dei manuali in modo deterministico; sulla card ha scelto «Codex PF1e, livello effettivo». Nel repo entrano i 454 PNG dei due Codex, la Tabella 14-9, il prezzo base degli oggetti comuni, la regola «Improving Monsters» e il registro delle regole custom con la voce RC-001. Sette schede vere risultano sopra la Tabella 4-23 (Avarthel, Bothor e Malvur, il comandante dei mercenari di Dauth, il blackguard e il chierico di Abbathor, Krusk, Ur-Vrax): Jfs ha risposto «Tieni e dichiara» alle sette card il 2026-11-14 e ogni scheda porta la riga «Equipaggiamento sopra la tabella: scelta del DM», senza cambiare numeri. Misura: violazioni 30 → 30 (37 senza le dichiarazioni), non verificabili 372 → 374; banco, quarta prova 0 → 50 su 118.
+- **Trovato nel repo:** `ADR-0134` → `plans/adr/ADR-0134-l-equipaggiamento-standard-viene-dai-codex-pf1e-entro-il-valore-del-3-5.md`; `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** le sette schede sopra la tabella non vengono dal prezzo base ma dal leggere l'equipaggiamento dove le schede lo scrivevano già, dentro la riga delle Statistiche: prima la verifica non lo vedeva. Una scheda scrive l'equipaggiamento due volte (recinto e prosa) e la prima versione l'avrebbe contato doppio. La quarta riga della Tabella 14-9 nel PRD somma 1.750 mo nelle categorie contro un totale di 1.650. Il thread del volume ha segnalato le forme non lette; Durin non risulta sopra la tabella con la misura di oggi.
