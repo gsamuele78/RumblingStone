@@ -1244,7 +1244,72 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
 
-### MS-0108 · 2026-11-13 · I giorni di «chi sa cosa» in state.yaml e la regola T2
+### MS-0108 · 2026-11-13 · ADR-0126 lotto 8: adamantio, mithral, bastoni con le cariche
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche» in `plans/CHANGELOG.md`
+- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125. Nella stessa PR le risposte di Jfs a cinque card del 13/11 (thread dell'audit): duergar con classi da PG a GS 2 e 8 con i file rinominati, goblin combattente di 1° a GS 1/3, tre righe di Balvar rimesse intere (Jfs non ha scelto la consigliata «tieni i tagli»), Terros 348 pf, «Virare» al posto di «Virata».
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
+### MS-0109 · 2026-11-13 · Piano di recupero: D5 chiusa e lotto L4, il registro delle adozioni prende i lotti interni
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0076
+- **Temi:** piani decisioni adozioni registro
+- **Origine:** riga del 2026-11-13 «L4 · I piani fermi, una casella alla volta (e D5 chiusa)» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha risposto voce per voce alla quinta domanda del piano di recupero sulle card del thread audit (13/11, 23:40-23:50): convertitori e shellcheck nel blocco piattaforma v1.5.0; frecce sulle mappe in attesa di un caso vero; dossier di ARC-09 dopo ARC-07 al tavolo; Foundry quando lo usa; carte del Drappo subito in un thread a parte; riassunto del Drappo dopo una serata; whisper.cpp in prova su una serata; carta del cielo sì per ARC-09; template PF1e sì col thread delle regole; incontri tarati alla chiusura della v1.2.0; Blockbench in attesa. Due card nel thread del piano: il registro prende solo le condizioni misurabili (R-6), e Blockbench aspetta una serie ComfyUI vera.
+- **Trovato nel repo:** `plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md` (R-6, D5, L4) · `plans/adozioni-in-attesa.json` · `scripts/adozioni_in_attesa.py`
+- **Solo qui:** la prima condizione di Blockbench («lo script per le serie ComfyUI su main») era vera dal 2026-09-05 (`scripts/comfyui_batch.py`, 494174ce): la riga di RICERCA-TOOL-LGM §3.3 che lo diceva «non fatto» era ferma da settembre. Le cinque attese lasciate fuori dal registro non hanno nessun allarme: le trova solo la routine del lunedì leggendo i piani. La soglia di 3 righe per «serie vera» e shellcheck nella v1.5.0 sono deduzioni del thread, non risposte di Jfs. La voce è nata MS-0108 ed è diventata MS-0109 al riallineo, dopo la #417 delle regole; il numero MS-0118 assegnato prima non è servito, perché la PR è entrata prima delle altre in coda.
+
+### MS-0110 · 2026-11-14 · RICERCA-TOOL-LGM-2026 §3.1: la carta del cielo di Zalkatar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0005 ADR-0019
+- **Temi:** arc09 handout immagini indagine
+- **Origine:** riga del 2026-11-14 «§3.1, la carta del cielo come handout» in `plans/CHANGELOG.md`
+- **Testo:** Jfs, 2026-11-13: «Sì, per ARC-09» alla carta del cielo come indizio; sulla card della pista ha scelto la Torre invisibile, «dove cammina» (consigliata). Stellarium 23.4 da apt gira nel container con Xvfb e Mesa software; uno script `.ssc` dà un PNG 1400×1400. Cultura del cielo `rumblingstone` con dieci figure sopra le posizioni reali (Hipparcos); stella-chiave HIP 81833 nel Sigillo, allo zenit a latitudine 38,922, sul meridiano alle 00:04 UT del 2000-06-01 a longitudine 0 (= mezzanotte del 30 Mirtul, giorno 152). Handout 7 con nota DM a tre strati.
+- **Trovato nel repo:** `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-HANDOUTS.md` (handout 7) · `09_…/Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`
+- **Solo qui:** la voce è nata MS-0108 ed è diventata MS-0110 al riallineo, dopo la #417 e la #421. La 23.4 di Ubuntu non ha il plugin SkyCultureMaker citato nel §3.1: la cultura del cielo è scritta a mano nei file `.fab`. Il segno di selezione è l'unico modo trovato per cerchiare la stella: `MarkerMgr.markerEquatorial` non disegna nulla nella 23.4, e il segno è animato (due lanci differiscono in 36×36 pixel). A mezzanotte esatta la stella è a un grado dal meridiano, quindi lo script usa le 00:04. Il punto di consegna l'ha deciso Jfs sulla card il 2026-11-14 («tutte e due»: il mago dei piromanti drow, e Sethrax come seconda occasione); anche la distanza del passo, un grado a sud (circa 110 km), l'ha decisa Jfs sulla seconda card: nessun `[INFERRED]` resta nell'handout. Il dossier delle piste di ARC-09 è fermo fino alla fine di ARC-07 al tavolo.
+
+### MS-0111 · 2026-11-13 · B3: le carte da tavolo del Drappo prima della serata
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0020 ADR-0129 ADR-0131
+- **Temi:** stampa drappo standalone tavolo
+- **Origine:** riga del 2026-11-13 «Voce B3 della ricerca sul modulo pubblicabile: le carte da tavolo del Drappo» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha scelto «Subito» sulla card delle carte da tavolo del Drappo di Tarsilia (voce B3 di `plans/RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE.md`), contro la consigliata di aspettare una serata vera come diceva il §5. Fatte nella catena typst dei booklet: 36 carte 63 × 88 mm in quattro fogli A4, PDF/UA-1 e PDF/A-2a conformi con veraPDF 1.28.2 (0 controlli falliti); misura_stampa delle carte senza errori. La voce B3 resta 🟡 finché una serata non dice quali carte servono.
+- **Trovato nel repo:** `10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/README.md` (Le carte da tavolo) · `docs/reference/RIFERIMENTO-BOOKLET.md` §1.2-bis · `scripts/tests/test_carte_tavolo.py`
+- **Solo qui:** la voce è nata MS-0108 sul ramo ed è diventata MS-0111 al riallineo dopo #417, #421 e #422 (il coordinatore aveva detto prima MS-0116, poi corretto: il check vuole numeri consecutivi). Gli scudi della serie Golarion portano nel cartiglio il motto del Palio («Pungo solo chi mi assale» per l'Istrice): sulle carte le scritte si tolgono alla lettura e il cartiglio resta vuoto, perché copiare gli SVG avrebbe fatto copie vecchie (CONTRADE §7). La griglia delle Lunghezze sul segnaposto è una scelta di disegno, non una regola: le regole dicono «su un foglio a vista, una riga per contrada».
+
+### MS-0112 · 2026-11-13 · ADR-0132: le copie delle immagini tengono la provenienza
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0132 ADR-0019
+- **Temi:** immagini provenienza booklet ai-generativa
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0132: le copie delle immagini tengono la dichiarazione di provenienza» in `plans/CHANGELOG.md`
+- **Testo:** Quarta tecnica della richiesta del DM del 2026-11-13. 28 master del repo hanno un manifesto C2PA firmato (Google per il Drappo e Durik, OpenAI per tre ritratti di Hella) con la sorgente digitale IPTC; le copie `web/` che vanno nei booklet la perdevano alla ricompressione. `provenienza_immagini.py` la riscrive nella copia come XMP IPTC senza ricomprimere. Copie etichettate 0 → 28 su 28; immagini JPEG nei 20 PDF 0 → 36 su 89; pixel e pagine identici.
+- **Trovato nel repo:** `plans/adr/ADR-0132-le-copie-delle-immagini-tengono-la-provenienza.md` · `plans/esperimenti/provenienza-immagini-2026-11-13/MISURE.md` · `scripts/provenienza_immagini.py`
+- **Solo qui:** Gemini mette il manifesto C2PA in un blocco di testo del PNG («Raw profile type app11») scritto in esadecimale, con un'intestazione che ha cifre sue: cercare «c2pa» nei byte del file ne trovava 18 su 28, e togliere tutti i caratteri non esadecimali sfasava la decodifica; si tengono solo le righe lunghe di esadecimale. Typst incorpora il JPEG così com'è, quindi l'XMP arriva dentro il PDF. Firmare le copie con c2pa-python scartato: chiede un certificato della lista di fiducia C2PA. Una prima corsa di misura è stata buttata perché l'export girava nella cartella di lavoro mentre cambiavo ramo: le misure lunghe vanno in un worktree a parte. Le 24 copie senza manifesto (20 di ARC-07, 4 ritratti dei PG) restano senza etichetta: dichiararle è una scelta del DM.
+
+### MS-0113 · 2026-11-14 · ADR-0091: le voci che mancavano in sei schede di ARC07-DEF-4
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0091
+- **Temi:** schede stampa booklet regole
+- **Origine:** riga del 2026-11-14 «ADR-0091, le voci che mancavano nelle schede di ARC07-DEF-4» in `plans/CHANGELOG.md`
+- **Testo:** seconda PR della scelta del DM «Voci mancanti, ordine PF1e» (2026-11-13). Linguaggi, Qualità speciali e «Altro equipaggiamento» in sei schede, solo da ciò che la scheda usa già o che l'SRD 3.5 dà alla razza. La serata Notte e Alba passa da 125 a 126 pagine e il booklet completo da 158 a 159: la scheda di Balvar si spezza su due pagine, e il DM l'ha accettato sulla card del 2026-11-14.
+- **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md` · `docs/audit/stampa-booklet.json`
+- **Solo qui:** bastano quattro righe in più nelle schede di guardie e sacerdote per spezzare Balvar, prima ancora che le sue tre righe tornino intere. `verifica_scheda` legge l'equipaggiamento solo da una riga che comincia con «Equipaggiamento»: non vede né la voce dentro le Statistiche (la forma di ADR-0091) né «Altro equipaggiamento», quindi la misura di `ricchezza` non si muove; detto al thread delle regole. `linguaggi.toml` ha solo le razze dei PG: per hobgoblin e orco i linguaggi automatici stanno nelle voci dei mostri dell'SRD. Sulla card avevo scritto «due pagine affiancate» senza verificarlo, e l'ho corretto subito dopo. La riga 994 di questo file è storia e non si corregge, anche dove l'audit del 2026-11-13 la trova superata. Nella stessa PR le righe ferme trovate dall'audit del 2026-11-13: P09 e inventario Gemini in STATO-E-ORDINE, casella VOL-3 del piano di stampa.
+
+### MS-0114 · 2026-11-13 · I giorni di «chi sa cosa» in state.yaml e la regola T2
 
 - **Data:** 2026-11-13
 - **PR:** —

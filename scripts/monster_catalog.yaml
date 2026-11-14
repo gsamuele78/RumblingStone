@@ -1100,13 +1100,13 @@ monsters:
     role: generalist
     environment: underdark
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE1-ASSEDIO-TESTO.md"
-  - id: duergar-ladro-rogue-1-telon-d60174
+  - id: duergar-ladro-rogue-1-telon-efe6d5
     name: "Duergar Ladro (Rogue 1) — «Telon»"
-    cr: 1.0
+    cr: 2.0
     faction: duergar-abbathor
     role: ranged
     environment: underdark
-    source_file: "Bestiario/mostri/duergar-ladro1-cr1.md"
+    source_file: "Bestiario/mostri/duergar-ladro1-cr2.md"
   - id: duergar-guerriero-fighter-2-lokee-ce521e
     name: "Duergar Guerriero (Fighter 2) — «Lokee»"
     cr: 3.0
@@ -1128,13 +1128,13 @@ monsters:
     role: caster-arcane
     environment: underdark
     source_file: "Bestiario/mostri/duergar-mago3-cr4.md"
-  - id: duergar-mago-ladro-rogue-3-wizard-4-f56ae1
+  - id: duergar-mago-ladro-rogue-3-wizard-4-d7509a
     name: "Duergar Mago/Ladro (Rogue 3 / Wizard 4)"
-    cr: 7.0
+    cr: 8.0
     faction: duergar-abbathor
     role: caster-arcane
     environment: underdark
-    source_file: "Bestiario/mostri/duergar-mago-ladro8-cr7.md"
+    source_file: "Bestiario/mostri/duergar-mago-ladro8-cr8.md"
   - id: cavaliere-antipaladino-di-abbathor-blackguard-69e1b0
     name: "Cavaliere Antipaladino di Abbathor (Blackguard)"
     cr: 10.0
@@ -1559,7 +1559,7 @@ monsters:
     source_file: "Bestiario/villain/Il_Collezionista_Rakshasa/il-collezionista-rakshasa-cr18.md"
   - id: goblin-warrior-1-ca9dbf
     name: "Goblin Warrior 1"
-    cr: 0.5
+    cr: 0.3333333333333333
     faction: red-hand
     role: fodder-ranged
     environment: any

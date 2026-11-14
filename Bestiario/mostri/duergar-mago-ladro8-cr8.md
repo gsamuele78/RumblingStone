@@ -1,9 +1,9 @@
 # Duergar Mago/Ladro (Rogue 3 / Wizard 4) [TRANSCRIBED — PCGen, L1 2026-07-08]
-**Faction**: duergar-abbathor | **Role**: caster-arcane | **Environment**: underdark | **CR**: 7 | **Source**: PCGen export `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/duergar_mage_rougue_8.htm` (testo `Bestiario/pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt`: CR 8 come Rogue 3/Wizard 5) | **Status**: transcribed-pcgen
+**Faction**: duergar-abbathor | **Role**: caster-arcane | **Environment**: underdark | **CR**: 8 | **Source**: PCGen export `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/duergar_mage_rougue_8.htm` (testo `Bestiario/pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt`: CR 8 come Rogue 3/Wizard 5) | **Status**: transcribed-pcgen
 
 
 ```statblocco
-gs: 7
+gs: 8
 tipo: Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4
 taglia: Media
 spazio: 1,5 m
@@ -31,3 +31,5 @@ Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4. **hp 37** (7 HD); **AC 13*
 Notes: i mago/ladri duergar dello scontro del ponte; usano Missile Magico/Palla di Fuoco + Furtivo.
 
 > correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 1-bis): campo `sensi` aggiunto, duergar: scurovisione 36 m (SRD, «Dwarf, Duergar»). La scheda non la scriveva.
+
+> decisione del DM (2026-11-13, card del grado di sfida): GS da 7 a 8. SRD 3.5, «Dwarf, Duergar»: un duergar con livelli di classe da PG ha grado di sfida pari al livello +1 (Rogue 3 / Wizard 4 = 7 livelli). Il file passa da `duergar-mago-ladro8-cr7.md` a `duergar-mago-ladro8-cr8.md`. Nessun altro numero cambia.

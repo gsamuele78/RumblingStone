@@ -207,7 +207,7 @@ modulo, non giocate.
 | Rituale F2: Thorik Tempra/FOR (**16** se Tordek riesce) · Tordek TxC/Conc. · Artemis UMD/TxC | 26 · 25 · 25 | §9 |
 
 ### Iniziativa tipo & pf da tracciare
-`Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
+`Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 348 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
 0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
 3 attacchi/CA 23; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
@@ -1881,8 +1881,8 @@ spazio: 4,5 m
 portata: 4,5 m
 ca: 26
 ca-dettaglio: contatto 7, colto 26 (−2 taglia, −1 DES, +19 naturale)
-pf: 345
-pf-dado: 30d8+210
+pf: 348
+pf-dado: 30d8+213
 ts: Temp +24, Rifl +9, Vol +14
 attributi: For 34 Des 8 Cos 25 Int 10 Sag 15 Car 11
 velocita: 9 m; Earth Glide 9 m (attraverso pietra)
@@ -1894,7 +1894,7 @@ attacchi:
 ```
 **Iniziativa** −1 (DES 8) · **Sensi** scurovisione 18 m, percezione tremorica 18 m; Ascoltare +20, Osservare +20
 
-**Difesa** **CA 26** (−2 taglia, −1 DES, +19 naturale), contatto 7, colto 26 · **pf 345** (30d8+210; Robustezza, fra i talenti, porterebbe a 348: il modulo tiene 345, e le soglie sono su quello) · TS Tempra +24, Riflessi +9, Volontà +14 · **RD 10/—** · immune acido, veleno, sonno, paralisi, stordimento (tranne il Diapason, dono della Madre) `[CANONE — DM 2026-10-15, D89]`, critici, fiancheggiamento, effetti di forma · **Debolezza** sonico ×1,5 (la Frequenza dei Cristalli morde; i pugni di Tordek, sonici col canto, sono la fonte di danno chiave)
+**Difesa** **CA 26** (−2 taglia, −1 DES, +19 naturale), contatto 7, colto 26 · **pf 348** (30d8+210, +3 Robustezza) · TS Tempra +24, Riflessi +9, Volontà +14 · **RD 10/—** · immune acido, veleno, sonno, paralisi, stordimento (tranne il Diapason, dono della Madre) `[CANONE — DM 2026-10-15, D89]`, critici, fiancheggiamento, effetti di forma · **Debolezza** sonico ×1,5 (la Frequenza dei Cristalli morde; i pugni di Tordek, sonici col canto, sono la fonte di danno chiave)
 
 **Attacco** Vel 9 m; Earth Glide 9 m (attraverso pietra). Non vola: in zero-G si spinge dalle superfici (azione di movimento, Equilibrio CD 10) · **Mischia** schianto +33 (2d10+12, 19-20/×2); attacco completo 2 schianti +33/+33 (2d10+12) · **Distanza** lancio di roccia (18 m) +19 (2d8+12) · Portata 4,5 m · **Poteri con ricarica**: ognuno è la sua azione del round, sostituisce l'attacco completo quando lo usa e non è gratuito (sotto, nelle capacità speciali)
 
@@ -1963,7 +1963,7 @@ salta e Thorik cade con gli altri. Il box è un giro solo, una frase per PG.
 | **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra `[CANONE — DM 2026-10-12, D85]` |
 | **Tordek** (Raffica +12/+12/+7: BAB +10 con monaco 9 e guerriero 4, SRD *Monaco*) | ~11 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
 | **Artemis** (Blast +16 vs **contatto 7**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | manca solo con l'1 naturale; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
-| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** `[CANONE — DM 2026-10-12, D85]` |
+| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 348 pf → **~10 round** `[CANONE — DM 2026-10-12, D85]` |
 
 | Bersaglio di Terros | Danno medio/round | Letalità |
 |---|---|---|
@@ -1987,7 +1987,7 @@ salta e Thorik cade con gli altri. Il box è un giro solo, una frase per PG.
 > vecchio quanto il piano**. Combatte come una frana: lento, inevitabile,
 > paziente. Non ha fretta — la roccia vince perché non ha fretta.
 
-- **Apertura (345–303 pf).** Se il party è entrato cantando la Frequenza:
+- **Apertura (348–303 pf).** Se il party è entrato cantando la Frequenza:
   primo round **intontito dal canto** (−4/−4), usa comunque l'**Onda** per
   disorientare. Altrimenti: si alza dall'Altare (K08-L09) e apre con **Onda
   Gravitazionale verso il soffitto** — vuole i PG **staccati dall'Altare**,

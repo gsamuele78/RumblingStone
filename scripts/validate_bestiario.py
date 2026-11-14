@@ -88,7 +88,15 @@ def banda(cr: float):
             riga["ca"] - t["ca_sotto"], riga["ca"] + t["ca_sopra"], riga["pf"], riga["ca"])
 
 
+#: Schede il cui grado di sfida è cambiato per decisione del DM col nome del file rimasto com'era
+#: (card del 2026-11-13: goblin combattente di 1° a GS 1/3, «il nome del file resta»). La stessa
+#: eccezione sta in `extract_statblocks.GS_COL_NOME_VECCHIO`.
+GS_COL_NOME_VECCHIO = {"goblin-warrior1-cr05.md": 1 / 3}
+
+
 def filename_cr(name: str):
+    if name in GS_COL_NOME_VECCHIO:
+        return GS_COL_NOME_VECCHIO[name]
     m = HAS_CR_RE.search(name)
     if not m:
         return None

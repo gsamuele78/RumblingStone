@@ -1743,7 +1743,7 @@
     },
     {
       "name": "export_booklet_typst",
-      "description": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»\n\nEdizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
+      "description": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»\n\nEdizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Un capitolo \"layout\": \"carte\" esce in carte da tavolo 63 × 88 mm, nove per foglio A4, coi dati delle tabelle dei master (le carte della corsa del Drappo). Affianca export_booklet_pdf.py senza sostituirlo.",
       "use_case": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»",
       "invocation": "python3 scripts/export_booklet_typst.py MANIFEST.json --all",
       "inputSchema": {
@@ -2220,6 +2220,43 @@
       "exit_codes": {
         "0": "ok",
         "1": "un booklet sopra il suo tetto (--check)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "provenienza_immagini",
+      "description": "«Le immagini generate che finiscono nei booklet dicono ancora di essere generate, come i loro master?»\n\nEtichetta di provenienza nelle copie web/ delle immagini: legge la sorgente digitale dal manifesto C2PA firmato del master e la scrive nella copia JPEG come XMP IPTC (DigitalSourceType), senza ricomprimerla. Non indovina: senza manifesto firmato la copia resta senza.",
+      "use_case": "«Le immagini generate che finiscono nei booklet dicono ancora di essere generate, come i loro master?»",
+      "invocation": "python3 scripts/provenienza_immagini.py [cartella ...] [--scrivi] [--check] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cartelle": {
+            "type": "string",
+            "description": "Cartelle dei master (default: tutte quelle con una web/ tracciata)."
+          },
+          "scrivi": {
+            "type": "boolean",
+            "description": "Scrive l'etichetta nelle copie che non l'hanno."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un'etichetta manca o non torna col master."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Rapporto in JSON."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<cartella>/web/*.jpg"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: un'etichetta manca o non torna"
       },
       "deterministic": true
     },

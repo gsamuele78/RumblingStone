@@ -799,7 +799,7 @@ modulo, non giocate.
 | Rituale F2: Thorik Tempra/FOR (**16** se Tordek riesce) · Tordek TxC/Conc. · Artemis UMD/TxC | 26 · 25 · 25 | §9 |
 
 ### Iniziativa tipo & pf da tracciare
-`Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
+`Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 348 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
 0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
 3 attacchi/CA 23; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
@@ -2394,7 +2394,7 @@ veloce, non rende sonici i pugni di Tordek, e la regola è in 8c-1.
 
 {{note
 ##### Terros l'Antico, l'Incudine del Mondo · GS 15
-**CA** 26, contatto 7, colto 26 (−2 taglia, −1 DES, +19 naturale) · **pf** 345 (30d8+210) · *scheda in appendice*
+**CA** 26, contatto 7, colto 26 (−2 taglia, −1 DES, +19 naturale) · **pf** 348 (30d8+213) · *scheda in appendice*
 
 **TATTICHE**
 *Round 1*: Onda gravitazionale verso il soffitto per staccare il party dall'Altare. È la sua azione del round: niente altro. Se nessuno è sull'Altare, al posto dell'Onda: lancio di roccia su Artemis, o carica su Thorik se è a portata. *Round 2*: Earth Glide nell'Altare: un'azione di movimento per entrarci, e per un turno è dentro la pietra, fuori portata, e guarisce 15. Al turno dopo riemerge (movimento) accanto al PG a terra più fragile, di solito chi è atterrato per tirare, e lo colpisce con uno schianto. Ogni riemersione dall'Altare è il momento delle azioni preparate e di «Radice a Terra». *Round 3*: se i PG sono dispersi, Stalattiti sul gruppo più fitto; se sono compatti sull'Altare, Scudo di geodi e attacco completo. *Dal round 4*: alterna i turni dentro l'Altare, le riemersioni con uno schianto, l'Onda e lo Scudo: in 3.5 non entra, colpisce ed esce nello stesso turno (servirebbe Attacco Rapido). Sotto il 50% combatte in difesa sull'Altare (rigenera) e costringe i PG ad avvicinarsi. **Morale**: non fugge mai, guardiano fino alla morte.  
@@ -2452,7 +2452,7 @@ salta e Thorik cade con gli altri. Il box è un giro solo, una frase per PG.
 | **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra |
 | **Tordek** (Raffica +12/+12/+7: BAB +10 con monaco 9 e guerriero 4, SRD *Monaco*) | ~11 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
 | **Artemis** (Blast +16 vs **contatto 7**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | manca solo con l'1 naturale; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
-| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** |
+| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 348 pf → **~10 round** |
 
 | Bersaglio di Terros | Danno medio/round | Letalità |
 |---|---|---|
@@ -2476,7 +2476,7 @@ salta e Thorik cade con gli altri. Il box è un giro solo, una frase per PG.
 > vecchio quanto il piano**. Combatte come una frana: lento, inevitabile,
 > paziente. Non ha fretta — la roccia vince perché non ha fretta.
 
-- **Apertura (345–303 pf).** Se il party è entrato cantando la Frequenza:
+- **Apertura (348–303 pf).** Se il party è entrato cantando la Frequenza:
   primo round **intontito dal canto** (−4/−4), usa comunque l'**Onda** per
   disorientare. Altrimenti: si alza dall'Altare (K08-L09) e apre con **Onda
   Gravitazionale verso il soffitto** — vuole i PG **staccati dall'Altare**,
@@ -3630,7 +3630,7 @@ ___
 
 **DIFESA**
 ___
-**CA 26** (−2 taglia, −1 DES, +19 naturale), contatto 7, colto 26 · **pf 345** (30d8+210; Robustezza, fra i talenti, porterebbe a 348: il modulo tiene 345, e le soglie sono su quello) · TS Tempra +24, Riflessi +9, Volontà +14 · **RD 10/—** · immune acido, veleno, sonno, paralisi, stordimento (tranne il Diapason, dono della Madre), critici, fiancheggiamento, effetti di forma · **Debolezza** sonico ×1,5 (la Frequenza dei Cristalli morde; i pugni di Tordek, sonici col canto, sono la fonte di danno chiave)  
+**CA 26** (−2 taglia, −1 DES, +19 naturale), contatto 7, colto 26 · **pf 348** (30d8+210, +3 Robustezza) · TS Tempra +24, Riflessi +9, Volontà +14 · **RD 10/—** · immune acido, veleno, sonno, paralisi, stordimento (tranne il Diapason, dono della Madre), critici, fiancheggiamento, effetti di forma · **Debolezza** sonico ×1,5 (la Frequenza dei Cristalli morde; i pugni di Tordek, sonici col canto, sono la fonte di danno chiave)  
 
 **ATTACCO**
 ___

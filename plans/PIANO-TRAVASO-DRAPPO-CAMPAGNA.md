@@ -137,7 +137,7 @@ prop»). Ognuno con la **nota per il DM che non si stampa** in coda.
 verde sui manifest che li includono.
 **Engine**: Sonnet, impegno **medio**. **Stima**: ~2 ore. **Priorità: 5**.
 
-### A6 · Il dossier delle piste per ARC-09 `⬜ gated`
+### A6 · Il dossier delle piste per ARC-09 `⏳ gated`
 
 **Produce**: l'equivalente di `10-DOSSIER-DELLE-PISTE.md` per i misteri che ARC-09 ha
 già: la torre invisibile, le due lettere che provano i traffici Sonjak↔Collezionista,
@@ -145,6 +145,12 @@ il «dottore», con nodi a tre strati, sei porte e orologio degli indizi
 (`rumblingstone-indagine`).
 **Gate**: **dopo** che ARC-07 finisce al tavolo. Scrivere le piste di un arco non
 ancora giocato mentre il precedente è aperto è lavoro che invecchia.
+⏳ **2026-11-13, Jfs sulla card (D5 del piano di recupero): «dopo che ARC-07
+è finito al tavolo»**, cioè il gate resta. Parte quando Jfs dice che ARC-07 è
+finito. Fuori da `adozioni-in-attesa.json` perché nessuno script sa quando un
+arco è finito al tavolo (R-6 del piano di recupero). Legata a questa voce: la
+carta del cielo di [RICERCA-TOOL-LGM §3.1](RICERCA-TOOL-LGM-2026.md), che Jfs
+vuole per ARC-09 e che chiede a quale pista serve.
 **Engine**: Opus, impegno **alto**. **Stima**: mezza giornata. **Priorità: 6**.
 
 ---
@@ -289,7 +295,7 @@ riga in `plans/CHANGELOG.md`.
 - ✅ **A3**: derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
 - ✅ **A4**: kit anti-improvvisazione della Valle *(`campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`: 3×1d20 nomi separati per popolo, i prezzi che dicono **cosa non si trova** a 13°, tre jolly senza agenda, 1d6 «la Valle respira»)*
 - ✅ **A5**: prop fisici per gli handout di ARC-07 *(tre prop nuovi + il difetto trovato: la nota anti-spoiler finiva stampata nella carta dei giocatori)*
-- ⬜ **A6**: dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
+- ⏳ **A6**: dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo, confermato da Jfs il 2026-11-13; parte quando lo dice lui)*
 - ✅ **B1**: analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
 - ✅ **B2**: audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
 - ✅ **C1**: misura della genealogia Drappo/Palio *(`plans/esperimenti/drappo-palio-2026-11-01/`: deriva dal Palio, 0 frasi in comune, 62% dell'impianto condiviso; hub del Drappo §10 corretto sulle contrade)*

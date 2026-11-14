@@ -208,7 +208,7 @@ Benedizioni ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]`.
   (+25), 2 ali +29 (+25), coda +29 (+25).
 - **La passata e il nome.** Non si ferma mai in aria, finché non ha paura.
   Con Attacco in Volo attraversa il cortile e a metà della passata soffia, o
-  morde, o grida il nome di un PG (*colpo accurato*); con *Virata* torna
+  morde, o grida il nome di un PG (*colpo accurato*); con *Virare* torna
   indietro sulla stessa linea. Il PG nominato lo morde al round dopo, a +54
   (+50), e l'occultamento non lo salva. Il nome non lo chiede: lo ha sentito
   di notte attraverso il corno, o usa un epiteto `[CANONE — DM 2026-10-19]`.
@@ -3491,13 +3491,13 @@ cambia davvero.
     movimento e un'azione standard in un punto qualsiasi del movimento. Il
     soffio è un'azione standard: lo usa a metà della passata e continua a
     volare. Il morso in passata è un attacco solo.
-  - ***Virata*** (SRD, *Wingover*). Una volta per round, con un'azione
+  - ***Virare*** (SRD, *Wingover*). Una volta per round, con un'azione
     gratuita, gira fino a 180° nonostante la manovrabilità scarsa. La virata
     costa 3 m di volo, e nel round in cui vira non sale: resta in quota o
     scende. È il talento che gli fa girare un drago Enorme dentro un cortile
     di 36 m: entra, soffia, e torna indietro sulla stessa linea quando il
-    gruppo pensava di averlo alle spalle. 🔎 Il testo è quello dell'SRD letto
-    su una trascrizione: va riscontrato su d20srd.org.
+    gruppo pensava di averlo alle spalle. Riscontrato sull'SRD 3.5
+    («Monster Feats», *Wingover*): prerequisito velocità di volare.
   - ***Colpo accurato*** (SRD, *true strike*, stregone di 1°). Azione
     standard: +20 di intuizione al prossimo tiro per colpire, entro la fine
     del round dopo, e niente probabilità di mancare per occultamento. La
@@ -4189,7 +4189,7 @@ attacchi:
 
 **Tattiche** Il duello della Scena 11: combatte in passata, dice il nome prima di colpire e fugge a ⅓ dei pf. Qui sotto, «Cosa cambia al tavolo», i numeri che contano nel duello.
 
-**Statistiche** For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18
+**Statistiche** For 31, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +22; Lotta +40 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virare, Volontà di Ferro · **Abilità** Ascoltare +29, Cercare +29, Concentrazione +32, Intimidire +29, Muoversi Silenziosamente +27, Nascondersi +19, Osservare +29, Sapienza Magica +29, Nuotare +18
 
 **Capacità speciali**
 - **Soffio impregnante**, quando lo sceglie: chi ne prende danno ne riprende metà al round dopo; toglierselo è un'azione di round completo con Riflessi CD 30 (+2 rotolando a terra, e si resta proni); la ricarica sale di 1 round.
@@ -4200,8 +4200,8 @@ attacchi:
 <!-- storico -->
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo — GS 14 → 14 (vale 15) — il DM lo vuole più forte senza salire di EL.
 <!-- /storico -->
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Impregnante** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[CANONE — DM 2026-11-04, P16, Skullcrusher: l'acido torna una volta sola, al round dopo, e non serve una prova per toglierselo]`.
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[CANONE — DM 2026-10-19]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virare* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Impregnante** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[CANONE — DM 2026-11-04, P16, Skullcrusher: l'acido torna una volta sola, al round dopo, e non serve una prova per toglierselo]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virare** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[CANONE — DM 2026-10-19]`.
 
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
@@ -4274,7 +4274,7 @@ attacchi:
 
 **Tattiche** Come A.1: fugge a ⅓ dei pf, circa **112 pf**.
 
-**Statistiche** For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virata (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1
+**Statistiche** For 33, Des 14, Cos 25, Int 18, Sag 19, Car 18 · BAB +25; Lotta +44 · **Talenti** Attacco in Volo, Capacità Focalizzata (soffio), Fluttuare, Iniziativa Migliorata, Riflessi Fulminei, Soffio Impregnante, Virare (non Ghermire), Volontà di Ferro, più Allerta · **Abilità** e il resto: come A.1
 
 **Capacità speciali**
 - **Presenza Terrificante**: raggio 72 m, Volontà CD 26 (meno di 25 DV).
@@ -4294,7 +4294,7 @@ testa**, e 12.600 per un gruppo di 14°, cioè **≈ 3.150 a testa**. Le wyvern
 si sommano a parte (§8 A).
 
 - Boost log:<!-- storico --> 2026-10-12 —<!-- /storico --> drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[CANONE — DM 2026-10-19]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virare** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[CANONE — DM 2026-10-19]`.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
@@ -4317,17 +4317,17 @@ iniziativa: +9
 sensi: scurovisione 18 m; Ascoltare +11, Osservare +3
 attacchi:
   - Mischia ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3) in Ira; +26/+21/+16 (3d6+16) fuori dall'Ira
-  - Distanza 3 giavellotti Grandi +19 (1d8+13) in Ira, (1d8+10) fuori, incremento 9 m
+  - Distanza 3 giavellotti Grandi +19 (1d8+13) in Ira; (1d8+10) fuori dall'Ira; incremento 9 m
 ```
 **Iniziativa** +9 · **Sensi** scurovisione 18 m (ogre e mezzorco, SRD); Ascoltare +11, Osservare +3
 
 **Difesa** **CA 26** (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat), contatto 12, impreparato 26 (Schivare Prodigioso Migliorato); 24 in Ira. Il mithral alza la DES massima a +3 (SRD); è preda presa ai nani, e i nani la riconoscono · **pf 283** (15 DV, massimi per dado), 328 in Ira Superiore · TS Tempra +18 (+21 in Ira), Riflessi +9, Volontà +9 (+12 in Ira; +16 contro gli ammaliamenti, Volontà Indomita) · RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato · Percepire Trappole +4 · Volontà Indomita (14°)
 
-**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
+**Attacco** Vel 12 m · **Mischia** in Ira, ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3); fuori dall'Ira (round di sorpresa) +26/+21/+16 (3d6+16) · **Distanza** 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13 in Ira, 1d8+10 fuori dall'Ira), incremento 9 m · **Colpo Terrificante** (azione standard) +25 in Ira, 3d6+20; Riflessi con CD pari al danno, o vola via di 3 m e cade prono (+1d6 a lui e all'ostacolo se ne incontra uno) · **Attacco Poderoso** a due mani: fino a −15 al colpire per +30 ai danni
 
 **Tattiche** La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta nella tenda.
 
-**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
+**Statistiche** For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare) · **Altro equipaggiamento** armatura completa di mithral +2, ascia a due mani +1, 3 giavellotti (tutto di taglia Grande); Occhio di Ossidiana (sotto)
 
 **Capacità speciali**
 - **Ira Barbarica Superiore** (6/giorno, con Ira Extra): +6 FOR, +6 COS, +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato (l'Ira Instancabile arriva al 17°).
@@ -4349,10 +4349,13 @@ pf: 60
 ts: Temp +8, Rifl +3, Vol +1
 velocita: 6 m (armatura pesante)
 iniziativa: +1
-sensi: Ascoltare +1, Osservare +1 (senza gradi)
+sensi: scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 attacchi:
   - Mischia spadone +14 (2d6+6/19-20)
   - Distanza giavellotti +9 (1d6+4), incremento 9 m
+voci:
+  - Linguaggi: Comune, Goblin
+  - Altro equipaggiamento: armatura completa, spadone, giavellotti
 ```
 <!-- /blocco -->
 <!-- storico -->
@@ -4383,11 +4386,11 @@ ts: Temp +4, Rifl +4, Vol +7
 attributi: For 10 Des 14 Cos 15 Int 14 Sag 15 Car 8
 velocita: 9 m
 iniziativa: +2
-sensi: Ascoltare +2, Osservare +2
+sensi: scurovisione 18 m; Ascoltare +2, Osservare +2
 attacchi:
   - Mischia bastone ferrato +3 (1d6)
 ```
-**Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
+**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +2, Osservare +2
 
 **Difesa** **CA 12** (+2 DES) · **pf 38** (7d6+14) · TS Temp +4, Rifl +4, Vol +7
 
@@ -4395,7 +4398,7 @@ attacchi:
 
 **Tattiche** Sta nella tenda di Zog'tar (Scena 8).
 
-**Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12
+**Statistiche** For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12 · **Linguaggi** Comune, Goblin · **Altro equipaggiamento** bastone ferrato
 <!-- /blocco -->
 
 ### A.3 · Durin Rocciadura (Scena 2)
@@ -4422,7 +4425,7 @@ attacchi:
 
 **Tattiche** Non vuole lo scontro con i PG e sa di non reggerlo: alla prima ferita grave getta l'ascia e grida *«Se siete dei nostri, dimostratelo!»* (§6, «Attaccano la pattuglia di Durin»). Nella Scena 6 li accompagna fino alla postierla e lì resta (la tiene aperta per il ritorno, Scena 8).
 
-**Statistiche** For 18, Cos 16, Sag 14 · BAB +6; Lotta +10
+**Statistiche** For 18, Cos 16, Sag 14 · BAB +6; Lotta +10 · **Linguaggi** Comune, Nanico · **Qualità speciali** tratti dei nani (SRD) · **Altro equipaggiamento** armatura completa +1, scudo pesante +1, ascia da guerra nanica +1
 
 **Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
 
@@ -4538,6 +4541,10 @@ sensi: scurovisione 18 m
 attacchi:
   - Mischia falchion +4 (2d4+4/18-20)
   - Distanza giavellotto +1 (1d6+3)
+voci:
+  - Linguaggi: Comune, Orchesco
+  - Qualità speciali: sensibilità alla luce (abbagliato in piena luce solare o in *luce diurna*)
+  - Altro equipaggiamento: cuoio borchiato, falchion, giavellotto
 tattica: Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestiario, GS 3: 30 pf, CA 16, falchion +7 (2d4+3) `[CANONE — DM 2026-10-19, giro 4 n. 9]`.
 ```
 
@@ -4553,9 +4560,12 @@ pf: 30
 ts: Temp +6, Rifl +2, Vol +0
 velocita: 9 m
 iniziativa: +1
-sensi: Ascoltare −1, Osservare −1
+sensi: scurovisione 18 m; Ascoltare −1, Osservare −1
 attacchi:
   - Mischia spada lunga +6 (1d8+3/19-20)
+voci:
+  - Linguaggi: Comune, Goblin
+  - Altro equipaggiamento: cuoio borchiato, scudo leggero, spada lunga
 fonte: in otto fanno EL 10; i numeri sono calcolati sull'SRD `[CANONE — DM 2026-10-07, Q15: guerriero 4 con Arma Focalizzata e Specializzata, GS 4 l'uno]`
 ```
 
