@@ -21,6 +21,9 @@ manifest, tre guide, cinque test). §3.1, §3.2, §3.3 erano **proposte**; il
 §3.1 **sì, per ARC-09** (lotto, vedi sotto), §3.2 è una regola e non chiede
 lavoro, §3.3 **in attesa** con una condizione misurata da
 `adozioni_in_attesa.py` (voce `blockbench-stanze-3d`).
+§3.1 **applicato** il 2026-11-14: handout 7 di ARC-09, carta del cielo di Zalkatar
+(pista della Torre invisibile) fatta con Stellarium 23.4 e una cultura del cielo del
+repo, senza codice nel toolkit (`09_…/Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`).
 
 ---
 
@@ -185,6 +188,12 @@ cui si lega: chi la prepara chiede prima a Jfs a quale pista e a quale scena
 serve. Nomi delle costellazioni propri del repo (ADR-0005). Limite tecnico:
 Stellarium è un programma a finestre, il lavoro è in gran parte manuale, e nel
 container va verificato se gira.
+
+✅ **2026-11-14, fatto (#422).** Nel container gira (Stellarium 23.4 da apt, Xvfb e
+Mesa software). Jfs ha scelto sulle card la pista della Torre invisibile, la carta
+addosso al mago dei piromanti drow con Sethrax come seconda occasione, e il passo
+della Torre un grado a sud. Handout 7 in `Arco-Post-Hammerfist-HANDOUTS.md`, file e
+provenienza in `09_…/Immagini-Handout/carta-del-cielo/`.
 
 ### §3.2 · Krita e GIMP: banco del DM, mai passo di catena
 

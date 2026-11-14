@@ -198,10 +198,60 @@
 
 ---
 
+## HANDOUT 7 — La carta del cielo di Zalkatar
+
+> **Quando darlo** (deciso dal DM il 2026-11-14, sulla card: «tutte e due»). La
+> carta sta addosso al mago della **squadra di piromanti drow** (tabella del
+> Cannath Vale, 56-70, `INCONTRI-VIAGGIO-CANNATH-VALE`), prima di fine Mirtul.
+> Se i PG non lo incontrano o non lo perquisiscono, **Sethrax** ne dà una copia
+> quando si smaschera al Torneo, come indizio gratuito sull'arco della Torre
+> (`P2B-Torneo-DAUTH-SUBQUEST-Artemis` §4.3): arriva dopo il 30 Mirtul, quindi
+> la carta dice dove la Torre **è già andata**.
+> Un foglio rotondo di pelle sottile, inchiostro bruno, nessuna firma.
+
+![Carta del cielo di Zalkatar: cielo di mezzanotte visto dall'alto, con il meridiano nord-sud, dieci costellazioni con i loro nomi e una stella cerchiata al centro esatto, nel Sigillo](Immagini-Handout/carta-del-cielo/carta-del-cielo-zalkatar-stampa.png)
+
+> *Le stelle sono puntini d'inchiostro, i nomi in Comune in una grafia piccola e
+> diritta. Una riga taglia il cerchio da nord a sud. Al centro, dove la riga
+> passa, qualcuno ha ripassato tre volte un anello intorno a una stella sola.*
+
+> **Nota DM: l'indizio a tre strati** (skill `rumblingstone-indagine`).
+> - **Fatto osservabile**: è il cielo di mezzanotte. La riga è il meridiano; il
+>   centro del cerchio è il punto sopra la testa di chi guarda. La stella
+>   cerchiata è la più alta del **Sigillo** ed è esattamente lì.
+> - **Lettura 1, la notte** (nessun tiro: basta guardare il cielo vero a
+>   mezzanotte). Il cielo gira di un grado per notte: ogni notte il Sigillo
+>   arriva al meridiano quattro minuti prima. Il 22 Mirtul a mezzanotte è ancora
+>   a est della riga, di circa nove gradi; sulla riga ci arriva a mezzanotte il
+>   **30 Mirtul**. È la notte in cui «la torre cammina». Una prova di
+>   Conoscenze (geografia) o Sopravvivenza CD 15 conta le notti a colpo d'occhio.
+> - **Lettura 2, il luogo**. Una stella passa esattamente sopra la testa solo
+>   alla latitudine uguale alla sua altezza in cielo: la carta è disegnata **dal
+>   luogo del passo**, non da dove sta la Torre oggi. Da dove sono i PG la stella
+>   cerchiata culmina un po' a sud (o a nord) dello zenit; ogni grado di scarto è
+>   circa 110 km in quella direzione. Misurare un grado a occhio non si può:
+>   serve un astrolabio, un quadrante o Conoscenze (geografia) CD 20.
+>   Deciso dal DM il 2026-11-14: il passo va **un grado più a sud** del pianoro
+>   della Torre, cioè circa 110 km (tre giorni di marcia a 9 m, quattro a 6 m).
+>   La carta non dipende da questa scelta: se cambia, cambia solo questa riga.
+> - **Nome**: «il Sigillo si chiude sulla Torre». È il calcolo del rito di
+>   spostamento di Zalkatar, la stessa vibrazione che sente l'Anello di Artemis.
+> - **Perché non si falsifica**: il cielo è lo stesso per tutti. Una copia con
+>   le stelle spostate non combacia col cielo della notte, e chiunque la confronti
+>   se ne accorge.
+
+> **Nota DM: stampa e provenienza**. Due versioni: inchiostro su carta
+> (`carta-del-cielo-zalkatar-stampa.png`, da stampare) e cielo notturno
+> (`carta-del-cielo-zalkatar.png`, da mostrare a schermo). Le costellazioni hanno
+> nomi del repo, non di Faerûn (ADR-0005); come si rifà l'immagine sta in
+> `Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`.
+
+---
+
 ## Nota di stampa
 
 - Una pagina per handout; consegna **al momento indicato** in "quando darlo".
-- Gli handout 1, 3 e 6 sono i più "fisici" (busta di pelle, mappa, carte): valgono
+- Gli handout 1, 3, 6 e 7 sono i più "fisici" (busta di pelle, mappa, carte): valgono
   molto se preparati davvero (una busta chiusa, un foglio invecchiato).
 - Riferimenti canonici in testa a ogni handout: non improvvisare contenuti nuovi
   senza marcarli `[INFERRED]`.
