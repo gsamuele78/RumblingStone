@@ -30,9 +30,13 @@
 // cartiglio il motto e il nome del Palio di Channathgate, non quelli di
 // Tarsilia (CONTRADE-DI-TARSILIA.md §7). Sulla carta il nome e il motto li
 // scrive il modello, quindi le scritte dello scudo si tolgono qui, alla
-// lettura, senza copiare il file.
+// lettura, senza copiare il file: le scritte e il cartiglio che le porta
+// (il rettangolo scuro 166 × 26 in fondo allo scudo), che vuoto restava una
+// barra nera senza senso.
 #let stemma(percorso, alt, alto: 21mm) = {
-  let svg = read(percorso).replace(regex("<text[^>]*>[^<]*</text>"), "")
+  let svg = read(percorso)
+    .replace(regex("<text[^>]*>[^<]*</text>"), "")
+    .replace(regex("<rect x=\"17\" y=\"182\" width=\"166\" height=\"26\"[^>]*/>"), "")
   image(bytes(svg), format: "svg", height: alto, alt: alt)
 }
 
