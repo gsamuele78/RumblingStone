@@ -1254,7 +1254,6 @@ repo scritto con altre parole.
 - **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125. Nella stessa PR le risposte di Jfs a cinque card del 13/11 (thread dell'audit): duergar con classi da PG a GS 2 e 8 con i file rinominati, goblin combattente di 1° a GS 1/3, tre righe di Balvar rimesse intere (Jfs non ha scelto la consigliata «tieni i tagli»), Terros 348 pf, «Virare» al posto di «Virata».
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
-
 ### MS-0109 · 2026-11-13 · Piano di recupero: D5 chiusa e lotto L4, il registro delle adozioni prende i lotti interni
 
 - **Data:** 2026-11-13
@@ -1287,3 +1286,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs ha scelto «Subito» sulla card delle carte da tavolo del Drappo di Tarsilia (voce B3 di `plans/RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE.md`), contro la consigliata di aspettare una serata vera come diceva il §5. Fatte nella catena typst dei booklet: 36 carte 63 × 88 mm in quattro fogli A4, PDF/UA-1 e PDF/A-2a conformi con veraPDF 1.28.2 (0 controlli falliti); misura_stampa delle carte senza errori. La voce B3 resta 🟡 finché una serata non dice quali carte servono.
 - **Trovato nel repo:** `10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/README.md` (Le carte da tavolo) · `docs/reference/RIFERIMENTO-BOOKLET.md` §1.2-bis · `scripts/tests/test_carte_tavolo.py`
 - **Solo qui:** la voce è nata MS-0108 sul ramo ed è diventata MS-0111 al riallineo dopo #417, #421 e #422 (il coordinatore aveva detto prima MS-0116, poi corretto: il check vuole numeri consecutivi). Gli scudi della serie Golarion portano nel cartiglio il motto del Palio («Pungo solo chi mi assale» per l'Istrice): sulle carte le scritte si tolgono alla lettura e il cartiglio resta vuoto, perché copiare gli SVG avrebbe fatto copie vecchie (CONTRADE §7). La griglia delle Lunghezze sul segnaposto è una scelta di disegno, non una regola: le regole dicono «su un foglio a vista, una riga per contrada».
+
+### MS-0112 · 2026-11-13 · ADR-0132: le copie delle immagini tengono la provenienza
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0132 ADR-0019
+- **Temi:** immagini provenienza booklet ai-generativa
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0132: le copie delle immagini tengono la dichiarazione di provenienza» in `plans/CHANGELOG.md`
+- **Testo:** Quarta tecnica della richiesta del DM del 2026-11-13. 28 master del repo hanno un manifesto C2PA firmato (Google per il Drappo e Durik, OpenAI per tre ritratti di Hella) con la sorgente digitale IPTC; le copie `web/` che vanno nei booklet la perdevano alla ricompressione. `provenienza_immagini.py` la riscrive nella copia come XMP IPTC senza ricomprimere. Copie etichettate 0 → 28 su 28; immagini JPEG nei 20 PDF 0 → 36 su 89; pixel e pagine identici.
+- **Trovato nel repo:** `plans/adr/ADR-0132-le-copie-delle-immagini-tengono-la-provenienza.md` · `plans/esperimenti/provenienza-immagini-2026-11-13/MISURE.md` · `scripts/provenienza_immagini.py`
+- **Solo qui:** Gemini mette il manifesto C2PA in un blocco di testo del PNG («Raw profile type app11») scritto in esadecimale, con un'intestazione che ha cifre sue: cercare «c2pa» nei byte del file ne trovava 18 su 28, e togliere tutti i caratteri non esadecimali sfasava la decodifica; si tengono solo le righe lunghe di esadecimale. Typst incorpora il JPEG così com'è, quindi l'XMP arriva dentro il PDF. Firmare le copie con c2pa-python scartato: chiede un certificato della lista di fiducia C2PA. Una prima corsa di misura è stata buttata perché l'export girava nella cartella di lavoro mentre cambiavo ramo: le misure lunghe vanno in un worktree a parte. Le 24 copie senza manifesto (20 di ARC-07, 4 ritratti dei PG) restano senza etichetta: dichiararle è una scelta del DM.

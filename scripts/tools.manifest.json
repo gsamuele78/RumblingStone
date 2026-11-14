@@ -596,6 +596,103 @@
       ]
     },
     {
+      "id": "provenienza_immagini",
+      "path": "scripts/provenienza_immagini.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/provenienza_immagini.py [cartella ...] [--scrivi] [--check] [--json]",
+      "summary": "Etichetta di provenienza nelle copie web/ delle immagini: legge la sorgente digitale dal manifesto C2PA firmato del master e la scrive nella copia JPEG come XMP IPTC (DigitalSourceType), senza ricomprimerla. Non indovina: senza manifesto firmato la copia resta senza.",
+      "use_case": "«Le immagini generate che finiscono nei booklet dicono ancora di essere generate, come i loro master?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "cartelle",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Cartelle dei master (default: tutte quelle con una web/ tracciata)."
+        },
+        {
+          "name": "--scrivi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive l'etichetta nelle copie che non l'hanno."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se un'etichetta manca o non torna col master."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rapporto in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<cartella>/*.png",
+          "kind": "png",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "<cartella>/web/*.jpg",
+          "kind": "png",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<cartella>/web/*.jpg",
+          "kind": "png",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: un'etichetta manca o non torna"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso master, stessa etichetta; i pixel della copia non cambiano."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/provenienza_immagini.py --check",
+      "tests": [
+        "scripts/tests/test_provenienza_immagini.py"
+      ],
+      "docs": [
+        "docs/how-to/GUIDA-IMMAGINI.md"
+      ]
+    },
+    {
       "id": "build_font_mappe",
       "path": "scripts/build_font_mappe.py",
       "category": "B-maps-pipeline",

@@ -2224,6 +2224,43 @@
       "deterministic": true
     },
     {
+      "name": "provenienza_immagini",
+      "description": "«Le immagini generate che finiscono nei booklet dicono ancora di essere generate, come i loro master?»\n\nEtichetta di provenienza nelle copie web/ delle immagini: legge la sorgente digitale dal manifesto C2PA firmato del master e la scrive nella copia JPEG come XMP IPTC (DigitalSourceType), senza ricomprimerla. Non indovina: senza manifesto firmato la copia resta senza.",
+      "use_case": "«Le immagini generate che finiscono nei booklet dicono ancora di essere generate, come i loro master?»",
+      "invocation": "python3 scripts/provenienza_immagini.py [cartella ...] [--scrivi] [--check] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cartelle": {
+            "type": "string",
+            "description": "Cartelle dei master (default: tutte quelle con una web/ tracciata)."
+          },
+          "scrivi": {
+            "type": "boolean",
+            "description": "Scrive l'etichetta nelle copie che non l'hanno."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se un'etichetta manca o non torna col master."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Rapporto in JSON."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<cartella>/web/*.jpg"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: un'etichetta manca o non torna"
+      },
+      "deterministic": true
+    },
+    {
       "name": "session_recap",
       "description": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»\n\nRecap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
       "use_case": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»",
