@@ -1782,6 +1782,28 @@ def _oggetti_del_lessico(sistema: str) -> "tuple[tuple[re.Pattern, str], ...]":
     return tuple(sorted(out, key=lambda x: -len(x[0].pattern)))
 
 
+_MATERIALE = r"mithr[ai]l|adamantin[eoa]|adamantio"
+_MATERIALE_DOPO = re.compile(rf"\s*(?:(?:di|in|d['’])\s*)?(?<!\w)({_MATERIALE})(?!\w)", re.I)
+_MATERIALE_PRIMA = re.compile(rf"(?<!\w)({_MATERIALE})\s+$", re.I)
+
+
+@lru_cache(maxsize=None)
+def _bastoni_del_lessico(sistema: str) -> "dict[str, str]":
+    """Nome italiano o inglese dell'effetto («fuoco», «fire») → chiave del prezzo («staff of fire»).
+    La parola «bastone» davanti la chiede chi cerca: qui un nome corto non è un rischio."""
+    import lessico_regole as LR
+    from dmcore import sistemi as S
+    prezzi = S.dati(sistema, "creature.costruzione")["oggetti"]["prezzi"]
+    out = {k[len("staff of "):]: k for k in prezzi if k.startswith("staff of ")}
+    for v in LR.tabella_35():
+        chiave = "staff of " + v["srd35"].lower().strip()
+        if v["tipo"] == "oggetto magico" and chiave in prezzi:
+            for n in [v["it"]] + (v.get("varianti") or "").split("|"):
+                if n.strip():
+                    out.setdefault(n.strip().lower(), chiave)
+    return out
+
+
 @lru_cache(maxsize=None)
 def _capacita_del_lessico(sistema: str) -> "dict[str, tuple[tuple[re.Pattern, dict], ...]]":
     """Per armi e armature, (schema, {bonus} o {mo}) delle capacità speciali coi nomi del lessico.
@@ -1830,6 +1852,19 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
     armature, scudi = CA.tabelle(sistema)
     armi = [n for a in S.dati(sistema, "creature.armi").get("armi", []) for n in a["nomi"]]
     capacita = _capacita_del_lessico(sistema)
+    categorie = {(v["ca"], v["des_max"]): v["categoria"]
+                 for v in S.dati(sistema, "creature.costruzione").get("movimento", {}).get("armature", {}).values()}
+
+    def in_piu(materiale: "str | None", nome: str, che: str) -> "tuple[int, str]":
+        """Quanto costa in più l'oggetto di adamantio o di mithral, se la tabella ha la sua categoria."""
+        if not materiale:
+            return 0, ""
+        chiave = "mithral" if materiale.lower().startswith("mith") else "adamantine"
+        if che == "arma" and (nome in scudi or nome in armature):
+            return 0, ""                                # uno scudo fra le armi: la tabella non lo prezza
+        categoria = "arma" if che == "arma" else "scudo" if nome in scudi else categorie.get(armature.get(nome))
+        mo = (d.get("materiali") or {}).get(chiave, {}).get(categoria, 0)
+        return mo, f" di {chiave.replace('adamantine', 'adamantio')}" if mo else ""
     for nomi, tabella, che in ((list(armature) + list(scudi), d["potenziamento"]["armatura"], "armatura"),
                                (armi, d["potenziamento"]["arma"], "arma")):
         for nome in sorted(set(nomi), key=len, reverse=True):
@@ -1841,7 +1876,16 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
                 # una capacità conta solo se sta attaccata al nome o al bonus («spadone sacrilego +2»,
                 # «spada lunga +1 infuocata e affilata»): più in là può essere un nome proprio
                 bonus, mo, dette = 0, 0, []
-                for tratto in (m.group(1), m.group(3)):
+                # il materiale conta come le capacità: attaccato al nome o al bonus, prima o dopo
+                tratti = [m.group(1), m.group(3)]
+                materiale = None
+                for i, tratto in enumerate(tratti):
+                    mm = _MATERIALE_DOPO.match(tratto) if i else _MATERIALE_DOPO.search(tratto)
+                    if mm and not materiale:
+                        materiale, tratti[i] = mm.group(1), tratto[:mm.start()] + tratto[mm.end():]
+                prima = _MATERIALE_PRIMA.search(riga[:m.start()])
+                materiale = materiale or (prima.group(1) if prima else None)
+                for tratto in tratti:
                     resto = tratto
                     while True:
                         resto = re.sub(r"^\s*(?:e\s+|and\s+)?", "", resto)
@@ -1854,8 +1898,22 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
                         dette.append(c[2])
                 if n + bonus > len(tabella):
                     bonus, mo, dette = 0, 0, []     # oltre la tabella: resta il solo potenziamento
+                piu, detto = in_piu(materiale, nome, che)
                 presi.append(m.span())
-                trovati.append((f"{nome} +{n}{''.join(' ' + x for x in dette)} ({che})", tabella[n + bonus - 1] + mo))
+                trovati.append((f"{nome} +{n}{detto}{''.join(' ' + x for x in dette)} ({che})",
+                                tabella[n + bonus - 1] + mo + piu))
+    # lo stesso senza il «+N» dopo il nome: «mithral chainmail», «+1 mithral full plate», «ascia di adamantio»
+    for nomi, tabella, che in ((list(armature) + list(scudi), d["potenziamento"]["armatura"], "armatura"),
+                               (armi, d["potenziamento"]["arma"], "arma")):
+        for nome in sorted(set(nomi), key=len, reverse=True):
+            for m in re.finditer(rf"(?:\+(\d+)\s+)?(?<!\w)({_MATERIALE})\s+{re.escape(nome)}(?!\w)"
+                                 rf"|(?<!\w){re.escape(nome)}\s+(?:di|in|d['’])\s*({_MATERIALE})(?!\w)", riga, re.I):
+                piu, detto = in_piu(m.group(2) or m.group(3), nome, che)
+                n = int(m.group(1) or 0)
+                if not piu or n > len(tabella) or not libero(*m.span()):
+                    continue
+                presi.append(m.span())
+                trovati.append((f"{nome}{f' +{n}' if n else ''}{detto} ({che})", piu + (tabella[n - 1] if n else 0)))
     # pozioni e pergamene di un incantesimo, bacchette con le cariche scritte
     incantesimi = _incantesimi_it()
     for parole, prefisso, tabella in ((r"pozion[ei]|oli[oi]|potions?|oils?", "potion of ", d["prezzi"]),
@@ -1879,6 +1937,13 @@ def _oggetti_col_prezzo(riga: str, d: dict, sistema: str) -> "list[tuple[str, in
                 mo, n = tabella[chiavi[0]], quanti(m.group(1)) * int(m.group(3) or 1)
             presi.append(m.span())
             trovati.append((f"{n} × {chiavi[0]}" if n > 1 else chiavi[0], mo * n))
+    # bastoni: solo con le cariche scritte, in proporzione alle 50 di un bastone nuovo
+    for m in re.finditer(rf"(?<!\w)(?:baston[ei]|staffs?)\s+{_PREP}[*_]*([^*_,;|()]+?)[*_]*\s*"
+                         rf"\([^()]*?(\d+)\s+(?:cariche|charges)\)", riga, re.I):
+        chiave = _bastoni_del_lessico(sistema).get(re.sub(r"\s+", " ", m.group(1).strip().lower()))
+        if chiave and libero(*m.span()):
+            presi.append(m.span())
+            trovati.append((f"{chiave} ({m.group(2)} cariche)", d["prezzi"][chiave] * min(int(m.group(2)), 50) // 50))
     # gli altri oggetti che il lessico nomina
     for schema, chiave in _oggetti_del_lessico(sistema):
         for m in schema.finditer(riga):

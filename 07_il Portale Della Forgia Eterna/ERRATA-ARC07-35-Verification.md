@@ -72,7 +72,7 @@
   Presenza Terrificante CD 26. Dal round 2 lo accompagnano le **2 wyvern** di
   A.6 (SRD, GS 6). Per un gruppo di 13° fanno **EL 17**, il tetto esatto di
   APL+4; per uno di 14°, APL+3 `[CANONE — DM 2026-10-19]`. Combatte in passata
-  con *Virata* al posto di *Ghermire*: la presa in bocca è di Fauci contro
+  con *Virare* al posto di *Ghermire*: la presa in bocca è di Fauci contro
   Thorik in ARC-08 (D71).
 - **L'alternativa**: l'**Adulto** di A.1 (drago nero adulto maturo dell'SRD con
   il template Avanzato di PF1e, **GS 14**, CA 33, 37 con *armatura magica*,
