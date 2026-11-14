@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 quinta parte: la ricchezza di un file con più schede.… | In PR |
 | 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 sesta parte: la velocità delle razze senza dadi vita razziali… | In PR |
 | 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 6 terza parte: razze dei mostri, taglia e velocità nelle abilit… | In PR |
 | 2026-11-14 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 quinta parte: i linguaggi delle razze senza dadi vita razzial… | In PR |
@@ -96,12 +97,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | DRAPPO-DI-TARSILIA-STANDALONE-PF1E | Voce B3 della ricerca sul modulo pubblicabile: le carte da tavolo del Drappo, f… | In PR |
 | 2026-11-13 | RECUPERO-DECISIONI | L4 · I piani fermi, una casella alla volta (e D5 chiusa) | ✅ D5 decisa da Jfs voce per voce (11 risposte sulle card del 13/11) e applicata: 14 caselle, 5 lotti con milestone o thread, 1 regola, 8 attese; nel registro d… |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche.… | In PR Nella stessa PR cinque decisioni del DM del 13/11 sulle card: duergar con classi da PG a GS 2 e 8 (file rinominati), goblin combattente a GS 1/3, tre rig… |
-| 2026-11-13 | STANDARD-SCHEDE | ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e. Jfs ha confrontat… | In PR |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 1 aperte, 323 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 118 voci, l'ultima MS-0118 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 119 voci, l'ultima MS-0119 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

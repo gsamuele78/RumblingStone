@@ -18,6 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `verifica_scheda`, verifica `ricchezza`: un file con più schede (un master d'arco) si giudica scheda per scheda, col titolo nella chiave `scheda` (ADR-0126, lotto 8, quinta parte).
 - `verifica_scheda`, verifica `velocita`: giudica anche nove razze senza dadi vita razziali; la velocità ridotta di chi non scompone la CA è un dubbio e non una violazione (ADR-0126, lotto 7, sesta parte).
 - `verifica_scheda`, verifica `abilita`: il margine contato vale anche per nove razze senza dadi vita razziali (hobgoblin, orco, drow, duergar…), il +4 di taglia a Nascondersi dei Piccoli entra nel conto e la velocità scritta cambia Saltare come nell'SRD (ADR-0126, lotto 6, terza parte).
 - `verifica_scheda`, verifica `linguaggi`: giudica anche nove razze senza dadi vita razziali (hobgoblin, orco, drow, duergar, goblin, coboldo, svirfneblin, aasimar, tiefling), coi linguaggi automatici che l'SRD scrive nel capitolo dei mostri (ADR-0126, lotto 7, quinta parte).

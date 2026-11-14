@@ -1364,3 +1364,14 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** due schede di hobgoblin regolari scrivono 6 m senza scomporre la CA: la prima versione le dava per violazioni, ed erano solo armature non nominate. Da lì la regola del dubbio. La correzione diretta del nome dell'armatura del bladebearer è stata fermata: una scheda si cambia solo con la risposta del DM, anche quando è un errore di trascrizione.
 
+### MS-0119 · 2026-11-14 · Regole, lotto 8 quinta parte: la ricchezza di un file con più schede
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole ricchezza equipaggiamento master verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 8 quinta parte» in `plans/CHANGELOG.md`
+- **Testo:** `ricchezza` giudica scheda per scheda anche i file con più schede. Prima usciva senza dire niente, e ARC07-DEF-4 non era controllato contro la Tabella 4-23. Una violazione vera: Durin Rocciadura ha 6.137 mo di equipaggiamento contro i 5.600 di un PNG di 6°. La scheda aspetta il DM.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** nella #425 era stato scritto che le schede allungate di ARC07-DEF-4 non davano violazioni nuove: era vero solo perché non erano lette. L'ha notato il thread del volume, ed è stato detto a Jfs. Una misura che tace va controllata: tace perché è in regola o perché non guarda?
+

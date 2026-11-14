@@ -2083,8 +2083,29 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     «Equipaggiamento sopra la tabella: … DM …» dichiara lo scarto come scelta
     del DM, e la verifica tace."""
     import conformita_statblocchi as C
+    intero = p.read_text(encoding="utf-8", errors="replace")
+    with contextlib.redirect_stderr(io.StringIO()):
+        recinti = list(C._recinti_del_master(intero))
+    if len(recinti) <= 1:
+        return _ricchezza_di_una_scheda(p, intero, 0, p.stem.replace("-", " "))
+    # un file con più schede (un master d'arco): ognuna si giudica da sola, dal suo titolo alla scheda dopo
+    righe = intero.split("\n")
+    viol, nv = [], []
+    for b in _blocchi_dei_fatti(righe, VT.sistema_di(p, intero)):
+        v, n = _ricchezza_di_una_scheda(p, "\n".join(righe[b["inizio"] - 1:b["fine"]]), b["inizio"] - 1, "")
+        viol += [dict(x, scheda=b["titolo"]) for x in v]
+        nv += [dict(x, scheda=b["titolo"]) for x in n]
+    return viol, nv
+
+
+def _ricchezza_di_una_scheda(p: Path, testo: str, riga0: int, dal_nome: str) -> "tuple[list[dict], list[dict]]":
+    """Il giudizio di `ricchezza` su una scheda sola: `testo` è il file o il pezzo
+    di un master, `riga0` le righe che lo precedono nel file, `dal_nome` le
+    parole del nome del file che aiutano a riconoscere la razza (vuote in un
+    master, dove il nome del file non dice di chi è la scheda)."""
+    import conformita_statblocchi as C
     from dmcore import sistemi as S
-    s = L.leggi(p)
+    s = L.leggi_testo(testo, p)
     if s is None:
         return [], []
     sistema = VT.sistema_di(p, s.testo)
@@ -2107,12 +2128,12 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
         return [], []
     totale = sum(o[1] for _, o in oggetti)
     tabella = d["png"]["per_livello"]
-    base = {"file": VT_rel(p), "riga": oggetti[0][0], "verifica": "ricchezza", "fonte": sistema,
+    base = {"file": VT_rel(p), "riga": oggetti[0][0] + riga0, "verifica": "ricchezza", "fonte": sistema,
             "regola": "equipaggiamento.valore"}
     elenco = ", ".join(f"{nome} {mo}" for _, (nome, mo) in oggetti)
     if totale <= tabella[min(dadi_vita, len(tabella)) - 1]:
         return [], []
-    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], dal_nome))
     mdl = 0 if _razza_srd(dove, gradi) else None
     if mdl is None:
         # una razza senza dadi vita razziali (hobgoblin, drow, orco…): il suo modificatore di livello

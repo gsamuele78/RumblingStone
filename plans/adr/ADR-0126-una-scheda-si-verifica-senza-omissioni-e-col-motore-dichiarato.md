@@ -1205,3 +1205,27 @@ Il DM ha risposto alle tre card lo stesso giorno, e le schede sono scritte:
 Misura dopo le risposte: `abilita` 0 violazioni, `velocita` 0 violazioni,
 `IN_ATTESA` di `test_velocita.py` vuoto.
 
+### Lotto 8, quinta parte — la ricchezza di un file con più schede (2026-11-14)
+
+**Contesto.** `ricchezza` usciva senza dire niente quando il file aveva più di
+un recinto `statblocco`. Le dodici schede di ARC07-DEF-4 non erano giudicate
+contro la Tabella 4-23, e una misura «senza violazioni nuove» lì voleva dire
+«non controllate». L'ha trovato il thread del volume leggendo il codice.
+
+**Decisione.** Un file con più schede si taglia coi blocchi di `--fatti`
+(`_blocchi_dei_fatti`): ogni scheda va dal suo titolo alla scheda dopo e si
+giudica da sola, con la riga contata nel file e il titolo nella chiave
+`scheda`. La dichiarazione «Equipaggiamento sopra la tabella» vale solo per la
+scheda che la porta. In un master il nome del file non aiuta a riconoscere la
+razza: conta solo il titolo della scheda.
+
+**Conseguenze.** Misura su `Bestiario 0*/`: violazioni di `ricchezza` negli
+archi 0 → 1. È Durin Rocciadura (ARC07-DEF-4, riga 4428): armatura completa +1,
+scudo pesante +1 e ascia da guerra nanica +1 valgono 6.137 mo contro i 5.600 di
+un PNG di 6°. La scheda non si tocca: card al DM, titolo in `IN_ATTESA` del
+cancello nuovo `Archi` di `test_ricchezza.py`.
+
+**Limiti dichiarati.** Le altre verifiche che leggono una scheda sola
+(`velocita`, `linguaggi`, `abilita`) non sono ancora portate ai file con più
+schede.
+
