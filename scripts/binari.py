@@ -192,6 +192,17 @@ OPZIONALI = (
          "  Fedora         sudo dnf install ShellCheck",
          "gli script shell del repo sono cinque e corti: senza shellcheck si "
          "leggono a mano."),
+    _opz("whisper-cli", "la trascrizione locale della serata (`transcribe_session.py`, "
+                        "ADR-0135, in prova)",
+         "  whisper.cpp (MIT) si compila: docs/how-to/GUIDA-TRASCRIZIONE-SERATA.md §2\n"
+         "  Bazzite  in una distrobox --nvidia, con -DGGML_VULKAN=1",
+         "senza, il log si scrive a memoria come prima: lo script esce con 3 e "
+         "dice come installarlo."),
+    _opz("ffmpeg", "convertire l'audio della serata in WAV 16 kHz per whisper.cpp "
+                   "(ADR-0135)",
+         "  Debian/Ubuntu  sudo apt install ffmpeg\n"
+         "  Fedora         sudo dnf install ffmpeg-free",
+         "serve solo alla trascrizione della serata: senza, lo script esce con 3."),
 )
 
 
@@ -385,6 +396,7 @@ CATENE = {
     "coerenza fra scene e archi": ("pyyaml",),
     "sintassi della prosa": ("spacy",),
     "secondo lettore LanguageTool": ("java", "mvn"),
+    "trascrizione della serata (in prova)": ("whisper-cli", "ffmpeg"),
 }
 
 

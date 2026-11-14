@@ -59,6 +59,7 @@ from dmcore import config as cfg  # noqa: E402
 from dmcore import gitio  # noqa: E402
 from dmcore.masters import per_master  # noqa: E402
 from dmcore import delta_sessione  # noqa: E402
+from dmcore.bozza_trascrizione import e_bozza  # noqa: E402
 from dmcore.regions import RegionError, find_regions, replace_region, wrap  # noqa: E402
 from state_sync import extract_events, _suggest  # noqa: E402
 
@@ -287,6 +288,11 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
             print(f"[apply] ✗ nessun log di sessione in {sessions}", file=sys.stderr)
             return 2
         spath = cands[-1]
+    # ADR-0135: la bozza della trascrizione non e' canone (ADR-0007).
+    if e_bozza(spath.read_text(encoding="utf-8")):
+        print(f"[apply] ✗ {spath.name} e' ancora una bozza della trascrizione: "
+              "il DM la riscrive e la firma prima — nessuna scrittura", file=sys.stderr)
+        return 2
     ev = extract_events(spath)
     print(f"[apply] sessione: {ev['file']} ({ev['date']}) — trigger: {len(ev['hits'])}")
 
