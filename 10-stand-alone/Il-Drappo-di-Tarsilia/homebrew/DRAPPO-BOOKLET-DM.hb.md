@@ -4206,13 +4206,13 @@ ___
 ___
 **Mischia** pugnale da maestro **+8** (1d4+1/19–20) *(Finezza nell'Arma)* · **Distanza** balestra a mano +7 (1d4/19–20) · **Attacco furtivo** +2d6 · **BAB** +3 · **CMB** +4 · **CMD** 20  
 
-**STATISTICHE**
-___
-For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Arma Accurata · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*  
-
 **TATTICHE**
 ___
 **Non ingaggia mai volontariamente.** Il suo mestiere è entrare, fare, uscire. Se lo scoprono usa l'olio e il fumo, poi le finestre alte. **Fugge a 8 pf, sempre**, anche a lavoro mezzo fatto, anche se sta vincendo. Catturato vivo: **non parla**. Non per lealtà — perché il mediatore paga i silenzi e non paga più i morti.  
+
+**STATISTICHE**
+___
+For 12, Des 18, Cos 12, Int 13, Sag 12, Car 10 · **Talenti** Arma Accurata · Schivare · Mobilità *(trucco di combattimento)* · **Talenti da ladro** Furtività Rapida · Trucco di Combattimento · **Abilità** Furtività **+15** *(+19 in movimento grazie a Furtività Rapida)*, Acrobazia +11, Rapidità di Mano +11, Disattivare Congegni +10, Percezione +8, Scalare +8, Cavalcare +9 · **Equipaggiamento** cuoio borchiato da maestro · pugnale da maestro · balestra a mano · anello di protezione +1 · **2 dosi di pasta corrosiva** (§7) · 2 pozioni di *cura ferite leggere* · corda da scalata con rampino · **scudiscio da corsa di ottima fattura** *(che non usa: gliel'hanno dato perché lo lasciasse sul posto)*  
 }}
 
 *Adepto di Norgorber nel modo pratico: non prega, esegue. Non conosce Ottavia Vesca e
@@ -4238,13 +4238,13 @@ ___
 ___
 **Mischia** bastone da tinozza +1 *(1d6 non letale)* · pugno +1 (1d3 non letale)  
 
-**STATISTICHE**
-___
-For 12, Des 11, Cos 12, Int 10, Sag 11, Car 10 · **Abilità** Artigianato (tintura) +6, Professione +4  
-
 **TATTICHE**
 ___
 Male, e in gruppo. Si ferma se vede una lama vera, se vede sangue, o se qualcuno più anziano di lui alza la voce.  
+
+**STATISTICHE**
+___
+For 12, Des 11, Cos 12, Int 10, Sag 11, Car 10 · **Abilità** Artigianato (tintura) +6, Professione +4  
 }}
 
 ### 4.2 · Bravaccio del canale — GS 1/2
@@ -4264,13 +4264,13 @@ ___
 ___
 **Mischia** mazza pesante +4 (1d8+2) · coltello +3 (1d4+2/19–20) · **BAB** +1 · **CMB** +3 · **CMD** 14  
 
-**STATISTICHE**
-___
-For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Arma Focalizzata (mazza pesante), Attacco Poderoso, Robustezza  
-
 **TATTICHE**
 ___
 Per la paga della serata. **Si arrende** se ne cadono due, o a un Intimidire CD 14 fatto da chi ne ha appena messo giù uno. Nessuno di loro morirà per Sfregio.  
+
+**STATISTICHE**
+___
+For 15, Des 12, Cos 14, Int 9, Sag 10, Car 8 · **Talenti** Arma Focalizzata (mazza pesante), Attacco Poderoso, Robustezza  
 }}
 
 **Pico** — uno dei quattro, diciassette anni, quello della rissa alla fontana.
@@ -4291,13 +4291,13 @@ ___
 ___
 **Mischia** lancia lunga +5 (1d8+3) · spada corta +4 (1d6+2/19–20) · **BAB** +2  
 
-**STATISTICHE**
-___
-For 15, Des 12, Cos 14, Int 10, Sag 11, Car 10 · **Talenti** Arma Focalizzata (lancia lunga)  
-
 **TATTICHE**
 ___
 In formazione, con le lance, e mai da soli. Trenchi ne ha **dodici** e li usa tutti insieme o nessuno.  
+
+**STATISTICHE**
+___
+For 15, Des 12, Cos 14, Int 10, Sag 11, Car 10 · **Talenti** Arma Focalizzata (lancia lunga)  
 }}
 
 ### 4.4 · Cerbo, guardiano del magazzino — GS 1/2
@@ -4317,13 +4317,13 @@ ___
 ___
 **Mischia** randello +2 (1d6+1)  
 
-**STATISTICHE**
-___
-**Percezione** +2  
-
 **TATTICHE**
 ___
 Non combatte. **Urla.**  
+
+**STATISTICHE**
+___
+**Percezione** +2  
 }}
 
 *Ha sessantun anni e dorme in magazzino perché a casa c'è la nuora.*

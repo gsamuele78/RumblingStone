@@ -56,6 +56,15 @@ gioca come **pericolo ambientale con contromosse quantificate** (vedi STRUTTURA
 **Full**: Morso +39 (2d8+11), 2 artigli +37 (2d6+5), 2 ali +37 (1d8+5), coda +37 (2d6+16), stritolamento (Huge) 2d8+16
 **Breath weapon (soffio)**: **linea 30 m, 20d8 elettricità**, Ref **CD 32** dimezza (10 + ½ DV + Cos), 1/1d4 round — *usato dall'alto sui bastioni come hazard di bombardamento*
 
+**Tattiche**
+- *Prima del combattimento e durante (profilo aereo, Fasi 1-3)*: resta in **volo alto**, alterna passate di soffio sui camminamenti e Snatch sulle balliste/serventi. **Non atterra mai** finché il Mythal non lo inchioda (Fase 4).
+- *A terra (Fase 4)*: costretto alla mischia, usa stritolamento, coda e morso; cerca di sfondare verso il cerchio del Mythal per spegnere l'ancoraggio (se lo raggiunge e uccide un PG-focus, riguadagna il volo).
+- *Morale*: Se le contromosse dei PG (balliste, gufi Tiri Kitor, esca) hanno successo ripetuto, sceglie di ritirarsi 1d4 round per ricaricare — *non* di ingaggiare corpo a corpo.
+- *Morale — trigger di fuga (nemesi ARC-10)*: se ridotto sotto **80 pf** *prima* che il
+  Mythal sia completo, Tyrgarun **fugge** (scavare + volo appena fuori area) e
+  diventa una **nemesi ricorrente** per campagne future. Se il Mythal è già attivo
+  quando scende sotto 80 pf, **non può fuggire** e va abbattuto.
+
 **Statistiche** **Abilities**: For 33, Des 10, Cos 25, Int 18, Sag 19, Car 18 · **BAB/Grapple**: +30/+49
 **Feats**: Flyby Attack, Hover, Wingover, Multiattack, Power Attack, Cleave, Improved Initiative, Snatch, Wingstorm `[Private source — Draconomicon]`, Riflessi Fulminei, Volontà di Ferro — undici, quanti ne dànno 30 DV; gli ultimi due spiegano il Ref +19 della scheda e portano Will a +23
 **Skills**: Spot +37, Listen +37, Nascondersi -4 (Huge), Raggirare +25, Concentrazione +30
@@ -79,18 +88,7 @@ effettivo scende a **~16-17**: epico ma battibile da party APL 14 + alleati.
 - **Speed**: 12 m, scavare 6 m — **niente volo** (Mythal attivo). Se il Mythal cade, torna al profilo aereo.
 - **Soffio**: invariato (20d8 linea, CD 32) ma ora **tracciabile a terra**: i PG possono spezzare la linea di tiro con copertura/mura.
 - **Malus da Mythal (già canone STRUTTURA §7)**: -2 a tutti i tiri per colpire e TS, niente teletrasporto/*velo* offensivo.
-- **Tattica**: vedi **Tattiche** qui sotto, *A terra (Fase 4)*.
-
----
-
-**Tattiche**
-- *Prima del combattimento e durante (profilo aereo, Fasi 1-3)*: resta in **volo alto**, alterna passate di soffio sui camminamenti e Snatch sulle balliste/serventi. **Non atterra mai** finché il Mythal non lo inchioda (Fase 4).
-- *A terra (Fase 4)*: costretto alla mischia, usa stritolamento, coda e morso; cerca di sfondare verso il cerchio del Mythal per spegnere l'ancoraggio (se lo raggiunge e uccide un PG-focus, riguadagna il volo).
-- *Morale*: Se le contromosse dei PG (balliste, gufi Tiri Kitor, esca) hanno successo ripetuto, sceglie di ritirarsi 1d4 round per ricaricare — *non* di ingaggiare corpo a corpo.
-- *Morale — trigger di fuga (nemesi ARC-10)*: se ridotto sotto **80 pf** *prima* che il
-  Mythal sia completo, Tyrgarun **fugge** (scavare + volo appena fuori area) e
-  diventa una **nemesi ricorrente** per campagne future. Se il Mythal è già attivo
-  quando scende sotto 80 pf, **non può fuggire** e va abbattuto.
+- **Tattica**: vedi **Tattiche** qui sopra, *A terra (Fase 4)*.
 
 ---
 

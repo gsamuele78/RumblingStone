@@ -591,12 +591,13 @@ def togli_blocco(testo: str) -> str:
 # ── la parte leggibile (ADR-0091) e la scheda di stampa (ADR-0105) ──────────
 # Il blocco ```statblocco dice i numeri; le righe che lo seguono nella forma di
 # ADR-0091 dicono come si legge la creatura al tavolo. In stampa le due cose
-# formano un riquadro solo, a fasce come nelle AP: DIFESA, ATTACCO,
-# STATISTICHE, CAPACITÀ SPECIALI, TATTICHE. Chi impagina (PDF, HTML,
+# formano un riquadro solo, a fasce come nelle AP PF1e: DIFESA, ATTACCO,
+# TATTICHE, STATISTICHE, CAPACITÀ SPECIALI (ordine di Burnt Offerings, scelto
+# da Jfs il 2026-11-13). Chi impagina (PDF, HTML,
 # Homebrewery) legge le righe qui, così il riquadro ha la stessa forma ovunque.
 
 #: Le etichette della parte leggibile, nell'ordine di ADR-0091.
-SEZIONI = ("Iniziativa", "Difesa", "Attacco", "Statistiche", "Capacità speciali", "Tattiche")
+SEZIONI = ("Iniziativa", "Difesa", "Attacco", "Tattiche", "Statistiche", "Capacità speciali")
 #: Le fasce del riquadro, cioè le sezioni che hanno un titolo in stampa.
 #: «Iniziativa» no: è la riga sotto il nome, come nelle AP.
 FASCE = SEZIONI[1:]

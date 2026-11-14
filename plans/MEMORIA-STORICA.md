@@ -1232,7 +1232,29 @@ repo scritto con altre parole.
 - **Testo:** Terza tecnica della richiesta del DM del 2026-11-13 («continua con le prossime che mancano e che misurate migliorano»). `export_booklet_typst` chiede a typst PDF/A-2a insieme a PDF/UA-1. veraPDF 1.28.2 sui 20 booklet, main 683480af: PDF/A-2a 0/20 e 544 controlli falliti (6.2.10-2 ×484 trasparenza senza intento d'uscita, 6.6.4-1 ×20 e 6.6.2.3.1 ×40 metadati XMP); ramo 20/20 e 0. PDF/UA-1 resta 20/20, pagine 985 = 985, testo estratto identico, peso 75,2 → 75,3 MB.
 - **Trovato nel repo:** `plans/adr/ADR-0131-il-volume-da-stampa-e-anche-pdf-a-2a.md` · `plans/esperimenti/pdfa-2026-11-13/MISURE.md` · `scripts/tests/test_pdfua.py` (TestPdfA)
 - **Solo qui:** typst 0.15.2 rifiuta PDF/A-4 con PDF/UA-1 («mutually incompatible»: A-4 vuole PDF 2.0, UA-1 PDF 1.7); A-2a, 2b, 2u e 3a si combinano. 86 pagine su 985 hanno pixel diversi a 40 dpi, al più 3 livelli su 255 e in media 1: è l'intento d'uscita sRGB, non si vede. Ghostscript `-dPDFA` scartato senza misura perché rifà il PDF e perde i tag. La voce è nata MS-0105 ed è diventata MS-0106 al riallineo, dopo la #414 delle regole.
-### MS-0107 · 2026-11-13 · ADR-0132: le copie delle immagini tengono la provenienza
+
+### MS-0107 · 2026-11-13 · ADR-0091: le schede nell'ordine di Burnt Offerings
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0091
+- **Temi:** schede stampa booklet
+- **Origine:** riga del 2026-11-13 «ADR-0091, aggiornamento: le schede nell'ordine delle AP PF1e» in `plans/CHANGELOG.md`
+- **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
+- **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
+- **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-13 · ADR-0126 lotto 8: adamantio, mithral, bastoni con le cariche
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole schede
+- **Origine:** addendum della riga del 2026-11-13 «ADR-0126, lotto 8 terza parte: adamantio, mithral, bastoni con le cariche» in `plans/CHANGELOG.md`
+- **Testo:** `oggetti.toml` ha il costo in più di adamantio e mithral per categoria; la verifica `ricchezza` lo somma al potenziamento e conta i bastoni con le cariche scritte. Misura: violazioni 33 → 33, non verificabili 374 → 375; banco, terza prova: 1 → 52 su 125. Nella stessa PR le risposte di Jfs a cinque card del 13/11 (thread dell'audit): duergar con classi da PG a GS 2 e 8 con i file rinominati, goblin combattente di 1° a GS 1/3, tre righe di Balvar rimesse intere (Jfs non ha scelto la consigliata «tieni i tagli»), Terros 348 pf, «Virare» al posto di «Virata».
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
+### MS-0109 · 2026-11-13 · ADR-0132: le copie delle immagini tengono la provenienza
 
 - **Data:** 2026-11-13
 - **PR:** —

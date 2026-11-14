@@ -42,12 +42,6 @@ Large monstrous humanoid, 7 HD (Minotauro 6 / Barbarian 1), CE. Tutto SRD.
 
 **Attacco** Vel 12 m · Spazio 3 m, portata 3 m · **Mischia** grande ascia +1 a due mani +13/+8 (3d6+10/x3) e incornata +7 (1d8+3); oppure incornata +12 (1d8+6) · **Carica Devastante** (Str): in carica, incornata +14 (4d6+9) · **Distanza** giavellotto +6/+1 (1d8+6) · **Ira** 1/giorno (7 round: For 27, Cos 23, Vol +9, CA 16, +14 pf → 81; grande ascia +15/+10, 3d6+13; incornata +9, 1d8+4)
 
-**Statistiche** For 23, Des 10, Cos 19, Int 7, Sag 10, Car 8 · BAB +7; Lotta +17 · **Talenti** Tempra Possente, Attacco Poderoso, Volontà di Ferro · **Abilità** Intimidire +3, Saltare +8 · **Equipaggiamento** grande ascia +1 (Grande), giaco di maglia (Grande), giavellotti e asce da lancio (Grandi), pozione di *volare*, pozione di *cura ferite gravi*, pozione di *cura ferite leggere*
-
-**Capacità speciali**
-- **Astuzia naturale** (Str): immune a *labirinto*, non si perde mai, segue le tracce, non è mai colto alla sprovvista.
-- **Movimento veloce** del barbaro (già nella velocità).
-
 **Tattiche**
 - *Prima del combattimento*: aspetta nei corridoi stretti della fortezza, dove la sua portata conta e i PG non lo possono circondare. Non si nasconde: si fa sentire, perché vuole che vengano da lui.
 - *Durante il combattimento*:
@@ -55,6 +49,12 @@ Large monstrous humanoid, 7 HD (Minotauro 6 / Barbarian 1), CE. Tutto SRD.
   - **Round 2 e seguenti**: attacco completo con la grande ascia e Attacco Poderoso a −4 sullo stesso bersaglio, finché cade; poi il più vicino. In un corridoio usa la portata di 3 m per colpire chi gli si avvicina.
   - Contro chi vola o resta fuori portata: giavellotti; se gli manca il bersaglio per due round beve la pozione di *volare*.
 - *Morale*: in ira combatte fino alla morte. Finita l'ira, affaticato e sotto 20 pf, beve *cura ferite gravi* e si ritira verso Koth; se Koth è caduto o fuggito, combatte fino alla fine, nei corridoi che conosce meglio di chiunque.
+
+**Statistiche** For 23, Des 10, Cos 19, Int 7, Sag 10, Car 8 · BAB +7; Lotta +17 · **Talenti** Tempra Possente, Attacco Poderoso, Volontà di Ferro · **Abilità** Intimidire +3, Saltare +8 · **Equipaggiamento** grande ascia +1 (Grande), giaco di maglia (Grande), giavellotti e asce da lancio (Grandi), pozione di *volare*, pozione di *cura ferite gravi*, pozione di *cura ferite leggere*
+
+**Capacità speciali**
+- **Astuzia naturale** (Str): immune a *labirinto*, non si perde mai, segue le tracce, non è mai colto alla sprovvista.
+- **Movimento veloce** del barbaro (già nella velocità).
 
 **Benchmark** PF T1-1 riga 5 (CA 18, pf 55, att. +10, danno medio 20, CD 15): CA 18 ✓ · pf 67 ✓ · att. +13 ✓ · danno completo ≈ 24, ≈ 50 in carica ✓. È un GS 5 pieno; contro APL 13 è un colpo di colore o la guardia del corpo di Koth.
 

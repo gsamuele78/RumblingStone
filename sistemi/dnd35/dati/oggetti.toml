@@ -1310,6 +1310,20 @@ armatura = [1000, 4000, 9000, 16000, 25000]
 "zone of silence" = 1000
 "zone of truth" = 150
 
+[oggetti.materiali.adamantine]
+# SRD, «Special Materials»: costo in più dell'oggetto (mo), per categoria
+leggera = 5000
+media = 10000
+pesante = 15000
+arma = 3000
+
+[oggetti.materiali.mithral]
+# SRD, «Special Materials»: costo in più dell'oggetto (mo), per categoria
+leggera = 1000
+media = 4000
+pesante = 9000
+scudo = 1000
+
 # come una scheda scrive un oggetto (espressioni regolari; non vengono dall'SRD). «N» è il bonus letto.
 [[oggetti.nomi]]
 nome = "ring of protection +N"

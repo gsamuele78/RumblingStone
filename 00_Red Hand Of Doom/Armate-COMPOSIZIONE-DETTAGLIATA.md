@@ -81,7 +81,7 @@
 
 | Unità | CR | Statblock file | Note |
 |---|---|---|---|
-| Goblin Warrior 1 | 1/2 | [CANONE — DM 2026-05-05] `Bestiario/mostri/goblin-warrior1-cr05.md` | MM Goblin |
+| Goblin Warrior 1 | 1/3 | [CANONE — DM 2026-05-05] `Bestiario/mostri/goblin-warrior1-cr05.md` | MM Goblin |
 | Goblin Worg Rider | 5 | `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/goblin worg raider cr5.htm` | 300 unità |
 | Worg (cavalcatura) | 2 | `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Worg.htm` | MM |
 | Orc Regular | 1/2 | `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/orc_regular.pcg` | MM Orc |

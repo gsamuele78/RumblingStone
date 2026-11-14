@@ -30,6 +30,11 @@ fonte: ricostruzione del repo su SRD 3.5, Complete Warrior e archetipo Gigante P
 
 **Attacco** Vel 12 m (9 m del mezzorco, +3 m di movimento veloce) · Spazio 3 m, portata 3 m · **Mischia** ascia bipenne Grande +2 +24/+19/+14 (3d6+17/×3) · **in ira** +26/+21/+16 (3d6+20/×3) · **in ira e frenesia** +29/+29/+24/+19 (3d6+24/×3; l'attacco in più c'è solo con l'attacco completo) · **Attacco Poderoso migliorato**: fino a −13 al tiro per colpire per **+39 ai danni** (+3 per ogni −1 con un'arma a due mani) · ira 2/giorno, frenesia 4/giorno (una per incontro), ispirare frenesia 1/giorno
 
+**Tattiche**
+- *Prima del combattimento*: avanza davanti agli ogre col cancello come unico bersaglio `[INFERRED — In quale scena di ARC-08 entra Krusk?; base: chat Gemini, Incontro 2A al cancello mentre Gorthak attacca le mura, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Entra in ira a 9 m dal nemico.
+- *Durante il combattimento*: il primo round demoralizza il nano più grosso con Ira Intimidatoria, poi carica. Al primo colpo subito entra in frenesia e la ispira agli ogre vicini. Attacco Poderoso a −8 contro chi ha CA sotto 30 (+24 ai danni), Incalzare potenziato col passo di Incalzare supremo dentro una fila di difensori. Se nessuno lo ferma, rompe il cancello.
+- *Morale*: non si ritira. In frenesia continua anche sotto −10 pf e muore quando la frenesia finisce, se nessuno lo cura. Fuori dalla frenesia, sotto i 30 pf, grida il nome di Tiamat e carica comunque.
+
 **Statistiche** For 30 (34 in ira, 40 in ira e frenesia), Des 11, Cos 22 (26 in ira), Int 8, Sag 12, Car 6 · BAB +13; Lotta +27 (+29 in ira, +32 in ira e frenesia) · **Talenti** Attacco poderoso, Incalzare (1°, bonus da guerriero), Ira Distruttiva (3°), Ira Intimidatoria (6°), Iniziativa migliorata (9°), Incalzare potenziato (12°), Duro a morire (bonus del berserker) · **Abilità** Intimidire +14, Saltare +18, Ascoltare +7 (26 gradi: 16 in Intimidire, 6 in Ascoltare, 4 in Saltare) · **Linguaggi** Comune, Orchesco · **Qualità speciali** analfabetismo (barbaro) · **Equipaggiamento** cintura della forza da gigante +6, amuleto della salute +4, bracciali dell'armatura +5, anello di protezione +2, mantello della resistenza +3, ascia bipenne Grande +2 (102.340 mo in tutto)
 
 **Capacità speciali**
@@ -39,11 +44,6 @@ fonte: ricostruzione del repo su SRD 3.5, Complete Warrior e archetipo Gigante P
 - **Ispirare frenesia (Sop)**: 1/giorno, mentre è in frenesia; gli alleati consenzienti entro 3 m entrano in frenesia per 11 round `[Private source — Complete Warrior, p. 34]`. Con i 20 ogre della sua coorte è la riga che fa paura.
 - **Ira Distruttiva**: in ira +8 alle prove di Forza per sfondare porte e rompere oggetti fissi. In ira e frenesia la prova contro il cancello vale **+23** (For 40, +15, e +8) `[Private source — Complete Warrior, p. 97]`.
 - **Ira Intimidatoria**: in ira, una volta per incontro, demoralizza un nemico entro 9 m con azione gratuita (Intimidire +14); il bersaglio resta scosso finché dura l'ira `[Private source — Complete Warrior, p. 102]`.
-
-**Tattiche**
-- *Prima del combattimento*: avanza davanti agli ogre col cancello come unico bersaglio `[INFERRED — In quale scena di ARC-08 entra Krusk?; base: chat Gemini, Incontro 2A al cancello mentre Gorthak attacca le mura, da decidere nel lotto S1 di PIANO-MASTER-DEF]`. Entra in ira a 9 m dal nemico.
-- *Durante il combattimento*: il primo round demoralizza il nano più grosso con Ira Intimidatoria, poi carica. Al primo colpo subito entra in frenesia e la ispira agli ogre vicini. Attacco Poderoso a −8 contro chi ha CA sotto 30 (+24 ai danni), Incalzare potenziato col passo di Incalzare supremo dentro una fila di difensori. Se nessuno lo ferma, rompe il cancello.
-- *Morale*: non si ritira. In frenesia continua anche sotto −10 pf e muore quando la frenesia finisce, se nessuno lo cura. Fuori dalla frenesia, sotto i 30 pf, grida il nome di Tiamat e carica comunque.
 
 Benchmark: PF T1-1 riga 14 (CA 29, pf 200, attacco +24, danno 75): CA sotto (19, in frenesia 13) / pf in ira poco sotto (192) / attacco +29 in frenesia sopra / danno con Attacco Poderoso a −8 circa 2 × (3d6+48) ≈ 117 sopra / TS Tempra sopra. Cannone di vetro voluto, come la Furia della Mano: i PG lo colpiscono quasi sempre e devono abbatterlo prima che arrivi.
 Combinazioni ed EL: da solo EL 14; con 4 ogre EL 15; con i 20 ogre della coorte è un'unità della battaglia di massa (`08_La Battaglia Di Hammerfist/mass_combat_guide_Dm.md`), non un incontro.
