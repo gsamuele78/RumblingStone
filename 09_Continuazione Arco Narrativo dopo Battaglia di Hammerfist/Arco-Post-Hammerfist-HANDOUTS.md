@@ -200,13 +200,13 @@
 
 ## HANDOUT 7 — La carta del cielo di Zalkatar
 
-> **Quando darlo** `[INFERRED — Dove trovano i PG la carta: sul mago dei piromanti drow o da Sethrax al Torneo?; base: tabella 56-70 di INCONTRI-VIAGGIO-CANNATH-VALE e «+1 indizio gratuito» di SUBQUEST-Artemis §4.3]`: il dossier delle piste di ARC-09 è fermo fino
-> alla fine di ARC-07 al tavolo, quindi il punto di consegna lo sceglie il DM.
-> Due posti già scritti nel testo: addosso al mago della **squadra di piromanti
-> drow** (tabella del Cannath Vale, 56-70, `INCONTRI-VIAGGIO-CANNATH-VALE`),
-> prima di fine Mirtul; oppure come **indizio gratuito** sull'arco della Torre
-> quando Sethrax si smaschera al Torneo (`P2B-Torneo-DAUTH-SUBQUEST-Artemis`
-> §4.3), cioè dopo: in quel caso la carta dice dove la Torre **è andata**.
+> **Quando darlo** (deciso dal DM il 2026-11-14, sulla card: «tutte e due»). La
+> carta sta addosso al mago della **squadra di piromanti drow** (tabella del
+> Cannath Vale, 56-70, `INCONTRI-VIAGGIO-CANNATH-VALE`), prima di fine Mirtul.
+> Se i PG non lo incontrano o non lo perquisiscono, **Sethrax** ne dà una copia
+> quando si smaschera al Torneo, come indizio gratuito sull'arco della Torre
+> (`P2B-Torneo-DAUTH-SUBQUEST-Artemis` §4.3): arriva dopo il 30 Mirtul, quindi
+> la carta dice dove la Torre **è già andata**.
 > Un foglio rotondo di pelle sottile, inchiostro bruno, nessuna firma.
 
 ![Carta del cielo di Zalkatar: cielo di mezzanotte visto dall'alto, con il meridiano nord-sud, dieci costellazioni con i loro nomi e una stella cerchiata al centro esatto, nel Sigillo](Immagini-Handout/carta-del-cielo/carta-del-cielo-zalkatar-stampa.png)
