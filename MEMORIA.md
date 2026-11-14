@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-14 | RICERCA-TOOL-LGM-2026 | §3.1, la carta del cielo passa a Stellarium 26.2 (richiesta di Jfs: aggiornare… | Due lanci dello stesso script: 619 pixel diversi su main (23.4, segno animato) contro 0 (26.2, segno fisso); stella-chiave al centro esatto in tutte e due (sca… |
 | 2026-11-14 | STANDARD-SCHEDE | ADR-0091, le voci che mancavano nelle schede di ARC07-DEF-4. Dopo l'ordine (rig… | `verifica_scheda.py Bestiario 0*/`: 33 violazioni e 374 non verificabili, come su main (la verifica `ricchezza` non legge ancora «Altro equipaggiamento»); due… |
 | 2026-11-14 | RICERCA-TOOL-LGM-2026 | §3.1, la carta del cielo come handout: handout 7 di ARC-09 «La carta del cielo… | In PR |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0132: le copie delle immagini tengono la dichiarazione di provenienza.… | ✅ copie con master firmato che dichiarano la sorgente 0 → 28 su 28; immagini JPEG nei 20 booklet PDF 0 → 36 su 89, in 8 booklet (i cinque del Drappo al complet… |
@@ -96,12 +97,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, due decisioni del DM sulle card delle difese (2026-11-13): la RI del… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 1 aperte, 323 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 113 voci, l'ultima MS-0113 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 114 voci, l'ultima MS-0114 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
