@@ -1244,7 +1244,7 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
 
-### MS-0115 · 2026-11-14 · ADR-0135: la trascrizione della serata è una bozza locale
+### MS-0108 · 2026-11-14 · ADR-0135: la trascrizione della serata è una bozza locale
 
 - **Data:** 2026-11-14
 - **PR:** —
@@ -1253,5 +1253,5 @@ repo scritto con altre parole.
 - **Origine:** riga del 2026-11-14 «ADR-0135 (proposta, testing): la trascrizione della serata è una bozza locale» in `plans/CHANGELOG.md`
 - **Testo:** il DM ha scelto sulla card del 13/11 «Prova su una serata» per la trascrizione locale con whisper.cpp (RICERCA-TOOL-ESTERNI §3 e §3.1). Banco nel container, CPU, `large-v3-turbo-q5_0`: FLEURS italiano 10,8 minuti 16,6% di parole sbagliate col contesto di whisper acceso e 5,8% con `-mc 0` (582 s contro 819 s); copione finto con voce Piper CC0, 6 nomi della campagna giusti su 20, numeri tutti giusti. Soglia proposta per l'adozione: il log richiede un terzo di tempo in meno e almeno metà dei momenti candidati serve.
 - **Trovato nel repo:** `plans/adr/ADR-0135-la-trascrizione-della-serata-e-una-bozza-locale.md` · `plans/esperimenti/trascrizione-2026-11-14/MISURE.md` · `docs/how-to/GUIDA-TRASCRIZIONE-SERATA.md`
-- **Solo qui:** col contesto acceso whisper salta interi pezzi quando una frase somiglia a una già detta (135 parole perse su 1012 in FLEURS, dove le frasi si ripetono). Il prompt coi nomi vive in quel contesto: con `-mc 0` non cambia nulla (trascrizioni identiche), col contesto acceso corregge alcuni nomi ma ne sostituisce altri («Tordek chiede» → «Thorik chiede», 4 nomi inventati su 20). Prima misura con un errore mio: la normalizzazione incollava le parole a capo, e dava 19,9% su FLEURS invece di 16,6%. La voce MS è stata data dal coordinatore e si rinumera al riallineo.
+- **Solo qui:** col contesto acceso whisper salta interi pezzi quando una frase somiglia a una già detta (135 parole perse su 1012 in FLEURS, dove le frasi si ripetono). Il prompt coi nomi vive in quel contesto: con `-mc 0` non cambia nulla (trascrizioni identiche), col contesto acceso corregge alcuni nomi ma ne sostituisce altri («Tordek chiede» → «Thorik chiede», 4 nomi inventati su 20). Prima misura con un errore mio: la normalizzazione incollava le parole a capo, e dava 19,9% su FLEURS invece di 16,6%. Il coordinatore ha assegnato MS-0115; sul ramo la voce è la prossima dopo main, e chi entra dopo rinumera al riallineo.
 
