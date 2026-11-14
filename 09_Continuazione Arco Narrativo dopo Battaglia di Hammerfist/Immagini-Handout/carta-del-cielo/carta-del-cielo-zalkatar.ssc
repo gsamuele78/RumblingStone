@@ -1,0 +1,48 @@
+// Carta del cielo di Zalkatar (ARC-09, Torre invisibile): mezzanotte del 30 Mirtul,
+// vista dal luogo del prossimo passo della Torre. Il Sigillo e la sua stella-chiave allo zenit.
+// Provenienza e uso: PROVENIENZA.txt accanto a questo file; handout 7 in
+// Arco-Post-Hammerfist-HANDOUTS.md. Si lancia con:
+//   stellarium --startup-script carta-del-cielo-zalkatar.ssc
+// dopo aver copiato cultura-del-cielo/rumblingstone in ~/.stellarium/skycultures/
+// e sostituito CARTELLA_DI_USCITA con una cartella vera.
+// I tre numeri che decidono la carta:
+//   latitudine 38.922 = declinazione della stella-chiave (HIP 81833): sta allo zenit solo li';
+//   2000-06-01 00:04 UT a longitudine 0 = mezzanotte del 30 Mirtul (giorno 152 dell'anno di Harptos;
+//   i 4 minuti portano la stella-chiave esattamente sul meridiano, a mezzanotte e' a un grado);
+//   a quell'ora la stella-chiave passa sul meridiano.
+core.setAppLanguage("it");
+core.setSkyLanguage("it");
+core.setSkyCulture("rumblingstone");
+core.setObserverLocation(0.0, 38.922, 0, 0, "Passo della Torre", "Earth");
+core.setDate("2000-06-01T00:04:00", "utc");
+core.setTimeRate(0);
+LandscapeMgr.setFlagAtmosphere(false);
+LandscapeMgr.setCurrentLandscapeID("zero");
+LandscapeMgr.setFlagLandscape(true);
+LandscapeMgr.setFlagFog(false);
+LandscapeMgr.setFlagCardinalPoints(true);
+SolarSystem.setFlagPlanets(false);
+MilkyWay.setFlagShow(false);
+ZodiacalLight.setFlagShow(false);
+NebulaMgr.setFlagHints(false);
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setFlagBoundaries(false);
+ConstellationMgr.setFlagArt(false);
+StarMgr.setFlagLabels(false);
+StelSkyDrawer.setFlagStarMagnitudeLimit(true);
+StelSkyDrawer.setCustomStarMagnitudeLimit(5.0);
+GridLinesMgr.setFlagMeridianLine(true);
+GridLinesMgr.setFlagHorizonLine(true);
+core.setProjectionMode("ProjectionStereographic");
+core.setGuiVisible(false);
+StelMovementMgr.setFlagTracking(false);
+StelMovementMgr.lookZenith();
+StelMovementMgr.zoomTo(182, 0);
+core.selectObjectByName("HIP 81833", true);
+StelMovementMgr.setFlagTracking(false);
+StelMovementMgr.lookZenith();
+core.wait(4);
+core.screenshot("zalkatar", false, "CARTELLA_DI_USCITA/", true);
+core.wait(2);
+core.quitStellarium();

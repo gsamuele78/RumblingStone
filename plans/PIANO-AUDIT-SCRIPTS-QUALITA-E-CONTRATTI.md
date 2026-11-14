@@ -36,14 +36,21 @@
 
 ## Gate / follow-up (al tavolo / opzionali)
 
-- ⬜ shellcheck: oggi **non bloccante** (non verificabile nell'ambiente di sviluppo);
+- 📅 shellcheck: oggi **non bloccante** (non verificabile nell'ambiente di sviluppo);
   promuovere a bloccante dopo una passata pulita su `converters/Image-to-webp`.
   *Condizione*: la passata pulita. 🔀 **Spostata il 2026-11-09 in
   [AMBIENTE A6](PIANO-AMBIENTE-RIPRODUCIBILE.md)**, che ha la stessa voce
   («shellcheck … bloccante in CI»): resta aperta là, non chiusa.
-- ⬜ opzionale: portare i convertitori (`converters/`) allo standard pieno
+  📅 **2026-11-13, D5 del piano di recupero**: è un lotto del blocco
+  piattaforma, [milestone v1.5.0](https://github.com/gsamuele78/RumblingStone/milestone/5)
+  («shellcheck bloccante» nella roadmap del motore).
+- 📅 opzionale: portare i convertitori (`converters/`) allo standard pieno
   (argparse/test) — oggi marcati `external-toolchain` nel manifest.
   *Condizione*: nessuna scritta; resta aperta al DM in RECUPERO D5.
+  📅 **2026-11-13, Jfs sulla card (D5 del piano di recupero): «nel blocco
+  piattaforma (v1.5.0)»**, una voce sola «convertitori con i test» nella
+  [milestone v1.5.0](https://github.com/gsamuele78/RumblingStone/milestone/5).
+  Non è un'attesa: è un lotto con la sua milestone.
 - ~~opzionale: fallback pyyaml in `compress_skills.py` (oggi `external_deps`).~~
   ✅ **Chiusa come superata il 2026-11-09** (card del DM, «Chiudi, superato»).
   *Prova*: PyYAML è una dipendenza dichiarata (`requirements.txt:28`,

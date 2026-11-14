@@ -4,7 +4,8 @@
 > risposta e il lotto I è fatto: 21 celle, 18 liste, `ranger`/`paladino`/`bardo`
 > che prima il generatore non sapeva costruire, e la variante PF1e sugli
 > incantesimi. **Aperti**: i lotti **J** e **K**, proposti in §9 e §10 su
-> richiesta del DM, non ancora autorizzati.
+> richiesta del DM; decisi da Jfs il 2026-11-13 (D5 del piano di recupero):
+> **J sì**, col thread delle regole; **K in attesa** della milestone v1.2.0.
 > **Il debito del Bestiario è chiuso: 157 schede su 157 sistemate.** · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
 > **Decisioni del DM (§5)**: taratura **SRD 3.5 di norma, PF1e come variante
 > più cattiva**; il generatore serve per **quello che nel Bestiario non c'è**;
@@ -565,7 +566,11 @@ sottile abbastanza da essere una scelta del DM.
 
 ## §9 · PROPOSTA — Lotto J: i template semplici di PF1e
 
-> ⚠️ **Proposta, non autorizzata.** Nasce da una domanda del DM: *«ha senso
+> 📅 **2026-11-13, Jfs sulla card (D5 del piano di recupero): «sì, col thread
+> delle regole»**: dati nel plugin PF1e con la fonte per riga e i test; gli
+> archetipi di classe restano fuori, come dice questa sezione.
+>
+> ⚠️ **Proposta, non autorizzata** (fino al 2026-11-13). Nasce da una domanda del DM: *«ha senso
 > inserire i template (archetipi) di Pathfinder 1e per versioni potenziate dei
 > PNG e mostri della 3.5, quelli sotto licenza aperta e non chiusi da Paizo?»*
 
@@ -600,7 +605,12 @@ in GS reale.
 
 ## §10 · PROPOSTA — Lotto K: l'incontro tarato sulla composizione del gruppo
 
-> ⚠️ **Proposta, non autorizzata.** Nasce da una domanda del DM: *«il generatore
+> ⏳ **2026-11-13, Jfs sulla card (D5 del piano di recupero): in attesa, parte
+> quando la milestone v1.2.0 (regole complete) è chiusa.** La condizione la
+> misura `adozioni_in_attesa.py` (voce `generatore-lotto-k`: `## [1.2.0]` in
+> `CHANGELOG.md`), e la CI lo dice quando scatta.
+>
+> ⚠️ **Proposta, non autorizzata** (fino al 2026-11-13). Nasce da una domanda del DM: *«il generatore
 > ha qualcosa per generare il gruppo di incontro che lavora meglio contro un
 > gruppo di incantatori o guerrieri o misti? ha senso?»*
 
