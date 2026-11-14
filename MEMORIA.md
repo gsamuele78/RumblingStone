@@ -49,7 +49,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11 (ADR… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/ramo-di-gruppo-2026-11-05/` (serie unica 0001-0004, provata su `ce34599` il 2026-11-05: ingloba le… | `git am --3way` sul ramo `campaign-group-rumblingstone`, passi in `docs/how-to/GUIDA-PATCH-RAMO-DI-GRUPPO.md` |
-| **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: ~~i pf di Terros~~ (348, deciso dal DM il 2026-11-13); ~~*Virata* da riscontrare~~ (si chiama «Virare» ed è riscontrato, DM 2026-11-13); la p… | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
+| **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: restano le domande 28-33 del giro 4 (non riverificate). Chiuse: i pf di Terros (348, deciso dal DM il 2026-11-13); *Virata* (si chiama «Virar… | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
 | **P10 · Mappe, le scelte del DM**: texture e tessere nella pagina di scelta (R8, livello B), la prima immagine di ComfyUI (R4-quinquies), il giro di prova sui modelli 3D CC0 e lo zip Standard di Quaternius (R4-ter), il… | [RESA-ASSET](plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md) §8 · [COLLAUDO-MAPPE](plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) | DM; poi l'agente mette le tessere nel tema e rimisura |
 | **P11 · I collaudi che solo il DM può fare**: l'import `.uvtt` in Foundry (INTEGRAZIONE, ~92%), il gate κ ≥ 0,6 (MISURA-EDITORIALE, ~90%), la prova del blocco dei segreti (PRATICHE PI-3), il collaudo del Drappo L9 al ta… | i piani | DM |
 | **P12 · Immagini da Canva**: gli originali a piena risoluzione dei sette ritratti al posto delle copie da 533 × 800, e Skullcrusher nel cortile col cane di Hella sbagliato | `07_…/Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` §4 | esportare da Canva con lo stesso nome di file |
@@ -85,6 +85,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-11-14 | STANDARD-SCHEDE | ADR-0091, le voci che mancavano nelle schede di ARC07-DEF-4. Dopo l'ordine (rig… | `verifica_scheda.py Bestiario 0*/`: 33 violazioni e 374 non verificabili, come su main (la verifica `ricchezza` non legge ancora «Altro equipaggiamento»); due… |
 | 2026-11-14 | RICERCA-TOOL-LGM-2026 | §3.1, la carta del cielo come handout: handout 7 di ARC-09 «La carta del cielo… | In PR |
 | 2026-11-13 | CHIUSURA-CATENA-EDITORIALE | ADR-0132: le copie delle immagini tengono la dichiarazione di provenienza.… | ✅ copie con master firmato che dichiarano la sorgente 0 → 28 su 28; immagini JPEG nei 20 booklet PDF 0 → 36 su 89, in 8 booklet (i cinque del Drappo al complet… |
 | 2026-11-13 | DRAPPO-DI-TARSILIA-STANDALONE-PF1E | Voce B3 della ricerca sul modulo pubblicabile: le carte da tavolo del Drappo, f… | In PR |
@@ -96,12 +97,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 seconda parte: capacità speciali, pozioni, pergamene, bacchet… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 5 quarta parte: il modificatore di livello delle razze senza da… | In PR |
 | 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 8 prima parte: il valore dell'equipaggiamento.… | In PR |
-| 2026-11-13 | SISTEMI-DI-GIOCO-PLUGIN | ADR-0126, lotto 7 quarta parte: i linguaggi automatici.… | In PR |
 
 ## Le misure che si portano dietro
 
 - **Decisioni**: 1 aperte, 323 chiuse (`decisioni_dm.py`).
-- **Memoria storica**: 112 voci, l'ultima MS-0112 del 2026-11-13 (`memoria_storica.py`, ADR-0127).
+- **Memoria storica**: 113 voci, l'ultima MS-0113 del 2026-11-14 (`memoria_storica.py`, ADR-0127).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

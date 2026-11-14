@@ -7589,7 +7589,7 @@ La tenda della Scena 8: le quattro guardie gli tengono la CA, il sacerdote sta n
 
 **STATISTICHE**
 ___
-For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)  
+For 30 (36 in Ira), Des 20, Cos 24 (30 in Ira), Int 16, Sag 16, Car 18 · BAB +15; Lotta +29 (+32 in Ira) · **Talenti** (7) Attacco Poderoso, Spingere Migliorato, Colpo Terrificante (talento da mostro, SRD), Ira Extra, Iniziativa Migliorata, Volontà di Ferro, Arma Focalizzata (ascia) · **Abilità** Ascoltare +11, Osservare +3, Intimidire +14 (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare) · **Altro equipaggiamento** armatura completa di mithral +2, ascia a due mani +1, 3 giavellotti (tutto di taglia Grande); Occhio di Ossidiana (sotto)  
 
 **CAPACITÀ SPECIALI**
 ___
@@ -7605,7 +7605,7 @@ ___
 *Hobgoblin Medio · Guerriero 8 SRD sulle caratteristiche dell'hobgoblin* · GS 8
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
+**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare +1, Osservare +1 (senza gradi nelle due abilità)
 
 **DIFESA**
 ___
@@ -7618,6 +7618,11 @@ ___
 **Velocità** 6 m (armatura pesante)  
 **Mischia** spadone +14 (2d6+6/19-20)  
 **Distanza** giavellotti +9 (1d6+4), incremento 9 m  
+
+**STATISTICHE**
+___
+Linguaggi: Comune, Goblin  
+Altro equipaggiamento: armatura completa, spadone, giavellotti  
 }}
 <!-- /blocco -->
 
@@ -7630,7 +7635,7 @@ ___
 *Hobgoblin Medio · Adepto 7* · GS 6
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +2 · **Sensi** Ascoltare +2, Osservare +2
+**Iniziativa** +2 · **Sensi** scurovisione 18 m; Ascoltare +2, Osservare +2
 
 **DIFESA**
 ___
@@ -7646,7 +7651,7 @@ Sta nella tenda di Zog'tar (Scena 8).
 
 **STATISTICHE**
 ___
-For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12  
+For 10, Des 14, Cos 15, Int 14, Sag 15, Car 8 · **Abilità** Ascoltare +2, Osservare +2, Concentrazione +12 · **Linguaggi** Comune, Goblin · **Altro equipaggiamento** bastone ferrato  
 }}
 <!-- /blocco -->
 
@@ -7673,7 +7678,7 @@ Non vuole lo scontro con i PG e sa di non reggerlo: alla prima ferita grave gett
 
 **STATISTICHE**
 ___
-For 18, Cos 16, Sag 14 · BAB +6; Lotta +10  
+For 18, Cos 16, Sag 14 · BAB +6; Lotta +10 · **Linguaggi** Comune, Nanico · **Qualità speciali** tratti dei nani (SRD) · **Altro equipaggiamento** armatura completa +1, scudo pesante +1, ascia da guerra nanica +1  
 }}
 
 **Onesto e leale fino alla morte** una volta convinto; antenato di Othrek (Hammerfist 1372).
@@ -7785,6 +7790,12 @@ ___
 **TATTICHE**
 ___
 Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestiario, GS 3: 30 pf, CA 16, falchion +7 (2d4+3).  
+
+**STATISTICHE**
+___
+Linguaggi: Comune, Orchesco  
+Qualità speciali: sensibilità alla luce (abbagliato in piena luce solare o in *luce diurna*)  
+Altro equipaggiamento: cuoio borchiato, falchion, giavellotto  
 }}
 
 {{monster,frame
@@ -7792,7 +7803,7 @@ Il sergente, guerriero 3 nel testo, ha i numeri dell'orco guerriero 4 del Bestia
 *Hobgoblin Medio · guerriero 4 SRD, con Arma Focalizzata e Specializzata* · GS 4
 ___
 **Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)
-**Iniziativa** +1 · **Sensi** Ascoltare −1, Osservare −1
+**Iniziativa** +1 · **Sensi** scurovisione 18 m; Ascoltare −1, Osservare −1
 
 **DIFESA**
 ___
@@ -7804,6 +7815,11 @@ ___
 ___
 **Velocità** 9 m  
 **Mischia** spada lunga +6 (1d8+3/19-20)  
+
+**STATISTICHE**
+___
+Linguaggi: Comune, Goblin  
+Altro equipaggiamento: cuoio borchiato, scudo leggero, spada lunga  
 
 *in otto fanno EL 10; i numeri sono calcolati sull'SRD*
 }}
