@@ -1319,3 +1319,59 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 sera: l'equipaggiamento standard di mostri e PNG non si inventa, si prende dalle tabelle dei manuali in modo deterministico; sulla card ha scelto «Codex PF1e, livello effettivo». Nel repo entrano i 454 PNG dei due Codex, la Tabella 14-9, il prezzo base degli oggetti comuni, la regola «Improving Monsters» e il registro delle regole custom con la voce RC-001. Sette schede vere risultano sopra la Tabella 4-23 (Avarthel, Bothor e Malvur, il comandante dei mercenari di Dauth, il blackguard e il chierico di Abbathor, Krusk, Ur-Vrax): Jfs ha risposto «Tieni e dichiara» alle sette card il 2026-11-14 e ogni scheda porta la riga «Equipaggiamento sopra la tabella: scelta del DM», senza cambiare numeri. Misura: violazioni 30 → 30 (37 senza le dichiarazioni), non verificabili 372 → 374; banco, quarta prova 0 → 50 su 118.
 - **Trovato nel repo:** `ADR-0134` → `plans/adr/ADR-0134-l-equipaggiamento-standard-viene-dai-codex-pf1e-entro-il-valore-del-3-5.md`; `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** le sette schede sopra la tabella non vengono dal prezzo base ma dal leggere l'equipaggiamento dove le schede lo scrivevano già, dentro la riga delle Statistiche: prima la verifica non lo vedeva. Una scheda scrive l'equipaggiamento due volte (recinto e prosa) e la prima versione l'avrebbe contato doppio. La quarta riga della Tabella 14-9 nel PRD somma 1.750 mo nelle categorie contro un totale di 1.650. Il thread del volume ha segnalato le forme non lette; Durin non risulta sopra la tabella con la misura di oggi.
+
+### MS-0115 · 2026-11-14 · Generatore, lotto J: i sette modelli semplici di PF1e
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0034
+- **Temi:** generatore creature modelli pf1e
+- **Origine:** riga del 2026-11-14 «Lotto J, i modelli semplici di PF1e» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha autorizzato il lotto J sulla card del 2026-11-13 («Sì, col thread delle regole»). Il generatore applica al blocco finito i sette modelli semplici del Bestiary di PF1e senza cambiare il GS scritto: i numeri stanno in `sistemi/pf1e/dati/modelli.toml` con la fonte per riga, il conto in `scripts/dmcore/modelli.py`, l'opzione è `--template`. `--piu-cattivi` è `--template advanced`. Gli archetipi di classe restano fuori.
+- **Trovato nel repo:** `ADR-0034` → `plans/adr/ADR-0034-generare-dalle-tabelle.md`
+- **Solo qui:** il vecchio conto del modello Avanzato lasciava ferma l'iniziativa e scriveva «+2 Advanced» nel dettaglio della CA invece di alzare Destrezza e armatura naturale; l'ha trovato il test del conto esatto. `pf-dado` registra i dadi e i bonus che non vengono dalla Costituzione, quindi un modello non lo tocca: cambia il bonus nella riga del tipo. I dadi di danno seguono le tabelle delle armi del Core Rulebook; da 2d6 in su le tabelle delle armi e degli attacchi naturali divergono, e un dado che la tabella non ha resta com'è e viene dichiarato. Per disfare un modello serve la traccia di ciò che ha fatto: il passo dei dadi all'ingiù non è l'inverso di quello all'insù.
+
+### MS-0116 · 2026-11-14 · Regole, lotto 7 quinta parte: linguaggi di hobgoblin, orco, drow, duergar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole linguaggi razze verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 7 quinta parte» in `plans/CHANGELOG.md`
+- **Testo:** La verifica `linguaggi` giudica anche nove razze senza dadi vita razziali, coi linguaggi automatici che l'SRD scrive nel capitolo dei mostri. L'ha chiesto il thread del volume. Schede giudicate nel Bestiario 7 → 14 su 24, banco 13 → 27 su 27, nessuna violazione e nessuna scheda toccata.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** le razze coi dadi vita razziali (bugbear, gnoll, ogre, troll) restano fuori apposta: la riga dell'SRD è per il personaggio giocante. Un test vecchio dava il drow come «razza fuori dalla tabella» ed è stato girato.
+
+### MS-0117 · 2026-11-14 · Regole, lotto 6 terza parte: razze dei mostri, taglia e velocità nelle abilità
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole abilità razze saltare verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 6 terza parte» in `plans/CHANGELOG.md`
+- **Testo:** Il margine dei gradi contato voce per voce vale anche per nove razze senza dadi vita razziali. Entrano il +4 di taglia a Nascondersi dei Piccoli e il modificatore della velocità a Saltare. Una violazione nuova, vera: Bothor e Malvur hanno Saltare +6 dove la regola dà +2. Il DM ha risposto «Correggi a +2» sulla card e la scheda è corretta.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** la prima estrazione dava «hide = 1» ai Piccoli, perché l'espressione prendeva il «+1» dell'attacco nella stessa frase; l'ha mostrato il diff del file dati. Le schede di prova dei talenti erano un orco barbaro tarato sul margine fisso: ora sono uno gnoll.
+
+### MS-0118 · 2026-11-14 · Regole, lotto 7 sesta parte: velocità di hobgoblin, orco, drow, duergar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole velocità razze armature verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 7 sesta parte» in `plans/CHANGELOG.md`
+- **Testo:** La verifica `velocita` giudica anche nove razze senza dadi vita razziali: schede giudicate 18 → 34. Due violazioni vere, su card al DM: la Furia della Mano a 12 m con un'armatura media e il bladebearer hobgoblin con il nome dell'armatura sbagliato rispetto alla fonte PCGen. Il DM ha risposto sulle card: corazza di mithral per la Furia (resta a 12 m), giaco di maglia +1 per il bladebearer.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** due schede di hobgoblin regolari scrivono 6 m senza scomporre la CA: la prima versione le dava per violazioni, ed erano solo armature non nominate. Da lì la regola del dubbio. La correzione diretta del nome dell'armatura del bladebearer è stata fermata: una scheda si cambia solo con la risposta del DM, anche quando è un errore di trascrizione.
+
+### MS-0119 · 2026-11-14 · Regole, lotto 8 quinta parte: la ricchezza di un file con più schede
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0126
+- **Temi:** regole ricchezza equipaggiamento master verifica-scheda
+- **Origine:** riga del 2026-11-14 «lotto 8 quinta parte» in `plans/CHANGELOG.md`
+- **Testo:** `ricchezza` giudica scheda per scheda anche i file con più schede. Prima usciva senza dire niente, e ARC07-DEF-4 non era controllato contro la Tabella 4-23. Una violazione vera: Durin Rocciadura ha 6.137 mo di equipaggiamento contro i 5.600 di un PNG di 6°. La scheda aspetta il DM.
+- **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
+- **Solo qui:** nella #425 era stato scritto che le schede allungate di ARC07-DEF-4 non davano violazioni nuove: era vero solo perché non erano lette. L'ha notato il thread del volume, ed è stato detto a Jfs. Una misura che tace va controllata: tace perché è in regola o perché non guarda?
+

@@ -257,6 +257,29 @@ def _e_umano(testo: str, nomi) -> bool:
     return bool(re.search(rf"\b(?:{'|'.join(nomi)})\b", testo, re.I))
 
 
+def _salto_da_velocita(testo: str, regole: dict) -> int:
+    """Quanto la velocità scritta dà a Saltare (SRD, «Jump»: +4 ogni 10 piedi
+    oltre i 30, −6 ogni 10 piedi sotto). 0 se la scheda non scrive una sola
+    riga della velocità."""
+    r = regole.get("salto")
+    righe = list(_RIGA_VELOCITA.finditer(testo))
+    if not r or len(righe) != 1:
+        return 0
+    numero = float(righe[0].group(1).replace(",", "."))
+    piedi = round(numero * 5 / 1.5) if righe[0].group(2).lower() == "m" else round(numero)
+    passi = (piedi - r["velocita"]) // r["ogni"]
+    return passi * (r["piu"] if passi > 0 else r["meno"])
+
+
+def _razza_senza_dv(senza_dv: dict, dove: str, tipo: str) -> "str | None":
+    """Quale razza senza dadi vita razziali di `[mdl]` è la scheda (hobgoblin,
+    drow, orco…), o None: una sola deve combaciare, col suo tipo, e senza un
+    modello nel titolo."""
+    sue = [r for r, rx in senza_dv["nomi"].items() if re.search(rf"(?<![\w-])(?:{rx})(?![\w-])", dove, re.I)
+           and re.search(rf"\b{senza_dv['razze'][r]['tipo']}\b", _tipo_en(tipo), re.I)]
+    return sue[0] if len(sue) == 1 and not _MODELLO.search(dove) else None
+
+
 def _razza_srd(dove: str, regole: dict) -> "str | None":
     """Quale delle razze di `[razze]` è la scheda, o None: una sola deve
     combaciare, e nessuna delle «altre» (un duergar è «umanoide (nano)» ma i
@@ -430,11 +453,14 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
     # delle razze dell'SRD, razza e sinergie si contano voce per voce invece del margine fisso
     preciso, scritte = None, {en for _, en, _ in voci}
     if sue is not None and not razziali and regole.get("margine"):
-        razza_ = _razza_srd(" ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), regole)
+        dove_ = " ".join((riga_tipo, s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+        razza_ = _razza_srd(dove_, regole) or _razza_senza_dv(
+            S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove_, s.tipo or riga_tipo)
         if razza_ is not None and not re.search(r"razzial|racial", s.testo, re.I):
             preciso = regole["razze"].get(razza_, {})
     pp = regole.get("penalita_di_prova") or {}
     penalita, da_armatura = _penalita_di_prova(s.testo, regole, sistema)
+    da_velocita = _salto_da_velocita(s.testo, regole) if preciso is not None else 0
     for nome, en, bonus in voci:
         lette += 1
         mod = (car.get(chiave[en], 10) - 10) // 2 if chiave[en] else 0
@@ -443,6 +469,8 @@ def abilita(p: Path) -> "tuple[list[dict], list[dict]]":
             fonti = [x for x in regole.get("sinergie", {}).get(en, []) if x in scritte]
             margine = regole["margine"]["oggetto"] + preciso.get(en, 0) + regole["margine"]["sinergia"] * len(fonti)
         pen = penalita * (2 if en in pp.get("doppia", ()) else 1) if en in pp.get("abilita", ()) else 0
+        if en == "jump":
+            margine += da_velocita                       # SRD, Saltare: +4 o −6 ogni 10 piedi di velocità
         minimi = int(bonus.replace("−", "-")) - mod - margine - talento + pen
         if sue is not None and not razziali and not any(a == en or a.startswith(en + " (") for a in sue):
             # fuori classe: il massimo è la metà e ogni grado costa il doppio (SRD, «Skills Summary»)
@@ -1495,7 +1523,9 @@ def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
     if not livelli or sum(g.n for g in s.gruppi) != sum(livelli.values()) + sum(
             int(v.rpartition(" ")[2]) for v in ignote):
         return [], []                                   # dadi vita razziali: la velocità è della creatura
-    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    razza = _razza_srd(dove, gradi) or _razza_senza_dv(
+        S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove, s.tipo or "")
     if razza is None or razza not in mv["razze"]:
         return [], []
     if ignote:
@@ -1535,12 +1565,18 @@ def velocita(p: Path) -> "tuple[list[dict], list[dict]]":
     if ha == atteso:
         return [], []
     testo = f"velocità {m.group(1)} {m.group(2)} ({ha} piedi), la regola dà {atteso} piedi ({', '.join(perche)})"
+    if not oggetti and ha == mv["ridotta"].get(str(atteso)) and not _CA_CON_LE_VOCI.search(s.testo):
+        # la velocità è quella di chi porta un'armatura media o pesante, e la scheda non scompone la CA
+        return [], [{**base, "regola": "numero.velocita",
+                     "testo": testo + "; è la velocità ridotta da un'armatura, e la scheda non scompone la CA"}]
     if _ALTRA_VELOCITA.search(s.testo) or _NOTA_VELOCITA.search(m.group(3)):
         return [], [{**base, "regola": "numero.velocita",
                      "testo": testo + "; la scheda nomina un oggetto, un incantesimo o una nota che la cambia"}]
     return [{**base, "regola": "numero.velocita", "atteso": atteso, "ha": ha, "testo": testo}], []
 
 
+#: una riga della CA che ne scrive le voci («+5 corazza di piastre», «+1 Des»)
+_CA_CON_LE_VOCI = re.compile(r"^(?:ca-dettaglio:|.*\b(?:CA|AC)\b).*[+]\d+\s+[A-Za-zà]", re.M)
 _SCRITTA_RI = re.compile(r"(?<![\w/])(?:RI|SR|resistenza agli incantesimi|spell resistance)\b[\s:*]*(\d+)([^|·\n]{0,60})",
                          re.I)
 _SCRITTA_RD = re.compile(r"(?<![\w/])(?:RD|DR|riduzione del danno|damage reduction)\b[\s:*]*(\d+)\s*/\s*(?:—|–|-)(?![\w])",
@@ -1680,8 +1716,8 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
     """I linguaggi che razza e classe danno da soli stanno nella riga dei linguaggi (ADR-0126, lotto 7).
 
     Solo per chi scrive una riga «Linguaggi» (una sola, fuori dalle righe di
-    storia): una delle sette razze dell'SRD ha i suoi linguaggi automatici, il
-    druido ha il Druidico. Quanti linguaggi in più si possono avere non si
+    storia): una delle sette razze dell'SRD, o una razza senza dadi vita razziali
+    (hobgoblin, orco, drow…), ha i suoi linguaggi automatici, il druido ha il Druidico. Quanti linguaggi in più si possono avere non si
     giudica: dipende da regione e gradi che la scheda non scrive."""
     from dmcore import sistemi as S
     s = L.leggi(p)
@@ -1701,7 +1737,9 @@ def linguaggi(p: Path) -> "tuple[list[dict], list[dict]]":
         return [], []
     n_riga, scritti = trovate[0]
     attesi, perche = [], []
-    razza = _razza_srd(" ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " "))), gradi)
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    razza = _razza_srd(dove, gradi) or _razza_senza_dv(
+        S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}, dove, s.tipo or "")
     if razza in d["razze"]:
         attesi += d["razze"][razza]
         perche.append(razza)
@@ -2045,8 +2083,29 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
     «Equipaggiamento sopra la tabella: … DM …» dichiara lo scarto come scelta
     del DM, e la verifica tace."""
     import conformita_statblocchi as C
+    intero = p.read_text(encoding="utf-8", errors="replace")
+    with contextlib.redirect_stderr(io.StringIO()):
+        recinti = list(C._recinti_del_master(intero))
+    if len(recinti) <= 1:
+        return _ricchezza_di_una_scheda(p, intero, 0, p.stem.replace("-", " "))
+    # un file con più schede (un master d'arco): ognuna si giudica da sola, dal suo titolo alla scheda dopo
+    righe = intero.split("\n")
+    viol, nv = [], []
+    for b in _blocchi_dei_fatti(righe, VT.sistema_di(p, intero)):
+        v, n = _ricchezza_di_una_scheda(p, "\n".join(righe[b["inizio"] - 1:b["fine"]]), b["inizio"] - 1, "")
+        viol += [dict(x, scheda=b["titolo"]) for x in v]
+        nv += [dict(x, scheda=b["titolo"]) for x in n]
+    return viol, nv
+
+
+def _ricchezza_di_una_scheda(p: Path, testo: str, riga0: int, dal_nome: str) -> "tuple[list[dict], list[dict]]":
+    """Il giudizio di `ricchezza` su una scheda sola: `testo` è il file o il pezzo
+    di un master, `riga0` le righe che lo precedono nel file, `dal_nome` le
+    parole del nome del file che aiutano a riconoscere la razza (vuote in un
+    master, dove il nome del file non dice di chi è la scheda)."""
+    import conformita_statblocchi as C
     from dmcore import sistemi as S
-    s = L.leggi(p)
+    s = L.leggi_testo(testo, p)
     if s is None:
         return [], []
     sistema = VT.sistema_di(p, s.testo)
@@ -2069,20 +2128,19 @@ def ricchezza(p: Path) -> "tuple[list[dict], list[dict]]":
         return [], []
     totale = sum(o[1] for _, o in oggetti)
     tabella = d["png"]["per_livello"]
-    base = {"file": VT_rel(p), "riga": oggetti[0][0], "verifica": "ricchezza", "fonte": sistema,
+    base = {"file": VT_rel(p), "riga": oggetti[0][0] + riga0, "verifica": "ricchezza", "fonte": sistema,
             "regola": "equipaggiamento.valore"}
     elenco = ", ".join(f"{nome} {mo}" for _, (nome, mo) in oggetti)
     if totale <= tabella[min(dadi_vita, len(tabella)) - 1]:
         return [], []
-    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], p.stem.replace("-", " ")))
+    dove = " ".join((s.tipo or "", s.testo.split("\n", 1)[0], dal_nome))
     mdl = 0 if _razza_srd(dove, gradi) else None
     if mdl is None:
         # una razza senza dadi vita razziali (hobgoblin, drow, orco…): il suo modificatore di livello
         senza_dv = S.dati(sistema, "creature.costruzione").get("mdl") or {"razze": {}, "nomi": {}}
-        sue = [r for r, rx in senza_dv["nomi"].items() if re.search(rf"(?<![\w-])(?:{rx})(?![\w-])", dove, re.I)
-               and re.search(rf"\b{senza_dv['razze'][r]['tipo']}\b", _tipo_en(s.tipo or ""), re.I)]
-        if len(sue) == 1 and not _MODELLO.search(dove):
-            mdl = senza_dv["razze"][sue[0]]["mdl"]
+        sua = _razza_senza_dv(senza_dv, dove, s.tipo or "")
+        if sua:
+            mdl = senza_dv["razze"][sua]["mdl"]
     if mdl is None and blocchi:
         trovata = _base_del_blocco(s.testo, blocchi[0]["sb"], True, sistema)
         if trovata and trovata[1].get("avanza") != "classe" and not L.livelli_di_classe(s):
