@@ -16,8 +16,11 @@ sottomissioni *State of Libre Graphics*, changelog e roadmap in
 > fuori perimetro, e il §4 dice per ciascuno *quale* perimetro.
 
 **STATO ATTUAZIONE**: §2 **applicato** in questa passata (`export_map_png.py`,
-manifest, tre guide, cinque test). §3.1, §3.2, §3.3 sono **proposte**: nessun codice,
-nessuna decisione presa.
+manifest, tre guide, cinque test). §3.1 **applicato** il 2026-11-14 su scelta di Jfs
+(«Sì, per ARC-09», pista della Torre invisibile): handout 7 di ARC-09, carta del cielo
+di Zalkatar fatta con Stellarium 23.4 e una cultura del cielo del repo, senza codice
+nel toolkit (`09_…/Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`). §3.2 e §3.3
+restano **proposte**: nessun codice, nessuna decisione presa.
 
 ---
 

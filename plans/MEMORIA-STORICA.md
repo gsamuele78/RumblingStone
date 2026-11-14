@@ -1243,3 +1243,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs, 2026-11-13 20:21: confrontare le schede con Pathfinder 1e e Red Hand of Doom, «secondo me si è perso qualcosa, manca ad esempio la voce dell'equipaggiamento». Misura su 205 schede: Equipaggiamento 46 (34 delle 90 con livelli di classe), Linguaggi 26, Qualità speciali 15, nessuna separa l'equipaggiamento da combattimento. Sulla card ha scelto «Voci mancanti, ordine PF1e»: Tattiche fra Attacco e Statistiche. 99 schede riordinate, pagine dei booklet 985 → 985.
 - **Trovato nel repo:** `ADR-0091` → `plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md`
 - **Solo qui:** la consigliata sulla card era tenere l'ordine di prima, e Jfs ha scelto l'altro. Il secondo passo automatico ha spostato la sola etichetta «Tattiche» in tre schede che hanno le tattiche in paragrafi numerati (i due Ghaurush, Zin'thara): `sezioni_leggibili` si ferma alla prima riga vuota seguita da un paragrafo, quindi quelle si spostano a mano. In appendice la scheda di chi ha la riga breve nel capitolo esce senza Tattiche: è voluto (ADR-0107), non una perdita.
+
+### MS-0108 · 2026-11-14 · RICERCA-TOOL-LGM-2026 §3.1: la carta del cielo di Zalkatar
+
+- **Data:** 2026-11-14
+- **PR:** —
+- **ADR:** ADR-0005 ADR-0019
+- **Temi:** arc09 handout immagini indagine
+- **Origine:** riga del 2026-11-14 «§3.1, la carta del cielo come handout» in `plans/CHANGELOG.md`
+- **Testo:** Jfs, 2026-11-13: «Sì, per ARC-09» alla carta del cielo come indizio; sulla card della pista ha scelto la Torre invisibile, «dove cammina» (consigliata). Stellarium 23.4 da apt gira nel container con Xvfb e Mesa software; uno script `.ssc` dà un PNG 1400×1400. Cultura del cielo `rumblingstone` con dieci figure sopra le posizioni reali (Hipparcos); stella-chiave HIP 81833 nel Sigillo, allo zenit a latitudine 38,922, sul meridiano alle 00:04 UT del 2000-06-01 a longitudine 0 (= mezzanotte del 30 Mirtul, giorno 152). Handout 7 con nota DM a tre strati.
+- **Trovato nel repo:** `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-HANDOUTS.md` (handout 7) · `09_…/Immagini-Handout/carta-del-cielo/PROVENIENZA.txt`
+- **Solo qui:** il coordinatore ha assegnato MS-0117: la voce nasce MS-0108 per tenere verde `--check` e si rinumera al riallineo. La 23.4 di Ubuntu non ha il plugin SkyCultureMaker citato nel §3.1: la cultura del cielo è scritta a mano nei file `.fab`. Il segno di selezione è l'unico modo trovato per cerchiare la stella: `MarkerMgr.markerEquatorial` non disegna nulla nella 23.4, e il segno è animato (due lanci differiscono in 36×36 pixel). A mezzanotte esatta la stella è a un grado dal meridiano, quindi lo script usa le 00:04. Il punto di consegna dell'handout e la distanza del passo (un grado a sud, circa 110 km) sono `[INFERRED]`: il dossier delle piste di ARC-09 è fermo fino alla fine di ARC-07 al tavolo.
