@@ -6,7 +6,7 @@
  },
  "derive_statblocks": {
   "byte": 1158,
-  "sha256": "232fd20ddbce3600b94f814a2e0ef2e0ce8478d7520f834c755a361141175ba2",
+  "sha256": "b830bc1ef9ef56017f1ea95ccfe86a73b11a043fc10eec8f8d4c109a292ec007",
   "uscita": 0
  },
  "domande_developer": {
@@ -25,8 +25,8 @@
   "uscita": 0
  },
  "suggest_encounter": {
-  "byte": 1860,
-  "sha256": "077cc767f4e7decc858a92b38c4baa4b248f5af171dee6f25268c05c3a5d7c3f",
+  "byte": 1903,
+  "sha256": "946de17f78459470efd453796d9c6c446b37d5ce0150318c5a2b5e4d714ed709",
   "uscita": 0
  },
  "suggest_loot_el13": {
