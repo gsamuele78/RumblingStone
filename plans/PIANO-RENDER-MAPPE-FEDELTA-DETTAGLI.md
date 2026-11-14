@@ -127,6 +127,11 @@ nucleo F1→F5 in un passaggio; ambito effettivo per fase:
 | **F6 CI** | ✅ coperto da `validate_maps` esistente (ri-rende i master col parser nuovo e pretende byte-identità → il contratto è enforced su ogni SVG committato); `--strict` disponibile per il check dims in locale |
 
 **Residuo aperto (non bloccante)**: callout grafici ancorati (F3 pieno).
+⏳ **2026-11-13, Jfs sulla card (D5 del piano di recupero): «in attesa di un
+caso vero»**. *Condizione*: al tavolo o in un giro di lettura una nota di mappa
+non si capisce a quale casella si riferisce; si apre allora, con quella mappa
+come prova. Non entra in `adozioni-in-attesa.json`: la condizione la vede solo
+chi legge la mappa, nessuno script la misura (R-6 del piano di recupero).
 
 `--strict` in CI: ✅ **fatto il 2026-11-09** ([ADR-0117](adr/ADR-0117-ogni-mappa-ha-il-suo-contratto-json.md)).
 `scripts/tests/test_contratti_mappe.py` lancia `render_map_svg.py --strict

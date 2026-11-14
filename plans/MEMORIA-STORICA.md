@@ -1255,3 +1255,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `ADR-0126` → `plans/adr/ADR-0126-una-scheda-si-verifica-senza-omissioni-e-col-motore-dichiarato.md`
 - **Solo qui:** «scudo pesante» sta anche fra le armi del plugin: la prima versione contava uno «scudo pesante di adamantio» come un'arma di adamantio (3.000 mo), ma la tabella dell'SRD non prezza uno scudo di adamantio. Un nome che è anche scudo o armatura non prende il prezzo dell'arma. Il bastone del fuoco di Ghaurush (10 cariche, 3.550 mo) porta la sua scheda sopra la tabella di 1.300 mo: resta non verificabile perché la razza non ha un modificatore di livello noto.
 
+### MS-0109 · 2026-11-13 · Piano di recupero: D5 chiusa e lotto L4, il registro delle adozioni prende i lotti interni
+
+- **Data:** 2026-11-13
+- **PR:** —
+- **ADR:** ADR-0076
+- **Temi:** piani decisioni adozioni registro
+- **Origine:** riga del 2026-11-13 «L4 · I piani fermi, una casella alla volta (e D5 chiusa)» in `plans/CHANGELOG.md`
+- **Testo:** Jfs ha risposto voce per voce alla quinta domanda del piano di recupero sulle card del thread audit (13/11, 23:40-23:50): convertitori e shellcheck nel blocco piattaforma v1.5.0; frecce sulle mappe in attesa di un caso vero; dossier di ARC-09 dopo ARC-07 al tavolo; Foundry quando lo usa; carte del Drappo subito in un thread a parte; riassunto del Drappo dopo una serata; whisper.cpp in prova su una serata; carta del cielo sì per ARC-09; template PF1e sì col thread delle regole; incontri tarati alla chiusura della v1.2.0; Blockbench in attesa. Due card nel thread del piano: il registro prende solo le condizioni misurabili (R-6), e Blockbench aspetta una serie ComfyUI vera.
+- **Trovato nel repo:** `plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md` (R-6, D5, L4) · `plans/adozioni-in-attesa.json` · `scripts/adozioni_in_attesa.py`
+- **Solo qui:** la prima condizione di Blockbench («lo script per le serie ComfyUI su main») era vera dal 2026-09-05 (`scripts/comfyui_batch.py`, 494174ce): la riga di RICERCA-TOOL-LGM §3.3 che lo diceva «non fatto» era ferma da settembre. Le cinque attese lasciate fuori dal registro non hanno nessun allarme: le trova solo la routine del lunedì leggendo i piani. La soglia di 3 righe per «serie vera» e shellcheck nella v1.5.0 sono deduzioni del thread, non risposte di Jfs. La voce è nata MS-0108 ed è diventata MS-0109 al riallineo, dopo la #417 delle regole; il numero MS-0118 assegnato prima non è servito, perché la PR è entrata prima delle altre in coda.
