@@ -2783,7 +2783,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/export_booklet_typst.py MANIFEST.json --all",
-      "summary": "Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
+      "summary": "Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Un capitolo \"layout\": \"carte\" esce in carte da tavolo 63 × 88 mm, nove per foglio A4, coi dati delle tabelle dei master (le carte della corsa del Drappo). Affianca export_booklet_pdf.py senza sostituirlo.",
       "use_case": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»",
       "stability": "beta",
       "stdlib_only": true,

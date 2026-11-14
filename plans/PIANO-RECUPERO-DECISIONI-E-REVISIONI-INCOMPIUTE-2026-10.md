@@ -320,7 +320,7 @@ se la condizione non si sa scrivere: in quel caso il lotto lo dice.
 | TRAVASO | A6, dossier delle piste di ARC-09 | ⏳ dopo ARC-07 al tavolo | **fuori**: nel piano |
 | INTEGRAZIONE | (b) prova in Foundry | ⏳ quando Jfs usa Foundry | **fuori**: nel piano |
 | INTEGRAZIONE | (c) hero map su una mappa chiave | ⏳ resta collaudo del DM: **nessuna card l'ha nominata** | **fuori**: nel piano |
-| MODULO-PUBBLICABILE | B3, carte da tavolo | 📅 lotto subito, in un thread a parte | — |
+| MODULO-PUBBLICABILE | B3, carte da tavolo | 🟡 fatto dalla PR #423 (36 carte, PDF/UA-1 e PDF/A-2a); da rivedere dopo la prima serata del Drappo | — |
 | MODULO-PUBBLICABILE | C3, riassunto fra le serate | ⏳ dopo una serata del Drappo | **fuori**: nel piano |
 | TOOL-ESTERNI | §3, trascrizione whisper.cpp | ⏳ prova su una serata registrata | **fuori**: nel piano |
 | TOOL-LGM | §3.1, carta del cielo | 📅 lotto, per ARC-09 | — |

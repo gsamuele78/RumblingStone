@@ -126,6 +126,48 @@ Ogni scheda viene compilata da un **sorgente suo**, non ritagliata per numero di
 pagina: il ritaglio regge finché ogni scheda sta in una pagina sola, cioè finché
 qualcuno non allunga un equipaggiamento.
 
+### 1.2-bis Le carte da tavolo di una corsa
+
+Un capitolo `"layout": "carte"` non si legge: si ritaglia. L'esportatore lo
+impagina con `scripts/typst/carte-tavolo.typ`: carte da **63 × 88 mm**, nove per
+foglio A4 a contatto, con la linea di taglio tratteggiata in comune. Sono la
+voce B3 di `plans/RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE.md`: carte che
+rendono visibile lo stato della gara senza spiegarlo.
+
+```json
+{
+  "title": "✉ Le carte da tavolo",
+  "file": "../REGOLE-DELLA-CORSA-PF1E.md",
+  "contrade": "../CONTRADE-DI-TARSILIA.md",
+  "tag": "player",
+  "layout": "carte"
+}
+```
+
+| Campo | Cosa fa |
+|---|---|
+| `layout: "carte"` | accende l'impaginazione a carte per quel capitolo |
+| `file` | il master delle **regole della corsa**: §4 (patti), §5 (funi e finte), §6 (giri), §6.1 (tratti e CD), §6.2 (posti) |
+| `contrade` | il master delle **contrade**: §1 (nome, dèi, livrea, motto), §7 (stemma) |
+| `front_matter: false` | *(chiave del manifest)* niente frontespizio né indice |
+
+I mazzetti, nell'ordine dei fogli: un **segnaposto** per contrada (stemma, motto,
+livrea, il cavallo da scrivere dopo la Sorte e la griglia delle Lunghezze da
+segnare a matita, giro per giro), l'**ordine alle funi** (un numero per cavallo
+fra le funi più quello di rincorsa, con le tre finte), i **tratti** in ordine di
+corsa (giro, tratto, CD, cosa succede se si sbaglia) e i **posti** dei PG non
+fantini; i posti vuoti di un foglio si riempiono di **patti** in bianco.
+
+I dati li legge `scripts/dmcore/carte_tavolo.py` dalle tabelle e da poche frasi
+dei master, riportate intere. Se un master cambia forma (una tabella rinominata,
+«Sette cavalli entrano fra le funi» riscritto), la lettura si ferma con un
+errore invece di stampare carte vecchie. Gli stemmi della serie Golarion portano
+nel cartiglio il motto del Palio: le scritte dello scudo si tolgono alla
+lettura, il file non si copia.
+
+Esempio nel repo:
+`10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-CARTE-DA-TAVOLO.manifest.json`.
+
 ### 1.3 Cosa controlla la CI, e cosa no
 
 | Livello | Chi lo controlla |

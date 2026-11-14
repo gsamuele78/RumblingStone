@@ -132,8 +132,12 @@ gated su una sessione vera, perché senza tempi reali si ottimizzerebbe alla
 cieca.
 
 📅 **B3, 2026-11-13, Jfs sulla card (D5 del piano di recupero): «subito»**, non
-la consigliata (che era aspettare una serata giocata). È un lotto, non un'attesa:
-lo fa un thread a parte, che chiude qui la casella con la sua PR.
+la consigliata (che era aspettare una serata giocata). 🟡 **Fatta dalla PR #423**:
+36 carte in `homebrew/DRAPPO-CARTE-DA-TAVOLO.manifest.json` (`"layout": "carte"`,
+`scripts/typst/carte-tavolo.typ`, dati letti dai master da
+`scripts/dmcore/carte_tavolo.py`), PDF/UA-1 e PDF/A-2a. Il limite resta quello
+scritto sopra: sono disegnate senza i tempi di una corsa giocata e si rivedono
+dopo la prima serata. Il 🟡 diventa ✅ solo allora.
 
 ⏳ **C3, 2026-11-13, Jfs sulla card: «dopo una serata del Drappo»**. Parte
 quando Jfs dice di averne giocata una; con i tempi veri di quella serata si

@@ -436,6 +436,32 @@
         "parole_ripetute": 17
       }
     },
+    "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-CARTE-DA-TAVOLO.manifest.json": {
+      "tetti": {
+        "testi_sotto_minimo": 0,
+        "fuori_margine": 0,
+        "immagini_sotto_300dpi": 0,
+        "schede_spezzate": 0,
+        "font_non_incorporati": 0,
+        "rimandi_sbagliati": 0
+      },
+      "misura": {
+        "pagine": 4,
+        "corpo_mediano_pt": 7.5,
+        "corpo_minimo_pt": 7.0,
+        "schede": 0,
+        "pagine_con_immagine": 0.0,
+        "pagine_con_immagine_decimo": 0.0,
+        "parole": 1925,
+        "quota_parole_ripetute": 0.648
+      },
+      "in_prova": {
+        "sigle_morte": 0,
+        "righe_brevi_incomplete": 0,
+        "titoli_rovinati": 0,
+        "parole_ripetute": 1248
+      }
+    },
     "10-stand-alone/Il-Drappo-di-Tarsilia/homebrew/DRAPPO-FASCICOLO-SCHEDE.manifest.json": {
       "tetti": {
         "testi_sotto_minimo": 0,
