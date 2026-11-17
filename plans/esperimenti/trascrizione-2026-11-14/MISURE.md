@@ -34,6 +34,32 @@ una già detta (qui succede perché le frasi si ripetono; al tavolo succede con
 l'errore è circa 3%, in linea con quello che si pubblica per whisper
 sull'italiano letto. Da qui la scelta: `-mc 0` di serie.
 
+### Quantizzazione e VAD (17/11, sullo stesso FLEURS, sempre `-mc 0`)
+
+Il kit della 4050 (#469) ha trovato 8,6% con `q8_0` + VAD contro il 5,8% di
+qui (`q5_0` senza VAD). Stesso audio, stessa colonna 3 di `dev.tsv` (la
+trascrizione grezza) come riferimento in tutti e due i casi: la differenza non
+viene da lì. Rifatto tutto qui, CPU a 4 thread:
+
+| Modello | VAD | Parole sbagliate | Parole perse in buchi ≥ 5 | Tempo |
+|---|---|---|---|---|
+| `q5_0` | no | 5,8% (59/1012) | — | 582 s |
+| `q5_0` | silero-v6.2.0 | 6,1% (62/1012) | 62 | 484 s |
+| `q8_0` | no | **2,3%** (23/1012) | 0 | 237 s |
+| `q8_0` | silero-v6.2.0 | **8,6%** (87/1012) | 62 | 188 s |
+
+- Il kit è riprodotto esatto (8,6%).
+- **La quantizzazione** conta: `q8_0` sbaglia 2,3% contro 5,8% di `q5_0`.
+- **Il VAD** fa perdere pezzi di frase (62 parole in buchi, tre frasi
+  intere o quasi). Qui le frasi FLEURS sono incollate senza pause, quindi il
+  banco è sfavorevole al VAD; al tavolo, con lunghi silenzi, il VAD può invece
+  evitare frasi inventate. Non è misurato: di serie resta spento, e si prova
+  sulla serata solo se compaiono frasi inventate.
+- I tempi di oggi (237 s per `q8_0`) e quelli del 14/11 (582 s per `q5_0`)
+  non sono confrontabili: il container non era lo stesso.
+
+Soglia di riferimento per la 4050: **2,3%** con `q8_0`, `-mc 0`, senza VAD.
+
 ### Copione finto, nomi della campagna
 
 | Configurazione | Pulita: errori · nomi giusti · inventati | Rumore: errori · nomi giusti · inventati |

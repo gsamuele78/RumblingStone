@@ -38,13 +38,16 @@ al DM e non al tavolo, e il campo «cosa hanno capito male» si scrive a mano.
    precedente come contesto): su FLEURS le parole sbagliate scendono dal 16,6%
    al 5,8%, perché col contesto whisper salta le frasi che somigliano a una già
    detta. I nomi nel prompt sono **spenti** di serie: funzionano solo col
-   contesto acceso, e nella prova sostituivano un nome con un altro.
+   contesto acceso, e nella prova sostituivano un nome con un altro. Il VAD
+   (silero) è **spento** di serie: su FLEURS col `q8_0` porta le parole
+   sbagliate dal 2,3% all'8,6%, perché taglia pezzi di frase.
 
 ## Misura
 
 Banco non personale (`plans/esperimenti/trascrizione-2026-11-14/MISURE.md`),
 CPU a 4 thread del container, `large-v3-turbo-q5_0`. FLEURS italiano (10,8
-minuti, lettori umani): 5,8% di parole sbagliate con `-mc 0`, 16,6% senza. Copione
+minuti, lettori umani): con `-mc 0` 2,3% di parole sbagliate col `q8_0` e 5,8%
+col `q5_0`; senza `-mc 0` il `q5_0` fa 16,6%; col VAD il `q8_0` sale all'8,6%. Copione
 finto con i nomi della campagna, voce sintetica CC0: 12,5-13,3% di parole
 sbagliate, 6 nomi giusti su 20, numeri tutti giusti. Velocità sulla CPU circa
 una volta il tempo reale; sulla RTX 4050 da misurare. La

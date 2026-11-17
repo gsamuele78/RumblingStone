@@ -72,7 +72,7 @@ sudo dnf install -y git cmake gcc-c++ ffmpeg-free \
 cd ~ && git clone https://github.com/ggml-org/whisper.cpp && cd whisper.cpp
 cmake -B build -DGGML_VULKAN=1 && cmake --build build -j --config Release
 sh models/download-ggml-model.sh large-v3-turbo-q8_0     # ~870 MB, il consigliato
-sh models/download-vad-model.sh silero-v6.2.0            # salta i silenzi
+sh models/download-vad-model.sh silero-v6.2.0            # facoltativo: vedi §6
 ./build/bin/whisper-cli --help | head -3                  # deve rispondere
 ```
 
@@ -104,8 +104,7 @@ python3 scripts/transcribe_session.py trascrivi \
     ~/RumblingStone-serate/2026-11-20/serata.flac --consenso \
     --out ~/RumblingStone-serate/2026-11-20 --data 2026-11-20 \
     --whisper ~/whisper.cpp/build/bin/whisper-cli \
-    --modello ~/whisper.cpp/models/ggml-large-v3-turbo-q8_0.bin \
-    --vad-modello ~/whisper.cpp/models/ggml-silero-v6.2.0.bin
+    --modello ~/whisper.cpp/models/ggml-large-v3-turbo-q8_0.bin
 ```
 
 Nella cartella trovi:
@@ -124,8 +123,10 @@ automatica arriva nel recap dei giocatori.
 **Cosa aspettarsi, onestamente.** I nomi inventati della campagna sono la
 parte che whisper sbaglia di più (§5). Ai numeri e all'italiano di tutti i
 giorni va molto meglio. Sopra la musica di sottofondo o a lunghi silenzi whisper
-può inventare frasi: il modello VAD serve a questo, ma rileggi i passaggi
-importanti ascoltandoli.
+può inventare frasi. Il modello VAD (`--vad-modello`) taglia i silenzi, ma
+nella prova del §5 tagliava anche pezzi di frase (da 2,3% a 8,6% di parole
+sbagliate): di serie resta spento, e si accende solo se compaiono frasi
+inventate. Rileggi comunque i passaggi importanti ascoltandoli.
 
 ---
 
@@ -189,10 +190,12 @@ I numeri e il banco per rifarli sono in
 [`plans/esperimenti/trascrizione-2026-11-14/`](../../plans/esperimenti/trascrizione-2026-11-14/MISURE.md).
 In breve:
 
-- sull'italiano letto, con le opzioni di serie, whisper sbaglia il **5,8%**
-  delle parole; con il contesto del testo precedente acceso (il default di
-  whisper) il **16,6%**, perché salta interi pezzi che somigliano a frasi già
-  dette. Per questo lo script passa sempre `-mc 0`;
+- sull'italiano letto, col modello consigliato (`q8_0`) e le opzioni di serie,
+  whisper sbaglia il **2,3%** delle parole (il `q5_0` il 5,8%). Con il contesto
+  del testo precedente acceso (il default di whisper) il `q5_0` arriva al
+  **16,6%**, perché salta interi pezzi che somigliano a frasi già dette: per
+  questo lo script passa sempre `-mc 0`. Con il VAD acceso il `q8_0` sale
+  all'**8,6%**, perché taglia pezzi di frase: per questo è spento;
 - sui nomi inventati ne sbaglia **più della metà** (6 giusti su 20), ma la voce
   sintetica pronuncia male proprio quelli, quindi quel numero va preso con le
   pinze;
@@ -211,6 +214,6 @@ La misura vera è la tua serata.
 | `Manca whisper-cli` ed esce con codice 3 | Non è un errore: ripeti il §2 o passa `--whisper` col percorso |
 | `Serve --consenso` | Hai chiesto a tutti? Allora aggiungi `--consenso` |
 | `non entrano mai nel repo` | `--out` punta dentro la copia del repo: usa `~/RumblingStone-serate/…` |
-| Frasi ripetute o inventate nei silenzi | Aggiungi `--vad-modello` |
+| Frasi ripetute o inventate nei silenzi | Prova `--vad-modello` su quello spezzone e confronta con `misura`: può tagliare parole vere |
 | Pezzi interi che mancano | Hai usato `--nomi-nel-prompt`? Riaccende il contesto: toglilo |
 | `state_apply` dice «ancora una bozza» | Il log non è ancora tuo: riscrivilo con il wizard e togli le due righe di testa |
