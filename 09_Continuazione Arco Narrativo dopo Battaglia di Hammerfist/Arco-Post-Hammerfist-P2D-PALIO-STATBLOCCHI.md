@@ -135,7 +135,7 @@ attacchi:
 
 **Attacco** Balestra a mano + veleno drow (sonno, CD 17) · **Attacco Furtivo** +6d6
 
-**Tattiche** **Obiettivo**: **il cavallo**, non i PG: colpire e sparire. Se scoperti, coprono la fuga.
+**Tattiche** **Obiettivo**: **il cavallo o il fantino** (sceglie il DM prima della notte), non chi fa la guardia: avvelenare il cavallo, oppure addormentare il fantino col veleno drow e portarlo via. Colpire e sparire. Se scoperti, coprono la fuga. `[CANONE — DM 2026-11-19, card]`
 
 **Statistiche** Des 20
 
@@ -144,11 +144,12 @@ attacchi:
 - **Innata**: *Oscurità*, *Fuoco delle Fate*.
 
 
-*Cosa sanno dei PG e in che stato li trovano*: Sonjak gli ha detto quale stalla e quale cavallo, non chi la guarda. Arrivano la notte del Giorno 2, dopo la Cena della Prova Generale e gli intrighi dei Partiti, quando i PG dormono o fanno la guardia a turno: uno sveglio, gli altri con quello che resta degli incantesimi del giorno. L'obiettivo resta il cavallo: chi è di guardia lo evitano, e lo colpiscono solo se sta fra loro e il cavallo o se li scopre, per coprire la fuga. <!-- [INFERRED — Sonjak sa chi fa la guardia alla stalla?; base: §3.1 e la scheda di Sonjak dicono il mandante, non che cosa sa dei PG] (marca tolta dal booklet stampato) -->
+*Cosa sanno dei PG e in che stato li trovano*: Sonjak gli ha detto quale stalla, quale cavallo e quale fantino, non chi li guarda. Arrivano la notte del Giorno 2, dopo la Cena della Prova Generale e gli intrighi dei Partiti, quando i PG dormono o fanno la guardia a turno: uno sveglio, gli altri con quello che resta degli incantesimi del giorno. L'obiettivo resta il cavallo o il fantino: chi è di guardia lo evitano, e lo colpiscono solo se sta fra loro e l'obiettivo o se li scopre, per coprire la fuga. Se il fantino è un PG (§4 dell'AVVENTURA) vale lo stesso: lo addormentano e lo portano via. <!-- [INFERRED — Sonjak sa chi fa la guardia alla stalla?; base: §3.1 e la scheda di Sonjak dicono il mandante, non che cosa sa dei PG] (marca tolta dal booklet stampato) -->
 
 <!-- storico -->
 Prima del 2026-11-17 (tattiche di ARC-09, lotto 5) i sicari e la chierica avevano solo l'obiettivo: il cavallo, non i PG. Che cosa sanno dei PG e in che stato li trovano è stato aggiunto qui e in §3.2, marcato INFERRED perché nessuna scena lo dice.
 Era (17/11, corretto il 18/11): «Se trovano un PG di guardia, il primo colpo va su di lui, non sul cavallo», che contraddiceva l'obiettivo scritto sopra (il cavallo, non i PG); «la giornata delle prove» (il Giorno 2 è la Cena e i Partiti) e «senza incantesimi preparati per l'indomani» (gli incantesimi si preparano al mattino: di notte resta quello che non si è speso).
+Era (fino al 19/11): «**Obiettivo**: **il cavallo**, non i PG: colpire e sparire» e «quale stalla e quale cavallo, non chi la guarda». Il DM ha scelto sulla card del 19/11 di allinearlo all'INTEGRAZIONE (riga Sonjak, Giorno 2: «avvelenare il cavallo … o rapirne il fantino») e all'AVVENTURA §3 C (le spie tentano di rapire o corrompere il fantino).
 <!-- /storico -->
 
 ### 3.2 Drow Chierica di Lolth (GS 10)

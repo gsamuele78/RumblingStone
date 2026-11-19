@@ -2883,11 +2883,11 @@ Statistiche-corsa astratte (mod. applicato ai tiri di Zona del fantino):
 **CA** 21 · **pf** 58 · *scheda in appendice*
 
 **TATTICHE**
-**Obiettivo**: **il cavallo**, non i PG: colpire e sparire. Se scoperti, coprono la fuga.  
+**Obiettivo**: **il cavallo o il fantino** (sceglie il DM prima della notte), non chi fa la guardia: avvelenare il cavallo, oppure addormentare il fantino col veleno drow e portarlo via. Colpire e sparire. Se scoperti, coprono la fuga.  
 }}
 
 
-*Cosa sanno dei PG e in che stato li trovano*: Sonjak gli ha detto quale stalla e quale cavallo, non chi la guarda. Arrivano la notte del Giorno 2, dopo la Cena della Prova Generale e gli intrighi dei Partiti, quando i PG dormono o fanno la guardia a turno: uno sveglio, gli altri con quello che resta degli incantesimi del giorno. L'obiettivo resta il cavallo: chi è di guardia lo evitano, e lo colpiscono solo se sta fra loro e il cavallo o se li scopre, per coprire la fuga. <!-- [INFERRED — Sonjak sa chi fa la guardia alla stalla?; base: §3.1 e la scheda di Sonjak dicono il mandante, non che cosa sa dei PG] (marca tolta dal booklet stampato) -->
+*Cosa sanno dei PG e in che stato li trovano*: Sonjak gli ha detto quale stalla, quale cavallo e quale fantino, non chi li guarda. Arrivano la notte del Giorno 2, dopo la Cena della Prova Generale e gli intrighi dei Partiti, quando i PG dormono o fanno la guardia a turno: uno sveglio, gli altri con quello che resta degli incantesimi del giorno. L'obiettivo resta il cavallo o il fantino: chi è di guardia lo evitano, e lo colpiscono solo se sta fra loro e l'obiettivo o se li scopre, per coprire la fuga. Se il fantino è un PG (§4 dell'AVVENTURA) vale lo stesso: lo addormentano e lo portano via. <!-- [INFERRED — Sonjak sa chi fa la guardia alla stalla?; base: §3.1 e la scheda di Sonjak dicono il mandante, non che cosa sa dei PG] (marca tolta dal booklet stampato) -->
 
 
 ### 3.2 Drow Chierica di Lolth (GS 10)

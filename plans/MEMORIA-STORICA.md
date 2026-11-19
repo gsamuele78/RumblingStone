@@ -2268,3 +2268,13 @@ repo scritto con altre parole.
 - **Trovato nel repo:** `scripts/conformita_statblocchi.py` · `scripts/tests/test_conformita_statblocchi.py` · `scripts/tests/test_fase1.py`
 - **Solo qui:** il clone dei thread di questo container risultava shallow (`git rev-parse --is-shallow-repository` = true) nonostante lo script d'avvio faccia l'unshallow
 
+### MS-0201 · 2026-11-19 · I sicari del Palio possono rapire il fantino
+
+- **Data:** 2026-11-19
+- **PR:** —
+- **ADR:** —
+- **Temi:** tattiche villain palio sonjak fantino canone arc09 coerenza
+- **Origine:** riga del 2026-11-19 «Sicari di Sonjak al Palio: l'obiettivo è il cavallo o il fantino» in `plans/CHANGELOG.md`
+- **Testo:** rileggendo il lotto 5 contro le fonti, gli statblocchi davano ai sicari un solo obiettivo, il cavallo, mentre l'INTEGRAZIONE (riga Sonjak del Giorno 2) e l'AVVENTURA §3 C prevedono anche il rapimento del fantino. Il DM ha scelto sulla card del 19/11 «cavallo o fantino, sceglie il DM»: la tattica lo dice, marcata `[CANONE — DM 2026-11-19, card]`, e il testo di prima sta nel blocco storico.
+- **Trovato nel repo:** `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-STATBLOCCHI.md` §3.1
+- **Solo qui:** «anche se il fantino è un PG» segue dalla scelta (§4 dell'AVVENTURA permette un PG fantino) ma nessuna fonte lo scrive; il `PALIO-BOOKLET.html` era già indietro su main e resta da rigenerare a parte.
