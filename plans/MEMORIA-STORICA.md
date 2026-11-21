@@ -2452,3 +2452,14 @@ repo scritto con altre parole.
 - **Testo:** Jfs ha chiesto il booklet della serata del 20/11 pronto da usare, poi (14:37 UTC) di togliere i rimandi tecnici. Il PDF è stato composto da main più le bozze #505-#509 e messo in /mnt/project-files/serata-2026-11-20/; questa PR porta nei sorgenti le stesse correzioni. Una copia generata da `componenti.py --includi` va corretta nella sua fonte (qui la scheda di Balvar), altrimenti il riallineamento rimette il testo vecchio. «#4» resta, perché il booklet stesso dice che è il capitolo VII
 - **Trovato nel repo:** `Bestiario/villain/balvar-fuocospento-cr13.md` · `07_il Portale Della Forgia Eterna/PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`
 - **Solo qui:** la ricerca dei marcatori era una regex in scratchpad, non un cancello del repo
+
+### MS-0218 · 2026-11-21 · Skullcrusher arriva al duello con i suoi oggetti, e la runa del martello di Balvar
+
+- **Data:** 2026-11-21
+- **PR:** —
+- **ADR:** —
+- **Temi:** skullcrusher drago nero vecchio incantesimi conosciuti stregone oggetti tesoro anello mantello bacchetta paura pergamene dominare suggestione immagine speculare gittate eldritch spear runa zeth balvar martello boost
+- **Origine:** riga del 2026-11-21 «Skullcrusher Vecchio come al duello del 20/11» in `plans/CHANGELOG.md`
+- **Testo:** Durante la serata del 20/11 Jfs ha chiesto perché il drago non usasse incantesimi di paura e di dominio. La scheda dava al Vecchio i conosciuti 6/4/2/2 contro i 7/5/3/2 dello stregone di 7° dell'SRD; le card del 21/11 hanno riempito i posti con *messaggio*, *causare paura* e *spaventare*, e hanno dato al drago anello +3, mantello +3, bacchetta di *paura* e tre pergamene (circa 51.900 mo del tesoro triplo da 108.000), *immagine speculare* al corno e passate oltre i 18 m. Con l'anello il contatto sale a 13 e Tordek (+21) lo colpisce solo col 20 naturale; Jfs ha scelto di tenerlo. Il PDF della serata diceva 18 m per la deflagrazione di Artemis: con *Eldritch Spear* sono 75 m, e il colpo a 72 m giocato al tavolo era legale. Al tavolo Zeth ha ricambiato il martello di Balvar con una runa +2 al colpire contro i draghi, regola della casa
+- **Trovato nel repo:** `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` · `07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md`
+- **Solo qui:** il duello simulato con questi numeri dura circa 10 round e il drago muore nel 3-11% delle prove, contro i 3 round stimati da Jfs: la simulazione sottostima la mischia e non conta Durik né le evocazioni. Le varianti stanno solo nello scratchpad del thread. Resta aperto se la runa del martello valga per tutto il duello, e se le due rune di acido comprate nella sessione 4 si siano attivate
