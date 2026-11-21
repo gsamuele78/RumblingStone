@@ -404,7 +404,7 @@ villain:
   clock: chiuso
   stato: morto
   reversibile: false
-  trigger: 'Ucciso nella notte alla sua tenda da una carica di Tordek (sessione 7, 2026-11-20). Il corpo nel buco portatile di Artemis con quello di Balvar; il resoconto del DM dice anche «appeso alle mura» (da chiarire). All''alba vale la versione «Zog''tar MORTO» della prova delle mura (ARC07-DEF-4 Scena 10)'
+  trigger: 'Ucciso nella notte alla sua tenda da una carica di Tordek (sessione 7, 2026-11-20). Il corpo, portato via nel buco portatile di Artemis, è stato poi appeso alle mura. All''alba vale la versione «Zog''tar MORTO» della prova delle mura (ARC07-DEF-4 Scena 10)'
 - villain: '**Balvar Fuocospento** (consigliere dell''orda, runaio esiliato, GS 13) — `Bestiario/villain/balvar-fuocospento-cr13.md`'
   tempo: giocato
   png_id: balvar
