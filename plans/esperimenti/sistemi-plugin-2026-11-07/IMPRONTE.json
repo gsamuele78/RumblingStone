@@ -50,8 +50,8 @@
   "uscita": 0
  },
  "validate_modules": {
-  "byte": 953,
-  "sha256": "5d5a75d9ea36d73cfdeb837813e7116c40f907bbaf89cad8adace3f3448fca13",
+  "byte": 808,
+  "sha256": "e6e714c967d89975043142e6f72ec1f0143a3b7e23bbc7b1667d487315bfdcae",
   "uscita": 0
  },
  "validate_standalone": {
