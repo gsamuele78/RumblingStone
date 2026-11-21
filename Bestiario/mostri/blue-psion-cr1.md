@@ -1,8 +1,11 @@
-# Blue (Psionic Goblinoid) [ACCEPTED — DM-canon 2026-05-05]
+# Blue (Psionic Goblinoid) [CANONE — DM 2026-05-05]
 **Faction**: red-hand | **Role**: psionic-support | **Environment**: any | **CR**: 1 | **Source**: MM II p.38 Blue | **Status**: inferred
 
 ```statblocco
 gs: 1
+taglia: Piccola
+spazio: 1,5 m
+portata: 1,5 m
 ca: 15
 ca-dettaglio: (+1 size, +2 Dex, +2 leather)
 pf: 5
@@ -13,9 +16,9 @@ velocita: 30 ft
 iniziativa: +2
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta −4 → **−5**: BAB +0, For 8 (−1), Piccola (−4). La For 8 è confermata dall'attacco (morning star +0) e dal danno (1d6−1).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta −4 → **−5**: BAB +0, For 8 (−1), Piccola (−4). La For 8 è confermata dall'attacco (morning star +0) e dal danno (1d6−1).
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 **Size/Type**: Small humanoid (goblinoid, psionic) | **HD**: 1d8+1 (5 HP)
 **AC**: 15 (+1 size, +2 Dex, +2 leather) | **Init**: +2 | **Speed**: 30 ft

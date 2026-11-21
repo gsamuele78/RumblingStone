@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""validate_standalone.py — gate CI per i moduli autoconclusivi (`STANDALONE-*/`).
+"""validate_standalone.py — gate CI per i moduli autoconclusivi (`10-stand-alone/*/`, e `STANDALONE-*/` se ne torna uno).
 
 `validate_modules.py` copre solo i master `ARC*-DEF-*.md` della campagna: i moduli
 standalone avevano **zero gate**. Questo script chiude il buco con controlli che una
@@ -19,9 +19,10 @@ regex può fare bene e un revisore umano fa male:
   7. **Generatori locali** (ADR-0017 §4) — i `.py` sotto la cartella del modulo devono
      essere stdlib-only, avere una docstring, essere citati in un `.md` e compilare.
 
-**Due famiglie di moduli, due serie di controlli.** I moduli `STANDALONE-*/` hanno
-master markdown e prendono i sette controlli qui sopra. I moduli sotto
-`10-stand-alone/*/` sono scritti direttamente in **HTML** — un supporto fuori da
+**Due famiglie di moduli, due serie di controlli.** I moduli con master markdown
+(riconosciuti dall'hub `00-*.md`: il Drappo, in `10-stand-alone/` dal 2026-11-01,
+prima in `STANDALONE-*/`) prendono i sette controlli qui sopra. Gli altri moduli
+sotto `10-stand-alone/*/` sono scritti direttamente in **HTML** — un supporto fuori da
 ADR-0003 e da entrambe le catene di impaginazione — e fino al 2026-09-02 non
 avevano **nessun** gate: la CI conosceva solo `STANDALONE-*`, e ~2.750 righe di
 modulo non erano viste da niente. Su HTML valgono i controlli che hanno senso:
@@ -64,16 +65,14 @@ SESSION_RE = re.compile(r"^0[1-3]-GIORNO-.*\.md$")
 # vantaggio» è lingua normale: bandirla sarebbe un falso positivo, e un validatore
 # che grida al lupo viene disattivato entro una settimana.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from validate_modules import RIPOSO_5E  # noqa: E402
+from dmcore.sistemi import sistema_di, termini_vietati  # noqa: E402
 
-BANNED = {
-    r"\bazione bonus\b": "azione bonus (5e) → azione veloce",
-    r"\bcon (?:un )?vantaggio\b": "tirare «con vantaggio» (5e) → nessun equivalente",
-    r"\bcon (?:uno )?svantaggio\b": "tirare «con svantaggio» (5e) → nessun equivalente",
-    r"\blair action": "lair action (5e)",
-    r"(?<![A-Za-z])DC\s+\d": "DC → CD (Classe Difficoltà)",
-    RIPOSO_5E: "riposo breve/lungo (5e) → otto ore di sonno, guarigione naturale",
-}
+
+def vietati(path: Path) -> "list[tuple[str, str]]":
+    """I termini vietati nel sistema del modulo: la lista sola del plugin d20,
+    la stessa di validate_modules (ADR-0111, L3)."""
+    return termini_vietati(sistema_di(path))
+
 
 PREGEN_SECTIONS = ("Difesa", "Attacco", "Statistiche", "Equipaggiamento")
 
@@ -85,13 +84,21 @@ def module_dirs(only: str | None) -> list[Path]:
     if only:
         p = (ROOT / only).resolve()
         return [p] if p.is_dir() and not _e_html(p) else []
-    return sorted(d for d in ROOT.iterdir() if d.is_dir() and d.name.startswith("STANDALONE-"))
+    vecchi = [d for d in ROOT.iterdir() if d.is_dir() and d.name.startswith("STANDALONE-")]
+    radice = ROOT / HTML_ROOT
+    # Dal 2026-11-01 anche i moduli markdown stanno in `10-stand-alone/` (il Drappo):
+    # li riconosce l'hub `00-*.md`, che i moduli HTML non hanno.
+    nuovi = [d for d in radice.iterdir() if d.is_dir() and not _e_html(d)
+             and any(re.match(REQUIRED["hub"], f.name) for f in d.glob("*.md"))] \
+        if radice.is_dir() else []
+    return sorted(vecchi + nuovi)
 
 
 def _e_html(d: Path) -> bool:
-    """Vero se la cartella è un modulo a supporto HTML (`10-stand-alone/<nome>/`)."""
+    """Vero se la cartella è un modulo a supporto HTML: sta in `10-stand-alone/` e ha
+    le pagine `.html` al primo livello (il Drappo le ha solo in `homebrew/`)."""
     radice = (ROOT / HTML_ROOT).resolve()
-    return radice in d.resolve().parents
+    return radice in d.resolve().parents and any(d.glob("*.html"))
 
 
 def html_module_dirs(only: str | None) -> list[Path]:
@@ -200,7 +207,7 @@ def check_banned(mod: Path, errors: list[str]) -> None:
         if f.name.endswith(".hb.md"):
             continue  # generati dai sorgenti: il difetto va segnalato una volta sola
         text = f.read_text(encoding="utf-8", errors="ignore")
-        for pattern, why in BANNED.items():
+        for pattern, why in vietati(f):
             for m in re.finditer(pattern, text, re.I):
                 line = text[: m.start()].count("\n") + 1
                 errors.append(f"{f.relative_to(ROOT)}:{line}: termine vietato — {why}")
@@ -401,7 +408,7 @@ def check_html_module(mod: Path, errors: list[str], warnings: list[str]) -> None
     check_aree_ambigue(pagine, mod.name, warnings)
 
     testo = "\n".join(_testo(f.read_text(encoding="utf-8", errors="ignore")) for f in pagine)
-    for pattern, why in BANNED.items():
+    for pattern, why in vietati(mod):
         if re.search(pattern, testo, re.I):
             errors.append(f"{mod.name}: termine vietato nel testo — {why}")
 

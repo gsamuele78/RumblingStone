@@ -1,10 +1,13 @@
-# ghost-lion-spettrale-cr8 [ACCEPTED — DM-canon 2026-05-05]
+# ghost-lion-spettrale-cr8 [CANONE — DM 2026-05-05]
 
 **Faction**: ghostlord-undead | **Role**: guardian-incorporeal | **Environment**: thornwaste,ruins | **CR**: 8
 
 ```statblocco
 gs: 8
 tipo: Large undead (incorporeal), fantasma PF1e su leone crudele, 9d8
+taglia: Grande
+spazio: 3 m
+portata: 1,5 m
 ca: 20
 ca-dettaglio: (−1 taglia, +4 Des, +7 deflessione dal Carisma), contatto 20, colto alla sprovvista 16
 pf: 103
@@ -17,6 +20,7 @@ attacchi:
   - Mischia tocco corruttore +9 (8d6, contatto incorporeo; Tempra CD 21 dimezza)
 voci:
   - BAB +6; lotta — (incorporeo)
+  - Tratti dei non morti
   - Incorporeo: 50% di mancare contro gli attacchi non magici; passa attraverso muri e pavimenti
   - Resistenza a incanalare +4; ringiovanimento (torna in 2d4 giorni se non si scioglie il suo legame con la tana del Ghostlord)
   - Gemito Terrificante: Volontà CD 21 o in preda al panico per 2d4 round (effetto di paura, sonoro)
@@ -25,7 +29,9 @@ voci:
 fonte: fantasma PF1e (scelto dal DM il 2026-09-23 come la versione più forte, D5) sul leone della fonte d'arco `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md` §2
 ```
 
-> [INFERRED — needs DM confirmation] **D5, deciso dal DM il 2026-09-23: la versione più forte fra 3.5 e PF1e, e coerente con le sue regole.** Sulla stessa base della fonte d'arco (9 DV, Des 18, Sag 12, Car 24 dalla sua deflessione +7), il **fantasma PF1e** vince su quello 3.5 quasi ovunque: pf 9d8 + Car per DV = **103** contro 9d12 = 58; Tempra dal Carisma **+10** contro +3; BAB ¾ **+6** contro ½ +4; **tocco corruttore 8d6** (1d6 per GS) contro 1d6. CA 20 e Riflessi +7 sono uguali nelle due. Dal PF1e: iniziativa **+4** (Des +4, nessun talento: chiude D12), tocco corruttore **+9** (BAB +6, Des +4, Grande −1), CD **21** per tocco e gemito (10 + metà dei DV + Car). Il morso incorporeo +10 della fonte non è un potere del fantasma e sparisce. ⚠ **Le regole del template sono citate a memoria**: i siti del SRD 3.5 e del PRD erano bloccati dalla rete di questo ambiente il 2026-09-23. Da rileggere sul PRD: il dado del tocco corruttore e le CD. I valori prima di oggi: pf 92, CA 15, TS +7/+5/+7, spada corta +15; poi, trascritta la fonte, pf 58, TS +3/+7/+7, morso +10.
+> [CANONE — DM 2026-09-23, D5 e D12] **D5, deciso dal DM il 2026-09-23: la versione più forte fra 3.5 e PF1e, e coerente con le sue regole.** Sulla stessa base della fonte d'arco (9 DV, Des 18, Sag 12, Car 24 dalla sua deflessione +7), il **fantasma PF1e** vince su quello 3.5 quasi ovunque: pf 9d8 + Car per DV = **103** contro 9d12 = 58; Tempra dal Carisma **+10** contro +3; BAB ¾ **+6** contro ½ +4; **tocco corruttore 8d6** (1d6 per GS) contro 1d6. CA 20 e Riflessi +7 sono uguali nelle due. Dal PF1e: iniziativa **+4** (Des +4, nessun talento: chiude D12), tocco corruttore **+9** (BAB +6, Des +4, Grande −1), CD **21** per tocco e gemito (10 + metà dei DV + Car). Il morso incorporeo +10 della fonte non è un potere del fantasma e sparisce.
+
+> ⚠ **Le regole del template sono citate a memoria** (non verificato sul sito: SRD 3.5 e PRD erano bloccati dalla rete il 2026-09-23 e il 2026-10-18). Il fantasma PF1e del Bestiary dà al tocco corruttore 1d6 per GS e una Tempra CD 10 + ½ DV + Car per dimezzare: 8d6 e CD 21 tornano, e restano (canone del DM 2026-10-18). I valori prima di oggi: pf 92, CA 15, TS +7/+5/+7, spada corta +15; poi, trascritta la fonte, pf 58, TS +3/+7/+7, morso +10.
 
 **Source**: leone crudele della fonte d'arco (`09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md` §2) + template **fantasma PF1e** (D5) — Ghostlord lair guardians
 **Status**: inferred — base template only; DM should finalize exact stats at the table.

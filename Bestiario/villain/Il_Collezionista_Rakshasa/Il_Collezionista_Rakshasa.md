@@ -1,35 +1,39 @@
 # IL COLLEZIONISTA
 
-## PROFILO DEL VILLAIN
+
 
 
 
 
 ```statblocco
 gs: 18
-tipo: Medium outsider, 18d4
-ca: 22
-ca-dettaglio: (+1 Des, +11 armatura)
-pf: 63
-pf-dado: 18d4
-ts: Temp +7, Rifl +7, Vol +11
-velocita: 9 m
-iniziativa: +1
-attributi: Car 19 Int 14 Des 13 Cos 12 Sag 10 For 8
+tipo: Medium outsider (native, evil, lawful), rakshasa / Stregone 11 (18 DV), LM
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: 26
+ca-dettaglio: (+2 Des, +9 naturale, +4 *armatura magica* sempre attiva, +1 deviazione), contatto 13, colto alla sprovvista 24
+pf: 113
+pf-dado: 7d8+11d4+54
+ts: Temp +13, Rifl +12, Vol +15
+velocita: 12 m
+iniziativa: +2
+sensi: scurovisione 18 m
+attributi: For 12 Des 14 Cos 16 Int 14 Sag 13 Car 20
 attacchi:
-  - Mischia bastone ferrato +8 (1d6-1)
+  - Mischia 2 artigli +13 (1d4+1) e morso +8 (1d6)
 voci:
-  - Incantatore di livello 18 (stregone, CAR +4)
-  - Incantesimi al giorno: 6/6/6/6/6/6/6/6/5/3
+  - Incantatore di livello 18 (stregone: 7 dall'innato del rakshasa + 11 livelli di classe, CAR +5)
+  - Incantesimi al giorno: 6/8/7/7/7/7/6/6/5/3
   - Incantesimi conosciuti: 9/5/5/4/4/4/3/3/2/1
-  - CD degli incantesimi: 10 + livello + +4 (massimo: 9° livello, CD 23)
-  - ⚠ incantatore spontaneo: prende ogni livello d'incantesimo due livelli dopo un preparato — per stare sulla stessa CD servono ~2 livelli in più
-  - Preparati — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: catena di dissolvimenti, disintegrazione, occhio arcano superiore · 7°: dito della morte, inversione della gravità, prigione · 8°: campo antimagia, labirinto, urlo doloroso · 9°: arresto del tempo, desiderio limitato, sfera di annichilimento
+  - CD degli incantesimi: 15 + livello (9° livello: CD 24)
+  - Conosciuti — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: contingenza, dissolvi magie superiore, disintegrazione · 7°: dito della morte, gabbia di forza, desiderio limitato · 8°: labirinto, urlo superiore · 9°: arresto del tempo
   - ⚠ **Non è inteso per lo scontro fisico.** La scheda dichiara GS 17-19 e dice che il villain non combatte mai in campo aperto: questi numeri servono se i PG lo mettono all'angolo, non a progettare un incontro
-  - Rakshasa Ak'chazar avanzato: RD 15/bene e perforante, cambiare forma, individuazione del pensiero a volontà
-  - ⚠ Il blocco conta i soli livelli di classe. I 7 DV razziali da esterno del rakshasa e la RD non ci sono dentro: vanno aggiunti prima di usarlo come boss (e non è previsto che lo sia)
+  - Rakshasa (SRD): RD 15/bene e perforante, RI 38 (27 del rakshasa + 11 livelli di classe), cambiare forma, individuazione del pensiero a volontà
   - Amuleto dell'Eclissi Planare: vuoto mentale e anti-individuazione continui a LI 20 — nemmeno la visione del vero lo smaschera
-fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=outsider, taglia=medium, ruolo=controllore, classe=('stregone', 18), elite=True, gs=18); derivati: ca, pf, ts. ADR-0034 — proposta da rileggere al tavolo
+  - Equipaggiamento da combattimento: pozione di cura ferite moderate, pozione di cura ferite gravi, pozione di splendore dell'aquila, pozione di volare, pozione di invisibilità, bacchetta di scudo (44 cariche)
+  - Altro equipaggiamento: anello di protezione +1, mantello della resistenza +2, Amuleto dell'Eclissi Planare, monile di ossidiana
+fonte: rakshasa (SRD 3.5) 7 DV + Stregone 11, rifatto a mano: vedi Boost log in fondo
 ```
 
 **Vero Nome:** Ignoto (Sussurrato come "Avaritia" nei Piani Inferiori)
@@ -55,15 +59,73 @@ fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=outsider, ta
 > rotta su cui la gilda vendette Therysol e suo fratello: la caccia di lei e la
 > fuga di lui sono la stessa strada. Il monile è un oggetto minore, distinto dal
 > Sigillo di Ossidiana di Shar.
-**Razza/Tipo:** Rakshasa Ak'chazar (Avanzato, Esterno Malvagio) Extra-Planare / Signore del Commercio
-**Allineamento:** Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
-**Livello Approssimativo/GS:** GS 17-19 (Mai inteso per scontro fisico diretto, è un villain di manipolazione)
+
+**Role**: villain di manipolazione — il villain «subdolo e senza scrupoli» della campagna (§Chi è)
+**Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; la fuga dalla Tana dei Minotauri è nel riquadro qui sopra]
+**Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; il riquadro qui sopra lo porta nel Piano del Fuoco, alla forgia dei salamandri]
+**Motivation**: → §Cosa vuole (Gli obiettivi)
+**CR**: 18 (17-19 nella prima stesura; mai inteso per scontro fisico diretto, è un villain di manipolazione) | **Race/Class**: Rakshasa Ak'chazar [Private source — Monster Manual II, non verificato: la variante non è nel repo e la build usa il rakshasa SRD] (Avanzato, Esterno Malvagio) Extra-Planare, Stregone 11 / Signore del Commercio; Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
+**Key stats**: → §In combattimento e il blocco qui sopra. `il-collezionista-rakshasa-cr18.md` rimanda a questa scheda.
 
 ---
 
-## IL CONCETTO E IL DESIGN (D&D 3.5)
+## Chi è
+
+### Il concetto e il design (D&D 3.5)
 
 "Il Collezionista" è il perfetto villain *"subdolo e senza scrupoli"*. Non cercherà mai di uccidere i PG in combattimento aperto. Li userà, li ingannerà e ne trarrà profitto, stringendo patti che sembrano vantaggiosi ma che nascondono trappole morali o temporali a lungo termine.
+
+## Aspetto e voce
+
+* **Sottigliezza.** Parla con voce calma, vellutata. Offre sempre tè esotici, tratta i PG come "esimi clienti" anche quando li sta insultando velatamente. Usa sempre scappatoie legali nei patti che stringe.
+
+## Cosa vuole
+
+### Gli obiettivi
+
+* **A Breve Termine (Anno -1000):** Depredare le reliquie dei clan nanici (es. gli Ironforge) mentre Hammerfist e l'Orda si distruggono a vicenda. Sfruttare l'arrivo dei PG dal futuro come "anomalia temporale" per fare il lavoro sporco per lui senza allertare i guardiani storici.
+* **A Lungo Termine (Anno 1372 e oltre):** Diventare il principale *Shadow-Broker* e fornitore di mercato nero della regione di Elsir. Finanziare fazioni opposte nella guerra contemporanea, raccogliere anime per pagare dazi planari e impossessarsi indirettamente di artefatti come la *Corona di Adamantio*.
+
+## Nella campagna
+
+* **Il piano di Varis:**
+ha un piano per far si che i PG si uccidano tra di loro. e che poi lui possa depredare i cadaveri dagli artefatti dei PG e venderli al miglior offerente.ha una gilda di ladri e assassini che lavora per lui (simile al libro di R.A. Salvatore per la parte del capo della gilda di ladri).Ha un clone di se stesso incontrato dai pg all'inizio della campagna nel minotaur lair che poi si rivelerà essere stato inviato per fare affari con i drow e la regina dei funghi.
+
+## Con i PG
+
+### "Shine Time" — come farlo odiare e amare (D&D 3.5 mechanics)
+
+#### L'Intrigo per ARTEMIS (Il Senior Developer)
+
+Varis offre ad Artemis lo scambio: il **Mantello dei Tiri Salvezza Elevati** (un oggetto che Artemis brama) in cambio del furto di un registro/reliquia dal caveau inviolabile del clan Ironforge (che cadrà sotto le macerie domani).
+
+* **Meccanica:** Richiede prove multiple di Raggirare (CD 25 per deviare guardie), Artemis non ha Disattivare Congegni (CD 32 sulle serrature meccanomagiche antiche) ovviando con incantesimi e pergamene vendute da Varis stesso e Utilizzare Oggetti Magici (CD 30 per craccare la barriera runica). Esalta la build skill-monkey di Artemis. Rende Artemis ricco ma moralmente compromesso.
+
+#### Il Dilemma per THORIK (Il Manager)
+
+Varis offre a Thorik un'arma: i "Fuochi di Baator", alabarde incendiarie o cannoni a frammentazione che annienterebbero l'assedio.
+
+* **Meccanica:** Le armi garantiscono la distruzione automatica di un'ala dell'esercito orco, ma il loro raggio d'azione provocherà fumi letali (Veneno Inalazione Tempra CD 18) nei tunnel di evacuazione nanici inferiori. Thorik deve decidere tra danni collaterali certi sui civili per la sicurezza strategica, testando il suo Senso del Dovere.
+
+#### Il Furto Ingegneristico per TORDEK (L'Ingegnere)
+
+Tordek non deve "comprare" da Varis. Può notare i **Cristalli di Risonanza** (esplosivi sonici nanici antichi rubati da Varis).
+
+* **Meccanica:** Tordek non può usare *Artigianato (Ingegneria/Fabbricare Trappole) CD 28* e non puo usare *Conoscenze (Architettura/Ingegneria) CD 25* per "hackerare" ovviare con metodi non convenzionali per aprire i forzieri dimensionali di Varis e rubare gli esplosivi mentre Artemis lo distrae. Tordek usa i propri pugni per alterare la frequenza vibratoria del cristallo di chiusura. Risalta la sua natura anarchica/costruttiva.
+
+#### La Sfida Etica per HELLA (La Bussola Morale)
+
+Varis rifiuta di curare una sezione di nani feriti (rifugiati) perché non possono pagare, o offre contratti che legano le loro anime.
+
+* **Meccanica:** Hella usa *Intimidire (basato su Forza/Natura)* supportata dai suoi Treant, o il suo incantesimo di *Cura Ferite Critiche* contrapposto alle maledizioni legali di Varis. Può minacciare di distruggere il portale planare del mercante se non lascia in pace la gente di Hammerfist, creando un rancore eterno del Rakshasa verso Hella.
+
+## In combattimento
+
+Non combatte: «Non cercherà mai di uccidere i PG in combattimento aperto» (§Chi è). Il blocco in testa serve se i PG lo mettono all'angolo.
+
+### Tattiche del master (come giocarlo)
+
+* **Mai attaccare.** Se attaccato, Varis sorride, attiva una contingenza (*contingenza* con dentro *porta dimensionale*: *parola del ritiro* è un incantesimo da chierico, e uno stregone non lo conosce) e svanisce, dicendo: *"Il mercato libero si è chiuso in anticipo oggi, signori. I tassi di interesse sul vostro orgoglio saranno letali."*
 
 ### Immunità al True Seeing e Detect Magic
 
@@ -73,47 +135,39 @@ Il Collezionista indossa l'**Amuleto dell'Eclissi Planare** (Artefatto Minore):
 * **Schermatura Assoluta:** Perfino la capacità *Visione del Vero* di Thorik (tramite Corona o incantesimi) mostra Varis semplicemente come un umanoide alto, coperto di sete esotiche, con una forte aura di "Magia di Evocazione" (la scusa perfetta per un mercante planare). Solo le Deità Maggiori possono vedere la sua vera forma di Rakshasa dalla testa di tigre bianca.
 * **Il Triangolo di Rischio per Artemis:** Artemis (che usa divinazioni) troverà "strano" che questo mercante sia l'unico essere su Faerûn la cui aura è *troppo perfetta*. L'intuito sarà l'unica vera difesa.
 
----
+## Esiti possibili
 
-## GLI OBIETTIVI
+Un ramo per patto (§Con i PG) e uno per l'attacco (§In combattimento). La colonna «Che cosa gli resta» è `[INFERRED — Che cosa fa il Collezionista con quello che ottiene da ogni patto?; base: la scheda dà il patto e il suo prezzo (r.102-128), non il dopo; da rivedere quando si fonde il master DEF-04/05]`.
 
-* **A Breve Termine (Anno -1000):** Depredare le reliquie dei clan nanici (es. gli Ironforge) mentre Hammerfist e l'Orda si distruggono a vicenda. Sfruttare l'arrivo dei PG dal futuro come "anomalia temporale" per fare il lavoro sporco per lui senza allertare i guardiani storici.
-* **A Lungo Termine (Anno 1372 e oltre):** Diventare il principale *Shadow-Broker* e fornitore di mercato nero della regione di Elsir. Finanziare fazioni opposte nella guerra contemporanea, raccogliere anime per pagare dazi planari e impossessarsi indirettamente di artefatti come la *Corona di Adamantio*.
+| Scelta dei PG | Conseguenza scritta nella scheda | Che cosa gli resta |
+|:---|:---|:---|
+| **Artemis accetta** lo scambio (il mantello per il registro degli Ironforge) | Artemis ricco ma compromesso moralmente (r.102) | Ha il registro e una prova del furto: una leva su Artemis da usare più avanti |
+| **Thorik usa i Fuochi di Baator** | Un'ala dell'orda distrutta, fumi letali nei tunnel di evacuazione (r.108) | Ha venduto un'arma e ha i morti civili da raccontare: una leva sul Senso del Dovere di Thorik |
+| **Tordek ruba i Cristalli di Risonanza** | Tordek apre i forzieri dimensionali e si prende gli esplosivi, mentre Artemis distrae Varis (r.114) | Perde merce e lo sa: Tordek entra nella lista di chi gli deve qualcosa |
+| **Hella lo minaccia** e difende i rifugiati | Rancore eterno del Rakshasa verso Hella (r.120) | Hella diventa il suo bersaglio personale nelle scene successive |
+| **I PG lo attaccano** | Contingenza con *porta dimensionale*: sparisce senza combattere (r.128) | Nessuna perdita per lui; il mercato con i PG si chiude e restano solo le leve già prese |
+| **Nessun patto** | — | Continua a depredare i clan mentre Hammerfist e l'orda si consumano (§Gli obiettivi) |
 
----
+<!-- storico -->
+- era (17/11, corretto il 18/11): riga di Tordek, conseguenza «Gli esplosivi tornano ai nani». La scheda dice solo che Tordek li ruba (r.114); a chi vanno dopo non è scritto.
+<!-- /storico -->
 
-## "SHINE TIME" - COME FARLO ODIARE E AMARE (D&D 3.5 MECHANICS)
+## Fonti e canone
 
-### L'Intrigo per ARTEMIS (Il Senior Developer)
+- La correzione del DM su Varis e la fuga dalla Tana dei Minotauri sono nel riquadro in testa; la scheda è della prima stesura (aprile 2026).
+- L'intermediario umano: `Bestiario/png/Varis_Seta_Argento/Varis_Seta_Argento.md`.
+- `il-collezionista-rakshasa-cr18.md` è un rimando a questa scheda.
 
-Varis offre ad Artemis lo scambio: il **Mantello dei Tiri Salvezza Elevati** (un oggetto che Artemis brama) in cambio del furto di un registro/reliquia dal caveau inviolabile del clan Ironforge (che cadrà sotto le macerie domani).
+Benchmark: PF T1-1 riga 18: CA 26 (−7), pf 113 (−187), att +13 (−15), CD 24 (−1). Per somma il GS sarebbe 21 (rakshasa GS 10 + 11 livelli di stregone, classe associata); sulle difese ne vale 13-14, sulle CD 17. Resta 18 per gli incantesimi di 8° e 9°, *contingenza* e l'amuleto, che sono quello che lo rende imprendibile.
 
-* **Meccanica:** Richiede prove multiple di Raggirare (CD 25 per deviare guardie), Artemis non ha Disattivare Congegni (CD 32 sulle serrature meccanomagiche antiche) ovviando con incantesimi e pergamene vendute da Varis stesso e Utilizzare Oggetti Magici (CD 30 per craccare la barriera runica). Esalta la build skill-monkey di Artemis. Rende Artemis ricco ma moralmente compromesso.
+> RC-001 (2026-11-15, ADR-0134) `[CANONE — DM 2026-11-15, RC-001]`: pozioni, bacchetta, anello e mantello vengono dal PNG dei Codex PF1e «Lucky Mage» (Stregone 11). L'anello di protezione +1 porta la CA da 25 a 26 (contatto 13, colto alla sprovvista 24); il mantello della resistenza +2 porta i tiri salvezza da +11/+10/+13 a +13/+12/+15. Non entrano l'amuleto dell'armatura naturale (al collo c'è già l'Amuleto dell'Eclissi Planare), la fascia del Carisma (nel 3.5 è un mantello, e il posto è del mantello della resistenza), la balestra e la lancia lunga. Valore 9.060 mo senza l'Amuleto e il monile, che non hanno prezzo; il livello effettivo è oltre il 20° e la Tabella 4-23 del DMG 3.5 non arriva (al 20° sono 220.000 mo).
 
-### Il Dilemma per THORIK (Il Manager)
+Boost log: DV razziali aggiunti (rakshasa SRD 7 DV + Stregone 11, l'innato del rakshasa sommato alla classe come incantatore di 18°) — GS 18 → 18 — il blocco contava solo 18 livelli da stregone e nessun DV razziale.
 
-Varis offre a Thorik un'arma: i "Fuochi di Baator", alabarde incendiarie o cannoni a frammentazione che annienterebbero l'assedio.
-
-* **Meccanica:** Le armi garantiscono la distruzione automatica di un'ala dell'esercito orco, ma il loro raggio d'azione provocherà fumi letali (Veneno Inalazione Tempra CD 18) nei tunnel di evacuazione nanici inferiori. Thorik deve decidere tra danni collaterali certi sui civili per la sicurezza strategica, testando il suo Senso del Dovere.
-
-### Il Furto Ingegneristico per TORDEK (L'Ingegnere)
-
-Tordek non deve "comprare" da Varis. Può notare i **Cristalli di Risonanza** (esplosivi sonici nanici antichi rubati da Varis).
-
-* **Meccanica:** Tordek non può usare *Artigianato (Ingegneria/Fabbricare Trappole) CD 28* e non puo usare *Conoscenze (Architettura/Ingegneria) CD 25* per "hackerare" ovviare con metodi non convenzionali per aprire i forzieri dimensionali di Varis e rubare gli esplosivi mentre Artemis lo distrae. Tordek usa i propri pugni per alterare la frequenza vibratoria del cristallo di chiusura. Risalta la sua natura anarchica/costruttiva.
-
-### La Sfida Etica per HELLA (La Bussola Morale)
-
-Varis rifiuta di curare una sezione di nani feriti (rifugiati) perché non possono pagare, o offre contratti che legano le loro anime.
-
-* **Meccanica:** Hella usa *Intimidire (basato su Forza/Natura)* supportata dai suoi Treant, o il suo incantesimo di *Cura Ferite Critiche* contrapposto alle maledizioni legali di Varis. Può minacciare di distruggere il portale planare del mercante se non lascia in pace la gente di Hammerfist, creando un rancore eterno del Rakshasa verso Hella.
-
----
-
-## TATTICHE DEL MASTER (COME GIOCARLO)
-
-* **Mai attaccare.** Se attaccato, Varis sorride, attiva una contingenza (*Parola del Ritiro* o *Porta Dimensionale*) e svanisce, dicendo: *"Il mercato libero si è chiuso in anticipo oggi, signori. I tassi di interesse sul vostro orgoglio saranno letali."*
-* **Sottigliezza.** Parla con voce calma, vellutata. Offre sempre tè esotici, tratta i PG come "esimi clienti" anche quando li sta insultando velatamente. Usa sempre scappatoie legali nei patti che stringe.
-
-* **Il piano di Varis:**
-ha un piano per far si che i PG si uccidano tra di loro. e che poi lui possa depredare i cadaveri dagli artefatti dei PG e venderli al miglior offerente.ha una gilda di ladri ed assassini che lavora per lui (simile al libro di R.A. Salvatore per la parte del capo della gilda di ladri).Ha un clone di se stesso incontrato dai pg all'inizio della campagna nel minotaur lair che poi si rivelerà essere stato inviato per fare affari con i drow e la regina dei funghi.
+<!-- storico -->
+- era: «Medium outsider, 18d4», pf 63, CA 22 (+1 Des, +11 armatura), tiri salvezza +7 / +7 / +11, iniziativa +1, dal generatore di statblocchi (ADR-0034)
+- era: attributi Car 19 Int 14 Des 13 Cos 12 Sag 10 For 8; bastone ferrato +8 (1d6−1)
+- era: incantesimi al giorno 6/6/6/6/6/6/6/6/5/3, CD massima 23; *campo antimagia* fra gli incantesimi di 8°, *desiderio limitato* e *sfera di annichilimento* fra quelli di 9°
+- era: fuga con *parola del ritiro*
+- era: CA 25, contatto 12, colto alla sprovvista 23; tiri salvezza +11 / +10 / +13 (prima del corredo scelto con RC-001 il 2026-11-15)
+<!-- /storico -->

@@ -41,7 +41,7 @@ in `editorial-standards.md`. Qui sta la **lingua**.
 
 | ❌ Traduttese | ✅ Italiano | Perché |
 |---|---|---|
-| «alzò **la sua** mano», «il **tuo** respiro si fa corto» | «alzò la mano», «il respiro si fa corto» | l'italiano **non mette il possessivo** su parti del corpo e cose proprie: è già implicito |
+| «alzò **la sua** mano», «il **tuo** respiro si fa corto» | «alzò la mano», «il respiro si fa corto» | l'italiano **non mette il possessivo** su parti del corpo e cose che si portano addosso: è già implicito. Gli altri possessivi («il suo re», «la loro città») sono liberi: dicono un legame, e i voti ciechi del DM li premiano (decisione del DM, 2026-10-23) |
 | «**Lui** si voltò. **Lui** non disse niente.» | «Si voltò. Non disse niente.» | l'italiano è **pro-drop**: il soggetto esplicito è enfasi, non norma |
 | «**stai** camminando nel buio» | «cammini nel buio» | il progressivo inglese non ha equivalente neutro: in italiano il presente basta |
 | «**realizzi** che è troppo tardi» | «capisci», «ti rendi conto» | *realizzare* = portare a compimento, non *to realize* |
@@ -224,12 +224,13 @@ ricorda (P1, D14). Il trattino lungo dopo «lui» è caduto con loro.
 
 ## 8. Checklist di revisione (30 secondi a handout)
 
-- [ ] Ho tolto **tutti** i possessivi inutili? (*la sua mano* → *la mano*)
+- [ ] Ho tolto i possessivi sulle **parti del corpo** e sulle cose addosso? (*la sua mano* → *la mano*; *il suo re* resta)
 - [ ] Ho tolto i **soggetti pronominali** non enfatici? (*tu senti* → *senti*)
 - [ ] C'è almeno **una dislocazione a sinistra** o un **c'è** presentativo?
 - [ ] I tempi verbali sono **coerenti** dentro ogni box?
 - [ ] C'è **un periodo lungo** seguito da **una frase corta** che chiude?
-- [ ] Ho tolto la **frase che spiega** l'ultima immagine?
+- [ ] Ho tolto le parole goffe **senza togliere la chiusa** enfatica?
+      (`read-aloud-adulti.md` §2-ter, regola 3: il taglio ha perso 4 volte su 4)
 - [ ] I titoli sono in **minuscolo italiano**, non in Title Case?
 - [ ] Se ritraduco in inglese parola per parola, **perdo qualcosa**? (se no,
       riscrivi)
@@ -269,7 +270,7 @@ Come uscirne, quando il concetto serve ancora:
 | Tic | Come suona | Antidoto |
 |---|---|---|
 | **Tricolon ovunque** | «fango, fumo, corni di guerra» · tre aggettivi, tre clausole, sempre | rompi il ritmo: **due**, oppure **quattro**, oppure uno solo |
-| **Chiusura a effetto obbligatoria** | ogni paragrafo finisce su una frase-sentenza | lascia che un paragrafo **finisca e basta**, su un dettaglio qualunque |
+| **Chiusura a effetto obbligatoria** | ogni paragrafo finisce su una frase-sentenza | lascia che un paragrafo **finisca e basta**, su un dettaglio qualunque. Il tic è la sentenza in fondo a *ogni* paragrafo: la chiusa enfatica di un box read-aloud che c'è resta (`read-aloud-adulti.md` §2-ter, regola 3) |
 | **Trattino lungo come respiro** | «la roccia — e sai già cosa — si muove» | punto e virgola, due punti, o niente |
 | **Maiuscole di portento** | PESO, TUMP, VERA | **una per documento**. Se sono due, non funzionano più |
 | **Tutto è significativo** | ogni dettaglio descritto è un indizio o un simbolo | metti **una cosa che non c'entra niente**: una macchia, un rumore che era il vento |

@@ -11,7 +11,7 @@ Fa rispettare lo standard della libreria di mostri/villain/PNG (T-D12):
      - header obbligatori: **Faction**, **Role**, **Environment**, **CR**,
        **Source**, **Status**;
      - CR del filename coerente col CR dichiarato nell'header;
-     - stato dichiarato nel titolo o nell'header ([ACCEPTED]/[INFERRED]/Status).
+     - stato dichiarato nel titolo o nell'header ([CANONE]/[INFERRED]/Status).
   3. Ogni DOSSIER (gli altri .md in villain|png) ha un titolo H1.
   4. `mostri/` contiene SOLO statblock (+ README*).
   5. `scripts/monster_catalog.yaml` è in sync con la libreria (rigenerazione
@@ -24,7 +24,13 @@ Monster-Statistics-by-CR (hp/AC entro tolleranza larga); (b) `**Status**:
 inferred` ⇒ deve esserci un marcatore `[INFERRED]` nel corpo; (c) se il file
 menziona un boost, deve avere una riga `Boost log:`.
 
-Uso: python3 scripts/validate_bestiario.py [--rules] [--help]
+Con `--forma` (ADR-0091, rapporto non bloccante) conta, per i PNG e i villain
+nominati, le sezioni obbligatorie che mancano e quelle fuori ordine: le cinque
+etichette dello statblocco (Difesa, Attacco, Statistiche, Capacità speciali,
+Tattiche) e le sezioni `##` del dossier. Un dossier senza sezioni è un dossier
+breve e passa; un `POINTER` verso un master d'arco e i cinque dossier di gruppo non si contano.
+
+Uso: python3 scripts/validate_bestiario.py [--rules] [--forma] [--help]
 Exit 0 = struttura ok (gli avvisi --rules NON fanno fallire); exit 1 = violazioni.
 """
 import re
@@ -68,6 +74,7 @@ def warn(msg: str):
 #: le fasce si ricavano dalla Tabella 1–1 in `pf1e-statistiche-per-gs.yaml`
 #: con la tolleranza scritta nello stesso file: un dato, un posto.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore import sistemi as S  # noqa: E402
 from dmcore.tabelle import TABELLA_1_1, TOLLERANZA_PER_GS  # noqa: E402
 
 
@@ -81,7 +88,15 @@ def banda(cr: float):
             riga["ca"] - t["ca_sotto"], riga["ca"] + t["ca_sopra"], riga["pf"], riga["ca"])
 
 
+#: Schede il cui grado di sfida è cambiato per decisione del DM col nome del file rimasto com'era
+#: (card del 2026-11-13: goblin combattente di 1° a GS 1/3, «il nome del file resta»). La stessa
+#: eccezione sta in `extract_statblocks.GS_COL_NOME_VECCHIO`.
+GS_COL_NOME_VECCHIO = {"goblin-warrior1-cr05.md": 1 / 3}
+
+
 def filename_cr(name: str):
+    if name in GS_COL_NOME_VECCHIO:
+        return GS_COL_NOME_VECCHIO[name]
     m = HAS_CR_RE.search(name)
     if not m:
         return None
@@ -117,9 +132,11 @@ def check_statblock(path: Path):
     if h_cr is None:
         err(f"{rel}: CR non leggibile dall'header **CR**")
     first = text.splitlines()[0] if text.splitlines() else ""
-    if not (re.search(r"\[(ACCEPTED|INFERRED)", first)
+    # CANONE è la marca di GUIDA-MARCATURE (ADR-0109); ACCEPTED resta letto
+    # finché esistono schede non migrate fuori dalla libreria.
+    if not (re.search(r"\[(CANONE|ACCEPTED|INFERRED)", first)
             or re.search(r"\*\*Status\*\*[:\s]*\S", text)):
-        err(f"{rel}: stato non dichiarato ([ACCEPTED]/[INFERRED] nel titolo o **Status** valorizzato)")
+        err(f"{rel}: stato non dichiarato ([CANONE — DM data]/[INFERRED — domanda; base: …] nel titolo o **Status** valorizzato)")
 
 
 def check_dossier(path: Path):
@@ -237,16 +254,112 @@ def check_rules(path: Path):
         warn(f"{rel}: menziona un boost ma non ha una riga `Boost log:`")
 
 
+#: ADR-0091 §1: le etichette dello statblocco, in quest'ordine, a inizio riga.
+FORMA_STATBLOCCO = ["Difesa", "Attacco", "Tattiche", "Statistiche", "Capacità speciali"]
+#: ADR-0091 §2: le sezioni del dossier in ordine, con l'obbligo. «In
+#: combattimento» è obbligatoria solo se il dossier rimanda a uno statblocco.
+FORMA_DOSSIER = [
+    ("In breve", False), ("Chi è", True), ("Aspetto e voce", True),
+    ("Cosa vuole", True), ("Nella campagna", True), ("Con i PG", False),
+    ("Rapporti", False), ("In combattimento", None), ("Esiti possibili", True),
+    ("Al tavolo", False), ("Segreti del DM", False), ("Fonti e canone", True),
+]
+
+
+#: ADR-0091 §3: i dossier di gruppo restano come sono (decisione del DM del
+#: 2026-10-15) e la forma non li conta.
+DOSSIER_DI_GRUPPO = {
+    "Consiglio_Rethmar.md", "Profughi_Guado_di_Drellin.md",
+    "Secondo_Anello_Rethmar.md", "Witchwood_e_Tiri_Kitor.md", "Zhentarim_Dauth.md",
+}
+
+
+def _fuori_ordine(trovate: list[str], ordine: list[str]) -> list[str]:
+    """Le sezioni che compaiono prima di una che dovrebbe precederle."""
+    pos = [ordine.index(t) for t in trovate]
+    return [trovate[i] for i in range(1, len(pos)) if pos[i] < max(pos[:i])]
+
+
+def forma(path: Path) -> dict | None:
+    """Il conto di forma di UNA scheda nominata (ADR-0091), o None se non si conta."""
+    if path.name in DOSSIER_DI_GRUPPO:
+        return None
+    text = path.read_text(encoding="utf-8", errors="replace")
+    testa = "\n".join(text.splitlines()[:8])
+    if is_statblock(path):
+        if "POINTER" in testa or "[RIMANDO]" in testa:
+            return None
+        trovate = [e for e in FORMA_STATBLOCCO
+                   if re.search(rf"^\*\*{re.escape(e)}\*\*", text, re.M)]
+        trovate.sort(key=lambda e: re.search(rf"^\*\*{re.escape(e)}\*\*", text, re.M).start())
+        return {"tipo": "statblocco",
+                "mancano": [e for e in FORMA_STATBLOCCO if e not in trovate],
+                "fuori_ordine": _fuori_ordine(trovate, FORMA_STATBLOCCO)}
+    titoli = re.findall(r"^##\s+(.+?)\s*$", text, re.M)
+    if not titoli:
+        return {"tipo": "breve", "mancano": [], "fuori_ordine": []}
+    nomi = [n for n, _ in FORMA_DOSSIER]
+    trovate = [t for t in titoli if t in nomi]
+    ha_stat = "[RIMANDO]" in testa
+    mancano = [n for n, obbl in FORMA_DOSSIER
+               if (obbl or (obbl is None and ha_stat)) and n not in trovate]
+    return {"tipo": "dossier", "mancano": mancano,
+            "fuori_ordine": _fuori_ordine(trovate, nomi)}
+
+
+def rapporto_forma(come_json: bool = False) -> int:
+    """Stampa il conto di forma di png/ e villain/. Non blocca: ritorna 0."""
+    conti = {"statblocco": [0, 0], "dossier": [0, 0], "breve": [0, 0]}
+    difetti = []
+    for sub in ("villain", "png"):
+        for path in sorted((BEST / sub).rglob("*.md")):
+            if path.name.startswith("README") or in_archivio(path):
+                continue
+            f = forma(path)
+            if f is None:
+                continue
+            conti[f["tipo"]][1] += 1
+            if f["mancano"] or f["fuori_ordine"]:
+                difetti.append((path.relative_to(ROOT), f))
+            else:
+                conti[f["tipo"]][0] += 1
+    if come_json:
+        report = {
+            "tool": "validate_bestiario",
+            "rapporto": "forma",
+            "conti": {tipo: {"in_forma": ok, "totale": tot}
+                      for tipo, (ok, tot) in conti.items()},
+            "difetti": [{"file": str(rel), "mancano": f["mancano"],
+                         "fuori_ordine": f["fuori_ordine"]} for rel, f in difetti],
+        }
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        return 0
+    for tipo, (ok, tot) in conti.items():
+        print(f"  {tipo:<11} {ok:>3} su {tot:>3} nella forma di ADR-0091")
+    for rel, f in difetti:
+        voci = []
+        if f["mancano"]:
+            voci.append("mancano " + ", ".join(f["mancano"]))
+        if f["fuori_ordine"]:
+            voci.append("fuori ordine " + ", ".join(f["fuori_ordine"]))
+        print(f"  ~ {rel}: " + "; ".join(voci))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(
         description="Gate CI della libreria Bestiario/ (struttura, naming, CR, catalogo in sync).",
         formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
     ap.add_argument("--rules", action="store_true",
                     help="controlli di regole PF1e (avvisi non bloccanti)")
+    ap.add_argument("--forma", action="store_true",
+                    help="conto delle sezioni di ADR-0091 per PNG e villain (rapporto, non blocca)")
     ap.add_argument("--json", action="store_true",
                     help="emette il report in JSON (opt-in) invece del testo")
     args = ap.parse_args(argv)
     do_rules = args.rules
+    if args.forma:
+        return rapporto_forma(args.json)
 
     # 1. struttura + legacy
     if not BEST.is_dir():
@@ -268,6 +381,13 @@ def main(argv=None):
             if path.name.startswith("README") or in_archivio(path):
                 continue
             if is_statblock(path):
+                # F4 di ADR-0112: i bersagli per GS e i campi devono essere
+                # quelli del sistema del file, non solo del 3.5
+                diverse = S.regole_diverse(S.sistema_di(path), "validate_bestiario")
+                if diverse:
+                    warn(f"{path.relative_to(ROOT)}: sistema {S.sistema_di(path)}, "
+                         f"regole {', '.join(diverse)} diverse da quelle 3.5: scheda non controllata")
+                    continue
                 check_statblock(path)
                 if do_rules:
                     check_rules(path)

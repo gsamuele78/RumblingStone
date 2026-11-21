@@ -226,7 +226,7 @@ niente da indagare** e l'orco è solo un orco, ma sono duecento.
 
 ## 8. Applicazione proposta agli archi in corso
 
-> ⚠️ **`[PROPOSTA — needs DM confirmation]`.** Questa sezione non è canone e
+> ⚠️ **`[PROPOSTA — da confermare dal DM]`.** Questa sezione non è canone e
 > non è stata scritta in `state.md`: ARC-08 e ARC-09 sono **preparati** e la
 > loro colorazione è una decisione del DM, non di un agente
 > (`campaign-coherence.md` §0). Serve come esempio lavorato del §1 e come

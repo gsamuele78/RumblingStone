@@ -304,11 +304,11 @@ Possibile nuovo nemico:
   - Se vittoria: diventa ambasciatore ufficiale a Rethmar, apre nuove rotte commerciali.  
   - Se sconfitta: muore gloriosamente oppure ritirata disgustata (relazione con PG tesa).
 
-- **Magister Veylan** `[INFERRED — needs DM confirmation]` (Dauth):
+- **Magister Veylan** `[CANONE — DM 2026-09-24]` (Dauth; il nome in `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §5):
   - Se vittoria: stabilisce grande fortezza di Dauth, riconosce i PG come alleati permanenti.  
   - Se sconfitta: Dauth cade, il Magister è prigioniero/esiliato (gancio per rescue mission).
 
-- **Durgan Tozzefort** `[ACCEPTED — DM-canon 2026-07-12]` (300 nani mercenari di Dauth):
+- **Durgan Tozzefort** `[CANONE — DM 2026-07-12]` (300 nani mercenari di Dauth):
   - Se vittoria: Hammerfist invia ambasciatore permanente, negozia basi logistiche per i PG.  
   - Se sconfitta: Hammerfist si chiude, invia solo un corpo di ricerca per recuperare i caduti.
 

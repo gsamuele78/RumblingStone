@@ -13,7 +13,7 @@
 > rispetto all'Arco della Forgia Eterna? e quali si potrebbero portare nella
 > campagna?»* — e la verifica dei file che ne è seguita (§1).
 
-**Stato**: 🔵 pianificato · **Data**: 2026-08-31
+**Stato**: ✅ **completo** (2026-11-14): A1-A6 ✅ · B1-B2 ✅ · C1-C2 ✅; A6 consegnato con tre scelte a Jfs su card (S1-S3) e da rileggere dopo la Battaglia di Hammerfist · **Data**: 2026-08-31, §3-bis il 2026-11-01, A6 il 2026-11-14
 **Ambito**: apparato, tooling e formati. **Mai** la prosa giocata.
 
 ---
@@ -137,14 +137,29 @@ prop»). Ognuno con la **nota per il DM che non si stampa** in coda.
 verde sui manifest che li includono.
 **Engine**: Sonnet, impegno **medio**. **Stima**: ~2 ore. **Priorità: 5**.
 
-### A6 · Il dossier delle piste per ARC-09 `⬜ gated`
+### A6 · Il dossier delle piste per ARC-09 `✅ 2026-11-14`
 
 **Produce**: l'equivalente di `10-DOSSIER-DELLE-PISTE.md` per i misteri che ARC-09 ha
 già: la torre invisibile, le due lettere che provano i traffici Sonjak↔Collezionista,
 il «dottore», con nodi a tre strati, sei porte e orologio degli indizi
 (`rumblingstone-indagine`).
-**Gate**: **dopo** che ARC-07 finisce al tavolo. Scrivere le piste di un arco non
-ancora giocato mentre il precedente è aperto è lavoro che invecchia.
+~~**Gate**: **dopo** che ARC-07 finisce al tavolo.~~ Il gate è **tolto il
+2026-11-14 da Jfs**, nel progetto: *«Facciamo tutto il dossier dell arco 09 con
+schede e soluzioni consigliate cosi si chiude anche quello»*. Supera la sua
+risposta del 2026-11-13 sulla card D5 del piano di recupero («dopo che ARC-07 è
+finito al tavolo»). Il rischio che il gate copriva resta, ed è dichiarato in
+testa al dossier: ARC-07 e la Battaglia di Hammerfist non sono giocati, quindi
+il dossier va riletto dopo (`…-DOSSIER-DELLE-PISTE.md` §12).
+✅ **Fatto il 2026-11-14**: `09_…/Arco-Post-Hammerfist-DOSSIER-DELLE-PISTE.md`,
+tre piste (la torre che cammina, il «dottore», le due lettere), 20 nodi a tre
+strati con INNOCENZA, ognuno col file da cui viene; rete per canale, schede dei
+testimoni con `dal_giorno`, orologio G21-G42, falso indizio già presente (le
+lettere di Halveth), esiti se falliscono ed effetti su Rethmar solo da testo
+scritto, tre schede di pista da stampare. Tre aggiunte nuove (S1-S3) a Jfs su
+card. Scheda breve nuova: `Bestiario/png/Saraah_dei_Faggi_grigi.md`, l'unico
+portatore d'indizio senza scheda. Legata a questa voce: la
+carta del cielo di [RICERCA-TOOL-LGM §3.1](RICERCA-TOOL-LGM-2026.md), che Jfs
+vuole per ARC-09 e che chiede a quale pista serve.
 **Engine**: Opus, impegno **alto**. **Stima**: mezza giornata. **Priorità: 6**.
 
 ---
@@ -179,6 +194,40 @@ attestati sono marcati `[INFERRED]`.
 
 ---
 
+## §3-bis · Direzione C — la genealogia, misurata *(2026-11-01)*
+
+Domanda del DM del 2026-11-01: *«se è lo stesso modulo il drappo che è derivato dovrà
+mettere l'origine, mentre se è vero il contrario le indicazioni devono andare nel senso
+opposto; se sono diversi bisogna capire misurando quando sono identici e poi decidere,
+permettendo la giocabilità sia nella campagna che come stand alone»*.
+
+### C1 · Misurare quanto sono lo stesso modulo `✅ 2026-11-01`
+
+**Produce**: `scripts/misura_derivazione.py` (solo stdlib, con test) e
+`plans/esperimenti/drappo-palio-2026-11-01/` con le corrispondenze dichiarate, la misura
+e il rapporto. Corregge l'hub del Drappo §10, che diceva nuove anche le contrade.
+**Esito**: il Drappo deriva dal Palio (git, piano, hub). Testo in comune quasi nullo (7
+sequenze di sei parole su 40.036, nessuna frase); impianto condiviso al 62% dei 74
+concetti (contrade 92%, scene 65%, PNG per ruolo 67%, regole 54%, struttura 36%).
+**Gate**: `pytest scripts/tests/test_misura_derivazione.py` · `validate_standalone.py`.
+
+### C2 · Il collegamento nei due sensi `✅ 2026-11-01`
+
+**Produce**: una riga in testa a `…-P2D-PALIO-CHANNATHGATE-AVVENTURA.md` che rimanda al
+Drappo come versione derivata, e un test che controlla che i due rimandi esistano.
+**Perché è gated**: il piano del Drappo (§1, 2026-08-14) dice che nessun file dell'arco 09
+si tocca. Una riga di rimando non crea dipendenza e non cambia testo giocato, quindi per
+la regola del DM del 2026-10-31 non c'è regressione misurabile; ma supera una decisione
+vecchia, e il dubbio va al DM.
+
+<!-- decisioni-dm: TRAVASO-GENEALOGIA -->
+
+| # | Fase | Domanda |
+|---|---|---|
+| ~~D1~~ | C2 | ✅ **Decisa il 2026-11-01** (il DM, card: «Nei due sensi»). Era: **Come colleghiamo Drappo e Palio?** Proposta: nei due sensi (il Drappo dichiara l'origine, il Palio rimanda al Drappo con una riga, un test tiene i rimandi). Alternative: solo nel Drappo; fondere i due in un sistema della corsa comune (sconsigliata: riscrive testo collaudato) |
+
+---
+
 ## §4 · Ordine di esecuzione, e perché questo
 
 ```
@@ -188,7 +237,7 @@ A2 fregi ──► A3 immagini ──► A1 cassetta ARC-07 ──► A4 kit Val
                           B1 bilanciamento ──► B2 ricchezza
                                (2 h)              (1 h)
 
-A6 dossier ARC-09  ⟵ gated: dopo che ARC-07 finisce al tavolo
+A6 dossier ARC-09  ✅ 2026-11-14 (gate tolto da Jfs il 2026-11-14)
 ```
 
 Il criterio dell'ordine è uno solo: **prima ciò che serve alla serata che il tavolo
@@ -225,6 +274,7 @@ Tutto il resto è parallelizzabile.
 | A5 | `validate_booklets.py` |
 | A6 | `validate_modules.py` · rilettura con `rumblingstone-indagine` |
 | B1, B2 | `validate_standalone.py` |
+| C1, C2 | `pytest scripts/tests/test_misura_derivazione.py` · `validate_standalone.py` |
 
 **Tracciatura** (regola d'oro, ADR-0009): ogni lotto chiuso aggiorna **nello stesso
 commit** la checklist qui sotto, la riga di questo piano in `plans/INDEX.md` e una
@@ -243,7 +293,8 @@ riga in `plans/CHANGELOG.md`.
 3. **Che il kit della Valle diventi canone per sbaglio.** Mitigazione: lo dichiara in
    testa, e i tre PNG jolly non hanno agenda.
 4. **Che si faccia tutto e non si giochi niente.** Il piano è ordinato per **utilità
-   alla prossima serata**, non per completezza. A6 è dichiaratamente gated.
+   alla prossima serata**, non per completezza. A6 era gated fino al 2026-11-14,
+   quando Jfs ha tolto il gate: il dossier dichiara che va riletto dopo il tavolo.
 
 ---
 
@@ -254,9 +305,11 @@ riga in `plans/CHANGELOG.md`.
 - ✅ **A3**: derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
 - ✅ **A4**: kit anti-improvvisazione della Valle *(`campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`: 3×1d20 nomi separati per popolo, i prezzi che dicono **cosa non si trova** a 13°, tre jolly senza agenda, 1d6 «la Valle respira»)*
 - ✅ **A5**: prop fisici per gli handout di ARC-07 *(tre prop nuovi + il difetto trovato: la nota anti-spoiler finiva stampata nella carta dei giocatori)*
-- ⬜ **A6**: dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
+- ✅ **A6**: dossier delle piste per ARC-09 *(`Arco-Post-Hammerfist-DOSSIER-DELLE-PISTE.md`: 3 piste, 20 nodi, orologio G21-G42, effetti su Rethmar solo da testo scritto; gate tolto da Jfs il 2026-11-14; S1-S3 su card; da rileggere dopo Hammerfist)*
 - ✅ **B1**: analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
 - ✅ **B2**: audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
+- ✅ **C1**: misura della genealogia Drappo/Palio *(`plans/esperimenti/drappo-palio-2026-11-01/`: deriva dal Palio, 0 frasi in comune, 62% dell'impianto condiviso; hub del Drappo §10 corretto sulle contrade)*
+- ✅ **C2**: collegamento nei due sensi *(D1 decisa dal DM il 2026-11-01: riga «Versione derivata» in testa a `…-P2D-PALIO-CHANNATHGATE-AVVENTURA.md`, test `RimandiNeiDueSensi`)*
 
 ---
 
@@ -267,5 +320,5 @@ riga in `plans/CHANGELOG.md`.
 - [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md): la catena di stampa, già condivisa
 - `skills/rumblingstone-indagine`: il vocabolario per A6
 - `skills/rumblingstone-playtest`: cosa misura se l'apparato funziona (ADR-0018: due tavoli veri)
-- `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md`: il modello di A1
+- `10-stand-alone/Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md`: il modello di A1
 - `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md`: il modello dei suoni, e l'esempio di come si dichiara il debito

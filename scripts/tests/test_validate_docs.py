@@ -30,6 +30,12 @@ class TestTreeParsing(unittest.TestCase):
         text = "```\ncampaign/                 # commento con parole/slash\n```\n"
         self.assertEqual([p for _, p in vd.paths_from_tree_blocks(text)], ["campaign"])
 
+    def test_un_blocco_di_codice_non_e_un_albero(self):
+        text = ("```mermaid\nflowchart LR\n    A --> B\n```\n"
+                "```bash\ncd RumblingStone\npython3 scripts/dm.py doctor\n```\n"
+                "```\ncampaign/\n```\n")
+        self.assertEqual([p for _, p in vd.paths_from_tree_blocks(text)], ["campaign"])
+
 
 class TestFalsiPositivi(unittest.TestCase):
     """Ogni caso qui è una citazione legittima: il gate NON deve segnalarla."""
@@ -301,7 +307,7 @@ class TestSorgenti(unittest.TestCase):
             self.assertTrue(vd._e_generato(rel), f"{rel} andrebbe escluso")
 
     def test_tiene_i_sorgenti(self):
-        for rel in ("plans/CHANGELOG.md", "docs/guides/GUIDA-MAPPE.md",
+        for rel in ("plans/CHANGELOG.md", "docs/how-to/GUIDA-MAPPE.md",
                     ".github/workflows/ci.yml"):
             self.assertFalse(vd._e_generato(rel), f"{rel} andrebbe tenuto")
 

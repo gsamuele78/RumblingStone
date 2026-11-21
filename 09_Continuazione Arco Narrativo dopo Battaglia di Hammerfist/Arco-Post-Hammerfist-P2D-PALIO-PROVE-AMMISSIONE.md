@@ -128,7 +128,7 @@ mette i PG dentro l'oscuro collegamento drow/Collezionista (GIORNO2 §3.3).
 ---
 
 ## 4 · L'ISTRICE — "La Notte del Campo"
-**Prova**: gestire una crisi improvvisa nel campo profughi fuori le mura.
+**Prova**: gestire una crisi improvvisa nel campo profughi ai margini della città.
 **Cast**: **Nania Seriv del Traghetto** (luogotenente di Lorana, NB); centinaia di profughi;
 un **incendio doloso** (o un'epidemia — scegli) appiccato da un infiltrato.
 
@@ -211,8 +211,8 @@ tesoriere di Waukeen; guardie del tempio.
 
 **Read-aloud**
 > *Sethis parla piano, come se le parole costassero. — "Nel tempio del Denaro c'è un libro
-> che dice troppo. Portatemelo. O, se preferite… scrivetene uno che dica di meno." Sorride,
-> e capite che qualunque cosa facciate, lui ne guadagnerà.*
+> che dice troppo. Portatemelo. O, se preferite… scrivetene uno che dica di meno." Sorride
+> come chi ha già fatto i conti di tutte e due le strade, e li ha chiusi in attivo.*
 
 **Beat 1 — L'ingresso**: infiltrazione (Furtività DC 22) o inganno (Raggirare DC 22,
 travestiti da esattori) nel tempio. La cassaforte-archivio è dietro una **serratura** (Aprire

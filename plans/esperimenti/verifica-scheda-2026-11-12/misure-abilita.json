@@ -1,0 +1,31 @@
+{
+ "schede": 31,
+ "una +4": {
+  "mutanti": 31,
+  "trovati": 6
+ },
+ "una +8": {
+  "mutanti": 31,
+  "trovati": 20
+ },
+ "una +12": {
+  "mutanti": 31,
+  "trovati": 25
+ },
+ "tutte +3": {
+  "mutanti": 31,
+  "trovati": 12
+ },
+ "tutte +6": {
+  "mutanti": 31,
+  "trovati": 19
+ },
+ "ciascuna +2": {
+  "mutanti": 160,
+  "trovati": 2
+ },
+ "ciascuna +4": {
+  "mutanti": 160,
+  "trovati": 24
+ }
+}

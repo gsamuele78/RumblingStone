@@ -241,3 +241,50 @@ concreto: la PR di Dependabot #228 alzava i pavimenti a `numpy>=2.5.3` e
 rossa per tutti e sei i pacchetti del gruppo. Chi ha ancora 3.11 resta fuori,
 ed è voluto (ADR-0081). La regola di questa ADR non cambia: cambia solo la
 versione della libreria standard su cui vale.
+
+---
+
+## Emendamento del 2026-10-23 — un corridore dei test solo, la parità resta
+
+**Stato**: accettato dal DM (D2 di
+[PIATTAFORMA-DI-SVILUPPO](../PIANO-PIATTAFORMA-DI-SVILUPPO.md), 2026-10-23:
+*«D1-d5 ok»*) · **Dettaglio**: [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md).
+
+La CI non esegue più la suite due volte. Il passo `python -m unittest discover`
+costava 222 s su 914 del job principale per rieseguire prove che pytest aveva
+già eseguito. La ragione per cui c'era, il difetto del 2026-09-21, resta
+presidiata da `test_i_test_girano_in_ci.py`: conta le prove che vedono i due
+corridori senza eseguirle e boccia se non combaciano. Quindi i test continuano
+a essere scritti come `unittest.TestCase` e a girare con la sola libreria
+standard, e `python -m unittest discover -s scripts/tests` resta un comando
+valido sul portatile del DM senza pytest. Cambia solo che la CI non lo esegue
+per intero.
+
+---
+
+## Emendamento del 2026-11-08 — typst entra come quarta libreria
+
+**Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0116](ADR-0116-typst-si-installa-da-pypi.md).
+
+Il pacchetto PyPI `typst` è la quarta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Senza il modulo, `typst_motore.py` usa una CLI `typst` nel PATH; senza nemmeno quella, i PDF per capitolo restano a Chromium. Il binario `typst` resta in `external_bins` come ripiego. Il rischio delle 20:45 non cresce: prima serviva un binario installato una volta, ora una wheel installata una volta, e il bundle del rilascio le porta tutte e due.
+
+
+## Emendamento del 2026-11-08 — pdfimpose, la quinta
+
+**Stato**: accettato dal DM il 2026-11-08 · **Dettaglio**: [ADR-0116](ADR-0116-typst-si-installa-da-pypi.md).
+
+`pdfimpose` sostituisce il binario pdfcpu per `dm.py volume --imposto` ed è la quinta libreria di `requirements.txt`, ancora della famiglia di Pillow: opzionale, e senza il volume resta stampabile pagina per pagina. Porta con sé PyMuPDF, che finora era solo in `requirements-dev.txt`: chi installa `requirements.txt` ora ha anche PyMuPDF 2.x e onnxruntime. È il prezzo di togliere mise, scritto qui perché è un peso vero.
+
+
+## Emendamento del 2026-11-08 — simpleeval, portata dentro e non installata
+
+**Stato**: accettato dal DM il 2026-11-08 (D1 di ADR-0112) · **Dettaglio**: [ADR-0112](ADR-0112-il-motore-e-agnostico-e-le-regole-d20-sono-dati-e-formule.md), F3.
+
+simpleeval 1.0.8 (MIT, un file, nessuna dipendenza) valuta le formule d20 scritte nei dati dei plugin. Non sta in `requirements.txt`: è copiato intero in `scripts/dmcore/_vendor/simpleeval.py`, con la licenza accanto e versione e sha256 in `_vendor/LIBRERIE.toml` (lo ricontrolla `test_formule.py`). Quindi la catena della sessione resta su Python nudo e il rischio delle 20:45 non cresce. È entrata perché è lo standard di fatto per questo problema e la misura I1 l'ha promossa: 7/7 formule su 598 casi, 50/50 espressioni ostili rifiutate. Aggiornarla vuol dire riscaricare la wheel, ricopiare il file, riscrivere lo sha256 e rifare il banco.
+
+
+## Emendamento del 2026-11-11 — markdown-it-py, la sesta
+
+**Stato**: accettato dal DM il 2026-11-12 (card sul parser) · **Dettaglio**: [ADR-0120](ADR-0120-la-d-eufonica-si-misura-con-una-regex-tarata-su-languagetool.md), emendamento del 2026-11-11.
+
+`markdown-it-py` (MIT, puro Python) è la sesta libreria di `requirements.txt`, della famiglia di Pillow: opzionale e con ripiego dichiarato. Dice a `validate_lingua.py` quali righe rientrate sono codice per CommonMark; senza, il validatore ripiega su una regola stdlib, lo stampa, e sul banco di semina trova gli stessi errori.

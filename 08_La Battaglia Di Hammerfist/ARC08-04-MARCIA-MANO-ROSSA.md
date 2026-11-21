@@ -3,7 +3,7 @@
 > **Scopo**: scheda logistica canonica della colonna d'assalto (900
 > unità, E8) che Fauci di Palude guida contro Hammerfist Holds — da
 > dove si stacca, che rotta segue, quando arriva, e dove il gruppo di
-> ricognizione del flashback (D6: Borin, Dara, Thorin Runaforte, Nala)
+> ricognizione del flashback (D6: Borin, Dara, Harbek Runaforte, Nala)
 > può interferire.
 > **Stato**: canonico (materiale di modulo). Canone di trama in
 > `campaign/state.md`, non ancora giocato — vedi piano ARC-08 A0.
@@ -26,8 +26,7 @@ corpo principale della Mano Rossa.
   (state.md §2.1) — dopodiché la colonna di Fauci prende una rotta
   indipendente verso nord, più diretta attraverso le montagne, mentre
   il grosso dell'orda segue la rotta ufficiale AP verso l'Elsir Vale.
-  `[INFERRED — needs DM confirmation: giorno esatto di distacco;
-  ipotesi di lavoro finché B6 non fissa la cronologia definitiva]`
+  Il distacco è al Day 1 (cronologia di `ARC08-12`, canone del DM 2026-10-18).
 - **Perché un distaccamento separato**: Hammerfist Holds è un
   avamposto nanico strategicamente rilevante (fucine, mercenari,
   passaggi montani) ma non necessario alla marcia su Rethmar — Azarr
@@ -59,8 +58,8 @@ periodica sopra la colonna.
 
 ## 3. Opportunità di interferenza — gruppo di ricognizione (D6)
 
-Il flashback dei pregen "Eroi di Hammerfist" (Borin Ferropugno, Dara
-Occhiolesto, Thorin Runaforte, Nala Cantapietre — D6, qualche
+Il flashback dei pregen "Eroi di Hammerfist" (Borin Giuraferro, Dara
+Occhiolesto, Harbek Runaforte, Nala Cantapietre — D6, qualche
 settimana prima dell'assedio) è la finestra di gioco su questa marcia.
 Mappe già pronte in `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` (master
 visivo, piano ARC-08 A8; griglie ultra-clear di 1A-1, 1A-2 e 1A-3 in
@@ -101,7 +100,7 @@ li tiene a mente mentre lo legge:
   fame non è un aggettivo, è logistica, ed è il motivo per cui Hammerfist
   è un bersaglio d'opportunità;
 - Fauci di Palude fa **ricognizione aerea periodica** sopra la colonna:
-  se il DM vuole un secondo presagio prima dell'Incontro 1F, è
+  se il DM vuole un secondo presagio prima dell'Incontro 1C, è
   un'ombra che passa e nessuno che riesce a dire cos'era.
 
 Cue sonoro: `ARC08-16-CUE-SONORI.md` §2 — il basso continuo parte qui e

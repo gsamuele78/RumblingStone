@@ -60,8 +60,8 @@ state.md §2). Il "terrore del cielo" qui è un semplice **Razorfiend**.
 
 | Elemento | Statblock (riuso) | Fonte / condizione |
 |---|---|---|
-| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr11.md` | Guarnigione cittadina |
-| Difensori nani | `.../dauth-dwarf-defender-cr6.md` | Guarnigione |
+| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr12.md` | Guarnigione cittadina |
+| Difensori nani (**200**, `[CANONE — DM 2026-11-05, P16, mura]`) | `.../dauth-dwarf-defender-cr6.md` | Guarnigione fissa: da sola tiene la Porta Sud (§8) |
 | **300 mercenari nani** | (astratti) | **Solo se Tordek vince/ha vinto** (D10) — a Dauth sono già ingaggiati per l'evento |
 | **150 lance di Re Thorek** | (astratte) | **Solo se il sigillo + messaggero** sono partiti in tempo — vedi `...SUBQUEST-Thorik.md` |
 | **Joran** (CR 5) + profughi | `HOOKS-Ghostlord-Refugees` §7.3 | **Solo se** la carovana è stata scortata a Dauth |
@@ -230,7 +230,7 @@ esito ai dadi, mai predeterminato.
 - **Mappa**: corpo di guardia + poterna **8×8** (1,5 m/q); corridoi ciechi, botola.
 - **Griglia**: `Mappe/dauth-assedio/DAUTH-E-cellula-nelle-mura.md`, collaudata e con l'SVG in `rendered/`.
 - **Nemici (EL ~12)**: `deathlock-cr8.md` **o** `drow-fighter3-cr4.md` ×2 + 1 sabotatore
-  (Ladro 7 [INFERRED]) con la chiave. Tattica: furtività, veleno, fuga se scoperti.
+  (Ladro 7) con la chiave. Tattica: furtività, veleno, fuga se scoperti.
 - **Posta**: se la poterna si apre, la cavalleria gnoll dilaga nel quartiere ovest.
 - **Esiti**:
   - **Vittoria**: poterna salva, sabotatori catturati (intel su Sonjak/Vanguard) →
@@ -299,6 +299,23 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 
 ## 8. Cross-link
 
+- **Pianta della città (dove stanno le carte A-E):** `Mappe/dauth-assedio/dauth-pianta.svg`:
+  42 ha dentro le mura, circa 7.000 abitanti, tre porte maggiori (Sud, Nord, Ovest);
+  la Porta Est è ridotta a postierla. È una piccola città, più del borgo della Elsir
+  Vale, perché regga l'urto della Mano Rossa (scelta del DM, 2026-10-22)
+  `[CANONE — DM 2026-10-23]`.
+- **Quanti uomini servono sulle mura** `[CANONE — DM 2026-11-05, P16, mura]`: le mura
+  della pianta sono lunghe 2,55 km, con 59 torri. Con la regola del Burghal Hidage
+  (0,8 uomini per metro di mura) servono circa 2.000 difensori. La leva degli uomini
+  abili (circa 1.260, il 18% di 7.000 abitanti) **non sale sulle mura**: porta l'acqua,
+  tiene le cisterne (Carta C) e spegne i fuochi. Sulle mura stanno la guarnigione
+  nanica di **200 nani** (§1.2), più i 300 mercenari se Tordek vince e le 150 lance se
+  parte il sigillo di Thorik: al massimo 650 soldati, un terzo di quelli che servono.
+  Si tengono le mura sud e ovest, dove preme il Vanguard, e si lasciano leggere quelle
+  nord ed est, sopra il versante ripido. Con la sola guarnigione si tiene la Porta Sud.
+  <!-- storico -->
+  *Prima del 2026-11-05 la leva si sommava (circa 1.700 più la guarnigione, che non aveva un numero).*
+  <!-- /storico -->
 - **HUB Torneo:** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §3 (sfondo Vanguard)
 - **Giorno 3 in arena (Tordek/Artemis):** `Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE3-Giorno3-Finale-e-Invasione.md`
 - **Le 150 lance (fonte):** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-SUBQUEST-Thorik.md` §4

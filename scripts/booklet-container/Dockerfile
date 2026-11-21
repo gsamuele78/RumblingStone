@@ -17,7 +17,7 @@
 # correzioni di sicurezza, e propone il 14 quando esce. Con `bookworm-slim` non
 # lo faceva, ed era rimasta su oldstable. Ogni sua PR costruisce l'immagine e
 # stampa un PDF di prova in `.github/workflows/dipendenze.yml`.
-FROM debian:13-slim@sha256:a29215f6a35e51e22adffa17f89e9d2ef06214e64a2bad10d765c46aea49f11f
+FROM debian:13-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         chromium \

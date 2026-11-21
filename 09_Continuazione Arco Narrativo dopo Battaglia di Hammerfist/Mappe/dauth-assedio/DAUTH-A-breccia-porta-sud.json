@@ -10,6 +10,9 @@
  ],
  "base_terrain": "⬜",
  "north": "N",
+ "luogo": "Dauth, Porta Sud",
+ "quota": "530 m ; s.l.m., l'androne della Porta Sud",
+ "dislivello": "+40 m ; sul borgo dei carrettieri e sulla piana a sud, in fondo alla rampa",
  "regions": [
   {
    "terrain": "⬛",
@@ -131,6 +134,7 @@
   {
    "faction": "Vanguard della Mano Rossa",
    "name": "Comandante del Vanguard (hobgoblin-captain-cr8)",
+   "scheda": "Bestiario/mostri/hobgoblin-captain-cr8.md",
    "token": "⚫",
    "at": [
     5,
@@ -141,6 +145,7 @@
   {
    "faction": "Vanguard della Mano Rossa",
    "name": "Sergente hobgoblin (hobgoblin-sergente-cr5)",
+   "scheda": "Bestiario/mostri/hobgoblin-sergente-cr5.md",
    "token": "🔴",
    "at": [
     4,
@@ -151,6 +156,7 @@
   {
    "faction": "Vanguard della Mano Rossa",
    "name": "Sergente hobgoblin (hobgoblin-sergente-cr5)",
+   "scheda": "Bestiario/mostri/hobgoblin-sergente-cr5.md",
    "token": "🔴",
    "at": [
     6,

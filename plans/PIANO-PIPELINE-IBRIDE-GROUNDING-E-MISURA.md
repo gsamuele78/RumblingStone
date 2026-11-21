@@ -407,7 +407,7 @@ con quei difetti dentro produrrebbe 194 falsi allarmi al primo giro e viene spen
 settimana dopo.
 
 **Il difetto vero, trovato e verificato a mano.**
-`STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/mappe/tarsilia-stalle.md` disegna
+`10-stand-alone/Il-Drappo-di-Tarsilia/ALLEGATI/mappe/tarsilia-stalle.md` disegna
 **tre box da 12 quadretti chiusi su quattro lati** da `🏰` (muratura piena:
 blocca vista e movimento), **senza un solo `🚪`**. Dentro due di essi stanno
 `🟢` a **H12** e **L12**, che il master stesso nomina: *«H12 box del cavallo»*,
@@ -500,7 +500,7 @@ inventa** e finisce in `notes`. Il vincolo è lo schema che esiste già,
 con errori precisi; il lotto A gli aggiunge il grounding. Il ciclo diventa:
 il modello emette JSON, il codice boccia con l'elenco dei difetti, il modello
 corregge. Non serve codice nuovo, serve che il ciclo sia **documentato come il
-modo normale di lavorare**, in `docs/guides/GUIDA-MAPPE.md` e nella skill.
+modo normale di lavorare**, in `docs/how-to/GUIDA-MAPPE.md` e nella skill.
 
 **B3 · Il banco di prova dell'estrazione.** Cinque prose di riferimento scritte
 dal DM, con accanto il JSON che un'estrazione corretta deve produrre, in

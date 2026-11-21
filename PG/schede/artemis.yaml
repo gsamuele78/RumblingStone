@@ -1,0 +1,21 @@
+# Scheda di Artemis come dato — lotto 4g-1 di PIANO-RIPRESA-PR-ABBANDONATE (ADR-0088).
+#
+# Porta solo i fatti che il repo deve tenere onesti: caratteristiche e
+# modificatori permanenti, ognuno con la sua fonte. Classe, PF, stato e artefatti
+# sono di campaign/state.yaml (`party`, `artefatti`) e qui non si copiano.
+# `null` = [INFERRED]: il repo non conosce il valore, e non si inventa. I valori
+# veri arrivano col lotto 4g-2, dalle schede del DM.
+# La vista leggibile, artemis.md, si rigenera con `python3 scripts/render_pg.py`.
+schema_version: 1
+pg: Artemis
+
+caratteristiche:
+  # Lotto P16 «PG» (2026-11-05): la carta del DM; nessun oggetto dà caratteristiche.
+  for: {base: 10, attuale: 10, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  des: {base: 18, attuale: 18, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  cos: {base: 14, attuale: 14, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  int: {base: 10, attuale: 10, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  sag: {base: 10, attuale: 10, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  car: {base: 18, attuale: 18, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+
+modificatori_permanenti: []

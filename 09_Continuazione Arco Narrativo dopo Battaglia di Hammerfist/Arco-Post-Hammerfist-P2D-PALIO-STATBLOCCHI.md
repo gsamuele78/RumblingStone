@@ -9,21 +9,68 @@
 ## 1. I Fantini (i due archetipi)
 
 ### 1.1 Fantino Cavaliere — "corsa pulita" (GS 8)
-Umano Guerriero 6 / Cavaliere-ish. **CA** 18 (armatura leggera da corsa) · **PF** 55 ·
-**For** 14 **Des** 16 **Cos** 13. **TS** Temp +7 Rifl +6 Vol +4.
-- **Cavalcare +16** (foco: corsa), *Combattere in Sella*, *Cavalcata Poderosa*, *Attacco in Corsa*.
-- **Nerbo** +9 mischia, 1d4+2 non letale; su colpo, bersaglio Cavalcare DC 15 o Sbilanciato.
+```statblocco
+nome: Fantino Cavaliere
+gs: 8
+tipo: Umano Guerriero 6 / Cavaliere-ish · corsa pulita
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: 18
+ca-dettaglio: armatura leggera da corsa
+pf: 55
+ts: Temp +7, Rifl +6, Vol +4
+attributi: For 14 Des 16 Cos 13
+attacchi:
+  - Nerbo +9 (1d4+2 non letale)
+voci:
+  - Equipaggiamento da combattimento: pozione di cura ferite moderate, pozioni di contrastare elementi (2)
+  - Altro equipaggiamento: giaco di maglia +1, nerbo
+```
+**Difesa** **CA 18** (armatura leggera da corsa) · **pf 55** · TS Tempra +7, Riflessi +6, Volontà +4
+
+**Attacco** **Mischia** nerbo +9 (1d4+2 non letale); su colpo, il bersaglio fa Cavalcare DC 15 o è Sbilanciato
+
+**Tattiche** Cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.
+
+**Statistiche** For 14, Des 16, Cos 13 · **Abilità** Cavalcare +16 (foco: corsa) · **Talenti** *Combattere in Sella*, *Carica Devastante*, *Attacco in Sella* · **Equipaggiamento** pozione di cura ferite moderate, pozioni di contrastare elementi (2); giaco di maglia +1, nerbo
+
+**Capacità speciali**
 - **Legame col cavallo**: +2 alle prove di Cavalcare del proprio destriero (empatia).
-- **Tattica**: cariche pulite, tiene la corda interna, nerba solo per difendersi. Onore alto.
+
+> RC-001 (2026-11-14, ADR-0134) `[CANONE — DM 2026-11-14, RC-001]`: il giaco di maglia +1 è l'armatura leggera che spiega la CA 18 (10, +3 Des, +5 armatura); le pozioni vengono dal PNG dei Codex PF1e «Adventuring Blacksmith» (Guerriero 6), che per il resto porta armatura completa e martelli e non entra. Il nerbo è l'arma della scheda e non ha un prezzo nell'SRD. Valore 1.650 mo contro i 5.600 del 6° livello (DMG 3.5, Tabella 4-23).
 
 ### 1.2 Fantino Ladro — "corsa assassina" (GS 8)
-Mezzelfo Ladro 8. **CA** 19 · **PF** 44 · **Des** 18. **TS** Temp +4 Rifl +10 Vol +3.
-- **Cavalcare +12**, **Raggirare +14**, **Furtività +14**, *Attacco Furtivo +4d6*.
-- **Nerbo con aghi**: +11 mischia, 1d4+1 + veleno (CD 14, 1d2 Des); *Attacco Furtivo* se il
-  rivale è Colto alla Sprovvista (curva cieca, Zona 5).
-- **Sbilanciare/Spingere in sella** +13. **Slealtà**: una volta a corsa può fingere una
-  caduta per far inciampare chi lo segue (Riflessi DC 18).
-- **Tattica**: sta dietro, colpisce nelle curve cieche, punta a **disarcionare** più che a vincere.
+```statblocco
+nome: Fantino Ladro
+gs: 8
+tipo: Mezzelfo Ladro 8 · corsa assassina
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: 19
+pf: 44
+ts: Temp +4, Rifl +10, Vol +3
+attributi: Des 18
+attacchi:
+  - Nerbo con aghi +11 (1d4+1 + veleno)
+voci:
+  - Equipaggiamento da combattimento: pozione di cura ferite moderate
+  - Altro equipaggiamento: cuoio borchiato +1, anello di protezione +1, nerbo con aghi, arnesi da scasso
+```
+**Difesa** **CA 19** · **pf 44** · TS Tempra +4, Riflessi +10, Volontà +3
+
+**Attacco** **Mischia** nerbo con aghi +11 (1d4+1 + veleno CD 14, 1d2 Des); *Attacco Furtivo* se il rivale è Colto alla Sprovvista (curva cieca, Zona 5) · **Sbilanciare/Spingere in sella** +13
+
+**Tattiche** Sta dietro, colpisce nelle curve cieche, punta a **disarcionare** più che a vincere.
+
+**Statistiche** Des 18 · **Abilità** Cavalcare +12, Raggirare +14, Furtività +14 · **Equipaggiamento** pozione di cura ferite moderate; cuoio borchiato +1, anello di protezione +1, nerbo con aghi, arnesi da scasso
+
+**Capacità speciali**
+- *Attacco Furtivo* +4d6.
+- **Slealtà**: una volta a corsa può fingere una caduta per far inciampare chi lo segue (Riflessi DC 18).
+
+> RC-001 (2026-11-15, ADR-0134) `[CANONE — DM 2026-11-15, RC-001]`: il cuoio borchiato +1 e l'anello di protezione +1 spiegano la CA 19 (10, +4 Des, +4 armatura, +1 deviazione); l'anello, la pozione e gli arnesi da scasso vengono dal PNG dei Codex PF1e «Trapsmith» (Ladro 8), che per il resto porta pugnale, balestra, mantello e occhiali e non entra. Il nerbo con aghi è l'arma della scheda e non ha un prezzo nell'SRD; il veleno non è contato. Valore 3.505 mo contro i 9.400 dell'8° livello (DMG 3.5, Tabella 4-23).
 
 ---
 
@@ -70,21 +117,88 @@ Statistiche-corsa astratte (mod. applicato ai tiri di Zona del fantino):
 ## 3. I Sicari di Sonjak (assalto alla stalla, Giorno 2 notte, GS 11–12)
 
 ### 3.1 Drow Assassino ×2 (GS 9 cad.)
-Drow Ladro 5 / Assassino 4. **CA** 21 · **PF** 58 · **Des** 20. **TS** Rifl +12.
-- **Attacco Furtivo +6d6**, **Morte Improvvisa** (CD 18), *Nascondersi nelle Ombre*.
-- **Innata**: *Oscurità*, *Fuoco delle Fate*. Balestra a mano + veleno drow (sonno, CD 17).
-- **Obiettivo**: **il cavallo**, non i PG — colpire e sparire. Se scoperti, coprono la fuga.
+```statblocco
+nome: Drow Assassino (2)
+gs: 9
+tipo: Drow Ladro 5 / Assassino 4
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: 21
+pf: 58
+ts: Rifl +12
+attributi: Des 20
+attacchi:
+  - Balestra a mano + veleno drow (sonno, CD 17)
+```
+**Difesa** **CA 21** · **pf 58** · TS Riflessi +12
+
+**Attacco** Balestra a mano + veleno drow (sonno, CD 17) · **Attacco Furtivo** +6d6
+
+**Tattiche** **Obiettivo**: **il cavallo** o **il fantino**, quale dei due lo sceglie il DM; gli altri PG non sono il bersaglio. Colpire e sparire. Se scoperti, coprono la fuga.
+
+**Statistiche** Des 20
+
+**Capacità speciali**
+- **Morte Improvvisa** (CD 18), *Nascondersi nelle Ombre*.
+- **Innata**: *Oscurità*, *Fuoco delle Fate*.
+
+
+*Cosa sanno dei PG e in che stato li trovano*: Sonjak gli ha detto quale stalla e quale cavallo, non chi la guarda. Arrivano la notte del Giorno 2, dopo la Cena della Prova Generale e gli intrighi dei Partiti, quando i PG dormono o fanno la guardia a turno: uno sveglio, gli altri con quello che resta degli incantesimi del giorno. L'obiettivo resta il cavallo o il fantino, anche quando il fantino è un PG (AVVENTURA §4): chi è di guardia lo evitano, e lo colpiscono solo se sta fra loro e il bersaglio o se li scopre, per coprire la fuga. Se il DM sceglie il fantino, lo addormentano con la balestra (veleno del sonno) e lo portano via nel buio; la sua scorta la trattano come la guardia della stalla. <!-- [INFERRED — Sonjak sa chi fa la guardia alla stalla?; base: §3.1 e la scheda di Sonjak dicono il mandante, non che cosa sa dei PG] (marca tolta dal booklet stampato) -->
+
+<!-- storico -->
+Prima del 2026-11-17 (tattiche di ARC-09, lotto 5) i sicari e la chierica avevano solo l'obiettivo: il cavallo, non i PG. Che cosa sanno dei PG e in che stato li trovano è stato aggiunto qui e in §3.2, marcato INFERRED perché nessuna scena lo dice.
+Fino al 2026-11-19 l'obiettivo era solo il cavallo; il DM ha scelto (card del 19/11) di allinearlo a INTEGRAZIONE §3.2 e GIORNO2 §3.3, che danno ai sicari anche il fantino da rapire. Il fantino può essere un PG (AVVENTURA §4), quindi la frase «non i PG» è diventata «gli altri PG non sono il bersaglio».
+Era (17/11, corretto il 18/11): «Se trovano un PG di guardia, il primo colpo va su di lui, non sul cavallo», che contraddiceva l'obiettivo scritto sopra (il cavallo, non i PG); «la giornata delle prove» (il Giorno 2 è la Cena e i Partiti) e «senza incantesimi preparati per l'indomani» (gli incantesimi si preparano al mattino: di notte resta quello che non si è speso).
+<!-- /storico -->
 
 ### 3.2 Drow Chierica di Lolth (GS 10)
-Drow Chierico 9. **CA** 22 · **PF** 63 · **Sag** 18. **Incantesimi** fino al 5° (Comando
-Superiore, Ragnatela, Silenzio, Flagello Insetti). *Oscurità*, *Individuazione Magico*.
-- Comanda l'assalto; usa **Silenzio** per soffocare gli allarmi, **Ragnatela** in stalla.
-- **Cattura viva** = intel Fase 0 Rethmar + −1 clock Sonjak.
+```statblocco
+nome: Drow Chierica di Lolth
+gs: 10
+tipo: Drow Chierico 9
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: 22
+pf: 63
+ts: —
+attributi: Sag 18
+voci:
+  - Altro equipaggiamento: armatura completa +1, scudo pesante di acciaio, mantello della resistenza +1, perla del potere 1°, pugnale, balestra leggera con 20 quadrelli
+```
+**Difesa** **CA 22** · **pf 63**
+
+**Tattiche** Comanda l'assalto; usa **Silenzio** per soffocare gli allarmi, **Ragnatela** in stalla. **Cattura viva** = intel Fase 0 Rethmar + −1 clock Sonjak.
+
+**Statistiche** Sag 18 · **Equipaggiamento** armatura completa +1, scudo pesante di acciaio, mantello della resistenza +1, perla del potere 1°, pugnale, balestra leggera con 20 quadrelli
+
+**Capacità speciali**
+- **Incantesimi** fino al 5° (Comando Superiore, Ragnatela, Silenzio, Flagello Insetti). *Oscurità*, *Individuazione Magico*.
+
+*Cosa sa dei PG*: quello che sanno gli assassini, e in più che uno dei PG cura (Hella): *Silenzio* va su un punto accanto a lei, se è sveglia: soffoca l'allarme e i suoi incantesimi insieme. <!-- [INFERRED — La chierica sa che Hella è la guaritrice?; base: lo sa se qualcuno ha visto Hella curare alla Tratta o alla Cena, nessuna scena lo dice] (marca tolta dal booklet stampato) -->
+
+> RC-001 (2026-11-15, ADR-0134) `[CANONE — DM 2026-11-15, RC-001]`: armatura completa +1 e scudo pesante di acciaio spiegano la CA 22 se la Destrezza è 12 (10, +9 armatura, +2 scudo, +1 Des); la scheda non scrive la Destrezza e questa è una lettura. Mantello, perla, pugnale e balestra vengono dal PNG dei Codex PF1e «Death Priest» (Chierico 9); il suo giaco di maglia +1, l'anello di protezione +1 e la fascia della saggezza non entrano. Il mantello non cambia numeri perché la scheda non scrive i tiri salvezza. Valore 4.709 mo contro i 21.000 dell'11° livello effettivo (9 livelli di classe + 2 di modificatore di livello dei drow; DMG 3.5, Tabella 4-23); anche senza il modificatore resta sotto i 12.000 del 9°.
+
 
 ### 3.3 Servitore della Spora (GS 3, ariete vivente)
-Umanoide fungino mindless (dall'esperimento di Sonjak, §2.4a CALCOLI). **PF** 32 · carica
-suicida, **veleno da contatto CD 16**, esplode in spore alla morte (Tempra CD 14 o
-1 round *nauseato*). 1–2 presenti.
+```statblocco
+nome: Servitore della Spora (1-2)
+gs: 3
+tipo: Umanoide fungino mindless, ariete vivente (dall'esperimento di Sonjak, §2.4a CALCOLI)
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
+ca: —
+pf: 32
+ts: —
+```
+**Difesa** **pf 32**
+
+**Capacità speciali**
+- **Carica suicida**, **veleno da contatto CD 16**.
+- **Esplode** in spore alla morte (Tempra CD 14 o 1 round *nauseato*).
+
 
 > **Prova documentale**: su un drow, il **sigillo del mercante di Channathgate** (rete de
 > *Il Collezionista*) → collega Sonjak, la Civetta/Valerius e i drow. Aggancio ai registri.

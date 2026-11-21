@@ -16,6 +16,20 @@ mancante, aggiunta poi a mano una per una. Basta un commit umano strutturale
 nel range, anche una correzione dentro la PR di Dependabot, e la riga torna
 obbligatoria.
 
+Colonne del CHANGELOG (P15, 2026-10-23): se il range tocca plans/CHANGELOG.md,
+ogni riga di dati (quelle che cominciano con «| 20») deve avere le cinque
+colonne data, piano, lotto, riferimento, esito. Un «|» dentro il testo si scrive
+«\\|», anche dentro il codice, come vuole GFM. Prima di questo controllo due righe
+del 2026-10-12 erano entrate senza esito e sei righe avevano un «|» non
+protetto che spezzava la tabella.
+
+Addendum della memoria storica (ADR-0127, 2026-11-12): se il range aggiunge
+righe di dati a plans/CHANGELOG.md, deve aggiungere anche almeno una voce
+«### MS-NNNN» a plans/MEMORIA-STORICA.md: le decisioni, le misure, le
+questioni aperte e i rimandi che la riga del changelog non tiene. Così la
+storia entra nel repo al merge, prima che qualcuno accorci la memoria delle
+sessioni (che sta fuori dal repo e la CI non vede).
+
 Promemoria ADR (warning, exit 0): se il range introduce una nuova skill,
 un nuovo script top-level o tocca i workflow CI senza toccare plans/adr/,
 stampa l'invito a valutare un ADR. Non bloccante: «serve un ADR?» non è
@@ -33,13 +47,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
+from pathlib import Path
 import sys
 
 CHANGELOG = "plans/CHANGELOG.md"
+STORICA = "plans/MEMORIA-STORICA.md"
 STRUCTURAL_PREFIXES = ("scripts/", "skills/", "converters/", ".github/", "plans/adr/")
 ADR_PREFIX = "plans/adr/"
 DEPENDABOT_EMAIL = "49699333+dependabot[bot]@users.noreply.github.com"
+CHANGELOG_COLONNE = 5
+_SEPARATORE = re.compile(r"(?<!\\)\|")
 
 
 def git(args: list[str], cwd: str) -> str:
@@ -71,6 +90,30 @@ def structural_authors(base: str, head: str, cwd: str) -> set[str]:
         if lines and any(f.startswith(STRUCTURAL_PREFIXES) for f in lines[1:]):
             authors.add(lines[0])
     return authors
+
+
+def changelog_righe_storte(testo: str) -> list[tuple[int, int]]:
+    """[(numero di riga, colonne)] delle righe di dati che non hanno 5 colonne.
+
+    Conta come GFM: separa sui «|» non preceduti da «\\», e il «|» finale
+    della riga è facoltativo.
+    """
+    storte: list[tuple[int, int]] = []
+    for n, riga in enumerate(testo.splitlines(), 1):
+        if not riga.startswith("| 20"):
+            continue
+        r = riga.strip()
+        celle = len(_SEPARATORE.findall(r)) - (1 if r.endswith("|") else 0)
+        if celle != CHANGELOG_COLONNE:
+            storte.append((n, celle))
+    return storte
+
+
+def righe_aggiunte(base: str, head: str, cwd: str, path: str, prefisso: str) -> int:
+    """Quante righe che cominciano con `prefisso` il range aggiunge a `path`."""
+    diff = git(["diff", "--unified=0", f"{base}...{head}", "--", path], cwd)
+    return sum(1 for r in diff.splitlines()
+               if r.startswith("+" + prefisso) and not r.startswith("+++"))
 
 
 def needs_adr_reminder(rows: list[tuple[str, str]]) -> list[str]:
@@ -112,6 +155,31 @@ def main() -> int:
         return _emit(0, "skipped-no-diff")
 
     paths = [p for _, p in rows]
+    changelog = Path(args.repo_root) / CHANGELOG
+    if CHANGELOG in paths and changelog.exists():
+        storte = changelog_righe_storte(changelog.read_text(encoding="utf-8"))
+        if storte:
+            if args.json:
+                return _emit(1, "changelog-colonne", righe=[n for n, _ in storte])
+            print(f"✗ {CHANGELOG}: righe senza le {CHANGELOG_COLONNE} colonne "
+                  "| data | piano | lotto | riferimento | esito |")
+            for n, celle in storte[:15]:
+                print(f"    - riga {n}: {celle} colonne")
+            print("  Un «|» dentro il testo si scrive «\\|», anche fra apici inversi.")
+            return 1
+    if CHANGELOG in paths:
+        nuove_righe = righe_aggiunte(args.base, args.head, args.repo_root, CHANGELOG, "| 20")
+        nuove_voci = righe_aggiunte(args.base, args.head, args.repo_root, STORICA, "### MS-")
+        if nuove_righe and not nuove_voci:
+            if args.json:
+                return _emit(1, "memoria-storica-missing", righe_changelog=nuove_righe)
+            print(f"✗ ADDENDUM MANCANTE (ADR-0127): il range aggiunge {nuove_righe} righe a "
+                  f"{CHANGELOG} ma nessuna voce a {STORICA}.")
+            print("  Aggiungi in coda almeno una voce «### MS-NNNN · AAAA-MM-GG · titolo» con")
+            print("  Data, PR, ADR, Temi, Origine, Testo: decisioni, misure, questioni aperte,")
+            print("  rimandi che la riga del changelog non tiene. Modello nel file stesso;")
+            print("  verifica con `python3 scripts/memoria_storica.py --check`.")
+            return 1
     structural = [p for p in paths if p.startswith(STRUCTURAL_PREFIXES)]
     if not structural:
         if not args.json:

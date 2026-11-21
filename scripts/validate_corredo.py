@@ -53,7 +53,6 @@ import argparse
 import itertools
 import json
 import re
-import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -62,6 +61,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import misura_craft as mc  # noqa: E402
+import typst_motore  # noqa: E402  (ADR-0116)
 import validate_booklets as vb  # noqa: E402
 from dmcore.testo import togli_storico  # noqa: E402
 
@@ -410,7 +410,9 @@ def stampa(manifest: Path) -> "tuple[list[str], str]":
         if esito.returncode != 0 or not pdf.is_file():
             coda = (esito.stderr or esito.stdout).strip().splitlines()[-4:]
             return [f"{_rel(manifest)}: la stampa fallisce — " + " / ".join(coda)], ""
-        return misura_pdf(pdf, manifest)
+        import validate_booklets as vb  # noqa: PLC0415
+        difetti, nota = misura_pdf(pdf, manifest)
+        return vb.controlla_volume(manifest, pdf) + difetti, nota
     finally:
         if not cera_prima:
             pdf.unlink(missing_ok=True)
@@ -465,7 +467,7 @@ def main(argv: "list[str] | None" = None) -> int:
                 if nota and nota not in note:
                     note.append(nota)
         elif args.stampa and not e:
-            if not shutil.which("typst"):
+            if not typst_motore.disponibile():
                 note.append("typst assente: i volumi NON sono stati compilati")
                 continue
             for m in manifest_del_corredo(c):

@@ -48,12 +48,32 @@ CHIUSURA = "```"
 
 # I campi obbligatori perché una scheda sia utilizzabile al tavolo: senza uno
 # di questi il riquadro sarebbe una cornice con dentro dei buchi.
-OBBLIGATORI = ("gs", "ca", "pf", "ts")
-AMMESSI = (
-    "nome", "gs", "tipo", "ca", "ca-dettaglio", "pf", "pf-dado", "ts", "velocita",
-    "iniziativa", "sensi", "attributi", "attacchi", "voci", "tattica", "fonte",
-)
-LISTE = ("attacchi", "voci")
+#: I campi stanno nel plugin della famiglia d20 (ADR-0111, L5d):
+#: `sistemi/d20/dati/statblocco.toml`, capacità `statblocco.campi`.
+#: Si leggono alla prima richiesta, non all'import (F2 di ADR-0112): i nomi
+#: `OBBLIGATORI`, `AMMESSI` e `LISTE` restano quelli di sempre per chi li importa.
+from functools import cache as _cache  # noqa: E402
+
+from . import sistemi as _S  # noqa: E402
+
+_NOMI_CAMPI = {"OBBLIGATORI": "obbligatori", "AMMESSI": "ammessi", "LISTE": "liste"}
+
+
+def campi(id_: str = "d20") -> "dict[str, tuple[str, ...]]":
+    """I campi del blocco per il sistema `id_` (capacità `statblocco.campi`)."""
+    return _campi(id_)
+
+
+@_cache
+def _campi(id_: str) -> "dict[str, tuple[str, ...]]":
+    d = _S.regole(id_).dati("statblocco.campi")
+    return {nome: tuple(d[chiave]) for nome, chiave in _NOMI_CAMPI.items()}
+
+
+def __getattr__(nome: str):
+    if nome in _NOMI_CAMPI:
+        return campi()[nome]
+    raise AttributeError(f"module {__name__!r} has no attribute {nome!r}")
 
 
 class StatblockError(ValueError):
@@ -65,6 +85,9 @@ class Statblocco:
     nome: str = ""
     gs: str = ""
     tipo: str = ""
+    taglia: str = ""
+    spazio: str = ""
+    portata: str = ""
     ca: str = ""
     ca_dettaglio: str = ""
     pf: str = ""
@@ -81,10 +104,133 @@ class Statblocco:
 
     @property
     def completo(self) -> bool:
-        return all(getattr(self, c.replace("-", "_")) for c in OBBLIGATORI)
+        return all(getattr(self, c.replace("-", "_")) for c in campi()["OBBLIGATORI"])
 
     def mancanti(self) -> list[str]:
-        return [c for c in OBBLIGATORI if not getattr(self, c.replace("-", "_"))]
+        return [c for c in campi()["OBBLIGATORI"] if not getattr(self, c.replace("-", "_"))]
+
+
+def taglie(id_: str = "d20") -> dict:
+    """La tabella di spazio e portata per taglia (capacità `statblocco.taglie`)."""
+    return _S.regole(id_).dati("statblocco.taglie")
+
+
+def taglia_canonica(testo: str) -> str:
+    """La taglia scritta in una riga di tipo, col nome della tabella.
+
+    >>> taglia_canonica("Nano Medio · Guerriero 6")
+    'Media'
+    >>> taglia_canonica("Large dragon (water)")
+    'Grande'
+    >>> taglia_canonica("Umanoide (goblinoide)")
+    ''
+    """
+    alias = taglie()["alias"]
+    for parola in re.findall(r"[^\W\d_]+", testo or ""):
+        if parola.lower() in alias:
+            return alias[parola.lower()]
+    return ""
+
+
+def _metri(testo: str) -> float | None:
+    m = re.match(r"\s*(\d+(?:[.,]\d+)?)\s*m\b", testo or "")
+    return float(m.group(1).replace(",", ".")) if m else None
+
+
+def _m(x: float) -> str:
+    return (f"{x:g}".replace(".", ",")) + " m"
+
+
+def quadretti_spazio(metri: float) -> str:
+    """Quanti quadretti da 1,5 m occupa un lato di `metri`.
+
+    >>> quadretti_spazio(1.5), quadretti_spazio(3.0), quadretti_spazio(0.75)
+    ('1 quadretto', '2×2 quadretti', 'meno di un quadretto')
+    """
+    if metri < 1.5:
+        return "meno di un quadretto"
+    n = round(metri / 1.5)
+    return "1 quadretto" if n == 1 else f"{n}×{n} quadretti"
+
+
+def quadretti_portata(metri: float) -> str:
+    """
+    >>> quadretti_portata(0), quadretti_portata(1.5), quadretti_portata(4.5)
+    ('nel suo quadretto', '1 quadretto', '3 quadretti')
+    """
+    if metri < 1.5:
+        return "nel suo quadretto"
+    n = round(metri / 1.5)
+    return "1 quadretto" if n == 1 else f"{n} quadretti"
+
+
+def ingombro(sb: "Statblocco") -> str:
+    """La riga «quanti quadretti occupa, quanti ne minaccia» del riquadro
+    (ADR-0128), o `""` se la scheda non dichiara la taglia.
+
+    >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="3 m"))
+    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 3 m (2 quadretti)'
+    >>> ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="1,5 m (3 m con il morso)"))
+    '**Taglia** Grande · **Spazio** 3 m (2×2 quadretti) · **Portata** 1,5 m (1 quadretto); 3 m (2 quadretti) con il morso'
+    >>> ingombro(Statblocco(nome="Guardia (4)", taglia="Media", spazio="1,5 m", portata="1,5 m"))
+    '**Taglia** Media · **Spazio** 1,5 m (1 quadretto) ciascuno · **Portata** 1,5 m (1 quadretto)'
+    >>> ingombro(Statblocco())
+    ''
+    """
+    if not sb.taglia:
+        return ""
+    pezzi = [f"**Taglia** {sb.taglia}"]
+    # una scheda per un gruppo, «Guardia (4)»: lo spazio è di ciascuno
+    gruppo = " ciascuno" if re.search(r"\(\d+(?:-\d+)?\)", sb.nome or "") else ""
+    if (s := _metri(sb.spazio)) is not None:
+        pezzi.append(f"**Spazio** {_m(s)} ({quadretti_spazio(s)}){gruppo}")
+    if (p := _metri(sb.portata)) is not None:
+        testo = f"**Portata** {_m(p)} ({quadretti_portata(p)})"
+        if nota := re.search(r"\(([^)]*)\)", sb.portata):
+            # l'eccezione in quadretti come il resto (giro del 2026-11-10)
+            e = nota.group(1)
+            if (pe := _metri(e)) is not None:
+                e = re.sub(r"^\s*\d+(?:[.,]\d+)?\s*m\b", f"{_m(pe)} ({quadretti_portata(pe)})", e)
+            testo += f"; {e}"
+        pezzi.append(testo)
+    return " · ".join(pezzi)
+
+
+def difetti_ingombro(sb: "Statblocco") -> list[str]:
+    """Cosa non torna fra taglia, spazio e portata di una scheda (ADR-0128).
+    Lo spazio è quello della tabella; la portata di base è quella «alta» o
+    quella «lunga» della taglia. Le eccezioni (un'arma con portata, il morso
+    di un drago) stanno fra parentesi dopo la portata di base.
+
+    >>> difetti_ingombro(Statblocco(taglia="Grande", spazio="3 m", portata="1,5 m (3 m con il morso)"))
+    []
+    >>> difetti_ingombro(Statblocco(tipo="Gigante Grande", taglia="Media", spazio="1,5 m", portata="1,5 m"))
+    ['taglia «Media», ma il tipo dice «Grande»']
+    >>> difetti_ingombro(Statblocco(taglia="Grande", spazio="1,5 m", portata="6 m"))
+    ['spazio 1,5 m: una creatura Grande occupa 3 m', 'portata 6 m: una creatura Grande arriva a 3 m (alta) o a 1,5 m (lunga)']
+    >>> difetti_ingombro(Statblocco())
+    ['manca la taglia', 'manca lo spazio', 'manca la portata']
+    """
+    tab = taglie()["taglie"]
+    fuori = []
+    if not sb.taglia:
+        fuori.append("manca la taglia")
+    elif sb.taglia not in tab:
+        fuori.append(f"taglia «{sb.taglia}» sconosciuta (ammesse: {', '.join(taglie()['ordine'])})")
+    elif (t := taglia_canonica(sb.tipo)) and t != sb.taglia:
+        fuori.append(f"taglia «{sb.taglia}», ma il tipo dice «{t}»")
+    riga = tab.get(sb.taglia)
+    s, p = _metri(sb.spazio), _metri(sb.portata)
+    if s is None:
+        fuori.append("manca lo spazio")
+    elif riga and abs(s - riga["spazio"]) > 1e-6:
+        fuori.append(f"spazio {_m(s)}: una creatura {sb.taglia} occupa {_m(riga['spazio'])}")
+    if p is None:
+        fuori.append("manca la portata")
+    elif riga and all(abs(p - riga[k]) > 1e-6 for k in ("alta", "lunga")):
+        fuori.append(f"portata {_m(p)}: una creatura {sb.taglia} arriva a {_m(riga['alta'])}"
+                     + ("" if riga["alta"] == riga["lunga"] else f" (alta) o a {_m(riga['lunga'])} (lunga)"))
+    return fuori
 
 
 def _campo(chiave: str) -> str:
@@ -122,10 +268,10 @@ def leggi(testo: str) -> Statblocco | None:
             raise StatblockError(f"riga senza «chiave: valore»: {r.strip()!r}")
         chiave, _, valore = r.partition(":")
         chiave = chiave.strip()
-        if chiave not in AMMESSI:
+        if chiave not in campi()["AMMESSI"]:
             raise StatblockError(f"campo sconosciuto «{chiave}» "
-                                 f"(ammessi: {', '.join(AMMESSI)})")
-        if chiave in LISTE:
+                                 f"(ammessi: {', '.join(campi()['AMMESSI'])})")
+        if chiave in campi()["LISTE"]:
             chiave_lista = _campo(chiave)
             if valore.strip():
                 getattr(sb, chiave_lista).append(valore.strip())
@@ -140,11 +286,11 @@ def leggi(testo: str) -> Statblocco | None:
 def rendi(sb: Statblocco) -> str:
     """Il blocco in forma canonica: stesso ordine, sempre, così i diff si leggono."""
     fuori = [APERTURA]
-    for chiave in AMMESSI:
+    for chiave in campi()["AMMESSI"]:
         valore = getattr(sb, _campo(chiave))
         if not valore:
             continue
-        if chiave in LISTE:
+        if chiave in campi()["LISTE"]:
             fuori.append(f"{chiave}:")
             fuori += [f"  - {v}" for v in valore]
         else:
@@ -440,3 +586,148 @@ def togli_blocco(testo: str) -> str:
     except StopIteration:
         return testo
     return "\n".join(righe[:inizio] + righe[fine + 1:]).lstrip("\n")
+
+
+# ── la parte leggibile (ADR-0091) e la scheda di stampa (ADR-0105) ──────────
+# Il blocco ```statblocco dice i numeri; le righe che lo seguono nella forma di
+# ADR-0091 dicono come si legge la creatura al tavolo. In stampa le due cose
+# formano un riquadro solo, a fasce come nelle AP PF1e: DIFESA, ATTACCO,
+# TATTICHE, STATISTICHE, CAPACITÀ SPECIALI (ordine di Burnt Offerings, scelto
+# da Jfs il 2026-11-13). Chi impagina (PDF, HTML,
+# Homebrewery) legge le righe qui, così il riquadro ha la stessa forma ovunque.
+
+#: Le etichette della parte leggibile, nell'ordine di ADR-0091.
+SEZIONI = ("Iniziativa", "Difesa", "Attacco", "Tattiche", "Statistiche", "Capacità speciali")
+#: Le fasce del riquadro, cioè le sezioni che hanno un titolo in stampa.
+#: «Iniziativa» no: è la riga sotto il nome, come nelle AP.
+FASCE = SEZIONI[1:]
+_SEZIONE = re.compile(r"^\*\*(" + "|".join(re.escape(s) for s in SEZIONI) + r")\*\*:?\s*(.*)$")
+_FINE_SCHEDA = re.compile(r"^(#|```|\||>|<!--|Notes?:|Boost log|\*\*Benchmark\*\*)")
+
+
+@dataclass
+class Sezione:
+    etichetta: str
+    testo: str = ""
+    voci: list[str] = field(default_factory=list)
+
+
+def sezioni_leggibili(righe: list[str], i: int) -> tuple[list[Sezione], int]:
+    """Le sezioni di ADR-0091 che cominciano alla riga `i` (righe vuote saltate).
+
+    Ritorna le sezioni e l'indice della prima riga che non ne fa parte. Se alla
+    riga `i` non comincia una sezione, ritorna `([], i)` e non consuma niente:
+    un blocco ```statblocco da solo resta un riquadro coi soli numeri.
+    """
+    j = i
+    while j < len(righe) and not righe[j].strip():
+        j += 1
+    if j >= len(righe) or not _SEZIONE.match(righe[j].strip()):
+        return [], i
+    fuori: list[Sezione] = []
+    while j < len(righe):
+        s = righe[j].strip()
+        m = _SEZIONE.match(s)
+        if m:
+            fuori.append(Sezione(m.group(1), m.group(2).strip()))
+            j += 1
+            continue
+        if not s:
+            k = j
+            while k < len(righe) and not righe[k].strip():
+                k += 1
+            if k < len(righe) and _SEZIONE.match(righe[k].strip()):
+                j = k
+                continue
+            break
+        if _FINE_SCHEDA.match(s):
+            break
+        corrente = fuori[-1]
+        if s.startswith("- "):
+            corrente.voci.append(s[2:].strip())
+        elif corrente.voci and righe[j][:1] in " \t":
+            corrente.voci[-1] += " " + s
+        else:
+            corrente.testo = (corrente.testo + " " + s).strip()
+        j += 1
+    return fuori, j
+
+
+_CARATTERISTICHE = re.compile(
+    r"^\s*(?:\**(?:For|Des|Cos|Int|Sag|Car|FOR|DES|COS|INT|SAG|CAR)\.?\s*[+-]?(?:\d+|—|-)\**"
+    r"(?:\s*\([^)]*\))?\s*,?\s*)+[·;]?\s*")
+
+
+def senza_caratteristiche(testo: str) -> str:
+    """La riga **Statistiche** senza le caratteristiche in testa: in stampa
+    stanno nella griglia del riquadro, e scriverle due volte confonde. Se una
+    caratteristica porta una parentesi che non è il solo modificatore
+    («For 30 (36 in Ira)»), la riga resta intera: la griglia ha solo il
+    numero, e la parentesi andrebbe persa."""
+    m = _CARATTERISTICHE.match(testo)
+    # «(+3)» è il modificatore, che la griglia non mostra ma si ricava: si
+    # toglie. Ogni altra parentesi («(36 in Ira)») è un'informazione.
+    if not m or re.search(r"\((?!\s*[+−-]?\d+\s*\))", m.group(0)):
+        return testo
+    # Si toglie solo un gruppo che le contiene tutte e sei: se la riga
+    # intercala un commento («Sag 20, con il +4 della Collana, Car 12»), la
+    # griglia non lo dice, e la riga resta intera.
+    if len(re.findall(r"(?i)\b(?:for|des|cos|int|sag|car)\b", m.group(0))) < 6:
+        return testo
+    return testo[m.end():]
+
+
+def caratteristiche(attributi: str) -> list[tuple[str, str]]:
+    """Le coppie (sigla, valore) del campo `attributi`, in qualunque ordine.
+
+    Le schede scrivono «For 12 Des 14 Cos 16 …» senza virgole (94 su 99 il
+    2026-09-26). La griglia del riquadro si stampa solo con tutte e sei."""
+    coppie = re.findall(r"\b(For|Des|Cos|Int|Sag|Car)\b\.?\s*([+-]?\d+|—|-)", attributi)
+    return [(k, v) for k, v in coppie]
+
+
+def etichetta_gs(gs: str, sigla: str | None = None) -> str:
+    """Quel che il riquadro scrive accanto al nome: «GS 12» per un numero,
+    il testo così com'è per un PG («PG di 13°»), niente per «—»."""
+    gs = gs.strip()
+    if gs in ("", "—", "-"):
+        return ""
+    if sigla is None:
+        sigla = _S.etichette().get("gs", "GS")   # stampa.etichette (ADR-0111, L7)
+    return f"{sigla} {gs}" if re.match(r"[~≈½\d]", gs) else gs
+
+
+def accosta_parte_leggibile(testo: str) -> str:
+    """Porta la parte leggibile di una scheda subito sotto il suo blocco.
+
+    Nel Bestiario fra il blocco ```statblocco e le righe di ADR-0091 ci sono le
+    note del DM (i conti, le fonti, lo storico). Un booklet che stampa la
+    scheda intera (il volume di ARC-07 include quella di Balvar) avrebbe il
+    riquadro coi soli numeri, poi le note, poi le righe leggibili sciolte:
+    tre pezzi invece di uno. Qui le righe leggibili salgono sotto il blocco, e
+    le note restano dopo il riquadro. Si cerca solo fino al titolo seguente:
+    oltre, la parte leggibile è di un'altra creatura.
+    """
+    righe = testo.split("\n")
+    i = 0
+    while i < len(righe):
+        if righe[i].strip() != APERTURA:
+            i += 1
+            continue
+        fine = next((k for k in range(i + 1, len(righe)) if righe[k].strip() == CHIUSURA), None)
+        if fine is None:
+            break
+        if sezioni_leggibili(righe, fine + 1)[0]:
+            i = fine + 1
+            continue
+        k = fine + 1
+        while k < len(righe) and not righe[k].startswith("#") and righe[k].strip() != APERTURA:
+            if re.match(r"^\*\*(Iniziativa|Difesa)\*\*", righe[k].strip()):
+                break
+            k += 1
+        if k < len(righe) and re.match(r"^\*\*(Iniziativa|Difesa)\*\*", righe[k].strip()):
+            _, dopo = sezioni_leggibili(righe, k)
+            parte = righe[k:dopo]
+            righe = righe[:fine + 1] + parte + [""] + righe[fine + 1:k] + righe[dopo:]
+        i = fine + 1
+    return "\n".join(righe)

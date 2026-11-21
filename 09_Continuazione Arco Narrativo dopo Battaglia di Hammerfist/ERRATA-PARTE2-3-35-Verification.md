@@ -89,14 +89,15 @@ lista di buff pre-cast con **durate esplicite** e **2 effetti a innesco**. CR sa
        → durante *righteous might*: taglia Grande, CA 27 (−1 taglia, +2 nat), contatto 13
 - BAB / Lotta: +13 / +18 (Str 20 ; +19 sotto righteous might, taglia Grande)
 - TS: Temp +15, Rif +7, Vol +15  [+2 dai livelli di chierico in più]
-- Caratteristiche: For 20, Des 12, Cos 18, Int 12, Sag 20, Car 16
+- Caratteristiche: For 20, Des 12, Cos 18, Int 12, Sag 22 (pietra ioun sfera blu, +2), Car 16  [fino al 2026-11-19 Sag 20: le CD sotto erano già quelle di Sag 22, come la scheda viva `Bestiario/villain/Azarr_Kul/azarr-kul-final-cr17.md`; scelta del DM sulla card del 2026-11-19]
 
 **Attacco:**
 - Spadone sacrificale +2 +21/+16/+11 (2d6+9, 19-20/×2; +2d6 vs buoni)
   → sotto *divine power*: +25/+20/+15/+10 e For effettiva superiore
 - Soffio mezzodrago blu: linea elettricità 6 m, 6d8, Rif CD 20 metà, ogni 1d4 round
 
-**Incantesimi (Chierico 12, CL 14 con oggetti; domini Guerra + Tirannia/Tiamat):**
+**Incantesimi (Chierico 12, CL 14 con oggetti; domini Male + Tirannia/Tiamat):**
+<!-- storico: fino al 2026-11-19 domini Guerra + Tirannia; Tiamat non dà Guerra (scelta del DM sulla card del 2026-11-19) -->
 - 6°: *blade barrier* (CD 22), *harm* (CD 22)
 - 5°: *flame strike* cromatico (CD 21), *righteous might*, *slay living*
 - 4°: *divine power*, *freedom of movement*, *unholy blight* (CD 20), *air walk*
@@ -116,8 +117,7 @@ lista di buff pre-cast con **durate esplicite** e **2 effetti a innesco**. CR sa
 | *prayer* | +1 alleati / −1 nemici entro 12 m | 12 round |
 | *shield of faith* | +2 deflessione (già in CA sopra) | 140 min |
 
-**2 effetti a innesco (Contingent/oggetti) `[INFERRED — via Craft Contingent Spell
-o pergamene sacerdotali, a discrezione DM]`:**
+**2 effetti a innesco (Contingent/oggetti) `[Private source — Complete Arcane: Craft Contingent Spell]`, o pergamene sacerdotali:**
 1. *Heal* automatico su di sé quando scende sotto **40 pf** (1/scontro).
 2. *Word of recall* / *plane shift* al Fane quando scende sotto **15 pf** (fuga per
    ARC-10) **oppure** *divine power* ri-innescato (se il DM vuole il combattimento
@@ -218,7 +218,7 @@ Fonte tabella esiti: `Bestiario/villain/Sethrax_il_Velato/Sethrax.md`. In scena 
 
 ## 6. CATCH DI COERENZA (trovato durante la verifica — fuori 3.5 ma importante)
 
-`Bestiario/villain/Azarr_Kul/azarr-kul-final-cr15.md` (riga Summary)
+`Bestiario/villain/Azarr_Kul/azarr-kul-final-cr17.md` (riga Summary)
 diceva ancora **"mounts Tyrgarun"** — **contraddice D11 v2 e la sessione A7**
 (Azarr Kul **NON** cavalca Tyrgarun; il drago è terrore dei cieli separato,
 inchiodato dal Mythal). **Corretto in place** (vedi §7). Anche il CR del file
@@ -261,7 +261,7 @@ place quando si tocca il file, o si tengono come **checklist di verifica al tavo
 2. `Arco-Post-Hammerfist-P2B-Torneo-STATBLOCCHI-COMPLETO.md` — CA contatto/colto, raffica monaci, RI.
 3. `Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` — RI non cumulativa, azioni 3.5.
 4. `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` — ✅ Azarr Kul fatto; Erinni/Avatar note.
-5. `Bestiario/villain/Azarr_Kul/azarr-kul-final-cr15.md` — ✅ Tyrgarun coerenza fatta.
+5. `Bestiario/villain/Azarr_Kul/azarr-kul-final-cr17.md` — ✅ Tyrgarun coerenza fatta.
 
 ---
 

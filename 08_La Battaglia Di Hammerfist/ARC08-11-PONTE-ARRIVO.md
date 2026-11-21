@@ -8,7 +8,8 @@
 > nella Guida DM); cuce ciò che nessun file diceva.
 > **Stato**: canonico (contenuto di modulo; canone di trama in
 > `campaign/state.md`, non ancora giocato — piano ARC-08 A0/B2).
-> **Ultima revisione**: 2026-07-02.
+> **Ultima revisione**: 2026-10-31 (stato in uscita allineato a `ARC07-DEF-5`
+> §0-bis e §9, decisioni del giro 4 DEF-5 n. 5 e n. 7; duello col Vecchio).
 > **Dipendenza**: il master P3B è in via di rifinitura in ARC-07 B2 —
 > per lo **stato canonico in uscita** questo ponte usa la fonte stabile
 > `state.md` §1/§6 + D8 (non la prosa del master, che può guadagnare
@@ -27,10 +28,12 @@ duplicare qui.**
 
 | Elemento | Stato all'inizio del finale di Hammerfist |
 |---|---|
-| **Hella** | Viva, template **Ibrido Treant** attivo; porta la **Collana dei Semi Eterni** con **Durik nel terzo seme** (compagno maschile) |
-| **Thorik** | **−2 CON permanente** (sacrificato per la resurrezione, MAI ripristinato) |
-| **Cuore di Moradin** | **Speso** (catalizzatore della resurrezione — uso singolo bruciato) |
-| **Corona di Adamantio** | **3 gemme accese**: Topazio (Tempo), Smeraldo (Terra), Rubino (Cuore della Leggenda) |
+| **Hella** | Viva, template **Ibrido Treant** attivo; porta la **Collana dei Semi Eterni**. **Durik** è sempre presente: è legato alla Collana e arriva con lei (`ARC07-DEF-5` Scena 2). Se il drago l'ha distrutto nel duello, Hella lo richiama col seme III, se è carico e l'Evocazione non è spenta; altrimenti torna all'alba |
+| **I tre Doni** (`ARC07-DEF-3` §5) | Germogliati in Hella, ciascuno da chi ha detto sì: **Scudo del Custode** (da Thorik), **Pelle di Adamantio**, RD 3/adamantino (da Tordek, che cede l'*Ancoraggio della Montagna* dei Bracieri), **Rovo Eldritch** (da Artemis, che scende a 6d6 di *Eldritch Blast*). Un Dono rifiutato resta un debito aperto (`ARC07-DEF-5` §7, «Doni mancati») |
+| **Thorik** | **−4 DES / +2 COS / +4 CAR permanenti** (−2 DES dalla Corona quando l'ha indossata; −2 DES, +2 COS e +4 CAR dal rito dello Smeraldo). ⚠️ **Nessun −2 COS.** Se al rito di Hella ha donato metà della deflessione della Corona (Scudo del Custode), resta a **−1 CA permanente**: la Corona +3 gli dà +2 di deviazione invece di +3, lo stesso punto contato una volta (`ARC07-DEF-5` §0-bis); ed è accelerato 3 round verso chi Hella protegge. Porta il **Debito della Radice** (E-07g), prezzo ignoto. Fonte: `campaign/state.md` §1 del ramo di gruppo |
+| **Cuore di Moradin** | **Speso** (catalizzatore della resurrezione — uso singolo bruciato). Non entra nel salto del Rubino `[CANONE — DM 2026-09-30, D32]` |
+| **Corona di Adamantio** | **Topazio** (Tempo) e **Smeraldo** (Terra) accesi; il **Rubino** (la Possanza Nanica) si accende alla vittoria della battaglia antica e **si consuma** nel salto che li riporta qui (uso singolo, D16). Dal Rituale 4: Corona +3, Senzienza, *Aura della Forgia Eterna* 1/settimana, che la prima volta dura fino all'alba della battaglia antica (`PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` del ramo di gruppo) |
+| **Carry-over B4** | Quello che il duello del −1000 lascia a Fauci, registrato al `ARC07-DEF-4` (esito di Skullcrusher e ferite). Il duello è col **Vecchio** e le 2 wyvern, EL 17 (`ARC07-DEF-4` Appendice A.1-bis e A.6) `[CANONE — DM 2026-10-19]`; l'Adulto di A.1 resta per i gruppi più deboli |
 | **Party** | APL **13** (D8), tutti gli artefatti nello stato di `state.md` §6 |
 
 ---
@@ -44,10 +47,12 @@ duplicare qui.**
 > dell'assedio** (P6, Incontro 3B). **D16 vince.** Questo è il raccordo.
 
 **Il motore**: alla vittoria della battaglia antica (Anno −1000), il
-**Rubino** si accende = *Gem of Immutable Time* (`PG/Artefatti/
-LaCorona_di_Adamantio-DM.md`); il **Cuore di Moradin**, nella Sala
-della Forgia Eterna del 1372, "aggancia" i loro spiriti e li strappa
-attraverso le ere (P5-DEF §4.3).
+**Rubino** si accende: il suo potere, la *Possanza Nanica*
+(`PG/Artefatti/LaCorona_di_Adamantio-DM.md`), e la **Forgia del 1372**,
+che fa da ancora, agganciano i loro spiriti e li tirano attraverso le ere.
+Il **Cuore di Moradin** è speso nella resurrezione e non entra in questa
+meccanica `[CANONE — DM 2026-09-30, D32]` (correzione su P5-DEF §4.3,
+che lo faceva agganciare; vedi `ARC07-DEF-5` §3).
 
 **Dove atterrano (D16, correzione su P5-DEF §4.3)**: non in una Sala
 della Forgia deserta, ma direttamente al **Cuore della Montagna** — la
@@ -60,25 +65,32 @@ più nero della battaglia presente**, non in un interludio tranquillo.
 P6-INTEGRAZIONE-Completa.md` r.621-753)**:
 
 - **Giorno 3 dell'assedio** (≈ March Clock Day 18-19, vedi
-  `ARC08-12-CRONOLOGIA-MARCH-CLOCK.md`), Round 2 dell'ultima resistenza.
+  `ARC08-12-CRONOLOGIA-MARCH-CLOCK.md`), **round 9-10** dell'ultima resistenza
+  (guida, Incontro 3C); i giocatori prendono i loro PG al round 11.
 - **90 guerrieri nanici** superstiti, morale −4.
-- **Re Thorek** a **8 pf**, avvelenato dal soffio del drago, morente;
-  Madre Dana tenta di guarirlo.
+- **Re Thorek** a **8 pf**, avvelenato dal soffio del drago, morente:
+  una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per
+  magia, e al terzo fallimento muore `[CANONE — DM 2026-10-19, D12]`.
+  Madre Dana lo tiene in vita con le mani: le restano 20 pf e un solo
+  *Muro di Pietra* `[CANONE — DM 2026-10-18]`.
 - Le **porte di mithral** cedono sotto l'assalto orchesco.
-- Al cedere delle porte (fine Round 2), **luce divina** esplode
+- Quando gli orchi sfondano l'ultima barricata (round 9-10), **luce divina** esplode
   sull'altare: le rune dorate, gli occhi di rubino delle statue, e la
   sfera tricolore (Topazio oro + Smeraldo verde + Rubino rosso) sopra
   l'altare. Da lì emergono i quattro.
+- **Grimjaw** non è ancora nella caverna: alla fine del round 11 il suo
+  corno suona nel tunnel nord, e al round 12 entra dalla porta di mithral
+  con le guardie (MAPPA 5, stato F) `[CANONE — DM 2026-10-19, D11]`.
 
 > **Read-aloud (raccordo, DM)** — cuce il salto all'Incontro 3B; il
 > testo pieno della manifestazione è in P6:
 >
-> *"Il mondo si frantuma in luce rossa. Il rosso vi tira attraverso le
-> ere — non c'è dolore, solo vertigine cosmica. Poi: pietra, calore,
+> *"Il mondo si frantuma in luce rossa, un sibilo riempie le orecchie e
+> lo stomaco cade nel vuoto. Poi: pietra, calore,
 > il rombo di un assedio. Non la quiete della Forgia — il **fragore**
 > del Cuore della Montagna che sta per cadere. Sopra l'altare di
 > Moradin, la Corona vi deposita nel mezzo dell'ultima resistenza dei
-> Novanta, nell'istante esatto in cui le porte di mithral si spezzano.
+> Novanta, nell'istante esatto in cui l'ultima barricata si spezza.
 > È il vostro momento."*
 
 ---
@@ -86,10 +98,14 @@ P6-INTEGRAZIONE-Completa.md` r.621-753)**:
 ## 3. La regia del passaggio pregen→PG (D6) — momento più delicato dell'arco
 
 Fino a questo istante i giocatori hanno impersonato i **pregen "Eroi di
-Hammerfist"** (Borin, Dara, Thorin Runaforte, Nala). Qui li lasciano e
+Hammerfist"** (Borin, Dara, Harbek Runaforte, Nala). Qui li lasciano e
 riprendono i loro **PG reali** (Rumbling Stones).
 
 ### 3.1 Cosa sanno i PG di ciò che i pregen hanno visto
+
+I giocatori hanno vissuto i tre giorni dentro lo strappo del Rubino, come
+visione della Corona (`ARC08-15-HANDOUTS-GIOCATORE.md`, handout 0)
+`[CANONE — DM 2026-10-21, D4]`.
 
 I Rumbling Stones **non hanno vissuto** l'assedio — ma **arrivano
 informati**, perché il salto del Rubino porta con sé la memoria della
@@ -109,10 +125,12 @@ battaglia antica *e* perché i bonus del flashback maturano come
 Ogni PG entra in scena con un beat proprio (il DM li distribuisce nel
 Round dell'apparizione):
 
-- **Thorik** (guerriero, Corona a 3 gemme): tocca terra per primo, la
+- **Thorik** (guerriero, Corona con Topazio e Smeraldo; il Rubino si è consumato nel salto): tocca terra per primo, la
   Corona che brucia tricolore; Re Thorek — a 8 pf — apre gli occhi e lo
-  **riconosce** (stesso sangue, la Corona che risponde). È il fulcro
-  della carica.
+  **riconosce** (stesso sangue, la Corona che risponde). Ha fiato per una
+  frase sola, prima di perdere i sensi: *«Moradin ha… ascoltato… la
+  Forgia… eterna…»* (`Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md`,
+  MAPPA 5). È il fulcro della carica.
 - **Tordek** (monaco, Bracieri + **Cintura della Devastazione**, D17):
   atterra tra i nemici e le porte spezzate, aura di ki visibile; apre
   un varco a mani nude dove le porte hanno ceduto.
@@ -130,7 +148,19 @@ Prima di iniziare il Round della riscossa, il DM somma i bonus del
 flashback (`ARC08-10-ESITI-E-CONTINGENZE.md` §5) e li applica al
 finale: iniziativa di massa, PNG vivi, −CR agli incontri, morale dei
 90, comandanti nemici logorati. È qui che il lavoro dei pregen "paga"
-— **in vantaggio tattico, non in esperienza** (D9).
+— **in vantaggio tattico, non in esperienza** (D9). Se il flashback coi
+pregen non è stato giocato, vale il default di
+`ARC08-10-ESITI-E-CONTINGENZE.md` §5.5.
+
+### 3.4 Dopo il portale di Dana — dove si riprende
+
+Dopo la pulizia del Cuore (`ARC07-DEF-5` Scena 3), Madre Dana apre il
+portale sui bastioni della Porta Ovest. Il raccordo di quella scena non è
+ancora scritto: finché manca, il DM apre la **Sessione 4** della Guida DM
+(l'**Incontro 4A**, la battaglia aerea contro Fauci) dall'uscita del
+portale, subito, con lo stato del §1 `[CANONE — DM 2026-10-19, giro 4
+DEF-5 n. 5]`. Non si gioca la mezza giornata di battaglia sotterranea che
+la Guida mette fra l'Incontro 3B e la Sessione 4.
 
 ---
 

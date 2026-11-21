@@ -93,6 +93,7 @@ import statistics
 import subprocess
 import sys
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -109,8 +110,8 @@ PARTI_DEL_CORPO = (r"man[oi]|braccia?|test[ae]|occhi?|respiro|cuore|petto|schien
 CALCHI_SEMPRE: list[tuple[str, str]] = [
     (rf"\brealizz(?:o|i|a|iamo|ate|ano|ato|ata)\s+(?:subito\s+|che\b)",
      "«realizzi che» → capisci / ti rendi conto (realizzare = portare a compimento)"),
-    (r"\bassum(?:o|i|e|iamo|ete|ono)\s+che\b",
-     "«assumi che» → dai per scontato / immagini (to assume ≠ assumere)"),
+    # «assumi che» tolto il 2026-10-22 (lotto 7e di AVVENTURE-COMMUNITY): zero
+    # scatti in tutto il repo dal giorno in cui la regola esiste.
     (r"\b(?:la\s+sensazione|un\s+senso|il\s+senso)\s+di\s+\w+",
      "nominalizzazione all'inglese: l'italiano verbalizza («cadi», non «la sensazione di cadere»)"),
     (r"\beventualmente\b",
@@ -145,6 +146,36 @@ MAIUSCOLE = re.compile(r"\b[A-ZÀÈÉÌÒÙ]{3,}\b")
 # fra spazi, e resta contato — anche fra numeri («Chiuso 2026-09-03 — 157
 # su 157»), motivo per cui l'esclusione chiede la enne E l'assenza di spazi.
 TRATTINO = re.compile(r"—|(?<![0-9])–|–(?![0-9])")
+
+# «Sembra» e «pare» nel read-aloud (read-aloud-adulti.md §1 punto 7, D13 e D17
+# di AGENT-SKILLS-ESTERNE). Stavano in `voto_scrittura.py`, il banco di L11,
+# che dal lotto 7e di AVVENTURE-COMMUNITY li riusa da qui: la regex serve a MQM
+# (`box_sembra_pare`) e a `ciclo_prosa segnala`, e vive qui con gli altri
+# rilevatori di prosa. «Come se» resta fuori: è un paragone.
+# ⚠️ Il 2026-10-02 mancavano il participio e il passato remoto («ti è
+# sembrato», «parve»); lo stesso giorno «appare» è uscito perché nei file di
+# gioco vuol dire «diventa visibile».
+SEMBRA = re.compile(r"\b(sembr(?:a|ano|ava|avano|are|ato|ata|ati|ate|ò|arono)|"
+                    r"pa(?:re|iono|reva|revano|rso|rsa|rsi|rse|rve|rvero))\b", re.I)
+# D17 (2026-10-03): il «sembra» smentito entro la frase dopo è lecito («Quella
+# che sembrava una parete — è una palpebra»). Un «è» da solo non basta.
+SMENTITA = re.compile(r"\b(?:invece|non lo (?:è|era|sono|erano)|"
+                      r"si rivel(?:a|ano|ava|avano|ò|arono))\b|\s[—–-]\s*(?:è|era)\b", re.I)
+_FINE_FRASE = re.compile(r"[.!?…]+")
+
+
+def sembra_esitanti(corpo: str) -> "list[re.Match]":
+    """I «sembra» e «pare» di un box che la norma vieta: tutti, tranne quelli
+    smentiti entro la frase dopo (D17)."""
+    fuori = []
+    for m in SEMBRA.finditer(corpo):
+        dopo = corpo[m.end():]
+        fini = list(_FINE_FRASE.finditer(dopo))
+        limite = fini[1].end() if len(fini) > 1 else len(dopo)
+        if not SMENTITA.search(dopo[:limite]):
+            fuori.append(m)
+    return fuori
+
 # Sigle e acronimi del repo: maiuscoli per necessità, non per enfasi.
 SIGLE = {
     "CD", "GS", "PG", "PGS", "DM", "PNG", "SRD", "OGL", "XP", "PX", "TS", "CA", "BAB",
@@ -914,6 +945,10 @@ NORME = (
     "maiuscole_di_enfasi",
     "trattino_come_respiro",
     "caratteristica_minuscola",
+    # Indicatore senza peso dal <data della decisione del DM>: nella calibrazione
+    # sui 38 voti ciechi i possessivi sono piu' alti nel VINCITORE 11 volte e nel
+    # perdente 3 (p 0,057). Si stampa, e MQM non lo pesa.
+    "possessivo_parte_del_corpo",
 )
 
 
@@ -949,9 +984,10 @@ def rilievi(f: Path) -> "list[tuple[str, str]]":
     if not readaloud.strip():
         return fuori
 
-    for pattern, perche in CALCHI_READ_ALOUD:
+    for i, (pattern, perche) in enumerate(CALCHI_READ_ALOUD):
+        chiave = "possessivo_parte_del_corpo" if i == 0 else "calco_dall_inglese"
         for m in re.finditer(pattern, readaloud, re.I):
-            fuori.append(("calco_dall_inglese",
+            fuori.append((chiave,
                           f"{rel}: read-aloud — {perche}  «…{m.group(0)}…»"))
 
     n_ant = len(ANTITESI.findall(readaloud))
@@ -1034,36 +1070,42 @@ CARATTERISTICHE = ("forza", "destrezza", "costituzione", "intelligenza",
 #: è il nome 5e/PF, e questa campagna è 3.5. Quindicesimo caso della stessa
 #: famiglia — un criterio largo che si inventa copertura — e il primo in cui a
 #: trovarlo è stato il controllo nuovo prima del commit, non una PR dopo.
-ABILITA = ("acrobazia", "addestrare animali", "artigianato", "artista della fuga",
-           "ascoltare", "camuffare", "cavalcare", "cercare", "concentrazione",
-           "decifrare scritture", "diplomazia", "disattivare congegni",
-           "equilibrio", "falsificare", "guarire", "intimidire",
-           "nascondersi", "nuotare", "osservare", "percepire intenzioni",
-           "professione", "raccogliere informazioni", "rapidità di mano",
-           "saltare", "sapienza magica", "scalare", "scassinare serrature",
-           "seguire tracce", "sopravvivenza", "utilizzare congegni magici",
-           "valutare")
-_TUTTE = "|".join(re.escape(x) for x in CARATTERISTICHE + ABILITA)
-_CAR = "|".join(re.escape(x) for x in CARATTERISTICHE)
-_ABI = "|".join(re.escape(x) for x in ABILITA)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore import sistemi as _S  # noqa: E402
 
-FORME_CARATTERISTICA = (
-    ("F1 punteggio nello statblock", re.compile(rf"\b({_CAR})\s+(\d{{1,2}})\b", re.I), None),
-    ("F2 abilità col modificatore", re.compile(rf"\b({_ABI})\s*[+-]\d{{1,2}}\b", re.I), None),
-    ("F3 prova con una CD", re.compile(
-        rf"\b(?:prov[ae]|tiri?|TS|test|verifich?[ae])\s+(?:di|su|sulla|sul|della|del)\s+({_TUTTE})\b", re.I),
-     re.compile(r"\b(?:CD|DC)\s*\d+", re.I)),
-    ("F4 modificatore o bonus", re.compile(
-        rf"\b(?:mod\.?|modificatore|bonus|malus|penalità)\s+(?:di|a|alla|al)\s+({_TUTTE})\b", re.I), None),
-)
+#: Le abilità del sistema predefinito (3.5), dal plugin (ADR-0111, L3): prima
+#: erano scritte qui; i moduli PF1e usano le loro (`forme_caratteristica`).
+ABILITA = tuple(_S.abilita()["nomi"])
+
+
+@lru_cache(maxsize=None)
+def forme_caratteristica(sistema: "str | None" = None) -> tuple:
+    """Le quattro forme, con le abilità di `sistema` (predefinito: 3.5)."""
+    abilita = tuple(_S.abilita(sistema)["nomi"]) if sistema else ABILITA
+    tutte = "|".join(re.escape(x) for x in CARATTERISTICHE + abilita)
+    car = "|".join(re.escape(x) for x in CARATTERISTICHE)
+    abi = "|".join(re.escape(x) for x in abilita)
+    return (
+        ("F1 punteggio nello statblock", re.compile(rf"\b({car})\s+(\d{{1,2}})\b", re.I), None),
+        ("F2 abilità col modificatore", re.compile(rf"\b({abi})\s*[+-]\d{{1,2}}\b", re.I), None),
+        ("F3 prova con una CD", re.compile(
+            rf"\b(?:prov[ae]|tiri?|TS|test|verifich?[ae])\s+(?:di|su|sulla|sul|della|del)\s+({tutte})\b", re.I),
+         re.compile(r"\b(?:CD|DC)\s*\d+", re.I)),
+        ("F4 modificatore o bonus", re.compile(
+            rf"\b(?:mod\.?|modificatore|bonus|malus|penalità)\s+(?:di|a|alla|al)\s+({tutte})\b", re.I), None),
+    )
+
+
+FORME_CARATTERISTICA = forme_caratteristica()
 
 
 def controlla_caratteristiche(f: Path) -> list[str]:
     """Caratteristiche e abilità maiuscole, cercate per forma e non per parola."""
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
     fuori: list[str] = []
+    forme = forme_caratteristica(_S.sistema_di(rel)) if ROOT in f.parents else FORME_CARATTERISTICA
     for n, riga in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
-        for nome, rx, condizione in FORME_CARATTERISTICA:
+        for nome, rx, condizione in forme:
             if condizione is not None and not condizione.search(riga):
                 continue
             for m in rx.finditer(riga):

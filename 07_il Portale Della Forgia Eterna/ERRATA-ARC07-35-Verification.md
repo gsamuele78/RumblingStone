@@ -30,7 +30,7 @@
 | Elder Fire Elemental (P3) | 14 | ~4.200/PG | GS = APL+2, "impegnativo" |
 | Terros / Golem di Mithral (P4) | **CR 15+ "Hard"** (power-up voluto, D8) | ~4.800-6.000/PG | tienilo duro (§2.2) |
 | Zog'tar (P5) | 14 | ~4.200/PG | risoluzione veloce (fast-play) |
-| Skullcrusher (P5) | 12 | ~2.700-2.925/PG (party 4, APL 13) | Hella è tornata → 4 PG |
+| Skullcrusher (DEF-4 Scena 11) | **17** (Vecchio e Avanzato) con le 2 wyvern: **EL 17** | **≈ 4.060/PG**: 15.600 PX per il drago e 650 per le wyvern, per un gruppo di 13° diviso per 4 `[CANONE — DM 2026-10-19, giro 4 n. 16]`. Con l'Adulto di A.1 (GS 14) **1.460/PG**, con le wyvern **1.625/PG** | Hella è tornata → 4 PG. Era GS 12 a ~2.700-2.925/PG; ricalcolato il 2026-10-19 sulla tabella PX del DMG (tab. 2-6), come in DEF-4 §8 A (D40); il Vecchio è il duello di serie dal 2026-10-19 (§2.3) |
 
 - **ERRORE da correggere**: `CORREZIONE-Boss-Fauci.md` assegna a un **GS 12**
   "**8.000 XP (2.000/PG)**". Per PG di 13° vs GS 12 il valore corretto è
@@ -57,18 +57,37 @@
   **Touch/Flat-footed/BAB/Lotta**; evita i termini 5e (max poteri speciali
   "puliti", niente "lair actions"). PF/RD/attacco possono restare alti se è
   ciò che serve per non chiudere in 2 round.
-- **Unico nodo da decidere (DM)**: l'**Aura di Pietrificazione** (drenaggio DES
-  = *save-or-die* **senza guaritore**, Hella morta nel P4). Il DM sceglie:
-  **tenerla letale** (coerente col power-up voluto) oppure renderla **non
-  permanente** (debuff forte ma recuperabile). Dettaglio in `_ARCHIVIO/Terros.md` §3/§5.
+- **Nodo chiuso (2026-10-18)**: l'**Aura di Pietrificazione** (drenaggio DES
+  = *save-or-die* **senza guaritore**) è stata giocata **letale**: Hella è
+  morta nel P4, ed è canone. Il master vivo `ARC07-DEF-1` §7 non la riporta più,
+  quindi per i gruppi futuri vale lo statblocco del master. La versione vecchia
+  resta in `_ARCHIVIO/Terros.md` §3/§5.
 
-### 2.3 Skullcrusher il Nero (P5, duello) — GS 12
-- Statblock giocabile nel `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md`: Drago Nero Adulto
-  potenziato **GS 12**, CA 27 (tocco 8, impreparato 25), **PF 240**, Volare 36
-  m (scarsa), morso +26 (2d6+9), soffio acido 12d4 (CD 24 Rifl. ½), Presenza
-  Terrificante CD 22. **Verifica**: coerente con un Drago Nero Adulto avanzato;
-  BAB/Lotta da esplicitare se il DM vuole i sotto-modificatori. Gli esiti del
-  duello alimentano **B4** (carry-over su Fauci).
+### 2.3 Skullcrusher il Nero (duello, DEF-4 Scena 11) — GS 14 l'Adulto, GS 17 il Vecchio che si usa di serie
+- **Il duello che si gioca**: Skullcrusher **Vecchio e Avanzato** (GS 17),
+  `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice A.1-bis
+  `[CANONE — DM 2026-10-12, D60; esteso al 13° il 2026-10-19]`: 337 pf, CA 36
+  (40 con *armatura magica*, che al duello è già addosso), morso +34 (2d8+11),
+  soffio acido **16d4**, linea di 30 m, **Riflessi CD 31** ½, aderente a scelta,
+  Presenza Terrificante CD 26. Dal round 2 lo accompagnano le **2 wyvern** di
+  A.6 (SRD, GS 6). Per un gruppo di 13° fanno **EL 17**, il tetto esatto di
+  APL+4; per uno di 14°, APL+3 `[CANONE — DM 2026-10-19]`. Combatte in passata
+  con *Virare* al posto di *Ghermire*: la presa in bocca è di Fauci contro
+  Thorik in ARC-08 (D71).
+- **L'alternativa**: l'**Adulto** di A.1 (drago nero adulto maturo dell'SRD con
+  il template Avanzato di PF1e, **GS 14**, CA 33, 37 con *armatura magica*,
+  297 pf, soffio 14d4 Riflessi CD 30 ½), con le stesse wyvern: per un gruppo di
+  13° logorato o senza tutti gli artefatti, per tre PG, o se il DM non conferma
+  il Vecchio. EL 14 sulla carta, 15 al tavolo.
+- Per i numeri fa fede il master, non queste righe.
+- **Versione precedente, superata**: fino al giro del 2026-10-19 questa sezione
+  riportava lo statblock del `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md`, un drago
+  nero adulto potenziato a **GS 12**, CA 27 (contatto 8, impreparato 25),
+  **240 pf**, volare 36 m (scarsa), morso +26 (2d6+9), soffio acido 12d4
+  (Riflessi CD 24 ½), Presenza Terrificante CD 22. Resta qui come traccia e
+  non si usa al tavolo. Il file del Bestiario è stato rinominato il 2026-10-19 in
+  `Bestiario/villain/skullcrusher-il-nero-cr14.md`, con 14 nel campo `CR`.
+- Gli esiti del duello alimentano **B4** (carry-over su Fauci).
 
 ### 2.4 Fauci di Palude (1372) — NON qui
 - Profilo canonico **GS 15** nei file ARC-08

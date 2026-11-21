@@ -113,7 +113,7 @@ Con la vittoria nell'assedio, il portatore diventa una leggenda vivente, un simb
 **Evento: La Stasi Temporale e l'Intervento di Moradin**
 Il mondo si congela. Moradin parla alla mente del Portatore.
 **(Leggi ad alta voce al giocatore):**
-> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato a Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
+> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato ad Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
 
 **La Sfida del Sogno: Proiezione Spirituale**
 Il Portatore viene trasportato spiritualmente a Hammerfist per una sfida tattica di 10 round. (Vedi **Appendice A** per i dettagli completi degli scontri).
@@ -182,7 +182,7 @@ Al termine dei 10 round, il Portatore torna bruscamente nel suo corpo.
     *   **Effetto:** Bonus di deviazione +2 alla CA (diventa +3 dopo il Rituale 4).
 *   **Power: Moradin’s Insight (Visione di Moradin) (Sopran.)**
     *   **Sblocco:** Rituale 2. **Attivazione:** Azione standard. **Frequenza:** 1/giorno. **Durata:** 10 minuti. **LI:** 20°.
-    *   **Effetto:** Concede *Visione del Vero* (come l'incantesimo). Fornisce +4 intuizione a Artigianato (Fabbro).
+    *   **Effetto:** Concede *Visione del Vero* (come l'incantesimo). Fornisce +4 intuizione ad Artigianato (Fabbro).
 *   **Power: Adamantine Will (Volontà Adamantina) (Sopran.)**
     *   **Sblocco:** Rituale 3. **Attivazione:** Continuo.
     *   **Effetto:** Immunità a charme e compulsione e +4 razziale ai TS vs effetti mentali toccando pietra/terra.
@@ -292,7 +292,7 @@ Quando il personaggio nano (che chiameremo "il Portatore") indossa la *Corona di
 La presenza di Moradin avvolge la mente del Portatore. Non è un dialogo, ma una trasmissione di conoscenza e scopo.
 
 **(Leggi o parafrasa al giocatore):**
-> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato a Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
+> *"Figlio della Pietra, hai risvegliato la Memoria del Mondo. La battaglia che infuria ora, sulle mura di Hammerfist, è già iniziata. Il tuo corpo è lontano, ma il tuo spirito, legato ad Aegis Fang e ora a questa corona, può ancora colpire. Hai **dieci rintocchi di martello** (10 round) prima che questo legame temporale si spezzi e tu ritorni al tuo presente. Non puoi vincere questa guerra ora, ma le tue azioni qui forgeranno la speranza per il futuro. Ogni colpo inferto, ogni nemico abbattuto, ogni alleato salvato in questo sogno spirituale indebolirà l'orda quando tornerai davvero per riscrivere la storia. Scegli saggiamente. La forgia del destino attende la tua mano."*
 
 Subito dopo, la scena attorno al giocatore si dissolve in un turbine di luce e ombra, per poi ricomporsi sulle mura assediate della fortezza nanica di Hammerfist.
 

@@ -1,10 +1,13 @@
-# Drow Trickster Arcano — «Dita di Ragnatela» (Ladro 3 / Mago 5 / Trickster Arcano 2) [ACCEPTED — DM-canon]
+# Drow Trickster Arcano — «Dita di Ragnatela» (Ladro 3 / Mago 5 / Trickster Arcano 2) [CANONE — DM 2026-09-23]
 **Faction**: drow-sonjak | **Role**: caster-subdolo/saboteur | **Environment**: underdark/urban | **CR**: 11 | **Source**: SRD drow + Ladro/Mago + CdP **Trickster Arcano** (SRD) | **Status**: accepted
 
 
 ```statblocco
 gs: 11
 tipo: Medium humanoid (elf), NE
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 19
 ca-dettaglio: (+4 Des, +4 *armatura magica*, +1 anello), contatto 15, colto alla sprovvista 15
 pf: 38
@@ -13,23 +16,22 @@ ts: Temp +5, Rifl +11, Vol +8
 attributi: For 8 Des 18 Cos 12 Int 20 Sag 12 Car 14
 velocita: 9 m
 attacchi:
-  - Mischia stocco +5 (1d6)
+  - Mischia stocco perfetto +5 (1d6−1/18-20)
 ```
 
-> [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «3d6», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus da Cos 12.
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Stocco +5 e balestra a mano +9 tornano già con +5.
+> [CANONE — DM 2026-09-23, D4] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Balestra a mano +9 torna già con +5. Lo stocco con For 8 dà +4: il +5 della scheda è di uno **stocco perfetto** (BAB +5, For −1, +1 perfetto), e il danno è 1d6−1 `[CANONE — regola, ADR-0118]`.
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *armatura magica*, +1 anello), contatto 15, colto alla sprovvista 15. Iniziativa +4. Vel 9 m.
 **TS** Temp +5, Rifl +11, Vol +8 (+2 razziale vs incantesimi, +2 vs ammaliamenti). **BAB/Lotta** +5/+4. **RI 21**.
-**Mischia** stocco +5 (1d6). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
+**Mischia** stocco perfetto +5 (1d6−1/18-20). **Distanza** balestra a mano +9 (1d4 + **veleno drow**, Tempra CD 13 o incosciente 1 min/2d4 ore).
 **Attacco furtivo** +3d6.
 **Car** For 8, Des 18, Cos 12, Int 20, Sag 12, Car 14.
 **Qualità speciali** Scurovisione 36 m, cecità alla luce solare, **individuazione delle trappole**, schivare prodigioso, **prestidigitazione a distanza**.
 **Capacità magiche** (1/giorno, CL 10): *luci danzanti*, *oscurità*, *fuoco fatuo*.
-**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Mira Precisa (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
+**Talenti** Scrivere Pergamene, Iniziativa Migliorata, Furtivo, Tiro Ravvicinato, Tiro Preciso (*Precise Shot*), Incantesimi Focalizzati (Invocazione).
 
 **Prestidigitazione a Distanza (Str, 1/giorno)**: usa **Rapidità di Mano**, Disattivare Congegni o Scassinare Serrature **a 9 m di distanza**, come azione standard. La prova subisce +5 alla CD e provoca un attacco di opportunità se il DM lo ritiene percepibile.
 
@@ -52,3 +54,7 @@ Medium humanoid (elf), NE. **DV 3d6 + 7d4**. **hp 38**. **CA 19** (+4 Des, +4 *a
 > 🎯 **Aggancio di campagna (E-07b, `campaign/state.md` §7.E)**: il **Seme-Mercato di Varis** viaggia **nello zaino di Tordek**, integro e mai toccato. Un Trickster Arcano che lo sfila a 9 m di distanza è il modo più elegante di far esplodere quell'eco — e di mettere Artemis nella posizione di **dover** rincorrere Varis. *Da usare solo con l'ok del DM: cambia il ramo dell'eco.*
 
 Notes: unità di infiltrazione della compagnia di **Sonjak**, non un ammazza-PG. Il suo valore è **portare via qualcosa** e sparire. Da schierare 1 per incontro (2 al massimo, in un colpo di mano), tipicamente in copertura dietro `drow-warrior-cr1.md`/`drow-fighter3-cr4.md` o insieme a `drow-assassina-lolth-cr10.md`. Da solo è un EL 11: contro il party è un incontro **facile in combattimento e duro in conseguenze**.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12): aggiunto **Tiro Ravvicinato**, prerequisito di Tiro Preciso; la scheda aveva 5 talenti su 6 (4 da 10 DV + 2 da mago), quindi nessun talento è stato tolto.
+
+> correzione 3.5 da `scripts/verifica_scheda.py` (2026-11-12, lotto 2 di ADR-0126): critico di «Mischia stocco perfetto» scritto (18-20, tabella delle armi dell'SRD).

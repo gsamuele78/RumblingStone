@@ -1,8 +1,11 @@
-# Drow Warrior [ACCEPTED — DM-canon 2026-05-05]
+# Drow Warrior [CANONE — DM 2026-05-05]
 **Faction**: drow-sonjak | **Role**: fodder-melee | **Environment**: underdark | **CR**: 1 | **Source**: FRCS p.17 drow traits + MM p.103 Elf Warrior 1 | **Status**: inferred
 
 ```statblocco
 gs: 1
+taglia: Media
+spazio: 1,5 m
+portata: 1,5 m
 ca: 17
 ca-dettaglio: (+4 chain shirt, +2 Dex, +1 light shield)
 pf: 5
@@ -13,7 +16,7 @@ velocita: 30 ft
 iniziativa: +2
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 **Size/Type**: Medium humanoid (elf) | **HD**: 1d8+1 (5 HP)
 **AC**: 17 (+4 chain shirt, +2 Dex, +1 light shield) | **Init**: +2 | **Speed**: 30 ft

@@ -14,8 +14,6 @@ Solo `unittest`: la CI non installa pytest.
 from __future__ import annotations
 
 import json
-import shutil
-import subprocess
 import sys
 import tempfile
 import unittest
@@ -32,6 +30,7 @@ from export_booklet_typst import (  # noqa: E402
 )
 from build_booklet_html import VOCI_COLOPHON as VOCI_HTML  # noqa: E402
 from validate_booklets import carica_schema, controlla_manifest, manifest_del_repo  # noqa: E402
+import typst_motore  # noqa: E402
 
 
 class TestAttributiDelloStatblocco(unittest.TestCase):
@@ -350,7 +349,7 @@ class TestTabelleLarghe(unittest.TestCase):
         self.assertIn('sezione: "Le prove di gruppo"', typ)
 
 
-@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+@unittest.skipIf(not typst_motore.disponibile(), "typst non installato")
 class TestTabelleLargheCompilate(unittest.TestCase):
     """Compilate. Un float non si interroga (`place` non è localizzabile), quindi
     si misura la sua conseguenza: se la tabella scavalca, il testo che la segue
@@ -368,14 +367,11 @@ class TestTabelleLargheCompilate(unittest.TestCase):
                 '#import "/scripts/typst/tema-rumblingstone.typ": *\n'
                 f'#set page(paper: "a4", columns: {colonne})\n'
                 + segno.format("prima") + corpo + segno.format("dopo"), encoding="utf-8")
-            esito = subprocess.run(
-                ["typst", "eval", "query(<dopo>).first().value - query(<prima>).first().value",
-                 "--in", str(typ),
-                 "--root", str(REPO), "--font-path", str(REPO / "scripts" / "fonts"),
-                 "--package-path", str(REPO / "scripts" / "typst" / "packages")],
-                capture_output=True, text=True)
-            self.assertEqual(esito.returncode, 0, esito.stderr)
-            return 1 if float(esito.stdout.strip()) < 0.5 else 0
+            salto = typst_motore.valuta(
+                typ, "query(<dopo>).first().value - query(<prima>).first().value",
+                root=REPO, font=REPO / "scripts" / "fonts",
+                pacchetti=REPO / "scripts" / "typst" / "packages")
+            return 1 if float(salto) < 0.5 else 0
 
     def _tab(self, testo: str, **kw) -> str:
         extra = "".join(f"{k}: {v}, " for k, v in kw.items())
@@ -397,7 +393,7 @@ class TestTabelleLargheCompilate(unittest.TestCase):
         self.assertEqual(self._float(self._tab("x", larga="true")), 1)
 
 
-@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+@unittest.skipIf(not typst_motore.disponibile(), "typst non installato")
 class TestFiguraSuPaginaCompilata(unittest.TestCase):
     """Compilata davvero: il testo dopo una mappa quadrata comincia sotto la
     mappa, non 21 cm più in basso."""
@@ -417,14 +413,10 @@ class TestFiguraSuPaginaCompilata(unittest.TestCase):
                 '#context [#metadata(here().position().y.cm()) <sotto>]\n',
                 encoding="utf-8")
             def y(etichetta: str) -> float:
-                esito = subprocess.run(
-                    ["typst", "query", "--root", str(REPO),
-                     "--font-path", str(REPO / "scripts" / "fonts"),
-                     "--package-path", str(REPO / "scripts" / "typst" / "packages"),
-                     str(cartella / "p.typ"), f"<{etichetta}>", "--field", "value", "--one"],
-                    capture_output=True, text=True)
-                self.assertEqual(esito.returncode, 0, esito.stderr)
-                return float(esito.stdout)
+                return float(typst_motore.valuta(
+                    cartella / "p.typ", f"query(<{etichetta}>).first().value",
+                    root=REPO, font=REPO / "scripts" / "fonts",
+                    pacchetti=REPO / "scripts" / "typst" / "packages"))
             salto = y("sotto") - y("sopra")
         # 17 cm di mappa (larga quanto la pagina) più i margini della figura.
         self.assertLess(salto, 19.0, f"la figura occupa {salto:.1f} cm: la cornice è ancora fissa")
@@ -445,8 +437,8 @@ class TestCapolettera(unittest.TestCase):
 class TestFormato(unittest.TestCase):
     """A5 è il libretto: una colonna, corpo 9.6 pt.
 
-    Sta accanto all'imposizione (ADR-0027), non al posto suo: `pdfcpu booklet`
-    su un volume A4 mette due pagine per foglio e scala tutto al 71%, cioè
+    Sta accanto all'imposizione (ADR-0027), non al posto suo: imporre
+    un volume A4 mette due pagine per foglio e scala tutto al 71%, cioè
     10.2 pt diventano ~7.2. Comporre in A5 e poi imporre tiene il corpo dove si
     legge.
     """
@@ -482,6 +474,35 @@ class TestManifestDelRepo(unittest.TestCase):
             with self.subTest(manifest=m.name):
                 errori, _ = controlla_manifest(m, self.schema)
                 self.assertEqual(errori, [])
+
+    def test_hb_md_vecchio_viene_segnalato(self):
+        # 2026-10-30: HTML rifatto, .hb.md di prima, e nessuno lo vedeva
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "c.md").write_text("# c\n\ntesto nuovo\n", encoding="utf-8")
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"title": "C", "file": "c.md"}]}),
+                          encoding="utf-8")
+            self.assertEqual(controlla_manifest(mp, self.schema)[0], [])  # senza .hb.md: libero
+            (Path(d) / "X.hb.md").write_text("vecchio\n", encoding="utf-8")
+            errori, _ = controlla_manifest(mp, self.schema)
+            self.assertTrue(any("X.hb.md non allineato" in e for e in errori), errori)
+
+    def test_griglia_disegnabile_stampata_viene_fermata(self):
+        # la griglia vera di S-2, nell'atlante di ARC-07
+        atlante = (REPO / "07_il Portale Della Forgia Eterna" / "Mappe" /
+                   "ARC07-MAPPE-DEFINITIVO.md").read_text(encoding="utf-8")
+        inizio = atlante.rfind("```", 0, atlante.index(" STANZA DELLA CORONA —"))
+        griglia = atlante[inizio:atlante.index("```", inizio + 3) + 3] + "\n"
+        with tempfile.TemporaryDirectory() as d:
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"title": "C", "file": "c.md"}]}),
+                          encoding="utf-8")
+            (Path(d) / "c.md").write_text(griglia, encoding="utf-8")
+            errori, _ = controlla_manifest(mp, self.schema)
+            self.assertTrue(any("stampata in c.md" in e for e in errori), errori)
+            (Path(d) / "c.md").write_text(f"<!-- apparato -->\n{griglia}<!-- /apparato -->\n",
+                                          encoding="utf-8")
+            self.assertEqual(controlla_manifest(mp, self.schema)[0], [])
 
     def test_una_chiave_inventata_viene_rifiutata(self):
         with tempfile.TemporaryDirectory() as d:
@@ -592,3 +613,16 @@ class TestColophon(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSchemaAsciiStampato(unittest.TestCase):
+    def test_schema_a_riquadri_fuori_dall_apparato_viene_fermato(self):
+        import validate_booklets as V
+
+        disegno = "```\n" + "┌────────┐\n│ torre  │\n└────────┘\n" * 2 + "```\n"
+        with tempfile.TemporaryDirectory() as d:
+            m = Path(d) / "m.md"
+            m.write_text("# x\n\n" + disegno, encoding="utf-8")
+            self.assertEqual(len(V._schemi_ascii_stampati(m, "m.md")), 1)
+            m.write_text("# x\n\n<!-- apparato -->\n" + disegno + "<!-- /apparato -->\n", encoding="utf-8")
+            self.assertEqual(V._schemi_ascii_stampati(m, "m.md"), [])

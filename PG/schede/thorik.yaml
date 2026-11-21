@@ -1,0 +1,47 @@
+# Scheda di Thorik come dato — lotto 4g-1 di PIANO-RIPRESA-PR-ABBANDONATE (ADR-0088).
+#
+# Porta solo i fatti che il repo deve tenere onesti: caratteristiche e
+# modificatori permanenti, ognuno con la sua fonte. Classe, PF, stato e artefatti
+# sono di campaign/state.yaml (`party`, `artefatti`) e qui non si copiano.
+# `null` = [INFERRED]: il repo non conosce il valore, e non si inventa. I valori
+# veri arrivano col lotto 4g-2, dalle schede del DM.
+# La vista leggibile, thorik.md, si rigenera con `python3 scripts/render_pg.py`.
+schema_version: 1
+pg: Thorik
+
+caratteristiche:
+  # Lotto P16 «PG» (2026-11-05): la carta del DM, con la DES 12 che ha già il −2
+  # della Corona (base 14) e senza il rito dello Smeraldo, che qui si aggiunge.
+  for: {base: 20, attuale: 20, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  des: {base: 14, attuale: 10, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  cos: {base: 16, attuale: 18, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  int: {base: 13, attuale: 13, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  sag: {base: 12, attuale: 12, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+  # CAR 9 della carta, +4 del rito (un solo +4, come in state.yaml).
+  car: {base: 9, attuale: 13, attestato_da: "plans/esperimenti/p16-inferred-2026-11-04/SCHEDE-PG-CARTA.md"}
+
+modificatori_permanenti:
+- caratteristica: DES
+  delta: -2
+  causa: Ha indossato la Corona di Adamantio, «peso e restrizione movimenti testa».
+  quando: ARC-07 P1, Corona indossata
+  cita: '**-2 Destrezza** (peso e restrizione movimenti testa)'
+  fonte: "07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md"
+- caratteristica: DES
+  delta: -2
+  causa: Il Peso del Mondo accettato nel corpo al rito dello Smeraldo; lo paga il portatore.
+  quando: rito dello Smeraldo, 2026-07-31
+  cita: '**−2 DES**, **+2 COS** e **+4 CAR**, permanenti'
+  fonte: "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md"
+- caratteristica: COS
+  delta: 2
+  causa: Il Peso del Mondo accettato nel corpo al rito dello Smeraldo.
+  quando: rito dello Smeraldo, 2026-07-31
+  cita: '**−2 DES**, **+2 COS** e **+4 CAR**, permanenti'
+  fonte: "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md"
+- caratteristica: CAR
+  delta: 4
+  causa: Il Peso del Mondo accettato nel corpo al rito dello Smeraldo (D84, 2026-10-12).
+  quando: rito dello Smeraldo, 2026-07-31
+  cita: '**−2 DES**, **+2 COS** e **+4 CAR**, permanenti'
+  fonte: "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md"
