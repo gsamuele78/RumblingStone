@@ -396,6 +396,24 @@ villain:
   clock: 0/4
   stato: attivo
   trigger: Si prende la terra da solo, da un villaggio che non c'entra niente, e la carta se la fa firmare con le mani
+- villain: '**Zog''tar Deatheye** (generale dell''orda di ≈372 DR, GS 15) — `Bestiario/villain/zog-tar-deatheye-cr15.md`'
+  tempo: giocato
+  png_id: zog-tar
+  dove: Campo dell'orda sotto Hammerfist, ≈372 DR (viaggio a −1.000, ARC-07 P5)
+  agenda: Prendere Hammerfist e impalare il re
+  clock: chiuso
+  stato: morto
+  reversibile: false
+  trigger: 'Ucciso nella notte alla sua tenda da una carica di Tordek (sessione 7, 2026-11-20). Il corpo nel buco portatile di Artemis con quello di Balvar; il resoconto del DM dice anche «appeso alle mura» (da chiarire). All''alba vale la versione «Zog''tar MORTO» della prova delle mura (ARC07-DEF-4 Scena 10)'
+- villain: '**Balvar Fuocospento** (consigliere dell''orda, runaio esiliato, GS 13) — `Bestiario/villain/balvar-fuocospento-cr13.md`'
+  tempo: giocato
+  png_id: balvar
+  dove: Hammerfist ≈372 DR, il cadavere da Kettra
+  agenda: Tenere il drago legato all'orda con la Catena
+  clock: chiuso
+  stato: morto
+  reversibile: false
+  trigger: 'Ucciso alla tenda (sessione 7, 2026-11-20). Kettra ha interrogato il cadavere: solo la lastra col nome del nipote. Il martello runico è andato a Mastro Zeth. La Catena su Skullcrusher regge ancora'
 conoscenze:
 - png: Sonjak (= Matrona Sajak)
   png_id: sonjak
@@ -786,6 +804,14 @@ png:
   nome: Tiri Kitor (elfi selvaggi di Witchwood)
   tipo: gruppo
   scheda: Bestiario/png/Witchwood_Tiri_Kitor/Witchwood_e_Tiri_Kitor.md
+- id: zog-tar
+  nome: Zog'tar Deatheye
+  tipo: persona
+  scheda: Bestiario/villain/zog-tar-deatheye-cr15.md
+- id: balvar
+  nome: Balvar Fuocospento
+  tipo: persona
+  scheda: Bestiario/villain/balvar-fuocospento-cr13.md
 - id: lathander-mask
   nome: Lathander + Mask
   tipo: divinita
