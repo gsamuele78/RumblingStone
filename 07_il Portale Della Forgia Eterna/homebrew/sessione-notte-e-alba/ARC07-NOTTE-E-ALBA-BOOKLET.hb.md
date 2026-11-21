@@ -3334,6 +3334,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido. La
   attiva chi la porta, toccando il bersaglio, perché *resistere all'energia*
   è a contatto (SRD): su Durik la mette Hella.
+  Al tavolo nessuna era attiva prima dell'alba: alla vista del drago ne hanno
+  attivata **una, su Durik**, e l'altra resta da usare; Hella si è lanciata
+  addosso *protezione dall'energia* (acido).
 - **Il martello di Balvar a Zeth.** Se dopo la tenda i PG regalano a Zeth il
   martello da guerra runico di Balvar (Scena 8, tesoro), Zeth ricambia con una
   runa sua, incisa su un'arma che i PG scelgono: **+2 ai tiri per colpire
@@ -3341,9 +3344,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   questa. Al tavolo l'ha incisa su una balestra nascosta nel torrione ovest
 . È una regola della casa: l'SRD non ha una runa così, e il bonus più
   vicino è il +2 al colpire di un'arma *anatema* contro il suo nemico, senza i
-  dadi in più. Quanto dura `[INFERRED — La runa del martello vale per tutto il
-  duello o per un colpo solo, come le altre rune di quella notte?; base: le
-  rune di Zeth scritte di notte valgono una volta]`.
+  dadi in più. Vale **per un colpo solo**, come il potere contro i draghi dei
+  Bracieri: chi la attiva dichiara il tiro, e la runa si spegne dopo quello,
+  a segno o a vuoto.
 - **Fermarsi o dormire — scelta.** In 3.5 ci sono solo le otto ore di sonno
   e il tempo che passa. **Tre ore di sosta** (2
   tacche) non ridanno incantesimi, perché l'SRD li restituisce solo dopo otto
