@@ -2499,7 +2499,7 @@ repo scritto con altre parole.
 ### MS-0222 · 2026-11-25 · Il prompt d'immagine si scrive per il modello che lo esegue
 
 - **Data:** 2026-11-25
-- **PR:** —
+- **PR:** #519
 - **ADR:** ADR-0150
 - **Temi:** immagini prompt flux klein flux3 gemini kaggle drappo didascalia misura cieco decisione-dm hugging-face licenza
 - **Origine:** riga del 2026-11-25 «D2, collaudo dell'arte del Drappo: ADR-0150 (proposta)» in `plans/CHANGELOG.md`
