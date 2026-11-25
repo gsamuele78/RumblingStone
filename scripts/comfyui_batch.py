@@ -127,6 +127,7 @@ PESI_VIETATI = (
     # FLUX.2: [dev] e [klein] 9B girano sotto la FLUX Non-Commercial License;
     # solo il [klein] 4B e' Apache 2.0 (scheda del modello, 2026-11-16).
     "flux2-dev", "flux.2-dev", "flux-2-dev", "klein-9b", "klein_9b",
+    "klein-base-9b", "klein_base_9b",
 )
 
 AVVIA_COMFYUI = """\
