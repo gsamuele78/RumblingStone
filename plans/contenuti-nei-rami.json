@@ -197,7 +197,7 @@
         "origin/claude/project-thread-4eo6nn"
       ],
       "stato": "in-volo",
-      "dove": "PR #519 in bozza del 2026-11-25 (ADR-0150, MS-0222): standard dei prompt d'immagine per i modelli senza riscrittura, scripts/misura_prompt_immagine.py, didascalie in §9 di PROMPT-RITRATTI-E-TAVOLE.md. Resta in volo fino al merge"
+      "dove": "PR #519 in bozza del 2026-11-25 (ADR-0150, MS-0224): standard dei prompt d'immagine per i modelli senza riscrittura, scripts/misura_prompt_immagine.py, didascalie in §9 di PROMPT-RITRATTI-E-TAVOLE.md. Resta in volo fino al merge"
     }
   ],
   "file": [
