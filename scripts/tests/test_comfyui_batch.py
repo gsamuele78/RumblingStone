@@ -84,6 +84,34 @@ class TestLettura(unittest.TestCase):
         self.assertIn("flemish panel painting light", positivo)
 
 
+class TestDidascalie(unittest.TestCase):
+    """ADR-0150: con FLUX.2 [klein] la didascalia in prosa vince sul prompt composto."""
+
+    def setUp(self):
+        testo = PROMPTS.read_text(encoding="utf-8")
+        self.immagini = {i.ident: i for i in cb.leggi_immagini(testo)}
+        self.blocchi = cb.leggi_blocchi(testo)
+        self.didascalie = cb.leggi_didascalie(testo)
+
+    def test_le_tre_tavole_del_collaudo_hanno_la_didascalia(self):
+        self.assertEqual(set(self.didascalie), {"ritratto-vanna", "tavola-la-ruota", "il-drappo"})
+
+    def test_con_klein_vince_la_didascalia_e_il_negativo_e_vuoto(self):
+        vanna = self.immagini["ritratto-vanna"]
+        positivo, negativo = cb.componi(vanna, self.blocchi, self.didascalie, "flux2")
+        self.assertEqual(positivo, self.didascalie["ritratto-vanna"])
+        self.assertIn("pine resin", positivo)
+        self.assertEqual(negativo, "")
+
+    def test_con_gli_altri_modelli_non_cambia_niente(self):
+        vanna = self.immagini["ritratto-vanna"]
+        self.assertEqual(cb.componi(vanna, self.blocchi, self.didascalie, None), cb.componi(vanna, self.blocchi))
+
+    def test_senza_didascalia_klein_usa_il_prompt_composto(self):
+        cena = self.immagini["tavola-la-cena"]
+        self.assertEqual(cb.componi(cena, self.blocchi, self.didascalie, "flux2"), cb.componi(cena, self.blocchi))
+
+
 class TestSeed(unittest.TestCase):
     def immagine(self, ident="ritratto-vanna", seed=None):
         return cb.Immagine(ident, 832, 1216, "ritratto", "base", "corpo", seed)

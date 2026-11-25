@@ -4599,6 +4599,39 @@
       "deterministic": true
     },
     {
+      "name": "misura_prompt_immagine",
+      "description": "«Questa didascalia e' scritta come la vuole il modello che la esegue?»\n\nMisura le didascalie d'immagine per i modelli senza riscrittura del prompt (FLUX.2 [klein]) contro la guida di Black Forest Labs: prosa, tipo d'immagine, luce, chiusa Style/Mood, niente negazioni ne' etichette di qualita' (ADR-0150).",
+      "use_case": "«Questa didascalia e' scritta come la vuole il modello che la esegue?»",
+      "invocation": "python3 scripts/misura_prompt_immagine.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Markdown con blocchi didascalia, o JSON {id: testo}."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 se una didascalia ha un errore."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Esito in JSON."
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "con --check: una didascalia ha un errore, o il file non ne contiene"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_sintassi",
       "description": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»\n\nI calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
       "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",

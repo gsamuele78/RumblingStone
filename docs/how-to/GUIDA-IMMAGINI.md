@@ -161,6 +161,60 @@ Sempre presente, sempre almeno: `text, letters, watermark, signature,
 modern objects, cartoon`. Poi i negativi **specifici della scena** (per
 Durik: `golem, robot, mechanical joints, collar, snarling, cute cartoon dog`).
 
+### 2.4-bis Se il modello non riscrive il prompt (FLUX.2 [klein])
+
+Gemini, come i servizi in genere, prende il prompt corto e lo riscrive in una
+didascalia lunga prima di disegnare. FLUX.2 [klein] riceve il testo così
+com'è, e una lista di etichette gli arriva come una lista. Per klein la
+scheda porta anche una didascalia in prosa, in un blocco
+`<!-- didascalia id=… modello=flux2-klein -->`, che `comfyui_batch.py` usa al
+posto del prompt composto ([ADR-0150](../../plans/adr/ADR-0150-il-prompt-si-scrive-per-il-modello-che-lo-esegue.md)).
+
+Le regole vengono dalla guida di Black Forest Labs:
+
+- frasi intere, non etichette;
+- la prima frase dice che immagine è («Waist-up portrait painting of…»);
+- la luce con sorgente e direzione («a single torch lights her from the upper left»);
+- si chiude con `Style: … Mood: …`;
+- niente negazioni: klein non ha prompt negativo, quindi «a mass of colour,
+  every face too small to read» invece di «no readable faces»;
+- niente «masterpiece» o «highly detailed»: non descrivono niente di visibile.
+
+La «cosa che non deve mancare» della scheda diventa una frase in primo piano,
+con i dettagli che si vedono: per Vanna le mani, «stained dark amber by pine
+resin, with small pale scars and calluses». Poi si misura:
+
+```bash
+python3 scripts/misura_prompt_immagine.py <file dei prompt> --check
+```
+
+### 2.4-ter FLUX 3 Image Klein su Kaggle: cosa serve prima di provarlo
+
+FLUX 3 Image Klein riscrive il prompt da solo, come Gemini. Il DM l'ha messo
+a condizione il 2026-11-25: si prova solo se resta gratuito e gira sulla
+Kaggle gratuita. Nella 4050 da 6 GB non entra. Non è ancora mai girato.
+
+I pesi stanno su
+[black-forest-labs/flux-3-image-klein-comfy](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy)
+e si scaricano solo dopo aver accettato la FLUX Kommunity License. I passi:
+
+1. Su Hugging Face, con l'account del DM, aprire la pagina e premere «Agree».
+   Si accetta la licenza e la condivisione di nome ed email con Black Forest
+   Labs.
+2. In Settings, Access Tokens, creare un token «Fine-grained» con il solo
+   permesso di lettura su quel repository.
+3. Nell'ambiente cloud del progetto, aggiungere la variabile `HF_TOKEN`. Il
+   token non si scrive mai in chat né nel repo.
+4. Su Kaggle non si fa niente a mano. I segreti di Kaggle non si collegano a
+   un notebook lanciato con `kaggle kernels push`, quindi l'agente carica il
+   token come dataset privato, lo collega al notebook privato e lo cancella a
+   prova finita. Per la durata della prova il token resta in chiaro su
+   Kaggle: è il motivo del token ristretto al passo 2.
+
+Si provano le versioni a 8 bit (5,8 GB il modello, 4,9 GB il codificatore,
+6,7 GB il riscrittore), che Black Forest Labs dà per schede da 8 GB. La T4 di
+Kaggle ne ha 16.
+
 ### 2.5 Formati
 
 | Uso | Aspect ratio |

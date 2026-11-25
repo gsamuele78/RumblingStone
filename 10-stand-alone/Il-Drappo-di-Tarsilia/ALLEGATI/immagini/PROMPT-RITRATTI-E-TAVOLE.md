@@ -373,3 +373,83 @@ light, no readable faces
 > a conchiglia invece che ad anello, campanile al posto del Drappo, pietra chiara
 > invece di intonaco ocra. Il patto tiene insieme la famiglia; i quattro dettagli la
 > distinguono.
+
+---
+
+## §9 · Le didascalie per FLUX.2 [klein]
+
+I prompt dei paragrafi sopra sono **liste di etichette**, scritte per SDXL e
+date a Gemini, che il testo corto lo espande da sé prima di disegnare. FLUX.2
+[klein] non lo fa: riceve il testo così com'è, e la guida di Black Forest Labs
+chiede prosa, la luce con la sua direzione e una chiusa «Style: … Mood: …»
+([ADR-0150](../../../../plans/adr/ADR-0150-il-prompt-si-scrive-per-il-modello-che-lo-esegue.md)).
+Qui sotto c'è la stessa immagine scritta per klein. Quando il modello è
+`flux2-klein-4b`, `comfyui_batch.py` usa la didascalia al posto del prompt
+composto; con gli altri modelli non cambia niente.
+
+Le didascalie nascono dalla scheda (la riga «*la cosa che non deve mancare*»
+diventa una frase in primo piano: le mani di Vanna, le nove facce del
+Drappo) e dal master: il §8 del Giorno 3 per il telo, il patto
+d'inquadratura del §8 di questo file per la Ruota. Si misurano con
+`python3 scripts/misura_prompt_immagine.py` su questo file.
+
+**Vanna Corsari**
+<!-- didascalia id=ritratto-vanna modello=flux2-klein -->
+```
+Waist-up portrait painting of a woman captain in her late thirties, seen in
+three-quarter view at eye level, standing square and unsmiling, her weathered
+face lined by sun and wind, short dark hair cut short for practicality. She
+wears a riveted chainmail shirt under a sleeveless surcoat of forest green and
+earth brown, a heavy round steel shield slung across her back, a plain longsword
+at her hip. Her bare hands are folded over the sword pommel in the foreground,
+fully visible and sharply painted: broad working hands, knuckles cracked, the
+fingers and palms stained dark amber by pine resin, with small pale scars and
+calluses from years of tapping trees. Behind her, a crowd of townsfolk holding
+torches is softly blurred in the night. A single warm torch lights her from the
+upper left; a cool rim of night air outlines her right shoulder. Muted
+river-town palette of wet ochre, iron grey and dyed indigo. Style: northern
+renaissance oil glazing on a wooden panel, flemish panel painting light,
+egg-tempera restraint in the flesh tones, visible brushwork. Mood: tired,
+stubborn, responsible.
+```
+
+**La Ruota, il giorno della corsa**
+<!-- didascalia id=tavola-la-ruota modello=flux2-klein -->
+```
+Wide painted panorama of a medieval river town on race day, seen from a rooftop
+loggia at a high three-quarter angle, the height from which a townsman would
+really watch. At the centre of the square stands a large covered grain market
+with a tiled roof on stone arcades; around it runs a broad oval racing track of
+packed sandy earth, closed by wooden barriers. Eight bareback riders in coloured
+jackets lean their horses into the curve in the near foreground, dust rising
+from the hooves. Behind the barriers and on the wooden galleries of the
+surrounding houses a dense crowd presses forward, a mass of colour and fabric,
+every face too small and distant to read. Eight long banners in different
+colours hang from the galleries. On the south side a tall painted cloth prize
+hangs from a pole, the single vertical element that the eye finds first. Beyond
+the roofs a river with a stone bridge and low hills of thorn scrub. Late-summer
+golden hour, sunlight coming low from the left, long shadows across the track,
+warm haze in the air. Style: northern renaissance oil glazing, flemish panel
+painting light, detailed townscape painting with atmospheric perspective. Mood:
+festive, tense, expectant.
+```
+
+**Il Drappo**
+<!-- didascalia id=il-drappo modello=flux2-klein -->
+```
+Frontal view of an entire tall, narrow painted linen banner filling the frame
+from top to bottom, hanging straight from a turned wooden rod by a cord, set
+against a plain dark wall; the four edges of the cloth are visible, slightly
+frayed. The whole surface of the cloth is one old votive painting in faded
+tempera on coarse linen with the weave showing through the pigment. The upper
+two thirds show a horse race around a town square, painted in a naive, flat,
+traditional manner: small horses and riders in a ring, rooftops, a covered
+market, tiny bystanders as simple dots of colour. In the lower right corner,
+where a crowd would usually be generic, nine faces of ordinary townspeople, men
+and women of different ages, are painted one by one with the care of real
+portraits, each face distinct, lifelike and individual, in clear contrast with
+the naive figures above them. The cloth surface is otherwise plain painted
+linen, its border unmarked. Soft, even daylight from the left. Style: aged
+pigment on linen, egg-tempera, northern renaissance devotional banner. Mood:
+quiet, solemn, a secret hidden in plain sight.
+```
