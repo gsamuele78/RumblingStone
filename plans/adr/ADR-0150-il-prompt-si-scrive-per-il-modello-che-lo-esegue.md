@@ -1,6 +1,6 @@
 # ADR-0150 — Il prompt d'immagine si scrive per il modello che lo esegue
 
-**Stato**: proposta (2026-11-25), in attesa che Jfs guardi il confronto del 25/11
+**Stato**: proposta (2026-11-25). Il DM ha guardato il confronto la sera del 25/11: la norma resta per chi usa klein, ma non sposta la scelta dell'arte del Drappo (vedi «L'esito del cieco»)
 **Data**: 2026-11-25
 **Decisione-fonte**: il DM (Jfs), 2026-11-25, nel thread «Scrivere lo script FLUX per il 4050», dopo il primo collaudo su Kaggle: «per vanna il flux seme 1 meglio ma le mani non sono rovinate come dovrebbero, probabilmente il prompt deve essere più accurato […] usare i migliori prompt possibili […] mi piacerebbe che diventasse uno standard del repo se ha senso», e «fissare le regole dello standard in modo da avere lo stesso standard di prompt che è regolato e verificato e misurato da regole utilizzate come best practices dalla community».
 **Rapporti**: completa [ADR-0015](ADR-0015-standard-prompt-immagine.md) (la scheda-prompt) per i modelli che non riscrivono il prompt; rispetta [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) e [ADR-0019](ADR-0019-licenza-dei-pesi-non-del-software.md); segue la regola di partenza di [ADR-0114](ADR-0114-ogni-prompt-ha-una-scheda-e-le-sue-prove.md) (prima lo standard di fatto). Misura: `scripts/misura_prompt_immagine.py`; esecuzione: `scripts/comfyui_batch.py` (blocchi `didascalia`).
@@ -83,6 +83,31 @@ Misura automatica: le sei didascalie passano `misura_prompt_immagine.py`
 (6/6). Quale serie dà immagini migliori lo dice la scelta del DM, e si scrive
 qui quando c'è. Il limite: tre tavole e tre semi sono un campione piccolo, e
 una preferenza di misura non dimostra una differenza fra i modelli.
+
+### L'esito del cieco (25/11, sera)
+
+Kaggle ha tenuto in coda i notebook per tutta la giornata, quindi il DM ha
+visto un solo seme per tavola (seme 0), generato su CPU a precisione piena:
+sei immagini, non le diciotto previste. Accanto ad A e B c'erano l'immagine
+Gemini del modulo e quella FLUX del 21/11.
+
+| Tavola | Scelta del DM | Nota |
+|---|---|---|
+| Ritratto di Vanna | A | «le mani devono essere più rovinate» |
+| La Ruota | Gemini | né A né B |
+| Il Drappo | Gemini | né A né B |
+
+La chiave si è aperta dopo la scelta e resta nel thread, fuori dal repo
+(`gara/chiave.json` fra i file del progetto). Fra i due modelli c'è quindi
+un solo confronto deciso, a favore di A: è
+un'indicazione, non una misura, e non basta a dire che un modello scrive
+didascalie migliori dell'altro.
+
+Che cosa dice la prova sulla norma: le didascalie in prosa correggono i
+difetti del 21/11 (il Drappo torna un telo dipinto, le mani di Vanna entrano
+in primo piano), ma su due tavole su tre il DM preferisce ancora Gemini. La
+norma migliora klein rispetto a sé stesso e non lo porta al livello di
+Gemini sulle tavole corali.
 
 ## Le conseguenze
 
