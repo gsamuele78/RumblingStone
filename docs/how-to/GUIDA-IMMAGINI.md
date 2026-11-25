@@ -201,15 +201,18 @@ e si scaricano solo dopo aver accettato la FLUX Kommunity License. I passi:
 1. Su Hugging Face, con l'account del DM, aprire la pagina e premere «Agree».
    Si accetta la licenza e la condivisione di nome ed email con Black Forest
    Labs.
-2. In Settings, Access Tokens, creare un token «Fine-grained» con il solo
-   permesso di lettura su quel repository.
+2. In Settings, Access Tokens, creare un token «Fine-grained» con una sola
+   voce spuntata: «Read contents of gated repos you can access», sotto User
+   permissions, Repositories. La sezione «Repositories permissions» riguarda
+   i repository propri e resta vuota. Il token legge solo i modelli protetti
+   di cui si sono accettati i termini, quindi il passo 1 viene prima.
 3. Nell'ambiente cloud del progetto, aggiungere la variabile `HF_TOKEN`. Il
    token non si scrive mai in chat né nel repo.
 4. Su Kaggle non si fa niente a mano. I segreti di Kaggle non si collegano a
    un notebook lanciato con `kaggle kernels push`, quindi l'agente carica il
    token come dataset privato, lo collega al notebook privato e lo cancella a
    prova finita. Per la durata della prova il token resta in chiaro su
-   Kaggle: è il motivo del token ristretto al passo 2.
+   Kaggle: è il motivo del token di sola lettura del passo 2.
 
 Si provano le versioni a 8 bit (5,8 GB il modello, 4,9 GB il codificatore,
 6,7 GB il riscrittore), che Black Forest Labs dà per schede da 8 GB. La T4 di
