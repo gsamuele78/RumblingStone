@@ -127,6 +127,7 @@ PESI_VIETATI = (
     # FLUX.2: [dev] e [klein] 9B girano sotto la FLUX Non-Commercial License;
     # solo il [klein] 4B e' Apache 2.0 (scheda del modello, 2026-11-16).
     "flux2-dev", "flux.2-dev", "flux-2-dev", "klein-9b", "klein_9b",
+    "klein-base-9b", "klein_base_9b",
 )
 
 AVVIA_COMFYUI = """\
@@ -146,6 +147,12 @@ ANNOTAZIONE = re.compile(
 )
 BLOCCO = re.compile(
     r"<!--\s*blocco\s+id=(?P<id>[a-z0-9-]+)\s*-->\s*\n```\n(?P<corpo>.*?)\n```",
+    re.DOTALL,
+)
+# La didascalia in prosa per i modelli che non riscrivono il prompt (FLUX.2
+# [klein]): ADR-0150. Se c'e', vince sul prompt composto dalle etichette.
+DIDASCALIA = re.compile(
+    r"<!--\s*didascalia\s+(?P<campi>[^>]*?)\s*-->\s*\n```\n(?P<corpo>.*?)\n```",
     re.DOTALL,
 )
 CAMPO = re.compile(r"(\w+)=([^\s]+)")
@@ -209,18 +216,35 @@ def leggi_immagini(testo: str) -> list[Immagine]:
     return fuori
 
 
+def leggi_didascalie(testo: str) -> dict[str, str]:
+    """Le didascalie in prosa per FLUX.2 [klein], per id (ADR-0150)."""
+    fuori = {}
+    for m in DIDASCALIA.finditer(testo):
+        campi = dict(CAMPO.findall(m.group("campi")))
+        if "id" in campi:
+            fuori[campi["id"]] = _riga_unica(m.group("corpo"))
+    return fuori
+
+
 def _riga_unica(blocco: str) -> str:
     """Un blocco di prompt a capo multiplo diventa una riga sola, senza doppi spazi."""
     return " ".join(blocco.split())
 
 
-def componi(img: Immagine, blocchi: dict[str, str]) -> tuple[str, str]:
+def componi(img: Immagine, blocchi: dict[str, str], didascalie: dict[str, str] | None = None,
+            grafo: str | None = None) -> tuple[str, str]:
     """Il prompt positivo e quello negativo, come li vedra' il modello.
+
+    Con FLUX.2 [klein] (`grafo == "flux2"`) la didascalia in prosa dell'id, se
+    c'e', sostituisce il prompt composto: klein riceve il testo cosi' com'e',
+    senza riscriverlo, e non ha prompt negativo (ADR-0150).
 
     I prompt dei ritratti nel markdown iniziano con il segnaposto `[look comune]`:
     qui viene **sostituito**, non affiancato, cosi' il testo composto e' quello
     che il DM legge nel documento e non una sua approssimazione.
     """
+    if grafo == "flux2" and didascalie and img.ident in didascalie:
+        return didascalie[img.ident], ""
     ancora = blocchi.get("ancora-storica", "")
     if img.stile == "ritratto":
         prefisso = ", ".join(p for p in (blocchi.get("look-comune", ""), ancora) if p)
@@ -574,6 +598,7 @@ def main(argv: list[str] | None = None) -> int:
     testo = args.prompts.read_text(encoding="utf-8")
     blocchi = leggi_blocchi(testo)
     immagini = leggi_immagini(testo)
+    didascalie = leggi_didascalie(testo)
     if not immagini:
         print(f"✗ nessuna annotazione <!-- img ... --> in {args.prompts}", file=sys.stderr)
         return 2
@@ -622,7 +647,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.dry_run:
         for img in serie:
-            positivo, negativo = componi(img, blocchi)
+            positivo, negativo = componi(img, blocchi, didascalie, mod.get("grafo"))
             print(f"── {img.ident} · {img.larghezza}x{img.altezza} · seed {img.seed(args.reroll)}")
             print(f"   + {positivo}")
             print(f"   − {negativo}\n")
@@ -662,7 +687,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.reroll:
             scrivi_scarto(scarti, img.ident, img.seed(args.reroll - 1),
                           args.reroll - 1, args.motivo)
-        positivo, negativo = componi(img, blocchi)
+        positivo, negativo = componi(img, blocchi, didascalie, mod.get("grafo"))
         print(f"▸ {img.ident} · {img.larghezza}x{img.altezza} · seed {seed} … ", end="", flush=True)
         try:
             prompt_id = comfy.accoda(workflow(img, positivo, negativo, seed, mod))

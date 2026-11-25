@@ -4892,6 +4892,80 @@
       ]
     },
     {
+      "id": "misura_prompt_immagine",
+      "path": "scripts/misura_prompt_immagine.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/misura_prompt_immagine.py",
+      "summary": "Misura le didascalie d'immagine per i modelli senza riscrittura del prompt (FLUX.2 [klein]) contro la guida di Black Forest Labs: prosa, tipo d'immagine, luce, chiusa Style/Mood, niente negazioni ne' etichette di qualita' (ADR-0150).",
+      "use_case": "«Questa didascalia e' scritta come la vuole il modello che la esegue?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Markdown con blocchi didascalia, o JSON {id: testo}."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se una didascalia ha un errore."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esito in JSON."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "10-stand-alone/Il-Drappo-di-Tarsilia/ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "con --check: una didascalia ha un errore, o il file non ne contiene"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Sola lettura."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/misura_prompt_immagine.py --help",
+      "tests": [
+        "scripts/tests/test_misura_prompt_immagine.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0150-il-prompt-si-scrive-per-il-modello-che-lo-esegue.md"
+      ]
+    },
+    {
       "id": "new-campaign-group",
       "path": "scripts/new-campaign-group.sh",
       "category": "G-orchestration-governance",

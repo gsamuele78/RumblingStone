@@ -191,6 +191,13 @@
       ],
       "stato": "in-volo",
       "dove": "PR #497 in bozza del 2026-11-19 (ADR-0144, MS-0205): volume d'arco di ARC-07 (07_il Portale Della Forgia Eterna/homebrew/volume-arco/), misura dei rimandi in plans/esperimenti/booklet-arc07-2026-11-19/. Resta in volo fino al merge"
+    },
+    {
+      "ref": [
+        "origin/claude/project-thread-4eo6nn"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #519 in bozza del 2026-11-25 (ADR-0150, MS-0226): standard dei prompt d'immagine per i modelli senza riscrittura, scripts/misura_prompt_immagine.py, didascalie in §9 di PROMPT-RITRATTI-E-TAVOLE.md. Resta in volo fino al merge"
     }
   ],
   "file": [

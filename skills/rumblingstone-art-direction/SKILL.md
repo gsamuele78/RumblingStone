@@ -45,6 +45,8 @@ Questa skill copre il mestiere in mezzo: quello che fa di dieci immagini **un li
    — il vocabolario di stile e l'ancora storica.
 5. Schede-personaggio: master d'arco, statblocco del Bestiario, ritratti canone (§7-bis.1).
 6. Esemplare: `10-stand-alone/Il-Drappo-di-Tarsilia/ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md`
+7. [ADR-0150](../../plans/adr/ADR-0150-il-prompt-si-scrive-per-il-modello-che-lo-esegue.md):
+   la didascalia in prosa per i modelli che non riscrivono il prompt (FLUX.2 [klein]).
 
 ## §1 · Le sei leve, in ordine di quanto pesano
 
@@ -175,6 +177,7 @@ di generazione.
 4. lock tecnici                  §4  ← seed, luce, camera, formato
 5. brief d'inquadratura          §5  ← una riga per immagine
 6. scrittura dei prompt          ADR-0015 §2 (anatomia della scheda)
+   + didascalia per klein        ADR-0150, misura_prompt_immagine.py
 7. generazione                   GUIDA-IMMAGINI.md
 8. confronto immagine-scheda     §7-bis passo 4 ← una riga per id
 9. gate di rifiuto               §6  ← IL GIORNO DOPO
@@ -231,6 +234,12 @@ scritto in `PROMPT-RITRATTI-E-TAVOLE-ARC07.md`.
 
 Con pesi locali: seed accanto al file (§4), provenienza per ADR-0019.
 
+Con un modello che non riscrive il prompt (FLUX.2 [klein]) il passo 2 produce
+anche il blocco `<!-- didascalia id=… modello=flux2-klein -->`: la stessa
+immagine in prosa, con la «cosa che non deve mancare» in una frase in primo
+piano (ADR-0150). Un servizio come Gemini il prompt corto lo espande da sé;
+klein no, e la lista di etichette gli arriva com'è.
+
 ## Prima di consegnare
 
 - Ogni immagine risponde alla domanda di §5, e nessuna brucia un colpo di scena?
@@ -248,3 +257,4 @@ I controlli che non chiedono un giudizio, da far girare prima di consegnare.
 Quello che qui non c'è resta giudizio di chi legge (registro delle norme).
 
 - `python3 scripts/validate_booklets.py`: le immagini citate esistono e le mappe entrano in pianta (ADR-0106).
+- `python3 scripts/misura_prompt_immagine.py FILE --check`: le didascalie per klein seguono la guida di FLUX (ADR-0150).
