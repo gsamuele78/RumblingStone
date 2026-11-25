@@ -109,6 +109,14 @@ in primo piano), ma su due tavole su tre il DM preferisce ancora Gemini. La
 norma migliora klein rispetto a sé stesso e non lo porta al livello di
 Gemini sulle tavole corali.
 
+Sulla card della stessa sera il DM ha deciso: la Ruota e il Drappo restano
+quelle di Gemini; il ritratto di Vanna resta in sospeso fino alla prova di
+FLUX 3 e a una riprova delle mani. Una prima riprova, con le mani descritte
+come piagate, è venuta esagerata: ferite e sangue al posto dell'usura del
+lavoro. La lezione per P1-P9: klein prende alla lettera anche gli aggettivi
+forti, e il danno va descritto per causa e materia (calli, screpolature,
+resina), non per gravità.
+
 ## Le conseguenze
 
 - Un prompt per klein costa di più da scrivere: 180-200 parole invece di 70,
