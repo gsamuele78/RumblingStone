@@ -2966,15 +2966,15 @@
     },
     {
       "name": "prove_skill",
-      "description": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»\n\nLe prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval.",
+      "description": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»\n\nLe prove con trappola delle skill (ADR-0114): controlla la forma dei casi in skills/<nome>/evals/ (quella di claude plugin eval), prepara il piano alla cieca di una prova A/B vecchia/nuova e ne scrive l'esito con il test del segno. Non chiama modelli: le esecuzioni le fa un workflow o claude plugin eval. Dal ADR-0148 anche gli agenti di .claude/agents/: casi in .claude/agent-evals/<agente>/<caso>/ con almeno un giudice deterministico (regex, tool_used, tool_order, file_exists) ed esempi fissi buona/cattiva; esempi controlla in CI che ogni giudice promuova la buona e bocci la cattiva; valuta giudica un'esecuzione registrata senza modelli; impronta lega agente, skill precaricate e casi; esegui lancia claude -p --agent (costa token, mai in CI); registra scrive l'esito in .claude/agent-evals/ESITI.jsonl; cricchetto chiede, per ogni agente toccato dal diff, un esito con l'impronta nuova non peggiore del precedente (testing: avvisa; --rigoroso: blocca).",
       "use_case": "«Questa skill ha le sue prove con trappola, e la versione nuova inventa meno della vecchia?»",
-      "invocation": "python3 scripts/prove_skill.py controlla",
+      "invocation": "python3 scripts/prove_skill.py controlla [--agenti] | esempi | valuta CASO ESECUZIONE | impronta | esegui | registra | cricchetto",
       "inputSchema": {
         "type": "object",
         "properties": {
           "comando": {
             "type": "string",
-            "description": "controlla · prepara · esito"
+            "description": "controlla · prepara · esito · valuta · esempi · impronta · esegui · registra · cricchetto"
           },
           "minimo": {
             "type": "integer",
@@ -2999,6 +2999,46 @@
           "giudizi": {
             "type": "string",
             "description": "File dei giudizi dentro --piano (esito)."
+          },
+          "agenti": {
+            "type": "boolean",
+            "description": "Con controlla: i casi degli agenti in .claude/agent-evals/."
+          },
+          "agente": {
+            "type": "string",
+            "description": "Agente su cui lavorare (esempi, impronta, esegui, registra, cricchetto)."
+          },
+          "caso": {
+            "type": "string",
+            "description": "Con esegui: solo questi casi; ripetibile."
+          },
+          "modello": {
+            "type": "string",
+            "description": "Con esegui e registra: il modello usato."
+          },
+          "cartella-lavoro": {
+            "type": "string",
+            "description": "Con esegui: il git worktree usa e getta dove l'agente lavora (obbligatorio)."
+          },
+          "esecuzioni": {
+            "type": "string",
+            "description": "Con registra: la cartella scritta da esegui."
+          },
+          "data": {
+            "type": "string",
+            "description": "Con registra: la data dell'esito."
+          },
+          "nota": {
+            "type": "string",
+            "description": "Con registra: una nota libera."
+          },
+          "base": {
+            "type": "string",
+            "description": "Con cricchetto: il ref di confronto (default origin/main)."
+          },
+          "rigoroso": {
+            "type": "boolean",
+            "description": "Con cricchetto: esce 1 invece di avvisare."
           }
         },
         "required": [
@@ -3008,12 +3048,14 @@
       },
       "outputs": [
         "<uscita>/piano.json",
-        "<piano>/ESITO.md"
+        "<piano>/ESITO.md",
+        ".claude/agent-evals/ESITI.jsonl",
+        "<uscita>/<caso>/ (risposta.md, trace.jsonl, files/, cli.txt)"
       ],
       "exit_codes": {
-        "0": "casi in forma, o la nuova non peggiora",
-        "1": "un caso malformato, o la nuova peggiora gli inventati senza marca",
-        "2": "errore d'uso"
+        "0": "casi in forma, giudici che discriminano, esito non peggiore",
+        "1": "un caso malformato, un giudice che non discrimina, un'esecuzione fallita, o (con --rigoroso) un agente toccato senza esito valido",
+        "2": "errore d'uso, git diff fallito o --cartella-lavoro uguale al repo"
       },
       "deterministic": true
     },
@@ -3683,7 +3725,7 @@
     },
     {
       "name": "controlla_marche",
-      "description": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»\n\nI due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Canale testing: in CI avvisa e non blocca.",
+      "description": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»\n\nI due cancelli delle marche sulle righe cambiate (ADR-0109, scheda 4): una marca INFERRED aggiunta senza domanda e base, e un INFERRED tolto senza CANONE, GENERATO o blocco storico nello stesso file. Guarda solo il diff contro la base; salta plans/, changelog, righe di regola e volumi di stampa. Bloccante in CI sulle PR dal 2026-11-25, dopo il canale testing di ADR-0099.",
       "use_case": "«In questa PR ho aggiunto una marca senza domanda, o tolto un INFERRED senza dire chi l'ha deciso?»",
       "invocation": "python3 scripts/controlla_marche.py --base origin/main",
       "inputSchema": {
@@ -3739,6 +3781,31 @@
       "exit_codes": {
         "0": "ok",
         "1": "rilievi non dichiarati o residui scaduti (--check)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "cricchetto_prosa",
+      "description": "«Questa PR ha peggiorato la prosa che tocca?»\n\nSui file di gioco cambiati da una revisione (prosa pura sempre, file misti solo se ricevono un box) nessuna norma MQM ha più difetti di prima; esce 1 altrimenti (ADR-0146).",
+      "use_case": "«Questa PR ha peggiorato la prosa che tocca?»",
+      "invocation": "python3 scripts/cricchetto_prosa.py --rispetto-a origin/main",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rispetto-a": {
+            "type": "string",
+            "description": "La revisione di confronto."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessuna norma peggiorata",
+        "1": "almeno una norma peggiorata"
       },
       "deterministic": true
     },
@@ -4037,6 +4104,52 @@
       "exit_codes": {
         "0": "ok",
         "1": "errore"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "instradamento_agenti",
+      "description": "«Il thread chiama l'agente giusto per questo lavoro?»\n\nGli hook UserPromptSubmit, PreToolUse e Stop di Claude Code nei thread: riconosce il tipo di lavoro del messaggio che arriva (riusando i trigger delle skill) e suggerisce agente e catena; se le istruzioni scrivono una riga «Catena: …», ferma push e PR finché la sessione non ha chiamato quegli agenti e autore-documenti, salvo una deroga con motivo; a fine turno registra se gli agenti sono stati chiamati (ADR-0146).",
+      "use_case": "«Il thread chiama l'agente giusto per questo lavoro?»",
+      "invocation": "python3 scripts/instradamento_agenti.py --riepilogo",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "boolean",
+            "description": "Evento UserPromptSubmit su stdin; scrive il contesto da aggiungere."
+          },
+          "stop": {
+            "type": "boolean",
+            "description": "Evento Stop su stdin; registra se gli agenti suggeriti sono stati chiamati."
+          },
+          "cancello": {
+            "type": "boolean",
+            "description": "Evento PreToolUse su push e PR su stdin; esce 2 per bloccare."
+          },
+          "deroga": {
+            "type": "string",
+            "description": "Via d'uscita dal cancello, con un motivo di almeno 15 caratteri."
+          },
+          "prova": {
+            "type": "string",
+            "description": "Mostra l'instradamento di un testo."
+          },
+          "riepilogo": {
+            "type": "boolean",
+            "description": "Suggerimenti dati e quanti seguiti."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        ".claude/.uso-agenti.jsonl"
+      ],
+      "exit_codes": {
+        "0": "passa (con o senza suggerimento)",
+        "1": "deroga senza motivo",
+        "2": "push o PR bloccati (--cancello)"
       },
       "deterministic": true
     },
@@ -5198,6 +5311,74 @@
       "deterministic": true
     },
     {
+      "name": "verifica_px",
+      "description": "«I PX e i livelli del gruppo tornano con le righe del registro e con lo stato?»\n\nADR-0148. Il registro dei PX (campaign/REGISTRO-PX.md) torna con quattro regole deterministiche: R1 la somma delle righe per colonna è il totale PX; R2 il livello dai PX è quello della tabella dei PX (PHB 3.5, Table 3–2, non SRD); R3 un livello alla volta (PX sotto la soglia del livello al tavolo + 2); R3 anche il limite inferiore (PX non sotto la soglia del livello al tavolo); R4 il livello al tavolo è il livello effettivo di campaign/state.yaml (ECL se scritto, altrimenti livelli di classe più LA) e ogni PG dei totali ha la sua riga. Ogni violazione dice regola, PG, atteso, ha, fonte e file:riga. Sola lettura; esce 1 su una violazione. Cancello in CI.",
+      "use_case": "«I PX e i livelli del gruppo tornano con le righe del registro e con lo stato?»",
+      "invocation": "python3 scripts/verifica_px.py [REGISTRO] [--state STATE] [--json]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "registro": {
+            "type": "string",
+            "description": "Il registro da verificare."
+          },
+          "state": {
+            "type": "string",
+            "description": "Lo stato da cui leggere i livelli di classe."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Violazioni in JSON: regola, colonna, atteso, ha, fonte, dove."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<stdout>"
+      ],
+      "exit_codes": {
+        "0": "il registro torna",
+        "1": "almeno una violazione di R1-R4 o di forma",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "verifica_rimandi",
+      "description": "«Questo §N esiste ancora nel file a cui rimanda?»\n\nADR-0148. I rimandi per sezione dei file di gioco («`ARC08-02` §1», «state.md §2», «vedi §4») puntano a un titolo che esiste nel bersaglio (titolo con «§N» o che inizia con il numero). Il bersaglio si risolve solo se il nome individua un solo .md del repo; un nome ambiguo, una riga che nomina un altro documento o un elenco di § finiscono fra i non verificabili, mai fra le violazioni. Le violazioni già portate al DM stanno in IN_ATTESA. Solo stdlib; --check esce 1 su una violazione nuova. Canale testing in CI (continue-on-error) fino al 2026-12-04.",
+      "use_case": "«Questo §N esiste ancora nel file a cui rimanda?»",
+      "invocation": "python3 scripts/verifica_rimandi.py [PERCORSI ...] [--json] [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "percorsi": {
+            "type": "string",
+            "description": "File .md da leggere; senza, gli archi, campaign/ e Bestiario/."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Rimandi non verificati in JSON, con motivo."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Esce 1 su una violazione nuova."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<stdout>"
+      ],
+      "exit_codes": {
+        "0": "misura eseguita (o nessuna violazione nuova con --check)",
+        "1": "violazione nuova, solo con --check",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "verifica_scheda",
       "description": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»\n\nADR-0124. Tutte le verifiche di regola di una scheda in una chiamata, sola lettura: i prerequisiti dei talenti (verifica_talenti, fonti nell'ordine SRD d20, manuali 3.5, PF1e) e i numeri (conformita_statblocchi.giudica: pf nella fascia dei dadi vita, BAB, tiri salvezza, lotta, attacco, iniziativa) e i gradi delle abilita' (massimo per abilita' e punti disponibili, capacita' creature.gradi del plugin) e gli incantesimi scritti per livello (nella lista della classe o in un dominio, non sotto il loro livello: capacita' creature.liste_incantesimi, SRD e poi liste dei manuali 3.5). Ogni violazione dice file:riga, verifica, regola, atteso, ha e fonte; con --json e' l'uscita che un agente legge per correggere e richiamare. Cio' che le regole del plugin non sanno giudicare (classi che la lettura non conosce, schede a dossier, talenti senza prerequisiti nel repo) va in non_verificabili, non fra le violazioni. Dal lotto 1 di ADR-0126 tiri salvezza e attacco si giudicano senza tolleranza: ogni punto sopra la base deve venire da un bonus che la scheda dichiara (capacita' bonus.cumulo: due bonus dello stesso tipo non si sommano); --tolleranza rimette la fascia di prima. Dal lotto 1-bis la CA del 3.5 si ricostruisce dalle voci di ca-dettaglio (armature e scudi dalla tabella, bonus per tipo, contatto e sprovvista: regole numero.CA e numero.CA.*), e si controllano i sensi della razza (numero.sensi) e la CD delle capacita' speciali (numero.CD_*); una scheda senza le voci della CA va in non_verificabili. Dal lotto 2 il danno delle armi della tabella (capacita' creature.armi): dado per taglia, bonus di Forza, potenziamento e talenti, critico (regole numero.danno.dado, numero.danno.bonus, numero.danno.critico); attacchi naturali e armi fuori tabella vanno in non_verificabili. Dal lotto 3 gli incantatori (capacita' creature.incantatori, 3.5 dall'SRD e PF1e dal PRD): incantesimi al giorno dalla tabella della classe piu' gli incantesimi bonus e lo slot di dominio o di scuola, conosciuti di bardo e stregone, livello massimo lanciabile e CD (regole numero.incantesimi.al_giorno, .conosciuti, .livello, .cd); una lista di cui non si leggono classe, livello o caratteristica va in non_verificabili, e cosi' la tabella PF1e del bardo scelta dal DM (numero.incantesimi.variante). Canale testing (ADR-0099): misura, non cancello. Lotto 3-bis: i requisiti delle classi di prestigio (capacita' creature.prestigio: 493 classi 3.5 dall'SRD e dai manuali, 10 PF1e dal PRD, solo nomi e numeri): bonus di attacco base delle altre classi, gradi, talenti, razza, allineamento, livello d'incantesimo; i requisiti speciali escono fra i non verificabili. Lotto 4: il numero dei talenti (regola numero.talenti): per dadi vita, talenti bonus di classe, talento dell'umano; fuori dal conto i concessi dalla classe e quelli dichiarati accanto al nome ((B), razziale, dominio, difetto); di piu' o di meno e' una violazione, con una classe senza talenti bonus nel plugin un dubbio. Dal lotto 5, seconda parte: il grado di sfida scritto contro livelli di classe (da PG o da PNG), eccezioni di razza e creatura base (regola numero.gs, tabella [gs] di creature.costruzione).",
       "use_case": "«Che cosa non torna in questa scheda, con quale regola e quale valore dovrebbe avere?»",
@@ -5291,6 +5472,43 @@
         "0": "misura eseguita (o nessuna violazione con --check)",
         "1": "violazioni, solo con --check",
         "2": "errore d'uso, percorso inesistente"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "vincolo_skill",
+      "description": "«Gli agenti caricano davvero la skill di stile prima di scrivere?»\n\nL'hook PreToolUse di Claude Code che ferma la scrittura di prosa di gioco (handout, recap, introduzioni dei volumi, box read-aloud nei file misti) se la sessione non ha caricato rumblingstone-narrative-style, e ricorda prosa-documenti sui documenti. Registra ogni decisione in .claude/.uso-skill.jsonl (ADR-0146).",
+      "use_case": "«Gli agenti caricano davvero la skill di stile prima di scrivere?»",
+      "invocation": "python3 scripts/vincolo_skill.py --riepilogo",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hook": {
+            "type": "boolean",
+            "description": "Evento PreToolUse su stdin; esce 2 per bloccare."
+          },
+          "riepilogo": {
+            "type": "boolean",
+            "description": "Quanti blocchi, passaggi e promemoria nel registro."
+          },
+          "classe": {
+            "type": "string",
+            "description": "La classe di ogni file (prosa, misto, documento)."
+          },
+          "cambiati": {
+            "type": "string",
+            "description": "I file di prosa o misti cambiati da una revisione."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        ".claude/.uso-skill.jsonl"
+      ],
+      "exit_codes": {
+        "0": "passa (con o senza promemoria)",
+        "2": "scrittura bloccata (--hook)"
       },
       "deterministic": true
     },
