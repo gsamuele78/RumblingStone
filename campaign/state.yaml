@@ -173,7 +173,7 @@ party:
   classe: Dwarf Fighter 13
   oggi: Hammerfist ≈372 DR, l'assedio dell'alba, sul camminamento est, vicino al torrione di sinistra, con Skullcrusher e due viverne a 50 m (fine sessione 6, 2026-11-20; hanno dormito la notte)
   preparato: Hammerfist Holds, war council chamber
-  hp: 'Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l''ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz''armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** ✅ Dono versato al rito del 2026-09-25: il **+2 di deflessione della Corona** è passato a Hella (**Scudo del Custode**), lui resta a **−1 CA permanente**, e ogni volta che Hella usa lo Scudo lui è **accelerato 3 round verso chi lei ha protetto**. ⚖️ Porta il **Debito della Radice** (E-07g), prezzo ignoto'
+  hp: 'Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l''ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz''armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** ✅ Dono versato al rito del 2026-09-25: il **+2 di deflessione della Corona** è passato a Hella (**Scudo del Custode**), lui resta a **−1 CA permanente**, e ogni volta che Hella usa lo Scudo lui è **accelerato 3 round verso chi lei ha protetto**. ⚖️ Porta il **Debito della Radice** (E-07g): la sua anima promessa al Sogno, saldabile al Cerchio Sacro'
   stato: attivo
   filoni: Decide whether to lead defense of Rethmar personally vs. delegate
 - pg: Tordek
@@ -237,7 +237,7 @@ echi:
   fatto: 'davanti alla Custode delle Radici dice che il **Debito della Radice** lo paga lui, **senza sapere quale sia il prezzo**: un quarto ramo, fuori da A/B/C di `ARC07-DEF-3` §6'
   tono: grigio
   miccia: lunga (ARC-09, Cerchio Sacro)
-  payoff: '[INFERRED — needs DM confirmation] il prezzo e il momento in cui la Custode lo riscuote. Hella sa che il debito è suo e si trova a doverlo lasciare a lui'
+  payoff: '[CANONE — DM 2026-11-26, card-debito-thorik] un''anima per un''anima: alla morte vera l''anima di Thorik, devoto di Moradin, va al Sogno della Terra e non alle sale del Forgiatore, che onora il giuramento libero. Finché un incantesimo lo richiama l''anima è libera e torna (deroga dichiarata a `ARC07-DEF-2` r.1067: quella di Hella era già nel Sogno, la sua è solo promessa); nessun costo meccanico finché vive. Al Cerchio Sacro (ARC-09) la Custode guarda lui e dice il prezzo: Thorik può prendere su di sé il Voto di Hella e fare da ancora sull''altare per le tre fasi del rituale, e allora il debito è saldato. Se lascia l''altare il patto resta, senza tiro salvezza; se al Cerchio non c''è, Hella porta il messaggio e l''offerta vale alla prima volta che lui ci passa.'
   stato: armato
   tag: 🔫 armato
 - id: E-07a
