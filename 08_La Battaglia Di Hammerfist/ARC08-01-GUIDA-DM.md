@@ -2046,7 +2046,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 - **Druido:** Cure e buff sul Guerriero durante duello
 - **Warlock:** Debuff su Grimjaw, eliminazione minacce secondarie
 
-**SE GRIMJAW È STATO ABBATTUTO NELL'ASSEDIO** `[CANONE — DM 2026-11-26, card «comandante a 0 pf nell'assedio»]`: il duello qui sopra non si gioca. Al round 12 entra al suo posto il capitano minore con le dieci guardie, e si ritira da solo. La sua scheda, il round della ritirata e che cosa chiude la serata sono in `ARC08-DEF-2`, §0-bis, «Il comandante a 0 pf o meno», con i default che aspettano il DM.
+**SE GRIMJAW È STATO ABBATTUTO NELL'ASSEDIO** `[CANONE — DM 2026-11-26, card «comandante a 0 pf nell'assedio»]`: il duello qui sopra non si gioca. Al round 12 entra al suo posto il capitano minore con le dieci guardie, e si ritira da solo. La sua scheda, il round della ritirata e che cosa chiude la serata sono in `ARC08-DEF-2`, §0-bis, «Il comandante a 0 pf o meno». Grimjaw non c'è stasera, ma torna indebolito al finale della Sessione 4 `[CANONE — DM 2026-11-27, card «Grimjaw abbattuto, se la guardia lo riporta al campo»: lo salvano, torna al finale debole]`.
 
 ### **RISULTATO DELLA SESSIONE 3:**
 - **Caverna Liberata:** Tutti i nemici morti o in fuga
@@ -2079,7 +2079,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 > | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
 > | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
 > | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[CANONE — DM 2026-11-04, P16, le forze e i pregen]` |
-> | Grimjaw e le guardie orog | 0, o quelli usciti vivi dal 3B | Grimjaw è in campo solo se nel 3B ha suonato la ritirata (scheda in `ARC08-02` §1, *Morale*), con le guardie rimaste |
+> | Grimjaw e le guardie orog | 0, o quelli usciti vivi dal 3B | Grimjaw è in campo se nel 3B ha suonato la ritirata (scheda in `ARC08-02` §1, *Morale*), con le guardie rimaste; o se è stato abbattuto nell'assedio e la guardia lo ha riportato al campo, indebolito (`ARC08-DEF-2`, §0-bis, «I bonus») `[CANONE — DM 2026-11-27, card «Grimjaw abbattuto, se la guardia lo riporta al campo»: lo salvano, torna al finale debole]` |
 > | Fauci di Palude e il cavaliere | 1 + 1 | `ARC08-02` §1; pf di partenza qui sotto, «FAUCI DI PALUDE» |
 >
 > Della rotta del 3B arrivano al campo solo quelli usciti dalla porta di mithral prima che si chiudesse: sono già contati nei ~400.

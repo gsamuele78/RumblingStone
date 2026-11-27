@@ -7,7 +7,7 @@
 **Key stats**: → statblock in `08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §1 (le due copie, in ARC08-02 e ARC08-01, sono allineate); i numeri che leggono gli strumenti sono nel recinto qui sotto. Orog [Private source — Monsters of Faerûn]; Signore della Guerra non è dell'SRD (forse il Warchief, Complete Warrior); in PF1e il Cavaliere fa la stessa cosa. La sua morte causa −3 morale a tutto l'esercito (regola di massa).
 **Esiti possibili**:
 - *Default* — presente al finale; può ritirarsi strategico o sfidare Thorik (arroganza) all'apparizione dei PG.
-- Può essere ucciso già in Sessione 2-3 (bonus "comandanti logorati", `ARC08-10-...` §5.2): in tal caso assente/sostituito al finale.
+- Può essere abbattuto già in Sessione 2-3 (bonus "comandanti logorati", `ARC08-10-...` §5.2): la guardia nera lo riporta al campo, nella 3A lo sostituisce il capitano minore, e al finale della Sessione 4 torna indebolito, curato o rianimato dai sacerdoti di Tiamat (`ARC08-DEF-2`, §0-bis) `[CANONE — DM 2026-11-27, card «Grimjaw abbattuto, se la guardia lo riporta al campo»: lo salvano, torna al finale debole]`.
 **Notes**: adattamento RHoD (Wyrmlord-like upscalato). Distinto da Khorn (nanico) e dagli altri comandanti.
 
 ```statblocco
