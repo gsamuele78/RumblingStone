@@ -2802,7 +2802,7 @@ repo scritto con altre parole.
 ### MS-0249 · 2026-11-27 · Il contesto dei thread si compatta a 200.000 token
 
 - **Data:** 2026-11-27
-- **PR:** —
+- **PR:** #546
 - **ADR:** ADR-0045 ADR-0140
 - **Temi:** contesto compattazione autocompact cache token consumo settings env thread piattaforma
 - **Origine:** riga del 2026-11-27 «Il contesto dei thread si compatta intorno ai 200.000 token» in `plans/CHANGELOG.md`
