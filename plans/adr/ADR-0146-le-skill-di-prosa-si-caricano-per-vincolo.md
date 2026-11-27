@@ -105,6 +105,10 @@ disturbato 2.944 volte; uno su prosa e box disturba circa 200 volte.
    avvia altri agenti: la catena (per esempio `integratore-dm`, poi
    `regolista` sui numeri) la guida il thread principale, e ogni agente
    scrive nel resoconto chi va chiamato dopo.
+
+   Gli agenti sono poi diventati quattordici: il tredicesimo,
+   `sincronizzatore-giocato`, viene da [ADR-0149](ADR-0149-il-giocato-arriva-sul-ramo-di-gruppo-con-un-agente-e-una-misura.md); il quattordicesimo,
+   `custode-memoria` (Tecnici), da [ADR-0151](ADR-0151-la-memoria-del-progetto-ha-uno-specchio-e-un-custode.md).
 5. **Nei thread** `claude-progetto.sh` collega `<cartella>/.claude/agents` alla
    cartella del repo e scrive nel CLAUDE.md una riga con l'albero di decisione
    (chi legge, quale skill, quale agente).
@@ -169,6 +173,11 @@ disturbato 2.944 volte; uno su prosa e box disturba circa 200 volte.
   coerenza che portano alla prosa invece che a `custode-canone`. Per questo
   suggerisce e non blocca, e chiede di scrivere nel resoconto quando lo si
   ignora.
+  *(Nota del 2026-11-27: quelle frasi hanno etichette di skill, in parte usate
+  anche per tarare i trigger. Su 29 messaggi veri etichettati per agente il
+  primo agente è giusto in 7, e sul test in 4 su 18, contro 6 della costante
+  «sviluppatore»; misura, set d'oro e cricchetto in
+  [ADR-0154](ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md).)*
 - **Il cancello del push controlla le chiamate, non il loro esito.** Un
   agente chiamato e ignorato conta come chiamato; un `custode-canone` che
   trova un 🔴 non ferma il push. Una deroga vale per tutta la sessione. Il
@@ -178,6 +187,10 @@ disturbato 2.944 volte; uno su prosa e box disturba circa 200 volte.
   Non c'è uno storico su cui tararlo: le catene scritte nascono adesso. La
   misura è `--riepilogo` dopo una settimana: push passati, bloccati, in
   deroga.
+  *(Nota del 2026-11-27: la misura non si è potuta fare, perché i registri
+  `.claude/.uso-*.jsonl` sono in `.gitignore` e restano nel container; per
+  l'instradamento la sostituisce il set d'oro di
+  [ADR-0154](ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md).)*
 - La norma «il box che promette» (§2-quater di `read-aloud-adulti.md`, misura
   `misura_craft --apertura`) arriva con la #508. Il cricchetto la vedrà
   quando entra fra le norme di `punteggio_mqm`, non prima.
@@ -245,7 +258,9 @@ il cricchetto. Gli agenti si tolgono cancellando `.claude/agents/`. Dettagli in
 
 - Uso: `python3 scripts/vincolo_skill.py --riepilogo` (blocchi, passaggi,
   promemoria). Da ripetere dopo una settimana di thread, contro lo zero del
-  campione del 20/11.
+  campione del 20/11. *(Nota del 2026-11-27: il registro
+  `.claude/.uso-skill.jsonl` è locale al container, e la ripetizione non si è
+  potuta fare; vedi [ADR-0154](ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md).)*
 - Classe di un file: `python3 scripts/vincolo_skill.py --classe FILE`.
 - Agenti: `python3 scripts/instradamento_agenti.py --riepilogo` (suggerimenti
   dati, turni chiusi, quanti hanno chiamato il primo agente suggerito);
