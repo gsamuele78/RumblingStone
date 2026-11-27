@@ -30,10 +30,11 @@ un cancello non confronta float (come in ``eval_metriche``). Esiti: «al tetto»
 
 **Il cricchetto contro il tetto abbassato a mano.** Con ``--rispetto-a REF``
 (default ``origin/main``, se esiste) ogni tetto si confronta con quello che
-aveva su REF (``git show REF:percorso``): se è peggiorato esce 1, salvo che la
-nota del tetto nel set porti una riga di rimessa di ``raccogli_casi_agenti.py
-applica`` diversa da quella su REF (è cambiato il set, non il componente). Se
-REF non c'è, come in un clone shallow, lo dice e quel controllo passa.
+aveva dove HEAD si stacca da REF (``git merge-base REF HEAD``, poi
+``git show``): se è peggiorato esce 1, salvo che la nota del tetto nel set
+porti una riga di rimessa di ``raccogli_casi_agenti.py applica`` diversa da
+quella su REF (è cambiato il set, non il componente). Se REF o l'antenato
+comune non ci sono, come in un clone shallow, lo dice e quel controllo passa.
 
 Codici d'uscita: 0 tutto al tetto o sopra; 1 una metrica sotto il tetto, o un
 tetto peggiorato rispetto a REF; 2 un comando fallito, un'uscita che non è JSON
@@ -270,6 +271,12 @@ def _ref_esiste(radice: Path, ref: str) -> bool:
     return p.returncode == 0
 
 
+def _merge_base(radice: Path, ref: str) -> "str | None":
+    p = subprocess.run(["git", "-C", str(radice), "merge-base", ref, "HEAD"],
+                       capture_output=True, text=True)
+    return p.stdout.strip() if p.returncode == 0 and p.stdout.strip() else None
+
+
 def _nota_rimessa(set_dati: "dict | None", spec) -> str:
     """La riga di rimessa nella nota accanto al tetto (``tetto.nota`` per ``tetto.giusti``)."""
     if not isinstance(spec, dict) or not isinstance(set_dati, dict):
@@ -291,7 +298,14 @@ def cricchetto(dati: dict, radice: Path, ref: str,
     if not _ref_esiste(radice, ref):
         return 0, [f"○ cricchetto dei tetti: il ref {ref} non esiste qui (clone shallow?), "
                    "controllo saltato"]
-    testo = _git_show(radice, ref, registro_rel)
+    # Il confronto è col punto in cui HEAD si stacca da REF (``REF...HEAD``, come
+    # documentazione_allineata): un tetto alzato su REF dopo il ramo non è un
+    # abbassamento del ramo.
+    base = _merge_base(radice, ref)
+    if base is None:
+        return 0, [f"○ cricchetto dei tetti: nessun antenato comune fra {ref} e HEAD "
+                   "(clone shallow?), controllo saltato"]
+    testo = _git_show(radice, base, registro_rel)
     vecchio = {v.get("id"): v for v in (json.loads(testo).get("componenti", []) if testo else [])}
     peggiori: list[str] = []
     note: list[str] = []
@@ -299,7 +313,7 @@ def cricchetto(dati: dict, radice: Path, ref: str,
         if solo is not None and v["id"] != solo:
             continue
         set_ora = _leggi_set(v, radice)
-        set_rif_testo = _git_show(radice, ref, v["set"])
+        set_rif_testo = _git_show(radice, base, v["set"])
         set_rif = json.loads(set_rif_testo) if set_rif_testo else None
         prima_voce = vecchio.get(v["id"], v)
         for nome, spec in v["tetto"].items():

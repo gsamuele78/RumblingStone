@@ -326,6 +326,27 @@ class TestCricchetto(_Radice):
         codice, msg = self.cricchetto()
         self.assertEqual(codice, 0, msg)
 
+    def _main_avanti(self):
+        """REF è andato avanti dopo il ramo e ha alzato il tetto; il ramo non l'ha toccato."""
+        self.git("branch", "-M", "ramo")
+        self.git("checkout", "-q", "-b", "avanti")
+        self.scrivi_set({"tetto": {"nota": "si alza a mano", "giusti": 5, "f1": "58/315"}})
+        self.git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qam", "alza")
+        self.git("checkout", "-q", "ramo")
+
+    def test_un_ramo_indietro_rispetto_a_ref_non_e_un_abbassamento(self):
+        # si confronta col punto in cui il ramo si stacca da REF (REF...HEAD),
+        # non con la punta di REF: se no un tetto alzato su main dopo il ramo
+        # sembra abbassato a mano sul ramo
+        self._main_avanti()
+        codice, msg = self.cricchetto("avanti")
+        self.assertEqual(codice, 0, msg)
+
+    def test_sul_ramo_indietro_un_abbassamento_vero_esce_ancora_1(self):
+        self._main_avanti()
+        self.scrivi_set({"tetto": {"nota": "si alza a mano", "giusti": 3, "f1": "58/315"}})
+        self.assertEqual(self.cricchetto("avanti")[0], 1)
+
 
 class TestRegistroVero(unittest.TestCase):
     """Il registro del repo: le prime due voci e i numeri di oggi (requisito 1)."""
