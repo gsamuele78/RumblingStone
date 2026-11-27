@@ -464,7 +464,7 @@ Grimjaw il Giorno 2 o il Giorno 3, al round 1, prima del corno del drago
   fuggito ferito; se era morto (−10 o meno, o finito), rianimato con un
   livello in meno `[SRD: Raise Dead]`
   `[CANONE — DM 2026-11-27, card «quale livello perde Grimjaw se lo rianimano»: un livello di Guerriero, Guerriero 10 / Signore della Guerra 3, GS 14]`
-  `[INFERRED — con che numeri entra Grimjaw rianimato al finale?; base: la scheda di A.3 meno un livello di Guerriero (SRD Raise Dead); proposta: il regolista la ricalcola da ARC08-02 §1 prima della Sessione 4]`.
+  (numeri: `Bestiario/villain/Generale_Grimjaw.md`, «Variante: Grimjaw rianimato (GS 14)»).
   Resta da decidere come il suo −3 sta col −2 di quella riga
   `[CANONE — DM 2026-11-26, card «−3 e −2 dei logorati»: lo sostituisce: con un abbattuto l'orda porta −3 e il −2 non si aggiunge, anche se l'altro è fuggito ferito; con due abbattuti −5 e non −6, perché la scala si ferma a −5]`.
 - **Il corpo.** Quello che Grimjaw ha addosso (A.3) se ne va con lui e con

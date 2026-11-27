@@ -84,7 +84,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-11-27 | PIANO-REVISIONE-ARC08-COERENZA-E-QUALITA | Le ultime scelte di ARC-08 dopo la #525, su card e parole di Jfs del 27/11: il… | Contraddizioni di canone fra libretto, master e state.md: 3 → 0; righe provvisorie in DEF-2: 1 → 0; INFERRED aperti 29 → 30 (i numeri di Grimjaw rianimato, Gue… |
+| 2026-11-27 | PIANO-REVISIONE-ARC08-COERENZA-E-QUALITA | Le ultime scelte di ARC-08 dopo la #525, su card e parole di Jfs del 27/11: il… | Contraddizioni di canone fra libretto, master e state.md: 3 → 0; righe provvisorie in DEF-2: 1 → 0; INFERRED aperti 29 → 29; nuova variante «Grimjaw rianimato… |
 | 2026-11-27 | STATO-E-ORDINE | ADR-0151, correzioni dopo la #529 (richiesta di Jfs del 27/11, 08:29 UTC: «fai… | ✅ suite 3.639 passati e 19 saltati, `gate_locale --pre-push` 56 verdi, `tools_manifest --check` 156 conformi; hook su Bash mediana 46-54 ms (prima 42-47), merg… |
 | 2026-11-27 | MISURA-AGENTI-E-AUTOMATISMI | M2, emendamento «M2» di ADR-0154: gli omonimi dei trigger e i messaggi che non… | 🟡 M2 fatto; la tecnica 1 senza cricchetto finché manca un set di prompt grezzi; ogni `<relay>` tace anche quando apre lavoro; regex euristiche, «avventura» non… |
 | 2026-11-27 | REGOLE-SENZA-OMISSIONI | Il fantino nella stalla del Palio solo se è un PNG ancora lì (card di Jfs del 2… | ✅ misura_stampa del Palio entro i tetti |
