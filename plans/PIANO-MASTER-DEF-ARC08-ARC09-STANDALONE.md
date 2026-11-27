@@ -525,6 +525,10 @@ nella forma.
 Fonti nella tabella A1. Un sotto-lotto per master (S2a-S2l). Qui confluiscono S5
 (la Torre) e S6 (la Battaglia Finale) di MESTIERE-BANCHI. I nomi di abilità
 della 5ª edizione trovati in A2 si correggono nel master che li contiene.
+Dal 2026-11-27 (card di Jfs del 27/11) qui si fanno anche gli SVG che i 16
+file narrativi di ARC-09 non hanno mai avuto (P2A, P2B, P3): la voce opzionale
+di T5c di [PIANO-REVISIONE-TRASVERSALE](PIANO-REVISIONE-TRASVERSALE-COERENZA-E-QUALITA.md)
+è chiusa là e passa a ogni master, dalla griglia che sceglie.
 
 **S3 · Il Drappo** `[engine: Opus · effort: alto · qualità: validate_standalone + ciclo del master, passi 1-2 e 4-7]` — PF1e
 È già vicino allo standard. Il lotto porta il contratto «In scena» (F5 di

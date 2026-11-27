@@ -1,5 +1,15 @@
 # PIANO DI REVISIONE ARC-07 (Il Portale della Forgia Eterna) — Coerenza & Qualità
 
+> **Stato (2026-11-27)**: ✅ **chiuso, 100%**. L'ultima voce aperta, B1, è
+> chiusa da due decisioni del DM: i log ricostruiti accettati senza verbale,
+> con date e giocatori non registrabili (`campaign/sessions/RETROATTIVI-ARC07-INFERRED.md`
+> r.3-10, commit `7d437bcfb` del 2026-10-18), e i PX dell'arco nel registro
+> (`campaign/REGISTRO-PX.md`, righe 98-107 della tabella, commit `87afeb193` del
+> 2026-11-05). Chiusura con la card di Jfs del 27/11 (11:53 UTC), dalla
+> verifica su `main` `21906369`. Il giocato dopo il 02/07 sta sul ramo di
+> gruppo `campaign-group-rumblingstone` (ADR-0007, ADR-0090): la tabella
+> G0-G6 qui sotto resta il diario di quel giorno.
+
 > **Versione**: v2 FINALE (2026-07-02) — audit completo dell'arco + artefatti
 > (`PG/Artefatti/`) + PNG, con TUTTE le decisioni del DM già incorporate
 > (D1-D17). **Il piano non ha domande aperte: l'engine può eseguire tutti i
@@ -54,6 +64,13 @@
    consentita.
 
 ### Stato GIOCATO / DA GIOCARE (canone DM 2026-07-02 — immutabile)
+
+> ⚠️ *(2026-11-27)* Diario fermo al 02/07, che non si riscrive. Da allora il
+> tavolo ha completato il P4 (31/07, `campaign/state.md` r.21) e giocato il P3B
+> il 25/09; il P5 è in corso. Questo giocato sta sul ramo di gruppo
+> `campaign-group-rumblingstone`, non su `main`. Anche la regola 1 qui sopra è
+> superata: il dato è `state.yaml` (ADR-0050) e il canone vivo sta sul ramo
+> (ADR-0007, ADR-0090).
 
 | # | Elemento | Stato |
 |---|---|---|
@@ -429,6 +446,16 @@ in corso d'opera si flagga `[INFERRED — needs DM confirmation]` e non blocca.
   giocatori, XP/loot reali (l'engine non può inventarli): il file è una
   ricostruzione dichiarata, da validare. Nodo aperto flaggato: compagno
   animale (rinoceronte/orso/Durik).
+- **✅ CHIUSO (2026-11-27, card di Jfs del 27/11)**. Date e giocatori: il DM
+  ha accettato i log il 2026-10-18 senza un verbale, e dove il tavolo ricorda
+  diversamente vince il tavolo (`RETROATTIVI-ARC07-INFERRED.md` r.3-10, commit
+  `7d437bcfb`); l'unica data certa, P4 = 31/07, è in `campaign/state.md` r.21.
+  PX: decisi dal DM il 2026-11-05 dal suo foglio, in `campaign/REGISTRO-PX.md`
+  righe 98-107 della tabella (commit `87afeb193`). Loot: «bottino dell'arco intatto»
+  (`state.md` r.24), e dalla sessione 4 ogni log del ramo di gruppo ha la sua
+  sezione. Resta un residuo cosmetico fuori da `plans/`: `RETROATTIVI` r.38 e
+  il blocco di r.62 dicono ancora «XP non registrati» invece di rimandare al
+  registro.
 
 ### B2. Master della resurrezione di Hella (P3B) — [CROSS-ARC]
 - **Evidenza**: quattro trattamenti della stessa scena-cardine
@@ -741,8 +768,9 @@ la checklist qui sotto.
 
 - [x] A1 · [x] A2 · [x] A3 · [x] A4 · [x] A5 · [x] A6 · [x] A7 ·
   [x] A8 · [x] A9 · [x] A10 · [x] A11 — **LOTTO A COMPLETO**
-- [~] B1 (log ricostruiti; compagno sciolto dal DM; restano date/XP/loot
-  reali) · [x] B2 · [x] B3 ·
+- [x] B1 (log ricostruiti; compagno sciolto dal DM; date e giocatori non
+  registrabili, DM 2026-10-18; PX nel registro, DM 2026-11-05; chiuso il
+  2026-11-27) · [x] B2 · [x] B3 ·
   [x] B4 · [x] B5 · [x] B6 · [x] B7 · [x] B8 · [x] B9 — Collana ✅,
   file-risultati ✅, Sonjak-raid ✅, schede Belkram/Urialle ✅, Cintura ✅
 - [x] C1 · [x] C2 · [x] C3 — **LOTTO C COMPLETO**

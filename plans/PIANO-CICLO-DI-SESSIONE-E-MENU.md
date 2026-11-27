@@ -1,5 +1,15 @@
 # PIANO — Il ciclo di sessione automatizzato, e il menu che lo guida
 
+> **Stato (2026-11-27)**: 🟡 **~15%**, ripreso ridotto dalla revisione dei
+> piani fermi (verifica su `main` `21906369`). Chiusi 2f, 2g e 0b; **2d
+> superato** (card di Jfs del 27/11). Il valore sta nel ramo della chiusura:
+> **0a** ADR-0068 senza il menu, **0c** gli schemi JSON, poi **1b** (proposte
+> → domande), che ADR-0149 ha reso più urgente: il 21/11 i thread hanno chiuso
+> a mano campi che spettavano al DM (MS-0232). Poi 1c e 1d. In attesa: il menu
+> 3a/3b (scelta di Jfs del 27/11, 11:52 UTC: «In attesa»), 2g-bis (Palio e
+> Drappo non si stampano a breve, «No, per ora», 11:52 UTC), 4a, e 2a ridotto
+> a echi e turno del mondo, perché il controllo lo fa già `sincronia_giocato.py`.
+>
 > **Stato**: 🟡 **in corso** (2026-09-25): chiusi 2f e 2g, il resto da fare. Pianificato il 2026-09-24; il primo
 > gate è la Fase 0 (ADR e decisioni del DM). **Rev. 2** (stesso giorno): il
 > metodo non è più solo TDD, ma contratto prima, nucleo puro e test a strati
@@ -89,6 +99,8 @@ esistono ma nessuno li mette in fila:
 
 `dm.py` ha **15 sottocomandi** e nessun menu. Il repo ha **67 script** in
 `scripts/`, **1.307 test**, e un server MCP che espone 71 tool con allowlist.
+*(2026-11-27: 20 sottocomandi in `dm.py --help`, ancora nessun `menu`; 145
+file `.py` in `scripts/`.)*
 
 ---
 
@@ -244,20 +256,20 @@ allineati. Numeri e ragioni in
 
 ### Fase 0 · Le decisioni prima del codice
 
-#### ⬜ 0a · ADR-0068, il menu è un guscio e ogni modulo ha un gemello in JSON
+#### ⬜ 0a · ADR-0068, il menu è un guscio e ogni modulo ha un gemello in JSON *(ripreso il 2026-11-27, senza il punto 1 sul menu)*
 `[engine: Opus 5.5, sessione principale · effort: alto · qualità: il DM la legge e riconosce il proprio problema]`
 
 Estratta dalla bozza di §7. Classe **G**.
 
-#### ⬜ 0c · I contratti, prima del codice
+#### ⬜ 0c · I contratti, prima del codice *(ripreso il 2026-11-27, senza lo schema del menu)*
 `[engine: Sonnet 5 · effort: medio · qualità: gli esempi del modulo di 4f-4 e del wizard passano lo schema; un esempio con un campo in più passa, uno con un campo cambiato no]`
 
 Classe **C**. Tre schemi JSON versionati in `scripts/schemas/`: il modulo (le
 domande), le risposte, il menu. Il modulo di `dm.py gruppo nuovo` è il primo
 esempio vero, perché esiste già (§5.0, punti 1 e 2).
 
-#### ✅ 0b · Le risposte del DM a D1-D6 *(2026-09-30: D1-D7 barrate in §8)*
-`[engine: DM · effort: — · qualità: le sei righe barrate in §8]`
+#### ✅ 0b · Le risposte del DM a D1-D7 *(2026-09-30: D1-D7 barrate in §8)*
+`[engine: DM · effort: — · qualità: le sette righe barrate in §8]`
 
 ### Fase 1 · La chiusura che non lascia niente a mano
 
@@ -270,7 +282,7 @@ restituisce il JSON delle risposte. Oggi il wizard e `gruppo_nuovo.py` hanno due
 presentazioni scritte a mano: si portano sopra il motore, e i loro test sono il
 collaudo del refactoring.
 
-#### ⬜ 1b · Le proposte diventano domande (ex 4f-5)
+#### ⬜ 1b · Le proposte diventano domande (ex 4f-5) *(ripreso il 2026-11-27, dopo 0a e 0c: l'unica strada per chiudere un campo aperto è una risposta datata del DM, con S6 di ADR-0149)*
 `[engine: Sonnet 5 · effort: alto · qualità: nessuna riga di state_apply stampa più «scrivi in state.yaml»; mutazioni sul delta rosse]`
 
 Classe **C**, dopo D2. Il delta di sessione (`dmcore/delta_sessione.py`) si
@@ -294,7 +306,7 @@ PG. Il Playbook §4 si riscrive attorno a un comando.
 
 ### Fase 2 · La preparazione in fila
 
-#### ⬜ 2a · Il controllo e il turno del mondo
+#### ⏸ 2a · Il controllo e il turno del mondo *(2026-11-27: ridotto a echi nel brief e turno del mondo; il controllo lo fa `sincronia_giocato.py`, S2, S4 e S5, ogni lunedì. In attesa)*
 `[engine: Sonnet 5 · effort: medio · qualità: una sessione non chiusa blocca la preparazione con il motivo; test U3]`
 
 Classe **C**. `dm.py session prep`: controlla che la chiusura precedente sia
@@ -319,7 +331,7 @@ lancia ciò che si genera da solo (render delle mappe, export UVTT, build dei
 booklet; le immagini solo sulla macchina del DM con ComfyUI). Il collaudo usa
 i manifest di ARC-07 come verità nota.
 
-#### ⬜ 2d · Il brief di scrittura per ciò che è prosa
+#### 🔀 2d · Il brief di scrittura per ciò che è prosa *(superato il 2026-11-27, card di Jfs del 27/11: la scheda brief di ADR-0114 §2 e l'agente `autore-prosa-gioco` di ADR-0146, conformi alla D3 = (a))*
 `[engine: Opus 5.5 · effort: alto · qualità: il DM usa il brief senza riaprire i file che cita]`
 
 Classe **G**, dopo D3. Per le interazioni dei PNG e il testo degli handout che
@@ -397,9 +409,16 @@ da 87 a 2, Ritorno da 60 a 0, Terros da 93 a 0, Palio da 65 a 26, Drappo da 97
 a 43. Restano dichiarati i residui di quattro volumi: il Palio e il Drappo
 chiedono un giudizio dentro il modulo, e sono il prossimo lotto.
 
+**2g-bis, i residui del Palio e del Drappo** ⏸ *(in attesa dal 2026-11-27)*.
+Misurati il 27/11: Palio 25 e Drappo 43 rilievi, esattamente i tetti di
+`scripts/apparato-residui.json` (il Palio è sceso da 26 a 25 con `17d0b331`,
+il 2026-10-22), e `validate_booklets --stampa` è verde. Contano solo se i due
+volumi si stampano o si condividono, e Jfs ha risposto «No, per ora» (27/11,
+11:52 UTC).
+
 ### Fase 3 · Il menu
 
-#### ⬜ 3a · `dm.py menu`, testuale
+#### ⏸ 3a · `dm.py menu`, testuale *(in attesa: scelta di Jfs del 27/11, 11:52 UTC; oggi il DM lavora con thread, agenti e card, e il contratto JSON di 0a serve comunque)*
 `[engine: Sonnet 5 · effort: medio · qualità: ogni voce produce la stessa riga di comando del manuale; test con risposte su stdin]`
 
 Classe **C**, dopo 0a e D4. Un menu a numeri, per fase: *Prepara*, *Chiudi*,
@@ -407,7 +426,7 @@ Classe **C**, dopo 0a e D4. Un menu a numeri, per fase: *Prepara*, *Chiudi*,
 ognuna la riga di `dm.py` e, se serve, il modulo da riempire. Il menu non ha
 logica sua; chiama `dm.py` e mostra l'uscita.
 
-#### ⬜ 3b · `dm.py menu --json`
+#### ⏸ 3b · `dm.py menu --json` *(in attesa, con 3a)*
 `[engine: Sonnet 5 · effort: basso · qualità: un test disegna il menu dal JSON e lo confronta con quello testuale]`
 
 Classe **C**. Le voci, i moduli e i comandi in JSON, per un'interfaccia.
@@ -487,8 +506,8 @@ test che non hanno bisogno di una tastiera.
 
 ## Checklist di avanzamento
 
-- ⬜ Fase 0 · 0a ADR-0068 · 0c i contratti versionati · ✅ 0b risposte a D1-D6 (2026-09-30)
-- ⬜ Fase 1 · 1a motore dei moduli · 1b proposte → domande (ex 4f-5) · 1c cronaca · 1d catena di chiusura
-- 🟡 Fase 2 · ✅ 2f il corredo della serata (2026-09-25) · ✅ 2g l'apparato fuori dalla stampa (2026-09-25) · ⬜ 2g-bis i residui del Palio e del Drappo · ⬜ 2a controllo e turno del mondo · 2b ricognizione · 2c inventario · 2d brief di scrittura · 2e manifest
-- ⬜ Fase 3 · 3a menu testuale · 3b menu in JSON
+- ⬜ Fase 0 · 0a ADR-0068 · 0c i contratti versionati (ripresi il 2026-11-27, senza il menu) · ✅ 0b risposte a D1-D7 (2026-09-30)
+- ⬜ Fase 1 · 1a motore dei moduli (insieme a 1b) · 1b proposte → domande (ex 4f-5, ripreso) · 1c cronaca · 1d catena di chiusura
+- 🟡 Fase 2 · ✅ 2f il corredo della serata (2026-09-25) · ✅ 2g l'apparato fuori dalla stampa (2026-09-25) · ⏸ 2g-bis i residui del Palio e del Drappo (in attesa, «No, per ora») · ⏸ 2a ridotto a echi e turno del mondo · 2b ricognizione · 2c inventario · 🔀 2d brief di scrittura (superato, 2026-11-27) · 2e manifest
+- ⏸ Fase 3 · 3a menu testuale · 3b menu in JSON (in attesa, scelta di Jfs del 27/11)
 - ⬜ Fase 4 · 4a collaudo al tavolo

@@ -15,6 +15,11 @@
 **Stato**: 🟢 eseguito (2026-08-25) · **Decisione-fonte**: richiesta DM in
 sessione · **ADR**: [ADR-0022](adr/ADR-0022-competenza-guadagnata-sul-campo.md)
 
+**Stato (2026-11-27)**: 🟡 **~80%**, la coda ripresa ridotta. I1-I4 e I7-I10
+sono chiusi; restano I6, ripreso in forma ridotta perché il corpus ora c'è, e
+I5, in attesa del tavolo e ristretto alla pista A di ARC-09 (§5). Verifica su
+`main` `21906369`, dalla revisione dei piani fermi del 27/11.
+
 ---
 
 ## 1. Il divario, misurato
@@ -165,6 +170,24 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
   lettura a freddo viene prima del tavolo. Senza una sessione vera non
   si sa se un caso da tre strati sta in una serata: **il tetto di Perizia e
   il numero di nodi per caso sono i due numeri da tarare al collaudo.**
+  *(2026-11-27)* Un nodo scritto con la skill è già stato giocato: la targa di
+  bronzo di `ARC07-DEF-4` (r.625, tre strati, sei porte, una porta fisica,
+  commit `f2a4fab20`), nella sessione 4 del 2026-09-25
+  (`campaign/REGISTRO-PX.md` r.179, «la targa»). I tempi reali e la
+  taratura dei due numeri mancano ancora: Acume e Perizia non compaiono in
+  `state.yaml`, e il registro delle norme dà il tetto di ADR-0022 come non
+  misurato. **I5 si restringe alla pista A di ARC-09 al primo tavolo**, con i
+  tempi annotati (consigliata seguita): il dossier delle piste (20 nodi, commit
+  `e8fa0d375` e `b45de2030`, MS-0135) è il corpus pronto. In attesa del tavolo.
 - ⬜ **I6 — `validate_modules.py`**: gate meccanico sui nodi (tre porte
   dichiarate, una fisica, il Fatto senza tiro). Ha senso solo quando
   esistono nodi veri da validare — prima sarebbe un validatore senza corpus.
+  *(2026-11-27)* **Ripreso ridotto, il blocco è caduto**: il corpus c'è (20
+  nodi nel dossier delle piste di ARC-09, 8 nel Drappo, la targa). Il lotto
+  diventa una regola nuova di `domande_developer.py`, non di
+  `validate_modules.py`, sui due dossier: tre porte, almeno una fisica, il
+  Fatto senza tiro, con le esenzioni dichiarate nel json dei residui (B5 di
+  ARC-09, il sogno divino «senza tiro», è voluto). La misura euristica della
+  revisione dà 5 candidati da leggere (ARC-09 B5 e C5, Drappo A3, A5 e B3). La
+  regola esce in testing per 14 giorni (ADR-0099), come consigliato; I6 va
+  prima di I5. Da fare.
