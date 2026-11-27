@@ -1,0 +1,230 @@
+{
+  "brand": "RUMBLING STONE · ARC-07 · IL PORTALE DELLA FORGIA ETERNA",
+  "title": "Il Duello e il Rubino",
+  "subtitle": "Hammerfist mille anni fa · il drago sopra le mura · il Rituale della Forgia Eterna · lo strappo fra le ere",
+  "banner": "BOOKLET DELLA SERATA",
+  "meta": "Sessione D&D 3.5 di circa tre ore per 4 personaggi di 13° livello · Faerûn, ≈372 DR · Campagna privata RumblingStone · regia della serata, cast e voci, la mappa del cortile, il duello con Skullcrusher ripreso a metà, il Rituale, il Rubino, lo strappo, la tabella delle ferite",
+  "header": "La serata: dal colpo di Artemis sul drago allo strappo fra le ere, con stop dopo i tiri dello strappo.",
+  "footer": "Il Duello e il Rubino",
+  "player_footer": "Il Duello e il Rubino",
+  "colophon": {
+    "edizione": "Booklet della serata",
+    "versione": "v1",
+    "data": "2026-11-27",
+    "autori": "Il DM di RumblingStone, con l'agente di scrittura del repo",
+    "basato_su": "D&D 3.5 SRD (OGL 1.0a); adattamento privato di Red Hand of Doom (Wizards of the Coast, 2006)",
+    "licenza": "materiale del DM, uso privato del tavolo, non diffondere",
+    "nota": "Serata del 30 novembre 2026, ripresa dallo stato giocato il 20 novembre: solo le scene che si giocano, nell'ordine di gioco, con la versione veloce in testa al duello, poi il dopo serata e le appendici. Il volume intero è il volume d'arco"
+  },
+  "cover_image": "../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg",
+  "intro_md": "00-INTRO-DOVE-SIAMO.md",
+  "out": "ARC07-DUELLO-E-RUBINO-SERATA.html",
+  "chapters": [
+    {
+      "title": "Il foglio della serata",
+      "file": "00-FOGLIO-DELLA-SERATA.md",
+      "tag": "dm",
+      "rimandi_romani": true,
+      "quando": "una pagina sola, aperta accanto allo schermo per tutta la sera: dove guardare",
+      "ruolo": "avvio"
+    },
+    {
+      "title": "Il riferimento rapido",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "§0-bis"
+      ],
+      "quando": "una pagina: le prove di gruppo, le Benedizioni, il giro del drago",
+      "ruolo": "avvio"
+    },
+    {
+      "title": "I · Regia della serata",
+      "file": "01-REGIA-SERATA.md",
+      "tag": "dm",
+      "quando": "da leggere prima, da tenere aperta durante",
+      "ruolo": "avvio"
+    },
+    {
+      "title": "II · Il cast: chi c'è, come si pronuncia, che suoni",
+      "file": "../../ARC07-CASSETTA-DEL-DM.md",
+      "tag": "dm",
+      "sezioni": [
+        "testa:ARC-07 — La cassetta",
+        "§1 ·",
+        "§2 ·",
+        "§4 ·",
+        "§5 ·",
+        "§6 ·"
+      ],
+      "quando": "prima di giocare: voci, pronunce, suoni, il momento da fotografare",
+      "ruolo": "preparazione"
+    },
+    {
+      "title": "III · La mappa del duello: M7-B",
+      "file": "../sessione-notte-e-alba/09-M7B-CORTILE.md",
+      "tag": "dm",
+      "quando": "il cortile del duello, quando qualcuno scende dal camminamento",
+      "ruolo": "gioco"
+    },
+    {
+      "title": "IV · Il duello con Skullcrusher",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "C.3",
+        "SCENA 11",
+        "§6 —",
+        "A.1-bis"
+      ],
+      "quando": "**la serata comincia qui**, dal colpo di Artemis: la versione in tre scambi è in testa, poi la scena intera, le contingenze e il Vecchio di stasera (A.1-bis), con gli oggetti",
+      "principale": true,
+      "ruolo": "gioco",
+      "scena": 11
+    },
+    {
+      "title": "V · Il Rituale della Forgia Eterna",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "SCENA 12"
+      ],
+      "quando": "dopo l'esito del duello: i cinque momenti, nella voce che l'esito ha scelto. Non si taglia",
+      "ruolo": "gioco",
+      "scena": 12
+    },
+    {
+      "title": "VI · Il Rubino e il ritorno",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "SCENA 13"
+      ],
+      "quando": "tre box di fila, senza tiri",
+      "ruolo": "gioco",
+      "scena": 13
+    },
+    {
+      "title": "VII · Lo strappo fra le ere",
+      "file": "../../ARC07-DEF-5-RITORNO-HAMMERFIST.md",
+      "tag": "dm",
+      "sezioni": [
+        "SCENA 1 — Lo strappo fra le ere"
+      ],
+      "quando": "subito dopo il terzo box del Rubino: un box, la Volontà CD 15, la Tempra CD 20 di Artemis, e lo stop",
+      "ruolo": "gioco",
+      "scena": 14
+    },
+    {
+      "title": "VIII · La Forgia ricorda le ferite: il ponte verso Fauci di Palude",
+      "file": "../../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md",
+      "tag": "dm",
+      "quando": "durante il duello si segnano le ferite; a fine duello l'esito diventa la ferita di Fauci di Palude",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "title": "IX · Dopo la serata: PX ed echi",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "A. Budget",
+        "§7 —"
+      ],
+      "quando": "a fine serata: i PX del beat, poi che cosa resta (la pagina «I PX e il livello» è nella regia)",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "title": "Appendice: tesoro, i numeri del drago, le viverne",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm",
+      "sezioni": [
+        "B. Tesoro",
+        "A.1-ter",
+        "A.6"
+      ],
+      "quando": "quando serve un numero o un oggetto: il tesoro del beat, cosa cambia al tavolo con il Vecchio, le viverne",
+      "ruolo": "riferimento"
+    }
+  ],
+  "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg",
+  "schede": "prima-volta",
+  "chi_si_incontra": true,
+  "pagine_nei_rimandi": true,
+  "ruoli_sezioni": [
+    {
+      "titolo": "^§0 · La serata in una tabella",
+      "ruolo": "sintesi"
+    },
+    {
+      "titolo": "^§[56] · ",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "titolo": "^§7 · I PX",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "titolo": "QUICK-REFERENCE",
+      "ruolo": "avvio"
+    },
+    {
+      "titolo": "^SCENA 11",
+      "ruolo": "gioco",
+      "scena": 11
+    },
+    {
+      "titolo": "^C\\.3 ·",
+      "ruolo": "sintesi",
+      "riassume": "^SCENA 11 "
+    },
+    {
+      "titolo": "^§6 — CONTINGENZE",
+      "ruolo": "gioco"
+    },
+    {
+      "titolo": "^SCENA 12",
+      "ruolo": "gioco",
+      "scena": 12
+    },
+    {
+      "titolo": "^SCENA 13",
+      "ruolo": "gioco",
+      "scena": 13
+    },
+    {
+      "titolo": "^SCENA 1 — Lo strappo",
+      "ruolo": "gioco",
+      "scena": 14
+    },
+    {
+      "titolo": "^§7 — ECHO LEDGER",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "titolo": "^A\\. Budget",
+      "ruolo": "fuori-serata"
+    },
+    {
+      "titolo": "^B\\. Tesoro",
+      "ruolo": "riferimento"
+    },
+    {
+      "titolo": "^A\\.1-bis",
+      "ruolo": "gioco",
+      "nota": "il riquadro del Vecchio sta nel capitolo del duello: senza, chi_si_incontra copiava il riquadro dell'Adulto (A.1, GS 14), il primo «Skullcrusher» del master"
+    },
+    {
+      "titolo": "^A\\.1-ter",
+      "ruolo": "riferimento"
+    },
+    {
+      "titolo": "^A\\.6 · Le creature del campo",
+      "ruolo": "riferimento",
+      "nota": "porta anche le creature del campo della Scena 6: le viverne sono la sola parte che serve stasera"
+    },
+    {
+      "titolo": "^[IVX]+ · La cassetta del DM",
+      "ruolo": "preparazione"
+    }
+  ]
+}
