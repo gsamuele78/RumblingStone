@@ -17,8 +17,8 @@ APL = 13.
 > - **Tordek rifiuta l'Ancoraggio** → Hella senza Pelle di Adamantio, quindi
 >   **senza nessuna RD**: i drow di lama della **Fase 0 Notte dei Drow**
 >   (`...FASE0-NOTTE-DEI-DROW-TESTO.md` §1).
-> - **Thorik rifiuta metà della deflessione** → niente **Scudo del Custode**,
->   niente Eco, e Aegis Fang lo giudica finché non rischia qualcosa di suo per
+> - **Thorik rifiuta il +2 di deflessione** (donato, la Corona scende a +1) →
+>   niente **Scudo del Custode**, niente Eco, e Aegis Fang lo giudica finché non rischia qualcosa di suo per
 >   lei; **Artemis rifiuta 1d6 di Eldritch Blast** → niente **Rovo Eldritch**
 >   (`08_.../ARC08-03-REGISTRO-PERDITE.md`, già dalla battaglia di Hammerfist).
 > - **Ogni seme dormiente** → una quest personale opzionale per colmarlo, e

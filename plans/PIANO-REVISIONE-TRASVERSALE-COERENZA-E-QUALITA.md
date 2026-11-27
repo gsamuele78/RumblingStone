@@ -416,7 +416,7 @@
     mancati» diceva ancora i Doni v1;
   - [x] `08_…/ARC08-11-PONTE-ARRIVO.md` r.23: rimando a DEF-3.
 - **Verifica del custode del canone**: nessun 🔴; tre 🟡 corretti (la RD
-  vale solo contro i colpi fisici; Thorik rifiuta «metà della deflessione»;
+  vale solo contro i colpi fisici; Thorik rifiuta il +2 di deflessione, che donato scende a +1;
   la reazione di Aegis Fang al rifiuto mancava in ARC08-03).
 - **Misure, contro main `21906369`**: file vivi (fuori da `_ARCHIVIO/`,
   `plans/`, build e copie) con termini dei Doni v1 da 4 a 0; file vivi con il
@@ -434,9 +434,13 @@
     `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md` r.10,
     `campaign/lore/campaign-premise.md` r.95,
     `skills/rumblingstone-campaign/references/campaign-artifacts.md` r.278;
-  - [ ] `campaign/state.md` r.93 e r.457 dicono «il +2 di deflessione»,
-    DEF-3 r.252 dice metà del +2, cioè +1: card a Jfs, e la correzione va
-    sul ramo di gruppo (ADR-0007), non su main.
+  - [x] «il +2 di deflessione» di `campaign/state.md` r.93 e r.457 contro
+    «metà del +2» di DEF-3 r.252: su richiesta di Jfs (27/11) confrontato con
+    le schede degli artefatti. La Corona (`00_SCHEDA-GIOCATORE-STATO-ATTUALE`
+    r.198-203) e la Collana (`01_Collana_dei_Semi_Eterni` r.101) chiamano il
+    dono «il +2 di deflessione», e la Corona scende a +1: stesso effetto,
+    nessuna correzione di state.md. I box di questo lotto usano il nome delle
+    schede, con «scende a +1».
 
 ### T10. Audit dei poteri di tutti gli artefatti, stadi e versioni (2026-09-25)
 

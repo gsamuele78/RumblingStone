@@ -17,9 +17,9 @@
 > **in questa battaglia**. Default (rituale non ancora giocato, o tutti i doni
 > concessi): **nessuna penalità**, Hella entra in campo con i tre doni pieni
 > (Doni v4-bis, DM 2026-09-12).
-> - **Thorik ha rifiutato metà della deflessione della Corona** → Hella
->   **senza Scudo del Custode**: non può prendersi addosso, dimezzato, il
->   colpo destinato a un alleato entro 9 m. La catena dei tre doni non esiste,
+> - **Thorik ha rifiutato il +2 di deflessione della Corona** (donato, la
+>   Corona scende a +1) → Hella **senza Scudo del Custode**: non può
+>   prendersi addosso, dimezzato, il colpo destinato a un alleato entro 9 m. La catena dei tre doni non esiste,
 >   e Thorik non scatta mai per l'Eco del Custode. E **Aegis Fang lo giudica**:
 >   quando Thorik le chiede qualcosa per Hella o per i nani da difendere, e
 >   questa battaglia lo è, tira **Volontà CD 14** contro l'Ego dell'ascia; se
