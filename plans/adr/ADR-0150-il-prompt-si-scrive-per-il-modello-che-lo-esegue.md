@@ -113,7 +113,13 @@ Sulla card della stessa sera il DM ha deciso: la Ruota e il Drappo restano
 quelle di Gemini; il ritratto di Vanna resta in sospeso fino alla prova di
 FLUX 3 e a una riprova delle mani. Una prima riprova, con le mani descritte
 come piagate, è venuta esagerata: ferite e sangue al posto dell'usura del
-lavoro. La lezione per P1-P9: klein prende alla lettera anche gli aggettivi
+lavoro. Il 27/11 Kaggle ha fatto girare il notebook in coda dal 25/11: i semi 0, 1 e 2
+di A e B su GPU T4, 27 immagini su 27, fra 10 e 17 secondi l'una con un picco
+di 8,8 GB di VRAM. I semi 1 e 2 confermano quello che il DM ha visto sul seme
+0: Vanna resta riconoscibile da un seme all'altro ma dimostra più dei suoi
+trentotto anni, e il Drappo esce con volti moderni.
+
+La lezione per P1-P9: klein prende alla lettera anche gli aggettivi
 forti, e il danno va descritto per causa e materia (calli, screpolature,
 resina), non per gravità.
 
