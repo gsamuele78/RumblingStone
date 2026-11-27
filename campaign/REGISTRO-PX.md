@@ -15,14 +15,16 @@ Le soglie sono quelle dell'SRD 3.5: 13° = 78.000, 14° = 91.000, 15° = 105.000
 
 | | Thorik | Tordek | Artemis | Hella | Jorr |
 |---|---:|---:|---:|---:|---:|
-| PX | 104.999 | 104.999 | 104.999 | 86.354 | 30.685 |
-| Livello dai PX | 14° | 14° | 14° | 13° | 8° |
+| PX | 104.999 | 104.999 | 104.999 | 91.066 | 30.685 |
+| Livello dai PX | 14° | 14° | 14° | 14° | 8° |
 | Livello al tavolo | 13° | 13° | 13° | 13° | — |
 
 Il 14° si prende al primo riposo dopo la battaglia di Hammerfist
 (`ARC07-DEF-5` §8, D90). Thorik, Tordek e Artemis ci arrivano con i PX già
-fermi al massimo (riga 108). Hella è al 64% della strada fra il 13° e il 14°:
-le mancano 4.646 PX, cioè la tenda di Zog'tar, Vatore e le mura di `ARC07-DEF-4`.
+fermi al massimo (riga 108), e le righe dalla 109 in poi per loro valgono 0.
+Hella ha passato la soglia del 14° di 66 PX con la tenda di Zog'tar e i premi
+di storia della sessione 6 (righe 110-111): al tavolo resta di 13° fino allo
+stesso riposo (D90; se dormono nel Cuore della Montagna vale lì, `ARC07-DEF-5` §8).
 
 
 ## Partenza (8° livello)
@@ -183,3 +185,11 @@ le mancano 4.646 PX, cioè la tenda di Zog'tar, Vatore e le mura di `ARC07-DEF-4
 | Riga | Scontro o evento | Th | To | Ar | He | Jo |
 |---:|---|---:|---:|---:|---:|---:|
 | 108 | Regola 3.5, un livello alla volta (DM 2026-11-05): al primo riposo dopo Hammerfist si sale al 14° e i PX si fermano a 104.999; l'eccedenza è persa | -4.968 | -6.784 | -2.333 |  |  |
+
+## Arco 07 · Il Portale della Forgia Eterna, dopo il 2026-09-25 (righe 109-111: non ancora nel foglio .ods, le riporta il DM)
+
+| Riga | Scontro o evento | Th | To | Ar | He | Jo |
+|---:|---|---:|---:|---:|---:|---:|
+| 109 | ARC-07 DEF-4 · Sessione 5 (2026-11-13), i barili coi rostri e la partenza di mezzanotte: nessun PX, Vatore non incontrato (DM 2026-11-21) | 0 | 0 | 0 | 0 |  |
+| 110 | ARC-07 DEF-4 · Sessione 6 (2026-11-20), la tenda di Zog'tar: Zog'tar GS 15 7.800, Balvar GS 13 3.900, 3 guardie GS 8 1.950, Grask 0; 13.650 ÷ 4; a Thorik, Tordek e Artemis 0 effettivi, fermi a 104.999 (riga 108) [CANONE — DM 2026-11-26, card-presenti-S5-S6] | 0 | 0 | 0 | 3.412 |  |
+| 111 | ARC-07 DEF-4 · Sessione 6 (2026-11-20), premi di storia: il barile sganciato sulla tenda 500, il generale ucciso nella notte 800; a Thorik, Tordek e Artemis 0 effettivi (riga 108) [CANONE — DM 2026-11-26, card-premi-S6] | 0 | 0 | 0 | 1.300 |  |
