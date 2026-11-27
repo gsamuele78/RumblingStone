@@ -391,13 +391,15 @@ caduti tutti, o gli otto round di una prova sono finiti prima.
 Può morire, e la vittoria conta. La card decide quattro cose: a 0 pf il
 comandante è **abbattuto**; la vittoria conta; al finale Grimjaw è
 sostituito dal capitano minore; l'orda prende −3 al morale. Chiede anche la
-riga di Gorthak, e non ne detta il contenuto. Tutto il resto di questa voce
-è lettura delle fonti citate riga per riga, e aspetta la conferma del DM:
-che i suoi non lo portino via, che inabile, morente e morto valgano uguale,
-e la riga di Gorthak per intero.
+riga di Gorthak, e non ne detta il contenuto. Il resto di questa voce è
+lettura delle fonti citate riga per riga, e il DM l'ha confermata con una
+differenza: inabile, morente e morto valgono uguale; Grimjaw resta dov'è
+caduto, mentre Gorthak lo portano via i suoi troll
+`[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]`.
 
-Gorthak o Grimjaw a 0 pf o meno è **abbattuto**: resta dov'è caduto, i suoi
-non lo portano via, e nell'assedio non torna. Per l'SRD a 0 pf è inabile,
+Gorthak o Grimjaw a 0 pf o meno è **abbattuto**, e nell'assedio non torna.
+Grimjaw resta dov'è caduto, e i suoi non lo portano via; Gorthak lo portano
+via i due troll dell'ariete (sotto, «La scorta») `[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]`. Per l'SRD a 0 pf è inabile,
 da −1 a −9 è morente e a −10 è morto `[SRD: Injury and Death]`; per la
 battaglia i tre casi valgono uguale (chi lo vuole vivo, o lo vuole finire:
 §8). La regola vale per le tabelle di Gorthak (Scena 2), per quelle di
@@ -430,7 +432,7 @@ Grimjaw il Giorno 2 o il Giorno 3, al round 1, prima del corno del drago
   **Conseguenza**: il duello fra Thorik e Grimjaw, che chiudeva la Sessione
   3 (`ARC08-01`, «L'arrivo di Grimjaw»), non si gioca
   `[CANONE — DM 2026-11-26, card «Sessione 3 senza Grimjaw»: niente lo sostituisce: il capitano entra e si ritira, e la serata chiude sulla caverna liberata (ARC08-01, «Risultato della Sessione 3»)]`.
-- **Gorthak abbattuto** (provvisorio: la card del 26/11 lascia questa riga da scrivere, e il DM non l'ha ancora vista). La carta **Gorthak al cancello** si toglie e non
+- **Gorthak abbattuto** `[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]`. La carta **Gorthak al cancello** si toglie e non
   torna. Se cade il Giorno 1, da quel round il fronte del Cancello torna a 3, e il Giorno 2 il fronte del Cancello resta 4, al
   round 3 il DM gioca la palla di fuoco, e l'ariete resta ai due troll, col
   ritmo di riferimento. Se cade il Giorno 2, da quel round il fronte del
@@ -448,6 +450,10 @@ Grimjaw il Giorno 2 o il Giorno 3, al round 1, prima del corno del drago
   incrollabile» `[CANONE — DM 2026-10-19, D10]`). Per i due troll nessuna
   fonte lo dice
   `[CANONE — DM 2026-11-26, card «i troll senza Gorthak»: sì: al loro primo turno dopo la caduta lasciano il ponte senza il corpo, e quel giorno, il Giorno 1 o il Giorno 2, il cancello perde 40 pf invece di 80; se Gorthak è caduto il Giorno 1, il Giorno 2 tornano all'ariete]`.
+  Lo portano via loro: lasciano il ponte **con il corpo**, al loro primo
+  turno dopo la caduta, e la card del 26/11 che diceva «senza il corpo» è
+  superata `[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]`: nessuno lo
+  finisce né lo lega, e quello che ha addosso se ne va con lui.
 - **I bonus.** Nella riga «Comandanti logorati» (§7) un comandante abbattuto
   conta come uno fuggito ferito: le due schede di `Bestiario/villain/` lo
   mettono sotto lo stesso bonus («logorato/ucciso», «ucciso già in Sessione
@@ -455,7 +461,8 @@ Grimjaw il Giorno 2 o il Giorno 3, al round 1, prima del corno del drago
   Resta da decidere come il suo −3 sta col −2 di quella riga
   `[CANONE — DM 2026-11-26, card «−3 e −2 dei logorati»: lo sostituisce: con un abbattuto l'orda porta −3 e il −2 non si aggiunge, anche se l'altro è fuggito ferito; con due abbattuti −5 e non −6, perché la scala si ferma a −5]`.
 - **Il corpo.** Quello che la scheda gli dà addosso (A.1, A.3) resta sul
-  corpo
+  corpo, e quello di Gorthak se ne va con i troll che lo portano via
+  `[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]`
   `[CANONE — DM 2026-11-26, card «corredo del comandante abbattuto»: si prende solo a scontro chiuso, quando sul ponte o sulla rampa non resta un nemico in piedi; lo tiene la rocca e i pregen lo usano se vogliono; è la stessa voce di ARC08-13, che al finale non si conta una seconda volta]`.
 
 Il libretto (§5, Sfidare) dice ancora ai giocatori «Un comandante non muore
@@ -630,10 +637,10 @@ reparti, non ai gesti.
 | il sorvolo: un eroe colpisce il drago `[CANONE — DM 2026-11-04, P16, il morale]` | +1 |
 | il Re cade sul cancello `[CANONE — DM 2026-11-04, P16, il morale]` | −2 |
 
-Il reparto distrutto, il settore che cede, il comandante che fugge e il
-giorno senza brecce sono nel libretto (§6). Le altre quattro righe i
-giocatori non le hanno, quella del comandante abbattuto compresa: quando
-una scatta, il DM la dice ad alta voce con
+Il reparto distrutto, il settore che cede, il comandante che fugge o è
+abbattuto e il giorno senza brecce sono nel libretto (§6)
+`[CANONE — DM 2026-11-27, card «libretto: il comandante che può morire»]`.
+Le altre tre righe i giocatori non le hanno: quando una scatta, il DM la dice ad alta voce con
 la sua causa («il drago sanguina, e le Mura lo hanno visto: +1»), così il
 numero non cambia senza che il tavolo sappia perché.
 
@@ -2618,7 +2625,7 @@ logorati» è in §0-bis, «I bonus»: per default lo sostituisce.
 |---|---|
 | **vogliono fare una sortita** sul campo dell'orda | il campo è sulla piana, a 500 m-1 km, sotto settecento paia d'occhi. Il DM lo dice in chiaro, una volta. Se escono, il loro settore è senza eroe per il giorno (libretto §9: 1d6, con 1-2 cede), e tornano con quello che hanno visto: i giganti che dormono alla rampa |
 | **vogliono uccidere Gorthak o Grimjaw** | possono `[CANONE — DM 2026-11-26, card «comandante a 0 pf nell'assedio»]`. Sotto metà il comandante fugge (libretto §5); se i dadi lo portano a 0 pf o meno prima della fuga è abbattuto, e la vittoria conta: +2 alla rocca, −3 all'orda (si segna sulla scheda della serata, e per default nell'assedio non tocca i dadi del libretto), la sua carta si toglie subito e non torna, e al finale manca (§0-bis, «Il comandante a 0 pf o meno»). Se fugge e un pregen lo insegue oltre il ponte o la rampa, quel pregen entra nell'orda da solo: il DM glielo dice, e lo lascia decidere |
-| **vogliono spogliarlo, prenderlo vivo o finirlo** | a 0 pf esatti il comandante è inabile e cosciente; da −1 a −9 è morente, perde 1 pf a round e può stabilizzarsi da solo o con una cura `[SRD: Injury and Death]`. Per la battaglia è abbattuto in tutti i casi, e i numeri non cambiano `[CANONE — DM 2026-11-26, card «comandante abbattuto ma vivo»: a 0 pf esatti non agisce più, e lo finisce qualunque colpo a segno; morente è indifeso, e lo finisce un colpo di grazia; vivo, la rocca lo tiene legato e stasera non si interroga; morto, finito, prigioniero o lasciato dov'è, la carta non torna e al finale manca]`. Quello che ha addosso si prende solo a scontro chiuso (§0-bis, «Il corpo») |
+| **vogliono spogliarlo, prenderlo vivo o finirlo** | a 0 pf esatti il comandante è inabile e cosciente; da −1 a −9 è morente, perde 1 pf a round e può stabilizzarsi da solo o con una cura `[SRD: Injury and Death]`. Per la battaglia è abbattuto in tutti i casi, e i numeri non cambiano `[CANONE — DM 2026-11-26, card «comandante abbattuto ma vivo»: a 0 pf esatti non agisce più, e lo finisce qualunque colpo a segno; morente è indifeso, e lo finisce un colpo di grazia; vivo, la rocca lo tiene legato e stasera non si interroga; morto, finito, prigioniero o lasciato dov'è, la carta non torna e al finale manca]`. Quello che ha addosso si prende solo a scontro chiuso (§0-bis, «Il corpo»). Tutto questo vale per Grimjaw: Gorthak lo portano via i troll, e nessuno lo finisce né lo lega `[CANONE — DM 2026-11-27, card «la riga di Gorthak abbattuto»: sì, ma i suoi lo portano via]` |
 | **chiudono il Re al sicuro il Giorno 3** | il Re sale lo stesso: è la decisione del DM. Se lo chiudono a chiave, usa la Corona sulle sue guardie (*comando*, «Lascia!»: lasciano le chiavi) o la sfonda a colpi di martello (una porta di legno rinforzato, 20 pf e durezza 5: il suo martello fa 1d8+12, due o tre round), e arriva sul cancello al round 3 della sequenza, col soffio già in posizione |
 | **esplorano il tunnel prima della ritirata** o mandano qualcuno a vederlo | il tunnel dietro la statua si apre solo spingendo la statua (Scena 7), e il Re non vuole che si apra prima del Giorno 3: chi lo apre di notte lo apre anche per l'orda. Se insistono e il Re cede, Dara in avanscoperta trova le tracce dei bugbear (Sopravvivenza CD 20 con Seguire Tracce): vale come la divinazione (§0), un'azione preparata a testa al round 1 della Scena 8 |
 | **evacuano i feriti e i civili prima** | i civili sono già al Cuore da prima dell'assedio (libretto §1). I feriti restano: il tunnel non si apre (sopra), e i 90 della ritirata li comprendono già |
@@ -2679,7 +2686,7 @@ questa serata (Handout 0). La ricompensa è la tabella del §7.
 
 | Dove | Cosa | Valore | Chi lo usa |
 |---|---|---|---|
-| Scena 2 e 4 | niente, se i comandanti fuggono: se ne vanno con le loro armi. Se uno è abbattuto, resta sul corpo quello che la scheda gli dà addosso (A.1, A.3); chi lo prende e quando è in §0-bis, «Il corpo» | quello di `ARC08-13` §3, «Equipaggiamento dei comandanti»: per default è la stessa voce, e al finale non si conta una seconda volta | per default la rocca, e i pregen se vogliono |
+| Scena 2 e 4 | niente, se i comandanti fuggono: se ne vanno con le loro armi. Se Grimjaw è abbattuto, resta sul corpo quello che la scheda gli dà addosso (A.1, A.3); Gorthak se lo portano via i troll, con quello che ha addosso; chi lo prende e quando è in §0-bis, «Il corpo» | quello di `ARC08-13` §3, «Equipaggiamento dei comandanti»: per default è la stessa voce, e al finale non si conta una seconda volta | per default la rocca, e i pregen se vogliono |
 | Scena 6 | due *frecce assassine* (draghi) dall'armeria del Re `[CANONE — DM 2026-11-04, P16: già in gioco con la CD del 2026-10-23]` | 2.282 mo l'una (SRD) | Dara |
 | Scena 8, i bugbear caduti | cuoio borchiato +1, morning star perfetta, 3 giavellotti, *fascia dell'intelletto +2*, due dosi di veleno, a testa | 1.175 + 308 + 3 + 4.000 mo a testa | nessuno, stasera: la colonna non si ferma a spogliare i morti |
 | Scena 8, gli hobgoblin | cotte di maglia, spade lunghe perfette | | nessuno |

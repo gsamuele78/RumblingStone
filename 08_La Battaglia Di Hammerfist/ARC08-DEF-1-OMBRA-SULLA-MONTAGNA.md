@@ -407,7 +407,7 @@ la vede solo Dara, dal torrione (Scena 4).
 
 | Occhi | Orecchie | Pelle e naso | Cosa NON dire |
 |---|---|---|---|
-| la polvere che non si posa, i fuochi a sud, il cielo d'autunno | il vento d'alta quota, un tamburo ogni tanto | il freddo della pietra, la brina sulle merlature | quanti sono: lo dice Dara, dopo |
+| la polvere che non si posa, i fuochi a sud, il cielo d'estate | il vento d'alta quota, un tamburo ogni tanto | il freddo della pietra, la brina sulle merlature | quanti sono: lo dice Dara, dopo |
 
 ### ZONA 2 — La Porta Interna e la targa annerita
 
@@ -528,8 +528,8 @@ l'udito, e lascia la vista all'alba.
 Chi chiede cosa fa: la notte non porta altro. Dara, sulle torri, può tirare
 Osservare quanto vuole e vede il buio. Si passa all'alba.
 
-> **Read-aloud (LotR lead) — le mura, all'alba.** *L'alba del primo giorno
-> d'autunno sale rossa dietro le creste. Dalle torri di Hammerfist le
+> **Read-aloud (LotR lead) — le mura, all'alba.** *L'alba d'estate sale
+> rossa dietro le creste. Dalle torri di Hammerfist le
 > sentinelle guardano la valle da un'ora, e da un'ora nessuna parla.
 > All'orizzonte, dove la valle si apre, c'è una polvere che non si posa,
 > larga quanto la valle. Sotto la polvere, a molte miglia, ci sono punti di
