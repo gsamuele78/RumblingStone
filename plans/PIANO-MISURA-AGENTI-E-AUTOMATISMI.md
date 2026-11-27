@@ -1,6 +1,6 @@
 # PIANO — Misurare agenti, skill e automatismi su casi veri
 
-> **Stato**: 🟡 in corso (2026-11-27). M1 fatto (PR 1, #531); M2 fatto sul ramo della PR 2 (le buste senza lavoro tacciono, gli omonimi dei trigger non scattano; macro-F1 del test da 41/252 a 58/315, esatti fermi a 4/17); M2-bis fatto sul ramo `lavoro/raccolta-v2` (la raccolta settimanale dei casi, con la consigliata da un annotatore cieco); M3 e M3-bis da fare; M4-M7 solo elencati · **Classe**: G per le etichette e la scelta della tecnica, C per il codice
+> **Stato**: 🟡 in corso (2026-11-27). M1 (#531), M2 (#534) e M2-bis (#535) su main; E1 fatto sul ramo della PR 5 (il registro `plans/eval/componenti.json` e il runner `eval_componenti.py`, ADR-0155); M3 e M3-bis da fare; M4-M7 solo elencati · **Classe**: G per le etichette e la scelta della tecnica, C per il codice
 > **Nasce da**: il thread «Misurare e migliorare agenti, skill e automatismi» del 2026-11-27, aperto da Jfs.
 > **Decisione**: [ADR-0154](adr/ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md), proposta, con l'emendamento del 2026-11-27 (Jfs: le librerie standard di fatto della comunità al posto della sola stdlib).
 > **Audit**: `/mnt/project-files/agenti-eval-2026-11-27/AUDIT.md` (fuori dal repo; i numeri che servono sono qui e nell'ADR).
@@ -175,6 +175,30 @@ cieco), 92 su `test_raccogli_casi_agenti` e `test_instradamento_agenti`;
 - Il set conserva ancora il testo nudo e non la busta: la tecnica 1 di M2
   resta senza cricchetto.
 
+### E1 · Un registro e un runner per tutti i componenti ✅ PR 5 (2026-11-27)
+
+Scelta di Jfs del 27/11 su card, la consigliata: ogni componente che decide
+qualcosa entra in un registro solo, `plans/eval/componenti.json`, e lo misura
+un runner solo, `scripts/eval_componenti.py` ([ADR-0155](adr/ADR-0155-un-registro-e-un-runner-per-le-misure-dei-componenti.md)),
+sul modello di lm-eval-harness e di OpenAI evals. Le altre voci del
+censimento (E0, E2-E11, in `/mnt/project-files/agenti-eval-2026-11-27/CANALE-MIGLIORAMENTO.md`)
+entrano ognuna con la sua voce.
+
+| | Prima (main) | Dopo |
+|---|---|---|
+| Passi CI per le due misure | 2, ognuno con il suo cricchetto | 1 runner (testing) più il passo bloccante delle skill finché il runner non è stable |
+| Agenti, test | 4/17, 4/17, 58/315 | gli stessi, dal runner |
+| Skill | 17 omissioni, 1 violazione | le stesse, più 0 conflitti fra le L1 |
+| Tetto abbassato a mano | nessun controllo | esce 1 rispetto al ramo di base, salvo la rimessa di `applica` |
+| Tempo | — | 1,5 s per le due voci |
+
+Test: 43 in `test_eval_componenti.py`, scritti prima del codice.
+
+Limiti: ogni comando deve stampare JSON con le metriche a un percorso fisso;
+il controllo contro il ramo di base chiede la storia completa e in un clone
+shallow passa dicendolo; il primo resoconto dell'agente sviluppatore si è
+interrotto per il limite d'uso, e il thread ha finito e verificato il lavoro.
+
 ### M3 · Un modello classico di scikit-learn contro le regole ⬜ PR 3
 
 `[engine: Sonnet 5 · effort: medio · qualità: TF-IDF con MultinomialNB o LogisticRegression di scikit-learn, scelto con la validazione incrociata sul solo dev e misurato una volta sul test; entra solo se batte M2 sul test, altrimenti il resoconto lo dice e il codice resta in esperimenti]`
@@ -233,6 +257,7 @@ mutanti (ADR-0148) e non entrano.
 - [x] M1 · set d'oro, `eval_metriche.py`, `--eval` e `--check`, cancello in testing (PR 1)
 - [x] M2 · omonimi e messaggi senza lavoro (PR 2): macro-F1 del test 41/252 → 58/315, suggerimenti sui prompt veri 57/103 → 1/103
 - [x] M2-bis · raccolta settimanale dei casi, con la consigliata da un annotatore cieco (`raccogli_casi_agenti.py`): accordo con l'etichetta di Jfs 8/28 per l'hook contro 24/27 per l'annotatore B
+- [x] E1 · registro `plans/eval/componenti.json` e runner `eval_componenti.py` (ADR-0155): stessi numeri dei passi di oggi, cricchetto contro il tetto abbassato a mano
 - [ ] M3 · TF-IDF con MultinomialNB o LogisticRegression di scikit-learn contro le regole (PR 3)
 - [ ] M3-bis · rete con sentence-transformers, solo con ≥ 200 casi e M3 che non basta (PR 4)
 - [ ] M4 · recall dell'instradamento delle skill

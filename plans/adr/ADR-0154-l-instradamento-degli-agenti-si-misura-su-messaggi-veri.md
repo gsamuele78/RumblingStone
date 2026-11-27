@@ -190,3 +190,7 @@ Con 17 casi di test nessuna tecnica batte la regex in modo significativo (banco 
 La consigliata della card non è la predizione dell'hook. Sui 28 casi confermati da Jfs l'hook coincide con l'etichetta in 8 (Wilson 95% 0,15-0,47, kappa 0,211), l'annotatore B, che leggeva solo il testo, in 24 su 27 (Wilson 0,72-0,96, kappa 0,865): mostrare la proposta dell'hook come consigliata ancorerebbe Jfs sulla cosa misurata. La mette un annotatore cieco, un agente Claude che riceve solo `CIECO-*.tsv` (id e testo) e `GUIDA-AGENTI-E-CASCATE.md`.
 
 **Quello che si paga.** 24 su 27 sopravvaluta l'accordo, perché B ha etichettato prima della conferma e in parte le consigliate di Jfs venivano da B. La cecità dipende da chi lancia l'annotatore, non da un controllo. Con n piccolo lo split per hash può sbilanciare dev e test. Il tetto di dieci a settimana lo tiene la routine, non lo script, e la routine del lunedì non chiama ancora lo script.
+
+## Emendamento del 2026-11-27: il registro dei componenti
+
+Da [ADR-0155](ADR-0155-un-registro-e-un-runner-per-le-misure-dei-componenti.md) il cricchetto di questo ADR gira dentro `scripts/eval_componenti.py`, con la voce `instradamento_agenti` di `plans/eval/componenti.json`. Il tetto resta in `plans/instradamento/agenti-oro.json` e il registro lo legge da lì. Il passo CI di `instradamento_agenti.py --check` è sostituito da quello del runner, sempre in testing.
