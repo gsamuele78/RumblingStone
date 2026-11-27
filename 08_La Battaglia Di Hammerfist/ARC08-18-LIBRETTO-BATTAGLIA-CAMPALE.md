@@ -151,10 +151,11 @@ Ogni round il tuo eroe fa **una** di queste cose.
   nel tuo settore. Il duello si gioca sulla mappa con le regole
   normali, quanti round servono, e vale come un round di battaglia: in quel
   round i tuoi reparti tirano senza di te, e il settore non prende tacche.
-  Un comandante non muore nell'assedio: sotto metà dei suoi punti ferita
-  fugge, ferito. Quando fugge, **+2** al morale della rocca (§6), e la sua
-  carta esce dal giorno. Nella prima battaglia si sfida il sergente
-  dell'avanguardia (§13).
+  Sotto metà dei suoi punti ferita un comandante fugge, ferito, e la sua
+  carta esce dal giorno. Se lo portate a zero o meno prima che fugga, è
+  abbattuto: la sua carta esce dall'assedio e non torna. Nei due casi
+  **+2** al morale della rocca (§6), una volta sola. Nella prima battaglia
+  si sfida il sergente dell'avanguardia (§13).
 
 **Gli incantesimi minori e quelli su di te.** Un incantesimo sotto il 3°
 livello non è un gesto: si lancia in più, perché un round di battaglia
@@ -184,7 +185,7 @@ di ogni singolo reparto: il morale della rocca si aggiunge.
 |---|---|
 | un vostro reparto è distrutto | **−1** |
 | un settore cede (breccia) | **−2** |
-| un comandante nemico fugge | **+2** |
+| un comandante nemico fugge o è abbattuto | **+2** |
 | un giorno finisce senza brecce | **+1**, la notte |
 | carte dell'orda | quello che dice la carta |
 

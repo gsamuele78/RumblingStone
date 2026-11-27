@@ -36,7 +36,7 @@ fonte: ricostruzione del repo, 2026-10-19 — ⚠ Non SRD (orog)
 
 **Capacità speciali**
 - *Guardia del corpo*: finché è adiacente a Grimjaw, chi attacca il generale in mischia deve prima superare lui; nel combattimento di massa l'unità assorbe i colpi diretti a Grimjaw (`ARC08-02` §5).
-- *Lealtà incrollabile*: immune alla paura e agli effetti di morale finché Grimjaw è vivo; se Grimjaw cade, combatte fino alla morte sul suo corpo (`ARC08-02` §5).
+- *Lealtà incrollabile*: immune alla paura e agli effetti di morale finché Grimjaw è vivo; se Grimjaw cade, due guardie lo riportano al campo e le altre coprono la ritirata fino alla morte `[CANONE — DM 2026-11-27, card «Grimjaw abbattuto, se la guardia lo riporta al campo»: lo salvano, torna al finale debole]`; fino al 2026-11-27 combatteva fino alla morte sul suo corpo (`ARC08-02` §5).
 - ⚠ **Non SRD**: i tratti razziali dell'orog vengono da `[Private source — Races of Faerûn]` e qui non si riproducono; della razza la scheda usa solo i numeri: modificatori alle caratteristiche, armatura naturale +2, linguaggi automatici (Orchesco, Sottocomune e la lingua della regione d'origine).
 
 **Hook**: ognuna porta sul petto una mano rossa dipinta col sangue di un nano. *Non parlano: è Grimjaw a parlare per loro.*
