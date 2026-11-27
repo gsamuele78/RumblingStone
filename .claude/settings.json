@@ -231,5 +231,8 @@
       "Read(**/.idea/**)",
       "Read(**/.env)"
     ]
+  },
+  "env": {
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "250000"
   }
 }
