@@ -6,6 +6,9 @@ foglio «Calcolo PX», al 2026-11-05. **Il foglio resta la fonte**: questa copia
 serve a leggere le righe nelle PR e a citarle. Se cambi il foglio, rifai la copia.
 Le decisioni del DM del 2026-11-05 sono in
 `plans/esperimenti/p16-inferred-2026-11-04/PX-DECISIONI.md`.
+Le righe 109-111 (sessioni 5 e 6, ARC-07) sono in anticipo sul foglio: le
+riporta nel foglio il DM, e la loro numerazione è provvisoria finché il DM non
+la conferma lì.
 <!-- /apparato -->
 
 Colonne: PX a testa. Th = Thorik, To = Tordek, Ar = Artemis, He = Hella, Jo = Jorr (PNG).
@@ -25,6 +28,15 @@ fermi al massimo (riga 108), e le righe dalla 109 in poi per loro valgono 0.
 Hella ha passato la soglia del 14° di 66 PX con la tenda di Zog'tar e i premi
 di storia della sessione 6 (righe 110-111): al tavolo resta di 13° fino allo
 stesso riposo (D90; se dormono nel Cuore della Montagna vale lì, `ARC07-DEF-5` §8).
+
+Due questioni restano aperte al DM, e nessuna cambia il 14° di Hella:
+
+- la quarta guardia (GS 8) e il sacerdote (GS 6) della tenda, che il master
+  conta (`ARC07-DEF-4` §8 A, ≈ 3.650 a testa per la tenda intera) e il DM non
+  ha elencato fra le morti: se ci sono, circa +243 a testa sulla riga 110;
+- i premi di storia per i nani che gridano il nome di Thorik e per il Seme di
+  Varis dissolto (sessione 5), lasciati fuori «salvo scelta diversa del DM»
+  (`campaign/sessions/2026-11-20_session-6.md`, «XP awarded»).
 
 
 ## Partenza (8° livello)
@@ -191,5 +203,5 @@ stesso riposo (D90; se dormono nel Cuore della Montagna vale lì, `ARC07-DEF-5` 
 | Riga | Scontro o evento | Th | To | Ar | He | Jo |
 |---:|---|---:|---:|---:|---:|---:|
 | 109 | ARC-07 DEF-4 · Sessione 5 (2026-11-13), i barili coi rostri e la partenza di mezzanotte: nessun PX, Vatore non incontrato (DM 2026-11-21) | 0 | 0 | 0 | 0 |  |
-| 110 | ARC-07 DEF-4 · Sessione 6 (2026-11-20), la tenda di Zog'tar: Zog'tar GS 15 7.800, Balvar GS 13 3.900, 3 guardie GS 8 1.950, Grask 0; 13.650 ÷ 4; a Thorik, Tordek e Artemis 0 effettivi, fermi a 104.999 (riga 108) [CANONE — DM 2026-11-26, card-presenti-S5-S6] | 0 | 0 | 0 | 3.412 |  |
+| 110 | ARC-07 DEF-4 · Sessione 6 (2026-11-20), la tenda di Zog'tar: Zog'tar GS 15 7.800, Balvar GS 13 3.900, 3 guardie GS 8 1.950, Grask 0; 13.650 ÷ 4; morti: DM 2026-11-21; divisore 4 [CANONE — DM 2026-11-26, card-presenti-S5-S6]; PX dalla tabella DMG 3.5 [Private source — DMG 3.5, tabella dei PX]; a Thorik, Tordek e Artemis 0 effettivi, fermi a 104.999 (riga 108) | 0 | 0 | 0 | 3.412 |  |
 | 111 | ARC-07 DEF-4 · Sessione 6 (2026-11-20), premi di storia: il barile sganciato sulla tenda 500, il generale ucciso nella notte 800; a Thorik, Tordek e Artemis 0 effettivi (riga 108) [CANONE — DM 2026-11-26, card-premi-S6] | 0 | 0 | 0 | 1.300 |  |
