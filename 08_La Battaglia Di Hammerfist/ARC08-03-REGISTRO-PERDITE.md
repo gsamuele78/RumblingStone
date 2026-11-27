@@ -13,20 +13,34 @@
 
 > **↩ Echi del rituale P3B (T9 — propagazione ramo del rifiuto)**: se al
 > tavolo il rituale di resurrezione di Hella è stato giocato con un **dono
-> rifiutato**, due echi possono riemergere **in questa battaglia**. Default
-> (rituale non ancora giocato, o tutti i doni concessi): **nessuna penalità**,
-> Hella entra in campo con i doni pieni.
-> - **Thorik ha rifiutato il sangue** → Hella **senza DR 3/−**; alla sua
->   **prima ferita critica** in battaglia, l'eco *"la carne ricorda chi non
->   ha sanguinato per lei"* (subisce il critico pieno, senza riduzione).
-> - **Artemis ha rifiutato la scintilla** → Hella **senza Spontaneous
->   Rebirth**: la **prima volta che va a 0 pf** in ARC-08/09 non si
->   auto-stabilizza (morente normale, TS Costituzione da regole standard).
+> rifiutato**, il seme di quel dono resta dormiente e la sua mancanza si sente
+> **in questa battaglia**. Default (rituale non ancora giocato, o tutti i doni
+> concessi): **nessuna penalità**, Hella entra in campo con i tre doni pieni
+> (Doni v4-bis, DM 2026-09-12).
+> - **Thorik ha rifiutato il +2 di deflessione della Corona** (donato, la
+>   Corona scende a +1) → Hella **senza Scudo del Custode**: non può
+>   prendersi addosso, dimezzato, il colpo destinato a un alleato entro 9 m. La catena dei tre doni non esiste,
+>   e Thorik non scatta mai per l'Eco del Custode. E **Aegis Fang lo giudica**:
+>   quando Thorik le chiede qualcosa per Hella o per i nani da difendere, e
+>   questa battaglia lo è, tira **Volontà CD 14** contro l'Ego dell'ascia; se
+>   fallisce, comanda lei (SRD, *Oggetti intelligenti*). Finisce la prima
+>   volta che Thorik rischia qualcosa di suo per Hella.
+> - **Tordek ha rifiutato l'Ancoraggio della Montagna** → Hella **senza Pelle
+>   di Adamantio**, cioè **senza nessuna RD**: non ne ha di base, e ogni colpo
+>   **fisico** di giganti e hobgoblin arriva pieno, dove la RD 3/adamantino
+>   gliene avrebbe tolti 3 (SRD, *Riduzione del danno*; contro fuoco ed
+>   energia non cambia nulla).
+> - **Artemis ha rifiutato 1d6 di Eldritch Blast** → Hella **senza Rovo
+>   Eldritch**: a slot finiti, o in forma selvatica, non ha un'opzione a
+>   distanza.
 >
-> Fonte e tabella completa: `07_il Portale Della Forgia
-> Eterna/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md` §2-BIS «Il ramo
-> del rifiuto» → *Tabella echi*. Quando P3B è giocato, l'esito reale va in
-> `campaign/state.md` (changelog §8) e i rami non presi si chiudono lì.
+> Ciascun seme dormiente si può ancora colmare **in gioco** con un atto di
+> sacrificio, nelle quest personali di ARC-09, e il dono si attiva
+> all'indietro. Fonte e tabella completa: il master della resurrezione di
+> Hella, `ARC07-DEF-3` §5, «Il rifiuto — e cosa succede alla Collana» e la
+> tabella delle reazioni degli artefatti. Quando il rito è giocato, l'esito
+> reale va in `campaign/state.md` sul ramo di gruppo (ADR-0007) e i rami non
+> presi si chiudono lì.
 
 ### **Come Usare Queste Schede**
 Queste schede sono progettate per velocizzare il combattimento di massa.

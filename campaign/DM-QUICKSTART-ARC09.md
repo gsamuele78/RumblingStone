@@ -12,18 +12,22 @@ APL = 13.
 > **↩ Carry-over dall'ARC-07 — echi del rituale P3B di Hella (T9)**: prima di
 > giocare ARC-09 verifica in `campaign/state.md` **come è stato risolto il
 > rituale di resurrezione di Hella** (ARC-07 P3B). Se un dono è stato
-> **rifiutato**, tre echi si propagano in questo arco e sono già agganciati
-> ai file bersaglio:
-> - **Tordek rifiuta il respiro** → veleni drow, **Fase 0 Notte dei Drow**
->   (`...FASE0-NOTTE-DEI-DROW-TESTO.md`).
-> - **Thorik / Artemis rifiutano** → prima ferita critica / primo 0 pf di
->   Hella (`08_.../ARC08-03-REGISTRO-PERDITE.md`).
-> - **Rifiuto totale** → 3 slot-dono vuoti della Collana = 3 quest opzionali
+> **rifiutato**, il suo seme resta dormiente e gli echi si propagano in questo
+> arco, già agganciati ai file bersaglio *(Doni v4-bis, DM 2026-09-12)*:
+> - **Tordek rifiuta l'Ancoraggio** → Hella senza Pelle di Adamantio, quindi
+>   **senza nessuna RD**: i drow di lama della **Fase 0 Notte dei Drow**
+>   (`...FASE0-NOTTE-DEI-DROW-TESTO.md` §1).
+> - **Thorik rifiuta il +2 di deflessione** (donato, la Corona scende a +1) →
+>   niente **Scudo del Custode**, niente Eco, e Aegis Fang lo giudica finché non rischia qualcosa di suo per
+>   lei; **Artemis rifiuta 1d6 di Eldritch Blast** → niente **Rovo Eldritch**
+>   (`08_.../ARC08-03-REGISTRO-PERDITE.md`, già dalla battaglia di Hammerfist).
+> - **Ogni seme dormiente** → una quest personale opzionale per colmarlo, e
+>   il dono si attiva all'indietro; con il **rifiuto totale** sono tre
 >   (`Arco-Post-Hammerfist-HOOKS-INTEGRATION-MASTER.md` §2).
 >
 > Tabella completa e default: `07_il Portale Della Forgia
-> Eterna/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md` §2-BIS «Il ramo del
-> rifiuto». Se il rituale non è ancora stato giocato, gioca i doni pieni
+> Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md` §5, «Il rifiuto — e cosa succede
+> alla Collana». Se il rituale non è ancora stato giocato, gioca i doni pieni
 > (nessun eco attivo).
 
 ---

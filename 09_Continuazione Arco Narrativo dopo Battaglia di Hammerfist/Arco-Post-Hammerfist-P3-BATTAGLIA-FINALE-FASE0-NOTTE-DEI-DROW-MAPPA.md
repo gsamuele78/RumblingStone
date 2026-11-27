@@ -70,7 +70,7 @@ Camera Artefatto:
 - **Forze** (dettaglio: `...FASE0-NOTTE-DEI-DROW-TESTO.md` §4): High Priestess Drow (CR 13, comando), 4 Drow Fungal Minion, 1 Aberrazione Fungina Alfa (CR 12, "ariete vivente"). CR complessivo 14-15.
 - **Nemico**: la Priestess punta a **completare il rito** che stacca l'Artefatto dal vincolo sacro (3 round di concentrazione non consecutivi); i Minion tengono impegnati i PG; l'Aberrazione sfonda muri/colonne verso le cripte.
 - **PG**: entrano da porta o porte laterali; possono interrompere il rito (uccidere la Priestess) o bloccarlo (*Dissolvi/Disgiunzione/Consacrare*).
-- **↩ Eco P3B (T9)**: se Tordek ha rifiutato il respiro, qui riemergono i veleni drow su Hella (vedi banner nel file TESTO §1).
+- **↩ Eco P3B (T9)**: se Tordek ha rifiutato l'Ancoraggio, Hella è senza Pelle di Adamantio e senza nessuna RD, e qui ogni colpo di lama drow le arriva pieno; se ha rifiutato Thorik, con o senza Tordek, manca lo Scudo del Custode (vedi banner nel file TESTO §1; fonte `ARC07-DEF-3` §5).
 
 ### 🔄 EVOLUZIONE (companion T5c — clock del rito)
 

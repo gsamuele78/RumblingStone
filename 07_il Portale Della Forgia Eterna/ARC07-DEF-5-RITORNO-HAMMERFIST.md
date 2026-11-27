@@ -916,7 +916,7 @@ Ogni fallimento di questo master è un costo, non un blocco.
 | **La notte del barile** (`DEF-4` Scena 6, supplemento «Il barile sulla tenda» §10) | chi è morto nel fuoco; il corno suonato o no; Zog'tar vivo, umiliato o morto. Balvar morto: la lastra col nome di Hald resta fra le ceneri | ARC-08, se Zog'tar è vivo (`DEF-4` §7) · ARC-09 (la lastra) |
 | **Il segno della cera nera** (`DEF-4` Scena 5, la boccetta n. 4) | chi l'ha bevuta, PG o Re Thorek, porta il riflesso violaceo sotto il polso, finché non lo toglie *rimuovi maledizione*. Lo vedono gli agenti della gilda del Collezionista, e in ARC-09 Sal lo cerca su quel polso | ARC-08/09 |
 | **Seme-Mercato di Varis** (`DEF-1` §6-bis) | Marchio di Varis / rispetto | ARC-09 |
-| **Doni mancati alla resurrezione** (`DEF-3` §5) | Hella senza RD 3 / Timeless / Rinascita, se rifiutati | ARC-08/09 |
+| **Doni mancati alla resurrezione** (`DEF-3` §5) | per ogni dono rifiutato, il seme resta dormiente: senza Scudo del Custode (Thorik), senza Pelle di Adamantio e senza nessuna RD (Tordek), senza Rovo Eldritch (Artemis) | ARC-08/09 |
 | **Tono del Rubino** (`DEF-4`) | «nessuna pietà / dovere / vigile» | ARC-08 (colore Corona) |
 | **Cronache dei Quattro Eroi compiute** | fama presso i nani → **Custodi Eterni** | ARC-08 E5 / Cerimonia 100 Asce |
 | **La Cronaca Vivente** (`DEF-2`) | A8 verso il 100% (il finale che i PG dipingono) | ARC-08/09 |

@@ -389,6 +389,59 @@
 - **Accettazione** ✅ (parte cross-link): ogni eco della tabella ha il suo
   aggancio nel file bersaglio; nessun eco orfano.
 
+### T9-bis. I box di rimando T9 seguono i Doni v4-bis — ✅ FATTO (2026-11-27)
+
+[engine: Opus, sessione principale, con la verifica del custode del canone · effort: alto · qualità: zero termini dei Doni v1 nei file vivi; nessun 🔴 del custode del canone]
+
+- **Origine**: audit settimanale del 2026-11-27 sui piani fermi
+  (`/mnt/project-files/audit-settimanale/piani-fermi-2026-11-27/A-ARC07-TRASVERSALE.md`,
+  fuori dal repo), che ha trovato il difetto e lo ha chiamato T9-bis. Jfs,
+  lo stesso giorno: riprendere i piani fermi, allinearli a quello che è stato
+  fatto dopo e misurare cosa danno in più.
+- **Il difetto**: il lotto dei Doni v4-bis del 2026-09-12 aveva aggiornato
+  FASE0-TESTO e `ARTEFATTI-MATRICE-VERSIONI.md`, ma non i box di rimando di
+  T9. Descrivevano ancora i Doni v1 (sangue e DR 3/−, scintilla e
+  Spontaneous Rebirth, respiro e veleni drow) e puntavano al master P3B
+  archiviato, `_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`.
+- **Fatto**, con fonte `07_…/ARC07-DEF-3-RESURREZIONE-HELLA.md` §5:
+  - [x] `08_…/ARC08-03-REGISTRO-PERDITE.md`: box degli echi riscritto sui
+    tre doni v4-bis (Scudo del Custode, Pelle di Adamantio, Rovo Eldritch),
+    con la reazione di Aegis Fang al rifiuto di Thorik;
+  - [x] `campaign/DM-QUICKSTART-ARC09.md`: carry-over riallineato;
+  - [x] `09_…/Arco-Post-Hammerfist-HOOKS-INTEGRATION-MASTER.md`: l'hook dello
+    slot-dono vale per ogni seme dormiente e non solo per il rifiuto totale,
+    come dice DEF-3 r.871-874; rimando di §9 a DEF-3 §5;
+  - [x] `09_…/…FASE0-NOTTE-DEI-DROW-MAPPA.md` r.73: eco di Tordek e di Thorik;
+  - [x] `07_…/ARC07-DEF-5-RITORNO-HAMMERFIST.md` r.919: la riga «Doni
+    mancati» diceva ancora i Doni v1;
+  - [x] `08_…/ARC08-11-PONTE-ARRIVO.md` r.23: rimando a DEF-3.
+- **Verifica del custode del canone**: nessun 🔴; tre 🟡 corretti (la RD
+  vale solo contro i colpi fisici; Thorik rifiuta il +2 di deflessione, che donato scende a +1;
+  la reazione di Aegis Fang al rifiuto mancava in ARC08-03).
+- **Misure, contro main `21906369`**: file vivi (fuori da `_ARCHIVIO/`,
+  `plans/`, build e copie) con termini dei Doni v1 da 4 a 0; file vivi con il
+  rimando al master P3B archiviato da 11 a 7. Dei 7, quattro sono rimandi
+  storici legittimi (`ARC07-00-INDICE`, DEF-3, la matrice, il `.hb.md`
+  generato) e tre sono residui fuori da questo lotto (vedi sotto).
+  `validate_modules` 0 errori, `validate_prosa` e `validate_lingua` puliti,
+  `verifica_rimandi` 0 violazioni.
+- **Cosa dà**: per il tavolo attuale niente, perché su main il rito non è
+  giocato e l'esito sta sul ramo di gruppo. Dà un canone giusto ai master
+  ARC-08 non ancora scritti, che hanno ARC08-03 fra le fonti, e a ogni gruppo
+  nuovo.
+- **Resta aperto**:
+  - [ ] i tre residui col rimando al master archiviato:
+    `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md` r.10,
+    `campaign/lore/campaign-premise.md` r.95,
+    `skills/rumblingstone-campaign/references/campaign-artifacts.md` r.278;
+  - [x] «il +2 di deflessione» di `campaign/state.md` r.93 e r.457 contro
+    «metà del +2» di DEF-3 r.252: su richiesta di Jfs (27/11) confrontato con
+    le schede degli artefatti. La Corona (`00_SCHEDA-GIOCATORE-STATO-ATTUALE`
+    r.198-203) e la Collana (`01_Collana_dei_Semi_Eterni` r.101) chiamano il
+    dono «il +2 di deflessione», e la Corona scende a +1: stesso effetto,
+    nessuna correzione di state.md. I box di questo lotto usano il nome delle
+    schede, con «scende a +1».
+
 ### T10. Audit dei poteri di tutti gli artefatti, stadi e versioni (2026-09-25)
 
 Richiesta del DM: *«la scheda di Thorik non è aggiornata correttamente… controlla
@@ -460,7 +513,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 - [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (resta opzionale/estetico solo l'SVG dei 16 narrativi)
 - [x] T6a (sessione 3, 2026-07-03) · [x] T6b (sessioni 6-8, 2026-07-04: Aegis master + Cerebro eletto + Corona consolidata/riconciliata + campaign-artifacts sync) · [x] T6c (sessione 11, 2026-07-04: doppia colonna §6, conferma DM T-D10) — **LOTTO ARTEFATTI COMPLETO**
 - [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [x] T10-c · [x] T10-d · [x] T10-e · [x] T10-f · [x] T10-g (tutte le domande del DM chiuse, D13-D17 comprese) · [x] T10-h (l'immagine dentro la scheda)
-- [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) — schede, sinergie, propagazione
+- [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) · [x] T9-bis (2026-11-27: i box di rimando T9 sui Doni v4-bis; restano tre rimandi al master archiviato e la deflessione in state.md) — schede, sinergie, propagazione
 - [x] T-D1…T-D12 — decisioni acquisite (2026-07-03/04); **ZERO domande DM
   aperte** (sessione 11, 2026-07-04: risolti Corona×2, Bracieri, Campo
   Drow 2, §6 doppia colonna, temporanei Word rimossi, locazione libreria).
