@@ -119,6 +119,27 @@ di 8,8 GB di VRAM. I semi 1 e 2 confermano quello che il DM ha visto sul seme
 0: Vanna resta riconoscibile da un seme all'altro ma dimostra più dei suoi
 trentotto anni, e il Drappo esce con volti moderni.
 
+Il giudizio del DM sui semi 0-2 (27/11), tavola per tavola:
+
+- **Vanna**: il viso più giovane è quello di B, seme 0; posa ed espressione
+  sono migliori in Gemini; le mani sembrano macchiate d'inchiostro, non
+  consumate come in Gemini; in Gemini la figura sta dentro una cornice che
+  rende meglio.
+- **La Ruota**: per i dettagli A, seme 1; ma i cavalli devono girare tutti
+  nello stesso verso attorno alla struttura centrale, che va al centro dello
+  spiazzo di terra e non di lato; la visuale va allontanata, con la città a
+  destra.
+- **Il Drappo**: sbagliato in tutto rispetto a Gemini, stile, impianto e
+  ritratti.
+
+Che cosa ne segue per le regole: le didascalie del giro successivo (v4, in
+`/mnt/project-files/drappo-flux-kaggle-2026-11-27/didascalie-v4.md`)
+descrivono la composizione di Gemini invece di quella della scheda, perché è
+quella che il DM ha scelto. Due lezioni per P1-P9: la geometria che conta
+(centro, verso di marcia, distanza della camera) va scritta come fatto
+esplicito, e il misuratore ha fermato tre negazioni e due chiuse mancanti
+prima che girassero.
+
 La lezione per P1-P9: klein prende alla lettera anche gli aggettivi
 forti, e il danno va descritto per causa e materia (calli, screpolature,
 resina), non per gravità.
