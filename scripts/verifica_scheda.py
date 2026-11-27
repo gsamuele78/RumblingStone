@@ -591,7 +591,42 @@ TESTA_INCANTESIMI = re.compile(r"incantesimi|spells", re.I)
 @lru_cache(maxsize=None)
 def _incantesimi_it() -> "dict[str, str]":
     import lessico_regole as LR
-    return {LR.norma(v["it"]): v["srd35"] for v in LR.tabella_35() if v["tipo"] == "incantesimo"}
+    out: dict = {}
+    for v in LR.tabella_35():
+        if v["tipo"] != "incantesimo":
+            continue
+        # anche le varianti del lessico («Risata incontenibile» senza Tasha)
+        for it in [v["it"], *(v.get("varianti") or "").split("|")]:
+            if it.strip():
+                out.setdefault(LR.norma(it), v["srd35"])
+    return out
+
+
+_GRADO_EN = re.compile(r"^(greater|lesser|mass|improved)\s+(.+)$")
+
+
+def _forma_srd(k: str) -> str:
+    """«greater dispel magic» → «dispel magic greater»: l'SRD scrive «Dispel Magic, Greater»."""
+    m = _GRADO_EN.match(k)
+    return f"{m.group(2)} {m.group(1)}" if m else k
+
+
+def _pezzi_della_lista(testo: str) -> "list[str]":
+    """La lista divisa alle virgole e ai punti e virgola fuori da parentesi tonde e quadre:
+    «dardo incantato* (4 dardi, 1d4+1)» resta un pezzo solo."""
+    pezzi, buf, prof = [], [], 0
+    for ch in testo:
+        if ch in "([":
+            prof += 1
+        elif ch in ")]" and prof:
+            prof -= 1
+        if ch in ",;" and prof == 0:
+            pezzi.append("".join(buf))
+            buf = []
+        else:
+            buf.append(ch)
+    pezzi.append("".join(buf))
+    return pezzi
 
 
 @lru_cache(maxsize=None)
@@ -760,7 +795,7 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
         manuale = set().union(*(dai_manuali.get(c, set()) for c in classe.split("+")))
         scritto = int(m.group(1))
         di_dominio = False
-        for pezzo in re.split(r"[,;]", re.sub(r"\((?:CD|DC)[^)]*\)", "", m.group(2))):
+        for pezzo in _pezzi_della_lista(re.sub(r"\((?:CD|DC)[^)]*\)", "", m.group(2))):
             if re.search(r"\bdomini[oa]\b|\bdomain\b", pezzo, re.I):
                 di_dominio = True
             dominio = di_dominio or bool(re.search(r"\((?:D|d)\)|\bD\b\s*$", pezzo))
@@ -769,6 +804,8 @@ def incantesimi(p: Path) -> "tuple[list[dict], list[dict]]":
             if not k or len(k) < 3 or re.fullmatch(r"[\d+ /]+", k):
                 continue
             k = LR.norma(it[k]) if k in it else k
+            if k not in nomi and _forma_srd(k) in nomi:
+                k = _forma_srd(k)
             base = {"file": VT_rel(p), "riga": i + 1, "verifica": "incantesimi", "incantesimo": nome,
                     "fonte": "prd" if sistema != "dnd35" else
                     "3.5 manuali (PCGen)" if k in manuale else "srd"}
@@ -1804,6 +1841,8 @@ def fatti(p: Path) -> dict:
                 if not k or len(k) < 3 or re.fullmatch(r"[\d+ /]+", k):
                     continue
                 k = LR.norma(it[k]) if k in it else k
+                if k not in nomi and _forma_srd(k) in nomi:
+                    k = _forma_srd(k)
                 della_riga.append({"nome": nome, "canonico": nomi.get(k), "livello": int(m.group("liv")),
                                    "usi": m.group("par") or None, "volte": int(volte.group(1)) if volte else 1,
                                    "riga": i + 1})

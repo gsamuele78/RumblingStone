@@ -189,6 +189,23 @@ class Incantesimi(unittest.TestCase):
         self.assertEqual(viol, [])
         self.assertEqual([x["regola"] for x in nv], ["incantesimo.nome"])
 
+    def test_virgola_dentro_la_parentesi_non_spezza_il_nome(self):
+        """«(1 round, poi Volontà nega)» non diventa un incantesimo «poi Volontà nega)» (2026-11-27)."""
+        self.assertEqual(self._giudica(self.SCHEDA.replace("*blocca persone* (CD 15)",
+                                                           "*blocca persone* (CD 15) (1 round, poi Volontà nega)")), ([], []))
+
+    def test_forma_inglese_greater_si_legge(self):
+        """«greater dispel magic» è «Dispel Magic, Greater» dell'SRD: di 6° per il chierico."""
+        viol, nv = self._giudica(self.SCHEDA.replace("*benedizione*", "*benedizione*, *greater dispel magic*"))
+        self.assertEqual(nv, [])
+        self.assertEqual([(v["regola"], v["atteso"]) for v in viol], [("incantesimo.livello", 6)])
+
+    def test_variante_del_lessico_si_legge(self):
+        """«Risata incontenibile» senza Tasha è una variante del lessico: fuori lista per il chierico."""
+        viol, nv = self._giudica(self.SCHEDA.replace("*aiuto*", "*risata incontenibile*"))
+        self.assertEqual(nv, [])
+        self.assertEqual([v["regola"] for v in viol], ["incantesimo.lista"])
+
     def test_senza_classe_da_nessuna_parte_non_si_giudica(self):
         self.assertEqual(self._giudica(self.SCHEDA.replace("Incantesimi da chierico", "Incantesimi")
                                        .replace("Chierico 5, ", "").replace("*aiuto*", "*palla di fuoco*")), ([], []))
