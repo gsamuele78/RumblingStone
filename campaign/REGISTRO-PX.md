@@ -29,13 +29,13 @@ Hella ha passato la soglia del 14° di 66 PX con la tenda di Zog'tar e i premi
 di storia della sessione 6 (righe 110-111): al tavolo resta di 13° fino allo
 stesso riposo (D90; se dormono nel Cuore della Montagna vale lì, `ARC07-DEF-5` §8).
 
-Due questioni restano aperte al DM, e nessuna cambia il 14° di Hella:
+Le due questioni che restavano al DM sono chiuse, e nessuna cambia il 14° di Hella:
 
-- la quarta guardia (GS 8) e il sacerdote (GS 6) della tenda, che il master
-  conta (`ARC07-DEF-4` §8 A, ≈ 3.650 a testa per la tenda intera) e il DM non
-  ha elencato fra le morti: se ci sono, circa +243 a testa sulla riga 110;
+- la quarta guardia (GS 8) e il sacerdote (GS 6) della tenda non sono morti:
+  valgono le morti dette dal DM il 21/11, e la riga 110 resta com'è
+  `[CANONE — DM 2026-11-27, serata-30-11 n. 15]`;
 - i premi di storia per i nani che gridano il nome di Thorik e per il Seme di
-  Varis dissolto (sessione 5), lasciati fuori «salvo scelta diversa del DM»
+  Varis dissolto (sessione 5) restano fuori, «salvo scelta diversa del DM»
   (`campaign/sessions/2026-11-20_session-6.md`, «XP awarded»).
 
 

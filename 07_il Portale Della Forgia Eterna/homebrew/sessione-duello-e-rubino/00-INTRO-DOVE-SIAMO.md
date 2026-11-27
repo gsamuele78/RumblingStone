@@ -32,13 +32,14 @@ chiude sul filo rosso di `DEF-5` Scena 1.
   nell'orda (stima del DM). Gli hobgoblin salgono con le scale e battono il
   portone con l'ariete. Si combatte sul camminamento, e i nani hanno
   riconosciuto Thorik.
-- **Dove sono**: i PG sul camminamento, vicino al torrione di sinistra, a
-  circa 20 m da quello di destra. Skullcrusher e le due viverne a circa 50 m
+- **Dove sono**: i PG sul camminamento est, vicino al torrione di sinistra,
+  che su M7-B è la torre est, a circa 20 m da quello di destra, la torre nord
+  `[CANONE — DM 2026-11-27, serata-30-11 n. 1]`. Skullcrusher e le due viverne a circa 50 m
   d'altezza sopra il camminamento.
 - **Il drago**: il Vecchio dell'Appendice A.1-bis, con anello, mantello,
   bacchetta e pergamene. *Immagine speculare* non l'ha ancora lanciata.
 - **Le rune di Zeth**: quella da +2 al colpire contro i draghi, per un colpo
-  solo, è sulla balestra nascosta nel torrione ovest. Una runa d'acido è
+  solo, è sulla balestra nascosta nella torre nord `[CANONE — DM 2026-11-27, serata-30-11 n. 1]`<!-- storico --> (fino al 2026-11-27: «nel torrione ovest»)<!-- /storico -->. Una runa d'acido è
   attiva su Durik; l'altra è ancora da attivare.
 - **Hella** ha addosso *protezione dall'energia* (acido).
 - **Il torque di Thorek I** è ancora al collo del re: lo dà lui alla Scena 12.

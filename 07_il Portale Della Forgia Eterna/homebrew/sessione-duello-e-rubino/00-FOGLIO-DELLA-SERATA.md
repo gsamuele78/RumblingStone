@@ -2,7 +2,7 @@
 
 Una pagina sola, da tenere aperta accanto allo schermo. Non aggiunge niente al master: dice dove guardare. `DEF-4` è `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, `DEF-5` è `ARC07-DEF-5-RITORNO-HAMMERFIST.md`.
 
-**Si comincia così.** Leggi il box di «Dove siamo», in testa al volume. Poi tira i danni della deflagrazione di Artemis su Skullcrusher: prima la resistenza agli incantesimi, 22, se al tavolo non è stata tirata; niente immagini, perché *immagine speculare* non c'è ancora (`01-REGIA-SERATA.md` §2). Descrivi il colpo, poi fissa con il tavolo dove sta ognuno: i PG sul camminamento vicino al torrione di sinistra, il torrione di destra a circa 20 m, il drago e le due viverne a circa 50 m d'altezza, gli hobgoblin sulle scale e sul camminamento, l'ariete al portone, il re nel cortile. Poi iniziativa.
+**Si comincia così.** Leggi il box di «Dove siamo», in testa al volume. Poi tira i danni della deflagrazione di Artemis su Skullcrusher: prima la resistenza agli incantesimi, 22, se al tavolo non è stata tirata; niente immagini, perché *immagine speculare* non c'è ancora (`01-REGIA-SERATA.md` §2). Descrivi il colpo, poi fissa con il tavolo dove sta ognuno: i PG sul camminamento est vicino al torrione di sinistra, la torre est di M7-B; la torre nord, con la balestra runica, a circa 20 m `[CANONE — DM 2026-11-27, serata-30-11 n. 1]`; il drago e le due viverne a circa 50 m d'altezza, gli hobgoblin sulle scale e sul camminamento, l'ariete al portone, il re nel cortile. Poi iniziativa. Il drago non ha ancora agito: al suo primo turno la Presenza (Volontà CD 26, Thorik non tira), che si tira prima di risolvere l'attacco, poi il soffio `[CANONE — DM 2026-11-27, serata-30-11 n. 2]` `[CANONE — DM 2026-11-27, serata-30-11 n. 3]`.
 
 **Le scene possibili, nell'ordine**
 

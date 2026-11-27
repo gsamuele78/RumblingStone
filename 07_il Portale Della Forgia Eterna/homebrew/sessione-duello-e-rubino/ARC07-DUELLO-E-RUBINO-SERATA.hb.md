@@ -54,13 +54,14 @@ chiude sul filo rosso di cap. VII Scena 1.
   nell'orda (stima del DM). Gli hobgoblin salgono con le scale e battono il
   portone con l'ariete. Si combatte sul camminamento, e i nani hanno
   riconosciuto Thorik.
-- **Dove sono**: i PG sul camminamento, vicino al torrione di sinistra, a
-  circa 20 m da quello di destra. Skullcrusher e le due viverne a circa 50 m
+- **Dove sono**: i PG sul camminamento est, vicino al torrione di sinistra,
+  che su M7-B è la torre est, a circa 20 m da quello di destra, la torre nord.
+  Skullcrusher e le due viverne a circa 50 m
   d'altezza sopra il camminamento.
 - **Il drago**: il Vecchio dell'Appendice A.1-bis, con anello, mantello,
   bacchetta e pergamene. *Immagine speculare* non l'ha ancora lanciata.
 - **Le rune di Zeth**: quella da +2 al colpire contro i draghi, per un colpo
-  solo, è sulla balestra nascosta nel torrione ovest. Una runa d'acido è
+  solo, è sulla balestra nascosta nella torre nord. Una runa d'acido è
   attiva su Durik; l'altra è ancora da attivare.
 - **Hella** ha addosso *protezione dall'energia* (acido).
 - **Il torque di Thorek I** è ancora al collo del re: lo dà lui alla Scena 12.
@@ -93,7 +94,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 Una pagina sola, da tenere aperta accanto allo schermo. Non aggiunge niente al master: dice dove guardare. cap. IV è cap. IV, cap. VII è cap. VII.
 
-**Si comincia così.** Leggi il box di «Dove siamo», in testa al volume. Poi tira i danni della deflagrazione di Artemis su Skullcrusher: prima la resistenza agli incantesimi, 22, se al tavolo non è stata tirata; niente immagini, perché *immagine speculare* non c'è ancora (cap. I §2). Descrivi il colpo, poi fissa con il tavolo dove sta ognuno: i PG sul camminamento vicino al torrione di sinistra, il torrione di destra a circa 20 m, il drago e le due viverne a circa 50 m d'altezza, gli hobgoblin sulle scale e sul camminamento, l'ariete al portone, il re nel cortile. Poi iniziativa.
+**Si comincia così.** Leggi il box di «Dove siamo», in testa al volume. Poi tira i danni della deflagrazione di Artemis su Skullcrusher: prima la resistenza agli incantesimi, 22, se al tavolo non è stata tirata; niente immagini, perché *immagine speculare* non c'è ancora (cap. I §2). Descrivi il colpo, poi fissa con il tavolo dove sta ognuno: i PG sul camminamento est vicino al torrione di sinistra, la torre est di M7-B; la torre nord, con la balestra runica, a circa 20 m; il drago e le due viverne a circa 50 m d'altezza, gli hobgoblin sulle scale e sul camminamento, l'ariete al portone, il re nel cortile. Poi iniziativa. Il drago non ha ancora agito: al suo primo turno la Presenza (Volontà CD 26, Thorik non tira), che si tira prima di risolvere l'attacco, poi il soffio.
 
 **Le scene possibili, nell'ordine**
 
@@ -282,28 +283,28 @@ cosa chiedere al tavolo, dove il log tace.
 
 | | Com'è | Da chiedere o da fissare |
 |---|---|---|
-| **I PG** | sul camminamento, vicino al torrione di sinistra; il torrione di destra è a circa 20 m | chi vola e chi no, chi è invisibile. Quale dei due torrioni è l'ovest `[INFERRED — Il torrione di destra è quello ovest, dove sta la balestra con la runa?; base: la porta è sul fronte sud («Il Viaggio a 1.000 Anni fa» Scena 10, «Dove sale l'assalto») e chi guarda la piana dal fronte sud ha l'ovest a destra; la distanza di 20 m data al tavolo]` |
+| **I PG** | sul camminamento est, vicino al torrione di sinistra, che su M7-B è la torre est (X18, sopra la postierla); il torrione di destra è la torre nord (S04), a circa 20 m | chi vola e chi no, chi è invisibile. La balestra con la runa sta nella torre più lontana dal camminamento, la torre nord |
 | **Skullcrusher** | a circa 50 m d'altezza sopra il camminamento; il Vecchio di A.1-bis, 337 pf, CA 39, 43 con *armatura magica*, contatto 13 | se *armatura magica* è già addosso (A.1-bis la dà «come al duello») |
 | **Le viverne** | due, con lui, alla stessa quota | se hanno già attaccato: il master le fa entrare dal round 2 |
 | **Gli hobgoblin** | sulle scale e sul camminamento; una parte è passata | quanti ne restano accanto ai PG: il log non lo dice, è un numero tuo |
 | **L'ariete** | batte il portone | — |
 | **Re Thorek I** | nel cortile, alle spalle dei PG, davanti alla porta (cap. IV Scena 11) | i suoi pf, se la prova delle mura è già stata tirata (Scena 10, «Successi su 4») |
 | **Hrodgar e Hald** | sul camminamento est («Il Viaggio a 1.000 Anni fa» Scena 10) | — |
-| **Il round** | la deflagrazione è a segno, i danni no | il round in corso e chi deve ancora agire. `[INFERRED — Il drago ha già fatto il suo primo turno, la Presenza e il soffio, o la deflagrazione è arrivata prima?; base: il log chiude con il drago a 50 m e il colpo a segno, e la runa di Durik e la protezione di Hella sono state attivate «alla vista del drago»]` |
-| **La Presenza** | raggio 72 m, Volontà CD 26; Thorik non tira | se è già stata tirata `[INFERRED — La Presenza è già scattata?; base: SRD, *Frightful Presence*: si attiva quando la creatura attacca, carica o vola sopra; a 50 m sopra il camminamento il drago è nel raggio]` |
+| **Il round** | la deflagrazione è a segno, i danni no | il round in corso e chi deve ancora agire. Il drago non ha ancora fatto il suo primo turno: la lancia di Artemis è arrivata prima, e il suo round 1, la Presenza e poi il soffio, si gioca adesso |
+| **La Presenza** | raggio 72 m, Volontà CD 26; Thorik non tira | per regola è già scattata, ma non si è tirata: si tira al primo turno del drago, quando attacca, prima di risolvere l'attacco `[SRD: Frightful Presence]` |
 | **La prova delle mura** | vale il ramo con Zog'tar morto: nessuna riga «Zog'tar vivo»; il boato del barile resta un successo in meno (Scena 10, «Dalla notte») | se il combattimento sul camminamento ha preso il posto della prova collettiva. `[INFERRED — La prova delle mura si tira ancora, o il combattimento sul camminamento giocato il 20/11 la sostituisce?; base: il log racconta un combattimento sul camminamento e non nomina la via scelta né i successi]` |
 
 **Le risorse note.**
 
 | Cosa | Com'è | Quando conta |
 |---|---|---|
-| **La runa contro i draghi** | +2 al tiro per colpire contro i draghi, **per un colpo solo**, sulla balestra nascosta nel torrione ovest. Regola della casa, non SRD («Il Viaggio a 1.000 Anni fa» Scena 5) | chi la va a prendere: sono 20 m di camminamento con gli hobgoblin in mezzo, o un volo. `[INFERRED — Il dardo della balestra runica supera la RD 10/magia del drago?; base: A.1-ter, «le balestre delle mura, no»; la runa di Zeth è magia, ma il log non dice se rende magico il dardo]` |
+| **La runa contro i draghi** | +2 al tiro per colpire contro i draghi, **per un colpo solo**, sulla balestra nascosta nella torre nord, S04 su M7-B. Regola della casa, non SRD («Il Viaggio a 1.000 Anni fa» Scena 5). Il dardo supera la RD 10/magia, e la runa vale un colpo solo | chi la va a prendere: dalla torre est alla base della torre nord sono circa 21 m in linea d'aria sulla griglia di M7-B (5 quadretti verso ovest, 13 verso nord), 27 m a piedi lungo il camminamento est e quello nord, con gli hobgoblin in mezzo, o un volo. `[INFERRED — La balestra è alla base della torre nord o in cima, 20 m più su?; base: M7-A, «La torre nord»: S04 è la base della torre e della sua scala, che sale di 20 m dentro la pietra fino al gradone di +120]` |
 | **La runa d'acido rimasta** | *resistere all'energia*, acido 20, azione standard per attivarla, dura 70 minuti (cap. IV, la tabella delle risorse) | vale di più su chi non ha già l'acido coperto. Su Hella è sprecata finché dura la sua protezione: *protezione dall'energia* non si somma con *resistere all'energia*, e assorbe per prima finché non è esaurita `[SRD: Protection from Energy]` |
 | **Durik** | la prima runa d'acido è attiva su di lui. Prende +50% dall'acido: con la runa prima il +50%, poi −20 («Il Viaggio a 1.000 Anni fa» §1, Hella) | il soffio: la riga 4-bis della regia dei primi round, Scena 11 |
 | **Hella** | *protezione dall'energia* (acido) addosso: assorbe 12 punti per livello d'incantatore, fino a 120, e poi si scarica `[SRD: Protection from Energy]` | il soffio, 16d4 (in media 40) con Riflessi CD 31, e l'acido impregnante del round dopo |
-| **Gli usi del giorno** | i PG hanno dormito: gli usi giornalieri sono pieni. *Dragondoom* di Aegis Fang 3 al giorno; lo *Scudo del Custode* di Hella 1 al giorno; il Salto Fiammeggiante di Tordek 3 al giorno | cap. IV Scena 11, «Artefatti» e «Chi non vola». La Cintura di Tordek rifiuta; i Bracieri no |
+| **Gli usi del giorno** | i PG hanno dormito: gli usi giornalieri sono pieni. *Dragondoom* di Aegis Fang 3 al giorno; lo *Scudo del Custode* di Hella 1 al giorno; il Salto Fiammeggiante di Tordek 3 al giorno | cap. IV Scena 11, «Artefatti» e «Chi non vola». La Cintura di Tordek rifiuta; i Bracieri no. All'alba Hella non ha chiamato nessuno; Hella ha usato uno [dei semi/Treant] `[INFERRED — «Uno» è un seme della Collana o un Treant?; base: la risposta del DM del 2026-11-27, «ne ha usato uno nella battaglia con Zog'tar»; «Il Viaggio a 1.000 Anni fa» Scena 5, «I Treant», dove ogni Treant si chiama da un seme]` nella battaglia con Zog'tar, ma poi hanno dormito 8 ore: all'alba i semi sono tornati tutti e tre, e le tre cariche della Collana sono intere («Il Viaggio a 1.000 Anni fa» Scena 5, D65) |
 | **Il livello** | il sonno del 372 **non** dà il 14°: si prende al primo riposo dopo la battaglia di Hammerfist («Il Ritorno a Hammerfist» §8, D90) | §7 |
-| **La benedizione dei chierici e le Benedizioni della Sala** | +2 morale al colpire e ai danni per 12 ore dal consiglio; le Benedizioni per 24 ore vissute dalla preghiera («Il riferimento rapido» §0-bis, Scena 4) | `[INFERRED — Dopo la notte di sonno la benedizione dei chierici e le Benedizioni della Sala sono ancora attive?; base: 12 e 24 ore dichiarate dal master, e il log non dice quando è finita la notte]` |
+| **La benedizione dei chierici e le Benedizioni della Sala** | +2 morale al colpire e ai danni per 12 ore dal consiglio; le Benedizioni per 24 ore vissute dalla preghiera («Il riferimento rapido» §0-bis, Scena 4) | **non attive** stasera: i PG hanno dormito, e all'alba sono finite tutte e due |
 | **Il resto dell'inventario** | pozioni, pergamene, bacchette: la tabella della regia della notte, §1 | quello che hanno bevuto o letto il 20/11 lo sanno loro |
 
 **Cosa è stato speso**: il martello runico di
@@ -311,6 +312,11 @@ Balvar, regalato a Mastro Zeth; una runa d'acido, su Durik; la *protezione
 dall'energia* di Hella; i *tentacoli neri di Evard* e le deflagrazioni di
 Artemis all'alba; le pozioni di *volare* del ritorno dal campo. Il corno di
 Grask è rimasto al campo.
+
+**Chi è morto alla tenda**: Zog'tar, Balvar, Grask e tre guardie.
+La quarta guardia e il sacerdote no:
+dove il master li conta fra i morti (cap. IX §7, «La notte del barile», e §8 A,
+la riga della tenda), vale questa riga.
 
 ---
 
@@ -336,14 +342,16 @@ Descrivi il colpo in una frase tua, sul corpo del drago e non sui numeri, poi
 fissa le posizioni (§1) e tira l'iniziativa. Se il tavolo ha già un ordine
 d'iniziativa per il combattimento sul camminamento, tienilo: il drago e le
 viverne entrano dove sono. Il −2 alla prima iniziativa del duello vale solo
-se il gruppo ha tenuto la breccia (Scena 10).
+se il gruppo ha tenuto la breccia (Scena 10). Al primo turno del drago si gioca
+il suo round 1: la Presenza, che si tira prima di risolvere l'attacco, poi il
+soffio (§1, «Il round» e «La Presenza»).
 
 **1 · Le soglie, con Balvar morto.** È la riga che cambia di più stasera.
 Balvar è morto nel fuoco: la Catena regge,
 perché le rune sopravvivono al runaio, ma il drago combatte a **−2** e fugge
 a **metà dei pf**, circa **168** su 337, invece che a un terzo (cap. IV Scena
 11, «La soglia»). E se fugge a metà, l'esito è **FERITO GRAVE** (Scena 11,
-«Le soglie»). `[INFERRED — Con Balvar morto, alla soglia di metà vale ancora la prima paura, il drago fermo in aria per un round e la clausola dei due colpi che lo trattiene un round in più?; base: cap. IV Scena 11, «La soglia», che mette le due regole nella stessa riga senza dire se la seconda sposta anche la prima]`
+«Le soglie»). Con Balvar morto si sposta tutta la soglia: a metà dei pf viene la prima paura, il drago fermo in aria per un round senza attaccare, e la clausola dei due colpi lo trattiene un round in più.
 
 **2 · Il camminamento.** I PG sono sulle mura, non nel cortile: vale la riga
 «Sulle mura» di «Dove sono i PG all'alba» (Scena 11). La prima passata il
@@ -360,8 +368,8 @@ nessun PG lo chiama (Scena 11, «Chi sceglie»).
 
 **3 · Il nome.** Il drago grida il nome di chi morderà al turno dopo, ed è il
 nome che ha sentito. Stamattina i nani hanno gridato «Thorik» verso l'alto.
-`[INFERRED — Il drago usa il nome che i nani hanno gridato dalle mura, oltre a quelli sentiti di notte attraverso il corno?; base: cap. IV Scena 11, «Suona» e «Chi sceglie»: il nome è quello sentito; Ascoltare +31 in A.1-bis; la chiamata del nome è nel log del 20/11]`
-Se sì, è un'eco della sessione 6: il nome che i nani hanno gridato per
+Il drago lo usa: lo ha sentito, con Ascoltare +31 (A.1-bis).
+È un'eco della sessione 6: il nome che i nani hanno gridato per
 rincuorarsi è quello che il drago grida per primo. La sua battuta d'ingresso
 è in «Scheda d'entrata», se al tavolo non l'ha ancora detta.
 
@@ -371,13 +379,18 @@ davanti:
 
 - **la passata**: Attacco in Volo e Virare; a metà passata soffia, grida un
   nome o morde chi ha nominato. Chiude ogni passata a più di 18 m da tutti i
-  PG: in mischia lo si prende solo con un'azione preparata (A.1-bis);
+  PG: in mischia lo si prende solo con un'azione preparata (A.1-bis). Alla
+  prima paura si ferma in aria entro 15 m, sopra il camminamento, perché la
+  paura la sentano: lì Aegis Fang scagliata ci arriva (cap. IV Scena 11,
+  «Momento Aegis Fang»);
 - **gli oggetti**: la bacchetta di *paura* mentre il soffio ricarica, sul
   gruppo più fitto; le pergamene di *dominare persone* solo da fermo, dopo la
   prima paura, mai su Thorik; la *suggestione di massa* sui nani delle corde
   (A.1-bis, «Tattiche»);
 - ***immagine speculare***: il master la dava al corno, prima di partire, e
-  al tavolo non c'è stata. `[INFERRED — Il drago la lancia durante il duello, con un'azione standard al posto di un morso o di un soffio, o la serata va avanti senza?; base: A.1-bis, conosciuti di 2°, 7 al giorno; il log del 20/11 dice solo che non l'ha ancora lanciata]`;
+  al tavolo non c'è stata. La lancia al primo turno in cui non soffia, dal
+  round 2, con l'azione standard al posto della bacchetta
+  `[SRD: Mirror Image]`: 1d4+2 immagini (A.1-bis);
 - **le viverne**: su chi tiene la corda e su chi vola; il veleno è Tempra CD
   17 (A.6). Fuggono quando fugge o muore il drago;
 - **la Catena**: leggerla è un'azione di movimento entro 9 m; il primo colpo a
@@ -445,8 +458,8 @@ l'ha rifiutata, perché la prima frase di Aegis Fang cambia.
 
 **Scena 13, il Rubino** (cap. VI Scena 13). Tre box di fila, senza fermarsi
 per i tiri. Nel secondo box i lampi si adattano al giocato: il generale cade
-nella tenda, ed è vero; gli alberi in marcia valgono solo se i Treant di
-Hella hanno caricato. `[INFERRED — I Treant di Hella sono stati chiamati all'alba, e hanno caricato?; base: cap. VI Scena 13, nota sotto i box; il log del 20/11 non li nomina]` Se no, il lampo è un'altra
+nella tenda, ed è vero; gli alberi in marcia non valgono, perché all'alba
+Hella non ha chiamato nessuno. Il lampo è un'altra
 scelta di Hella: la sua forma d'aquila sopra il campo, per esempio, o la
 *protezione* lanciata alla vista del drago.
 
@@ -526,18 +539,21 @@ sotto, cioè a 104.999.
 
 | Voce | PX a testa | Quando |
 |---|---:|---|
-| Il duello: Skullcrusher Vecchio (GS 17) e le due viverne, EL 17 | **≈ 4.060** | se il duello ha un esito; il master non divide i PX per esito. `[INFERRED — Il vinto sporco vale i PX pieni del duello, o meno?; base: «Il Viaggio a 1.000 Anni fa» §8 A dà ≈ 4.060 senza distinguere l'esito; §6 dice solo che col vinto sporco non si segnano ferite ancestrali]` |
+| Il duello: Skullcrusher Vecchio (GS 17) e le due viverne, EL 17 | **≈ 4.060** | se il duello ha un esito. Col vinto sporco i PX del drago si dimezzano, 1.950 invece di 3.900, e le viverne valgono i loro ≈ 160 solo se le uccidono i PG («Il Viaggio a 1.000 Anni fa» §8 A) |
 | Le Scene 12-13: il Rituale e il Rubino, premio di storia maggiore | **800** | quando si giocano |
-| Le mura, Scena 10 | 600 | `[INFERRED — Il premio delle mura si dà stasera?; base: «Il Viaggio a 1.000 Anni fa» §8 A lo mette fra le scene del beat, e il log della sessione 6 non lo assegna]` |
+| Le mura, Scena 10 | 600 | stasera, se a fine serata le mura reggono: nel log del 20/11 non c'è |
 
-Il conto: 91.066 + 4.060 + 800 = **95.926**, e con le mura **96.526**. Tutti e
-due stanno sotto i 104.999: per Hella stasera non c'è un tetto da applicare.
+Il conto: 91.066 + 4.060 + 800 = **95.926**, e con le mura **96.526**. Col
+vinto sporco: 91.066 + 1.950 + 800 = **93.816**, 93.976 se i PG uccidono le
+viverne, e 600 in più con le mura. Tutti i
+conti stanno sotto i 104.999: per Hella stasera non c'è un tetto da applicare.
 I numeri esatti li dà la tabella dei PX della DMG sul giocato, come nel log
 della sessione 6; i «≈» del master valgono per un gruppo di quattro di 13°.
 
 I PX di cap. VII (1.000 per il ritorno e la Manifestazione, 2.000 per il
 completamento dell'arco) non si danno stasera: la Manifestazione è la Scena
-2, la serata dopo. `[INFERRED — I 1.000 del ritorno si danno tutti alla Scena 2, o una parte va alla Scena 1 giocata stasera?; base: «Il Ritorno a Hammerfist» §8 A li mette in una riga sola, «Ritorno + Manifestazione»]`
+2, la serata dopo, e i 1.000 del ritorno si danno tutti lì, quando il ritorno è
+compiuto («Il Ritorno a Hammerfist» §8 A).
 
 Il registro dei PX lo aggiorna il DM.
 
