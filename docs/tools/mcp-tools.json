@@ -3991,6 +3991,48 @@
       "deterministic": true
     },
     {
+      "name": "eval_componenti",
+      "description": "«Le misure di tutti i componenti sono ancora al loro tetto, e nessuno l'ha abbassato a mano?»\n\nLotto E1 (scelta di Jfs del 2026-11-27): il runner unico delle misure dei componenti sul registro plans/eval/componenti.json, sul modello del registro dei task di lm-eval-harness e OpenAI evals. Ogni voce dichiara componente, set, comando (argv senza shell), metriche (percorso nel JSON d'uscita e verso), tetto e canale di ADR-0099; il tetto che il set scrive già si punta con dal_set e non si copia. Esegue ogni voce, confronta interi e frazioni «a/b» esatte con fractions.Fraction e stampa la tabella componente, metrica, valore, tetto, esito. Cricchetto: un tetto peggiorato rispetto a REF (default origin/main, se esiste) esce 1, salvo la riga di rimessa di raccogli_casi_agenti.py applica nella nota del tetto. Prime voci: instradamento_agenti (giusti, indulgenti, macro-F1 sul test) e instradamento_skill (omissioni, violazioni, conflitti L1). Solo stdlib: scikit-learn lo importa il componente, nel suo processo.",
+      "use_case": "«Le misure di tutti i componenti sono ancora al loro tetto, e nessuno l'ha abbassato a mano?»",
+      "invocation": "python3 scripts/eval_componenti.py [--json] [--solo ID] [--check-registro] [--rispetto-a REF]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "json": {
+            "type": "boolean",
+            "description": "Il rapporto macchina."
+          },
+          "solo": {
+            "type": "string",
+            "description": "Esegue una voce sola, per id."
+          },
+          "check-registro": {
+            "type": "boolean",
+            "description": "Valida la forma del registro (campi, canali, file, tetti) senza eseguire niente."
+          },
+          "rispetto-a": {
+            "type": "string",
+            "description": "Il ref git dei tetti di confronto per il cricchetto; se non esiste il controllo si salta."
+          },
+          "registro": {
+            "type": "string",
+            "description": "Il registro delle voci."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "tutte le metriche al tetto o sopra, nessun tetto peggiorato",
+        "1": "una metrica sotto il tetto, o un tetto peggiorato rispetto a REF",
+        "2": "comando fallito, uscita non JSON o senza il percorso, voce o registro malformati"
+      },
+      "deterministic": true
+    },
+    {
       "name": "fase1",
       "description": "«Sto per toccare questi file: cosa il repo mi sta gia' dicendo, prima che io scriva un rilevatore che se lo inventa?»\n\nL'analisi in sola lettura che precede ogni modifica: mette in fila cio' che il repo gia' sa sul bersaglio — quali norme del registro lo coprono, quali skill apre l'algoritmo a strati, quali dati di stato lo dichiarano (snapshot storico, archivio, DEPRECATO, matrice delle versioni), i 322 nomi propri del Bestiario e le misure di oggi. Una regex nuova viene dopo, mai prima.",
       "use_case": "«Sto per toccare questi file: cosa il repo mi sta gia' dicendo, prima che io scriva un rilevatore che se lo inventa?»",

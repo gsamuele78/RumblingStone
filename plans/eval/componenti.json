@@ -1,0 +1,42 @@
+{
+  "versione": 1,
+  "nota": "Registro unico delle misure dei componenti (lotto E1, ADR-0155), sul modello del registro dei task di lm-eval-harness e di OpenAI evals: ogni voce dichiara il comando che misura (argv, senza shell; {python} è l'interprete che esegue il runner, {set} il percorso del set), il set, le metriche (percorso nel JSON d'uscita del comando e verso: «alto» se più alto è meglio, «basso» se più basso è meglio), il tetto e il canale di ADR-0099. Un tetto che vive già nel set non si copia qui: la voce lo punta con {\"dal_set\": \"percorso\"}, e il runner lo legge da lì. Il tetto in chiaro serve solo quando il set non lo scrive. Lo esegue scripts/eval_componenti.py; un tetto peggiorato rispetto a main fa uscire 1.",
+  "componenti": [
+    {
+      "id": "instradamento_agenti",
+      "componente": "scripts/instradamento_agenti.py",
+      "set": "plans/instradamento/agenti-oro.json",
+      "comando": ["{python}", "scripts/instradamento_agenti.py", "--eval", "--json", "--oro", "{set}"],
+      "metriche": {
+        "giusti": {"percorso": "test.giusti", "verso": "alto"},
+        "giusti_indulgenti": {"percorso": "test.giusti_indulgenti", "verso": "alto"},
+        "macro_f1": {"percorso": "test.macro_f1.frazione", "verso": "alto"}
+      },
+      "tetto": {
+        "giusti": {"dal_set": "tetto.giusti"},
+        "giusti_indulgenti": {"dal_set": "tetto.giusti_indulgenti"},
+        "macro_f1": {"dal_set": "tetto.macro_f1"}
+      },
+      "canale": "testing",
+      "adr": ["ADR-0154"]
+    },
+    {
+      "id": "instradamento_skill",
+      "componente": "scripts/instradamento_skill.py",
+      "set": "plans/instradamento/casi.json",
+      "comando": ["{python}", "scripts/instradamento_skill.py", "--json", "--casi", "{set}"],
+      "metriche": {
+        "omissioni": {"percorso": "omesse", "verso": "basso"},
+        "violazioni": {"percorso": "violazioni", "verso": "basso"},
+        "conflitti_l1": {"percorso": "conflitti_l1", "verso": "basso"}
+      },
+      "tetto": {
+        "omissioni": {"dal_set": "tetto_omissioni"},
+        "violazioni": {"dal_set": "tetto_violazioni"},
+        "conflitti_l1": 0
+      },
+      "canale": "stable",
+      "adr": ["ADR-0058", "ADR-0154"]
+    }
+  ]
+}

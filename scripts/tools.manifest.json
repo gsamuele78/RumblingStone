@@ -9955,6 +9955,125 @@
       ]
     },
     {
+      "id": "eval_componenti",
+      "path": "scripts/eval_componenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/eval_componenti.py [--json] [--solo ID] [--check-registro] [--rispetto-a REF]",
+      "summary": "Lotto E1 (scelta di Jfs del 2026-11-27): il runner unico delle misure dei componenti sul registro plans/eval/componenti.json, sul modello del registro dei task di lm-eval-harness e OpenAI evals. Ogni voce dichiara componente, set, comando (argv senza shell), metriche (percorso nel JSON d'uscita e verso), tetto e canale di ADR-0099; il tetto che il set scrive già si punta con dal_set e non si copia. Esegue ogni voce, confronta interi e frazioni «a/b» esatte con fractions.Fraction e stampa la tabella componente, metrica, valore, tetto, esito. Cricchetto: un tetto peggiorato rispetto a REF (default origin/main, se esiste) esce 1, salvo la riga di rimessa di raccogli_casi_agenti.py applica nella nota del tetto. Prime voci: instradamento_agenti (giusti, indulgenti, macro-F1 sul test) e instradamento_skill (omissioni, violazioni, conflitti L1). Solo stdlib: scikit-learn lo importa il componente, nel suo processo.",
+      "use_case": "«Le misure di tutti i componenti sono ancora al loro tetto, e nessuno l'ha abbassato a mano?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "external_deps": [
+        "scikit-learn"
+      ],
+      "args": [
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il rapporto macchina."
+        },
+        {
+          "name": "--solo",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esegue una voce sola, per id."
+        },
+        {
+          "name": "--check-registro",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Valida la forma del registro (campi, canali, file, tetti) senza eseguire niente."
+        },
+        {
+          "name": "--rispetto-a",
+          "type": "str",
+          "required": false,
+          "default": "origin/main",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il ref git dei tetti di confronto per il cricchetto; se non esiste il controllo si salta."
+        },
+        {
+          "name": "--registro",
+          "type": "path",
+          "required": false,
+          "default": "plans/eval/componenti.json",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il registro delle voci."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/eval/componenti.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/instradamento/agenti-oro.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/instradamento/casi.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "json",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "tutte le metriche al tetto o sopra, nessun tetto peggiorato",
+        "1": "una metrica sotto il tetto, o un tetto peggiorato rispetto a REF",
+        "2": "comando fallito, uscita non JSON o senza il percorso, voce o registro malformati"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "le voci di oggi sono deterministiche (interi e frazioni, niente bootstrap); il tempo per voce nel JSON no"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/eval_componenti.py --check-registro",
+      "tests": [
+        "scripts/tests/test_eval_componenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md",
+        "plans/adr/ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md"
+      ]
+    },
+    {
       "id": "eco_decisioni",
       "path": "scripts/eco_decisioni.py",
       "category": "G-orchestration-governance",
