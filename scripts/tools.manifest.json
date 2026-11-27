@@ -8929,6 +8929,161 @@
       "idempotent": true
     },
     {
+      "id": "lavoro_in_corso",
+      "path": "scripts/lavoro_in_corso.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/lavoro_in_corso.py [--fetch] [--offline] [--stdout|--json] | --check",
+      "summary": "L'istantanea dal vivo del lavoro in sviluppo fuori da main, complementare a MEMORIA.md (che resta il cancello deterministico di ciò che è su main). Legge il registro curato plans/lavoro-in-corso.json (filoni con thread, PR, rami, cartelle condivise, che cosa aspettano, il passo dopo), le PR aperte dalla REST di GitHub o da --pr-json (formato REST o gh pr list --json), i rami di origin e le cartelle di primo livello di /mnt/project-files (solo nome, data e primo titolo del LEGGIMI). Attacca una PR a un filone per numero, ramo o thread=cmsg_… nel corpo; segnala PR, rami claude/* recenti e cartelle senza filone, PR del registro non più aperte, PR ferme da oltre 30 giorni e filoni non aggiornati da 14. Conta anche i canali di ADR-0099 (stable, testing, unstable…) dalle tabelle di §2 di plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md, scritte a mano fino al lotto P1, e il campo facoltativo canale dei filoni. Scrive plans/LAVORO-IN-CORSO.md. --check valida solo il registro, offline.",
+      "use_case": "«Che lavoro c'è in sviluppo, dove sta (PR, rami, cartelle dei thread) e che cosa aspetta me?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Valida solo il registro, offline e deterministico; esce 1 sugli errori."
+        },
+        {
+          "name": "--pr-json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "PR aperte da file (REST /pulls o gh pr list --json number,title,headRefName,isDraft,updatedAt,url,body) invece della rete."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Niente rete: le PR non si leggono e la pagina lo dice."
+        },
+        {
+          "name": "--fetch",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Prima scarica i rami di origin (rete)."
+        },
+        {
+          "name": "--mnt",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La cartella condivisa dei thread (default /mnt/project-files se esiste)."
+        },
+        {
+          "name": "--giorni",
+          "type": "int",
+          "required": false,
+          "default": 14,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Finestra di rami e cartelle ed età massima di un filone."
+        },
+        {
+          "name": "--stdout",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La pagina a video, senza scrivere il file."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il rapporto in JSON, senza scrivere il file."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/lavoro-in-corso.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/contenuti-nei-rami.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "/mnt/project-files/*/",
+          "kind": "directory",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/LAVORO-IN-CORSO.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "<stdout>",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "pagina scritta (anche con la rete giù: lo dice la pagina) o registro valido (--check)",
+        "1": "registro illeggibile o malformato",
+        "2": "uso errato"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": "--ora",
+        "notes": "La pagina porta la data UTC e dipende da PR aperte, rami del clone e cartelle della macchina: non è un cancello di CI. --check invece è deterministico e offline."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "Scrive plans/LAVORO-IN-CORSO.md (non canone, rigenerabile) salvo con --stdout, --json o --check. Rete: GET della REST /pulls di GitHub (token facoltativo da GITHUB_TOKEN o GH_TOKEN) salvo con --offline o --pr-json, e git fetch con --fetch."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/lavoro_in_corso.py --check",
+      "tests": [
+        "scripts/tests/test_lavoro_in_corso.py"
+      ],
+      "docs": []
+    },
+    {
       "id": "gruppo_nuovo",
       "path": "scripts/gruppo_nuovo.py",
       "category": "G-orchestration-governance",
@@ -14822,6 +14977,153 @@
       "docs": [
         "plans/adr/ADR-0146-le-skill-di-prosa-si-caricano-per-vincolo.md",
         "plans/adr/ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md"
+      ]
+    },
+    {
+      "id": "raccogli_casi_agenti",
+      "path": "scripts/raccogli_casi_agenti.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/raccogli_casi_agenti.py proponi IN.json --coda DIR | cieco DIR/AAAA-Www.json | annota DIR/AAAA-Www.json ANNOTAZIONI.tsv | applica DIR/AAAA-Www.json SCELTE.tsv | --check",
+      "summary": "ADR-0154, scelta di Jfs del 2026-11-27: ogni thread nuovo porta un caso al set d'oro degli agenti, e Jfs ne conferma l'etichetta una volta a settimana. «proponi» legge i messaggi esportati dalla routine del lunedì, scarta i duplicati (stesso id o stesso testo normalizzato, nel set o in coda) e i testi con segreti, email o percorsi con un nome utente, etichetta ogni caso con la predizione dell'hook (instradamento_agenti.predici) come proposta e scrive DIR/AAAA-Www.json e DIR/CARD.md, una card per caso con la consigliata, le alternative e la catena di ognuna. «applica» porta nel set i casi confermati in SCELTE.tsv, con lo split per hash sha256 dell'id (50/50 dev/test, stabile come in TFDS e Hugging Face), rimette il tetto con l'hook invariato e stampa la misura prima e dopo. --check valida la forma del set (campi, split, etichette, duplicati, testo non vuoto, nessun dato da non pubblicare). «cieco» e «annota» danno la consigliata da un annotatore che non vede la proposta dell'hook. La CI non legge i thread: lo lancia la routine dalla shell, perché la coda e i messaggi esportati stanno in /mnt/project-files/instradamento-coda/, fuori dal repo, e contengono prompt che nel repo non vanno. Il server MCP rifiuta i percorsi fuori dal repo e gli strumenti che scrivono: da lì la raccolta non si lancia.",
+      "use_case": "«È lunedì: quali messaggi dei thread nuovi entrano nel set d'oro degli agenti, con che etichetta da confermare, e com'è cambiata la misura dopo le mie scelte?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "scikit-learn",
+        "scipy"
+      ],
+      "args": [
+        {
+          "name": "proponi|cieco|annota|applica",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": [
+            "proponi",
+            "cieco",
+            "annota",
+            "applica"
+          ],
+          "repeatable": false,
+          "desc": "proponi = le proposte della settimana dai messaggi esportati; cieco = id e testo per l'annotatore cieco, senza la proposta; annota = le sue etichette come consigliate; applica = i casi confermati nel set d'oro, con il tetto rimesso."
+        },
+        {
+          "name": "ingresso",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con proponi: IN.json, elenco di {data, fonte, tipo, testo, id_messaggio}."
+        },
+        {
+          "name": "--coda",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con proponi: la cartella della coda, dove vanno AAAA-Www.json e CARD.md."
+        },
+        {
+          "name": "settimana",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con applica: il file DIR/AAAA-Www.json della settimana."
+        },
+        {
+          "name": "scelte",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con applica: SCELTE.tsv, colonne id_messaggio, atteso, accettabili (virgole), azione tieni|togli."
+        },
+        {
+          "name": "--oggi",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La data di oggi AAAA-MM-GG: sceglie la settimana e va nella nota del tetto."
+        },
+        {
+          "name": "--oro",
+          "type": "path",
+          "required": false,
+          "default": "plans/instradamento/agenti-oro.json",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il set d'oro."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La forma del set d'oro: exit 1 se un caso è scritto male."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/instradamento/agenti-oro.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "skills/*/SKILL.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/instradamento/agenti-oro.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check: set non in forma; applica: scelte che non tornano, niente scritto",
+        "2": "ingresso malformato o nessun sottocomando"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "split per hash sha256 dell'id; --oggi fissa la settimana"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive plans/instradamento/agenti-oro.json solo con applica; proponi scrive nella cartella della coda, fuori dal repo; --check è sola lettura."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/raccogli_casi_agenti.py --check",
+      "tests": [
+        "scripts/tests/test_raccogli_casi_agenti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0154-l-instradamento-degli-agenti-si-misura-su-messaggi-veri.md",
+        "plans/PIANO-MISURA-AGENTI-E-AUTOMATISMI.md"
       ]
     },
     {
