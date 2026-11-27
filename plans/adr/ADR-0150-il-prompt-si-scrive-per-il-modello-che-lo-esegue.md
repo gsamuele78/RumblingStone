@@ -140,6 +140,26 @@ quella che il DM ha scelto. Due lezioni per P1-P9: la geometria che conta
 esplicito, e il misuratore ha fermato tre negazioni e due chiuse mancanti
 prima che girassero.
 
+### Il prompt di Gemini con l'immagine di Gemini come guida (27/11)
+
+Il DM ha chiesto di dare a FLUX sia il prompt usato per Gemini (quello di
+`PROMPT-RITRATTI-E-TAVOLE.md`, l'unico file di prompt del Drappo: non ce n'è
+un altro nel repo, nella memoria storica o nelle cartelle condivise) sia
+l'immagine di Gemini come riferimento, e di farne lo standard se la misura
+dice che va meglio. Il grafo aggiunge a klein l'immagine come
+`ReferenceLatent` (scala a 1 megapixel, codifica VAE, aggancio al
+condizionamento).
+
+La misura è stata scritta prima di guardare: otto requisiti per tavola, presi
+dal giudizio del DM e dal confronto dettaglio per dettaglio con Gemini.
+Seme 0, su CPU: 22 su 24 con l'immagine guida, 18 su 24 con la sola
+didascalia v5. Vince l'immagine guida, con tre limiti scritti: un seme solo;
+ha contato chi ha scritto i prompt; klein con il riferimento ricopia quasi
+tale e quale Gemini, quindi la tecnica serve a rifare un'immagine che c'è
+già, non a farne una nuova. Su CPU costa circa 25 minuti a immagine invece
+di 8-10. Il conto è in
+`/mnt/project-files/drappo-flux-kaggle-2026-11-27/MISURA-DICHIARATA.md`.
+
 La lezione per P1-P9: klein prende alla lettera anche gli aggettivi
 forti, e il danno va descritto per causa e materia (calli, screpolature,
 resina), non per gravità.
