@@ -148,17 +148,21 @@ Giorno 42  Assedio, Riti & Avatar, Mythal & finale (Phase 1-4).
 > **Confronto con v1 (deprecata):** la v1 prevedeva 4 lettere consegnate da Tempestas. La v2 distribuisce gli hook in **fonti diverse e plausibili**, riducendo Tempestas alla **sua reale funzione** (intel agent + lettera Brenna).
 
 > **↩ Hook condizionale — Slot-dono della Collana (T9, dal ramo del rifiuto
-> P3B)**: **solo se** al rituale di resurrezione di Hella il party ha scelto
-> il **rifiuto totale** (nessun dono concesso), Hella torna in vita con la
-> **Collana dei Semi Eterni a 3 slot-dono vuoti**. Questi slot diventano
-> **3 quest personali opzionali** in ARC-09 — *un atto di sacrificio per
-> slot* — che riusano poteri già canonici (vedi sinergie future F1-F4,
-> canone dal 2026-09-25, in `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md`). Innesti
-> naturali: il **rito druidico di Saraah** (Giorno 25) e il **Cerchio del
-> Sacred Forest** (P1). Se il rituale non è stato giocato o i doni sono stati
-> concessi, questo hook **non esiste** (Collana già completa). Fonte:
-> `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`
-> §2-BIS «Il ramo del rifiuto» → *Tabella echi*, riga «Rifiuto totale».
+> P3B; Doni v4-bis, DM 2026-09-12)**: **per ogni PG** che al rituale di
+> resurrezione di Hella ha **rifiutato** il suo dono, il seme corrispondente
+> della **Collana dei Semi Eterni** resta dormiente: niente Scudo del Custode
+> se ha rifiutato Thorik, niente Pelle di Adamantio se Tordek, niente Rovo
+> Eldritch se Artemis. Ogni seme dormiente diventa **una quest personale
+> opzionale** in ARC-09 per quel PG, *un atto di sacrificio per seme*; quando
+> il seme si colma, **il dono si attiva all'indietro**. Con il **rifiuto
+> totale** le quest sono tre. Riusano poteri già canonici (vedi sinergie
+> future F1-F4, canone dal 2026-09-25, in
+> `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md`). Innesti naturali: il **rito
+> druidico di Saraah** (Giorno 25) e il **Cerchio del Sacred Forest** (P1).
+> Se il rituale non è stato giocato o tutti i doni sono stati concessi, questo
+> hook **non esiste** (Collana già completa). Fonte: `07_il Portale Della
+> Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md` §5, «Il rifiuto — e cosa
+> succede alla Collana».
 
 ---
 
@@ -341,6 +345,6 @@ Sintesi rapida per i 4 PG:
 - **Palio di Channathgate (P2D) arc:** HUB in `Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-INTEGRAZIONE.md` (opzionale, parallelo al Torneo, Day 27-36; il Drappellone = Matrice del Mythal alimenta la Fase 4; muove il voto del Consiglio di Rethmar)
 - **Torre Invisibile (P2A) arc:** `Arco-Post-Hammerfist-P2A-Torre-PARTE*.md`
 - **Ghostlord arc files:** `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-TESTO.md`
-- **Ramo del rifiuto P3B (echi del rituale Hella → slot-dono Collana):** `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md` §2-BIS
+- **Ramo del rifiuto P3B (echi del rituale Hella → slot-dono Collana):** `07_il Portale Della Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md` §5
 - **Sinergie future Collana (F1-F4, canone dal 2026-09-25):** `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md`
 - **Stato campagna:** `campaign/state.md`

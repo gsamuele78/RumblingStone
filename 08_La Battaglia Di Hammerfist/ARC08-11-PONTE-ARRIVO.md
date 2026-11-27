@@ -21,7 +21,8 @@
 
 La resurrezione fisica di Hella avviene **tra** Forgia Eterna e
 Hammerfist (D8, ARC-07 P3B). Master: `07_il Portale Della Forgia
-Eterna/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`. **Non
+Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md` (il vecchio master P3B è in
+`_ARCHIVIO/`). **Non
 duplicare qui.**
 
 **Stato canonico in uscita** (fonte stabile: `state.md` §1/§6, D8):
