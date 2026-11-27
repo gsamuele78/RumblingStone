@@ -8,6 +8,14 @@
 >
 > **Strumento**: `python3 scripts/misura_craft.py [--densita|--copertura|--mancanti]`
 > **Decisione**: [ADR-0055](adr/ADR-0055-il-mestiere-si-misura-per-congegni.md)
+>
+> **Stato (2026-11-27)**: 🟡 **~92%**. Dei 12 lotti, 11 sono fatti, superati
+> o spostati, con la card di Jfs del 27/11 voce per voce: fatti S4, S4-bis,
+> P1 e S7; superati S0a, S0b, S1, S2, P2 e P3; P4 passa a
+> [MARCATURA](PIANO-MARCATURA-DEGLI-INCONTRI.md) M2.6; S5 e S6 erano già
+> passati a MASTER-DEF. Resta **S3 sul solo DEF-5**, ripreso. Verifica su
+> `main` `21906369`. Dal 2026-11-20 la scelta del DM è «niente cancelli di
+> prosa nuovi» (ADR-0146): è il motivo per cui il seguito di S0b non si fa.
 
 ---
 
@@ -15,7 +23,9 @@
 
 **Quello che non so, e che cambia il piano se la risposta è diversa:**
 
-1. **Quali parti sono ancora riscrivibili.** DEF-1 è 🟡 *in corso al tavolo*. Un
+1. **Quali parti sono ancora riscrivibili.** DEF-1 è 🟡 *in corso al tavolo*
+   *(2026-11-27: dato superato, DEF-1 è giocato; la D3 del 2026-09-30 tiene
+   i lotti su di lui additivi)*. Un
    documento che i giocatori stanno vivendo si tocca con criteri diversi da uno
    non ancora giocato. **Assunzione**: i lotti su DEF-1 restano **additivi**
    (si aggiungono sidebar, non si riscrive prosa già letta).
@@ -408,7 +418,8 @@ per numero nella colonna «qualità». Conseguenze qui:
 - S1-S3 e S4-bis, quando toccano DEF-1, DEF-2 o DEF-3, aspettano che F4 li
   abbia convertiti nella forma (titoli `### SCENA`, contratto, componenti):
   aggiungere una sidebar a un master che poi si riordina vuol dire scriverla
-  due volte.
+  due volte. *(2026-11-27: F4 di LETTORE è chiuso dal 2026-10-15, e
+  quest'attesa non c'è più.)*
 
 ### Onda 0 — il cancello, prima della prosa *(nuova, da §1.3)*
 
@@ -418,8 +429,8 @@ proprio perché nessuno li guardava.
 
 | | Lotto | Cosa |
 |---|---|---|
-| ⬜ | **S0a · `validate_modules` conti i box, non le parole** | oggi `len(re.findall("[Rr]ead-aloud"))` ≥ 5 basta: DEF-5 ha **zero box** e passa. Si conta `box_read_aloud()`, e si applicano le soglie di `read-aloud-adulti.md` (≤12 righe, un nome proprio, niente parentesi) come **avvisi** al primo giro |
-| ⬜ | **S0b · il lint esca dai 5 DEF** | ARC-08, ARC-09, Palio e Abbazia — **96 file su 100** — non sono mai stati guardati. Prima in sola lettura, per misurare quanto verrebbe rosso, **poi** si sceglie la soglia |
+| 🔀 | **S0a · `validate_modules` conti i box, non le parole** *(superato il 2026-11-27: le soglie dei box sono norme pesate di `punteggio_mqm` su 600 documenti, ADR-0059; `cricchetto_prosa.py` blocca ogni peggioramento sui file di gioco cambiati, ADR-0146; `copertura_scene` C1 chiede un box per scena, e DEF-5 ne ha 9)* | oggi `len(re.findall("[Rr]ead-aloud"))` ≥ 5 basta: DEF-5 ha **zero box** e passa. Si conta `box_read_aloud()`, e si applicano le soglie di `read-aloud-adulti.md` (≤12 righe, un nome proprio, niente parentesi) come **avvisi** al primo giro |
+| 🔀 | **S0b · il lint esca dai 5 DEF** *(superato il 2026-11-27: `punteggio_mqm` e `cricchetto_prosa` guardano già oltre i master; il seguito, «poi si sceglie la soglia», sarebbe un cancello di prosa nuovo, che il DM ha escluso il 2026-11-20; MS-0028: 17 misure non predicono il voto cieco)* | ARC-08, ARC-09, Palio e Abbazia — **96 file su 100** — non sono mai stati guardati. Prima in sola lettura, per misurare quanto verrebbe rosso, **poi** si sceglie la soglia |
 
 ⚠️ **Il rischio di S0b, dichiarato**: accendere il lint su 96 file mai
 controllati produrrà centinaia di rilievi. Per questo il lotto **misura
@@ -430,16 +441,16 @@ prima e blocca poi**, ed è l'errore che il repo ha già evitato una volta
 
 | | Lotto | Cosa | Perché prima |
 |---|---|---|---|
-| ⬜ | **S1 · La scalatura che non c'è** | sidebar «Scalare lo scontro» ai boss di ARC-08 e ARC-09 (oggi **zero** in 71 file) | è una sidebar **obbligatoria** dello standard, e senza il DM improvvisa il bilanciamento |
-| ⬜ | **S2 · Gli orologi di DEF-3 e DEF-4** | DEF-4 ha **1** menzione, DEF-3 ne ha 3; i banchi 31 e 41 | è il congegno che regge la tensione: la sua assenza si sente **subito** |
-| ⬜ | **S3 · Le vie non combattive dei DEF** | DEF-1, DEF-2, DEF-3, DEF-5 sono a **zero**; lo standard chiede **≥2 per scontro** | un tavolo che vuole parlare oggi non trova niente di scritto |
+| 🔀 | **S1 · La scalatura che non c'è** *(superato il 2026-11-27: assorbito da MASTER-DEF §1, «i master nascono con lei»; il rilevatore è `domande_developer` D10. ARC08-DEF-1 ha 1 scalatura, DEF-2 ne ha 3)* | sidebar «Scalare lo scontro» ai boss di ARC-08 e ARC-09 (oggi **zero** in 71 file) | è una sidebar **obbligatoria** dello standard, e senza il DM improvvisa il bilanciamento |
+| 🔀 | **S2 · Gli orologi di DEF-3 e DEF-4** *(superato il 2026-11-27: D6 di AVVENTURE-COMMUNITY fa di fronti e orologi un canone da ARC-08 in poi, e «ARC-07 resta com'è»; DEF-3 è giocato)* | DEF-4 ha **1** menzione, DEF-3 ne ha 3; i banchi 31 e 41 | è il congegno che regge la tensione: la sua assenza si sente **subito** |
+| ⬜ | **S3 · Le vie non combattive dei DEF** *(2026-11-27: ripreso **solo su DEF-5**, non giocato, dentro il ciclo del master: 2 scontri con una via sola, ne servono 2. DEF-2 e DEF-3 non hanno scene di scontro, DEF-1 è giocato; `misura_craft` dà 1 via in DEF-1, 2, 3 e 5, 7 in DEF-4)* | DEF-1, DEF-2, DEF-3, DEF-5 sono a **zero**; lo standard chiede **≥2 per scontro** | un tavolo che vuole parlare oggi non trova niente di scritto |
 
 ### Onda B — la prosa (dove l'assenza è misurata, non un'impressione)
 
 | | Lotto | Cosa |
 |---|---|---|
-| ⬜ | **S4 · I read-aloud di DEF-4 e DEF-5** | DEF-4 ne ha 5 in 955 righe, DEF-5 **zero** in 513. Banco: il Palio (41) e ARC-08 (90). ⚠️ Si scrivono **al metro di `read-aloud-adulti.md`**, non a occhio: ≤12 righe, un nome proprio nuovo, niente parentesi |
-| ⬜ | **S4-bis · ADR-0014 esce da DEF-1** | la regia di round, la chiusura su «Che fate?» e il dialogo `**NOME (registro):**` esistono **solo** in DEF-1 (e 3 battute sparse). Sono prescritti per **ogni** modulo dal 2026-07-30 |
+| ✅ | **S4 · I read-aloud di DEF-4 e DEF-5** *(fatto: DEF-4 ne ha 39, DEF-5 9, contro il criterio «DEF-4 ≥ 10, ogni bersaglio > 0»; F4 di LETTORE chiuso il 2026-10-15 e la riscrittura di ARC-07 col voto cieco, MS-0018 e MS-0020)* | DEF-4 ne ha 5 in 955 righe, DEF-5 **zero** in 513. Banco: il Palio (41) e ARC-08 (90). ⚠️ Si scrivono **al metro di `read-aloud-adulti.md`**, non a occhio: ≤12 righe, un nome proprio nuovo, niente parentesi |
+| ✅ | **S4-bis · ADR-0014 esce da DEF-1** *(fatto per ARC-07: dialogo, «Che fate?» e regia di round sono 5/2/0 in DEF-2, 7/3/4 in DEF-3, 8/11/4 in DEF-4, 2/4/2 in DEF-5; ARC-08 e ARC-09 sono di MASTER-DEF)* | la regia di round, la chiusura su «Che fate?» e il dialogo `**NOME (registro):**` esistono **solo** in DEF-1 (e 3 battute sparse). Sono prescritti per **ogni** modulo dal 2026-07-30 |
 | ➡️ | **S5 · La Torre parla** → PIANO-MASTER-DEF, `ARC09-DEF-03` (D2, 2026-09-27) | 12 file, **zero dialogo**. Zalkatar, i grimlock ceremorfi, i drow psionici: nessuno ha una battuta |
 | ➡️ | **S6 · I read-aloud della Battaglia Finale** → PIANO-MASTER-DEF, `ARC09-DEF-11/12` (D2, 2026-09-27) | 16 file, zero letture. È il climax della campagna |
 
@@ -447,10 +458,10 @@ prima e blocca poi**, ed è l'errore che il repo ha già evitato una volta
 
 | | Lotto | Cosa |
 |---|---|---|
-| ⬜ | **P1 · Il validatore dei rimandi `§`** | 317 rimandi, zero controllo. Deve capire i rimandi **fra file**: è il motivo per cui non porto un conteggio di rotti in questo piano. Prima si scrive, poi si misura |
-| ⬜ | **P2 · Budget di parole** | il repo non conta le parole da nessuna parte. Un tetto per § — come il budget PX — e `misura_craft` che lo riporta |
-| ⬜ | **P3 · ADR-0018 esce da ARC-08** | i sette elementi dell'apparato esistono in **un arco su dodici**. Il più utile al tavolo e il più economico: la **guida alla pronuncia** e il **foglio del cast** si estraggono dai dati che ci sono già |
-| 🔵 | **P4 · «Adventure at a glance»** | una tabella per modulo: ogni incontro, EL, XP, dove sta. Generabile — gated su P2, perché condivide il posto in pagina |
+| ✅ | **P1 · Il validatore dei rimandi `§`** *(fatto: `verifica_rimandi.py`, `5da4d18de` del 2026-11-20, ADR-0148, in testing fino al 2026-12-04; 1.787 rimandi, 0 violazioni, 742 non verificabili)* | 317 rimandi, zero controllo. Deve capire i rimandi **fra file**: è il motivo per cui non porto un conteggio di rotti in questo piano. Prima si scrive, poi si misura |
+| 🔀 | **P2 · Budget di parole** *(superato, scartato con ragione: ADR-0078 «Alternative scartate» e RICERCA-STANDARD-PROSA, un numero importato da un altro formato)* | il repo non conta le parole da nessuna parte. Un tetto per § — come il budget PX — e `misura_craft` che lo riporta |
+| 🔀 | **P3 · ADR-0018 esce da ARC-08** *(superato: `componenti.py --apparato`, ADR-0074, genera il foglio del cast per i 7 master; la pronuncia sta nella cassetta di ARC-07; ARC-09 lo avrà con i suoi master)* | i sette elementi dell'apparato esistono in **un arco su dodici**. Il più utile al tavolo e il più economico: la **guida alla pronuncia** e il **foglio del cast** si estraggono dai dati che ci sono già |
+| ➡️ | **P4 · «Adventure at a glance»** → [MARCATURA](PIANO-MARCATURA-DEGLI-INCONTRI.md) M2.6 *(2026-11-27: il vero prerequisito è EL, CR e PX marcati, poi `componenti --apparato` genera la tabella)* | una tabella per modulo: ogni incontro, EL, XP, dove sta. Generabile — gated su P2, perché condivide il posto in pagina |
 
 ### Onda C — i due congegni dell'Abbazia *(gated sul DM, §3.1)*
 

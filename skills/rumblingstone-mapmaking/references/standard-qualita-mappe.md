@@ -79,8 +79,14 @@ funzione disegna un luogo in cui poi si combatte.
 4. **La tattica.** Solo ora le creature: dove partono, in quanti round si
    toccano, quali coperture e linee di vista ci sono, dove sta la strozzatura e
    se è voluta. Le creature Grandi e Enormi hanno `@taglia` e il loro ingombro
-   libero. Poi il collaudo, la misura di qualità, il render, il PNG e il
-   collaudatore a freddo, come in [collaudo-mappe.md](collaudo-mappe.md).
+   libero. Almeno un punto di riferimento ha un nome che i giocatori dicono al
+   tavolo («il carro bruciato», «l'albero fulminato»), per dire dove vanno
+   senza contare quadretti: nessuno strumento lo misura, si controlla a vista.
+   Si scrive anche come si perde, e mai con una sconfitta gratuita del gruppo:
+   perdere costa qualcosa (l'obiettivo, un alleato, la posizione nello scontro
+   dopo) e la storia continua. Poi il collaudo, la misura di qualità, il
+   render, il PNG e il collaudatore a freddo, come in
+   [collaudo-mappe.md](collaudo-mappe.md).
 
 ## Le regole misurabili
 

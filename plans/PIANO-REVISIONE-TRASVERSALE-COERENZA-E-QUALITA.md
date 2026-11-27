@@ -1,5 +1,16 @@
 # PIANO DI REVISIONE TRASVERSALE — Rituale P3B · Mappe · Artefatti
 
+> **Stato (2026-11-27)**: 🟡 **~98%**. T1-T10 chiusi; T8 e T9 chiusi come
+> superati con la card di Jfs del 27/11, l'SVG dei 16 narrativi di ARC-09
+> passa ai master ARC09-DEF (§5). Restano due voci: **T9-bis**, i Doni di
+> Hella vecchi in quattro file (in corso nella #539), e il residuo di
+> **T10-h**, le immagini di Aegis Fang (stadi 0 e 1) e dei Bracieri dormienti,
+> che aspettano la commissione del DM insieme a P12 di STATO-E-ORDINE §0.
+> Verifica su `main` `21906369`. Le regole di §0 parlano del tavolo del 03/07
+> («OGGI: ARC-07 P4 in corso»): da allora il P3B è stato giocato il 25/09, e
+> il giocato sta sul ramo di gruppo `campaign-group-rumblingstone` (ADR-0007,
+> ADR-0090).
+
 > **Versione**: v1 (2026-07-03) — nasce dalle 3 domande del DM sui piani
 > ARC-07/08/09 completati: (1) il costo della resurrezione di Hella deve
 > essere una scelta giocabile, (2) tutte le mappe alla qualità delle mappe
@@ -219,6 +230,11 @@
   - **Resta opzionale (non serve per l'accettazione)**: dare a questi 16 una
     griglia-emoji per l'SVG è lavoro puramente estetico — da fare solo se il
     DM vuole la resa visuale per una scena specifica.
+  - **➡️ Chiuso qui il 2026-11-27 (card di Jfs del 27/11, «ai master
+    ARC-09»)**: gli SVG di P2A, P2B e P3 si fanno nei master ARC09-DEF, che
+    scelgono la griglia migliore per sezione con il collaudatore delle mappe
+    nel ciclo ([PIANO-MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md)
+    S2). Farli qui vorrebbe dire lavorare su file che i master riscriveranno.
 - **Accettazione** ✅: **zero mappe senza companion negli archi 07-09**;
   EL/CR dichiarati; esiti aperti (D13); [INFERRED] su ogni scelta di design.
 
@@ -363,6 +379,20 @@
   state.md §6 + scheda giocatore Hella, rigenerare HTML/PDF con nuova
   data-versione, changelog §8.
 - **Accettazione**: zero [PROPOSTA] attive in §1; export sincronizzati.
+- **✅ SUPERATO (2026-11-27, card di Jfs del 27/11, «chiudere con
+  l'avviso»)**. Il DM ha fatto canone F1-F4 il 2026-09-25 senza aspettare il
+  tavolo (commit `b6eef4a8e`): `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md` §1
+  non ha `[PROPOSTA]` attive, e il primo criterio è soddisfatto. Le sinergie
+  stanno nelle pagine a stadi di ADR-0071, che sono oggi l'export vivo. F1 e
+  F4 restano 🔒 finché la condizione si gioca in ARC-09 (§3 r.58): è una
+  condizione di gioco, non un compito di questo piano.
+- ⚠️ **Avviso**: lo snapshot `PG/Artefatti/Artefatti-Pg/Sinergie_Artefatti_QuickReference.html`
+  è fermo al contenuto di aprile (`7ca7e7f7a`) e non nomina né la Collana né
+  Hella (0 occorrenze; così il PDF gemello). È superato dalle pagine a stadi, e
+  rigenerarlo le duplicherebbe. Il banner D10 sull'HTML e la riga della
+  MATRICE (`PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` r.249-250, che lo dà
+  «da rigenerare») stanno fuori da `plans/` e non sono toccati qui: residuo per
+  un lotto sugli artefatti.
 
 ### T9. Propagazione del ramo del rifiuto — ✅ FATTO (parte cross-link)
 - **Azione**: cross-link della tabella echi T1 nei file bersaglio
@@ -386,6 +416,13 @@
   registrare l'esito reale in `state.md` §8 (changelog) e chiudere i rami
   non presi con banner "non accaduto". Non eseguibile finché il rituale non
   è giocato (regola d'oro §0.1: mai riscrivere la storia in avanti).
+- **✅ CHIUSO (2026-11-27, card di Jfs del 27/11)**, senza banner «non
+  accaduto» su `main`. Il P3B è stato giocato il 25/09 senza rifiuti, e
+  l'esito è registrato sul ramo di gruppo (sessione 4 e `state.yaml`, commit
+  `d8ecd2b04` e `70709426d`). I banner andrebbero contro ADR-0007 e ADR-0090:
+  `main` è il prodotto per ogni tavolo, e i rami non presi devono restare
+  validi per un altro gruppo. La verifica ha trovato un difetto nuovo nei box
+  di questo lotto, i Doni di Hella nella versione v1: è T9-bis.
 - **Accettazione** ✅ (parte cross-link): ogni eco della tabella ha il suo
   aggancio nel file bersaglio; nessun eco orfano.
 
@@ -457,15 +494,16 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 ## §5 — Checklist avanzamento
 
 - [x] T1 · [x] T2 · [x] T3 · [x] T4 — **LOTTO T-A COMPLETO (2026-07-03)**
-- [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (resta opzionale/estetico solo l'SVG dei 16 narrativi)
+- [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (l'SVG dei 16 narrativi, opzionale, passa ai master ARC09-DEF: card di Jfs del 27/11)
 - [x] T6a (sessione 3, 2026-07-03) · [x] T6b (sessioni 6-8, 2026-07-04: Aegis master + Cerebro eletto + Corona consolidata/riconciliata + campaign-artifacts sync) · [x] T6c (sessione 11, 2026-07-04: doppia colonna §6, conferma DM T-D10) — **LOTTO ARTEFATTI COMPLETO**
 - [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [x] T10-c · [x] T10-d · [x] T10-e · [x] T10-f · [x] T10-g (tutte le domande del DM chiuse, D13-D17 comprese) · [x] T10-h (l'immagine dentro la scheda)
-- [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) — schede, sinergie, propagazione
+- [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [x] T8 (superato il 2026-11-27) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura superata il 2026-11-27) — schede, sinergie, propagazione
 - [x] T-D1…T-D12 — decisioni acquisite (2026-07-03/04); **ZERO domande DM
   aperte** (sessione 11, 2026-07-04: risolti Corona×2, Bracieri, Campo
   Drow 2, §6 doppia colonna, temporanei Word rimossi, locazione libreria).
   Restano SOLO i task gated sul gioco al tavolo: T8 (quest Hella giocata)
-  e chiusura T9 (esito reale del P3B in state.md §8)
+  e chiusura T9 (esito reale del P3B in state.md §8). *(2026-11-27: chiusi
+  tutti e due come superati, card di Jfs del 27/11; resta T9-bis.)*
 
 ### Infrastruttura CI (a supporto del lotto mappe)
 

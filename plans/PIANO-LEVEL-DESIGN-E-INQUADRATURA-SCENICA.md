@@ -22,6 +22,23 @@
 > I link agli ADR della #72 portano ai numeri di oggi; quelli a file mai
 > arrivati portano all'ultimo commit della PR su GitHub.
 
+> **Stato (2026-11-27)**: 🔵 0%, **ridotto a due lotti** dalla revisione dei
+> piani fermi (verifica su `main` `21906369`; card di Jfs del 27/11).
+>
+> | Lotto | Stato | Prova |
+> |---|---|---|
+> | C1 | 🔀 superato, con due righe aggiunte | ADR-0098 e `standard-qualita-mappe.md` «Come si prepara» (funzione, flusso, scala, tattica), `@deroga` motivate, «come si vince» in `audit-mappe-workflow.md`. Restavano scoperti i punti di riferimento con un nome e la sconfitta mai gratuita: aggiunti al passo 4 dello standard e registrati come norme non misurate |
+> | C2 | ⬜ ripreso, **solo il Torrione di Vedetta** | HF-1A2 (`fortezza-json/HF-1A2-torrione-di-vedetta.json`, ADR-0117): voto 94, ma M1 0,11 · M2 0,89 · M4 0,94 senza deroghe. Si rifà prima che si giochi ARC-08, senza M8 (i punti di riferimento si guardano a vista). Ondata 2 si rimisura dopo; Ground Battle sta in `_ARCHIVIO/` ed è coperta da `@tipo` |
+> | C3 | ➡️ spostato a [COLLAUDO-MAPPE](PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) V3 | i numeri sono la classifica di ADR-0098, e il lavoro mappa per mappa col DM è V3: due proprietari dello stesso lavoro non servono |
+> | D1 | ⏸ in attesa | diventa un campo facoltativo `Inquadratura` nella scheda di ADR-0015 (`<arco>/Immagini/PROMPT-IMMAGINI-*.md`), non un template; pilota su 3 scene solo se il DM vuole immagini nuove |
+> | D2 | 🔀 superato | `read-aloud-adulti.md` §2-bis (F2.10, `ca33d7d9`, 2026-10-01): l'ordine di rivelazione di *Dungeon*/Paizo. La regola 2 di D2 andrebbe contro ADR-0014 e `misura_craft --metrature` |
+> | D3 | ⏸ in attesa | fino al collaudo della hero map; `render_map_blender.py --profondita` dà già il passo depth |
+> | D4 | ⬜ ripreso, in un altro thread | 31 righe con titoli o autori protetti in 12 file di `campaign/ai-media-prompts/` (il piano ne contava 10 in 7); il DM ha scelto di riscriverli in linguaggio descrittivo (27/11, 11:51 UTC) |
+> | §2-bis | 🔀 superato | la regola vigente è ADR-0084 (STATO-E-ORDINE §2-bis), non ADR-0037 |
+>
+> Il rimando di §3 ai check `framing/*` di P2.6 non porta a niente: né
+> PIANO-VENDIBILITA né `scripts/` ne hanno uno.
+
 > **Origine**: guida operativa **«Dall'immagine mentale all'artefatto»**
 > (2026-07-25, fornita dal DM) — Parte I §0-§10 (composizione visiva) e
 > Parte II §L1-§L9 (level design e codifica nel toolkit).
@@ -217,7 +234,7 @@ il lotto **D4** (igiene IP) alimenta `framing/ip-reference`.
 
 ### Ramo C — Il debito di contenuto (le mappe)
 
-#### ⬜ C1 — `campaign/templates/scheda-mappa-template.md` <!-- validate-docs: futuro -->
+#### 🔀 C1 — `campaign/templates/scheda-mappa-template.md` <!-- validate-docs: futuro --> *(superato il 2026-11-27)*
 
 *Realizza*: §L6. **Si compila prima di disegnare**, ed è il gemello della
 scheda-inquadratura (D1). Contiene: intento (la domanda che i giocatori devono
@@ -235,7 +252,7 @@ compilato su **una** mappa reale come esempio vivo.
 **Engine**: Opus (è design). **Impegno**: medio. **Stima**: 4-6 h.
 **Indipendente da A/B** — candidabile per primo.
 
-#### ⬜ C2 — Riprogettazione delle 3 mappe peggiori
+#### ⬜ C2 — Riprogettazione delle 3 mappe peggiori *(dal 2026-11-27 solo il Torrione di Vedetta, HF-1A2)*
 
 Dalla classifica di audit §3.2, in ordine di urgenza al tavolo:
 
@@ -260,7 +277,7 @@ motivata; SVG rigenerato; companion Ambiente/Tattiche/Evoluzione aggiornati.
 **Engine**: Opus (design) → Sonnet (griglia). **Impegno**: alto.
 **Stima**: 6-8 h a mappa. **Dipende da**: C1, B1. **Gate**: prova al tavolo.
 
-#### ⬜ C3 — Parity pass sul resto del corpus
+#### ➡️ C3 — Parity pass sul resto del corpus *(spostato a COLLAUDO-MAPPE V3 il 2026-11-27)*
 
 Le ~26 griglie restanti, una alla volta, su decisione DM. Le mappe che il
 linter promuove già (le caverne: *Cuore della Montagna* M1 1.00 · M2 0.00,
@@ -293,7 +310,7 @@ focale, altezza camera e figura di scala (oggi: 0/48).
 **Engine**: Opus (le schede sono design) → Sonnet (retrofit).
 **Impegno**: medio. **Stima**: 6-8 h.
 
-#### ⬜ D2 — Regola d'ordine percettivo nel read-aloud ⭐
+#### 🔀 D2 — Regola d'ordine percettivo nel read-aloud ⭐ *(superato il 2026-11-27)*
 
 *Realizza*: §6. **È l'item a ritorno più alto dell'intero piano**: nessuna GPU,
 nessun Blender, nessun codice — e agisce su ciò che il repo produce di più.
@@ -437,15 +454,15 @@ Onestà, in coerenza con §L8 della guida:
 Rami 0, A, B → DELEGATI al PIANO-PRODOTTO (fasi P0/P1/P2)
 
 Ramo C — contenuto mappe
-□ C1  scheda-mappa-template.md
-□ C2  riprogettazione Dirupo Mortale · Ondata 2 · (Ground Battle → map_kind?)
-□ C3  parity pass — a mappa singola, gated dal tavolo
+☒ C1  scheda-mappa-template.md: superato (ADR-0098), due righe nel passo 4 dello standard (2026-11-27)
+□ C2  riprogettazione del solo Torrione di Vedetta, HF-1A2 (Ground Battle superata da @tipo; Ondata 2 da rimisurare)
+→ C3  parity pass: spostato a COLLAUDO-MAPPE V3 (2026-11-27)
 
 Ramo D — inquadratura e prosa
-□ D2  ⭐ ordine percettivo nel read-aloud (narrative-style)
-□ D1  scheda-inquadratura + campo ## Inquadratura (pilota: 3 scene ARC-07)
-□ D4  igiene IP dei prompt versionati
-□ D3  Modalità 4 — blockout 3D → depth → ControlNet (gated: GPU DM)
+☒ D2  ⭐ ordine percettivo nel read-aloud: superato da read-aloud-adulti.md §2-bis (2026-11-27)
+⏸ D1  scheda-inquadratura + campo ## Inquadratura (pilota: 3 scene ARC-07), in attesa
+□ D4  igiene IP dei prompt versionati: ripreso, riscrittura (scelta del DM del 27/11)
+⏸ D3  Modalità 4 — blockout 3D → depth → ControlNet (gated: GPU DM), in attesa
 ```
 
 > **Regola d'oro dei piani**: chi chiude un lotto aggiorna — nello stesso

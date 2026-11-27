@@ -515,6 +515,12 @@ misurato; la copertura SRD, M7 e M8 restano in V5, che ora ha lo strumento.
 - Le porte senza muro nelle mappe che V2 ha classificato tattiche; le zone
   separate e le unità irraggiungibili, una per una: o si corregge, o si scrive
   la deroga con il motivo.
+- Da C3 di [LEVEL-DESIGN](PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md),
+  spostato qui il 2026-11-27 (card di Jfs del 27/11): il parity pass sulle
+  mappe tattiche con M1 o M2 sotto soglia e senza deroga, dalla classifica di
+  ADR-0098 (`plans/esperimenti/mappe-qualita-2026-10-22/CLASSIFICA.md`). Al
+  27/11 sono 21 su 63 tattiche. Le mappe che la classifica promuove non si
+  toccano.
 
 ### V4 · Il gate a tetto
 
